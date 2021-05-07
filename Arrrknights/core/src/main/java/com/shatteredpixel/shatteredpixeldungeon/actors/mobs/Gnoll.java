@@ -23,13 +23,13 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GnollSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.InfantrySprite;
 import com.watabou.utils.Random;
 
 public class Gnoll extends Mob {
 	
 	{
-		spriteClass = GnollSprite.class;
+		spriteClass = InfantrySprite.class;
 		
 		HP = HT = 12;
 		defenseSkill = 4;

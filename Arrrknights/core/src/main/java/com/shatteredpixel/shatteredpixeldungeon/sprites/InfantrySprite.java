@@ -24,26 +24,26 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class GnollSprite extends MobSprite {
+public class InfantrySprite extends MobSprite {
 	
-	public GnollSprite() {
+	public InfantrySprite() {
 		super();
 		
-		texture( Assets.Sprites.GNOLL );
+		texture( Assets.Sprites.INFANTRY );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 15 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, 0, 0, 0, 1, 0, 0, 1, 1 );
+		idle.frames( frames, 21 );
 		
 		run = new Animation( 12, true );
-		run.frames( frames, 4, 5, 6, 7 );
+		run.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7 );
 		
 		attack = new Animation( 12, false );
-		attack.frames( frames, 2, 3, 0 );
+		attack.frames( frames, 8, 9, 10, 11, 12, 13 );
 		
 		die = new Animation( 12, false );
-		die.frames( frames, 8, 9, 10 );
+		die.frames( frames, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 );
 		
 		play( idle );
 	}

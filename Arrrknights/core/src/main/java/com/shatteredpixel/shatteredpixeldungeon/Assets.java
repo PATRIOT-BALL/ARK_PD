@@ -230,7 +230,7 @@ public class Assets {
 		public static final String KING		= "sprites/king.png";
 		public static final String PIRANHA	= "sprites/piranha.png";
 		public static final String EYE		= "sprites/eye.png";
-		public static final String GNOLL	= "sprites/gnoll.png";
+		public static final String INFANTRY	= "sprites/Infantry_32.png";
 		public static final String CRAB		= "sprites/crab.png";
 		public static final String GOO		= "sprites/goo.png";
 		public static final String SWARM	= "sprites/swarm.png";

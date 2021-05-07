@@ -176,16 +176,16 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 0, 48, 13, 64 ) );
 			break;
 		case WARRIOR:
-			icon.frame( icon.texture.uvRect( 16, 48, 25, 63 ) );
+			icon.frame( icon.texture.uvRect( 16, 48, 32, 67 ) );
 			break;
 		case MAGE:
-			icon.frame( icon.texture.uvRect( 32, 48, 47, 62 ) );
+			icon.frame( icon.texture.uvRect( 32, 48, 48, 67 ) );
 			break;
 		case ROGUE:
-			icon.frame( icon.texture.uvRect( 48, 48, 57, 63 ) );
+			icon.frame( icon.texture.uvRect( 48, 48, 64, 67 ) );
 			break;
 		case HUNTRESS:
-			icon.frame( icon.texture.uvRect( 64, 48, 80, 64 ) );
+			icon.frame( icon.texture.uvRect( 64, 48, 80, 67 ) );
 			break;
 		
 		case ENTER:
@@ -204,7 +204,8 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 68, 64, 83, 79 ) );
 			break;
 		case SHPX:
-			icon.frame( icon.texture.uvRect( 85, 64, 101, 80 ) );
+			icon.frame( icon.texture.uvRect( 0, 96, 32, 128 ) );
+			icon.scale.set(PixelScene.align(0.49f));
 			break;
 		case GOLD:
 			icon.frame( icon.texture.uvRect( 102, 64, 119, 80 ) );
@@ -222,11 +223,11 @@ public enum Icons {
 
 		//32*32 icons are scaled down to match game's size
 		case ALEKS:
-			icon.frame( icon.texture.uvRect( 0, 96, 32, 128 ) );
+			icon.frame( icon.texture.uvRect( 32, 96, 64, 128 ) );
 			icon.scale.set(PixelScene.align(0.49f));
 			break;
 		case CHARLIE:
-			icon.frame( icon.texture.uvRect( 32, 96, 64, 128 ) );
+			icon.frame( icon.texture.uvRect( 64, 96, 96, 128 ) );
 			icon.scale.set(PixelScene.align(0.49f));
 			break;
 		case ARCNOR:
