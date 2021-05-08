@@ -201,13 +201,13 @@ public enum HeroClass {
 	public String spritesheet() {
 		switch (this) {
 			case WARRIOR: default:
-				return Assets.Sprites.WARRIOR;
+				return Assets.Sprites.BLAZE;
 			case MAGE:
-				return Assets.Sprites.MAGE;
+				return Assets.Sprites.AMIYA;
 			case ROGUE:
 				return Assets.Sprites.ROGUE;
 			case HUNTRESS:
-				return Assets.Sprites.HUNTRESS;
+				return Assets.Sprites.GREY;
 		}
 	}
 

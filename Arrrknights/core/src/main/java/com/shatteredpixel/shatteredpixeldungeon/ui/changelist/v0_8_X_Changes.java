@@ -45,7 +45,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DM100Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DM300Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ElementalSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GuardSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazCasterSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.KingSprite;
@@ -703,7 +703,7 @@ public class v0_8_X_Changes {
 				"_-_ Defense now costs 33% more evasion\n" +
 				"_-_ Evasion now grants 33% more evasion"));
 
-		changes.addButton( new ChangeButton(new Image(new GuardSprite()), "Enemy Nerfs",
+		changes.addButton( new ChangeButton(new Image(new SarkazCasterSprite()), "Enemy Nerfs",
 				"To better balance overall prison difficulty, I've weakened prison guards slightly:\n" +
 				"_-_ Prison guard accuracy reduced by ~15%\n" +
 				"_-_ Prison guard armor reduced by ~12%\n\n" +

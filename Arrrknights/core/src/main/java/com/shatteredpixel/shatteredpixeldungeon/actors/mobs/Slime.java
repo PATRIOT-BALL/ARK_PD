@@ -26,14 +26,15 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.SlimeSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ShieldedLeaderSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ShieldedSprite;
 import com.watabou.utils.Random;
 import com.watabou.utils.Reflection;
 
 public class Slime extends Mob {
 	
 	{
-		spriteClass = SlimeSprite.class;
+		spriteClass = ShieldedSprite.class;
 		
 		HP = HT = 20;
 		defenseSkill = 5;

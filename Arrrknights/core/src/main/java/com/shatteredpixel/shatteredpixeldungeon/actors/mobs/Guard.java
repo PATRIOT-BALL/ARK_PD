@@ -33,7 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GuardSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazCasterSprite;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
@@ -45,7 +45,7 @@ public class Guard extends Mob {
 	private boolean chainsUsed = false;
 
 	{
-		spriteClass = GuardSprite.class;
+		spriteClass = SarkazCasterSprite.class;
 
 		HP = HT = 40;
 		defenseSkill = 10;

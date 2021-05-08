@@ -106,7 +106,7 @@ public class v0_6_X_Changes {
 				"_-_ 'Death by glyph' badge is now 'death by deferred damage'.\n\n" +
 				"_-_ Removed rare monster slayer badge."));
 		
-		changes.addButton( new ChangeButton(new Image(Assets.Sprites.WARRIOR, 0, 90, 12, 15), "Berserker",
+		changes.addButton( new ChangeButton(new Image(Assets.Sprites.BLAZE, 0, 90, 12, 15), "Berserker",
 				"Even with recent nerfs the berserker is still much stronger than other subclasses. Rather than continually nerfing his existing mechanics, which makes the subclass unfun, I have instead opted to give him a small rework.\n\n" +
 				"These changes focus on giving the berserker some of his old power back, but making it more difficult to access that power.\n\n" +
 				"_-_ Rage is built by taking physical damage\n" +

@@ -195,13 +195,13 @@ public class v0_2_X_Changes {
 				"\n" +
 				"This update also continued 0.2.0's trend of expanding Shattered's scope. I was no longer just planning to change items, but was now making additions and reworks to regions of the game as well!"));
 		
-		changes.addButton( new ChangeButton(new Image(Assets.Sprites.GHOST, 0, 0, 14, 15), "New Sewer Quests",
+		changes.addButton( new ChangeButton(new Image(Assets.Sprites.GUARD, 0, 0, 14, 15), "New Sewer Quests",
 				"_-_ Removed the dried rose quest (the rose will return...)\n\n" +
 				"_-_ Tweaked the mechanics of the fetid rat quest\n\n" +
 				"_-_ Added a gnoll trickster quest\n\n" +
 				"_-_ Added a great crab quest"));
 		
-		changes.addButton( new ChangeButton(new Image(Assets.Sprites.GOO, 43, 3, 14, 11), "Goo Changes",
+		changes.addButton( new ChangeButton(new Image(Assets.Sprites.HANDCLAB, 43, 3, 14, 11), "Goo Changes",
 				"Goo's animations have been overhauled, including a particle effect for the area of its pumped up attack.\n\n" +
 				"Goo's arena has been updated to give more room to maneuver, and to be more variable."));
 		
