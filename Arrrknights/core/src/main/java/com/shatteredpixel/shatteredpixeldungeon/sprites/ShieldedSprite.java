@@ -29,22 +29,28 @@ public class ShieldedSprite extends MobSprite {
 	public ShieldedSprite() {
 		super();
 		
-		texture( Assets.Sprites.BRUTE );
+		texture( Assets.Sprites.SHILDED );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 16 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
-		idle = new Animation( 2, true );
-		idle.frames( frames, 21, 21, 21, 22, 21, 21, 22, 22 );
+		idle = new Animation( 3, true );
+		idle.frames( frames, 0, 1, 1, 0 );
 		
-		run = new Animation( 12, true );
-		run.frames( frames, 25, 26, 27, 28 );
+		run = new Animation( 10, true );
+		run.frames( frames, 0, 1, 2, 3, 4, 5, 6 );
 		
-		attack = new Animation( 12, false );
-		attack.frames( frames, 23, 24 );
+		attack = new Animation( 15, false );
+		attack.frames( frames, 7, 8, 9, 10, 11, 12, 13 );
 		
-		die = new Animation( 12, false );
-		die.frames( frames, 29, 30, 31 );
+		die = new Animation( 10, false );
+		die.frames( frames, 14, 15, 16, 17, 18,19, 20, 21, 22, 23 );
 		
-		play( idle );
+		play(idle);
 	}
+
+	@Override
+	public int blood() {
+		return 0xFF88CC44;
+	}
+	
 }
