@@ -32,7 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.FetidRatSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.InfantrySprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CrossbowmanSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreatCrabSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.ItemSlot;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
@@ -67,7 +67,7 @@ public class WndSadGhost extends Window {
 				message = PixelScene.renderTextBlock( Messages.get(this, "rat")+"\n\n"+Messages.get(this, "give_item"), 6 );
 				break;
 			case 2:
-				titlebar.icon( new InfantrySprite() );
+				titlebar.icon( new CrossbowmanSprite() );
 				titlebar.label( Messages.get(this, "gnoll_title") );
 				message = PixelScene.renderTextBlock( Messages.get(this, "gnoll")+"\n\n"+Messages.get(this, "give_item"), 6 );
 				break;

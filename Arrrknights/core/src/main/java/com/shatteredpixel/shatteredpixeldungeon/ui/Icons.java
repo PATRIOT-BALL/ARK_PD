@@ -176,17 +176,29 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 0, 48, 13, 64 ) );
 			break;
 		case WARRIOR:
-			icon.frame( icon.texture.uvRect( 16, 48, 32, 67 ) );
+			icon.frame( icon.texture.uvRect( 16, 48, 32, 61 ) );
 			break;
 		case MAGE:
-			icon.frame( icon.texture.uvRect( 32, 48, 48, 67 ) );
+			icon.frame( icon.texture.uvRect( 32, 48, 48, 61 ) );
 			break;
 		case ROGUE:
-			icon.frame( icon.texture.uvRect( 48, 48, 64, 67 ) );
+			icon.frame( icon.texture.uvRect( 48, 48, 64, 61 ) );
 			break;
 		case HUNTRESS:
-			icon.frame( icon.texture.uvRect( 64, 48, 80, 67 ) );
+			icon.frame( icon.texture.uvRect( 64, 48, 80, 61 ) );
 			break;
+			//case WARRIOR:
+			//			icon.frame( icon.texture.uvRect( 0, 140, 20, 160 ) );
+			//			break;
+			//		case MAGE:
+			//			icon.frame( icon.texture.uvRect( 20, 140, 40, 160 ) );
+			//			break;
+			//		case ROGUE:
+			//			icon.frame( icon.texture.uvRect( 40, 140, 60, 160 ) );
+			//			break;
+			//		case HUNTRESS:
+			//			icon.frame( icon.texture.uvRect( 60, 140, 80, 160 ) );
+			//			break;
 		
 		case ENTER:
 			icon.frame( icon.texture.uvRect( 0, 64, 16, 80 ) );
@@ -239,7 +251,7 @@ public enum Icons {
 			icon.scale.set(PixelScene.align(0.49f));
 			break;
 		case CUBE_CODE:
-			icon.frame( icon.texture.uvRect( 101, 32, 128, 62 ) );
+			icon.frame( icon.texture.uvRect( 101, 16, 128, 46 ) );
 			icon.scale.set(PixelScene.align(0.49f));
 			break;
 

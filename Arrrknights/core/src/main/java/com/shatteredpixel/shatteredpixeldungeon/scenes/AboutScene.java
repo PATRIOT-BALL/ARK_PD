@@ -64,20 +64,20 @@ public class AboutScene extends PixelScene {
 		shpxLink += "&utm_campaign=ingame_link";
 
 		CreditsBlock shpx = new CreditsBlock(true, Window.SHPX_COLOR,
-				"Shattered Pixel Dungeon",
+				"Tomorrow's Roguenight",
 				Icons.SHPX.get(),
-				"Developed by: _Evan Debenham_\nBased on Pixel Dungeon's open source",
+				"Developed by: _NamSek & mizq4482_\nBased on Pixel Dungeon's open source",
 				"ShatteredPixel.com",
 				shpxLink);
 		shpx.setRect((w - fullWidth)/2f, 6, 120, 0);
 		content.add(shpx);
 
 		CreditsBlock alex = new CreditsBlock(false, Window.SHPX_COLOR,
-				"Hero Art & Design:",
+				"Pixel Art & Design:",
 				Icons.ALEKS.get(),
-				"Aleksandar Komitov",
-				"alekskomitov.com",
-				"https://www.alekskomitov.com");
+				"NamSek",
+				"Pixiv.net",
+				"https://www.pixiv.net/users/14086167");
 		alex.setSize(colWidth/2f, 0);
 		if (landscape()){
 			alex.setPos(shpx.right(), shpx.top() + (shpx.height() - alex.height())/2f);
@@ -87,11 +87,11 @@ public class AboutScene extends PixelScene {
 		content.add(alex);
 
 		CreditsBlock charlie = new CreditsBlock(false, Window.SHPX_COLOR,
-				"Sound Effects:",
+				"Programming:",
 				Icons.CHARLIE.get(),
-				"Charlie",
-				"s9menine.itch.io",
-				"https://s9menine.itch.io");
+				"mizq4482",
+				"hypergryph.gall",
+				"https://drive.google.com/drive/folders/17z-PzgCxTby5fJoNQf2f7noNv4ne6Mlg");
 		charlie.setRect(alex.right(), alex.top(), colWidth/2f, 0);
 		content.add(charlie);
 

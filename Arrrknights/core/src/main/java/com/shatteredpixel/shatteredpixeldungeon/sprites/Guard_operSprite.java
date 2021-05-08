@@ -39,10 +39,10 @@ public class Guard_operSprite extends MobSprite {
 		idle = new Animation( 5, true );
 		idle.frames( frames, 17 );
 		
-		run = new Animation( 10, true );
+		run = new Animation( 13, true );
 		run.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7 );
 
-		attack = new Animation( 10, false );
+		attack = new Animation( 16, false );
 		attack.frames( frames, 8, 9, 10, 11, 12, 13, 14, 15 );
 
 		die = new Animation( 8, false );

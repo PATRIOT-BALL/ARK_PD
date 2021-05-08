@@ -44,10 +44,10 @@ public class CrossbowmanSprite extends MobSprite {
 		run = new Animation( 12, true );
 		run.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7 );
 
-		attack = new Animation( 12, false );
+		attack = new Animation( 14, false );
 		attack.frames( frames, 8, 9, 10, 11, 12, 13 );
 
-		die = new Animation( 12, false );
+		die = new Animation( 10, false );
 		die.frames( frames, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 );
 
 		play( idle );
