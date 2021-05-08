@@ -22,28 +22,39 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
-import com.watabou.utils.Random;
 
-public class SheepSprite extends MobSprite {
-	
-	public SheepSprite() {
+public class SarkazCasterSprite extends MobSprite {
+
+	public SarkazCasterSprite() {
 		super();
-		
-		texture( Assets.Sprites.SHEEP );
-		
-		TextureFilm frames = new TextureFilm( texture, 16, 15 );
-		
-		idle = new Animation( 8, true );
-		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0 );
-		
-		run = idle.clone();
-		attack = idle.clone();
-		
-		die = new Animation( 20, false );
-		die.frames( frames, 0 );
-		
+
+		texture( Assets.Sprites.S_CASTER );
+
+		TextureFilm frames = new TextureFilm( texture, 12, 16 );
+
+		idle = new Animation( 2, true );
+		idle.frames( frames, 0, 0, 0 );
+
+		run = new MovieClip.Animation( 15, true );
+		run.frames( frames, 0, 0, 0 );
+
+		attack = new MovieClip.Animation( 12, false );
+		attack.frames( frames, 0, 0, 0 );
+
+		die = new MovieClip.Animation( 8, false );
+		die.frames( frames, 0, 0, 0 );
+
 		play( idle );
-		curFrame = Random.Int( curAnim.frames.length );
+	}
+
+	@Override
+	public void play( Animation anim ) {
+		if (anim == die) {
+			emitter().burst( ShadowParticle.UP, 4 );
+		}
+		super.play( anim );
 	}
 }

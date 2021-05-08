@@ -27,7 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.SheepSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CivilianSprite;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
@@ -36,7 +36,7 @@ public class Sheep extends NPC {
 	private static final String[] LINE_KEYS = {"Baa!", "Baa?", "Baa.", "Baa..."};
 
 	{
-		spriteClass = SheepSprite.class;
+		spriteClass = CivilianSprite.class;
 	}
 
 	public float lifespan;

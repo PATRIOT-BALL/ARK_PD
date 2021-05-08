@@ -32,6 +32,8 @@ public class WornShortsword extends MeleeWeapon {
 		hitSoundPitch = 1.1f;
 
 		tier = 1;
+		DLY = 0.5f;
+		ACC = 0.6f;
 		
 		bones = false;
 	}

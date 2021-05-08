@@ -213,33 +213,42 @@ public class Assets {
 		public static final String ITEMS	    = "sprites/items.png";
 		public static final String ITEM_ICONS   = "sprites/item_icons.png";
 
-		public static final String WARRIOR	= "sprites/warrior.png";
-		public static final String MAGE		= "sprites/mage.png";
+		public static final String BLAZE	= "sprites/blaze.png";
+		public static final String AMIYA		= "sprites/amiya.png";
 		public static final String ROGUE	= "sprites/rogue.png";
-		public static final String HUNTRESS	= "sprites/huntress.png";
+		public static final String GREY	= "sprites/greythroat.png";
 		public static final String AVATARS	= "sprites/avatars.png";
 		public static final String PET		= "sprites/pet.png";
 		public static final String AMULET	= "sprites/amulet.png";
 
+		public static final String KEEPER	= "sprites/shopkeeper.png";
+		public static final String TENTACLE	= "sprites/tentacle.png";
+		public static final String CIVILIAN	= "sprites/civilian.png";
+		public static final String GUARD	= "sprites/guard.png";
+		public static final String VULCAN	= "sprites/blacksmith.png";
+
+		public static final String SNAKE	= "sprites/snake.png";
 		public static final String RAT		= "sprites/rat.png";
+		public static final String INFANTRY	= "sprites/Infantry.png";
+		public static final String CROSSBOWMAN	= "sprites/crossbowman.png";
+		public static final String SHILDED	= "sprites/Shielded.png";
+		public static final String SHILDED_L	= "sprites/ShieldedLeader.png";
+		public static final String CRAB		= "sprites/crab.png";
+		public static final String YOMA	= "sprites/yoma.png";
+		public static final String HANDCLAB		= "sprites/handclab.png";
+
 		public static final String BRUTE	= "sprites/brute.png";
 		public static final String SPINNER	= "sprites/spinner.png";
 		public static final String DM300	= "sprites/dm300.png";
 		public static final String WRAITH	= "sprites/wraith.png";
 		public static final String UNDEAD	= "sprites/undead.png";
 		public static final String KING		= "sprites/king.png";
-		public static final String PIRANHA	= "sprites/piranha.png";
 		public static final String EYE		= "sprites/eye.png";
-		public static final String INFANTRY	= "sprites/Infantry_32.png";
-		public static final String CRAB		= "sprites/crab.png";
-		public static final String GOO		= "sprites/goo.png";
-		public static final String SWARM	= "sprites/swarm.png";
+
 		public static final String SKELETON	= "sprites/skeleton.png";
 		public static final String SHAMAN	= "sprites/shaman.png";
 		public static final String THIEF	= "sprites/thief.png";
 		public static final String TENGU	= "sprites/tengu.png";
-		public static final String SHEEP	= "sprites/sheep.png";
-		public static final String KEEPER	= "sprites/shopkeeper.png";
 		public static final String BAT		= "sprites/bat.png";
 		public static final String ELEMENTAL= "sprites/elemental.png";
 		public static final String MONK		= "sprites/monk.png";
@@ -251,20 +260,17 @@ public class Assets {
 		public static final String FISTS	= "sprites/yog_fists.png";
 		public static final String YOG		= "sprites/yog.png";
 		public static final String LARVA	= "sprites/larva.png";
-		public static final String GHOST	= "sprites/ghost.png";
 		public static final String MAKER	= "sprites/wandmaker.png";
-		public static final String TROLL	= "sprites/blacksmith.png";
+
 		public static final String IMP		= "sprites/demon.png";
 		public static final String RATKING	= "sprites/ratking.png";
 		public static final String BEE      = "sprites/bee.png";
 		public static final String MIMIC    = "sprites/mimic.png";
 		public static final String ROT_LASH = "sprites/rot_lasher.png";
 		public static final String ROT_HEART= "sprites/rot_heart.png";
-		public static final String GUARD    = "sprites/guard.png";
+		public static final String S_CASTER    = "sprites/Sarkaz_Caster.png";
 		public static final String WARDS    = "sprites/wards.png";
 		public static final String GUARDIAN	= "sprites/guardian.png";
-		public static final String SHILDED	= "sprites/Shielded.png";
-		public static final String SNAKE	= "sprites/snake.png";
 		public static final String NECRO	= "sprites/necromancer.png";
 		public static final String GHOUL	= "sprites/ghoul.png";
 		public static final String RIPPER	= "sprites/ripper.png";

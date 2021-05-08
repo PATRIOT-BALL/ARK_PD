@@ -22,32 +22,49 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.watabou.noosa.TextureFilm;
 
-public class CausticSlimeSprite extends MobSprite {
+public class TentacleSprite extends MobSprite {
 	
-	public CausticSlimeSprite() {
+	public TentacleSprite() {
 		super();
+
+		renderShadow = false;
+		perspectiveRaise = 0.2f;
 		
-		texture( Assets.Sprites.SLIME );
+		texture( Assets.Sprites.TENTACLE );
 		
-		TextureFilm frames = new TextureFilm( texture, 14, 12 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
-		int c = 9;
+		idle = new Animation( 8, true );
+		idle.frames( frames, 0, 0, 0, 0 );
 		
-		idle = new Animation( 3, true );
-		idle.frames( frames, c+0, c+1, c+1, c+0 );
+		run = new Animation( 20, true );
+		run.frames( frames, 0, 0, 0, 0 );
 		
-		run = new Animation( 10, true );
-		run.frames( frames, c+0, c+2, c+3, c+3, c+2, c+0 );
+		attack = new Animation( 20, false );
+		attack.frames( frames, 0, 0, 0, 0 );
 		
-		attack = new Animation( 15, false );
-		attack.frames( frames, c+2, c+3, c+4, c+6, c+5 );
+		die = new Animation( 4, false );
+		die.frames( frames, 0, 0, 0, 0 );
 		
-		die = new Animation( 10, false );
-		die.frames( frames, c+0, c+5, c+6, c+7 );
-		
-		play(idle);
+		play( idle );
 	}
-	
+
+	@Override
+	public void link(Char ch) {
+		super.link(ch);
+		renderShadow = false;
+	}
+
+	@Override
+	public void onComplete( Animation anim ) {
+		super.onComplete( anim );
+		
+		if (anim == attack) {
+			GameScene.ripple( ch.pos );
+		}
+	}
 }

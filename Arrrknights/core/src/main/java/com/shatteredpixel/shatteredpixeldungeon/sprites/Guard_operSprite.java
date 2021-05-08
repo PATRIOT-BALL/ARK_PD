@@ -27,26 +27,26 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.glwrap.Blending;
 import com.watabou.noosa.TextureFilm;
 
-public class GhostSprite extends MobSprite {
+public class Guard_operSprite extends MobSprite {
 	
-	public GhostSprite() {
+	public Guard_operSprite() {
 		super();
 		
-		texture( Assets.Sprites.GHOST );
+		texture( Assets.Sprites.GUARD );
 		
-		TextureFilm frames = new TextureFilm( texture, 14, 15 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 5, true );
-		idle.frames( frames, 0, 1 );
+		idle.frames( frames, 17 );
 		
 		run = new Animation( 10, true );
-		run.frames( frames, 0, 1 );
+		run.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7 );
 
 		attack = new Animation( 10, false );
-		attack.frames( frames, 0, 2, 3 );
+		attack.frames( frames, 8, 9, 10, 11, 12, 13, 14, 15 );
 
 		die = new Animation( 8, false );
-		die.frames( frames, 0, 4, 5, 6, 7 );
+		die.frames( frames, 16 );
 		
 		play( idle );
 	}

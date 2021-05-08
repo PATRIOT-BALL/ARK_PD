@@ -31,14 +31,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.PiranhaSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.TentacleSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class Piranha extends Mob {
 	
 	{
-		spriteClass = PiranhaSprite.class;
+		spriteClass = TentacleSprite.class;
 
 		baseSpeed = 2f;
 		

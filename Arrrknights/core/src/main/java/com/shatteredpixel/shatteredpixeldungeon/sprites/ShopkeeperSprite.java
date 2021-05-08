@@ -33,10 +33,10 @@ public class ShopkeeperSprite extends MobSprite {
 		super();
 		
 		texture( Assets.Sprites.KEEPER );
-		TextureFilm film = new TextureFilm( texture, 14, 14 );
+		TextureFilm film = new TextureFilm( texture, 64, 50 );
 		
 		idle = new Animation( 10, true );
-		idle.frames( film, 1, 1, 1, 1, 1, 0, 0, 0, 0 );
+		idle.frames( film, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 );
 
 		die = new Animation( 20, false );
 		die.frames( film, 0 );
@@ -46,20 +46,5 @@ public class ShopkeeperSprite extends MobSprite {
 		attack = idle.clone();
 		
 		idle();
-	}
-	
-	@Override
-	public void onComplete( Animation anim ) {
-		super.onComplete( anim );
-		
-		if (visible && anim == idle) {
-			if (coin == null) {
-				coin = new PixelParticle();
-				parent.add( coin );
-			}
-			coin.reset( x + (flipHorizontal ? 0 : 13), y + 7, 0xFFFF00, 1, 0.5f );
-			coin.speed.y = -40;
-			coin.acc.y = +160;
-		}
 	}
 }

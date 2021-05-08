@@ -31,7 +31,12 @@ public class Greatsword extends MeleeWeapon {
 		hitSound = Assets.Sounds.HIT_SLASH;
 		hitSoundPitch = 1f;
 
+
 		tier=5;
+		DLY = 0.5f;
+		ACC = 0.5f;
+		RCH = 2;
+
 	}
 
 }

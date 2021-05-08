@@ -36,12 +36,12 @@ public class BlacksmithSprite extends MobSprite {
 	public BlacksmithSprite() {
 		super();
 		
-		texture( Assets.Sprites.TROLL );
+		texture( Assets.Sprites.VULCAN );
 		
-		TextureFilm frames = new TextureFilm( texture, 13, 16 );
+		TextureFilm frames = new TextureFilm( texture, 64, 36 );
 		
 		idle = new Animation( 15, true );
-		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 3 );
+		idle.frames( frames, 0, 1, 2, 3, 4, 5 );
 		
 		run = new Animation( 20, true );
 		run.frames( frames, 0 );

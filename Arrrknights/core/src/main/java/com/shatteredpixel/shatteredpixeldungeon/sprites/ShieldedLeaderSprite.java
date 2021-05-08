@@ -24,32 +24,33 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class SwarmSprite extends MobSprite {
+public class ShieldedLeaderSprite extends MobSprite {
 	
-	public SwarmSprite() {
+	public ShieldedLeaderSprite() {
 		super();
 		
-		texture( Assets.Sprites.SWARM );
-		
-		TextureFilm frames = new TextureFilm( texture, 16, 16 );
-		
-		idle = new Animation( 15, true );
-		idle.frames( frames, 0, 1, 2, 3, 4, 5 );
-		
-		run = new Animation( 15, true );
-		run.frames( frames, 0, 1, 2, 3, 4, 5 );
-		
-		attack = new Animation( 20, false );
-		attack.frames( frames, 6, 7, 8, 9 );
-		
-		die = new Animation( 15, false );
-		die.frames( frames, 10, 11, 12, 13, 14 );
-		
-		play( idle );
+		texture( Assets.Sprites.SHILDED_L );
+
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
+
+		idle = new Animation( 3, true );
+		idle.frames( frames, 0, 1, 1, 0 );
+
+		run = new Animation( 10, true );
+		run.frames( frames, 0, 1, 2, 3, 4, 5, 6 );
+
+		attack = new Animation( 15, false );
+		attack.frames( frames, 7, 8, 9, 10, 11, 12, 13 );
+
+		die = new Animation( 10, false );
+		die.frames( frames, 14, 15, 16, 17, 18,19, 20, 21, 22, 23 );
+
+		play(idle);
 	}
-	
+
 	@Override
 	public int blood() {
-		return 0xFF8BA077;
+		return 0xFF88CC44;
 	}
+
 }

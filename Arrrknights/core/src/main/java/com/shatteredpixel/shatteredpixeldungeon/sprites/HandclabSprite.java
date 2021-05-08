@@ -38,7 +38,7 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class GooSprite extends MobSprite {
+public class HandclabSprite extends MobSprite {
 	
 	private Animation pump;
 	private Animation pumpAttack;
@@ -46,30 +46,30 @@ public class GooSprite extends MobSprite {
 	private Emitter spray;
 	private ArrayList<Emitter> pumpUpEmitters = new ArrayList<>();
 
-	public GooSprite() {
+	public HandclabSprite() {
 		super();
 		
-		texture( Assets.Sprites.GOO );
+		texture( Assets.Sprites.HANDCLAB );
 		
-		TextureFilm frames = new TextureFilm( texture, 20, 14 );
+		TextureFilm frames = new TextureFilm( texture, 38, 38 );
 		
 		idle = new Animation( 10, true );
-		idle.frames( frames, 2, 1, 0, 0, 1 );
+		idle.frames( frames, 21 );
 		
 		run = new Animation( 15, true );
-		run.frames( frames, 3, 2, 1, 2 );
+		run.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8 );
 		
 		pump = new Animation( 20, true );
-		pump.frames( frames, 4, 3, 2, 1, 0 );
+		pump.frames( frames, 9, 10, 11 );
 
 		pumpAttack = new Animation ( 20, false );
-		pumpAttack.frames( frames, 4, 3, 2, 1, 0, 7);
+		pumpAttack.frames( frames, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
 
 		attack = new Animation( 10, false );
-		attack.frames( frames, 8, 9, 10 );
+		attack.frames( frames, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 );
 		
 		die = new Animation( 10, false );
-		die.frames( frames, 5, 6, 7 );
+		die.frames( frames, 21 );
 		
 		play(idle);
 
