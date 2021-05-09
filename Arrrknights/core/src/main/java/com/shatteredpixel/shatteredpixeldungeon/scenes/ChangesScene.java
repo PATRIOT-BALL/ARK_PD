@@ -69,25 +69,27 @@ public class ChangesScene extends PixelScene {
 		{
 			Music.INSTANCE.play(Assets.Music.BOSS5, true);
 		}
-		else {
-			switch (Dungeon.depth) {
-				case 1:
-					Music.INSTANCE.play(Assets.Music.GAME, true);
-					break;
-				case 6:
-					Music.INSTANCE.play(Assets.Music.GAME2, true);
-					break;
-				case 11:
-					Music.INSTANCE.play(Assets.Music.GAME3, true);
-					break;
-				case 16:
-					Music.INSTANCE.play(Assets.Music.GAME4, true);
-					break;
-				case 21:
-					Music.INSTANCE.play(Assets.Music.GAME5, true);
-					break;
-			}
+		else if (Dungeon.depth >= 1 && Dungeon.depth < 5)
+		{
+			Music.INSTANCE.play(Assets.Music.GAME, true);
 		}
+		else if (Dungeon.depth >= 6 && Dungeon.depth < 10)
+		{
+			Music.INSTANCE.play(Assets.Music.GAME2, true);
+		}
+		else if (Dungeon.depth >= 11 && Dungeon.depth < 15)
+		{
+			Music.INSTANCE.play(Assets.Music.GAME3, true);
+		}
+		else if (Dungeon.depth >= 16 && Dungeon.depth < 20)
+		{
+			Music.INSTANCE.play(Assets.Music.GAME4, true);
+		}
+		else if (Dungeon.depth >= 21 && Dungeon.depth < 25)
+		{
+			Music.INSTANCE.play(Assets.Music.GAME5, true);
+		}
+
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;
