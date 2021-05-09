@@ -48,7 +48,7 @@ public class RankingsScene extends PixelScene {
 	private static final float ROW_HEIGHT_MAX	= 20;
 	private static final float ROW_HEIGHT_MIN	= 12;
 
-	private static final float MAX_ROW_WIDTH    = 160;
+	private static final float MAX_ROW_WIDTH    = 180;
 
 	private static final float GAP	= 4;
 	

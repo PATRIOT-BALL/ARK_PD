@@ -104,8 +104,11 @@ public class MovieClip extends Image {
 		
 		frameTimer = 0;
 		
-		if (anim != null) {
-			frame( anim.frames[curFrame] );
+		if (anim != null)
+		{
+			if (anim.frames[curFrame] != null) {
+				frame(anim.frames[curFrame]);
+			}
 		}
 	}
 	
