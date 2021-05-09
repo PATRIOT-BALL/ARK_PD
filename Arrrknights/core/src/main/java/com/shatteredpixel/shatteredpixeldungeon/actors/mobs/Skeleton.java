@@ -46,6 +46,8 @@ public class Skeleton extends Mob {
 		EXP = 5;
 		maxLvl = 10;
 
+		flying = true;
+
 		loot = Generator.Category.WEAPON;
 		lootChance = 0.2f; //by default, see rollToDropLoot()
 
