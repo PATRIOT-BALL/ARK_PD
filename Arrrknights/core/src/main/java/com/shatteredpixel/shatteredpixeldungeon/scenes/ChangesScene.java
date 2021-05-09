@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.scenes;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Archs;
@@ -47,8 +48,46 @@ public class ChangesScene extends PixelScene {
 	@Override
 	public void create() {
 		super.create();
-		
-		Music.INSTANCE.play( Assets.Music.THEME, true );
+
+		if (Dungeon.depth == 5)
+		{
+			Music.INSTANCE.play(Assets.Music.BOSS, true);
+		}
+		else if (Dungeon.depth == 10)
+		{
+			Music.INSTANCE.play(Assets.Music.BOSS2, true);
+		}
+		else if (Dungeon.depth == 15)
+		{
+			Music.INSTANCE.play(Assets.Music.BOSS3, true);
+		}
+		else if (Dungeon.depth == 20)
+		{
+			Music.INSTANCE.play(Assets.Music.BOSS4, true);
+		}
+		else if (Dungeon.depth >= 25)
+		{
+			Music.INSTANCE.play(Assets.Music.BOSS5, true);
+		}
+		else {
+			switch (Dungeon.depth) {
+				case 1:
+					Music.INSTANCE.play(Assets.Music.GAME, true);
+					break;
+				case 6:
+					Music.INSTANCE.play(Assets.Music.GAME2, true);
+					break;
+				case 11:
+					Music.INSTANCE.play(Assets.Music.GAME3, true);
+					break;
+				case 16:
+					Music.INSTANCE.play(Assets.Music.GAME4, true);
+					break;
+				case 21:
+					Music.INSTANCE.play(Assets.Music.GAME5, true);
+					break;
+			}
+		}
 
 		int w = Camera.main.width;
 		int h = Camera.main.height;
