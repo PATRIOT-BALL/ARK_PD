@@ -33,7 +33,7 @@ public class SarkazCasterSprite extends MobSprite {
 
 		texture( Assets.Sprites.S_CASTER );
 
-		TextureFilm frames = new TextureFilm( texture, 12, 16 );
+		TextureFilm frames = new TextureFilm( texture, 38, 38 );
 
 		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 0, 0 );

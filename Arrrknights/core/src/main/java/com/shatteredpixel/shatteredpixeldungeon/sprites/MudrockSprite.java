@@ -33,17 +33,17 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Callback;
 
-public class DM300Sprite extends MobSprite {
+public class MudrockSprite extends MobSprite {
 
 	private Animation charge;
 	private Animation slam;
 
 	private Emitter superchargeSparks;
 	
-	public DM300Sprite() {
+	public MudrockSprite() {
 		super();
 		
-		texture( Assets.Sprites.DM300 );
+		texture( Assets.Sprites.MUD );
 		
 		updateChargeState(false);
 	}
@@ -53,30 +53,30 @@ public class DM300Sprite extends MobSprite {
 
 		int c = enraged ? 10 : 0;
 
-		TextureFilm frames = new TextureFilm( texture, 25, 22 );
+		TextureFilm frames = new TextureFilm( texture, 48, 48 );
 
 		idle = new Animation( enraged ? 15 : 10, true );
-		idle.frames( frames, c+0, c+1 );
+		idle.frames( frames, c+0 );
 
 		run = new Animation( enraged ? 15 : 10, true );
-		run.frames( frames, c+0, c+2 );
+		run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 
 		attack = new Animation( 15, false );
-		attack.frames( frames, c+3, c+4, c+5 );
+		attack.frames( frames, c+9, c+10, c+11, c+12, c+13, c+14, c+15, c+16, c+17 );
 
 		//unaffected by enrage state
 
 		if (charge == null) {
 			charge = new Animation(4, true);
-			charge.frames(frames, 0, 10);
+			charge.frames(frames, 0);
 
 			slam = attack.clone();
 
 			zap = new Animation(15, false);
-			zap.frames(frames, 6, 7, 7, 6);
+			zap.frames(frames, 9, 10, 11, 12, 13, 14, 15, 16, 17);
 
 			die = new Animation(20, false);
-			die.frames(frames, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10);
+			die.frames(frames, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34);
 		}
 
 		if (curAnim != charge) play(idle);

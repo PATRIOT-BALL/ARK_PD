@@ -43,7 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.DM300Sprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.MudrockSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
@@ -55,7 +55,7 @@ import com.watabou.utils.Random;
 public class OldDM300 extends Mob {
 	
 	{
-		spriteClass = DM300Sprite.class;
+		spriteClass = MudrockSprite.class;
 		
 		HP = HT = 200;
 		EXP = 30;

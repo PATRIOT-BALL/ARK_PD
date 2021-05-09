@@ -28,14 +28,14 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.utils.Callback;
 
-public class TenguSprite extends MobSprite {
+public class WSprite extends MobSprite {
 	
-	public TenguSprite() {
+	public WSprite() {
 		super();
 		
-		texture( Assets.Sprites.TENGU );
+		texture( Assets.Sprites.W );
 		
-		TextureFilm frames = new TextureFilm( texture, 14, 16 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 0, 0, 1 );
@@ -49,7 +49,7 @@ public class TenguSprite extends MobSprite {
 		zap = attack.clone();
 		
 		die = new Animation( 8, false );
-		die.frames( frames, 8, 9, 10, 10, 10, 10, 10, 10 );
+		die.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 );
 		
 		play( run.clone() );
 	}

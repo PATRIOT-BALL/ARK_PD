@@ -29,14 +29,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.DM200Sprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.S_GolemSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class DM200 extends Mob {
 
 	{
-		spriteClass = DM200Sprite.class;
+		spriteClass = S_GolemSprite.class;
 
 		HP = HT = 80;
 		defenseSkill = 12;

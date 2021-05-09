@@ -58,7 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.ConeAOE;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.DM300Sprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.MudrockSprite;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -77,7 +77,7 @@ import java.util.List;
 public class NewDM300 extends Mob {
 
 	{
-		spriteClass = DM300Sprite.class;
+		spriteClass = MudrockSprite.class;
 
 		HP = HT = 300;
 		EXP = 30;
@@ -221,7 +221,7 @@ public class NewDM300 extends Mob {
 							turnsSinceLastAbility = 0;
 							GLog.w(Messages.get(this, "rocks"));
 							if (sprite != null && (sprite.visible || enemy.sprite.visible)) {
-								((DM300Sprite)sprite).slam(enemy.pos);
+								((MudrockSprite)sprite).slam(enemy.pos);
 								return false;
 							} else {
 								dropRocks(enemy);
@@ -267,7 +267,7 @@ public class NewDM300 extends Mob {
 						} else {
 							GLog.w(Messages.get(this, "rocks"));
 							if (sprite != null && (sprite.visible || enemy.sprite.visible)) {
-								((DM300Sprite)sprite).slam(enemy.pos);
+								((MudrockSprite)sprite).slam(enemy.pos);
 								return false;
 							} else {
 								dropRocks(enemy);
@@ -474,8 +474,8 @@ public class NewDM300 extends Mob {
 		spend(3f);
 		yell(Messages.get(this, "charging"));
 		sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "invulnerable"));
-		((DM300Sprite)sprite).updateChargeState(true);
-		((DM300Sprite)sprite).charge();
+		((MudrockSprite)sprite).updateChargeState(true);
+		((MudrockSprite)sprite).charge();
 		chargeAnnounced = false;
 
 	}
@@ -486,7 +486,7 @@ public class NewDM300 extends Mob {
 
 	public void loseSupercharge(){
 		supercharged = false;
-		((DM300Sprite)sprite).updateChargeState(false);
+		((MudrockSprite)sprite).updateChargeState(false);
 
 		if (pylonsActivated < 2){
 			yell(Messages.get(this, "charge_lost"));

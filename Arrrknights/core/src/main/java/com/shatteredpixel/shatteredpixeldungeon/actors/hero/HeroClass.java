@@ -207,7 +207,7 @@ public enum HeroClass {
 			case MAGE:
 				return Assets.Sprites.AMIYA;
 			case ROGUE:
-				return Assets.Sprites.ROGUE;
+				return Assets.Sprites.RED;
 			case HUNTRESS:
 				return Assets.Sprites.GREY;
 		}

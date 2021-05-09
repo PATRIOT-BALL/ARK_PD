@@ -27,14 +27,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.CorrosiveGas;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.DM201Sprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.I_GolemSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class DM201 extends DM200 {
 
 	{
-		spriteClass = DM201Sprite.class;
+		spriteClass = I_GolemSprite.class;
 
 		HP = HT = 120;
 

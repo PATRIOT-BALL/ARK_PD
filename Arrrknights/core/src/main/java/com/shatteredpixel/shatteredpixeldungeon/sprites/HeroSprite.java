@@ -79,7 +79,7 @@ public class HeroSprite extends CharSprite {
 		die = new Animation( 10, false );
 		die.frames( film, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 );
 		
-		attack = new Animation( 17, false );
+		attack = new Animation( 18, false );
 		attack.frames( film, 9, 10, 11, 12, 13, 14, 15, 16 );
 		
 		zap = attack.clone();
@@ -90,7 +90,7 @@ public class HeroSprite extends CharSprite {
 		fly = new Animation( 1, true );
 		fly.frames( film, 38, 39 );
 
-		read = new Animation( 10, false );
+		read = new Animation( 8, false );
 		read.frames( film, 17, 18, 19, 20, 21, 22, 23, 24, 24, 24 );
 		
 		if (Dungeon.hero.isAlive())

@@ -22,7 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DM201;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DM200;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -31,32 +31,50 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
 
-public class DM201Sprite extends MobSprite {
+public class S_GolemSprite extends MobSprite {
 
-	public DM201Sprite () {
+	public S_GolemSprite() {
 		super();
 
-		texture( Assets.Sprites.DM200 );
+		texture( Assets.Sprites.S_GOLEM );
 
-		TextureFilm frames = new TextureFilm( texture, 21, 18 );
+		TextureFilm frames = new TextureFilm( texture, 50, 50 );
 
-		int c = 12;
+		idle = new Animation( 10, true );
+		idle.frames( frames, 0, 1 );
 
-		idle = new Animation( 2, true );
-		idle.frames( frames, c+0, c+1 );
-
-		run = idle.clone();
+		run = new Animation( 10, true );
+		run.frames( frames, 2, 3 );
 
 		attack = new Animation( 15, false );
-		attack.frames( frames, c+4, c+5, c+6 );
+		attack.frames( frames, 1, 2,3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 );
 
 		zap = new Animation( 15, false );
-		zap.frames( frames, c+7, c+8, c+8, c+7 );
+		zap.frames( frames, 1, 2,3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 );
 
 		die = new Animation( 8, false );
-		die.frames( frames, c+9, c+10, c+11 );
+		die.frames( frames, 9, 10, 11 );
 
 		play( idle );
+	}
+
+	public void zap( int cell ) {
+
+		turnTo( ch.pos , cell );
+		play( zap );
+
+		MagicMissile.boltFromChar( parent,
+				MagicMissile.TOXIC_VENT,
+				this,
+				cell,
+				new Callback() {
+					@Override
+					public void call() {
+						((DM200)ch).onZapComplete();
+					}
+				} );
+		Sample.INSTANCE.play( Assets.Sounds.GAS );
+		GLog.w(Messages.get(DM200.class, "vent"));
 	}
 
 	@Override
@@ -69,26 +87,6 @@ public class DM201Sprite extends MobSprite {
 	public void die() {
 		emitter().burst( Speck.factory( Speck.WOOL ), 8 );
 		super.die();
-	}
-
-	public void zap( int cell ) {
-
-		turnTo( ch.pos , cell );
-		play( zap );
-
-		MagicMissile.boltFromChar( parent,
-				MagicMissile.CORROSION,
-				this,
-				cell,
-				new Callback() {
-					@Override
-					public void call() {
-						Sample.INSTANCE.play( Assets.Sounds.GAS );
-						((DM201)ch).onZapComplete();
-					}
-				} );
-		Sample.INSTANCE.play( Assets.Sounds.MISS, 1f, 1.5f );
-		GLog.w(Messages.get(DM201.class, "vent"));
 	}
 
 	@Override
