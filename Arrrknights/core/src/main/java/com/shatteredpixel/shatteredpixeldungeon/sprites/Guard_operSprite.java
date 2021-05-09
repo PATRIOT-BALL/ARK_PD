@@ -51,18 +51,18 @@ public class Guard_operSprite extends MobSprite {
 		play( idle );
 	}
 	
-	@Override
-	public void draw() {
-		Blending.setLightMode();
-		super.draw();
-		Blending.setNormalMode();
-	}
+	//@Override
+	//public void draw() {
+		//Blending.setLightMode();
+		//super.draw();
+		//Blending.setNormalMode();
+	//}
 	
 	@Override
 	public void die() {
 		super.die();
 		emitter().start( ShaftParticle.FACTORY, 0.3f, 4 );
-		emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
+		//emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
 	}
 	
 	@Override

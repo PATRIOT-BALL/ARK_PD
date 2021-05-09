@@ -26,7 +26,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.blobs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BlobEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclabSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 
 public class GooWarn extends Blob {
 
@@ -60,7 +60,7 @@ public class GooWarn extends Blob {
 	@Override
 	public void use( BlobEmitter emitter ) {
 		super.use( emitter );
-		emitter.pour(HandclabSprite.GooParticle.FACTORY, 0.03f );
+		emitter.pour(HandclapSprite.GooParticle.FACTORY, 0.03f );
 	}
 
 	@Override

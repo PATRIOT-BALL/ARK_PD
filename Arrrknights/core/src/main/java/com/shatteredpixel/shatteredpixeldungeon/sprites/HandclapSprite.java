@@ -38,7 +38,7 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class HandclabSprite extends MobSprite {
+public class HandclapSprite extends MobSprite {
 	
 	private Animation pump;
 	private Animation pumpAttack;
@@ -46,10 +46,10 @@ public class HandclabSprite extends MobSprite {
 	private Emitter spray;
 	private ArrayList<Emitter> pumpUpEmitters = new ArrayList<>();
 
-	public HandclabSprite() {
+	public HandclapSprite() {
 		super();
 		
-		texture( Assets.Sprites.HANDCLAB );
+		texture( Assets.Sprites.HANDCLAP );
 		
 		TextureFilm frames = new TextureFilm( texture, 38, 38 );
 		

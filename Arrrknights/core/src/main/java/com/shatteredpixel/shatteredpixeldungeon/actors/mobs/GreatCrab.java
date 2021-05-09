@@ -29,7 +29,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GreatCrabSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.DefenderSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
@@ -37,7 +37,7 @@ import com.watabou.utils.Random;
 public class GreatCrab extends Crab {
 
 	{
-		spriteClass = GreatCrabSprite.class;
+		spriteClass = DefenderSprite.class;
 
 		HP = HT = 25;
 		defenseSkill = 0; //see damage()
@@ -47,7 +47,7 @@ public class GreatCrab extends Crab {
 
 		state = WANDERING;
 
-		loot = new MysteryMeat().quantity(2);
+		loot = new MysteryMeat().quantity(3);
 		lootChance = 1f;
 
 		properties.add(Property.MINIBOSS);

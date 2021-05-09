@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
@@ -127,9 +128,11 @@ public enum HeroClass {
 		stones.quantity(3).collect();
 		Dungeon.quickslot.setSlot(0, stones);
 
+
 		if (hero.belongings.armor != null){
 			hero.belongings.armor.affixSeal(new BrokenSeal());
 		}
+
 
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();

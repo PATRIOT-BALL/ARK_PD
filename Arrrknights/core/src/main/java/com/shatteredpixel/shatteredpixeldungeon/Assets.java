@@ -234,8 +234,9 @@ public class Assets {
 		public static final String SHILDED	= "sprites/Shielded.png";
 		public static final String SHILDED_L	= "sprites/ShieldedLeader.png";
 		public static final String CRAB		= "sprites/crab.png";
+		public static final String DIFENDER		= "sprites/difender.png";
 		public static final String YOMA	= "sprites/yoma.png";
-		public static final String HANDCLAB		= "sprites/handclab.png";
+		public static final String HANDCLAP		= "sprites/handclap.png";
 
 		public static final String BRUTE	= "sprites/brute.png";
 		public static final String SPINNER	= "sprites/spinner.png";

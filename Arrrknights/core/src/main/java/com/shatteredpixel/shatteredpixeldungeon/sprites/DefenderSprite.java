@@ -25,26 +25,26 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 
-public class GreatCrabSprite extends MobSprite {
+public class DefenderSprite extends MobSprite {
 
-	public GreatCrabSprite() {
+	public DefenderSprite() {
 		super();
 
-		texture( Assets.Sprites.CRAB );
+		texture( Assets.Sprites.DIFENDER );
 
-		TextureFilm frames = new TextureFilm( texture, 16, 16 );
+		TextureFilm frames = new TextureFilm( texture, 42, 42 );
 
 		idle = new MovieClip.Animation( 5, true );
-		idle.frames( frames, 16, 17, 16, 18 );
+		idle.frames( frames, 13 );
 
 		run = new MovieClip.Animation( 10, true );
-		run.frames( frames, 19, 20, 21, 22 );
+		run.frames( frames, 0, 1, 2, 3, 4, 5 );
 
 		attack = new MovieClip.Animation( 12, false );
-		attack.frames( frames, 23, 24, 25 );
+		attack.frames( frames, 6, 7, 8, 9, 10, 11, 12 );
 
 		die = new MovieClip.Animation( 12, false );
-		die.frames( frames, 26, 27, 28, 29 );
+		die.frames( frames, 13 );
 
 		play( idle );
 	}

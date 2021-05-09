@@ -35,7 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclabSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
@@ -49,7 +49,7 @@ public class Goo extends Mob {
 		HP = HT = 100;
 		EXP = 10;
 		defenseSkill = 8;
-		spriteClass = HandclabSprite.class;
+		spriteClass = HandclapSprite.class;
 
 		properties.add(Property.BOSS);
 		properties.add(Property.DEMONIC);
@@ -97,7 +97,7 @@ public class Goo extends Mob {
 			}
 			if (HP*2 == HT) {
 				BossHealthBar.bleed(false);
-				((HandclabSprite)sprite).spray(false);
+				((HandclapSprite)sprite).spray(false);
 			}
 			HP++;
 		}
@@ -134,14 +134,14 @@ public class Goo extends Mob {
 		super.updateSpriteState();
 
 		if (pumpedUp > 0){
-			((HandclabSprite)sprite).pumpUp( pumpedUp );
+			((HandclapSprite)sprite).pumpUp( pumpedUp );
 		}
 	}
 
 	@Override
 	protected boolean doAttack( Char enemy ) {
 		if (pumpedUp == 1) {
-			((HandclabSprite)sprite).pumpUp( 2 );
+			((HandclapSprite)sprite).pumpUp( 2 );
 			pumpedUp++;
 
 			spend( attackDelay() );
@@ -153,13 +153,13 @@ public class Goo extends Mob {
 
 			if (visible) {
 				if (pumpedUp >= 2) {
-					((HandclabSprite) sprite).pumpAttack();
+					((HandclapSprite) sprite).pumpAttack();
 				} else {
 					sprite.attack(enemy.pos);
 				}
 			} else {
 				if (pumpedUp >= 2){
-					((HandclabSprite)sprite).triggerEmitters();
+					((HandclapSprite)sprite).triggerEmitters();
 				}
 				attack( enemy );
 			}
@@ -172,7 +172,7 @@ public class Goo extends Mob {
 
 			pumpedUp++;
 
-			((HandclabSprite)sprite).pumpUp( 1 );
+			((HandclapSprite)sprite).pumpUp( 1 );
 
 			if (Dungeon.level.heroFOV[pos]) {
 				sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "!!!") );
@@ -211,7 +211,7 @@ public class Goo extends Mob {
 		if ((HP*2 <= HT) && !bleeding){
 			BossHealthBar.bleed(true);
 			sprite.showStatus(CharSprite.NEGATIVE, Messages.get(this, "enraged"));
-			((HandclabSprite)sprite).spray(true);
+			((HandclapSprite)sprite).spray(true);
 			yell(Messages.get(this, "gluuurp"));
 		}
 		LockedFloor lock = Dungeon.hero.buff(LockedFloor.class);
