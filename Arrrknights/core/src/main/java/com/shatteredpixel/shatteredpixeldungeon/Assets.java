@@ -112,6 +112,15 @@ public class Assets {
 
 	public static class Music {
 		public static final String GAME		= "music/game.ogg";
+		public static final String GAME2		= "music/game2.ogg";
+		public static final String GAME3		= "music/game3.ogg";
+		public static final String GAME4		= "music/game4.ogg";
+		public static final String GAME5		= "music/game5.ogg";
+		public static final String BOSS		= "music/boss.ogg";
+		public static final String BOSS2		= "music/boss2.ogg";
+		public static final String BOSS3		= "music/boss3.ogg";
+		public static final String BOSS4		= "music/boss4.ogg";
+		public static final String BOSS5		= "music/boss5.ogg";
 		public static final String SURFACE	= "music/surface.ogg";
 		public static final String THEME	= "music/theme.ogg";
 	}
