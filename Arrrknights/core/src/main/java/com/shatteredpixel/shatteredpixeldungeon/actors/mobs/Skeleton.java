@@ -39,9 +39,9 @@ public class Skeleton extends Mob {
 	{
 		spriteClass = BombtailSprite.class;
 		
-		HP = HT = 15;
-		defenseSkill = 5;
-		baseSpeed = 0.8f;
+		HP = HT = 12;
+		defenseSkill = 2;
+		baseSpeed = 0.5f;
 		
 		EXP = 5;
 		maxLvl = 10;
@@ -55,7 +55,7 @@ public class Skeleton extends Mob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 2, 2 );
+		return Random.NormalIntRange( 1, 1 );
 	}
 	
 	@Override
@@ -70,7 +70,7 @@ public class Skeleton extends Mob {
 			Char ch = findChar( pos + PathFinder.NEIGHBOURS8[i] );
 			if (ch != null && ch.isAlive()) {
 				int damage = Random.NormalIntRange(15, 25);
-				damage = Math.max( 0,  damage - (ch.drRoll() + ch.drRoll()) );
+				damage = Math.max( 0,  damage - (ch.drRoll() + ch.drRoll() + ch.drRoll()) );
 				ch.damage( damage, this );
 				if (ch == Dungeon.hero && !ch.isAlive()) {
 					heroKilled = true;
