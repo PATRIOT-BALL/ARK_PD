@@ -258,7 +258,7 @@ public class Assets {
 		public static final String KING		= "sprites/king.png";
 		public static final String EYE		= "sprites/eye.png";
 
-		public static final String SKELETON	= "sprites/skeleton.png";
+		public static final String BOMBTAIL	= "sprites/bombtail.png";
 		public static final String SHAMAN	= "sprites/shaman.png";
 		public static final String THIEF	= "sprites/thief.png";
 		public static final String W	= "sprites/w.png";
@@ -289,7 +289,7 @@ public class Assets {
 		public static final String GHOUL	= "sprites/ghoul.png";
 		public static final String RIPPER	= "sprites/ripper.png";
 		public static final String SPAWNER	= "sprites/spawner.png";
-		public static final String DM100	= "sprites/dm100.png";
+		public static final String A_MASTER1	= "sprites/arts_master1.png";
 		public static final String PYLON	= "sprites/pylon.png";
 
 

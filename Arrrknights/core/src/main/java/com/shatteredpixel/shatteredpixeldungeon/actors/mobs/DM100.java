@@ -28,7 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.DM100Sprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.A_master1Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.utils.Callback;
@@ -39,7 +39,7 @@ public class DM100 extends Mob implements Callback {
 	private static final float TIME_TO_ZAP	= 1f;
 	
 	{
-		spriteClass = DM100Sprite.class;
+		spriteClass = A_master1Sprite.class;
 		
 		HP = HT = 20;
 		defenseSkill = 8;

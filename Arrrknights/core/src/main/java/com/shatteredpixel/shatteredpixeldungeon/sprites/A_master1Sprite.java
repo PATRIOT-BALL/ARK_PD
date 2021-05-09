@@ -31,29 +31,29 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.PointF;
 
-public class DM100Sprite extends MobSprite {
+public class A_master1Sprite extends MobSprite {
 	
-	public DM100Sprite () {
+	public A_master1Sprite() {
 		super();
 		
-		texture( Assets.Sprites.DM100 );
+		texture( Assets.Sprites.A_MASTER1 );
 		
-		TextureFilm frames = new TextureFilm( texture, 16, 14 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 1, true );
-		idle.frames( frames, 0, 1 );
+		idle.frames( frames, 0, 1, 2, 3 );
 
 		run = new Animation( 12, true );
-		run.frames( frames, 6, 7, 8, 9 );
+		run.frames( frames, 0, 1, 2, 3 );
 		
-		attack = new Animation( 12, false );
-		attack.frames( frames, 2, 3, 4, 0 );
+		attack = new Animation( 14, false );
+		attack.frames( frames, 3, 4, 5, 6 );
 
-		zap = new Animation( 8, false );
-		zap.frames( frames, 5, 5, 1 );
+		zap = new Animation( 14, false );
+		zap.frames( frames, 3, 4, 5, 6 );
 
 		die = new Animation( 12, false );
-		die.frames( frames, 10, 11, 12, 13, 14, 15 );
+		die.frames( frames, 6, 7, 8, 9, 10, 11);
 		
 		play( idle );
 	}
@@ -99,6 +99,6 @@ public class DM100Sprite extends MobSprite {
 
 	@Override
 	public int blood() {
-		return 0xFFFFFF88;
+		return 0xFFcccccc;
 	}
 }

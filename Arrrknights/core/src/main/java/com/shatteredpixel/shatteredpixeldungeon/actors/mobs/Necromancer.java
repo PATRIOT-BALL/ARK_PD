@@ -36,7 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NecromancerSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.SkeletonSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -339,7 +339,7 @@ public class Necromancer extends Mob {
 		{
 			state = WANDERING;
 			
-			spriteClass = NecroSkeletonSprite.class;
+			spriteClass = BombtailSprite.class;
 			
 			//no loot or exp
 			maxLvl = -5;
@@ -357,7 +357,7 @@ public class Necromancer extends Mob {
 			spend(TICK);
 		}
 		
-		public static class NecroSkeletonSprite extends SkeletonSprite{
+		public static class NecroSkeletonSprite extends BombtailSprite {
 			
 			public NecroSkeletonSprite(){
 				super();
