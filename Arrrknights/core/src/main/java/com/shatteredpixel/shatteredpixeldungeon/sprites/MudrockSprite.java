@@ -126,7 +126,6 @@ public class MudrockSprite extends MobSprite {
 		
 		if (anim == die) {
 			Sample.INSTANCE.play(Assets.Sounds.BLAST);
-			emitter().burst( BlastParticle.FACTORY, 100 );
 			killAndErase();
 		}
 	}
