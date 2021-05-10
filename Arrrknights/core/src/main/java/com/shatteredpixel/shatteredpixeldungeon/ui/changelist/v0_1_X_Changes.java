@@ -70,13 +70,12 @@ public class v0_1_X_Changes {
 		changes.hardlight(CharSprite.WARNING);
 		changeInfos.add(changes);
 
-		changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLAZE, 0, 0, 24, 15), "블레이즈!",
-				"3저지 국밥!\n\n" +
-						"블레이즈는 페도가 아닙니다."));
+		changes.addButton(new ChangeButton(new Image(Assets.Sprites.BOMBTAIL, 6, 12, 16, 16), "폭탄새!",
+				"- 날아다닙니다!\n\n" +
+						"- 스펙이 매우 낮고 이동속도가 느립니다. 대신 자폭 피해가 매우 강합니다!"));
 
-		changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLAZE, 0, 0, 24, 15), "블레이즈!",
-				"2스쓰세요!\n\n" +
-						"블레이즈는 페도가 맞습니다."));
+		changes.addButton(new ChangeButton(new Image(Assets.Sprites.NECRO, 0, 0, 16, 16), "기술자!",
+				"- 자신이 소환한 폭탄새를 회복,강화시키는 대신 불태워버립니다!"));
 
 	/*
 		changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
