@@ -53,7 +53,7 @@ public class Effects {
 				icon.frame(icon.texture.uvRect(0, 16, 6, 25));
 				break;
 			case CHAIN:
-				icon.frame(icon.texture.uvRect(6, 16, 11, 22));
+				icon.frame(icon.texture.uvRect(6, 16, 12, 24));
 				break;
 			case DEATH_RAY:
 				icon.frame(icon.texture.uvRect(16, 16, 32, 24));

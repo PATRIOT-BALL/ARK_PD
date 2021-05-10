@@ -38,17 +38,17 @@ public class WSprite extends MobSprite {
 		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, 0, 0, 0, 1 );
+		idle.frames( frames, 20 );
 		
 		run = new Animation( 15, false );
 		run.frames( frames, 2, 3, 4, 5, 0 );
 		
 		attack = new Animation( 15, false );
-		attack.frames( frames, 6, 7, 7, 0 );
+		attack.frames( frames, 21, 22, 23, 24, 25, 26, 27, 28 );
 		
 		zap = attack.clone();
 		
-		die = new Animation( 8, false );
+		die = new Animation( 10, false );
 		die.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 );
 		
 		play( run.clone() );

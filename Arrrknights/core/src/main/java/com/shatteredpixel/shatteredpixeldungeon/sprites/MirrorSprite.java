@@ -28,8 +28,8 @@ import com.watabou.noosa.TextureFilm;
 
 public class MirrorSprite extends MobSprite {
 	
-	private static final int FRAME_WIDTH	= 12;
-	private static final int FRAME_HEIGHT	= 15;
+	private static final int FRAME_WIDTH	= 32;
+	private static final int FRAME_HEIGHT	= 34;
 	
 	public MirrorSprite() {
 		super();
@@ -44,22 +44,22 @@ public class MirrorSprite extends MobSprite {
 		super.link( ch );
 		updateArmor( ((MirrorImage)ch).armTier );
 	}
-	
+
 	public void updateArmor( int tier ) {
 		TextureFilm film = new TextureFilm( HeroSprite.tiers(), tier, FRAME_WIDTH, FRAME_HEIGHT );
-		
+
 		idle = new Animation( 1, true );
-		idle.frames( film, 0, 0, 0, 1, 0, 0, 1, 1 );
-		
+		idle.frames( film, 0, 0, 0 );
+
 		run = new Animation( 20, true );
-		run.frames( film, 2, 3, 4, 5, 6, 7 );
-		
+		run.frames( film, 1, 2, 3, 4, 5, 6, 7, 8  );
+
 		die = new Animation( 20, false );
-		die.frames( film, 0 );
-		
+		die.frames( film, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 );
+
 		attack = new Animation( 15, false );
-		attack.frames( film, 13, 14, 15, 0 );
-		
+		attack.frames( film, 9, 10, 11, 12, 13, 14, 15, 16 );
+
 		idle();
 	}
 }
