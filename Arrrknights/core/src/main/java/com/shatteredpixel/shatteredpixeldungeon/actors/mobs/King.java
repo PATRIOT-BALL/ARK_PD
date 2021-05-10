@@ -68,7 +68,6 @@ public class King extends Mob {
 		Undead.count = 0;
 
 		properties.add(Property.BOSS);
-		properties.add(Property.UNDEAD);
 	}
 	
 	private boolean nextPedestal = true;
@@ -265,7 +264,6 @@ public class King extends Mob {
 			
 			state = WANDERING;
 
-			properties.add(Property.UNDEAD);
 			properties.add(Property.INORGANIC);
 		}
 		

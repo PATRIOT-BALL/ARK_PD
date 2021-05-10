@@ -73,7 +73,6 @@ public class DwarfKing extends Mob {
 		defenseSkill = 22;
 
 		properties.add(Property.BOSS);
-		properties.add(Property.UNDEAD);
 	}
 
 	@Override

@@ -55,8 +55,6 @@ public class Guard extends Mob {
 
 		loot = Generator.Category.ARMOR;
 		lootChance = 0.2f; //by default, see rollToDropLoot()
-
-		properties.add(Property.UNDEAD);
 		
 		HUNTING = new Hunting();
 	}

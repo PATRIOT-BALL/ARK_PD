@@ -56,8 +56,6 @@ public class Necromancer extends Mob {
 		loot = new PotionOfHealing();
 		lootChance = 0.2f; //see createloot
 		
-		properties.add(Property.UNDEAD);
-		
 		HUNTING = new Hunting();
 	}
 	
