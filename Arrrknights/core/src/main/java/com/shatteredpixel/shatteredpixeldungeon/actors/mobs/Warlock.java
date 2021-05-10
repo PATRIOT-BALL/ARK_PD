@@ -64,7 +64,7 @@ public class Warlock extends Mob implements Callback {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		Buff.affect(this, Bleeding.class).set(4);
+		Buff.affect(this, Bleeding.class).set(6);
 		return 25;
 	}
 	
