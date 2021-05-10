@@ -51,7 +51,7 @@ public class MudrockSprite extends MobSprite {
 	public void updateChargeState( boolean enraged ){
 		if (superchargeSparks != null) superchargeSparks.on = enraged;
 
-		int c = enraged ? 10 : 0;
+		int c = enraged ? 44 : 0;
 
 		TextureFilm frames = new TextureFilm( texture, 42, 42 );
 
