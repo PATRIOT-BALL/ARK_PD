@@ -515,7 +515,7 @@ public class DriedRose extends Artifact {
 		{
 			spriteClass = Guard_operSprite.class;
 
-			flying = true;
+			flying = false;
 
 			alignment = Alignment.ALLY;
 			intelligentAlly = true;

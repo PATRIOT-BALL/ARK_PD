@@ -59,8 +59,6 @@ public class Ghost extends NPC {
 	{
 		spriteClass = Guard_operSprite.class;
 		
-		flying = false;
-		
 		state = WANDERING;
 	}
 
