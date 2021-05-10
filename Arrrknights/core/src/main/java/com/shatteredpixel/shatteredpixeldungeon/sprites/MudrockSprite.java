@@ -53,7 +53,7 @@ public class MudrockSprite extends MobSprite {
 
 		int c = enraged ? 10 : 0;
 
-		TextureFilm frames = new TextureFilm( texture, 48, 48 );
+		TextureFilm frames = new TextureFilm( texture, 42, 42 );
 
 		idle = new Animation( enraged ? 15 : 10, true );
 		idle.frames( frames, c+0 );
@@ -73,7 +73,7 @@ public class MudrockSprite extends MobSprite {
 			slam = attack.clone();
 
 			zap = new Animation(15, false);
-			zap.frames(frames, 9, 10, 11, 12, 13, 14, 15, 16, 17);
+			zap.frames(frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
 			die = new Animation(20, false);
 			die.frames(frames, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34);

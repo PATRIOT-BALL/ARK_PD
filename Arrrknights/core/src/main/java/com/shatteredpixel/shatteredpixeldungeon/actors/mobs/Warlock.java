@@ -33,7 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.WarlockSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ThrowerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
@@ -44,7 +44,7 @@ public class Warlock extends Mob implements Callback {
 	private static final float TIME_TO_ZAP	= 1f;
 	
 	{
-		spriteClass = WarlockSprite.class;
+		spriteClass = ThrowerSprite.class;
 		
 		HP = HT = 75;
 		defenseSkill = 18;
