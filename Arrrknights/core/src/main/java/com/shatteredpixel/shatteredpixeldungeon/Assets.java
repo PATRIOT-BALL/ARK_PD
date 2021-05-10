@@ -276,7 +276,7 @@ public class Assets {
 		public static final String LARVA	= "sprites/larva.png";
 		public static final String ACE	= "sprites/ace.png";
 
-		public static final String IMP		= "sprites/demon.png";
+		public static final String IMP		= "sprites/cannot.png";
 		public static final String AJIMU	= "sprites/ajimu.png";
 		public static final String BEE      = "sprites/bee.png";
 		public static final String MIMIC    = "sprites/mimic.png";
