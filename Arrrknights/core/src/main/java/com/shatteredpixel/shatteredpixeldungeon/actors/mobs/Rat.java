@@ -22,6 +22,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.RatSprite;
 import com.watabou.utils.Random;
 
@@ -42,9 +44,7 @@ public class Rat extends Mob {
 	}
 	
 	@Override
-	public int attackSkill( Char target ) {
-		return 8;
-	}
+	public int attackSkill( Char target ) {return 8; }
 	
 	@Override
 	public int drRoll() {

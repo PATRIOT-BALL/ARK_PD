@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
@@ -39,7 +40,7 @@ public class Monk extends Mob {
 	{
 		spriteClass = MonkSprite.class;
 		
-		HP = HT = 70;
+		HP = HT = 90;
 		defenseSkill = 30;
 		
 		EXP = 11;
@@ -58,6 +59,7 @@ public class Monk extends Mob {
 	
 	@Override
 	public int attackSkill( Char target ) {
+		Buff.affect(this, Bleeding.class).set(4);
 		return 30;
 	}
 	
