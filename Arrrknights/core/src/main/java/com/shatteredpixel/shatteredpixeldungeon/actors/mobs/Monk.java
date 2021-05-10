@@ -48,7 +48,7 @@ public class Monk extends Mob {
 		loot = new Food();
 		lootChance = 0.083f;
 
-		properties.add(Property.UNDEAD);
+
 	}
 	
 	@Override

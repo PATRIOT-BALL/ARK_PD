@@ -51,7 +51,6 @@ public class Skeleton extends Mob {
 		loot = Generator.Category.WEAPON;
 		lootChance = 0.2f; //by default, see rollToDropLoot()
 
-		properties.add(Property.UNDEAD);
 		properties.add(Property.INORGANIC);
 	}
 	
