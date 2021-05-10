@@ -39,7 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.RitualSite
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Rotberry;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.WandmakerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.AceSprite;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndQuest;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndWandmaker;
 import com.watabou.noosa.Game;
@@ -53,7 +53,7 @@ import java.util.ArrayList;
 public class Wandmaker extends NPC {
 
 	{
-		spriteClass = WandmakerSprite.class;
+		spriteClass = AceSprite.class;
 
 		properties.add(Property.IMMOVABLE);
 	}

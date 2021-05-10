@@ -28,19 +28,19 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 
-public class WandmakerSprite extends MobSprite {
+public class AceSprite extends MobSprite {
 	
 	private ShieldHalo shield;
 	
-	public WandmakerSprite() {
+	public AceSprite() {
 		super();
 		
-		texture( Assets.Sprites.MAKER );
+		texture( Assets.Sprites.ACE );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 14 );
+		TextureFilm frames = new TextureFilm( texture, 34, 34 );
 		
 		idle = new Animation( 10, true );
-		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 3, 3, 3, 3, 3, 2, 1 );
+		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
 		
 		run = new Animation( 20, true );
 		run.frames( frames, 0 );

@@ -26,11 +26,11 @@ import com.watabou.noosa.TextureFilm;
 
 import java.util.Calendar;
 
-public class RatKingSprite extends MobSprite {
+public class AjimuSprite extends MobSprite {
 
 	public boolean festive;
 	
-	public RatKingSprite() {
+	public AjimuSprite() {
 		super();
 
 		final Calendar calendar = Calendar.getInstance();
@@ -40,15 +40,15 @@ public class RatKingSprite extends MobSprite {
 
 		final int c = festive ? 8 : 0;
 		
-		texture( Assets.Sprites.RATKING );
+		texture( Assets.Sprites.AJIMU );
 		
-		TextureFilm frames = new TextureFilm( texture, 16, 17 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, c+0, c+0, c+0, c+1 );
+		idle.frames( frames, c+8, c+9, c+10, c+10, c+10, c+10, c+9, c+8, c+8, c+8, c+8, c+8, c+8, c+8, c+8 );
 		
-		run = new Animation( 10, true );
-		run.frames( frames, c+2, c+3, c+4, c+5, c+6 );
+		run = new Animation( 15, true );
+		run.frames( frames, c+0, c+1, c+2, c+3, c+4, c+5, c+6);
 		
 		attack = new Animation( 15, false );
 		attack.frames( frames, c+0 );

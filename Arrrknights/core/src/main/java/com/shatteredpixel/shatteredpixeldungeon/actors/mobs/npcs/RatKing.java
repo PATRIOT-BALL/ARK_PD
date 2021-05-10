@@ -25,12 +25,12 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.RatKingSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.AjimuSprite;
 
 public class RatKing extends NPC {
 
 	{
-		spriteClass = RatKingSprite.class;
+		spriteClass = AjimuSprite.class;
 		
 		state = SLEEPING;
 	}
@@ -115,7 +115,7 @@ public class RatKing extends NPC {
 	
 	@Override
 	public String description() {
-		return ((RatKingSprite)sprite).festive ?
+		return ((AjimuSprite)sprite).festive ?
 				Messages.get(this, "desc_festive")
 				: super.description();
 	}

@@ -30,13 +30,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
-import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.FistSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.NecromancerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ScoutSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -45,7 +43,7 @@ import com.watabou.utils.Random;
 public class Necromancer extends Mob {
 	
 	{
-		spriteClass = NecromancerSprite.class;
+		spriteClass = ScoutSprite.class;
 		
 		HP = HT = 40;
 		defenseSkill = 14;
@@ -73,7 +71,7 @@ public class Necromancer extends Mob {
 	protected boolean act() {
 		if (summoning && state != HUNTING){
 			summoning = false;
-			if (sprite instanceof NecromancerSprite) ((NecromancerSprite) sprite).cancelSummoning();
+			if (sprite instanceof ScoutSprite) ((ScoutSprite) sprite).cancelSummoning();
 		}
 		return super.act();
 	}
@@ -220,7 +218,7 @@ public class Necromancer extends Mob {
 				mySkeleton.pos = summoningPos;
 				GameScene.add( mySkeleton );
 				Dungeon.level.occupyCell( mySkeleton );
-				((NecromancerSprite)sprite).finishSummoning();
+				((ScoutSprite)sprite).finishSummoning();
 				
 				if (buff(Corruption.class) != null){
 					Buff.affect(mySkeleton, Corruption.class);

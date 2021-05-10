@@ -74,7 +74,7 @@ public class v0_1_X_Changes {
 				"- 날아다닙니다!\n\n" +
 						"- 스펙이 매우 낮고 이동속도가 느립니다. 대신 자폭 피해가 매우 강합니다!"));
 
-		changes.addButton(new ChangeButton(new Image(Assets.Sprites.NECRO, 0, 0, 16, 16), "기술자!",
+		changes.addButton(new ChangeButton(new Image(Assets.Sprites.SCOUT, 0, 0, 16, 16), "기술자!",
 				"- 자신이 소환한 폭탄새를 회복,강화시키는 대신 불태워버립니다!"));
 
 	/*

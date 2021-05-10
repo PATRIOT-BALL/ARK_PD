@@ -31,31 +31,31 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 
-public class NecromancerSprite extends MobSprite {
+public class ScoutSprite extends MobSprite {
 	
 	private Animation charging;
 	private Emitter summoningBones;
 	
-	public NecromancerSprite(){
+	public ScoutSprite(){
 		super();
 		
-		texture( Assets.Sprites.NECRO );
-		TextureFilm film = new TextureFilm( texture, 16, 16 );
+		texture( Assets.Sprites.SCOUT );
+		TextureFilm film = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 1, true );
-		idle.frames( film, 0, 0, 0, 1, 0, 0, 0, 0, 1 );
+		idle.frames( film, 0, 0, 0);
 		
 		run = new Animation( 8, true );
-		run.frames( film, 0, 0, 0, 2, 3, 4 );
+		run.frames( film, 0, 0 );
 		
 		zap = new Animation( 10, false );
-		zap.frames( film, 5, 6, 7, 8 );
+		zap.frames( film, 0 );
 		
 		charging = new Animation( 5, true );
-		charging.frames( film, 7, 8 );
+		charging.frames( film, 0 );
 		
 		die = new Animation( 10, false );
-		die.frames( film, 9, 10, 11, 12 );
+		die.frames( film, 0 );
 		
 		attack = zap.clone();
 		

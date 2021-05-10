@@ -274,10 +274,10 @@ public class Assets {
 		public static final String FISTS	= "sprites/yog_fists.png";
 		public static final String YOG		= "sprites/yog.png";
 		public static final String LARVA	= "sprites/larva.png";
-		public static final String MAKER	= "sprites/wandmaker.png";
+		public static final String ACE	= "sprites/ace.png";
 
 		public static final String IMP		= "sprites/demon.png";
-		public static final String RATKING	= "sprites/ratking.png";
+		public static final String AJIMU	= "sprites/ajimu.png";
 		public static final String BEE      = "sprites/bee.png";
 		public static final String MIMIC    = "sprites/mimic.png";
 		public static final String ROT_LASH = "sprites/rot_lasher.png";
@@ -285,7 +285,7 @@ public class Assets {
 		public static final String S_CASTER    = "sprites/Sarkaz_Caster.png";
 		public static final String WARDS    = "sprites/wards.png";
 		public static final String GUARDIAN	= "sprites/guardian.png";
-		public static final String NECRO	= "sprites/necromancer.png";
+		public static final String SCOUT	= "sprites/scout.png";
 		public static final String GHOUL	= "sprites/ghoul.png";
 		public static final String RIPPER	= "sprites/ripper.png";
 		public static final String SPAWNER	= "sprites/spawner.png";
