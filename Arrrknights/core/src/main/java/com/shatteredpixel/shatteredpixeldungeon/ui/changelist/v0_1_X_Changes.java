@@ -71,7 +71,7 @@ public class v0_1_X_Changes {
 		changeInfos.add(changes);
 
 		changes.addButton(new ChangeButton(new Image(Assets.Sprites.BOMBTAIL, 6, 12, 16, 16), "폭탄새",
-				"- [파리떼]에서 변경되었습니다.\n\n" +
+				"- [해골]에서 변경되었습니다.\n\n" +
 						"- 스펙이 매우 낮고 이동속도가 느립니다. 대신 자폭 피해가 매우 강합니다!"));
 
 		changes.addButton(new ChangeButton(new Image(Assets.Sprites.SCOUT, 6, 4, 16, 16), "정찰기술자",
