@@ -176,10 +176,11 @@ public class SurfaceScene extends PixelScene {
 				wardLevel = Math.max(wardLevel, staff.level());
 			}
 		}
-		
+
+		allySprite = new Guard_operSprite();
 		if (roseLevel >= 3 && roseLevel >= earthLevel && roseLevel >= wardLevel){
 			allySprite = new Guard_operSprite();
-			if (dayTime) allySprite.alpha(0.4f);
+			if (dayTime) allySprite.alpha(1.0f);
 		} else if (earthLevel >= 3 && earthLevel >= wardLevel){
 			allySprite = new EarthGuardianSprite();
 		} else if (wardLevel >= 3){
@@ -189,7 +190,7 @@ public class SurfaceScene extends PixelScene {
 		
 		if (allySprite != null){
 			allySprite.add(CharSprite.State.PARALYSED);
-			allySprite.scale = new PointF(2, 2);
+			allySprite.scale = new PointF(1, 1);
 			allySprite.x = a.x - allySprite.width()*0.75f;
 			allySprite.y = SKY_HEIGHT - allySprite.height();
 			align(allySprite);
