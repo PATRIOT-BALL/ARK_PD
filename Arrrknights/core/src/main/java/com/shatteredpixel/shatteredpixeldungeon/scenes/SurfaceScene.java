@@ -176,8 +176,7 @@ public class SurfaceScene extends PixelScene {
 				wardLevel = Math.max(wardLevel, staff.level());
 			}
 		}
-
-		allySprite = new Guard_operSprite();
+		
 		if (roseLevel >= 3 && roseLevel >= earthLevel && roseLevel >= wardLevel){
 			allySprite = new Guard_operSprite();
 			if (dayTime) allySprite.alpha(1.0f);
