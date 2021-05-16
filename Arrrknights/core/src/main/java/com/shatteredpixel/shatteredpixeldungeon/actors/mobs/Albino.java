@@ -25,13 +25,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.AlbinoSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
 import com.watabou.utils.Random;
 
 public class Albino extends Rat {
 
 	{
-		spriteClass = AlbinoSprite.class;
+		spriteClass = Bug_ASprite.class;
 		
 		HP = HT = 15;
 		EXP = 2;

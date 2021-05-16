@@ -31,7 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GhoulSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.PossessedSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -41,7 +41,7 @@ import java.util.ArrayList;
 public class Ghoul extends Mob {
 	
 	{
-		spriteClass = GhoulSprite.class;
+		spriteClass = PossessedSprite.class;
 		
 		HP = HT = 45;
 		defenseSkill = 20;
@@ -150,7 +150,7 @@ public class Ghoul extends Mob {
 				Dungeon.level.mobs.remove( this );
 				timesDowned++;
 				Buff.append(nearby, GhoulLifeLink.class).set(timesDowned*5, this);
-				((GhoulSprite)sprite).crumple();
+				((PossessedSprite)sprite).crumple();
 				beingLifeLinked = false;
 				return;
 			}
@@ -285,7 +285,7 @@ public class Ghoul extends Mob {
 		public void fx(boolean on) {
 			if (on && ghoul != null && ghoul.sprite == null){
 				GameScene.addSprite(ghoul);
-				((GhoulSprite)ghoul.sprite).crumple();
+				((PossessedSprite)ghoul.sprite).crumple();
 			}
 		}
 

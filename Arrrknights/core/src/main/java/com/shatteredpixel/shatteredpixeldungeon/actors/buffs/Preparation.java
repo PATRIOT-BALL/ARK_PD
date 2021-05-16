@@ -303,7 +303,7 @@ public class Preparation extends Buff implements ActionIndicator.Action {
 				Dungeon.hero.sprite.place( Dungeon.hero.pos );
 				Dungeon.hero.sprite.turnTo( Dungeon.hero.pos, cell);
 				CellEmitter.get( Dungeon.hero.pos ).burst( Speck.factory( Speck.WOOL ), 6 );
-				Sample.INSTANCE.play( Assets.Sounds.PUFF );
+				Sample.INSTANCE.play( Assets.Sounds.HIT_SLASH );
 
 				Dungeon.hero.curAction = new HeroAction.Attack( enemy );
 				Dungeon.hero.next();

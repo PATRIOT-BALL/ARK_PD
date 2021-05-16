@@ -36,7 +36,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Callback;
 
-public abstract class ElementalSprite extends MobSprite {
+public abstract class DroneSprite extends MobSprite {
 	
 	protected int boltType;
 	
@@ -45,20 +45,20 @@ public abstract class ElementalSprite extends MobSprite {
 	private Emitter particles;
 	protected abstract Emitter createEmitter();
 	
-	public ElementalSprite() {
+	public DroneSprite() {
 		super();
 		
 		int c = texOffset();
 		
-		texture( Assets.Sprites.ELEMENTAL );
+		texture( Assets.Sprites.DRONE );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 14 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 10, true );
-		idle.frames( frames, c+0, c+1, c+2 );
+		idle.frames( frames, c+0, c+1, c+2, c+3 );
 		
 		run = new Animation( 12, true );
-		run.frames( frames, c+0, c+1, c+3 );
+		run.frames( frames, c+0, c+1, c+2, c+3 );
 		
 		attack = new Animation( 15, false );
 		attack.frames( frames, c+4, c+5, c+6 );
@@ -66,7 +66,7 @@ public abstract class ElementalSprite extends MobSprite {
 		zap = attack.clone();
 		
 		die = new Animation( 15, false );
-		die.frames( frames, c+7, c+8, c+9, c+10, c+11, c+12, c+13, c+12 );
+		die.frames( frames, c+7, c+8, c+9, c+10, c+11, c+12 );
 		
 		play( idle );
 	}
@@ -131,7 +131,7 @@ public abstract class ElementalSprite extends MobSprite {
 		super.onComplete( anim );
 	}
 	
-	public static class Fire extends ElementalSprite {
+	public static class Fire extends DroneSprite {
 		
 		{
 			boltType = MagicMissile.FIRE;
@@ -155,7 +155,7 @@ public abstract class ElementalSprite extends MobSprite {
 		}
 	}
 	
-	public static class NewbornFire extends ElementalSprite {
+	public static class NewbornFire extends DroneSprite {
 		
 		{
 			boltType = MagicMissile.FIRE;
@@ -163,7 +163,7 @@ public abstract class ElementalSprite extends MobSprite {
 		
 		@Override
 		protected int texOffset() {
-			return 14;
+			return 30;
 		}
 		
 		@Override
@@ -179,7 +179,7 @@ public abstract class ElementalSprite extends MobSprite {
 		}
 	}
 	
-	public static class Frost extends ElementalSprite {
+	public static class Frost extends DroneSprite {
 		
 		{
 			boltType = MagicMissile.FROST;
@@ -187,7 +187,7 @@ public abstract class ElementalSprite extends MobSprite {
 		
 		@Override
 		protected int texOffset() {
-			return 28;
+			return 60;
 		}
 		
 		@Override
@@ -203,7 +203,7 @@ public abstract class ElementalSprite extends MobSprite {
 		}
 	}
 	
-	public static class Shock extends ElementalSprite {
+	public static class Shock extends DroneSprite {
 		
 		//different bolt, so overrides zap
 		@Override
@@ -217,7 +217,7 @@ public abstract class ElementalSprite extends MobSprite {
 		
 		@Override
 		protected int texOffset() {
-			return 42;
+			return 90;
 		}
 		
 		@Override
@@ -233,7 +233,7 @@ public abstract class ElementalSprite extends MobSprite {
 		}
 	}
 	
-	public static class Chaos extends ElementalSprite {
+	public static class Chaos extends DroneSprite {
 
 		{
 			boltType = MagicMissile.RAINBOW;
@@ -241,7 +241,7 @@ public abstract class ElementalSprite extends MobSprite {
 		
 		@Override
 		protected int texOffset() {
-			return 56;
+			return 120;
 		}
 		
 		@Override

@@ -24,30 +24,27 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class SnakeSprite extends MobSprite {
-	
-	public SnakeSprite() {
+public class RivengerSprite extends MobSprite {
+
+	public RivengerSprite() {
 		super();
-		
-		texture( Assets.Sprites.SNAKE );
-		
-		TextureFilm frames = new TextureFilm( texture, 12, 11 );
-		
-		//many frames here as we want the rising/falling to be slow but the tongue to be fast
-		idle = new Animation( 10, true );
-		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-		                     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 2, 1, 1);
-		
-		run = new Animation( 8, true );
-		run.frames( frames, 4, 5, 6, 7 );
-		
-		attack = new Animation( 15, false );
-		attack.frames( frames, 8, 9, 10, 9, 0);
-		
-		die = new Animation( 10, false );
-		die.frames( frames, 11, 12, 13 );
-		
-		play(idle);
+
+		texture( Assets.Sprites.RIVENGER );
+
+		TextureFilm frames = new TextureFilm( texture, 46, 32 );
+
+		idle = new Animation( 2, true );
+		idle.frames( frames, 11 );
+
+		run = new Animation( 12, true );
+		run.frames( frames, 11 );
+
+		attack = new Animation( 17, false );
+		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 );
+
+		die = new Animation( 12, false );
+		die.frames( frames, 11 );
+
+		play( idle );
 	}
-	
 }

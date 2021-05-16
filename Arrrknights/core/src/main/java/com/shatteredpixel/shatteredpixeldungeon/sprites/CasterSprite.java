@@ -28,34 +28,34 @@ import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
 
-public abstract class ShamanSprite extends MobSprite {
+public abstract class CasterSprite extends MobSprite {
 	
 	protected int boltType;
 	
 	protected abstract int texOffset();
 	
-	public ShamanSprite() {
+	public CasterSprite() {
 		super();
 		
 		int c = texOffset();
 		
-		texture( Assets.Sprites.SHAMAN );
+		texture( Assets.Sprites.CASTER );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 15 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, c+0, c+0, c+0, c+1, c+0, c+0, c+1, c+1 );
+		idle.frames( frames, c+0, c+0, c+0 );
 		
 		run = new Animation( 12, true );
-		run.frames( frames, c+4, c+5, c+6, c+7 );
+		run.frames( frames, c+0, c+0, c+0 );
 		
 		attack = new Animation( 12, false );
-		attack.frames( frames, c+2, c+3, c+0 );
+		attack.frames( frames, c+0, c+0, c+0 );
 		
 		zap = attack.clone();
 		
 		die = new Animation( 12, false );
-		die.frames( frames, c+8, c+9, c+10 );
+		die.frames( frames, c+0, c+0, c+0 );
 		
 		play( idle );
 	}
@@ -86,7 +86,7 @@ public abstract class ShamanSprite extends MobSprite {
 		super.onComplete( anim );
 	}
 	
-	public static class Red extends ShamanSprite {
+	public static class Red extends CasterSprite {
 		{
 			boltType = MagicMissile.SHAMAN_RED;
 		}
@@ -97,25 +97,25 @@ public abstract class ShamanSprite extends MobSprite {
 		}
 	}
 	
-	public static class Blue extends ShamanSprite {
+	public static class Blue extends CasterSprite {
 		{
 			boltType = MagicMissile.SHAMAN_BLUE;
 		}
 		
 		@Override
 		protected int texOffset() {
-			return 21;
+			return 40;
 		}
 	}
 	
-	public static class Purple extends ShamanSprite {
+	public static class Purple extends CasterSprite {
 		{
 			boltType = MagicMissile.SHAMAN_PURPLE;
 		}
 		
 		@Override
 		protected int texOffset() {
-			return 42;
+			return 80;
 		}
 	}
 }

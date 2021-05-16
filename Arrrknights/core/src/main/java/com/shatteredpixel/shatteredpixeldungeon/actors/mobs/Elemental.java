@@ -41,7 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Shocki
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ElementalSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.DroneSprite;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -173,7 +173,7 @@ public abstract class Elemental extends Mob {
 	public static class FireElemental extends Elemental {
 		
 		{
-			spriteClass = ElementalSprite.Fire.class;
+			spriteClass = DroneSprite.Fire.class;
 			
 			loot = new PotionOfLiquidFlame();
 			lootChance = 1/8f;
@@ -205,7 +205,7 @@ public abstract class Elemental extends Mob {
 	public static class NewbornFireElemental extends FireElemental {
 		
 		{
-			spriteClass = ElementalSprite.NewbornFire.class;
+			spriteClass = DroneSprite.NewbornFire.class;
 			
 			HT = 60;
 			HP = HT/2; //30
@@ -233,7 +233,7 @@ public abstract class Elemental extends Mob {
 	public static class FrostElemental extends Elemental {
 		
 		{
-			spriteClass = ElementalSprite.Frost.class;
+			spriteClass = DroneSprite.Frost.class;
 			
 			loot = new PotionOfFrost();
 			lootChance = 1/8f;
@@ -261,7 +261,7 @@ public abstract class Elemental extends Mob {
 	public static class ShockElemental extends Elemental {
 		
 		{
-			spriteClass = ElementalSprite.Shock.class;
+			spriteClass = DroneSprite.Shock.class;
 			
 			loot = new ScrollOfRecharging();
 			lootChance = 1/4f;
@@ -306,7 +306,7 @@ public abstract class Elemental extends Mob {
 	public static class ChaosElemental extends Elemental {
 		
 		{
-			spriteClass = ElementalSprite.Chaos.class;
+			spriteClass = DroneSprite.Chaos.class;
 			
 			loot = new ScrollOfTransmutation();
 			lootChance = 1f;

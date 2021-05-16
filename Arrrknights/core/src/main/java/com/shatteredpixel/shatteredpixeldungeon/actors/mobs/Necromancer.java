@@ -150,13 +150,13 @@ public class Necromancer extends Mob {
 		}
 		
 		//heal skeleton first
-		if (mySkeleton.buff(Burning.class) == null) {
+		if (mySkeleton.buff(Corruption.class) == null) {
 
 			if (sprite.visible || mySkeleton.sprite.visible) {
 				sprite.parent.add(new Beam.HealthRay(sprite.center(), mySkeleton.sprite.center()));
 			}
 
-			Buff.affect(mySkeleton, Burning.class);
+			Buff.affect(mySkeleton, Corruption.class);
 		}
 		
 		next();

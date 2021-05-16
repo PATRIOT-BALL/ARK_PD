@@ -176,11 +176,11 @@ public class ItemSpriteSheet {
 	public static final int SHRAPNEL_BOMB   = BOMBS+11;
 	
 	static{
-		assignItemRect(BOMB,            10, 13);
-		assignItemRect(DBL_BOMB,        14, 13);
-		assignItemRect(FIRE_BOMB,       13, 12);
-		assignItemRect(FROST_BOMB,      13, 12);
-		assignItemRect(REGROWTH_BOMB,   13, 12);
+		assignItemRect(BOMB,            16, 16);
+		assignItemRect(DBL_BOMB,        16, 16);
+		assignItemRect(FIRE_BOMB,       16, 16);
+		assignItemRect(FROST_BOMB,      16, 16);
+		assignItemRect(REGROWTH_BOMB,   16, 16);
 		assignItemRect(FLASHBANG,       13, 12);
 		assignItemRect(SHOCK_BOMB,      10, 13);
 		assignItemRect(HOLY_BOMB,       10, 13);
@@ -214,11 +214,11 @@ public class ItemSpriteSheet {
 	public static final int QUARTERSTAFF    = WEP_TIER2+3;
 	public static final int DIRK            = WEP_TIER2+4;
 	static{
-		assignItemRect(SHORTSWORD,      13, 13);
-		assignItemRect(HAND_AXE,        12, 14);
+		assignItemRect(SHORTSWORD,      16, 16);
+		assignItemRect(HAND_AXE,        16, 16);
 		assignItemRect(SPEAR,           16, 16);
 		assignItemRect(QUARTERSTAFF,    16, 16);
-		assignItemRect(DIRK,            13, 14);
+		assignItemRect(DIRK,            16, 16);
 	}
 
 	private static final int WEP_TIER3      =                               xy(1, 8);   //8 slots
@@ -333,7 +333,7 @@ public class ItemSpriteSheet {
 	public static final int BLINDING_DART   = TIPPED_DARTS+11;
 	static {
 		for (int i = TIPPED_DARTS; i < TIPPED_DARTS+16; i++)
-			assignItemRect(i, 15, 15);
+			assignItemRect(i, 16, 16);
 	}
 	
 	private static final int ARMOR          =                               xy(1, 12);  //16 slots
@@ -628,19 +628,19 @@ public class ItemSpriteSheet {
 	public static final int BLAND_CHUNKS= FOOD+11;
 	public static final int BERRY =       FOOD+12;
 	static{
-		assignItemRect(MEAT,        15, 11);
-		assignItemRect(STEAK,       15, 11);
-		assignItemRect(STEWED,      15, 11);
-		assignItemRect(OVERPRICED,  14, 11);
-		assignItemRect(CARPACCIO,   15, 11);
-		assignItemRect(RATION,      16, 12);
-		assignItemRect(PASTY,       16, 11);
-		assignItemRect(PUMPKIN_PIE, 16, 12);
-		assignItemRect(CANDY_CANE,  13, 16);
-		assignItemRect(MEAT_PIE,    16, 12);
-		assignItemRect(BLANDFRUIT,  9,  12);
-		assignItemRect(BLAND_CHUNKS,14, 6);
-		assignItemRect(BERRY,       9,  11);
+		assignItemRect(MEAT,        16, 16);
+		assignItemRect(STEAK,       16, 16);
+		assignItemRect(STEWED,      16, 16);
+		assignItemRect(OVERPRICED,  16, 16);
+		assignItemRect(CARPACCIO,   16, 16);
+		assignItemRect(RATION,      16, 16);
+		assignItemRect(PASTY,       16, 16);
+		assignItemRect(PUMPKIN_PIE, 16, 16);
+		assignItemRect(CANDY_CANE,  16, 16);
+		assignItemRect(MEAT_PIE,    16, 16);
+		assignItemRect(BLANDFRUIT,  16, 16);
+		assignItemRect(BLAND_CHUNKS,16, 16);
+		assignItemRect(BERRY,       16, 16);
 	}
 
 	private static final int QUEST  =                                       xy(1, 29);  //32 slots
@@ -654,15 +654,15 @@ public class ItemSpriteSheet {
 	public static final int BLOB    = QUEST+7;
 	public static final int SHARD   = QUEST+8;
 	static{
-		assignItemRect(SKULL,   16, 11);
-		assignItemRect(DUST,    12, 11);
-		assignItemRect(CANDLE,  12, 12);
-		assignItemRect(EMBER,   12, 11);
-		assignItemRect(PICKAXE, 14, 14);
-		assignItemRect(ORE,     15, 15);
-		assignItemRect(TOKEN,   12, 12);
-		assignItemRect(BLOB,    10,  9);
-		assignItemRect(SHARD,    8, 10);
+		assignItemRect(SKULL,   16, 16);
+		assignItemRect(DUST,    16, 16);
+		assignItemRect(CANDLE,  16, 16);
+		assignItemRect(EMBER,   16, 16);
+		assignItemRect(PICKAXE, 16, 16);
+		assignItemRect(ORE,     16, 16);
+		assignItemRect(TOKEN,   16, 16);
+		assignItemRect(BLOB,    16, 16);
+		assignItemRect(SHARD,    16, 16);
 	}
 
 	private static final int BAGS       =                                   xy(1, 31);  //16 slots

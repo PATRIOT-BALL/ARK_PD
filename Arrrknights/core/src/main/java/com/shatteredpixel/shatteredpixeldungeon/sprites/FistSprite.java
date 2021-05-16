@@ -58,22 +58,22 @@ public abstract class FistSprite extends MobSprite {
 
 		texture( Assets.Sprites.FISTS );
 
-		TextureFilm frames = new TextureFilm( texture, 24, 17 );
+		TextureFilm frames = new TextureFilm( texture, 72, 50 );
 
 		idle = new Animation( 2, true );
-		idle.frames( frames, c+0, c+0, c+1 );
+		idle.frames( frames, c+0 );
 
-		run = new Animation( 3, true );
-		run.frames( frames, c+0, c+1 );
+		run = new Animation( 8, true );
+		run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
 
-		attack = new Animation( Math.round(1 / SLAM_TIME), false );
-		attack.frames( frames, c+0 );
+		attack = new Animation( 10, false );
+		attack.frames( frames, c+11 );
 
 		zap = new Animation( 8, false );
-		zap.frames( frames, c+0, c+5, c+6 );
+		zap.frames( frames, c+11 );
 
 		die = new Animation( 10, false );
-		die.frames( frames, c+0, c+2, c+3, c+4 );
+		die.frames( frames, c+0 );
 
 		play( idle );
 	}
@@ -115,8 +115,6 @@ public abstract class FistSprite extends MobSprite {
 	@Override
 	public void attack( int cell ) {
 		super.attack( cell );
-
-		jump(ch.pos, ch.pos, null, 9, SLAM_TIME );
 	}
 
 	public void zap( int cell ) {
@@ -185,7 +183,7 @@ public abstract class FistSprite extends MobSprite {
 
 		@Override
 		protected int texOffset() {
-			return 10;
+			return 30;
 		}
 
 		@Override
@@ -210,7 +208,7 @@ public abstract class FistSprite extends MobSprite {
 
 		@Override
 		protected int texOffset() {
-			return 20;
+			return 60;
 		}
 
 		@Override
@@ -235,7 +233,7 @@ public abstract class FistSprite extends MobSprite {
 
 		@Override
 		protected int texOffset() {
-			return 30;
+			return 90;
 		}
 
 		@Override
@@ -260,7 +258,7 @@ public abstract class FistSprite extends MobSprite {
 
 		@Override
 		protected int texOffset() {
-			return 40;
+			return 120;
 		}
 
 		@Override
@@ -293,7 +291,7 @@ public abstract class FistSprite extends MobSprite {
 
 		@Override
 		protected int texOffset() {
-			return 50;
+			return 150;
 		}
 
 		@Override

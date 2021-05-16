@@ -28,11 +28,11 @@ public class Gauntlet extends MeleeWeapon {
 	
 	{
 		image = ItemSpriteSheet.GAUNTLETS;
-		hitSound = Assets.Sounds.HIT_CRUSH;
+		hitSound = Assets.Sounds.HIT_PUNCH;
 		hitSoundPitch = 1.2f;
 		
 		tier = 5;
-		DLY = 0.5f; //2x speed
+		DLY = 0.2f; //2x speed
 	}
 	
 	@Override

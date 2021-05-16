@@ -33,7 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ShamanSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CasterSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
@@ -142,7 +142,7 @@ public abstract class Shaman extends Mob {
 	
 	public static class RedShaman extends Shaman {
 		{
-			spriteClass = ShamanSprite.Red.class;
+			spriteClass = CasterSprite.Red.class;
 		}
 		
 		@Override
@@ -153,7 +153,7 @@ public abstract class Shaman extends Mob {
 	
 	public static class BlueShaman extends Shaman {
 		{
-			spriteClass = ShamanSprite.Blue.class;
+			spriteClass = CasterSprite.Blue.class;
 		}
 		
 		@Override
@@ -164,7 +164,7 @@ public abstract class Shaman extends Mob {
 	
 	public static class PurpleShaman extends Shaman {
 		{
-			spriteClass = ShamanSprite.Purple.class;
+			spriteClass = CasterSprite.Purple.class;
 		}
 		
 		@Override

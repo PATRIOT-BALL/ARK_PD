@@ -40,21 +40,21 @@ public class GolemSprite extends MobSprite {
 		
 		texture( Assets.Sprites.GOLEM );
 		
-		TextureFilm frames = new TextureFilm( texture, 17, 19 );
+		TextureFilm frames = new TextureFilm( texture, 38, 34 );
 		
 		idle = new Animation( 4, true );
-		idle.frames( frames, 0, 1 );
+		idle.frames( frames, 0 );
 		
 		run = new Animation( 12, true );
-		run.frames( frames, 2, 3, 4, 5 );
+		run.frames( frames, 0 );
 		
 		attack = new Animation( 10, false );
-		attack.frames( frames, 6, 7, 8 );
+		attack.frames( frames, 0 );
 
 		zap = attack.clone();
 		
 		die = new Animation( 15, false );
-		die.frames( frames, 9, 10, 11, 12, 13 );
+		die.frames( frames, 0 );
 		
 		play( idle );
 	}

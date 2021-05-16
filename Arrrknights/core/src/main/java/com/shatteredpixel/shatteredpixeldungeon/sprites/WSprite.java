@@ -48,8 +48,8 @@ public class WSprite extends MobSprite {
 		
 		zap = attack.clone();
 		
-		die = new Animation( 10, false );
-		die.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 );
+		die = new Animation( 8, false );
+		die.frames( frames, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 );
 		
 		play( run.clone() );
 	}

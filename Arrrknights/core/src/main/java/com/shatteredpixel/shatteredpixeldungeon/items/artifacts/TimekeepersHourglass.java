@@ -98,7 +98,7 @@ public class TimekeepersHourglass extends Artifact {
 								if (index == 0) {
 									GLog.i( Messages.get(TimekeepersHourglass.class, "onstasis") );
 									GameScene.flash(0x80FFFFFF);
-									Sample.INSTANCE.play(Assets.Sounds.TELEPORT);
+									Sample.INSTANCE.play(Assets.Sounds.TIMESTOP);
 
 									activeBuff = new timeStasis();
 									Talent.onArtifactUsed(Dungeon.hero);
@@ -106,7 +106,7 @@ public class TimekeepersHourglass extends Artifact {
 								} else if (index == 1) {
 									GLog.i( Messages.get(TimekeepersHourglass.class, "onfreeze") );
 									GameScene.flash(0x80FFFFFF);
-									Sample.INSTANCE.play(Assets.Sounds.TELEPORT);
+									Sample.INSTANCE.play(Assets.Sounds.TIMESTOP);
 
 									activeBuff = new timeFreeze();
 									Talent.onArtifactUsed(Dungeon.hero);

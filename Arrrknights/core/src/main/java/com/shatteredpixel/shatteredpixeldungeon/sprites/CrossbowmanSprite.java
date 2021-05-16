@@ -39,7 +39,7 @@ public class CrossbowmanSprite extends MobSprite {
 		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 
 		idle = new Animation( 2, true );
-		idle.frames( frames, 14 );
+		idle.frames( frames, 25 );
 
 		run = new Animation( 12, true );
 		run.frames( frames, 0, 1, 2, 3, 4, 5, 6 );
@@ -47,11 +47,14 @@ public class CrossbowmanSprite extends MobSprite {
 		attack = new Animation( 14, false );
 		attack.frames( frames, 7, 8, 9, 10, 11, 12, 13, 14 );
 
+		cast = attack.clone();
+
 		die = new Animation( 10, false );
 		die.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 );
 
 		play( idle );
 	}
+
 
 	@Override
 	public void attack( int cell ) {

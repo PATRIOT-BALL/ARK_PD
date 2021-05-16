@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ScaleArmor;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.AvengerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ShieldedSprite;
 import com.watabou.utils.Random;
@@ -35,7 +36,7 @@ import com.watabou.utils.Random;
 public class ArmoredBrute extends Brute {
 
 	{
-		spriteClass = ShieldedSprite.class;
+		spriteClass = AvengerSprite.class;
 		
 		//see rollToDropLoot
 		loot = Generator.Category.ARMOR;

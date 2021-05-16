@@ -35,7 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.EyeSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.A_master2Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -44,7 +44,7 @@ import com.watabou.utils.Random;
 public class Eye extends Mob {
 	
 	{
-		spriteClass = EyeSprite.class;
+		spriteClass = A_master2Sprite.class;
 		
 		HP = HT = 100;
 		defenseSkill = 20;
@@ -121,7 +121,7 @@ public class Eye extends Mob {
 		if (beamCooldown > 0) {
 			return super.doAttack(enemy);
 		} else if (!beamCharged){
-			((EyeSprite)sprite).charge( enemy.pos );
+			((A_master2Sprite)sprite).charge( enemy.pos );
 			spend( attackDelay()*2f );
 			beamCharged = true;
 			return true;

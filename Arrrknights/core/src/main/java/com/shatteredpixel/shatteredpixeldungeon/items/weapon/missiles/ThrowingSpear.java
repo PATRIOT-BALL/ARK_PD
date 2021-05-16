@@ -28,7 +28,7 @@ public class ThrowingSpear extends MissileWeapon {
 	
 	{
 		image = ItemSpriteSheet.THROWING_SPEAR;
-		hitSound = Assets.Sounds.HIT_STAB;
+		hitSound = Assets.Sounds.HIT_SPEAR;
 		hitSoundPitch = 1f;
 		
 		tier = 3;

@@ -32,7 +32,7 @@ public class Dagger extends MeleeWeapon {
 	
 	{
 		image = ItemSpriteSheet.DAGGER;
-		hitSound = Assets.Sounds.HIT_STAB;
+		hitSound = Assets.Sounds.HIT_KNIFE;
 		hitSoundPitch = 1.1f;
 
 		tier = 1;

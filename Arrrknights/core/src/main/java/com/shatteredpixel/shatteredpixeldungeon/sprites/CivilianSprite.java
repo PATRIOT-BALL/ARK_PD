@@ -34,7 +34,7 @@ public class CivilianSprite extends MobSprite {
 		
 		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
-		idle = new Animation( 15, true );
+		idle = new Animation( 5, true );
 		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 );
 		
 		run = idle.clone();

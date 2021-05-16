@@ -24,26 +24,26 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class KingSprite extends MobSprite {
+public class BugSprite extends MobSprite {
 	
-	public KingSprite() {
+	public BugSprite() {
 		super();
 		
-		texture( Assets.Sprites.KING );
+		texture( Assets.Sprites.BUG );
 		
 		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 		
-		idle = new Animation( 12, true );
-		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2 );
+		idle = new Animation( 2, true );
+		idle.frames( frames, 0, 0, 0 );
 		
-		run = new Animation( 15, true );
-		run.frames( frames, 3, 4, 5, 6, 7, 8 );
+		run = new Animation( 10, true );
+		run.frames( frames, 0 );
 		
 		attack = new Animation( 15, false );
-		attack.frames( frames, 9, 10, 11 );
+		attack.frames( frames, 0 );
 		
-		die = new Animation( 8, false );
-		die.frames( frames, 12, 13, 14, 15 );
+		die = new Animation( 10, false );
+		die.frames( frames, 0 );
 		
 		play( idle );
 	}

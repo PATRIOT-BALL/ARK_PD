@@ -143,6 +143,10 @@ public class Assets {
 		public static final String HIT		        = "sounds/hit.mp3";
 		public static final String MISS		        = "sounds/miss.mp3";
 		public static final String HIT_SLASH        = "sounds/hit_slash.mp3";
+		public static final String HIT_CHAINSAW        = "sounds/hit_chainsaw.mp3";
+		public static final String HIT_PUNCH        = "sounds/hit_punch.mp3";
+		public static final String HIT_SPEAR        = "sounds/hit_spear.mp3";
+		public static final String HIT_KNIFE        = "sounds/hit_knife.mp3";
 		public static final String HIT_STAB         = "sounds/hit_stab.mp3";
 		public static final String HIT_CRUSH        = "sounds/hit_crush.mp3";
 		public static final String HIT_MAGIC        = "sounds/hit_magic.mp3";
@@ -195,19 +199,20 @@ public class Assets {
 		public static final String CHAINS   = "sounds/chains.mp3";
 		public static final String SCAN     = "sounds/scan.mp3";
 		public static final String SHEEP    = "sounds/sheep.mp3";
+		public static final String TIMESTOP    = "sounds/timestop.mp3";
 
 		public static final String[] all = new String[]{
 				CLICK, BADGE, GOLD,
 
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
-				HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY,
+				HIT_PUNCH, HIT_SPEAR, HIT_KNIFE, HIT_CHAINSAW, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY,
 				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, LIGHTNING, LEVELUP, DEATH,
 				CHALLENGE, CURSED, TRAP, EVOKE, TOMB, ALERT, MELD, BOSS, BLAST, PLANT, RAY, BEACON,
 				TELEPORT, CHARMS, MASTERY, PUFF, ROCKS, BURNING, FALLING, GHOST, SECRET, BONES,
-				BEE, DEGRADE, MIMIC, DEBUFF, CHARGEUP, GAS, CHAINS, SCAN, SHEEP
+				BEE, DEGRADE, MIMIC, DEBUFF, CHARGEUP, GAS, CHAINS, SCAN, SHEEP, TIMESTOP
 		};
 	}
 
@@ -236,30 +241,34 @@ public class Assets {
 		public static final String GUARD	= "sprites/guard.png";
 		public static final String VULCAN	= "sprites/blacksmith.png";
 
-		public static final String SNAKE	= "sprites/snake.png";
-		public static final String RAT		= "sprites/rat.png";
+		public static final String BABYBUG	= "sprites/babybug.png";
+		public static final String BUG		= "sprites/bug.png";
+		public static final String BUG_A		= "sprites/bug_a.png";
+		public static final String SPITTER		= "sprites/spitter.png";
 		public static final String INFANTRY	= "sprites/Infantry.png";
 		public static final String CROSSBOWMAN	= "sprites/crossbowman.png";
 		public static final String SHILDED	= "sprites/Shielded.png";
 		public static final String SHILDED_L	= "sprites/ShieldedLeader.png";
-		public static final String CRAB		= "sprites/crab.png";
+		public static final String HAUND		= "sprites/haund.png";
 		public static final String DIFENDER		= "sprites/difender.png";
 		public static final String YOMA	= "sprites/yoma.png";
 		public static final String HANDCLAP		= "sprites/handclap.png";
 
 		public static final String BRUTE	= "sprites/brute.png";
+		public static final String CASTER	= "sprites/caster.png";
 		public static final String SPINNER	= "sprites/spinner.png";
 		public static final String MUD	= "sprites/mudrock.png";
 		public static final String S_GOLEM	= "sprites/Stone_golem.png";
 		public static final String I_GOLEM	= "sprites/iron_golem.png";
 
+
 		public static final String WRAITH	= "sprites/wraith.png";
-		public static final String UNDEAD	= "sprites/undead.png";
-		public static final String KING		= "sprites/king.png";
-		public static final String EYE		= "sprites/eye.png";
+		public static final String MEPHISTO		= "sprites/mephisto.png";
+		public static final String A_MASTER2	= "sprites/arts_master2.png";
 
 		public static final String BOMBTAIL	= "sprites/bombtail.png";
-		public static final String SHAMAN	= "sprites/shaman.png";
+		public static final String RIVENGER	= "sprites/rivenger.png";
+		public static final String AVENGER	= "sprites/avenger.png";
 		public static final String THIEF	= "sprites/thief.png";
 		public static final String W	= "sprites/w.png";
 
@@ -267,11 +276,13 @@ public class Assets {
 		public static final String ELEMENTAL= "sprites/elemental.png";
 		public static final String MONK		= "sprites/monk.png";
 		public static final String THROWER	= "sprites/thrower.png";
-		public static final String GOLEM	= "sprites/golem.png";
+		public static final String GOLEM	= "sprites/junkman.png";
+		public static final String ENRAGED	= "sprites/enraged.png";
+		public static final String DRONE	= "sprites/drone.png";
 		public static final String STATUE	= "sprites/statue.png";
 		public static final String SUCCUBUS	= "sprites/succubus.png";
 		public static final String SCORPIO	= "sprites/scorpio.png";
-		public static final String FISTS	= "sprites/yog_fists.png";
+		public static final String FISTS	= "sprites/tongvengers.png";
 		public static final String YOG		= "sprites/yog.png";
 		public static final String LARVA	= "sprites/larva.png";
 		public static final String ACE	= "sprites/ace.png";
@@ -291,6 +302,8 @@ public class Assets {
 		public static final String SPAWNER	= "sprites/spawner.png";
 		public static final String A_MASTER1	= "sprites/arts_master1.png";
 		public static final String PYLON	= "sprites/pylon.png";
+		public static final String POSSESSED	= "sprites/possessed.png";
+		public static final String UNDEAD	= "sprites/possessed.png";
 
 
 		public static final String LOTUS	= "sprites/lotus.png";

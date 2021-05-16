@@ -32,7 +32,7 @@ public class HandAxe extends MeleeWeapon {
 		hitSoundPitch = 1f;
 
 		tier = 2;
-		ACC = 1.32f; //32% boost to accuracy
+		ACC = 4f; //32% boost to accuracy
 	}
 
 	@Override

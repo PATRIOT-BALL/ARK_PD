@@ -28,13 +28,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ghost;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.FetidRatSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SpitterSprite;
 import com.watabou.utils.Random;
 
 public class FetidRat extends Rat {
 
 	{
-		spriteClass = FetidRatSprite.class;
+		spriteClass = SpitterSprite.class;
 
 		HP = HT = 20;
 		defenseSkill = 5;

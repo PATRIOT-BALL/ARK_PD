@@ -27,41 +27,42 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Eye;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 
-public class EyeSprite extends MobSprite {
+public class A_master2Sprite extends MobSprite {
 
 	private int zapPos;
 
 	private Animation charging;
 	private Emitter chargeParticles;
 	
-	public EyeSprite() {
+	public A_master2Sprite() {
 		super();
 		
-		texture( Assets.Sprites.EYE );
+		texture( Assets.Sprites.A_MASTER2 );
 		
-		TextureFilm frames = new TextureFilm( texture, 16, 18 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 8, true );
-		idle.frames( frames, 0, 1, 2 );
+		idle.frames( frames, 0, 1, 2, 3 );
 
 		charging = new Animation( 12, true);
-		charging.frames( frames, 3, 4 );
-		
+		charging.frames( frames, 4 );
+
 		run = new Animation( 12, true );
-		run.frames( frames, 5, 6 );
-		
-		attack = new Animation( 8, false );
-		attack.frames( frames, 4, 3 );
+		run.frames( frames, 0, 1, 2, 3 );
+
+		attack = new Animation( 14, false );
+		attack.frames( frames, 3, 4, 5, 6 );
 		zap = attack.clone();
-		
-		die = new Animation( 8, false );
-		die.frames( frames, 7, 8, 9 );
-		
+
+		die = new Animation( 12, false );
+		die.frames( frames, 6, 7, 8, 9, 10, 11);
+
 		play( idle );
 	}
 
@@ -88,11 +89,10 @@ public class EyeSprite extends MobSprite {
 
 	@Override
 	public void die() {
+		emitter().burst( Speck.factory( Speck.WOOL ), 5 );
 		super.die();
-		if (chargeParticles != null){
-			chargeParticles.on = false;
-		}
 	}
+
 
 	@Override
 	public void kill() {
@@ -137,4 +137,5 @@ public class EyeSprite extends MobSprite {
 			chargeParticles.killAndErase();
 		}
 	}
+
 }

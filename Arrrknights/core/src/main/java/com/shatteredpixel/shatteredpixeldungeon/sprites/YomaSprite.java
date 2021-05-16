@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.watabou.noosa.TextureFilm;
 
 public class YomaSprite extends MobSprite {
@@ -46,6 +47,12 @@ public class YomaSprite extends MobSprite {
 		die.frames( frames, 6, 7, 8, 9, 10 );
 		
 		play( idle );
+	}
+	
+	@Override
+	public void die() {
+		emitter().burst( Speck.factory( Speck.WOOL ), 5 );
+		super.die();
 	}
 	
 	@Override

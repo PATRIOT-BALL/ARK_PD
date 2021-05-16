@@ -22,15 +22,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.RatSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
 import com.watabou.utils.Random;
 
 public class Rat extends Mob {
 
 	{
-		spriteClass = RatSprite.class;
+		spriteClass = BugSprite.class;
 		
 		HP = HT = 8;
 		defenseSkill = 2;

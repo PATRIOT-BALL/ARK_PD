@@ -24,27 +24,29 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class RatSprite extends MobSprite {
+public class BabyBugSprite extends MobSprite {
 	
-	public RatSprite() {
+	public BabyBugSprite() {
 		super();
 		
-		texture( Assets.Sprites.RAT );
+		texture( Assets.Sprites.BABYBUG );
 		
-		TextureFilm frames = new TextureFilm( texture, 16, 15 );
+		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 		
-		idle = new Animation( 2, true );
-		idle.frames( frames, 0, 0, 0, 1 );
+		//many frames here as we want the rising/falling to be slow but the tongue to be fast
+		idle = new Animation( 10, true );
+		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0);
 		
-		run = new Animation( 10, true );
-		run.frames( frames, 6, 7, 8, 9, 10 );
+		run = new Animation( 8, true );
+		run.frames( frames, 0 );
 		
 		attack = new Animation( 15, false );
-		attack.frames( frames, 2, 3, 4, 5, 0 );
+		attack.frames( frames,  0);
 		
 		die = new Animation( 10, false );
-		die.frames( frames, 11, 12, 13, 14 );
+		die.frames( frames, 0 );
 		
-		play( idle );
+		play(idle);
 	}
+	
 }
