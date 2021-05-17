@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CrossbowmanSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.InfantrySprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -41,7 +42,7 @@ import com.watabou.utils.Random;
 public class GnollTrickster extends Gnoll {
 
 	{
-		spriteClass = InfantrySprite.class;
+		spriteClass = CrossbowmanSprite.class;
 
 		HP = HT = 20;
 		defenseSkill = 5;
