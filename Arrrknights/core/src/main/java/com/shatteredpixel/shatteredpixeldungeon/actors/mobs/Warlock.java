@@ -24,6 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Degrade;
@@ -64,8 +65,18 @@ public class Warlock extends Mob implements Callback {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		Buff.affect(this, Bleeding.class).set(6);
+		Buff.affect(this, ActiveOriginium.class).set(HT * 0.1f);
 		return 25;
+	}
+
+	@Override
+	protected float attackDelay() {
+		if (this.buff(ActiveOriginium.class) == null) {
+			return super.attackDelay();
+		} else
+		{
+			return super.attackDelay() * 0.5f;
+		}
 	}
 	
 	@Override
@@ -101,14 +112,9 @@ public class Warlock extends Mob implements Callback {
 	
 	private void zap() {
 		spend( TIME_TO_ZAP );
-		
-		if (hit( this, enemy, true )) {
-			//TODO would be nice for this to work on ghost/statues too
-			if (enemy == Dungeon.hero && Random.Int( 2 ) == 0) {
-				Buff.prolong( enemy, Degrade.class, Degrade.DURATION );
-				Sample.INSTANCE.play( Assets.Sounds.DEBUFF );
-			}
-			
+
+		if (hit( this, enemy, false )) {
+
 			int dmg = Random.NormalIntRange( 12, 18 );
 			enemy.damage( dmg, new DarkBolt() );
 			

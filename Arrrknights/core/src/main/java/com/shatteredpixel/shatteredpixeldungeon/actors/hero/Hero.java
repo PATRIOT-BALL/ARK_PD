@@ -31,11 +31,13 @@ import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Alchemy;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.AdrenalineSurge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Awareness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barkskin;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
@@ -1041,6 +1043,7 @@ public class Hero extends Char {
 
 		enemy = action.target;
 
+
 		if (enemy.isAlive() && canAttack( enemy ) && !isCharmedBy( enemy )) {
 			
 			sprite.attack( enemy.pos );
@@ -1722,10 +1725,19 @@ public class Hero extends Char {
 		boolean hit = attack( enemy );
 		
 		Invisibility.dispel();
-		spend( attackDelay() );
+		if (this.buff(ActiveOriginium.class) == null) {
+			spend(attackDelay());
+		} else
+		{
+			spend(attackDelay() * 0.5f);
+		}
 
 		if (hit && subClass == HeroSubClass.GLADIATOR){
 			Buff.affect( this, Combo.class ).hit( enemy );
+		}
+
+		if (this.buff(ActiveOriginium.class) != null) {
+			Buff.affect(this, ActiveOriginium.class).set(HT * 0.1f);
 		}
 
 		curAction = null;

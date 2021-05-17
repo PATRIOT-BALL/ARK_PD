@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
@@ -59,13 +60,18 @@ public class Monk extends Mob {
 	
 	@Override
 	public int attackSkill( Char target ) {
-		Buff.affect(this, Bleeding.class).set(6);
+		Buff.affect(this, ActiveOriginium.class).set(HT * 0.1f);
 		return 30;
 	}
 	
 	@Override
 	protected float attackDelay() {
-		return super.attackDelay()*0.5f;
+		if (this.buff(ActiveOriginium.class) == null) {
+			return super.attackDelay();
+		} else
+		{
+			return super.attackDelay() * 0.5f;
+		}
 	}
 	
 	@Override

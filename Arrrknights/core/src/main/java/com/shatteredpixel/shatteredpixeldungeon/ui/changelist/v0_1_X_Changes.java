@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.ChangesScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
 import com.watabou.noosa.Image;
@@ -46,11 +47,10 @@ public class v0_1_X_Changes {
 		changes.hardlight(Window.TITLE_COLOR);
 		changeInfos.add(changes);
 
-		changes.addButton(new ChangeButton(Icons.get(Icons.SHPX), "쉬시면 앙대요!",
-				"_-_ Released 05-08, 2021\n" +
-						"_-_ v0.0.1\n" +
-						"\n" +
-						"빨리 박사를 구해서 로도스로 돌아와주세요!"));
+		changes.addButton(new ChangeButton(Icons.get(Icons.ALEKS), "새로운 버프 : 활성 오리지늄",
+				"- 새로 추가된 버프입니다.\n\n" +
+						"- 체력이 지속적으로 감소합니다. 그 대신 공격 속도가 2배가 됩니다.\n" +
+						"- 이 버프가 있을 때 공격하면 버프가 갱신될 것입니다."));
 
 
 		changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
@@ -59,15 +59,21 @@ public class v0_1_X_Changes {
 
 		changes.addButton(new ChangeButton(new Image(Assets.Sprites.BOMBTAIL, 6, 12, 16, 16), "폭탄새",
 				"- [해골]에서 변경되었습니다.\n\n" +
-						"- 스펙이 매우 낮고 이동속도가 느립니다. 대신 자폭 피해가 매우 강합니다!"));
+						"- 스펙이 매우 낮고 이동속도가 느립니다. 대신 자폭 피해가 매우 강합니다."));
 
 		changes.addButton(new ChangeButton(new Image(Assets.Sprites.SCOUT, 6, 4, 16, 16), "정찰기술자",
 				"- [네크로맨서]에서 변경되었습니다.\n\n" +
-						"- 폭탄새를 소환합니다. 그런데 소환한 폭탄새를 회복,강화하는게 아닌 불태워버립니다!"));
+						"- 폭탄새를 소환합니다. 그런데 소환한 폭탄새를 회복,강화하는게 아닌 터트려버립니다!"));
 
 		changes.addButton(new ChangeButton(new Image(Assets.Sprites.THROWER, 12, 6, 16, 16), "폭주 숙주병들",
 				"- [드워프 수도승], [드워프 흑마법사]에서 변경되었습니다.\n\n" +
-						"- 체력이 높아졌습니다. 대신 공격할 때마다 자신에게 출혈을 겁니다!"));
+						"- [폭주한 숙주병사]는 공격속도가 너프되었습니다.\n\n" +
+						"- [폭주한 숙주투척병]은 원거리 공격이 물리 공격으로 변경되었씁니다.\n\n" +
+						"- 공격시 자신에게 '활성 오리지늄'버프를 부여합니다."));
+
+		changes.addButton(new ChangeButton(new Image(Assets.Sprites.I_GOLEM, 14, 6, 16, 16), "거대석상",
+				"- [DM200]에서 변경되었습니다.\n" +
+						"- 멀리 있을 때 독가스를 날리는게 아니라 낙석 패턴(DM300의 보스 패턴)을 발동시킵니다."));
 
 	/*
 		changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);

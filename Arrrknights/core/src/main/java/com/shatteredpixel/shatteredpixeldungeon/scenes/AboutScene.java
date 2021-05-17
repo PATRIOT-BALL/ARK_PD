@@ -90,8 +90,8 @@ public class AboutScene extends PixelScene {
 				"Programming:",
 				Icons.CHARLIE.get(),
 				"mizq4482",
-				"hypergryph.gall",
-				"https://drive.google.com/drive/folders/17z-PzgCxTby5fJoNQf2f7noNv4ne6Mlg");
+				"tistroy.com",
+				"https://mizq4482.tistory.com/");
 		charlie.setRect(alex.right(), alex.top(), colWidth/2f, 0);
 		content.add(charlie);
 
