@@ -64,7 +64,7 @@ public class S_GolemSprite extends MobSprite {
 		play( zap );
 
 		MagicMissile.boltFromChar( parent,
-				MagicMissile.TOXIC_VENT,
+				MagicMissile.EARTH,
 				this,
 				cell,
 				new Callback() {
@@ -73,7 +73,7 @@ public class S_GolemSprite extends MobSprite {
 						((DM200)ch).onZapComplete();
 					}
 				} );
-		Sample.INSTANCE.play( Assets.Sounds.GAS );
+		Sample.INSTANCE.play( Assets.Sounds.ROCKS );
 		GLog.w(Messages.get(DM200.class, "vent"));
 	}
 

@@ -24,14 +24,19 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
-import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
+import com.shatteredpixel.shatteredpixeldungeon.levels.NewCavesBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.S_GolemSprite;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class DM200 extends Mob {
 
@@ -117,12 +122,54 @@ public class DM200 extends Mob {
 		spend( TICK );
 		ventCooldown = 30;
 
-		Ballistica trajectory = new Ballistica(pos, enemy.pos, Ballistica.STOP_TARGET);
+		dropRocks(enemy);
 
-		for (int i : trajectory.subPath(0, trajectory.dist)){
-			GameScene.add(Blob.seed(i, 20, ToxicGas.class));
+	}
+
+	public void dropRocks( Char target ) {
+
+		Dungeon.hero.interrupt();
+		final int rockCenter;
+
+		if (Dungeon.level.adjacent(pos, target.pos)){
+			int oppositeAdjacent = target.pos + (target.pos - pos);
+			Ballistica trajectory = new Ballistica(target.pos, oppositeAdjacent, Ballistica.MAGIC_BOLT);
+			WandOfBlastWave.throwChar(target, trajectory, 2, false, false);
+			if (target == Dungeon.hero){
+				Dungeon.hero.interrupt();
+			}
+			rockCenter = trajectory.path.get(Math.min(trajectory.dist, 2));
+		} else {
+			rockCenter = target.pos;
 		}
-		GameScene.add(Blob.seed(trajectory.collisionPos, 100, ToxicGas.class));
+
+		int safeCell;
+		do {
+			safeCell = rockCenter + PathFinder.NEIGHBOURS8[Random.Int(8)];
+		} while (safeCell == pos
+				|| (Dungeon.level.solid[safeCell] && Random.Int(2) == 0)
+				|| (Blob.volumeAt(safeCell, NewCavesBossLevel.PylonEnergy.class) > 0 && Random.Int(2) == 0));
+
+		ArrayList<Integer> rockCells = new ArrayList<>();
+
+		int start = rockCenter - Dungeon.level.width() * 3 - 3;
+		int pos;
+		for (int y = 0; y < 7; y++) {
+			pos = start + Dungeon.level.width() * y;
+			for (int x = 0; x < 7; x++) {
+				if (!Dungeon.level.insideMap(pos)) {
+					pos++;
+					continue;
+				}
+				//add rock cell to pos, if it is not solid, and isn't the safecell
+				if (!Dungeon.level.solid[pos] && pos != safeCell && Random.Int(Dungeon.level.distance(rockCenter, pos)) == 0) {
+					//don't want to overly punish players with slow move or attack speed
+					rockCells.add(pos);
+				}
+				pos++;
+			}
+		}
+		Buff.append(this, NewDM300.FallingRockBuff.class, Math.min(target.cooldown(), 3*TICK)).setRockPositions(rockCells);
 
 	}
 

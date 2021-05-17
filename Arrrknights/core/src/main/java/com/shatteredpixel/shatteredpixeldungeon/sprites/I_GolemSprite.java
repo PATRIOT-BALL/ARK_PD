@@ -78,13 +78,13 @@ public class I_GolemSprite extends MobSprite {
 		play( zap );
 
 		MagicMissile.boltFromChar( parent,
-				MagicMissile.CORROSION,
+				MagicMissile.EARTH,
 				this,
 				cell,
 				new Callback() {
 					@Override
 					public void call() {
-						Sample.INSTANCE.play( Assets.Sounds.GAS );
+						Sample.INSTANCE.play( Assets.Sounds.ROCKS );
 						((DM201)ch).onZapComplete();
 					}
 				} );
