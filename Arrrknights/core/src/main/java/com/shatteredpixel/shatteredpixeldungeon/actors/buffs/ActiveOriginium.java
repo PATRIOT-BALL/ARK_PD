@@ -57,6 +57,7 @@ public class ActiveOriginium extends Buff {
 
             level = NormalFloat((level * 0.5f) - 1, level);
             int dmg = Math.round((level * 0.2f) + (target.HP * 0.05f));
+            if (dmg < 1) dmg = 1;
 
             if (level > 0) {
 
