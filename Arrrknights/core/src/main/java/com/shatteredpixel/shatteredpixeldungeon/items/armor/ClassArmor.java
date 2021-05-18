@@ -82,7 +82,7 @@ abstract public class ClassArmor extends Armor {
 		classArmor.curseInfusionBonus = armor.curseInfusionBonus;
 		classArmor.identify();
 
-		classArmor.charge = 0;
+		classArmor.charge = 100;
 		if (owner.lvl > 18){
 			classArmor.charge += (owner.lvl-18)*25;
 			if (classArmor.charge > 100) classArmor.charge = 100;
