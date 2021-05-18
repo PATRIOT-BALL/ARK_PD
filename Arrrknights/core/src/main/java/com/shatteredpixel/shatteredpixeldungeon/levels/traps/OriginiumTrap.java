@@ -16,8 +16,10 @@ import com.watabou.noosa.audio.Sample;
 public class OriginiumTrap extends Trap {
 
     {
-        color = GREY;
-        shape = STARS;
+        color = 0;
+        shape = SP1;
+
+        canBeHidden = false;
     }
 
     @Override
@@ -37,7 +39,6 @@ public class OriginiumTrap extends Trap {
         Char c = Actor.findChar( pos );
 
         if (c != null) {
-            int damage = Math.max( Dungeon.depth/2,  (4 + Dungeon.depth/2) - c.drRoll() );
             Buff.affect(c, ActiveOriginium.class).set(c.HT * 0.1f);
 
             if (c instanceof Mob) {
