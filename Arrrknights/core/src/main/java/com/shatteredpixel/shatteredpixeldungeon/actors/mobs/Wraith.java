@@ -26,7 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.WraithSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.LurkerSprite;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -39,7 +39,7 @@ public class Wraith extends Mob {
 	private int level;
 	
 	{
-		spriteClass = WraithSprite.class;
+		spriteClass = LurkerSprite.class;
 		
 		HP = HT = 1;
 		EXP = 0;

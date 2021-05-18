@@ -24,32 +24,27 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class WraithSprite extends MobSprite {
+public class LurkerSprite extends MobSprite {
 	
-	public WraithSprite() {
+	public LurkerSprite() {
 		super();
 		
-		texture( Assets.Sprites.WRAITH );
-		
-		TextureFilm frames = new TextureFilm( texture, 14, 15 );
-		
-		idle = new Animation( 5, true );
-		idle.frames( frames, 0, 1 );
-		
-		run = new Animation( 10, true );
-		run.frames( frames, 0, 1 );
-		
-		attack = new Animation( 10, false );
-		attack.frames( frames, 0, 2, 3 );
-		
-		die = new Animation( 8, false );
-		die.frames( frames, 0, 4, 5, 6, 7 );
-		
+		texture( Assets.Sprites.LURKER );
+
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
+
+		idle = new Animation( 2, true );
+		idle.frames( frames, 14 );
+
+		run = new Animation( 12, true );
+		run.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7 );
+
+		attack = new Animation( 14, false );
+		attack.frames( frames, 8, 9, 10, 11, 12, 13, 14 );
+
+		die = new Animation( 10, false );
+		die.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 );
+
 		play( idle );
-	}
-	
-	@Override
-	public int blood() {
-		return 0x88000000;
 	}
 }

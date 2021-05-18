@@ -1365,7 +1365,7 @@ items.weapon.melee.dirk.desc=더 기다란 찌르기용 단검이다. 칼날을 
 
 items.weapon.melee.flail.name=하야부사
 items.weapon.melee.flail.stats_desc=명중률 -% \n 기습공격 불가
-items.weapon.melee.flail.desc=사람의 키보다 거대한 극동식 환도, 지나치게 거대해 목표를 베기 어렵고 휘두르는 동작으로 인해 기습공격이 불가능 하지만, 이 검의 무게와
+items.weapon.melee.flail.desc=사람의 키보다 거대한 극동식 환도, 지나치게 거대해 목표를 베기 어렵고 휘두르는 동작으로 인해 기습공격이 불가능 하지만, 거대한 칼날의 무게로 적을 찍어누를 수 있습니다.
 
 items.weapon.melee.gauntlet.name=마운틴 브레이커
 items.weapon.melee.gauntlet.stats_desc=공격속도 +5
@@ -1620,6 +1620,10 @@ items.amulet.name=박사
 items.amulet.ac_end=여정을 끝낸다
 items.amulet.rankings_desc=박사 구출
 items.amulet.desc=아무것도 기억이 나지 않는다. 처음에는 전혀 실감이 나지 않았지만, 천천히 기억이 돌아오고 있다고 한다. 하지만 중요한 기억들은 여전히 기억이 나지 않는다고 한다.\n\n제약회사 로도스 아일랜드의 박사. 바로 당신이다. 직접 켈시에게로 데려가거나, 아니면 "나쁜녀석들 호"가 현장에 도착할 때까지 기다리는 것으로 이 여정을 마무리 할 수 있을 것이다.  
+
+items.originiumshard.name=오리지늄 조각
+items.originiumshard.use=사용한다!
+items.originiumshard.desc=로도스의 박사가 좋아하는 부류의 간식. 직접 섭취하는 것으로 사용할 수도 있지만. 손에 쥐고 있는 것으로도 체내의 오리지늄을 자극할 수있다. \n\n사용 시 활성 오리지늄 버프가 걸리게 된다. 위험한 버프인 만큼, 신중히 사용하자.
 
 items.ankh.name=앙크
 items.ankh.ac_bless=축복한다

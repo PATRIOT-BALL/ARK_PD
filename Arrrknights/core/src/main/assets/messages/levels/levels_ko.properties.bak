@@ -21,7 +21,7 @@ levels.rooms.special.weakfloorroom$hiddenwell.desc=아래층의 우물으로 빠
 
 ###traps
 levels.traps.originiumTrap.name=활성 오리지늄
-levels.traps.originiumTrap.desc=이 함정은 밟은 대상의 아츠 제어능력을 자극시켜 공격속도를 크게 올려주지만, 지속적으로 체력을 잃게 만든다.\n\n이 장치는 항상 드러나 있으며, 오리지늄의 무한한 힘으로 몇 번을 작동해도 망가지지 않을것이다.
+levels.traps.originiumTrap.desc=이 함정은 밟은 대상의 아츠 제어능력을 자극시켜 공격속도를 크게 올려주지만, 지속적으로 체력을 잃게 만든다.
 
 levels.traps.alarmtrap.name=경보 함정
 levels.traps.alarmtrap.alarm=함정이 던전 전체에 울려퍼지는 꿰뚫는 듯한 소리를 내었다!

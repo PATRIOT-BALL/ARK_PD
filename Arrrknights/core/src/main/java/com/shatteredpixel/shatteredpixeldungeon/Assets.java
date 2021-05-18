@@ -262,7 +262,7 @@ public class Assets {
 		public static final String I_GOLEM	= "sprites/iron_golem.png";
 
 
-		public static final String WRAITH	= "sprites/wraith.png";
+		public static final String LURKER	= "sprites/lurker.png";
 		public static final String MEPHISTO		= "sprites/mephisto.png";
 		public static final String A_MASTER2	= "sprites/arts_master2.png";
 
