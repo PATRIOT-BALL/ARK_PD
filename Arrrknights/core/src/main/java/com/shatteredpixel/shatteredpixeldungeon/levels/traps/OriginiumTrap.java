@@ -38,7 +38,7 @@ public class OriginiumTrap extends Trap {
 
         if (c != null) {
             int damage = Math.max( Dungeon.depth/2,  (4 + Dungeon.depth/2) - c.drRoll() );
-            Buff.affect( c, ActiveOriginium.class ).set( damage );
+            Buff.affect(c, ActiveOriginium.class).set(c.HT * 0.1f);
 
             if (c instanceof Mob) {
                 if (((Mob)c).state == ((Mob)c).HUNTING) ((Mob)c).state = ((Mob)c).WANDERING;
