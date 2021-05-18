@@ -55,10 +55,10 @@ public class ActiveOriginium extends Buff {
     public boolean act() {
         if (target.isAlive()) {
 
-            level = NormalFloat(level / 2f, level);
-            int dmg = Math.round(level);
+            level = NormalFloat((level * 0.5f) - 2, level);
+            int dmg = Math.round((level * 0.3f) + (target.HP * 0.05f));
 
-            if (dmg > 0) {
+            if (level > 0) {
 
                 target.damage( dmg, this );
                 if (target.sprite.visible) {
