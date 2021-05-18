@@ -100,16 +100,15 @@ items.armor.clotharmor.name=대원의 사복
 items.armor.clotharmor.desc=오퍼레이터가 입기 편하게 제작된 복장. 편하지만 방호력을 기대하긴 어렵다.
 
 items.armor.huntressarmor.name=하늬바람
-items.armor.huntressarmor.ac_special=유령 칼날
-items.armor.huntressarmor.no_enemies=시야 내에 적이 없습니다.
-items.armor.huntressarmor.desc=이 망토를 두른 그레이스롯은 유령 칼날을 만들어 날릴 수 있습니다. 각각의 칼날들은 그레이스롯의 시야 안에 들어온 적 하나를 추적하여, 그녀가 현재 장비한 무기에 비례한 피해량을 줍니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 그레이스롯이 경험치를 얻을 때마다 증가합니다.
+items.armor.huntressarmor.ac_special=날개깃
+items.armor.huntressarmor.desc=이 망토를 두른 그레이스롯은 날개깃을 발동하여 자신에게 아드레날린을 부여할 수 있습니다. 하지만 짧은 시간동안 속박과 불구를 같이 얻습니다.\n\n이 능력을 사용하면 갑옷의 SP를 25% 사용합니다. 충전량은 그레이스롯이 경험치를 얻을 때마다 증가합니다.
 
 items.armor.leatherarmor.name=카시미어 경갑
 items.armor.leatherarmor.desc="이렇게 입는 게 맞아? 왜 가슴만 보호하는건데.."\n\일부 기동성을 중시하는 카시미어 기사들이 사용하는 경량형 갑옷. 신체의 급소를 보호하지만 기타 신체부위는 신경쓰지 않았다.  
 
 items.armor.magearmor.name=박사의 외투
-items.armor.magearmor.ac_special=대지 융해
-items.armor.magearmor.desc=로도스 고위 간부들의 공용 외투, 원래는 박사의 외투지만 아미야는 이 옷을 입음으로 대지 융해 아츠를 사용할 수 있습니다. 시야 내에 들어온 모든 적들은 불세례를 받으며 움직일 수 없게 됩니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 아미야가 경험치를 얻을 때마다 증가합니다.
+items.armor.magearmor.ac_special=영소 절영
+items.armor.magearmor.desc=로도스 고위 간부들의 공용 외투, 원래는 박사의 외투지만 아미야는 이 옷을 입음으로 도약하여 원하는 위치로 이동한 뒤, 근처에 적이 있으면 그 중 하나에게 강력한 10연격을 가할 수 있습니다.\n\n이 능력을 사용하면 갑옷의 SP를 100% 사용합니다. 충전량은 아미야가 경험치를 얻을 때마다 증가합니다.
 
 items.armor.mailarmor.name=로도스 전술조끼
 items.armor.mailarmor.desc="다시한번 말하지만 두르나르. 거기는 간식을 담아두는 곳이 아니다."\n\ 전방에서 싸우는 모든 로도스 전투대원들을 위해 제작된 전술조끼, 전방의 조끼 주머니에 구호품이나 의약품, 냉병기를 방호할 수 있는 증가장갑을 넣어둘 수 있습니다.
@@ -118,18 +117,18 @@ items.armor.platearmor.name=제국의 방패 2형식
 items.armor.platearmor.desc=과거 우르수스 유격대 중 무거운 방패를 들고 선봉에 나서는 정예 병력들에게 지급됐던 중갑. 그 동안 우르수스가 모든 전투에서 승리했던 이유를 몸으로 깨닫게 될 것이다. 
 
 items.armor.roguearmor.name=빨간 망토
-items.armor.roguearmor.ac_special=연막탄
+items.armor.roguearmor.ac_special=이리떼
 items.armor.roguearmor.fov=당신의 시야 안의 빈 공간으로만 이동할 수 있습니다.
 items.armor.roguearmor.prompt=이동할 지역을 선택하세요
-items.armor.roguearmor.desc=이 핏빛 망토를 두른 레드는 연막만을 남긴 채 시야가 밝혀진 지역으로 순간이동할 수 있습니다. 이 능력은 프로젝트 레드를 잠시 동안 투명하게 만들고, 처음 위치 주변 적들의 시야를 방해합니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 레드가 경험치를 얻을 때마다 증가합니다.
+items.armor.roguearmor.desc=이 핏빛 망토를 두른 레드는 이리떼를 발동해 시야가 밝혀진 지역으로 순간이동할 수 있습니다. 이 능력은 프로젝트 레드를 잠시 동안 투명하게 만들고, 처음 위치 주변 적들을 기절시키고 피해를 줍니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 레드가 경험치를 얻을 때마다 증가합니다.
 
 items.armor.scalearmor.name=용문 제식 전술조끼
 items.armor.scalearmor.desc=용문 전투경찰들이 사용하는 제식 전술조끼. 폭동 진압, 외부 세력과의 교전을 고려해 만들어진 조끼로 전방의 3열의 강철 플레이트가 착용자를 안전하게 보호합니다. 
 
 items.armor.warriorarmor.name=블레이즈의 전투복
-items.armor.warriorarmor.ac_special=도약
+items.armor.warriorarmor.ac_special=끓어오르는 투지
 items.armor.warriorarmor.prompt=도약할 지역을 선택하세요
-items.armor.warriorarmor.desc=가벼운 옷과 단련된 신체가 조화를 이뤄, 블레이즈는 높이 도약해 원하는 위치로 이동하고 주변의 적을 충격파로 기절시킬 수 있습니다. \n\ 그 어떤 옷보다 가볍지만, 블레이즈는 이미 오랜 전투로 단련된 상태입니다. 그녀에게 상처 따위는 전투의지를 더욱 고양시키는 증표일 뿐입니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 전사가 경험치를 얻을 때마다 증가합니다.
+items.armor.warriorarmor.desc=가벼운 옷과 단련된 신체가 조화를 이뤄 블레이즈는 끓어오르는 투지를 발동시켜 피해 감소 효과를 얻고, 지속시간 동안 받은 피해에 비례해 피해 증가 효과를 얻습니다. \n\ 그 어떤 옷보다 가볍지만, 블레이즈는 이미 오랜 전투로 단련된 상태입니다. 그녀에게 상처 따위는 전투의지를 더욱 고양시키는 증표일 뿐입니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 전사가 경험치를 얻을 때마다 증가합니다.
 
 
 
@@ -1371,7 +1370,7 @@ items.weapon.melee.gauntlet.name=마운틴 브레이커
 items.weapon.melee.gauntlet.stats_desc=공격속도 +5
 items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.
 
-items.weapon.melee.glaive.name=적소ㆍ침식
+items.weapon.melee.glaive.name=영소ㆍ절영
 items.weapon.melee.glaive.stats_desc=사거리 +1 \n 공격속도 -0.5
 items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니라 일종의 아츠 스태프다. 두려운 붉은색으로 빛나는 적소는 멀리 떨어진 적도 공격할 수 있지만 사용자에게 큰 부담을 준다.
 

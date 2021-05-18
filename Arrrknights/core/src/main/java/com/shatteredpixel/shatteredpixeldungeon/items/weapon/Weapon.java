@@ -102,10 +102,16 @@ abstract public class Weapon extends KindOfWeapon {
 	
 	@Override
 	public int proc( Char attacker, Char defender, int damage ) {
-		
+		int conservedDamage = 0;
+		if (attacker.buff(Kinetic.ConservedDamage.class) != null) {
+			conservedDamage = attacker.buff(Kinetic.ConservedDamage.class).damageBonus();
+			attacker.buff(Kinetic.ConservedDamage.class).detach();
+
+			damage += conservedDamage;
+		}
 		if (enchantment != null && attacker.buff(MagicImmune.class) == null) {
 			damage = enchantment.proc( this, attacker, defender, damage );
-		}
+			}
 		
 		if (!levelKnown && attacker == Dungeon.hero) {
 			float uses = Math.min( availableUsesToID, Talent.itemIDSpeedFactor(Dungeon.hero, this) );

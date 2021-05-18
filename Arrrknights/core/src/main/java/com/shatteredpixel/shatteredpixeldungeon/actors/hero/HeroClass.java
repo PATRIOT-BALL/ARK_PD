@@ -29,6 +29,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
@@ -130,10 +131,13 @@ public enum HeroClass {
 		stones.quantity(5).collect();
 		Dungeon.quickslot.setSlot(0, stones);
 
-
 		if (hero.belongings.armor != null){
 			hero.belongings.armor.affixSeal(new BrokenSeal());
 		}
+
+		/*ArmorKit Kit;
+		Kit = new ArmorKit();
+		Kit.quantity(1).collect();*/
 
 
 		new PotionBandolier().collect();
@@ -150,7 +154,9 @@ public enum HeroClass {
 		(hero.belongings.weapon = staff).identify();
 		hero.belongings.weapon.activate(hero);
 
-
+		/*ArmorKit Kit;
+		Kit = new ArmorKit();
+		Kit.quantity(1).collect();*/
 
 		Dungeon.quickslot.setSlot(0, staff);
 
@@ -168,7 +174,9 @@ public enum HeroClass {
 		(hero.belongings.artifact = cloak).identify();
 		hero.belongings.artifact.activate( hero );
 
-
+		/*ArmorKit Kit;
+		Kit = new ArmorKit();
+		Kit.quantity(1).collect();*/
 
 		ThrowingKnife knives = new ThrowingKnife();
 		knives.quantity(5).collect();
@@ -189,6 +197,10 @@ public enum HeroClass {
 		bow.identify().collect();
 
 		Dungeon.quickslot.setSlot(0, bow);
+
+		/*ArmorKit Kit;
+		Kit = new ArmorKit();
+		Kit.quantity(1).collect();*/
 
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
