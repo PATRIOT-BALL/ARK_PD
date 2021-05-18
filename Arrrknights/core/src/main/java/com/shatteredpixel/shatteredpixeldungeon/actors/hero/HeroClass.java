@@ -150,6 +150,8 @@ public enum HeroClass {
 		(hero.belongings.weapon = staff).identify();
 		hero.belongings.weapon.activate(hero);
 
+
+
 		Dungeon.quickslot.setSlot(0, staff);
 
 		new ScrollHolder().collect();
@@ -165,6 +167,8 @@ public enum HeroClass {
 		CloakOfShadows cloak = new CloakOfShadows();
 		(hero.belongings.artifact = cloak).identify();
 		hero.belongings.artifact.activate( hero );
+
+
 
 		ThrowingKnife knives = new ThrowingKnife();
 		knives.quantity(5).collect();
