@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Honeypot;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.MerchantsBeacon;
+import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.Stylus;
 import com.shatteredpixel.shatteredpixeldungeon.items.Torch;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
@@ -211,7 +212,7 @@ public class ShopRoom extends SpecialRoom {
 		itemsToSpawn.add( new SmallRation() );
 		itemsToSpawn.add( new SmallRation() );
 		
-		switch (Random.Int(4)){
+		switch (Random.Int(5)){
 			case 0:
 				itemsToSpawn.add( new Bomb() );
 				break;
@@ -221,6 +222,9 @@ public class ShopRoom extends SpecialRoom {
 				break;
 			case 3:
 				itemsToSpawn.add( new Honeypot() );
+				break;
+			case 4:
+				itemsToSpawn.add( new OriginiumShard() );
 				break;
 		}
 

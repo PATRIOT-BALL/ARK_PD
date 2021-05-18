@@ -49,4 +49,19 @@ public class OriginiumShard extends Item {
 
 
         }
+
+    @Override
+    public boolean isUpgradable() {
+        return false;
+    }
+
+    @Override
+    public boolean isIdentified() {
+        return true;
+    }
+
+    @Override
+    public int value() {
+        return 20 * quantity;
+    }
     }

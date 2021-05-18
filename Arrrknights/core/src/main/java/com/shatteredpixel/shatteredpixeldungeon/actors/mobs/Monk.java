@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
+import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MonkSprite;
@@ -48,6 +49,7 @@ public class Monk extends Mob {
 		maxLvl = 21;
 		
 		loot = new Food();
+		loot = new OriginiumShard();
 		lootChance = 0.083f;
 
 

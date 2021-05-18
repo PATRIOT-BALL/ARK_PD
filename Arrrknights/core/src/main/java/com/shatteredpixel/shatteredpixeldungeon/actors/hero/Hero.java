@@ -190,7 +190,7 @@ public class Hero extends Char {
 	public Hero() {
 		super();
 
-		HP = HT = 100;
+		HP = HT = 20;
 		STR = STARTING_STR;
 		
 		belongings = new Belongings( this );
