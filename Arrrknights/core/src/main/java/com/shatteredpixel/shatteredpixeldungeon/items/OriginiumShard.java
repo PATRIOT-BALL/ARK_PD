@@ -20,7 +20,7 @@ public class OriginiumShard extends Item {
     private static final String AC_APPLY = "APPLY";
 
     {
-        image = ItemSpriteSheet.TORCH;
+        image = ItemSpriteSheet.ORIGINIUM;
 
         stackable = true;
 

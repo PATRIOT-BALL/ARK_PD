@@ -128,7 +128,7 @@ public class ItemSpriteSheet {
 	private static final int SINGLE_USE     =                               xy(1, 4);   //16 slots
 	public static final int ANKH            = SINGLE_USE+0;
 	public static final int STYLUS          = SINGLE_USE+1;
-	
+	public static final int ORIGINIUM          = SINGLE_USE+2;
 	public static final int SEAL            = SINGLE_USE+3;
 	public static final int TORCH           = SINGLE_USE+4;
 	public static final int BEACON          = SINGLE_USE+5;
