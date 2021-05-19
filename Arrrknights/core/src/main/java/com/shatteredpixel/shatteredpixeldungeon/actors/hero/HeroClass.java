@@ -28,7 +28,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
@@ -153,6 +154,14 @@ public enum HeroClass {
 		staff = new MagesStaff(new WandOfMagicMissile());
 		(hero.belongings.weapon = staff).identify();
 		hero.belongings.weapon.activate(hero);
+
+		/*TomeOfMastery T;
+		T = new TomeOfMastery();
+		T.quantity(1).collect();
+
+		PotionOfExperience P;
+		P = new PotionOfExperience();
+		P.quantity(30).collect();
 
 		/*ArmorKit Kit;
 		Kit = new ArmorKit();
