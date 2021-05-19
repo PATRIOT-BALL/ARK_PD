@@ -29,7 +29,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
@@ -136,9 +138,19 @@ public enum HeroClass {
 			hero.belongings.armor.affixSeal(new BrokenSeal());
 		}
 
-		/*ArmorKit Kit;
+		/*
+		ArmorKit Kit;
 		Kit = new ArmorKit();
-		Kit.quantity(1).collect();*/
+		Kit.quantity(1).collect();
+
+		CurseInfusion Cu;
+		Cu = new CurseInfusion();
+		Cu.quantity(99).collect();
+
+		StoneOfEnchantment sto;
+		sto = new StoneOfEnchantment();
+		sto.quantity(99).collect();
+		*/
 
 
 		new PotionBandolier().collect();

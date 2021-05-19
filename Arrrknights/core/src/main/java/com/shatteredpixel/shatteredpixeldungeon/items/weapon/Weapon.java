@@ -24,8 +24,10 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SeethingBurst;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -33,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Annoying;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Displacing;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.contamination;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Exhausting;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Fragile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Friendly;
@@ -203,6 +206,10 @@ abstract public class Weapon extends KindOfWeapon {
 
 	@Override
 	public int reachFactor(Char owner) {
+		if (curUser.buff(SeethingBurst.class) != null)
+		{
+			return hasEnchant(Projecting.class, owner) ? RCH+2 : RCH+1;
+		}
 		return hasEnchant(Projecting.class, owner) ? RCH+1 : RCH;
 	}
 
@@ -347,7 +354,8 @@ abstract public class Weapon extends KindOfWeapon {
 		
 		private static final Class<?>[] curses = new Class<?>[]{
 				Annoying.class, Displacing.class, Exhausting.class, Fragile.class,
-				Sacrificial.class, Wayward.class, Polarized.class, Friendly.class
+				Sacrificial.class, Wayward.class, Polarized.class, Friendly.class,
+				contamination.class
 		};
 		
 			
