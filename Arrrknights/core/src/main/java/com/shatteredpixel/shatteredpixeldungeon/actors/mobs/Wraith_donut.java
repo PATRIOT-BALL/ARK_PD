@@ -8,6 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.I_GolemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LurkerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MirrorSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Wraith_donutSprite;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -19,7 +20,7 @@ public class Wraith_donut extends Mob{
         private int level;
 
 	{
-            spriteClass = I_GolemSprite.class;
+            spriteClass = Wraith_donutSprite.class;
 
 		HP = HT = 1;
                 EXP = 0;
