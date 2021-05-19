@@ -233,6 +233,7 @@ public class Assets {
 		public static final String GREY	= "sprites/greythroat.png";
 		public static final String AVATARS	= "sprites/avatars.png";
 		public static final String PET		= "sprites/pet.png";
+		public static final String DONUT		= "sprites/Wraith_donut.png";
 		public static final String AMULET	= "sprites/amulet.png";
 
 		public static final String KEEPER	= "sprites/shopkeeper.png";
