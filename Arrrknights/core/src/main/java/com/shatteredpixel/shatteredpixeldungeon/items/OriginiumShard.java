@@ -37,15 +37,16 @@ public class OriginiumShard extends Item {
         public void execute (Hero hero, String action ){
 
             super.execute(hero, action);
+            if (action.equals(AC_USE)) {
+                hero.busy();
 
-            hero.busy();
+                hero.sprite.operate(hero.pos);
 
-            hero.sprite.operate(hero.pos);
+                detach(hero.belongings.backpack);
 
-            detach(hero.belongings.backpack);
-
-            Buff.affect(hero, ActiveOriginium.class).set(hero.HT * 0.1f);
-            Sample.INSTANCE.play(Assets.Sounds.BURNING);
+                Buff.affect(hero, ActiveOriginium.class).set(hero.HT * 0.1f);
+                Sample.INSTANCE.play(Assets.Sounds.BURNING);
+            }
 
 
         }

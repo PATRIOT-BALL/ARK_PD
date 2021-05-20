@@ -27,7 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corrosion;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -150,13 +150,13 @@ public class Necromancer extends Mob {
 		}
 		
 		//heal skeleton first
-		if (mySkeleton.buff(Corrosion.class) == null) {
+		if (mySkeleton.buff(Ooze.class) == null) {
 
 			if (sprite.visible || mySkeleton.sprite.visible) {
 				sprite.parent.add(new Beam.HealthRay(sprite.center(), mySkeleton.sprite.center()));
 			}
 
-			Buff.affect(mySkeleton, Corrosion.class);
+			Buff.affect(mySkeleton, Ooze.class).set( Ooze.DURATION) ;
 		}
 		
 		next();
@@ -218,8 +218,8 @@ public class Necromancer extends Mob {
 				Dungeon.level.occupyCell( mySkeleton );
 				((ScoutSprite)sprite).finishSummoning();
 				
-				if (buff(Corrosion.class) != null){
-					Buff.affect(mySkeleton, Corrosion.class);
+				if (buff(Ooze.class) != null){
+					Buff.affect(mySkeleton, Ooze.class).set( Ooze.DURATION);
 				}
 				for (Buff b : buffs(ChampionEnemy.class)){
 					Buff.affect( mySkeleton, b.getClass());
