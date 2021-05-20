@@ -17,7 +17,7 @@ public class OriginiumShard extends Item {
 
     private static final float TIME_TO_UPGRADE = 1;
 
-    private static final String AC_APPLY = "APPLY";
+    private static final String AC_USE = "USE";
 
     {
         image = ItemSpriteSheet.ORIGINIUM;
@@ -29,7 +29,7 @@ public class OriginiumShard extends Item {
     @Override
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
-        actions.add(AC_APPLY);
+        actions.add(AC_USE);
         return actions;
     }
 
