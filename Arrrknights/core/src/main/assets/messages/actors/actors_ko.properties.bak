@@ -303,7 +303,7 @@ actors.buffs.snipersmark.name=정조준
 actors.buffs.snipersmark.desc=저격수는 그녀가 가장 최근에 공격한 대상에게 집중합니다. 그녀는 어떻게 활이 개조되었는지에 따라 다양한 특수한 공격을 시전할 수 있습니다.\n\n개조되지 않은 활은 _스냅샷_ 을 쏘며, 적은 피해를 입히지만 발사하는 데 턴을 소모하지 않는 화살을 쏩니다.\n\n공격 속도를 위해 개조된 활은 3발의 화살을 _일제 사격_ 합니다. 각각의 화살은 적은 피해를 입히지만, 아츠을 발동시킬 수 있습니다. 일제 사격은 1턴을 소모합니다.\n\n피해량을 위해 개조된 활은 _저격탄_ 을 쏩니다. 이 빗나가지 않는 화살은 대상과의 거리에 따른 추가 피해를 입히며, 발사하는 데 2턴을 소모합니다.
 
 actors.buffs.soulmark.name=낙인
-actors.buffs.soulmark.desc=아미야가 해당 생물체의 영혼을 이용하고 있습니다. 대상에게 물리 피해를 입힐 때 마다 흑아미야의 체력을 회복하고 허기를 감소시킵니다.\n\n영혼 표식은 %s턴 동안 지속됩니다.
+actors.buffs.soulmark.desc=아미야가 해당 생물체의 영혼을 이용하고 있습니다. 대상에게 물리 피해를 입힐 때 마다 아미야의 체력을 회복하고 허기를 감소시킵니다.\n\n영혼 표식은 %s턴 동안 지속됩니다.
 
 actors.buffs.stamina.name=지구력
 actors.buffs.stamina.desc=끝없는 지구력으로 더 빠르게 움직일 수 있게 되었습니다!\n\n효과 중에는 50%% 더 빠르게 이동하지만, 다른 행동은 정상적인 속도로 실행합니다.\n\n지구력 효과는 %s턴 동안 지속됩니다.
@@ -526,7 +526,7 @@ actors.hero.herosubclass.gladiator_desc=_블레이즈α_ 는 근접 공격을 �
 actors.hero.herosubclass.berserker=블레이즈β
 actors.hero.herosubclass.berserker_desc=_블레이즈β_ 는 받은 피해에 비례해 분노를 쌓아 추가 피해를 입힙니다. \n최대로 분노한 블레이즈는 짧은 시간 동안 죽음을 유예할 수 있으며, 그 후 탈진 상태에 빠집니다.
 actors.hero.herosubclass.warlock=아미야β
-actors.hero.herosubclass.warlock_desc=_아미야β_ 는 적에게 아츠 스태프를 사용함으로써 영혼의 낙인을 걸 확률이 있습니다. 낙인이 걸린 적들은 물리 피해를 입을 때마다 흑아미야의 체력을 회복시키고 허기를 충족시킵니다.
+actors.hero.herosubclass.warlock_desc=_아미야β_ 는 적에게 아츠 스태프를 사용함으로써 영혼의 낙인을 걸 확률이 있습니다. 낙인이 걸린 적들은 물리 피해를 입을 때마다 아미야의 체력을 회복시키고 허기를 충족시킵니다.
 actors.hero.herosubclass.battlemage=아미야α
 actors.hero.herosubclass.battlemage_desc=_아미야α_ 는 자신의 흑요석 반지로 물리 공격을 할 때, 흑요석 반지가 흡수한 특성에 따른 추가 효과를 줄 수 있습니다. 또한 피해를 입힐 때 마다 추가 충전량을 얻을 수 있습니다.
 actors.hero.herosubclass.assassin=레드α
@@ -870,7 +870,7 @@ actors.mobs.statue.def_verb=방어
 actors.mobs.statue.desc=단순히 봐서는 던전의 다른 움직임 없는 석상들과 다를 것 없다고 느낄 것입니다. 하지만 붉게 빛나는 눈은 전혀 그렇지 않다고 말합니다.\n\n이 석상은 돌로 만들어져 있지만, 석상의 몸에 박혀있는 _%s_ 만큼은 진짜처럼 보입니다.
 
 actors.mobs.succubus.name=서큐버스
-actors.mobs.succubus.desc=서큐버스는 먹잇감의 정신을 조종하는 또다른 모습의 악마입니다. 이 서큐버스는 고딕 양식의 옷을 입은 창백한 사람의 형태를 띠고 있는데, 아마 드워프 흑아미야들을 유혹하려 한 걸지도요?\n\n서큐버스들은 공격할 때 공격한 대상을 매혹시킬 수 있으며, 대상의 직접 공격을 불가능하게 만듭니다. 그들이 매혹된 적을 공격하면, 대상의 생명력을 훔칠 것입니다.
+actors.mobs.succubus.desc=서큐버스들은 공격할 때 공격한 대상을 매혹시킬 수 있으며, 대상의 직접 공격을 불가능하게 만듭니다. 그들이 매혹된 적을 공격하면, 대상의 생명력을 훔칠 것입니다.
 
 actors.mobs.swarm.name=요마 MK.1
 actors.mobs.swarm.desc=치명적인 파리떼들이 성난 듯이 윙윙댑니다. 모든 비아츠 공격은 이를 원래보다는 작지만 여전히 위험한 두 무리의 파리떼로 나눌 것입니다.
@@ -912,6 +912,9 @@ actors.mobs.thief.desc=엔지니어링에 뛰어난 리유니온 맴버로, 무�
 actors.mobs.warlock.name=폭주한 숙주 투척병
 actors.mobs.warlock.bolt_kill=당신은 몸에 무언가가 꽂힌 채로 죽었다..
 actors.mobs.warlock.desc=점점 미쳐가고 있는 적군 투척병. 지속적으로 생명을 잃어가고 있다. 미친 듯이 주변의 모든 것을 목표에게 던진다. 어떻게 이런 생물이 전장에 존재할 수 있는지, 상상이 잘 가지 않는다.
+
+actors.mobs.wraith_donut.name=영혼의 환영
+actors.mobs.wraith_donut.desc=아미야가 적을 쓰러트리며 나온 영혼을 자신의 모습으로 만들어낸 환영. 구체적인 형체가 없어 일반적인 공격으로 명중시키기 매우 어렵다.
 
 actors.mobs.wraith.name=럴커
 actors.mobs.wraith.desc=리유니온의 특수 전투원. 행동이 민첩하고 잘 발견되지 않아 일반적인 공격으론 피해를 주기 어려우나, 단 한번의 공격으로 나가떨어질 만큼 연약하다.

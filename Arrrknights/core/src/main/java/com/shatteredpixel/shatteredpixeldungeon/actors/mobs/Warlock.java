@@ -117,7 +117,7 @@ public class Warlock extends Mob implements Callback {
 
 		if (hit( this, enemy, true )) {
 
-			int dmg = Random.NormalIntRange( 10, 14 );
+			int dmg = Random.NormalIntRange( 14, 18 );
 			enemy.damage( dmg, new DarkBolt() );
 			
 			if (enemy == Dungeon.hero && !enemy.isAlive()) {

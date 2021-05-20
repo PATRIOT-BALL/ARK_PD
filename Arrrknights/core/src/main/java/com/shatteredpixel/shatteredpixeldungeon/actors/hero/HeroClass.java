@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
@@ -57,6 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortswor
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.sun.org.apache.xpath.internal.operations.Or;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.DeviceCompat;
 
@@ -138,6 +140,10 @@ public enum HeroClass {
 			hero.belongings.armor.affixSeal(new BrokenSeal());
 		}
 
+		OriginiumShard Cu;
+		Cu = new OriginiumShard();
+		Cu.quantity(11).collect();
+
 		/*
 		ArmorKit Kit;
 		Kit = new ArmorKit();
@@ -186,6 +192,10 @@ public enum HeroClass {
 
 		new ScrollOfUpgrade().identify();
 		new PotionOfLiquidFlame().identify();
+
+		OriginiumShard Cu;
+		Cu = new OriginiumShard();
+		Cu.quantity(11).collect();
 	}
 
 	private static void initRogue( Hero hero ) {
@@ -209,6 +219,10 @@ public enum HeroClass {
 
 		new ScrollOfMagicMapping().identify();
 		new PotionOfInvisibility().identify();
+
+		OriginiumShard Cu;
+		Cu = new OriginiumShard();
+		Cu.quantity(11).collect();
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -228,6 +242,10 @@ public enum HeroClass {
 
 		new PotionOfMindVision().identify();
 		new ScrollOfLullaby().identify();
+		
+		OriginiumShard Cu;
+		Cu = new OriginiumShard();
+		Cu.quantity(11).collect();
 	}
 
 	public String title() {

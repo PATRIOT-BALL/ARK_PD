@@ -42,7 +42,7 @@ public class Wraith_donutSprite extends MobSprite {
         idle = new Animation( 2, true );
         idle.frames( frames, 0, 0, 0 );
 
-        run = new Animation( 17, true );
+        run = new Animation( 15, true );
         run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8  );
 
         attack = new Animation( 17, false );

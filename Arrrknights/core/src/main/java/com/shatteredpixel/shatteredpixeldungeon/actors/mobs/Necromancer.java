@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corrosion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
@@ -218,8 +219,8 @@ public class Necromancer extends Mob {
 				Dungeon.level.occupyCell( mySkeleton );
 				((ScoutSprite)sprite).finishSummoning();
 				
-				if (buff(Corruption.class) != null){
-					Buff.affect(mySkeleton, Corruption.class);
+				if (buff(Corrosion.class) != null){
+					Buff.affect(mySkeleton, Corrosion.class);
 				}
 				for (Buff b : buffs(ChampionEnemy.class)){
 					Buff.affect( mySkeleton, b.getClass());
