@@ -45,6 +45,7 @@ public class LurkerSprite extends MobSprite {
 		die = new Animation( 10, false );
 		die.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 );
 
+		alpha(0.6f);
 		play( idle );
 	}
 }

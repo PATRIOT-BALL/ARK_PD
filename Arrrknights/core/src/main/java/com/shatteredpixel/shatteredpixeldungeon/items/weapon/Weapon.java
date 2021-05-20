@@ -93,16 +93,16 @@ abstract public class Weapon extends KindOfWeapon {
 			return dly * delayFactor;
 		}
 	}
-	
+
 	public Augment augment = Augment.NONE;
-	
+
 	private static final int USES_TO_ID = 20;
 	private float usesLeftToID = USES_TO_ID;
 	private float availableUsesToID = USES_TO_ID/2f;
-	
+
 	public Enchantment enchantment;
 	public boolean curseInfusionBonus = false;
-	
+
 	@Override
 	public int proc( Char attacker, Char defender, int damage ) {
 		int conservedDamage = 0;
@@ -115,7 +115,7 @@ abstract public class Weapon extends KindOfWeapon {
 		if (enchantment != null && attacker.buff(MagicImmune.class) == null) {
 			damage = enchantment.proc( this, attacker, defender, damage );
 			}
-		
+
 		if (!levelKnown && attacker == Dungeon.hero) {
 			float uses = Math.min( availableUsesToID, Talent.itemIDSpeedFactor(Dungeon.hero, this) );
 			availableUsesToID -= uses;
@@ -129,7 +129,7 @@ abstract public class Weapon extends KindOfWeapon {
 
 		return damage;
 	}
-	
+
 	public void onHeroGainExp( float levelPercent, Hero hero ){
 		levelPercent *= Talent.itemIDSpeedFactor(hero, this);
 		if (!levelKnown && isEquipped(hero) && availableUsesToID <= USES_TO_ID/2f) {
@@ -137,7 +137,7 @@ abstract public class Weapon extends KindOfWeapon {
 			availableUsesToID = Math.min(USES_TO_ID/2f, availableUsesToID + levelPercent * USES_TO_ID);
 		}
 	}
-	
+
 	private static final String USES_LEFT_TO_ID = "uses_left_to_id";
 	private static final String AVAILABLE_USES  = "available_uses";
 	private static final String ENCHANTMENT	    = "enchantment";
@@ -153,7 +153,7 @@ abstract public class Weapon extends KindOfWeapon {
 		bundle.put( CURSE_INFUSION_BONUS, curseInfusionBonus );
 		bundle.put( AUGMENT, augment );
 	}
-	
+
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle( bundle );
@@ -164,19 +164,19 @@ abstract public class Weapon extends KindOfWeapon {
 
 		augment = bundle.getEnum(AUGMENT, Augment.class);
 	}
-	
+
 	@Override
 	public void reset() {
 		super.reset();
 		usesLeftToID = USES_TO_ID;
 		availableUsesToID = USES_TO_ID/2f;
 	}
-	
+
 	@Override
 	public float accuracyFactor( Char owner ) {
-		
+
 		int encumbrance = 0;
-		
+
 		if( owner instanceof Hero ){
 			encumbrance = STRReq() - ((Hero)owner).STR();
 		}
@@ -188,7 +188,7 @@ abstract public class Weapon extends KindOfWeapon {
 
 		return encumbrance > 0 ? (float)(ACC / Math.pow( 1.5, encumbrance )) : ACC;
 	}
-	
+
 	@Override
 	public float speedFactor( Char owner ) {
 
@@ -206,11 +206,12 @@ abstract public class Weapon extends KindOfWeapon {
 
 	@Override
 	public int reachFactor(Char owner) {
-		if (curUser.buff(SeethingBurst.class) != null)
-		{
-			return hasEnchant(Projecting.class, owner) ? RCH+2 : RCH+1;
+		if (owner.buff(SeethingBurst.class) != null) {
+			return hasEnchant(Projecting.class, owner) ? RCH + 2 : RCH + 1;
 		}
-		return hasEnchant(Projecting.class, owner) ? RCH+1 : RCH;
+		else {
+			return hasEnchant(Projecting.class, owner) ? RCH + 1 : RCH;
+		}
 	}
 
 	public int STRReq(){

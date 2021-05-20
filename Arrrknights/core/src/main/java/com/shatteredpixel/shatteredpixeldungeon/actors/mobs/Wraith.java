@@ -46,7 +46,7 @@ public class Wraith extends Mob {
 
 		maxLvl = -2;
 		
-		flying = true;
+		flying = false;
 
 	}
 	

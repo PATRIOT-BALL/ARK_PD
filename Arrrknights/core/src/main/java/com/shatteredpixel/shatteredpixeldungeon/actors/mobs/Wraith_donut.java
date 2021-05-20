@@ -27,7 +27,7 @@ public class Wraith_donut extends Mob{
 
                 maxLvl = -2;
 
-                flying = true;
+                flying = false;
 
                 }
 
