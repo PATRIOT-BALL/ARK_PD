@@ -28,7 +28,6 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corrosion;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -151,13 +150,13 @@ public class Necromancer extends Mob {
 		}
 		
 		//heal skeleton first
-		if (mySkeleton.buff(Corruption.class) == null) {
+		if (mySkeleton.buff(Corrosion.class) == null) {
 
 			if (sprite.visible || mySkeleton.sprite.visible) {
 				sprite.parent.add(new Beam.HealthRay(sprite.center(), mySkeleton.sprite.center()));
 			}
 
-			Buff.affect(mySkeleton, Corruption.class);
+			Buff.affect(mySkeleton, Corrosion.class);
 		}
 		
 		next();
