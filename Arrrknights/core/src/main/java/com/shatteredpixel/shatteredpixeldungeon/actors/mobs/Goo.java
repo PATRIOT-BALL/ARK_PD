@@ -237,7 +237,10 @@ public class Goo extends Mob {
 				ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
 			} while (!Dungeon.level.passable[pos + ofs]);
 			Dungeon.level.drop( new GooBlob(), pos + ofs ).sprite.drop( pos );
-			Dungeon.level.drop( new ThrowingClub(), pos + ofs).sprite.drop(pos);
+		}
+		for (int i = 0; i < 2; i++) {
+			int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+			Dungeon.level.drop(new ThrowingClub(), pos + ofs).sprite.drop(pos);
 		}
 		
 		Badges.validateBossSlain();
