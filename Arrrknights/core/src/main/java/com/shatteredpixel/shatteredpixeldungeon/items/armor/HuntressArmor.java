@@ -51,15 +51,19 @@ public class HuntressArmor extends ClassArmor {
 	@Override
 	public void doSpecial() {
 
-		charge -= 25;
-		updateQuickslot();
+	 if (charge < 25) {
+		 GLog.w(Messages.get(this, "low_charge"));}
+		else{
+			 charge -= 25;
+			 updateQuickslot();
 
-		Buff.affect(curUser, Adrenaline.class, 8);
-		Buff.affect(curUser, Roots.class, 1);
-		Buff.affect(curUser, Cripple.class, 4);
+			 Buff.affect(curUser, Adrenaline.class, 8);
+			 Buff.affect(curUser, Roots.class, 1);
+			 Buff.affect(curUser, Cripple.class, 4);
 
-		curUser.busy();
-		curUser.spendAndNext(1);
-	}
+			 curUser.busy();
+			 curUser.spendAndNext(1);
+		 }
+	 }
 
 }

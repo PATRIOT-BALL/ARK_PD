@@ -48,7 +48,7 @@ import java.util.ArrayList;
 public class SpiritBow extends Weapon {
 	
 	public static final String AC_SHOOT		= "SHOOT";
-	
+
 	{
 		image = ItemSpriteSheet.SPIRIT_BOW;
 		
@@ -329,7 +329,7 @@ public class SpiritBow extends Weapon {
 									}
 								});
 				
-				user.sprite.zap(cell, new Callback() {
+				user.sprite.Sattack(cell, new Callback() {
 					@Override
 					public void call() {
 						flurryCount--;

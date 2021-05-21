@@ -130,10 +130,8 @@ abstract public class ClassArmor extends Armor {
 		if (action.equals(AC_SPECIAL)) {
 			
 			if (!isEquipped( hero )) {
-				GLog.w( Messages.get(this, "not_equipped") );
-			} else if (charge < 35) {
-				GLog.w( Messages.get(this, "low_charge") );
-			} else  {
+				GLog.w( Messages.get(this, "not_equipped") );}
+			else  {
 				curUser = hero;
 				doSpecial();
 			}

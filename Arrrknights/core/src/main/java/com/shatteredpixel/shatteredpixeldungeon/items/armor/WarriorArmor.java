@@ -38,6 +38,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
@@ -54,12 +55,16 @@ public class WarriorArmor extends ClassArmor {
 	@Override
 	public void doSpecial() {
 
-		charge -= 35;
-		updateQuickslot();
+		if (charge < 35) {
+			GLog.w(Messages.get(this, "low_charge"));}
+		else {
+			charge -= 35;
+			updateQuickslot();
 
-		Buff.affect(curUser, SeethingBurst.class, 5);
+			Buff.affect(curUser, SeethingBurst.class, 5);
 
-		curUser.busy();
-		curUser.spendAndNext(1);
+			curUser.busy();
+			curUser.spendAndNext(1);
+		}
 	};
 }

@@ -54,7 +54,11 @@ public class RogueArmor extends ClassArmor {
 	
 	@Override
 	public void doSpecial() {
-		GameScene.selectCell( teleporter );
+		if (charge < 35) {
+			GLog.w(Messages.get(this, "low_charge"));
+		} else {
+			GameScene.selectCell(teleporter);
+		} ;
 	}
 	
 	protected CellSelector.Listener teleporter = new  CellSelector.Listener() {

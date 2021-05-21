@@ -68,7 +68,11 @@ public class MageArmor extends ClassArmor {
 
 	@Override
 	public void doSpecial() {
-		GameScene.selectCell( leaper );
+		if (charge < 100) {
+			GLog.w(Messages.get(this, "low_charge"));}
+		else {
+			GameScene.selectCell(leaper);
+		}
 	}
 
 	protected CellSelector.Listener leaper = new  CellSelector.Listener() {
