@@ -1350,7 +1350,7 @@ items.weapon.melee.assassinsblade.stats_desc=기습 시 최대 데미지 보정 
 items.weapon.melee.assassinsblade.desc=카시미어의 검투사들이 사용하던 단검. 시에스타의 흑요석으로 가공 된 날카로운 두 개의 단도는 적의 생명을 순식간에 앗아갈 것이다.
 
 items.weapon.melee.battleaxe.name=성좌의 수호자
-items.weapon.melee.battleaxe.stats_desc=명중률 +100%
+items.weapon.melee.battleaxe.stats_desc=명중률 +35%
 items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.
 
 items.weapon.melee.crossbow.name=핸드 발리스타
@@ -1395,7 +1395,7 @@ items.weapon.melee.greatsword.stats_desc=사거리 +1 \n 공격속도 +100% \n �
 items.weapon.melee.greatsword.desc=로도스 아일랜드 기술진이 만든 사거리 연장모듈이 도착했다. 전기톱 우는 소리 들리지? 덤으로 새로운 모터와 무딘 칼날들도 새로 교체됐다구! 
 
 items.weapon.melee.handaxe.name=묠니르-3
-items.weapon.melee.handaxe.stats_desc=명중률 +100%
+items.weapon.melee.handaxe.stats_desc=명중률 +20%
 items.weapon.melee.handaxe.desc=적당한 무게와 길이를 가진 도어 브리칭용 망치. 문 뿐만이 아니라 벽도 부술 수 있다. 아니면 사람의 머리라던가?
 
 items.weapon.melee.knuckles.name=너클더스터
@@ -1407,7 +1407,7 @@ items.weapon.melee.longsword.stats_desc=사거리 +1, 명중률 -25%
 items.weapon.melee.longsword.desc=독특한 형상의 동양풍의 검으로, 특수한 설계 과정을 거쳐 아츠를 사용할 때 충격성 효과를 발생시킨다.
 
 items.weapon.melee.mace.name=테르밋 블레이드
-items.weapon.melee.mace.stats_desc=명중률 +100%
+items.weapon.melee.mace.stats_desc=명중률 +28%
 items.weapon.melee.mace.desc=2500도까지 달아오르는 고열로 대상을 관통하는 레이피어. 이글거리는 테르밋 블레이드가 뚫을 수 없는 방어는 존재하지 않는다.
 
 items.weapon.melee.magesstaff.name=흑요석 반지
@@ -1463,14 +1463,14 @@ items.weapon.melee.spear.stats_desc=사거리 +2 \n 공격속도 -33%
 items.weapon.melee.spear.desc=키가 작은 그라니를 위해 빅토리아에서 맞춤 제작된 수축형 장창. 카탈로그 상 창의 길이를 두배가량 늘릴 수 있지만, 그라니 본인은 무게 중심이 불안정해져서 거의 사용하지 않는 기능이라고 한다...
 
 items.weapon.melee.rifle.name=리-엔필드
-items.weapon.melee.rifle.stats_desc=사거리 _무한_ \n 공격속도 -33%5
+items.weapon.melee.rifle.stats_desc=사거리 _무한_ \n 공격속도 -33%
 items.weapon.melee.rifle.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.
 
 items.weapon.melee.sword.name=범고래 쿠션
 items.weapon.melee.sword.desc=귀여운 범고래모양 쿠션. 보기와 다르게 굉장히 무겁다. 이런 걸 휘두르면 분명 아프겠지?
 
 items.weapon.melee.warhammer.name=레바테인
-items.weapon.melee.warhammer.stats_desc=명중률 +150%%
+items.weapon.melee.warhammer.stats_desc=명중률 +40%
 items.weapon.melee.warhammer.desc=대검이 휘둘릴 때, 맹렬한 화염은 천지를 불태우고 신의 정원을 몰락시킬 것이다. 이는 신들의 황혼이자 신사의 폐막이나 그것은 끝이 아니니, 옛 죄악을 태워버린 초토 위에서 희망의 싹이 새로 태어날 것이기 때문이다. \n\n_신의 정원을 베고 성신을 제련하는 자, 수르트가 돌아왔다!_
 
 items.weapon.melee.whip.name=데스트레자
