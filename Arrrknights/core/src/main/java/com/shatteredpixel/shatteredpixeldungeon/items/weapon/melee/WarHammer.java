@@ -32,7 +32,7 @@ public class WarHammer extends MeleeWeapon {
 		hitSoundPitch = 1f;
 
 		tier = 5;
-		ACC = 2.5f; //20% boost to accuracy
+		ACC = 1.40f; //20% boost to accuracy
 	}
 
 	@Override

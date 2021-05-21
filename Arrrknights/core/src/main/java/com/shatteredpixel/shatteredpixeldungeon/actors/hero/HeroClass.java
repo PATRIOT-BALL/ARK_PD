@@ -232,9 +232,9 @@ public enum HeroClass {
 
 		Dungeon.quickslot.setSlot(0, bow);
 
-		ArmorKit Kit;
+		/*ArmorKit Kit;
 		Kit = new ArmorKit();
-		Kit.quantity(1).collect();
+		Kit.quantity(1).collect();*/
 
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
