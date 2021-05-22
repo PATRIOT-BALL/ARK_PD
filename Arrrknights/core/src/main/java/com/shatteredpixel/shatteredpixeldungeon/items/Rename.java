@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
+import com.badlogic.gdx.Input;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -9,8 +10,8 @@ import com.watabou.noosa.audio.Sample;
 
 import java.util.ArrayList;
 
+public class Rename extends Item {
 
-public class OriginiumShard extends Item {
     private static final String TXT_UPGRADED = "OriginiumShard";
 
     private static final float TIME_TO_UPGRADE = 1;
@@ -31,23 +32,15 @@ public class OriginiumShard extends Item {
         return actions;
     }
 
-        @Override
-        public void execute (Hero hero, String action ){
+    @Override
+    public void execute (Hero hero, String action ){
 
-            super.execute(hero, action);
-            if (action.equals(AC_USE)) {
-                hero.busy();
-
-                hero.sprite.operate(hero.pos);
-
-                detach(hero.belongings.backpack);
-
-                Buff.affect(hero, ActiveOriginium.class).set(hero.HT * 0.1f);
-                Sample.INSTANCE.play(Assets.Sounds.BURNING);
-            }
-
-
+        super.execute(hero, action);
+        if (action.equals(AC_USE)){
+            hero.named = "대충 아직 구현안된 기능!";
         }
+
+    }
 
     @Override
     public boolean isUpgradable() {
@@ -63,4 +56,4 @@ public class OriginiumShard extends Item {
     public int value() {
         return 20 * quantity;
     }
-    }
+}

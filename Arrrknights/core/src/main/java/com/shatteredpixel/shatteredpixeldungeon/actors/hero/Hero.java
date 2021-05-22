@@ -68,6 +68,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
@@ -181,6 +182,12 @@ public class Hero extends Char {
 	public int exp = 0;
 	
 	public int HTBoost = 0;
+
+	public String named;
+
+	public Skill SK1;
+	public Skill SK2;
+	public Skill SK3;
 	
 	private ArrayList<Mob> visibleEnemies;
 
@@ -193,6 +200,7 @@ public class Hero extends Char {
 
 		HP = HT = 20;
 		STR = STARTING_STR;
+		named = "NoName";
 		
 		belongings = new Belongings( this );
 		
@@ -235,6 +243,7 @@ public class Hero extends Char {
 	private static final String LEVEL		= "lvl";
 	private static final String EXPERIENCE	= "exp";
 	private static final String HTBOOST     = "htboost";
+	private static final String RENAME      = "named";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -254,6 +263,7 @@ public class Hero extends Char {
 		bundle.put( EXPERIENCE, exp );
 		
 		bundle.put( HTBOOST, HTBoost );
+		bundle.put( RENAME, named);
 
 		belongings.storeInBundle( bundle );
 	}
@@ -274,6 +284,7 @@ public class Hero extends Char {
 		
 		attackSkill = bundle.getInt( ATTACK );
 		defenseSkill = bundle.getInt( DEFENSE );
+		named = bundle.getString(RENAME);
 		
 		STR = bundle.getInt( STRENGTH );
 
@@ -334,12 +345,15 @@ public class Hero extends Char {
 	}
 	
 	public String className() {
-		return subClass == null || subClass == HeroSubClass.NONE ? heroClass.title() : subClass.title();
+		if (named != "NoName") {
+			return  named;
+		}
+		else return subClass == null || subClass == HeroSubClass.NONE ? heroClass.title() : subClass.title();
 	}
 
 	@Override
 	public String name(){
-		return className();
+    return  className();
 	}
 
 	@Override

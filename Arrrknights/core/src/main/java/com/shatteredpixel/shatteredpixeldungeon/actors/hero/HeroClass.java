@@ -29,11 +29,15 @@ import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
+import com.shatteredpixel.shatteredpixeldungeon.items.Rename;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
@@ -60,6 +64,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingSt
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.DeviceCompat;
+
+import java.awt.print.Book;
 
 public enum HeroClass {
 
@@ -143,6 +149,14 @@ public enum HeroClass {
 		Cu = new OriginiumShard();
 		Cu.quantity(11).collect();
 
+		SkillBook skillB;
+		skillB = new SkillBook();
+		skillB.quantity(1).collect();
+
+		BookPowerfulStrike P;
+		P = new BookPowerfulStrike();
+		P.quantity(1).collect();
+
 		/*
 		ArmorKit Kit;
 		Kit = new ArmorKit();
@@ -156,6 +170,10 @@ public enum HeroClass {
 		sto = new StoneOfEnchantment();
 		sto.quantity(99).collect();
 		*/
+
+		Rename re;
+		re = new Rename();
+		re.quantity(1).collect();
 
 
 		new PotionBandolier().collect();
@@ -357,4 +375,5 @@ public enum HeroClass {
 		String value = bundle.getString( CLASS );
 		return value.length() > 0 ? valueOf( value ) : ROGUE;
 	}
+
 }
