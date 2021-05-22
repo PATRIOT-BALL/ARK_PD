@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
@@ -156,6 +157,10 @@ public enum HeroClass {
 		BookPowerfulStrike P;
 		P = new BookPowerfulStrike();
 		P.quantity(1).collect();
+
+		BookTacticalChanting T;
+		T = new BookTacticalChanting();
+		T.quantity(1).collect();
 
 		/*
 		ArmorKit Kit;
