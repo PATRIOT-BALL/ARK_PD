@@ -1,11 +1,14 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.Skill;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.noosa.audio.Sample;
 
@@ -18,7 +21,6 @@ public class SkillBook extends Item {
 
     {
         image = ItemSpriteSheet.ARTIFACT_GREAVES;
-
         stackable = true;
 
     }
@@ -44,8 +46,30 @@ public class SkillBook extends Item {
             if (hero.SK1 != null){
             hero.SK1.doSkill();}
         }
+    }
 
+    @Override
+    public String info() {
+        String info = desc();
 
+        curUser = Dungeon.hero;
+
+        if (curUser.SK1 != null) {
+            info += "\n\n" + curUser.SK1.name();
+            info += " " + curUser.SK1.desc();
+        }
+
+        if (curUser.SK2 != null) {
+            info += "\n\n" +  curUser.SK2.name();
+            info += " " + curUser.SK2.desc();
+        }
+
+        if (curUser.SK3 != null) {
+            info += "\n\n" +  curUser.SK3.name();
+            info += " " + curUser.SK3.desc();
+        }
+
+        return info;
     }
 
     @Override

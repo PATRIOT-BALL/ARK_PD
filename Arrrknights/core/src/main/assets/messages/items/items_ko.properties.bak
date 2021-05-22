@@ -1,9 +1,16 @@
 ###SkillBook
 items.skill.skillbook.name = 아츠 개론서
 items.skill.skillbook.desc = 로도스 대원들의 아츠들을 기록할 수 있는 신비한 도구입니다.
-items.skill.skillbook.ac_skl1 = 1스킬 발동
-items.skill.skillbook.ac_skl2 = 2스킬 발동
-items.skill.skillbook.ac_skl3 = 3스킬 발동
+items.skill.skillbook.ac_skl1 = 1스킬 발동 (SP 30%)
+items.skill.skillbook.ac_skl2 = 2스킬 발동 (SP 60%)
+items.skill.skillbook.ac_skl3 = 3스킬 발동 (SP 100%)
+
+##Skill
+items.skill.sk1.tacticalchanting.name=_급속 충전(1스킬)
+items.skill.sk1.tacticalchanting.desc=발동시 레벨에 비례한 충전 효과를 얻습니다.
+
+items.skill.sk1.powerfulstrike.name=_강타(1스킬)
+items.skill.sk1.powerfulstrike.desc=발동시 레벨과 힘에 비례하여 다음 공격의 피해량이 상승합니다.
 
 
 
