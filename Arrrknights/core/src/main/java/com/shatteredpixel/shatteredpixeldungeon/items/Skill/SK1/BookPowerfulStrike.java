@@ -42,6 +42,7 @@ public class BookPowerfulStrike extends Item {
             detach(hero.belongings.backpack);
 
             hero.SK1 = new PowerfulStrike();
+            hero.SetSkill1Num(2);
         }
 
 

@@ -68,6 +68,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.WolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
@@ -188,6 +193,10 @@ public class Hero extends Char {
 	public Skill SK1;
 	public Skill SK2;
 	public Skill SK3;
+
+	private int SK1num;
+	private int SK2num;
+	private int SK3num;
 	
 	private ArrayList<Mob> visibleEnemies;
 
@@ -200,7 +209,6 @@ public class Hero extends Char {
 
 		HP = HT = 20;
 		STR = STARTING_STR;
-		named = "NoName";
 		
 		belongings = new Belongings( this );
 		
@@ -244,6 +252,9 @@ public class Hero extends Char {
 	private static final String EXPERIENCE	= "exp";
 	private static final String HTBOOST     = "htboost";
 	private static final String RENAME      = "named";
+	private static final String SKL1      = "sk1num";
+	private static final String SKL2      = "sk2num";
+	private static final String SKL3      = "sk3num";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
@@ -265,6 +276,11 @@ public class Hero extends Char {
 		bundle.put( HTBOOST, HTBoost );
 		bundle.put( RENAME, named);
 
+		// 스킬 데이터 저장
+		bundle.put( SKL1, SK1num );
+		bundle.put( SKL2, SK2num );
+		bundle.put( SKL3, SK3num );
+
 		belongings.storeInBundle( bundle );
 	}
 	
@@ -284,7 +300,17 @@ public class Hero extends Char {
 		
 		attackSkill = bundle.getInt( ATTACK );
 		defenseSkill = bundle.getInt( DEFENSE );
+
 		named = bundle.getString(RENAME);
+
+		// 스킬 데이터 불러오기
+		SK1num = bundle.getInt(SKL1);
+		SK2num = bundle.getInt(SKL2);
+		SK3num = bundle.getInt(SKL3);
+
+		loadSkill1(SK1num);
+		loadSkill2(SK2num);
+		loadSkill3(SK3num);
 		
 		STR = bundle.getInt( STRENGTH );
 
@@ -345,10 +371,10 @@ public class Hero extends Char {
 	}
 	
 	public String className() {
-		if (named != "NoName") {
+		/*if (named != null) {
 			return  named;
 		}
-		else return subClass == null || subClass == HeroSubClass.NONE ? heroClass.title() : subClass.title();
+		else*/ return subClass == null || subClass == HeroSubClass.NONE ? heroClass.title() : subClass.title();
 	}
 
 	@Override
@@ -1979,4 +2005,32 @@ public class Hero extends Char {
 	public static interface Doom {
 		public void onDeath();
 	}
+
+
+	public void SetSkill1Num(int SkillNumber){
+		SK1num = SkillNumber;
+	}
+	public void SetSkill2Num(int SkillNumber){
+		SK2num = SkillNumber;
+	}
+	public void SetSkill3Num(int SkillNumber){
+		SK3num = SkillNumber;
+	}
+
+	private void loadSkill1(int SkillNumber){
+		if (SkillNumber==1) {SK1 = new TacticalChanting();}
+		else if (SkillNumber==2) {SK1 = new PowerfulStrike();}
+		else if (SkillNumber==3) {SK1 = new ExecutionMode();}
+		else SK1 = null;
+	}
+
+	private void loadSkill2(int SkillNumber){
+		if (SkillNumber==1) {SK2 = new WolfPack();}
+		else if (SkillNumber==2) {SK2 = new MentalBurst();}
+		else SK2 = null;
+	}
+
+	private void loadSkill3(int SkillNumber){
+		SK3 = null;
+		}
 }

@@ -29,8 +29,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
@@ -162,6 +165,18 @@ public enum HeroClass {
 		T = new BookTacticalChanting();
 		T.quantity(1).collect();
 
+		BookExecutionMode BBB;
+		BBB = new BookExecutionMode();
+		BBB.quantity(1).collect();
+
+		BookWolfPack Wowo;
+		Wowo = new BookWolfPack();
+		Wowo.quantity(1).collect();
+
+		BookMentalBurst BurstBurst;
+		BurstBurst = new BookMentalBurst();
+		BurstBurst.quantity(1).collect();
+
 		/*
 		ArmorKit Kit;
 		Kit = new ArmorKit();
@@ -176,9 +191,9 @@ public enum HeroClass {
 		sto.quantity(99).collect();
 		*/
 
-		Rename re;
+		/*Rename re;
 		re = new Rename();
-		re.quantity(1).collect();
+		re.quantity(1).collect();*/
 
 
 		new PotionBandolier().collect();

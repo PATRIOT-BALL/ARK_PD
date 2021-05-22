@@ -6,7 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 import java.util.ArrayList;
 
-public class BookTacticalChanting extends Item {
+public class BookExecutionMode extends Item {
     private static final String AC_USE = "USE";
 
     {
@@ -32,8 +32,8 @@ public class BookTacticalChanting extends Item {
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
 
-            hero.SK1 = new TacticalChanting();
-            hero.SetSkill1Num(1);
+            hero.SK1 = new ExecutionMode();
+            hero.SetSkill1Num(3);
         }
 
 

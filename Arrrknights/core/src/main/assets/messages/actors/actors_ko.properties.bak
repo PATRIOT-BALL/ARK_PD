@@ -158,8 +158,11 @@ actors.buffs.drowsy.desc=아츠의 힘이 잠을 쏟아지게 만듭니다.\n\n�
 actors.buffs.earthimbue.name=대지와 동화함
 actors.buffs.earthimbue.desc=당신은 대지의 힘과 하나가 되었습니다!\n\n당신의 모든 물리적 공격에 땅을 일으키는 힘이 담기게 될 것이며, 일시적으로 타격한 적들을 속박시킬 것입니다.\n\n효과가 끝나기까지 %s 턴 남았습니다.
 
-actors.buffs.enhancedrings.name=향상된 반지
-actors.buffs.enhancedrings.desc=레드이 최근에 사용한 유물이 반지를 강화하고 있습니다. +1의 강화 수치가 다음 %d턴 동안 적용됩니다.
+actors.buffs.enhancedrings.name=처형 모드
+actors.buffs.enhancedrings.desc=처형 모드에 돌입하였습니다. 지속되는동안 회피율이 1.3배로 적용됩니다.\n\n효과가 끝나기까지 %s 턴 남았습니다.
+
+actors.buffs.mxecutmode.name=향상된 반지
+actors.buffs.mxecutmode.desc=레드이 최근에 사용한 유물이 반지를 강화하고 있습니다. +1의 강화 수치가 다음 %d턴 동안 적용됩니다.
 
 actors.buffs.fireimbue.name=화염과 동화함
 actors.buffs.fireimbue.desc=당신은 불의 힘과 하나가 되었습니다!\n\n적에게 가하는 모든 물리 공격은 지속시간 동안 적들을 불타오르게 만들며, 당신은 불에 면역이 됩니다.\n\n화염과 동화함 효과는 %s턴 동안 지속됩니다.
@@ -862,8 +865,8 @@ actors.mobs.snake.name=새싹 원석충
 actors.mobs.snake.hint=바위게에게 조사 버튼을 사용하여 어떻게 반격할 수 있는지에 대해 배워 보세요.
 actors.mobs.snake.desc=거대한 하수구 뱀들은 공격을 잘 회피하는 습성 덕에 피해를 주기가 까다롭습니다. 하지만 기습이나 아츠 공격 등으로 대응할 수 있습니다.\n\n뱀의 시야 바깥에서 공격하면 한 번의 기습 공격을 가합니다. 문 너머로 뱀을 유인한 뒤 _뱀이 문을 넘어온 순간에 공격_ 하는 것도 좋은 방법입니다.
 
-actors.mobs.spinner.name=동굴 거미
-actors.mobs.spinner.desc=이 녹색의 털복숭이 거미는 직접적으로 싸우기보단, 그들이 쳐둔 거미줄에 걸린 희생자가 그들의 독니에 물려 천천히 죽어가는 것을 거리를 두고 지켜봅니다.  그들은 먼 거리까지 거미줄을 발사할 수 있으며, 그들의 먹잇감이 도망치려는 어떠한 길도 막으려 들 것입니다.
+actors.mobs.spinner.name=고에너지 원석충
+actors.mobs.spinner.desc=야생의 감염 생물. 복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다. 이런 저지능 생물은 적의 캐스터에게 조종당할 가능성이 있으며, 인공설비에 침입하여 무리지어 공격한다. 그들은 독 이빨로 대상을 중독시키고 먼 거리까지 거미줄을 발사할 수 있으며, 그들의 먹잇감이 도망치려는 어떠한 길도 막으려 들 것입니다.
 
 actors.mobs.statue.name=움직이는 석상
 actors.mobs.statue.def_verb=방어
@@ -873,8 +876,7 @@ actors.mobs.succubus.name=서큐버스
 actors.mobs.succubus.desc=서큐버스들은 공격할 때 공격한 대상을 매혹시킬 수 있으며, 대상의 직접 공격을 불가능하게 만듭니다. 그들이 매혹된 적을 공격하면, 대상의 생명력을 훔칠 것입니다.
 
 actors.mobs.swarm.name=요마 MK.1
-actors.mobs.swarm.desc=치명적인 파리떼들이 성난 듯이 윙윙댑니다. 모든 비아츠 공격은 이를 원래보다는 작지만 여전히 위험한 두 무리의 파리떼로 나눌 것입니다.
-
+actors.mobs.swarm.desc=적이 조종하는 드론. 내부에선 '요마'라고 불리고 있다. 원거리 조종이 가능한 아츠 리시버가 탑재된 것으로 미뤄보아 가까운 곳에 숨어있는 캐스터가 조종하고 있는 것으로 보인다. 방어력이 높은 오퍼레이터에겐 큰 대미지를 줄 수는 없겠지만, 그렇지 않은 오퍼레이터에겐 여전히 위협적인 존재다.\n\n 아츠 공격이 아닌 일반 공격은 요마를 둘로 분열시킬 것 입니다.
 actors.mobs.newtengu.name=W
 actors.mobs.newtengu.notice_gotcha=오랫만이네, %s!
 actors.mobs.newtengu.interesting=너, 좀 재밌는걸?

@@ -36,15 +36,23 @@ public class SkillBook extends Item {
 
     @Override
     public void execute (Hero hero, String action ){
-
         super.execute(hero, action);
         if (action.equals(AC_SKL1)) {
-            hero.busy();
-            hero.sprite.operate(hero.pos);
-
 
             if (hero.SK1 != null){
             hero.SK1.doSkill();}
+        }
+
+        if (action.equals(AC_SKL2)) {
+
+            if (hero.SK2 != null){
+                hero.SK2.doSkill();}
+        }
+
+        if (action.equals(AC_SKL3)) {
+
+            if (hero.SK3 != null){
+                hero.SK3.doSkill();}
         }
     }
 
