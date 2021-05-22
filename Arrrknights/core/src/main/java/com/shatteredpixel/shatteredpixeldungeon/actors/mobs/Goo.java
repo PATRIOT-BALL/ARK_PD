@@ -53,7 +53,6 @@ public class Goo extends Mob {
 		spriteClass = HandclapSprite.class;
 
 		properties.add(Property.BOSS);
-		properties.add(Property.DEMONIC);
 		properties.add(Property.ACIDIC);
 	}
 

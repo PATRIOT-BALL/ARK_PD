@@ -67,7 +67,6 @@ public abstract class YogFist extends Mob {
 		state = HUNTING;
 
 		properties.add(Property.BOSS);
-		properties.add(Property.DEMONIC);
 	}
 
 	private float rangedCooldown;

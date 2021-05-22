@@ -62,8 +62,6 @@ public class Succubus extends Mob {
 		
 		loot = Generator.Category.SCROLL;
 		lootChance = 0.33f;
-
-		properties.add(Property.DEMONIC);
 	}
 	
 	@Override
