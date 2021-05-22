@@ -429,9 +429,9 @@ public class DwarfKing extends Mob {
 				}
 				h.destroy();
 			}
-			Dungeon.level.drop(new ArmorKit(), pos + Dungeon.level.width()).sprite.drop(pos);
+			//Dungeon.level.drop(new ArmorKit(), pos + Dungeon.level.width()).sprite.drop(pos); 개조킷 드롭부분. 비활성화
 		} else {
-			Dungeon.level.drop(new ArmorKit(), pos).sprite.drop();
+			//Dungeon.level.drop(new ArmorKit(), pos).sprite.drop(); 개조킷 드롭부분. 비활성화.
 		}
 
 		Badges.validateBossSlain();
