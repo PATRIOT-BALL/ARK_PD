@@ -32,8 +32,13 @@ public class Longsword extends MeleeWeapon {
 		hitSoundPitch = 1f;
 
 		tier = 4;
-		ACC = 0.75f;
+		ACC = 0.65f;
 		RCH = 2;
+	}
+	@Override
+	public int max(int lvl) {
+		return  4*(tier+1) +    //20 base, down from 25
+				lvl*(tier+1);   //scaling unchanged
 	}
 
 }
