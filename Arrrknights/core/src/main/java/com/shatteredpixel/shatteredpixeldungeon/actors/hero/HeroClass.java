@@ -25,23 +25,15 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
-import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
-import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
-import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
-import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
-import com.shatteredpixel.shatteredpixeldungeon.items.Rename;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
@@ -68,8 +60,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingSt
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.DeviceCompat;
-
-import java.awt.print.Book;
 
 public enum HeroClass {
 
@@ -149,39 +139,11 @@ public enum HeroClass {
 			hero.belongings.armor.affixSeal(new BrokenSeal());
 		}
 
-		OriginiumShard Cu;
-		Cu = new OriginiumShard();
-		Cu.quantity(11).collect();
-
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 
-		BookPowerfulStrike P;
-		P = new BookPowerfulStrike();
-		P.quantity(1).collect();
-
-		BookTacticalChanting T;
-		T = new BookTacticalChanting();
-		T.quantity(1).collect();
-
-		BookExecutionMode BBB;
-		BBB = new BookExecutionMode();
-		BBB.quantity(1).collect();
-
-		BookWolfPack Wowo;
-		Wowo = new BookWolfPack();
-		Wowo.quantity(1).collect();
-
-		BookMentalBurst BurstBurst;
-		BurstBurst = new BookMentalBurst();
-		BurstBurst.quantity(1).collect();
-
 		/*
-		ArmorKit Kit;
-		Kit = new ArmorKit();
-		Kit.quantity(1).collect();
-
 		CurseInfusion Cu;
 		Cu = new CurseInfusion();
 		Cu.quantity(99).collect();
@@ -230,9 +192,9 @@ public enum HeroClass {
 		new ScrollOfUpgrade().identify();
 		new PotionOfLiquidFlame().identify();
 
-		OriginiumShard Cu;
-		Cu = new OriginiumShard();
-		Cu.quantity(11).collect();
+		SkillBook skillB;
+		skillB = new SkillBook();
+		skillB.quantity(1).collect();
 	}
 
 	private static void initRogue( Hero hero ) {
@@ -257,9 +219,9 @@ public enum HeroClass {
 		new ScrollOfMagicMapping().identify();
 		new PotionOfInvisibility().identify();
 
-		OriginiumShard Cu;
-		Cu = new OriginiumShard();
-		Cu.quantity(11).collect();
+		SkillBook skillB;
+		skillB = new SkillBook();
+		skillB.quantity(1).collect();
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -270,9 +232,13 @@ public enum HeroClass {
 
 		Dungeon.quickslot.setSlot(0, bow);
 
-		/*ArmorKit Kit;
-		Kit = new ArmorKit();
-		Kit.quantity(1).collect();*/
+		ThrowingStone stones;
+		stones = new ThrowingStone();
+		stones.quantity(5).collect();
+
+		SkillBook skillB;
+		skillB = new SkillBook();
+		skillB.quantity(1).collect();
 
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();

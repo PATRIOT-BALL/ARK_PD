@@ -46,6 +46,13 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.EarthParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SparkParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookEmergencyDefibrillator;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
@@ -517,6 +524,21 @@ public class NewDM300 extends Mob {
 				ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
 			} while (!Dungeon.level.passable[pos + ofs]);
 			Dungeon.level.drop( new MetalShard(), pos + ofs ).sprite.drop( pos );
+		}
+
+		switch (Dungeon.hero.heroClass) {
+			case WARRIOR:
+				Dungeon.level.drop(new BookEmergencyDefibrillator(), pos).sprite.drop(pos);
+				break;
+			case ROGUE:
+				Dungeon.level.drop(new BookWolfPack(), pos).sprite.drop(pos);
+				break;
+			case MAGE:
+				Dungeon.level.drop(new BookMentalBurst(), pos).sprite.drop(pos);
+				break;
+			case HUNTRESS:
+				Dungeon.level.drop(new BookReflow(), pos).sprite.drop(pos);
+				break;
 		}
 
 		Badges.validateBossSlain();

@@ -1,9 +1,12 @@
 ###SkillBook
-items.skill.skillbook.name = 아츠 기록장치
-items.skill.skillbook.desc = 로도스 대원들의 아츠들을 기록할 수 있는 신비한 도구입니다.
-items.skill.skillbook.ac_skl1 = 1스킬 발동 (SP 30%)
-items.skill.skillbook.ac_skl2 = 2스킬 발동 (SP 60%)
-items.skill.skillbook.ac_skl3 = 3스킬 발동 (SP 100%)
+items.skill.skillbook.name=아츠 기록장치
+items.skill.skillbook.desc=로도스 대원들의 아츠들을 기록할 수 있는 신비한 도구입니다.
+items.skill.skillbook.spcharge=현재 _%s의 SP가 충전되어있습니다._ SP는 경험치를 얻을 때마다 충전되며, 특수 아이템을 이용해 충전할 수도 있습니다.
+items.skill.skillbook.no_skill=스킬이 기록되어있지 않습니다.
+items.skill.skillbook.low_charge=SP가 부족합니다.
+items.skill.skillbook.ac_skl1=1스킬 발동 (SP 30%)
+items.skill.skillbook.ac_skl2=2스킬 발동 (SP 60%)
+items.skill.skillbook.ac_skl3=3스킬 발동 (SP 100%)
 
 items.skill.sk1.bookpowerfulstrike.name=강타의 스킬개론
 items.skill.sk1.bookpowerfulstrike.desc=_강타_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 다음 공격시 레벨과 힘에 비례한 추가 피해\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
@@ -21,6 +24,34 @@ items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookwolfpack.ac_use=읽는다
 
+items.skill.sk2.bookmentalburst.name=스피릿 버스트의 스킬개론
+items.skill.sk2.bookmentalburst.desc=_스피릿 버스트_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내의 적들에게 광란을 부여\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookmentalburst.ac_use=읽는다
+
+items.skill.sk2.bookreflow.name=역류의 스킬개론
+items.skill.sk2.bookreflow.desc=_역류_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 투척 무기의 최대 피해량 상승\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookreflow.ac_use=읽는다
+
+items.skill.sk2.bookemergencydefibrillator.name=긴급 제세동기의 스킬개론
+items.skill.sk2.bookemergencydefibrillator.desc=_긴급 제세동기_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 회복 및 마법 방어력 상승\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookemergencydefibrillator.ac_use=읽는다
+
+items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
+items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
+items.skill.sk3.bookshadowassault.ac_use=읽는다
+
+items.skill.sk3.booksoaringfeather.name=날개깃의 스킬개론
+items.skill.sk3.booksoaringfeather.desc=_날개깃_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 긴 시간동안 아드레날린 상태가 되어 공격속도와 이동속도 상승\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
+items.skill.sk3.booksoaringfeather.ac_use=읽는다
+
+items.skill.sk3.booksburst.name=끓어오르는 투지의 스킬개론
+items.skill.sk3.booksburst.desc=_끓어오르는 투지_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 방어력이 2배가 되고 사거리 상승. 효과가 끝나면 지속시간동안 받은 피해에 비례해 다음 공격의 피해량 상승\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
+items.skill.sk3.booksburst.ac_use=읽는다
+
+items.skill.sk3.booknigetraid.name=밤의 장막의 기습의 스킬개론
+items.skill.sk3.booknigetraid.desc=_밤의 장막의 기습_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 즉시 은신하고 SP충전 상태를 얻음. 또한 짧은 시간동안 이동속도 상승\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
+items.skill.sk3.booknigetraid.ac_use=읽는다
+
 
 
 ###Skill
@@ -37,6 +68,28 @@ items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 순간이동_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
 items.skill.sk2.wolfpack.fov=당신의 시야 안의 빈 공간으로만 이동할 수 있습니다.
 items.skill.sk2.wolfpack.prompt=이동할 지역을 선택하세요
+
+items.skill.sk2.mentalburst.name=_스피릿 버스트(2스킬)_
+items.skill.sk2.mentalburst.desc=발동시 시야 내의 적들에게 _광란_을 부여합니다.
+
+items.skill.sk2.reflow.name=_역류(2스킬)_
+items.skill.sk2.reflow.desc=발동시 _힘과 레벨에 비례해 투척 무기의 최대 피해량이 상승_합니다.
+
+items.skill.sk2.emergencydefibrillator.name=_긴급 제세동기(2스킬)_
+items.skill.sk2.emergencydefibrillator.desc=발동시 _체력을 25%회복_하며, _레벨에 비례해 마법 방어력이 상승_합니다.
+
+items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
+items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.
+
+items.skill.sk3.soaringfeather.name=_날개깃(3스킬)_
+items.skill.sk3.soaringfeather.desc=발동시 긴 시간동안 _아드레날린_상태가 되어 _공격속도와 이동속도가 상승_합니다.
+
+items.skill.sk3.sburst.name=_끓어오르는 투지(3스킬)_
+items.skill.sk3.sburst.desc=발동시 _근접 무기의 사거리가 상승하고 방어력이 2배_가 됩니다. 지속시간이 끝나면 _지속시간동안 받은 피해에 비례해 다음 공격의 피해량이 상승_합니다.
+
+items.skill.sk3.nigetraid.name=_밤의 장막의 기습(3스킬)_
+items.skill.sk3.nigetraid.desc=발동시 _즉시 투명화_합니다. 또한 긴 시간동안 _SP 충전_상태를 얻고, 그보다 조금 짧은 시간동안 _이동속도가 1.5배로 상승_합니다.
+
 
 
 

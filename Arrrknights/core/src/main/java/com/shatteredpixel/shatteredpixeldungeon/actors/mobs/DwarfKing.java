@@ -41,6 +41,10 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle
 import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
@@ -429,9 +433,35 @@ public class DwarfKing extends Mob {
 				}
 				h.destroy();
 			}
-			//Dungeon.level.drop(new ArmorKit(), pos + Dungeon.level.width()).sprite.drop(pos); 개조킷 드롭부분. 비활성화
+			switch (Dungeon.hero.heroClass) {
+				case WARRIOR:
+					Dungeon.level.drop(new BookSBurst(), pos).sprite.drop(pos);
+					break;
+				case ROGUE:
+					Dungeon.level.drop(new BookNigetRaid(), pos).sprite.drop(pos);
+					break;
+				case MAGE:
+					Dungeon.level.drop(new BookShadowAssault(), pos).sprite.drop(pos);
+					break;
+				case HUNTRESS:
+					Dungeon.level.drop(new BookSoaringFeather(), pos).sprite.drop(pos);
+					break;
+			}
 		} else {
-			//Dungeon.level.drop(new ArmorKit(), pos).sprite.drop(); 개조킷 드롭부분. 비활성화.
+			switch (Dungeon.hero.heroClass) {
+				case WARRIOR:
+					Dungeon.level.drop(new BookSBurst(), pos).sprite.drop(pos);
+					break;
+				case ROGUE:
+					Dungeon.level.drop(new BookNigetRaid(), pos).sprite.drop(pos);
+					break;
+				case MAGE:
+					Dungeon.level.drop(new BookShadowAssault(), pos).sprite.drop(pos);
+					break;
+				case HUNTRESS:
+					Dungeon.level.drop(new BookSoaringFeather(), pos).sprite.drop(pos);
+					break;
+			}
 		}
 
 		Badges.validateBossSlain();

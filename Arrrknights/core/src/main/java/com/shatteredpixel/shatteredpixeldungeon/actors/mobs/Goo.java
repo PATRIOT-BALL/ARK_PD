@@ -29,6 +29,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.HuntressArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.MageArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.RogueArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.WarriorArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.SkeletonKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
@@ -240,6 +248,21 @@ public class Goo extends Mob {
 		for (int i = 0; i < 2; i++) {
 			int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
 			Dungeon.level.drop(new ThrowingClub(), pos + ofs).sprite.drop(pos);
+		}
+
+		switch (Dungeon.hero.heroClass) {
+			case WARRIOR:
+				Dungeon.level.drop(new BookPowerfulStrike(), pos).sprite.drop(pos);
+				break;
+			case ROGUE:
+				Dungeon.level.drop(new BookExecutionMode(), pos).sprite.drop(pos);
+				break;
+			case MAGE:
+				Dungeon.level.drop(new BookTacticalChanting(), pos).sprite.drop(pos);
+				break;
+			case HUNTRESS:
+				Dungeon.level.drop(new BookPowerfulStrike(), pos).sprite.drop(pos);
+				break;
 		}
 		
 		Badges.validateBossSlain();

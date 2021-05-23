@@ -71,8 +71,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Reflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.WolfPack;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.NigetRaid;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
@@ -141,6 +147,7 @@ import com.watabou.utils.GameMath;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
+import java.sql.Ref;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -2027,10 +2034,17 @@ public class Hero extends Char {
 	private void loadSkill2(int SkillNumber){
 		if (SkillNumber==1) {SK2 = new WolfPack();}
 		else if (SkillNumber==2) {SK2 = new MentalBurst();}
+		else if (SkillNumber==3) {SK2 = new Reflow(); }
+		else if (SkillNumber==4) {SK2 = new EmergencyDefibrillator(); }
 		else SK2 = null;
 	}
 
 	private void loadSkill3(int SkillNumber){
-		SK3 = null;
+		if (SkillNumber==1) {SK3 = new ShadowAssault();}
+		else if (SkillNumber==2) {SK3 = new SoaringFeather();}
+		else if (SkillNumber==3) {SK3 = new SBurst();}
+		else if (SkillNumber==4) {SK3 = new NigetRaid();}
+		else SK3 = null;
 		}
+
 }
