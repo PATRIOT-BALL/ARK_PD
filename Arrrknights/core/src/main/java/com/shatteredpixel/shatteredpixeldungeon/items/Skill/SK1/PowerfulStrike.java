@@ -7,7 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Kineti
 public class PowerfulStrike extends Skill {
     public void doSkill()
     {
-        int value = (curUser.STR + curUser.lvl);
+        int value = (curUser.STR * 2 + curUser.lvl) - 20;
         Buff.affect(curUser, Kinetic.ConservedDamage.class).setBonus(value);
     }
 }
