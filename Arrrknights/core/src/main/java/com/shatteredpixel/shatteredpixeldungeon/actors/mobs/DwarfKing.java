@@ -420,12 +420,17 @@ public class DwarfKing extends Mob {
 
 	@Override
 	public void die(Object cause) {
+		int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+		do {
+			ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+		} while (!Dungeon.level.passable[pos + ofs]);
 
 		GameScene.bossSlain();
 
 		super.die( cause );
 
 		if (Dungeon.level.solid[pos]){
+
 			Heap h = Dungeon.level.heaps.get(pos);
 			if (h != null) {
 				for (Item i : h.items) {
@@ -434,32 +439,33 @@ public class DwarfKing extends Mob {
 				h.destroy();
 			}
 			switch (Dungeon.hero.heroClass) {
+
 				case WARRIOR:
-					Dungeon.level.drop(new BookSBurst(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookSBurst(), pos+ofs).sprite.drop(pos);
 					break;
 				case ROGUE:
-					Dungeon.level.drop(new BookNigetRaid(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookNigetRaid(), pos+ofs).sprite.drop(pos);
 					break;
 				case MAGE:
-					Dungeon.level.drop(new BookShadowAssault(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookShadowAssault(), pos+ofs).sprite.drop(pos);
 					break;
 				case HUNTRESS:
-					Dungeon.level.drop(new BookSoaringFeather(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookSoaringFeather(), pos+ofs).sprite.drop(pos);
 					break;
 			}
 		} else {
 			switch (Dungeon.hero.heroClass) {
 				case WARRIOR:
-					Dungeon.level.drop(new BookSBurst(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookSBurst(), pos+ofs).sprite.drop(pos);
 					break;
 				case ROGUE:
-					Dungeon.level.drop(new BookNigetRaid(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookNigetRaid(), pos+ofs).sprite.drop(pos);
 					break;
 				case MAGE:
-					Dungeon.level.drop(new BookShadowAssault(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookShadowAssault(), pos+ofs).sprite.drop(pos);
 					break;
 				case HUNTRESS:
-					Dungeon.level.drop(new BookSoaringFeather(), pos).sprite.drop(pos);
+					Dungeon.level.drop(new BookSoaringFeather(), pos+ofs).sprite.drop(pos);
 					break;
 			}
 		}

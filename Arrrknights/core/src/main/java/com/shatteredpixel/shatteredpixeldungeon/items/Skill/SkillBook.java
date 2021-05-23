@@ -45,7 +45,7 @@ public class SkillBook extends Item {
         if (action.equals(AC_ACT)) {
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),
-                            Messages.get(this, "wnddesc") + Messages.get(this, "spcharge"),
+                            Messages.get(this, "wnddesc") + "\n\n" + Messages.get(this, "spcharge", Math.round(charge)),
                             Messages.get(this, "ac_skl1"),
                             Messages.get(this, "ac_skl2"),
                             Messages.get(this, "ac_skl3")) {
@@ -84,8 +84,6 @@ public class SkillBook extends Item {
         }
     }
 
-    //
-
             @Override
             public String info() {
                 String info = desc();
@@ -114,7 +112,7 @@ public class SkillBook extends Item {
 
     public void onHeroGainExp(float levelPercent, Hero hero) {
         super.onHeroGainExp(levelPercent, hero);
-        charge += 80 * levelPercent;
+        charge += (10+(hero.lvl * 6)) * levelPercent;
         if (charge > 100) charge = 100;
         updateQuickslot();
     }
@@ -141,5 +139,21 @@ public class SkillBook extends Item {
     @Override
     public boolean isIdentified() {
         return true;
+    }
+
+    @Override
+    public String status() {
+
+        //if the artifact isn't IDed, or is cursed, don't display anything
+        if (!isIdentified() || cursed){
+            return null;
+        }
+        //display as percent
+        if (chargeCap == 100)
+            return Messages.format( "%d%%", charge );
+
+
+        //otherwise, if there's no charge, return null.
+        return null;
     }
 }
