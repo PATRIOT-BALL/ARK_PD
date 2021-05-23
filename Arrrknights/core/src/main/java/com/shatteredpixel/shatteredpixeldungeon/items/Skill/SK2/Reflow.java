@@ -7,7 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 
 public class Reflow extends Skill {
     public void doSkill() {
-        Buff.affect(curUser, ReflowBuff.class, 20);
+        Buff.affect(curUser, ReflowBuff.class, 15);
     }
 
 }
