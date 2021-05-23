@@ -7,6 +7,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 
 public class ExecutionMode extends Skill {
     public void doSkill() {
-        Buff.affect(curUser, ExecutMode.class, 10);
-        Buff.affect(curUser, Stamina.class,3); }
+        Buff.affect(curUser, ExecutMode.class, 15);
+        Buff.affect(curUser, Stamina.class,4); }
 }

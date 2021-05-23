@@ -8,7 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 public class TacticalChanting extends Skill {
 
     public void doSkill() {
-        int Value = 10 + (curUser.lvl /2);
+        int Value = 3 + (curUser.lvl /4);
         Buff.affect(curUser, Recharging.class, Value);
     }
 }
