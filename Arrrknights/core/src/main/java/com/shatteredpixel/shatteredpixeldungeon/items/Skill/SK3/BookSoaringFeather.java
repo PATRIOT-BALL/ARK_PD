@@ -11,7 +11,7 @@ public class BookSoaringFeather extends Item {
     private static final String AC_USE = "USE";
 
     {
-        image = ItemSpriteSheet.ARTIFACT_SPELLBOOK;
+        image = ItemSpriteSheet.SKILL_CHIP3;
 
         stackable = true;
 

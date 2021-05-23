@@ -13,7 +13,7 @@ public class BookWolfPack extends Item {
     private static final String AC_USE = "USE";
 
     {
-        image = ItemSpriteSheet.ARTIFACT_SPELLBOOK;
+        image = ItemSpriteSheet.SKILL_CHIP2;
 
         stackable = true;
 

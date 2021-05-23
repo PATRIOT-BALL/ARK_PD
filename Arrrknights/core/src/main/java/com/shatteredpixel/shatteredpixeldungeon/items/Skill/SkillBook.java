@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class SkillBook extends Item {
     {
-        image = ItemSpriteSheet.ARTIFACT_GREAVES;
+        image = ItemSpriteSheet.SKILL_BOOK;
         stackable = false;
         bones = true;
         unique = true;

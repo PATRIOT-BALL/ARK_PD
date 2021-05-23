@@ -114,6 +114,10 @@ public class ItemSpriteSheet {
 	public static final int LOCKED_CHEST    = CONTAINERS+5;
 	public static final int CRYSTAL_CHEST   = CONTAINERS+6;
 	public static final int EBONY_CHEST     = CONTAINERS+7;
+	public static final int SKILL_BOOK     = CONTAINERS+8;
+	public static final int SKILL_CHIP1     = CONTAINERS+9;
+	public static final int SKILL_CHIP2     = CONTAINERS+10;
+	public static final int SKILL_CHIP3     = CONTAINERS+11;
 	static{
 		assignItemRect(BONES,           14, 11);
 		assignItemRect(REMAINS,         14, 11);
@@ -123,6 +127,12 @@ public class ItemSpriteSheet {
 		assignItemRect(LOCKED_CHEST,    16, 14);
 		assignItemRect(CRYSTAL_CHEST,   16, 14);
 		assignItemRect(EBONY_CHEST,     16, 14);
+		assignItemRect(SKILL_BOOK,     16, 16);
+		assignItemRect(SKILL_CHIP1,     16, 16);
+		assignItemRect(SKILL_CHIP2,     16, 16);
+		assignItemRect(SKILL_CHIP3,     16, 16);
+
+
 	}
 
 	private static final int SINGLE_USE     =                               xy(1, 4);   //16 slots
@@ -144,10 +154,10 @@ public class ItemSpriteSheet {
 	public static final int AMULET          = SINGLE_USE+15;
 	static{
 		assignItemRect(ANKH,            10, 16);
-		assignItemRect(STYLUS,          12, 13);
+		assignItemRect(STYLUS,          16, 16);
 		
 		assignItemRect(SEAL,            9,  15);
-		assignItemRect(TORCH,           12, 15);
+		assignItemRect(TORCH,           16, 16);
 		assignItemRect(BEACON,          16, 15);
 		
 		assignItemRect(HONEYPOT,        14, 12);

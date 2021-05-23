@@ -19,7 +19,7 @@ public class BookPowerfulStrike extends Item {
     private static final String AC_USE = "USE";
 
     {
-        image = ItemSpriteSheet.ARTIFACT_SPELLBOOK;
+        image = ItemSpriteSheet.SKILL_CHIP1;
 
         stackable = true;
 
