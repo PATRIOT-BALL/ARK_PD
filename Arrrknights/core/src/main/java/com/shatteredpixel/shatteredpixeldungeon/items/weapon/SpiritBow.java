@@ -146,7 +146,7 @@ public class SpiritBow extends Weapon {
 			return 6 + (int)(Dungeon.hero.lvl/2.5f)
 					+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 					+ (curseInfusionBonus ? 2 : 0)
-			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /2;
+			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4;
 		}
 		else return 6 + (int)(Dungeon.hero.lvl/2.5f)
 				+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
