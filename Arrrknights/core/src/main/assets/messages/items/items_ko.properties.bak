@@ -2,7 +2,7 @@
 items.skill.skillbook.name=아츠 기록장치
 items.skill.skillbook.desc=로도스 대원들의 아츠들을 기록할 수 있는 신비한 도구입니다.
 items.skill.skillbook.wnddesc=이 장치를 이용해 아츠를 사용할 수 있습니다.
-items.skill.skillbook.spcharge=현재 _%s의 SP가 충전되어있습니다._\nSP는 경험치를 얻을 때마다 충전됩니다.\N충전 효율은 레벨이 오를수록 상승합니다.
+items.skill.skillbook.spcharge=현재 _%s의 SP가 충전되어있습니다._\nSP는 경험치를 얻을 때마다 충전됩니다.\n충전 효율은 레벨이 오를수록 상승합니다.
 items.skill.skillbook.no_skill=스킬이 기록되어있지 않습니다.
 items.skill.skillbook.low_charge=SP가 부족합니다.
 items.skill.skillbook.ac_act=스킬 발동
@@ -21,6 +21,10 @@ items.skill.sk1.booktacticalchanting.ac_use=읽는다
 items.skill.sk1.bookexecutionmode.name=처형 모드의 스킬개론
 items.skill.sk1.bookexecutionmode.desc=_처형 모드_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 회피 상승 및 이동속도 상승\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookexecutionmode.ac_use=읽는다
+
+items.skill.sk1.bookfate.name=운명의 스킬개론
+items.skill.sk1.bookfate.desc=_운명_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 무작위 아이템 1개 감정\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookfate.ac_use=읽는다
 
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
@@ -65,6 +69,12 @@ items.skill.sk1.powerfulstrike.desc=발동시 _레벨과 힘에 비례하여 다
 
 items.skill.sk1.executionmode.name=_처형 모드(1스킬)_
 items.skill.sk1.executionmode.desc=발동시 _자신의 회피율을 상승_시키며, 짧은 시간동안 _이동속도가 1.5배_가 됩니다.
+
+items.skill.sk1.fate.name=_운명(1스킬)_
+items.skill.sk1.fate.thefate=운명의 힘
+items.skill.sk1.fate.desc=발동시 _미감정된 반지, 포션, 물약, 일기장_중 무작위 하나를 _감정_합니다.
+items.skill.sk1.fate$wnddivination.desc=이 아이템을 감정한 것은 그럴 운명이기 때문입니다!
+items.skill.sk1.fate.nothing_lef=더 이상 감정할 아이템이 없다!
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 순간이동_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.

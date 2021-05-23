@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
@@ -143,6 +144,10 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
+
+		BookFate FA;
+		FA = new BookFate();
+		FA.quantity(1).collect();
 		
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();

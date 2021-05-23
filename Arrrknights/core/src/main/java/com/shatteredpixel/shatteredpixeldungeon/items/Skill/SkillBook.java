@@ -57,6 +57,7 @@ public class SkillBook extends Item {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
                                         charge -= 30;
+                                        updateQuickslot();
                                         hero.SK1.doSkill();
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
@@ -66,6 +67,7 @@ public class SkillBook extends Item {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
                                         charge -= 60;
+                                        updateQuickslot();
                                         hero.SK2.doSkill();
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
@@ -75,6 +77,7 @@ public class SkillBook extends Item {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
                                         charge -= 100;
+                                        updateQuickslot();
                                         hero.SK3.doSkill();
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));

@@ -69,6 +69,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
@@ -2029,6 +2030,7 @@ public class Hero extends Char {
 		if (SkillNumber==1) {SK1 = new TacticalChanting();}
 		else if (SkillNumber==2) {SK1 = new PowerfulStrike();}
 		else if (SkillNumber==3) {SK1 = new ExecutionMode();}
+		else if (SkillNumber==4) {SK1 = new Fate();}
 		else SK1 = null;
 	}
 
