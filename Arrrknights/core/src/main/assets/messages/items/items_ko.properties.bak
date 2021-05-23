@@ -1655,8 +1655,8 @@ items.weapon.missiles.forcecube.desc=이 기묘한 외형의 무기는 당신이
 items.weapon.missiles.heavyboomerang.name=텐진
 items.weapon.missiles.heavyboomerang.desc=실버애쉬가 사육하는 수렵용 매. 그냥 명령을 내려 사냥감을 공격할 수도 있지만 주인 외의 말은 듣지 않는다. 그냥 집어 던져도 다시 돌아오니까, 있는 힘껏 던져버리자.
 
-items.weapon.missiles.javelin.name=엄청 가벼운 창
-items.weapon.missiles.javelin.desc=이 기다란 투창의 무게 중심은 가시가 있는 앞 부분에 쏠려 있어 날아가는 동안 힘을 실을 수 있게 됩니다.
+items.weapon.missiles.javelin.name=엄청 무거운 창
+items.weapon.missiles.javelin.desc=엄청 무거워!!! \n\n성인이 들어도 묵직한 무게의 장창. 무겁지만 이걸 던진다면 충분히 파괴적일 것이다.
 
 items.weapon.missiles.kunai.name=쿠나이
 items.weapon.missiles.kunai.desc=이 조그마한 칼들은 노련한 사용자의 손에 쥐여주면 매우 강력합니다. 이 무기는 무방비 상태의 적들에게 가장 효과적입니다.
@@ -1689,8 +1689,8 @@ items.weapon.missiles.throwingstone.desc=이 돌멩이들은 일반적인 돌보
 items.weapon.missiles.tomahawk.name=엄청 차가운 도끼
 items.weapon.missiles.tomahawk.desc=엄청 차가워!! \n\n예리하게 갈아놓은 묵직한 투척도끼. 차갑지만 적을 얼리진 않고, 출혈을 일으킬 것이다.
 
-items.weapon.missiles.trident.name=엄청 무거운 창
-items.weapon.missiles.trident.desc=엄청 무거워!!! \n\n성인이 들어도 묵직한 무게의 장창. 무겁지만 이걸 던진다면 충분히 파괴적일 것이다.
+items.weapon.missiles.trident.name=EX-42
+items.weapon.missiles.trident.desc=오리지늄 아츠 원격 조작장치. 칼날은 없지만 그녀는 이것을 대검이라 부른다 .과연 이 방벽같은 물건을 검이라 부를수 있을까?
 
 
 items.weapon.spiritbow.name=리버스 크로스보우
