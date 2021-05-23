@@ -36,6 +36,7 @@ public class BookSoaringFeather extends Item {
             hero.SK3 = new SoaringFeather();
             hero.SetSkill3Num(2);
             ((HeroSprite)hero.sprite).updateArmor();
+            hero.spendAndNext(1f);
         }
 
 

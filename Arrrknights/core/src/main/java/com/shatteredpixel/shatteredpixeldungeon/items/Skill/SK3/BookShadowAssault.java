@@ -37,6 +37,7 @@ public class BookShadowAssault extends Item {
             hero.SK3 = new ShadowAssault();
             hero.SetSkill3Num(1);
             ((HeroSprite)hero.sprite).updateArmor();
+            hero.spendAndNext(1f);
         }
 
 

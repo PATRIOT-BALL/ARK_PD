@@ -36,6 +36,7 @@ public class BookSBurst extends Item {
             hero.SK3 = new SBurst();
             hero.SetSkill3Num(3);
             ((HeroSprite)hero.sprite).updateArmor();
+            hero.spendAndNext(1f);
         }
 
 

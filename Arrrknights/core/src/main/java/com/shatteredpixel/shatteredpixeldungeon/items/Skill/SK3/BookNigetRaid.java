@@ -36,6 +36,7 @@ public class BookNigetRaid extends Item {
             hero.SK3 = new NigetRaid();
             hero.SetSkill3Num(4);
             ((HeroSprite)hero.sprite).updateArmor();
+            hero.spendAndNext(1f);
         }
 
 
