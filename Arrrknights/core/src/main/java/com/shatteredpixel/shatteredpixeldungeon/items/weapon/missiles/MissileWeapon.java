@@ -86,7 +86,7 @@ abstract public class MissileWeapon extends Weapon {
 	@Override
 	public int max() {
 		if (Dungeon.hero.buff(ReflowBuff.class) != null) {
-			return Math.max(0, max( buffedLvl() + (RingOfSharpshooting.levelDamageBonus(Dungeon.hero) + ((Dungeon.hero.lvl /2) + (Dungeon.hero.STR /2)) /2) ));
+			return Math.max(0, max( buffedLvl() + (RingOfSharpshooting.levelDamageBonus(Dungeon.hero) + (Dungeon.hero.lvl /4) + (Dungeon.hero.STR /2))));
 		}
 		else return Math.max(0, max( buffedLvl() + RingOfSharpshooting.levelDamageBonus(Dungeon.hero) ));
 	}
