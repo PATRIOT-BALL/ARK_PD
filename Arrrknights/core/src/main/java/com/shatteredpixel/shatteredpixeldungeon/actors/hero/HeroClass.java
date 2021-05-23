@@ -142,22 +142,7 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
-
-		/*
-		CurseInfusion Cu;
-		Cu = new CurseInfusion();
-		Cu.quantity(99).collect();
-
-		StoneOfEnchantment sto;
-		sto = new StoneOfEnchantment();
-		sto.quantity(99).collect();
-		*/
-
-		/*Rename re;
-		re = new Rename();
-		re.quantity(1).collect();*/
-
-
+		
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();
 
@@ -171,18 +156,6 @@ public enum HeroClass {
 		staff = new MagesStaff(new WandOfMagicMissile());
 		(hero.belongings.weapon = staff).identify();
 		hero.belongings.weapon.activate(hero);
-
-		/*TomeOfMastery T;
-		T = new TomeOfMastery();
-		T.quantity(1).collect();
-
-		PotionOfExperience P;
-		P = new PotionOfExperience();
-		P.quantity(30).collect();
-
-		/*ArmorKit Kit;
-		Kit = new ArmorKit();
-		Kit.quantity(1).collect();*/
 
 		Dungeon.quickslot.setSlot(0, staff);
 
@@ -204,9 +177,6 @@ public enum HeroClass {
 		(hero.belongings.artifact = cloak).identify();
 		hero.belongings.artifact.activate( hero );
 
-		/*ArmorKit Kit;
-		Kit = new ArmorKit();
-		Kit.quantity(1).collect();*/
 
 		ThrowingKnife knives = new ThrowingKnife();
 		knives.quantity(5).collect();
@@ -245,10 +215,6 @@ public enum HeroClass {
 
 		new PotionOfMindVision().identify();
 		new ScrollOfLullaby().identify();
-		
-		OriginiumShard Cu;
-		Cu = new OriginiumShard();
-		Cu.quantity(11).collect();
 	}
 
 	public String title() {
