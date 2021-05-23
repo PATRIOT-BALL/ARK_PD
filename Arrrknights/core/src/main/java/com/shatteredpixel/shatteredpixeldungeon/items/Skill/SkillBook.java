@@ -9,8 +9,10 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.shatteredpixel.shatteredpixeldungeon.windows.WndOptions;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 
@@ -22,7 +24,9 @@ public class SkillBook extends Item {
         stackable = false;
         bones = true;
         unique = true;
+        defaultAction = AC_ACT;
     }
+    private static final String AC_ACT = "ACT";
     private static final String AC_SKL1 = "SKL1";
     private static final String AC_SKL2 = "SKL2";
     private static final String AC_SKL3 = "SKL3";
@@ -32,48 +36,54 @@ public class SkillBook extends Item {
     @Override
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
-        actions.add(AC_SKL1);
-        actions.add(AC_SKL2);
-        actions.add(AC_SKL3);
+        actions.add(AC_ACT);
         return actions;}
 
     @Override
     public void execute (Hero hero, String action ) {
         super.execute(hero, action);
-        if (action.equals(AC_SKL1)) {
-            if (hero.SK1 != null) {
-                if (charge < 30) {
-                    GLog.w(Messages.get(SkillBook.class, "low_charge"));
-                } else {
-                    charge-=30;
-                    hero.SK1.doSkill();
-                }
-            }
-            else GLog.w(Messages.get(SkillBook.class, "no_skill"));
-        }
-
-        if (action.equals(AC_SKL2)) {
-            if (hero.SK2 != null) {
-                if (charge < 60) {
-                    GLog.w(Messages.get(SkillBook.class, "low_charge"));
-                } else {
-                    charge -=60;
-                    hero.SK2.doSkill();}
-            }
-            else GLog.w(Messages.get(SkillBook.class, "no_skill"));
-        }
-
-        if (action.equals(AC_SKL3)) {
-            if (hero.SK3 != null) {
-                if (charge < 100) {
-                    GLog.w(Messages.get(SkillBook.class, "low_charge"));
-                } else {
-                    charge -=100;
-                    hero.SK3.doSkill();}
-            }
-            else GLog.w(Messages.get(SkillBook.class, "no_skill"));
+        if (action.equals(AC_ACT)) {
+            GameScene.show(
+                    new WndOptions(Messages.get(this, "name"),
+                            Messages.get(this, "wnddesc") + Messages.get(this, "spcharge"),
+                            Messages.get(this, "ac_skl1"),
+                            Messages.get(this, "ac_skl2"),
+                            Messages.get(this, "ac_skl3")) {
+                        @Override
+                        protected void onSelect(int index) {
+                            if (index == 0) {
+                                if (hero.SK1 != null) {
+                                    if (charge < 30) {
+                                        GLog.w(Messages.get(SkillBook.class, "low_charge"));
+                                    } else {
+                                        charge -= 30;
+                                        hero.SK1.doSkill();
+                                    }
+                                } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
+                            } else if (index == 1) {
+                                if (hero.SK2 != null) {
+                                    if (charge < 60) {
+                                        GLog.w(Messages.get(SkillBook.class, "low_charge"));
+                                    } else {
+                                        charge -= 60;
+                                        hero.SK2.doSkill();
+                                    }
+                                } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
+                            } else if (index == 2) {
+                                if (hero.SK3 != null) {
+                                    if (charge < 100) {
+                                        GLog.w(Messages.get(SkillBook.class, "low_charge"));
+                                    } else {
+                                        charge -= 100;
+                                        hero.SK3.doSkill();
+                                    }
+                                } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
+                            }
+                        }
+                    });
         }
     }
+
     //
 
             @Override

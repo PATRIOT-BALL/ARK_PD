@@ -142,6 +142,7 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
+		Dungeon.quickslot.setSlot(1,skillB);
 		
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();
