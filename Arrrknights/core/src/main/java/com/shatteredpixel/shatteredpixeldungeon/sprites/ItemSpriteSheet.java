@@ -101,7 +101,7 @@ public class ItemSpriteSheet {
 		assignItemRect(GUIDE_PAGE,  10, 11);
 		assignItemRect(ALCH_PAGE,   10, 11);
 		
-		assignItemRect(TENGU_BOMB,      10, 10);
+		assignItemRect(TENGU_BOMB,      16, 16);
 		assignItemRect(TENGU_SHOCKER,   10, 10);
 	}
 
