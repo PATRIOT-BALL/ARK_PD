@@ -73,6 +73,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Reflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.WolfPack;
@@ -198,8 +199,8 @@ public class Hero extends Char {
 
 	public String named;
 
-	public Skill SK1;
-	public Skill SK2;
+	public Skill SK1 = new WolfPack();
+	public Skill SK2 = new Jackinthebox();
 	public Skill SK3;
 
 	private int SK1num;
@@ -2039,6 +2040,7 @@ public class Hero extends Char {
 		else if (SkillNumber==2) {SK2 = new MentalBurst();}
 		else if (SkillNumber==3) {SK2 = new Reflow(); }
 		else if (SkillNumber==4) {SK2 = new EmergencyDefibrillator(); }
+		else if (SkillNumber==5) {SK2 = new Jackinthebox(); }
 		else SK2 = null;
 	}
 

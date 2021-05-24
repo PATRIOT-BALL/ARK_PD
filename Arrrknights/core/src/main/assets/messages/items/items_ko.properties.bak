@@ -42,6 +42,10 @@ items.skill.sk2.bookemergencydefibrillator.name=긴급 제세동기의 스킬개
 items.skill.sk2.bookemergencydefibrillator.desc=_긴급 제세동기_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 회복 및 마법 방어력 상승\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookemergencydefibrillator.ac_use=읽는다
 
+items.skill.sk2.bookjackinthebox.name=깜짝 상자의 스킬개론
+items.skill.sk2.bookjackinthebox.desc=_깜짝 상자_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 3턴뒤 폭발하는 폭탄 투척\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookjackinthebox.ac_use=읽는다
+
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookshadowassault.ac_use=읽는다
@@ -72,13 +76,12 @@ items.skill.sk1.executionmode.desc=발동시 _자신의 회피율을 상승_시�
 
 items.skill.sk1.fate.name=_운명(1스킬)_
 items.skill.sk1.fate.thefate=운명의 힘
-items.skill.sk1.fate.desc=발동시 _미감정된 반지, 포션, 물약, 일기장_중 무작위 하나를 _감정_합니다.
+items.skill.sk1.fate.desc=발동시 _미감정된 반지, 포션_중 무작위 하나를 _감정_합니다.
 items.skill.sk1.fate$wnddivination.desc=이 아이템을 감정한 것은 그럴 운명이기 때문입니다!
 items.skill.sk1.fate.nothing_lef=더 이상 감정할 아이템이 없다!
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 순간이동_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
-items.skill.sk2.wolfpack.fov=당신의 시야 안의 빈 공간으로만 이동할 수 있습니다.
 items.skill.sk2.wolfpack.prompt=이동할 지역을 선택하세요
 
 items.skill.sk2.mentalburst.name=_스피릿 버스트(2스킬)_
@@ -89,6 +92,13 @@ items.skill.sk2.reflow.desc=발동시 _힘과 레벨에 비례해 투척 무기�
 
 items.skill.sk2.emergencydefibrillator.name=_긴급 제세동기(2스킬)_
 items.skill.sk2.emergencydefibrillator.desc=발동시 _체력을 25%회복_하며, _레벨에 비례해 마법 방어력이 상승_합니다.
+
+items.skill.sk2.jackinthebox.name=_깜짝 상자(2스킬)_
+items.skill.sk2.jackinthebox.desc=발동시 해당 지점에 지뢰를 던집니다. 지뢰는 3턴 후 폭발하여 _층수와 레벨에 비례한 방어 무시 피해_를 입히고 _마비_시키며, _취약_을 부여합니다.\n_주의! 자폭할 수 있습니다!_
+items.skill.sk2.jackinthebox$bombability$bombitem.name=당신이 던진 지뢰
+items.skill.sk2.jackinthebox$bombability$bombitem.desc=_깜짝 상자_스킬로 생성된 지뢰다. 근처에 있다간 그대로 폭발에 휘말리니 다가가지말자.
+items.skill.sk2.jackinthebox$bombability$bombitem.cant_pickup=렌즈 : 렌즈가 당신을 위해서 명복을 빕니다!
+items.skill.sk2.jackinthebox.prompt=던질 위치를 지정하세요.
 
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
 items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.

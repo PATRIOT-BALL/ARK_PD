@@ -174,6 +174,10 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
+
+		BookFate FA;
+		FA = new BookFate();
+		FA.quantity(1).collect();
 	}
 
 	private static void initRogue( Hero hero ) {
@@ -198,6 +202,10 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
+
+		BookFate FA;
+		FA = new BookFate();
+		FA.quantity(1).collect();
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -212,15 +220,19 @@ public enum HeroClass {
 		stones = new ThrowingStone();
 		stones.quantity(5).collect();
 
-		SkillBook skillB;
-		skillB = new SkillBook();
-		skillB.quantity(1).collect();
-
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
 
 		new PotionOfMindVision().identify();
 		new ScrollOfLullaby().identify();
+
+		SkillBook skillB;
+		skillB = new SkillBook();
+		skillB.quantity(1).collect();
+
+		BookFate FA;
+		FA = new BookFate();
+		FA.quantity(1).collect();
 	}
 
 	public String title() {

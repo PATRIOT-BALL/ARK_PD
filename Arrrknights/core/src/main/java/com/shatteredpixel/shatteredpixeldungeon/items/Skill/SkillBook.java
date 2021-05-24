@@ -1,19 +1,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.Skill;
 
-import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndOptions;
-import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
@@ -30,7 +24,7 @@ public class SkillBook extends Item {
     private static final String AC_SKL1 = "SKL1";
     private static final String AC_SKL2 = "SKL2";
     private static final String AC_SKL3 = "SKL3";
-    public int charge = 0;
+    public int charge = 100;
     public int chargeCap = 100;
 
     @Override
@@ -115,6 +109,7 @@ public class SkillBook extends Item {
 
     public void onHeroGainExp(float levelPercent, Hero hero) {
         super.onHeroGainExp(levelPercent, hero);
+
         charge += (10+(hero.lvl * 6)) * levelPercent;
         if (charge > 100) charge = 100;
         updateQuickslot();
