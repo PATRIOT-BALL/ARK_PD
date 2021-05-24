@@ -205,7 +205,7 @@ public class Assets {
 		public static final String TIMESTOP    = "sounds/timestop.mp3";
 
 		public static final String FROST    = "sounds/frost.mp3";
-		public static final String SHINNING    = "sounds/shinning.mp3";
+		public static final String SHINNING    = "sounds/shining.mp3";
 		public static final String AJIMU   = "sounds/ajimu.mp3";
 
 		public static final String HIT_KNIFE        = "sounds/hit_knife.mp3";
