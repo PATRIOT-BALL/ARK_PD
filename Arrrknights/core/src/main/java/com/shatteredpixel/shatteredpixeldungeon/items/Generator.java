@@ -22,6 +22,15 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
@@ -206,7 +215,10 @@ public class Generator {
 		SCROLL	( 16,   Scroll.class ),
 		STONE   ( 2,    Runestone.class),
 		
-		GOLD	( 20,   Gold.class );
+		GOLD	( 20,   Gold.class ),
+		SKL_T1  (0,SkillBook .class),
+		SKL_T2  (0,SkillBook .class),
+		SKL_T3  (0, SkillBook.class);
 		
 		public Class<?>[] classes;
 
@@ -457,6 +469,24 @@ public class Generator {
 			};
 			ARTIFACT.defaultProbs = new float[]{ 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1};
 			ARTIFACT.probs = ARTIFACT.defaultProbs.clone();
+
+			SKL_T1.classes = new Class<?>[]{
+					BookFate.class,
+					Bookpanorama.class
+			};
+			SKL_T1.probs = new float[]{ 1, 1 };
+
+			SKL_T2.classes = new Class<?>[]{
+					BookJackinthebox.class,
+					BookRockfailHammer.class
+			};
+			SKL_T2.probs = new float[]{ 1, 1 };
+
+			SKL_T3.classes = new Class<?>[]{
+					BookTrueSilverSlash.class,
+					BookTerminationT.class
+			};
+			SKL_T3.probs = new float[]{ 1, 1 };
 		}
 	}
 

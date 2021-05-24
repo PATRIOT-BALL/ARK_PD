@@ -31,8 +31,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.HuntressArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.MageArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.RogueArmor;
@@ -245,7 +247,7 @@ public class Goo extends Mob {
 			} while (!Dungeon.level.passable[pos + ofs]);
 			Dungeon.level.drop( new GooBlob(), pos + ofs ).sprite.drop( pos );
 		}
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 1; i++) {
 			int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
 			do {
 				ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
@@ -267,6 +269,10 @@ public class Goo extends Mob {
 				Dungeon.level.drop(new BookPowerfulStrike(), pos).sprite.drop(pos);
 				break;
 		}
+
+		// 테스트버젼 전용. 이후 삭제
+		Dungeon.level.drop(new BookFate(), pos).sprite.drop(pos);
+		Dungeon.level.drop(new Bookpanorama(), pos).sprite.drop(pos);
 		
 		Badges.validateBossSlain();
 		

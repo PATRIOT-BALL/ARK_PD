@@ -77,12 +77,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibri
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Reflow;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.RockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.WolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.NigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
@@ -2044,6 +2046,7 @@ public class Hero extends Char {
 		else if (SkillNumber==3) {SK2 = new Reflow(); }
 		else if (SkillNumber==4) {SK2 = new EmergencyDefibrillator(); }
 		else if (SkillNumber==5) {SK2 = new Jackinthebox(); }
+		else if (SkillNumber==6) {SK2 = new RockfailHammer(); }
 		else SK2 = null;
 	}
 
@@ -2053,6 +2056,7 @@ public class Hero extends Char {
 		else if (SkillNumber==3) {SK3 = new SBurst();}
 		else if (SkillNumber==4) {SK3 = new NigetRaid();}
 		else if (SkillNumber==5) {SK3 = new TerminationT();}
+		else if (SkillNumber==6) {SK3 = new TrueSilverSlash();}
 		else SK3 = null;
 		}
 

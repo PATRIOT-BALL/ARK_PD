@@ -26,6 +26,10 @@ items.skill.sk1.bookfate.name=운명의 스킬개론
 items.skill.sk1.bookfate.desc=_운명_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 무작위 아이템 1개 감정\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookfate.ac_use=읽는다
 
+items.skill.sk1.bookpanorama.name=과다노출 스킬개론
+items.skill.sk1.bookpanorama.desc=_파노라마 오버로드 촬영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 정찰용 응애캐슬 소환\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookpanorama.ac_use=읽는다
+
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookwolfpack.ac_use=읽는다
@@ -66,6 +70,10 @@ items.skill.sk3.bookterminationt.name=최후의 전술의 스킬개론
 items.skill.sk3.bookterminationt.desc=_최후의 전술_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점에 사격을 가해 적에게 매우 강한 피해\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookterminationt.ac_use=읽는다
 
+items.skill.sk3.booktruesilverslash.name=진은참의 스킬개론
+items.skill.sk3.booktruesilverslash.desc=_진은참_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내의 적들에게 피해. 대상이 보스나 미니보스가 아니라면 즉사\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
+items.skill.sk3.booktruesilverslash.ac_use=읽는다
+
 
 
 ###Skill
@@ -83,6 +91,10 @@ items.skill.sk1.fate.thefate=운명의 힘
 items.skill.sk1.fate.desc=발동시 _미감정된 반지, 포션_중 무작위 하나를 _감정_합니다.
 items.skill.sk1.fate$wnddivination.desc=이 아이템을 감정한 것은 그럴 운명이기 때문입니다!
 items.skill.sk1.fate.nothing_lef=더 이상 감정할 아이템이 없다!
+
+items.skill.sk1.panorama.name=_파노라마 오버로드 촬영(1스킬)_
+items.skill.sk1.panorama.desc=발동시 _렌즈_를 소환합니다. 소환된 렌즈는 _투명화_상태를 얻으며, 영웅에게 _시야를 공유_해줍니다.\n투명화가 끝난 렌즈는 _이동속도가 감소_하고 얼마안가 _시야 공유 능력을 잃게됩니다._
+items.skill.sk1.panorama.prompt="렌즈가 당신을 위해서 힘냅니다!"
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 순간이동_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
@@ -119,6 +131,9 @@ items.skill.sk3.nigetraid.desc=발동시 _즉시 투명화_합니다. 또한 긴
 items.skill.sk3.terminationt.name=_최후의 전술(3스킬)_
 items.skill.sk3.terminationt.desc=발동시 사격할 지점을 지정합니다. _사격 지점에 적이 있다면_ 대상에게 _힘에 비례한 강력한 피해_를 입히고 매우 긴 시간동안 _취약_을 부여합니다.
 items.skill.sk3.terminationt.prompt=사격 위치를 지정하세요.
+
+items.skill.sk3.truesilverslash.name=_진은참(3스킬)_
+items.skill.sk3.truesilverslash.desc=발동시 시야 안에 있는 모든 적들을 베어버립니다.\n_충분한 강함을 갖추지 못한 적들은 이 공격을 절대 버틸 수 없습니다._ 하지만 강한 힘에는 그만한 대가가 따를 것입니다...
 
 
 

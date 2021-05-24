@@ -41,10 +41,13 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle
 import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
@@ -469,6 +472,10 @@ public class DwarfKing extends Mob {
 					break;
 			}
 		}
+
+		// 테스트 전용
+		Dungeon.level.drop(new BookTrueSilverSlash(), pos+ofs).sprite.drop(pos);
+		Dungeon.level.drop(new BookTerminationT(), pos+ofs).sprite.drop(pos);
 
 		Badges.validateBossSlain();
 

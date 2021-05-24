@@ -47,11 +47,14 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.EarthParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SparkParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookEmergencyDefibrillator;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
@@ -540,6 +543,10 @@ public class NewDM300 extends Mob {
 				Dungeon.level.drop(new BookReflow(), pos).sprite.drop(pos);
 				break;
 		}
+
+		//테스트 전용
+		Dungeon.level.drop(new BookJackinthebox(), pos).sprite.drop(pos);
+		Dungeon.level.drop(new BookRockfailHammer(), pos).sprite.drop(pos);
 
 		Badges.validateBossSlain();
 

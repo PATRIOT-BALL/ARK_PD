@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
@@ -152,10 +153,6 @@ public enum HeroClass {
 
 		new PotionOfHealing().identify();
 		new ScrollOfRage().identify();
-
-		Bookpanorama FA;
-		FA = new Bookpanorama();
-		FA.quantity(1).collect();
 	}
 
 	private static void initMage( Hero hero ) {
@@ -201,7 +198,7 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
-		Dungeon.quickslot.setSlot(1,skillB);
+		Dungeon.quickslot.setSlot(2,skillB);
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -211,10 +208,6 @@ public enum HeroClass {
 		bow.identify().collect();
 
 		Dungeon.quickslot.setSlot(0, bow);
-
-		ThrowingStone stones;
-		stones = new ThrowingStone();
-		stones.quantity(5).collect();
 
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
