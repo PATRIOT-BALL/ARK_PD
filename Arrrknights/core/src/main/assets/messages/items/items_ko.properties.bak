@@ -118,7 +118,7 @@ items.skill.sk3.nigetraid.desc=발동시 _즉시 투명화_합니다. 또한 긴
 
 items.skill.sk3.terminationt.name=_최후의 전술(3스킬)_
 items.skill.sk3.terminationt.desc=발동시 사격할 지점을 지정합니다. _사격 지점에 적이 있다면_ 대상에게 _힘에 비례한 강력한 피해_를 입히고 매우 긴 시간동안 _취약_을 부여합니다.
-items.skill.sk3.terminationt.prompt=사격 위치를 지정하세요. (해당 지점에 적이 없다면 불발이 됩니다!)
+items.skill.sk3.terminationt.prompt=사격 위치를 지정하세요.
 
 
 

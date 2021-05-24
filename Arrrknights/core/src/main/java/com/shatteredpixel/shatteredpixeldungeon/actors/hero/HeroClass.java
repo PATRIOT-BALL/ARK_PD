@@ -29,7 +29,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
@@ -144,16 +146,16 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
-
-		BookFate FA;
-		FA = new BookFate();
-		FA.quantity(1).collect();
 		
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();
 
 		new PotionOfHealing().identify();
 		new ScrollOfRage().identify();
+
+		Bookpanorama FA;
+		FA = new Bookpanorama();
+		FA.quantity(1).collect();
 	}
 
 	private static void initMage( Hero hero ) {
@@ -174,10 +176,7 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
-
-		BookFate FA;
-		FA = new BookFate();
-		FA.quantity(1).collect();
+		Dungeon.quickslot.setSlot(1,skillB);
 	}
 
 	private static void initRogue( Hero hero ) {
@@ -202,10 +201,7 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
-
-		BookFate FA;
-		FA = new BookFate();
-		FA.quantity(1).collect();
+		Dungeon.quickslot.setSlot(1,skillB);
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -229,10 +225,7 @@ public enum HeroClass {
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
-
-		BookFate FA;
-		FA = new BookFate();
-		FA.quantity(1).collect();
+		Dungeon.quickslot.setSlot(1,skillB);
 	}
 
 	public String title() {

@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
@@ -200,7 +201,7 @@ public class Hero extends Char {
 
 	public String named;
 
-	public Skill SK1;
+	public Skill SK1 = new Panorama();
 	public Skill SK2;
 	public Skill SK3;
 
@@ -2033,6 +2034,7 @@ public class Hero extends Char {
 		else if (SkillNumber==2) {SK1 = new PowerfulStrike();}
 		else if (SkillNumber==3) {SK1 = new ExecutionMode();}
 		else if (SkillNumber==4) {SK1 = new Fate();}
+		else if (SkillNumber==5) {SK1 = new Panorama();}
 		else SK1 = null;
 	}
 
