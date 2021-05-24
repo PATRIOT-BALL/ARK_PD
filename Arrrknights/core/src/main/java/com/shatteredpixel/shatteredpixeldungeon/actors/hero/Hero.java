@@ -2050,6 +2050,7 @@ public class Hero extends Char {
 		else if (SkillNumber==2) {SK3 = new SoaringFeather();}
 		else if (SkillNumber==3) {SK3 = new SBurst();}
 		else if (SkillNumber==4) {SK3 = new NigetRaid();}
+		else if (SkillNumber==5) {SK3 = new TerminationT();}
 		else SK3 = null;
 		}
 
