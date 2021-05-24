@@ -104,7 +104,7 @@ public class TerminationT extends Skill {
              else {
                  CellEmitter.center(target).burst(HandclapSprite.GooParticle.FACTORY, 60);
                  Camera.main.shake(5, 0.5f);
-                 Sample.INSTANCE.play(Assets.Sounds.HIT_CRUSH);
+                 Sample.INSTANCE.play(Assets.Sounds.SKILL_CROSSBOW);
              }
 
              Invisibility.dispel();

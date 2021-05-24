@@ -28,7 +28,7 @@ public class Greatsword extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.GREATSWORD;
-		hitSound = Assets.Sounds.HIT_CHAINSAW;
+		hitSound = Assets.Sounds.HIT_CHAINSAW2;
 		hitSoundPitch = 1f;
 
 

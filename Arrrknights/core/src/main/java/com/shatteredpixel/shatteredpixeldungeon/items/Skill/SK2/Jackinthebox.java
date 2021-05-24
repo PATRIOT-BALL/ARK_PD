@@ -62,7 +62,7 @@ public class Jackinthebox extends Skill {
                 updateQuickslot();
 
 
-                Sample.INSTANCE.play(Assets.Sounds.PUFF);
+                Sample.INSTANCE.play(Assets.Sounds.SKILL_BEEP);
                 Dungeon.level.occupyCell(curUser);
                 Dungeon.observe();
                 GameScene.updateFog();

@@ -26,7 +26,7 @@ import java.util.HashSet;
 public class Fate extends Skill {
     public void doSkill() {
 
-        Sample.INSTANCE.play(Assets.Sounds.READ);
+        Sample.INSTANCE.play(Assets.Sounds.SKILL_BASIC);
 
         HashSet<Class<? extends Potion>> potions = Potion.getUnknown();
         HashSet<Class<? extends Scroll>> scrolls = Scroll.getUnknown();

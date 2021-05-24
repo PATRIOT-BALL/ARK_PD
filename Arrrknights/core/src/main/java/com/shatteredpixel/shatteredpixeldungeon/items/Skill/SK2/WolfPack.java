@@ -64,7 +64,7 @@ public class WolfPack extends Skill {
                         Camera.main.shake(2, 0.5f);
                         Buff.affect(curUser, Invisibility.class, Invisibility.DURATION/5f);
                         CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
-                        Sample.INSTANCE.play( Assets.Sounds.PUFF );
+                        Sample.INSTANCE.play( Assets.Sounds.SKILL_WOLFPACK );
 
                         curUser.spendAndNext( 1 );
                     }

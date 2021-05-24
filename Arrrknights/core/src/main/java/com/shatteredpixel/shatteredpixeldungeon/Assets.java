@@ -126,6 +126,8 @@ public class Assets {
 	}
 
 	public static class Sounds {
+
+
 		public static final String CLICK	= "sounds/click.mp3";
 		public static final String BADGE	= "sounds/badge.mp3";
 		public static final String GOLD		= "sounds/gold.mp3";
@@ -143,10 +145,9 @@ public class Assets {
 		public static final String HIT		        = "sounds/hit.mp3";
 		public static final String MISS		        = "sounds/miss.mp3";
 		public static final String HIT_SLASH        = "sounds/hit_slash.mp3";
-		public static final String HIT_CHAINSAW        = "sounds/hit_chainsaw.mp3";
 		public static final String HIT_PUNCH        = "sounds/hit_punch.mp3";
 		public static final String HIT_SPEAR        = "sounds/hit_spear.mp3";
-		public static final String HIT_KNIFE        = "sounds/hit_knife.mp3";
+
 		public static final String HIT_STAB         = "sounds/hit_stab.mp3";
 		public static final String HIT_CRUSH        = "sounds/hit_crush.mp3";
 		public static final String HIT_MAGIC        = "sounds/hit_magic.mp3";
@@ -199,20 +200,43 @@ public class Assets {
 		public static final String CHAINS   = "sounds/chains.mp3";
 		public static final String SCAN     = "sounds/scan.mp3";
 		public static final String SHEEP    = "sounds/sheep.mp3";
+
+		//명픽던에서만 추가된  효과음들↓
 		public static final String TIMESTOP    = "sounds/timestop.mp3";
+
+		public static final String FROST    = "sounds/frost.mp3";
+		public static final String SHINNING    = "sounds/shinning.mp3";
+		public static final String AJIMU   = "sounds/ajimu.mp3";
+
+		public static final String HIT_KNIFE        = "sounds/hit_knife.mp3";
+		public static final String HIT_CHAINSAW        = "sounds/hit_chainsaw.mp3";
+		public static final String HIT_CHAINSAW2        = "sounds/hit_chainsaw2.mp3";
+
+		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
+		public static final String SKILL_BEEP       = "sounds/skill_beep.mp3";
+		public static final String SKILL_CHAINSAW        = "sounds/skill_chainsaw.mp3";
+		public static final String SKILL_WOLFPACK        = "sounds/skill_wolfpack.mp3";
+		public static final String SKILL_CROSSBOW       = "sounds/skill_crossbow.mp3";
+
 
 		public static final String[] all = new String[]{
 				CLICK, BADGE, GOLD,
 
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
-				HIT_PUNCH, HIT_SPEAR, HIT_KNIFE, HIT_CHAINSAW, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY,
+				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY,
 				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, LIGHTNING, LEVELUP, DEATH,
 				CHALLENGE, CURSED, TRAP, EVOKE, TOMB, ALERT, MELD, BOSS, BLAST, PLANT, RAY, BEACON,
 				TELEPORT, CHARMS, MASTERY, PUFF, ROCKS, BURNING, FALLING, GHOST, SECRET, BONES,
-				BEE, DEGRADE, MIMIC, DEBUFF, CHARGEUP, GAS, CHAINS, SCAN, SHEEP, TIMESTOP
+				BEE, DEGRADE, MIMIC, DEBUFF, CHARGEUP, GAS, CHAINS, SCAN, SHEEP,
+
+				//명픽던에서만 추가된  효과음들↓
+				TIMESTOP,
+				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2,
+				FROST, SHINNING, AJIMU,
+				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW
 		};
 	}
 
@@ -308,5 +332,7 @@ public class Assets {
 
 
 		public static final String LOTUS	= "sprites/lotus.png";
+		//명픽던에서만 추가된 것들↓
+		public static final String LENS	= "sprites/lens.png";
 	}
 }
