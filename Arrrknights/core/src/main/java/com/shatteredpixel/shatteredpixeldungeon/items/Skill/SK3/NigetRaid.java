@@ -21,7 +21,7 @@ import com.watabou.noosa.particles.PixelParticle;
 public class NigetRaid extends Skill {
     public void doSkill() {
         CellEmitter.get( curUser.pos ).start( ShadowParticle.UP, 0.05f, 10 );
-        Sample.INSTANCE.play(Assets.Sounds.CHAINS);
+        Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
 
         for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
             if (Dungeon.level.adjacent(mob.pos, curUser.pos) && mob.alignment != Char.Alignment.ALLY) {

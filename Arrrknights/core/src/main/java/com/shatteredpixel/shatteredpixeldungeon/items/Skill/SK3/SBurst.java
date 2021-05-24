@@ -24,6 +24,7 @@ public class SBurst extends Skill {
 
         curUser.sprite.emitter().burst( ElmoParticle.FACTORY, 5 );
         Sample.INSTANCE.play(Assets.Sounds.BURNING);
+        Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
 
         for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
             if (Dungeon.level.adjacent(mob.pos, curUser.pos) && mob.alignment != Char.Alignment.ALLY) {

@@ -217,6 +217,7 @@ public class Assets {
 		public static final String SKILL_CHAINSAW        = "sounds/skill_chainsaw.mp3";
 		public static final String SKILL_WOLFPACK        = "sounds/skill_wolfpack.mp3";
 		public static final String SKILL_CROSSBOW       = "sounds/skill_crossbow.mp3";
+		public static final String SKILL_SILVERSLASH   = "sounds/skill_silverslash";
 
 
 		public static final String[] all = new String[]{
