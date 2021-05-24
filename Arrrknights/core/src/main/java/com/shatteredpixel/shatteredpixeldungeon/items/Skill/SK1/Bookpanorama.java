@@ -32,7 +32,7 @@ public class Bookpanorama extends Item {
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
 
-            hero.SK1 = new PowerfulStrike();
+            hero.SK1 = new Panorama();
             hero.SetSkill1Num(5);
         }
 
