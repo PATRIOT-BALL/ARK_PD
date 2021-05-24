@@ -8,11 +8,12 @@ public class SeethingBurst extends FlavourBuff {
 
     {
         type = buffType.POSITIVE;
+        announced = true;
     }
 
     protected int Power = 0;
 
-    public static final float DURATION = 5f;
+    public static final float DURATION = 15f;
 
     @Override
     public boolean act() {

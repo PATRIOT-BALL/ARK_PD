@@ -81,6 +81,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.NigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SoaringFeather;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
@@ -199,8 +200,8 @@ public class Hero extends Char {
 
 	public String named;
 
-	public Skill SK1 = new WolfPack();
-	public Skill SK2 = new Jackinthebox();
+	public Skill SK1;
+	public Skill SK2;
 	public Skill SK3;
 
 	private int SK1num;

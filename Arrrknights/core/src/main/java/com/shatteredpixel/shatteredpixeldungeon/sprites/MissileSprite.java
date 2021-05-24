@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Bolas;
@@ -46,7 +47,7 @@ import java.util.HashMap;
 
 public class MissileSprite extends ItemSprite implements Tweener.Listener {
 
-	private static final float SPEED	= 240f;
+	private static final float SPEED	= 480f;
 	
 	private Callback callback;
 	
@@ -107,6 +108,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		ANGULAR_SPEEDS.put(Shuriken.class,      2160);
 		
 		ANGULAR_SPEEDS.put(WSprite.TenguShuriken.class,      2160);
+		ANGULAR_SPEEDS.put(TerminationT.SpiritArrow.class,0);
 	}
 
 	//TODO it might be nice to have a source and destination angle, to improve thrown weapon visuals
@@ -149,7 +151,8 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		}
 		
 		float speed = SPEED;
-		if (item instanceof Dart && Dungeon.hero.belongings.weapon instanceof Crossbow){
+		if (item instanceof Dart && Dungeon.hero.belongings.weapon instanceof Crossbow
+				|| item instanceof TerminationT.SpiritArrow){
 			speed *= 3f;
 			
 		} else if (item instanceof SpiritBow.SpiritArrow
