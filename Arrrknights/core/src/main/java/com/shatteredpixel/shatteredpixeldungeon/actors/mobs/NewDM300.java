@@ -544,10 +544,6 @@ public class NewDM300 extends Mob {
 				break;
 		}
 
-		//테스트 전용
-		Dungeon.level.drop(new BookJackinthebox(), pos).sprite.drop(pos);
-		Dungeon.level.drop(new BookRockfailHammer(), pos).sprite.drop(pos);
-
 		Badges.validateBossSlain();
 
 		LloydsBeacon beacon = Dungeon.hero.belongings.getItem(LloydsBeacon.class);
