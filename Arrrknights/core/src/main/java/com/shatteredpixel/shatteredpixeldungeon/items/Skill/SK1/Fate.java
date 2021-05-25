@@ -29,10 +29,9 @@ public class Fate extends Skill {
         Sample.INSTANCE.play(Assets.Sounds.SKILL_BASIC);
 
         HashSet<Class<? extends Potion>> potions = Potion.getUnknown();
-        HashSet<Class<? extends Scroll>> scrolls = Scroll.getUnknown();
         HashSet<Class<? extends Ring>> rings = Ring.getUnknown();
 
-        int total = potions.size() + scrolls.size() + rings.size();
+        int total = potions.size() + rings.size();
 
         if (total == 0) {
             GLog.n(Messages.get(this, "nothing_left"));

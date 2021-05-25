@@ -16,7 +16,7 @@ public class SkillBook extends Item {
     {
         image = ItemSpriteSheet.SKILL_BOOK;
         stackable = false;
-        bones = true;
+        bones = false;
         unique = true;
         defaultAction = AC_ACT;
     }

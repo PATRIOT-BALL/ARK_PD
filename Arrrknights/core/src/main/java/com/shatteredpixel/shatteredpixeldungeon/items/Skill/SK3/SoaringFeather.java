@@ -37,12 +37,12 @@ public class SoaringFeather extends Skill {
                 Ballistica trajectory = new Ballistica(curUser.pos, mob.pos, Ballistica.STOP_TARGET);
                 trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
                 mob.sprite.emitter().burst(Speck.factory(Speck.BONE), 8);
-                WandOfBlastWave.throwChar(mob, trajectory, 2); // 넉백 효과
-                Buff.prolong(mob, Cripple.class, 7);
+                WandOfBlastWave.throwChar(mob, trajectory, 3); // 넉백 효과
+                Buff.prolong(mob, Cripple.class, 30);
             }
         }
 
-        Buff.affect(curUser, Adrenaline.class, 35);
+        Buff.affect(curUser, Adrenaline.class, 40);
         Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
         curUser.spendAndNext( 1 );
     }

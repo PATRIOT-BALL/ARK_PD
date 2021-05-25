@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
@@ -70,6 +71,7 @@ public class ShadowAssault extends Skill {
 
                         CellEmitter.center(dest).burst(Speck.factory(Speck.WOOL), 10);
                         Buff.affect(curUser, Recharging.class, 10);
+                        Buff.affect(curUser, Bless.class, 60);
                         Camera.main.shake(2, 0.5f);
 
                         Invisibility.dispel();

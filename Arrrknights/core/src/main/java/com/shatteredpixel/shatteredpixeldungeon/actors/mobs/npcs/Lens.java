@@ -47,6 +47,7 @@ public class Lens extends NPC {
 
         if (this.buff(Invisibility.class) == null) {
             baseSpeed = 0.25f;
+            damage(this.HT/10, this);
         }
         else Buff.affect(Dungeon.hero, TalismanOfForesight.CharAwareness.class, 12).charID = this.id();
         return super.act();
