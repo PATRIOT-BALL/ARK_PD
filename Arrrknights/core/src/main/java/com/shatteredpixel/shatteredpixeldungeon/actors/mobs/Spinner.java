@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Web;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -46,6 +47,9 @@ public class Spinner extends Mob {
 
 		EXP = 9;
 		maxLvl = 17;
+
+		loot = Generator.Category.SKL_T2;
+		lootChance = 0.03f;
 
 		loot = new MysteryMeat();
 		lootChance = 0.125f;

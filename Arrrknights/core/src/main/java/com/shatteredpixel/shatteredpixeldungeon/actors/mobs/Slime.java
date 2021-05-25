@@ -25,6 +25,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ShieldedLeaderSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ShieldedSprite;
@@ -41,8 +43,9 @@ public class Slime extends Mob {
 		
 		EXP = 4;
 		maxLvl = 9;
-		
-		lootChance = 0.2f; //by default, see rollToDropLoot()
+
+		loot = Generator.Category.SKL_T1;
+		lootChance = 0.03f;
 	}
 	
 	@Override

@@ -47,6 +47,9 @@ public class Scorpio extends Mob {
 		
 		EXP = 14;
 		maxLvl = 27;
+
+		loot = Generator.Category.SKL_T3;
+		lootChance = 0.05f;
 		
 		loot = Generator.Category.POTION;
 		lootChance = 0.5f;
