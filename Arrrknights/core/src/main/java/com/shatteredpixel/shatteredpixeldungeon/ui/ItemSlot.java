@@ -111,8 +111,8 @@ public class ItemSlot extends Button {
 	protected void layout() {
 		super.layout();
 		
-		sprite.x = x + (width - sprite.width) / 2f;
-		sprite.y = y + (height - sprite.height) / 2f;
+		sprite.x = x + (width - sprite.width + 6);
+		sprite.y = y + (height - sprite.height + 6);
 		PixelScene.align(sprite);
 		
 		if (status != null) {

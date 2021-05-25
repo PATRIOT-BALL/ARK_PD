@@ -27,7 +27,7 @@ import com.watabou.noosa.TextureFilm;
 public class ItemSpriteSheet {
 
 	private static final int WIDTH = 16;
-	public static final int SIZE = 16;
+	public static final int SIZE = 32;
 
 	public static TextureFilm film = new TextureFilm( Assets.Sprites.ITEMS, SIZE, SIZE );
 
@@ -39,7 +39,7 @@ public class ItemSpriteSheet {
 	private static void assignItemRect( int item, int width, int height ){
 		int x = (item % WIDTH) * SIZE;
 		int y = (item / WIDTH) * SIZE;
-		film.add( item, x, y, x+width, y+height);
+		film.add( item, x, y, x+width * 2, y+height * 2);
 	}
 
 	private static final int PLACEHOLDERS   =                               xy(1, 1);   //16 slots
