@@ -3,6 +3,8 @@ package com.shatteredpixel.shatteredpixeldungeon.items.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -10,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class SkillBook extends Item {
@@ -37,12 +40,14 @@ public class SkillBook extends Item {
     public void execute (Hero hero, String action ) {
         super.execute(hero, action);
         if (action.equals(AC_ACT)) {
+
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),
                             Messages.get(this, "wnddesc") + "\n\n" + Messages.get(this, "spcharge", Math.round(charge)),
-                            Messages.get(this, "ac_skl1"),
-                            Messages.get(this, "ac_skl2"),
-                            Messages.get(this, "ac_skl3")) {
+                            Messages.get(this, "ac_skl1", new DecimalFormat("#").format(30f)),
+                            Messages.get(this, "ac_skl2", new DecimalFormat("#").format(60f)),
+                            Messages.get(this, "ac_skl3", new DecimalFormat("#").format(100f))) {
+
                         @Override
                         protected void onSelect(int index) {
                             if (index == 0) {
@@ -50,7 +55,8 @@ public class SkillBook extends Item {
                                     if (charge < 30) {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
-                                        charge -= 30;
+                                        float chargeDown = 30 / (RingOfSunLight.SPBonus(Dungeon.hero));
+                                        charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK1.doSkill();
                                     }
@@ -60,7 +66,8 @@ public class SkillBook extends Item {
                                     if (charge < 60) {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
-                                        charge -= 60;
+                                        float chargeDown = 60 / (RingOfSunLight.SPBonus(Dungeon.hero));
+                                        charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK2.doSkill();
                                     }
@@ -70,7 +77,8 @@ public class SkillBook extends Item {
                                     if (charge < 100) {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
-                                        charge -= 100;
+                                        float chargeDown = 100 / (RingOfSunLight.SPBonus(Dungeon.hero));
+                                        charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK3.doSkill();
                                     }

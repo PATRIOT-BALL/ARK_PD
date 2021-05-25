@@ -389,7 +389,7 @@ public class ItemSpriteSheet {
 			assignItemRect(i, 16, 16);
 	}
 
-	private static final int RINGS          =                               xy(1, 15);  //16 slots
+	private static final int RINGS          =                               xy(1, 15);  //17 slots
 	public static final int RING_GARNET     = RINGS+0;
 	public static final int RING_RUBY       = RINGS+1;
 	public static final int RING_TOPAZ      = RINGS+2;
@@ -402,8 +402,9 @@ public class ItemSpriteSheet {
 	public static final int RING_QUARTZ     = RINGS+9;
 	public static final int RING_AGATE      = RINGS+10;
 	public static final int RING_DIAMOND    = RINGS+11;
+	public static final int RING_DINGDONG    = RINGS+12;
 	static {
-		for (int i = RINGS; i < RINGS+16; i++)
+		for (int i = RINGS; i < RINGS+17; i++)
 			assignItemRect(i, 16, 16);
 	}
 
@@ -722,7 +723,7 @@ public class ItemSpriteSheet {
 		public static final int RING_SHARPSHOOT = RINGS+8;
 		public static final int RING_TENACITY   = RINGS+9;
 		public static final int RING_WEALTH     = RINGS+10;
-		public static final int RING_UNUSED     = RINGS+11;
+		public static final int RING_SUNLIGHT     = RINGS+11;
 		static {
 			assignIconRect( RING_ACCURACY,      7, 7 );
 			assignIconRect( RING_ELEMENTS,      7, 7 );
@@ -735,6 +736,7 @@ public class ItemSpriteSheet {
 			assignIconRect( RING_SHARPSHOOT,    7, 7 );
 			assignIconRect( RING_TENACITY,      6, 6 );
 			assignIconRect( RING_WEALTH,        7, 6 );
+			assignIconRect( RING_SUNLIGHT,        7, 6 );
 		}
 
 		                                                                                //16 free slots

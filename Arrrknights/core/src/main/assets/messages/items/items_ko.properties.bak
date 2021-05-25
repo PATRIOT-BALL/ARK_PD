@@ -6,9 +6,9 @@ items.skill.skillbook.spcharge=현재 _%s의 SP가 충전되어있습니다._\nS
 items.skill.skillbook.no_skill=스킬이 기록되어있지 않습니다.
 items.skill.skillbook.low_charge=SP가 부족합니다.
 items.skill.skillbook.ac_act=스킬 발동
-items.skill.skillbook.ac_skl1=1스킬 발동 (SP 30%)
-items.skill.skillbook.ac_skl2=2스킬 발동 (SP 60%)
-items.skill.skillbook.ac_skl3=3스킬 발동 (SP 100%)
+items.skill.skillbook.ac_skl1=1스킬 발동 _SP%s%%_
+items.skill.skillbook.ac_skl2=2스킬 발동 _SP%s%%_
+items.skill.skillbook.ac_skl3=3스킬 발동 _SP%s%%_
 
 items.skill.sk1.bookpowerfulstrike.name=강타의 스킬개론
 items.skill.sk1.bookpowerfulstrike.desc=_강타_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 다음 공격시 레벨과 힘에 비례한 추가 피해\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
@@ -49,6 +49,10 @@ items.skill.sk2.bookemergencydefibrillator.ac_use=읽는다
 items.skill.sk2.bookjackinthebox.name=깜짝 상자의 스킬개론
 items.skill.sk2.bookjackinthebox.desc=_깜짝 상자_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 3턴뒤 폭발하는 폭탄 투척\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookjackinthebox.ac_use=읽는다
+
+items.skill.sk2.bookrockfailhammer.name=바위깨기의 스킬개론
+items.skill.sk2.bookrockfailhammer.desc=_바위를 깨는 망치_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 피해와 함께 넉백,마비,현기증. 또한 자신의 체력 회복\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookrockfailhammer.ac_use=읽는다
 
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
@@ -113,8 +117,11 @@ items.skill.sk2.jackinthebox.name=_깜짝 상자(2스킬)_
 items.skill.sk2.jackinthebox.desc=발동시 해당 지점에 지뢰를 던집니다. 지뢰는 3턴 후 폭발하여 _피아 구분없이_ 층수와 레벨에 비례한 _방어 무시 피해_를 입히고 _마비_시키며, _취약_을 부여합니다.\n_주의 : 반드시 땅바닥에 설치하시오._
 items.skill.sk2.jackinthebox$bombability$bombitem.name=당신이 던진 지뢰
 items.skill.sk2.jackinthebox$bombability$bombitem.desc=_깜짝 상자_스킬로 생성된 지뢰다. 근처에 있다간 그대로 폭발에 휘말리니 다가가지말자.
-items.skill.sk2.jackinthebox$bombability$bombitem.cant_pickup=렌즈 : 렌즈가 당신을 위해서 명복을 빕니다!
+items.skill.sk2.jackinthebox$bombability$bombitem.cant_pickup=셋 셀 때까지 도망칠 기회를 줄게...
 items.skill.sk2.jackinthebox.prompt=던질 위치를 지정하세요.
+
+items.skill.sk2.rockfailhammer.name=_바위를 깨는 망치(2스킬)_
+items.skill.sk2.rockfailhammer.desc=발동시 주위 적들에게 _힘에 비례한 피해_를 입히고 밀쳐냄과 동시에 _마비_와 _현기증_을 부여합니다.\n또한, 시전시 체력 회복 효과를 얻습니다.
 
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
 items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.
@@ -940,6 +947,7 @@ items.rings.ring.emerald=에메랄드 반지
 items.rings.ring.sapphire=사파이어 반지
 items.rings.ring.quartz=수정 반지
 items.rings.ring.agate=아게이트 반지
+items.rings.ring.dingdong=링딩동 반지
 items.rings.ring.equip_cursed=반지가 당신의 손가락을 고통스럽게 옥죄였다!
 items.rings.ring.unknown_desc=어둠 속에서 반짝이는 커다란 보석이 박힌 금속 고리입니다. 이걸 꼈을 때 어떤 일이 일어날까요?
 items.rings.ring.known=이것은 %s 입니다.
@@ -1002,6 +1010,11 @@ items.rings.ringofwealth.name=부유함의 반지
 items.rings.ringofwealth.stats=이 반지를 장착했을 때, 이 반지는 당신의 운을 _%s%%_ 만큼 증가시킬 것입니다.
 items.rings.ringofwealth.typical_stats=이 반지를 장착했을 때, 이 반지는 일반적으로 당신의 운을 _%s%%_ 만큼 증가시킬 것입니다.
 items.rings.ringofwealth.desc=이 반지는 보물을 끌어당기는 자석처럼 작용하며, 적들과 상자에서 더 좋은 아이템이 나올 가능성을 늘려 줍니다. 저주받은 반지는 당신이 전리품을 얻을 확률을 감소시킵니다.
+
+items.rings.ringofsunlight.name=햇빛의 반지
+items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 스킬을 사용하면 약 _%s%%_ 의 SP를 환급받습니다.
+items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록 장치의 스킬을 사용했을 때  약 _%s%%_ 의 SP를 환급받습니다.
+items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP의 충전 속도를 빠르게해줍니다. 저주받은 반지는 충전률을 감소시켜버립니다.
 
 
 

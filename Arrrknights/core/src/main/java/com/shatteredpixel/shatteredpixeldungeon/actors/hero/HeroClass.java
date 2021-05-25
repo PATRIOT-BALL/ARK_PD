@@ -50,6 +50,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibility;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -151,9 +153,9 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
 
-		//ScrollOfUpgrade UPg;
-		//UPg = new ScrollOfUpgrade();
-		//UPg.quantity(99).collect();
+		///ScrollOfUpgrade UPg;
+		///UPg = new ScrollOfUpgrade();
+		///UPg.quantity(99).collect();
 
 		//WandOfWarding WW;
 		//WW = new WandOfWarding();
@@ -169,6 +171,16 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
+
+		/*
+		RingOfSunLight R;
+		R = new RingOfSunLight();
+		R.cursed = true;
+		R.quantity(1).collect();
+
+		ScrollOfIdentify FFC;
+		FFC = new ScrollOfIdentify();
+		FFC.quantity(1).collect();*/
 	}
 
 	private static void initMage( Hero hero ) {
