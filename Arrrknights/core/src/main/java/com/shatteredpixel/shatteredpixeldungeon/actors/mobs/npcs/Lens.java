@@ -28,7 +28,7 @@ public class Lens extends NPC {
 
     public Lens() {
         super();
-        HP = 30 + Dungeon.hero.lvl * 2;
+        HP = 30;
         defenseSkill = 5 + Dungeon.hero.lvl;
     }
 
@@ -47,7 +47,7 @@ public class Lens extends NPC {
 
         if (this.buff(Invisibility.class) == null) {
             baseSpeed = 0.25f;
-            damage(this.HT/10, this);
+            damage(3, this);
         }
         else Buff.affect(Dungeon.hero, TalismanOfForesight.CharAwareness.class, 12).charID = this.id();
         return super.act();
@@ -55,6 +55,7 @@ public class Lens extends NPC {
 
     @Override
     public boolean interact(Char c) {
+        sprite.attack(0);
         sprite.showStatus( CharSprite.NEUTRAL, Messages.get(this, Random.element( LINE_KEYS )) );
         return true;
     }
