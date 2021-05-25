@@ -303,7 +303,7 @@ public class HeroSelectScene extends PixelScene {
 					icon(new Image(Icons.AMIYA.get()));
 					break;
 				case ROGUE:
-					icon(new Image(Icons.ROGUE.get()));
+					icon(new Image(Icons.P_RED.get()));
 					break;
 				case HUNTRESS:
 					icon(new Image(Icons.GREY.get()));

@@ -86,7 +86,7 @@ public class SupporterScene extends PixelScene {
 				DeviceCompat.openURI(link);
 			}
 		};
-		link.icon(Icons.get(Icons.GOLD));
+		link.icon(Icons.get(Icons.ROSEMARI));
 		link.textColor(Window.TITLE_COLOR);
 		link.setSize(elementWidth, BTN_HEIGHT);
 		add(link);
@@ -125,7 +125,7 @@ public class SupporterScene extends PixelScene {
 			if (Messages.lang() != Languages.ENGLISH) {
 				message += "\n" + Messages.get(SupporterScene.class, "patreon_english");
 			}
-			message += "\n\n- NAMSEK";
+			message += "\n\n- NAM";
 
 			text = PixelScene.renderTextBlock(message, 6);
 			add(text);

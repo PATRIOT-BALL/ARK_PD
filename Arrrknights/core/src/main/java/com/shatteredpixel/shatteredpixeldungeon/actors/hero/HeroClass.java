@@ -151,13 +151,13 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
 
-		ScrollOfUpgrade UPg;
-		UPg = new ScrollOfUpgrade();
-		UPg.quantity(99).collect();
+		//ScrollOfUpgrade UPg;
+		//UPg = new ScrollOfUpgrade();
+		//UPg.quantity(99).collect();
 
-		WandOfWarding WW;
-		WW = new WandOfWarding();
-		WW.quantity(1).collect();
+		//WandOfWarding WW;
+		//WW = new WandOfWarding();
+		//WW.quantity(1).collect();
 		
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();

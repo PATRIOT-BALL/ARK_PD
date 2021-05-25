@@ -62,7 +62,7 @@ public enum Icons {
 	DEPTH,
 	WARRIOR,
 	MAGE,
-	ROGUE,
+	RED,
 	HUNTRESS,
 	
 	//main menu icons
@@ -78,6 +78,7 @@ public enum Icons {
 	LIBGDX,
 	WATA,
 	WARNING,
+	PATRIOT,
 
 	//32x32 icons for credits
 	ALEKS,
@@ -88,8 +89,10 @@ public enum Icons {
 
 	BLAZE,
 	AMIYA,
-	RED,
-	GREY;
+	P_RED,
+	GREY,
+	NEARL,
+	ROSEMARI;
 
 	public Image get() {
 		return get( this );
@@ -186,7 +189,7 @@ public enum Icons {
 		case MAGE:
 			icon.frame( icon.texture.uvRect( 32, 48, 48, 61 ) );
 			break;
-		case ROGUE:
+		case RED:
 			icon.frame( icon.texture.uvRect( 48, 48, 64, 61 ) );
 			break;
 		case HUNTRESS:
@@ -198,13 +201,19 @@ public enum Icons {
 			case AMIYA:
 				icon.frame(icon.texture.uvRect(20, 140, 40, 160));
 				break;
-			case RED:
+			case P_RED:
 				icon.frame(icon.texture.uvRect(40, 140, 60, 160));
 				break;
 			case GREY:
 				icon.frame(icon.texture.uvRect(60, 140, 80, 160));
 				break;
-		
+			case NEARL:
+				icon.frame(icon.texture.uvRect(80, 140, 100, 160));
+				break;
+			case ROSEMARI:
+				icon.frame(icon.texture.uvRect(100, 140, 120, 160));
+				break;
+
 		case ENTER:
 			icon.frame( icon.texture.uvRect( 0, 64, 16, 80 ) );
 			break;
@@ -235,8 +244,13 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 17, 81, 34, 93 ) );
 			break;
 		case WARNING:
-			icon.frame( icon.texture.uvRect( 34, 81, 48, 95 ) );
+			icon.frame(icon.texture.uvRect(34, 81, 48, 95));
 			break;
+
+			case PATRIOT:
+				icon.frame(icon.texture.uvRect(48, 80, 64, 96));
+				break;
+
 
 		case ALEKS:
 			icon.frame( icon.texture.uvRect( 32, 96, 64, 128 ) );
@@ -271,7 +285,7 @@ public enum Icons {
 		case MAGE:
 			return get( MAGE );
 		case ROGUE:
-			return get( ROGUE );
+			return get( RED );
 		case HUNTRESS:
 			return get( HUNTRESS );
 		default:

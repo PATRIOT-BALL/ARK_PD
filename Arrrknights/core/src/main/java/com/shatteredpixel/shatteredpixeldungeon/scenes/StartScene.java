@@ -178,7 +178,7 @@ public class StartScene extends PixelScene {
 							hero = new Image(Icons.AMIYA.get());
 							break;
 						case ROGUE:
-							hero = new Image(Icons.RED.get());
+							hero = new Image(Icons.P_RED.get());
 							break;
 						case HUNTRESS:
 							hero = new Image(Icons.GREY.get());
@@ -204,7 +204,7 @@ public class StartScene extends PixelScene {
 							hero = new Image(Icons.AMIYA.get());
 							break;
 						case ROGUE:
-							hero = new Image(Icons.RED.get());
+							hero = new Image(Icons.P_RED.get());
 							break;
 						case HUNTRESS:
 							hero = new Image(Icons.GREY.get());
