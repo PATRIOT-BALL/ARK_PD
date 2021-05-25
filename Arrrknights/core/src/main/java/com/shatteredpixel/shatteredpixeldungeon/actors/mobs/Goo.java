@@ -269,10 +269,6 @@ public class Goo extends Mob {
 				Dungeon.level.drop(new BookPowerfulStrike(), pos).sprite.drop(pos);
 				break;
 		}
-
-		// 테스트버젼 전용. 이후 삭제
-		Dungeon.level.drop(new BookFate(), pos).sprite.drop(pos);
-		Dungeon.level.drop(new Bookpanorama(), pos).sprite.drop(pos);
 		
 		Badges.validateBossSlain();
 		

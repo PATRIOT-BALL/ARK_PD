@@ -473,10 +473,6 @@ public class DwarfKing extends Mob {
 			}
 		}
 
-		// 테스트 전용
-		Dungeon.level.drop(new BookTrueSilverSlash(), pos+ofs).sprite.drop(pos);
-		Dungeon.level.drop(new BookTerminationT(), pos+ofs).sprite.drop(pos);
-
 		Badges.validateBossSlain();
 
 		Dungeon.level.unseal();
