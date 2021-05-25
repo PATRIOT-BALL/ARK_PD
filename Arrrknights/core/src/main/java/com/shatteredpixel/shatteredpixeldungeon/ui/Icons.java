@@ -84,7 +84,12 @@ public enum Icons {
 	CHARLIE,
 	CUBE_CODE,
 	PURIGRO,
-	ARCNOR;
+	ARCNOR,
+
+	BLAZE,
+	AMIYA,
+	RED,
+	GREY;
 
 	public Image get() {
 		return get( this );
@@ -187,18 +192,18 @@ public enum Icons {
 		case HUNTRESS:
 			icon.frame( icon.texture.uvRect( 64, 48, 80, 61 ) );
 			break;
-			//case WARRIOR:
-			//			icon.frame( icon.texture.uvRect( 0, 140, 20, 160 ) );
-			//			break;
-			//		case MAGE:
-			//			icon.frame( icon.texture.uvRect( 20, 140, 40, 160 ) );
-			//			break;
-			//		case ROGUE:
-			//			icon.frame( icon.texture.uvRect( 40, 140, 60, 160 ) );
-			//			break;
-			//		case HUNTRESS:
-			//			icon.frame( icon.texture.uvRect( 60, 140, 80, 160 ) );
-			//			break;
+			case BLAZE:
+				icon.frame(icon.texture.uvRect(0, 140, 20, 160));
+				break;
+			case AMIYA:
+				icon.frame(icon.texture.uvRect(20, 140, 40, 160));
+				break;
+			case RED:
+				icon.frame(icon.texture.uvRect(40, 140, 60, 160));
+				break;
+			case GREY:
+				icon.frame(icon.texture.uvRect(60, 140, 80, 160));
+				break;
 		
 		case ENTER:
 			icon.frame( icon.texture.uvRect( 0, 64, 16, 80 ) );
@@ -233,7 +238,6 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 34, 81, 48, 95 ) );
 			break;
 
-		//32*32 icons are scaled down to match game's size
 		case ALEKS:
 			icon.frame( icon.texture.uvRect( 32, 96, 64, 128 ) );
 			icon.scale.set(PixelScene.align(0.49f));
@@ -254,6 +258,7 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 101, 16, 128, 46 ) );
 			icon.scale.set(PixelScene.align(0.49f));
 			break;
+
 
 		}
 		return icon;

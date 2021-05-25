@@ -24,26 +24,26 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class ThiefSprite extends MobSprite {
-	
-	public ThiefSprite() {
-		super();
-		
-		texture( Assets.Sprites.GHOST1 );
-		TextureFilm film = new TextureFilm( texture, 32, 32 );
-		
-		idle = new Animation( 1, true );
-		idle.frames( film, 0 );
-		
-		run = new Animation( 15, true );
-		run.frames( film, 0 );
-		
-		die = new Animation( 10, false );
-		die.frames( film, 0 );
-		
-		attack = new Animation( 12, false );
-		attack.frames( film, 0 );
-		
-		idle();
-	}
+public class Ghost2Sprite extends MobSprite {
+
+    public Ghost2Sprite() {
+        super();
+
+        texture( Assets.Sprites.GHOST2 );
+        TextureFilm film = new TextureFilm( texture, 32, 32 );
+
+        idle = new Animation( 1, true );
+        idle.frames( film, 0 );
+
+        run = new Animation( 15, true );
+        run.frames( film, 0 );
+
+        die = new Animation( 10, false );
+        die.frames( film, 0 );
+
+        attack = new Animation( 12, false );
+        attack.frames( film, 0 );
+
+        idle();
+    }
 }

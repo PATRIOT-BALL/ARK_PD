@@ -78,8 +78,8 @@ scenes.startscene.new=새 게임 시작
 scenes.supporterscene.title=게임을 지원하기
 scenes.supporterscene.intro=미...미안... 사실 여기 그런건 없어...
 scenes.supporterscene.patreon_msg=어처피 이거 2차창작겜이기도 하고 돈 받으면 안될거같애 \n근데 우리한테 수입원이 있으면 좀더 작업이 수월해지긴 하겠지? 매일 김치에 김만 싸먹는건 싫거든 \n\n 아직까진 모르겠는데 툴박스같은 명빵소스 이용하는곳도 후원 받는거 보면 받아도 될거같긴 해\n\n 만약 후원받는거 된다면 보상은 스킨같은걸 넣지 않을까 싶어 솔직히 너네 ui 색 바뀌는거보단 플레이어 이미지 자체가 바뀌는거 더 좋아하잖아 무려 서리별이랑 패트리어트를 플레이어블로 만나볼수있다구\n게임은 차후 구글플레이에 업로드될 예정임
-scenes.supporterscene.patreon_english=원래 이거 아래 버튼 패트론 후원버튼인데 딱히 넣을건 없어서 내 픽시브 링크 넣었음 스레기같은 그림 보고싶으면 누르고
-scenes.supporterscene.supporter_link=와 정말요
+scenes.supporterscene.patreon_english=원래 이거 아래 버튼 패트론 후원버튼인데 딱히 넣을건 없어서 게임 설문조사 링크 넣었음 온김에 쓰고가줘
+scenes.supporterscene.supporter_link=와 정말 안할수 없겟는걸??
 
 scenes.surfacescene.exit=게임 오버
 

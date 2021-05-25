@@ -30,19 +30,19 @@ public class BanditSprite extends MobSprite {
 		super();
 		
 		texture( Assets.Sprites.THIEF );
-		TextureFilm film = new TextureFilm( texture, 12, 13 );
+		TextureFilm film = new TextureFilm( texture, 32, 32 );
 		
 		idle = new Animation( 1, true );
-		idle.frames( film, 21, 21, 21, 22, 21, 21, 21, 21, 22 );
+		idle.frames( film, 0 );
 		
 		run = new Animation( 15, true );
-		run.frames( film, 21, 21, 23, 24, 24, 25 );
+		run.frames( film, 0 );
 		
 		die = new Animation( 10, false );
-		die.frames( film, 25, 27, 28, 29, 30 );
+		die.frames( film, 0 );
 		
 		attack = new Animation( 12, false );
-		attack.frames( film, 31, 32, 33 );
+		attack.frames( film, 0 );
 		
 		idle();
 	}

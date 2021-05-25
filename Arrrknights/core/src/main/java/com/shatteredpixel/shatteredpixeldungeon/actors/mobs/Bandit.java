@@ -29,6 +29,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BanditSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Ghost2Sprite;
 import com.watabou.utils.Random;
 
 public class Bandit extends Thief {
@@ -36,7 +37,7 @@ public class Bandit extends Thief {
 	public Item item;
 	
 	{
-		spriteClass = BanditSprite.class;
+		spriteClass = Ghost2Sprite.class;
 
 		//guaranteed first drop, then 1/3, 1/9, etc.
 		lootChance = 1f;
