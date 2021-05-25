@@ -76,7 +76,7 @@ public class Sheep extends NPC {
 		sprite.showStatus( CharSprite.NEUTRAL, Messages.get(this, Random.element( LINE_KEYS )) );
 		if (c == Dungeon.hero) {
 			Dungeon.hero.spendAndNext(1f);
-			Sample.INSTANCE.play(Assets.Sounds.SHEEP, 0.5f, Random.Float(0.91f, 1.1f));
+			Sample.INSTANCE.play(Assets.Sounds.SHEEP, 0.2f, Random.Float(0.91f, 1.1f));
 		}
 		return true;
 	}
