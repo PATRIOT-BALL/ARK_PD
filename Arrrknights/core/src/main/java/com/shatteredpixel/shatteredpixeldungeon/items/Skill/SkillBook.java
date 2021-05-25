@@ -110,7 +110,10 @@ public class SkillBook extends Item {
     public void onHeroGainExp(float levelPercent, Hero hero) {
         super.onHeroGainExp(levelPercent, hero);
 
-        charge += (10 + (Dungeon.depth * 3) * levelPercent);
+        float chargepur = (10 + (Dungeon.hero.lvl *6) - 72 );
+        if (chargepur < 10) chargepur = 10;
+
+        charge += chargepur * levelPercent
         if (charge > 100) charge = 100;
         updateQuickslot();
     }
