@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
+import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
@@ -40,6 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSl
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
+import com.shatteredpixel.shatteredpixeldungeon.items.bags.MagicalHolster;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
@@ -151,8 +153,13 @@ public enum HeroClass {
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();
 
+		new VelvetPouch().collect();
+		Dungeon.LimitedDrops.VELVET_POUCH.drop();
+
 		new PotionOfHealing().identify();
 		new ScrollOfRage().identify();
+
+		new DewVial().collect();
 	}
 
 	private static void initMage( Hero hero ) {
@@ -167,6 +174,9 @@ public enum HeroClass {
 		new ScrollHolder().collect();
 		Dungeon.LimitedDrops.SCROLL_HOLDER.drop();
 
+		new PotionBandolier().collect();
+		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();
+
 		new ScrollOfUpgrade().identify();
 		new PotionOfLiquidFlame().identify();
 
@@ -174,6 +184,8 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
+
+		new DewVial().collect();
 	}
 
 	private static void initRogue( Hero hero ) {
@@ -192,6 +204,9 @@ public enum HeroClass {
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
 
+		new ScrollHolder().collect();
+		Dungeon.LimitedDrops.SCROLL_HOLDER.drop();
+
 		new ScrollOfMagicMapping().identify();
 		new PotionOfInvisibility().identify();
 
@@ -199,6 +214,8 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(2,skillB);
+
+		new DewVial().collect();
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -212,6 +229,9 @@ public enum HeroClass {
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
 
+		new MagicalHolster().collect();
+		Dungeon.LimitedDrops.MAGICAL_HOLSTER.drop();
+
 		new PotionOfMindVision().identify();
 		new ScrollOfLullaby().identify();
 
@@ -219,6 +239,8 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
+
+		new DewVial().collect();
 	}
 
 	public String title() {

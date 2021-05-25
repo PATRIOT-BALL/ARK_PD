@@ -335,7 +335,7 @@ public class Assets {
 		public static final String LOTUS	= "sprites/lotus.png";
 		//명픽던에서만 추가된 것들↓
 		public static final String LENS	= "sprites/lens.png";
-		public static final String GHOST1	= "sprites/ghost1.png";
-		public static final String GHOST2	= "sprites/ghost2.png";
+		public static final String GHOST1	= "sprites/ghost_1.png";
+		public static final String GHOST2	= "sprites/ghost_2.png";
 	}
 }

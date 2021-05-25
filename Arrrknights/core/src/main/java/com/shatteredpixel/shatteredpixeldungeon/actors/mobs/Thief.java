@@ -147,6 +147,7 @@ public class Thief extends Mob {
 
 		if (toSteal != null && !toSteal.unique && toSteal.level() < 1 ) {
 
+			sprite.showStatus( CharSprite.POSITIVE, Messages.get(this,  "BYE" ) );
 			GLog.w( Messages.get(Thief.class, "stole", toSteal.name()) );
 			if (!toSteal.stackable) {
 				Dungeon.quickslot.convertToPlaceholder(toSteal);

@@ -170,6 +170,20 @@ public class StartScene extends PixelScene {
 				
 				if (hero == null){
 					hero = new Image(info.heroClass.spritesheet(), 0, 30*info.armorTier, 24, 20);
+					switch (info.heroClass) {
+						case WARRIOR:
+							hero = new Image(Icons.BLAZE.get());
+							break;
+						case MAGE:
+							hero = new Image(Icons.AMIYA.get());
+							break;
+						case ROGUE:
+							hero = new Image(Icons.RED.get());
+							break;
+						case HUNTRESS:
+							hero = new Image(Icons.GREY.get());
+							break;
+					}
 					add(hero);
 					
 					steps = new Image(Icons.get(Icons.DEPTH));
@@ -182,7 +196,20 @@ public class StartScene extends PixelScene {
 					level = new BitmapText(PixelScene.pixelFont);
 					add(level);
 				} else {
-					hero.copy(new Image(info.heroClass.spritesheet(), 0, 30*info.armorTier, 24, 20));
+					switch (info.heroClass) {
+						case WARRIOR:
+							hero = new Image(Icons.BLAZE.get());
+							break;
+						case MAGE:
+							hero = new Image(Icons.AMIYA.get());
+							break;
+						case ROGUE:
+							hero = new Image(Icons.RED.get());
+							break;
+						case HUNTRESS:
+							hero = new Image(Icons.GREY.get());
+							break;
+					}
 
 					classIcon.copy(Icons.get(info.heroClass));
 				}

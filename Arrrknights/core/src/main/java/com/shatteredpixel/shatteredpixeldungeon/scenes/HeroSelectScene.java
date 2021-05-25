@@ -289,14 +289,27 @@ public class HeroSelectScene extends PixelScene {
 		private HeroClass cl;
 
 		private static final int MIN_WIDTH = 20;
-		private static final int HEIGHT = 24;
+		private static final int HEIGHT = 20;
 
 		HeroBtn ( HeroClass cl ){
 			super(Chrome.Type.GREY_BUTTON_TR, "");
 
 			this.cl = cl;
+			switch (cl) {
+				case WARRIOR:
+					icon(new Image(Icons.BLAZE.get()));
+					break;
+				case MAGE:
+					icon(new Image(Icons.AMIYA.get()));
+					break;
+				case ROGUE:
+					icon(new Image(Icons.ROGUE.get()));
+					break;
+				case HUNTRESS:
+					icon(new Image(Icons.GREY.get()));
+					break;
+			}
 
-			icon(new Image(cl.spritesheet(), 0, 90, 12, 15));
 
 		}
 
