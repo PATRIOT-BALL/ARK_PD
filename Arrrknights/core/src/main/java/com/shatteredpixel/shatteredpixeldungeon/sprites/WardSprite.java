@@ -20,22 +20,22 @@ public class WardSprite extends MobSprite {
 		texture(Assets.Sprites.WARDS);
 
 		tierIdles[1] = new Animation( 1, true );
-		tierIdles[1].frames(texture.uvRect(0, 7, 32, 0));
+		tierIdles[1].frames(texture.uvRect(0, 0, 32, 25));
 
 		tierIdles[2] = new Animation( 1, true );
-		tierIdles[2].frames(texture.uvRect(32, 2, 64, 0));
+		tierIdles[2].frames(texture.uvRect(32, 0, 64, 29));
 
 		tierIdles[3] = new Animation( 1, true );
-		tierIdles[3].frames(texture.uvRect(64, 0, 96, 0));
+		tierIdles[3].frames(texture.uvRect(64, 0, 96, 32));
 
 		tierIdles[4] = new Animation( 1, true );
-		tierIdles[4].frames(texture.uvRect(96, 14, 128, 32));
+		tierIdles[4].frames(texture.uvRect(96, 10, 128, 32));
 
 		tierIdles[5] = new Animation( 1, true );
-		tierIdles[5].frames(texture.uvRect(128, 14, 160, 8));
+		tierIdles[5].frames(texture.uvRect(128, 10, 160, 32));
 
 		tierIdles[6] = new Animation( 1, true );
-		tierIdles[6].frames(texture.uvRect(160, 14, 192, 8));
+		tierIdles[6].frames(texture.uvRect(160, 10, 192, 32));
 
 	}
 
