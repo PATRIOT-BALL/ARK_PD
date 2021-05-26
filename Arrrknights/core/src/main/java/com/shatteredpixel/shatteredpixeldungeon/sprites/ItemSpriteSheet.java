@@ -88,7 +88,8 @@ public class ItemSpriteSheet {
 	
 	public static final int GUIDE_PAGE      = UNCOLLECTIBLE+6;
 	public static final int ALCH_PAGE       = UNCOLLECTIBLE+7;
-	
+
+	public static final int TENGU_MINE      = UNCOLLECTIBLE+8;
 	public static final int TENGU_BOMB      = UNCOLLECTIBLE+9;
 	public static final int TENGU_SHOCKER   = UNCOLLECTIBLE+10;
 	static{
@@ -102,7 +103,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ALCH_PAGE,   10, 11);
 		
 		assignItemRect(TENGU_BOMB,      16, 16);
-		assignItemRect(TENGU_SHOCKER,   10, 10);
+		assignItemRect(TENGU_SHOCKER,   16, 16);
 	}
 
 	private static final int CONTAINERS     =                               xy(1, 3);   //16 slots

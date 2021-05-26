@@ -480,7 +480,8 @@ public class NewPrisonBossLevel extends Level {
 				
 				for (Item item : storedItems) {
 					if (!(item instanceof NewTengu.BombAbility.BombItem)
-						&& !(item instanceof NewTengu.ShockerAbility.ShockerItem)) {
+						&& !(item instanceof NewTengu.ShockerAbility.ShockerItem)
+					&& !(item instanceof NewTengu.WMine.BombItem)) {
 						drop(item, randomTenguCellPos());
 					}
 				}
