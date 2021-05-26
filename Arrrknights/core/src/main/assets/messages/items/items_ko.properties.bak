@@ -100,6 +100,12 @@ items.skill.sk1.panorama.name=_파노라마 오버로드 촬영(1스킬)_
 items.skill.sk1.panorama.desc=발동시 _렌즈_를 소환합니다. 소환된 렌즈는 _투명화_상태를 얻으며, 영웅에게 _시야를 공유_해줍니다.\n투명화가 끝난 렌즈는 _이동속도가 감소_하고 얼마안가 _시야 공유 능력을 잃게됩니다._
 items.skill.sk1.panorama.prompt="렌즈가 당신을 위해서 힘냅니다!"
 
+items.skill.sk1.foodprep.name=_야외 취사(1스킬)_
+items.skill.sk1.foodprep.desc=발동시 목표 지점에 있는 대상에게 약간의 피해와 함께 불을 지릅니다. 만약 적을 태웠다면 _고기가 생성됩니다._
+items.skill.sk1.foodprep.prompt=식재료를 선택
+items.skill.sk1.foodprep.yam1="굼의 특제 요리다!"
+items.skill.sk1.foodprep.yam1="맛있는거 먹자!"
+
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 순간이동_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
 items.skill.sk2.wolfpack.prompt=이동할 지역을 선택하세요
@@ -1014,7 +1020,7 @@ items.rings.ringofwealth.desc=이 반지는 보물을 끌어당기는 자석처�
 items.rings.ringofsunlight.name=햇빛의 반지
 items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 스킬을 사용하면 약 _%s%%_ 의 SP를 환급받습니다.
 items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록 장치의 스킬을 사용했을 때  약 _%s%%_ 의 SP를 환급받습니다.
-items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP의 충전 속도를 빠르게해줍니다. 저주받은 반지는 충전률을 감소시켜버립니다.
+items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP 효율을 높혀줍니다. 저주받은 반지는 오히려 효율을 감소시킵니다.
 
 
 

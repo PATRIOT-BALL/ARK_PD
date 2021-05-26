@@ -910,7 +910,7 @@ actors.mobs.newtengu$shockerability$shockeritem.desc=W가 여기에 전기를 �
 actors.mobs.newtengu$wmine$bombblob.desc=엄청나게 가열된 연기 구름이 피어오르고 있습니다.
 actors.mobs.newtengu$wmine$bombitem.name=특수 지뢰
 actors.mobs.newtengu$wmine$bombitem.cant_pickup=이 녀석은 바닥에 들러붙어 있다. 옮길 수 없다!
-actors.mobs.newtengu$wmine$bombitem.desc=W가 도망치면서 설치한 이 지뢰는 다른 지뢰들과 다르게, 주위에 W를 제외한 누군가가 감지되었을 때 타이머가 돌아갑니다.\n\n특이한 방식으로 만들어진 이 지뢰는 일반적인 지뢰보다 늦게 터지며, _의외로 위력이 낮은 편입니다._
+actors.mobs.newtengu$wmine$bombitem.desc=W가 도망치면서 설치한 이 지뢰는 다른 지뢰들과 다르게, 주위에 W를 제외한 누군가가 감지되었을 때 타이머가 돌아갑니다.\n\n특이한 방식으로 만들어진 이 지뢰는 일반적인 지뢰보다 늦게 터지며, _의외로 위력이 낮은 대신 대상을 실명시킬 것입니다!_
 
 actors.mobs.oldtengu.name=W
 actors.mobs.oldtengu.notice_gotcha=오랫만이네, %s!

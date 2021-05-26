@@ -120,10 +120,10 @@ public class ItemSpriteSheet {
 	public static final int SKILL_CHIP2     = CONTAINERS+10;
 	public static final int SKILL_CHIP3     = CONTAINERS+11;
 	static{
-		assignItemRect(BONES,           14, 11);
-		assignItemRect(REMAINS,         14, 11);
-		assignItemRect(TOMB,            14, 15);
-		assignItemRect(GRAVE,           14, 15);
+		assignItemRect(BONES,           16, 16);
+		assignItemRect(REMAINS,         16, 16);
+		assignItemRect(TOMB,            16, 16);
+		assignItemRect(GRAVE,           16, 16);
 		assignItemRect(CHEST,           16, 14);
 		assignItemRect(LOCKED_CHEST,    16, 14);
 		assignItemRect(CRYSTAL_CHEST,   16, 14);

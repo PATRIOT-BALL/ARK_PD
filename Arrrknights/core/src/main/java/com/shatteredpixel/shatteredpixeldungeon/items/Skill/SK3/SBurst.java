@@ -29,7 +29,7 @@ public class SBurst extends Skill {
         for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
             if (Dungeon.level.adjacent(mob.pos, curUser.pos) && mob.alignment != Char.Alignment.ALLY) {
                 mob.sprite.emitter().burst(Speck.factory(Speck.BONE), 8);
-                Buff.affect(mob, Burning.class);
+                Buff.affect(mob, Burning.class).reignite(mob);
             }
         }
         Buff.affect(curUser, SeethingBurst.class, 15);

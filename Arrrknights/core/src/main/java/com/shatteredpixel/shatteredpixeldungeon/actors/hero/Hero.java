@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
@@ -96,6 +97,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.CrystalKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.GoldenKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.IronKey;
@@ -203,7 +205,7 @@ public class Hero extends Char {
 
 	public String named;
 
-	public Skill SK1;
+	public Skill SK1 = new FoodPrep();
 	public Skill SK2;
 	public Skill SK3;
 
