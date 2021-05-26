@@ -61,22 +61,22 @@ public class ItemSpriteSheet {
 	public static final int ELIXIR_HOLDER   = PLACEHOLDERS+14;
 	public static final int SPELL_HOLDER    = PLACEHOLDERS+15;
 	static{
-		assignItemRect(SOMETHING,       8,  13);
-		assignItemRect(WEAPON_HOLDER,   14, 14);
-		assignItemRect(ARMOR_HOLDER,    14, 12);
-		assignItemRect(MISSILE_HOLDER,  15, 15);
-		assignItemRect(WAND_HOLDER,     14, 14);
-		assignItemRect(RING_HOLDER,     8,  10);
-		assignItemRect(ARTIFACT_HOLDER, 15, 15);
-		assignItemRect(FOOD_HOLDER,     15, 11);
-		assignItemRect(BOMB_HOLDER,     10, 13);
-		assignItemRect(POTION_HOLDER,   12, 14);
-		assignItemRect(SEED_HOLDER,     10, 10);
-		assignItemRect(SCROLL_HOLDER,   15, 14);
-		assignItemRect(STONE_HOLDER,    14, 12);
-		assignItemRect(CATA_HOLDER,     6,  15);
-		assignItemRect(ELIXIR_HOLDER,   12, 14);
-		assignItemRect(SPELL_HOLDER,    8,  16);
+		assignItemRect(SOMETHING,       16,  16);
+		assignItemRect(WEAPON_HOLDER,   16,  16);
+		assignItemRect(ARMOR_HOLDER,    16,  16);
+		assignItemRect(MISSILE_HOLDER,  16,  16);
+		assignItemRect(WAND_HOLDER,     16,  16);
+		assignItemRect(RING_HOLDER,     16,  16);
+		assignItemRect(ARTIFACT_HOLDER, 16,  16);
+		assignItemRect(FOOD_HOLDER,     16,  16);
+		assignItemRect(BOMB_HOLDER,     16,  16);
+		assignItemRect(POTION_HOLDER,   16,  16);
+		assignItemRect(SEED_HOLDER,     16,  16);
+		assignItemRect(SCROLL_HOLDER,   16,  16);
+		assignItemRect(STONE_HOLDER,    16,  16);
+		assignItemRect(CATA_HOLDER,     16,  16);
+		assignItemRect(ELIXIR_HOLDER,   16,  16);
+		assignItemRect(SPELL_HOLDER,    16,  16);
 	}
 
 	private static final int UNCOLLECTIBLE  =                               xy(1, 2);   //16 slots
