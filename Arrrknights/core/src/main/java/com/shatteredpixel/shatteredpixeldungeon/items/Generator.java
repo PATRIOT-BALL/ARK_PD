@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
@@ -78,6 +79,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfHaste;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
@@ -449,8 +451,9 @@ public class Generator {
 					RingOfMight.class,
 					RingOfSharpshooting.class,
 					RingOfTenacity.class,
-					RingOfWealth.class};
-			RING.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+					RingOfWealth.class,
+					RingOfSunLight.class};
+			RING.probs = new float[]{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1 };
 			
 			ARTIFACT.classes = new Class<?>[]{
 					CapeOfThorns.class,
@@ -472,9 +475,10 @@ public class Generator {
 
 			SKL_T1.classes = new Class<?>[]{
 					BookFate.class,
-					Bookpanorama.class
+					Bookpanorama.class,
+					BookFoodPrep.class
 			};
-			SKL_T1.probs = new float[]{ 1, 1 };
+			SKL_T1.probs = new float[]{ 1, 1, 1 };
 
 			SKL_T2.classes = new Class<?>[]{
 					BookJackinthebox.class,

@@ -170,7 +170,7 @@ public class Hero extends Char {
 	
 	public static final int MAX_LEVEL = 40;
 
-	public static final int STARTING_STR = 65;
+	public static final int STARTING_STR = 10;
 
 	private static final float TIME_TO_REST		    = 1f;
 	private static final float TIME_TO_SEARCH	    = 2f;
@@ -180,8 +180,8 @@ public class Hero extends Char {
 	public HeroSubClass subClass = HeroSubClass.NONE;
 	public ArrayList<LinkedHashMap<Talent, Integer>> talents = new ArrayList<>();
 	
-	private int attackSkill = 100;
-	private int defenseSkill = 50;
+	private int attackSkill = 10;
+	private int defenseSkill = 5;
 
 	public boolean ready = false;
 	private boolean damageInterrupt = true;
@@ -205,7 +205,7 @@ public class Hero extends Char {
 
 	public String named;
 
-	public Skill SK1 = new FoodPrep();
+	public Skill SK1;
 	public Skill SK2;
 	public Skill SK3;
 
@@ -222,7 +222,7 @@ public class Hero extends Char {
 	public Hero() {
 		super();
 
-		HP = HT = 250;
+		HP = HT = 20;
 		STR = STARTING_STR;
 		
 		belongings = new Belongings( this );
@@ -2039,6 +2039,7 @@ public class Hero extends Char {
 		else if (SkillNumber==3) {SK1 = new ExecutionMode();}
 		else if (SkillNumber==4) {SK1 = new Fate();}
 		else if (SkillNumber==5) {SK1 = new Panorama();}
+		else if (SkillNumber==6) {SK1 = new FoodPrep();}
 		else SK1 = null;
 	}
 
