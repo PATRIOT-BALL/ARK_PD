@@ -67,7 +67,7 @@ public class ItemSprite extends MovieClip {
 	//offset is the number of pixels the shadow is moved down or up (handy for some animations)
 	protected boolean renderShadow  = false;
 	protected float shadowWidth     = 1f;
-	protected float shadowHeight    = 0.8f;
+	protected float shadowHeight    = 0.25f;
 	protected float shadowOffset    = 1.25f;
 	
 	public ItemSprite() {

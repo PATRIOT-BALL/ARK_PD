@@ -47,22 +47,22 @@ public class MimicSprite extends MobSprite {
 
 		texture( Assets.Sprites.MIMIC );
 
-		TextureFilm frames = new TextureFilm( texture, 16, 16 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 
-		hiding = new Animation( 1, true );
-		hiding.frames( frames, 0+c, 0+c, 0+c, 0+c, 0+c, 1+c);
+		hiding = new Animation( 8, true );
+		hiding.frames( frames, 0+c, 0+c, 0+c, 0+c, 0+c,0+c, 0+c, 0+c, 0+c, 0+c,0+c, 0+c, 0+c, 0+c, 0+c, 0+c, 0+c, 0+c,0+c, 0+c, 0+c, 0+c, 0+c,0+c, 0+c, 0+c, 0+c, 0+c,0+c, 0+c, 0+c, 0+c, 0+c, 0+c, 0+c, 0+c, 0+c, 0+c,0+c, 0+c, 0+c, 0+c, 0+c, 1+c, 2+c, 3+c, 4+c, 5+c, 1+c);
 
 		idle = new Animation( 5, true );
 		idle.frames( frames, 2+c, 2+c, 2+c, 3+c, 3+c );
 
 		run = new Animation( 10, true );
-		run.frames( frames, 2+c, 3+c, 4+c, 5+c, 5+c, 4+c, 3+c );
+		run.frames( frames, 6+c, 7+c, 8+c, 9+c, 10+c, 11+c, 12+c );
 
-		attack = new Animation( 10, false );
-		attack.frames( frames, 2+c, 6+c, 7+c, 8+c );
+		attack = new Animation( 15, false );
+		attack.frames( frames, 13+c, 14+c, 15+c, 16+c, 17+c, 18+c );
 
-		die = new Animation( 5, false );
-		die.frames( frames, 9+c, 10+c, 11+c );
+		die = new Animation( 12, false );
+		die.frames( frames, 19+c, 20+c, 21+c, 22+c, 23+c, 24+c, 25+c, 26+c, 27+c, 28+c );
 
 		play( idle );
 	}
@@ -91,14 +91,14 @@ public class MimicSprite extends MobSprite {
 	public static class Golden extends MimicSprite{
 		@Override
 		protected int texOffset() {
-			return 16;
+			return 30;
 		}
 	}
 
 	public static class Crystal extends MimicSprite{
 		@Override
 		protected int texOffset() {
-			return 32;
+			return 60;
 		}
 	}
 

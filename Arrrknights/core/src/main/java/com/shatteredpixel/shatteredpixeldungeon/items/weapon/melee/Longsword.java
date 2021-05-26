@@ -32,7 +32,7 @@ public class Longsword extends MeleeWeapon {
 		hitSoundPitch = 1f;
 
 		tier = 4;
-		ACC = 0.65f;
+		ACC = 0.75f;
 		RCH = 2;
 	}
 	@Override

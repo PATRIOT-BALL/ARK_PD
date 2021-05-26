@@ -296,25 +296,25 @@ public class WndJournal extends WndTabbed {
 				}
 				switch (page){
 					case Document.GUIDE_INTRO_PAGE: default:
-						return new ItemSprite(ItemSpriteSheet.MASTERY);
+						return new ItemSprite(ItemSpriteSheet.ICON_1 );
 					case "Identifying":
-						return new ItemSprite( ItemSpriteSheet.SCROLL_ISAZ );
+						return new ItemSprite( ItemSpriteSheet.ICON_2 );
 					case Document.GUIDE_SEARCH_PAGE:
-						return new ItemSprite( ItemSpriteSheet.LOCKED_CHEST );
+						return new ItemSprite( ItemSpriteSheet.ICON_3 );
 					case "Strength":
-						return new ItemSprite( ItemSpriteSheet.ARMOR_SCALE );
+						return new ItemSprite( ItemSpriteSheet.ICON_4 );
 					case "Food":
-						return new ItemSprite( ItemSpriteSheet.PASTY );
+						return new ItemSprite( ItemSpriteSheet.ICON_5 );
 					case "Levelling":
-						return new ItemSprite( ItemSpriteSheet.POTION_MAGENTA );
+						return new ItemSprite( ItemSpriteSheet.ICON_6 );
 					case "Surprise_Attacks":
-						return new ItemSprite( ItemSpriteSheet.ASSASSINS_BLADE );
+						return new ItemSprite( ItemSpriteSheet.ICON_7 );
 					case "Dieing":
-						return new ItemSprite( ItemSpriteSheet.ANKH );
+						return new ItemSprite( ItemSpriteSheet.ICON_8 );
 					case "Looting":
-						return new ItemSprite( ItemSpriteSheet.CRYSTAL_KEY );
+						return new ItemSprite( ItemSpriteSheet.ICON_9 );
 					case "Magic":
-						return new ItemSprite( ItemSpriteSheet.WAND_LIGHTNING );
+						return new ItemSprite( ItemSpriteSheet.ICON_10 );
 				}
 			}
 			

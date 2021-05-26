@@ -103,8 +103,6 @@ items.skill.sk1.panorama.prompt="렌즈가 당신을 위해서 힘냅니다!"
 items.skill.sk1.foodprep.name=_야외 취사(1스킬)_
 items.skill.sk1.foodprep.desc=발동시 목표 지점에 있는 대상에게 약간의 피해와 함께 불을 지릅니다. 만약 적을 태웠다면 _고기가 생성됩니다._
 items.skill.sk1.foodprep.prompt=식재료를 선택
-items.skill.sk1.foodprep.yam1="굼의 특제 요리다!"
-items.skill.sk1.foodprep.yam1="맛있는거 먹자!"
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 순간이동_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
@@ -1716,8 +1714,8 @@ items.weapon.missiles.forcecube.name=힘의 큐브
 items.weapon.missiles.forcecube.ondeath=당신은 당신의 힘의 큐브로 인해 죽었다...
 items.weapon.missiles.forcecube.desc=이 기묘한 외형의 무기는 당신이 손에 쥘 수 있을 정도로 작지만 엄청나게 무겁습니다. 이 무기를 던지면 목표 지점을 중심으로 작은 범위에 힘을 방출하여, 범위 내의 모든 대상에게 피해를 줄 것입니다.
 
-items.weapon.missiles.heavyboomerang.name=텐진
-items.weapon.missiles.heavyboomerang.desc=실버애쉬가 사육하는 수렵용 매. 그냥 명령을 내려 사냥감을 공격할 수도 있지만 주인 외의 말은 듣지 않는다. 그냥 집어 던져도 다시 돌아오니까, 있는 힘껏 던져버리자.
+items.weapon.missiles.heavyboomerang.name=풍차 수리검
+items.weapon.missiles.heavyboomerang.desc=거대한 칼날이 달려있는 삼각형 모양의 수리검. 적에게 던진 후 다음 턴에 던졌던 위치로 다시 돌아온다.
 
 items.weapon.missiles.javelin.name=엄청 무거운 창
 items.weapon.missiles.javelin.desc=엄청 무거워!!! \n\n성인이 들어도 묵직한 무게의 장창. 무겁지만 이걸 던진다면 충분히 파괴적일 것이다.
@@ -1744,8 +1742,8 @@ items.weapon.missiles.throwinghammer.desc=이 묵직한 망치는 적에게 던�
 items.weapon.missiles.throwingknife.name=발리스틱 나이프
 items.weapon.missiles.throwingknife.desc=이 가벼운 칼들은 바람을 가르며 목표의 목을 가르기에도 적합합니다. 무방비 상태의 적들에게 가장 효과적입니다.
 
-items.weapon.missiles.throwingspear.name=투척용 창
-items.weapon.missiles.throwingspear.desc=이 가벼운 창들은 얇은 몸체를 가져 직접 찌르기엔 부적합하지만, 던져 날리기엔 적합합니다.
+items.weapon.missiles.throwingspear.name=텐진
+items.weapon.missiles.throwingspear.desc=실버애쉬가 사육하는 수렵용 매. 그냥 명령을 내려 사냥감을 공격할 수도 있지만 주인 외의 말은 듣지 않는다. 그냥 집어 던져도 언젠간 돌아올테니까, 있는 힘껏 던져버리자.
 
 items.weapon.missiles.throwingstone.name=투척용 돌
 items.weapon.missiles.throwingstone.desc=이 돌멩이들은 일반적인 돌보다 더 강하게 던질 수 있도록 가공되었습니다. 잘 만들어졌긴 하지만 여전히 믿음직한 무기는 아닙니다.
@@ -1754,7 +1752,7 @@ items.weapon.missiles.tomahawk.name=엄청 차가운 도끼
 items.weapon.missiles.tomahawk.desc=엄청 차가워!! \n\n예리하게 갈아놓은 묵직한 투척도끼. 차갑지만 적을 얼리진 않고, 출혈을 일으킬 것이다.
 
 items.weapon.missiles.trident.name=EX-42
-items.weapon.missiles.trident.desc=오리지늄 아츠 원격 조작장치. 칼날은 없지만 그녀는 이것을 대검이라 부른다 .과연 이 방벽같은 물건을 검이라 부를수 있을까?
+items.weapon.missiles.trident.desc=_"네가 원하는데로."_ \n\n오리지늄 아츠 원격 조작장치. 칼날은 없지만 그녀는 이것을 대검이라 부른다. 과연 이 방벽같은 물건을 검이라 부를수 있을까?
 
 
 items.weapon.spiritbow.name=리버스 크로스보우
