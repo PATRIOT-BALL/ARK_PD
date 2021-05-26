@@ -176,11 +176,11 @@ public abstract class RegularPainter extends Painter {
 		float hiddenDoorChance = 0;
 		if (Dungeon.depth > 1){
 			//chance for a hidden door scales from 2/20 on floor 2 to 20/20 on floor 20
-			hiddenDoorChance = Math.min(1f, Dungeon.depth / 20f);
+			hiddenDoorChance = 0;
 		}
 		if (l.feeling == Level.Feeling.SECRETS){
 			//pull the value of extra secret doors toward 50% on secrets level feel
-			hiddenDoorChance = (0.5f + hiddenDoorChance)/2f;
+			hiddenDoorChance = 0;
 		}
 
 		HashMap<Room, Room> roomMerges = new HashMap<>();
@@ -200,10 +200,11 @@ public abstract class RegularPainter extends Painter {
 				
 				Room.Door d = r.connected.get(n);
 				int door = d.x + d.y * l.width();
-				
+
+
 				if (d.type == Room.Door.Type.REGULAR){
 					if (Random.Float() < hiddenDoorChance) {
-						d.type = Room.Door.Type.HIDDEN;
+						d.type = Room.Door.Type.REGULAR;
 						Graph.buildDistanceMap(rooms, r);
 						//don't hide if it would make this room only accessible by hidden doors
 						//unless we're on a secrets depth
