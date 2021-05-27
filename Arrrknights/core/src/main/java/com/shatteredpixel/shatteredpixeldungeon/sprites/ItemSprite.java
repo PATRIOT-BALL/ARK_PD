@@ -221,7 +221,7 @@ public class ItemSprite extends MovieClip {
 			case REMAINS:
 				return view( ItemSpriteSheet.REMAINS, null );
 			case CAUTUS:
-				return view( ItemSpriteSheet.CRYSTAL_CHEST, null );
+				return view( ItemSpriteSheet.CAUTUS, null );
 			default:
 				return view( 0, null );
 		}

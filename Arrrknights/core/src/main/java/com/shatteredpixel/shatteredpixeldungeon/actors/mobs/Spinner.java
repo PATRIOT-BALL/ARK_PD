@@ -48,9 +48,6 @@ public class Spinner extends Mob {
 		EXP = 9;
 		maxLvl = 17;
 
-		loot = Generator.Category.SKL_T2;
-		lootChance = 0.03f;
-
 		loot = new MysteryMeat();
 		lootChance = 0.125f;
 
@@ -145,6 +142,15 @@ public class Spinner extends Mob {
 			}
 		}
 		super.move(step);
+	}
+
+	@Override
+	public void die( Object cause ) {
+		super.die(cause);
+		if (Random.Int(0,100) <= 3)
+		{
+			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T2), pos ).sprite.drop( pos );
+		}
 	}
 	
 	public int webPos(){

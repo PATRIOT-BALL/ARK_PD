@@ -705,6 +705,7 @@ actors.mobs.olddm300.desc=이 기계는 몇세기 전 드워프들에 의해 만
 
 actors.mobs.newdm300.name=머드락
 actors.mobs.newdm300.damageup=공격력 상승!
+actors.mobs.newdm300.final=더러운 대지의 핏줄
 actors.mobs.newdm300.notice=적인가.
 actors.mobs.newdm300.shield=머드락이 노출된 전력관의 아츠를 충전하여 방어막을 생성했다!
 actors.mobs.newdm300.vent=머드락이 강화 슈트에서 유독성 배기 가스를 방출했다!

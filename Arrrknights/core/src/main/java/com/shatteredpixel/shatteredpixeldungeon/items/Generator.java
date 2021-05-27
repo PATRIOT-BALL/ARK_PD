@@ -221,7 +221,8 @@ public class Generator {
 		GOLD	( 20,   Gold.class ),
 		SKL_T1  (0,SkillBook .class),
 		SKL_T2  (0,SkillBook .class),
-		SKL_T3  (0, SkillBook.class);
+		SKL_T3  (0, SkillBook.class),
+		SKL_RND  (0, SkillBook.class);
 		
 		public Class<?>[] classes;
 
@@ -493,6 +494,19 @@ public class Generator {
 					BookTerminationT.class
 			};
 			SKL_T3.probs = new float[]{ 1, 1 };
+
+
+			SKL_RND.classes = new Class<?>[]{
+					BookFate.class, // 1
+					Bookpanorama.class,
+					BookFoodPrep.class,
+					BookJackinthebox.class, // 2
+					BookRockfailHammer.class,
+					BookChargingPS.class,
+					BookTrueSilverSlash.class, // 3
+					BookTerminationT.class
+			};
+			SKL_RND.probs = new float[]{ 2, 2, 2, 1.5f, 1.5f, 1.5f, 1, 1, 1 };
 		}
 	}
 

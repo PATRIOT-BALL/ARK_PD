@@ -147,6 +147,15 @@ public class Guard extends Mob {
 		return super.createLoot();
 	}
 
+	@Override
+	public void die( Object cause ) {
+		super.die(cause);
+		if (Random.Int(0,100) <= 3)
+		{
+			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T1), pos ).sprite.drop( pos );
+		}
+	}
+
 	private final String CHAINSUSED = "chainsused";
 
 	@Override

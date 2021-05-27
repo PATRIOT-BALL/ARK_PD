@@ -55,7 +55,6 @@ public class Warlock extends Mob implements Callback {
 		maxLvl = 21;
 		
 		loot = Generator.Category.POTION;
-		loot = new OriginiumShard();
 		lootChance = 0.5f;
 
 	}

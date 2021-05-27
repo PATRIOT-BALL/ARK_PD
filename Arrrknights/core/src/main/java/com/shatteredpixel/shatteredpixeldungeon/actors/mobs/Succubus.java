@@ -155,6 +155,15 @@ public class Succubus extends Mob {
 	}
 
 	@Override
+	public void die( Object cause ) {
+		super.die(cause);
+		if (Random.Int(0,100) <= 5)
+		{
+			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T2), pos ).sprite.drop( pos );
+		}
+	}
+
+	@Override
 	protected Item createLoot() {
 		Class<?extends Scroll> loot;
 		do{

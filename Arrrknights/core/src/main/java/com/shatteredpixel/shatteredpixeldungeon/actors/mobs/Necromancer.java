@@ -51,9 +51,6 @@ public class Necromancer extends Mob {
 		
 		EXP = 7;
 		maxLvl = 14;
-
-		loot = Generator.Category.SKL_T1;
-		lootChance = 0.02f;
 		
 		loot = new PotionOfHealing();
 		lootChance = 0.2f; //see createloot
@@ -110,6 +107,10 @@ public class Necromancer extends Mob {
 		}
 		
 		super.die(cause);
+			if (Random.Int(0,100) <= 1)
+			{
+				Dungeon.level.drop(Generator.random(Generator.Category.SKL_T1), pos ).sprite.drop( pos );
+			}
 	}
 
 	@Override

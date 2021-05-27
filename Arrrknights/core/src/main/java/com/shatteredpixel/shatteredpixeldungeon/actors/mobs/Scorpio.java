@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ScorpioSprite;
 import com.watabou.utils.Random;
@@ -47,9 +48,6 @@ public class Scorpio extends Mob {
 		
 		EXP = 14;
 		maxLvl = 27;
-
-		loot = Generator.Category.SKL_T3;
-		lootChance = 0.05f;
 		
 		loot = Generator.Category.POTION;
 		lootChance = 0.5f;
@@ -103,6 +101,15 @@ public class Scorpio extends Mob {
 		} while (loot == PotionOfHealing.class || loot == PotionOfStrength.class);
 
 		return Reflection.newInstance(loot);
+	}
+
+	@Override
+	public void die( Object cause ) {
+		super.die(cause);
+		if (Random.Int(0,100) < 5)
+		{
+			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T3), pos ).sprite.drop( pos );
+		}
 	}
 	
 }

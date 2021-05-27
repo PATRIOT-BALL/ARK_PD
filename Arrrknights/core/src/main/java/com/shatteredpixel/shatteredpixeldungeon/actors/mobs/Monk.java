@@ -22,11 +22,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
+import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -49,7 +51,6 @@ public class Monk extends Mob {
 		maxLvl = 21;
 		
 		loot = new Food();
-		loot = new OriginiumShard();
 		lootChance = 0.083f;
 
 
@@ -131,6 +132,15 @@ public class Monk extends Mob {
 			Sample.INSTANCE.play( Assets.Sounds.HIT_PARRY, 1, Random.Float(0.96f, 1.05f));
 			focusCooldown = Random.NormalFloat( 6, 7 );
 			return Messages.get(this, "parried");
+		}
+	}
+
+	@Override
+	public void die( Object cause ) {
+		super.die(cause);
+		if (Random.Int(0,100) <= 3)
+		{
+			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T2), pos ).sprite.drop( pos );
 		}
 	}
 	

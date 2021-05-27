@@ -49,9 +49,6 @@ public class Golem extends Mob {
 		loot = Random.oneOf(Generator.Category.WEAPON, Generator.Category.ARMOR);
 		lootChance = 0.125f; //initially, see rollToDropLoot
 
-		loot = Generator.Category.SKL_T2;
-		lootChance = 0.02f;
-
 		properties.add(Property.INORGANIC);
 		properties.add(Property.LARGE);
 
@@ -135,6 +132,15 @@ public class Golem extends Mob {
 			return true;
 		}
 		return super.act();
+	}
+
+	@Override
+	public void die( Object cause ) {
+		super.die(cause);
+		if (Random.Int(0,100) < 3)
+		{
+			Dungeon.level.drop(Generator.random(Generator.Category.SKL_RND), pos ).sprite.drop( pos );
+		}
 	}
 
 	public void onZapComplete(){

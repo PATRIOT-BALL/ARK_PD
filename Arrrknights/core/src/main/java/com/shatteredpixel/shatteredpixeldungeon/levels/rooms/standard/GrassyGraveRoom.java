@@ -53,7 +53,7 @@ public class GrassyGraveRoom extends StandardRoom {
 			int pos = w > h ?
 					left + 1 + shift + i * 2 + (top + 2 + Random.Int( h-2 )) * level.width() :
 					(left + 2 + Random.Int( w-2 )) + (top + 1 + shift + i * 2) * level.width();
-			if (Dungeon.depth > 5 && Dungeon.cautusquset == -1) {
+			if (Dungeon.depth > 10 && Dungeon.cautusquset == -1) {
 			level.drop(Generator.random(Generator.Category.SKL_T2), pos ).type = Heap.Type.CAUTUS;
 			Dungeon.cautusquset = 1;}
 			else level.drop( i == index ? Generator.random() : new Gold().random(), pos ).type = Heap.Type.TOMB;
