@@ -96,6 +96,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
@@ -163,6 +164,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Dirk.class,                       false);
 		WEAPONS.seen.put( Sword.class,                      false);
 		WEAPONS.seen.put( Mace.class,                       false);
+		WEAPONS.seen.put( Enfild.class,                       false);
 		WEAPONS.seen.put( Scimitar.class,                   false);
 		WEAPONS.seen.put( RoundShield.class,                false);
 		WEAPONS.seen.put( Sai.class,                        false);
