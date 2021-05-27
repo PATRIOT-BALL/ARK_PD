@@ -506,7 +506,7 @@ public class Generator {
 					BookTrueSilverSlash.class, // 3
 					BookTerminationT.class
 			};
-			SKL_RND.probs = new float[]{ 2, 2, 2, 1.5f, 1.5f, 1.5f, 1, 1, 1 };
+			SKL_RND.probs = new float[]{ 7, 7, 7, 5, 5, 5, 1, 1, 1 };
 		}
 	}
 

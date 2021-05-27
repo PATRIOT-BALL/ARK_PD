@@ -144,9 +144,9 @@ items.skill.sk2.rockfailhammer.name=_바위를 깨는 망치(2스킬)_
 items.skill.sk2.rockfailhammer.desc=발동시 주위 적들에게 _힘에 비례한 피해_를 입히고 밀쳐냄과 동시에 _마비_와 _현기증_을 부여합니다.\n또한, 시전시 체력 회복 효과를 얻습니다.
 items.skill.sk2.rockfailhammer.desc_wnd=발동시 주위 적들에게 피해를 입히고 밀쳐냅니다.
 
-items.skill.sk2.chargingpS.name=_스콜피온 테일(2스킬)_
-items.skill.sk2.chargingpS.desc=발동시 사거리 2의 범위 공격을 가해  _힘에 비례한 피해_를 입히고 실명, 불구를 부여합니다. 시전 후 짧은 시간동안 이동속도가 상승합니다.
-items.skill.sk2.chargingpS.desc_wnd=발동시 주위 적들에게 피해를 입히고 불구,실명을 겁니다.
+items.skill.sk2.chargingps.name=_스콜피온 테일(2스킬)_
+items.skill.sk2.chargingps.desc=발동시 사거리 2의 범위 공격을 가해  _힘에 비례한 피해_를 입히고 실명, 불구를 부여합니다. 시전 후 짧은 시간동안 이동속도가 상승합니다.
+items.skill.sk2.chargingps.desc_wnd=발동시 주위 적들에게 피해를 입히고 불구,실명을 겁니다.
 
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
 items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.
@@ -1867,6 +1867,7 @@ items.heap.crystal_chest_desc=안에 _%s_ 이/가 들어있는 것이 보이지�
 items.heap.artifact=아츠 깃든 유물
 items.heap.wand=아츠 스태프
 items.heap.ring=반지
+items.heap.skl=스킬개론
 items.heap.tomb=무덤
 items.heap.tomb_desc=누군가의 유해가 묻혀있는 장소. 망자가 죽기 전 유용하게 사용했던 물건이 담겨있다. 하지만 대부분 망자들은 자신의 물건을 가져가려 하는 것을 싫어할 것이다.
 items.heap.skeleton=해골 잔해
