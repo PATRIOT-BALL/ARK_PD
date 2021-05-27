@@ -23,6 +23,7 @@ public class SkillBook extends Item {
         unique = true;
         defaultAction = AC_ACT;
     }
+
     private static final String AC_ACT = "ACT";
     private static final String AC_SKL1 = "SKL1";
     private static final String AC_SKL2 = "SKL2";
@@ -34,16 +35,17 @@ public class SkillBook extends Item {
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
         actions.add(AC_ACT);
-        return actions;}
+        return actions;
+    }
 
     @Override
-    public void execute (Hero hero, String action ) {
+    public void execute(Hero hero, String action) {
         super.execute(hero, action);
         if (action.equals(AC_ACT)) {
 
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),
-                            Messages.get(this, "wnddesc") + "\n\n" + Messages.get(this, "spcharge", Math.round(charge)),
+                            Messages.get(this, "wnddesc") + infoWnd(),
                             Messages.get(this, "ac_skl1", new DecimalFormat("#").format(30f)),
                             Messages.get(this, "ac_skl2", new DecimalFormat("#").format(60f)),
                             Messages.get(this, "ac_skl3", new DecimalFormat("#").format(100f))) {
@@ -89,36 +91,57 @@ public class SkillBook extends Item {
         }
     }
 
-            @Override
-            public String info() {
-                String info = desc();
+    @Override
+    public String info() {
+        String info = desc();
 
-                curUser = Dungeon.hero;
+        curUser = Dungeon.hero;
 
-                info += "\n\n" + Messages.get(this, "spcharge", Math.round(charge));
+        info += "\n\n" + Messages.get(this, "spcharge", Math.round(charge));
 
-                if (curUser.SK1 != null) {
-                    info += "\n\n" + curUser.SK1.name();
-                    info += " " + curUser.SK1.desc();
-                }
+        if (curUser.SK1 != null) {
+            info += "\n\n" + curUser.SK1.name();
+            info += " " + curUser.SK1.desc();
+        }
 
-                if (curUser.SK2 != null) {
-                    info += "\n\n" + curUser.SK2.name();
-                    info += " " + curUser.SK2.desc();
-                }
+        if (curUser.SK2 != null) {
+            info += "\n\n" + curUser.SK2.name();
+            info += " " + curUser.SK2.desc();
+        }
 
-                if (curUser.SK3 != null) {
-                    info += "\n\n" + curUser.SK3.name();
-                    info += " " + curUser.SK3.desc();
-                }
+        if (curUser.SK3 != null) {
+            info += "\n\n" + curUser.SK3.name();
+            info += " " + curUser.SK3.desc();
+        }
 
-                return info;
-            }
+        return info;
+    }
+
+
+    public String infoWnd() {
+        String infoWnd = "";
+        if (curUser.SK1 != null) {
+            infoWnd += "\n\n" + curUser.SK1.name();
+            infoWnd += " " + curUser.SK1.desc_wnd();
+        }
+
+        if (curUser.SK2 != null) {
+            infoWnd += "\n\n" + curUser.SK2.name();
+            infoWnd += " " + curUser.SK2.desc_wnd();
+        }
+
+        if (curUser.SK3 != null) {
+            infoWnd += "\n\n" + curUser.SK3.name();
+            infoWnd += " " + curUser.SK3.desc_wnd();
+        }
+
+        return infoWnd;
+    }
 
     public void onHeroGainExp(float levelPercent, Hero hero) {
         super.onHeroGainExp(levelPercent, hero);
 
-        float chargepur = 10 + (Dungeon.hero.lvl *6) - 72;
+        float chargepur = 10 + (Dungeon.hero.lvl * 6) - 72;
         if (chargepur < 10) chargepur = 10;
 
         charge += chargepur * levelPercent;
@@ -127,17 +150,18 @@ public class SkillBook extends Item {
     }
 
     private static final String CHARGE = "charge";
+
     @Override
-    public void storeInBundle( Bundle bundle ) {
+    public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
-        bundle.put( CHARGE , charge );
+        bundle.put(CHARGE, charge);
     }
 
     @Override
-    public void restoreFromBundle( Bundle bundle ) {
+    public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        if (chargeCap > 0)  charge = Math.min( chargeCap, bundle.getInt( CHARGE ));
-        else                charge = bundle.getInt( CHARGE );
+        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
+        else charge = bundle.getInt(CHARGE);
     }
 
     @Override
@@ -154,12 +178,12 @@ public class SkillBook extends Item {
     public String status() {
 
         //if the artifact isn't IDed, or is cursed, don't display anything
-        if (!isIdentified() || cursed){
+        if (!isIdentified() || cursed) {
             return null;
         }
         //display as percent
         if (chargeCap == 100)
-            return Messages.format( "%d%%", charge );
+            return Messages.format("%d%%", charge);
 
 
         //otherwise, if there's no charge, return null.

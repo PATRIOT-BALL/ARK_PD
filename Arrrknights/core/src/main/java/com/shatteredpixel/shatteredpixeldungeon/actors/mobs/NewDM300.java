@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
@@ -44,6 +45,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.EarthParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SparkParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
@@ -100,7 +102,7 @@ public class NewDM300 extends Mob {
 
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 15, 25 );
+		return Random.NormalIntRange( 15, 18 + DamageUP );
 	}
 
 	@Override
@@ -114,6 +116,7 @@ public class NewDM300 extends Mob {
 	}
 
 	public int pylonsActivated = 0;
+	public int DamageUP = 0;
 	public boolean supercharged = false;
 	public boolean chargeAnnounced = false;
 
@@ -136,6 +139,7 @@ public class NewDM300 extends Mob {
 	private static final String ABILITY_COOLDOWN = "ability_cooldown";
 
 	private static final String LAST_ABILITY = "last_ability";
+	private static final String DAMAGE_UP = "damageup";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -146,6 +150,7 @@ public class NewDM300 extends Mob {
 		bundle.put(TURNS_SINCE_LAST_ABILITY, turnsSinceLastAbility);
 		bundle.put(ABILITY_COOLDOWN, abilityCooldown);
 		bundle.put(LAST_ABILITY, lastAbility);
+		bundle.put(DAMAGE_UP, DamageUP);
 	}
 
 	@Override
@@ -157,6 +162,7 @@ public class NewDM300 extends Mob {
 		turnsSinceLastAbility = bundle.getInt(TURNS_SINCE_LAST_ABILITY);
 		abilityCooldown = bundle.getInt(ABILITY_COOLDOWN);
 		lastAbility = bundle.getInt(LAST_ABILITY);
+		DamageUP = bundle.getInt(DAMAGE_UP);
 
 		if (turnsSinceLastAbility != -1){
 			BossHealthBar.assignBoss(this);
@@ -170,7 +176,6 @@ public class NewDM300 extends Mob {
 		if (paralysed > 0){
 			return super.act();
 		}
-
 		//ability logic only triggers if DM is not supercharged
 		if (!supercharged){
 			if (turnsSinceLastAbility >= 0) turnsSinceLastAbility++;
@@ -303,7 +308,15 @@ public class NewDM300 extends Mob {
 
 		}
 
+
 		return super.act();
+	}
+
+	@Override
+	public int attackProc(Char enemy, int damage) {
+		DamageUP +=8;
+		sprite.showStatus( CharSprite.NEUTRAL, Messages.get(NewDM300.class, "damageup") );
+		return super.attackProc(enemy, damage);
 	}
 
 	@Override
@@ -320,6 +333,9 @@ public class NewDM300 extends Mob {
 		super.move(step);
 
 		Camera.main.shake( supercharged ? 3 : 1, 0.25f );
+
+		DamageUP -= 6;
+		if (DamageUP < 0) DamageUP = 0;
 
 		if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && state == HUNTING) {
 

@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Obfuscation;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Potential;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Swiftness;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Bundlable;
@@ -23,12 +24,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 abstract public class Skill extends Item {
-
-
-
     abstract public void doSkill();
 
-
+    public String desc_wnd() {
+        return Messages.get(this, "desc_wnd");
+    }
 
     @Override
     public boolean isUpgradable() {

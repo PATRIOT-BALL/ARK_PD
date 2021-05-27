@@ -43,7 +43,7 @@ public class RockfailHammer extends Skill {
     }
 
     public void dohit(final Char enemy) {
-        int dmg = Random.NormalIntRange(10 + (curUser.STR() * 2), 15 + (curUser.STR() * 3));
+        int dmg = Random.NormalIntRange(10 + (curUser.STR * 2), 15 + (curUser.STR * 3));
         CellEmitter.get( enemy.pos ).burst( Speck.factory( Speck.ROCK ), 10 );
         dmg -= enemy.drRoll();
         enemy.damage(dmg, enemy);

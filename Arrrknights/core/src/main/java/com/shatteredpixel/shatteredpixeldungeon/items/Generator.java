@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
@@ -482,9 +483,10 @@ public class Generator {
 
 			SKL_T2.classes = new Class<?>[]{
 					BookJackinthebox.class,
-					BookRockfailHammer.class
+					BookRockfailHammer.class,
+					BookChargingPS.class
 			};
-			SKL_T2.probs = new float[]{ 1, 1 };
+			SKL_T2.probs = new float[]{ 1, 1, 1 };
 
 			SKL_T3.classes = new Class<?>[]{
 					BookTrueSilverSlash.class,

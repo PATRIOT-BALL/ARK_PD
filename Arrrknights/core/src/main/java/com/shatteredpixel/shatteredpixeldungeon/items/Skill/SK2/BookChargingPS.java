@@ -3,10 +3,11 @@ package com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.Image;
 
 import java.util.ArrayList;
 
-public class BookJackinthebox extends Item {
+public class BookChargingPS extends Item {
     private static final String AC_USE = "USE";
 
     {
@@ -24,7 +25,7 @@ public class BookJackinthebox extends Item {
     }
 
     @Override
-    public void execute (Hero hero, String action ){
+    public void execute(Hero hero, String action) {
 
         super.execute(hero, action);
         if (action.equals(AC_USE)) {
@@ -32,10 +33,9 @@ public class BookJackinthebox extends Item {
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
 
-            hero.SK2 = new Jackinthebox();
-            hero.SetSkill2Num(6);
+            hero.SK2 = new ChargingPS();
+            hero.SetSkill2Num(7);
         }
-
 
     }
 

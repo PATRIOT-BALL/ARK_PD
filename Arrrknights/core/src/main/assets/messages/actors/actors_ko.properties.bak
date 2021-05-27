@@ -503,6 +503,8 @@ actors.hero.hero.search=탐색
 actors.hero.hero.search_distracted=집중할 수 없어 탐색에 약간 시간이 걸린다.
 actors.hero.hero.pain_resist=고통으로 인해 당신은 수면 욕구에 저항했다.
 actors.hero.hero.revive=앙크는 부활의 에너지로 폭발했다!
+actors.hero.hero.yam1=굼의 특제 요리다!
+actors.hero.hero.yam2=맛있는거 먹자!
 
 actors.hero.heroclass.warrior=블레이즈
 actors.hero.heroclass.warrior_desc_innate=블레이즈는 방어구에 붙일 수 있는 _특별한 깃털 부적_ 을 가지고 시작합니다.블레이즈는 깃털 부적이 붙은 방어구를 입고 있을 때 천천히 재생하는 방어막을 얻습니다.\n\n블레이즈의 깃털 부적은 다른 방어구들에 옮겨 붙일 수 있으며, 1만큼의 강화 수치를 이전할 수 있습니다.\n\n블레이즈는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 치유 물약\n- 분노의 주문서
@@ -702,6 +704,7 @@ actors.mobs.olddm300.rankings_desc=머드락에게 박살남
 actors.mobs.olddm300.desc=이 기계는 몇세기 전 드워프들에 의해 만들어졌습니다. 그 후, 드워프들은 이 기계들을 골렘, 정령, 심지어는 악마들로 대신했습니다. 결국 그들의 문명은 쇠퇴하고 말았습니다. 머드락과 같은 계열의 기계들은 주로 건설과 채굴 작업에 사용되지만, 필요에 따라 거점 방어도 가능합니다.
 
 actors.mobs.newdm300.name=머드락
+actors.mobs.newdm300.damageup=공격력 상승!
 actors.mobs.newdm300.notice=적인가.
 actors.mobs.newdm300.shield=머드락이 노출된 전력관의 아츠를 충전하여 방어막을 생성했다!
 actors.mobs.newdm300.vent=머드락이 강화 슈트에서 유독성 배기 가스를 방출했다!

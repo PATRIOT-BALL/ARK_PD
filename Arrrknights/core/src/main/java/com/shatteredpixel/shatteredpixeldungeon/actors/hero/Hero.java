@@ -74,6 +74,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
@@ -170,7 +171,7 @@ public class Hero extends Char {
 	
 	public static final int MAX_LEVEL = 40;
 
-	public static final int STARTING_STR = 1000;
+	public static final int STARTING_STR = 10;
 
 	private static final float TIME_TO_REST		    = 1f;
 	private static final float TIME_TO_SEARCH	    = 2f;
@@ -180,7 +181,7 @@ public class Hero extends Char {
 	public HeroSubClass subClass = HeroSubClass.NONE;
 	public ArrayList<LinkedHashMap<Talent, Integer>> talents = new ArrayList<>();
 	
-	private int attackSkill = 1000;
+	private int attackSkill = 10;
 	private int defenseSkill = 5;
 
 	public boolean ready = false;
@@ -222,7 +223,7 @@ public class Hero extends Char {
 	public Hero() {
 		super();
 
-		HP = HT = 2000;
+		HP = HT = 99999;
 		STR = STARTING_STR;
 		
 		belongings = new Belongings( this );
@@ -233,7 +234,7 @@ public class Hero extends Char {
 	public void updateHT( boolean boostHP ){
 		int curHT = HT;
 		
-		HT = 2000 + 5*(lvl-1) + HTBoost;
+		HT = 20 + 5*(lvl-1) + HTBoost;
 		float multiplier = RingOfMight.HTMultiplier(this);
 		HT = Math.round(multiplier * HT);
 		
@@ -2050,6 +2051,7 @@ public class Hero extends Char {
 		else if (SkillNumber==4) {SK2 = new EmergencyDefibrillator(); }
 		else if (SkillNumber==5) {SK2 = new Jackinthebox(); }
 		else if (SkillNumber==6) {SK2 = new RockfailHammer(); }
+		else if (SkillNumber==7) {SK2 = new ChargingPS(); }
 		else SK2 = null;
 	}
 
