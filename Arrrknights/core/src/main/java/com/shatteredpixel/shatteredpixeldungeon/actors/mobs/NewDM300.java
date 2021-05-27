@@ -105,7 +105,7 @@ public class NewDM300 extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(15, 22 + DamageUP);
+        return Random.NormalIntRange(12, 22 + DamageUP);
     }
 
     @Override
@@ -353,7 +353,7 @@ public class NewDM300 extends Mob {
 
         Camera.main.shake(supercharged ? 3 : 1, 0.25f);
 
-        DamageUP -= 3;
+        DamageUP -= 6;
         if (DamageUP < 0) DamageUP = 0;
 
         if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && state == HUNTING) {
@@ -527,8 +527,7 @@ public class NewDM300 extends Mob {
     public void FinalPhaseSkill() {
         chargedSkill = true;
         ((MudrockSprite) sprite).updateChargeState(false, true, false);
-        sprite.emitter().start(ShadowParticle.UP, 15f, 20);
-        ((MudrockSprite) sprite).attack(0);
+        ((MudrockSprite) sprite).charge();
         Buff.affect(this, Stamina.class, 3f);
         spend(3f);
         lastcharge();
