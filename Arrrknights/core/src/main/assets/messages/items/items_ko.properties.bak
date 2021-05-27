@@ -687,11 +687,11 @@ items.food.mysterymeat.stuffed=당신은 속이 막혔다.
 items.food.mysterymeat.desc=위험을 감수하고 먹어 보십시오!
 items.food.mysterymeat$placeholder.name=고기
 
-items.food.pasty.pasty=초코바
-items.food.pasty.pie=애플 파이
-items.food.pasty.cane=초코스틱
-items.food.pasty.pasty_desc=누군가 몰래 가져온 간식. 페로족 대원들의 강력한 반발로 인해 좀처럼 찾아보기 어렵지만, 행복한 단맛과 든든한 열량은 적은 양으로 허기를 채우기 충분하다. 당신이 페로가 아니라면 말이다.
-items.food.pasty.pie_desc="응? 호박파이보단 애플파이가 더 맛있잖아, 리더!" \n\ 할로윈을 축하하기 위해 엑시아가 만든 라테라노 전통 파이. 새콤달콤하고 향긋한 맛에 배가 차고 약간 치유가 될 것이다.
+items.food.pasty.pasty=애플 파이
+items.food.pasty.pie=초코스틱
+items.food.pasty.cane=사탕
+items.food.pasty.pasty_desc="응? 호박파이보단 애플파이가 더 맛있잖아, 리더!" \n\ 할로윈을 축하하기 위해 엑시아가 만든 라테라노 전통 파이. 새콤달콤하고 향긋한 맛에 배가 차고 약간 치유가 될 것이다.
+items.food.pasty.pie_desc=누군가 몰래 가져온 간식. 페로족 대원들의 강력한 반발로 인해 좀처럼 찾아보기 어렵지만, 행복한 단맛과 든든한 열량은 적은 양으로 허기를 채우기 충분하다. 당신이 페로가 아니라면 말이다.
 items.food.pasty.cane_desc=밀가루 반죽을 얇게 구워 초콜릿을 입혀 만든 맛있는 과자. 텍사스가 하루에 4봉지를 먹는다. \n\ 허기와 피곤에 지친 당신을 위로하기엔 충분하며 아츠 스태프의 SP를 채울 수도 있습니다.\n\n즐거운 휴일 되세요!
 
 items.food.smallration.name=케오베의 벌꿀 쿠키
@@ -1308,32 +1308,32 @@ items.wands.wand.prompt=발사할 지점을 선택하세요
 items.wands.wandofblastwave.name=충격파의 아츠 스태프
 items.wands.wandofblastwave.staff_name=충격파의 흑요석 반지
 items.wands.wandofblastwave.ondeath=당신은 당신이 발사한 충격파에 맞아 죽었다...
-items.wands.wandofblastwave.desc=이 막대는 대리석의 일종으로 만들어졌으며, 금색의 테두리와 끝 부분의 둥글고 검은 보석으로 장식되어 있습니다. 손에 쥐었을때 매우 무겁게 느껴집니다.
+items.wands.wandofblastwave.desc="아, 악수는 이쪽 장갑 낀 오른손으로 해주세요."\n\n이 막대는 대리석의 일종으로 만들어졌으며, 금색의 테두리와 끝 부분의 둥글고 검은 보석으로 장식되어 있습니다. 손에 쥐었을때 매우 무겁게 느껴집니다.
 items.wands.wandofblastwave.stats_desc=이 막대는 해당 지점에 착탄해 공간을 사납게 폭발시키는 화살을 발사합니다. 충격파는 _%1$d-%2$d 의 피해_ 를 입히며 해당 지점에 있는 대부분의 적들을 날려보낼 만큼 강력합니다.
 items.wands.wandofblastwave.bmage_desc=_전투 아미야_ 가 충격파의 흑요석 반지로 적을 공격하면, 탄성의 아츠 무기로 공격한 것처럼 대상을 밀쳐낼 수 있습니다.
 
 items.wands.wandofcorrosion.name=부식의 아츠 스태프
 items.wands.wandofcorrosion.staff_name=부식의 흑요석 반지
-items.wands.wandofcorrosion.desc=이 막대는 잿빛 몸체에 끝은 밝은 주황색 보석으로 장식되어 있습니다.
+items.wands.wandofcorrosion.desc="기억해두자, 몸에 좋은 약은 입에 쓰다는 걸."\n\n이 막대는 잿빛 몸체에 끝은 밝은 주황색 보석으로 장식되어 있습니다.
 items.wands.wandofcorrosion.stats_desc=이 막대는 목표 지점에 강력한 부식 가스를 발생시키는 화살을 발사합니다. 이 구름 속에 갇힌 적들은 _%d 피해_ 부터 시작해 점차 강해지는 지속 피해를 입습니다.
 items.wands.wandofcorrosion.bmage_desc=_전투 아미야_ 가 부식의 흑요석 반지로 적을 공격하면, 대상에게 일정 확률로 산성 점액을 부여합니다.
 
 items.wands.wandofcorruption.name=타락의 아츠 스태프
 items.wands.wandofcorruption.staff_name=타락의 흑요석 반지
 items.wands.wandofcorruption.already_corrupted=그 대상에게 더 영향을 줄 수 없다.
-items.wands.wandofcorruption.desc=이 막대는 끝 부분에 달린 해골 모양 장식에서 알 수 있듯이 혼란스럽고 어두운 에너지를 발하고 있습니다.
+items.wands.wandofcorruption.desc="그 날 눈에 새겨진 광경, 외치고 싶어도 목소리가 안 나왔을 만큼의 절망감... 전부… 기억의 깊숙한 곳에 넣어둘 수 있으면 좋을텐데."\n\n이 막대는 끝 부분에 달린 해골 모양 장식에서 알 수 있듯이 혼란스럽고 어두운 에너지를 발하고 있습니다.
 items.wands.wandofcorruption.stats_desc=이 막대는 타락의 에너지를 발사하여, 적을 약화시키다가 끝내는 정신을 조종할 수 있게 합니다. 적들은 타락에 저항할 수 있지만, 약화된 적들은 훨씬 더 쉽게 타락시킬 수 있습니다.
 items.wands.wandofcorruption.bmage_desc=_전투 아미야_ 가 타락의 흑요석 반지로 적을 공격하면, 대상에게 일정 확률로 광란을 부여합니다.
 
 items.wands.wandofdisintegration.name=붕괴의 아츠 스태프
 items.wands.wandofdisintegration.staff_name=붕괴의 흑요석 반지
-items.wands.wandofdisintegration.desc=이 막대는 매끈한 흑요석 덩어리로 만들어졌으며, 진보라색 빛이 옆 부분을 타고 끝부분까지 이어져 있습니다. 파괴적인 에너지를 내뿜으고 있으며 그 에너지가 발사되길 기다리고 있습니다.
+items.wands.wandofdisintegration.desc="그녀도 잘 알고 있다. 전쟁이든 록 음악이든, 뭐든지 전력을 다해야 한다는 걸."\n\n이 막대는 매끈한 흑요석 덩어리로 만들어졌으며, 진보라색 빛이 옆 부분을 타고 끝부분까지 이어져 있습니다. 파괴적인 에너지를 내뿜으고 있으며 그 에너지가 발사되길 기다리고 있습니다.
 items.wands.wandofdisintegration.stats_desc=이 막대는 모든 장애물을 관통하는 광선을 발사합니다. 막대가 강화될수록 광선이 더 멀리까지 나갑니다. 이 막대가 발사하는 광선은 _%1$d-%2$d의 피해를_ 입히며, 적과 지형을 관통할수록 더 강력해집니다.
 items.wands.wandofdisintegration.bmage_desc=_전투 아미야_ 가 붕괴의 흑요석 반지를 휘두를 때, 도달의 아츠 무기로 공격한 것처럼 공격 범위가 증가합니다.
 
 items.wands.wandoffireblast.name=화염 폭발의 아츠 스태프
 items.wands.wandoffireblast.staff_name=화염 폭발의 흑요석 반지
-items.wands.wandoffireblast.desc=이 막대는 붉은 색으로 옻칠한 나뭇가지를 금색 잎으로 대강 말아서 만들었습니다. 끝 부분이 떨리고 있어 강력한 아츠를 발사하길 원하는 것 같습니다.
+items.wands.wandoffireblast.desc="한 번만 더 화재경보기를 울리면, 그땐 월급을 깎아야지!"\n\n이 막대는 붉은 색으로 옻칠한 나뭇가지를 금색 잎으로 대강 말아서 만들었습니다. 끝 부분이 떨리고 있어 강력한 아츠를 발사하길 원하는 것 같습니다.
 items.wands.wandoffireblast.stats_desc=이 막대를 사용하면 방사형으로 화염 폭발을 일으킵니다. 다음 공격은 _SP를 %1$d_ 소모하고 _%2$d-%3$d 피해_ 를 입힙니다. SP를 더 소모할수록 효과가 강력해집니다.
 items.wands.wandoffireblast.bmage_desc=_전투 아미야_ 가 화염 폭발의 흑요석 반지로 적을 공격하면, 화염의 아츠 무기로 공격한 것처럼 대상을 불태울 수 있습니다.
 
@@ -1346,13 +1346,13 @@ items.wands.wandoffrost.bmage_desc=_전투 아미야_ 가 서리의 흑요석 �
 items.wands.wandoflightning.name=번개의 아츠 스태프
 items.wands.wandoflightning.staff_name=번개의 흑요석 반지
 items.wands.wandoflightning.ondeath=당신은 당신이 발사한 번개에 맞아 죽었다...
-items.wands.wandoflightning.desc=이 막대는 쇳덩어리로 만들어져 생각보다 엄청 무겁습니다. 두 개의 지침이 끝 부분에 함께 휘어져 있으며 전류가 둘 사이에 흐르고 있습니다.
+items.wands.wandoflightning.desc="빛은 아무리 그 크기가 작아도, 온 힘을 다해 주변을 비추는 법이다."\n\n이 막대는 쇳덩어리로 만들어져 생각보다 엄청 무겁습니다. 두 개의 지침이 끝 부분에 함께 휘어져 있으며 전류가 둘 사이에 흐르고 있습니다.
 items.wands.wandoflightning.stats_desc=이 막대는 대상에게 강력한 번개를 발사하여 _%1$d-%2$d의 피해_ 를 입힙니다.  번개는 주변의 적들에게 튕겨나가며, 물에 서 있는 대상에게 더 잘 튕겨나갑니다. 번개는 당신에게 피해를 줄 수 있지만, 아군에게 피해를 주지 않습니다.
 items.wands.wandoflightning.bmage_desc=_전투 아미야_ 가 번개의 흑요석 반지로 적을 공격하면, 짜릿한 아츠 무기로 공격한 것처럼 주변 적들에게 연쇄 번개로 피해를 줄 수 있습니다.
 
 items.wands.wandoflivingearth.name=대지의 아츠 스태프
 items.wands.wandoflivingearth.staff_name=대지의 흑요석 반지
-items.wands.wandoflivingearth.desc=이 아츠 스태프는 기이한 암석과 그를 감싸며 에너지를 내뿜는 노란 띠로 이루어져 있습니다. 당신이 이 아츠 스태프를 쥐자 암석이 약간 움직인 것처럼 보입니다. 마치 당신의 손을 느낄 수 있는 것처럼 말이죠.
+items.wands.wandoflivingearth.desc="옥토여, 바위여. 일어나라."\n\n이 아츠 스태프는 기이한 암석과 그를 감싸며 에너지를 내뿜는 노란 띠로 이루어져 있습니다. 당신이 이 아츠 스태프를 쥐자 암석이 약간 움직인 것처럼 보입니다. 마치 당신의 손을 느낄 수 있는 것처럼 말이죠.
 items.wands.wandoflivingearth.stats_desc=이 아츠 스태프는 적에게 아츠의 돌을 날려보내, _%1$d-%2$d_ 의 피해를 줍니다. 그 직후 암석이 사용자의 주변에서 다시 결합되어, 준 피해의 일부만큼 피해를 막아내는 장갑을 형성합니다. 만약 충분한 양의 장갑이 만들어졌다면, 다음 아츠 스태프를 사용할 때 장갑이 암석 수호자 형태로 변할 것입니다.
 items.wands.wandoflivingearth.bmage_desc=_전투 아미야_ 가 대지의 흑요석 반지로 적을 공격하면, 입힌 피해량의 일부가 암석 장갑으로 전환되어 돌아옵니다.
 items.wands.wandoflivingearth$rockarmor.name=암석 장갑
@@ -1362,7 +1362,7 @@ items.wands.wandoflivingearth$earthguardian.desc=당신의 대지의 아츠 스�
 
 items.wands.wandofmagicmissile.name=마탄의 아츠 스태프
 items.wands.wandofmagicmissile.staff_name=마탄의 흑요석 반지
-items.wands.wandofmagicmissile.desc=이 평범해 보이는 막대는 순수한 아츠 에너지를 발사합니다. 이 막대 자체는 특별한 효과를 가지진 않지만, 다른 막대에 비해 더 많은 SP를 가지며 강화되었을 때 다른 막대들의 위력을 잠시동안 증가시킬 수 있습니다.
+items.wands.wandofmagicmissile.desc="저들 중에도 체르노보그의 시민은 있었을까?"\n\n이 평범해 보이는 막대는 순수한 아츠 에너지를 발사합니다. 이 막대 자체는 특별한 효과를 가지진 않지만, 다른 막대에 비해 더 많은 SP를 가지며 강화되었을 때 다른 막대들의 위력을 잠시동안 증가시킬 수 있습니다.
 items.wands.wandofmagicmissile.stats_desc=이 아츠 스태프가 발사하는 에너지는 _%1$d-%2$d의 피해_ 를 입히고, 강화되어 있을 경우 다른 아츠 스태프의 위력을 약간 증가시킵니다.
 items.wands.wandofmagicmissile.bmage_desc=_전투 아미야_ 가 마탄의 흑요석 반지로 적을 공격하면, 가지고 있는 모든 아츠 스태프와 흑요석 반지가 추가 SP를 얻습니다.
 items.wands.wandofmagicmissile$magiccharge.name=마력 충전
@@ -1370,7 +1370,7 @@ items.wands.wandofmagicmissile$magiccharge.desc=당신의 마탄의 아츠 스�
 
 items.wands.wandofprismaticlight.name=섬광의 아츠 스태프
 items.wands.wandofprismaticlight.staff_name=굴절광의 흑요석 반지
-items.wands.wandofprismaticlight.desc=이 막대는 투명한 수정 덩어리로 만들어져서 마치 기다랗고 매끈한 유리처럼 보입니다. 끝부분에는 형형색색의 빛이 춤추고 있으며, 발사되기를 원하는 것 같습니다.
+items.wands.wandofprismaticlight.desc="어떤 죄를 지어왔던간에, 그 목숨과 함께 먼지로 돌아가겠죠."\n\n이 막대는 투명한 수정 덩어리로 만들어져서 마치 기다랗고 매끈한 유리처럼 보입니다. 끝부분에는 형형색색의 빛이 춤추고 있으며, 발사되기를 원하는 것 같습니다.
 items.wands.wandofprismaticlight.stats_desc=이 막대는 맞은 적들에게 _%1$d-%2$d의 피해와_ 실명을 주며, 던전의 어둠을 밝혀 숨겨진 지역과 함정을 드러내 주는 광선을 발사합니다. 악마와 언데드는 막대에서 발사된 빛에 태워지며 추가 피해를 입습니다.
 items.wands.wandofprismaticlight.bmage_desc=_전투 아미야_ 가 굴절광의 흑요석 반지로 적을 공격하면, 대상에게 흑요석 반지 강화 수치에 비례한 양의 불구 효과를 부여합니다.
 
@@ -1391,7 +1391,7 @@ items.wands.wandoftransfusion.name=이식의 아츠 스태프
 items.wands.wandoftransfusion.staff_name=이식의 흑요석 반지
 items.wands.wandoftransfusion.ondeath=당신은 당신이 가진 이식의 아츠 스태프 때문에 죽었다...
 items.wands.wandoftransfusion.charged=당신의 흑요석 반지는 적들의 생명력으로 충전되었다!
-items.wands.wandoftransfusion.desc=꽤나 평범하게 생긴 막대로써, 자주색 몸통 끝에 달린 칠흑색 보석이 돋보입니다.
+items.wands.wandoftransfusion.desc="곤경에 처했을 때 사람은 성장한다. 그렇지?"\n\n꽤나 평범하게 생긴 막대로써, 자주색 몸통 끝에 달린 칠흑색 보석이 돋보입니다.
 items.wands.wandoftransfusion.stats_desc=아군에게 사용되는 경우, 이 아츠 스태프는 _%1$d만큼의 사용자의 체력_을 흡수하여 아군에게  _%2$d만큼의 체력_을 회복시키거나 보호막을 씌웁니다. 적들에게 사용되는 경우, 이 아츠 스태프는 대상을 잠시동안 매혹시키고 사용자에게  _%3$d만큼의 보호막_을 씌웁니다. 언데드 적들은 매혹되는 대신 _%4$d-%5$d만큼의 피해_를 입을 것입니다.
 items.wands.wandoftransfusion.bmage_desc=_전투 아미야_ 가 이식의 흑요석 반지로 매혹된 적을 공격하면, 보호막을 얻고 다음 이식의 흑요석 반지 사용에 체력을 소모하지 않습니다.
 
@@ -1399,7 +1399,7 @@ items.wands.wandofwarding.name=소환의 아츠 스태프
 items.wands.wandofwarding.staff_name=소환의 흑요석 반지
 items.wands.wandofwarding.no_more_wards=당신의 아츠 스태프는 더 이상의 미보를 유지할 수 없다.
 items.wands.wandofwarding.bad_location=그곳에 미보를 소환할 수 없다.
-items.wands.wandofwarding.desc=이 짧은 금속질의 아츠 스태프의 끝 부분 위에는 밝은 보라색 보석이 떠 있습니다.
+items.wands.wandofwarding.desc="연구 방해만은 절대로 하지 마, 방해하면 미보가 반드시 물어버릴테니까. 나도 물어버릴거야!"\n\n이 짧은 금속질의 아츠 스태프의 끝 부분 위에는 밝은 보라색 보석이 떠 있습니다.
 items.wands.wandofwarding.stats_desc=적에게 직접 피해를 입히는 대신, 이 아츠 스태프는 고정된 미보과 감시탑을 소환합니다. 감시탑은 벽 너머를 포함한 시야가 닿는 모든 곳에 설치가 가능합니다. 이 아츠 스태프는 한 번에 _%d만큼의 미보 에너지_ 를 유지할 수 있습니다.
 items.wands.wandofwarding.bmage_desc=_아미야_ 가 수호의 흑요석 반지로 적을 공격하면, 일정 확률로 모든 활성화된 미보의 체력이 회복됩니다.
 items.wands.wandofwarding$ward.name_1=공업용 미보
@@ -1421,11 +1421,11 @@ items.wands.wandofwarding$ward.dismiss_cancel=아니오
 
 ###weapon curses
 items.weapon.curses.annoying.name=짜증나는 %s
-items.weapon.curses.annoying.msg_1="우리 지금 싸우는거 맞지!?"
-items.weapon.curses.annoying.msg_2="좋아, 박살내버려!"
-items.weapon.curses.annoying.msg_3="이봐, 여기야!"
-items.weapon.curses.annoying.msg_4="보스는 아직이야!?"
-items.weapon.curses.annoying.msg_5="아야, 그렇게 세게 휘두르지 말라고!"
+items.weapon.curses.annoying.msg_1="우후후, 그럼… 로도스에서 오리지늄을 숨겨놓은 곳을, 알려줄 수 있겠니?"
+items.weapon.curses.annoying.msg_2="아하하! 엄청 찡그리고 있네?"
+items.weapon.curses.annoying.msg_3="이 사람들이 적이구나? 헤에, 재미있을 거 같은데."
+items.weapon.curses.annoying.msg_4="70% 정도의 힘으로도 충분하려나."
+items.weapon.curses.annoying.msg_5="나는 강해."
 items.weapon.curses.annoying.desc=짜증나는 무기는 말을 할 수 있습니다만 너무 시끄럽습니다. 이 소리는 원치 않게 적들의 주의를 끌 수 도 있습니다.
 
 items.weapon.curses.contamination.name=오염된 %s

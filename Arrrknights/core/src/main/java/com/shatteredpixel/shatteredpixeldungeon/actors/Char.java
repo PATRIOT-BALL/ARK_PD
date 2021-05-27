@@ -830,6 +830,7 @@ public abstract class Char extends Actor {
 				new HashSet<Class>()),
 		LARGE,
 		IMMOVABLE;
+		// 명픽던 추가 요소
 		
 		private HashSet<Class> resistances;
 		private HashSet<Class> immunities;

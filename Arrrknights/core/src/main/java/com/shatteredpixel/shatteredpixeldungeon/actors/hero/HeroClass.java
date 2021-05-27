@@ -67,6 +67,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -156,7 +157,11 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
 
-		ScrollOfUpgrade UPg;
+		Firesteel Stl;
+		Stl = new Firesteel();
+		Stl.quantity(1).collect();
+
+		/*ScrollOfUpgrade UPg;
 		UPg = new ScrollOfUpgrade();
 		UPg.quantity(99).collect();
 
@@ -170,7 +175,7 @@ public enum HeroClass {
 
 		PlateArmor ss;
 		ss = new PlateArmor();
-		ss.quantity(1).collect();
+		ss.quantity(1).collect();*/
 		
 		new PotionBandolier().collect();
 		Dungeon.LimitedDrops.POTION_BANDOLIER.drop();

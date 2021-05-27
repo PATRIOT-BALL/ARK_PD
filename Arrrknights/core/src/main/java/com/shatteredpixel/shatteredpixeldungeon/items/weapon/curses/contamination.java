@@ -16,9 +16,9 @@ public class contamination extends Weapon.Enchantment {
 
         float procChance = 1/10f * procChanceMultiplier(attacker);
         if (Random.Float() < procChance) {
-
+            if (Random.Float(1f,2f) < 1f)
             Buff.affect(attacker, ActiveOriginium.class).set(attacker.HT * 0.1f);
-
+            else Buff.affect(defender, ActiveOriginium.class).set(attacker.HT * 0.1f);
         }
 
         return damage;
