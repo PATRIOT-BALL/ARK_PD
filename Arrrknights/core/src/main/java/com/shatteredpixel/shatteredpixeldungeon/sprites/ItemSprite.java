@@ -66,8 +66,8 @@ public class ItemSprite extends MovieClip {
 	//the width and height of the shadow are a percentage of sprite size
 	//offset is the number of pixels the shadow is moved down or up (handy for some animations)
 	protected boolean renderShadow  = false;
-	protected float shadowWidth     = 1f;
-	protected float shadowHeight    = 0.25f;
+	protected float shadowWidth     = 1.25f;
+	protected float shadowHeight    = 0.75f;
 	protected float shadowOffset    = 1.25f;
 	
 	public ItemSprite() {
@@ -220,6 +220,8 @@ public class ItemSprite extends MovieClip {
 				return aview;
 			case REMAINS:
 				return view( ItemSpriteSheet.REMAINS, null );
+			case CAUTUS:
+				return view( ItemSpriteSheet.CRYSTAL_CHEST, null );
 			default:
 				return view( 0, null );
 		}

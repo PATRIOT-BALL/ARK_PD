@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard;
 
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
@@ -52,7 +53,10 @@ public class GrassyGraveRoom extends StandardRoom {
 			int pos = w > h ?
 					left + 1 + shift + i * 2 + (top + 2 + Random.Int( h-2 )) * level.width() :
 					(left + 2 + Random.Int( w-2 )) + (top + 1 + shift + i * 2) * level.width();
-			level.drop( i == index ? Generator.random() : new Gold().random(), pos ).type = Heap.Type.TOMB;
+			if (Dungeon.depth > 5 && Dungeon.cautusquset == -1) {
+			level.drop(Generator.random(Generator.Category.SKL_T2), pos ).type = Heap.Type.CAUTUS;
+			Dungeon.cautusquset = 1;}
+			else level.drop( i == index ? Generator.random() : new Gold().random(), pos ).type = Heap.Type.TOMB;
 		}
 	}
 }

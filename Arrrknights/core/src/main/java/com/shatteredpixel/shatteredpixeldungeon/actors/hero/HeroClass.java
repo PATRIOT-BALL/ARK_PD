@@ -188,6 +188,10 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		ScrollOfMagicMapping MAPA;
+		MAPA = new ScrollOfMagicMapping();
+		MAPA.quantity(999).collect();
+
 		/*
 		RingOfSunLight R;
 		R = new RingOfSunLight();
@@ -196,7 +200,8 @@ public enum HeroClass {
 
 		ScrollOfIdentify FFC;
 		FFC = new ScrollOfIdentify();
-		FFC.quantity(1).collect();*/
+		FFC.quantity(1).collect();
+		 */
 	}
 
 	private static void initMage( Hero hero ) {

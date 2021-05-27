@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Wraith;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Wraith_donut;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -64,7 +65,8 @@ public class Heap implements Bundlable {
 		TOMB,
 		SKELETON,
 		REMAINS,
-		MIMIC //remains for pre-0.8.0 compatibility. There are converted to mimics on level load
+		MIMIC, //remains for pre-0.8.0 compatibility. There are converted to mimics on level load
+		CAUTUS
 	}
 	public Type type = Type.HEAP;
 	
@@ -88,6 +90,9 @@ public class Heap implements Bundlable {
 		case SKELETON:
 			CellEmitter.center( pos ).start(Speck.factory(Speck.RATTLE), 0.1f, 3);
 			break;
+			case CAUTUS:
+				Wraith_donut.spawnAround( hero.pos );
+				break;
 		default:
 		}
 		

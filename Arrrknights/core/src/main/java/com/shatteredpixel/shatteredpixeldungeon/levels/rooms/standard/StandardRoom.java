@@ -139,7 +139,7 @@ public abstract class StandardRoom extends Room {
 		rooms.add(PlatformRoom.class);
 		rooms.add(BurnedRoom.class);
 		rooms.add(FissureRoom.class);
-		rooms.add(GrassyGraveRoom.class);
+		rooms.add(GrassyGraveRoom.class); // 22
 		rooms.add(StripedRoom.class);
 		rooms.add(StudyRoom.class);
 		rooms.add(SuspiciousChestRoom.class);
@@ -156,7 +156,7 @@ public abstract class StandardRoom extends Room {
 		chances[6] =  new float[]{15,  0,0,0, 10,10,5, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1};
 		chances[10] = chances[9] = chances[8] = chances[7] = chances[6];
 
-		chances[11] = new float[]{20,  0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1};
+		chances[11] = new float[]{20,  0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0,  1,1,1,1,1,2,1,1,1,1};
 		chances[15] = chances[14] = chances[13] = chances[12] = chances[11];
 
 		chances[16] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 10,10,5, 0,0,0,  1,1,1,1,1,1,1,1,1,1};

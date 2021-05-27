@@ -61,6 +61,7 @@ public class CavesLevel extends RegularLevel {
 	protected ArrayList<Room> initRooms() {
 		return Blacksmith.Quest.spawn(super.initRooms());
 	}
+
 	
 	@Override
 	protected int standardRooms(boolean forceMax) {
