@@ -160,10 +160,6 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
 
-		Firesteel Stl;
-		Stl = new Firesteel();
-		Stl.quantity(1).collect();
-
 		/*ScrollOfUpgrade UPg;
 		UPg = new ScrollOfUpgrade();
 		UPg.quantity(99).collect();
@@ -191,13 +187,13 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		ScrollOfMagicMapping MAPA;
+		/*ScrollOfMagicMapping MAPA;
 		MAPA = new ScrollOfMagicMapping();
 		MAPA.quantity(999).collect();
 
 		BookChargingPS naa;
 		naa = new BookChargingPS();
-		naa.quantity(1).collect();
+		naa.quantity(1).collect();*/
 
 		/*
 		RingOfSunLight R;
