@@ -45,13 +45,14 @@ public class MudrockSprite extends MobSprite {
 		
 		texture( Assets.Sprites.MUD );
 		
-		updateChargeState(false);
+		updateChargeState(false, false, false);
 	}
 
-	public void updateChargeState( boolean enraged ){
+	public void updateChargeState( boolean enraged, boolean FinalSkill, boolean FinalPhase ){
 		if (superchargeSparks != null) superchargeSparks.on = enraged;
 
 		int c = enraged ? 44 : 0;
+		// int c = enraged ? FinalSkill ? FinalPhase ? 44 : 88 : 132 : 0;
 
 		TextureFilm frames = new TextureFilm( texture, 42, 42 );
 
@@ -63,6 +64,9 @@ public class MudrockSprite extends MobSprite {
 
 		attack = new Animation( 15, false );
 		attack.frames( frames, c+9, c+10, c+11, c+12, c+13, c+14, c+15, c+16, c+17 );
+
+		Sattack = new Animation( 15, true );
+		Sattack.frames( frames, 9, 10, 11, 12, 13, 14, 15, 16, 17 );
 
 		//unaffected by enrage state
 
@@ -146,7 +150,7 @@ public class MudrockSprite extends MobSprite {
 		superchargeSparks.on = false;
 
 		if (ch instanceof NewDM300 && ((NewDM300) ch).isSupercharged()){
-			updateChargeState(true);
+			updateChargeState(true,false,false);
 		}
 	}
 
