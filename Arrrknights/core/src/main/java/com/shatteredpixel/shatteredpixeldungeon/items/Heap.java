@@ -378,6 +378,8 @@ public class Heap implements Bundlable {
 				return Messages.get(this, "skeleton");
 			case REMAINS:
 				return Messages.get(this, "remains");
+			case CAUTUS:
+				return Messages.get(this, "cautus");
 			default:
 				return peek().toString();
 		}
@@ -403,6 +405,8 @@ public class Heap implements Bundlable {
 				return Messages.get(this, "skeleton_desc");
 			case REMAINS:
 				return Messages.get(this, "remains_desc");
+			case CAUTUS:
+				return Messages.get(this, "cautus_desc");
 			default:
 				return peek().info();
 		}

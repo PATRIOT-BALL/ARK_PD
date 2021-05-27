@@ -153,7 +153,7 @@ public abstract class StandardRoom extends Room {
 		chances[4] =  chances[3] = chances[2];
 		chances[5] =  new float[]{15,  10,10,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  0,0,0,0,0,0,0,0,0,0};
 
-		chances[6] =  new float[]{15,  0,0,0, 10,10,5, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1};
+		chances[6] =  new float[]{15,  0,0,0, 10,10,5, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,2,1,1,1,1};
 		chances[10] = chances[9] = chances[8] = chances[7] = chances[6];
 
 		chances[11] = new float[]{20,  0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0,  1,1,1,1,1,2,1,1,1,1};

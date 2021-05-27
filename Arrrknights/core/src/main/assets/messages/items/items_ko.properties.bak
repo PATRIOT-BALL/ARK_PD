@@ -1707,6 +1707,9 @@ items.weapon.missiles.boomerang.name=부메랑
 items.weapon.missiles.boomerang.desc=이 구부러진 나무 부메랑은 적에게 던지면 던진 사람의 손으로 되돌아옵니다.
 items.weapon.missiles.boomerang.durability=부메랑은 단단한 구조로 인해 절대 부서지지 않습니다.
 
+items.weapon.missiles.firesteel.name=부싯돌
+items.weapon.missiles.firesteel.desc=이 돌은 평범한 돌과 같습니다. 하지만 _뭔가 잘 터질거같은 적에게는 매우 효과적입니다!_
+
 items.weapon.missiles.fishingspear.name=작살
 items.weapon.missiles.fishingspear.desc=물속의 생물들을 잡기 위한 작은 투창입니다. 무기로도 그럭저럭 사용할 수 있습니다. \n\n절대 에기르 출신 사람들에게 들이대지 말아줘.\nㅡ위디
 
@@ -1843,6 +1846,8 @@ items.heap.skeleton=해골 잔해
 items.heap.skeleton_desc=전사한 리유니온의 잔해일까, 그녀가 생전 갖고 있던 것이 아직 품에 있다. 귀중품이 있는지 뒤져볼 만한 가치가 있어 보인다.
 items.heap.remains=대원의 유해
 items.heap.remains_desc=당신이 이전 작전에서 남기고 간 물건이다. 쓸 만한 물건이 있나 찾아보자.
+items.heap.cautus=카우트스 소녀
+items.heap.cautus_desc=금속 물체에 발이 눌린 한 카우투스 소녀가 있었다. 그녀는 당신을 보고는 급히 도움을 요청하고있다.\n\n_이 소녀는 어째서 이런 위험한 곳에 홀로 있는 거지?_
 
 items.honeypot.name=꿀단지
 items.honeypot.ac_shatter=깨트린다

@@ -19,7 +19,7 @@ public class Firesteel extends MissileWeapon {
         bones = false;
 
         tier = 1;
-        baseUses = 12;
+        baseUses = 6;
         sticky = false;
     }
 
