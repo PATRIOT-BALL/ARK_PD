@@ -119,6 +119,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
@@ -1201,7 +1202,11 @@ public class Hero extends Char {
 		}
 
 		WandOfLivingEarth.RockArmor rockArmor = buff(WandOfLivingEarth.RockArmor.class);
-		if (rockArmor != null) {
+		StaffOfMudrock.RockArmor MudrockArmor = buff(StaffOfMudrock.RockArmor.class);
+		if (MudrockArmor != null) {
+			damage = MudrockArmor.absorb(damage);
+		}
+		else if (rockArmor != null) {
 			damage = rockArmor.absorb(damage);
 		}
 		
