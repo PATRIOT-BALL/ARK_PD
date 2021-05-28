@@ -213,7 +213,7 @@ public class Hero extends Char {
 
 	public Skill SK1;
 	public Skill SK2;
-	public Skill SK3;
+	public Skill SK3 = new ShadowAssault();
 
 	private int SK1num;
 	private int SK2num;

@@ -187,25 +187,7 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		AlchemicalCatalyst AB;
-		AB = new AlchemicalCatalyst();
-		AB.level(2);
-		AB.quantity(1).collect();
-
-		WandOfPrismaticLight ABC;
-		ABC = new WandOfPrismaticLight();
-		ABC.level(2);
-		ABC.quantity(1).collect();
-
-		MetalShard ABCd;
-		ABCd = new MetalShard();
-		ABCd.level(2);
-		ABCd.quantity(1).collect();
-
-		AlchemistsToolkit AK;
-		AK = new AlchemistsToolkit();
-		AK.quantity(1).collect();
-/*
+		/*
 		ScrollOfUpgrade UPg;
 		UPg = new ScrollOfUpgrade();
 		UPg.quantity(99).collect();
@@ -230,19 +212,21 @@ public enum HeroClass {
 		naa = new BookChargingPS();
 		naa.quantity(1).collect();
 
+ */
+
 		RingOfSunLight R;
 		R = new RingOfSunLight();
-		R.level(3);
+		R.level(100);
 		R.quantity(1).collect();
-		*/
 
-		ScrollOfIdentify FFC;
+
+		/*ScrollOfIdentify FFC;
 		FFC = new ScrollOfIdentify();
 		FFC.quantity(1).collect();
 
 		StaffKit SK;
 		SK = new StaffKit();
-		SK.quantity(3).collect();
+		SK.quantity(3).collect();*/
 
 	}
 

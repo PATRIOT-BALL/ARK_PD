@@ -53,7 +53,7 @@ public class MudrockSprite extends MobSprite {
         if (superchargeSparks != null) superchargeSparks.on = enraged;
 
         int c = enraged ? 44 : 0;
-        // if (FinalPhase == true) c = 88;
+        if (FinalPhase == true) c = 88;
 
         TextureFilm frames = new TextureFilm(texture, 42, 42);
 
@@ -79,10 +79,10 @@ public class MudrockSprite extends MobSprite {
             slam = attack.clone();
 
             zap = new Animation(15, false);
-            zap.frames(frames, 1, 2, 3, 4, 5, 6, 7, 8);
+            zap.frames(frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8);
 
             die = new Animation(7, false);
-            die.frames(frames, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 43);
+            die.frames(frames, c+17, c+18, c+19, c+20, c+21, c+22, c+23, c+24, c+25, c+26, c+27, c+28, c+29, c+30, c+31, c+32, c+33,c+ 43);
         }
 
         if (curAnim != charge) play(Sattack);

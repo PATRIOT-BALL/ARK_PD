@@ -85,7 +85,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 				listener );
 	}
 	
-	private static final int DEFAULT_ANGULAR_SPEED = 720;
+	private static final int DEFAULT_ANGULAR_SPEED = 1080;
 	
 	private static final HashMap<Class<?extends Item>, Integer> ANGULAR_SPEEDS = new HashMap<>();
 	static {
@@ -105,7 +105,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		ANGULAR_SPEEDS.put(HeavyBoomerang.class,1440);
 		ANGULAR_SPEEDS.put(Bolas.class,         1440);
 		
-		ANGULAR_SPEEDS.put(Shuriken.class,      2160);
+		ANGULAR_SPEEDS.put(Shuriken.class,      0);
 		
 		ANGULAR_SPEEDS.put(WSprite.TenguShuriken.class,      2160);
 		ANGULAR_SPEEDS.put(TerminationT.SpiritArrow.class,0);
