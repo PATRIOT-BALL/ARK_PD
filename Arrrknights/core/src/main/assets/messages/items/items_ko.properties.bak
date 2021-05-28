@@ -34,9 +34,13 @@ items.skill.sk1.bookfoodprep.name=야외취사 스킬개론
 items.skill.sk1.bookfoodprep.desc=_야외 취사_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 대상을 불태우고 고기 획득\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookfoodprep.ac_use=읽는다
 
-items.skill.sk1.bookfoodprep.name=야외취사 스킬개론
-items.skill.sk1.bookfoodprep.desc=_야외 취사_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 대상을 불태우고 고기 획득\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
-items.skill.sk1.bookfoodprep.ac_use=읽는다
+items.skill.sk1.bookchainhook.name=사슬의 스킬개론
+items.skill.sk1.bookchainhook.desc=_체인 훅_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 추가 효과가 있는 사슬 사용\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookchainhook.ac_use=읽는다
+
+items.skill.sk1.bookwhispers.name=바람의 스킬개론
+items.skill.sk1.bookwhispers.desc=_바람의 언어_ 스킬의 정보가 기록되어있는 _특별한_ 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 현기증 부여\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookwhispers.ac_use=읽는다
 
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
@@ -128,6 +132,10 @@ items.skill.sk1.chainhook.desc_wnd=발동시 추가 능력을 지닌 사슬을 �
 items.skill.sk1.chainhook.prompt=사슬을 던질 위치를 지정하세요.
 items.skill.sk1.chainhook.fail=사슬을 잘못 던졌다...
 items.skill.sk1.chainhook.does_nothing=그러나 아무 일도 없었다.
+
+items.skill.sk1.whispers.name=_바람의 언어(1스킬)_
+items.skill.sk1.whispers.desc=발동시 사거리 2의 범위 공격을 가해 _적들에게 현기증을 부여_합니다.
+items.skill.sk1.whispers.desc_wnd=발동시 주위 적들을 현기증에 빠트립니다.
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 도약_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
@@ -1057,8 +1065,8 @@ items.rings.ringofwealth.typical_stats=이 반지를 장착했을 때, 이 반�
 items.rings.ringofwealth.desc=이 반지는 보물을 끌어당기는 자석처럼 작용하며, 적들과 상자에서 더 좋은 아이템이 나올 가능성을 늘려 줍니다. 저주받은 반지는 당신이 전리품을 얻을 확률을 감소시킵니다.
 
 items.rings.ringofsunlight.name=햇빛의 반지
-items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 스킬을 사용하면 약 _%s%%_ 의 SP를 환급받습니다.
-items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록 장치의 스킬을 사용했을 때  약 _%s%%_ 의 SP를 환급받습니다.
+items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 스킬을 사용하면 약 _%s%%_ 만큼 SP를 덜 사용합니다.\n\n단, 이 반지의 효과를 받아도 최소 5의 sp는 무조건 소모됩니다.
+items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록 장치의 스킬을 사용했을 때  약 _%s%%_ 만큼 SP를 덜 사용합니다.
 items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP 효율을 높혀줍니다. 저주받은 반지는 오히려 효율을 감소시킵니다.
 
 

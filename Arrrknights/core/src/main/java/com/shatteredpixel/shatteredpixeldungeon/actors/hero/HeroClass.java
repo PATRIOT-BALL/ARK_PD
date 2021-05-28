@@ -173,8 +173,8 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
-
-		/*ScrollOfUpgrade UPg;
+/*
+		ScrollOfUpgrade UPg;
 		UPg = new ScrollOfUpgrade();
 		UPg.quantity(99).collect();
 
@@ -192,22 +192,21 @@ public enum HeroClass {
 
 		/*ScrollOfMagicMapping MAPA;
 		MAPA = new ScrollOfMagicMapping();
-		MAPA.quantity(999).collect();
-
+		MAPA.quantity(999).collect(); */
+/*
 		BookChargingPS naa;
 		naa = new BookChargingPS();
-		naa.quantity(1).collect();*/
+		naa.quantity(1).collect();
 
-		/*
 		RingOfSunLight R;
 		R = new RingOfSunLight();
-		R.cursed = true;
+		R.level(3);
 		R.quantity(1).collect();
 
 		ScrollOfIdentify FFC;
 		FFC = new ScrollOfIdentify();
 		FFC.quantity(1).collect();
-		 */
+*/
 	}
 
 	private static void initMage( Hero hero ) {
