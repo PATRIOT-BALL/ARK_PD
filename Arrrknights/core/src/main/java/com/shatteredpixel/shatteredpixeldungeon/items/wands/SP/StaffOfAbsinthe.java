@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
@@ -22,6 +23,7 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class StaffOfAbsinthe extends DamageWand {
+    private static ItemSprite.Glowing COL = new ItemSprite.Glowing( 0x191970 );
     {
         image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
     }
@@ -32,6 +34,11 @@ public class StaffOfAbsinthe extends DamageWand {
 
     public int max(int lvl){
         return 8+2*lvl;
+    }
+
+    @Override
+    public ItemSprite.Glowing glowing() {
+        return COL;
     }
 
     @Override

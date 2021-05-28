@@ -64,6 +64,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMappi
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLightning;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
@@ -176,10 +183,20 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		WandOfMagicMissile AB;
-		AB = new WandOfMagicMissile();
+		WandOfDisintegration AB;
+		AB = new WandOfDisintegration();
 		AB.level(2);
 		AB.quantity(1).collect();
+
+		WandOfFrost ABC;
+		ABC = new WandOfFrost();
+		ABC.level(2);
+		ABC.quantity(1).collect();
+
+		WandOfCorrosion ABCd;
+		ABCd = new WandOfCorrosion();
+		ABCd.level(2);
+		ABCd.quantity(1).collect();
 /*
 		ScrollOfUpgrade UPg;
 		UPg = new ScrollOfUpgrade();
@@ -217,7 +234,7 @@ public enum HeroClass {
 
 		StaffKit SK;
 		SK = new StaffKit();
-		SK.quantity(2).collect();
+		SK.quantity(3).collect();
 
 	}
 

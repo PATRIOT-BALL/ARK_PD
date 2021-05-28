@@ -7,7 +7,17 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClassArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLightning;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -70,6 +80,82 @@ public class StaffKit extends Item {
 
             n.collect();
             wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfLightning) {
+            n = new StaffOfGreyy(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfDisintegration) {
+            n = new StaffOfVigna(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfCorrosion)
+        {
+            n = new StaffOfBreeze(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfLivingEarth)
+        {
+            n = new StaffOfMudrock(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfFrost)
+        {
+            n = new StaffOfLeaf(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else {
+
         }
 
         curUser.sprite.operate(curUser.pos);
