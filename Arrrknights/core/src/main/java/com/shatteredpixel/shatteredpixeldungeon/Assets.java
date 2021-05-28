@@ -211,6 +211,7 @@ public class Assets {
 		public static final String HIT_KNIFE        = "sounds/hit_knife.mp3";
 		public static final String HIT_CHAINSAW        = "sounds/hit_chainsaw.mp3";
 		public static final String HIT_CHAINSAW2        = "sounds/hit_chainsaw2.mp3";
+		public static final String HIT_BIRD        = "sounds/hit_bird.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
 		public static final String SKILL_BEEP       = "sounds/skill_beep.mp3";
@@ -235,7 +236,7 @@ public class Assets {
 
 				//명픽던에서만 추가된  효과음들↓
 				TIMESTOP,
-				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2,
+				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2, HIT_BIRD,
 				FROST, SHINNING, AJIMU,
 				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW, SKILL_SILVERSLASH
 		};
@@ -298,7 +299,7 @@ public class Assets {
 		public static final String THIEF	= "sprites/thief.png";
 		public static final String W	= "sprites/w.png";
 
-		public static final String BAT		= "sprites/bat.png";
+		public static final String BREAKER		= "sprites/breaker.png";
 		public static final String ELEMENTAL= "sprites/elemental.png";
 		public static final String MONK		= "sprites/monk.png";
 		public static final String THROWER	= "sprites/thrower.png";

@@ -27,24 +27,23 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BatSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.watabou.utils.Random;
 
 public class Bat extends Mob {
 
 	{
-		spriteClass = BatSprite.class;
+		spriteClass = BreakerSprite.class;
 		
-		HP = HT = 30;
-		defenseSkill = 15;
+		HP = HT = 36;
+		defenseSkill = 10;
 		baseSpeed = 2f;
 		
 		EXP = 7;
 		maxLvl = 15;
 		
-		flying = true;
-		
 		loot = new PotionOfHealing();
-		lootChance = 0.1667f; //by default, see rollToDropLoot()
+		lootChance = 0.2f; //by default, see rollToDropLoot()
 	}
 	
 	@Override

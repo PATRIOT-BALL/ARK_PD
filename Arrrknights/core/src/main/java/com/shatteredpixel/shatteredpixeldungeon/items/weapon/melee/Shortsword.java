@@ -28,7 +28,7 @@ public class Shortsword extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.SHORTSWORD;
-		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSound = Assets.Sounds.HIT_SPEAR;
 		hitSoundPitch = 1.1f;
 
 		tier = 2;

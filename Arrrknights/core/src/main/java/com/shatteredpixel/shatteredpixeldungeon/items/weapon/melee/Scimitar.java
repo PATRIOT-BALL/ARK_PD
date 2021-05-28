@@ -28,7 +28,7 @@ public class Scimitar extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.SCIMITAR;
-		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSound = Assets.Sounds.HIT_SPEAR;
 		hitSoundPitch = 1.2f;
 
 		tier = 3;

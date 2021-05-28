@@ -28,7 +28,7 @@ public class Spear extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.SPEAR;
-		hitSound = Assets.Sounds.HIT_STAB;
+		hitSound = Assets.Sounds.HIT_SPEAR;
 		hitSoundPitch = 0.9f;
 
 		tier = 2;

@@ -28,7 +28,7 @@ public class Mace extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.MACE;
-		hitSound = Assets.Sounds.HIT_CRUSH;
+		hitSound = Assets.Sounds.ATK_SPIRITBOW;
 		hitSoundPitch = 1f;
 
 		tier = 3;

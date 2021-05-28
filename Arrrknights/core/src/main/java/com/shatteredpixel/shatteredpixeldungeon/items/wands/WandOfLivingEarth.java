@@ -181,7 +181,7 @@ public class WandOfLivingEarth extends DamageWand {
 				curUser.sprite,
 				bolt.collisionPos,
 				callback);
-		Sample.INSTANCE.play(Assets.Sounds.ZAP);
+		Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
 	}
 	
 	@Override
