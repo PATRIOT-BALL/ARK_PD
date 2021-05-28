@@ -1376,8 +1376,8 @@ items.wands.sp.staffofmudrock$earthguardian.desc=당신의 대지의 아츠 스�
 
 items.wands.sp.staffofleaf.name=스태프 오브 리프
 items.wands.sp.staffofleaf.staff_name=개조 서리의 흑요석 반지
-items.wands.sp.staffofleaf.desc="얼어붙어라, 내 피와 같이!"\n\n이 개조된 서리 아츠의 스태프는 프로스트리프 대원의 능력이 반영되었습니다. 다른 스태프에 비해 SP가 적은 편이지만, 발사에 걸리는 시간이 짧습니다.
-items.wands.sp.staffofleaf.stats_desc=이 막대는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d - %2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 일정량의 한기를 가진 적에게 적중시키면 얼려버릴 수 있습니다. 이미 한기를 느끼거나 얼어붙은 적들은 이 막대의 피해를 적게 입습니다.
+items.wands.sp.staffofleaf.desc="얼어붙어라, 내 피와 같이!"\n\n이 개조된 서리 아츠의 스태프는 프로스트리프 대원의 능력이 반영되었습니다.
+items.wands.sp.staffofleaf.stats_desc=이 막대는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d - %2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 일정량의 한기를 가진 적에게 적중시키면 얼려버릴 수 있습니다. 한기를 느끼는 적에게 더 강한 피해를 줍니다.
 items.wands.sp.staffofleaf.bmage_desc=_전투 아미야_ 가 개조 서리의 흑요석 반지로 한기에 걸린 적을 공격하면, 대상을 일정 확률로 즉시 빙결시킵니다. 대상이 더 많이 한기를 느낄수록 빙결시킬 확률이 높아집니다.
 
 
@@ -1710,12 +1710,12 @@ items.weapon.melee.scimitar.stats_desc=공격속도 +25%
 items.weapon.melee.scimitar.desc=빅토리아에서 만들어진 건 랜스. 사격 기능이 제거됐지만 약실의 장약을 터트려 순간적으로 빠르게 적을 공격할 수 있습니다.
 
 items.weapon.melee.spear.name=기병창ㆍ카빈
-items.weapon.melee.spear.stats_desc=사거리 +2 \n 공격속도 -33%
+items.weapon.melee.spear.stats_desc=사거리 +2 \n공격속도 -33%
 items.weapon.melee.spear.desc=키가 작은 그라니를 위해 빅토리아에서 맞춤 제작된 수축형 장창. 카탈로그 상 창의 길이를 두배가량 늘릴 수 있지만, 그라니 본인은 무게 중심이 불안정해져서 거의 사용하지 않는 기능이라고 한다...
 
-items.weapon.melee.rifle.name=리-엔필드
-items.weapon.melee.rifle.stats_desc=사거리 _무한_ \n 공격속도 -33%
-items.weapon.melee.rifle.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.
+items.weapon.melee.enfild.name=리-엔필드
+items.weapon.melee.enfild.stats_desc=사거리 _무한_ \n 공격속도 -33%
+items.weapon.melee.enfild.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.
 
 items.weapon.melee.sword.name=범고래 쿠션
 items.weapon.melee.sword.desc=귀여운 범고래모양 쿠션. 보기와 다르게 굉장히 무겁다. 이런 걸 휘두르면 분명 아프겠지?

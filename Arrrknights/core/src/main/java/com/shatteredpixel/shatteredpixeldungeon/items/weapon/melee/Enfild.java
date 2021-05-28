@@ -38,13 +38,13 @@ public class Enfild extends MeleeWeapon {
 
     @Override
     public int min(int lvl) {
-        return  5*(tier) +  //base
+        return  3*(tier) +  //base
                 lvl*(tier);     //level scaling
     }
 
     @Override
     public int max(int lvl) {
-        return  5*(tier) +    //base
+        return  3*(tier) +    //base
                 lvl*(tier);   //level scaling
     }
 
