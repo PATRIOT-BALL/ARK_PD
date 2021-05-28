@@ -32,7 +32,7 @@ public class StaffOfLeaf extends DamageWand {
     }
 
     public int max(int lvl){
-        return 5+3*lvl;
+        return 5+4*lvl;
     }
 
     @Override
