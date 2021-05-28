@@ -68,12 +68,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ChainHook;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
@@ -169,7 +171,7 @@ public class Hero extends Char {
 		alignment = Alignment.ALLY;
 	}
 	
-	public static final int MAX_LEVEL = 30;
+	public static final int MAX_LEVEL = 40;
 
 	//public static final int STARTING_STR = 100000;
 	public static final int STARTING_STR = 10;
@@ -2044,6 +2046,8 @@ public class Hero extends Char {
 		else if (SkillNumber==4) {SK1 = new Fate();}
 		else if (SkillNumber==5) {SK1 = new Panorama();}
 		else if (SkillNumber==6) {SK1 = new FoodPrep();}
+		else if (SkillNumber==7) {SK1 = new ChainHook();}
+		else if (SkillNumber==8) {SK1 = new Whispers();}
 		else SK1 = null;
 	}
 

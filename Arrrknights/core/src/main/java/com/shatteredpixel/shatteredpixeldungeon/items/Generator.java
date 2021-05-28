@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookChainHook;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
@@ -357,9 +358,8 @@ public class Generator {
 					Spear.class,
 					Quarterstaff.class,
 					Dirk.class,
-					Enfild.class
 			};
-			WEP_T2.probs = new float[]{ 6, 5, 5, 4, 4, 4 };
+			WEP_T2.probs = new float[]{ 6, 5, 5, 4, 4 };
 			
 			WEP_T3.classes = new Class<?>[]{
 					Sword.class,
@@ -480,7 +480,8 @@ public class Generator {
 			SKL_T1.classes = new Class<?>[]{
 					BookFate.class,
 					Bookpanorama.class,
-					BookFoodPrep.class
+					BookFoodPrep.class,
+					BookChainHook.class
 			};
 			SKL_T1.probs = new float[]{ 1, 1, 1 };
 

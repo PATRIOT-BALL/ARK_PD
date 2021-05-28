@@ -37,6 +37,12 @@ actors.blobs.waterofawareness.desc=지식의 힘이 이 우물의 물에서 뿜�
 actors.blobs.waterofhealth.procced=한 모금을 마시는 순간, 당신의 모든 상처가 완전히 나았다.
 actors.blobs.waterofhealth.desc=회복의 힘이 이 우물의 물에서 뿜어져 나오고 있다. 이 물을 마시면 당신의 체력을 모두 회복하며 허기도 완전히 줄어들게 된다.
 
+actors.blobs.waterofhealth.procced=한 모금을 마시는 순간, 당신의 모든 상처가 완전히 나았다.
+actors.blobs.waterofhealth.desc=회복의 힘이 이 우물의 물에서 뿜어져 나오고 있다. 이 물을 마시면 당신의 체력을 모두 회복하며 허기도 완전히 줄어들게 된다.
+
+actors.blobs.waterofadvanceguard.procced=한 모금을 마시는 순간, 당신의 모든 상처가 완전히 나았다.
+actors.blobs.waterofadvanceguard.desc=아방가르드한 기운이 이 우물에서 느껴진다. 
+
 actors.blobs.wateroftransmutation.desc=변화의 힘이 이 우물의 물에서 뿜어져 나오고 있다. 이 우물에 아이템을 던져 넣으면 다른 것으로 변하게 된다.
 
 actors.blobs.web.desc=모든 것이 굵은 거미줄로 뒤덮혀 있다. 무언가가 거미줄을 건드리거나 거미줄에 던져진다면 거미줄이 끊어지지만, 그 대상은 거미줄에 걸려 꼼짝도 못 할 것이다.
@@ -754,6 +760,9 @@ actors.mobs.elemental$chaoselemental.desc=적이 조종하는 드론. 모 우주
 actors.mobs.eye.name=아츠마스터 A2
 actors.mobs.eye.deathgaze_kill=아츠 광선에 몸이 관통됐다...
 actors.mobs.eye.desc=적이 조종하는 드론으로, 비행 보조 모듈을 일부 제거하여 비행속도를 희생하는 대신 더 큰 아츠 무기를 장착했기에, 원거리 마법 대미지에 각별히 주의해야 한다. 자료에 따르면, 탑재된 아츠 무기는 더 많은 양의 마법 대미지를 막아주는 역할도 겸한다고 한다.
+
+actors.mobs.fanatic.name=무뢰한
+actors.mobs.fanatic.desc=손에 든 거대한 해머로 막강한 파괴력을 뽐내는 전투원이다. 카우투스 소녀의 동료인 듯 하다...
 
 actors.mobs.fetidrat.name=산성 원석충
 actors.mobs.fetidrat.desc=야생의 감염 생물. 부식성의 분비액으로 작전 인원의 방호설비를 부식시킬 수 있다. 이런 저지능 생물은 적의 캐스터에게 조종당할 가능성이 있으며, 인공설비에 침입하여 무리지어 공격한다.\n\n이 원석충은 산성 구름을 발생시킵니다. 가까이 있을 수록 강력해지는 것 같습니다.\n\n산성 체엑이 이 벌레의 몸에서 흘러내립니다. 바닥을 녹일 정도로 강력하지만 물에는 녹는 것 같습니다.

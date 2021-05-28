@@ -34,6 +34,10 @@ items.skill.sk1.bookfoodprep.name=야외취사 스킬개론
 items.skill.sk1.bookfoodprep.desc=_야외 취사_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 대상을 불태우고 고기 획득\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookfoodprep.ac_use=읽는다
 
+items.skill.sk1.bookfoodprep.name=야외취사 스킬개론
+items.skill.sk1.bookfoodprep.desc=_야외 취사_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 대상을 불태우고 고기 획득\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookfoodprep.ac_use=읽는다
+
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookwolfpack.ac_use=읽는다
@@ -123,6 +127,7 @@ items.skill.sk1.chainhook.desc=발동시 추가 효과가 있는 사슬을 사�
 items.skill.sk1.chainhook.desc_wnd=발동시 추가 능력을 지닌 사슬을 사용합니다.
 items.skill.sk1.chainhook.prompt=사슬을 던질 위치를 지정하세요.
 items.skill.sk1.chainhook.fail=사슬을 잘못 던졌다...
+items.skill.sk1.chainhook.does_nothing=그러나 아무 일도 없었다.
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 도약_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
