@@ -1065,8 +1065,8 @@ items.rings.ringofwealth.typical_stats=이 반지를 장착했을 때, 이 반�
 items.rings.ringofwealth.desc=이 반지는 보물을 끌어당기는 자석처럼 작용하며, 적들과 상자에서 더 좋은 아이템이 나올 가능성을 늘려 줍니다. 저주받은 반지는 당신이 전리품을 얻을 확률을 감소시킵니다.
 
 items.rings.ringofsunlight.name=햇빛의 반지
-items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 스킬을 사용하면 약 _%s%%_ 만큼 SP를 덜 사용합니다.\n\n단, 이 반지의 효과를 받아도 최소 5의 sp는 무조건 소모됩니다.
-items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록 장치의 스킬을 사용했을 때  약 _%s%%_ 만큼 SP를 덜 사용합니다.
+items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 성능이 _%s%%_ 만큼 상승합니다.
+items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록 장치의 성능이 약 _%s%%_ 만큼 SP를 덜 사용합니다.
 items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP 효율을 높혀줍니다. 저주받은 반지는 오히려 효율을 감소시킵니다.
 
 
