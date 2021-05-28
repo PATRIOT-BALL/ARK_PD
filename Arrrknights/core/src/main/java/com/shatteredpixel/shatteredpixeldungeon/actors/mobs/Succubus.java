@@ -59,45 +59,46 @@ public class Succubus extends Mob {
 		
 		EXP = 12;
 		maxLvl = 25;
+		baseSpeed = 0.5f;
 		
 		loot = Generator.Category.SCROLL;
 		lootChance = 0.33f;
 	}
+
+	private int ASPlus;
+	private boolean speedup = false;
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 25, 30 );
+		return Random.NormalIntRange( 18, 22 + ASPlus );
 	}
 	
 	@Override
 	public int attackProc( Char enemy, int damage ) {
 		damage = super.attackProc( enemy, damage );
-		
-		if (enemy.buff(Charm.class) != null ){
-			int shield = (HP - HT) + (5 + damage);
-			if (shield > 0){
-				HP = HT;
-				Buff.affect(this, Barrier.class).setShield(shield);
-			} else {
-				HP += 5 + damage;
-			}
-			if (Dungeon.level.heroFOV[pos]) {
-				sprite.emitter().burst( Speck.factory( Speck.HEALING ), 2 );
-				Sample.INSTANCE.play( Assets.Sounds.CHARMS );
-			}
-		} else if (Random.Int( 3 ) == 0) {
-			Charm c = Buff.affect( enemy, Charm.class, Charm.DURATION/2f );
-			c.object = id();
-			c.ignoreNextHit = true; //so that the -5 duration from succubus hit is ignored
-			if (Dungeon.level.heroFOV[enemy.pos]) {
-				enemy.sprite.centerEmitter().start(Speck.factory(Speck.HEART), 0.2f, 5);
-				Sample.INSTANCE.play(Assets.Sounds.CHARMS);
-			}
-		}
+		ASPlus = 0;
 		
 		return damage;
 	}
-	
+
+	@Override
+	protected boolean act() {
+		speedup = true;
+		return super.act();
+	}
+
+	@Override
+	public void move(int step) {
+		super.move(step);
+		if (speedup = true) ASPlus +=3;
+		if (ASPlus > 30) ASPlus = 30;
+	}
+
+	@Override
+	public float speed() {
+		return super.speed() * 1 + (ASPlus * (ASPlus / 3) / 30);}
+
+	/*
 	@Override
 	protected boolean getCloser( int target ) {
 		if (fieldOfView[target] && Dungeon.level.distance( pos, target ) > 2 && blinkCooldown <= 0) {
@@ -112,8 +113,9 @@ public class Succubus extends Mob {
 			return super.getCloser( target );
 			
 		}
-	}
-	
+	}*/
+
+	/*
 	private void blink( int target ) {
 		
 		Ballistica route = new Ballistica( pos, target, Ballistica.PROJECTILE);
@@ -142,11 +144,11 @@ public class Succubus extends Mob {
 		ScrollOfTeleportation.appear( this, cell );
 
 		blinkCooldown = Random.IntRange(4, 6);
-	}
+	}*/
 	
 	@Override
 	public int attackSkill( Char target ) {
-		return 40;
+		return 40 + (ASPlus * 2);
 	}
 	
 	@Override
@@ -177,17 +179,17 @@ public class Succubus extends Mob {
 		immunities.add( Charm.class );
 	}
 
-	private static final String BLINK_CD = "blink_cd";
+	private static final String SPEEDSKILL = "speedup";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-		bundle.put(BLINK_CD, blinkCooldown);
+		bundle.put(SPEEDSKILL, speedup);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		blinkCooldown = bundle.getInt(BLINK_CD);
+		speedup = bundle.getBoolean(SPEEDSKILL);
 	}
 }

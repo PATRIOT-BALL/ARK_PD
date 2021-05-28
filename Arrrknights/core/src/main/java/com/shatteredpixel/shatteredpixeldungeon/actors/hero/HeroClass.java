@@ -212,8 +212,6 @@ public enum HeroClass {
 		naa = new BookChargingPS();
 		naa.quantity(1).collect();
 
- */
-
 		RingOfSunLight R;
 		R = new RingOfSunLight();
 		R.level(100);

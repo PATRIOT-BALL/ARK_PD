@@ -1848,8 +1848,8 @@ items.weapon.missiles.throwingknife.desc=이 가벼운 칼들은 바람을 가�
 items.weapon.missiles.throwingspear.name=텐진
 items.weapon.missiles.throwingspear.desc=실버애쉬가 사육하는 수렵용 매. 그냥 명령을 내려 사냥감을 공격할 수도 있지만 주인 외의 말은 듣지 않는다. 그냥 집어 던져도 언젠간 돌아올테니까, 있는 힘껏 던져버리자.
 
-items.weapon.missiles.throwingstone.name=투척용 돌
-items.weapon.missiles.throwingstone.desc=이 돌멩이들은 일반적인 돌보다 더 강하게 던질 수 있도록 가공되었습니다. 잘 만들어졌긴 하지만 여전히 믿음직한 무기는 아닙니다.
+items.weapon.missiles.throwingstone.name=원형 톱날
+items.weapon.missiles.throwingstone.desc=림 빌리턴에서 만들어진 정교한 톱날. 보급이 잘못 된걸까, 블레이즈가 사용하는 톱과 다른 톱날이다... \n\n그대로 던져버려도 그럭저럭 피해를 입힐 수 있을것이다. 
 
 items.weapon.missiles.tomahawk.name=엄청 차가운 도끼
 items.weapon.missiles.tomahawk.desc=엄청 차가워!! \n\n예리하게 갈아놓은 묵직한 투척도끼. 차갑지만 적을 얼리진 않고, 출혈을 일으킬 것이다.
@@ -1955,6 +1955,8 @@ items.heap.remains=대원의 유해
 items.heap.remains_desc=당신이 이전 작전에서 남기고 간 물건이다. 쓸 만한 물건이 있나 찾아보자.
 items.heap.cautus=카우투스 소녀
 items.heap.cautus_desc=금속 물체에 발이 눌린 한 카우투스 소녀가 있었다. 그녀는 당신을 보고는 급히 도움을 요청하고있다.\n\n_이 소녀는 어째서 이런 위험한 곳에 홀로 있는 거지?_
+items.heap.doolta=박사?
+items.heap.doolta=이번 작전의 목표이자 구출 대상인 박사다. 힘이 빠진 것인지 우물 안에 누워있다.\n\n_그런데 어째서 박사가 무방비하게 방치되어 있는거지?_
 
 items.honeypot.name=꿀단지
 items.honeypot.ac_shatter=깨트린다

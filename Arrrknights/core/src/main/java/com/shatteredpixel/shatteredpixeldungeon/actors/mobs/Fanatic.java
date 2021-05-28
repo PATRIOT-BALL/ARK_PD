@@ -28,7 +28,7 @@ public class Fanatic extends Mob {
     public Fanatic() {
         super();
 
-        HP = HT = Dungeon.depth * 3 - 8;
+        HP = HT = Dungeon.depth * 4 - 8;
         defenseSkill = Dungeon.depth;
     }
 
@@ -39,7 +39,7 @@ public class Fanatic extends Mob {
 
     @Override
     public int attackSkill( Char target ) {
-        return 15 + Dungeon.depth;
+        return 20 + Dungeon.depth;
     }
 
     @Override

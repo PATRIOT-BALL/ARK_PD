@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Fanatic;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Wraith;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Wraith_donut;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -47,6 +48,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
@@ -68,7 +71,9 @@ public class Heap implements Bundlable {
 		SKELETON,
 		REMAINS,
 		MIMIC, //remains for pre-0.8.0 compatibility. There are converted to mimics on level load
-		CAUTUS
+		// 명픽던 추가
+		CAUTUS,
+		DOOLTA
 	}
 	public Type type = Type.HEAP;
 	
@@ -95,6 +100,14 @@ public class Heap implements Bundlable {
 			case CAUTUS:
 				Fanatic.spawnAround( hero.pos );
 				Sample.INSTANCE.play( Assets.Sounds.CHARMS );
+				break;
+			case DOOLTA:
+				GLog.n( Messages.get(this, "doolta_trap") );
+				Fanatic.spawnAt(this.pos);
+				for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+					mob.beckon( this.pos );}
+					Camera.main.shake(2, 0.5f);
+				Sample.INSTANCE.play( Assets.Sounds.MIMIC );
 				break;
 		default:
 		}
@@ -383,6 +396,8 @@ public class Heap implements Bundlable {
 				return Messages.get(this, "remains");
 			case CAUTUS:
 				return Messages.get(this, "cautus");
+			case DOOLTA:
+				return Messages.get(this,"doolta");
 			default:
 				return peek().toString();
 		}
@@ -412,6 +427,8 @@ public class Heap implements Bundlable {
 				return Messages.get(this, "remains_desc");
 			case CAUTUS:
 				return Messages.get(this, "cautus_desc");
+			case DOOLTA:
+				return Messages.get(this, "doolta_desc");
 			default:
 				return peek().info();
 		}
