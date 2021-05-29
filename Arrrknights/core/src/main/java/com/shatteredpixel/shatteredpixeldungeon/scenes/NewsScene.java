@@ -85,34 +85,6 @@ public class NewsScene extends PixelScene {
 
 		float top = 18;
 
-		displayingNoArticles = !News.articlesAvailable();
-
-		if (!displayingNoArticles) {
-			ArrayList<NewsArticle> articles = News.articles();
-
-			float articleSpace = h - top - 2;
-			int rows = articles.size();
-			if (PixelScene.landscape()){
-				rows /= 2;
-			}
-			rows++;
-
-			while ((articleSpace) / (BTN_HEIGHT+0.5f) < rows) {
-				articles.remove(articles.size() - 1);
-				if (PixelScene.landscape()) {
-					articles.remove(articles.size() - 1);
-				}
-				rows--;
-			}
-
-			float gap = ((articleSpace) - (BTN_HEIGHT * rows)) / (float)rows;
-
-			boolean rightCol = false;
-			top += gap;
-		} else {
-			top += 240;
-		}
-
 		StyledButton btnSite = new StyledButton(Chrome.Type.GREY_BUTTON_TR, Messages.get(this, "read_more1")){
 			@Override
 			protected void onClick() {
