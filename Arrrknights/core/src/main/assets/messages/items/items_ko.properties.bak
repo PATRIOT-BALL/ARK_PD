@@ -42,9 +42,9 @@ items.skill.sk1.bookwhispers.name=바람의 스킬개론
 items.skill.sk1.bookwhispers.desc=_바람의 언어_ 스킬의 정보가 기록되어있는 _특별한_ 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 현기증 부여\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookwhispers.ac_use=읽는다
 
-items.skill.sk1.crimsoncutter.name=진홍칼날의 스킬개론
-items.skill.sk1.crimsoncutter.desc=_크림슨 커터_ 스킬의 정보가 기록되어있는 _특별한_ 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 피해와 함께 출혈 부여\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
-items.skill.sk1.crimsoncutter.ac_use=읽는다
+items.skill.sk1.bookcrimsoncutter.name=진홍칼날의 스킬개론
+items.skill.sk1.bookcrimsoncutter.desc=_크림슨 커터_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 피해와 함께 출혈 부여\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookcrimsoncutter.ac_use=읽는다
 
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
@@ -1291,6 +1291,9 @@ items.spells.wildenergy.desc=이 아츠는 DM-300의 동력이었던 저주받�
 items.stones.inventorystone.ac_use=사용한다
 
 items.stones.runestone$placeholder.name=룬석
+
+items.stones.stoneofadvanceguard.name=아방가르드한 돌
+items.stones.stoneofadvanceguard.desc=이 돌에 맞은 대상은 아방가르드한 서버 점검 보상으로 대체됩니다. 강한 적들한텐 무용합니다.
 
 items.stones.stoneofaggression.name=공격성의 돌
 items.stones.stoneofaggression.desc=이 돌을 아군이나 적군에게 던지면 짧은 시간동안 주변의 모든 적들이 대상 캐릭터만을 공격하게 할 수 있습니다.\n\n적에게 사용한 경우 이 아츠는 잠깐 동안만 지속되나, 당신이나 아군에게 사용한 경우 훨씬 긴 시간동안 지속됩니다. 강력한 적들은 또한 이 효과에 저항할 것입니다.

@@ -10,6 +10,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMod
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -19,19 +21,19 @@ import com.watabou.utils.Random;
 public class WaterOfAdvanceguard extends WellWater {
 
     @Override
-    protected Item affectItem(Item item, int pos ) {
+    protected Item affectItem(Item item, int pos) {
         int Price = 0;
 
-        if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
+        if (item instanceof Runestone) { // 아이템이 돌일 경우
+            item = new StoneOfAdvanceguard();
+        } else if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
         {
             Price = item.value() * 3;
-            item = new Gold( Price );
-            GLog.p(String.format(Messages.get(this, "procced"), Price) );
-        }
-        else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode){
+            item = new Gold(Price);
+            GLog.p(String.format(Messages.get(this, "procced"), Price));
+        } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode) {
             item = new BookWhispers();
-        }
-        else {
+        } else {
             item = null;
         }
 
@@ -49,9 +51,9 @@ public class WaterOfAdvanceguard extends WellWater {
     }
 
     @Override
-    public void use( BlobEmitter emitter ) {
-        super.use( emitter );
-        emitter.start( Speck.factory( Speck.COIN ), 0.5f, 0 );
+    public void use(BlobEmitter emitter) {
+        super.use(emitter);
+        emitter.start(Speck.factory(Speck.COIN), 0.5f, 0);
     }
 
     @Override
