@@ -1377,14 +1377,21 @@ items.wands.sp.staffofmudrock$earthguardian.desc=당신의 대지의 아츠 스�
 items.wands.sp.staffofleaf.name=스태프 오브 리프
 items.wands.sp.staffofleaf.staff_name=개조 서리의 흑요석 반지
 items.wands.sp.staffofleaf.desc="얼어붙어라, 내 피와 같이!"\n\n이 개조된 서리 아츠의 스태프는 프로스트리프 대원의 능력이 반영되었습니다.
-items.wands.sp.staffofleaf.stats_desc=이 막대는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d - %2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 일정량의 한기를 가진 적에게 적중시키면 얼려버릴 수 있습니다. 한기를 느끼는 적에게 더 강한 피해를 줍니다.
+items.wands.sp.staffofleaf.stats_desc=이 아츠 스태프는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d - %2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 일정량의 한기를 가진 적에게 적중시키면 얼려버릴 수 있습니다. 한기를 느끼는 적에게 더 강한 피해를 줍니다.
 items.wands.sp.staffofleaf.bmage_desc=_전투 아미야_ 가 개조 서리의 흑요석 반지로 한기에 걸린 적을 공격하면, 대상을 일정 확률로 즉시 빙결시킵니다. 대상이 더 많이 한기를 느낄수록 빙결시킬 확률이 높아집니다.
 
 items.wands.sp.staffofshining.name=스태프 오브 샤이닝
 items.wands.sp.staffofshining.staff_name=개조 굴절광의 흑요석 반지
 items.wands.sp.staffofshining.desc="이건 우리 자신을 구하기 위한 싸움, 이지요?"\n\n이 개조된 섬광의 아츠 스태프는 샤이닝 대원의 능력의 반영되었습니다.
-items.wands.sp.staffofshining.stats_desc=이 막대는 맞은 적들에게 _%1$d-%2$d의 피해와_ 실명을 주며, 던전의 어둠을 밝혀 숨겨진 지역과 함정을 드러내 주는 광선을 발사합니다. 실명에 걸린 적에게 추가 피해를 가할 수 있습니다.
+items.wands.sp.staffofshining.stats_desc=이 아츠 스태프는 맞은 적들에게 _%1$d-%2$d의 피해와_ 실명을 주며, 던전의 어둠을 밝혀 숨겨진 지역과 함정을 드러내 주는 광선을 발사합니다. 실명에 걸린 적에게 추가 피해를 가할 수 있습니다.
 items.wands.sp.staffofshining.bmage_desc=_전투 아미야_ 가 개조 굴절광의 흑요석 반지로 적을 공격하면, 대상에게 흑요석 반지 강화 수치에 비례한 양의 불구 효과를 부여합니다.
+
+items.wands.sp.staffofskyfire.name=스태프 오브 스카이파이어
+items.wands.sp.staffofskyfire.staff_name=개조 화염 폭발의 흑요석 반지
+items.wands.sp.staffofskyfire.desc="그녀의 소지품이나 옷은 종종 그녀의 몸에서 나오는 열에너지에 불타 없어지곤 한다."\n\n이 개조된 화염 폭발의 아츠 스태프는 스카이파이어 대원의 능력이 반영되었습니다.
+items.wands.sp.staffofskyfire.stats_desc=이 아츠 스태프를 사용하면 투사체를 발사하여 착탄 지점 주위의 적들을 불태우고 _%1$d-%2$d 피해_ 를 입힙니다. 이 스태프의 강화 단계에 비례하여 마비를 걸 확률이 존재합니다.
+items.wands.sp.staffofskyfire.bmage_desc=_전투 아미야_ 가 개조 화염 폭발의 흑요석 반지로 적을 공격하면, 화염의 아츠 무기로 공격한 것처럼 대상을 불태울 수 있습니다.
+
 
 
 ###wands
@@ -1956,7 +1963,8 @@ items.heap.remains_desc=당신이 이전 작전에서 남기고 간 물건이다
 items.heap.cautus=카우투스 소녀
 items.heap.cautus_desc=금속 물체에 발이 눌린 한 카우투스 소녀가 있었다. 그녀는 당신을 보고는 급히 도움을 요청하고있다.\n\n_이 소녀는 어째서 이런 위험한 곳에 홀로 있는 거지?_
 items.heap.doolta=박사?
-items.heap.doolta=이번 작전의 목표이자 구출 대상인 박사다. 힘이 빠진 것인지 우물 안에 누워있다.\n\n_그런데 어째서 박사가 무방비하게 방치되어 있는거지?_
+items.heap.doolta_desc=이번 작전의 목표이자 구출 대상인 박사다. 힘이 빠진 것인지 앉아서 쉬고있다.\n\n_그런데 어째서 박사가 무방비하게 방치되어 있는거지?_
+items.heap.doolta_trap=함정이다! 적들이 몰려온다!
 
 items.honeypot.name=꿀단지
 items.honeypot.ac_shatter=깨트린다

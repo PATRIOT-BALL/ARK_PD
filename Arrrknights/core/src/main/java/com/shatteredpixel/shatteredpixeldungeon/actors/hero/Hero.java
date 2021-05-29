@@ -175,7 +175,7 @@ public class Hero extends Char {
 	public static final int MAX_LEVEL = 40;
 
 	//public static final int STARTING_STR = 100000;
-	public static final int STARTING_STR = 10;
+	public static final int STARTING_STR = 1000;
 
 	private static final float TIME_TO_REST		    = 1f;
 	private static final float TIME_TO_SEARCH	    = 2f;
@@ -185,7 +185,7 @@ public class Hero extends Char {
 	public HeroSubClass subClass = HeroSubClass.NONE;
 	public ArrayList<LinkedHashMap<Talent, Integer>> talents = new ArrayList<>();
 
-	private int attackSkill = 10;
+	private int attackSkill = 1000;
 	//private int attackSkill = 1000;
 	private int defenseSkill = 5;
 
@@ -217,7 +217,7 @@ public class Hero extends Char {
 
 	private int SK1num;
 	private int SK2num;
-	private int SK3num;
+	private int SK3num = 3;
 	
 	private ArrayList<Mob> visibleEnemies;
 
@@ -228,7 +228,7 @@ public class Hero extends Char {
 	public Hero() {
 		super();
 
-		HP = HT = 20;
+		HP = HT = 2000;
 		//HP = HT = 2000;
 		STR = STARTING_STR;
 		
@@ -240,7 +240,7 @@ public class Hero extends Char {
 	public void updateHT( boolean boostHP ){
 		int curHT = HT;
 		
-		HT = 20 + 5*(lvl-1) + HTBoost;
+		HT = 2000 + 5*(lvl-1) + HTBoost;
 		float multiplier = RingOfMight.HTMultiplier(this);
 		HT = Math.round(multiplier * HT);
 		

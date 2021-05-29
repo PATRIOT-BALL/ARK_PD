@@ -67,29 +67,32 @@ public class Bestiary {
 				
 			// Prison
 			case 6:
-				//3x skeleton, 1x thief, 1x swarm
-				return new ArrayList<>(Arrays.asList(Skeleton.class, Skeleton.class, Skeleton.class,
+				//1x skeleton, 1x thief, 1x swarm, 2x AirborneSoldiers
+				return new ArrayList<>(Arrays.asList(Skeleton.class,
+						AirborneSoldier.class,AirborneSoldier.class,
 						Thief.class,
 						Swarm.class));
 			case 7:
-				//3x skeleton, 1x thief, 1x DM-100, 1x guard
-				return new ArrayList<>(Arrays.asList(Skeleton.class, Skeleton.class, Skeleton.class,
-						Thief.class,
-						DM100.class,
-						Guard.class));
-			case 8:
-				//2x skeleton, 1x thief, 2x DM-100, 2x guard, 1x necromancer
+				//2x skeleton, 1x thief, 1x DM-100, 1x guard, 2x AirborneSoldiers
 				return new ArrayList<>(Arrays.asList(Skeleton.class, Skeleton.class,
 						Thief.class,
-						DM100.class, DM100.class,
-						Guard.class, Guard.class,
-						Necromancer.class));
-			case 9: case 10:
-				//1x skeleton, 1x thief, 2x DM-100, 2x guard, 2x necromancer
+						DM100.class,
+						AirborneSoldier.class, AirborneSoldier.class,
+						Guard.class));
+			case 8:
+				//1x skeleton, 1x thief, 2x DM-100, 2x guard, 1x necromancer, 2x AirborneSoldiers
 				return new ArrayList<>(Arrays.asList(Skeleton.class,
 						Thief.class,
 						DM100.class, DM100.class,
 						Guard.class, Guard.class,
+						AirborneSoldier.class, AirborneSoldier.class,
+						Necromancer.class));
+			case 9: case 10:
+				//1x skeleton, 2x DM-100, 2x guard, 2x necromancer, 1x AirborneSoldiers
+				return new ArrayList<>(Arrays.asList(Skeleton.class,
+						DM100.class, DM100.class,
+						Guard.class, Guard.class,
+						AirborneSoldier.class,
 						Necromancer.class, Necromancer.class));
 				
 			// Caves
