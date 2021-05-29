@@ -27,7 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Chrome;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.Rankings;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BannerSprites;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Languages;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -40,12 +40,11 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Image;
 import com.watabou.utils.FileUtils;
 
-import java.util.ArrayList;
 import java.util.Locale;
 
 public class WelcomeScene extends PixelScene {
 
-	private static final int LATEST_UPDATE = ShatteredPixelDungeon.v0_9_2;
+	private static final int LATEST_UPDATE = TomorrowRogueNight.v0_1_2;
 
 	@Override
 	public void create() {
@@ -53,8 +52,8 @@ public class WelcomeScene extends PixelScene {
 
 		final int previousVersion = SPDSettings.version();
 
-		if (ShatteredPixelDungeon.versionCode == previousVersion && !SPDSettings.intro()) {
-			ShatteredPixelDungeon.switchNoFade(TitleScene.class);
+		if (TomorrowRogueNight.versionCode == previousVersion && !SPDSettings.intro()) {
+			TomorrowRogueNight.switchNoFade(TitleScene.class);
 			return;
 		}
 
@@ -98,13 +97,13 @@ public class WelcomeScene extends PixelScene {
 			protected void onClick() {
 				super.onClick();
 				if (previousVersion == 0 || SPDSettings.intro()){
-					SPDSettings.version(ShatteredPixelDungeon.versionCode);
+					SPDSettings.version(TomorrowRogueNight.versionCode);
 					GamesInProgress.selectedClass = null;
 					GamesInProgress.curSlot = 1;
-					ShatteredPixelDungeon.switchScene(HeroSelectScene.class);
+					TomorrowRogueNight.switchScene(HeroSelectScene.class);
 				} else {
 					updateVersion(previousVersion);
-					ShatteredPixelDungeon.switchScene(TitleScene.class);
+					TomorrowRogueNight.switchScene(TitleScene.class);
 				}
 			}
 		};
@@ -117,7 +116,7 @@ public class WelcomeScene extends PixelScene {
 				protected void onClick() {
 					super.onClick();
 					updateVersion(previousVersion);
-					ShatteredPixelDungeon.switchScene(ChangesScene.class);
+					TomorrowRogueNight.switchScene(ChangesScene.class);
 				}
 			};
 			okay.setRect(title.x, buttonY, (title.width()/2)-2, 20);
@@ -137,7 +136,7 @@ public class WelcomeScene extends PixelScene {
 		String message;
 		if (previousVersion == 0 || SPDSettings.intro()) {
 			message = Messages.get(this, "welcome_msg");
-		} else if (previousVersion <= ShatteredPixelDungeon.versionCode) {
+		} else if (previousVersion <= TomorrowRogueNight.versionCode) {
 			if (previousVersion < LATEST_UPDATE){
 				message = Messages.get(this, "update_intro");
 				message += "\n\n" + Messages.get(this, "update_msg");
@@ -175,14 +174,14 @@ public class WelcomeScene extends PixelScene {
 					} catch (Exception e) {
 						//if we encounter a fatal per-record error, then clear that record
 						Rankings.INSTANCE.records.remove(rec);
-						ShatteredPixelDungeon.reportException(e);
+						TomorrowRogueNight.reportException(e);
 					}
 				}
 				Rankings.INSTANCE.save();
 			} catch (Exception e) {
 				//if we encounter a fatal error, then just clear the rankings
 				FileUtils.deleteFile( Rankings.RANKINGS_FILE );
-				ShatteredPixelDungeon.reportException(e);
+				TomorrowRogueNight.reportException(e);
 			}
 
 			//fixes a bug from v0.9.0- where champion badges would rarely not save
@@ -204,7 +203,7 @@ public class WelcomeScene extends PixelScene {
 			Messages.setup(Languages.FINNISH);
 		}
 		
-		SPDSettings.version(ShatteredPixelDungeon.versionCode);
+		SPDSettings.version(TomorrowRogueNight.versionCode);
 	}
 	
 }

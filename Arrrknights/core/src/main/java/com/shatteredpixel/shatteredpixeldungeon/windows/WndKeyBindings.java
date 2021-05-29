@@ -22,7 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.SPDAction;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -259,11 +259,11 @@ public class WndKeyBindings extends Window {
 			if (inside(x, y)){
 				//assigning second key
 				if (x >= this.x + 3*width()/4 && key1 != 0) {
-					ShatteredPixelDungeon.scene().addToFront( new WndChangeBinding(gameAction, this, false, key2, key1));
+					TomorrowRogueNight.scene().addToFront( new WndChangeBinding(gameAction, this, false, key2, key1));
 
 				//assigning first key
 				} else if (x >= this.x + width()/2){
-					ShatteredPixelDungeon.scene().addToFront( new WndChangeBinding(gameAction, this, true, key1, key2));
+					TomorrowRogueNight.scene().addToFront( new WndChangeBinding(gameAction, this, true, key1, key2));
 
 				}
 				return true;

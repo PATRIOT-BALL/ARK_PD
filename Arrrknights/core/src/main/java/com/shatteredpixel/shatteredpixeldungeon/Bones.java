@@ -65,7 +65,7 @@ public class Bones {
 		try {
 			FileUtils.bundleToFile( BONES_FILE, bundle );
 		} catch (IOException e) {
-			ShatteredPixelDungeon.reportException(e);
+			TomorrowRogueNight.reportException(e);
 		}
 	}
 

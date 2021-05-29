@@ -24,7 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.windows;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ghost;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
@@ -143,7 +143,7 @@ public class WndSadGhost extends Window {
 				}
 				@Override
 				protected void onClick() {
-					ShatteredPixelDungeon.scene().addToFront(new RewardWindow(item));
+					TomorrowRogueNight.scene().addToFront(new RewardWindow(item));
 				}
 			};
 			add(slot);

@@ -24,7 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.scenes;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Archs;
 import com.shatteredpixel.shatteredpixeldungeon.ui.ExitButton;
@@ -184,7 +184,7 @@ public class ChangesScene extends PixelScene {
 				super.onClick();
 				if (changesSelected != 0) {
 					changesSelected = 0;
-					ShatteredPixelDungeon.seamlessResetScene();
+					TomorrowRogueNight.seamlessResetScene();
 				}
 			}
 		};
@@ -202,7 +202,7 @@ public class ChangesScene extends PixelScene {
 	
 	@Override
 	protected void onBackPressed() {
-		ShatteredPixelDungeon.switchNoFade(TitleScene.class);
+		TomorrowRogueNight.switchNoFade(TitleScene.class);
 	}
 
 }

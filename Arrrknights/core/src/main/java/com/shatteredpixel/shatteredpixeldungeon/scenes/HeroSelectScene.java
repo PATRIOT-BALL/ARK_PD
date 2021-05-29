@@ -27,7 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.Rankings;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
@@ -145,7 +145,7 @@ public class HeroSelectScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				ShatteredPixelDungeon.scene().addToFront(new WndHeroInfo(GamesInProgress.selectedClass));
+				TomorrowRogueNight.scene().addToFront(new WndHeroInfo(GamesInProgress.selectedClass));
 			}
 		};
 		infoButton.visible = false;
@@ -174,7 +174,7 @@ public class HeroSelectScene extends PixelScene {
 				Icons.get( SPDSettings.challenges() > 0 ? Icons.CHALLENGE_ON :Icons.CHALLENGE_OFF)){
 			@Override
 			protected void onClick() {
-				ShatteredPixelDungeon.scene().addToFront(new WndChallenges(SPDSettings.challenges(), true) {
+				TomorrowRogueNight.scene().addToFront(new WndChallenges(SPDSettings.challenges(), true) {
 					public void onBackPressed() {
 						super.onBackPressed();
 						icon(Icons.get(SPDSettings.challenges() > 0 ? Icons.CHALLENGE_ON : Icons.CHALLENGE_OFF));
@@ -278,7 +278,7 @@ public class HeroSelectScene extends PixelScene {
 	@Override
 	protected void onBackPressed() {
 		if (btnExit.visible){
-			ShatteredPixelDungeon.switchScene(TitleScene.class);
+			TomorrowRogueNight.switchScene(TitleScene.class);
 		} else {
 			super.onBackPressed();
 		}
@@ -332,9 +332,9 @@ public class HeroSelectScene extends PixelScene {
 			super.onClick();
 
 			if( !cl.isUnlocked() ){
-				ShatteredPixelDungeon.scene().addToFront( new WndMessage(cl.unlockMsg()));
+				TomorrowRogueNight.scene().addToFront( new WndMessage(cl.unlockMsg()));
 			} else if (GamesInProgress.selectedClass == cl) {
-				ShatteredPixelDungeon.scene().add(new WndHeroInfo(cl));
+				TomorrowRogueNight.scene().add(new WndHeroInfo(cl));
 			} else {
 				setSelectedHero(cl);
 			}
@@ -382,7 +382,7 @@ public class HeroSelectScene extends PixelScene {
 						WndHeroInfo newWindow = new WndHeroInfo(cl);
 						newWindow.talents.scrollTo(0, talents.content().camera.scroll.y);
 						newWindow.select(2);
-						ShatteredPixelDungeon.scene().addToFront(newWindow);
+						TomorrowRogueNight.scene().addToFront(newWindow);
 					}
 				}
 			};
@@ -400,7 +400,7 @@ public class HeroSelectScene extends PixelScene {
 						WndHeroInfo newWindow = new WndHeroInfo(cl);
 						newWindow.talents.scrollTo(0, talents.content().camera.scroll.y);
 						newWindow.select(2);
-						ShatteredPixelDungeon.scene().addToFront(newWindow);
+						TomorrowRogueNight.scene().addToFront(newWindow);
 					}
 				}
 			};

@@ -14,8 +14,8 @@ allprojects {
         appName = 'tomorrow Pixel Dungeon'
         appPackageName = 'com.shatteredpixel.tomorrowpixel'
 
-        appVersionCode = 532
-        appVersionName = '0.9.2b'
+        appVersionCode = 533
+        appVersionName = '0.1.2t'
 
         appJavaCompatibility = JavaVersion.VERSION_1_8
 

@@ -21,7 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.scenes;
 
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.ui.ExitButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
@@ -238,7 +238,7 @@ public class AboutScene extends PixelScene {
 	
 	@Override
 	protected void onBackPressed() {
-		ShatteredPixelDungeon.switchScene(TitleScene.class);
+		TomorrowRogueNight.switchScene(TitleScene.class);
 	}
 
 	private void addLine( float y, Group content ){

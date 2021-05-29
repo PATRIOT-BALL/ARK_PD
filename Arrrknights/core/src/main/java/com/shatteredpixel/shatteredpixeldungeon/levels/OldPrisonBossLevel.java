@@ -24,7 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Bones;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
@@ -404,12 +404,12 @@ public class OldPrisonBossLevel extends Level {
 				CustomTilemap vis = new exitVisual();
 				vis.pos(11, 8);
 				customTiles.add(vis);
-				((GameScene)ShatteredPixelDungeon.scene()).addCustomTile(vis);
+				((GameScene) TomorrowRogueNight.scene()).addCustomTile(vis);
 
 				vis = new exitVisualWalls();
 				vis.pos(11, 8);
 				customWalls.add(vis);
-				((GameScene)ShatteredPixelDungeon.scene()).addCustomWall(vis);
+				((GameScene) TomorrowRogueNight.scene()).addCustomWall(vis);
 
 				Dungeon.hero.interrupt();
 				Dungeon.hero.pos = 5+27*32;

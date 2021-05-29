@@ -23,7 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.HeroSelectScene;
@@ -93,7 +93,7 @@ public class WndGame extends Window {
 					InterlevelScene.noStory = true;
 					GamesInProgress.selectedClass = Dungeon.hero.heroClass;
 					GamesInProgress.curSlot = GamesInProgress.firstEmpty();
-					ShatteredPixelDungeon.switchScene(HeroSelectScene.class);
+					TomorrowRogueNight.switchScene(HeroSelectScene.class);
 				}
 			} );
 			curBtn.icon(Icons.get(Icons.ENTER));
@@ -117,7 +117,7 @@ public class WndGame extends Window {
 						try {
 							Dungeon.saveAll();
 						} catch (IOException e) {
-							ShatteredPixelDungeon.reportException(e);
+							TomorrowRogueNight.reportException(e);
 						}
 						Game.switchScene(TitleScene.class);
 					}
@@ -129,7 +129,7 @@ public class WndGame extends Window {
 						try {
 							Dungeon.saveAll();
 						} catch (IOException e) {
-							ShatteredPixelDungeon.reportException(e);
+							TomorrowRogueNight.reportException(e);
 						}
 						Game.instance.finish();
 					}

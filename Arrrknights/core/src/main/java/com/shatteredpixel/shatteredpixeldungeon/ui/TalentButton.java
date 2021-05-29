@@ -23,7 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.ui;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
@@ -115,14 +115,14 @@ public class TalentButton extends Button {
 				&& Dungeon.hero.isAlive()
 				&& Dungeon.hero.talentPointsAvailable(tier) > 0
 				&& Dungeon.hero.pointsInTalent(talent) < talent.maxPoints()){
-			ShatteredPixelDungeon.scene().addToFront(new WndInfoTalent(talent, pointsInTalent, new Callback() {
+			TomorrowRogueNight.scene().addToFront(new WndInfoTalent(talent, pointsInTalent, new Callback() {
 				@Override
 				public void call() {
 					upgradeTalent();
 				}
 			}));
 		} else {
-			ShatteredPixelDungeon.scene().addToFront(new WndInfoTalent(talent, pointsInTalent, null));
+			TomorrowRogueNight.scene().addToFront(new WndInfoTalent(talent, pointsInTalent, null));
 		}
 	}
 

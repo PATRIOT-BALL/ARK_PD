@@ -25,7 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Belongings;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -300,7 +300,7 @@ public class AlchemyScene extends PixelScene {
 			Badges.saveGlobal();
 			Journal.saveGlobal();
 		} catch (IOException e) {
-			ShatteredPixelDungeon.reportException(e);
+			TomorrowRogueNight.reportException(e);
 		}
 	}
 	
@@ -418,7 +418,7 @@ public class AlchemyScene extends PixelScene {
 			try {
 				Dungeon.saveAll();
 			} catch (IOException e) {
-				ShatteredPixelDungeon.reportException(e);
+				TomorrowRogueNight.reportException(e);
 			}
 			
 			synchronized (inputs) {
@@ -478,7 +478,7 @@ public class AlchemyScene extends PixelScene {
 			Badges.saveGlobal();
 			Journal.saveGlobal();
 		} catch (IOException e) {
-			ShatteredPixelDungeon.reportException(e);
+			TomorrowRogueNight.reportException(e);
 		}
 		super.destroy();
 	}

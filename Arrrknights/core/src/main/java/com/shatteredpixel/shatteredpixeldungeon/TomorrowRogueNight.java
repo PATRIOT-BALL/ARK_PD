@@ -29,7 +29,7 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.PlatformSupport;
 
-public class ShatteredPixelDungeon extends Game {
+public class TomorrowRogueNight extends Game {
 
 	//variable constants for specific older versions of shattered, used for data conversion
 	//versions older than v0.7.5e are no longer supported, and data from them is ignored
@@ -42,8 +42,9 @@ public class ShatteredPixelDungeon extends Game {
 	public static final int v0_9_0b  = 489;
 	public static final int v0_9_1d  = 511;
 	public static final int v0_9_2   = 519;
+	public static final int v0_1_2   = 533;
 	
-	public ShatteredPixelDungeon( PlatformSupport platform ) {
+	public TomorrowRogueNight(PlatformSupport platform ) {
 		super( sceneClass == null ? WelcomeScene.class : sceneClass, platform );
 
 		//v0.8.0

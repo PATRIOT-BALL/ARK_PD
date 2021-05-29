@@ -22,30 +22,17 @@
 package com.shatteredpixel.shatteredpixeldungeon.scenes;
 
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
-import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
-import com.shatteredpixel.shatteredpixeldungeon.messages.Languages;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.services.news.News;
-import com.shatteredpixel.shatteredpixeldungeon.services.news.NewsArticle;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Archs;
 import com.shatteredpixel.shatteredpixeldungeon.ui.ExitButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
-import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.StyledButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndTitledMessage;
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Camera;
-import com.watabou.noosa.Game;
-import com.watabou.noosa.NinePatch;
-import com.watabou.noosa.ui.Component;
 import com.watabou.utils.DeviceCompat;
-
-import java.util.ArrayList;
-import java.util.Calendar;
 
 public class NewsScene extends PixelScene {
 
@@ -117,13 +104,13 @@ public class NewsScene extends PixelScene {
 
 	@Override
 	protected void onBackPressed() {
-		ShatteredPixelDungeon.switchNoFade( TitleScene.class );
+		TomorrowRogueNight.switchNoFade( TitleScene.class );
 	}
 
 	@Override
 	public void update() {
 		if (displayingNoArticles && News.articlesAvailable()){
-			ShatteredPixelDungeon.seamlessResetScene();
+			TomorrowRogueNight.seamlessResetScene();
 		}
 		super.update();
 	}

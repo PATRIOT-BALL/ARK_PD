@@ -22,7 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.ui;
 
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.services.updates.AvailableUpdateData;
 import com.shatteredpixel.shatteredpixeldungeon.services.updates.Updates;
@@ -55,7 +55,7 @@ public class UpdateNotification extends StyledButton {
 	@Override
 	protected void onClick() {
 		if (Updates.updateAvailable()){
-			ShatteredPixelDungeon.scene().addToFront( new WndUpdate( Updates.updateData() ) );
+			TomorrowRogueNight.scene().addToFront( new WndUpdate( Updates.updateData() ) );
 		}
 	}
 

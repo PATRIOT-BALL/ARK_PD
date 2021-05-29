@@ -24,7 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.services.news;
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
 import com.watabou.noosa.Image;
@@ -116,7 +116,7 @@ public class News {
 
 		//if we run into any formatting errors (or icon is null), default to the news icon
 		} catch (Exception e){
-			if (article.icon != null) ShatteredPixelDungeon.reportException(e);
+			if (article.icon != null) TomorrowRogueNight.reportException(e);
 			return Icons.get(Icons.NEWS);
 		}
 	}

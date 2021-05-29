@@ -22,7 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.scenes;
 
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Languages;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Archs;
@@ -106,7 +106,7 @@ public class SupporterScene extends PixelScene {
 
 	@Override
 	protected void onBackPressed() {
-		ShatteredPixelDungeon.switchNoFade( TitleScene.class );
+		TomorrowRogueNight.switchNoFade( TitleScene.class );
 	}
 
 	private static class SupporterMessage extends Component {

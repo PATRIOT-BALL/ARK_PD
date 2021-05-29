@@ -21,7 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.journal;
 
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.FileUtils;
 
@@ -69,7 +69,7 @@ public class Journal {
 			FileUtils.bundleToFile( JOURNAL_FILE, bundle );
 			saveNeeded = false;
 		} catch (IOException e) {
-			ShatteredPixelDungeon.reportException(e);
+			TomorrowRogueNight.reportException(e);
 		}
 		
 	}

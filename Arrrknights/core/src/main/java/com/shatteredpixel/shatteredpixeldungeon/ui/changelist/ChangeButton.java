@@ -21,7 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.ui.changelist;
 
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
@@ -53,7 +53,7 @@ public class ChangeButton extends Component {
 	}
 	
 	protected void onClick() {
-		ShatteredPixelDungeon.scene().add(new ChangesWindow(new Image(icon), title, message));
+		TomorrowRogueNight.scene().add(new ChangesWindow(new Image(icon), title, message));
 	}
 	
 	@Override

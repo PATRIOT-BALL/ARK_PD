@@ -21,7 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard;
 
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.ImpShopkeeper;
@@ -86,7 +86,7 @@ public class ImpShopRoom extends ShopRoom {
 
 		Mob shopkeeper = new ImpShopkeeper();
 		shopkeeper.pos = pos;
-		if (ShatteredPixelDungeon.scene() instanceof GameScene) {
+		if (TomorrowRogueNight.scene() instanceof GameScene) {
 			GameScene.add(shopkeeper);
 		} else {
 			level.mobs.add(shopkeeper);

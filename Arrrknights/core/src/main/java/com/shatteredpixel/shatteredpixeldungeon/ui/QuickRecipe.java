@@ -22,7 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.ui;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Recipe;
@@ -108,7 +108,7 @@ public class QuickRecipe extends Component {
 
 				@Override
 				protected void onClick() {
-					ShatteredPixelDungeon.scene().addToFront(new WndInfoItem(in));
+					TomorrowRogueNight.scene().addToFront(new WndInfoItem(in));
 				}
 			};
 			
@@ -136,7 +136,7 @@ public class QuickRecipe extends Component {
 		}
 		if (hasInputs) {
 			arrow.icon.tint(1, 1, 0, 1);
-			if (!(ShatteredPixelDungeon.scene() instanceof AlchemyScene)) {
+			if (!(TomorrowRogueNight.scene() instanceof AlchemyScene)) {
 				arrow.enable(false);
 			}
 		} else {
@@ -149,7 +149,7 @@ public class QuickRecipe extends Component {
 		this.output = new ItemSlot(output){
 			@Override
 			protected void onClick() {
-				ShatteredPixelDungeon.scene().addToFront(new WndInfoItem(output));
+				TomorrowRogueNight.scene().addToFront(new WndInfoItem(output));
 			}
 		};
 		if (!hasInputs){
@@ -235,7 +235,7 @@ public class QuickRecipe extends Component {
 				}
 			}
 			
-			((AlchemyScene)ShatteredPixelDungeon.scene()).populate(ingredients, Dungeon.hero.belongings);
+			((AlchemyScene) TomorrowRogueNight.scene()).populate(ingredients, Dungeon.hero.belongings);
 		}
 		
 		public void hardlightText(int color ){

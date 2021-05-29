@@ -21,7 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Blandfruit;
@@ -153,7 +153,7 @@ public abstract class Recipe {
                 result.quantity(outQuantity);
                 return result;
             } catch (Exception e) {
-                ShatteredPixelDungeon.reportException(e);
+                TomorrowRogueNight.reportException(e);
                 return null;
             }
         }

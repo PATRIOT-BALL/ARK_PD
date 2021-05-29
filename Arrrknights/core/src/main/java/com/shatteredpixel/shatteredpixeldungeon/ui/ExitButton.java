@@ -21,7 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.ui;
 
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.TitleScene;
 import com.watabou.noosa.Game;
 
@@ -39,7 +39,7 @@ public class ExitButton extends IconButton {
 		if (Game.scene() instanceof TitleScene) {
 			Game.instance.finish();
 		} else {
-			ShatteredPixelDungeon.switchNoFade( TitleScene.class );
+			TomorrowRogueNight.switchNoFade( TitleScene.class );
 		}
 	}
 }

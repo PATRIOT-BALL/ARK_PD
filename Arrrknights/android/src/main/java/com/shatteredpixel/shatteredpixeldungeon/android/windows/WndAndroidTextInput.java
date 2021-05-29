@@ -39,7 +39,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidGraphics;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.android.AndroidGame;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
@@ -220,7 +220,7 @@ public class WndAndroidTextInput extends Window {
 					imm.hideSoftInputFromWindow(((AndroidGraphics)Gdx.app.getGraphics()).getView().getWindowToken(), 0);
 
 					//Soft keyboard sometimes triggers software buttons, so make sure to reassert immersive
-					ShatteredPixelDungeon.updateSystemUI();
+					TomorrowRogueNight.updateSystemUI();
 
 					textInput = null;
 				}

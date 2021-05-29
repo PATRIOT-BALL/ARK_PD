@@ -58,7 +58,7 @@ public class SPDSettings extends GameSettings {
 	public static void fullscreen( boolean value ) {
 		put( KEY_FULLSCREEN, value );
 		
-		ShatteredPixelDungeon.updateSystemUI();
+		TomorrowRogueNight.updateSystemUI();
 	}
 	
 	public static boolean fullscreen() {
@@ -67,7 +67,7 @@ public class SPDSettings extends GameSettings {
 	
 	public static void landscape( boolean value ){
 		put( KEY_LANDSCAPE, value );
-		((ShatteredPixelDungeon)ShatteredPixelDungeon.instance).updateDisplaySize();
+		((TomorrowRogueNight) TomorrowRogueNight.instance).updateDisplaySize();
 	}
 	
 	//can return null because we need to directly handle the case of landscape not being set
@@ -82,7 +82,7 @@ public class SPDSettings extends GameSettings {
 	
 	public static void powerSaver( boolean value ){
 		put( KEY_POWER_SAVER, value );
-		((ShatteredPixelDungeon)ShatteredPixelDungeon.instance).updateDisplaySize();
+		((TomorrowRogueNight) TomorrowRogueNight.instance).updateDisplaySize();
 	}
 	
 	public static boolean powerSaver(){

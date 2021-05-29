@@ -24,7 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -310,7 +310,7 @@ public abstract class Level implements Bundlable {
 		version = bundle.getInt( VERSION );
 		
 		//saves from before v0.7.5e are not supported
-		if (version < ShatteredPixelDungeon.v0_7_5e){
+		if (version < TomorrowRogueNight.v0_7_5e){
 			throw new RuntimeException("old save");
 		}
 
@@ -813,7 +813,7 @@ public abstract class Level implements Bundlable {
 			heap.drop(item);
 		}
 		
-		if (Dungeon.level != null && ShatteredPixelDungeon.scene() instanceof GameScene) {
+		if (Dungeon.level != null && TomorrowRogueNight.scene() instanceof GameScene) {
 			pressCell( cell );
 		}
 		

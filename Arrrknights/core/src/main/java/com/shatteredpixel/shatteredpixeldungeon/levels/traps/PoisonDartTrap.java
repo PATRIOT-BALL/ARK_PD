@@ -23,7 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels.traps;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -87,7 +87,7 @@ public class PoisonDartTrap extends Trap {
 					@Override
 					protected boolean act() {
 						final Actor toRemove = this;
-						((MissileSprite) ShatteredPixelDungeon.scene().recycle(MissileSprite.class)).
+						((MissileSprite) TomorrowRogueNight.scene().recycle(MissileSprite.class)).
 							reset(pos, finalTarget.sprite, new PoisonDart(), new Callback() {
 								@Override
 								public void call() {

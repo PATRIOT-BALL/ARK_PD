@@ -21,7 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret;
 
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.SpecialRoom;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -115,7 +115,7 @@ public abstract class SecretRoom extends SpecialRoom {
 			regionSecretsThisRun = bundle.getIntArray(REGIONS);
 		} else {
 			initForRun();
-			ShatteredPixelDungeon.reportException(new Exception("secrets array didn't exist!"));
+			TomorrowRogueNight.reportException(new Exception("secrets array didn't exist!"));
 		}
 	}
 	

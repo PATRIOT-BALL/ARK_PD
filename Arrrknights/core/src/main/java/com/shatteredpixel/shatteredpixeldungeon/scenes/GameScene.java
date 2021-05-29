@@ -25,7 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -174,7 +174,7 @@ public class GameScene extends PixelScene {
 	public void create() {
 		
 		if (Dungeon.hero == null || Dungeon.level == null) {
-			ShatteredPixelDungeon.switchNoFade(TitleScene.class);
+			TomorrowRogueNight.switchNoFade(TitleScene.class);
 			return;
 		}
 
@@ -603,7 +603,7 @@ public class GameScene extends PixelScene {
 			try {
 				actorThread.wait(msToWait);
 			} catch (InterruptedException e) {
-				ShatteredPixelDungeon.reportException(e);
+				TomorrowRogueNight.reportException(e);
 			}
 			return !Actor.processing();
 		}
@@ -617,7 +617,7 @@ public class GameScene extends PixelScene {
 			Badges.saveGlobal();
 			Journal.saveGlobal();
 		} catch (IOException e) {
-			ShatteredPixelDungeon.reportException(e);
+			TomorrowRogueNight.reportException(e);
 		}
 	}
 

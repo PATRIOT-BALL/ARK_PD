@@ -242,7 +242,7 @@ public class SPDAction extends GameAction {
 		try {
 			FileUtils.bundleToFile(BINDINGS_FILE, b);
 		} catch (IOException e) {
-			ShatteredPixelDungeon.reportException(e);
+			TomorrowRogueNight.reportException(e);
 		}
 
 	}

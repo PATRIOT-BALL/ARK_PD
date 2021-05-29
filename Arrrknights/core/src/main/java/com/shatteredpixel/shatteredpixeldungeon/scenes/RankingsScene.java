@@ -23,7 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.scenes;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Rankings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroClass;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -141,7 +141,7 @@ public class RankingsScene extends PixelScene {
 	
 	@Override
 	protected void onBackPressed() {
-		ShatteredPixelDungeon.switchNoFade(TitleScene.class);
+		TomorrowRogueNight.switchNoFade(TitleScene.class);
 	}
 	
 	public static class Record extends Button {

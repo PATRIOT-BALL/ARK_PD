@@ -23,7 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -76,7 +76,7 @@ public class WndGameInProgress extends Window {
 			protected boolean onLongClick() {
 				try {
 					Bundle bundle = FileUtils.bundleFromFile(GamesInProgress.gameFile(slot));
-					ShatteredPixelDungeon.scene().addToFront(new WndMessage("_Debug Info:_\n\n" +
+					TomorrowRogueNight.scene().addToFront(new WndMessage("_Debug Info:_\n\n" +
 							"Version: " + Game.version + " (" + Game.versionCode + ")\n" +
 							"Seed: " + bundle.getLong("seed") + "\n" +
 							"Challenge Mask: " + info.challenges));
@@ -129,7 +129,7 @@ public class WndGameInProgress extends Window {
 				Dungeon.hero = null;
 				ActionIndicator.action = null;
 				InterlevelScene.mode = InterlevelScene.Mode.CONTINUE;
-				ShatteredPixelDungeon.switchScene(InterlevelScene.class);
+				TomorrowRogueNight.switchScene(InterlevelScene.class);
 			}
 		};
 		
@@ -138,7 +138,7 @@ public class WndGameInProgress extends Window {
 			protected void onClick() {
 				super.onClick();
 				
-				ShatteredPixelDungeon.scene().add(new WndOptions(
+				TomorrowRogueNight.scene().add(new WndOptions(
 						Messages.get(WndGameInProgress.class, "erase_warn_title"),
 						Messages.get(WndGameInProgress.class, "erase_warn_body"),
 						Messages.get(WndGameInProgress.class, "erase_warn_yes"),
@@ -148,7 +148,7 @@ public class WndGameInProgress extends Window {
 						if (index == 0) {
 							FileUtils.deleteDir(GamesInProgress.gameFolder(slot));
 							GamesInProgress.setUnknown(slot);
-							ShatteredPixelDungeon.switchNoFade(StartScene.class);
+							TomorrowRogueNight.switchNoFade(StartScene.class);
 						}
 					}
 				} );

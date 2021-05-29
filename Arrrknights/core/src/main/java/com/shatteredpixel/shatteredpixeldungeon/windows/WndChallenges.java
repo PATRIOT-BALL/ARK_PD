@@ -23,7 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.ui.CheckBox;
@@ -82,7 +82,7 @@ public class WndChallenges extends Window {
 				@Override
 				protected void onClick() {
 					super.onClick();
-					ShatteredPixelDungeon.scene().add(
+					TomorrowRogueNight.scene().add(
 							new WndMessage(Messages.get(Challenges.class, challenge+"_desc"))
 					);
 				}

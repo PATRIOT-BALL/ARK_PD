@@ -30,7 +30,7 @@ import com.badlogic.gdx.Files;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.services.news.News;
 import com.shatteredpixel.shatteredpixeldungeon.services.news.NewsImpl;
 import com.shatteredpixel.shatteredpixeldungeon.services.updates.UpdateImpl;
@@ -107,7 +107,7 @@ public class AndroidGame extends AndroidApplication {
 		
 		support.updateSystemUI();
 		
-		initialize(new ShatteredPixelDungeon(support), config);
+		initialize(new TomorrowRogueNight(support), config);
 		
 	}
 

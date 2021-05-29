@@ -22,7 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.mechanics;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.ShatteredPixelDungeon;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
 
 //based on: http://www.roguebasin.com/index.php?title=FOV_using_recursive_shadowcasting
@@ -68,7 +68,7 @@ public final class ShadowCaster {
 			scanOctant(distance, fieldOfView, blocking, 1, x, y, 0.0, 1.0, -1, -1, true);
 			scanOctant(distance, fieldOfView, blocking, 1, x, y, 0.0, 1.0, -1, -1, false);
 		} catch (Exception e){
-			ShatteredPixelDungeon.reportException(e);
+			TomorrowRogueNight.reportException(e);
 			BArray.setFalse(fieldOfView);
 		}
 
