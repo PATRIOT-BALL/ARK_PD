@@ -27,5 +27,8 @@ public class StoneOfAdvanceguard extends Runestone {
                 GLog.p(Messages.get(this, "hit"));
             }
         }
+        else {
+            Dungeon.level.drop(new StoneOfAdvanceguard(), cell).sprite.drop();;
+        }
     }
 }

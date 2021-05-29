@@ -193,6 +193,7 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		/*
 		BookCrimsonCutter naa;
 		naa = new BookCrimsonCutter();
 		naa.quantity(1).collect();
