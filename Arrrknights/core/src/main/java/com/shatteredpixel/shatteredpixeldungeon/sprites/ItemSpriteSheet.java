@@ -157,7 +157,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ANKH,            10, 16);
 		assignItemRect(STYLUS,          16, 16);
 		
-		assignItemRect(SEAL,            9,  15);
+		assignItemRect(SEAL,            16,  16);
 		assignItemRect(TORCH,           16, 16);
 		assignItemRect(BEACON,          16, 15);
 		
