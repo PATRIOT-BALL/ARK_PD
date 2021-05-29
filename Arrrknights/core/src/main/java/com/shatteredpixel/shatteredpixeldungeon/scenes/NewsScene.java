@@ -51,7 +51,7 @@ public class NewsScene extends PixelScene {
 
 	boolean displayingNoArticles = false;
 
-	private static final int BTN_HEIGHT = 22;
+	private static final int BTN_HEIGHT = 44;
 	private static final int BTN_WIDTH = 100;
 
 	@Override
@@ -86,15 +86,6 @@ public class NewsScene extends PixelScene {
 		float top = 18;
 
 		displayingNoArticles = !News.articlesAvailable();
-		if (displayingNoArticles || Messages.lang() != Languages.ENGLISH) {
-
-			Component newsInfo = new NewsInfo();
-			newsInfo.setRect(left, 20, fullWidth, 0);
-			add(newsInfo);
-
-			top = newsInfo.bottom();
-
-		}
 
 		if (!displayingNoArticles) {
 			ArrayList<NewsArticle> articles = News.articles();
@@ -117,47 +108,38 @@ public class NewsScene extends PixelScene {
 			float gap = ((articleSpace) - (BTN_HEIGHT * rows)) / (float)rows;
 
 			boolean rightCol = false;
-			for (NewsArticle article : articles) {
-				StyledButton b = new ArticleButton(article);
-				b.multiline = true;
-				if (!rightCol) {
-					top += gap;
-					b.setRect( left, top, BTN_WIDTH, BTN_HEIGHT);
-				} else {
-					b.setRect( left + fullWidth - BTN_WIDTH, top, BTN_WIDTH, BTN_HEIGHT);
-				}
-				align(b);
-				add(b);
-				if (!PixelScene.landscape()) {
-					top += BTN_HEIGHT;
-				} else {
-					if (rightCol){
-						top += BTN_HEIGHT;
-					}
-					rightCol = !rightCol;
-				}
-			}
 			top += gap;
 		} else {
-			top += 20;
+			top += 240;
 		}
 
-		StyledButton btnSite = new StyledButton(Chrome.Type.GREY_BUTTON_TR, Messages.get(this, "read_more")){
+		StyledButton btnSite = new StyledButton(Chrome.Type.GREY_BUTTON_TR, Messages.get(this, "read_more1")){
 			@Override
 			protected void onClick() {
 				super.onClick();
-				String link = "https://ShatteredPixel.com";
+				String link = "https://www.pixiv.net/users/14086167";
 				//tracking codes, so that the website knows where this pageview came from
-				link += "?utm_source=shatteredpd";
-				link += "&utm_medium=news_page";
-				link += "&utm_campaign=ingame_link";
 				DeviceCompat.openURI(link);
 			}
 		};
-		btnSite.icon(Icons.get(Icons.NEWS));
+		StyledButton btnSite2 = new StyledButton(Chrome.Type.GREY_BUTTON_TR, Messages.get(this, "read_more2")){
+			@Override
+			protected void onClick() {
+				super.onClick();
+				String link = "https://mizq4482.tistory.com/";
+				//tracking codes, so that the website knows where this pageview came from
+				DeviceCompat.openURI(link);
+			}
+		};
+		btnSite.icon(Icons.get(Icons.ALEKS));
 		btnSite.textColor(Window.TITLE_COLOR);
 		btnSite.setRect(left, top, fullWidth, BTN_HEIGHT);
 		add(btnSite);
+
+		btnSite2.icon(Icons.get(Icons.CHARLIE));
+		btnSite2.textColor(Window.TITLE_COLOR);
+		btnSite2.setRect(left, top*4, fullWidth, BTN_HEIGHT);
+		add(btnSite2);
 
 	}
 
@@ -172,164 +154,6 @@ public class NewsScene extends PixelScene {
 			ShatteredPixelDungeon.seamlessResetScene();
 		}
 		super.update();
-	}
-
-	private static class NewsInfo extends Component {
-
-		NinePatch bg;
-		RenderedTextBlock text;
-		RedButton button;
-
-		@Override
-		protected void createChildren() {
-			bg = Chrome.get(Chrome.Type.GREY_BUTTON_TR);
-			add(bg);
-			
-			String message = "";
-
-			if (Messages.lang() != Languages.ENGLISH){
-				message += Messages.get(this, "english_warn");
-			}
-			
-			if (!News.articlesAvailable()){
-				if (SPDSettings.news()) {
-					if (SPDSettings.WiFi() && !Game.platform.connectedToUnmeteredNetwork()) {
-						message += "\n\n" + Messages.get(this, "metered_network");
-
-						button = new RedButton(Messages.get(this, "enable_data")) {
-							@Override
-							protected void onClick() {
-								super.onClick();
-								SPDSettings.WiFi(false);
-								News.checkForNews();
-								ShatteredPixelDungeon.seamlessResetScene();
-							}
-						};
-						add(button);
-					} else {
-						message += "\n\n" + Messages.get(this, "no_internet");
-					}
-				} else {
-					message += "\n\n" + Messages.get(this, "news_disabled");
-
-					button = new RedButton(Messages.get(this, "enable_news")) {
-						@Override
-						protected void onClick() {
-							super.onClick();
-							SPDSettings.news(true);
-							News.checkForNews();
-							ShatteredPixelDungeon.seamlessResetScene();
-						}
-					};
-					add(button);
-				}
-			}
-
-			if (message.startsWith("\n\n")) message = message.replaceFirst("\n\n", "");
-			
-			text = PixelScene.renderTextBlock(message, 6);
-			text.hardlight(CharSprite.WARNING);
-			add(text);
-		}
-
-		@Override
-		protected void layout() {
-			bg.x = x;
-			bg.y = y;
-
-			text.maxWidth((int)width - bg.marginHor());
-			text.setPos(x + bg.marginLeft(), y + bg.marginTop()+1);
-
-			height = (text.bottom()) - y;
-
-			if (button != null){
-				height += 4;
-				button.setSize(button.reqWidth()+2, 16);
-				button.setPos(x + (width - button.width())/2, y + height);
-				height = button.bottom() - y;
-			}
-
-			height += bg.marginBottom() + 1;
-
-			bg.size(width, height);
-
-		}
-	}
-
-	private static class ArticleButton extends StyledButton {
-
-		NewsArticle article;
-
-		BitmapText date;
-
-		public ArticleButton(NewsArticle article) {
-			super(Chrome.Type.GREY_BUTTON_TR, article.title, 6);
-			this.article = article;
-
-			icon(News.parseArticleIcon(article));
-			long lastRead = SPDSettings.newsLastRead();
-			if (lastRead > 0 && article.date.getTime() > lastRead) {
-				textColor(Window.SHPX_COLOR);
-			}
-
-			Calendar cal = Calendar.getInstance();
-			cal.setTime(article.date);
-			date = new BitmapText( News.parseArticleDate(article), pixelFont);
-			date.scale.set(PixelScene.align(0.5f));
-			date.hardlight( 0x888888 );
-			date.measure();
-			add(date);
-		}
-
-		@Override
-		protected void layout() {
-			super.layout();
-
-			icon.x = x + bg.marginLeft() + (16-icon.width())/2f;
-			PixelScene.align(icon);
-			text.setPos(x + bg.marginLeft() + 18, text.top());
-
-			if (date != null) {
-				date.x = x + width - bg.marginRight() - date.width() + 1;
-				date.y = y + height - bg.marginBottom() - date.height() + 2.5f;
-				align(date);
-			}
-		}
-
-		@Override
-		protected void onClick() {
-			super.onClick();
-			textColor(Window.WHITE);
-			if (article.date.getTime() > SPDSettings.newsLastRead()){
-				SPDSettings.newsLastRead(article.date.getTime());
-			}
-			ShatteredPixelDungeon.scene().addToFront(new WndArticle(article));
-		}
-	}
-
-	private static class WndArticle extends WndTitledMessage {
-
-		public WndArticle(NewsArticle article ) {
-			super(News.parseArticleIcon(article), article.title, article.summary);
-
-			RedButton link = new RedButton(Messages.get(NewsScene.class, "read_more")){
-				@Override
-				protected void onClick() {
-					super.onClick();
-					String link = article.URL;
-					//tracking codes, so that the website knows where this pageview came from
-					link += "?utm_source=shatteredpd";
-					link += "&utm_medium=news_page";
-					link += "&utm_campaign=ingame_link";
-					DeviceCompat.openURI(link);
-				}
-			};
-			link.setRect(0, height + 2, width, BTN_HEIGHT);
-			add(link);
-			resize(width, (int) link.bottom());
-		}
-
-
 	}
 
 }
