@@ -218,7 +218,7 @@ public class Hero extends Char {
 
 	private int SK1num;
 	private int SK2num;
-	private int SK3num = 3;
+	private int SK3num;
 	
 	private ArrayList<Mob> visibleEnemies;
 
