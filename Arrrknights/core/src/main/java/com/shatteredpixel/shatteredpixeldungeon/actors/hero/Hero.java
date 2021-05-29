@@ -69,6 +69,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ChainHook;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.CrimsonCutter;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
@@ -240,7 +241,7 @@ public class Hero extends Char {
 	public void updateHT( boolean boostHP ){
 		int curHT = HT;
 		
-		HT = 2000 + 5*(lvl-1) + HTBoost;
+		HT = 20 + 5*(lvl-1) + HTBoost;
 		float multiplier = RingOfMight.HTMultiplier(this);
 		HT = Math.round(multiplier * HT);
 		
@@ -2053,6 +2054,7 @@ public class Hero extends Char {
 		else if (SkillNumber==6) {SK1 = new FoodPrep();}
 		else if (SkillNumber==7) {SK1 = new ChainHook();}
 		else if (SkillNumber==8) {SK1 = new Whispers();}
+		else if (SkillNumber==9) {SK1 = new CrimsonCutter();}
 		else SK1 = null;
 	}
 

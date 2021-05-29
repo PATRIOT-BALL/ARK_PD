@@ -29,6 +29,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookChainHook;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCrimsonCutter;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
@@ -189,6 +191,14 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		BookCrimsonCutter naa;
+		naa = new BookCrimsonCutter();
+		naa.quantity(1).collect();
+
+		BookChainHook nada;
+		nada = new BookChainHook();
+		nada.quantity(1).collect();
+
 		/*
 		ScrollOfUpgrade UPg;
 		UPg = new ScrollOfUpgrade();
@@ -208,11 +218,7 @@ public enum HeroClass {
 
 		/*ScrollOfMagicMapping MAPA;
 		MAPA = new ScrollOfMagicMapping();
-		MAPA.quantity(999).collect(); */
-/*
-		BookChargingPS naa;
-		naa = new BookChargingPS();
-		naa.quantity(1).collect();
+		MAPA.quantity(999).collect();
 
 		RingOfSunLight R;
 		R = new RingOfSunLight();

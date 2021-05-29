@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SparkParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -55,6 +56,7 @@ public class DM100 extends Mob implements Callback {
 		properties.add(Property.ELECTRIC);
 		properties.add(Property.INORGANIC);
 		properties.add(Property.DRONE);
+		immunities.add(Bleeding.class);
 	}
 	
 	@Override
