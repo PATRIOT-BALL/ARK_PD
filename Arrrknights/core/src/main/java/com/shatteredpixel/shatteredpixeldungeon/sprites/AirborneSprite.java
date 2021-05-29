@@ -24,25 +24,27 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class LancerSprite extends MobSprite {
+public class AirborneSprite extends MobSprite {
 
-    public LancerSprite() {
+    public AirborneSprite() {
         super();
 
-        texture( Assets.Sprites.LANCER );
+        texture( Assets.Sprites.AIRBORNE );
 
-        TextureFilm frames = new TextureFilm( texture, 52, 34 );
+        TextureFilm frames = new TextureFilm( texture, 34, 32 );
 
         idle = new Animation( 2, true );
         idle.frames( frames, 0 );
 
-        run = new Animation( 18, true );
-        run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
+        run = new Animation( 13, true );
+        run.frames( frames, 1, 2, 3, 4, 5, 6, 7 );
 
-        attack = new Animation( 19, false );
-        attack.frames( frames, 1, 9, 1, 9, 1 );
+        attack = new Animation( 12, false );
+        attack.frames( frames, 1, 2, 3, 4, 5, 6, 7 );
 
         die = new Animation( 10, false );
         die.frames( frames, 0 );
+
+        play( idle );
     }
 }

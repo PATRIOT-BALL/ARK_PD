@@ -18,19 +18,19 @@ public class AirborneSoldier extends Mob{
     {
     spriteClass = InfantrySprite .class;
 
-    HP = HT = 16;
+    HP = HT = 18;
     defenseSkill = 5;
 
     EXP = 4;
-    maxLvl = 11;
+    maxLvl = 12;
 
     loot = Gold .class;
-    lootChance = 0.25f;
+    lootChance = 0.3f;
 }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 1, 9 );
+        return Random.NormalIntRange( 4, 10 );
     }
 
     @Override
