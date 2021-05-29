@@ -68,6 +68,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
@@ -217,21 +218,17 @@ public enum HeroClass {
 		R = new RingOfSunLight();
 		R.level(100);
 		R.quantity(1).collect();
-		*/
-
-
-		ScrollOfIdentify FFC;
-		FFC = new ScrollOfIdentify();
-		FFC.quantity(1).collect();
 
 		StaffKit SK;
 		SK = new StaffKit();
 		SK.quantity(3).collect();
 
-		StaffOfSkyfire STT;
-		STT = new StaffOfSkyfire();
-		STT.level(1);
+		StaffOfMayer STT;
+		STT = new StaffOfMayer();
+		STT.level(8);
+		STT.gainCharge(9);
 		STT.quantity(1).collect();
+		*/
 
 	}
 
@@ -259,6 +256,10 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
+
+		ScrollOfIdentify FFC;
+		FFC = new ScrollOfIdentify();
+		FFC.quantity(1).collect();
 	}
 
 	private static void initRogue( Hero hero ) {

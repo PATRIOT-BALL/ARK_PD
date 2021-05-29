@@ -54,6 +54,8 @@ public class Swarm extends Mob {
 
 		loot = new PotionOfHealing();
 		lootChance = 0.1667f; //by default, see rollToDropLoot()
+
+		properties.add(Property.DRONE);
 	}
 	
 	private static final float SPLIT_DELAY	= 1f;

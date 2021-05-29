@@ -52,6 +52,7 @@ public class Skeleton extends Mob {
 		lootChance = 0.2f; //by default, see rollToDropLoot()
 
 		properties.add(Property.INORGANIC);
+		properties.add(Property.DRONE);
 	}
 	
 	@Override

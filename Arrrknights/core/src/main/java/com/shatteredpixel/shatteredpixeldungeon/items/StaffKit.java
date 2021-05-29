@@ -14,17 +14,21 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLightning;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -163,6 +167,36 @@ public class StaffKit extends Item {
         else if (wand instanceof WandOfPrismaticLight)
         {
             n = new StaffOfShining(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfFireblast)
+        {
+            n = new StaffOfSkyfire(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfWarding)
+        {
+            n = new StaffOfMayer(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
             int level = wand.level();
             if (wand.curseInfusionBonus) level--;

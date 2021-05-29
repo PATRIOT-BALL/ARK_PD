@@ -5,17 +5,18 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.tweeners.AlphaTweener;
 
-public class WardSprite extends MobSprite {
+public class WardSprite_Mayer extends MobSprite {
 
     private Animation tierIdles[] = new Animation[7];
 
-    public WardSprite() {
+    public WardSprite_Mayer() {
         super();
 
         texture(Assets.Sprites.WARDS);
@@ -52,7 +53,7 @@ public class WardSprite extends MobSprite {
         } else {
             parent.add(new Beam.DeathRay(center(), DungeonTilemap.raisedTileCenterToWorld(pos)));
         }
-        ((WandOfWarding.Ward) ch).onZapComplete();
+        ((StaffOfMayer.Ward) ch).onZapComplete();
     }
 
     @Override
@@ -69,7 +70,7 @@ public class WardSprite extends MobSprite {
         parent.add(new AlphaTweener(this, 0, 2f) {
             @Override
             protected void onComplete() {
-                WardSprite.this.killAndErase();
+                WardSprite_Mayer.this.killAndErase();
                 parent.erase(this);
             }
         });
@@ -78,8 +79,8 @@ public class WardSprite extends MobSprite {
     @Override
     public void resetColor() {
         super.resetColor();
-        if (ch instanceof WandOfWarding.Ward) {
-            WandOfWarding.Ward ward = (WandOfWarding.Ward) ch;
+        if (ch instanceof StaffOfMayer.Ward) {
+            StaffOfMayer.Ward ward = (StaffOfMayer.Ward) ch;
             if (ward.tier <= 3) {
                 brightness(Math.max(0.2f, 1f - (ward.totalZaps / (float) (2 * ward.tier - 1))));
             }
@@ -89,7 +90,7 @@ public class WardSprite extends MobSprite {
     public void linkVisuals(Char ch) {
 
         if (ch == null) return;
-        updateTier(((WandOfWarding.Ward) ch).tier);
+        updateTier(((StaffOfMayer.Ward) ch).tier);
 
     }
 

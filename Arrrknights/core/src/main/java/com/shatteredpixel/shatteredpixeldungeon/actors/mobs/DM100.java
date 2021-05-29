@@ -46,12 +46,15 @@ public class DM100 extends Mob implements Callback {
 		
 		EXP = 6;
 		maxLvl = 13;
+
+		flying = true;
 		
 		loot = Generator.Category.SCROLL;
 		lootChance = 0.25f;
 		
 		properties.add(Property.ELECTRIC);
 		properties.add(Property.INORGANIC);
+		properties.add(Property.DRONE);
 	}
 	
 	@Override
