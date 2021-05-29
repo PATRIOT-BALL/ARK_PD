@@ -262,10 +262,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-
-		ScrollOfIdentify FFC;
-		FFC = new ScrollOfIdentify();
-		FFC.quantity(1).collect();
 	}
 
 	private static void initRogue( Hero hero ) {
