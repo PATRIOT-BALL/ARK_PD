@@ -120,5 +120,22 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLAZE, 742, 38, 16, 16), "스킬북 편의성 개선",
                 "- 아츠 기록장치를 퀵슬롯에서 사용해도 스킬 정보를 확인할 수 있게되었습니다!\n\n" +
                         "- 다만, 상세한 정보 등은 인벤토리에서 확인하셔야합니다."));
+
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLAZE, 22, 38, 16, 16), "분노 전문화 상향",
+                "- 분노 상태에서 이동속도가 상승하며, 피해량이 더 높아졌습니다!!\n\n" +
+                        "- 대신 격노 상태의 패널티가 커졌습니다. 자세한건 패치노트를 참조해주세요."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.AMIYA, 2, 34, 16, 16), "아미야 전체적인 너프",
+                "- 아미야의 전체적인 특성이 하향당했으며, 지배 전문화 (아미야β)의 낙인 부여 확률이 감소했습니다.\n\n" +
+                        "- 일부 특성은 상향되었습니다!"));
     }
 }
