@@ -196,6 +196,9 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		new TomeOfMastery().quantity(1).collect();
+		new PotionOfExperience().quantity(99).collect();
+
 
 		/*
 		BookCrimsonCutter naa;

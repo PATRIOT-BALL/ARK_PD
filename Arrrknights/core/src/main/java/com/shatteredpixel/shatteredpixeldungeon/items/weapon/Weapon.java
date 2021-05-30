@@ -227,6 +227,7 @@ abstract public class Weapon extends KindOfWeapon {
 		int req = (8 + tier * 2) - (int)(Math.sqrt(8 * lvl + 1) - 1)/2;
 
 		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 2) req--;
+		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 4) req--;
 
 		return req;
 	}
