@@ -42,7 +42,7 @@ public class Berserk extends Buff {
 	}
 	private State state = State.NORMAL;
 
-	private static final float LEVEL_RECOVER_START = 3f;
+	private static final float LEVEL_RECOVER_START = 5f;
 	private float levelRecovery;
 	
 	private float power = 0;
@@ -89,12 +89,12 @@ public class Berserk extends Buff {
 				}
 			} else {
 				state = State.RECOVERING;
-				levelRecovery = LEVEL_RECOVER_START - Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA)/2f;
+				levelRecovery = LEVEL_RECOVER_START;
 				if (buff != null) buff.absorbDamage(buff.shielding());
 				power = 0f;
 			}
 		} else if (state == State.NORMAL) {
-			power -= GameMath.gate(0.1f, power, 1f) * 0.037f * Math.pow((target.HP/(float)target.HT), 2);
+			power -= GameMath.gate(0.1f, power, 1f) * 0.06f * Math.pow((target.HP/(float)target.HT), 2);
 			
 			if (power <= 0){
 				detach();
@@ -109,12 +109,12 @@ public class Berserk extends Buff {
 	}
 
 	public int damageFactor(int dmg){
-		float bonus = Math.min(1.625f, 1f + (power / 1.6f));
+		float bonus = Math.min(2f, 1f + (power));
 		return Math.round(dmg * bonus);
 	}
 
 	public boolean berserking(){
-		if (target.HP == 0 && state == State.NORMAL && power >= 0.6f){
+		if (target.HP == 0 && state == State.NORMAL && power >= 1f){
 
 			WarriorShield shield = target.buff(WarriorShield.class);
 			if (shield != null){
@@ -138,6 +138,10 @@ public class Berserk extends Buff {
 		float maxPower = 1f + 0.2f*((Hero)target).pointsInTalent(Talent.ENDLESS_RAGE);
 		power = Math.min(maxPower, power + (damage/(float)target.HT)/2f );
 		BuffIndicator.refreshHero(); //show new power immediately
+	}
+
+	public float getPower() {
+		return power;
 	}
 
 	public void recover(float percent){
@@ -198,9 +202,11 @@ public class Berserk extends Buff {
 	@Override
 	public String desc() {
 		float dispDamage = (damageFactor(10000) / 100f) - 100f;
+		float dispSpeed = ((damageFactor(10000) / 100) - 100f) / 1.3f;
+		if (dispSpeed > 30 + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) * 2)) dispSpeed = 30 + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) * 2);
 		switch (state){
 			case NORMAL: default:
-				return Messages.get(this, "angered_desc", Math.floor(power * 100f), dispDamage);
+				return Messages.get(this, "angered_desc", Math.floor(power * 100f), dispDamage, dispSpeed);
 			case BERSERK:
 				return Messages.get(this, "berserk_desc");
 			case RECOVERING:
