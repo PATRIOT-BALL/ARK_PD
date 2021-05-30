@@ -41,6 +41,31 @@ public enum HeroSubClass {
 	WARDEN( "warden" );
 	
 	private String title;
+
+	public String ChangeName() {
+		if (this.title == "gladiator") {
+			return Messages.get(this, "gladiator_changename");
+		}
+		else if (this.title == "berserker") {
+			return Messages.get(this, "berserker_changename");
+		}
+		else if (this.title == "warlock") {
+			return Messages.get(this, "warlock_changename");}
+		else if (this.title == "battlemage") {
+			return Messages.get(this, "battlemage_changename");}
+		else if (this.title == "assassin") {
+			return Messages.get(this, "assassin_changename");}
+		else if (this.title == "freerunner") {
+			return Messages.get(this, "freerunner_changename");}
+		else if (this.title == "sniper") {
+			return Messages.get(this, "sniper_changename");}
+		else if (this.title == "warden") {
+			return Messages.get(this, "warden_changename");}
+		else
+			return title;
+
+
+	}
 	
 	HeroSubClass( String title ) {
 		this.title = title;

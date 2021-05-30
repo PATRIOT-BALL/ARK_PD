@@ -410,7 +410,7 @@ public class DwarfKing extends Mob {
 			summonsMade = 1; //monk/warlock on 3rd summon
 			sprite.centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.4f, 2 );
 			Sample.INSTANCE.play( Assets.Sounds.CHALLENGE );
-			yell(  Messages.get(this, "enraged", Dungeon.hero.name()) );
+			yell(  Messages.get(this, "enraged", Dungeon.hero.heroClass.title()) );
 		} else if (phase == 3 && preHP > 20 && HP < 20){
 			yell( Messages.get(this, "losing") );
 		}

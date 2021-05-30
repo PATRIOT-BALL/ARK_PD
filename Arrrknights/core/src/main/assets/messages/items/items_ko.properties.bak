@@ -74,6 +74,10 @@ items.skill.sk2.bookchargingps.name=전갈꼬리의 스킬개론
 items.skill.sk2.bookchargingps.desc=_스콜피온 테일_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 피해와 함께 불구, 실명. 또한 자신의 이속 상승\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookchargingps.ac_use=읽는다
 
+items.skill.sk2.bookneverbackdown.name=임전무퇴의 스킬개론
+items.skill.sk2.bookneverbackdown.desc=_임전무퇴!_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 보호막 획득 및 가속. 가속 중 공격시 큰 피해를 가하고 가속 해제\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookneverbackdown.ac_use=읽는다
+
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookshadowassault.ac_use=읽는다

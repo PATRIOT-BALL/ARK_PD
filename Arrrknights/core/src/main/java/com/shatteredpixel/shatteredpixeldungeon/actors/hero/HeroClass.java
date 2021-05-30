@@ -46,6 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeath
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.StaffKit;
+import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
@@ -194,6 +195,8 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		new TomeOfMastery().quantity(1).collect();
+
 		/*
 		BookCrimsonCutter naa;
 		naa = new BookCrimsonCutter();
@@ -322,8 +325,10 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		
-		Heamyo jot;
-		jot = new Heamyo();jot.quantity(1).collect();
+		/*Heamyo jot;
+		jot = new Heamyo();jot.quantity(1).collect();*/
+
+		new TomeOfMastery().quantity(1).collect();
 	}
 
 	public String title() {

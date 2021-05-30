@@ -119,13 +119,13 @@ public class Wandmaker extends NPC {
 				String msg;
 				switch(Quest.type){
 					case 1: default:
-						msg = Messages.get(this, "reminder_dust", Dungeon.hero.name());
+						msg = Messages.get(this, "reminder_dust", Dungeon.hero.heroClass.title());
 						break;
 					case 2:
-						msg = Messages.get(this, "reminder_ember", Dungeon.hero.name());
+						msg = Messages.get(this, "reminder_ember", Dungeon.hero.heroClass.title());
 						break;
 					case 3:
-						msg = Messages.get(this, "reminder_berry", Dungeon.hero.name());
+						msg = Messages.get(this, "reminder_berry", Dungeon.hero.heroClass.title());
 						break;
 				}
 				Game.runOnRenderThread(new Callback() {
@@ -148,7 +148,7 @@ public class Wandmaker extends NPC {
 					msg1 += Messages.get(this, "intro_rogue");
 					break;
 				case MAGE:
-					msg1 += Messages.get(this, "intro_mage", Dungeon.hero.name());
+					msg1 += Messages.get(this, "intro_mage", Dungeon.hero.heroClass.title());
 					break;
 				case HUNTRESS:
 					msg1 += Messages.get(this, "intro_huntress");

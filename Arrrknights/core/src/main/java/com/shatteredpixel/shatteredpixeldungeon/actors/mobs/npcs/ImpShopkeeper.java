@@ -41,7 +41,7 @@ public class ImpShopkeeper extends Shopkeeper {
 	protected boolean act() {
 
 		if (!seenBefore && Dungeon.level.heroFOV[pos]) {
-			yell( Messages.get(this, "greetings", Dungeon.hero.name() ) );
+			yell( Messages.get(this, "greetings", Dungeon.hero.heroClass.title() ) );
 			seenBefore = true;
 		}
 		
