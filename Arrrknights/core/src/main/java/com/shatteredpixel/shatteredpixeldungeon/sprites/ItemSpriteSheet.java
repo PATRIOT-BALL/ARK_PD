@@ -163,10 +163,10 @@ public class ItemSpriteSheet {
 		
 		assignItemRect(HONEYPOT,        14, 12);
 		assignItemRect(SHATTPOT,        14, 12);
-		assignItemRect(IRON_KEY,        8,  14);
-		assignItemRect(GOLDEN_KEY,      8,  14);
-		assignItemRect(CRYSTAL_KEY,     8,  14);
-		assignItemRect(SKELETON_KEY,    8,  14);
+		assignItemRect(IRON_KEY,        16,  16);
+		assignItemRect(GOLDEN_KEY,      16,  16);
+		assignItemRect(CRYSTAL_KEY,     16,  16);
+		assignItemRect(SKELETON_KEY,    16,  16);
 		assignItemRect(MASTERY,         16, 16);
 		assignItemRect(KIT,             16, 15);
 		assignItemRect(AMULET,          16, 16);
@@ -192,13 +192,13 @@ public class ItemSpriteSheet {
 		assignItemRect(FIRE_BOMB,       16, 16);
 		assignItemRect(FROST_BOMB,      16, 16);
 		assignItemRect(REGROWTH_BOMB,   16, 16);
-		assignItemRect(FLASHBANG,       13, 12);
-		assignItemRect(SHOCK_BOMB,      10, 13);
-		assignItemRect(HOLY_BOMB,       10, 13);
-		assignItemRect(WOOLY_BOMB,      10, 13);
-		assignItemRect(NOISEMAKER,      10, 13);
-		assignItemRect(ARCANE_BOMB,     10, 13);
-		assignItemRect(SHRAPNEL_BOMB,   10, 13);
+		assignItemRect(FLASHBANG,       16,  16);
+		assignItemRect(SHOCK_BOMB,      16,  16);
+		assignItemRect(HOLY_BOMB,       16,  16);
+		assignItemRect(WOOLY_BOMB,      16,  16);
+		assignItemRect(NOISEMAKER,      16,  16);
+		assignItemRect(ARCANE_BOMB,     16,  16);
+		assignItemRect(SHRAPNEL_BOMB,   16,  16);
 	}
 
 	
