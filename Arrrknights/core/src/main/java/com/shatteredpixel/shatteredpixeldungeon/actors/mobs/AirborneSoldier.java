@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.AirborneSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.InfantrySprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -16,9 +17,9 @@ import java.util.ArrayList;
 public class AirborneSoldier extends Mob{
     private int blinkCooldown = 0;
     {
-    spriteClass = InfantrySprite .class;
+    spriteClass = AirborneSprite .class;
 
-    HP = HT = 18;
+    HP = HT = 20;
     defenseSkill = 5;
 
     EXP = 4;
@@ -30,7 +31,7 @@ public class AirborneSoldier extends Mob{
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 4, 10 );
+        return Random.NormalIntRange( 6, 12 );
     }
 
     @Override
