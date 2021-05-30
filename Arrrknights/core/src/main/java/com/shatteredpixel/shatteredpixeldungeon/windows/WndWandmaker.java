@@ -162,9 +162,13 @@ public class WndWandmaker extends Window {
 			RedButton btnConfirm = new RedButton(Messages.get(WndSadGhost.class, "confirm")){
 				@Override
 				protected void onClick() {
+					if (Dungeon.acequest != 1)
+					{
+						Dungeon.acequest = 1;
+						selectReward( item );
+					}
+					else {wandmaker.yell( Messages.get(this, "nobug", Dungeon.hero.heroClass.title()) );}
 					RewardWindow.this.hide();
-
-					selectReward( item );
 				}
 			};
 			btnConfirm.setRect(0, height+2, width/2-1, 16);

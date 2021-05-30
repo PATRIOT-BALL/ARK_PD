@@ -159,6 +159,8 @@ public class Dungeon {
 	
 	public static int depth;
 	public static int gold;
+	public static int guardquest;
+	public static int acequest;
 	public static int cautusquset;
 	
 	public static HashSet<Integer> chapters;
@@ -198,9 +200,11 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 0;
+		depth = 3;
 		gold = 0;
 		cautusquset = -1;
+		guardquest = -1;
+		acequest = -1;
 
 		droppedItems = new SparseArray<>();
 		portedItems = new SparseArray<>();
@@ -464,9 +468,11 @@ public class Dungeon {
 	private static final String CHAPTERS	= "chapters";
 	private static final String QUESTS		= "quests";
 	private static final String BADGES		= "badges";
+	private static final String GUARD_Q		= "guardquest";
+	private static final String ACE_Q		= "acequest";
 	private static final String cautus		= "cautusquset";
-	
-	public static void saveGame( int save ) {
+
+	public static void saveGame(int save ) {
 		try {
 			Bundle bundle = new Bundle();
 
@@ -479,6 +485,8 @@ public class Dungeon {
 			bundle.put( GOLD, gold );
 			bundle.put( DEPTH, depth );
 			bundle.put( cautus, cautusquset);
+			bundle.put( GUARD_Q, guardquest);
+			bundle.put( ACE_Q, acequest);
 
 			for (int d : droppedItems.keyArray()) {
 				bundle.put(Messages.format(DROPPED, d), droppedItems.get(d));
@@ -624,6 +632,9 @@ public class Dungeon {
 		
 		gold = bundle.getInt( GOLD );
 		depth = bundle.getInt( DEPTH );
+
+		guardquest = bundle.getInt(GUARD_Q);
+		acequest = bundle.getInt(ACE_Q);
 		cautusquset = bundle.getInt(cautus);
 		
 		Statistics.restoreFromBundle( bundle );

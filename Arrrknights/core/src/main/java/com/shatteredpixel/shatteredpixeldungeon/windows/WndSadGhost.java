@@ -118,7 +118,7 @@ public class WndSadGhost extends Window {
 		
 		ghost.yell( Messages.get(this, "farewell") );
 		ghost.die( null );
-		
+
 		Ghost.Quest.complete();
 	}
 
@@ -169,9 +169,14 @@ public class WndSadGhost extends Window {
 			RedButton btnConfirm = new RedButton(Messages.get(WndSadGhost.class, "confirm")){
 				@Override
 				protected void onClick() {
+					if (Dungeon.guardquest != 1) {
+						Dungeon.guardquest = 1;
+						WndSadGhost.this.selectReward(item);
+					}
+					else {
+						ghost.yell( Messages.get(this, "nobug") );
+					}
 					RewardWindow.this.hide();
-
-					WndSadGhost.this.selectReward( item );
 				}
 			};
 			btnConfirm.setRect(0, height+2, width/2-1, 16);
