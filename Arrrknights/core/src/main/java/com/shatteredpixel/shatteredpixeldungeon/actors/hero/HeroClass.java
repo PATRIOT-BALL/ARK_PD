@@ -145,8 +145,8 @@ public enum HeroClass {
 	}
 
 	private static void initCommon( Hero hero ) {
-		Item i = new ClothArmor().identify();
-		if (!Challenges.isItemBlocked(i)) hero.belongings.armor = (ClothArmor)i;
+		Item i = new PlateArmor().identify();
+		if (!Challenges.isItemBlocked(i)) hero.belongings.armor = (PlateArmor)i;
 
 		i = new Food();
 		if (!Challenges.isItemBlocked(i)) i.collect();
@@ -196,8 +196,15 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		/*
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();
+
+		ScrollOfUpgrade UPg;
+		UPg = new ScrollOfUpgrade();
+		UPg.quantity(99).collect();
+
+		new PotionOfHealing().quantity(1).collect();*/
 
 
 		/*
@@ -210,9 +217,7 @@ public enum HeroClass {
 		nada.quantity(1).collect();
 
 		/*
-		ScrollOfUpgrade UPg;
-		UPg = new ScrollOfUpgrade();
-		UPg.quantity(99).collect();
+
 
 		WandOfTransfusion WW;
 		WW = new WandOfTransfusion();

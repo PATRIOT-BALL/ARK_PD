@@ -42,7 +42,7 @@ public class Berserk extends Buff {
 	}
 	private State state = State.NORMAL;
 
-	private static final float LEVEL_RECOVER_START = 2f;
+	private static final float LEVEL_RECOVER_START = 3f;
 	private float levelRecovery;
 	
 	private float power = 0;
@@ -89,7 +89,7 @@ public class Berserk extends Buff {
 				}
 			} else {
 				state = State.RECOVERING;
-				levelRecovery = LEVEL_RECOVER_START - Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA)/1.5f;
+				levelRecovery = LEVEL_RECOVER_START - Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA)/2f;
 				if (buff != null) buff.absorbDamage(buff.shielding());
 				power = 0f;
 			}
@@ -114,7 +114,7 @@ public class Berserk extends Buff {
 	}
 
 	public boolean berserking(){
-		if (target.HP == 0 && state == State.NORMAL && power >= 1f){
+		if (target.HP == 0 && state == State.NORMAL && power >= 0.6f){
 
 			WarriorShield shield = target.buff(WarriorShield.class);
 			if (shield != null){
