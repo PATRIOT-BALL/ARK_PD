@@ -29,7 +29,7 @@ public class AcidicSprite extends ScorpioSprite {
 	public AcidicSprite() {
 		super();
 		
-		texture( Assets.Sprites.SCORPIO );
+		texture( Assets.Sprites.SARKAZ_SNIPER_E );
 		
 		TextureFilm frames = new TextureFilm( texture, 18, 17 );
 		

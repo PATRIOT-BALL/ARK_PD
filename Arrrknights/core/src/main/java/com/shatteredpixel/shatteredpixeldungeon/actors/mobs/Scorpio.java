@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ScorpioSprite;
 import com.watabou.utils.Random;
 import com.watabou.utils.Reflection;
@@ -40,7 +41,7 @@ import com.watabou.utils.Reflection;
 public class Scorpio extends Mob {
 	
 	{
-		spriteClass = ScorpioSprite.class;
+		spriteClass = SarkazSniperSprite.class;
 		
 		HP = HT = 110;
 		defenseSkill = 24;

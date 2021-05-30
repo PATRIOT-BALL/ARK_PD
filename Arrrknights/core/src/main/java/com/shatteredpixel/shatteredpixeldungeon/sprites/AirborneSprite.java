@@ -36,14 +36,14 @@ public class AirborneSprite extends MobSprite {
         idle = new Animation( 2, true );
         idle.frames( frames, 0 );
 
-        run = new Animation( 13, true );
-        run.frames( frames, 1, 2, 3, 4, 5, 6, 7 );
+        run = new Animation( 14, true );
+        run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
-        attack = new Animation( 12, false );
-        attack.frames( frames, 1, 2, 3, 4, 5, 6, 7 );
+        attack = new Animation( 15, false );
+        attack.frames( frames, 9, 10, 11, 12, 13, 14 );
 
         die = new Animation( 10, false );
-        die.frames( frames, 0 );
+        die.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 );
 
         play( idle );
     }

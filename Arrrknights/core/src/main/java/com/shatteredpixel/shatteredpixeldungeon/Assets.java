@@ -122,7 +122,7 @@ public class Assets {
 		public static final String BOSS4		= "music/boss4.ogg";
 		public static final String BOSS5		= "music/boss5.ogg";
 		public static final String SURFACE	= "music/surface.ogg";
-		public static final String THEME	= "music/thema.ogg";
+		public static final String THEME	= "music/theme.ogg";
 	}
 
 	public static class Sounds {
@@ -338,6 +338,8 @@ public class Assets {
 		public static final String LENS	= "sprites/lens.png";
 		public static final String FANATIC	= "sprites/fanatic.png";
 		public static final String AIRBORNE	= "sprites/airborne.png";
+		public static final String SARKAZ_SNIPER	= "sprites/Sarkaz_Sniper.png";
+		public static final String SARKAZ_SNIPER_E	= "sprites/Sarkaz_Sniper_E.png";
 		public static final String LANCER	= "sprites/Lancer.png";
 		public static final String GHOST1	= "sprites/ghost_1.png";
 		public static final String GHOST2	= "sprites/ghost_2.png";
