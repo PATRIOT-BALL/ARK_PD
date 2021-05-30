@@ -88,6 +88,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
@@ -320,6 +321,9 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
+		
+		Heamyo jot;
+		jot = new Heamyo();jot.quantity(1).collect();
 	}
 
 	public String title() {

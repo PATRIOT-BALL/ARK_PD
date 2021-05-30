@@ -211,6 +211,7 @@ public class ItemSpriteSheet {
 	public static final int CHAINSAW          = WEP_TIER1+3;
 	public static final int DAGGER          = WEP_TIER1+4;
 	public static final int MAGES_STAFF     = WEP_TIER1+5;
+	public static final int HEAMYO     = WEP_TIER1+6;
 	static{
 		assignItemRect(WORN_SHORTSWORD, 16, 16);
 		assignItemRect(BLITZE, 			16, 16);
@@ -218,6 +219,7 @@ public class ItemSpriteSheet {
 		assignItemRect(CHAINSAW, 			16, 16);
 		assignItemRect(DAGGER,          16, 16);
 		assignItemRect(MAGES_STAFF,     16, 16);
+		assignItemRect(HEAMYO,     16, 16);
 	}
 
 	private static final int WEP_TIER2      =                               xy(9, 7);   //8 slots
