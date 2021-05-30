@@ -174,7 +174,7 @@ public class WndSadGhost extends Window {
 						WndSadGhost.this.selectReward(item);
 					}
 					else {
-						ghost.yell( Messages.get(this, "nobug") );
+						ghost.yell( Messages.get(ghost, "stop") );
 					}
 					RewardWindow.this.hide();
 				}

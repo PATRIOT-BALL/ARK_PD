@@ -76,7 +76,7 @@ public class RitualSiteRoom extends StandardRoom {
 			tileW = tileH = 3;
 		}
 		
-		final int TEX_WIDTH = 64;
+		final int TEX_WIDTH = 128;
 
 		@Override
 		public Tilemap create() {

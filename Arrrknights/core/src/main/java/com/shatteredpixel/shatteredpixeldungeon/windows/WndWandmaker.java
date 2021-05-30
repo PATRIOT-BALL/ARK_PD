@@ -167,7 +167,7 @@ public class WndWandmaker extends Window {
 						Dungeon.acequest = 1;
 						selectReward( item );
 					}
-					else {wandmaker.yell( Messages.get(this, "nobug", Dungeon.hero.heroClass.title()) );}
+					else {wandmaker.yell( Messages.get(wandmaker, "stop", Dungeon.hero.heroClass.title()) );}
 					RewardWindow.this.hide();
 				}
 			};

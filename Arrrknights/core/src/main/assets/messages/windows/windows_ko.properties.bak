@@ -140,6 +140,7 @@ windows.wndsadghost.give_item=이 장비들 중 하나를 가져가세요, 아�
 windows.wndsadghost.confirm=확인
 windows.wndsadghost.cancel=취소
 windows.wndsadghost.farewell=나중에 뵙겠습니다. 아무쪼록 조심하세요!
+windows.wndsadghost.nobug=어어, 잠깐! 이러지마세요!
 
 windows.wndsettings$displaytab.title=화면 설정
 windows.wndsettings$displaytab.scale=화면 스케일
@@ -204,3 +205,4 @@ windows.wndwandmaker.dust=내 무기를 가져왔군. 럴커들은 걱정하지 
 windows.wndwandmaker.ember=역시 기대했던 데로 부품을 가져왔군, 송신기가 제대로 작동해야 할 텐데. \n\이건 다른 대원이 두고 간 아츠 스태프다. 하나 가져가도록 해.
 windows.wndwandmaker.berry=오오, 열매를 가져왔군! 썩은열매 나무 때문에 위험에 처하지는 않았나 모르겠군. \n\이건 다른 대원이 두고 간 아츠 스태프다. 하나 가져가도록 해.
 windows.wndwandmaker.farewell=먼저 가겠다, 조심하도록 해라 %s.
+windows.wndwandmaker.nobug=하나만 가져가게, %s.
