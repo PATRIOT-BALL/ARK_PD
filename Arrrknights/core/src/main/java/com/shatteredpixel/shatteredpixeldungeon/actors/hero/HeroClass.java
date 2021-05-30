@@ -196,7 +196,7 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		/*
+
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();
 
@@ -204,7 +204,7 @@ public enum HeroClass {
 		UPg = new ScrollOfUpgrade();
 		UPg.quantity(99).collect();
 
-		new PotionOfHealing().quantity(1).collect();*/
+		new PotionOfHealing().quantity(1).collect();
 
 
 		/*

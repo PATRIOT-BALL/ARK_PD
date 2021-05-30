@@ -109,7 +109,7 @@ public class Berserk extends Buff {
 	}
 
 	public int damageFactor(int dmg){
-		float bonus = Math.min(1.5f, 1f + (power / 2f));
+		float bonus = Math.min(1.625f, 1f + (power / 1.6f));
 		return Math.round(dmg * bonus);
 	}
 
@@ -136,7 +136,7 @@ public class Berserk extends Buff {
 	public void damage(int damage){
 		if (state == State.RECOVERING) return;
 		float maxPower = 1f + 0.2f*((Hero)target).pointsInTalent(Talent.ENDLESS_RAGE);
-		power = Math.min(maxPower, power + (damage/(float)target.HT)/2.4f );
+		power = Math.min(maxPower, power + (damage/(float)target.HT)/2.7f );
 		BuffIndicator.refreshHero(); //show new power immediately
 	}
 
