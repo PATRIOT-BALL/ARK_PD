@@ -236,17 +236,17 @@ public class NewPrisonBossLevel extends Level {
 	private static final Point levelExit = new Point( endStart.x+12, endStart.y+6);
 	private static final int[] endMap = new int[]{
 			W, W, D, W, W, W, W, W, W, W, W, W, W, W,
-			W, e, e, e, W, W, W, W, W, W, W, W, W, W,
-			W, e, e, e, e, e, e, e, e, W, W, W, W, W,
+			W, e, e, e, W, W, W, C, C, C, W, W, W, W,
+			W, e, e, e, e, e, e, C, C, C, C, W, W, W,
 			e, e, e, e, e, e, e, e, e, e, e, e, W, W,
-			e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+			e, e, e, e, e, e, e, e, e, e, C, e, e, W,
 			e, e, e, C, C, C, C, C, C, C, C, e, e, W,
-			e, W, C, C, C, C, C, C, C, C, C, E, E, W,
+			e, W, C, C, C, C, C, C, C, C, C, e, e, W,
 			e, e, e, C, C, C, C, C, C, C, C, E, E, W,
 			e, e, e, e, e, C, C, C, C, C, C, E, E, W,
-			e, e, e, e, e, e, e, W, W, W, C, C, C, W,
-			W, e, e, e, e, e, W, W, W, W, C, C, C, W,
-			W, e, e, e, e, W, W, W, W, W, W, C, C, W,
+			e, e, e, C, C, C, C, W, W, C, C, C, C, W,
+			W, e, C, W, C, C, W, W, W, W, C, C, C, W,
+			W, e, e, C, C, W, W, W, W, W, W, C, C, W,
 			W, W, W, W, W, W, W, W, W, W, W, C, C, W,
 			W, W, W, W, W, W, W, W, W, W, W, C, C, W,
 			W, D, W, W, W, W, W, W, W, W, W, C, C, W,
@@ -273,12 +273,12 @@ public class NewPrisonBossLevel extends Level {
 		}
 		
 		CustomTilemap vis = new exitVisual();
-		vis.pos(11, 10);
+		vis.pos(16, 16);
 		customTiles.add(vis);
 		GameScene.add(vis, false);
 		
 		vis = new exitVisualWalls();
-		vis.pos(11, 10);
+		vis.pos(16, 16);
 		customWalls.add(vis);
 		GameScene.add(vis, true);
 		
@@ -791,8 +791,8 @@ public class NewPrisonBossLevel extends Level {
 		@Override
 		public void restoreFromBundle(Bundle bundle) {
 			super.restoreFromBundle(bundle);
-			tileX = 11;
-			tileY = 10;
+			tileX = 16;
+			tileY = 16;
 			tileW = 14;
 			tileH = 11;
 		}
@@ -848,8 +848,8 @@ public class NewPrisonBossLevel extends Level {
 		@Override
 		public void restoreFromBundle(Bundle bundle) {
 			super.restoreFromBundle(bundle);
-			tileX = 11;
-			tileY = 10;
+			tileX = 16;
+			tileY = 12;
 			tileW = 14;
 			tileH = 22;
 		}

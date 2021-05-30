@@ -178,6 +178,10 @@ items.skill.sk2.chargingps.name=_스콜피온 테일(2스킬)_
 items.skill.sk2.chargingps.desc=발동시 사거리 2의 범위 공격을 가해  _힘에 비례한 피해_를 입히고 실명, 불구를 부여합니다. 시전 후 짧은 시간동안 이동속도가 상승합니다.
 items.skill.sk2.chargingps.desc_wnd=발동시 주위 적들에게 피해를 입히고 불구,실명을 겁니다.
 
+items.skill.sk2.neverbackdown.name=_임전무퇴!(2스킬)_
+items.skill.sk2.neverbackdown.desc=발동시 _레벨에 비례한 보호막_을 얻고 가속하여 이동속도가 대폭 상승합니다. 이 상태에서 공격시 큰 피해를 입히고 가속을 종료합니다.
+items.skill.sk2.neverbackdown.desc_wnd=발동시 보호막을 얻고 가속합니다.
+
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
 items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.
 items.skill.sk3.shadowassault.desc_wnd=발동시 목표 지점으로 도약한 후 10번 공격합니다.
@@ -1294,6 +1298,8 @@ items.stones.runestone$placeholder.name=룬석
 
 items.stones.stoneofadvanceguard.name=아방가르드한 돌
 items.stones.stoneofadvanceguard.desc=이 돌에 맞은 대상은 아방가르드한 서버 점검 보상으로 대체됩니다. 강한 적들한텐 무용합니다.
+items.stones.stoneofadvanceguard.hit=점검 보상 200합성옥이 지급됩니다.
+items.stones.stoneofadvanceguard.fail=이렇게나 강한 적을 200합성옥으로 대체하는 건 아방가르드하지 않네요.
 
 items.stones.stoneofaggression.name=공격성의 돌
 items.stones.stoneofaggression.desc=이 돌을 아군이나 적군에게 던지면 짧은 시간동안 주변의 모든 적들이 대상 캐릭터만을 공격하게 할 수 있습니다.\n\n적에게 사용한 경우 이 아츠는 잠깐 동안만 지속되나, 당신이나 아군에게 사용한 경우 훨씬 긴 시간동안 지속됩니다. 강력한 적들은 또한 이 효과에 저항할 것입니다.

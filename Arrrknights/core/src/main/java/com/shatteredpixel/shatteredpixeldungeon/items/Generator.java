@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChan
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
@@ -485,14 +486,15 @@ public class Generator {
 					BookChainHook.class,
 					BookCrimsonCutter.class
 			};
-			SKL_T1.probs = new float[]{ 1, 1, 1 };
+			SKL_T1.probs = new float[]{ 1, 1, 1,1,1 };
 
 			SKL_T2.classes = new Class<?>[]{
 					BookJackinthebox.class,
 					BookRockfailHammer.class,
-					BookChargingPS.class
+					BookChargingPS.class,
+					BookNeverBackDown.class
 			};
-			SKL_T2.probs = new float[]{ 1, 1, 1 };
+			SKL_T2.probs = new float[]{ 1, 1, 1,1 };
 
 			SKL_T3.classes = new Class<?>[]{
 					BookTrueSilverSlash.class,
@@ -508,10 +510,11 @@ public class Generator {
 					BookJackinthebox.class, // 2
 					BookRockfailHammer.class,
 					BookChargingPS.class,
+					BookNeverBackDown.class,
 					BookTrueSilverSlash.class, // 3
 					BookTerminationT.class
 			};
-			SKL_RND.probs = new float[]{ 7, 7, 7, 5, 5, 5, 1, 1, 1 };
+			SKL_RND.probs = new float[]{ 7, 7, 7, 5, 5, 5,5, 1, 1, 1 };
 		}
 	}
 

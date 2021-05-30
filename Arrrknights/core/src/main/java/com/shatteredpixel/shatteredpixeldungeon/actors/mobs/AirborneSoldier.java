@@ -31,7 +31,7 @@ public class AirborneSoldier extends Mob{
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 6, 12 );
+        return Random.NormalIntRange( 3, 9 );
     }
 
     @Override
