@@ -31,6 +31,7 @@ public class Heamyo extends MeleeWeapon {
         image = ItemSpriteSheet.HEAMYO;
 
         tier = 1;
+        ACC = 12000f;
         DLY = 0.1f; //0.67x speed
         RCH = 300;
     }
