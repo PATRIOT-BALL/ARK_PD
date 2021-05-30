@@ -188,7 +188,7 @@ public abstract class Wand extends Item {
 		if (target != Dungeon.hero &&
 				Dungeon.hero.subClass == HeroSubClass.WARLOCK &&
 				//standard 1 - 0.92^x chance, plus 7%. Starts at 15%
-				Random.Float() > (Math.pow(0.92f, (wandLevel*chargesUsed)+1) - 0.07f)){
+				Random.Float() > (Math.pow(0.9f, (wandLevel*chargesUsed)+1) - 0.07f)){
 			SoulMark.prolong(target, SoulMark.class, SoulMark.DURATION + wandLevel);
 		}
 	}
@@ -378,7 +378,7 @@ public abstract class Wand extends Item {
 				&& !Dungeon.hero.belongings.contains(this)) {
 			if (curCharges == 0 && Dungeon.hero.hasTalent(Talent.BACKUP_BARRIER)) {
 				//grants 4/6 shielding
-				Buff.affect(Dungeon.hero, Barrier.class).setShield(2 + 2 * Dungeon.hero.pointsInTalent(Talent.BACKUP_BARRIER));
+				Buff.affect(Dungeon.hero, Barrier.class).setShield(1 + 2 * Dungeon.hero.pointsInTalent(Talent.BACKUP_BARRIER));
 			}
 			if (Dungeon.hero.hasTalent(Talent.EMPOWERED_STRIKE)){
 				Buff.prolong(Dungeon.hero, Talent.EmpoweredStrikeTracker.class, 5f);

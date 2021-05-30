@@ -57,6 +57,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibility;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
@@ -195,7 +196,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		new TomeOfMastery().quantity(1).collect();
 
 		/*
 		BookCrimsonCutter naa;
@@ -327,8 +327,9 @@ public enum HeroClass {
 		
 		/*Heamyo jot;
 		jot = new Heamyo();jot.quantity(1).collect();*/
-
+/*
 		new TomeOfMastery().quantity(1).collect();
+		new PotionOfExperience().quantity(99).collect();*/
 	}
 
 	public String title() {

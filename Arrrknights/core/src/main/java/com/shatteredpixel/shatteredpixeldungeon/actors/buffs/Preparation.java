@@ -72,9 +72,9 @@ public class Preparation extends Buff implements ActionIndicator.Action {
 
 		//1st index is prep level, 2nd is talent level
 		private static final float[][] KOThresholds = new float[][]{
-				{.03f, .04f, .05f, .06f},
-				{.10f, .12f, .14f, .16f},
-				{.20f, .25f, .30f, .35f},
+				{.03f, .04f, .06f, .08f},
+				{.10f, .13f, .16f, .19f},
+				{.20f, .30f, .40f, .50f},
 				{.40f, .60f, .80f, 1.0f}
 		};
 

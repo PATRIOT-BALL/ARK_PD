@@ -598,7 +598,7 @@ public abstract class Mob extends Char {
 			
 			//physical damage that doesn't come from the hero is less effective
 			if (enemy != Dungeon.hero){
-				restoration = Math.round(restoration * 0.15f*Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON));
+				restoration = Math.round(restoration * 0.1f*Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON));
 			}
 			if (restoration > 0) {
 				Buff.affect(Dungeon.hero, Hunger.class).affectHunger(restoration*Dungeon.hero.pointsInTalent(Talent.SOUL_EATER)/3f);
@@ -693,7 +693,7 @@ public abstract class Mob extends Char {
 
 		if (!(this instanceof Wraith_donut)
 				&& soulMarked
-				&& Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.NECROMANCERS_MINIONS)){
+				&& Random.Int(8) < Dungeon.hero.pointsInTalent(Talent.NECROMANCERS_MINIONS)){
 			Wraith_donut w = Wraith_donut.spawnAt(pos);
 			if (w != null) {
 				Buff.affect(w, Corruption.class);
@@ -744,7 +744,7 @@ public abstract class Mob extends Char {
 
 		//bounty hunter talent
 		if (Dungeon.hero.buff(Talent.BountyHunterTracker.class) != null){
-			Dungeon.level.drop(new Gold(10 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+			Dungeon.level.drop(new Gold(8 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
 		}
 
 	}

@@ -226,7 +226,7 @@ public enum Talent {
 
 	public static float itemIDSpeedFactor( Hero hero, Item item ){
 		// 1.75x/2.5x speed with huntress talent
-		float factor = 1f + hero.pointsInTalent(SURVIVALISTS_INTUITION)*0.75f;
+		float factor = 1f + hero.pointsInTalent(SURVIVALISTS_INTUITION);
 
 		// 2x/instant for Warrior (see onItemEquipped)
 		if (item instanceof MeleeWeapon || item instanceof Armor){
