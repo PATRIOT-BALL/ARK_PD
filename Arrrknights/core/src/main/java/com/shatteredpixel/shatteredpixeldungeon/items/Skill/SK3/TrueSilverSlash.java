@@ -24,9 +24,6 @@ import com.watabou.utils.Random;
 public class TrueSilverSlash extends Skill {
     @Override
     public void doSkill() {
-        if (curUser.buff(MindVision.class) != null) {
-            Buff.detach(curUser, MindVision.class);
-        }
 
         curUser.sprite.zap(0);
 

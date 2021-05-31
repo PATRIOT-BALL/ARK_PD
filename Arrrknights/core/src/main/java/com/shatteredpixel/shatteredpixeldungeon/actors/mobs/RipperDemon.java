@@ -57,6 +57,8 @@ public class RipperDemon extends Mob {
 
 		baseSpeed = 1f;
 
+		properties.add(Property.SARKAZ);
+
 	}
 
 	@Override

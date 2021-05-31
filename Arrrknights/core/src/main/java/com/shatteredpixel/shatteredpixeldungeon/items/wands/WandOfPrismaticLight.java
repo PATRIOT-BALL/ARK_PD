@@ -92,7 +92,7 @@ public class WandOfPrismaticLight extends DamageWand {
 			ch.sprite.emitter().burst(Speck.factory(Speck.LIGHT), 6 );
 		}
 
-		if (ch.properties().contains(Char.Property.DEMONIC) || ch.properties().contains(Char.Property.UNDEAD)){
+		if (ch.properties().contains(Char.Property.SARKAZ)){
 			ch.sprite.emitter().start( ShadowParticle.UP, 0.05f, 10+buffedLvl() );
 			Sample.INSTANCE.play(Assets.Sounds.SHINNING);
 

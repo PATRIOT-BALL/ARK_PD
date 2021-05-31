@@ -54,7 +54,6 @@ public class Skeleton extends Mob {
 
 		properties.add(Property.INORGANIC);
 		properties.add(Property.DRONE);
-		immunities.add(Bleeding.class);
 	}
 	
 	@Override

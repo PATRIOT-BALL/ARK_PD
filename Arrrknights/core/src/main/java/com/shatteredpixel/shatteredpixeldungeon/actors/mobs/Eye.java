@@ -62,7 +62,6 @@ public class Eye extends Mob {
 		lootChance = 1f;
 
 		properties.add(Property.DRONE);
-		immunities.add(Bleeding.class);
 	}
 
 	@Override

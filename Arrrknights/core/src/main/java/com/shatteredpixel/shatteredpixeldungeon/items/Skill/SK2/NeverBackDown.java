@@ -31,7 +31,7 @@ public class NeverBackDown extends Skill {
         }
 
         Buff.affect(curUser, LanceCharge.class, 7f);
-        Buff.affect(curUser, Barrier.class).setShield(10 + curUser.lvl * 2);
+        Buff.affect(curUser, Barrier.class).incShield(15 + curUser.lvl * 2);
         Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
         curUser.spendAndNext( 1 );
     }

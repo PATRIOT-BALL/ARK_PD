@@ -103,7 +103,7 @@ public class WandOfTransfusion extends Wand {
 			} else {
 				
 				//charms living enemies
-				if (!ch.properties().contains(Char.Property.UNDEAD)) {
+				if (!ch.properties().contains(Char.Property.DRONE)) {
 					Charm charm = Buff.affect(ch, Charm.class, Charm.DURATION/2f);
 					charm.object = curUser.id();
 					charm.ignoreHeroAllies = true;

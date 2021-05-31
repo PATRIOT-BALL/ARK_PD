@@ -119,7 +119,7 @@ public class Succubus extends Mob {
     @Override
     public void die(Object cause) {
         super.die(cause);
-        if (Random.Int(0, 100) <= 5) {
+        if (Random.Int(0, 100) <= 3) {
             Dungeon.level.drop(Generator.random(Generator.Category.SKL_T2), pos).sprite.drop(pos);
         }
     }

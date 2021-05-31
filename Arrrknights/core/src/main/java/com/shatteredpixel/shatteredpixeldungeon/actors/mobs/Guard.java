@@ -57,6 +57,8 @@ public class Guard extends Mob {
 		lootChance = 0.2f; //by default, see rollToDropLoot()
 		
 		HUNTING = new Hunting();
+
+		properties.add(Property.SARKAZ);
 	}
 
 	@Override
@@ -150,7 +152,7 @@ public class Guard extends Mob {
 	@Override
 	public void die( Object cause ) {
 		super.die(cause);
-		if (Random.Int(0,100) <= 3)
+		if (Random.Int(0,120) <= 1)
 		{
 			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T1), pos ).sprite.drop( pos );
 		}

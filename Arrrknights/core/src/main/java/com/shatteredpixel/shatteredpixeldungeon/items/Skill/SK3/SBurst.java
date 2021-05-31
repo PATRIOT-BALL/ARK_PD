@@ -32,6 +32,6 @@ public class SBurst extends Skill {
                 Buff.affect(mob, Burning.class).reignite(mob);
             }
         }
-        Buff.affect(curUser, SeethingBurst.class, 15);
+        Buff.affect(curUser, SeethingBurst.class, 20);
     }
 }

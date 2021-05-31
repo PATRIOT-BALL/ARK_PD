@@ -71,6 +71,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAugmentation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
@@ -198,7 +199,6 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
-		new BookCoverSmoke().collect();
 
 		StaffOfBreeze STT;
 		STT = new StaffOfBreeze();
@@ -206,7 +206,8 @@ public enum HeroClass {
 		STT.gainCharge(6);
 		STT.quantity(1).collect();
 
-		new PotionOfLiquidFlame().quantity(5).collect();
+	/*	new PotionOfLiquidFlame().quantity(5).collect();
+		new ScrollOfEnchantment().quantity(999).collect();*/
 
 /*
 		new TomeOfMastery().quantity(1).collect();
@@ -341,7 +342,7 @@ public enum HeroClass {
 		new DewVial().collect();
 		
 		/*Heamyo jot;
-		jot = new Heamyo();jot.quantity(1).collect();*/
+		jot = new Heamyo();jot.quantity(1).collect();/*
 /*
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();*/

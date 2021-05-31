@@ -98,6 +98,9 @@ public class StaffOfMudrock extends DamageWand {
                 ch.sprite.centerEmitter().burst(MagicMissile.EarthParticle.BURST, 5 + buffedLvl()/2);
 
                 processSoulMark(ch, chargesPerCast());
+                if (ch.properties().contains(Char.Property.SARKAZ) == true) {
+                    damage *= 1.5f;
+                }
                 ch.damage(damage, this);
 
                 int closest = -1;
@@ -142,6 +145,9 @@ public class StaffOfMudrock extends DamageWand {
                 ch.sprite.centerEmitter().burst(MagicMissile.EarthParticle.BURST, 5 + buffedLvl() / 2);
 
                 processSoulMark(ch, chargesPerCast());
+                if (ch.properties().contains(Char.Property.SARKAZ) == true) {
+                    damage *= 1.5f;
+                }
                 ch.damage(damage, this);
                 Sample.INSTANCE.play( Assets.Sounds.HIT_MAGIC, 1, 0.8f * Random.Float(0.87f, 1.15f) );
 

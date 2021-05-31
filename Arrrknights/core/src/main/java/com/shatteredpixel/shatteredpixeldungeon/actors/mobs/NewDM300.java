@@ -99,6 +99,7 @@ public class NewDM300 extends Mob {
         defenseSkill = 15;
 
         properties.add(Property.BOSS);
+        properties.add(Property.SARKAZ);
         properties.add(Property.INORGANIC);
         properties.add(Property.LARGE);
     }
