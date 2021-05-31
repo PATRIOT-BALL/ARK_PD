@@ -597,7 +597,7 @@ public class Hero extends Char {
         float spup = 0f;
         Berserk berserk = buff(Berserk.class);
         if (berserk != null)
-            spup = (berserk.getPower() / 1.3f) + Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 20;
+            spup = berserk.getPower() / 1.3f;
         if (spup > 0.3f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5))
             spup = 0.5f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
 

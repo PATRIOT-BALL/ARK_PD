@@ -203,7 +203,7 @@ public class Berserk extends Buff {
 	public String desc() {
 		float dispDamage = (damageFactor(10000) / 100f) - 100f;
 		float dispSpeed = ((damageFactor(10000) / 100) - 100f) / 1.3f;
-		if (dispSpeed > 30 + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) * 2)) dispSpeed = 30 + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) * 2);
+		if (dispSpeed > 30 + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) * 20)) dispSpeed = 30 + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) * 20);
 		switch (state){
 			case NORMAL: default:
 				return Messages.get(this, "angered_desc", Math.floor(power * 100f), dispDamage, dispSpeed);
