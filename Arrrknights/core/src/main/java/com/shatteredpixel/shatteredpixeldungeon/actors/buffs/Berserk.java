@@ -42,7 +42,7 @@ public class Berserk extends Buff {
 	}
 	private State state = State.NORMAL;
 
-	private static final float LEVEL_RECOVER_START = 5f;
+	private static final float LEVEL_RECOVER_START = 5.5f;
 	private float levelRecovery;
 	
 	private float power = 0;
