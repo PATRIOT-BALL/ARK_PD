@@ -338,6 +338,8 @@ public class Assets {
 		public static final String LENS	= "sprites/lens.png";
 		public static final String FANATIC	= "sprites/fanatic.png";
 		public static final String AIRBORNE	= "sprites/airborne.png";
+		public static final String URSUS_INFANTRI	= "sprites/Ursus_Infantri.png";
+		public static final String SARKAZ_SWARDMAN	= "sprites/Sarkaz_Swordsman.png";
 		public static final String SARKAZ_SNIPER	= "sprites/Sarkaz_Sniper.png";
 		public static final String SARKAZ_SNIPER_E	= "sprites/Sarkaz_Sniper_E.png";
 		public static final String LANCER	= "sprites/Lancer.png";

@@ -46,7 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.LarvaSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Ursus_InfantrySprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.YogSprite;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
@@ -495,7 +495,7 @@ public class YogDzewa extends Mob {
 	public static class Larva extends Mob {
 
 		{
-			spriteClass = LarvaSprite.class;
+			spriteClass = Ursus_InfantrySprite.class;
 
 			HP = HT = 20;
 			defenseSkill = 12;

@@ -39,7 +39,7 @@ public class LancerSprite extends MobSprite {
         run = new Animation( 18, true );
         run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
-        attack = new Animation( 19, false );
+        attack = new Animation( 12, false );
         attack.frames( frames, 1, 9, 1, 9, 1 );
 
         die = new Animation( 10, false );
