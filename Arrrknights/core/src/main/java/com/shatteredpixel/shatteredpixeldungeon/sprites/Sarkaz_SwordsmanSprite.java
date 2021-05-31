@@ -37,7 +37,7 @@ public class Sarkaz_SwordsmanSprite extends MobSprite {
     public Sarkaz_SwordsmanSprite() {
         super();
 
-        texture( Assets.Sprites.RIPPER );
+        texture( Assets.Sprites.SARKAZ_SWARDMAN );
 
         TextureFilm frames = new TextureFilm( texture, 32, 32 );
 
