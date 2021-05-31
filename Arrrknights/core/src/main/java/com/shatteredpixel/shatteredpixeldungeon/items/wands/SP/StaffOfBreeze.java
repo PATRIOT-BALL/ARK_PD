@@ -42,7 +42,7 @@ public class StaffOfBreeze extends Wand {
 
     @Override
     protected void onZap(Ballistica bolt) {
-        HealingGas gas = Blob.seed(bolt.collisionPos, 30 + 10 * buffedLvl(), HealingGas.class);
+        HealingGas gas = Blob.seed(bolt.collisionPos, 30 + 10 * (buffedLvl() * 2), HealingGas.class);
         CellEmitter.get(bolt.collisionPos).burst(Speck.factory(Speck.HEALING), 10 );
         gas.setStrength(1);
         GameScene.add(gas);

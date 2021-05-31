@@ -59,7 +59,7 @@ public class StaffOfLeaf extends DamageWand {
             if (ch.buff(Chill.class) != null){
                 //6.67% less damage per turn of chill remaining, to a max of 10 turns (50% dmg)
                 float chillturns = Math.min(10, ch.buff(Chill.class).cooldown());
-                damage = (int)Math.round(damage * Math.pow(1.0335f, chillturns));
+                damage = (int)Math.round(damage * Math.pow(1.0525f, chillturns));
             } else {
                 ch.sprite.burst( 0xFF99CCFF, buffedLvl() / 2 + 2 );
             }
@@ -70,11 +70,11 @@ public class StaffOfLeaf extends DamageWand {
 
             if (ch.isAlive()){
                 if (Dungeon.level.water[ch.pos])
-                    Buff.affect(ch, Chill.class, 4+buffedLvl());
+                    Buff.affect(ch, Chill.class, 5+buffedLvl());
                 else
-                    Buff.affect(ch, Chill.class, 2+buffedLvl());
+                    Buff.affect(ch, Chill.class, 3+buffedLvl());
                 if (ch.buff(Chill.class).cooldown() > 35) {
-                    Buff.affect(ch, Frost.class, 1+buffedLvl());
+                    Buff.affect(ch, Frost.class, 2+(buffedLvl() / 2));
                     Buff.detach(ch, Chill.class);
                 }
             }

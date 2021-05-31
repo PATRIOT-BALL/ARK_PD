@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
@@ -42,7 +43,7 @@ public class StaffOfShining extends DamageWand {
     }
 
     public int max(int lvl){
-        return 5+3*lvl;
+        return 3 +2*lvl;
     }
 
     @Override
@@ -66,7 +67,7 @@ public class StaffOfShining extends DamageWand {
         int Blinddmg;
 
         if (ch.buff(Blindness.class) == null) Blinddmg = 0;
-        else Blinddmg = 3 + buffedLvl();
+        else Blinddmg = 4 + buffedLvl();
 
         //three in (5+lvl) chance of failing
         if (Random.Int(5+buffedLvl()) >= 3) {
@@ -77,12 +78,12 @@ public class StaffOfShining extends DamageWand {
         if (ch.properties().contains(Char.Property.DEMONIC) || ch.properties().contains(Char.Property.UNDEAD)){
             ch.sprite.emitter().start( ShadowParticle.UP, 0.05f, 10+buffedLvl() );
             Sample.INSTANCE.play(Assets.Sounds.SHINNING);
-
-            ch.damage(Math.round((dmg + Blinddmg)*1.333f), this);
+            ch.damage(Math.round(dmg * 1.333f), this);
         } else {
             ch.sprite.centerEmitter().burst( RainbowParticle.BURST, 10+buffedLvl() );
 
-            ch.damage(dmg+Blinddmg, this);
+            ch.damage(dmg, this);
+            Buff.affect(curUser, Barrier.class).incShield(Blinddmg);
         }
 
     }

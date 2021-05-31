@@ -74,8 +74,10 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAugmentation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
@@ -198,6 +200,14 @@ public enum HeroClass {
 		new DewVial().collect();
 		new BookCoverSmoke().collect();
 
+		StaffOfBreeze STT;
+		STT = new StaffOfBreeze();
+		STT.level(3);
+		STT.gainCharge(6);
+		STT.quantity(1).collect();
+
+		new PotionOfLiquidFlame().quantity(5).collect();
+
 /*
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();
@@ -246,11 +256,6 @@ public enum HeroClass {
 		SK = new StaffKit();
 		SK.quantity(3).collect();
 
-		StaffOfMayer STT;
-		STT = new StaffOfMayer();
-		STT.level(8);
-		STT.gainCharge(9);
-		STT.quantity(1).collect();
 		*/
 
 	}
