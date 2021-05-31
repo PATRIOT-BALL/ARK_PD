@@ -294,7 +294,7 @@ public class StaffOfMudrock extends DamageWand {
         private void setInfo(Hero hero, int wandLevel, int healthToAdd){
             if (wandLevel > this.wandLevel) {
                 this.wandLevel = wandLevel;
-                HT = 22 + 8 * wandLevel;
+                HT = 22 + 9 * wandLevel;
             }
             HP = Math.min(HT, HP + healthToAdd);
             //half of hero's evasion
@@ -315,7 +315,7 @@ public class StaffOfMudrock extends DamageWand {
 
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange(2, 4 + Dungeon.depth/2);
+            return Random.NormalIntRange(4, 7 + Dungeon.depth/2);
         }
 
         @Override
