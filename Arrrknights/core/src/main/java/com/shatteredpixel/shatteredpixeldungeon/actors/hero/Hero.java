@@ -78,6 +78,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.CoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
@@ -595,8 +596,10 @@ public class Hero extends Char {
 
         float spup = 0f;
         Berserk berserk = buff(Berserk.class);
-        if (berserk != null) spup = (berserk.getPower() / 1.3f) + Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA)/20;
-        if (spup > 0.3f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5)) spup = 0.5f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA)/5);
+        if (berserk != null)
+            spup = (berserk.getPower() / 1.3f) + Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 20;
+        if (spup > 0.3f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5))
+            spup = 0.5f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
 
         return speed + spup;
 
@@ -2095,6 +2098,8 @@ public class Hero extends Char {
             SK2 = new ChargingPS();
         } else if (SkillNumber == 8) {
             SK2 = new NeverBackDown();
+        } else if (SkillNumber == 9) {
+            SK2 = new CoverSmoke();
         } else SK2 = null;
     }
 

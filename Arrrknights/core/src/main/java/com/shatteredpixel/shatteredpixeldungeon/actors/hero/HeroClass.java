@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStri
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
@@ -195,6 +196,7 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
+		new BookCoverSmoke().collect();
 
 /*
 		new TomeOfMastery().quantity(1).collect();
