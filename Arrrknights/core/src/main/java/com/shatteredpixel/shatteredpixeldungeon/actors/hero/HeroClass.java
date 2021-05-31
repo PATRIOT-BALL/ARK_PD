@@ -200,12 +200,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		StaffOfBreeze STT;
-		STT = new StaffOfBreeze();
-		STT.level(3);
-		STT.gainCharge(6);
-		STT.quantity(1).collect();
-
 	/*	new PotionOfLiquidFlame().quantity(5).collect();
 		new ScrollOfEnchantment().quantity(999).collect();*/
 
