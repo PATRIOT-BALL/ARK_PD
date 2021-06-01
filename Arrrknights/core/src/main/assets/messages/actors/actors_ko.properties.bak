@@ -986,7 +986,7 @@ actors.mobs.yog$larva.desc=요그-제바는 고대의 신이며, 혼돈의 땅�
 
 actors.mobs.yogdzewa.name=탈룰라?
 actors.mobs.yogdzewa.notice=결론을 내리기 전에 네 목숨부터 지켜야 할 거다.
-actors.mobs.yogdzewa.phase2="나는 소금기 가득한 평원가 피 흘리는 계곡을 지났지만, 죽지 않았다."
+actors.mobs.yogdzewa.phase2="나는 소금기 가득한 평원과 피 흘리는 계곡을 지났지만, 죽지 않았다."
 actors.mobs.yogdzewa.phase3="그의 검, 그의 땅, 그의 신하, 모두가 날 호위했기 때문이다."
 actors.mobs.yogdzewa.phase4=하지만, 장난은 여기까지다.
 actors.mobs.yogdzewa.phase4_end=인정하지. 이번만큼은 자신들의 승리를 마음껏 축하해도 좋아.
