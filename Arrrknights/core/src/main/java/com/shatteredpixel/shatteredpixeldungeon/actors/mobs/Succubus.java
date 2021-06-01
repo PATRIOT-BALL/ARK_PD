@@ -84,6 +84,7 @@ public class Succubus extends Mob {
     public int attackProc(Char enemy, int damage) {
         damage = super.attackProc(enemy, damage);
         ASPlus = 0;
+        Buff.detach(this, Acceleration.class);
 
         return damage;
     }
