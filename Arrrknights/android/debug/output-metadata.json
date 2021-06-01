@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.shatteredpixel.tomorrowpixel.indev",
+  "variantName": "processDebugResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 533,
+      "versionName": "0.1.2t-INDEV",
+      "outputFile": "android-debug.apk"
+    }
+  ]
+}
