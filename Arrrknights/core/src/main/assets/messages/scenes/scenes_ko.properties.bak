@@ -61,7 +61,8 @@ scenes.introscene.text=수많은 대원들이 당신에 앞서 이동도시 체�
 scenes.newsscene.title=게임 소식
 scenes.newsscene.read_more1=디자이너 픽시브
 scenes.newsscene.read_more2=개발노트 확인
-scenes.newsscene$newsinfo.english_warn=새로운 소식은 개발자가 작성하며 한글로만 작성됩니다.
+scenes.newsscene.read_more3=설문조사
+scenes.newsscene$newsinfo.english_warn=게임 소식은 개발자가 작성하며 한글로만 작성됩니다.
 scenes.newsscene$newsinfo.metered_network=당신이 지금 모바일 데이터와 같은 요금제 네트워크에 연결되어 있어서, 새로운 소식을 확인할 수 없었습니다.
 scenes.newsscene$newsinfo.enable_data=모바일 데이터 확인
 scenes.newsscene$newsinfo.no_internet=새로운 소식을 확인할 수 없었습니다. 인터넷에 연결되어 있는지 확인해 주세요.
@@ -81,7 +82,7 @@ scenes.supporterscene.title=미안..사실 여기 그런건 없어
 scenes.supporterscene.intro=사실 이건 알사람은 알텐데 후원 페이지거든
 scenes.supporterscene.patreon_msg=근데 이거 2차창작겜이기도 하고 돈 받으면 안될거같애 \n근데 우리한테 수입원이 있으면 좀더 작업이 수월해지긴 하겠지?\n\n 아직까진 모르겠는데 툴박스같은 명빵소스 이용하는곳도 후원 받는거 보면 받아도 될거같긴 해\n\n 만약 후원받는거 된다면 보상은 스킨같은걸 넣지 않을까 싶어\n솔직히 UI 색 바뀌는거보단 플레이어 이미지 자체가 바뀌는거 더 좋아하잖아 무려 서리별이랑 패트리어트를 플레이어블로 만나볼수있다구\n\n그리고 게임은 차후 구글플레이에 업로드될 예정임
 scenes.supporterscene.patreon_english=원래 이거 _아래 버튼_ 패트론 후원버튼인데 딱히 넣을건 없어서 _게임 설문조사 링크_ 넣었음 온김에 쓰고가줘
-scenes.supporterscene.supporter_link=아 독타!!!!!!
+scenes.supporterscene.supporter_link=밥 사주러가기
 
 scenes.surfacescene.exit=게임 오버
 
@@ -106,7 +107,7 @@ scenes.titlescene.patreon_button=Patreon 페이지로 이동
 
 scenes.welcomescene.welcome_msg=Tomorrow`s RogueNight는 무작위로 출현하는 적들과 아이템, 그리고함정이 도사리고 있는 던전을 돌파하는 로그라이크 RPG입니다!\n\n매 플레이마다 새로운 도전이 기다리고 있습니다. 하지만 조심하세요. 한번 죽으면 그걸로 끝이니까요!\n\n즐거운 플레이 되십시오!
 scenes.welcomescene.update_intro=Tomorrow`s RogueNight가 업데이트되었습니다!
-scenes.welcomescene.update_msg=v0.9.2에서는 세부 전직과 상호작용하며 가장 핵심적인 효과를 담은 3단계 특성을 도입했습니다!\n\n또한 여러 직업과 세부 전직의 밸런스 변경이 다수 있으며, 감옥 후반 이후의 적들에 대한 밸런스 조정도 진행했습니다.\n\n전체 세부 내용을 확인하기 위해 변경사항을 꼭 확인해보시기 바랍니다.
+scenes.welcomescene.update_msg=Test v0.1.2에서는 아츠 스태프 개조 시스템과 새로운 스킬들, 일부 몬스터의 추가&변경과 보스 패턴 추가 등이 있었습니다. 자세한 사항은 개발노트나 Hypergryph갤러리의 게시글을 참조해주세요!
 scenes.welcomescene.patch_intro=Tomorrow`s RogueNight가 패치되었습니다!
 scenes.welcomescene.patch_bugfixes=버그 수정이 있습니다.
 scenes.welcomescene.patch_translations=번역 업데이트가 있습니다.

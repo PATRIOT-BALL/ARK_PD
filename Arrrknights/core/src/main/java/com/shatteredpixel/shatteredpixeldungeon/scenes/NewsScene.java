@@ -90,6 +90,15 @@ public class NewsScene extends PixelScene {
 				DeviceCompat.openURI(link);
 			}
 		};
+		StyledButton btnSite3 = new StyledButton(Chrome.Type.GREY_BUTTON_TR, Messages.get(this, "read_more3")){
+			@Override
+			protected void onClick() {
+				super.onClick();
+				String link = "https://docs.google.com/forms/d/1zWwdN87nAG8YsikZHPl7HBLYc83JKjKcAYz_zyHNrJ8";
+				//tracking codes, so that the website knows where this pageview came from
+				DeviceCompat.openURI(link);
+			}
+		};
 		btnSite.icon(Icons.get(Icons.ALEKS));
 		btnSite.textColor(Window.TITLE_COLOR);
 		btnSite.setRect(left, top, fullWidth, BTN_HEIGHT);
@@ -99,6 +108,10 @@ public class NewsScene extends PixelScene {
 		btnSite2.textColor(Window.TITLE_COLOR);
 		btnSite2.setRect(left, top*4, fullWidth, BTN_HEIGHT);
 		add(btnSite2);
+
+		btnSite3.textColor(Window.TITLE_COLOR);
+		btnSite3.setRect(left, top*7, fullWidth, BTN_HEIGHT);
+		add(btnSite3);
 
 	}
 
