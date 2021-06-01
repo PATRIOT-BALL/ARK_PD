@@ -11,11 +11,11 @@ buildscript {
 allprojects {
 
     ext {
-        appName = 'tomorrow Pixel Dungeon'
+        appName = '명픽던!'
         appPackageName = 'com.shatteredpixel.tomorrowpixel'
 
-        appVersionCode = 533
-        appVersionName = '0.1.2t'
+        appVersionCode = 534
+        appVersionName = '0.1.2b'
 
         appJavaCompatibility = JavaVersion.VERSION_1_8
 
