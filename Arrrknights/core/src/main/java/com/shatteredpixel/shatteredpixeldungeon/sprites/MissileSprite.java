@@ -98,10 +98,9 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		ANGULAR_SPEEDS.put(Trident.class,       0);
 		
 		ANGULAR_SPEEDS.put(SpiritBow.SpiritArrow.class,       0);
-		ANGULAR_SPEEDS.put(ScorpioSprite.ScorpioShot.class,   0);
-		
-		//720 is default
-		
+		ANGULAR_SPEEDS.put(SarkazSniperSprite.ScorpioShot.class,   0);
+		ANGULAR_SPEEDS.put(SarkazSniperEliteSprite.ScorpioShot.class,   0);
+
 		ANGULAR_SPEEDS.put(HeavyBoomerang.class,1440);
 		ANGULAR_SPEEDS.put(Bolas.class,         1440);
 		

@@ -140,7 +140,7 @@ public class YogDzewa extends Mob {
 		}
 
 		if (phase == 4 && findFist() == null){
-			yell(Messages.get(this, "hope"));
+			yell(Messages.get(this, "phase4_end"));
 			summonCooldown = -15; //summon a burst of minions!
 			phase = 5;
 		}
@@ -318,7 +318,10 @@ public class YogDzewa extends Mob {
 			phase++;
 
 			updateVisibility(Dungeon.level);
-			GLog.n(Messages.get(this, "darkness"));
+			if (phase == 2)
+			GLog.n(Messages.get(this, "phase2"));
+			else if (phase == 3) GLog.n(Messages.get(this, "phase3"));
+			else if (phase == 4)  GLog.n(Messages.get(this, "phase4"));
 			sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "invulnerable"));
 
 			YogFist fist = (YogFist) Reflection.newInstance(fistSummons.remove(0));

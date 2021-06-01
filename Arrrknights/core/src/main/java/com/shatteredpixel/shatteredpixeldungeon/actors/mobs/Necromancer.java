@@ -107,7 +107,7 @@ public class Necromancer extends Mob {
 		}
 		
 		super.die(cause);
-			if (Random.Int(0,150) <= 1)
+			if (Random.Int(0,110) <= 1)
 			{
 				Dungeon.level.drop(Generator.random(Generator.Category.SKL_T1), pos ).sprite.drop( pos );
 			}

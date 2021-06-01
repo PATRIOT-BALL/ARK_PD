@@ -152,7 +152,7 @@ public class Guard extends Mob {
 	@Override
 	public void die( Object cause ) {
 		super.die(cause);
-		if (Random.Int(0,120) <= 1)
+		if (Random.Int(0,100) <= 1)
 		{
 			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T1), pos ).sprite.drop( pos );
 		}

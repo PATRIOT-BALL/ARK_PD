@@ -45,7 +45,7 @@ public class Slime extends Mob {
 		maxLvl = 9;
 
 		loot = Generator.Category.SKL_T1;
-		lootChance = 0.004f;
+		lootChance = 0.007f;
 	}
 	
 	@Override

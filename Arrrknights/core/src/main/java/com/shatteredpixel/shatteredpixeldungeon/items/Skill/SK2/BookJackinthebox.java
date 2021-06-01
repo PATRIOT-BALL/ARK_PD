@@ -33,7 +33,7 @@ public class BookJackinthebox extends Item {
             detach(hero.belongings.backpack);
 
             hero.SK2 = new Jackinthebox();
-            hero.SetSkill2Num(6);
+            hero.SetSkill2Num(5);
         }
 
 

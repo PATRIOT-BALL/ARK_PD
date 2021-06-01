@@ -94,7 +94,7 @@ public class ScorpioSprite extends MobSprite {
 	
 	public class ScorpioShot extends Item {
 		{
-			image = ItemSpriteSheet.FISHING_SPEAR;
+			image = ItemSpriteSheet.DART;
 		}
 	}
 }

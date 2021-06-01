@@ -37,7 +37,6 @@ public class HealingGas extends Blob {
                 for (int j = area.top; j < area.bottom; j++) {
                     cell = i + j * Dungeon.level.width();
                     if (cur[cell] > 0 && (ch = Actor.findChar(cell)) != null) {
-                        if (ch != Dungeon.hero) {
                             Buff.affect(ch, Healing.class).setHeal(1, 1f, 1);
                             switch (bb) {
                                 case 1:
@@ -56,7 +55,7 @@ public class HealingGas extends Blob {
                                     Buff.detach(ch, Bleeding.class); // 출혈 제거
                                     break;
                                 default:
-                                    break; } } } } } } }
+                                    break; } } } } } }
 
     public HealingGas setStrength(int str) {
         if (str > strength) {

@@ -28,11 +28,11 @@ public class StaffOfLeaf extends DamageWand {
     }
 
     public int min(int lvl){
-        return 1+lvl;
+        return 1;
     }
 
     public int max(int lvl){
-        return 5+4*lvl;
+        return 5+5*lvl;
     }
 
     @Override
@@ -73,10 +73,6 @@ public class StaffOfLeaf extends DamageWand {
                     Buff.affect(ch, Chill.class, 5+buffedLvl());
                 else
                     Buff.affect(ch, Chill.class, 3+buffedLvl());
-                if (ch.buff(Chill.class).cooldown() > 35) {
-                    Buff.affect(ch, Frost.class, 2+(buffedLvl() / 2));
-                    Buff.detach(ch, Chill.class);
-                }
             }
         } else {
             Dungeon.level.pressCell(bolt.collisionPos);
