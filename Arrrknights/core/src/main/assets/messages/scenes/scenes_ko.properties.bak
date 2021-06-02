@@ -71,7 +71,7 @@ scenes.newsscene$newsinfo.enable_news=새로운 소식 활성화
 
 scenes.rankingsscene.title=정예 오퍼레이터
 scenes.rankingsscene.total=총 작전 횟수:
-scenes.rankingsscene.no_games=아직 한 번도 게 않았습니다.
+scenes.rankingsscene.no_games=아직 한 번도 작전을 진행하지 않았습니다.
 scenes.rankingsscene.no_info=추가 정보가 없습니다.
 
 scenes.startscene.title=게임 진행 중
