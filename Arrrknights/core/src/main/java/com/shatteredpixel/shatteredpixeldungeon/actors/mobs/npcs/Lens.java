@@ -28,7 +28,7 @@ public class Lens extends NPC {
 
     public Lens() {
         super();
-        HP = 30;
+        HP = 45;
         defenseSkill = 5 + Dungeon.hero.lvl;
     }
 

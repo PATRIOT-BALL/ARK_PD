@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Sentinel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ghost;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Ripple;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
@@ -41,6 +42,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.traps.WornDartTrap;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.particles.Emitter;
@@ -55,7 +57,7 @@ public class SewerLevel extends RegularLevel {
 		color1 = 0x48763c;
 		color2 = 0x59994a;
 	}
-	
+
 	@Override
 	protected int standardRooms(boolean forceMax) {
 		if (forceMax) return 7;
@@ -115,6 +117,7 @@ public class SewerLevel extends RegularLevel {
 		}
 
 		Ghost.Quest.spawn( this );
+		//Sentinel.spawn(this);
 		
 		super.createItems();
 	}
