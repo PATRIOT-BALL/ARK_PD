@@ -29,21 +29,21 @@ public class AvengerSprite extends MobSprite {
 	public AvengerSprite() {
 		super();
 		
-		texture( Assets.Sprites.AVENGER );
+		texture( Assets.Sprites.RIVENGER );
 		
 		TextureFilm frames = new TextureFilm( texture, 46, 32 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, 11 );
+		idle.frames( frames, 51 );
 		
 		run = new Animation( 12, true );
-		run.frames( frames, 11 );
+		run.frames( frames, 51 );
 		
 		attack = new Animation( 17, false );
-		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 );
+		attack.frames( frames, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 );
 		
 		die = new Animation( 12, false );
-		die.frames( frames, 11 );
+		die.frames( frames, 5a1 );
 		
 		play( idle );
 	}
