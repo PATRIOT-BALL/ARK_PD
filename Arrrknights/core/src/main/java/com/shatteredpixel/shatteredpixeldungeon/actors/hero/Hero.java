@@ -568,7 +568,7 @@ public class Hero extends Char {
         if (berserk != null) dmg = berserk.damageFactor(dmg);
 
         if (this.buff(LanceCharge.class) != null) {
-            dmg *= 5f;
+            dmg *= 3f;
             Buff.detach(this, LanceCharge.class);
         }
 

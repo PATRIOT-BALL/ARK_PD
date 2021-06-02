@@ -76,7 +76,7 @@ public class Succubus extends Mob {
     @Override
     public int damageRoll() {
 
-        if (ASPlus != 0) return Random.NormalIntRange(25, 35 + ASPlus);
+        if (ASPlus != 0) return Random.NormalIntRange(25, 40 + ASPlus);
         else return Random.NormalIntRange(18, 28 + ASPlus);
     }
 
@@ -90,16 +90,11 @@ public class Succubus extends Mob {
     }
 
     @Override
-    protected boolean act() {
+    public void move(int step) {
+        super.move(step);
         if (state == HUNTING && buff(Acceleration.class) == null) {
             Buff.affect(this, Acceleration.class, 15f);
         }
-        return super.act();
-    }
-
-    @Override
-    public void move(int step) {
-        super.move(step);
         if (buff(Acceleration.class) != null) ASPlus += 3;
         if (ASPlus > 30) ASPlus = 30;
     }

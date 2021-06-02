@@ -663,7 +663,7 @@ actors.mobs.npcs.lens.t4=타임 랩스~!
 ###miniboss
 
 actors.mobs.miniboss.sentinel.name=살카즈 보초
-actors.mobs.miniboss.sentinel.desc=부대 전체의 정찰을 담당하며, 순찰과 경비 임무를 주로 맡는 살카즈 용병. _대원에게 직접적으로 공격_을 받았을 때 층 내의 모든 적들에게 경고를 보내 버프를 부여하고 자신의 위치로 불러온다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
+actors.mobs.miniboss.sentinel.desc=부대 전체의 정찰을 담당하며, 순찰과 경비 임무를 주로 맡는 살카즈 용병. _대원에게 직접적인 공격_을 받았을 때 층 내의 모든 적들에게 경고를 보내 버프를 부여하고 자신의 위치로 불러온다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
 actors.mobs.miniboss.sentinel.hit=살카즈 보초가 이 층 내의 모든 적들에게 경고를 보냈다!
 actors.mobs.miniboss.sentinel.die=살카즈 저주술사와 탈룰라의 힘이 약해지는 것이 느껴졌다.
 
