@@ -55,10 +55,10 @@ public class WolfPack extends Skill {
 
                         for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                             if (Dungeon.level.adjacent(mob.pos, curUser.pos) && mob.alignment != Char.Alignment.ALLY) {
-                                dohit(mob);
                                 Buff.prolong( mob, Paralysis.class, 2 );
                                 if (mob.state == mob.HUNTING) mob.state = mob.WANDERING;
                                 mob.sprite.emitter().burst( Speck.factory( Speck.LIGHT ), 4 );
+                                dohit(mob);
                             }
                         }
                         Camera.main.shake(2, 0.5f);

@@ -335,8 +335,8 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		
-		//Heamyo jot;
-		//jot = new Heamyo();jot.quantity(1).collect();
+		Heamyo jot;
+		jot = new Heamyo();jot.quantity(1).collect();
 /*
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();*/

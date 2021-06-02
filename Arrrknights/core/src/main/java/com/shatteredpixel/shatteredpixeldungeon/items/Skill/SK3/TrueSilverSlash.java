@@ -38,7 +38,7 @@ public class TrueSilverSlash extends Skill {
         Camera.main.shake(2, 0.5f);
 
         Buff.affect(curUser, Vulnerable.class,50);
-        Buff.affect(curUser, Degrade.class,50);
+        Buff.affect(curUser, Degrade.class,25);
 
         Invisibility.dispel();
         identify();

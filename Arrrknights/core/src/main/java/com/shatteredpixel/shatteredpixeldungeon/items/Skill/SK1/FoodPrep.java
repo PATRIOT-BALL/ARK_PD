@@ -41,11 +41,11 @@ public class FoodPrep extends Skill {
                 Char mob = Actor.findChar(target);
                 if (mob != null) {
                     int dmg = Random.NormalIntRange(3,8);
-                    mob.damage(dmg, mob);
                     mob.sprite.emitter().burst( ElmoParticle.FACTORY, 5 );
                     Buff.affect(mob, Burning.class).reignite(mob);
                     Dungeon.level.drop( new ChargrilledMeat(), mob.pos ).sprite.drop( mob.pos );
                     curUser.sprite.showStatus( CharSprite.POSITIVE, Messages.get(Hero.class, Random.element( LINE_KEYS )) );
+                    mob.damage(dmg, mob);
                 }
                 curUser.sprite.zap(targetCell);
                 curUser.spendAndNext(1);

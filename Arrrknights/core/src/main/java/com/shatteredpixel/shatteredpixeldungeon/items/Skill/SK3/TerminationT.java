@@ -121,10 +121,10 @@ public class TerminationT extends Skill {
             Ballistica trajectory = new Ballistica(curUser.pos, enemy.pos, Ballistica.STOP_TARGET);
             trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size()-1), Ballistica.PROJECTILE);
             int dmg = Random.NormalIntRange(35 + (curUser.STR() * 5), 50 + (curUser.STR() * 5) + (enemy.HT / 5));
-            enemy.damage(dmg, enemy);
             WandOfBlastWave.throwChar(enemy, trajectory, 4); // 넉백 효과
             Buff.prolong( enemy, Vulnerable.class, 600 );
             Buff.prolong( enemy, Paralysis.class, 1 );
+            enemy.damage(dmg, enemy);
         }
     }
 

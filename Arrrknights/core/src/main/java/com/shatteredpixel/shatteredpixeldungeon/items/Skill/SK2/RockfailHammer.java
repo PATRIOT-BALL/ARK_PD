@@ -29,9 +29,9 @@ public class RockfailHammer extends Skill {
                 Ballistica trajectory = new Ballistica(curUser.pos, mob.pos, Ballistica.STOP_TARGET);
                 trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
                 WandOfBlastWave.throwChar(mob, trajectory, 2); // 넉백 효과
-                dohit(mob);
                 Buff.prolong(mob, Paralysis.class, 2);
                 Buff.prolong(mob, Vertigo.class, 7);
+                dohit(mob);
             }
         }
 
