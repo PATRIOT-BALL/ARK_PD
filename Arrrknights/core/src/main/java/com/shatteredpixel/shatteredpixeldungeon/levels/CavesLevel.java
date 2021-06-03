@@ -22,7 +22,10 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.BloodMagister;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Centurion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.CavesPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -84,7 +87,15 @@ public class CavesLevel extends RegularLevel {
 				.setGrass(feeling == Feeling.GRASS ? 0.65f : 0.15f, 3)
 				.setTraps(nTraps(), trapClasses(), trapChances());
 	}
-	
+
+	@Override
+	protected void createItems() {
+
+		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) BloodMagister.spawn(this);
+
+		super.createItems();
+	}
+
 	@Override
 	public String tilesTex() {
 		return Assets.Environment.TILES_CAVES;

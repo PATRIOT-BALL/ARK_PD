@@ -98,7 +98,7 @@ public enum Languages {
 			if (lang.code().equals(code))
 				return lang;
 		}
-		return ENGLISH;
+		return KOREAN;
 	}
 
 }

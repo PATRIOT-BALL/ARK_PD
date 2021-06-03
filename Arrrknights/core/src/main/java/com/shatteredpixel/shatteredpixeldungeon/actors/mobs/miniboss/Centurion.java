@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Necromancer;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Skeleton;
@@ -55,6 +56,10 @@ public class Centurion extends Mob {
         return Random.NormalIntRange(4, 16);
     }
 
+    @Override
+    public int attackSkill( Char target ) {
+        return 12;
+    }
 
     @Override
     public int drRoll() {
@@ -167,9 +172,9 @@ public class Centurion extends Mob {
 
         @Override
         public void die(Object cause) {
-            super.die(cause);
             GLog.w(Messages.get(Centurion.class, "die"));
             Dungeon.mboss9 = 0;
+            super.die(cause);
         }
     }
 }

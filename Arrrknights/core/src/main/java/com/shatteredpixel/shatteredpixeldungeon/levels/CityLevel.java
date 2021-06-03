@@ -22,7 +22,10 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.BloodMagister;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Faust;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.CityPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -69,6 +72,14 @@ public class CityLevel extends RegularLevel {
 		if (forceMax) return 3;
 		//2 to 3, average 2.33
 		return 2 + Random.chances(new float[]{2, 1});
+	}
+
+	@Override
+	protected void createItems() {
+
+		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) Faust.spawn(this);
+
+		super.createItems();
 	}
 	
 	@Override

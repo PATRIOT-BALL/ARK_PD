@@ -493,7 +493,19 @@ public class GameScene extends PixelScene {
 					}
 				}
 
-				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) || Dungeon.mboss4 == 1)
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss4 == 1 && Dungeon.depth == 5 && Dungeon.bossLevel())
+				{
+					GLog.n(Messages.get(this, "miniboss"));
+				}
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1 && Dungeon.depth == 10 && Dungeon.bossLevel())
+				{
+					GLog.n(Messages.get(this, "miniboss"));
+				}
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 15 && Dungeon.bossLevel())
+				{
+					GLog.n(Messages.get(this, "miniboss"));
+				}
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1 && Dungeon.depth == 20 && Dungeon.bossLevel())
 				{
 					GLog.n(Messages.get(this, "miniboss"));
 				}

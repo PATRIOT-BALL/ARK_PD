@@ -163,10 +163,10 @@ public class Dungeon {
 	public static int acequest;
 	public static int cautusquset;
 
-	public static int mboss4 = 1; // 0이 되면 보스 제거 판정
-	public static int mboss9 = 1; // 0이 되면 보스 제거 판정
-	public static int mboss14 = 1; // 0이 되면 보스 제거 판정
-	public static int mboss19 = 1; // 0이 되면 보스 제거 판정
+	public static int mboss4;
+	public static int mboss9;
+	public static int mboss14;
+	public static int mboss19;
 	
 	public static HashSet<Integer> chapters;
 
@@ -205,11 +205,16 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 9;
+		depth = 18;
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
 		acequest = -1;
+
+		mboss4 = 1;
+		mboss9 = 1;
+		mboss14 = 1;
+		mboss19 = 1;
 
 		droppedItems = new SparseArray<>();
 		portedItems = new SparseArray<>();
