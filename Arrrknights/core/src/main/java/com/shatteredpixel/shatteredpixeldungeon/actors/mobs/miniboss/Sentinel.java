@@ -76,7 +76,7 @@ public class Sentinel extends Mob {
     }
 
     public static void spawn(SewerLevel level) {
-        if ( Dungeon.depth >= 3 && !Dungeon.bossLevel()) {
+        if ( Dungeon.depth >= 4 && !Dungeon.bossLevel()) {
 
             Sentinel sentinel = new Sentinel();
             do {

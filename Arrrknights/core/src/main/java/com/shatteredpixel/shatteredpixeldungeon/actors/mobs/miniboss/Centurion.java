@@ -35,7 +35,7 @@ public class Centurion extends Mob {
         properties.add(Property.MINIBOSS);
         properties.add(Property.SARKAZ);
 
-        HP = HT = 40;
+        HP = HT = 65;
         defenseSkill = 0;
         baseSpeed = 1f;
 
@@ -123,7 +123,7 @@ public class Centurion extends Mob {
     }
 
     public static void spawn(PrisonLevel level) {
-        if (Dungeon.depth >= 8 && !Dungeon.bossLevel()) {
+        if (Dungeon.depth >= 9 && !Dungeon.bossLevel()) {
 
             Centurion centinel = new Centurion();
             do {
