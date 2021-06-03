@@ -61,7 +61,7 @@ public class Faust extends Mob {
     @Override
     public int attackProc( Char enemy, int damage ) {
         if (charge >= 3) {
-            damage = super.attackProc(enemy, damage) * 8;
+            damage = (super.attackProc(enemy, damage) * 2) + (enemy.HT / 3);
             charge = 0;
         }
         else {
