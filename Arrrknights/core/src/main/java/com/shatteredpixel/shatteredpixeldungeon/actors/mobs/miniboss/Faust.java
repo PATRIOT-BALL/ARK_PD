@@ -24,7 +24,7 @@ public class Faust extends Mob {
         properties.add(Property.MINIBOSS);
         immunities.add(ScrollOfRage.class);
 
-        HP = HT = 120;
+        HP = HT = 135;
         defenseSkill = 20;
         baseSpeed = 1f;
 
@@ -33,6 +33,8 @@ public class Faust extends Mob {
 
         loot = Generator.Category.SEED;
         lootChance = 1.0f;
+
+        state = WANDERING;
     }
 
     private int charge = 0; // 3이 될경우 강화 사격
@@ -61,7 +63,7 @@ public class Faust extends Mob {
     @Override
     public int attackProc( Char enemy, int damage ) {
         if (charge >= 3) {
-            damage = (super.attackProc(enemy, damage) * 2) + (enemy.HT / 3);
+            damage = (super.attackProc(enemy, damage) * 2) + (enemy.HT / 2);
             charge = 0;
         }
         else {
