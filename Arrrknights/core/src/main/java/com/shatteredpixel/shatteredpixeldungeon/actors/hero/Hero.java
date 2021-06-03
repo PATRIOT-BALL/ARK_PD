@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Bones;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
+import com.shatteredpixel.shatteredpixeldungeon.QuickSlot;
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
@@ -127,6 +128,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocking;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
@@ -176,7 +178,7 @@ public class Hero extends Char {
     public static final int MAX_LEVEL = 40;
 
     //public static final int STARTING_STR = 100000;
-    public static final int STARTING_STR = 10;
+    public static final int STARTING_STR = 14;
 
     private static final float TIME_TO_REST = 1f;
     private static final float TIME_TO_SEARCH = 2f;
@@ -186,7 +188,7 @@ public class Hero extends Char {
     public HeroSubClass subClass = HeroSubClass.NONE;
     public ArrayList<LinkedHashMap<Talent, Integer>> talents = new ArrayList<>();
 
-    private int attackSkill = 10;
+    private int attackSkill = 14;
     //private int attackSkill = 1000;
     private int defenseSkill = 5;
 
@@ -1821,6 +1823,11 @@ public class Hero extends Char {
 
         if (this.buff(ActiveOriginium.class) != null) {
             Buff.affect(this, ActiveOriginium.class).set(HT * 0.1f);
+        }
+
+        if (hit && this.belongings.weapon instanceof Gamzashield)
+        {
+            ((Gamzashield) belongings.weapon).SPCharge(10);
         }
 
         curAction = null;

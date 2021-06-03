@@ -47,4 +47,9 @@ public class BookCoverSmoke extends Item {
     public boolean isIdentified() {
         return true;
     }
+
+    @Override
+    public int value() {
+        return 45;
+    }
 }

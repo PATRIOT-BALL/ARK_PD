@@ -71,7 +71,7 @@ items.skill.sk2.bookrockfailhammer.desc=_바위를 깨는 망치_ 스킬의 정�
 items.skill.sk2.bookrockfailhammer.ac_use=읽는다
 
 items.skill.sk2.bookchargingps.name=전갈꼬리의 스킬개론
-items.skill.sk2.bookchargingps.desc=_스콜피온 테일_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 피해와 함께 불구, 실명. 또한 자신의 이속 상승\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookchargingps.desc=_스콜피온 테일_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들에게 피해와 함께 마비, 실명. 또한 자신의 이속 상승\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookchargingps.ac_use=읽는다
 
 items.skill.sk2.bookneverbackdown.name=임전무퇴의 스킬개론
@@ -183,8 +183,8 @@ items.skill.sk2.rockfailhammer.desc=발동시 주위 적들에게 _힘에 비례
 items.skill.sk2.rockfailhammer.desc_wnd=발동시 주위 적들에게 피해를 입히고 밀쳐냅니다.
 
 items.skill.sk2.chargingps.name=_스콜피온 테일(2스킬)_
-items.skill.sk2.chargingps.desc=발동시 사거리 2의 범위 공격을 가해  _힘에 비례한 피해_를 입히고 실명, 불구를 부여합니다. 시전 후 짧은 시간동안 이동속도가 상승합니다.
-items.skill.sk2.chargingps.desc_wnd=발동시 주위 적들에게 피해를 입히고 불구,실명을 겁니다.
+items.skill.sk2.chargingps.desc=발동시 사거리 2의 범위 공격을 가해  _힘에 비례한 피해_를 입히고 실명, 마비를 부여합니다. 시전 후 짧은 시간동안 이동속도가 상승합니다.
+items.skill.sk2.chargingps.desc_wnd=발동시 주위 적들에게 피해를 입히고 마비,실명을 겁니다.
 
 items.skill.sk2.neverbackdown.name=_임전무퇴!(2스킬)_
 items.skill.sk2.neverbackdown.desc=발동시 _레벨에 비례한 보호막_을 얻고 가속하여 이동속도가 대폭 상승합니다. 이 상태에서 공격시 큰 피해를 입히고 가속을 종료합니다.
@@ -1766,6 +1766,16 @@ items.weapon.melee.roundshield.name=라인랩 실드
 items.weapon.melee.roundshield.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
 items.weapon.melee.roundshield.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
 items.weapon.melee.roundshield.desc=이 커다란 방패는 공격을 효과적으로 방어하며, 위기에 몰렸을 때에는 그럭저럭 괜찮은 무기도 됩니다.
+
+items.weapon.melee.gamzashield.name=감자 실드
+items.weapon.melee.gamzashield.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
+items.weapon.melee.gamzashield.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
+items.weapon.melee.gamzashield.desc=블랙 스틸에서 온 대원 리스캄의 방패입니다. 이 _특별한 무기_는 일반적인 방패와 같지만, 공격할 때마다 SP를 충전할 수 있습니다. SP100%를 소모해 대상을 실명시키는 광선을 발사할 수 있습니다.
+items.weapon.melee.gamzashield.prompt=목표를 지정해주세요.
+items.weapon.melee.gamzashield.zap=눈뿅 발사!
+items.weapon.melee.gamzashield.self_target=자신에게는 발사할 수 없습니다.
+items.weapon.melee.gamzashield.no_magic=아츠 면역일 땐 발사할 수 없습니다.
+items.weapon.melee.gamzashield.fizzles=당신의 감자 실드의 충전량이 부족합니다.
 
 items.weapon.melee.runicblade.name=오리지늄 검
 items.weapon.melee.runicblade.stats_desc=강화 효율 +

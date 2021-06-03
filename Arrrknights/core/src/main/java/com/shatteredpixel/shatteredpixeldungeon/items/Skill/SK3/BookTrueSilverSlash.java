@@ -51,4 +51,9 @@ public class BookTrueSilverSlash extends Item {
     public boolean isIdentified() {
         return true;
     }
+
+    @Override
+    public int value() {
+        return 100;
+    }
 }

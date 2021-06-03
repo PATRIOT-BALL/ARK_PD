@@ -48,4 +48,9 @@ public class BookFate extends Item {
     public boolean isIdentified() {
         return true;
     }
+
+    @Override
+    public int value() {
+        return 25;
+    }
 }

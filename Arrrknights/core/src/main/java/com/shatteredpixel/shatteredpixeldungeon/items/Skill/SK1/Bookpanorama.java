@@ -49,4 +49,9 @@ public class Bookpanorama extends Item {
         return true;
     }
 
+    @Override
+    public int value() {
+        return 25;
+    }
+
 }
