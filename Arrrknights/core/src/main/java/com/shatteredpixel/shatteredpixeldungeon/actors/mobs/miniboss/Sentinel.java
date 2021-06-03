@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ImpSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Sentinel extends Mob {
@@ -28,9 +29,9 @@ public class Sentinel extends Mob {
 
         HP = HT = 14;
         defenseSkill = 1;
-        baseSpeed = 0.5f;
+        baseSpeed = 1f;
 
-        EXP = 1;
+        EXP = 8;
         maxLvl = -1;
 
         state = WANDERING;
@@ -85,3 +86,5 @@ public class Sentinel extends Mob {
         }
     }
 }
+
+

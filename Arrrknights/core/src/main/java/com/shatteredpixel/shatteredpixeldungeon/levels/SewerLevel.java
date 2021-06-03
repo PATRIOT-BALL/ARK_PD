@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Sentinel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ghost;
@@ -117,7 +118,7 @@ public class SewerLevel extends RegularLevel {
 		}
 
 		Ghost.Quest.spawn( this );
-		//Sentinel.spawn(this);
+		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) Sentinel.spawn(this);
 		
 		super.createItems();
 	}

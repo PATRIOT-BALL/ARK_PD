@@ -22,7 +22,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Centurion;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Sentinel;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ghost;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Wandmaker;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -82,6 +86,14 @@ public class PrisonLevel extends RegularLevel {
 				.setWater(feeling == Feeling.WATER ? 0.90f : 0.30f, 4)
 				.setGrass(feeling == Feeling.GRASS ? 0.80f : 0.20f, 3)
 				.setTraps(nTraps(), trapClasses(), trapChances());
+	}
+
+	@Override
+	protected void createItems() {
+
+		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) Centurion.spawn(this);
+
+		super.createItems();
 	}
 	
 	@Override

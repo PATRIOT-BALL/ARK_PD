@@ -233,7 +233,7 @@ actors.buffs.lockedfloor.name=층이 잠겨있음
 actors.buffs.lockedfloor.desc=현재 층이 잠겨 있어 당신은 나갈 수 없습니다!\n\n층이 잠겨있는 동안 당신은 배고픔이 증가하지 않고 굶주림 피해를 입지 않습니다. 더하여 이 층의 보스를 물리치러 나아가지 않는 이상 재생 효과는 멈춥니다.\n\n또 층이 잠겨있는 동안 축복받지 않은 앙크로 부활한다면 해당 층을 재시작하게됩니다.\n\n잠금을 풀기 위해 이 층의 보스를 물리치십시오.
 
 actors.buffs.lancecharge.name=랜스 차징!
-actors.buffs.lancecharge.desc=현재 가속한 상태입니다!\n\n이동속도가 5배가 되었으며, 다음 공격은 5배의 피해를 줄 것입니다.\n공격한다면 이 효과는 사라집니다.
+actors.buffs.lancecharge.desc=현재 가속한 상태입니다!\n\n이동속도가 5배가 되었으며, 다음 공격은 3배의 피해를 줄 것입니다.\n공격한다면 이 효과는 사라집니다.
 
 actors.buffs.magicalsight.name=아츠 비전
 actors.buffs.magicalsight.desc=당신은 어떻게든 마음의 눈으로 주변을 살펴볼 수 있게 되었습니다.\n\n시야를 가리는 효과나 지형은 아츠 시야가 활성화 된 동안 시야를 가리지 않습니다.\n\n아츠 시야는 %s턴 동안 지속됩니다.
@@ -666,6 +666,12 @@ actors.mobs.miniboss.sentinel.name=살카즈 보초
 actors.mobs.miniboss.sentinel.desc=부대 전체의 정찰을 담당하며, 순찰과 경비 임무를 주로 맡는 살카즈 용병. _대원에게 직접적인 공격_을 받았을 때 층 내의 모든 적들에게 경고를 보내 버프를 부여하고 자신의 위치로 불러온다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
 actors.mobs.miniboss.sentinel.hit=살카즈 보초가 이 층 내의 모든 적들에게 경고를 보냈다!
 actors.mobs.miniboss.sentinel.die=살카즈 저주술사와 탈룰라의 힘이 약해지는 것이 느껴졌다.
+
+actors.mobs.miniboss.centurion.name=살카즈 백부장
+actors.mobs.miniboss.centurion.desc=리유니온의 간부이자 살카즈의 용병. 살카즈의 용병을 일부 선동하여 정면 돌파를 시도한다.\n주기적으로 살카즈 용병을 불러오며, _체력을 조금이라도 잃는다면_ 매우 빠른 속도로 용병들을 불러온다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
+actors.mobs.miniboss.centurion.tep=소환된 살카즈 용병이 이 층의 다른 곳으로 전이하였다!
+actors.mobs.miniboss.centurion$centurionminion.name=무명의 살카즈 용병
+actors.mobs.miniboss.centurion$centurionminion.desc=이 살카즈 용병은 백부장의 부름을 받고 소환되었습니다. 만약 백부장이 이상한 곳에 소환을 시도한다면, 용병은 전이하여 이 층의 다른 곳에서 나타날 것입니다.
 
 
 
