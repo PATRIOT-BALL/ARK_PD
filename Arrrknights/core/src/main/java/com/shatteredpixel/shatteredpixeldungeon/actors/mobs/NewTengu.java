@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -1120,6 +1121,19 @@ public class NewTengu extends Mob {
         throwingChar = thrower;
         final WMine.BombItem item = new WMine.BombItem();
         thrower.sprite.zap(finalTargetCell);
+        if (!Dungeon.isChallenged(Challenges.SPECIAL_BOSS) || Dungeon.mboss9 == 1) {
+            ((MissileSprite) thrower.sprite.parent.recycle(MissileSprite.class)).
+                    reset(thrower.sprite,
+                            finalTargetCell,
+                            item,
+                            new Callback() {
+                                @Override
+                                public void call() {
+                                    item.onThrow(thrower.pos);
+                                    thrower.next();
+                                }
+                            });
+        }
         ((MissileSprite) thrower.sprite.parent.recycle(MissileSprite.class)).
                 reset(thrower.sprite,
                         finalTargetCell,
@@ -1131,6 +1145,8 @@ public class NewTengu extends Mob {
                                 thrower.next();
                             }
                         });
+
+
         return true;
     }
 
@@ -1166,8 +1182,9 @@ public class NewTengu extends Mob {
                         Char ch = Actor.findChar(cell);
                         if (ch != null && !(ch instanceof NewTengu)) {
                             int dmg = Random.NormalIntRange(3, 9);
+                            if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) || Dungeon.mboss9 == 1) { dmg = Random.NormalIntRange(18, 24);}
                             dmg -= ch.drRoll();
-                            Buff.affect(ch, Blindness.class,5);
+                            Buff.affect(ch, Blindness.class,dmg);
 
                             if (dmg > 0) {
                                 ch.damage(dmg, Bomb.class);

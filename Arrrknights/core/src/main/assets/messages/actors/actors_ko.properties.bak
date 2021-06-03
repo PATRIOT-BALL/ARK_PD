@@ -670,8 +670,9 @@ actors.mobs.miniboss.sentinel.die=살카즈 저주술사와 탈룰라의 힘이 
 actors.mobs.miniboss.centurion.name=살카즈 백부장
 actors.mobs.miniboss.centurion.desc=리유니온의 간부이자 살카즈의 용병. 살카즈의 용병을 일부 선동하여 정면 돌파를 시도한다.\n주기적으로 살카즈 용병을 불러오며, _체력을 조금이라도 잃는다면_ 매우 빠른 속도로 용병들을 불러온다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
 actors.mobs.miniboss.centurion.tep=소환된 살카즈 용병이 이 층의 다른 곳으로 전이하였다!
+
 actors.mobs.miniboss.centurion$centurionminion.name=무명의 살카즈 용병
-actors.mobs.miniboss.centurion$centurionminion.desc=이 살카즈 용병은 백부장의 부름을 받고 소환되었습니다. 만약 백부장이 이상한 곳에 소환을 시도한다면, 용병은 전이하여 이 층의 다른 곳에서 나타날 것입니다.
+actors.mobs.miniboss.centurion$centurionminion.desc=이 살카즈 용병은 백부장의 부름을 받고 소환되었습니다. 만약 백부장이 이상한 곳에 소환을 시도한다면, 용병은 전이 아츠를 사용해 이 층의 다른 곳에서 나타날 것입니다.
 
 
 

@@ -72,6 +72,7 @@ public class Sentinel extends Mob {
     @Override
     public void die(Object cause) {
         GLog.w(Messages.get(Sentinel.class, "die"));
+        Dungeon.mboss4 = 0;
         super.die(cause);
     }
 

@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.scenes;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
@@ -490,6 +491,11 @@ public class GameScene extends PixelScene {
 					if (ch instanceof DriedRose.GhostHero){
 						((DriedRose.GhostHero) ch).sayAppeared();
 					}
+				}
+
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) || Dungeon.mboss4 == 1)
+				{
+					GLog.n(Messages.get(this, "miniboss"));
 				}
 
 				int spawnersAbove = Statistics.spawnersAlive;

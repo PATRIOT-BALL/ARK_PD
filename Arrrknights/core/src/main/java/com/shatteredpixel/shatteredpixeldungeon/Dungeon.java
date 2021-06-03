@@ -162,6 +162,11 @@ public class Dungeon {
 	public static int guardquest;
 	public static int acequest;
 	public static int cautusquset;
+
+	public static int mboss4 = 1; // 0이 되면 보스 제거 판정
+	public static int mboss9 = 1; // 0이 되면 보스 제거 판정
+	public static int mboss14 = 1; // 0이 되면 보스 제거 판정
+	public static int mboss19 = 1; // 0이 되면 보스 제거 판정
 	
 	public static HashSet<Integer> chapters;
 
@@ -200,7 +205,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 0;
+		depth = 9;
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
@@ -471,11 +476,14 @@ public class Dungeon {
 	private static final String GUARD_Q		= "guardquest";
 	private static final String ACE_Q		= "acequest";
 	private static final String cautus		= "cautusquset";
+	private static final String MBOSS4		= "mboss4";
+	private static final String MBOSS9		= "mboss9";
+	private static final String MBOSS14		= "mboss14";
+	private static final String MBOSS19		= "mboss19";
 
 	public static void saveGame(int save ) {
 		try {
 			Bundle bundle = new Bundle();
-
 			version = Game.versionCode;
 			bundle.put( VERSION, version );
 			bundle.put( SEED, seed );
@@ -487,6 +495,10 @@ public class Dungeon {
 			bundle.put( cautus, cautusquset);
 			bundle.put( GUARD_Q, guardquest);
 			bundle.put( ACE_Q, acequest);
+			bundle.put (MBOSS4, mboss4);
+			bundle.put (MBOSS9, mboss9);
+			bundle.put (MBOSS14, mboss14);
+			bundle.put (MBOSS19, mboss19);
 
 			for (int d : droppedItems.keyArray()) {
 				bundle.put(Messages.format(DROPPED, d), droppedItems.get(d));
@@ -636,6 +648,11 @@ public class Dungeon {
 		guardquest = bundle.getInt(GUARD_Q);
 		acequest = bundle.getInt(ACE_Q);
 		cautusquset = bundle.getInt(cautus);
+
+		mboss4 = bundle.getInt(MBOSS4);
+		mboss9 = bundle.getInt(MBOSS9);
+		mboss14 = bundle.getInt(MBOSS14);
+		mboss19 = bundle.getInt(MBOSS19);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );

@@ -163,5 +163,13 @@ public class Centurion extends Mob {
         public float speed() {
             return super.speed() * 1.5f;
         }
+
+
+        @Override
+        public void die(Object cause) {
+            super.die(cause);
+            GLog.w(Messages.get(Centurion.class, "die"));
+            Dungeon.mboss9 = 0;
+        }
     }
 }

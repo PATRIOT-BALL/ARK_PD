@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -98,6 +99,13 @@ public class Goo extends Mob {
 	@Override
 	public int drRoll() {
 		return Random.NormalIntRange(0, 2);
+	}
+
+	@Override
+	public float speed() {
+		float up = 1f;
+		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) up = 1.5f;
+		return super.speed() * up;
 	}
 
 	@Override
