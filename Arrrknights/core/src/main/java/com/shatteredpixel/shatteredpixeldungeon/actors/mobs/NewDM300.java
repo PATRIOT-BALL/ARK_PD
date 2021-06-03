@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -117,7 +118,12 @@ public class NewDM300 extends Mob {
     @Override
     public int drRoll() {
         if (!Finalcharged) return Random.NormalIntRange(0, 10);
-        else return Random.NormalIntRange(3, 10);
+        else {
+            if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1) {
+                return Random.NormalIntRange(6, 18);
+            }
+            else return Random.NormalIntRange(3, 10);
+        }
     }
 
     public int pylonsActivated = 0;
@@ -354,7 +360,11 @@ public class NewDM300 extends Mob {
 
         Camera.main.shake(supercharged ? 3 : 1, 0.25f);
 
-        DamageUP -= 6;
+        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1) {
+            DamageUP -= 2;
+        }
+        else DamageUP -= 6;
+
         if (DamageUP < 0) DamageUP = 0;
 
         if (Dungeon.level.map[step] == Terrain.INACTIVE_TRAP && state == HUNTING) {

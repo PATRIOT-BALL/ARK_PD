@@ -79,6 +79,11 @@ public class Faust extends Mob {
     }
 
     @Override
+    public float speed() {
+        return super.speed() * 0.5f;
+    }
+
+    @Override
     protected boolean getCloser( int target ) {
         if (state == HUNTING) {
             return enemySeen && getFurther( target );

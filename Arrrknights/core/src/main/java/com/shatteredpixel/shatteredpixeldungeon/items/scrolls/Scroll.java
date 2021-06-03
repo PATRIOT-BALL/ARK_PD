@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.scrolls;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -168,7 +169,9 @@ public abstract class Scroll extends Item {
 			} else if (hero.buff(UnstableSpellbook.bookRecharge.class) != null
 					&& hero.buff(UnstableSpellbook.bookRecharge.class).isCursed()
 					&& !(this instanceof ScrollOfRemoveCurse || this instanceof ScrollOfAntiMagic)){
-				GLog.n( Messages.get(this, "cursed") );
+				GLog.n( Messages.get(this, "cursed") );}
+				else if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1){
+				GLog.n( Messages.get(this, "miniboss") );
 			} else {
 				curUser = hero;
 				curItem = detach( hero.belongings.backpack );

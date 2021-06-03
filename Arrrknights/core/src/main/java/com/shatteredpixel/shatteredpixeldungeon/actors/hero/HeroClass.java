@@ -342,6 +342,8 @@ public enum HeroClass {
 		//Heamyo myo;
 		//myo = new Heamyo();myo.quantity(1).collect();
 
+
+
 /*
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();*/

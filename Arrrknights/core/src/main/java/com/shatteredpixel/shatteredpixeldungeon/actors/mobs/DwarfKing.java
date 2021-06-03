@@ -24,12 +24,14 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LifeLink;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
@@ -506,6 +508,10 @@ public class DwarfKing extends Mob {
 		@Override
 		protected boolean act() {
 			partnerID = -2; //no partners
+			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1)
+			{
+				Buff.affect(this, Healing.class).setHeal(5,0.25f,1);
+			}
 			return super.act();
 		}
 	}
@@ -514,11 +520,29 @@ public class DwarfKing extends Mob {
 		{
 			state = HUNTING;
 		}
+
+		@Override
+		protected boolean act() {
+			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1)
+			{
+				Buff.affect(this, Healing.class).setHeal(5,0.25f,1);
+			}
+			return super.act();
+		}
 	}
 
 	public static class DKWarlock extends Warlock {
 		{
 			state = HUNTING;
+		}
+
+		@Override
+		protected boolean act() {
+			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1)
+			{
+				Buff.affect(this, Healing.class).setHeal(5,0.25f,1);
+			}
+			return super.act();
 		}
 	}
 

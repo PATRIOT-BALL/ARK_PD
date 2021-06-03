@@ -1121,7 +1121,7 @@ public class NewTengu extends Mob {
         throwingChar = thrower;
         final WMine.BombItem item = new WMine.BombItem();
         thrower.sprite.zap(finalTargetCell);
-        if (!Dungeon.isChallenged(Challenges.SPECIAL_BOSS) || Dungeon.mboss9 == 1) {
+        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1) {
             ((MissileSprite) thrower.sprite.parent.recycle(MissileSprite.class)).
                     reset(thrower.sprite,
                             finalTargetCell,

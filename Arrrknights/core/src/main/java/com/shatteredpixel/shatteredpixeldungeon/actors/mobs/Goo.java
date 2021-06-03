@@ -104,7 +104,7 @@ public class Goo extends Mob {
 	@Override
 	public float speed() {
 		float up = 1f;
-		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) up = 1.5f;
+		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss4 == 1) up = 1.5f;
 		return super.speed() * up;
 	}
 
