@@ -102,19 +102,19 @@ public enum Icons {
 		Image icon = new Image( Assets.Interfaces.ICONS );
 		switch (type) {
 		case CHECKED:
-			icon.frame( icon.texture.uvRect( 0, 0, 12, 12 ) );
+			icon.frame( icon.texture.uvRect( 0, 0, 16, 12 ) );
 			break;
 		case UNCHECKED:
-			icon.frame( icon.texture.uvRect( 16, 0, 28, 12 ) );
+			icon.frame( icon.texture.uvRect( 16, 0, 32, 12 ) );
 			break;
 		case INFO:
 			icon.frame( icon.texture.uvRect( 32, 0, 46, 14 ) );
 			break;
 		case CHALLENGE_ON:
-			icon.frame( icon.texture.uvRect( 48, 0, 62, 12 ) );
+			icon.frame( icon.texture.uvRect( 48, 0, 64, 14 ) );
 			break;
 		case CHALLENGE_OFF:
-			icon.frame( icon.texture.uvRect( 64, 0, 78, 12 ) );
+			icon.frame( icon.texture.uvRect( 64, 0, 80, 14 ) );
 			break;
 		case PREFS:
 			icon.frame( icon.texture.uvRect( 80, 0, 94, 14 ) );
