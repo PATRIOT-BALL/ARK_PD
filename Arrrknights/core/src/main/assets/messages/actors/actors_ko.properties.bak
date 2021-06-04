@@ -615,7 +615,7 @@ actors.mobs.npcs.prismaticimage.name=프리즈마 거울상
 actors.mobs.npcs.prismaticimage.desc=이 빛나는 환영은 당신과 매우 유사한 외형을 띠고 있으며, 당신이 장비한 갑옷과 무기까지도 복제한 것으로 보입니다.\n\n프리즈마 거울상은 적을 탐색하는 데 온 힘을 기울이며, 향상된 방어력과 체력을 이용하여 당신을 지키기 위해 노력할 것입니다. 비록 거울상만큼의 공격력을 지니지는 않지만, 당신의 갑옷으로부터 얻는 방어력을 포함하여 더욱 향상된 내구력을 가지고 있습니다.\n\n체력이 0이 될 경우, 프리즈마 거울상은 몇 턴 후 사라지게 되며, 사라지기 전까지는 체력을 회복할 수 있습니다. 시야 내에 적이 없는 경우, 프리즈마 거울상은 그 몸을 감추고 당신의 곁을 맴돌 것입니다. 적이 나타날 때까지 말이죠.
 
 actors.mobs.npcs.ratking.name=전달자 아지무 안젤리나
-actors.mobs.npcs.ratking.not_sleeping=저, 저는 졸지 않았어요!
+actors.mobs.npcs.ratking.not_sleeping=저, 저는 졸지 않았어요! 아, 이거 받으세요!
 actors.mobs.npcs.ratking.what_is_it=잠시 지나갈게요! 빨리 정보를 전달해야...
 actors.mobs.npcs.ratking.confused= "발이 느린 메신저는, 바람에 날아가버린다"라는 말이 시라쿠사의 메신저 사이에 있을 정도니까.
 actors.mobs.npcs.ratking.desc_festive=아지무 안젤리나. 시라쿠사에서 정보, 화물 운송 등의 공개적인 활동을 하였으며, '전달자'인 것으로 추측된다. 현재는 인턴 캐스터 오퍼레이터로서, 로도스 아일랜드에서 후방 지원, 전장 보조, 전술 협동 등의 서비스를 제공하고 있다.\n\n바쁜 날에도 특별한 날은 챙기고 싶어 한다.
@@ -674,10 +674,11 @@ actors.mobs.miniboss.centurion.die=W와 탈룰라의 힘이 약해지는 것이 
 actors.mobs.miniboss.centurion$centurionminion.name=무명의 살카즈 용병
 actors.mobs.miniboss.centurion$centurionminion.desc=이 살카즈 용병은 백부장의 부름을 받고 소환되었습니다. 만약 백부장이 이상한 곳에 소환을 시도한다면, 용병은 전이 아츠를 사용해 이 층의 다른 곳에서 나타날 것입니다.
 
-actors.mobs.miniboss.bloodmagister.name=윈터위습 블러드 위치
-actors.mobs.miniboss.bloodmagister.desc=현대 오리지늄 아츠보다 더욱 무서운 윈터위습 족의 고대 마법을 연구하는 현지인. 엄청난 전투력을 가졌기에 _정면으로 싸우는 것은 위험_ 하지만, 힘의 부작용으로 _전투에 돌입하는 순간 서서히 체력을 잃게될 것_입니다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
-actors.mobs.miniboss.bloodmagister.rage=폭주
+actors.mobs.miniboss.bloodmagister.name=블러드 위치
+actors.mobs.miniboss.bloodmagister.desc=현대 오리지늄 아츠보다 더욱 무서운 윈터위습 족의 고대 마법을 연구하는 현지인. 엄청난 전투력을 가졌기에 _정면으로 싸우는 것은 위험_ 하지만, 힘의 부작용으로 _전투에 돌입하는 순간 빠르게 체력을 잃게될 것_입니다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
 actors.mobs.miniboss.bloodmagister.die=머드락과 탈룰라의 힘이 약해지는 것이 느껴졌다.
+actors.mobs.miniboss.bloodmagister$rage.name=폭주
+actors.mobs.miniboss.bloodmagister$rage.desc=폭주했습니다! 이 상태에선 엄청난 전투력을 지니지만, 서서히 체력을 잃게될 것입니다.\n\n_이 효과는 위치가 죽을 때까지 지속됩니다._
 
 actors.mobs.miniboss.faust.name=파우스트
 actors.mobs.miniboss.faust.desc=리유니온 간부, 스나이퍼 신분으로 리유니온에 가담하고 있으며, 보통 메피스토와 함께 행동하고 있다.\n원거리 공격을 가하며, 제자리에서 움직이지 않고 연속으로 _4회의 공격_을 가하면 _끔찍한 위력의_ 강화 화살을 발사할 것입니다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!

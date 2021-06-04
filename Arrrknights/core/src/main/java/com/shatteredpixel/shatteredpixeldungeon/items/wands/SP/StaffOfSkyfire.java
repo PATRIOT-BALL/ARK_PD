@@ -71,7 +71,7 @@ public class StaffOfSkyfire extends DamageWand {
 
 
         //throws other chars around the center.
-        for (int i : PathFinder.NEIGHBOURS8) {
+        for (int i : PathFinder.NEIGHBOURS9) {
             GameScene.add(Blob.seed(bolt.collisionPos + i, 1+this.level(), Fire.class));
             Char ch = Actor.findChar(bolt.collisionPos + i);
 

@@ -63,7 +63,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibility;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nullshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
@@ -201,9 +203,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		new Gamzashield().collect();
-		new ScrollOfIdentify().collect();
-
 	/*	new PotionOfLiquidFlame().quantity(5).collect();
 		new ScrollOfEnchantment().quantity(999).collect();*/
 
@@ -339,10 +338,8 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		
-		//Heamyo myo;
-		//myo = new Heamyo();myo.quantity(1).collect();
-
-
+		Heamyo myo;
+		myo = new Heamyo();myo.quantity(1).collect();
 
 /*
 		new TomeOfMastery().quantity(1).collect();

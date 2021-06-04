@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPsionicBlast;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CavesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -23,8 +24,9 @@ public class Faust extends Mob {
 
         properties.add(Property.MINIBOSS);
         immunities.add(ScrollOfRage.class);
+        immunities.add(ScrollOfPsionicBlast.class);
 
-        HP = HT = 135;
+        HP = HT = 180;
         defenseSkill = 20;
         baseSpeed = 1f;
 
@@ -41,7 +43,7 @@ public class Faust extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(20, 30);
+        return Random.NormalIntRange(25, 30);
     }
 
     @Override
@@ -82,7 +84,7 @@ public class Faust extends Mob {
 
     @Override
     public float speed() {
-        return super.speed() * 0.5f;
+        return super.speed() * 0.7f;
     }
 
     @Override

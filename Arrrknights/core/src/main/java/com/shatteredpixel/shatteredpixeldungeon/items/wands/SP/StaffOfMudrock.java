@@ -99,7 +99,7 @@ public class StaffOfMudrock extends DamageWand {
 
                 processSoulMark(ch, chargesPerCast());
                 if (ch.properties().contains(Char.Property.SARKAZ) == true) {
-                    damage *= 1.5f;
+                    damage *= 2f;
                 }
                 ch.damage(damage, this);
 

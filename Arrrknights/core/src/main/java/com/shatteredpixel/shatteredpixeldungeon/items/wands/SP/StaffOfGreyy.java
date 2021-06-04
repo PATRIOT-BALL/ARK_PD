@@ -61,7 +61,7 @@ public class StaffOfGreyy extends DamageWand {
             }
             processSoulMark(ch, chargesPerCast());
             if (ch == curUser) {
-                ch.damage(Math.round(damageRoll() * 0.5f), this);
+                ch.damage(Math.round(damageRoll() * 0.25f), this);
             } else {
                 ch.damage(Math.round(damageRoll()), this);
             }

@@ -24,6 +24,8 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.AjimuSprite;
 
@@ -105,7 +107,8 @@ public class RatKing extends NPC {
 
 		if (state == SLEEPING) {
 			notice();
-			yell( Messages.get(this, "not_sleeping") );
+			yell( Messages.get(this, "not_sleeping", Dungeon.hero.heroClass.title()) );
+			Dungeon.level.drop(new Gamza(), pos).sprite.drop(pos);
 			state = WANDERING;
 		} else {
 			yell( Messages.get(this, "what_is_it") );

@@ -78,6 +78,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.CoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
@@ -215,7 +217,7 @@ public class Hero extends Char {
     public String named;
 
     public Skill SK1;
-    public Skill SK2;
+    public Skill SK2 = new AncientKin();
     public Skill SK3;
 
     private int SK1num;
@@ -2107,6 +2109,10 @@ public class Hero extends Char {
             SK2 = new NeverBackDown();
         } else if (SkillNumber == 9) {
             SK2 = new CoverSmoke();
+        } else if (SkillNumber == 10) {
+            SK2 = new BenasProtracto();
+        } else if (SkillNumber == 11) {
+            SK2 = new AncientKin();
         } else SK2 = null;
     }
 

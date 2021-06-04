@@ -28,11 +28,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookBenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Bookancientkin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
@@ -494,9 +496,11 @@ public class Generator {
                     BookRockfailHammer.class,
                     BookChargingPS.class,
                     BookNeverBackDown.class,
-                    BookCoverSmoke.class
+                    BookCoverSmoke.class,
+                    BookBenasProtracto.class,
+                    Bookancientkin.class
             };
-            SKL_T2.probs = new float[]{1, 1, 1, 1, 1};
+            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1};
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
@@ -516,12 +520,14 @@ public class Generator {
                     BookChargingPS.class,
                     BookNeverBackDown.class,
                     BookCoverSmoke.class,
+                    BookBenasProtracto.class,
+                    Bookancientkin.class,
                     BookTrueSilverSlash.class, // 3
                     BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
                     7, 7, 7, 7, 7,
-                    5, 5, 5, 5, 5,
+                    5, 5, 5, 5, 5, 5, 5,
                     1, 1
             };
         }

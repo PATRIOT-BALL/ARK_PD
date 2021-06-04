@@ -120,6 +120,11 @@ public class Gamzashield extends MeleeWeapon {
         return null;
     }
 
+    @Override
+    public boolean isIdentified() {
+        return true;
+    }
+
 
     public boolean tryToZap(Hero owner, int target) {
 

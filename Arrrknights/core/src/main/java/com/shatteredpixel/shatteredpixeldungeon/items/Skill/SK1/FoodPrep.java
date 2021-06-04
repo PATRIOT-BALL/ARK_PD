@@ -30,9 +30,7 @@ import com.watabou.utils.Random;
 public class FoodPrep extends Skill {
     private static final String[] LINE_KEYS = {"YAM1", "YAM2"};
 
-    public void doSkill()  {
-        GameScene.selectCell(Food);
-    }
+    public void doSkill()  { GameScene.selectCell(Food); }
 
     protected CellSelector.Listener Food = new CellSelector.Listener() {
         public void onSelect( Integer target ) {
