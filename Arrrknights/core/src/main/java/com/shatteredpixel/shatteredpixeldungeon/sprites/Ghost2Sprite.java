@@ -35,8 +35,8 @@ public class Ghost2Sprite extends MobSprite {
         idle = new Animation( 1, true );
         idle.frames( film, 0 );
 
-        run = new Animation( 15, true );
-        run.frames( film, 0 );
+        run = new Animation( 17, true );
+        run.frames( film, 1, 2, 3, 4, 5, 6, 7, 8 );
 
         die = new Animation( 10, false );
         die.frames( film, 0 );
