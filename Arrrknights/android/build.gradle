@@ -49,6 +49,8 @@ android {
             }
             applicationIdSuffix '.indev'
             versionNameSuffix '-INDEV'
+
+
         }
     }
 

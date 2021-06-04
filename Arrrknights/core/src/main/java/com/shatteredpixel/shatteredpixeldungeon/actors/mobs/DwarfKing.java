@@ -510,7 +510,7 @@ public class DwarfKing extends Mob {
 			partnerID = -2; //no partners
 			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1)
 			{
-				Buff.affect(this, Healing.class).setHeal(5,0.25f,1);
+				Buff.affect(this, Healing.class).setHeal(5,1f,1);
 			}
 			return super.act();
 		}
@@ -525,7 +525,7 @@ public class DwarfKing extends Mob {
 		protected boolean act() {
 			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1)
 			{
-				Buff.affect(this, Healing.class).setHeal(5,0.25f,1);
+				Buff.affect(this, Healing.class).setHeal(5,1f,1);
 			}
 			return super.act();
 		}
@@ -540,7 +540,7 @@ public class DwarfKing extends Mob {
 		protected boolean act() {
 			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1)
 			{
-				Buff.affect(this, Healing.class).setHeal(5,0.25f,1);
+				Buff.affect(this, Healing.class).setHeal(5,1f,1);
 			}
 			return super.act();
 		}

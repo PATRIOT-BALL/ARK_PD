@@ -73,6 +73,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
@@ -205,6 +206,7 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
+
 
 	/*	new PotionOfLiquidFlame().quantity(5).collect();
 		new ScrollOfEnchantment().quantity(999).collect();*/
