@@ -1751,8 +1751,8 @@ items.weapon.melee.greatsword.stats_desc=사거리 +1 \n 공격속도 +100% \n �
 items.weapon.melee.greatsword.desc=로도스 아일랜드 기술진이 만든 사거리 연장모듈이 도착했다. 전기톱 우는 소리 들리지? 덤으로 새로운 모터와 무딘 칼날들도 새로 교체됐다구! 
 
 items.weapon.melee.hannya.name=반야
-items.weapon.melee.hannya.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
-items.weapon.melee.hannya.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
+items.weapon.melee.hannya.typical_stats_desc=일반적으로 이 무기는 0-%d의 피해를 감소시키며, 공격받으면 공격자에게 0-%d의 피해를 입힙니다. 이 수치는 강화를 하면 상승합니다.
+items.weapon.melee.hannya.stats_desc=이 무기는 0-%d의 피해를 감소시키며, 공격받으면 공격자에게 0-%d의 피해를 입힙니다. 이 수치는 강화를 하면 상승합니다.
 items.weapon.melee.hannya.desc=_"반야여, 너의 아버지가 담은 분노의 불꽃을 지금이야말로 휘두를 때다!"_\n\n이 _특별한_ 방패는 용문의 호시구마 대원이 사용하던 무기입니다. 이 무기를 들고있다면 자신을 공격한 적도 피해를 받게될 것입니다.
 
 items.weapon.melee.handaxe.name=묠니르-3
