@@ -66,6 +66,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nullshield;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Onihorn;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
@@ -97,6 +98,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
@@ -209,10 +212,6 @@ public enum HeroClass {
 /*
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();
-
-		ScrollOfUpgrade UPg;
-		UPg = new ScrollOfUpgrade();
-		UPg.quantity(99).collect();
 
 		new PotionOfHealing().quantity(1).collect();*/
 
@@ -338,8 +337,8 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		
-		Heamyo myo;
-		myo = new Heamyo();myo.quantity(1).collect();
+		//Heamyo myo;
+		//myo = new Heamyo();myo.quantity(1).collect();
 
 /*
 		new TomeOfMastery().quantity(1).collect();

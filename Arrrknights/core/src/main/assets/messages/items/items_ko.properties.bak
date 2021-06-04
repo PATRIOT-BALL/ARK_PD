@@ -1032,8 +1032,11 @@ items.quest.pickaxe.desc=이건 여기 있을 아이템이 아닌거같은데?\n
 items.quest.ratskull.name=거대한 생쥐 두개골
 items.quest.ratskull.desc=놀랍도록 커다란 생쥐 두개골입니다. 벽에 걸어둘 수만 있다면 멋진 사냥 기념물이 될 것 같습니다.
 
-items.quest.gamza.name=감자 화물
-items.quest.gamza.desc=어째서 이걸 건네줬을까요? 그래도 무언가 용도가 있겠지요!
+items.quest.gamza.name=감자 전지
+items.quest.gamza.desc=어째서 이걸 건네줬을까요? 잘 모르겠지만 그래도 무언가 용도가 있을겁니다!\n\n아방가르드한 힘의 영향을 받기 쉬워보입니다...
+
+items.quest.onihorn.name=오니의 뿔
+items.quest.onihorn.desc=이거 감자 아니였어요?
 
 items.quest.nullshield.name=빈 방패
 items.quest.nullshield.desc=무언가를 끼우면 쓸 수 있을 것 같습니다...
@@ -1746,6 +1749,11 @@ items.weapon.melee.greatshield.desc=그는 자신의 생명이 다하는 순간�
 items.weapon.melee.greatsword.name=끓어오르는 투지
 items.weapon.melee.greatsword.stats_desc=사거리 +1 \n 공격속도 +100% \n 명중률 -50%
 items.weapon.melee.greatsword.desc=로도스 아일랜드 기술진이 만든 사거리 연장모듈이 도착했다. 전기톱 우는 소리 들리지? 덤으로 새로운 모터와 무딘 칼날들도 새로 교체됐다구! 
+
+items.weapon.melee.hannya.name=반야
+items.weapon.melee.hannya.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
+items.weapon.melee.hannya.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
+items.weapon.melee.hannya.desc=_"반야여, 너의 아버지가 담은 분노의 불꽃을 지금이야말로 휘두를 때다!"_\n\n이 _특별한_ 방패는 용문의 호시구마 대원이 사용하던 무기입니다. 이 무기를 들고있다면 자신을 공격한 적도 피해를 받게될 것입니다.
 
 items.weapon.melee.handaxe.name=묠니르-3
 items.weapon.melee.handaxe.stats_desc=명중률 +20%

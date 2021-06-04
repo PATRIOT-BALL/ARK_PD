@@ -131,6 +131,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocking;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
@@ -217,7 +218,7 @@ public class Hero extends Char {
     public String named;
 
     public Skill SK1;
-    public Skill SK2 = new AncientKin();
+    public Skill SK2;
     public Skill SK3;
 
     private int SK1num;
@@ -1215,6 +1216,12 @@ public class Hero extends Char {
             damage = belongings.armor.proc(enemy, this, damage);
         }
 
+        if (belongings.weapon instanceof Hannya)
+        {
+            int dmg = Random.IntRange(0,3+belongings.weapon.buffedLvl() * 3);
+            enemy.damage(dmg - enemy.drRoll(),this);
+        }
+
         Earthroot.Armor armor = buff(Earthroot.Armor.class);
         if (armor != null) {
             damage = armor.absorb(damage);
@@ -1825,11 +1832,6 @@ public class Hero extends Char {
 
         if (this.buff(ActiveOriginium.class) != null) {
             Buff.affect(this, ActiveOriginium.class).set(HT * 0.1f);
-        }
-
-        if (hit && this.belongings.weapon instanceof Gamzashield)
-        {
-            ((Gamzashield) belongings.weapon).SPCharge(10);
         }
 
         curAction = null;

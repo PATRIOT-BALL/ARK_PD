@@ -10,6 +10,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMod
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Onihorn;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
@@ -33,6 +35,9 @@ public class WaterOfAdvanceguard extends WellWater {
             GLog.p(String.format(Messages.get(this, "procced"), Price));
         } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode) {
             item = new BookWhispers();
+        } else if (item instanceof Gamza) {
+            if (Random.IntRange(0,10) < 6) item = new Onihorn();
+            else {item = new Gold(100); GLog.p(String.format(Messages.get(this, "procced"), 100));}
         } else {
             item = null;
         }

@@ -66,6 +66,12 @@ public class Gamzashield extends MeleeWeapon {
     }
 
     @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        SPCharge(Random.IntRange(5,5+buffedLvl()));
+        return super.proc(attacker, defender, damage);
+    }
+
+    @Override
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
         actions.add(AC_ZAP);
@@ -118,11 +124,6 @@ public class Gamzashield extends MeleeWeapon {
 
         //otherwise, if there's no charge, return null.
         return null;
-    }
-
-    @Override
-    public boolean isIdentified() {
-        return true;
     }
 
 

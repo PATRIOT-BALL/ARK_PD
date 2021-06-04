@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -52,6 +53,16 @@ public class Nullshield extends Item {
                    Gamzashield gma = new Gamzashield();
                    gma.enchant(Weapon.Enchantment.randomUncommon());
                    gma.collect();
+                   gma.identify();
+                   item.detach( curUser.belongings.backpack );
+                }
+                else if (item instanceof Onihorn)
+                {
+                    GLog.h(Messages.get(Nullshield.class, "suc"));
+                    Hannya nya = new Hannya();
+                    nya.enchant(Weapon.Enchantment.randomUncommon());
+                    nya.identify();
+                    nya.collect();
                     item.detach( curUser.belongings.backpack );
                 }
                 else {
