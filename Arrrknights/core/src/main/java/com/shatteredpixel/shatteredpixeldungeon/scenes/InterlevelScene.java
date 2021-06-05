@@ -30,10 +30,12 @@ import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.SpecialRoom;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.services.updates.Updates;
 import com.shatteredpixel.shatteredpixeldungeon.ui.GameLog;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
@@ -123,12 +125,7 @@ public class InterlevelScene extends PixelScene {
 				scrollSpeed = 5;
 				break;
 			case DESCEND_27:
-				if (Dungeon.hero == null){
-					loadingDepth = 1;
-					fadeTime = SLOW_FADE;
-				} else {
-					loadingDepth = Dungeon.depth = 26;
-				}
+				loadingDepth = Dungeon.depth+26;
 				scrollSpeed = 5;
 				break;
 			case FALL:
@@ -138,6 +135,11 @@ public class InterlevelScene extends PixelScene {
 			case ASCEND:
 				fadeTime = FAST_FADE;
 				loadingDepth = Dungeon.depth-1;
+				scrollSpeed = -5;
+				break;
+			case ASCEND_27:
+				fadeTime = FAST_FADE;
+				loadingDepth = Dungeon.depth-26;
 				scrollSpeed = -5;
 				break;
 			case RETURN:
@@ -388,7 +390,6 @@ public class InterlevelScene extends PixelScene {
 	}
 
 	private void descend_27() throws IOException {
-
 		if (Dungeon.hero == null) {
 			Mob.clearHeldAllies();
 			Dungeon.init();
@@ -404,10 +405,11 @@ public class InterlevelScene extends PixelScene {
 
 		Level level;
 		if (Dungeon.depth >= Statistics.deepestFloor) {
+			Dungeon.depth=26;
 			level = Dungeon.newLevel();
 		} else {
-			Dungeon.depth = 27;
-			level = Dungeon.newLevel();
+			Dungeon.depth=26;
+			level = Dungeon.loadLevel( GamesInProgress.curSlot );
 		}
 		Dungeon.switchLevel( level, level.entrance );
 	}
@@ -440,7 +442,6 @@ public class InterlevelScene extends PixelScene {
 	}
 
 	private void ascend_27() throws IOException {
-
 		Mob.holdAllies( Dungeon.level );
 
 		Dungeon.saveAll();

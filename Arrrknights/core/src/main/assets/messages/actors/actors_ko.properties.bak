@@ -661,9 +661,9 @@ actors.mobs.npcs.lens.t4=타임 랩스~!
 actors.mobs.npcs.greencat.name=켈시
 actors.mobs.npcs.greencat.desc=애옹
 
-actors.mobs.npcs.pinkpig.name=■■■■
-actors.mobs.npcs.pinkpig.desc=그래서 그... 얘 이름이 뭔가요?\n\n의외로 공격할 수 있을 것 같습니다.
-actors.mobs.npcs.pinkpig.no=여긴 안대요!
+actors.mobs.npcs.closure.name=클로저
+actors.mobs.npcs.closure.desc=온 김에 돈 써줘!\n\n의외로 공격할 수 있을 것 같습니다.
+actors.mobs.npcs.closure.no=여긴 미개방이야!
 
 
 

@@ -250,6 +250,7 @@ public class Dungeon {
 		depth++;
 		if (depth > Statistics.deepestFloor) {
 			if (depth != 27) Statistics.deepestFloor = depth;
+			if (Statistics.deepestFloor <= 1) Statistics.deepestFloor = 1;
 			
 			if (Statistics.qualifiedForNoKilling) {
 				Statistics.completedWithNoKilling = true;

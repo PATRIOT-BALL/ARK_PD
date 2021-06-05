@@ -8,8 +8,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.NewTengu;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.BloodMagister;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.GreenCat;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.PinkPig;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
@@ -111,15 +111,15 @@ public class GroundLevel extends Level
     @Override
     protected void createItems() {
         GreenCat.spawn(this);
-        PinkPig.spawn(this,PingPig);
+        Closure.spawn(this,PingPig);
 
         //장난용
         /*
-        PinkPig.spawn(this,372);
-        PinkPig.spawn(this,395);
-        PinkPig.spawn(this,232);
-        PinkPig.spawn(this,228);
-        PinkPig.spawn(this,304);
+        Closure.spawn(this,372);
+        Closure.spawn(this,395);
+        Closure.spawn(this,232);
+        Closure.spawn(this,228);
+        Closure.spawn(this,304);
         drop(new Gold(1), 418 ).type = Heap.Type.SKELETON; // 시체
         drop(new Gold(1), 369 ).type = Heap.Type.SKELETON; // 시체
         drop(new Gold(1), 329 ).type = Heap.Type.SKELETON; // 시체

@@ -10,7 +10,7 @@ public class ClosureSprite extends MobSprite {
 
         texture( Assets.Sprites.CLOSURE );
 
-        TextureFilm frames = new TextureFilm( texture, 32, 32 );
+        TextureFilm frames = new TextureFilm( texture, 32, 28 );
 
         idle = new Animation( 2, true );
         idle.frames( frames, 0, 0, 0 );

@@ -1098,8 +1098,8 @@ public class Hero extends Char {
             //there can be multiple entrance tiles, so descend on any of them
             //TODO this is slightly brittle, it assumes there are no disjointed sets of entrance tiles
         } else if (Dungeon.level.map[pos] == Terrain.ENTRANCE) {
-
-            if (Dungeon.depth == 1) {
+            if (Dungeon.depth == 1)
+            {
                 curAction = null;
 
                 Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
@@ -1107,10 +1107,10 @@ public class Hero extends Char {
                 buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
                 if (buff != null) buff.detach();
 
-                InterlevelScene.mode = InterlevelScene.Mode.DESCEND_27;
+                else InterlevelScene.mode = InterlevelScene.Mode.DESCEND_27;
                 Game.switchScene(InterlevelScene.class);
 
-                return false;
+                return true;
             }
             else {
                 curAction = null;
@@ -1120,11 +1120,11 @@ public class Hero extends Char {
                 buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
                 if (buff != null) buff.detach();
 
-                if (Dungeon.depth != 27)InterlevelScene.mode = InterlevelScene.Mode.ASCEND;
+                if (Dungeon.depth != 27) InterlevelScene.mode = InterlevelScene.Mode.ASCEND;
                 else InterlevelScene.mode = InterlevelScene.Mode.ASCEND_27;
                 Game.switchScene(InterlevelScene.class);
 
-                return false;
+                return true;
             }
         } else if (getCloser(stairs)) {
 
