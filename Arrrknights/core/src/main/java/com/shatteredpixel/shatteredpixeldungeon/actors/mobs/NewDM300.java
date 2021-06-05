@@ -120,7 +120,7 @@ public class NewDM300 extends Mob {
         if (!Finalcharged) return Random.NormalIntRange(0, 10);
         else {
             if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1) {
-                return Random.NormalIntRange(6, 18);
+                return Random.NormalIntRange(12, 24);
             }
             else return Random.NormalIntRange(3, 10);
         }

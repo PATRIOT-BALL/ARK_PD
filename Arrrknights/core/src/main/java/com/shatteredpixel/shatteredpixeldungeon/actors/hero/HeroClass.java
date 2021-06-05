@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -61,13 +62,19 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibility;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLevitation;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfParalyticGas;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nullshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Onihorn;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
@@ -78,9 +85,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAugmentation;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
@@ -103,11 +112,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Dreamfoil;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Fadeleaf;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.DeviceCompat;
 
@@ -214,7 +226,7 @@ public enum HeroClass {
 		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();
 
-		new PotionOfHealing().quantity(1).collect();*/
+
 
 
 		/*
@@ -241,9 +253,7 @@ public enum HeroClass {
 		ss = new PlateArmor();
 		ss.quantity(1).collect();*/
 
-		/*ScrollOfMagicMapping MAPA;
-		MAPA = new ScrollOfMagicMapping();
-		MAPA.quantity(999).collect();
+		/*
 
 		RingOfSunLight R;
 		R = new RingOfSunLight();
@@ -280,6 +290,28 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
+
+		Ankh A = new Ankh();
+		A.bless();
+		A.collect();
+		Ankh B = new Ankh();
+		B.bless();
+		B.collect();
+		new ScrollOfUpgrade().quantity(20).collect();
+		new StaffOfLeaf().collect();
+		new TomeOfMastery().quantity(1).collect();
+		new RingOfFuror().collect();
+		new RingOfEvasion().collect();
+		new PlateArmor().collect();
+		new ScrollOfEnchantment().quantity(2).collect();
+		new ScrollOfIdentify().quantity(99).collect();
+		new PotionOfHealing().quantity(8).collect();
+		new PotionOfMindVision().quantity(3).collect();
+		new PotionOfParalyticGas().quantity(5).collect();
+		new PotionOfLevitation().quantity(3).collect();
+		new PotionOfInvisibility().quantity(3).collect();
+		new PotionOfExperience().quantity(26).collect();
+		new PotionOfStrength().quantity(10).collect();
 
 		new DewVial().collect();
 	}
@@ -338,11 +370,10 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		
-		//Heamyo myo;
-		//myo = new Heamyo();myo.quantity(1).collect();
+		Heamyo myo;
+		myo = new Heamyo();myo.quantity(1).collect();
 
 /*
-		new TomeOfMastery().quantity(1).collect();
 		new PotionOfExperience().quantity(99).collect();*/
 	}
 

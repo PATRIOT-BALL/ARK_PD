@@ -21,12 +21,18 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Frost;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
@@ -40,10 +46,23 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
+import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
+import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
+import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
+import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
+import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.FrozenCarpaccio;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHaste;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Ursus_InfantrySprite;
@@ -51,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.YogSprite;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.GameMath;
 import com.watabou.utils.PathFinder;
@@ -175,6 +195,7 @@ public class YogDzewa extends Mob {
 				}
 				for (Char ch : affected) {
 					ch.damage(Random.NormalIntRange(20, 30), new Eye.DeathGaze());
+					if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1) Buff.affect(ch, Paralysis.class, 20f);
 
 					if (Dungeon.level.heroFOV[pos]) {
 						ch.sprite.flash();
@@ -255,6 +276,7 @@ public class YogDzewa extends Mob {
 					summon.pos = spawnPos;
 					GameScene.add( summon );
 					Actor.addDelayed( new Pushing( summon, pos, summon.pos ), -1 );
+					if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss4 == 1) Buff.affect(summon, Adrenaline.class, 50f);
 					summon.beckon(Dungeon.hero.pos);
 
 					summonCooldown += Random.NormalFloat(MIN_SUMMON_CD, MAX_SUMMON_CD);
@@ -318,9 +340,10 @@ public class YogDzewa extends Mob {
 			phase++;
 
 			updateVisibility(Dungeon.level);
-			if (phase == 2)
-			GLog.n(Messages.get(this, "phase2"));
-			else if (phase == 3) GLog.n(Messages.get(this, "phase3"));
+			if (phase == 2) {if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) yell(Messages.get(this, "phase2_ch"));
+			else GLog.n(Messages.get(this, "phase2"));}
+			else if (phase == 3) {if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) yell(Messages.get(this, "phase3_ch"));
+			else GLog.n(Messages.get(this, "phase3"));}
 			else if (phase == 4)  GLog.n(Messages.get(this, "phase4"));
 			sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "invulnerable"));
 
@@ -344,6 +367,7 @@ public class YogDzewa extends Mob {
 			}
 
 			GameScene.add(fist, 4);
+			Buff.affect(fist, Bless.class, 300f);
 			Actor.addDelayed( new Pushing( fist, Dungeon.level.exit, fist.pos ), -1 );
 		}
 
@@ -413,19 +437,31 @@ public class YogDzewa extends Mob {
 	public void notice() {
 		if (!BossHealthBar.isAssigned()) {
 			BossHealthBar.assignBoss(this);
-			yell(Messages.get(this, "notice"));
-			for (Char ch : Actor.chars()){
-				if (ch instanceof DriedRose.GhostHero){
-					((DriedRose.GhostHero) ch).sayBoss();
+			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) yell(Messages.get(this, "notice_ch"));
+			else yell(Messages.get(this, "notice"));
+			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1) {
+				Dungeon.hero.SK1 = null;
+				Dungeon.hero.SK2 = null;
+				Dungeon.hero.SK3 = null;
+				Dungeon.hero.HT /= 2;
+				Dungeon.hero.HP /= 2;
+			}
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1) {
+					Buff.affect(Dungeon.hero, Doom.class);
+				}
+				for (Char ch : Actor.chars()) {
+					if (ch instanceof DriedRose.GhostHero) {
+						((DriedRose.GhostHero) ch).sayBoss();
+					}
+				}
+				if (phase == 0) {
+					phase = 1;
+					summonCooldown = Random.NormalFloat(MIN_SUMMON_CD, MAX_SUMMON_CD);
+					abilityCooldown = Random.NormalFloat(MIN_ABILITY_CD, MAX_ABILITY_CD);
 				}
 			}
-			if (phase == 0) {
-				phase = 1;
-				summonCooldown = Random.NormalFloat(MIN_SUMMON_CD, MAX_SUMMON_CD);
-				abilityCooldown = Random.NormalFloat(MIN_ABILITY_CD, MAX_ABILITY_CD);
-			}
 		}
-	}
+
 
 	@Override
 	public String description() {

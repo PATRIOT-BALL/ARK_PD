@@ -33,8 +33,6 @@ public class BloodMagister extends Mob {
         loot = Generator.Category.SEED;
         lootChance = 1.0f;
 
-        state = WANDERING;
-
     }
 
     @Override
