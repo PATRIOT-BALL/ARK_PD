@@ -659,12 +659,12 @@ actors.mobs.npcs.lens.t3=파노라마~!
 actors.mobs.npcs.lens.t4=타임 랩스~!
 
 actors.mobs.npcs.greencat.name=켈시
-actors.mobs.npcs.greencat.desc=애옹
+actors.mobs.npcs.greencat.desc=로도스 아일랜드의 수석 관리자 중 한 명이자, 로도스 아일랜드 의료 프로젝트의 리더. 그리고 당신의 상사다.
 
 actors.mobs.npcs.closure.name=클로저
 actors.mobs.npcs.closure.desc=온 김에 돈 써줘!\n\n의외로 공격할 수 있을 것 같습니다.
-actors.mobs.npcs.closure.no=이 앞은 미개발 구역이야!
-actors.mobs.npcs.closure.die=끄악-
+actors.mobs.npcs.closure.no=이건 어때?
+actors.mobs.npcs.closure.die=끄악~
 
 
 

@@ -10,6 +10,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.NewTengu;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.BloodMagister;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.GreenCat;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
@@ -39,7 +40,7 @@ public class RhodesLevel extends Level
         color1 = 0x801500;
         color2 = 0xa68521;
 
-        viewDistance = 12;
+        viewDistance = 18;
     }
 
     @Override
@@ -76,7 +77,7 @@ public class RhodesLevel extends Level
     }
 
     private static final int ROOM_TOP = 6;
-    public int PingPig = 392;
+    public int Moneygirl = 229;
 
     @Override
     protected boolean build() {
@@ -111,33 +112,8 @@ public class RhodesLevel extends Level
     @Override
     protected void createItems() {
         GreenCat.spawn(this);
-        Closure.spawn(this,PingPig);
-
-        //장난용
-        /*
-        Closure.spawn(this,372);
-        Closure.spawn(this,395);
-        Closure.spawn(this,232);
-        Closure.spawn(this,228);
-        Closure.spawn(this,304);
-        drop(new Gold(1), 418 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 369 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 329 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 348 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 322 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 300 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 325 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 302 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 351 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 399 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 423 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 421 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 274 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 256 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 230 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 225 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 203 ).type = Heap.Type.SKELETON; // 시체
-        drop(new Gold(1), 208 ).type = Heap.Type.SKELETON; // 시체*/
+        Closure.spawn(this,Moneygirl);
+        SkinModel.spawn(this, 255);
     }
 
     @Override

@@ -18,6 +18,7 @@ import com.watabou.utils.Callback;
 public class GreenCat extends NPC {
     {
         spriteClass = GreenCatSprite.class;
+        properties.add(Property.IMMOVABLE);
     }
 
     @Override

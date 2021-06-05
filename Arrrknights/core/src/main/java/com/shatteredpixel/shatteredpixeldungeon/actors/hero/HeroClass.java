@@ -291,7 +291,7 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
-
+		
 		new DewVial().collect();
 	}
 
