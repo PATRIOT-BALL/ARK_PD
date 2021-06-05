@@ -4,13 +4,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.levels.GroundLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ClosureSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LensSprite;
 import com.watabou.utils.Random;
 
-public class PinkPig extends NPC {
+public class Closure extends NPC {
     {
-        spriteClass = LensSprite.class;
+        spriteClass = ClosureSprite.class;
         HP=HT=10;
     }
 
@@ -22,7 +23,7 @@ public class PinkPig extends NPC {
     }
 
     public static void spawn(GroundLevel level, int poss) {
-        PinkPig WhatYourName = new PinkPig();
+        Closure WhatYourName = new Closure();
         do {
             WhatYourName.pos = poss;
         } while (WhatYourName.pos == -1);
