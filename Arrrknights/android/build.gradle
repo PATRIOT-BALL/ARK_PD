@@ -47,8 +47,8 @@ android {
                 releaseImplementation project(':services:updates:githubUpdates')
                 releaseImplementation project(':services:news:shatteredNews')
             }
-            applicationIdSuffix '.indev'
-            versionNameSuffix '-INDEV'
+            applicationIdSuffix '.Release'
+            versionNameSuffix '-Release'
 
 
         }
