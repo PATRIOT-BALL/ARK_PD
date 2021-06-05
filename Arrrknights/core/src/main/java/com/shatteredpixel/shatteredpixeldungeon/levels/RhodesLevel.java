@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 // 다른 맵 베이스는 이거로!!
-public class GroundLevel extends Level
+public class RhodesLevel extends Level
 {
     {
         color1 = 0x801500;
@@ -44,7 +44,7 @@ public class GroundLevel extends Level
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILES_PRISON;
+        return Assets.Environment.TILSE_RHODES;
     }
 
     @Override
@@ -88,7 +88,7 @@ public class GroundLevel extends Level
 
         Painter.fill( this, MID - 6, 8, 12, 10, Terrain.EMPTY);
         Painter.fill( this, MID - 4, 8, 1, 10, Terrain.WALL);
-        Painter.fill( this, MID - 4, 16, 1, 1, Terrain.DOOR);
+        Painter.fill( this, MID - 4, 16, 1, 1, Terrain.EMPTY); // 후에 DOOR로 변경
 
         entrance = (height-ROOM_TOP) * width() + MID - 6;
         exit = 8*(width()) + MID - 6; // 세로, 가로, 중앙기준 -6
