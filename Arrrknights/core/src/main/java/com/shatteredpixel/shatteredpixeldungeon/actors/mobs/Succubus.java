@@ -65,7 +65,7 @@ public class Succubus extends Mob {
 
         EXP = 12;
         maxLvl = 25;
-        baseSpeed = 0.5f;
+        baseSpeed = 1f;
 
         loot = Generator.Category.SCROLL;
         lootChance = 0.22f;
@@ -76,7 +76,7 @@ public class Succubus extends Mob {
     @Override
     public int damageRoll() {
 
-        if (ASPlus != 0) return Random.NormalIntRange(25, 40 + ASPlus);
+        if (ASPlus != 0) return Random.NormalIntRange(25, 25 + ASPlus * 2);
         else return Random.NormalIntRange(18, 28 + ASPlus);
     }
 
@@ -97,6 +97,12 @@ public class Succubus extends Mob {
         }
         if (buff(Acceleration.class) != null) ASPlus += 3;
         if (ASPlus > 30) ASPlus = 30;
+    }
+
+    @Override
+    protected boolean act() {
+        if (paralysed == 1) ASPlus = 0;
+        return super.act();
     }
 
     @Override

@@ -22,16 +22,20 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCamouflage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookChainHook;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCrimsonCutter;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookBenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Bookancientkin;
@@ -487,9 +491,12 @@ public class Generator {
                     Bookpanorama.class,
                     BookFoodPrep.class,
                     BookChainHook.class,
-                    BookCrimsonCutter.class
+                    BookCrimsonCutter.class,
+                    BookShinkageryu.class,
+                    BookFierceGlare.class,
+                    BookCamouflage.class
             };
-            SKL_T1.probs = new float[]{1, 1, 1, 1, 1};
+            SKL_T1.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1};
 
             SKL_T2.classes = new Class<?>[]{
                     BookJackinthebox.class,
@@ -498,9 +505,10 @@ public class Generator {
                     BookNeverBackDown.class,
                     BookCoverSmoke.class,
                     BookBenasProtracto.class,
-                    Bookancientkin.class
+                    Bookancientkin.class,
+                    BookLandingStrike.class
             };
-            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1};
+            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1};
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
@@ -510,24 +518,19 @@ public class Generator {
 
 
             SKL_RND.classes = new Class<?>[]{
-                    BookFate.class, // 1
-                    Bookpanorama.class,
-                    BookFoodPrep.class,
-                    BookChainHook.class,
-                    BookCrimsonCutter.class,
-                    BookJackinthebox.class, // 2
-                    BookRockfailHammer.class,
-                    BookChargingPS.class,
-                    BookNeverBackDown.class,
-                    BookCoverSmoke.class,
-                    BookBenasProtracto.class,
-                    Bookancientkin.class,
-                    BookTrueSilverSlash.class, // 3
-                    BookTerminationT.class
+                    BookFate.class, Bookpanorama.class, BookFoodPrep.class,
+                    BookChainHook.class, BookCrimsonCutter.class, BookShinkageryu.class,  BookFierceGlare.class,
+                    BookCamouflage.class,
+
+                    BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
+                    BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
+                    BookLandingStrike.class,
+
+                    BookTrueSilverSlash.class, BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
-                    7, 7, 7, 7, 7,
-                    5, 5, 5, 5, 5, 5, 5,
+                    7, 7, 7, 7, 7, 7, 7, 7,
+                    5, 5, 5, 5, 5, 5, 5, 5,
                     1, 1
             };
         }

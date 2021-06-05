@@ -153,7 +153,7 @@ public class MagesStaff extends MeleeWeapon {
 			damage = Math.round( damage * (1f + Dungeon.hero.pointsInTalent(Talent.EMPOWERED_STRIKE)/4f));
 		}
 
-		if (wand.curCharges >= wand.maxCharges && attacker instanceof Hero && Random.Int(5) < ((Hero) attacker).pointsInTalent(Talent.EXCESS_CHARGE)){
+		if (wand.curCharges >= wand.maxCharges && attacker instanceof Hero && Random.Int(9) < ((Hero) attacker).pointsInTalent(Talent.EXCESS_CHARGE)){
 			Buff.affect(attacker, Barrier.class).setShield(buffedLvl()*2);
 		}
 

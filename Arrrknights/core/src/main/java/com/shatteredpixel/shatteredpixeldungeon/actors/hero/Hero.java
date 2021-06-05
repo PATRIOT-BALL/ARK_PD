@@ -69,13 +69,16 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ChainHook;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.CrimsonCutter;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Shinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
@@ -84,6 +87,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.CoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.LandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.NeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Reflow;
@@ -218,7 +222,7 @@ public class Hero extends Char {
     public String named;
 
     public Skill SK1;
-    public Skill SK2;
+    public Skill SK2 = new LandingStrike();
     public Skill SK3;
 
     private int SK1num;
@@ -2089,6 +2093,12 @@ public class Hero extends Char {
             SK1 = new Whispers();
         } else if (SkillNumber == 9) {
             SK1 = new CrimsonCutter();
+        } else if (SkillNumber == 10) {
+                SK1 = new Shinkageryu();
+        } else if (SkillNumber == 11) {
+            SK1 = new FierceGlare();
+        } else if (SkillNumber == 12) {
+            SK1 = new Camouflage();
         } else SK1 = null;
     }
 
@@ -2115,6 +2125,8 @@ public class Hero extends Char {
             SK2 = new BenasProtracto();
         } else if (SkillNumber == 11) {
             SK2 = new AncientKin();
+        } else if (SkillNumber == 12) {
+            SK2 = new LandingStrike();
         } else SK2 = null;
     }
 

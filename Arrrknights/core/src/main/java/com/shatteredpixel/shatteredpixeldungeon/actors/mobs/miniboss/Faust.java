@@ -84,7 +84,7 @@ public class Faust extends Mob {
 
     @Override
     public float speed() {
-        return super.speed() * 0.7f;
+        return super.speed() * 0.8f;
     }
 
     @Override
