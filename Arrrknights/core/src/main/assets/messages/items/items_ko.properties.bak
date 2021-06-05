@@ -102,6 +102,10 @@ items.skill.sk2.bookancientkin.name=혈족의 스킬개론
 items.skill.sk2.bookancientkin.desc=_먼 옛날의 혈족_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 대상을 혈족으로 만들고 주위 적에게 공포\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookancientkin.ac_use=읽는다
 
+items.skill.sk2.booklandingstrike.name=낙지참의 스킬개론
+items.skill.sk2.booklandingstrike.desc=_낙지참 파문_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 자신의 장비를 저주한 후 장착한 저주장비 수에 비례해 축복 획득\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.booklandingstrike.ac_use=읽는다
+
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookshadowassault.ac_use=읽는다
@@ -230,10 +234,6 @@ items.skill.sk2.benasprotracto.name=_베나의 각도기(2스킬)_
 items.skill.sk2.benasprotracto.desc=발동시 _투명화 상태_를 얻으며, 주위에 _강력한 보호막_을 지닌 분신을 1체 소환합니다. 적들은 분신을 우선적으로 공격할 것입니다.
 items.skill.sk2.benasprotracto.desc_wnd=발동시 튼튼한 분신을 소환해 공격받게 만듭니다.
 
-items.skill.sk2.landingstrike.name=_낙지참 파문(2스킬)_
-items.skill.sk2.landingstrike.desc=발동시 _장착한 장비들을 _저주_합니다. 대신 매우 긴 시간동안 축복을 얻습니다.
-items.skill.sk2.landingstrike.desc_wnd=발동시 튼튼한 분신을 소환해 공격받게 만듭니다.
-
 items.skill.sk2.ancientkin.name=_먼 옛날의 혈족(2스킬)_
 items.skill.sk2.ancientkin.desc=발동시 대상을 _혈족_으로 만들고 주위 적들은 공포 상태가 됩니다. 강한 적이라면 혈족으로 삼는 대신 마비를 부여합니다. 혈족의 능력치는 플레이어의 _레벨_에 비례합니다.
 items.skill.sk2.ancientkin.desc_wnd=발동시 대상을 혈족으로 만듭니다.
@@ -241,6 +241,10 @@ items.skill.sk2.ancientkin.prompt=내 혈족이 되어줘.
 items.skill.sk2.ancientkin.fail=발동에 실패했다.
 items.skill.sk2.ancientkin$seaborn.name=혈족
 items.skill.sk2.ancientkin$seaborn.desc=적어도 이 땅에 존재해선 안되는 생물입니다. 해양 생물인데 왜 땅을 기어다니는거죠?
+
+items.skill.sk2.landingstrike.name=_낙지참 파문(2스킬)_
+items.skill.sk2.landingstrike.desc=발동시 _장착한 장비들을 _저주_합니다. 현재 장착한 저주받은 장비 수에 비례해 축복을 얻습니다.
+items.skill.sk2.landingstrike.desc_wnd=발동시 자신의 장비를 저주한 후 축복을 얻습니다.
 
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
 items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.

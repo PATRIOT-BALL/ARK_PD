@@ -47,6 +47,7 @@ import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CavesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.DeadEndLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.GroundLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.HallsLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.LastLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.LastShopLevel;
@@ -205,7 +206,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 24;
+		depth = 0;
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
@@ -248,7 +249,7 @@ public class Dungeon {
 		
 		depth++;
 		if (depth > Statistics.deepestFloor) {
-			Statistics.deepestFloor = depth;
+			if (depth != 27) Statistics.deepestFloor = depth;
 			
 			if (Statistics.qualifiedForNoKilling) {
 				Statistics.completedWithNoKilling = true;
@@ -320,6 +321,9 @@ public class Dungeon {
 			break;
 		case 26:
 			level = new LastLevel();
+			break;
+		case 27:
+			level = new GroundLevel();
 			break;
 		default:
 			level = new DeadEndLevel();

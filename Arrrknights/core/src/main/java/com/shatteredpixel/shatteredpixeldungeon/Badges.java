@@ -831,6 +831,14 @@ public class Badges {
 		local.add(badge);
 		displayBadge( badge );
 	}
+
+	public static void validateroaringflare() {
+		displayBadge( Badge.ROARINGFLARE );
+	}
+
+	public static void validateeviltimeend() {
+		displayBadge( Badge.EVILTIME_END );
+	}
 	
 	private static void displayBadge( Badge badge ) {
 		

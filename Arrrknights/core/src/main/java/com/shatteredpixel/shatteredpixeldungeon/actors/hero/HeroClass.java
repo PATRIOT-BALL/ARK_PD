@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
@@ -291,27 +292,7 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
 
-		Ankh A = new Ankh();
-		A.bless();
-		A.collect();
-		Ankh B = new Ankh();
-		B.bless();
-		B.collect();
-		new ScrollOfUpgrade().quantity(20).collect();
-		new StaffOfLeaf().collect();
-		new TomeOfMastery().quantity(1).collect();
-		new RingOfFuror().collect();
-		new RingOfEvasion().collect();
-		new PlateArmor().collect();
-		new ScrollOfEnchantment().quantity(2).collect();
-		new ScrollOfIdentify().quantity(99).collect();
-		new PotionOfHealing().quantity(8).collect();
-		new PotionOfMindVision().quantity(3).collect();
-		new PotionOfParalyticGas().quantity(5).collect();
-		new PotionOfLevitation().quantity(3).collect();
-		new PotionOfInvisibility().quantity(3).collect();
-		new PotionOfExperience().quantity(26).collect();
-		new PotionOfStrength().quantity(10).collect();
+		new Amulet().collect();
 
 		new DewVial().collect();
 	}
@@ -370,8 +351,8 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		
-		Heamyo myo;
-		myo = new Heamyo();myo.quantity(1).collect();
+		//Heamyo myo;
+		//myo = new Heamyo();myo.quantity(1).collect();
 
 /*
 		new PotionOfExperience().quantity(99).collect();*/

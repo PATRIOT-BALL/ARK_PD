@@ -176,6 +176,9 @@ import java.util.LinkedHashMap;
 
 public class Hero extends Char {
 
+    // 스킨 관련
+    public static final int TALULAH      = 1;
+
     {
         actPriority = HERO_PRIO;
 
@@ -229,6 +232,8 @@ public class Hero extends Char {
     private int SK2num;
     private int SK3num;
 
+    public int CharSkin = 0; // 미사용. 후에 사용할 예정
+
     private ArrayList<Mob> visibleEnemies;
 
     //This list is maintained so that some logic checks can be skipped
@@ -238,7 +243,7 @@ public class Hero extends Char {
     public Hero() {
         super();
 
-        HP = HT = 20;
+        HP = HT = 2000;
         //HP = HT = 2000;
         STR = STARTING_STR;
 
@@ -287,6 +292,7 @@ public class Hero extends Char {
     private static final String SKL1 = "sk1num";
     private static final String SKL2 = "sk2num";
     private static final String SKL3 = "sk3num";
+    private static final String SKIN = "charskin";
 
     @Override
     public void storeInBundle(Bundle bundle) {
@@ -312,6 +318,9 @@ public class Hero extends Char {
         bundle.put(SKL1, SK1num);
         bundle.put(SKL2, SK2num);
         bundle.put(SKL3, SK3num);
+
+        // 스킨 코드 저장
+        bundle.put(SKIN, CharSkin);
 
         belongings.storeInBundle(bundle);
     }
@@ -343,6 +352,9 @@ public class Hero extends Char {
         loadSkill1(SK1num);
         loadSkill2(SK2num);
         loadSkill3(SK3num);
+
+        // 스킨 코드 불러오기
+        CharSkin = bundle.getInt(SKIN);
 
         STR = bundle.getInt(STRENGTH);
 
@@ -1060,12 +1072,13 @@ public class Hero extends Char {
             buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
             if (buff != null) buff.detach();
 
+
             InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
             Game.switchScene(InterlevelScene.class);
 
             return false;
 
-        } else if (getCloser(stairs)) {
+        }else if (getCloser(stairs)) {
 
             return true;
 
@@ -1078,7 +1091,6 @@ public class Hero extends Char {
     private boolean actAscend(HeroAction.Ascend action) {
         int stairs = action.dst;
 
-
         if (rooted) {
             Camera.main.shake(1, 1f);
             ready();
@@ -1088,24 +1100,6 @@ public class Hero extends Char {
         } else if (Dungeon.level.map[pos] == Terrain.ENTRANCE) {
 
             if (Dungeon.depth == 1) {
-
-                if (belongings.getItem(Amulet.class) == null) {
-                    Game.runOnRenderThread(new Callback() {
-                        @Override
-                        public void call() {
-                            GameScene.show(new WndMessage(Messages.get(Hero.this, "leave")));
-                        }
-                    });
-                    ready();
-                } else {
-                    Badges.silentValidateHappyEnd();
-                    Dungeon.win(Amulet.class);
-                    Dungeon.deleteGame(GamesInProgress.curSlot, true);
-                    Game.switchScene(SurfaceScene.class);
-                }
-
-            } else {
-
                 curAction = null;
 
                 Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
@@ -1113,12 +1107,25 @@ public class Hero extends Char {
                 buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
                 if (buff != null) buff.detach();
 
-                InterlevelScene.mode = InterlevelScene.Mode.ASCEND;
+                InterlevelScene.mode = InterlevelScene.Mode.DESCEND_27;
                 Game.switchScene(InterlevelScene.class);
+
+                return false;
             }
+            else {
+                curAction = null;
 
-            return false;
+                Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
+                if (buff != null) buff.detach();
+                buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
+                if (buff != null) buff.detach();
 
+                if (Dungeon.depth != 27)InterlevelScene.mode = InterlevelScene.Mode.ASCEND;
+                else InterlevelScene.mode = InterlevelScene.Mode.ASCEND_27;
+                Game.switchScene(InterlevelScene.class);
+
+                return false;
+            }
         } else if (getCloser(stairs)) {
 
             return true;
@@ -1127,7 +1134,7 @@ public class Hero extends Char {
             ready();
             return false;
         }
-    }
+        }
 
     private boolean actAttack(HeroAction.Attack action) {
 

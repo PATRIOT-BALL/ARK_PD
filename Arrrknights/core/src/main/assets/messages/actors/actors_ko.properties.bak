@@ -496,7 +496,7 @@ actors.hero.talent.shielding_dew.title=보호의 이슬
 actors.hero.talent.shielding_dew.desc=_+1:_ 최대 체력일 때 이슬을 획득하면 _최대 체력의 20%_에 해당하는 보호막을 얻습니다.\n\n_+2:_ 최대 체력일 때 이슬을 획득하면 _최대 체력의 40%_에 해당하는 보호막을 얻습니다.\n\n_+3:_ 최대 체력일 때 이슬을 획득하면 _최대 체력의 60%_에 해당하는 보호막을 얻습니다.
 
 actors.hero.hero.name=%s.
-actors.hero.hero.leave=박사를 데려오기 전까진 돌아올 생각 하지 마라. -켈시
+actors.hero.hero.leave=%s, 어서 빨리 박사를 구출해라.
 actors.hero.hero.level_up=레벨 업!
 actors.hero.hero.new_level=레벨 업! +정확성, +회피, +5 최대 체력!
 actors.hero.hero.new_talent=+1 특성 포인트!
@@ -657,6 +657,14 @@ actors.mobs.npcs.lens.t1=촬영~!
 actors.mobs.npcs.lens.t2=노출~!
 actors.mobs.npcs.lens.t3=파노라마~!
 actors.mobs.npcs.lens.t4=타임 랩스~!
+
+actors.mobs.npcs.greencat.name=켈시
+actors.mobs.npcs.greencat.desc=애옹
+
+actors.mobs.npcs.pinkpig.name=■■■■
+actors.mobs.npcs.pinkpig.desc=그래서 그... 얘 이름이 뭔가요?\n\n의외로 공격할 수 있을 것 같습니다.
+actors.mobs.npcs.pinkpig.no=여긴 안대요!
+
 
 
 
@@ -1014,9 +1022,9 @@ actors.mobs.yogdzewa.name=탈룰라?
 actors.mobs.yogdzewa.notice=결론을 내리기 전에 네 목숨부터 지켜야 할 거다.
 actors.mobs.yogdzewa.notice_ch=아무래도 내가 너희들을 대단한 착각에 빠트린 것 같군.
 actors.mobs.yogdzewa.phase2="나는 소금기 가득한 평원과 피 흘리는 계곡을 지났지만, 죽지 않았다."
-actors.mobs.yogdzewa.phase2_ch="다시 한번 말하지. 이곳에서 나를 죽일 수 있는 사람은 이미 죽었다."
+actors.mobs.yogdzewa.phase2_ch=다시 한번 말하지. 이곳에서 나를 죽일 수 있는 사람은 이미 죽었다.
 actors.mobs.yogdzewa.phase3="그의 검, 그의 땅, 그의 신하, 모두가 날 호위했기 때문이다."
-actors.mobs.yogdzewa.phase3_ch="툰드라의 눈과 얼음의 악몽 프로스트노바, 그녀 역시 용문에서 죽었지."
+actors.mobs.yogdzewa.phase3_ch=툰드라의 눈과 얼음의 악몽 프로스트노바, 그녀 역시 용문에서 죽었지.
 actors.mobs.yogdzewa.phase4=하지만, 장난은 여기까지다.
 actors.mobs.yogdzewa.phase4_end=인정하지. 이번만큼은 자신들의 승리를 마음껏 축하해도 좋아.
 actors.mobs.yogdzewa.defeated=기억해라, 탈룰라. "이 세상의 끝에서도 나는 존재할 것이다."

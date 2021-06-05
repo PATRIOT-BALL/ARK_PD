@@ -67,7 +67,7 @@ public class InterlevelScene extends PixelScene {
 	private static float fadeTime;
 	
 	public enum Mode {
-		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, RESET, NONE
+		DESCEND, ASCEND, CONTINUE, RESURRECT, RETURN, FALL, RESET, NONE, DESCEND_27, ASCEND_27,
 	}
 	public static Mode mode;
 	
@@ -119,6 +119,15 @@ public class InterlevelScene extends PixelScene {
 							|| loadingDepth == 16 || loadingDepth == 21) {
 						fadeTime = SLOW_FADE;
 					}
+				}
+				scrollSpeed = 5;
+				break;
+			case DESCEND_27:
+				if (Dungeon.hero == null){
+					loadingDepth = 1;
+					fadeTime = SLOW_FADE;
+				} else {
+					loadingDepth = Dungeon.depth = 26;
 				}
 				scrollSpeed = 5;
 				break;
@@ -242,8 +251,14 @@ public class InterlevelScene extends PixelScene {
 							case DESCEND:
 								descend();
 								break;
+							case DESCEND_27:
+								descend_27();
+								break;
 							case ASCEND:
 								ascend();
+								break;
+							case ASCEND_27:
+								ascend_27();
 								break;
 							case CONTINUE:
 								restore();
@@ -371,6 +386,31 @@ public class InterlevelScene extends PixelScene {
 		}
 		Dungeon.switchLevel( level, level.entrance );
 	}
+
+	private void descend_27() throws IOException {
+
+		if (Dungeon.hero == null) {
+			Mob.clearHeldAllies();
+			Dungeon.init();
+			if (noStory) {
+				Dungeon.chapters.add( WndStory.ID_SEWERS );
+				noStory = false;
+			}
+			GameLog.wipe();
+		} else {
+			Mob.holdAllies( Dungeon.level );
+			Dungeon.saveAll();
+		}
+
+		Level level;
+		if (Dungeon.depth >= Statistics.deepestFloor) {
+			level = Dungeon.newLevel();
+		} else {
+			Dungeon.depth = 27;
+			level = Dungeon.newLevel();
+		}
+		Dungeon.switchLevel( level, level.entrance );
+	}
 	
 	private void fall() throws IOException {
 		
@@ -390,7 +430,7 @@ public class InterlevelScene extends PixelScene {
 	}
 	
 	private void ascend() throws IOException {
-		
+
 		Mob.holdAllies( Dungeon.level );
 
 		Dungeon.saveAll();
@@ -398,6 +438,17 @@ public class InterlevelScene extends PixelScene {
 		Level level = Dungeon.loadLevel( GamesInProgress.curSlot );
 		Dungeon.switchLevel( level, level.exit );
 	}
+
+	private void ascend_27() throws IOException {
+
+		Mob.holdAllies( Dungeon.level );
+
+		Dungeon.saveAll();
+		Dungeon.depth = 1;
+		Level level = Dungeon.loadLevel( GamesInProgress.curSlot );
+		Dungeon.switchLevel( level, level.entrance );
+	}
+
 	
 	private void returnTo() throws IOException {
 		
