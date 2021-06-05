@@ -231,7 +231,7 @@ items.skill.sk2.benasprotracto.desc=발동시 _투명화 상태_를 얻으며, �
 items.skill.sk2.benasprotracto.desc_wnd=발동시 튼튼한 분신을 소환해 공격받게 만듭니다.
 
 items.skill.sk2.landingstrike.name=_낙지참 파문(2스킬)_
-items.skill.sk2.landingstrike.desc=발동시 _가지고있는 장비들을 _저주_합니다. 대신 매우 긴 시간동안 축복을 얻습니다.
+items.skill.sk2.landingstrike.desc=발동시 _장착한 장비들을 _저주_합니다. 대신 매우 긴 시간동안 축복을 얻습니다.
 items.skill.sk2.landingstrike.desc_wnd=발동시 튼튼한 분신을 소환해 공격받게 만듭니다.
 
 items.skill.sk2.ancientkin.name=_먼 옛날의 혈족(2스킬)_
