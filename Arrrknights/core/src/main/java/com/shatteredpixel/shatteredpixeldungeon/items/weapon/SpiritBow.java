@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
@@ -250,6 +251,9 @@ public class SpiritBow extends Weapon {
 		
 		@Override
 		public int proc(Char attacker, Char defender, int damage) {
+			if (Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.POINT_BLANK)) {
+				Buff.affect(defender, Vertigo.class, 3f);
+			}
 			return SpiritBow.this.proc(attacker, defender, damage);
 		}
 		
@@ -352,10 +356,10 @@ public class SpiritBow extends Weapon {
 						&& user.buff(Talent.SeerShotCooldown.class) == null){
 					int shotPos = throwPos(user, dst);
 					if (Actor.findChar(shotPos) == null) {
-						RevealedArea a = Buff.affect(user, RevealedArea.class, 5 * user.pointsInTalent(Talent.SEER_SHOT));
+						RevealedArea a = Buff.affect(user, RevealedArea.class, 3f);
 						a.depth = Dungeon.depth;
 						a.pos = shotPos;
-						Buff.affect(user, Talent.SeerShotCooldown.class, 20f);
+						Buff.affect(user, Talent.SeerShotCooldown.class, 30 - (user.pointsInTalent(Talent.SEER_SHOT) * 7));
 					}
 				}
 

@@ -390,27 +390,12 @@ public class InterlevelScene extends PixelScene {
 	}
 
 	private void descend_27() throws IOException {
-		if (Dungeon.hero == null) {
-			Mob.clearHeldAllies();
-			Dungeon.init();
-			if (noStory) {
-				Dungeon.chapters.add( WndStory.ID_SEWERS );
-				noStory = false;
-			}
-			GameLog.wipe();
-		} else {
-			Mob.holdAllies( Dungeon.level );
-			Dungeon.saveAll();
-		}
+		Mob.holdAllies( Dungeon.level );
+		Dungeon.saveAll();
 
 		Level level;
-		if (Dungeon.depth >= Statistics.deepestFloor) {
-			Dungeon.depth=26;
-			level = Dungeon.newLevel();
-		} else {
-			Dungeon.depth=26;
-			level = Dungeon.loadLevel( GamesInProgress.curSlot );
-		}
+		Dungeon.depth=26;
+		level = Dungeon.newLevel();
 		Dungeon.switchLevel( level, level.entrance );
 	}
 	
@@ -444,7 +429,6 @@ public class InterlevelScene extends PixelScene {
 	private void ascend_27() throws IOException {
 		Mob.holdAllies( Dungeon.level );
 
-		Dungeon.saveAll();
 		Dungeon.depth = 1;
 		Level level = Dungeon.loadLevel( GamesInProgress.curSlot );
 		Dungeon.switchLevel( level, level.entrance );

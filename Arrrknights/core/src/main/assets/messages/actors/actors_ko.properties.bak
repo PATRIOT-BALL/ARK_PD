@@ -478,14 +478,14 @@ actors.hero.talent.heightened_senses.title=예리해진 감각
 actors.hero.talent.heightened_senses.desc=_+1:_ 주변 _2 타일_에 있는 모든 적에 대해 심안 효과를 얻습니다.\n\n_+2:_ 주변 _3 타일_에 있는 모든 적에 대해 심안 효과를 얻습니다.
 actors.hero.talent.durable_projectiles.title=무기 손질
 actors.hero.talent.durable_projectiles.desc=_+1:_ 그레이스롯이 사용하는 투척 무기의 내구도가 _50%_ 증가합니다.\n\n_+2:_ 그레이스롯이 사용하는 투척 무기의 내구도가 _75%_ 증가합니다.
-actors.hero.talent.point_blank.title=영점 사격
-actors.hero.talent.point_blank.desc=_+1:_ 그레이스롯의 근거리 투척 무기 명중률 보정이 기존 -50%에서 _-30%_ 로 변경됩니다.\n\n_+2:_ 그레이스롯의 근거리 투척 무기 명중률 보정이 기존 -50%에서 _-10%_ 로 변경됩니다.\n\n_+3:_ 그레이스롯의 근거리 투척 무기 명중률 보정이 기존 -50%에서 _+10%_ 로 변경됩니다.\n\n원거리에서의 투척 무기는 항상 +50%의 명중률을 얻습니다.
+actors.hero.talent.point_blank.title=접근 금지!
+actors.hero.talent.point_blank.desc=_+1:_ 그레이스롯의 쇠뇌에 적중당한 적은 _15%_ 확률로 현기증에 걸립니다.\n\n_+2:_ 그레이스롯의 쇠뇌에 적중당한 적은 _30%_ 확률로 현기증에 걸립니다.\n\n_+3:_ 그레이스롯의 쇠뇌에 적중당한 적은 _45%_ 확률로 현기증에 걸립니다.\n\n원거리에서의 투척 무기는 항상 +50%의 명중률을 얻습니다.
 actors.hero.talent.seer_shot.title=음파 화살
-actors.hero.talent.seer_shot.desc=_+1:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역이 _5 턴_ 동안 보입니다. 20 턴의 재사용 대기시간을 가집니다.\n\n_+2:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역이 _10 턴_ 동안 보입니다. 20 턴의 재사용 대기시간을 가집니다.\n\n_+3:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역이 _15 턴_ 동안 보입니다. 20 턴의 재사용 대기시간을 가집니다.
+actors.hero.talent.seer_shot.desc=_+1:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역이 3 턴 동안 보입니다. _23 턴_의 재사용 대기시간을 가집니다.\n\n_+2:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역이 3턴 동안 보입니다. _16 턴_의 재사용 대기시간을 가집니다.\n\n_+3:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역이 3턴 동안 보입니다. _9 턴_의 재사용 대기시간을 가집니다.
 actors.hero.talent.farsight.title=천리안
-actors.hero.talent.farsight.desc=_+1:_ 저격수의 시야 범위가 _25%_ 만큼 증가합니다.\n\n_+2:_ 저격수의 시야 범위가 _50%_ 만큼 증가합니다.\n\n_+3:_ 저격수의 시야 범위가 _75%_ 만큼 증가합니다.
+actors.hero.talent.farsight.desc=_+1:_ 그레이스롯의 시야 범위가 _25%_ 만큼 증가합니다.\n\n_+2:_ 그레이스롯의 시야 범위가 _50%_ 만큼 증가합니다.\n\n_+3:_ 그레이스롯의 시야 범위가 _75%_ 만큼 증가합니다.
 actors.hero.talent.shared_enchantment.title=아츠부여 공유
-actors.hero.talent.shared_enchantment.desc=_+1:_  _33% 확률_ 로 저격수의 투척 무기에 활에 부여된 아츠가 적용됩니다.\n\n_+2:_ _67% 확률_ 로 저격수의 투척 무기에 활에 부여된 아츠가 적용됩니다.\n\n_+3:_ _100% 확률_ 로 저격수의 투척 무기에 활에 부여된 아츠가 적용됩니다.\n\n아츠가 부여된 쇠뇌로 발사한 다트에는 이미 쇠뇌의 아츠가 적용되므로 이 특성이 적용되지 않습니다.
+actors.hero.talent.shared_enchantment.desc=_+1:_  _33% 확률_ 로 그레이스롯의 투척 무기에 활에 부여된 아츠가 적용됩니다.\n\n_+2:_ _67% 확률_ 로 그레이스롯의 투척 무기에 활에 부여된 아츠가 적용됩니다.\n\n_+3:_ _100% 확률_ 로 저격수의 투척 무기에 활에 부여된 아츠가 적용됩니다.\n\n아츠가 부여된 쇠뇌로 발사한 다트에는 이미 쇠뇌의 아츠가 적용되므로 이 특성이 적용되지 않습니다.
 actors.hero.talent.shared_upgrades.title=강화 공유
 actors.hero.talent.shared_upgrades.desc=_+1:_ 강화된 투척 무기로 공격하는 경우 그레이스롯의 표식의 지속 시간이 강화 수치 당 1 턴씩 증가하며 특수 활 공격의 피해량이 _7%_ 씩 증가합니다.\n\n_+2:_ 강화된 투척 무기로 공격하는 경우 그레이스롯의 표식의 지속 시간이 강화 수치 당 1 턴씩 증가하며 특수 활 공격의 피해량이 _13%_ 씩 증가합니다.\n\n_+3:_ 강화된 투척 무기로 공격하는 경우 그레이스롯의 표식의 지속 시간이 강화 수치 당 1 턴씩 증가하며 특수 활 공격의 피해량이 _20%_ 씩 증가합니다.
 actors.hero.talent.durable_tips.title=튼튼한 화살촉
@@ -662,7 +662,7 @@ actors.mobs.npcs.greencat.name=켈시
 actors.mobs.npcs.greencat.desc=로도스 아일랜드의 수석 관리자 중 한 명이자, 로도스 아일랜드 의료 프로젝트의 리더. 그리고 당신의 상사다.
 
 actors.mobs.npcs.closure.name=클로저
-actors.mobs.npcs.closure.desc=온 김에 돈 써줘!\n\n의외로 공격할 수 있을 것 같습니다.
+actors.mobs.npcs.closure.desc=온 김에 돈 써줘!
 actors.mobs.npcs.closure.no=이건 어때?
 actors.mobs.npcs.closure.die=끄악~
 
@@ -844,7 +844,7 @@ actors.mobs.goo.gluuurp=죽어라!
 actors.mobs.goo.rankings_desc=저주술사에게 저지당함
 actors.mobs.goo.desc=아츠 사용 시 지팡이가 아니라, 오리지늄에 침식된 몸을 편리한 아츠 리시버로 활용하는 살카즈 용병. 대기 중일 땐 공격을 하지 않지만, 전투 상태에 돌입하면 잔혹하게 자신의 몸에서 힘을 짜내 생명을 빼앗는다.
 
-actors.mobs.greatcrab.name=리유니온 중기갑병
+actors.mobs.greatcrab.name=중기갑병
 actors.mobs.greatcrab.noticed=중기갑병이 거대한 방패로 당신의 하찮은 공격을 막아냈다.
 actors.mobs.greatcrab.blocked=방어
 actors.mobs.greatcrab.def_verb=방어
@@ -994,7 +994,7 @@ actors.mobs.thief.carries=\n\n저 유령은 _%s_ 을/를 들고 있습니다. �
 actors.mobs.thief.escapes=유령이 당신의 %s을/를 들고 지나가용했다!
 actors.mobs.thief.desc=엔지니어링에 뛰어난 리유니온 맴버로, 무기를 거의 휴대하고 있지 않다. 민첩한 기동 능력으로 인해 아군 유닛이 저지할 수 없으며, 다양한 방법으로 목표에 침투하여 기계 설비를 파괴한다.\n\n유령들은 직접 싸우기보다는 물건을 훔쳐서 달아나려고 합니다. 그들을 시야에서 놓치지 마십시오. 아니면 도둑맞은 아이템을 다신 볼 수 없을지도 모릅니다.
 
-actors.mobs.warlock.name=폭주한 숙주 투척병
+actors.mobs.warlock.name=숙주 투척병
 actors.mobs.warlock.bolt_kill=당신은 몸에 무언가가 꽂힌 채로 죽었다..
 actors.mobs.warlock.desc=점점 미쳐가고 있는 적군 투척병. 지속적으로 생명을 잃어가고 있다. 미친 듯이 주변의 모든 것을 목표에게 던진다. 어떻게 이런 생물이 전장에 존재할 수 있는지, 상상이 잘 가지 않는다.
 
@@ -1048,7 +1048,7 @@ actors.mobs.yogfist$rottingfist.name=부패하는 주먹
 actors.mobs.yogfist$rottingfist.desc=이 주먹은 살아있는 부패로 이루어져 있습니다. 부패하는 주먹은 근처에는 부식성의 점액을 퍼뜨리고 먼 곳에는 유독성 가스를 배출할 수 있는 부패한 살점이 솟아오른 덩어리입니다. 더 심한 것은, 이 주먹의 거대한 덩어리가 직접 피해를 입는 것이 아닌 피를 흘리게 한다는 것입니다.\n\n점액은 물에서 씻어낼 수 있지만, 주먹 또한 스스로를 치유하기 위해 물을 흡수할 수 있습니다. 또한, 주먹이 출혈을 일으킬 때 공격하는 것은 출혈을 쌓는 것이 아닌 갱신하는 것에 불과합니다.
 actors.mobs.yogfist$rustedfist.name=패트리어트
 actors.mobs.yogfist$rustedfist.desc=_탈룰라가 불러낸 과거의 환영,_오랜 세월 동안 수리하지 않은 갑옷은 이미 많은 곳이 파손되었고, 과거 날카로웠던 거극의 칼날엔 이미 녹이 슬어버렸지만, 패트리어트는 절대 동요하지도, 위축되지도, 그리고 가엾게 여기지도 않았었다. 오랜 세월동안 운명과 싸워왔던 그는, 이제 운명의 숨통을 찢어버리려 한다.\n\n패트리어트는 강력한 근접 공격력을 가지고 있으며, 원거리에서는 목표를 불구로 만들 수 있습니다. 그의 강력한 의지와 오리지늄 침식으로 고통을 잊어버린 육체는 즉시 피해를 받는 것이 아닌 시간이 경과함에 따라 피해를 받게 됩니다.\n\n하지만 그는 거대한 덩치 덕분에 좁은 통로를 지날 수 없습니다. 또한 패트리어트는 피해를 느리게 입지만, 여러번 공격받으면 지연된 피해는 계속 증가할 것입니다.
-actors.mobs.yogfist$brightfist.name=메피스토, 노래하는 자
+actors.mobs.yogfist$brightfist.name=노래하는 자
 actors.mobs.yogfist$brightfist.teleport=눈부신 주먹은 당신의 눈을 심각하게 멀게 하는 섬광 속에서 순간이동했다!
 actors.mobs.yogfist$brightfist.desc=석관에서 나타난 신비한 괴물, 당신은 그를 알고 있다. 신비의 노랫소리가 그 뾰족한 부리로부터 주변으로 흘러들어가고, 주변 감염자의 사유가 삼켜지고, 개인의 의지가 사라진다. 노래 소리가 아직 멈추지 않았다. 그는 노래 부르기를 원했다.\n\n메피스토가 발사하는 광선은 당신의 눈을 멀게 하고 또한 큰 피해를 입힙니다. 자신이 불리해지면 당신의 눈을 멀게 하고 전장 어딘가로 순간이동 할 것입니다. 하지만 메피스토는 근거리에서 사용할 수 있는 특별한 능력은 가지고 있지 않습니다.
 actors.mobs.yogfist$darkfist.name=황제의 칼날

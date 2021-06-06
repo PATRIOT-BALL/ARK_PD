@@ -180,70 +180,71 @@ public abstract class Level implements Bundlable {
 	public void create() {
 
 		Random.pushGenerator( Dungeon.seedCurDepth() );
-		
-		if (!(Dungeon.bossLevel())) {
 
-			addItemToSpawn(Generator.random(Generator.Category.FOOD));
+		if (Dungeon.depth != 27) {
+			if (!(Dungeon.bossLevel())) {
 
-			if (Dungeon.isChallenged(Challenges.DARKNESS)){
-				addItemToSpawn( new Torch() );
-			}
+				addItemToSpawn(Generator.random(Generator.Category.FOOD));
 
-			if (Dungeon.posNeeded()) {
-				addItemToSpawn( new PotionOfStrength() );
-				Dungeon.LimitedDrops.STRENGTH_POTIONS.count++;
-			}
-			if (Dungeon.souNeeded()) {
-				addItemToSpawn( new ScrollOfUpgrade() );
-				Dungeon.LimitedDrops.UPGRADE_SCROLLS.count++;
-			}
-			if (Dungeon.asNeeded()) {
-				addItemToSpawn( new Stylus() );
-				Dungeon.LimitedDrops.ARCANE_STYLI.count++;
-			}
-			//one scroll of transmutation is guaranteed to spawn somewhere on chapter 2-4
-			int enchChapter = (int)((Dungeon.seed / 10) % 3) + 1;
-			if ( Dungeon.depth / 5 == enchChapter &&
-					Dungeon.seed % 4 + 1 == Dungeon.depth % 5){
-				addItemToSpawn( new StoneOfEnchantment() );
-			}
-			
-			if ( Dungeon.depth == ((Dungeon.seed % 3) + 1)){
-				addItemToSpawn( new StoneOfIntuition() );
-			}
-			
-			if (Dungeon.depth > 1) {
-				//50% chance of getting a level feeling
-				//~7.15% chance for each feeling
-				switch (Random.Int( 14 )) {
-					case 0:
-						feeling = Feeling.CHASM;
-						break;
-					case 1:
-						feeling = Feeling.WATER;
-						break;
-					case 2:
-						feeling = Feeling.GRASS;
-						break;
-					case 3:
-						feeling = Feeling.DARK;
-						addItemToSpawn(new Torch());
-						viewDistance = Math.round(viewDistance/2f);
-						break;
-					case 4:
-						feeling = Feeling.LARGE;
-						addItemToSpawn(Generator.random(Generator.Category.FOOD));
-						break;
-					case 5:
-						feeling = Feeling.TRAPS;
-						break;
-					case 6:
-						feeling = Feeling.SECRETS;
-						break;
+				if (Dungeon.isChallenged(Challenges.DARKNESS)) {
+					addItemToSpawn(new Torch());
 				}
-			}
-		}
-		
+				if (Dungeon.posNeeded()) {
+					addItemToSpawn(new PotionOfStrength());
+					Dungeon.LimitedDrops.STRENGTH_POTIONS.count++;
+				}
+				if (Dungeon.souNeeded()) {
+					addItemToSpawn(new ScrollOfUpgrade());
+					Dungeon.LimitedDrops.UPGRADE_SCROLLS.count++;
+				}
+				if (Dungeon.asNeeded()) {
+					addItemToSpawn(new Stylus());
+					Dungeon.LimitedDrops.ARCANE_STYLI.count++;
+				}
+				//one scroll of transmutation is guaranteed to spawn somewhere on chapter 2-4
+				int enchChapter = (int) ((Dungeon.seed / 10) % 3) + 1;
+				if (Dungeon.depth / 5 == enchChapter &&
+						Dungeon.seed % 4 + 1 == Dungeon.depth % 5) {
+					addItemToSpawn(new StoneOfEnchantment());
+				}
+
+				if (Dungeon.depth == ((Dungeon.seed % 3) + 1)) {
+					addItemToSpawn(new StoneOfIntuition());
+				}
+
+				if (Dungeon.depth > 1) {
+					//50% chance of getting a level feeling
+					//~7.15% chance for each feeling
+					switch (Random.Int(14)) {
+						case 0:
+							feeling = Feeling.CHASM;
+							break;
+						case 1:
+							feeling = Feeling.WATER;
+							break;
+						case 2:
+							feeling = Feeling.GRASS;
+							break;
+						case 3:
+							feeling = Feeling.DARK;
+							addItemToSpawn(new Torch());
+							viewDistance = Math.round(viewDistance / 2f);
+							break;
+						case 4:
+							feeling = Feeling.LARGE;
+							addItemToSpawn(Generator.random(Generator.Category.FOOD));
+							break;
+						case 5:
+							feeling = Feeling.TRAPS;
+							break;
+						case 6:
+							feeling = Feeling.SECRETS;
+							break;
+					}
+				}
+			}}
+
+
 		do {
 			width = height = length = 0;
 
@@ -254,8 +255,9 @@ public abstract class Level implements Bundlable {
 			traps = new SparseArray<>();
 			customTiles = new HashSet<>();
 			customWalls = new HashSet<>();
-			
+
 		} while (!build());
+
 		
 		buildFlagMaps();
 		cleanWalls();

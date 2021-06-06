@@ -228,17 +228,6 @@ public enum HeroClass {
 		new PotionOfExperience().quantity(99).collect();
 
 
-
-
-		/*
-		BookCrimsonCutter naa;
-		naa = new BookCrimsonCutter();
-		naa.quantity(1).collect();
-
-		BookChainHook nada;
-		nada = new BookChainHook();
-		nada.quantity(1).collect();
-
 		/*
 
 
@@ -291,7 +280,7 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
-		
+
 		new DewVial().collect();
 	}
 
@@ -342,6 +331,9 @@ public enum HeroClass {
 		new PotionOfMindVision().identify();
 		new ScrollOfLullaby().identify();
 
+		new ScrollOfUpgrade().identify();
+		new PotionOfStrength().identify();
+
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
@@ -351,6 +343,9 @@ public enum HeroClass {
 		
 		//Heamyo myo;
 		//myo = new Heamyo();myo.quantity(1).collect();
+
+		//new TomeOfMastery().quantity(1).collect();
+		//new PotionOfExperience().quantity(99).collect();
 
 /*
 		new PotionOfExperience().quantity(99).collect();*/
