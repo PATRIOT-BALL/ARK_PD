@@ -61,6 +61,6 @@ public class PurgatoryKnife extends MissileWeapon {
 
     @Override
     public int value() {
-        return 100;
+        return 120;
     }
 }
