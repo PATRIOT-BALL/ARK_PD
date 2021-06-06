@@ -21,6 +21,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperEliteSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Sarkaz_CenturionSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Sarkaz_SwordsmanSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.particles.Emitter;
@@ -31,7 +32,7 @@ import com.watabou.utils.Reflection;
 
 public class Centurion extends Mob {
     {
-        spriteClass = SarkazSniperEliteSprite.class;
+        spriteClass = Sarkaz_CenturionSprite.class;
 
         properties.add(Property.MINIBOSS);
         properties.add(Property.SARKAZ);

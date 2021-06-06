@@ -310,6 +310,7 @@ public class ItemSpriteSheet {
 	public static final int TRIDENT         = MISSILE_WEP+13;
 	public static final int THROWING_HAMMER = MISSILE_WEP+14;
 	public static final int FORCE_CUBE      = MISSILE_WEP+15;
+	public static final int FLINT  		= MISSILE_WEP+16;
 	
 	static{
 		assignItemRect(SPIRIT_BOW,      16, 16);
@@ -333,6 +334,7 @@ public class ItemSpriteSheet {
 		assignItemRect(TRIDENT,         16, 16);
 		assignItemRect(THROWING_HAMMER, 16, 16);
 		assignItemRect(FORCE_CUBE,      16, 16);
+		assignItemRect(FLINT,      16, 16);
 	}
 	
 	public static final int TIPPED_DARTS    =                               xy(1, 11);  //16 slots
@@ -768,7 +770,7 @@ public class ItemSpriteSheet {
 		public static final int RING_TENACITY   = RINGS+9;
 		public static final int RING_WEALTH     = RINGS+10;
 		public static final int RING_SUNLIGHT     = RINGS+11;
-		public static final int FLINT  		= MISSILE_WEP+12;
+
 		static {
 			assignIconRect( RING_ACCURACY,      7, 7 );
 			assignIconRect( RING_ELEMENTS,      7, 7 );
@@ -782,7 +784,6 @@ public class ItemSpriteSheet {
 			assignIconRect( RING_TENACITY,      6, 6 );
 			assignIconRect( RING_WEALTH,        7, 6 );
 			assignIconRect( RING_SUNLIGHT,        7, 6 );
-			assignIconRect( FLINT,   			16, 16 );
 		}
 
 		                                                                                //16 free slots
