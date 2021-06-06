@@ -389,7 +389,7 @@ public class NewDM300 extends Mob {
 
     @Override
     public float speed() {
-        return super.speed() * (supercharged ? 2 : 1);
+        return super.speed() * (supercharged ? 1.8f : 1);
     }
 
     @Override
