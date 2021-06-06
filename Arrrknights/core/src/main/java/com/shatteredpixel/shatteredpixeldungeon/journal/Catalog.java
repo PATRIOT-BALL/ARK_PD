@@ -23,6 +23,36 @@ package com.shatteredpixel.shatteredpixeldungeon.journal;
 
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCamouflage;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookChainHook;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCrimsonCutter;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookBenasProtracto;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookEmergencyDefibrillator;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Bookancientkin;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.HuntressArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
@@ -64,6 +94,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfHaste;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
@@ -78,6 +109,16 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportat
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTerror;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAngelina;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
@@ -98,6 +139,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
@@ -105,6 +147,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
@@ -128,21 +171,21 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 public enum Catalog {
-	
+
 	WEAPONS,
-	ARMOR,
+	SKILLBOOK,
 	WANDS,
 	RINGS,
 	ARTIFACTS,
 	POTIONS,
 	SCROLLS;
-	
+
 	private LinkedHashMap<Class<? extends Item>, Boolean> seen = new LinkedHashMap<>();
-	
+
 	public Collection<Class<? extends Item>> items(){
 		return seen.keySet();
 	}
-	
+
 	public boolean allSeen(){
 		for (Class<?extends Item> item : items()){
 			if (!seen.get(item)){
@@ -151,7 +194,7 @@ public enum Catalog {
 		}
 		return true;
 	}
-	
+
 	static {
 		WEAPONS.seen.put( WornShortsword.class,             false);
 		WEAPONS.seen.put( Gloves.class,                     false);
@@ -182,17 +225,40 @@ public enum Catalog {
 		WEAPONS.seen.put( Greataxe.class,                   false);
 		WEAPONS.seen.put( Greatshield.class,                false);
 		WEAPONS.seen.put( Gauntlet.class,                   false);
-	
-		ARMOR.seen.put( ClothArmor.class,                   false);
-		ARMOR.seen.put( LeatherArmor.class,                 false);
-		ARMOR.seen.put( MailArmor.class,                    false);
-		ARMOR.seen.put( ScaleArmor.class,                   false);
-		ARMOR.seen.put( PlateArmor.class,                   false);
-		ARMOR.seen.put( WarriorArmor.class,                 false);
-		ARMOR.seen.put( MageArmor.class,                    false);
-		ARMOR.seen.put( RogueArmor.class,                   false);
-		ARMOR.seen.put( HuntressArmor.class,                false);
-	
+		WEAPONS.seen.put( Gamzashield.class,               false);
+		WEAPONS.seen.put( Hannya.class,                   false);
+
+		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);
+		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);
+		SKILLBOOK.seen.put( BookExecutionMode.class,       false);
+		SKILLBOOK.seen.put( BookFate.class,                false);
+		SKILLBOOK.seen.put( Bookpanorama.class,            false);
+		SKILLBOOK.seen.put( BookFoodPrep.class,            false);
+		SKILLBOOK.seen.put( BookChainHook.class,            false);
+		SKILLBOOK.seen.put( BookWhispers.class,            false);
+		SKILLBOOK.seen.put( BookCrimsonCutter.class,            false);
+		SKILLBOOK.seen.put( BookShinkageryu.class,             false);
+		SKILLBOOK.seen.put( BookFierceGlare.class,             false);
+		SKILLBOOK.seen.put( BookCamouflage.class,              false);
+		SKILLBOOK.seen.put( BookWolfPack.class,               false);
+		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
+		SKILLBOOK.seen.put( BookReflow.class,                false);
+		SKILLBOOK.seen.put( BookEmergencyDefibrillator.class,  false);
+		SKILLBOOK.seen.put( BookJackinthebox.class,            false);
+		SKILLBOOK.seen.put( BookRockfailHammer.class,          false);
+		SKILLBOOK.seen.put( BookChargingPS.class,           false);
+        SKILLBOOK.seen.put( BookNeverBackDown.class,          false);
+        SKILLBOOK.seen.put( BookCoverSmoke.class,           false);
+        SKILLBOOK.seen.put( BookBenasProtracto.class,          false);
+        SKILLBOOK.seen.put( Bookancientkin.class,          false);
+        SKILLBOOK.seen.put( BookLandingStrike.class,          false);
+        SKILLBOOK.seen.put( BookShadowAssault.class,          false);
+        SKILLBOOK.seen.put( BookSoaringFeather.class,          false);
+        SKILLBOOK.seen.put( BookSBurst.class,          false);
+        SKILLBOOK.seen.put( BookNigetRaid.class,          false);
+        SKILLBOOK.seen.put( BookTerminationT.class,          false);
+        SKILLBOOK.seen.put( BookTrueSilverSlash.class,          false);
+
 		WANDS.seen.put( WandOfMagicMissile.class,           false);
 		WANDS.seen.put( WandOfLightning.class,              false);
 		WANDS.seen.put( WandOfDisintegration.class,         false);
@@ -206,7 +272,17 @@ public enum Catalog {
 		WANDS.seen.put( WandOfTransfusion.class,            false);
 		WANDS.seen.put( WandOfCorruption.class,             false);
 		WANDS.seen.put( WandOfRegrowth.class,               false);
-	
+		WANDS.seen.put( StaffOfAbsinthe.class,               false);
+		WANDS.seen.put( StaffOfGreyy.class,               false);
+		WANDS.seen.put( StaffOfVigna.class,               false);
+		WANDS.seen.put( StaffOfSkyfire.class,               false);
+		WANDS.seen.put( StaffOfBreeze.class,               false);
+		WANDS.seen.put( StaffOfMudrock.class,               false);
+		WANDS.seen.put( StaffOfLeaf.class,               false);
+		WANDS.seen.put( StaffOfShining.class,               false);
+		WANDS.seen.put( StaffOfMayer.class,               false);
+		WANDS.seen.put( StaffOfAngelina.class,               false);
+
 		RINGS.seen.put( RingOfAccuracy.class,               false);
 		RINGS.seen.put( RingOfEnergy.class,                 false);
 		RINGS.seen.put( RingOfElements.class,               false);
@@ -218,7 +294,8 @@ public enum Catalog {
 		RINGS.seen.put( RingOfSharpshooting.class,          false);
 		RINGS.seen.put( RingOfTenacity.class,               false);
 		RINGS.seen.put( RingOfWealth.class,                 false);
-	
+		RINGS.seen.put( RingOfSunLight.class,               false);
+
 		ARTIFACTS.seen.put( AlchemistsToolkit.class,        false);
 		//ARTIFACTS.seen.put( CapeOfThorns.class,             false);
 		ARTIFACTS.seen.put( ChaliceOfBlood.class,           false);
@@ -232,7 +309,7 @@ public enum Catalog {
 		ARTIFACTS.seen.put( TalismanOfForesight.class,      false);
 		ARTIFACTS.seen.put( TimekeepersHourglass.class,     false);
 		ARTIFACTS.seen.put( UnstableSpellbook.class,        false);
-	
+
 		POTIONS.seen.put( PotionOfHealing.class,            false);
 		POTIONS.seen.put( PotionOfStrength.class,           false);
 		POTIONS.seen.put( PotionOfLiquidFlame.class,        false);
@@ -245,7 +322,7 @@ public enum Catalog {
 		POTIONS.seen.put( PotionOfInvisibility.class,       false);
 		POTIONS.seen.put( PotionOfExperience.class,         false);
 		POTIONS.seen.put( PotionOfHaste.class,              false);
-	
+
 		SCROLLS.seen.put( ScrollOfIdentify.class,           false);
 		SCROLLS.seen.put( ScrollOfUpgrade.class,            false);
 		SCROLLS.seen.put( ScrollOfRemoveCurse.class,        false);
@@ -259,18 +336,18 @@ public enum Catalog {
 		SCROLLS.seen.put( ScrollOfRetribution.class,        false);
 		SCROLLS.seen.put( ScrollOfTransmutation.class,      false);
 	}
-	
+
 	public static LinkedHashMap<Catalog, Badges.Badge> catalogBadges = new LinkedHashMap<>();
 	static {
 		catalogBadges.put(WEAPONS, Badges.Badge.ALL_WEAPONS_IDENTIFIED);
-		catalogBadges.put(ARMOR, Badges.Badge.ALL_ARMOR_IDENTIFIED);
+		catalogBadges.put(SKILLBOOK, Badges.Badge.ALL_SKILLBOOK_IDENTIFIED);
 		catalogBadges.put(WANDS, Badges.Badge.ALL_WANDS_IDENTIFIED);
 		catalogBadges.put(RINGS, Badges.Badge.ALL_RINGS_IDENTIFIED);
 		catalogBadges.put(ARTIFACTS, Badges.Badge.ALL_ARTIFACTS_IDENTIFIED);
 		catalogBadges.put(POTIONS, Badges.Badge.ALL_POTIONS_IDENTIFIED);
 		catalogBadges.put(SCROLLS, Badges.Badge.ALL_SCROLLS_IDENTIFIED);
 	}
-	
+
 	public static boolean isSeen(Class<? extends Item> itemClass){
 		for (Catalog cat : values()) {
 			if (cat.seen.containsKey(itemClass)) {
@@ -279,7 +356,7 @@ public enum Catalog {
 		}
 		return false;
 	}
-	
+
 	public static void setSeen(Class<? extends Item> itemClass){
 		for (Catalog cat : values()) {
 			if (cat.seen.containsKey(itemClass) && !cat.seen.get(itemClass)) {
@@ -289,15 +366,15 @@ public enum Catalog {
 		}
 		Badges.validateItemsIdentified();
 	}
-	
+
 	private static final String CATALOG_ITEMS = "catalog_items";
-	
+
 	public static void store( Bundle bundle ){
-		
+
 		Badges.loadGlobal();
-		
+
 		ArrayList<Class> seen = new ArrayList<>();
-		
+
 		//if we have identified all items of a set, we use the badge to keep track instead.
 		if (!Badges.isUnlocked(Badges.Badge.ALL_ITEMS_IDENTIFIED)) {
 			for (Catalog cat : values()) {
@@ -308,15 +385,15 @@ public enum Catalog {
 				}
 			}
 		}
-		
+
 		bundle.put( CATALOG_ITEMS, seen.toArray(new Class[0]) );
-		
+
 	}
-	
+
 	public static void restore( Bundle bundle ){
-		
+
 		Badges.loadGlobal();
-		
+
 		//logic for if we have all badges
 		if (Badges.isUnlocked(Badges.Badge.ALL_ITEMS_IDENTIFIED)){
 			for ( Catalog cat : values()){
@@ -326,7 +403,7 @@ public enum Catalog {
 			}
 			return;
 		}
-		
+
 		//catalog-specific badge logic
 		for (Catalog cat : values()){
 			if (Badges.isUnlocked(catalogBadges.get(cat))){
@@ -335,7 +412,7 @@ public enum Catalog {
 				}
 			}
 		}
-		
+
 		//general save/load
 		//includes "catalogs" for pre-0.8.2 saves
 		if (bundle.contains("catalogs") || bundle.contains(CATALOG_ITEMS)) {
@@ -348,7 +425,7 @@ public enum Catalog {
 				Journal.saveNeeded = true; //we want to overwrite with the newer storage format
 				seenItems = Arrays.asList(bundle.getStringArray("catalogs"));
 			}
-			
+
 			for (Catalog cat : values()) {
 				for (Class<? extends Item> item : cat.items()) {
 					if (seenClasses.contains(item) || seenItems.contains(item.getSimpleName())) {
@@ -358,5 +435,5 @@ public enum Catalog {
 			}
 		}
 	}
-	
+
 }

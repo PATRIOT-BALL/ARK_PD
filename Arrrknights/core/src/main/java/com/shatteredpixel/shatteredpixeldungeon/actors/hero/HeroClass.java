@@ -81,6 +81,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfEnchantment;
@@ -95,6 +96,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
@@ -220,6 +222,7 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+
 	/*	new PotionOfLiquidFlame().quantity(5).collect();
 		new ScrollOfEnchantment().quantity(999).collect();*/
 
@@ -228,23 +231,6 @@ public enum HeroClass {
 		new PotionOfExperience().quantity(99).collect();
 
 
-		/*
-
-
-		WandOfTransfusion WW;
-		WW = new WandOfTransfusion();
-		WW.quantity(1).collect();
-
-		Greataxe SKD;
-		SKD = new Greataxe();
-		SKD.quantity(1).collect();
-
-		PlateArmor ss;
-		ss = new PlateArmor();
-		ss.quantity(1).collect();*/
-
-		/*
-
 		RingOfSunLight R;
 		R = new RingOfSunLight();
 		R.level(100);
@@ -252,7 +238,6 @@ public enum HeroClass {
 
 		StaffKit SK;
 		SK = new StaffKit();
-		SK.quantity(3).collect();
 
 		*/
 
@@ -282,6 +267,21 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
+
+		WandOfTransfusion WW;
+		WW = new WandOfTransfusion();
+		WW.level(12);
+		WW.quantity(1).collect();
+
+		WandOfBlastWave BB;
+		BB = new WandOfBlastWave();
+		BB.level(12);
+		BB.quantity(1).collect();
+
+		new StaffKit().quantity(2).collect();
+		new ScrollOfIdentify().quantity(2).collect();
+		new ScrollOfRecharging().quantity(6).collect();
+		new PotionOfMindVision().collect();
 	}
 
 	private static void initRogue( Hero hero ) {

@@ -116,7 +116,7 @@ public class Badges {
 		POTIONS_COOKED_4            ( 71 ),
 		BOSS_SLAIN_4                ( 72 ),
 		ALL_WEAPONS_IDENTIFIED      ( 73 ),
-		ALL_ARMOR_IDENTIFIED        ( 74 ),
+		ALL_SKILLBOOK_IDENTIFIED        ( 74 ),
 		ALL_WANDS_IDENTIFIED        ( 75 ),
 		ALL_RINGS_IDENTIFIED        ( 76 ),
 		ALL_ARTIFACTS_IDENTIFIED    ( 77 ),
@@ -496,7 +496,7 @@ public class Badges {
 		
 		if (!global.contains( Badge.ALL_ITEMS_IDENTIFIED ) &&
 			global.contains( Badge.ALL_WEAPONS_IDENTIFIED ) &&
-			global.contains( Badge.ALL_ARMOR_IDENTIFIED ) &&
+			global.contains( Badge.ALL_SKILLBOOK_IDENTIFIED ) &&
 			global.contains( Badge.ALL_WANDS_IDENTIFIED ) &&
 			global.contains( Badge.ALL_RINGS_IDENTIFIED ) &&
 			global.contains( Badge.ALL_ARTIFACTS_IDENTIFIED ) &&
@@ -928,7 +928,7 @@ public class Badges {
 			{Badge.DEATH_FROM_FALLING, Badge.YASD },
 
 			{Badge.ALL_WEAPONS_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED},
-			{Badge.ALL_ARMOR_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED},
+			{Badge.ALL_SKILLBOOK_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED},
 			{Badge.ALL_WANDS_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED},
 			{Badge.ALL_RINGS_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED},
 			{Badge.ALL_ARTIFACTS_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED},

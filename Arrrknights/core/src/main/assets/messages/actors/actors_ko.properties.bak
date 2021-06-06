@@ -662,9 +662,14 @@ actors.mobs.npcs.greencat.name=켈시
 actors.mobs.npcs.greencat.desc=로도스 아일랜드의 수석 관리자 중 한 명이자, 로도스 아일랜드 의료 프로젝트의 리더. 그리고 당신의 상사다.
 
 actors.mobs.npcs.closure.name=클로저
-actors.mobs.npcs.closure.desc=온 김에 돈 써줘!
+actors.mobs.npcs.closure.desc=로도스 아일랜드의 고참. _클로저가 있을 때 물건을 버리고간다면 클로저가 다른 대원한테 팔아버릴 것이다._ \n\n클릭하면 다음 스킨을 볼 수 있습니다.
 actors.mobs.npcs.closure.no=이건 어때?
 actors.mobs.npcs.closure.die=끄악~
+
+actors.mobs.npcs.skinmodel.name=신형 모델 생성기
+actors.mobs.npcs.skinmodel.desc=실물과 거의 유사한 모습에, 움직임 기능도 탑제된 홀로그램을 생성하는 기계다.
+
+
 
 
 

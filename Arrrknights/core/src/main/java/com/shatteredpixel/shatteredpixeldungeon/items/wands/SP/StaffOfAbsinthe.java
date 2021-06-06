@@ -28,9 +28,7 @@ public class StaffOfAbsinthe extends DamageWand {
         image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
     }
 
-    public int min(int lvl){
-        return 2+lvl;
-    }
+    public int min(int lvl){ return 2+lvl; }
 
     public int max(int lvl){
         return 8+2*lvl;

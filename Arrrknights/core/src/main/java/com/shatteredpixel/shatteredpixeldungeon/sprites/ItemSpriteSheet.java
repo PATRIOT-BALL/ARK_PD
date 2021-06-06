@@ -409,7 +409,7 @@ public class ItemSpriteSheet {
 	public static final int RING_QUARTZ     = RINGS+9;
 	public static final int RING_AGATE      = RINGS+10;
 	public static final int RING_DIAMOND    = RINGS+11;
-	public static final int RING_DINGDONG    = RINGS+12;
+	public static final int FIRESTEEL    = RINGS+12;
 	static {
 		for (int i = RINGS; i < RINGS+17; i++)
 			assignItemRect(i, 16, 16);

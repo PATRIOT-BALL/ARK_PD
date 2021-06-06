@@ -579,14 +579,14 @@ public class WndJournal extends WndTabbed {
 		
 		//sprite locations
 		private static final int WEAPON_IDX = 0;
-		private static final int ARMOR_IDX  = 1;
+		private static final int SKILL_IDX  = 1;
 		private static final int WAND_IDX   = 2;
 		private static final int RING_IDX   = 3;
 		private static final int ARTIF_IDX  = 4;
 		private static final int POTION_IDX = 5;
 		private static final int SCROLL_IDX = 6;
 		
-		private static final int spriteIndexes[] = {1, 2, 4, 5, 6, 9, 11};
+		private static final int spriteIndexes[] = {1, 15, 4, 5, 6, 9, 11};
 		
 		private ScrollPane list;
 		
@@ -660,8 +660,8 @@ public class WndJournal extends WndTabbed {
 			if (currentItemIdx == WEAPON_IDX) {
 				itemClasses = new ArrayList<>(Catalog.WEAPONS.items());
 				for (Class<? extends Item> cls : itemClasses) known.put(cls, true);
-			} else if (currentItemIdx == ARMOR_IDX){
-				itemClasses = new ArrayList<>(Catalog.ARMOR.items());
+			} else if (currentItemIdx == SKILL_IDX){
+				itemClasses = new ArrayList<>(Catalog.SKILLBOOK.items());
 				for (Class<? extends Item> cls : itemClasses) known.put(cls, true);
 			} else if (currentItemIdx == WAND_IDX){
 				itemClasses = new ArrayList<>(Catalog.WANDS.items());
