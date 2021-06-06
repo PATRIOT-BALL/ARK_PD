@@ -94,7 +94,7 @@ items.skill.sk2.bookcoversmoke.name=연막전개의 스킬개론
 items.skill.sk2.bookcoversmoke.desc=_연막 전개_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 주위에 연막 생성 및 자신 투명화\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookcoversmoke.ac_use=읽는다
 
-items.skill.sk2.bookbenasprotracto.name=인혈놀이의 스킬개론
+items.skill.sk2.bookbenasprotracto.name=인형놀이의 스킬개론
 items.skill.sk2.bookbenasprotracto.desc=_베나의 각도기_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 튼튼한 분신 소환 및 자신 투명화\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookbenasprotracto.ac_use=읽는다
 
@@ -1783,7 +1783,7 @@ items.weapon.melee.gauntlet.name=마운틴 브레이커
 items.weapon.melee.gauntlet.stats_desc=공격속도 +400%
 items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.
 
-items.weapon.melee.glaive.name=영소ㆍ절영
+items.weapon.melee.glaive.name=영소
 items.weapon.melee.glaive.stats_desc=사거리 +2 \n공격속도 -33%
 items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니라 일종의 아츠 스태프다. 두려운 붉은색으로 빛나는 적소는 멀리 떨어진 적도 공격할 수 있지만 사용자에게 큰 부담을 준다.
 
