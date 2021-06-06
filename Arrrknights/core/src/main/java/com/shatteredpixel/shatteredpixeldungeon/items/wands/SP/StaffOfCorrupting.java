@@ -51,6 +51,7 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.ui.TargetHealthIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -61,8 +62,14 @@ import com.watabou.utils.Random;
 import java.util.HashMap;
 
 public class StaffOfCorrupting extends Wand {
+    private static ItemSprite.Glowing COL = new ItemSprite.Glowing( 0xA9A9A9);
     {
         image = ItemSpriteSheet.WAND_CORRUPTION;
+    }
+
+    @Override
+    public ItemSprite.Glowing glowing() {
+        return COL;
     }
 
     //Note that some debuffs here have a 0% chance to be applied.

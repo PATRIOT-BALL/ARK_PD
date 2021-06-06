@@ -20,6 +20,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -30,6 +31,7 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class StaffOfAngelina extends Wand {
+    private static ItemSprite.Glowing COL = new ItemSprite.Glowing( 0xE6E6FA );
     {
         image = ItemSpriteSheet.WAND_TRANSFUSION;
 
@@ -37,6 +39,11 @@ public class StaffOfAngelina extends Wand {
     }
 
     private boolean freeCharge = false;
+
+    @Override
+    public ItemSprite.Glowing glowing() {
+        return COL;
+    }
 
     @Override
     protected void onZap(Ballistica beam) {

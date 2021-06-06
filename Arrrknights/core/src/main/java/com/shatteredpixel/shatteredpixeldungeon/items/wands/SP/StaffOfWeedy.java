@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.features.Door;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.TenguDartTrap;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -31,10 +32,16 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 public class StaffOfWeedy extends DamageWand {
+    private static ItemSprite.Glowing COL = new ItemSprite.Glowing( 0xF8F8FF);
     {
         image = ItemSpriteSheet.WAND_BLAST_WAVE;
 
         collisionProperties = Ballistica.PROJECTILE;
+    }
+
+    @Override
+    public ItemSprite.Glowing glowing() {
+        return COL;
     }
 
     public int min(int lvl){ return 1+lvl;

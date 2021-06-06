@@ -53,6 +53,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurs
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAugmentation;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.PurgatoryKnife;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Ragesawblade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.TippedDart;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -164,7 +166,8 @@ public class ShopRoom extends SpecialRoom {
 			
 		case 11:
 			w = (MeleeWeapon) Generator.random(Generator.wepTiers[2]);
-			itemsToSpawn.add( Generator.random(Generator.misTiers[2]).quantity(2).identify() );
+			itemsToSpawn.add(new Ragesawblade().quantity(2).identify());
+			itemsToSpawn.add(new PurgatoryKnife().quantity(1).identify());
 			itemsToSpawn.add( new MailArmor().identify() );
 			break;
 			
