@@ -32,26 +32,29 @@ public class PurgatoryKnife extends MissileWeapon {
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        Ballistica route = new Ballistica( defender.pos, attacker.pos, Ballistica.PROJECTILE);
-        int cell = route.collisionPos;
+        if (defender.properties().contains(Char.Property.MINIBOSS) != true && defender.properties().contains(Char.Property.BOSS) != true)
+        if (Random.Int(24) < 19) {
+            Ballistica route = new Ballistica(defender.pos, attacker.pos, Ballistica.PROJECTILE);
+            int cell = route.collisionPos;
 
-        //can't occupy the same cell as another char, so move back one.
-        if (Actor.findChar( cell ) != null && cell != defender.pos)
-            cell = route.path.get(route.dist-1);
+            //can't occupy the same cell as another char, so move back one.
+            if (Actor.findChar(cell) != null && cell != defender.pos)
+                cell = route.path.get(route.dist - 1);
 
-        if (Dungeon.level.avoid[ cell ]){
-            ArrayList<Integer> candidates = new ArrayList<>();
-            for (int n : PathFinder.NEIGHBOURS8) {
-                cell = route.collisionPos + n;
-                if (Dungeon.level.passable[cell] && Actor.findChar( cell ) == null) {
-                    candidates.add( cell );
+            if (Dungeon.level.avoid[cell]) {
+                ArrayList<Integer> candidates = new ArrayList<>();
+                for (int n : PathFinder.NEIGHBOURS8) {
+                    cell = route.collisionPos + n;
+                    if (Dungeon.level.passable[cell] && Actor.findChar(cell) == null) {
+                        candidates.add(cell);
+                    }
                 }
+                if (candidates.size() > 0)
+                    cell = Random.element(candidates);
             }
-            if (candidates.size() > 0)
-                cell = Random.element(candidates);
-        }
 
-        ScrollOfTeleportation.appear( defender, cell );
+            ScrollOfTeleportation.appear(defender, cell);
+        }
 
         return super.proc(attacker, defender, damage);
     }
