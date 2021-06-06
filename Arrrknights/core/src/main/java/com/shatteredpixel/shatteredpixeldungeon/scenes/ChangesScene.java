@@ -65,7 +65,7 @@ public class ChangesScene extends PixelScene {
 		{
 			Music.INSTANCE.play(Assets.Music.BOSS4, true);
 		}
-		else if (Dungeon.depth >= 25)
+		else if (Dungeon.depth == 25 || Dungeon.depth == 26)
 		{
 			Music.INSTANCE.play(Assets.Music.BOSS5, true);
 		}
@@ -88,6 +88,9 @@ public class ChangesScene extends PixelScene {
 		else if (Dungeon.depth >= 21 && Dungeon.depth < 25)
 		{
 			Music.INSTANCE.play(Assets.Music.GAME5, true);
+		}
+		else if (Dungeon.depth >= 27) {
+			Music.INSTANCE.play(Assets.Music.RHODOS, true);
 		}
 
 
