@@ -34,7 +34,7 @@ public class Greatsword extends MeleeWeapon {
 
 		tier=5;
 		DLY = 0.5f;
-		ACC = 0.5f;
+		ACC = 0.7f;
 		RCH = 2;
 
 	}

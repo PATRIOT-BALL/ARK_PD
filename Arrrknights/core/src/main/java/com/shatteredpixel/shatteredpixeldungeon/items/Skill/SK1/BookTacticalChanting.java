@@ -25,9 +25,9 @@ public class BookTacticalChanting extends Item {
 
     @Override
     public void execute (Hero hero, String action ){
-
         super.execute(hero, action);
         if (action.equals(AC_USE)) {
+            this.identify();
             hero.busy();
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
@@ -46,6 +46,6 @@ public class BookTacticalChanting extends Item {
 
     @Override
     public boolean isIdentified() {
-        return true;
+        return false;
     }
 }

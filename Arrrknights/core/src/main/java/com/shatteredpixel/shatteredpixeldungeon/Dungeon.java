@@ -57,6 +57,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.NewCityBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewHallsBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewPrisonBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.PrisonLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.SecretRoom;
@@ -206,7 +207,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 14;
+		depth = 0;
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
@@ -325,6 +326,9 @@ public class Dungeon {
 			break;
 		case 27:
 			level = new RhodesLevel();
+			break;
+		case 28:
+			level = new RhodesLevel2();
 			break;
 		default:
 			level = new DeadEndLevel();

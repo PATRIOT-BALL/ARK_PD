@@ -46,7 +46,7 @@ public class BookChainHook extends Item {
 
     @Override
     public boolean isIdentified() {
-        return true;
+        return false;
     }
 
     @Override

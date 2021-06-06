@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.ArcaneCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAngelina;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
@@ -24,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfWeedy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
@@ -231,6 +233,21 @@ public class StaffKit extends Item {
         else if (wand instanceof WandOfBlastWave)
         {
             n = new StaffOfWeedy(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
+        else if (wand instanceof WandOfCorruption)
+        {
+            n = new StaffOfCorrupting(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
             int level = wand.level();
             if (wand.curseInfusionBonus) level--;

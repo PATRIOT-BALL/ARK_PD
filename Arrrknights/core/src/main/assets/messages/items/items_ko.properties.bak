@@ -1299,7 +1299,7 @@ items.scrolls.exotic.scrollofpetrification.name=석화의 일기장
 items.scrolls.exotic.scrollofpetrification.desc=이 일기장를 사용하면 시뻘건 빛을 발하여 시야 내의 적들이 공포에 압도되어 그 자리에 멈춰서게 만듭니다.
 
 items.scrolls.exotic.scrollofpolymorph.name=변신의 일기장
-items.scrolls.exotic.scrollofpolymorph.desc=이 일기장는 강력한 변신 아츠를 담고 있으며, 이것을 읽게 되면 독자의 시야 내에 있는 모든 적들이 아츠 양으로 바뀌게 됩니다!\n\n이 변환은 영구적이며, 영향받은 모든 적들을 제거합니다. 다만 강력한 적들은 이에 저항할 것이며, 적이 들고 있던 모든 아이템은 사라질 것입니다.
+items.scrolls.exotic.scrollofpolymorph.desc=이 일기장는 강력한 변신 아츠를 담고 있으며, 이것을 읽게 되면 독자의 시야 내에 있는 모든 적들이 무능력한 시민으로 바뀌게 됩니다!\n\n이 변환은 영구적이며, 영향받은 모든 적들을 제거합니다. 다만 강력한 적들은 이에 저항할 것이며, 적이 들고 있던 모든 아이템은 사라질 것입니다.
 
 items.scrolls.exotic.scrollofprismaticimage.name=프리즈마 거울상의 일기장
 items.scrolls.exotic.scrollofprismaticimage.desc=이 일기장에는 사용자를 닮은 다채로운 환영을 소환하는 아츠가 담겨 있습니다. 프리즈마 거울상은 사용자와 비슷한 방어력, 그리고 낮은 체력과 공격력을 가지고 사용자의 약한 분신처럼 행동합니다.\n\n프리즈마 거울상은 적이 나타날 경우 스스로를 드러내, 사용자를 지키려 할 것입니다.\n\n만약 프리즈마 거울상이 이미 존재한다면, 이 일기장는 그것의 체력을 완전히 회복시킬 것입니다.
@@ -1527,9 +1527,16 @@ items.wands.sp.staffofangelina.bmage_desc=_아미야_ 가 개조 이식의 흑�
 items.wands.sp.staffofweedy.name=스태프 오브 위디
 items.wands.sp.staffofweedy.staff_name=개조 충격파의 흑요석 반지
 items.wands.sp.staffofweedy.ondeath=당신은 당신이 발사한 충격파에 맞아 죽었다...
-items.wands.sp.staffofweedy.desc="아, 악수는 이쪽 장갑 낀 오른손으로 해주세요."\n\n이 개조된 충격파의 아츠 스태프는 위디 대원의 능력이 반영되었습니다.
+items.wands.sp.staffofweedy.desc=_"내가 그들을 위해 뭔가를 해줘도 괜찮을까?"_\n\n이 개조된 충격파의 아츠 스태프는 위디 대원의 능력이 반영되었습니다.
 items.wands.sp.staffofweedy.stats_desc=이 막대는 _모든 SP_를 소모해 대상에게 강력한 충격의 화살을 발사합니다. 충격의 화살은 _%1$d-%2$d 의 피해_ 를 입히며 적중한 적을 적을 날려보낼 만큼 강력합니다. 소모한 SP에 비례해 피해량과 밀쳐내는 거리가 상승합니다.
 items.wands.sp.staffofweedy.bmage_desc=_아미야_ 가 개조 충격파의 흑요석 반지로 적을 공격하면, 탄성의 아츠 무기로 공격한 것처럼 대상을 밀쳐낼 수 있습니다.
+
+items.wands.sp.staffofcorrupting.name=스태프 오브 커럽팅
+items.wands.sp.staffofcorrupting.staff_name=■■ 타락의 흑요석 반지
+items.wands.sp.staffofcorrupting.already_corrupted=그 대상에게 더 영향을 줄 수 없다.
+items.wands.sp.staffofcorrupting.desc=_"있지, 나랑 함께 가자. 당신의 진정한 모습이 바닷속 깊은 곳에서 기다리고 있어."_\n\n이 아츠 스태프는 스■디였던 대원의 능력이 반영되었습니다.
+items.wands.sp.staffofcorrupting.stats_desc=이 막대는 강한 타락의 에너지를 발사하여, 적을 약화시키다가 끝내는 _이 육지에 존재해서는 안될 존재_로 만들어버립니다. 적들은 타락에 저항할 수 있지만, 약화된 적들은 훨씬 더 쉽게 타락시킬 수 있습니다.
+items.wands.sp.staffofcorrupting.bmage_desc=_아미야_ 가 이 ■■■ ■■로 적을 공격하면, 대상에게 일정 확률로 광란을 부여합니다.
 
 
 
@@ -1567,7 +1574,7 @@ items.wands.wandofcorrosion.bmage_desc=_아미야_ 가 부식의 흑요석 반�
 items.wands.wandofcorruption.name=타락의 아츠 스태프
 items.wands.wandofcorruption.staff_name=타락의 흑요석 반지
 items.wands.wandofcorruption.already_corrupted=그 대상에게 더 영향을 줄 수 없다.
-items.wands.wandofcorruption.desc="그 날 눈에 새겨진 광경, 외치고 싶어도 목소리가 안 나왔을 만큼의 절망감... 전부… 기억의 깊숙한 곳에 넣어둘 수 있으면 좋을텐데."\n\n이 막대는 끝 부분에 달린 해골 모양 장식에서 알 수 있듯이 혼란스럽고 어두운 에너지를 발하고 있습니다.
+items.wands.wandofcorruption.desc=이해할 수 없다. 슬픈 노래다. 내 심장은 타락해간다.\n\n이 아츠 스태프는... 최소한 안전한 물건은 아닙니다. 확실히요.
 items.wands.wandofcorruption.stats_desc=이 막대는 타락의 에너지를 발사하여, 적을 약화시키다가 끝내는 정신을 조종할 수 있게 합니다. 적들은 타락에 저항할 수 있지만, 약화된 적들은 훨씬 더 쉽게 타락시킬 수 있습니다.
 items.wands.wandofcorruption.bmage_desc=_아미야_ 가 타락의 흑요석 반지로 적을 공격하면, 대상에게 일정 확률로 광란을 부여합니다.
 
@@ -1769,7 +1776,7 @@ items.weapon.melee.dirk.stats_desc=기습 시 최대 데미지 보정 +67%
 items.weapon.melee.dirk.desc=더 기다란 찌르기용 단검이다. 칼날을 적에게 더 깊숙히 박아넣을 수 있게 되어 있다.
 
 items.weapon.melee.flail.name=하야부사
-items.weapon.melee.flail.stats_desc=명중률 -20% \n 기습공격 불가
+items.weapon.melee.flail.stats_desc=명중률 +10% \n 기습공격 불가
 items.weapon.melee.flail.desc=사람의 키보다 거대한 극동식 환도, 지나치게 거대해 목표를 베기 어렵고 휘두르는 동작으로 인해 기습공격이 불가능 하지만, 거대한 칼날의 무게로 적을 찍어누를 수 있습니다.
 
 items.weapon.melee.gauntlet.name=마운틴 브레이커
@@ -1777,7 +1784,7 @@ items.weapon.melee.gauntlet.stats_desc=공격속도 +400%
 items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.
 
 items.weapon.melee.glaive.name=영소ㆍ절영
-items.weapon.melee.glaive.stats_desc=사거리 +2 \n 공격속도 -33%
+items.weapon.melee.glaive.stats_desc=사거리 +2 \n공격속도 -33%
 items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니라 일종의 아츠 스태프다. 두려운 붉은색으로 빛나는 적소는 멀리 떨어진 적도 공격할 수 있지만 사용자에게 큰 부담을 준다.
 
 items.weapon.melee.gloves.name=슈팅 글러브
@@ -1794,7 +1801,7 @@ items.weapon.melee.greatshield.stats_desc=이 무기는 0-%d의 피해를 감소
 items.weapon.melee.greatshield.desc=그는 자신의 생명이 다하는 순간까지도 자신의 신념을 버리지 않았다.
 
 items.weapon.melee.greatsword.name=끓어오르는 투지
-items.weapon.melee.greatsword.stats_desc=사거리 +1 \n 공격속도 +100% \n 명중률 -50%
+items.weapon.melee.greatsword.stats_desc=사거리 +1 \n공격속도 +100% \n명중률 -30%
 items.weapon.melee.greatsword.desc=로도스 아일랜드 기술진이 만든 사거리 연장모듈이 도착했다. 전기톱 우는 소리 들리지? 덤으로 새로운 모터와 무딘 칼날들도 새로 교체됐다구! 
 
 items.weapon.melee.hannya.name=반야
@@ -1846,7 +1853,7 @@ items.weapon.melee.shortsword.name=적소ㆍ프로토타입
 items.weapon.melee.shortsword.desc=용문 전경들의 백병전 장비를 토대로 만든 실험용 장검. 
 
 items.weapon.melee.quarterstaff.name=카시미어 전쟁도끼
-items.weapon.melee.quarterstaff.stats_desc=0-2 피해흡수
+items.weapon.melee.quarterstaff.stats_desc=이 무기는 0-2의 피해를 감소시킵니다.
 items.weapon.melee.quarterstaff.desc=카시미어 팔라딘의 제식 장비, 신성한 힘이 깃들어 어느정도 사용자를 보호할 것이다.
 
 items.weapon.melee.roundshield.name=라인랩 실드

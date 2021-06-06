@@ -58,6 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bags.MagicalHolster;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
@@ -98,6 +99,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLightning;
@@ -268,20 +270,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		WandOfTransfusion WW;
-		WW = new WandOfTransfusion();
-		WW.level(12);
-		WW.quantity(1).collect();
-
-		WandOfBlastWave BB;
-		BB = new WandOfBlastWave();
-		BB.level(12);
-		BB.quantity(1).collect();
-
-		new StaffKit().quantity(2).collect();
-		new ScrollOfIdentify().quantity(2).collect();
-		new ScrollOfRecharging().quantity(6).collect();
-		new PotionOfMindVision().collect();
 	}
 
 	private static void initRogue( Hero hero ) {

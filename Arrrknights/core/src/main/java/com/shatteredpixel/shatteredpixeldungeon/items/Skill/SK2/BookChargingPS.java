@@ -29,6 +29,7 @@ public class BookChargingPS extends Item {
 
         super.execute(hero, action);
         if (action.equals(AC_USE)) {
+            this.identify();
             hero.busy();
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
@@ -46,7 +47,7 @@ public class BookChargingPS extends Item {
 
     @Override
     public boolean isIdentified() {
-        return true;
+        return false;
     }
 
     @Override

@@ -46,7 +46,7 @@ public class BookCrimsonCutter extends Item {
 
     @Override
     public boolean isIdentified() {
-        return true;
+        return false;
     }
 
     @Override

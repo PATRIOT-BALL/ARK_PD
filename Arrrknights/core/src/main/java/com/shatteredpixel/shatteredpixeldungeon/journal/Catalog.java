@@ -112,6 +112,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAngelina;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
@@ -282,6 +283,7 @@ public enum Catalog {
 		WANDS.seen.put( StaffOfShining.class,               false);
 		WANDS.seen.put( StaffOfMayer.class,               false);
 		WANDS.seen.put( StaffOfAngelina.class,               false);
+		WANDS.seen.put( StaffOfCorrupting.class,             false);
 
 		RINGS.seen.put( RingOfAccuracy.class,               false);
 		RINGS.seen.put( RingOfEnergy.class,                 false);

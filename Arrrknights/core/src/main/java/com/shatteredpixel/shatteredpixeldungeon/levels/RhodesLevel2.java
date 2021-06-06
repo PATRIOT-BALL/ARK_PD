@@ -1,41 +1,21 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.NewTengu;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.BloodMagister;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.GreenCat;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
-import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
-import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
-import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
-import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
-import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.keys.IronKey;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
-import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
-import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTileSheet;
 import com.watabou.noosa.Group;
-import com.watabou.noosa.Tilemap;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
-import com.watabou.utils.Point;
 import com.watabou.utils.Random;
-import com.watabou.utils.Rect;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
-// 다른 맵 베이스는 이거로!!
-public class RhodesLevel extends Level
-{
+public class RhodesLevel2 extends Level {
     {
         color1 = 0x801500;
         color2 = 0xa68521;
@@ -82,20 +62,32 @@ public class RhodesLevel extends Level
     @Override
     protected boolean build() {
 
-        setSize(24, 24);
+        setSize(18, 28);
         Arrays.fill( map, Terrain.WALL );
 
         final int MID = width/2;
 
-        Painter.fill( this, MID - 6, 8, 12, 10, Terrain.EMPTY);
-        Painter.fill( this, MID - 4, 8, 1, 10, Terrain.WALL);
-        Painter.fill( this, MID - 4, 16, 1, 1, Terrain.DOOR); // 후에 DOOR로 변경
+        Painter.fill( this, 0, 0, 15, 24, Terrain.EMPTY);
 
-        entrance = (height-ROOM_TOP) * width() + MID - 6;
-        exit = 198;
+        Painter.fill( this, MID, 0, 1, 24, Terrain.WALL);
+        Painter.fill( this, MID -4, 0, 1, 24, Terrain.WALL);
+
+        Painter.fill( this, MID, 6, 1, 1, Terrain.DOOR);
+        Painter.fill( this, MID - 4, 6, 1, 1, Terrain.DOOR);
+        Painter.fill( this, MID, 17, 1, 1, Terrain.DOOR);
+        Painter.fill( this, MID - 4, 17, 1, 1, Terrain.DOOR);
+
+        Painter.fill( this, 0, 10, 5, 4, Terrain.WALL);
+        Painter.fill( this, 10, 10, 5, 4, Terrain.WALL);
+
+        Painter.fill( this, 0, 0, 15, 1, Terrain.WALL);
+        Painter.fill( this, 0, 23, 15, 1, Terrain.WALL);
+
+        entrance = 403;
+        exit = 25;
 
         map[entrance] = Terrain.ENTRANCE;
-        if (Dungeon.hero.belongings.getItem(Amulet.class) != null) map[exit] = Terrain.EXIT;
+        Painter.set( this, exit, Terrain.EXIT );
 
         feeling = Feeling.NONE;
 
@@ -112,9 +104,6 @@ public class RhodesLevel extends Level
 
     @Override
     protected void createItems() {
-        if (Dungeon.hero.belongings.getItem(Amulet.class) == null) GreenCat.spawn(this, exit);
-        Closure.spawn(this,Moneygirl);
-        SkinModel.spawn(this, 255);
     }
 
     @Override

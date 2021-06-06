@@ -22,22 +22,22 @@ public class GreenCat extends NPC {
     }
 
     @Override
-    public int defenseSkill( Char enemy ) {
+    public int defenseSkill(Char enemy) {
         return INFINITE_EVASION;
     }
 
     @Override
-    public void damage( int dmg, Object src ) {
+    public void damage(int dmg, Object src) {
     }
 
     @Override
     public boolean interact(Char c) {
-        sprite.turnTo( pos, c.pos );
+        sprite.turnTo(pos, c.pos);
         if (Dungeon.hero.belongings.getItem(Amulet.class) == null) {
             Game.runOnRenderThread(new Callback() {
                 @Override
                 public void call() {
-                    GameScene.show(new WndMessage(Messages.get(Hero.class, "leave",Dungeon.hero.heroClass.title()) ));
+                    GameScene.show(new WndMessage(Messages.get(Hero.class, "leave", Dungeon.hero.heroClass.title())));
                 }
             });
         } else {
@@ -49,11 +49,11 @@ public class GreenCat extends NPC {
         return true;
     }
 
-    public static void spawn(RhodesLevel level) {
-            GreenCat Cat = new GreenCat();
-            do {
-                Cat.pos = level.exit;
-            } while (Cat.pos == -1);
-            level.mobs.add(Cat);
+    public static void spawn(RhodesLevel level, int ppos) {
+        GreenCat Cat = new GreenCat();
+        do {
+            Cat.pos = ppos;
+        } while (Cat.pos == -1);
+        level.mobs.add(Cat);
     }
 }

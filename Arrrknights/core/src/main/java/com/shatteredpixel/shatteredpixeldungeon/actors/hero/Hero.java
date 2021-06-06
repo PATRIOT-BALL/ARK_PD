@@ -243,7 +243,7 @@ public class Hero extends Char {
     public Hero() {
         super();
 
-        HP = HT = 2000;
+        HP = HT = 20;
         //HP = HT = 2000;
         STR = STARTING_STR;
 
@@ -1511,7 +1511,7 @@ public class Hero extends Char {
             curAction = new HeroAction.Unlock(cell);
 
         } else if ((cell == Dungeon.level.exit || Dungeon.level.map[cell] == Terrain.EXIT || Dungeon.level.map[cell] == Terrain.UNLOCKED_EXIT)
-                && Dungeon.depth < 26) {
+                && Dungeon.depth < 28) {
 
             curAction = new HeroAction.Descend(cell);
 
