@@ -1979,8 +1979,8 @@ items.weapon.missiles.boomerang.name=부메랑
 items.weapon.missiles.boomerang.desc=이 구부러진 나무 부메랑은 적에게 던지면 던진 사람의 손으로 되돌아옵니다.
 items.weapon.missiles.boomerang.durability=부메랑은 단단한 구조로 인해 절대 부서지지 않습니다.
 
-items.weapon.missiles.firesteel.name=라이터
-items.weapon.missiles.firesteel.desc=번지 수 잘못 찾아온거 같은데요?\n\n_뭔가 잘 터질거같은 적에게는 매우 효과적입니다!_
+items.weapon.missiles.firesteel.name=부싯돌 화살
+items.weapon.missiles.firesteel.desc=...부싯돌 화살은 또 뭐여? \n\n_뭔가 잘 터질거같은 적에게는 매우 효과적입니다!_
 
 items.weapon.missiles.fishingspear.name=작살
 items.weapon.missiles.fishingspear.desc=물속의 생물들을 잡기 위한 작은 투창입니다. 무기로도 그럭저럭 사용할 수 있습니다. \n\n절대 에기르 출신 사람들에게 들이대지 말아줘.\nㅡ위디
@@ -1995,8 +1995,8 @@ items.weapon.missiles.heavyboomerang.desc=거대한 칼날이 달려있는 삼�
 items.weapon.missiles.javelin.name=엄청 무거운 창
 items.weapon.missiles.javelin.desc=엄청 무거워!!! \n\n성인이 들어도 묵직한 무게의 장창. 무겁지만 이걸 던진다면 충분히 파괴적일 것이다.
 
-items.weapon.missiles.kunai.name=쿠나이
-items.weapon.missiles.kunai.desc=이 조그마한 칼들은 노련한 사용자의 손에 쥐여주면 매우 강력합니다. 이 무기는 무방비 상태의 적들에게 가장 효과적입니다.
+items.weapon.missiles.kunai.name=묵인자의 쿠나이
+items.weapon.missiles.kunai.desc=어우우, 넌 죽을때 까지도 나를 치료하는구나!\n\n이 조그마한 칼들은 노련한 사용자의 손에 쥐여주면 매우 강력합니다. 이 무기는 무방비 상태의 적들에게 가장 효과적입니다.
 
 items.weapon.missiles.missileweapon.stats=이 _%1$d단계_  투척 무기는 _%2$d-%3$d의 피해_ 를 입히며 _힘이 %4$d이상_ 이어야 제대로 다룰 수 있습니다.
 items.weapon.missiles.missileweapon.distance=이 무기는 원거리 투척용으로 만들어졌으며, 먼 거리의 적에게는 더 정확하고, 가까운 거리에서는 훨씬 덜 정확해집니다.
