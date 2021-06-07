@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.Onihorn;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -36,8 +37,8 @@ public class WaterOfAdvanceguard extends WellWater {
         } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode) {
             item = new BookWhispers();
         } else if (item instanceof Gamza) {
-            if (Random.IntRange(0,10) < 9) item = new Onihorn();
-            else {item = new Gold(100); GLog.p(String.format(Messages.get(this, "procced"), 100));}
+            if (Random.IntRange(0,10) < 4) item = new Onihorn();
+            else item = new Thunderbolt();
         } else {
             item = null;
         }

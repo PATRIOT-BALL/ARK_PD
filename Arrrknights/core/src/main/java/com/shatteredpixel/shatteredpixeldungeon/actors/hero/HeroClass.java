@@ -123,6 +123,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.PurgatoryKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Dreamfoil;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Fadeleaf;
@@ -224,8 +225,6 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
-
-		new Amulet().collect();
 
 
 	/*	new PotionOfLiquidFlame().quantity(5).collect();

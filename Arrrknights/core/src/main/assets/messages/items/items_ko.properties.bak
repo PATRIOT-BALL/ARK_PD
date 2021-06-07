@@ -14,11 +14,11 @@ items.skill.sk1.bookpowerfulstrike.name=강타의 스킬개론
 items.skill.sk1.bookpowerfulstrike.desc=_강타_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 다음 공격시 레벨과 힘에 비례한 추가 피해\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookpowerfulstrike.ac_use=읽는다
 
-items.skill.sk1.booktacticalchanting.name=급속 충전의 스킬개론
+items.skill.sk1.booktacticalchanting.name=급속충전의 스킬개론
 items.skill.sk1.booktacticalchanting.desc=_급속 충전_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 레벨에 비례한 충전\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.booktacticalchanting.ac_use=읽는다
 
-items.skill.sk1.bookexecutionmode.name=처형 모드의 스킬개론
+items.skill.sk1.bookexecutionmode.name=처형모드의 스킬개론
 items.skill.sk1.bookexecutionmode.desc=_처형 모드_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 회피 상승 및 이동속도 상승\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookexecutionmode.ac_use=읽는다
 
@@ -118,11 +118,11 @@ items.skill.sk3.booksburst.name=끓어오르는 투지의 스킬개론
 items.skill.sk3.booksburst.desc=_끓어오르는 투지_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 방어력이 2배가 되고 사거리 상승. 효과가 끝나면 지속시간동안 받은 피해에 비례해 다음 공격의 피해량 상승\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.booksburst.ac_use=읽는다
 
-items.skill.sk3.booknigetraid.name=밤의 장막의 기습의 스킬개론
+items.skill.sk3.booknigetraid.name=밤의 장막의 스킬개론
 items.skill.sk3.booknigetraid.desc=_밤의 장막의 기습_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 즉시 은신하고 SP충전 상태를 얻음. 또한 짧은 시간동안 이동속도 상승\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.booknigetraid.ac_use=읽는다
 
-items.skill.sk3.bookterminationt.name=최후의 전술의 스킬개론
+items.skill.sk3.bookterminationt.name=최후전술의 스킬개론
 items.skill.sk3.bookterminationt.desc=_최후의 전술_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점에 사격을 가해 적에게 매우 강한 피해\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookterminationt.ac_use=읽는다
 
@@ -2034,6 +2034,9 @@ items.weapon.missiles.ragesawblade.desc=강력한 오리지늄의 영향을 받�
 
 items.weapon.missiles.purgatoryknife.name=상처투성이 단검
 items.weapon.missiles.purgatoryknife.desc=_"만약 또다시, 모두와 함께 싸울 수 있다면..."_ ​​\n\n적중한 적을 자신의 근처로 순간이동시킵니다.\n강화할 수 없습니다.
+
+tems.weapon.missiles.thunderbolt.name=썬더볼트
+items.weapon.missiles.thunderbolt.desc=이 _특별한_ 캡슐은 대상의 체력이 많을수록 큰 피해를 입힐 수 있습니다. 전기의 아츠가 깃들었지만 적을 마비시키는 기능은 없습니다.\n\n대상의 체력이 100%라면 2배의 피해를 입히며, 적의 체력이 떨어질수록 배율이 감소합니다. (50%이하면 피해량이 낮아집니다.)
 
 
 items.weapon.spiritbow.name=리버스 크로스보우
