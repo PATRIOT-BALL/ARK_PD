@@ -152,6 +152,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
@@ -207,6 +208,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Quarterstaff.class,               false);
 		WEAPONS.seen.put( Dirk.class,                       false);
 		WEAPONS.seen.put( Enfild.class,                   false);
+		WEAPONS.seen.put( MidnightSword.class,                   false);
 		WEAPONS.seen.put( Sword.class,                      false);
 		WEAPONS.seen.put( Mace.class,                       false);
 		WEAPONS.seen.put( Enfild.class,                       false);

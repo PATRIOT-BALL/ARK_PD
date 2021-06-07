@@ -489,6 +489,7 @@ public class GameScene extends PixelScene {
 					&& (InterlevelScene.mode == InterlevelScene.Mode.DESCEND || InterlevelScene.mode == InterlevelScene.Mode.FALL)) {
 				GLog.h(Messages.get(this, "descend"), Dungeon.depth);
 				Sample.INSTANCE.play(Assets.Sounds.DESCEND);
+
 				
 				for (Char ch : Actor.chars()){
 					if (ch instanceof DriedRose.GhostHero){
@@ -532,7 +533,8 @@ public class GameScene extends PixelScene {
 				
 			} else if (InterlevelScene.mode == InterlevelScene.Mode.RESET) {
 				GLog.h(Messages.get(this, "warp"));
-			} else {
+			}
+			else {
 				GLog.h(Messages.get(this, "return"), Dungeon.depth);
 			}
 

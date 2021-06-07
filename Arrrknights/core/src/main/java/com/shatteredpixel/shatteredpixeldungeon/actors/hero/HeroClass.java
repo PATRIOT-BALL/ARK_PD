@@ -117,6 +117,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
@@ -225,6 +226,7 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
+		new Firesteel().collect();
 
 
 	/*	new PotionOfLiquidFlame().quantity(5).collect();
@@ -251,6 +253,7 @@ public enum HeroClass {
 		MagesStaff staff;
 
 		staff = new MagesStaff(new WandOfMagicMissile());
+
 		(hero.belongings.weapon = staff).identify();
 		hero.belongings.weapon.activate(hero);
 

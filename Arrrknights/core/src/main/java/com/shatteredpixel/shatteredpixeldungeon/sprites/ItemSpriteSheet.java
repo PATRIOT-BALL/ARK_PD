@@ -26,7 +26,7 @@ import com.watabou.noosa.TextureFilm;
 
 public class ItemSpriteSheet {
 
-	private static final int WIDTH = 16;
+	private static final int WIDTH = 32;
 	public static final int SIZE = 32;
 
 	public static TextureFilm film = new TextureFilm( Assets.Sprites.ITEMS, SIZE, SIZE );
@@ -229,6 +229,7 @@ public class ItemSpriteSheet {
 	public static final int QUARTERSTAFF    = WEP_TIER2+3;
 	public static final int DIRK            = WEP_TIER2+4;
 	public static final int ENFILD           = WEP_TIER2+5;
+	public static final int MIDSWORD           = WEP_TIER2+6;
 	static{
 		assignItemRect(SHORTSWORD,      16, 16);
 		assignItemRect(HAND_AXE,        16, 16);
@@ -236,6 +237,7 @@ public class ItemSpriteSheet {
 		assignItemRect(QUARTERSTAFF,    16, 16);
 		assignItemRect(DIRK,            16, 16);
 		assignItemRect(ENFILD,            16, 16);
+		assignItemRect(MIDSWORD,            16, 16);
 	}
 
 	private static final int WEP_TIER3      =                               xy(1, 8);   //8 slots
