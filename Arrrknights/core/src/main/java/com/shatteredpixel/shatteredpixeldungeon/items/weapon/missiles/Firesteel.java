@@ -12,7 +12,7 @@ import com.watabou.utils.Random;
 
 public class Firesteel extends MissileWeapon {
     {
-        image = ItemSpriteSheet.THROWING_STONE;
+        image = ItemSpriteSheet.FLINT;
         hitSound = Assets.Sounds.HIT;
         hitSoundPitch = 1.1f;
 

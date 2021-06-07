@@ -339,6 +339,9 @@ public class Assets {
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";
 		public static final String CLOSURE	= "sprites/closure.png";
+
+		public static final String SARKAZ_CENTURION	= "sprites/Sarkaz_Centurion.png";
+
 		public static final String LENS	= "sprites/lens.png";
 		public static final String FANATIC	= "sprites/fanatic.png";
 		public static final String AIRBORNE	= "sprites/airborne.png";
