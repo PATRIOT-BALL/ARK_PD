@@ -321,9 +321,6 @@ public enum HeroClass {
 		new PotionOfMindVision().identify();
 		new ScrollOfLullaby().identify();
 
-		new ScrollOfUpgrade().identify();
-		new PotionOfStrength().identify();
-
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
