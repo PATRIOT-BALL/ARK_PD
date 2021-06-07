@@ -596,20 +596,20 @@ items.artifacts.etherealchains.desc_cursed=저주받은 사슬은 당신의 곁�
 items.artifacts.etherealchains.desc_equipped=이 사슬은 당신의 곁에 느슨하게 매여 있으며, 당신이 무찌른 적의 아츠를 천천히 빨아들입니다. 각각의 충전량은 사슬의 한 마디에 해당하며, 충전량 하나당 정확히 한 칸의 길이를 차지합니다.
 items.artifacts.etherealchains$chainsrecharge.levelup=당신의 사슬이 더욱 강해졌다!
 
-items.artifacts.hornofplenty.name=풍요의 뿔
-items.artifacts.hornofplenty.ac_eat=먹는다
-items.artifacts.hornofplenty.ac_store=저장한다
-items.artifacts.hornofplenty.eat=당신은 뿔에서 나온 음식을 먹었다.
-items.artifacts.hornofplenty.prompt=넣을 음식을 선택하세요
-items.artifacts.hornofplenty.no_food=당신의 뿔피리 안에 남은 음식이 없다!
-items.artifacts.hornofplenty.full=당신의 뿔피리가 음식으로 가득 찼다!
-items.artifacts.hornofplenty.reject=당신의 뿔피리는 안 익힌 담백과를 뱉어 냈다.
-items.artifacts.hornofplenty.maxlevel=당신의 뿔피리는 먹을 수 있는 모든 음식을 흡수했다!
-items.artifacts.hornofplenty.levelup=당신의 뿔피리는 음식을 흡수하고 더욱 강해졌다!
-items.artifacts.hornofplenty.feed=풍요의 뿔은 당신이 준 음식을 흡수했다.
-items.artifacts.hornofplenty.desc=이 뿔피리는 불 수는 없지만, 착용한 후 경험치를 얻음에 따라 음식을 만들어내는 것 같습니다.
-items.artifacts.hornofplenty.desc_hint=아마도 음식을 뿔피리에게 줌으로써 그 힘을 더 키울 수 있을 것 같습니다.
-items.artifacts.hornofplenty.desc_cursed=저주받은 뿔피리는 당신의 옆에 붙어 버렸습니다. 음식을 생산하기 보다는 먹어치우려고 합니다.
+items.artifacts.hornofplenty.name=굼 인형
+items.artifacts.hornofplenty.ac_eat=받아 먹는다
+items.artifacts.hornofplenty.ac_store=음식을 준다
+items.artifacts.hornofplenty.eat=당신은 인형이 만든 음식을 먹었다.
+items.artifacts.hornofplenty.prompt=건네줄 음식을 선택하세요
+items.artifacts.hornofplenty.no_food=아직 요리를 만들고 있으니까 조금만 더 기다려 줘!
+items.artifacts.hornofplenty.full=굼의 특제 요리가 준비됐다!
+items.artifacts.hornofplenty.reject=당신의 인형은 안 익힌 담백과를 뱉어 냈다.
+items.artifacts.hornofplenty.maxlevel=당신의 인형은 먹을 수 있는 모든 음식을 먹었다!
+items.artifacts.hornofplenty.levelup=당신의 인형은 음식을 먹고 더욱 강해졌다!
+items.artifacts.hornofplenty.feed=인형은 당신이 준 음식을 받아먹었다.
+items.artifacts.hornofplenty.desc=이 인형은 누군가의 정신이 깃든 물건으로, 착용한 후 경험치를 얻음에 따라 음식을 만들어내는 것 같습니다.
+items.artifacts.hornofplenty.desc_hint=아마도 음식을 인형에게 줌으로써 그 힘을 더 키울 수 있을 것 같습니다.
+items.artifacts.hornofplenty.desc_cursed=굼은 배가 고파! 굼은 어쩔수 없었어...\n\n 저주받은 인형이 당신의 옆에 붙어 버렸습니다. 음식을 요리하기 보다는 당신의 음식을 먹어치우려고 합니다.
 
 items.artifacts.lloydsbeacon.name=로이드의 신호기
 items.artifacts.lloydsbeacon.ac_zap=발사한다
@@ -738,8 +738,8 @@ items.bombs.firebomb.desc=이 폭탄은 폭발할 때 폭발 범위보다 넓은
 items.bombs.flashbang.name=섬광탄
 items.bombs.flashbang.desc=이 개조된 폭탄은 폭발과 동시에 엄청난 섬광을 내뿜습니다. 주변의 모든 것들이 방향 감각을 잃을 것이며, 그 강도는 폭탄과의 거리에 따라 달라집니다.
 
-items.bombs.frostbomb.name=서리 폭탄
-items.bombs.frostbomb.desc=이 폭탄은 폭발할 때 폭발 범위보다 넓은 지역을 오랫동안 냉기 돌풍으로 뒤덮도록 개조되었습니다.
+items.bombs.frostbomb.name=서리별 인형
+items.bombs.frostbomb.desc=이 그리운 느낌의 인형은 폭발할 때 폭발 범위보다 넓은 지역을 오랫동안 냉기 돌풍으로 뒤덮도록 개조되었습니다.
 
 items.bombs.holybomb.name=신성 폭탄
 items.bombs.holybomb.desc=이 폭탄은 폭발할 때 폭발 범위보다 넓은 지역에 신성한 빛을 내뿜어, 언데드와 악마 적에게 추가 피해를 줍니다.
