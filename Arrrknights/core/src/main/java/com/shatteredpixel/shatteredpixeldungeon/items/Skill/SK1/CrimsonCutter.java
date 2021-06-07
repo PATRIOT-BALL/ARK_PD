@@ -40,10 +40,10 @@ public class CrimsonCutter extends Skill {
         int dmg;
         enemy.sprite.burst(CharSprite.NEGATIVE, 10);
         if (enemy.properties().contains(Char.Property.DRONE)) {
-            dmg = Random.NormalIntRange(5, 5+curUser.STR) * 2;
+            dmg = Random.NormalIntRange(10, 10+curUser.STR) * 2;
         }
         else if (enemy.buff(Bleeding.class) != null) {
-            dmg = Random.NormalIntRange(7, 13+curUser.STR);
+            dmg = Random.NormalIntRange(5, 5+curUser.STR) * 2;
             Buff.affect(enemy, Bleeding.class).set(curUser.STR / 5);}
         else {
             dmg = Random.NormalIntRange(5, 5+curUser.STR);
