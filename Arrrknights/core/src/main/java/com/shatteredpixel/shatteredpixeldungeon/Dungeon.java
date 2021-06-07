@@ -58,6 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.NewHallsBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewPrisonBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.PrisonLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel2;
+import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.SecretRoom;
@@ -329,6 +330,9 @@ public class Dungeon {
 			break;
 		case 28:
 			level = new RhodesLevel2();
+			break;
+		case 29:
+			level = new RhodesLevel3();
 			break;
 		default:
 			level = new DeadEndLevel();

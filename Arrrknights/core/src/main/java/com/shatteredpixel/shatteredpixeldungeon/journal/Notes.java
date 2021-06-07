@@ -76,7 +76,8 @@ public class Notes {
 		GHOST,
 		WANDMAKER,
 		TROLL,
-		IMP;
+		IMP,
+		GREENCAT;
 		
 		public String desc() {
 			return Messages.get(this, name());

@@ -225,6 +225,8 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		new Amulet().collect();
+
 
 	/*	new PotionOfLiquidFlame().quantity(5).collect();
 		new ScrollOfEnchantment().quantity(999).collect();*/

@@ -13,8 +13,13 @@ import com.watabou.noosa.Game;
 public class Closure extends NPC {
     {
         spriteClass = ClosureSprite.class;
-        HP=HT=10;
+        HP=HT=60;
         properties.add(Property.IMMOVABLE);
+    }
+
+    @Override
+    public int defenseSkill(Char enemy) {
+        return INFINITE_EVASION;
     }
 
     @Override

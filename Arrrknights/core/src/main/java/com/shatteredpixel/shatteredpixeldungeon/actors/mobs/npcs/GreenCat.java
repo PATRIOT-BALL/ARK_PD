@@ -6,7 +6,9 @@ import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
+import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.SurfaceScene;
@@ -21,6 +23,8 @@ public class GreenCat extends NPC {
         properties.add(Property.IMMOVABLE);
     }
 
+    private boolean seenBefore = false;
+
     @Override
     public int defenseSkill(Char enemy) {
         return INFINITE_EVASION;
@@ -28,6 +32,22 @@ public class GreenCat extends NPC {
 
     @Override
     public void damage(int dmg, Object src) {
+    }
+
+    @Override
+    protected boolean act() {
+
+        if (Dungeon.level.heroFOV[pos] && Dungeon.hero.belongings.getItem(Amulet.class) != null) {
+            if (!seenBefore) {
+                yell( Messages.get(this, "wellcom", Dungeon.hero.heroClass.title() ) );
+            }
+            Notes.add( Notes.Landmark.GREENCAT );
+            seenBefore = true;
+        } else {
+            seenBefore = false;
+        }
+
+        return super.act();
     }
 
     @Override
@@ -50,6 +70,14 @@ public class GreenCat extends NPC {
     }
 
     public static void spawn(RhodesLevel level, int ppos) {
+        GreenCat Cat = new GreenCat();
+        do {
+            Cat.pos = ppos;
+        } while (Cat.pos == -1);
+        level.mobs.add(Cat);
+    }
+
+    public static void spawn(RhodesLevel3 level, int ppos) {
         GreenCat Cat = new GreenCat();
         do {
             Cat.pos = ppos;
