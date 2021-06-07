@@ -436,13 +436,13 @@ public class ItemSpriteSheet {
 	public static final int ARTIFACT_CHALICE1   = ARTIFACTS+13;
 	public static final int ARTIFACT_CHALICE2   = ARTIFACTS+14;
 	public static final int ARTIFACT_CHALICE3   = ARTIFACTS+15;
-	public static final int ARTIFACT_SANDALS    = ARTIFACTS+16;
-	public static final int ARTIFACT_SHOES      = ARTIFACTS+17;
-	public static final int ARTIFACT_BOOTS      = ARTIFACTS+18;
-	public static final int ARTIFACT_GREAVES    = ARTIFACTS+19;
-	public static final int ARTIFACT_ROSE1      = ARTIFACTS+20;
-	public static final int ARTIFACT_ROSE2      = ARTIFACTS+21;
-	public static final int ARTIFACT_ROSE3      = ARTIFACTS+22;
+	public static final int ARTIFACT_SANDALS    = ARTIFACTS+32;
+	public static final int ARTIFACT_SHOES      = ARTIFACTS+33;
+	public static final int ARTIFACT_BOOTS      = ARTIFACTS+34;
+	public static final int ARTIFACT_GREAVES    = ARTIFACTS+35;
+	public static final int ARTIFACT_ROSE1      = ARTIFACTS+36;
+	public static final int ARTIFACT_ROSE2      = ARTIFACTS+37;
+	public static final int ARTIFACT_ROSE3      = ARTIFACTS+38;
 	static{
 		assignItemRect(ARTIFACT_CLOAK,      16, 16);
 		assignItemRect(ARTIFACT_ARMBAND,    16, 16);
