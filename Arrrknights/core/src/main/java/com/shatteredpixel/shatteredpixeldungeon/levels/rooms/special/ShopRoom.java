@@ -166,7 +166,7 @@ public class ShopRoom extends SpecialRoom {
 			
 		case 11:
 			w = (MeleeWeapon) Generator.random(Generator.wepTiers[2]);
-			itemsToSpawn.add(new Ragesawblade().quantity(2).identify());
+			itemsToSpawn.add(new Ragesawblade().quantity(1).identify());
 			itemsToSpawn.add(new PurgatoryKnife().quantity(1).identify());
 			itemsToSpawn.add( new MailArmor().identify() );
 			break;

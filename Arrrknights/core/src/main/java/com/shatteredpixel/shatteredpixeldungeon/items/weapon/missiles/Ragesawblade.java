@@ -18,7 +18,7 @@ public class Ragesawblade extends MissileWeapon {
         bones = false;
 
         tier = 3;
-        baseUses = 4;
+        baseUses = 5;
         sticky = false;
     }
 
@@ -31,5 +31,10 @@ public class Ragesawblade extends MissileWeapon {
     @Override
     public ItemSprite.Glowing glowing() {
         return COL;
+    }
+
+    @Override
+    public int value() {
+        return super.value() * 2;
     }
 }

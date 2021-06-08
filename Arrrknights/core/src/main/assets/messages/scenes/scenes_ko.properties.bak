@@ -49,8 +49,8 @@ scenes.heroselectscene$wndheroinfo.subclasses_title=보조 직업
 
 scenes.interlevelscene$mode.descend=내려가는 중...
 scenes.interlevelscene$mode.ascend=올라가는 중...
-scenes.interlevelscene$mode.loloup=로도스 아일랜드로 가는 중...
-scenes.interlevelscene$mode.lolodown=체르노보그로 가는 중...
+scenes.interlevelscene$mode.descend_27=로도스 아일랜드로 가는 중...
+scenes.interlevelscene$mode.ascend_27=체르노보그로 가는 중...
 scenes.interlevelscene$mode.continue=불러오는 중...
 scenes.interlevelscene$mode.resurrect=나는 살아있다구, *로도스 욕설*들아!
 scenes.interlevelscene$mode.return=돌아오는 중...
@@ -109,7 +109,7 @@ scenes.titlescene$changesbutton.changes=현재 변경 사항 화면
 scenes.titlescene.patreon_body=Tomorrow`s RogueNight는 완전히 무료인 게임으로, 이는 제가 너그러운 플레이어들의 후원에 의지하여 게임을 계속 만들어감을 의미합니다.\n\n만약 저를 후원하는 데에 관심이 있으시다면, 가장 좋은 방법은 Patreon을 이용하는 것입니다. Patreon은 제게 지속적인 수입을 제공하며, 또한 저를 지원해 주시는 분들에게 무언가 보답할 수 있게 합니다.\n\n후원자분들은 매 주마다 누구보다도 빠르게 제가 현재 하고 있는 작업에 대한 전용 블로그 게시물을 받아보실 수 있습니다!\n\n제 Patreon 페이지를 둘러보시면 후원을 통해 얻을 수 있는 혜택에 대한 가장 최신 정보를 얻으실 수 있습니다. 후원을 고려해 주셔서 감사합니다!\n\n(Patreon 혜택은 영어로만 제공됩니다.)
 scenes.titlescene.patreon_button=Patreon 페이지로 이동
 
-scenes.welcomescene.welcome_msg=Tomorrow`s RogueNight는 무작위로 출현하는 적들과 아이템, 그리고함정이 도사리고 있는 던전을 돌파하는 로그라이크 RPG입니다!\n\n매 플레이마다 새로운 도전이 기다리고 있습니다. 하지만 조심하세요. 한번 죽으면 그걸로 끝이니까요!\n\n즐거운 플레이 되십시오!
+scenes.welcomescene.welcome_msg=Tomorrow`s RogueNight는 오픈 소스 게임 Shattered Pixel Dungeon을 기반으로 제작되었습니다.
 scenes.welcomescene.update_intro=Tomorrow`s RogueNight가 업데이트되었습니다!
 scenes.welcomescene.update_msg=Test v0.1.3으로 돌입하면서 구글 플레이에 정식 출시되었습니다! 자세한 변경점은 개발노트를 참조해주세요!
 scenes.welcomescene.patch_intro=Tomorrow`s RogueNight가 패치되었습니다!
@@ -119,6 +119,6 @@ scenes.welcomescene.patch_balance=게임 밸런스의 수정이 있습니다.
 scenes.welcomescene.patch_msg=이 업데이트는 몇가지 자잘한 수정과 성능 향상을 포함합니다.
 scenes.welcomescene.what_msg=현재 저장된 게임은 Tomorrow`s RogueNight의 이전 버전에서 나온 것입니다!\n\n현재 버전에 등장하지 않는 요소들이 충돌을 일으킬 수 있으니, 조심하십시오!
 scenes.welcomescene.lang_warning_title=미완성된 번역
-scenes.welcomescene.lang_warning_msg=이 업데이트로 추가된 몇 가지 항목이 번역되지 않았습니다.\n\n몇몇 문장이 영어로 나타날 수 있습니다.\n\n번역팀이 이를 해결하기 위해 작업 중이며 조만간 완전한 번역을 볼 수 있을 것입니다.\n\n기다려 주셔서 감사합니다.
+scenes.welcomescene.lang_warning_msg=이 업데이트로 추가된 몇 가지 항목이 번역되지 않았습니다.\n\n몇몇 문장이 한국어로 나타날 수 있습니다.\n\n번역팀이 이를 해결하기 위해 작업 중이며 조만간 완전한 번역을 볼 수 있을 것입니다.\n\n기다려 주셔서 감사합니다.
 scenes.welcomescene.continue=계속
 scenes.welcomescene.changelist=변경사항

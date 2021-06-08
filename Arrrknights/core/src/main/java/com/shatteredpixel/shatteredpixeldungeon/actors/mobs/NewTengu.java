@@ -1185,7 +1185,7 @@ public class NewTengu extends Mob {
                         Char ch = Actor.findChar(cell);
                         if (ch != null && !(ch instanceof NewTengu)) {
                             int dmg = Random.NormalIntRange(3, 9);
-                            if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) || Dungeon.mboss9 == 1) { dmg = Random.NormalIntRange(18, 24);}
+                            if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1) { dmg = Random.NormalIntRange(18, 24);}
                             dmg -= ch.drRoll();
                             Buff.affect(ch, Blindness.class,dmg);
 
