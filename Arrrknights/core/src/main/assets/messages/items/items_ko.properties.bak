@@ -1068,7 +1068,7 @@ items.quest.gamza.name=감자 전지
 items.quest.gamza.desc=어딘가에선 감자로 서버를 돌린다는 소문이 있다.\n\n아방가르드한 힘의 우물에 던지면 뭔가 일어날 수도 있습니다.
 
 items.quest.nmould.name=고대 주물
-items.quest.nmould.desc=하늘에는 커다란 용광로가, 땅에는 금, 은, 동, 석, 철, 다섯 가지 금속이 난다"\n\n...근데 이거 감자 아니였나요?
+items.quest.nmould.desc=하늘에는 커다란 용광로가, 땅에는 금, 은, 동, 석, 철, 다섯 가지 금속이 난다\n\n...근데 이거 감자 아니였나요?
 
 items.quest.nullshield.name=빈 방패
 items.quest.nullshield.desc=무언가를 끼우면 쓸 수 있을 것 같습니다...
@@ -1866,15 +1866,15 @@ items.weapon.melee.roundshield.typical_stats_desc=일반적으로 이 무기는 
 items.weapon.melee.roundshield.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
 items.weapon.melee.roundshield.desc=이 커다란 방패는 공격을 효과적으로 방어하며, 위기에 몰렸을 때에는 그럭저럭 괜찮은 무기도 됩니다.
 
-items.weapon.melee.gamzashield.name=블랙스틸 특수 방패
+items.weapon.melee.gamzashield.name=G52 전술 섬광 방패
 items.weapon.melee.gamzashield.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
 items.weapon.melee.gamzashield.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
-items.weapon.melee.gamzashield.desc=블랙 스틸에서 온 대원 리스캄의 방패입니다. 이 _특별한 무기_는 일반적인 방패와 같지만, 공격할 때마다 SP를 충전할 수 있습니다. SP100%를 소모해 대상을 실명시키는 광선을 발사할 수 있습니다.
+items.weapon.melee.gamzashield.desc=_"명심해. 총은 나쁜 놈들에게 겨누는 거다."_\n\n이 _특별한 무기_는 일반적인 방패와 같지만, 공격할 때마다 SP를 충전할 수 있습니다. SP100%를 소모해 대상을 실명시키는 광선을 발사할 수 있습니다.
 items.weapon.melee.gamzashield.prompt=목표를 지정해주세요.
 items.weapon.melee.gamzashield.ac_zap=눈뿅 발사!
 items.weapon.melee.gamzashield.self_target=자신에게는 발사할 수 없습니다.
 items.weapon.melee.gamzashield.no_magic=아츠 면역, 혹은 침묵 상태일 땐 발사할 수 없습니다.
-items.weapon.melee.gamzashield.fizzles=당신의 감자 실드의 충전량이 부족합니다.
+items.weapon.melee.gamzashield.fizzles=당신의 섬광 방패의 충전량이 부족합니다.
 
 items.weapon.melee.runicblade.name=오리지늄 검
 items.weapon.melee.runicblade.stats_desc=강화 효율 +
