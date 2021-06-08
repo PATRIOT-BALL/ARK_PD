@@ -247,6 +247,7 @@ public class ItemSpriteSheet {
 	public static final int ROUND_SHIELD    = WEP_TIER3+3;
 	public static final int SAI             = WEP_TIER3+4;
 	public static final int WHIP            = WEP_TIER3+5;
+	public static final int GAMZA_SHIELD     = WEP_TIER3+6;
 	static{
 		assignItemRect(SWORD,           16, 16);
 		assignItemRect(MACE,            16, 16);
@@ -279,7 +280,7 @@ public class ItemSpriteSheet {
 	public static final int GREATAXE        = WEP_TIER5+3;
 	public static final int GREATSHIELD     = WEP_TIER5+4;
 	public static final int GAUNTLETS       = WEP_TIER5+5;
-	public static final int HANYA       = WEP_TIER5+6;
+	public static final int NIANSWORD       = WEP_TIER5+6;
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
 		assignItemRect(WAR_HAMMER,  16, 16);
@@ -287,7 +288,7 @@ public class ItemSpriteSheet {
 		assignItemRect(GREATAXE,    16, 16);
 		assignItemRect(GREATSHIELD, 16, 16);
 		assignItemRect(GAUNTLETS,   16, 16);
-		assignItemRect(HANYA,   16, 16);
+		assignItemRect(NIANSWORD,   16, 16);
 	}
 
 	                                                                                    //8 free slots
@@ -693,6 +694,9 @@ public class ItemSpriteSheet {
 	public static final int BLOB    = QUEST+7;
 	public static final int SHARD   = QUEST+8;
 	public static final int CAUTUS   = QUEST+9;
+	public static final int MOULD   = QUEST+10;
+	public static final int NULL_DEF   = QUEST+11;
+	public static final int GAMZA   = QUEST+12;
 	static{
 		assignItemRect(SKULL,   16, 16);
 		assignItemRect(DUST,    16, 16);
@@ -704,6 +708,9 @@ public class ItemSpriteSheet {
 		assignItemRect(BLOB,    16, 16);
 		assignItemRect(SHARD,    16, 16);
 		assignItemRect(CAUTUS,    16, 17);
+		assignItemRect(MOULD,    16, 16);
+		assignItemRect(NULL_DEF,    16, 16);
+		assignItemRect(GAMZA,    16, 16);
 	}
 
 	private static final int BAGS       =                                   xy(1, 31);  //16 slots

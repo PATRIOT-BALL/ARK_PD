@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class PurgatoryKnife extends MissileWeapon {
     private static ItemSprite.Glowing COL = new ItemSprite.Glowing( 0x00008B);
     {
-        image = ItemSpriteSheet.THROWING_KNIFE;
+        image = ItemSpriteSheet.LAVA;
         hitSound = Assets.Sounds.HIT_KNIFE;
         hitSoundPitch = 1.2f;
 

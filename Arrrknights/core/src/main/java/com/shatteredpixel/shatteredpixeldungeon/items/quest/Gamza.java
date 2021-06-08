@@ -5,7 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Gamza extends Item {
     {
-        image = ItemSpriteSheet.CAUTUS;
+        image = ItemSpriteSheet.GAMZA;
 
         stackable = true;
         unique = true;

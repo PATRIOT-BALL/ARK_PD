@@ -43,7 +43,7 @@ public class Gamzashield extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
 
     {
-        image = ItemSpriteSheet.ROUND_SHIELD;
+        image = ItemSpriteSheet.GAMZA_SHIELD;
         hitSound = Assets.Sounds.HIT;
         hitSoundPitch = 1f;
         usesTargeting = true;

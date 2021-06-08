@@ -3,9 +3,9 @@ package com.shatteredpixel.shatteredpixeldungeon.items.quest;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Onihorn extends Item {
+public class Nmould extends Item {
     {
-        image = ItemSpriteSheet.BONES;
+        image = ItemSpriteSheet.MOULD;
 
         stackable = true;
         unique = true;

@@ -2,11 +2,9 @@ package com.shatteredpixel.shatteredpixeldungeon.items.quest;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -18,7 +16,7 @@ import java.util.ArrayList;
 public class Nullshield extends Item {
     private static final String AC_USE = "USE";
     {
-        image = ItemSpriteSheet.ROUND_SHIELD;
+        image = ItemSpriteSheet.NULL_DEF;
 
         stackable = false;
         unique = true;
@@ -56,10 +54,10 @@ public class Nullshield extends Item {
                    gma.identify();
                    item.detach( curUser.belongings.backpack );
                 }
-                else if (item instanceof Onihorn)
+                else if (item instanceof Nmould)
                 {
                     GLog.h(Messages.get(Nullshield.class, "suc"));
-                    Hannya nya = new Hannya();
+                    Niansword nya = new Niansword();
                     nya.enchant(Weapon.Enchantment.randomUncommon());
                     nya.identify();
                     nya.collect();

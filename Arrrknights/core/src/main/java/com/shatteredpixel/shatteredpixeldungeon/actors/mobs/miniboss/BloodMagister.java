@@ -24,7 +24,7 @@ public class BloodMagister extends Mob {
         properties.add(Property.MINIBOSS);
         immunities.add(ScrollOfPsionicBlast.class);
 
-        HP = HT = 200;
+        HP = HT = 300;
         defenseSkill = 15;
         baseSpeed = 2f;
 
@@ -59,7 +59,7 @@ public class BloodMagister extends Mob {
         }
         else if (buff(rage.class) != null)
         {
-            damage(4,this);
+            damage(12,this);
         }
         return super.act();
     }

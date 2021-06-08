@@ -1,6 +1,5 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.blobs;
 
-import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BlobEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -11,10 +10,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStri
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
-import com.shatteredpixel.shatteredpixeldungeon.items.quest.Onihorn;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nmould;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -37,7 +35,7 @@ public class WaterOfAdvanceguard extends WellWater {
         } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode) {
             item = new BookWhispers();
         } else if (item instanceof Gamza) {
-            if (Random.IntRange(0,10) < 4) item = new Onihorn();
+            if (Random.IntRange(0,10) < 4) item = new Nmould();
             else item = new Thunderbolt();
         } else {
             item = null;

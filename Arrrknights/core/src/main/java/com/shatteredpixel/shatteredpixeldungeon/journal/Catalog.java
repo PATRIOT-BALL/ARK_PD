@@ -53,15 +53,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssaul
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.HuntressArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.MageArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.MailArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.RogueArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.ScaleArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.WarriorArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
@@ -148,7 +139,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Hannya;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
@@ -229,7 +220,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Greatshield.class,                false);
 		WEAPONS.seen.put( Gauntlet.class,                   false);
 		WEAPONS.seen.put( Gamzashield.class,               false);
-		WEAPONS.seen.put( Hannya.class,                   false);
+		WEAPONS.seen.put( Niansword.class,                   false);
 
 		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);
 		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);

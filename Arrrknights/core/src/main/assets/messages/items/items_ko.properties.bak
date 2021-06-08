@@ -1067,8 +1067,8 @@ items.quest.ratskull.desc=놀랍도록 커다란 생쥐 두개골입니다. 벽�
 items.quest.gamza.name=감자 전지
 items.quest.gamza.desc=어째서 이걸 건네줬을까요? 잘 모르겠지만 그래도 무언가 용도가 있을겁니다!\n\n아방가르드한 힘의 우물에 던지면 뭔가 일어날 수도 있습니다.
 
-items.quest.onihorn.name=고대 주물
-items.quest.onihorn.desc=하늘에는 커다란 용광로가, 땅에는 금, 은, 동, 석, 철, 다섯 가지 금속이 난다"\n\n...근데 이거 감자 아니였나요?
+items.quest.nmould.name=고대 주물
+items.quest.nmould.desc=하늘에는 커다란 용광로가, 땅에는 금, 은, 동, 석, 철, 다섯 가지 금속이 난다"\n\n...근데 이거 감자 아니였나요?
 
 items.quest.nullshield.name=빈 방패
 items.quest.nullshield.desc=무언가를 끼우면 쓸 수 있을 것 같습니다...
@@ -1804,10 +1804,10 @@ items.weapon.melee.greatsword.name=끓어오르는 투지
 items.weapon.melee.greatsword.stats_desc=사거리 +1, 공격속도 +100%, 명중률 -30%
 items.weapon.melee.greatsword.desc=로도스 아일랜드 기술진이 만든 사거리 연장모듈이 도착했다. 전기톱 우는 소리 들리지? 덤으로 새로운 모터와 무딘 칼날들도 새로 교체됐다구! 
 
-items.weapon.melee.hannya.name=동의 인장
-items.weapon.melee.hannya.typical_stats_desc=일반적으로 이 무기는 0-%d의 피해를 감소시키며, 공격받으면 공격자에게 0-%d의 피해를 입힙니다. 이 수치는 강화를 하면 상승합니다.
-items.weapon.melee.hannya.stats_desc=이 무기는 0-%d의 피해를 감소시키며, 공격받으면 공격자에게 0-%d의 피해를 입힙니다. 이 수치는 강화를 하면 상승합니다.
-items.weapon.melee.hannya.desc=_"내 몸 속은 1400도나 된다고."_\n\n이 _특별한_ 무기는 매운 걸 좋아하는 어떤 대원의 것입니다. 이 무기를 들고있다면 자신을 공격한 적도 피해를 받게될 것입니다.
+items.weapon.melee.niansword.name=동의 인장
+items.weapon.melee.niansword.typical_stats_desc=일반적으로 이 무기는 0-%d의 피해를 감소시키며, 공격받으면 공격자에게 0-%d의 피해를 입힙니다. 이 수치는 강화를 하면 상승합니다.
+items.weapon.melee.niansword.stats_desc=이 무기는 0-%d의 피해를 감소시키며, 공격받으면 공격자에게 0-%d의 피해를 입힙니다. 이 수치는 강화를 하면 상승합니다.
+items.weapon.melee.niansword.desc=_"내 몸 속은 1400도나 된다고."_\n\n이 _특별한_ 무기는 매운 걸 좋아하는 어떤 대원의 것입니다. 이 무기를 들고있다면 자신을 공격한 적도 피해를 받게될 것입니다.
 
 items.weapon.melee.handaxe.name=묠니르-3
 items.weapon.melee.handaxe.stats_desc=명중률 +20%
@@ -1866,7 +1866,7 @@ items.weapon.melee.roundshield.typical_stats_desc=일반적으로 이 무기는 
 items.weapon.melee.roundshield.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
 items.weapon.melee.roundshield.desc=이 커다란 방패는 공격을 효과적으로 방어하며, 위기에 몰렸을 때에는 그럭저럭 괜찮은 무기도 됩니다.
 
-items.weapon.melee.gamzashield.name=감자 실드
+items.weapon.melee.gamzashield.name=블랙스틸 특수 방패
 items.weapon.melee.gamzashield.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
 items.weapon.melee.gamzashield.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
 items.weapon.melee.gamzashield.desc=블랙 스틸에서 온 대원 리스캄의 방패입니다. 이 _특별한 무기_는 일반적인 방패와 같지만, 공격할 때마다 SP를 충전할 수 있습니다. SP100%를 소모해 대상을 실명시키는 광선을 발사할 수 있습니다.
@@ -1994,7 +1994,7 @@ items.weapon.missiles.boomerang.desc=이 구부러진 나무 부메랑은 적에
 items.weapon.missiles.boomerang.durability=부메랑은 단단한 구조로 인해 절대 부서지지 않습니다.
 
 items.weapon.missiles.firesteel.name=라이터
-items.weapon.missiles.firesteel.desc=...이건 마인크(검열됨) \n\n_뭔가 잘 터질거같은 적에게는 매우 효과적입니다!_
+items.weapon.missiles.firesteel.desc=...이건 마인크(검열됨)\n\n_뭔가 잘 터질거같은 적에게는 매우 효과적입니다!_
 
 items.weapon.missiles.fishingspear.name=작살
 items.weapon.missiles.fishingspear.desc=물속의 생물들을 잡기 위한 작은 투창입니다. 무기로도 그럭저럭 사용할 수 있습니다. \n\n절대 에기르 출신 사람들에게 들이대지 말아줘.\nㅡ위디
@@ -2082,7 +2082,7 @@ items.amulet.desc=아무것도 기억이 나지 않는다. 처음에는 전혀 �
 
 items.originiumshard.name=오리지늄 조각
 items.originiumshard.ac_use=사용한다!
-items.originiumshard.desc=로도스의 박사가 좋아하는 부류의 간식. 직접 섭취하는 것으로 사용할 수도 있지만. 손에 쥐고 있는 것으로도 체내의 오리지늄을 자극할 수있다. \n\n사용 시 활성 오리지늄 버프가 걸리게 된다. 위험한 버프인 만큼, 신중히 사용하자.
+items.originiumshard.desc=로도스의 박사가 좋아하는 부류의 간식. 직접 섭취하는 것으로 사용할 수도 있지만. 손에 쥐고 있는 것으로도 체내의 오리지늄을 자극할 수있다. \n\n사용 시 활성 오리지늄 버프를 받아 공격속도가 상승하지만 체력을 계속해서 잃게된다.
 
 items.ankh.name=앙크
 items.ankh.ac_bless=축복한다
@@ -2193,4 +2193,4 @@ items.tomeofmastery.desc=선임 오퍼레이터들의 경험이 담겨있는 데
 
 items.torch.name=형광등
 items.torch.ac_light=빛이 있으라!
-items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아니지, 내가 말을 하기 시작했을 때부터 라테라노 사람이었어." \n\n 주변이 어둡다면, 이것을 머리에 올려놓아 주변을 밝히십시오.
+items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아니지, 내가 말을 하기 시작했을 때부터 라테라노 사람이었어." \n\n주변이 어둡다면, 이것을 머리에 올려놓아 주변을 밝히십시오.

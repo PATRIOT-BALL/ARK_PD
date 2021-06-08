@@ -4,9 +4,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Hannya extends MeleeWeapon {
+public class Niansword extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.GREATSHIELD;
+        image = ItemSpriteSheet.NIANSWORD;
 
         tier = 5;
     }
