@@ -40,8 +40,8 @@ public class Challenges {
 	public static final int MAX_VALUE           = 511; // 다 합쳐야댐!!
 
 	public static final String[] NAME_IDS = {
-			"champion_enemies",
 			"special_boss",
+			"champion_enemies",
 			"no_food",
 			"no_armor",
 			"no_healing",
@@ -52,7 +52,7 @@ public class Challenges {
 	};
 
 	public static final int[] MASKS = {
-			CHAMPION_ENEMIES, SPECIAL_BOSS,NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS
+			SPECIAL_BOSS, CHAMPION_ENEMIES, ,NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS
 	};
 
 	public static int activeChallenges(){

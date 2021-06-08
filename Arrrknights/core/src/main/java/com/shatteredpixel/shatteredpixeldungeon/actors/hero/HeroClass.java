@@ -227,9 +227,6 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
-		new ScrollOfEnchantment().quantity(999).collect();
-		new ScrollOfIdentify().collect();
-		new PotionOfAdrenalineSurge().collect();
 
 
 		/*	new PotionOfLiquidFlame().quantity(5).collect();
