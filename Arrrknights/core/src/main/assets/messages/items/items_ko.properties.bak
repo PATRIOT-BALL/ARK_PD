@@ -1824,7 +1824,7 @@ items.weapon.melee.longsword.stats_desc=이 무기를 사용하면 특이한 힘
 items.weapon.melee.longsword.prompt=목표를 지정해주세요.
 items.weapon.melee.longsword.self_target=자신에게는 발사할 수 없습니다.
 items.weapon.melee.longsword.no_magic=아츠 면역, 혹은 침묵 상태일 땐 발사할 수 없습니다.
-items.weapon.melee.longsword.fizzles=당신의 마왕 에너지가 부족합니다.
+items.weapon.melee.longsword.fizzles=SP가 부족합니다.
 
 items.weapon.melee.mace.name=테르밋 블레이드
 items.weapon.melee.mace.stats_desc=명중률 +28%
