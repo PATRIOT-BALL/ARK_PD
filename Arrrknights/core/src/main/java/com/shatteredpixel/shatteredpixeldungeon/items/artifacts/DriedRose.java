@@ -197,7 +197,7 @@ public class DriedRose extends Artifact {
 	}
 	
 	public int ghostStrength(){
-		return 13 + level()/2;
+		return 14 + level()/2;
 	}
 
 	@Override
@@ -548,9 +548,9 @@ public class DriedRose extends Artifact {
 			}
 			
 			//same dodge as the hero
-			defenseSkill = (Dungeon.hero.lvl+4);
+			defenseSkill = (Dungeon.hero.lvl+5);
 			if (rose == null) return;
-			HT = 20 + 8*rose.level();
+			HT = 25 + 8*rose.level();
 		}
 		
 		private int defendingPos = -1;
@@ -599,7 +599,7 @@ public class DriedRose extends Artifact {
 		public int attackSkill(Char target) {
 			
 			//same accuracy as the hero.
-			int acc = Dungeon.hero.lvl + 9;
+			int acc = Dungeon.hero.lvl + 10;
 			
 			if (rose != null && rose.weapon != null){
 				acc *= rose.weapon.accuracyFactor(this);
@@ -624,11 +624,11 @@ public class DriedRose extends Artifact {
 		
 		@Override
 		public int damageRoll() {
-			int dmg = 0;
+			int dmg = 2;
 			if (rose != null && rose.weapon != null){
 				dmg += rose.weapon.damageRoll(this);
 			} else {
-				dmg += Random.NormalIntRange(0, 5);
+				dmg += Random.NormalIntRange(0, 6);
 			}
 			
 			return dmg;
@@ -706,12 +706,14 @@ public class DriedRose extends Artifact {
 		@Override
 		public int drRoll() {
 			int block = 0;
+			int plusblock = rose.level();
 			if (rose != null && rose.armor != null){
 				block += Random.NormalIntRange( rose.armor.DRMin(), rose.armor.DRMax());
 			}
 			if (rose != null && rose.weapon != null){
 				block += Random.NormalIntRange( 0, rose.weapon.defenseFactor( this ));
 			}
+			if (HT / 2 >= HP) block += plusblock;
 			return block;
 		}
 		
