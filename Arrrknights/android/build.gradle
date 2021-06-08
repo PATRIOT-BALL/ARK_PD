@@ -29,6 +29,7 @@ android {
         debug {
             applicationIdSuffix ".indev"
             versionNameSuffix '-INDEV'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             dependencies {
                 debugImplementation project(':services:updates:debugUpdates')
                 debugImplementation project(':services:news:debugNews')
@@ -50,8 +51,10 @@ android {
             applicationIdSuffix '.Release'
             versionNameSuffix '-Release'
 
-
         }
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = parent.project.getName() + "-v${variant.versionName}.apk"}}
     }
 
     sourceSets {
