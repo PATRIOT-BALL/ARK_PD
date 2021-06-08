@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPsi
 import com.shatteredpixel.shatteredpixeldungeon.levels.CavesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.PrisonLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Blood_ShamanSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LancerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperEliteSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
@@ -18,7 +19,7 @@ import com.watabou.utils.Random;
 
 public class BloodMagister extends Mob {
     {
-        spriteClass = LancerSprite.class;
+        spriteClass = Blood_ShamanSprite.class;
 
         properties.add(Property.MINIBOSS);
         immunities.add(ScrollOfPsionicBlast.class);

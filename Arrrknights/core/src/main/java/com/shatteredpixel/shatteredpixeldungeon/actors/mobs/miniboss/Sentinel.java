@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ImpSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Sarkaz_SentinelSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
@@ -22,7 +23,7 @@ import com.watabou.utils.Random;
 
 public class Sentinel extends Mob {
     {
-        spriteClass = SarkazSniperSprite.class;
+        spriteClass = Sarkaz_SentinelSprite.class;
 
         properties.add(Property.MINIBOSS);
         properties.add(Property.SARKAZ);

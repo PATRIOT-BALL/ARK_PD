@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.CavesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.FaustSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LancerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -20,7 +21,7 @@ import com.watabou.utils.Random;
 
 public class Faust extends Mob {
     {
-        spriteClass = SarkazSniperSprite.class;
+        spriteClass = FaustSprite.class;
 
         properties.add(Property.MINIBOSS);
         immunities.add(ScrollOfRage.class);

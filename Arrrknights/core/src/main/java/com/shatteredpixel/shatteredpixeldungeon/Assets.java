@@ -340,7 +340,10 @@ public class Assets {
 		public static final String KALTSIT	= "sprites/kaltsit.png";
 		public static final String CLOSURE	= "sprites/closure.png";
 
+		public static final String SARKAZ_SENTINEL	= "sprites/Sarkaz_Sentinel.png";
 		public static final String SARKAZ_CENTURION	= "sprites/Sarkaz_Centurion.png";
+		public static final String BLOOD_SHAMAN	= "sprites/Blood_Shaman.png";
+		public static final String FAUST	= "sprites/FaustSprite.png";
 
 		public static final String LENS	= "sprites/lens.png";
 		public static final String FANATIC	= "sprites/fanatic.png";
