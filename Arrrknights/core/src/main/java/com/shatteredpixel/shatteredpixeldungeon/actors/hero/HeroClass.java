@@ -158,16 +158,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		new Nullshield().collect();
-		new Gamza().collect();
-		new Gamzashield().collect();
-
-		new Niansword().collect();
-		new PurgatoryKnife().collect();
-		new Nmould().collect();
-		new ThrowingClub().collect();
-		new H
-
 		/*	new PotionOfLiquidFlame().quantity(5).collect();
 		*/
 
