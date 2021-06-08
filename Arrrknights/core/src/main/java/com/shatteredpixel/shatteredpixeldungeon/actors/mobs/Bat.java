@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
@@ -65,10 +66,12 @@ public class Bat extends Mob {
 	public int attackProc( Char enemy, int damage ) {
 		damage = super.attackProc( enemy, damage );
 		int reg = Math.min( damage - 4, HT - HP );
-		
-		if (reg > 0) {
-			HP += reg;
-			sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+
+		if(this.buff(Silence.class) != null) {
+			if (reg > 0) {
+				HP += reg;
+				sprite.emitter().burst(Speck.factory(Speck.HEALING), 1);
+			}
 		}
 		
 		return damage;

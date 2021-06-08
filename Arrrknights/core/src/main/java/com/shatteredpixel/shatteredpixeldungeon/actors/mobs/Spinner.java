@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Web;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
@@ -131,7 +132,7 @@ public class Spinner extends Mob {
 
 	@Override
 	public void move(int step) {
-		if (enemySeen && webCoolDown <= 0 && lastEnemyPos != -1){
+		if (enemySeen && webCoolDown <= 0 && lastEnemyPos != -1 && this.buff(Silence.class) != null){
 			if (webPos() != -1){
 				if (sprite != null && (sprite.visible || enemy.sprite.visible)) {
 					sprite.zap( webPos() );

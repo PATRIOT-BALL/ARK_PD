@@ -41,9 +41,6 @@ import java.util.ArrayList;
 
 public class MidnightSword extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
-    private Wand wand;
-    private static final float STAFF_SCALE_FACTOR = 0.75f;
-
     {
         image = ItemSpriteSheet.MIDSWORD;
         hitSound = Assets.Sounds.HIT;
@@ -181,7 +178,7 @@ public class MidnightSword extends MeleeWeapon {
             return false;
         }
 
-        if (charge >= chargeCap) {
+        if (charge >= 1) {
             return true;
         } else {
             GLog.w(Messages.get(this, "fizzles"));
@@ -199,18 +196,11 @@ public class MidnightSword extends MeleeWeapon {
 
             ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
 
-            //apply the magic charge buff if we have another wand in inventory of a lower level, or already have the buff
-            for (Wand.Charger wandCharger : curUser.buffs(Wand.Charger.class)){
-                if (wandCharger.wand().buffedLvl() < buffedLvl() || curUser.buff(WandOfMagicMissile.MagicCharge.class) != null){
-                    Buff.prolong(curUser, WandOfMagicMissile.MagicCharge.class, WandOfMagicMissile.MagicCharge.DURATION).setLevel(buffedLvl());
-                    break;
-                }
-            }
-
         } else {
             Dungeon.level.pressCell(bolt.collisionPos);
         }
 
         charge -=1;
+        updateQuickslot();
     }
 }

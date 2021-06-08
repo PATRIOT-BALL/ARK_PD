@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
@@ -57,7 +58,7 @@ public class Swarm extends Mob {
 		lootChance = 0.1667f; //by default, see rollToDropLoot()
 
 		properties.add(Property.DRONE);
-		immunities.add(Bleeding.class);
+		immunities.add(Silence.class);
 	}
 	
 	private static final float SPLIT_DELAY	= 1f;

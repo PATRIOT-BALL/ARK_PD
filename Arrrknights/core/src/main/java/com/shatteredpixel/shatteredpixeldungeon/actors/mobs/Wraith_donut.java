@@ -3,6 +3,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.I_GolemSprite;
@@ -23,13 +24,13 @@ public class Wraith_donut extends Mob{
             spriteClass = Wraith_donutSprite.class;
 
 		HP = HT = 1;
-                EXP = 0;
+		EXP = 0;
+		maxLvl = -2;
+		flying = false;
 
-                maxLvl = -2;
+		immunities.add(Silence.class);
 
-                flying = false;
-
-                }
+	}
 
 private static final String LEVEL = "level";
 

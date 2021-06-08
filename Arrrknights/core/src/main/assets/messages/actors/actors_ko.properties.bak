@@ -660,7 +660,7 @@ actors.mobs.npcs.lens.t4=타임 랩스~!
 
 actors.mobs.npcs.greencat.name=닥터 켈시
 actors.mobs.npcs.greencat.desc=로도스 아일랜드의 수석 관리자 중 한 명이자, 로도스 아일랜드 의료 프로젝트의 리더. 그리고 당신의 상사다.
-actors.mobs.npcs.greencat.welcome=그렇군, 작전 성공인가... 수고했다, %s.
+actors.mobs.npcs.greencat.wellcom=그렇군, 작전 성공인가... 수고했다, %s.
 
 actors.mobs.npcs.closure.name=클로저
 actors.mobs.npcs.closure.desc=로도스 아일랜드의 고참. _클로저가 있을 때 물건을 버리고 체르노보그르 돌아간다면, 버렸던 물건은 다른 대원한테 판매될 것이다._ \n\n클릭하면 다음 스킨을 볼 수 있습니다.

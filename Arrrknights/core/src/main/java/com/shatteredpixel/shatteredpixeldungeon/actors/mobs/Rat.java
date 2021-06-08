@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
 import com.watabou.utils.Random;
 
@@ -34,6 +35,7 @@ public class Rat extends Mob {
 		defenseSkill = 2;
 		
 		maxLvl = 5;
+		immunities.add(Silence.class);
 	}
 	
 	@Override

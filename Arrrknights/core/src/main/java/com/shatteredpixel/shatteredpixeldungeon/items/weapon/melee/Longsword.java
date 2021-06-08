@@ -22,23 +22,193 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Bundle;
+import com.watabou.utils.Callback;
+import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Longsword extends MeleeWeapon {
-	
+
+	public static final String AC_ZAP = "ZAP";
 	{
 		image = ItemSpriteSheet.LONGSWORD;
 		hitSound = Assets.Sounds.HIT_SLASH;
 		hitSoundPitch = 1f;
 
 		tier = 4;
-		ACC = 0.75f;
-		RCH = 2;
-	}
-	@Override
-	public int max(int lvl) {
-		return  4*(tier+1) +    //20 base, down from 25
-				lvl*(tier+1);   //scaling unchanged
+
+		usesTargeting = true;
+		defaultAction = AC_ZAP;
 	}
 
+	protected int collisionProperties = Ballistica.MAGIC_BOLT;
+
+	private int charge = 2;
+	private int chargeCap = 2;
+
+	@Override
+	public int max(int lvl) {
+		return  4*(tier) +    //16 + 4
+				lvl*(tier);
+	}
+
+	@Override
+	public int proc(Char attacker, Char defender, int damage) {
+		SPCharge(1);
+		return super.proc(attacker, defender, damage);
+	}
+
+	@Override
+	public ArrayList<String> actions(Hero hero) {
+		ArrayList<String> actions = super.actions(hero);
+		actions.add(AC_ZAP);
+		return actions;
+	}
+
+	@Override
+	public void execute(Hero hero, String action) {
+
+		super.execute(hero, action);
+
+		if (action.equals(AC_ZAP) && charge > 0) {
+			GameScene.selectCell(zapper);
+		}
+	}
+
+	public String statsInfo() {
+		return Messages.get(this, "stats_desc");
+	}
+
+	public void SPCharge(int n) {
+		if (Random.Int(35) < 8 + buffedLvl()) {
+			charge += n;
+			if (chargeCap < charge) charge = chargeCap;
+			updateQuickslot();
+		}
+	}
+
+	@Override
+	public String status() {
+		return charge + "/" + chargeCap;
+	}
+
+	private static final String CHARGE = "charge";
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(CHARGE, charge);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
+		else charge = bundle.getInt(CHARGE);
+	}
+
+	protected static CellSelector.Listener zapper = new CellSelector.Listener() {
+
+		@Override
+		public void onSelect(Integer target) {
+
+			if (target != null) {
+
+				final Longsword ss;
+				if (curItem instanceof Longsword) {
+					ss = (Longsword) Longsword.curItem;
+
+					Ballistica shot = new Ballistica(curUser.pos, target, Ballistica.PROJECTILE);
+					int cell = shot.collisionPos;
+
+					if (target == curUser.pos || cell == curUser.pos) {
+						GLog.i(Messages.get(Longsword.class, "self_target"));
+						return;
+					}
+
+					curUser.sprite.zap(cell);
+
+					//attempts to target the cell aimed at if something is there, otherwise targets the collision pos.
+					if (Actor.findChar(target) != null)
+						QuickSlotButton.target(Actor.findChar(target));
+					else
+						QuickSlotButton.target(Actor.findChar(cell));
+
+					if (ss.tryToZap(curUser, target)) {
+						ss.fx(shot, new Callback() {
+							public void call() {
+								ss.onZap(shot);
+							}
+						});
+					}
+
+				}
+			}
+		}
+
+		@Override
+		public String prompt() {
+			return Messages.get(Longsword.class, "prompt");
+		}
+	};
+
+	protected void fx( Ballistica bolt, Callback callback ) {
+		MagicMissile.boltFromChar( curUser.sprite.parent,
+				MagicMissile.MAGIC_MISSILE,
+				curUser.sprite,
+				bolt.collisionPos,
+				callback);
+		Sample.INSTANCE.play( Assets.Sounds.ZAP );
+	}
+	public boolean tryToZap(Hero owner, int target) {
+
+		if (owner.buff(MagicImmune.class) != null) {
+			GLog.w(Messages.get(this, "no_magic"));
+			return false;
+		}
+
+		if (charge >= 1) {
+			return true;
+		} else {
+			GLog.w(Messages.get(this, "fizzles"));
+			return false;
+		}
+	}
+
+
+	protected void onZap( Ballistica bolt ) {
+		Char ch = Actor.findChar( bolt.collisionPos );
+		if (ch != null) {
+			float dmg = 3f + (buffedLvl() * 1.1f) - Random.NormalFloat(0, ch.HP / 5);
+			Buff.affect(ch, Silence.class, dmg);
+			Sample.INSTANCE.play( Assets.Sounds.LIGHTNING, 1, Random.Float(0.87f, 1.15f) );
+
+			ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
+
+		} else {
+			Dungeon.level.pressCell(bolt.collisionPos);
+		}
+
+		charge -=1;
+		updateQuickslot();
+	}
 }
