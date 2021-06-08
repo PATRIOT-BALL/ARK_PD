@@ -25,8 +25,8 @@ public class SkillBook extends Item {
     }
 
     private static final String AC_ACT = "ACT";
-    public int charge = 0;
-    public int chargeCap = 100;
+    public int charge = 30;
+    public int chargeCap = 150;
 
     @Override
     public ArrayList<String> actions(Hero hero) {
@@ -144,8 +144,10 @@ public class SkillBook extends Item {
         float chargepur = 10 + (Dungeon.hero.lvl * 6) - 72;
         if (chargepur < 10) chargepur = 10;
 
+        if (charge > 100) chargepur /= 2;
+
         charge += chargepur * levelPercent;
-        if (charge > 100) charge = 100;
+        if (charge > 150) charge = 150;
         updateQuickslot();
     }
 
@@ -182,7 +184,7 @@ public class SkillBook extends Item {
             return null;
         }
         //display as percent
-        if (chargeCap == 100)
+        if (chargeCap == 150)
             return Messages.format("%d%%", charge);
 
 
