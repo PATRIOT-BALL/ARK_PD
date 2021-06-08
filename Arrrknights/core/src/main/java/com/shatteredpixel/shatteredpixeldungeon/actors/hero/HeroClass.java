@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfParalyticGas;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfToxicGas;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfAdrenalineSurge;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nullshield;
@@ -226,10 +227,13 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
+		new ScrollOfEnchantment().quantity(999).collect();
+		new ScrollOfIdentify().collect();
+		new PotionOfAdrenalineSurge().collect();
 
 
-	/*	new PotionOfLiquidFlame().quantity(5).collect();
-		new ScrollOfEnchantment().quantity(999).collect();*/
+		/*	new PotionOfLiquidFlame().quantity(5).collect();
+		*/
 
 /*
 		new TomeOfMastery().quantity(1).collect();

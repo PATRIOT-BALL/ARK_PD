@@ -353,7 +353,7 @@ public class ItemSpriteSheet {
 	public static final int DISPLACING_DART = TIPPED_DARTS+10;
 	public static final int BLINDING_DART   = TIPPED_DARTS+11;
 	static {
-		for (int i = TIPPED_DARTS; i < TIPPED_DARTS+16; i++)
+		for (int i = TIPPED_DARTS; i < TIPPED_DARTS+31; i++)
 			assignItemRect(i, 16, 16);
 	}
 	
@@ -396,7 +396,7 @@ public class ItemSpriteSheet {
 	public static final int WAND_REGROWTH       = WANDS+11;
 	public static final int WAND_TRANSFUSION    = WANDS+12;
 	static {
-		for (int i = WANDS; i < WANDS+16; i++)
+		for (int i = WANDS; i < WANDS+31; i++)
 			assignItemRect(i, 16, 16);
 	}
 
@@ -415,7 +415,7 @@ public class ItemSpriteSheet {
 	public static final int RING_DIAMOND    = RINGS+11;
 	public static final int FIRESTEEL    = RINGS+12;
 	static {
-		for (int i = RINGS; i < RINGS+17; i++)
+		for (int i = RINGS; i < RINGS+31; i++)
 			assignItemRect(i, 16, 16);
 	}
 
@@ -487,7 +487,7 @@ public class ItemSpriteSheet {
 	
 	public static final int SCROLL_CATALYST = SCROLLS+13;
 	static {
-		for (int i = SCROLLS; i < SCROLLS+16; i++)
+		for (int i = SCROLLS; i < SCROLLS+31; i++)
 			assignItemRect(i, 15, 14);
 		assignItemRect(SCROLL_CATALYST, 16, 16);
 	}
@@ -506,7 +506,7 @@ public class ItemSpriteSheet {
 	public static final int EXOTIC_ODAL     = EXOTIC_SCROLLS+10;
 	public static final int EXOTIC_TIWAZ    = EXOTIC_SCROLLS+11;
 	static {
-		for (int i = EXOTIC_SCROLLS; i < EXOTIC_SCROLLS+16; i++)
+		for (int i = EXOTIC_SCROLLS; i < EXOTIC_SCROLLS+31; i++)
 			assignItemRect(i, 16, 16);
 	}
 	
@@ -524,7 +524,7 @@ public class ItemSpriteSheet {
 	public static final int STONE_INTUITION     = STONES+10;
 	public static final int STONE_SHOCK         = STONES+11;
 	static {
-		for (int i = STONES; i < STONES+16; i++)
+		for (int i = STONES; i < STONES+31; i++)
 			assignItemRect(i, 14, 12);
 	}
 
@@ -543,7 +543,7 @@ public class ItemSpriteSheet {
 	public static final int POTION_IVORY    = POTIONS+11;
 	public static final int POTION_CATALYST = POTIONS+13;
 	static {
-		for (int i = POTIONS; i < POTIONS+16; i++)
+		for (int i = POTIONS; i < POTIONS+31; i++)
 			assignItemRect(i, 16, 16);
 		assignItemRect(POTION_CATALYST, 16, 16);
 	}
@@ -562,7 +562,7 @@ public class ItemSpriteSheet {
 	public static final int EXOTIC_SILVER   = EXOTIC_POTIONS+10;
 	public static final int EXOTIC_IVORY    = EXOTIC_POTIONS+11;
 	static {
-		for (int i = EXOTIC_POTIONS; i < EXOTIC_POTIONS+16; i++)
+		for (int i = EXOTIC_POTIONS; i < EXOTIC_POTIONS+31; i++)
 			assignItemRect(i, 16, 16);
 	}
 
@@ -580,7 +580,7 @@ public class ItemSpriteSheet {
 	public static final int SEED_FADELEAF       = SEEDS+10;
 	public static final int SEED_BLINDWEED      = SEEDS+11;
 	static{
-		for (int i = SEEDS; i < SEEDS+16; i++)
+		for (int i = SEEDS; i < SEEDS+31; i++)
 			assignItemRect(i, 10, 10);
 	}
 	
@@ -599,7 +599,7 @@ public class ItemSpriteSheet {
 	public static final int ELIXIR_ICY      = ELIXIRS+5;
 	public static final int ELIXIR_ARCANE   = ELIXIRS+6;
 	static{
-		for (int i = BREWS; i < BREWS+16; i++)
+		for (int i = BREWS; i < BREWS+31; i++)
 			assignItemRect(i, 12, 14);
 	}
 
