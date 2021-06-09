@@ -13,7 +13,7 @@ public class SeethingBurst extends FlavourBuff {
 
     protected int Power = 0;
 
-    public static final float DURATION = 15f;
+    public static final float DURATION = 40;
 
     @Override
     public boolean act() {
@@ -49,6 +49,6 @@ public class SeethingBurst extends FlavourBuff {
 
     public void GetDamage(int damage)
     {
-        Power += damage * 3;
+        Power += damage * 4;
     }
 }

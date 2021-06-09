@@ -62,8 +62,8 @@ public class Longsword extends MeleeWeapon {
 
 	protected int collisionProperties = Ballistica.MAGIC_BOLT;
 
-	private int charge = 2;
-	private int chargeCap = 2;
+	private int charge = 1;
+	private int chargeCap = 1;
 
 	@Override
 	public int max(int lvl) {
@@ -99,7 +99,7 @@ public class Longsword extends MeleeWeapon {
 	}
 
 	public void SPCharge(int n) {
-		if (Random.Int(35) < 8 + buffedLvl()) {
+		if (Random.Int(15) < 2) {
 			charge += n;
 			if (chargeCap < charge) charge = chargeCap;
 			updateQuickslot();
@@ -199,6 +199,7 @@ public class Longsword extends MeleeWeapon {
 		Char ch = Actor.findChar( bolt.collisionPos );
 		if (ch != null) {
 			float dmg = 3f + (buffedLvl() * 1.1f) - Random.NormalFloat(0, ch.HP / 5);
+			dmg = Math.max(dmg, 1.5f);
 			Buff.affect(ch, Silence.class, dmg);
 			Sample.INSTANCE.play( Assets.Sounds.LIGHTNING, 1, Random.Float(0.87f, 1.15f) );
 

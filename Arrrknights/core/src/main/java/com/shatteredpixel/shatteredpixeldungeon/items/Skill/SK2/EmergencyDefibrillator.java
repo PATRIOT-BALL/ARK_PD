@@ -10,7 +10,7 @@ import com.watabou.noosa.audio.Sample;
 public class EmergencyDefibrillator extends Skill {
     public void doSkill() {
         Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
-        Buff.affect(curUser, ArcaneArmor.class).set(curUser.lvl * 2, 10);
+        Buff.affect(curUser, ArcaneArmor.class).set(curUser.lvl * 2, 5);
         Buff.affect(curUser, Healing.class).setHeal((curUser.HT / 4),0.45f,0);
     }
 }

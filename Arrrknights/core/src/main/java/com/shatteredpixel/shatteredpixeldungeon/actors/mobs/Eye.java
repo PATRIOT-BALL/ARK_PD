@@ -105,16 +105,22 @@ public class Eye extends Mob {
 	@Override
 	protected boolean act() {
 
-		if (beamCharged && state != HUNTING || this.buff(Silence.class) != null){
+		if (this.buff(Silence.class) != null) {
 			beamCharged = false;
+	     	beamCooldown = Random.IntRange(4, 6);
 			sprite.idle();
-		}
-		if (beam == null && beamTarget != -1) {
-			beam = new Ballistica(pos, beamTarget, Ballistica.STOP_SOLID);
-			sprite.turnTo(pos, beamTarget);
-		}
-		if (beamCooldown > 0)
-			beamCooldown--;
+			return super.act();}
+
+			if (beamCharged && state != HUNTING) {
+				beamCharged = false;
+				sprite.idle();
+			}
+			if (beam == null && beamTarget != -1) {
+				beam = new Ballistica(pos, beamTarget, Ballistica.STOP_SOLID);
+				sprite.turnTo(pos, beamTarget);
+			}
+			if (beamCooldown > 0)
+				beamCooldown--;
 		return super.act();
 	}
 

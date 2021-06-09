@@ -183,7 +183,7 @@ public class Hero extends Char {
     public static final int MAX_LEVEL = 40;
 
     //public static final int STARTING_STR = 100000;
-    public static final int STARTING_STR = 10;
+    public static final int STARTING_STR = 30;
 
     private static final float TIME_TO_REST = 1f;
     private static final float TIME_TO_SEARCH = 2f;
@@ -614,10 +614,11 @@ public class Hero extends Char {
         Berserk berserk = buff(Berserk.class);
         if (berserk != null)
             spup = berserk.getPower() / 1.3f;
-        if (spup > 0.3f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5))
-            spup = 0.5f + (Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
 
-        return speed + spup;
+        spup = Math.min(spup, 0.3f+(float)Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
+
+        speed *= (1 + spup);
+        return speed;
 
     }
 

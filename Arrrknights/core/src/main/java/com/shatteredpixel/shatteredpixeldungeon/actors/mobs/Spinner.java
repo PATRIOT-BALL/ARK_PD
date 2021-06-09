@@ -132,7 +132,7 @@ public class Spinner extends Mob {
 
 	@Override
 	public void move(int step) {
-		if (enemySeen && webCoolDown <= 0 && lastEnemyPos != -1 && this.buff(Silence.class) != null){
+		if (enemySeen && webCoolDown <= 0 && lastEnemyPos != -1){
 			if (webPos() != -1){
 				if (sprite != null && (sprite.visible || enemy.sprite.visible)) {
 					sprite.zap( webPos() );
@@ -195,28 +195,33 @@ public class Spinner extends Mob {
 	
 	public void shootWeb(){
 		int webPos = webPos();
-		if (webPos != -1){
-			int i;
-			for ( i = 0; i < PathFinder.CIRCLE8.length; i++){
-				if ((enemy.pos + PathFinder.CIRCLE8[i]) == webPos){
-					break;
+		if (this.buff(Silence.class) == null) {
+			if (webPos != -1) {
+				int i;
+				for (i = 0; i < PathFinder.CIRCLE8.length; i++) {
+					if ((enemy.pos + PathFinder.CIRCLE8[i]) == webPos) {
+						break;
+					}
+				}
+
+				//spread to the tile hero was moving towards and the two adjacent ones
+				int leftPos = enemy.pos + PathFinder.CIRCLE8[left(i)];
+				int rightPos = enemy.pos + PathFinder.CIRCLE8[right(i)];
+
+				if (Dungeon.level.passable[leftPos])
+					GameScene.add(Blob.seed(leftPos, 20, Web.class));
+				if (Dungeon.level.passable[webPos]) GameScene.add(Blob.seed(webPos, 20, Web.class));
+				if (Dungeon.level.passable[rightPos])
+					GameScene.add(Blob.seed(rightPos, 20, Web.class));
+
+				webCoolDown = 10;
+
+				if (Dungeon.level.heroFOV[enemy.pos]) {
+					Dungeon.hero.interrupt();
 				}
 			}
-			
-			//spread to the tile hero was moving towards and the two adjacent ones
-			int leftPos = enemy.pos + PathFinder.CIRCLE8[left(i)];
-			int rightPos = enemy.pos + PathFinder.CIRCLE8[right(i)];
-			
-			if (Dungeon.level.passable[leftPos]) GameScene.add(Blob.seed(leftPos, 20, Web.class));
-			if (Dungeon.level.passable[webPos])  GameScene.add(Blob.seed(webPos, 20, Web.class));
-			if (Dungeon.level.passable[rightPos])GameScene.add(Blob.seed(rightPos, 20, Web.class));
-			
-			webCoolDown = 10;
-
-			if (Dungeon.level.heroFOV[enemy.pos]){
-				Dungeon.hero.interrupt();
-			}
 		}
+		else webCoolDown = 10;
 		next();
 	}
 	
