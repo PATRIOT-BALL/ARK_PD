@@ -11,7 +11,7 @@ buildscript {
 allprojects {
 
     ext {
-        appName = 'TMRogueNight'
+        appName = 'RogueNight'
         appPackageName = 'com.shatteredpixel.tomorrowpixel'
 
         appVersionCode = 535

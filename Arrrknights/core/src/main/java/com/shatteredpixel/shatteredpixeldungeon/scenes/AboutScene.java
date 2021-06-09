@@ -182,20 +182,6 @@ public class AboutScene extends PixelScene {
 
 		addLine(wata.top() - 4, content);
 
-		CreditsBlock cube = new CreditsBlock(false, WATA_COLOR,
-				"Music:",
-				Icons.CUBE_CODE.get(),
-				"Cube Code",
-				null,
-				null);
-		cube.setSize(colWidth/2f, 0);
-		if (landscape()){
-			cube.setPos(wata.right(), wata.top() + (wata.height() - cube.height())/2f);
-		} else {
-			cube.setPos(alex.left(), wata.bottom()+5);
-		}
-		content.add(cube);
-
 		//*** Transifex Credits ***
 
 		CreditsBlock transifex = new CreditsBlock(true,
@@ -205,7 +191,7 @@ public class AboutScene extends PixelScene {
 				"Tomorrow's Roguenight is community-translated via _Transifex_! Thank you so much to all of Shattered's volunteer translators!",
 				"www.transifex.com/team-rosemari/",
 				"https://www.transifex.com/team-rosemari/tomorrows-roguenight/");
-		transifex.setRect((Camera.main.width - colWidth)/2f, cube.bottom() + 8, colWidth, 0);
+		transifex.setRect((Camera.main.width - colWidth)/2f, wata.bottom() + 8, colWidth, 0);
 		content.add(transifex);
 
 		addLine(transifex.top() - 4, content);

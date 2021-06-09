@@ -217,6 +217,7 @@ public enum Icons {
 
 			case HYPER:
 				icon.frame(icon.texture.uvRect(0, 160, 32, 192));
+				icon.scale.set(PixelScene.align(0.49f));
 				break;
 
 
