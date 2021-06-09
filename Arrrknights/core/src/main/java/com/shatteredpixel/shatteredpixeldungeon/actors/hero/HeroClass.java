@@ -162,12 +162,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		new TomeOfMastery().quantity(1).collect();
-		new PotionOfExperience().quantity(99).collect();
-		new Longsword().collect();
-		PlateArmor P = new PlateArmor();
-		P.level(12); P.collect();
-
 		/*	new PotionOfLiquidFlame().quantity(5).collect();
 		*/
 

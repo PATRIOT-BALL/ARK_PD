@@ -46,7 +46,7 @@ public class Slime extends Mob {
 		maxLvl = 9;
 
 		loot = Generator.Category.SKL_T1;
-		lootChance = 0.007f;
+		lootChance = 0.009f;
 
 		immunities.add(Silence.class);
 	}

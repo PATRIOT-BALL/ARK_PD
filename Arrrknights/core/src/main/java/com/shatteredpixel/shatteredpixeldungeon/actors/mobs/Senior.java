@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SeniorSprite;
 import com.watabou.utils.Random;
@@ -32,6 +33,8 @@ public class Senior extends Monk {
 
 		loot = new Pasty();
 		lootChance = 1f;
+
+		immunities.add(Amok.class);
 	}
 	
 	@Override
@@ -44,7 +47,7 @@ public class Senior extends Monk {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 16, 25 );
+		return Random.NormalIntRange( 20, 30 );
 	}
 	
 }

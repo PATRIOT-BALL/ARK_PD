@@ -52,6 +52,11 @@ public class BloodMagister extends Mob {
     }
 
     @Override
+    protected float attackDelay() {
+        return super.attackDelay() * 0.5f;
+    }
+
+    @Override
     public boolean act() {
         if (buff(rage.class) == null && state == HUNTING)
         {
