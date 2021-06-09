@@ -68,7 +68,7 @@ public class WndGame extends Window {
 					Updates.launchInstall();
 				}
 			} );
-			curBtn.textColor(Window.SHPX_COLOR);
+			curBtn.textColor(Window.ARKPD_COLOR);
 			curBtn.icon(Icons.get(Icons.CHANGES));
 		}
 

@@ -92,7 +92,8 @@ public enum Icons {
 	P_RED,
 	GREY,
 	NEARL,
-	ROSEMARI;
+	ROSEMARI,
+	HYPER;
 
 	public Image get() {
 		return get( this );
@@ -214,7 +215,12 @@ public enum Icons {
 				icon.frame(icon.texture.uvRect(100, 140, 120, 160));
 				break;
 
-		case ENTER:
+			case HYPER:
+				icon.frame(icon.texture.uvRect(0, 160, 32, 192));
+				break;
+
+
+			case ENTER:
 			icon.frame( icon.texture.uvRect( 0, 64, 16, 80 ) );
 			break;
 		case RANKINGS:

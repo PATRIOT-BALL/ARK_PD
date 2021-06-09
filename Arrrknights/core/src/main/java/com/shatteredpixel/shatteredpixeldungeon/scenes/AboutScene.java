@@ -57,22 +57,22 @@ public class AboutScene extends PixelScene {
 
 		//*** Shattered Pixel Dungeon Credits ***
 
-		String shpxLink = "https://ShatteredPixel.com";
+		String shpxLink = "https://www.patreon.com/roguenight";
 		//tracking codes, so that the website knows where this pageview came from
 		shpxLink += "?utm_source=shatteredpd";
 		shpxLink += "&utm_medium=about_page";
 		shpxLink += "&utm_campaign=ingame_link";
 
-		CreditsBlock shpx = new CreditsBlock(true, Window.SHPX_COLOR,
+		CreditsBlock shpx = new CreditsBlock(true, Window.ARKPD_COLOR,
 				"Tomorrow's Roguenight",
 				Icons.SHPX.get(),
 				"Developed by: _NamSek & mizq4482_\nBased on Pixel Dungeon's open source",
-				"ShatteredPixel.com",
+				"www.patreon.com/roguenight",
 				shpxLink);
 		shpx.setRect((w - fullWidth)/2f, 6, 120, 0);
 		content.add(shpx);
 
-		CreditsBlock alex = new CreditsBlock(false, Window.SHPX_COLOR,
+		CreditsBlock alex = new CreditsBlock(false, Window.ARKPD_COLOR,
 				"Pixel Art & Design:",
 				Icons.ALEKS.get(),
 				"NamSek",
@@ -86,7 +86,7 @@ public class AboutScene extends PixelScene {
 		}
 		content.add(alex);
 
-		CreditsBlock charlie = new CreditsBlock(false, Window.SHPX_COLOR,
+		CreditsBlock charlie = new CreditsBlock(false, Window.ARKPD_COLOR,
 				"Programming:",
 				Icons.CHARLIE.get(),
 				"mizq4482",
@@ -94,6 +94,25 @@ public class AboutScene extends PixelScene {
 				"https://mizq4482.tistory.com/");
 		charlie.setRect(alex.right(), alex.top(), colWidth/2f, 0);
 		content.add(charlie);
+
+
+		//*** hypergraph Credits ***
+
+		final int HYPER_COLOR = 0xFFFFFF;
+		CreditsBlock hyper = new CreditsBlock(true, HYPER_COLOR,
+				"Hypergryph",
+				Icons.HYPER.get(),
+				"Graphic & Sound ip used",
+				"hypergryph.com",
+				"https://ak.hypergryph.com/");
+		if (landscape()){
+			hyper.setRect(shpx.left(), shpx.top() + 8, colWidth, 0);
+		} else {
+			hyper.setRect(shpx.left(), alex.bottom() + 8, colWidth, 0);
+		}
+		content.add(hyper);
+
+		addLine(hyper.top() - 4, content);
 
 		//*** Pixel Dungeon Credits ***
 
@@ -105,7 +124,7 @@ public class AboutScene extends PixelScene {
 				"pixeldungeon.watabou.ru",
 				"http://pixeldungeon.watabou.ru");
 		if (landscape()){
-			wata.setRect(shpx.left(), shpx.bottom() + 8, colWidth, 0);
+			wata.setRect(hyper.left(), hyper.bottom() + 8, colWidth, 0);
 		} else {
 			wata.setRect(shpx.left(), alex.bottom() + 8, colWidth, 0);
 		}
@@ -154,7 +173,7 @@ public class AboutScene extends PixelScene {
 
 		CreditsBlock arcnor = new CreditsBlock(false, GDX_COLOR,
 				"Pixel Dungeon GDX:",
-				Icons.ARCNOR.get(),
+				Icons.LIBGDX.get(),
 				"Edu García",
 				"twitter.com/arcnor",
 				"https://twitter.com/arcnor");
@@ -168,7 +187,7 @@ public class AboutScene extends PixelScene {
 
 		CreditsBlock purigro = new CreditsBlock(false, GDX_COLOR,
 				"Shattered GDX Help:",
-				Icons.PURIGRO.get(),
+				Icons.LIBGDX.get(),
 				"Kevin MacMartin",
 				"github.com/prurigro",
 				"https://github.com/prurigro/");
@@ -181,9 +200,9 @@ public class AboutScene extends PixelScene {
 				Window.TITLE_COLOR,
 				null,
 				null,
-				"ShatteredPD is community-translated via _Transifex_! Thank you so much to all of Shattered's volunteer translators!",
-				"www.transifex.com/shattered-pixel/",
-				"https://www.transifex.com/shattered-pixel/shattered-pixel-dungeon/");
+				"Tomorrow's Roguenight is community-translated via _Transifex_! Thank you so much to all of Shattered's volunteer translators!",
+				"www.transifex.com/team-rosemari/",
+				"https://www.transifex.com/team-rosemari/tomorrows-roguenight/");
 		transifex.setRect((Camera.main.width - colWidth)/2f, purigro.bottom() + 8, colWidth, 0);
 		content.add(transifex);
 
@@ -191,40 +210,11 @@ public class AboutScene extends PixelScene {
 
 		addLine(transifex.bottom() + 4, content);
 
-		//*** Freesound Credits ***
 
-		CreditsBlock freesound = new CreditsBlock(true,
-				Window.TITLE_COLOR,
-				null,
-				null,
-				"Shattered Pixel Dungeon uses the following sound samples from _freesound.org_:\n\n" +
+		transifex.setRect(transifex.left()-10, transifex.bottom() + 8, colWidth+20, 0);
+		content.add(transifex);
 
-				"Creative Commons Attribution License:\n" +
-				"_SFX ATTACK SWORD 001.wav_ by _JoelAudio_\n" +
-				"_Pack: Slingshots and Longbows_ by _saturdaysoundguy_\n" +
-				"_Cracking/Crunching, A.wav_ by _InspectorJ_\n" +
-				"_Extracting a sword.mp3_ by _Taira Komori_\n" +
-				"_Pack: Uni Sound Library_ by _timmy h123_\n\n" +
-
-				"Creative Commons Zero License:\n" +
-				"_Pack: Movie Foley: Swords_ by _Black Snow_\n" +
-				"_machine gun shot 2.flac_ by _qubodup_\n" +
-				"_m240h machine gun burst 4.flac_ by _qubodup_\n" +
-				"_Pack: Onomatopoeia_ by _Adam N_\n" +
-				"_Pack: Watermelon_ by _lolamadeus_\n" +
-				"_metal chain_ by _Mediapaja2009_\n" +
-				"_Pack: Sword Clashes Pack_ by _JohnBuhr_\n" +
-				"_Pack: Metal Clangs and Pings_ by _wilhellboy_\n" +
-				"_Pack: Stabbing Stomachs & Crushing Skulls_ by _TheFilmLook_\n" +
-				"_Sheep bleating_ by _zachrau_\n" +
-				"_Lemon,Juicy,Squeeze,Fruit.wav_ by _Filipe Chagas_\n" +
-				"_Lemon,Squeeze,Squishy,Fruit.wav_ by _Filipe Chagas_",
-				"www.freesound.org",
-				"https://www.freesound.org");
-		freesound.setRect(transifex.left()-10, transifex.bottom() + 8, colWidth+20, 0);
-		content.add(freesound);
-
-		content.setSize( fullWidth, freesound.bottom()+10 );
+		content.setSize( fullWidth, transifex.bottom()+10 );
 
 		list.setRect( 0, 0, w, h );
 		list.scrollTo(0, 0);

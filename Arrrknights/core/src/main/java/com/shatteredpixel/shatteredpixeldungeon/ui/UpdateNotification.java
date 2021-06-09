@@ -33,7 +33,7 @@ public class UpdateNotification extends StyledButton {
 
 	public UpdateNotification(){
 		super( Chrome.Type.GREY_BUTTON_TR, Messages.get(UpdateNotification.class, "title") );
-		textColor( Window.SHPX_COLOR );
+		textColor( Window.ARKPD_COLOR );
 		visible = false;
 		Updates.checkForUpdate();
 	}

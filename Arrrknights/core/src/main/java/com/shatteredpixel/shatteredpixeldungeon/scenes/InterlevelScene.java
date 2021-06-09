@@ -228,7 +228,7 @@ public class InterlevelScene extends PixelScene {
 				}
 			};
 			install.icon(Icons.get(Icons.CHANGES));
-			install.textColor(Window.SHPX_COLOR);
+			install.textColor(Window.ARKPD_COLOR);
 			install.setSize(install.reqWidth()+5, 20);
 			install.setPos((Camera.main.width - install.width())/2, (Camera.main.height - message.bottom())/3 + message.bottom());
 			add(install);
