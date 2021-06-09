@@ -114,37 +114,7 @@ public class AboutScene extends PixelScene {
 
 		addLine(hyper.top() - 4, content);
 
-		//*** Pixel Dungeon Credits ***
 
-		final int WATA_COLOR = 0x55AAFF;
-		CreditsBlock wata = new CreditsBlock(true, WATA_COLOR,
-				"Pixel Dungeon",
-				Icons.WATA.get(),
-				"Developed by: _Watabou_\nInspired by Brian Walker's Brogue",
-				"pixeldungeon.watabou.ru",
-				"http://pixeldungeon.watabou.ru");
-		if (landscape()){
-			wata.setRect(hyper.left(), hyper.bottom() + 8, colWidth, 0);
-		} else {
-			wata.setRect(shpx.left(), alex.bottom() + 8, colWidth, 0);
-		}
-		content.add(wata);
-
-		addLine(wata.top() - 4, content);
-
-		CreditsBlock cube = new CreditsBlock(false, WATA_COLOR,
-				"Music:",
-				Icons.CUBE_CODE.get(),
-				"Cube Code",
-				null,
-				null);
-		cube.setSize(colWidth/2f, 0);
-		if (landscape()){
-			cube.setPos(wata.right(), wata.top() + (wata.height() - cube.height())/2f);
-		} else {
-			cube.setPos(alex.left(), wata.bottom()+5);
-		}
-		content.add(cube);
 
 		//*** libGDX Credits ***
 
@@ -157,9 +127,9 @@ public class AboutScene extends PixelScene {
 				"libGDX.com",
 				"https://libGDX.com/");
 		if (landscape()){
-			gdx.setRect(wata.left(), wata.bottom() + 8, colWidth, 0);
+			gdx.setRect(hyper.left(), hyper.bottom() + 8, colWidth, 0);
 		} else {
-			gdx.setRect(wata.left(), cube.bottom() + 8, colWidth, 0);
+			gdx.setRect(hyper.left(), hyper.bottom() + 8, colWidth, 0);
 		}
 		content.add(gdx);
 
@@ -194,6 +164,38 @@ public class AboutScene extends PixelScene {
 		purigro.setRect(arcnor.right()+2, arcnor.top(), colWidth/2f, 0);
 		content.add(purigro);
 
+		//*** Pixel Dungeon Credits ***
+
+		final int WATA_COLOR = 0x55AAFF;
+		CreditsBlock wata = new CreditsBlock(true, WATA_COLOR,
+				"Pixel Dungeon",
+				Icons.WATA.get(),
+				"Developed by: _Watabou_\nInspired by Brian Walker's Brogue",
+				"pixeldungeon.watabou.ru",
+				"http://pixeldungeon.watabou.ru");
+		if (landscape()){
+			wata.setRect(shpx.left(), purigro.bottom() + 8, colWidth, 0);
+		} else {
+			wata.setRect(shpx.left(), purigro.bottom() + 8, colWidth, 0);
+		}
+		content.add(wata);
+
+		addLine(wata.top() - 4, content);
+
+		CreditsBlock cube = new CreditsBlock(false, WATA_COLOR,
+				"Music:",
+				Icons.CUBE_CODE.get(),
+				"Cube Code",
+				null,
+				null);
+		cube.setSize(colWidth/2f, 0);
+		if (landscape()){
+			cube.setPos(wata.right(), wata.top() + (wata.height() - cube.height())/2f);
+		} else {
+			cube.setPos(alex.left(), wata.bottom()+5);
+		}
+		content.add(cube);
+
 		//*** Transifex Credits ***
 
 		CreditsBlock transifex = new CreditsBlock(true,
@@ -203,12 +205,11 @@ public class AboutScene extends PixelScene {
 				"Tomorrow's Roguenight is community-translated via _Transifex_! Thank you so much to all of Shattered's volunteer translators!",
 				"www.transifex.com/team-rosemari/",
 				"https://www.transifex.com/team-rosemari/tomorrows-roguenight/");
-		transifex.setRect((Camera.main.width - colWidth)/2f, purigro.bottom() + 8, colWidth, 0);
+		transifex.setRect((Camera.main.width - colWidth)/2f, cube.bottom() + 8, colWidth, 0);
 		content.add(transifex);
 
 		addLine(transifex.top() - 4, content);
 
-		addLine(transifex.bottom() + 4, content);
 
 
 		transifex.setRect(transifex.left()-10, transifex.bottom() + 8, colWidth+20, 0);
