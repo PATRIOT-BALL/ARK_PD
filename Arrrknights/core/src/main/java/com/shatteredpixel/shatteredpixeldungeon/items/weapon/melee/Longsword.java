@@ -198,8 +198,8 @@ public class Longsword extends MeleeWeapon {
 	protected void onZap( Ballistica bolt ) {
 		Char ch = Actor.findChar( bolt.collisionPos );
 		if (ch != null) {
-			float dmg = 3f + (buffedLvl() * 1.1f) - Random.NormalFloat(0, ch.HP / 5);
-			dmg = Math.max(dmg, 1.5f);
+			float dmg = 4f + (buffedLvl() * 1.5f) - Random.NormalFloat(0, ch.HP / 5);
+			dmg = Math.max(dmg, 3f); // 최소 침묵 3턴
 			Buff.affect(ch, Silence.class, dmg);
 			Sample.INSTANCE.play( Assets.Sounds.LIGHTNING, 1, Random.Float(0.87f, 1.15f) );
 
