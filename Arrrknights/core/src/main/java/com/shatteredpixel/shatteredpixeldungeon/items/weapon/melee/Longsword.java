@@ -99,7 +99,7 @@ public class Longsword extends MeleeWeapon {
 	}
 
 	public void SPCharge(int n) {
-		if (Random.Int(15) < 2) {
+		if (Random.Int(11) < 2) {
 			charge += n;
 			if (chargeCap < charge) charge = chargeCap;
 			updateQuickslot();
