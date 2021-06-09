@@ -353,6 +353,7 @@ actors.buffs.wellfed.name=배부름
 actors.buffs.wellfed.desc=당신은 매우 배부르며, 만족감을 느끼고 있습니다.\n\n배부른 상태에서, 당신은 허기가 지지 않을 것이며, 일정 시간동안 추가적인 체력을 회복할 것입니다.\n\n배부름을 느끼지 않기까지 %d 턴 남았습니다.
 
 actors.buffs.silence.name=침묵
+actors.buffs.corrosion.heromsg=읍읍? 읍읍읍읍?!!
 actors.buffs.silence.desc=읍읍읍...\n\n대원이라면 아츠 스태프를 사용할 수 없으며, 적이라면 특수 능력이 봉인됩니다.
 
 
@@ -383,7 +384,7 @@ actors.hero.talent.strongman.desc=_+1:_ 블레이즈가 갑옷과 무기를 사�
 actors.hero.talent.endless_rage.title=끝없는 분노
 actors.hero.talent.endless_rage.desc=_+1:_ 블레이즈는 분노를 최대 _120%_ 까지 쌓을 수 있습니다.\n\n_+2:_ 블레이즈는 분노를 최대 _140%_ 까지 쌓을 수 있습니다.\n\n_+3:_ 블레이즈는 분노를 최대 _160%_ 까지 쌓을 수 있습니다.\n\n100% 이상의 분노는 최대 +100%의 피해량을 제공합니다.
 actors.hero.talent.berserking_stamina.title=타오르는 투쟁
-actors.hero.talent.berserking_stamina.desc=_+1:_ 블레이즈는 격노 중에 _10%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _50%_가 됩니다.\n\n_+2:_ 블레이즈는 격노 중에 _20%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _70%_가 됩니다.\n\n_+3:_ 블레이즈는 격노 중에 _30%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _90_%가 됩니다.
+actors.hero.talent.berserking_stamina.desc=_+1:_ 블레이즈는 격노 중에 _10%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _50%_가 됩니다.\n\n_+2:_ 블레이즈는 격노 중에 _20%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _70%_가 됩니다.\n\n_+3:_ 블레이즈는 격노 중에 _30%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _90%_가 됩니다.
 actors.hero.talent.enraged_catalyst.title=광분의 전기톱
 actors.hero.talent.enraged_catalyst.desc=_+1:_ 블레이즈의 무기에 부여된 아츠 또는 저주가 분노에 비례해서 더 자주 발동하게 되며, 100%의 분노에서 최대 _25% 더 자주 발동_ 합니다.\n\n_+2:_ 블레이즈의 무기에 부여된 아츠 또는 저주가 분노에 비례해서 더 자주 발동하게 되며, 100%의 분노에서 최대 _50% 더 자주 발동_ 합니다.\n\n_+3:_ 블레이즈의 무기에 부여된 아츠 또는 저주가 분노에 비례해서 더 자주 발동하게 되며, 100%의 분노에서 최대 _75% 더 자주 발동_ 합니다.
 actors.hero.talent.cleave.title=콤보 어택

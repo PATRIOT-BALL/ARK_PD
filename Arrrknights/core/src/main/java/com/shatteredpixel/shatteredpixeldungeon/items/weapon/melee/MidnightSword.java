@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
@@ -82,7 +83,11 @@ public class MidnightSword extends MeleeWeapon {
         super.execute(hero, action);
 
         if (action.equals(AC_ZAP) && charge > 0) {
-            GameScene.selectCell(zapper);
+            if (this.cursed != true) GameScene.selectCell(zapper);
+            else {
+                Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero,4f);
+                charge -= 1;
+            }
         }
     }
 

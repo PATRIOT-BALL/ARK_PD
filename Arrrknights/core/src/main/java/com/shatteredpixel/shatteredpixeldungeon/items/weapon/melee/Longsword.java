@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
@@ -45,6 +46,8 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+
+import javax.swing.SingleSelectionModel;
 
 public class Longsword extends MeleeWeapon {
 
@@ -90,7 +93,11 @@ public class Longsword extends MeleeWeapon {
 		super.execute(hero, action);
 
 		if (action.equals(AC_ZAP) && charge > 0) {
-			GameScene.selectCell(zapper);
+			if (this.cursed != true) GameScene.selectCell(zapper);
+			else {
+				Buff.affect(Dungeon.hero, Silence.class, 45f);
+				charge -= 1;
+			}
 		}
 	}
 
