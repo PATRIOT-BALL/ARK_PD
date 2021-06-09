@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.A_master2Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.FanaticSprite;
@@ -69,11 +70,13 @@ public class Fanatic extends Mob {
             Fanatic w = new Fanatic();
             w.pos = pos;
             w.state = w.HUNTING;
-            GameScene.add( w, SPAWN_DELAY );
+            if (Dungeon.level.map[w.pos] == Terrain.WALL || Dungeon.level.map[w.pos] == Terrain.EMPTY) return null;
+           else {
+                GameScene.add(w, SPAWN_DELAY);
 
-            w.sprite.emitter().burst( ShadowParticle.CURSE, 5 );
-
-            return w;
+                w.sprite.emitter().burst(ShadowParticle.CURSE, 5);
+                return w;
+            }
         } else {
             return null;
         }
