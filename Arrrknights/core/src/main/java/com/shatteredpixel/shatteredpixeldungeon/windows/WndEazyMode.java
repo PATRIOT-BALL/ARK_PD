@@ -49,8 +49,6 @@ public class WndEazyMode extends Window {
                 new PotionOfExperience().identify();
                 new ElixirOfAquaticRejuvenation().collect();
 
-                Dungeon.hero.HT += 25;
-
                 hide();
             }
         };

@@ -59,8 +59,10 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.FrozenCarpaccio;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHaste;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -450,6 +452,11 @@ public class YogDzewa extends Mob {
 				Dungeon.hero.SK3 = null;
 				Dungeon.hero.HT /= 2;
 				Dungeon.hero.HP /= 2;
+
+				while (Dungeon.hero.belongings.getItem(PotionOfExperience.class) != null)
+				{
+					Dungeon.hero.belongings.getItem(PotionOfExperience.class).detach(Dungeon.hero.belongings.backpack);
+				}
 			}
 				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1) {
 					Buff.affect(Dungeon.hero, Doom.class);

@@ -250,7 +250,8 @@ public class Hero extends Char {
     public void updateHT(boolean boostHP) {
         int curHT = HT;
 
-        HT = 20 + 5 * (lvl - 1) + HTBoost;
+        if (Dungeon.eazymode == 1)  HT = 20 + 10 * (lvl - 1) + (HTBoost * 2);
+        else  HT = 20 + 5 * (lvl - 1) + HTBoost;
         float multiplier = RingOfMight.HTMultiplier(this);
         HT = Math.round(multiplier * HT);
 

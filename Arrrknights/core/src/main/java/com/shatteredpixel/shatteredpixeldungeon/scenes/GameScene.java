@@ -513,6 +513,16 @@ public class GameScene extends PixelScene {
 				{
 					GLog.n(Messages.get(this, "miniboss"));
 				}
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.bossLevel() && Dungeon.depth == 25)
+				{
+					if (Dungeon.mboss4 == 1 || Dungeon.mboss9 == 1 || Dungeon.mboss14 == 1 || Dungeon.mboss19 == 1)
+					GLog.n(Messages.get(this, "miniboss"));
+				}
+				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.depth == 25 && Dungeon.bossLevel())
+				{
+					if (Dungeon.mboss4 == 1 && Dungeon.mboss9 == 1 && Dungeon.mboss14 == 1 && Dungeon.mboss19 == 1)
+					GLog.n(Messages.get(this, "miniboss_final"));
+				}
 
 				int spawnersAbove = Statistics.spawnersAlive;
 				if (spawnersAbove > 0 && Dungeon.depth <= 25) {
