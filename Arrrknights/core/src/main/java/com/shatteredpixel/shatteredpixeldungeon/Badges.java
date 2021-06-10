@@ -833,11 +833,19 @@ public class Badges {
 	}
 
 	public static void validateroaringflare() {
-		displayBadge( Badge.ROARINGFLARE );
+		if (!local.contains( Badge.ROARINGFLARE )){
+			global.add(Badge.ROARINGFLARE);
+			saveNeeded = true;
+			local.add(Badge.ROARINGFLARE);
+		displayBadge( Badge.ROARINGFLARE );}
 	}
 
 	public static void validateeviltimeend() {
-		displayBadge( Badge.EVILTIME_END );
+		if (!local.contains( Badge.EVILTIME_END )){
+			global.add(Badge.EVILTIME_END);
+			saveNeeded = true;
+			local.add(Badge.EVILTIME_END);
+		displayBadge( Badge.EVILTIME_END );}
 	}
 	
 	private static void displayBadge( Badge badge ) {
