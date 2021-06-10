@@ -5,9 +5,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blackperro;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfAquaticRejuvenation;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.DwarfToken;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
@@ -40,19 +43,14 @@ public class WndEazyMode extends Window {
                 GLog.i(Messages.get(WndEazyMode.class, "act"));
                 Dungeon.eazymode = 1;
                 new ScrollOfUpgrade().identify();
+                new ScrollOfRemoveCurse().identify();
+                new ScrollOfTransmutation().identify();
                 new PotionOfStrength().identify();
-                new ElixirOfAquaticRejuvenation().quantity(5).collect();
+                new PotionOfExperience().identify();
+                new ElixirOfAquaticRejuvenation().collect();
 
-                Generator.Category c = Generator.wepTiers[1];
-                MeleeWeapon weapon = (MeleeWeapon) Reflection.newInstance(c.classes[Random.chances(c.probs)]);
-                weapon.identify();
-                weapon.level(2);
-                weapon.collect();
+                Dungeon.hero.HT += 25;
 
-                LeatherArmor armor = new LeatherArmor();
-                armor.identify();
-                armor.level(2);
-                armor.collect();
                 hide();
             }
         };
