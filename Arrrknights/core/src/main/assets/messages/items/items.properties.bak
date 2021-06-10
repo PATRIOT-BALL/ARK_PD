@@ -1926,7 +1926,7 @@ items.weapon.melee.midnightsword.fizzles=당신의 마왕 에너지가 부족합
 
 items.weapon.melee.m1887.name=M1887
 items.weapon.melee.m1887.stats_desc=명중률 -10%
-items.weapon.melee.m1887.desc=그래서 이렇게도 말할 수 있다. 공증소는 원래 가장 성가신 프로젝트에만 집행자를 파견한다고.\n\n이 라테라노의 샷건은 피해량이 낮지만 범위 공격을 가합니다.\n만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.
+items.weapon.melee.m1887.desc=그래서 이렇게도 말할 수 있다. 공증소는 원래 가장 성가신 프로젝트에만 집행자를 파견한다고.\n\n이 라테라노의 샷건은 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.
 
 
 ###missile weapons

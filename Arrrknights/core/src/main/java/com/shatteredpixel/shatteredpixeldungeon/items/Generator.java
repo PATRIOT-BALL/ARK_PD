@@ -135,6 +135,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
@@ -148,6 +149,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.M1887;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
@@ -378,9 +380,10 @@ public class Generator {
                     Scimitar.class,
                     RoundShield.class,
                     Sai.class,
-                    Whip.class
+                    Whip.class,
+                    CrabGun.class
             };
-            WEP_T3.probs = new float[]{6, 5, 5, 4, 4, 4};
+            WEP_T3.probs = new float[]{6, 5, 5, 4, 4, 4, 4};
 
             WEP_T4.classes = new Class<?>[]{
                     Longsword.class,
@@ -388,9 +391,10 @@ public class Generator {
                     Flail.class,
                     RunicBlade.class,
                     AssassinsBlade.class,
-                    Crossbow.class
+                    Crossbow.class,
+                    M1887.class
             };
-            WEP_T4.probs = new float[]{6, 5, 5, 4, 4, 4};
+            WEP_T4.probs = new float[]{5, 5, 5, 4, 4, 4, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,
