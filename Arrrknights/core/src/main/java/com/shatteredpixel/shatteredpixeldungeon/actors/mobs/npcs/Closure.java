@@ -28,7 +28,7 @@ public class Closure extends NPC {
 
     @Override
     public boolean interact(Char c) {
-        sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "NO"));
+        sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
 
         for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
             if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {

@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LifeLink;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
@@ -62,6 +63,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MephistoSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Bundle;
@@ -425,70 +427,79 @@ public class DwarfKing extends Mob {
 
 	@Override
 	public void die(Object cause) {
-		int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
-		do {
-			ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
-		} while (!Dungeon.level.passable[pos + ofs]);
-
-		GameScene.bossSlain();
-
-		super.die( cause );
-
-		if (Dungeon.level.solid[pos]){
-
-			Heap h = Dungeon.level.heaps.get(pos);
-			if (h != null) {
-				for (Item i : h.items) {
-					Dungeon.level.drop(i, pos + Dungeon.level.width());
-				}
-				h.destroy();
+		// 이지모드라면 플레이어 사망
+		if (Dungeon.eazymode == 1) {
+			while (Dungeon.hero.isAlive() == true) {
+				Dungeon.hero.die(Dungeon.hero);
 			}
-			switch (Dungeon.hero.heroClass) {
-
-				case WARRIOR:
-					Dungeon.level.drop(new BookSBurst(), pos+ofs).sprite.drop(pos);
-					break;
-				case ROGUE:
-					Dungeon.level.drop(new BookNigetRaid(), pos+ofs).sprite.drop(pos);
-					break;
-				case MAGE:
-					Dungeon.level.drop(new BookShadowAssault(), pos+ofs).sprite.drop(pos);
-					break;
-				case HUNTRESS:
-					Dungeon.level.drop(new BookSoaringFeather(), pos+ofs).sprite.drop(pos);
-					break;
-			}
+			GLog.h(Messages.get(Hero.class, "eazymode"));
 		} else {
-			switch (Dungeon.hero.heroClass) {
-				case WARRIOR:
-					Dungeon.level.drop(new BookSBurst(), pos+ofs).sprite.drop(pos);
-					break;
-				case ROGUE:
-					Dungeon.level.drop(new BookNigetRaid(), pos+ofs).sprite.drop(pos);
-					break;
-				case MAGE:
-					Dungeon.level.drop(new BookShadowAssault(), pos+ofs).sprite.drop(pos);
-					break;
-				case HUNTRESS:
-					Dungeon.level.drop(new BookSoaringFeather(), pos+ofs).sprite.drop(pos);
-					break;
+
+			int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+			do {
+				ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+			} while (!Dungeon.level.passable[pos + ofs]);
+
+			GameScene.bossSlain();
+
+			super.die(cause);
+
+			if (Dungeon.level.solid[pos]) {
+
+				Heap h = Dungeon.level.heaps.get(pos);
+				if (h != null) {
+					for (Item i : h.items) {
+						Dungeon.level.drop(i, pos + Dungeon.level.width());
+					}
+					h.destroy();
+				}
+				switch (Dungeon.hero.heroClass) {
+
+					case WARRIOR:
+						Dungeon.level.drop(new BookSBurst(), pos + ofs).sprite.drop(pos);
+						break;
+					case ROGUE:
+						Dungeon.level.drop(new BookNigetRaid(), pos + ofs).sprite.drop(pos);
+						break;
+					case MAGE:
+						Dungeon.level.drop(new BookShadowAssault(), pos + ofs).sprite.drop(pos);
+						break;
+					case HUNTRESS:
+						Dungeon.level.drop(new BookSoaringFeather(), pos + ofs).sprite.drop(pos);
+						break;
+				}
+			} else {
+				switch (Dungeon.hero.heroClass) {
+					case WARRIOR:
+						Dungeon.level.drop(new BookSBurst(), pos + ofs).sprite.drop(pos);
+						break;
+					case ROGUE:
+						Dungeon.level.drop(new BookNigetRaid(), pos + ofs).sprite.drop(pos);
+						break;
+					case MAGE:
+						Dungeon.level.drop(new BookShadowAssault(), pos + ofs).sprite.drop(pos);
+						break;
+					case HUNTRESS:
+						Dungeon.level.drop(new BookSoaringFeather(), pos + ofs).sprite.drop(pos);
+						break;
+				}
 			}
+
+			Badges.validateBossSlain();
+
+			Dungeon.level.unseal();
+
+			for (Mob m : getSubjects()) {
+				m.die(null);
+			}
+
+			LloydsBeacon beacon = Dungeon.hero.belongings.getItem(LloydsBeacon.class);
+			if (beacon != null) {
+				beacon.upgrade();
+			}
+
+			yell(Messages.get(this, "defeated"));
 		}
-
-		Badges.validateBossSlain();
-
-		Dungeon.level.unseal();
-
-		for (Mob m : getSubjects()){
-			m.die(null);
-		}
-
-		LloydsBeacon beacon = Dungeon.hero.belongings.getItem(LloydsBeacon.class);
-		if (beacon != null) {
-			beacon.upgrade();
-		}
-
-		yell( Messages.get(this, "defeated") );
 	}
 
 	@Override

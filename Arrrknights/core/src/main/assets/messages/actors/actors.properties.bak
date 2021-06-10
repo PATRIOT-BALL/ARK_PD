@@ -678,7 +678,6 @@ actors.mobs.npcs.skinmodel.desc=실물과 거의 유사한 모습에, 움직임 
 actors.mobs.npcs.blackperro.name=훈련교관 도베르만
 actors.mobs.npcs.blackperro.desc=로도스 아일랜드의 전술 훈련 교관. 엄격하고 깐깐하며 빈틈없는 성격이다.\n\n_이지 모드를 활성화할 수 있습니다._
 actors.mobs.npcs.blackperro.no=훈련은 필요없을 것 같은데?
-actors.mobs.npcs.blackperro.active=이미 훈련은 시작했다.
 
 
 

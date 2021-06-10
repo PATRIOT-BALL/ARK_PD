@@ -166,6 +166,8 @@ public class Dungeon {
 	public static int acequest;
 	public static int cautusquset;
 
+	public static int eazymode;
+
 	public static int mboss4;
 	public static int mboss9;
 	public static int mboss14;
@@ -213,6 +215,8 @@ public class Dungeon {
 		cautusquset = -1;
 		guardquest = -1;
 		acequest = -1;
+
+		eazymode = -1;
 
 		mboss4 = 1;
 		mboss9 = 1;
@@ -498,6 +502,7 @@ public class Dungeon {
 	private static final String MBOSS9		= "mboss9";
 	private static final String MBOSS14		= "mboss14";
 	private static final String MBOSS19		= "mboss19";
+	private static final String EAZYMODE    = "eazymode";
 
 	public static void saveGame(int save ) {
 		try {
@@ -517,6 +522,7 @@ public class Dungeon {
 			bundle.put (MBOSS9, mboss9);
 			bundle.put (MBOSS14, mboss14);
 			bundle.put (MBOSS19, mboss19);
+			bundle.put (EAZYMODE, eazymode);
 
 			for (int d : droppedItems.keyArray()) {
 				bundle.put(Messages.format(DROPPED, d), droppedItems.get(d));
@@ -671,6 +677,8 @@ public class Dungeon {
 		mboss9 = bundle.getInt(MBOSS9);
 		mboss14 = bundle.getInt(MBOSS14);
 		mboss19 = bundle.getInt(MBOSS19);
+
+		eazymode = bundle.getInt(EAZYMODE);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );
