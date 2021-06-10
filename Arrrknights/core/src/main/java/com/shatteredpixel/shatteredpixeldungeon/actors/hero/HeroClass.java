@@ -139,7 +139,7 @@ public enum HeroClass {
 		(hero.belongings.weapon = new WornShortsword()).identify();
 		ThrowingStone stones = new ThrowingStone();
 
-		stones.quantity(5).collect();
+		stones.quantity(3).collect();
 		Dungeon.quickslot.setSlot(0, stones);
 
 		if (hero.belongings.armor != null){
@@ -216,7 +216,7 @@ public enum HeroClass {
 
 
 		ThrowingKnife knives = new ThrowingKnife();
-		knives.quantity(5).collect();
+		knives.quantity(3).collect();
 		Dungeon.quickslot.setSlot(0, cloak);
 		Dungeon.quickslot.setSlot(1, knives);
 
