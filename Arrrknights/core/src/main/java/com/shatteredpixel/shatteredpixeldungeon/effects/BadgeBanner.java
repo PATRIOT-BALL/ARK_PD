@@ -58,7 +58,7 @@ public class BadgeBanner extends Image {
 		super( Assets.Interfaces.BADGES );
 		
 		if (atlas == null) {
-			atlas = new TextureFilm( texture, 32, 32 );
+			atlas = new TextureFilm( texture, 16, 16 );
 		}
 		
 		this.index = index;

@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.DobermannSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndEazyMode;
@@ -23,7 +24,7 @@ import java.text.DecimalFormat;
 
 public class Blackperro extends NPC {
     {
-        spriteClass = GreenCatSprite.class;
+        spriteClass = DobermannSprite.class;
         properties.add(Char.Property.IMMOVABLE);
     }
 
