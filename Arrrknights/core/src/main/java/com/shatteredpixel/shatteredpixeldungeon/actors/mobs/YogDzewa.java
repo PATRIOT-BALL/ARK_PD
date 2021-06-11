@@ -371,7 +371,7 @@ public class YogDzewa extends Mob {
 			}
 
 			GameScene.add(fist, 4);
-			Buff.affect(fist, Bless.class, 300f);
+			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) Buff.affect(fist, Bless.class, 300f);
 			Actor.addDelayed( new Pushing( fist, Dungeon.level.exit, fist.pos ), -1 );
 		}
 

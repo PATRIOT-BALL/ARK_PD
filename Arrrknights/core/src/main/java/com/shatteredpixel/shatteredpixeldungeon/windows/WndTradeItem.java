@@ -32,6 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
+import com.watabou.utils.Random;
 
 public class WndTradeItem extends WndInfoItem {
 
@@ -101,18 +102,18 @@ public class WndTradeItem extends WndInfoItem {
 
 		float pos = height;
 
-		final int price = Shopkeeper.sellPrice( item );
+		final int price = Shopkeeper.sellPrice(item);
 
-		RedButton btnBuy = new RedButton( Messages.get(this, "buy", price) ) {
+		RedButton btnBuy = new RedButton(Messages.get(this, "buy", price)) {
 			@Override
 			protected void onClick() {
 				hide();
-				buy( heap );
+				buy(heap);
 			}
 		};
-		btnBuy.setRect( 0, pos + GAP, width, BTN_HEIGHT );
-		btnBuy.enable( price <= Dungeon.gold );
-		add( btnBuy );
+		btnBuy.setRect(0, pos + GAP, width, BTN_HEIGHT);
+		btnBuy.enable(price <= Dungeon.gold);
+		add(btnBuy);
 
 		pos = btnBuy.bottom();
 
@@ -147,7 +148,36 @@ public class WndTradeItem extends WndInfoItem {
 
 			pos = btnSteal.bottom();
 
-		}
+		} else if (Dungeon.depth == 20) {
+			final float chance = 300;
+			RedButton btnSteal = new RedButton(Messages.get(this, "steal", 33)) {
+			@Override
+			protected void onClick() {
+				if (Random.Int(2) == 0) {
+					Hero hero = Dungeon.hero;
+					Item item = heap.pickUp();
+					hide();
+
+					if (!item.doPickUp(hero)) {
+						Dungeon.level.drop(item, heap.pos).sprite.drop();
+					}
+				} else {
+					for (Mob mob : Dungeon.level.mobs) {
+						if (mob instanceof Shopkeeper) {
+							mob.yell(Messages.get(mob, "thief"));
+							((Shopkeeper) mob).flee();
+							break;
+						}
+					}
+					hide();
+				}
+			}
+		};
+		btnSteal.setRect(0, pos + 1, width, BTN_HEIGHT);
+		add(btnSteal);
+
+		pos = btnSteal.bottom();
+	}
 
 		resize(width, (int) pos);
 	}

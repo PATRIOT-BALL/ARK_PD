@@ -1928,6 +1928,13 @@ items.weapon.melee.m1887.name=M1887
 items.weapon.melee.m1887.stats_desc=명중률 -10%
 items.weapon.melee.m1887.desc=그래서 이렇게도 말할 수 있다. 공증소는 원래 가장 성가신 프로젝트에만 집행자를 파견한다고.\n\n이 라테라노의 샷건은 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.
 
+items.weapon.melee.crabgun.name=바위게 사육사
+items.weapon.melee.crabgun.stats_desc=사거리 +1
+items.weapon.melee.crabgun.desc=_"아, 얘 이름은 완두콩이야. 자, 콩콩아, 박사랑 인사하자."_\n\n이 석궁은 신비한 바위게들을 부릴 수 있습니다. 공격시 SP가 충전되며, SP가 100%일 때 공격시 바위게가 소환됩니다.
+items.weapon.melee.crabgun$metalcrab.name=바위게
+items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수에 비례해 공격 능력치가 상승하며, 무기 강화에 비례해 방어 능력치가 상승합니다.
+
+
 
 ###missile weapons
 items.weapon.missiles.darts.adrenalinedart.name=아드레날린 화살
@@ -2165,6 +2172,10 @@ items.honeypot.ac_shatter=깨트린다
 items.honeypot.desc=이 커다란 꿀단지는 꿀만으로 채워진 대신, 거대한 벌을 담고 있습니다! 벌들은 보통 무리를 지어 벌집에서 살기 때문에, 이 단지는 벌을 가두기 위한 함정일 수도 있습니다. 벌은 단지 안의 꿀에 만족한 모습이지만, 당신이 쳐다보면 조심스럽게 윙윙거리는 소리를 들을 수 있습니다.
 items.honeypot$shatteredpot.name=깨진 꿀단지
 items.honeypot$shatteredpot.desc=이 단지는 이미 깨져 벼렸고, 벽을 타고 흐르는 끈적한 꿀들만 형태를 유지하도록 하며, 그마저도 천천히 분리되고 있습니다.\n\n단지는 이미 깨져 버렸지만, 벌은 여전히 단지를 지키려고 하고 있습니다.
+
+items.randombox.name=가챠 박스
+items.randombox.ac_add=개봉한다.
+items.randombox.desc=무작위 무기 / 스킬개론, 혹은 합성옥을 얻습니다.\n\n_게임 진행도에 따라 확률이 변하는 가변형 확률 시스템이 탑재되어있습니다._
 
 items.item.pack_full=당신의 %s이 가득 찼다.
 items.item.prompt=던질 방향을 선택하세요
