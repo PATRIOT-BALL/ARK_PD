@@ -11,10 +11,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
@@ -71,6 +73,37 @@ public class CrabGun extends MeleeWeapon {
         charge += n;
         if (chargeCap < charge) charge = chargeCap;
         updateQuickslot();
+    }
+
+    private static final String CHARGE = "charge";
+
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(CHARGE, charge);
+    }
+
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
+        else charge = bundle.getInt(CHARGE);
+    }
+
+    @Override
+    public String status() {
+
+        //if the artifact isn't IDed, or is cursed, don't display anything
+        if (!isIdentified() || cursed) {
+            return null;
+        }
+        //display as percent
+        if (chargeCap == 100)
+            return Messages.format("%d%%", charge);
+
+
+        //otherwise, if there's no charge, return null.
+        return null;
     }
 
     public class MetalCrab extends Mob {
