@@ -355,6 +355,9 @@ public class Assets {
 		public static final String SARKAZ_SNIPER_E	= "sprites/Sarkaz_Sniper_E.png";
 		public static final String LANCER	= "sprites/Lancer.png";
 		public static final String GHOST1	= "sprites/ghost_1.png";
-		public static final String GHOST2	= "sprites/ghost_2.png";
+
+		//스킨
+		public static final String TALRU_FIGHT	= "sprites/talru.png";
+		public static final String FNOVA	= "sprites/nova.png";
 	}
 }

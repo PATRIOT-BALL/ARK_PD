@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.RandomBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
@@ -235,6 +236,7 @@ public enum HeroClass {
 
 		new ScrollOfMagicMapping().identify();
 		new PotionOfInvisibility().identify();
+		new BookTrueSilverSlash().collect();
 
 		SkillBook skillB;
 		skillB = new SkillBook();
@@ -284,6 +286,26 @@ public enum HeroClass {
 	}
 
 	public String spritesheet() {
+		if (Dungeon.hero != null) {
+
+			switch (Dungeon.hero.CharSkin) {
+				case 1: return Assets.Sprites.TALRU_FIGHT;
+				case 2: return Assets.Sprites.FNOVA;
+			}
+		}
+		switch (this) {
+			case WARRIOR: default:
+				return Assets.Sprites.BLAZE;
+			case MAGE:
+				return Assets.Sprites.AMIYA;
+			case ROGUE:
+				return Assets.Sprites.RED;
+			case HUNTRESS:
+				return Assets.Sprites.GREY;
+		}
+	}
+
+	public String spritesheet_de() {
 		switch (this) {
 			case WARRIOR: default:
 				return Assets.Sprites.BLAZE;

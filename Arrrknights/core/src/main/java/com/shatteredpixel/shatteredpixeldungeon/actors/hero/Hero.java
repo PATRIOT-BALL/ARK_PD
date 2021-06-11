@@ -173,6 +173,7 @@ public class Hero extends Char {
 
     // 스킨 관련
     public static final int TALULAH      = 1;
+    public static final int F_NOVA      = 2;
 
     {
         actPriority = HERO_PRIO;
@@ -227,7 +228,7 @@ public class Hero extends Char {
     private int SK2num;
     private int SK3num;
 
-    public int CharSkin = 0; // 미사용. 후에 사용할 예정
+    public int CharSkin = 0; // 0은 디폴트 스킨.
 
     private ArrayList<Mob> visibleEnemies;
 

@@ -5,7 +5,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.talrufightSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.FnovaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LensSprite;
@@ -20,17 +21,20 @@ public class SkinModel extends NPC {
     public SkinModel()
     {
         super();
-       switch (Skin) {
+       switch (skin_ch) {
            default:
            case 0:
-           spriteClass = LensSprite.class;
+           spriteClass = talrufightSprite.class;
            break;
-           case 1: spriteClass = Guard_operSprite.class;
+           case 1: spriteClass = FnovaSprite.class;
 
        }
     }
 
-    private static int Skin = 0;
+
+
+    public int Skin = 0;
+    public static int skin_ch = 0;
 
     @Override
     public int defenseSkill( Char enemy ) {
@@ -43,7 +47,7 @@ public class SkinModel extends NPC {
 
     @Override
     public boolean interact(Char c) {
-        sprite.attack(0);
+        SkinChange();
         return true;
     }
 
@@ -57,8 +61,8 @@ public class SkinModel extends NPC {
 
     public void SkinChange()
     {
-        Skin++;
-        if (Skin > 1) Skin = 0;
+        skin_ch++;
+        if (skin_ch > 1) skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();
@@ -67,6 +71,7 @@ public class SkinModel extends NPC {
 
         SkinModel Model = new SkinModel();
         Model.pos = ppos;
+        Model.Skin = skin_ch;
         GameScene.add(Model, 0f);
     }
 }

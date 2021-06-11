@@ -258,6 +258,12 @@ public class StatusPane extends Component {
 		}
 	}
 
+	public void Avaterupdate()
+	{
+		avatar.copy( HeroSprite.avatar( Dungeon.hero.heroClass, lastTier ) );
+
+	}
+
 	public void pickup( Item item, int cell) {
 		pickedUp.reset( item,
 			cell,

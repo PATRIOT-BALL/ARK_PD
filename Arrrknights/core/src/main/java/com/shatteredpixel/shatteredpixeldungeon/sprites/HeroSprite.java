@@ -48,10 +48,18 @@ public class HeroSprite extends CharSprite {
 
 	public HeroSprite() {
 		super();
-		
-		texture( Dungeon.hero.heroClass.spritesheet() );
+
+		switch (Dungeon.hero.CharSkin) {
+			case 0: default:
+			texture(Dungeon.hero.heroClass.spritesheet());
+			break;
+			case 1: texture(Assets.Sprites.TALRU_FIGHT);
+			break;
+			case 2: texture(Assets.Sprites.FNOVA);
+			break;
+		}
 		updateArmor();
-		
+
 		link( Dungeon.hero );
 
 		if (ch.isAlive())
@@ -61,7 +69,15 @@ public class HeroSprite extends CharSprite {
 	}
 	
 	public void updateArmor() {
-
+		switch (Dungeon.hero.CharSkin) {
+			case 0: default:
+				texture(Dungeon.hero.heroClass.spritesheet());
+				break;
+			case 1: texture(Assets.Sprites.TALRU_FIGHT);
+				break;
+			case 2: texture(Assets.Sprites.FNOVA);
+				break;
+		}
 		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 32, 32);
 
 		idle = new Animation( 1, true );
@@ -176,6 +192,17 @@ public class HeroSprite extends CharSprite {
 		frame.shift( patch.left, patch.top );
 		avatar.frame( frame );
 		
+		return avatar;
+	}
+
+	public static Image avatar_de( HeroClass cl, int armorTier ) {
+
+		RectF patch = tiers().get( armorTier );
+		Image avatar = new Image( cl.spritesheet_de() );
+		RectF frame = avatar.texture.uvRect( 1, 0, FRAME_WIDTH, FRAME_HEIGHT );
+		frame.shift( patch.left, patch.top );
+		avatar.frame( frame );
+
 		return avatar;
 	}
 }

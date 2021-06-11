@@ -29,7 +29,7 @@ public class Ghost2Sprite extends MobSprite {
     public Ghost2Sprite() {
         super();
 
-        texture( Assets.Sprites.GHOST2 );
+        texture( Assets.Sprites.GHOST1 );
         TextureFilm film = new TextureFilm( texture, 32, 32 );
 
         int c = 30;

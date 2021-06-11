@@ -977,6 +977,8 @@ public class GameScene extends PixelScene {
 		if (scene != null) scene.pane.updateKeys();
 	}
 
+	public static void updateplayeravater(){ if (scene != null) scene.pane.Avaterupdate(); }
+
 	public static void resetMap() {
 		if (scene != null) {
 			scene.tiles.map(Dungeon.level.map, Dungeon.level.width() );
