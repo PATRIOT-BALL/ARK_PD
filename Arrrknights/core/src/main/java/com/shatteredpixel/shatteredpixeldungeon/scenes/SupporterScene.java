@@ -80,7 +80,7 @@ public class SupporterScene extends PixelScene {
 				super.onClick();
 				String link = "https://www.patreon.com/roguenight";
 				//tracking codes, so that the website knows where this pageview came from
-				link += "?utm_source=shatteredpd";
+				link += "?utm_source=roguenight";
 				link += "&utm_medium=supporter_page";
 				link += "&utm_campaign=ingame_link";
 				DeviceCompat.openURI(link);

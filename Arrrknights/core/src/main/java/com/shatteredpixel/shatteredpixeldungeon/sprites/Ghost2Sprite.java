@@ -32,11 +32,13 @@ public class Ghost2Sprite extends MobSprite {
         texture( Assets.Sprites.GHOST2 );
         TextureFilm film = new TextureFilm( texture, 32, 32 );
 
+        int c = 30;
+
         idle = new Animation( 1, true );
         idle.frames( film, 0 );
 
         run = new Animation( 17, true );
-        run.frames( film, 1, 2, 3, 4, 5, 6, 7, 8 );
+        run.frames( film, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 
         die = new Animation( 10, false );
         die.frames( film, 0 );

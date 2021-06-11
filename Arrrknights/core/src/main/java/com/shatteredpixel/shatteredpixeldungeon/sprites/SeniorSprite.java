@@ -34,22 +34,24 @@ public class SeniorSprite extends MobSprite {
 		
 		texture( Assets.Sprites.ENRAGED );
 		
-		TextureFilm frames = new TextureFilm( texture, 15, 14 );
+		TextureFilm frames = new TextureFilm( texture, 32, 32 );
+
+		int c = 40;
 		
 		idle = new Animation( 6, true );
-		idle.frames( frames, 18, 17, 18, 19 );
+		idle.frames( frames, c+0 );
 		
 		run = new Animation( 15, true );
-		run.frames( frames, 28, 29, 30, 31, 32, 33 );
+		run.frames( frames, c+0 );
 		
 		attack = new Animation( 12, false );
-		attack.frames( frames, 20, 21, 20, 21 );
+		attack.frames( frames, c+0 );
 		
 		kick = new Animation( 10, false );
-		kick.frames( frames, 22, 23, 22 );
+		kick.frames( frames, c+0 );
 		
 		die = new Animation( 15, false );
-		die.frames( frames, 18, 24, 25, 25, 26, 27 );
+		die.frames( frames, c+0 );
 		
 		play( idle );
 	}

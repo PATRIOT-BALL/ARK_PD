@@ -4,11 +4,11 @@ A Roguelike RPG, with randomly generated levels, items, enemies, and traps! Base
 
 Shattered Pixel Dungeon currently compiles for Android and desktop platforms. It is available from [GitHub](https://github.com/00-Evan/shattered-pixel-dungeon/releases), [Google Play](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon), [Amazon](https://www.amazon.com/Shattered-Pixel-Dungeon/dp/B00OH2C21M), and [F-Droid](https://f-droid.org/repository/browse/?fdid=com.shatteredpixel.shatteredpixeldungeon).
 
-If you like this game, please consider [supporting me on Patreon](https://www.patreon.com/ShatteredPixel)!
+If you like this game, please consider [supporting me on Patreon](https://www.patreon.com/roguenight)!
 
-There is an official blog for this project at [ShatteredPixel.com](http://www.shatteredpixel.com).
+There is an official blog for this project at [ShatteredPixel.com](https://www.patreon.com/roguenight).
 
-The game also has a translation project hosted on [Transifex](https://www.transifex.com/shattered-pixel/shattered-pixel-dungeon/).
+The game also has a translation project hosted on [Transifex](https://www.transifex.com/team-rosemari/tomorrows-roguenight/).
 
 Note that **this repository does not accept pull requests!** The code here is provided in hopes that others may find it useful for their own projects, not to allow community contribution. Issue reports of all kinds (bug reports, feature requests, etc.) are welcome.
 
