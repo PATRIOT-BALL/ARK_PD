@@ -318,11 +318,7 @@ public abstract class Char extends Actor {
 					Buff.affect(Dungeon.hero, Talent.BountyHunterTracker.class, 0.0f);
 				}
 				if (this == Dungeon.hero && Dungeon.hero.hasTalent(Talent.SWEEP)) {
-					if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
-						SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
-						Item.GetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
-					}
-				}
+						Buff.affect(Dungeon.hero, Talent.SWEEPTraker.class, 0.0f); }
 			} else {
 				dmg = damageRoll();
 			}

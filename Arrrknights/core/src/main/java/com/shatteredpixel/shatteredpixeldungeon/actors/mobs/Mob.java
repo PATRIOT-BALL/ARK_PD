@@ -50,6 +50,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
@@ -691,6 +692,12 @@ public abstract class Mob extends Char {
 
 		super.die( cause );
 
+		if (Dungeon.hero.buff(Talent.SWEEPTraker.class) != null) {
+			if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
+				SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
+				Item.GetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
+			}}
+
 		if (!(this instanceof Wraith_donut)
 				&& soulMarked
 				&& Random.Int(7) < Dungeon.hero.pointsInTalent(Talent.NECROMANCERS_MINIONS)){
@@ -743,7 +750,7 @@ public abstract class Mob extends Char {
 		}
 
 		//bounty hunter talent
-		if (Dungeon.hero.buff(Talent.BountyHunterTracker.class) != null){
+		if (Dungeon.hero.buff(Talent.BountyHunterTracker.class) != null) {
 			Dungeon.level.drop(new Gold(8 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
 		}
 
