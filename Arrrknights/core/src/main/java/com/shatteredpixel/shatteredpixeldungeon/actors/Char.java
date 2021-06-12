@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Elemental;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.NeverBackDown;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Potential;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
@@ -315,6 +316,12 @@ public abstract class Char extends Actor {
 				dmg = prep.damageRoll(this);
 				if (this == Dungeon.hero && Dungeon.hero.hasTalent(Talent.BOUNTY_HUNTER)) {
 					Buff.affect(Dungeon.hero, Talent.BountyHunterTracker.class, 0.0f);
+				}
+				if (this == Dungeon.hero && Dungeon.hero.hasTalent(Talent.SWEEP)) {
+					if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
+						SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
+						Item.GetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
+					}
 				}
 			} else {
 				dmg = damageRoll();

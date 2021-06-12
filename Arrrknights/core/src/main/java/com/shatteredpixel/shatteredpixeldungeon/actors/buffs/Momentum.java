@@ -75,6 +75,15 @@ public class Momentum extends Buff implements ActionIndicator.Action {
 		spend(TICK);
 		return true;
 	}
+
+	public void BounsStack(int n) {
+		movedLastTurn = true;
+		if (freerunCooldown <= 0) {
+			postpone(target.cooldown()+(1/target.speed()));
+			momentumStacks += Math.min(momentumStacks + n, 10);
+			ActionIndicator.setAction(this);
+		}
+	}
 	
 	public void gainStack(){
 		movedLastTurn = true;

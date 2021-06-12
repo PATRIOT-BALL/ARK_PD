@@ -24,8 +24,10 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -119,6 +121,10 @@ public class Dart extends MissileWeapon {
 	public int proc(Char attacker, Char defender, int damage) {
 		if (bow != null){
 			damage = bow.proc(attacker, defender, damage);
+		}
+		if (Dungeon.hero.pointsInTalent(Talent.SAVIOR_BELIEF) > Random.Int(0,2))
+		{
+			Buff.affect(curUser, MagicImmune.class, 1f);
 		}
 
 		return super.proc(attacker, defender, damage);

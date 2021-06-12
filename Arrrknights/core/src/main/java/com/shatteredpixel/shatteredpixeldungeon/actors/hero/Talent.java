@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.CounterBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.EnhancedRings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WandEmpower;
@@ -77,6 +78,12 @@ public enum Talent {
 	ENDLESS_RAGE(11, 3), BERSERKING_STAMINA(12, 3), ENRAGED_CATALYST(13, 3),
 	//Gladiator T3
 	CLEAVE(14, 3), LETHAL_DEFENSE(15, 3), ENHANCED_COMBO(16, 3),
+	//Warrior T4
+	TACTICAL_SHIELD(3, 3), CHAINSAW_EXTEND(14, 3),
+	//Berserker T4
+	INFINITE_RAGE(11, 3),
+	//Gladiator T4
+	SPARKOFLIFE(13,3),
 
 	//Mage T1
 	EMPOWERING_MEAL(32), SCHOLARS_INTUITION(33), TESTED_HYPOTHESIS(34), BACKUP_BARRIER(35),
@@ -88,6 +95,12 @@ public enum Talent {
 	EMPOWERED_STRIKE(43, 3), MYSTICAL_CHARGE(44, 3), EXCESS_CHARGE(45, 3),
 	//Warlock T3
 	SOUL_EATER(46, 3), SOUL_SIPHON(47, 3), NECROMANCERS_MINIONS(48, 3),
+	//Mage T4
+	PSYCHOANALYSIS(40,3), RHODES(38,3),
+	//Battlemage T4
+	AZURE_FURY(43,3),
+	//Warlokc T4
+	EMOTION(46,3),
 
 	//Rogue T1
 	CACHED_RATIONS(64), THIEFS_INTUITION(65), SUCKER_PUNCH(66), PROTECTIVE_SHADOWS(67),
@@ -99,6 +112,12 @@ public enum Talent {
 	ENHANCED_LETHALITY(75, 3), ASSASSINS_REACH(76, 3), BOUNTY_HUNTER(77, 3),
 	//Freerunner T3
 	EVASIVE_ARMOR(78, 3), PROJECTILE_MOMENTUM(79, 3), SPEEDY_STEALTH(80, 3),
+	//Rogue T4
+	ASSASSINSCREED(66,3),CLOCK_UPGRADE(74,3),
+	//Assassin T4
+	SWEEP(76,3),
+	//Freerunner T4
+	SPECIAL_OPERATIONS(80,3),
 
 	//Huntress T1
 	NATURES_BOUNTY(96), SURVIVALISTS_INTUITION(97), FOLLOWUP_STRIKE(98), NATURES_AID(99),
@@ -109,7 +128,13 @@ public enum Talent {
 	//Sniper T3
 	FARSIGHT(107, 3), SHARED_ENCHANTMENT(108, 3), SHARED_UPGRADES(109, 3),
 	//Warden T3
-	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SHIELDING_DEW(112, 3);
+	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SHIELDING_DEW(112, 3),
+	//Huntress T4
+	ARTS_FOCUS(108,3), IMPROVED_CROSSBOW(109,3),
+	//Sniper T4
+	SNIPING(105,3),
+	//Warden T4
+	SAVIOR_BELIEF(112,3);
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};
@@ -123,7 +148,7 @@ public enum Talent {
 	int maxPoints;
 
 	// tiers 1/2/3/4 start at levels 2/7/13/21
-	public static int[] tierLevelThresholds = new int[]{0, 2, 7, 13, 21, 31};
+	public static int[] tierLevelThresholds = new int[]{0, 2, 7, 13, 21, 26};
 
 	Talent( int icon ){
 		this(icon, 2);
@@ -309,7 +334,14 @@ public enum Talent {
 
 	public static void onArtifactUsed( Hero hero ){
 		if (hero.hasTalent(ENHANCED_RINGS)){
-			Buff.prolong(hero, EnhancedRings.class, 3f*hero.pointsInTalent(ENHANCED_RINGS));
+			Buff.prolong(hero, EnhancedRings.class, 2.5f*hero.pointsInTalent(ENHANCED_RINGS));
+		}
+		if (hero.hasTalent(SPECIAL_OPERATIONS)){
+			Momentum p = Dungeon.hero.buff(Momentum.class);
+			if (p != null)
+			{
+				p.BounsStack(Dungeon.hero.pointsInTalent(SPECIAL_OPERATIONS) * 2);
+			}
 		}
 	}
 
@@ -355,6 +387,13 @@ public enum Talent {
 			Buff.affect(enemy, SuckerPunchTracker.class);
 		}
 
+		if (hero.hasTalent(Talent.ASSASSINSCREED)
+				&& enemy instanceof Mob && ((Mob) enemy).surprisedBy(hero)
+				&& enemy.buff(SuckerPunchTracker.class) == null){
+			dmg *= 0.9f + hero.pointsInTalent(Talent.ASSASSINSCREED) * 0.2;
+			Buff.affect(enemy, SuckerPunchTracker.class);
+		}
+
 		if (hero.hasTalent(Talent.FOLLOWUP_STRIKE)) {
 			if (hero.belongings.weapon instanceof MissileWeapon) {
 				Buff.affect(enemy, FollowupStrikeTracker.class);
@@ -373,7 +412,7 @@ public enum Talent {
 	public static class SuckerPunchTracker extends Buff{};
 	public static class FollowupStrikeTracker extends Buff{};
 
-	public static final int MAX_TALENT_TIERS = 3;
+	public static final int MAX_TALENT_TIERS = 4;
 
 	public static void initClassTalents( Hero hero ){
 		initClassTalents( hero.heroClass, hero.talents );
@@ -447,7 +486,24 @@ public enum Talent {
 		tierTalents.clear();
 
 		//tier4
-		//TBD
+		switch (cls){
+			case WARRIOR: default:
+				Collections.addAll(tierTalents, TACTICAL_SHIELD, CHAINSAW_EXTEND);
+				break;
+			case MAGE:
+				Collections.addAll(tierTalents, PSYCHOANALYSIS, RHODES);
+				break;
+			case ROGUE:
+				Collections.addAll(tierTalents, ASSASSINSCREED, CLOCK_UPGRADE);
+				break;
+			case HUNTRESS:
+				Collections.addAll(tierTalents, ARTS_FOCUS,IMPROVED_CROSSBOW);
+				break;
+		}
+		for (Talent talent : tierTalents){
+			talents.get(3).put(talent, 0);
+		}
+		tierTalents.clear();
 	}
 
 	public static void initSubclassTalents( Hero hero ){
@@ -496,7 +552,36 @@ public enum Talent {
 		tierTalents.clear();
 
 		//tier4
-		//TBD
+		switch (cls){
+			case BERSERKER: default:
+				Collections.addAll(tierTalents, INFINITE_RAGE);
+				break;
+			case GLADIATOR:
+				Collections.addAll(tierTalents, SPARKOFLIFE);
+				break;
+			case BATTLEMAGE:
+				Collections.addAll(tierTalents, AZURE_FURY);
+				break;
+			case WARLOCK:
+				Collections.addAll(tierTalents, EMOTION);
+				break;
+			case ASSASSIN:
+				Collections.addAll(tierTalents, SWEEP);
+				break;
+			case FREERUNNER:
+				Collections.addAll(tierTalents, SPECIAL_OPERATIONS);
+				break;
+			case SNIPER:
+				Collections.addAll(tierTalents, SNIPING);
+				break;
+			case WARDEN:
+				Collections.addAll(tierTalents, SAVIOR_BELIEF);
+				break;
+		}
+		for (Talent talent : tierTalents){
+			talents.get(3).put(talent, 0);
+		}
+		tierTalents.clear();
 	}
 
 	private static final String TALENT_TIER = "talents_tier_";

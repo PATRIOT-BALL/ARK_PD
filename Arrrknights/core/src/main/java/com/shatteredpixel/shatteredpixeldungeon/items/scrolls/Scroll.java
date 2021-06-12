@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.scrolls;
 
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArcaneArmor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
@@ -56,6 +57,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.HeroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 import com.watabou.utils.Reflection;
 
 import java.util.ArrayList;
@@ -185,13 +187,26 @@ public abstract class Scroll extends Item {
 
 	protected void readAnimation() {
 		Invisibility.dispel();
-		curUser.spend( TIME_TO_READ );
+
+		if (curUser.hasTalent(Talent.PSYCHOANALYSIS)){
+			curUser.spend( 0 );
+		}
+		else curUser.spend( TIME_TO_READ );
 		curUser.busy();
 		((HeroSprite)curUser.sprite).read();
 
 		if (curUser.hasTalent(Talent.EMPOWERING_SCROLLS)){
 			Buff.affect(curUser, ScrollEmpower.class, 30f);
 			updateQuickslot();
+		}
+
+		if (curUser.hasTalent(Talent.PSYCHOANALYSIS)) {
+			if (Random.Int(0,2) < curUser.pointsInTalent(Talent.PSYCHOANALYSIS)) {
+				Talent.onFoodEaten(Dungeon.hero, 0, null); }
+		}
+
+		if (curUser.hasTalent(Talent.RHODES)){
+			Buff.affect(curUser, ArcaneArmor.class).set(curUser.pointsInTalent(Talent.RHODES) * 5, 5);
 		}
 
 	}

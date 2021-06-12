@@ -62,6 +62,9 @@ public class TalentsPane extends ScrollPane {
 			if (tiersAvailable > 2 && Dungeon.hero.subClass == HeroSubClass.NONE){
 				tiersAvailable = 2;
 			}
+			if (tiersAvailable > 3 && Dungeon.hero.subClass == HeroSubClass.NONE){
+				tiersAvailable = 3;
+			}
 		}
 
 		tiersAvailable = Math.min(tiersAvailable, talents.size());
@@ -78,21 +81,32 @@ public class TalentsPane extends ScrollPane {
 			content.add(sep);
 		}
 
-		sep = new ColorBlock(0, 1, 0xFF000000);
-		content.add(sep);
+		if (tiersAvailable == 4) {
+			sep = new ColorBlock(0, 0, 0xFF000000);
+			content.add(sep);
 
-		blocker = new ColorBlock(0, 0, 0xFF222222);
-		content.add(blocker);
-
-		if (tiersAvailable == 1) {
-			blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier2"), 6);
-		} else if (tiersAvailable == 2) {
-			blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier3"), 6);
-		} else {
-			blockText = PixelScene.renderTextBlock(Messages.get(this, "coming_soon"), 6);
+			blocker = new ColorBlock(0, 0, 0xFF222222);
+			content.add(blocker);
 		}
-		content.add(blockText);
-	}
+		else {
+			sep = new ColorBlock(0, 1, 0xFF000000);
+			content.add(sep);
+
+			blocker = new ColorBlock(0, 0, 0xFF222222);
+			content.add(blocker);
+		}
+
+			if (tiersAvailable == 1) {
+				blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier2"), 6);
+			} else if (tiersAvailable == 2) {
+				blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier3"), 6);
+			} else if (tiersAvailable == 3) {
+				blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier4"), 6);
+			} else {
+				blockText = PixelScene.renderTextBlock(0);
+			}
+			content.add(blockText);
+		}
 
 	@Override
 	protected void layout() {

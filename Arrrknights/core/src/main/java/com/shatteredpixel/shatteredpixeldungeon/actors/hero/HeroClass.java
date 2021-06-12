@@ -72,6 +72,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.PurgatoryK
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingClub;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.Dart;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.DeviceCompat;
@@ -170,6 +171,10 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		new PotionOfExperience().quantity(99).collect();
+		new TomeOfMastery().collect();
+		new ScrollOfUpgrade().quantity(99).collect();
+
 		/*	new PotionOfLiquidFlame().quantity(5).collect();
 		*/
 
@@ -211,6 +216,10 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
 
+		new PotionOfExperience().quantity(99).collect();
+		new TomeOfMastery().collect();
+		new ScrollOfUpgrade().quantity(99).collect();
+
 		new DewVial().collect();
 
 	}
@@ -241,6 +250,10 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(2,skillB);
 
+		new PotionOfExperience().quantity(99).collect();
+		new TomeOfMastery().collect();
+		new ScrollOfUpgrade().quantity(99).collect();
+
 		new DewVial().collect();
 	}
 
@@ -267,6 +280,11 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
+
+		new PotionOfExperience().quantity(99).collect();
+		new TomeOfMastery().collect();
+		new ScrollOfUpgrade().quantity(99).collect();
+		new Dart().collect();
 
 		//new TomeOfMastery().quantity(1).collect();
 		//new PotionOfExperience().quantity(99).collect();

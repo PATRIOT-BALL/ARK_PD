@@ -25,10 +25,12 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
@@ -147,11 +149,13 @@ public class SpiritBow extends Weapon {
 			return 6 + (int)(Dungeon.hero.lvl/2.5f)
 					+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 					+ (curseInfusionBonus ? 2 : 0)
-			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4;
+			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4
+					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3;
 		}
 		else return 6 + (int)(Dungeon.hero.lvl/2.5f)
 				+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
-				+ (curseInfusionBonus ? 2 : 0);
+				+ (curseInfusionBonus ? 2 : 0)
+				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3;
 	}
 
 	@Override
@@ -173,7 +177,7 @@ public class SpiritBow extends Weapon {
 		}
 
 		if (sniperSpecial){
-			damage = Math.round(damage * (1f + sniperSpecialBonusDamage));
+			damage = Math.round(damage * (1f + sniperSpecialBonusDamage + Dungeon.hero.pointsInTalent(Talent.SNIPING)*0.2f));
 
 			switch (augment){
 				case NONE:
@@ -253,6 +257,9 @@ public class SpiritBow extends Weapon {
 		public int proc(Char attacker, Char defender, int damage) {
 			if (Random.Int(12) < Dungeon.hero.pointsInTalent(Talent.POINT_BLANK)) {
 				Buff.affect(defender, Vertigo.class, 3f);
+			}
+			if (Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.ARTS_FOCUS)) {
+				Buff.affect(defender, Vulnerable.class, 6f);
 			}
 			return SpiritBow.this.proc(attacker, defender, damage);
 		}

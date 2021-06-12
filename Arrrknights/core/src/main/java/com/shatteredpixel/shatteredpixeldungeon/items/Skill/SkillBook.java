@@ -151,6 +151,13 @@ public class SkillBook extends Item {
         updateQuickslot();
     }
 
+    public void GetCharge(int cha)
+    {
+        charge += cha;
+        if (charge > 150) charge = 150;
+        updateQuickslot();
+    }
+
     private static final String CHARGE = "charge";
 
     @Override

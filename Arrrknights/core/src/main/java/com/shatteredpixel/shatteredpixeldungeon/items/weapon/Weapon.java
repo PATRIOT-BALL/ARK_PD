@@ -185,6 +185,10 @@ abstract public class Weapon extends KindOfWeapon {
 			encumbrance = Math.max(2, encumbrance+2);
 
 		float ACC = this.ACC;
+		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND))
+		{
+			encumbrance += 4 - Dungeon.hero.pointsInTalent(Talent.CHAINSAW_EXTEND);
+		}
 
 		return encumbrance > 0 ? (float)(ACC / Math.pow( 1.5, encumbrance )) : ACC;
 	}
@@ -206,11 +210,15 @@ abstract public class Weapon extends KindOfWeapon {
 
 	@Override
 	public int reachFactor(Char owner) {
+		int RCHmath = RCH;
+		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND)) {
+			RCHmath +=1;
+		}
 		if (owner.buff(SeethingBurst.class) != null) {
-			return hasEnchant(Projecting.class, owner) ? RCH + 2 : RCH + 1;
+			return hasEnchant(Projecting.class, owner) ? RCHmath + 2 : RCHmath + 1;
 		}
 		else {
-			return hasEnchant(Projecting.class, owner) ? RCH + 1 : RCH;
+			return hasEnchant(Projecting.class, owner) ? RCHmath + 1 : RCHmath;
 		}
 	}
 
@@ -337,30 +345,30 @@ abstract public class Weapon extends KindOfWeapon {
 	}
 
 	public static abstract class Enchantment implements Bundlable {
-		
+
 		private static final Class<?>[] common = new Class<?>[]{
 				Blazing.class, Chilling.class, Kinetic.class, Shocking.class};
-		
+
 		private static final Class<?>[] uncommon = new Class<?>[]{
 				Blocking.class, Blooming.class, Elastic.class,
 				Lucky.class, Projecting.class, Unstable.class};
-		
+
 		private static final Class<?>[] rare = new Class<?>[]{
 				Corrupting.class, Grim.class, Vampiric.class};
-		
+
 		private static final float[] typeChances = new float[]{
 				50, //12.5% each
 				40, //6.67% each
 				10  //3.33% each
 		};
-		
+
 		private static final Class<?>[] curses = new Class<?>[]{
 				Annoying.class, Displacing.class, Exhausting.class, Fragile.class,
 				Sacrificial.class, Wayward.class, Polarized.class, Friendly.class,
 				contamination.class
 		};
-		
-			
+
+
 		public abstract int proc( Weapon weapon, Char attacker, Char defender, int damage );
 
 		protected float procChanceMultiplier( Char attacker ){
@@ -371,6 +379,7 @@ abstract public class Weapon extends KindOfWeapon {
 					multi += (rage.rageAmount() / 4f) * ((Hero) attacker).pointsInTalent(Talent.ENRAGED_CATALYST);
 				}
 			}
+
 			return multi;
 		}
 

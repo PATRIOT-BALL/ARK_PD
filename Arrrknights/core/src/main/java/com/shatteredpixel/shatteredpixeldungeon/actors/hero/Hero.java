@@ -566,6 +566,12 @@ public class Hero extends Char {
             dr += Random.NormalIntRange(0, 2 * pointsInTalent(Talent.HOLD_FAST));
         }
 
+        if (Dungeon.hero.hasTalent(Talent.TACTICAL_SHIELD)){
+            int drplus = Dungeon.hero.belongings.armor.buffedLvl() * Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD);
+            drplus = Math.min(drplus, Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD) * 6);
+            dr += drplus;
+        }
+
         return dr;
     }
 
@@ -774,7 +780,7 @@ public class Hero extends Char {
         }
 
         if (hasTalent(Talent.BARKSKIN) && Dungeon.level.map[pos] == Terrain.FURROWED_GRASS) {
-            Buff.affect(this, Barkskin.class).set(lvl, pointsInTalent(Talent.BARKSKIN));
+            Buff.affect(this, Barkskin.class).set(lvl - 3, pointsInTalent(Talent.BARKSKIN));
         }
 
         return actResult;
@@ -1276,9 +1282,21 @@ public class Hero extends Char {
         }
 
         if (buff(Talent.WarriorFoodImmunity.class) != null) {
-            if (pointsInTalent(Talent.IRON_STOMACH) == 1) dmg = Math.round(dmg * 0.25f);
-            else if (pointsInTalent(Talent.IRON_STOMACH) == 2) dmg = Math.round(dmg * 0.00f);
+            if (pointsInTalent(Talent.IRON_STOMACH) == 1) dmg = Math.round(dmg * 0.5f);
+            else if (pointsInTalent(Talent.IRON_STOMACH) == 2) dmg = Math.round(dmg * 0.25f);
         }
+
+        if (Dungeon.hero.hasTalent(Talent.INFINITE_RAGE)) {
+            Berserk berserk = buff(Berserk.class);
+            float ber;
+            if (berserk != null){ ber =  1.25f - (Dungeon.hero.pointsInTalent(Talent.INFINITE_RAGE) * 0.25f);
+            if (berserk.getPower() >= ber)
+            {
+                dmg = Math.round(dmg * 0.7f);
+            }
+        }
+    }
+
 
         int preHP = HP + shielding();
         super.damage(dmg, src);
@@ -1833,6 +1851,14 @@ public class Hero extends Char {
             spend(attackDelay());
         } else {
             spend(attackDelay() * 0.5f);
+        }
+
+        if (Dungeon.hero.hasTalent(Talent.SPARKOFLIFE))
+        {
+            if (Dungeon.hero.pointsInTalent(Talent.SPARKOFLIFE) > Random.IntRange(0, 19))
+            {
+                HP += HT / 20;
+            }
         }
 
         if (hit && subClass == HeroSubClass.GLADIATOR) {
