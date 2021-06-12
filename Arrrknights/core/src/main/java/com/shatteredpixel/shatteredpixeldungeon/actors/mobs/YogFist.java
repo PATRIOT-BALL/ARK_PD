@@ -141,7 +141,7 @@ public abstract class YogFist extends Mob {
 
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 18, 36 );
+		return Random.NormalIntRange( 22, 36 );
 	}
 
 	@Override
@@ -187,8 +187,8 @@ public abstract class YogFist extends Mob {
 				CellEmitter.get( pos ).burst( Speck.factory( Speck.STEAM ), 10 );
 			}
 
-			//1.33 evaporated tiles on average
-			int evaporatedTiles = Random.chances(new float[]{0, 2, 1});
+			//타일 증발
+			int evaporatedTiles = Random.chances(new float[]{0, 2, 1, 1});
 
 			for (int i = 0; i < evaporatedTiles; i++) {
 				int cell = pos + PathFinder.NEIGHBOURS8[Random.Int(8)];
