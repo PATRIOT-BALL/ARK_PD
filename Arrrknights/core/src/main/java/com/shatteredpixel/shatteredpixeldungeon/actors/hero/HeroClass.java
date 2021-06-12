@@ -222,7 +222,6 @@ public enum HeroClass {
 		(hero.belongings.artifact = cloak).identify();
 		hero.belongings.artifact.activate( hero );
 
-
 		ThrowingKnife knives = new ThrowingKnife();
 		knives.quantity(3).collect();
 		Dungeon.quickslot.setSlot(0, cloak);
@@ -236,7 +235,6 @@ public enum HeroClass {
 
 		new ScrollOfMagicMapping().identify();
 		new PotionOfInvisibility().identify();
-		new BookTrueSilverSlash().collect();
 
 		SkillBook skillB;
 		skillB = new SkillBook();

@@ -1932,7 +1932,7 @@ items.weapon.melee.crabgun.name=바위게 사육사
 items.weapon.melee.crabgun.stats_desc=사거리 +1
 items.weapon.melee.crabgun.desc=_"아, 얘 이름은 완두콩이야. 자, 콩콩아, 박사랑 인사하자."_\n\n이 석궁은 신비한 바위게들을 부릴 수 있습니다. 공격시 SP가 충전되며, SP가 100%일 때 공격시 바위게가 소환됩니다.
 items.weapon.melee.crabgun$metalcrab.name=바위게
-items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수에 비례해 공격 능력치가 상승하며, 무기 강화에 비례해 방어 능력치가 상승합니다.
+items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수와 무기 강화에 비례해 능력치가 상승합니다.
 
 
 
@@ -2109,7 +2109,9 @@ items.armorkit.desc=이 작은 부품과 재료로 이루어진 도구를 작동
 
 items.staffkit.name=스태프 개조 키트
 items.staffkit.ac_apply=개조한다
+items.staffkit.ac_ring=흑요석 반지를 개조
 items.staffkit.fail=이 스태프는 개조할 수 없는 것 같다.
+items.staffkit.fail_ring=흑요석 반지가 없는 것 같다.
 items.staffkit.prompt=개조할 스태프를 선택하세요
 items.staffkit.desc=이 도구는 당신의 스태프를 로도스 대원들의 능력을 반영한 _특별한 스태프_로 개조할 수 있습니다. 개조된 도구는 원본 스태프에서 약간 수정되거나, 아에 달라진 능력을 가집니다.
 

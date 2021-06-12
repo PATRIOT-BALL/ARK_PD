@@ -115,25 +115,28 @@ public class CrabGun extends MeleeWeapon {
             alignment = Alignment.ALLY;
         }
 
+        private int crabLevel = 0;
+
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange( 2 + Dungeon.depth / 2, 6 + Dungeon.depth );
+            return Random.NormalIntRange( 2 + Dungeon.depth / 2, 6 + Dungeon.depth + crabLevel );
         }
 
         @Override
         public int attackSkill( Char target ) {
-            return 10 + Dungeon.depth;
+            return 10 + Dungeon.depth + crabLevel;
         }
 
         @Override
         public int drRoll() {
-            return Random.NormalIntRange(0, 3 + Dungeon.depth / 2);
+            return Random.NormalIntRange(0, 3 + crabLevel);
         }
 
         public void setting(int setlvl)
         {
             HP=HT=20 + setlvl * 8;
             defenseSkill = 1 + setlvl * 2;
+            crabLevel = setlvl;
         }
     }
 }
