@@ -188,8 +188,8 @@ public abstract class Wand extends Item {
 
 		if (target != Dungeon.hero &&
 				Dungeon.hero.subClass == HeroSubClass.WARLOCK &&
-				//standard 1 - 0.81^x chance, plus 7%. Starts at 15%, 특성으로 0.8부분에 수치당 +0.0625
-				Random.Float() > (Math.pow(0.81f + Dungeon.hero.pointsInTalent(Talent.EMOTION) / 16, (wandLevel*chargesUsed)+1) - 0.07f)){
+				//standard 1 - 0.95^x chance, plus 7%. Starts at 15%, 특성으로 0.8부분에 수치당 +0.83.. 3업시 0.25
+				Random.Float() > (Math.pow(0.95f - Dungeon.hero.pointsInTalent(Talent.EMOTION) / 12, (wandLevel*chargesUsed)+1) - 0.07f)){
 			SoulMark.prolong(target, SoulMark.class, SoulMark.DURATION + wandLevel);
 		}
 	}

@@ -693,7 +693,7 @@ public abstract class Mob extends Char {
 
 		if (!(this instanceof Wraith_donut)
 				&& soulMarked
-				&& Random.Int(8) < Dungeon.hero.pointsInTalent(Talent.NECROMANCERS_MINIONS)){
+				&& Random.Int(7) < Dungeon.hero.pointsInTalent(Talent.NECROMANCERS_MINIONS)){
 			Wraith_donut w = Wraith_donut.spawnAt(pos);
 			if (w != null) {
 				Buff.affect(w, Corruption.class);
