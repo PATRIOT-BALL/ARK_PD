@@ -548,7 +548,7 @@ public class YogDzewa extends Mob {
 		{
 			spriteClass = Ursus_InfantrySprite.class;
 
-			HP = HT = 20;
+			HP = HT = 25;
 			defenseSkill = 12;
 			viewDistance = Light.DISTANCE;
 

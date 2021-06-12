@@ -61,7 +61,7 @@ public class Succubus extends Mob {
     {
         spriteClass = LancerSprite.class;
 
-        HP = HT = 80;
+        HP = HT = 90;
         defenseSkill = 25;
         viewDistance = Light.DISTANCE;
 
@@ -123,7 +123,7 @@ public class Succubus extends Mob {
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 10);
+        return Random.NormalIntRange(0, 5 + ASPlus * 2);
     }
 
     @Override

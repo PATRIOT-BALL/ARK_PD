@@ -49,7 +49,7 @@ public class Eye extends Mob {
 		spriteClass = A_master2Sprite.class;
 		
 		HP = HT = 100;
-		defenseSkill = 20;
+		defenseSkill = 25;
 		viewDistance = Light.DISTANCE;
 		
 		EXP = 13;
@@ -185,7 +185,7 @@ public class Eye extends Mob {
 			}
 
 			if (hit( this, ch, true )) {
-				ch.damage( Random.NormalIntRange( 30, 50 ), new DeathGaze() );
+				ch.damage( Random.NormalIntRange( 35, 55 ), new DeathGaze() );
 
 				if (Dungeon.level.heroFOV[pos]) {
 					ch.sprite.flash();

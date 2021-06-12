@@ -40,7 +40,7 @@ public class Cannot extends Mob {
 
     @Override
     public int attackSkill( Char target ) {
-        return 30;
+        return 35;
     }
 
     @Override
