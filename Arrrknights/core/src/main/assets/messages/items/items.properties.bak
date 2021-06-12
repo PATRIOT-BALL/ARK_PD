@@ -2174,7 +2174,7 @@ items.honeypot$shatteredpot.name=깨진 꿀단지
 items.honeypot$shatteredpot.desc=이 단지는 이미 깨져 벼렸고, 벽을 타고 흐르는 끈적한 꿀들만 형태를 유지하도록 하며, 그마저도 천천히 분리되고 있습니다.\n\n단지는 이미 깨져 버렸지만, 벌은 여전히 단지를 지키려고 하고 있습니다.
 
 items.randombox.name=가챠 박스
-items.randombox.ac_add=개봉한다.
+items.randombox.ac_add=개봉한다
 items.randombox.desc=무작위 무기 / 스킬개론, 혹은 합성옥을 얻습니다.\n\n_게임 진행도에 따라 확률이 변하는 가변형 확률 시스템이 탑재되어있습니다._
 
 items.item.pack_full=당신의 %s이 가득 찼다.

@@ -263,6 +263,11 @@ public class MagesStaff extends MeleeWeapon {
 		return wand != null ? wand.getClass() : null;
 	}
 
+	public Wand GetWand()
+	{
+		return wand;
+	}
+
 	@Override
 	public Item upgrade(boolean enchant) {
 		super.upgrade( enchant );
@@ -434,6 +439,18 @@ public class MagesStaff extends MeleeWeapon {
 			updateQuickslot();
 		}
 	};
+
+	public void staffkitwand(Wand wand){
+		Sample.INSTANCE.play(Assets.Sounds.BURNING);
+		curUser.sprite.emitter().burst( ElmoParticle.FACTORY, 12 );
+		evoke(curUser);
+		Dungeon.quickslot.clearItem(wand);
+		imbueWand( wand, curUser );
+
+		wand.identify();
+
+		updateQuickslot();
+	}
 
 	private final Emitter.Factory StaffParticleFactory = new Emitter.Factory() {
 		@Override

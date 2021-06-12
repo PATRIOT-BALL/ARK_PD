@@ -69,8 +69,8 @@ badges$badge.unlock_mage=아미야 해금
 badges$badge.unlock_rogue=레드 해금
 badges$badge.unlock_huntress=그레이스롯 해금
 
-badges$badge.roaringflare=울부짖는 광명(위기협약 통합운동 클리어)
-badges$badge.eviltime_end=암흑 시대의 끝(위기협약 통합운동에서 미니보스를 1마리도 잡지않고 탈룰라 처치)
+badges$badge.roaringflare=울부짖는 광명
+badges$badge.eviltime_end=암흑 시대의 끝
 
 challenges.no_food=환경: 식량배급 중단
 challenges.no_food_desc=음식은 이미 부족하지만, 양 또한 주의해야 합니다!\n\n- 음식과 풍요의 뿔이 1/3의 허기만을 회복시켜 줍니다.\n- 허기를 채우는 다른 수단은 기존과 같습니다.

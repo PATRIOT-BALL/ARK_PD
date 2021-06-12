@@ -48,6 +48,7 @@ import java.util.ArrayList;
 
 public class StaffKit extends Item {
     private static final String AC_APPLY = "APPLY";
+    private static final String AC_RING = "RING";
     private static final float TIME_TO_UPGRADE = 2;
 
     {
@@ -58,6 +59,7 @@ public class StaffKit extends Item {
     public ArrayList<String> actions(Hero hero) {
         ArrayList<String> actions = super.actions(hero);
         actions.add(AC_APPLY);
+        actions.add(AC_RING);
         return actions;
     }
 
@@ -67,9 +69,18 @@ public class StaffKit extends Item {
         super.execute(hero, action);
 
         if (action.equals(AC_APPLY)) {
-
             curUser = hero;
             GameScene.selectItem(itemSelector, WndBag.Mode.WAND, Messages.get(this, "prompt"));
+        }
+        else  if (action.equals(AC_RING)) {
+
+            curUser = hero;
+            if (curUser.belongings.getItem(MagesStaff.class) != null)
+            {
+                MagesStaff Item = curUser.belongings.getItem(MagesStaff.class);
+                StaffKit.this.upgrade_staff(Item);
+            }
+            else GLog.w( Messages.get(this, "fail_ring") );
 
         }
     }
@@ -259,6 +270,203 @@ public class StaffKit extends Item {
 
             n.collect();
             wand.detach( curUser.belongings.backpack );
+        }
+        else {
+            GLog.w( Messages.get(this, "fail") );
+            StaffKit S = new StaffKit();
+            S.quantity(1).collect();
+        }
+
+        curUser.sprite.operate(curUser.pos);
+        Sample.INSTANCE.play(Assets.Sounds.EVOKE);
+    }
+
+    private void upgrade_staff(MagesStaff Staff) {
+
+        detach(curUser.belongings.backpack);
+
+        curUser.sprite.centerEmitter().start(Speck.factory(Speck.KIT), 0.05f, 10);
+        curUser.spend(TIME_TO_UPGRADE);
+        curUser.busy();
+
+        Wand wand = Staff.GetWand();
+        Wand n;
+        if (wand instanceof WandOfMagicMissile) {
+            n = new StaffOfAbsinthe(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfLightning) {
+            n = new StaffOfGreyy(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfDisintegration) {
+            n = new StaffOfVigna(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfCorrosion)
+        {
+            n = new StaffOfBreeze(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfLivingEarth)
+        {
+            n = new StaffOfMudrock(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfFrost)
+        {
+            n = new StaffOfLeaf(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfPrismaticLight)
+        {
+            n = new StaffOfShining(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfFireblast)
+        {
+            n = new StaffOfSkyfire(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfWarding)
+        {
+            n = new StaffOfMayer(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfTransfusion)
+        {
+            n = new StaffOfAngelina(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfBlastWave)
+        {
+            n = new StaffOfWeedy(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfCorruption)
+        {
+            n = new StaffOfCorrupting(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
         }
         else {
             GLog.w( Messages.get(this, "fail") );
