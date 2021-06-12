@@ -67,7 +67,7 @@ public class Closure extends NPC {
                                         public void call() {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin2", Dungeon.hero.heroClass.title())));
                                         }});}*/
-                            {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "incomplete"));
+                            sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "incomplete"));
                                 break;
                         }
                     }
