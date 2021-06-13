@@ -30,6 +30,7 @@ public class CrabGun extends MeleeWeapon {
 
         tier = 3;
         RCH = 2;
+        DLY = 0.75f;
     }
 
     private int charge = 0;
@@ -37,8 +38,9 @@ public class CrabGun extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier-1) +    //8 + 2 (one target = x2)
-                lvl*(tier-1);
+        return  4*(tier-1) +    //7 + 2
+                lvl*(tier-1)
+                - 1;
     }
 
     @Override
