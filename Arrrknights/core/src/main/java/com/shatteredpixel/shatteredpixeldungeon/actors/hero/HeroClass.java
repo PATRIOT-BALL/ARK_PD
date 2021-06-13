@@ -242,9 +242,6 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(2,skillB);
 
-		new PotionOfExperience().quantity(99).collect();
-		new TomeOfMastery().collect();
-
 		new DewVial().collect();
 	}
 
