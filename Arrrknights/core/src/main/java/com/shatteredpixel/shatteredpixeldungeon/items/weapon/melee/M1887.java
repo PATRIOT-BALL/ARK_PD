@@ -9,8 +9,8 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class M1887 extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.ENFILD;
-        hitSound = Assets.Sounds.SKILL_BEEP;
+        image = ItemSpriteSheet.M1887;
+        hitSound = Assets.Sounds.HIT_SHOTGUN;
         hitSoundPitch = 1f;
 
         tier = 4;

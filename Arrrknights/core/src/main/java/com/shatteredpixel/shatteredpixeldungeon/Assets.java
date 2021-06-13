@@ -213,6 +213,7 @@ public class Assets {
 		public static final String HIT_KNIFE        = "sounds/hit_knife.mp3";
 		public static final String HIT_CHAINSAW        = "sounds/hit_chainsaw.mp3";
 		public static final String HIT_CHAINSAW2        = "sounds/hit_chainsaw2.mp3";
+		public static final String HIT_SHOTGUN        = "sounds/hit_shotgun.mp3";
 		public static final String HIT_BIRD        = "sounds/hit_bird.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
