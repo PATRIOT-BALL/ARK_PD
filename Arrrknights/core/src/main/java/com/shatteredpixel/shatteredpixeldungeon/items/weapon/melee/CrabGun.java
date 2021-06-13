@@ -64,6 +64,7 @@ public class CrabGun extends MeleeWeapon {
                 respawnPoints.remove( index );
                 spawnd++;
             }
+            charge = 0;
         }
         else SPCharge(Random.IntRange(3,7+buffedLvl() / 3));
         return super.proc(attacker, defender, damage);
