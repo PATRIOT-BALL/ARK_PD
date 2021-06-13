@@ -32,7 +32,7 @@ public class Flail extends MeleeWeapon {
 		hitSoundPitch = 0.8f;
 
 		tier = 4;
-		ACC = 1.1f; //0.8x accuracy
+		ACC = 0.9f; //0.9x accuracy
 		//also cannot surprise attack, see Hero.canSurpriseAttack
 	}
 
