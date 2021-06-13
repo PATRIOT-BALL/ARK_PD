@@ -78,4 +78,9 @@ public class Nullshield extends Item {
     public boolean isIdentified() {
         return true;
     }
+
+    @Override
+    public int value() {
+        return 75;
+    }
 }

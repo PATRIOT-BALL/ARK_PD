@@ -18,6 +18,9 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.RainbowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.CursedWand;
@@ -63,6 +66,18 @@ public class Gamzashield extends MeleeWeapon {
     public int max(int lvl) {
         return Math.round(2.5f * (tier + 1)) +     //10 base, down from 20
                 lvl * (tier - 1);                   //+2 per level, down from +4
+    }
+
+    @Override
+    public Item upgrade() {
+        if (buffedLvl() == 8)
+        {
+            if (Random.Int(8) < 5)
+            {
+                Dungeon.level.drop(new BookFlashShield(), Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+            }
+        }
+        return super.upgrade();
     }
 
     @Override

@@ -49,7 +49,7 @@ public class Eye extends Mob {
 		spriteClass = A_master2Sprite.class;
 		
 		HP = HT = 100;
-		defenseSkill = 25;
+		defenseSkill = 12;
 		viewDistance = Light.DISTANCE;
 		
 		EXP = 13;
@@ -67,7 +67,7 @@ public class Eye extends Mob {
 
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange(20, 30);
+		return Random.NormalIntRange(20, 35);
 	}
 
 	@Override

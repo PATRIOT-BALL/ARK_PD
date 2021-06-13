@@ -172,7 +172,6 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
-		new Amulet().collect();
 
 		/*	new PotionOfLiquidFlame().quantity(5).collect();
 		*/
