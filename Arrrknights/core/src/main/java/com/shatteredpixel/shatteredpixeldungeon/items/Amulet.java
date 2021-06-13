@@ -66,8 +66,6 @@ public class Amulet extends Item {
         curItem = this;
        // GLog.w(Messages.get(Hero.class, "name", curUser.pos)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
       //  new ScrollOfPassage().collect();
-        Badges.validateroaringflare();
-        Badges.validateeviltimeend();
 
         if (action.equals(AC_END)) {
             showAmuletScene(false);

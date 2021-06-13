@@ -36,7 +36,6 @@ public class Nullshield extends Item {
 
         if (action.equals(AC_USE)) {
             GameScene.selectItem(itemSelector, WndBag.Mode.ALL, Messages.get(this, "prompt"));
-            detach(curUser.belongings.backpack);
         }
     }
 
@@ -44,7 +43,6 @@ public class Nullshield extends Item {
         @Override
         public void onSelect(final Item item) {
             if (item != null) {
-
                 if (item instanceof Gamza)
                 {
                    GLog.h(Messages.get(Nullshield.class, "suc"));
@@ -53,6 +51,7 @@ public class Nullshield extends Item {
                    gma.collect();
                    gma.identify();
                    item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
                 }
                 else if (item instanceof Nmould)
                 {
@@ -62,9 +61,9 @@ public class Nullshield extends Item {
                     nya.identify();
                     nya.collect();
                     item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
                 }
                 else {
-                    new Nullshield().collect();
                     GLog.h(Messages.get(Nullshield.class, "fail"));}
             }
         }
