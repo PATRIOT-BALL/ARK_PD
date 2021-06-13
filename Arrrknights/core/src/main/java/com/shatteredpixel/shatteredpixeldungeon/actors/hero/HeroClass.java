@@ -31,6 +31,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.RandomBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWolfSpirit;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
@@ -241,6 +243,9 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(2,skillB);
+
+		new BookWolfSpirit().collect();
+		new BookDreamland().collect();
 
 		new DewVial().collect();
 	}

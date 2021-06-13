@@ -38,6 +38,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corrosion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Dream;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ExecutMode;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FireImbue;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Frost;
@@ -539,6 +540,11 @@ public abstract class Char extends Actor {
 		}
 		if (this.buff(MagicalSleep.class) != null){
 			Buff.detach(this, MagicalSleep.class);
+			if (this.isAlive()){
+				if (this.buff(Dream.class) != null) {
+					this.damage(Random.NormalIntRange(8 + Dungeon.hero.lvl, 12 + Dungeon.hero.lvl * 2), this);
+					Buff.detach(this, Dream.class);
+				}}
 		}
 		if (this.buff(Doom.class) != null && !isImmune(Doom.class)){
 			dmg *= 2;

@@ -41,6 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Dream;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Foresight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Fury;
@@ -79,10 +80,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Shinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.WolfSpirit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.CoverSmoke;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Dreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.LandingStrike;
@@ -2130,6 +2133,8 @@ public class Hero extends Char {
             SK1 = new FierceGlare();
         } else if (SkillNumber == 12) {
             SK1 = new Camouflage();
+        } else if (SkillNumber == 13) {
+            SK1 = new WolfSpirit();
         } else SK1 = null;
     }
 
@@ -2158,6 +2163,8 @@ public class Hero extends Char {
             SK2 = new AncientKin();
         } else if (SkillNumber == 12) {
             SK2 = new LandingStrike();
+        } else if (SkillNumber == 13) {
+            SK2 = new Dreamland();
         } else SK2 = null;
     }
 
