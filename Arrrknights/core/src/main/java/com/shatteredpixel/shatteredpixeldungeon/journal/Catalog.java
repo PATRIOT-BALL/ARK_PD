@@ -34,10 +34,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStri
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWolfSpirit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookBenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookEmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
@@ -238,6 +240,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookShinkageryu.class,             false);
 		SKILLBOOK.seen.put( BookFierceGlare.class,             false);
 		SKILLBOOK.seen.put( BookCamouflage.class,              false);
+		SKILLBOOK.seen.put( BookWolfSpirit.class,              false);
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
 		SKILLBOOK.seen.put( BookReflow.class,                false);
@@ -250,6 +253,7 @@ public enum Catalog {
         SKILLBOOK.seen.put( BookBenasProtracto.class,          false);
         SKILLBOOK.seen.put( Bookancientkin.class,          false);
         SKILLBOOK.seen.put( BookLandingStrike.class,          false);
+		SKILLBOOK.seen.put( BookDreamland.class,              false);
         SKILLBOOK.seen.put( BookShadowAssault.class,          false);
         SKILLBOOK.seen.put( BookSoaringFeather.class,          false);
         SKILLBOOK.seen.put( BookSBurst.class,          false);
