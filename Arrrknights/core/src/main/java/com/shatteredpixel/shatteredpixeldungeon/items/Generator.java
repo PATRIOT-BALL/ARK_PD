@@ -30,10 +30,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWolfSpirit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookBenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
@@ -500,9 +503,10 @@ public class Generator {
                     BookCrimsonCutter.class,
                     BookShinkageryu.class,
                     BookFierceGlare.class,
-                    BookCamouflage.class
+                    BookCamouflage.class,
+                    BookWolfSpirit.class
             };
-            SKL_T1.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1};
+            SKL_T1.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1};
 
             SKL_T2.classes = new Class<?>[]{
                     BookJackinthebox.class,
@@ -512,9 +516,10 @@ public class Generator {
                     BookCoverSmoke.class,
                     BookBenasProtracto.class,
                     Bookancientkin.class,
-                    BookLandingStrike.class
+                    BookLandingStrike.class,
+                    BookDreamland.class,
             };
-            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1};
+            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1,1};
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
@@ -526,17 +531,17 @@ public class Generator {
             SKL_RND.classes = new Class<?>[]{
                     BookFate.class, Bookpanorama.class, BookFoodPrep.class,
                     BookChainHook.class, BookCrimsonCutter.class, BookShinkageryu.class,  BookFierceGlare.class,
-                    BookCamouflage.class,
+                    BookCamouflage.class, BookWolfSpirit.class,
 
                     BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
-                    BookLandingStrike.class,
+                    BookLandingStrike.class, BookDreamland.class,
 
                     BookTrueSilverSlash.class, BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
-                    7, 7, 7, 7, 7, 7, 7, 7,
-                    5, 5, 5, 5, 5, 5, 5, 5,
+                    4, 4, 4, 4, 4, 4, 4, 4, 4,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3,
                     1, 1
             };
         }

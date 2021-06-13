@@ -244,9 +244,6 @@ public enum HeroClass {
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(2,skillB);
 
-		new BookWolfSpirit().collect();
-		new BookDreamland().collect();
-
 		new DewVial().collect();
 	}
 
