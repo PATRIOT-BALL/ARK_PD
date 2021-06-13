@@ -341,7 +341,7 @@ public enum Talent {
 			Momentum p = Dungeon.hero.buff(Momentum.class);
 			if (p != null)
 			{
-				p.BounsStack(Dungeon.hero.pointsInTalent(SPECIAL_OPERATIONS) * 2);
+				p.BounsStack(Dungeon.hero.pointsInTalent(SPECIAL_OPERATIONS) * 3);
 			}
 		}
 	}
