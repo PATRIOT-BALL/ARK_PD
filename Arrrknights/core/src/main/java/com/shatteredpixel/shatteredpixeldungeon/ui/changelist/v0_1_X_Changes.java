@@ -79,14 +79,15 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 개조 키트",
                 "- 이제 흑요석 반지에도 사용할 수 있습니다."));
 
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLOOD_SHAMAN, 6, 7, 16, 16), "블러드 위치 변경",
+                "- 자해 피해로 사망하지 않게됩니다. (체력 20이하시 자해 피해를 받지 않음)"));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 버프",
                 "- _살카즈 도병_\n도약 공격이 더욱 많은 출혈을 부여합니다" + "\n\n" +
-                        "- _살카즈 랜서_\n최대 체력 80 -> _90_\n기본 공격력 18-28 -> _20-30_\n가속 공격력 25-25(+가속) -> _30-30(+가속)_\n" +
-                        "방어력 0-10 -> _0-5(+가속)_" + "\n\n" +
                         "- _아츠마스터 A2_\n공격력 20-30 -> _20-35_\n빔 공격력 30-50 -> _35-55_\n방어력 0-10 -> _0-12_\n회피율 20 -> _12_"+ "\n\n" +
                         "- _살카즈 스나이퍼_\n공격력 30-40 -> _32-44_\n명중률 36 -> _42_"));
 

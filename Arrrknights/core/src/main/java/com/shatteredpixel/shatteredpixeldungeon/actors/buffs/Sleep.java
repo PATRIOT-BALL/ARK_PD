@@ -21,6 +21,8 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.buffs;
 
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+
 public class Sleep extends FlavourBuff {
 
 	@Override
@@ -29,5 +31,10 @@ public class Sleep extends FlavourBuff {
 	}
 
 	public static final float SWS	= 1.5f;
+
+	@Override
+	public String desc() {
+		return Messages.get(this, "desc", dispTurns());
+	}
 	
 }

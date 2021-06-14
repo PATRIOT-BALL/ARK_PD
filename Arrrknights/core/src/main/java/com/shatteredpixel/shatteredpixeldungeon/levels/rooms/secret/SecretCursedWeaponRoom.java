@@ -48,7 +48,6 @@ public class SecretCursedWeaponRoom extends SecretRoom {
                 pos = level.pointToCell(random(1));
             } while (level.traps.get(pos) != null);
 
-            //randomly places some embers around the mines
             for (int j = 0; j < 8; j ++){
                 int c = PathFinder.NEIGHBOURS8[Random.Int(8)];
                 if (level.traps.get(pos+c) == null && level.map[pos+c] == Terrain.EMPTY){
@@ -57,7 +56,7 @@ public class SecretCursedWeaponRoom extends SecretRoom {
             }
 
             Painter.set(level, pos, Terrain.SECRET_TRAP);
-            level.setTrap(new CursingTrap().hide(), pos);
+            level.setTrap(new CursingTrap(), pos);
 
         }
 

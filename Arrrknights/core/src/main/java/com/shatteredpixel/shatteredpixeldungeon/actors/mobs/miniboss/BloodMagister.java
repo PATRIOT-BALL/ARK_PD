@@ -3,6 +3,8 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPsionicBlast;
@@ -64,7 +66,7 @@ public class BloodMagister extends Mob {
         }
         else if (buff(rage.class) != null)
         {
-            damage(12,this);
+            if (HP >= 20) damage(15,this);
         }
         return super.act();
     }

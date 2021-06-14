@@ -160,7 +160,6 @@ public class ShopRoom extends SpecialRoom {
 		switch (Dungeon.depth) {
 		case 6: default:
 			w = new Enfild();
-			itemsToSpawn.add( w );
 			itemsToSpawn.add( Generator.random(Generator.misTiers[1]).quantity(2).identify() );
 			itemsToSpawn.add( new LeatherArmor().identify() );
 			break;
