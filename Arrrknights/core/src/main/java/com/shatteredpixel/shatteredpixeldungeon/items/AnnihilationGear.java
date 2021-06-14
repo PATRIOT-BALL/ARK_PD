@@ -5,10 +5,13 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
@@ -24,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MissileSprite;
+import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
@@ -77,6 +81,11 @@ public class AnnihilationGear extends Item {
     public void SPCharge(int n) {
         charge += n;
         if (chargeCap < charge) charge = chargeCap;
+        updateQuickslot();
+    }
+
+    public void discharge() {
+        charge--;
         updateQuickslot();
     }
 
@@ -193,7 +202,13 @@ public class Spriteex extends MissileWeapon {
         //Ballistica trajectory = new Ballistica(curUser.pos, enemy.pos, Ballistica.STOP_TARGET);
        // trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size()-1), Ballistica.PROJECTILE);
         // WandOfBlastWave.throwChar(enemy, trajectory, 4); // 넉백 효과
+
         int dmg = Random.NormalIntRange(min(), max());
+        if (curUser.buff(Rose_Force.class) != null) dmg *= 1.3f;
         enemy.damage(dmg, enemy);
+
+        // 서브 직업이 파괴라면, 집중 버프 부여
+        if (curUser.subClass == HeroSubClass.DESTROYER)
+            Buff.affect(curUser, Rose_Force.class, Rose_Force.DURATION);
     }
 }

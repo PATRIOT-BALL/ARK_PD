@@ -10,8 +10,8 @@ public class EX42 extends MeleeWeapon {
         hitSoundPitch = 0.65f;
 
         tier = 1;
-        DLY = 0.8f;
-        ACC = 0.8f;
+        DLY = 1.25f;
+        ACC = 0.9f;
         RCH = 2;
 
         bones = false;

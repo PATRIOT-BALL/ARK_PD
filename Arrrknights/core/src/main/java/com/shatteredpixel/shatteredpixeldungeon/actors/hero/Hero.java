@@ -1254,8 +1254,7 @@ public class Hero extends Char {
         if (MudrockArmor != null) {
             damage = MudrockArmor.absorb(damage);
         } else if (rockArmor != null) {
-            damage = rockArmor.absorb(damage);
-        }
+            damage = rockArmor.absorb(damage); }
 
         return damage;
     }
@@ -1300,9 +1299,18 @@ public class Hero extends Char {
             if (berserk.getPower() >= ber)
             {
                 dmg = Math.round(dmg * 0.7f);
-            }
+            }}}
+
+        if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN)
+        {
+            AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
+            if (Gear != null)
+                if (Gear.charge > 0)
+                {
+                    dmg *= 0.6f;
+                    Gear.discharge();
+                }
         }
-    }
 
 
         int preHP = HP + shielding();
