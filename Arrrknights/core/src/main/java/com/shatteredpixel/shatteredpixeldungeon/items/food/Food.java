@@ -92,7 +92,8 @@ public class Food extends Item {
 		if (Dungeon.hero.hasTalent(Talent.IRON_STOMACH)
 			|| Dungeon.hero.hasTalent(Talent.ENERGIZING_MEAL)
 			|| Dungeon.hero.hasTalent(Talent.MYSTICAL_MEAL)
-			|| Dungeon.hero.hasTalent(Talent.INVIGORATING_MEAL)){
+			|| Dungeon.hero.hasTalent(Talent.INVIGORATING_MEAL)
+		    || Dungeon.hero.hasTalent(Talent.FASTMEAL)){
 			return TIME_TO_EAT - 2;
 		} else {
 			return TIME_TO_EAT;
@@ -100,10 +101,14 @@ public class Food extends Item {
 	}
 	
 	protected void satisfy( Hero hero ){
+		float EN = energy;
+		if (Dungeon.hero.hasTalent(Talent.MOREMEALS)) {
+			EN *= 1f + (float)Dungeon.hero.pointsInTalent(Talent.MOREMEALS) / 10;
+		}
 		if (Dungeon.isChallenged(Challenges.NO_FOOD)){
-			Buff.affect(hero, Hunger.class).satisfy(energy/3f);
+			Buff.affect(hero, Hunger.class).satisfy(EN/3f);
 		} else {
-			Buff.affect(hero, Hunger.class).satisfy(energy);
+			Buff.affect(hero, Hunger.class).satisfy(EN);
 		}
 	}
 	

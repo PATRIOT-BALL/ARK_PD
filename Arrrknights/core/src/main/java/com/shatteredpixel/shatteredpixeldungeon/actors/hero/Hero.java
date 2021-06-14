@@ -269,7 +269,7 @@ public class Hero extends Char {
         if (boostHP) {
             HP += Math.max(HT - curHT, 0);
         }
-        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth > 21 && Dungeon.bossLevel()) HT /= 2;
+        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 25 && Dungeon.bossLevel()) HT /= 2;
         HP = Math.min(HP, HT);
     }
 
@@ -626,6 +626,8 @@ public class Hero extends Char {
         }
 
         float spup = 0f;
+
+        // 광붕이
         Berserk berserk = buff(Berserk.class);
         if (berserk != null)
             spup = berserk.getPower() / 1.3f;
@@ -633,6 +635,16 @@ public class Hero extends Char {
         spup = Math.min(spup, 0.3f+(float)Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
 
         speed *= (1 + spup);
+
+        // 쪽냥이 수호
+        AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
+        if (Gear != null) {
+            if (Gear.charge > 0){
+                if (this.hasTalent(Talent.SPEED_COMABT)) {
+                    speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 3;
+                }
+            }
+        }
         return speed;
 
     }
@@ -1199,6 +1211,12 @@ public class Hero extends Char {
 
         damage = Talent.onAttackProc(this, enemy, damage);
 
+        if (this.hasTalent(Talent.RHODES_CAT)) {
+            AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
+            if (Gear != null)
+                if (Gear.charge == 0) { damage *= 1f + (float)this.pointsInTalent(Talent.RHODES_CAT) * 0.15f; }
+        }
+
         switch (subClass) {
             case SNIPER:
                 if (wep instanceof MissileWeapon && !(wep instanceof SpiritBow.SpiritArrow) && enemy != this) {
@@ -1256,6 +1274,19 @@ public class Hero extends Char {
         } else if (rockArmor != null) {
             damage = rockArmor.absorb(damage); }
 
+        AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
+        if (Gear != null) {
+            if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN) {
+                if (Gear.charge > 0) {
+                    damage *= 0.5f - (float) this.pointsInTalent(Talent.BARRIER_OPERATION) * 0.1f;
+                    Gear.discharge(); }}
+
+            if (Dungeon.hero.hasTalent(Talent.BARRIER_REPAIR)) {
+                if (Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(10)) {
+                    Gear.SPCharge(1); }
+            }
+        }
+
         return damage;
     }
 
@@ -1300,17 +1331,6 @@ public class Hero extends Char {
             {
                 dmg = Math.round(dmg * 0.7f);
             }}}
-
-        if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN)
-        {
-            AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
-            if (Gear != null)
-                if (Gear.charge > 0)
-                {
-                    dmg *= 0.6f;
-                    Gear.discharge();
-                }
-        }
 
 
         int preHP = HP + shielding();

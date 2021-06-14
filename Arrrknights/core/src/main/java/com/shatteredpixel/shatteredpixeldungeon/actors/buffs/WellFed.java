@@ -49,6 +49,10 @@ public class WellFed extends Buff {
 		spend(TICK);
 		return true;
 	}
+
+	public void set(int n) {
+		left += n;
+	}
 	
 	public void reset(){
 		//heals one HP every 18 turns for 450 turns

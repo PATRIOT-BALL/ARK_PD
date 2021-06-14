@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArtifactRecharge;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.CounterBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.EnhancedRings;
@@ -41,6 +42,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
@@ -267,6 +269,10 @@ public enum Talent {
 		if (hero.hasTalent(LIGHTNESSMEAL)){
 			Buff.prolong( hero, Levitation.class, 1+hero.pointsInTalent(LIGHTNESSMEAL));
 		}
+
+		if (hero.hasTalent(FASTMEAL)){
+			Buff.append( hero, Barrier.class).setShield(hero.HT * (hero.pointsInTalent(FASTMEAL) / 10));
+		}
 	}
 
 	public static class WarriorFoodImmunity extends FlavourBuff{
@@ -354,6 +360,15 @@ public enum Talent {
 				SpellSprite.show( hero, SpellSprite.CHARGE );
 			}
 		}
+
+		if (hero.hasTalent(RECOVERY_UPGRADE))
+		{
+			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
+			if (hero.belongings.getItem(AnnihilationGear.class) != null)
+			{
+				Gear.SPCharge(1 + hero.pointsInTalent(RECOVERY_UPGRADE));
+			}
+		}
 	}
 
 	public static void onArtifactUsed( Hero hero ){
@@ -401,12 +416,14 @@ public enum Talent {
 			Buff.affect(hero, Recharging.class, 1f + hero.pointsInTalent(TESTED_HYPOTHESIS));
 			ScrollOfRecharging.charge(hero);
 		}
-		if (hero.hasTalent(RECALL_MEMORY)){
-			SkillBook Book = hero.belongings.getItem(SkillBook.class);
-			if (Book!=null){
-				Book.SetCharge(hero.pointsInTalent(RECALL_MEMORY) * 3);
-			}
 
+		if (hero.hasTalent(NYANGING))
+		{
+			if (Random.Int(0,1) < hero.pointsInTalent(NYANGING))
+			{
+				AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
+				if (Gear != null) Gear.SPCharge(1);
+			}
 		}
 	}
 

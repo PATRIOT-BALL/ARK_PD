@@ -25,6 +25,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WellFed;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
@@ -41,6 +43,14 @@ public class MeatPie extends Food {
 	protected void satisfy(Hero hero) {
 		super.satisfy( hero );
 		Buff.affect(hero, WellFed.class).reset();
+		if (hero.hasTalent(Talent.DELICIOUS_FOOD))
+		{
+			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
+			if (hero.belongings.getItem(AnnihilationGear.class) != null)
+			{
+				Gear.SPCharge(hero.pointsInTalent(Talent.DELICIOUS_FOOD));
+			}
+		}
 	}
 	
 	@Override

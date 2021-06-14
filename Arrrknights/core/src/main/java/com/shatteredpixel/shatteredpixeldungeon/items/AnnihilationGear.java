@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
@@ -37,8 +38,6 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
-
-import javax.xml.bind.annotation.XmlElementDecl;
 
 public class AnnihilationGear extends Item {
 
@@ -200,16 +199,45 @@ public class Spriteex extends MissileWeapon {
 }
 
     public void dohit(final Char enemy) {
-        //Ballistica trajectory = new Ballistica(curUser.pos, enemy.pos, Ballistica.STOP_TARGET);
-       // trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size()-1), Ballistica.PROJECTILE);
-        // WandOfBlastWave.throwChar(enemy, trajectory, 4); // 넉백 효과
+        if (Dungeon.hero.hasTalent(Talent.POWERGEAR)) {
+            Ballistica trajectory = new Ballistica(curUser.pos, enemy.pos, Ballistica.STOP_TARGET);
+            trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
+            WandOfBlastWave.throwChar(enemy, trajectory, Dungeon.hero.pointsInTalent(Talent.POWERGEAR)); // 넉백 효과
+        }
 
         int dmg = Random.NormalIntRange(min(), max());
-        if (curUser.buff(Rose_Force.class) != null) dmg *= 1.3f;
+        if (curUser.buff(Rose_Force.class) != null) {
+            if (Dungeon.hero.hasTalent(Talent.FOCUSED_ATTACK)) {
+                dmg *= 1.3f + (float) Dungeon.hero.pointsInTalent(Talent.FOCUSED_ATTACK) * 0.1f;
+            } else dmg *= 1.3f;
+
+        }
+
+        if (Dungeon.hero.hasTalent(Talent.AIMTRAINING)) {
+            if (enemy instanceof Mob) {
+                if (enemy.properties().contains(Char.Property.DRONE) == true) {
+                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.AIMTRAINING) * 0.15f;
+                }
+            }
+        }
+
+        if (Dungeon.hero.hasTalent(Talent.ESTHESIA)) {
+            if (enemy instanceof Mob) {
+                if (enemy.properties().contains(Char.Property.BOSS) == true || enemy.properties().contains(Char.Property.MINIBOSS) == true) {
+                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.ESTHESIA) * 0.15f;
+                }
+            }
+        }
         enemy.damage(dmg, enemy);
 
         // 서브 직업이 파괴라면, 집중 버프 부여
         if (curUser.subClass == HeroSubClass.DESTROYER)
             Buff.affect(curUser, Rose_Force.class, Rose_Force.DURATION);
-    }
+
+        // 마비
+        if (enemy.isAlive()) {
+            if (curUser.hasTalent(Talent.PHYSICAL_ATTACK)) {
+                if (curUser.pointsInTalent(Talent.PHYSICAL_ATTACK) > Random.Int(4)) {
+                    Buff.affect(enemy,Paralysis.class, 1f);
+                }}} }
 }

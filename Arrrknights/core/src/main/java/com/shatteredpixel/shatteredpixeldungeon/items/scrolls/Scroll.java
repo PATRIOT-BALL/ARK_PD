@@ -35,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.ItemStatusHandler;
 import com.shatteredpixel.shatteredpixeldungeon.items.Recipe;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ExoticScroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfAntiMagic;
@@ -198,6 +199,13 @@ public abstract class Scroll extends Item {
 		if (curUser.hasTalent(Talent.EMPOWERING_SCROLLS)){
 			Buff.affect(curUser, ScrollEmpower.class, 30f);
 			updateQuickslot();
+		}
+
+		if (curUser.hasTalent(Talent.RECALL_MEMORY)) {
+			SkillBook Book = curUser.belongings.getItem(SkillBook.class);
+			if (Book != null) {
+				Book.SetCharge(curUser.pointsInTalent(Talent.RECALL_MEMORY) * 4);
+			}
 		}
 
 		if (curUser.hasTalent(Talent.PSYCHOANALYSIS)) {

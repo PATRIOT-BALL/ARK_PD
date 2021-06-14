@@ -46,12 +46,14 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Surprise;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Wound;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatCutlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
@@ -696,6 +698,22 @@ public abstract class Mob extends Char {
 				SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
 				Item.SetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
 			}}
+
+		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {
+			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(12)) {
+				Dungeon.level.drop(new MeatCutlet(), pos).sprite.drop();
+			}
+		}
+
+		if (Dungeon.hero.hasTalent(Talent.BATTLEFLOW)) {
+			if (Dungeon.hero.pointsInTalent(Talent.BATTLEFLOW) > Random.Int(12)) {
+				AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
+				if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null)
+				{
+					Gear.SPCharge(1);
+				}
+			}
+		}
 
 		if (!(this instanceof Wraith_donut)
 				&& soulMarked
