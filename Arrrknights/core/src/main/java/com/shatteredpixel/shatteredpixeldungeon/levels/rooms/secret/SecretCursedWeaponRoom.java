@@ -55,7 +55,7 @@ public class SecretCursedWeaponRoom extends SecretRoom {
                 }
             }
 
-            Painter.set(level, pos, Terrain.SECRET_TRAP);
+            Painter.set(level, pos, Terrain.TRAP);
             level.setTrap(new CursingTrap(), pos);
 
         }

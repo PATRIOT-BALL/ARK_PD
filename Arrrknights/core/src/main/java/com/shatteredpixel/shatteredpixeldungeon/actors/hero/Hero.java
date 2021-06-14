@@ -185,7 +185,7 @@ public class Hero extends Char {
         alignment = Alignment.ALLY;
     }
 
-    public static final int MAX_LEVEL = 40;
+    public static final int MAX_LEVEL = 35;
 
     //public static final int STARTING_STR = 100000;
     public static final int STARTING_STR = 10;
@@ -224,7 +224,7 @@ public class Hero extends Char {
 
     public String named;
 
-    public Skill SK1;
+    public Skill SK1 = new FlashShield();
     public Skill SK2;
     public Skill SK3;
 

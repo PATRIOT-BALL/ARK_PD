@@ -19,7 +19,7 @@ public class FlashShield extends Skill {
         for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
             if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
                 Buff.prolong(mob, Paralysis.class, 4f);
-                Buff.prolong(mob, Silence.class, 15f);
+                Buff.prolong(mob, Silence.class, 13f);
             }
         }
 

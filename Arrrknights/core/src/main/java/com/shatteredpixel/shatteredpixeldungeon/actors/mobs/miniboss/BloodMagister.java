@@ -66,7 +66,7 @@ public class BloodMagister extends Mob {
         }
         else if (buff(rage.class) != null)
         {
-            if (HP >= 20) damage(15,this);
+            if (HP >= 16) damage(15,this);
         }
         return super.act();
     }

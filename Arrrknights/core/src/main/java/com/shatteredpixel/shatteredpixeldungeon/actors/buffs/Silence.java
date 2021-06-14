@@ -27,6 +27,6 @@ public class Silence extends FlavourBuff {
 
     @Override
     public String desc() {
-        return Messages.get(this, "desc");
+        return Messages.get(this, "desc", dispTurns());
     }
 }

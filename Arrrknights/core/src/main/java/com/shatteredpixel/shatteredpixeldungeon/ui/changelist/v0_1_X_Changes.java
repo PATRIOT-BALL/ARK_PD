@@ -80,7 +80,7 @@ public class v0_1_X_Changes {
                 "- 이제 흑요석 반지에도 사용할 수 있습니다."));
 
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLOOD_SHAMAN, 6, 7, 16, 16), "블러드 위치 변경",
-                "- 자해 피해로 사망하지 않게됩니다. (체력 20이하시 자해 피해를 받지 않음)"));
+                "- 자해 피해로 사망하지 않게됩니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
