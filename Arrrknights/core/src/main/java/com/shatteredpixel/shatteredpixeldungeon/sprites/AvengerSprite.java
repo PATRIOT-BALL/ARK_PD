@@ -32,19 +32,20 @@ public class AvengerSprite extends MobSprite {
 		texture( Assets.Sprites.RIVENGER );
 		
 		TextureFilm frames = new TextureFilm( texture, 46, 32 );
-		
+		int c = 40;
+
 		idle = new Animation( 2, true );
-		idle.frames( frames, 51 );
-		
+		idle.frames( frames, c+11 );
+
 		run = new Animation( 12, true );
-		run.frames( frames, 51 );
-		
+		run.frames( frames, c+11 );
+
 		attack = new Animation( 17, false );
-		attack.frames( frames, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 );
-		
+		attack.frames( frames, c+0, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+
 		die = new Animation( 12, false );
-		die.frames( frames, 41 );
-		
+		die.frames( frames, c+11 );
+
 		play( idle );
 	}
 }
