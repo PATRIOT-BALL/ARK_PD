@@ -96,6 +96,10 @@ public class v0_1_X_Changes {
                         "- _탈룰라의 환영_들의 체력 300 -> _330_,\n공격력 18-36 -> _22-36_" + "\n\n" +
                         "- _불멸의 검은 뱀 환영_이 물을 증발시킬 확률이 _상승_했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
+                "- _해시계_ : 강화 효율이 4 에서 _5_ 로 상승했습니다." + "\n\n" +
+                "- _동야의 마왕_ : 기본 공격력이 2-9 에서 _2-11_로 상승했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
                 "- 다음 특성들이 상향 조정되었습니다." + "\n\n" +
                         "- _지배 아미야_ : _환영 생성_ 특성의 발동 확률이 _14-42%_로 상승했습니다."));

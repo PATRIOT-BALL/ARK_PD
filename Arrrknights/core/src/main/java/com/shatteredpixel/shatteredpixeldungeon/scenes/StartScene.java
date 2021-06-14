@@ -179,6 +179,9 @@ public class StartScene extends PixelScene {
 						case HUNTRESS:
 							hero = new Image(Icons.GREY.get());
 							break;
+						case ROSECAT:
+							hero = new Image(Icons.BLAZE.get());
+							break;
 					}
 					add(hero);
 					
@@ -204,6 +207,9 @@ public class StartScene extends PixelScene {
 							break;
 						case HUNTRESS:
 							hero = new Image(Icons.GREY.get());
+							break;
+						case ROSECAT:
+							hero = new Image(Icons.BLAZE.get());
 							break;
 					}
 

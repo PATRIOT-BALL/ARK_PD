@@ -295,6 +295,8 @@ public enum Icons {
 			return get( RED );
 		case HUNTRESS:
 			return get( HUNTRESS );
+		case ROSECAT:
+			return get( ROSEMARI );
 		default:
 			return null;
 		}
