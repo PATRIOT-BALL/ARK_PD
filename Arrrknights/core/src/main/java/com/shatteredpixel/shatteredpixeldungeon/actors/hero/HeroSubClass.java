@@ -38,7 +38,10 @@ public enum HeroSubClass {
 	FREERUNNER( "freerunner" ),
 	
 	SNIPER( "sniper" ),
-	WARDEN( "warden" );
+	WARDEN( "warden" ),
+
+	DESTROYER("destroyer"),
+	GUARDIAN("guardian");
 	
 	private String title;
 
@@ -61,6 +64,10 @@ public enum HeroSubClass {
 			return Messages.get(this, "sniper_changename");}
 		else if (this.title == "warden") {
 			return Messages.get(this, "warden_changename");}
+		else if (this.title == "destroyer") {
+			return Messages.get(this, "destroyer_changename");}
+		else if (this.title == "guardian") {
+			return Messages.get(this, "guardian_changename");}
 		else
 			return title;
 

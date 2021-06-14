@@ -256,10 +256,10 @@ public class SpiritBow extends Weapon {
 		@Override
 		public int proc(Char attacker, Char defender, int damage) {
 			if (Random.Int(12) < Dungeon.hero.pointsInTalent(Talent.POINT_BLANK)) {
-				Buff.affect(defender, Vertigo.class, 3f);
+				Buff.affect(defender, Vertigo.class, 2f);
 			}
-			if (Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.ARTS_FOCUS)) {
-				Buff.affect(defender, Vulnerable.class, 6f);
+			if (Random.Int(14) < Dungeon.hero.pointsInTalent(Talent.ARTS_FOCUS)) {
+				Buff.affect(defender, Vulnerable.class, 4f);
 			}
 			return SpiritBow.this.proc(attacker, defender, damage);
 		}

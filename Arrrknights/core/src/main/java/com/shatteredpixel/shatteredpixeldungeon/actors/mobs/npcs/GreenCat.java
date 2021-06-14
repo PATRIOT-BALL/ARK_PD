@@ -36,7 +36,11 @@ public class GreenCat extends NPC {
 
     @Override
     public void damage(int dmg, Object src) {
+    }
 
+    @Override
+    protected Char chooseEnemy() {
+        return null;
     }
 
     @Override

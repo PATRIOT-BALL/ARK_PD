@@ -308,6 +308,9 @@ public class HeroSelectScene extends PixelScene {
 				case HUNTRESS:
 					icon(new Image(Icons.GREY.get()));
 					break;
+				case ROSECAT:
+					icon(new Image(Icons.GREY.get()));
+					break;
 			}
 
 
@@ -433,6 +436,12 @@ public class HeroSelectScene extends PixelScene {
 					tabIcons = new Image[]{
 							new ItemSprite(ItemSpriteSheet.SPIRIT_BOW, null),
 							new ItemSprite(ItemSpriteSheet.GLOVES, null)
+					};
+					break;
+				case ROSECAT:
+					tabIcons = new Image[]{
+							new ItemSprite(ItemSpriteSheet.SEAL, null),
+							new ItemSprite(ItemSpriteSheet.WORN_SHORTSWORD, null)
 					};
 					break;
 			}

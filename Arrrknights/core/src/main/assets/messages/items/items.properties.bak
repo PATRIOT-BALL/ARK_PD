@@ -114,6 +114,10 @@ items.skill.sk2.bookdreamland.name=요람의 스킬개론
 items.skill.sk2.bookdreamland.desc=_꿈나라의 요람_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 주위 적들을 잠재우며, 잠에서 깨어날 때 피해를 줌\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookdreamland.ac_use=읽는다
 
+items.skill.sk2.bookflashshield.name=섬광 방패의 스킬개론
+items.skill.sk2.bookflashshield.desc=_섬광 방패_ 스킬의 정보가 기록되어있는 _특별한_ 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내의 적들에게 마비 + 침묵 부여\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookflashshield.ac_use=읽는다
+
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookshadowassault.ac_use=읽는다
@@ -261,6 +265,10 @@ items.skill.sk2.landingstrike.desc_wnd=발동시 자신의 장비를 저주한 �
 items.skill.sk2.dreamland.name=_꿈나라의 요람(2스킬)_
 items.skill.sk2.dreamland.desc=발동시 사거리 5의 범위 상태이상 공격을 가해 적들을 잠재웁니다. 이 스킬로 잠든 적들은 잠에서 깰 때 _레벨에 비례한 피해_를 받습니다.
 items.skill.sk2.dreamland.desc_wnd=발동시 주위 적들을 잠재우고, 수면이 끝날 때 피해를 줍니다.
+
+items.skill.sk2.flashshield.name=_섬광 방패(2스킬)_
+items.skill.sk2.flashshield.desc=발동시 시야 내의 적들에게 마비와 침묵을 부여합니다.
+items.skill.sk2.flashshield.desc_wnd=발동시 시야 내의 적들에게 마비와 침묵 부여
 
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
 items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.
@@ -1175,7 +1183,7 @@ items.rings.ringofwealth.desc=이 반지는 보물을 끌어당기는 자석처�
 
 items.rings.ringofsunlight.name=햇빛의 반지
 items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 성능이 _%s%%_ 만큼 상승합니다.
-items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록 장치의 성능이 약 _%s%%_ 만큼 상승합니다.
+items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록장치의 성능이 약 _%s%%_ 만큼 상승합니다.
 items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP 효율을 높혀줍니다. 저주받은 반지는 오히려 효율을 감소시킵니다.
 
 
@@ -1468,7 +1476,7 @@ items.wands.sp.staffofgreyy.stats_desc=이 아츠 스태프는 대상에게 강�
 items.wands.sp.staffofgreyy.bmage_desc=_아미야_ 가 개조 번개의 흑요석 반지로 적을 공격하면, 짜릿한 아츠 무기로 공격한 것처럼 주변 적들에게 연쇄 번개로 피해를 줄 수 있습니다.
 
 items.wands.sp.staffofvigna.name=스태프 오브 비그나
-items.wands.sp.staffofvigna.staff_name=개조 붕괴의 흑요석 반지PurgatoryKnife
+items.wands.sp.staffofvigna.staff_name=개조 붕괴의 흑요석 반지
 items.wands.sp.staffofvigna.desc=_"보고 있어. 지금부터 내 시간이야!"_\n\n이 개조된 붕괴의 스태프는 비그나 대원의 능력이 반영되었습니다.
 items.wands.sp.staffofvigna.stats_desc=이 아츠 스태프는 모든 장애물을 관통하는 광선을 발사합니다. 막대가 강화될수록 광선이 더 멀리까지 나갑니다. 이 막대가 발사하는 광선은 _%1$d-%2$d의 피해를_ 입히며, 적과 지형을 관통할수록 더 강력해집니다. 사거리가 매우 짧아진 대신 적에게 취약을 부여합니다.
 items.wands.sp.staffofvigna.bmage_desc=_아미야_ 가 개조 붕괴의 흑요석 반지로 공격할 때, 도달의 아츠 무기로 공격한 것처럼 공격 범위가 증가합니다.
@@ -1950,6 +1958,10 @@ items.weapon.melee.crabgun.desc=_"아, 얘 이름은 완두콩이야. 자, 콩�
 items.weapon.melee.crabgun$metalcrab.name=바위게
 items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수와 무기 강화에 비례해 능력치가 결정됩니다.
 
+items.weapon.melee.ex42.name=EX42
+items.weapon.melee.ex42.stats_desc=사거리 +1, 공격속도 -25%, 명중률 -20%
+items.weapon.melee.ex42.desc=이 오리지늄 아츠 원격 조종 장치는 타고 날아다닐 수도 있습니다.
+
 
 
 ###missile weapons
@@ -2227,3 +2239,8 @@ items.tomeofmastery.desc=선임 오퍼레이터들의 경험이 담겨있는 데
 items.torch.name=형광등
 items.torch.ac_light=빛이 있으라!
 items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아니지, 내가 말을 하기 시작했을 때부터 라테라노 사람이었어." \n\n주변이 어둡다면, 이것을 머리에 올려놓아 주변을 밝히십시오.
+
+items.annihilationgear.name=섬멸전장비
+items.annihilationgear.ac_active=방벽 투척
+items.annihilationgear.desc=이 강력한 장비는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.
+items.annihilationgear.prompt=목표 지정
