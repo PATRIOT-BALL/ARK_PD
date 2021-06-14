@@ -4,6 +4,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
@@ -21,6 +23,8 @@ public class GreenCat extends NPC {
     {
         spriteClass = GreenCatSprite.class;
         properties.add(Property.IMMOVABLE);
+        immunities.add(Terror.class);
+        immunities.add(Amok.class);
     }
 
     private boolean seenBefore = false;
@@ -32,6 +36,7 @@ public class GreenCat extends NPC {
 
     @Override
     public void damage(int dmg, Object src) {
+
     }
 
     @Override
