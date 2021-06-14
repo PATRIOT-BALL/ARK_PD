@@ -112,7 +112,7 @@ public class StaffOfVigna extends DamageWand {
     }
 
     private int distance() {
-        return buffedLvl() + 2;
+        return buffedLvl() / 2 + 3;
     }
 
     @Override
