@@ -21,17 +21,11 @@ import com.watabou.utils.Random;
 public class SecretCursedWeaponRoom extends SecretRoom {
 
     @Override
-    public boolean canMerge(Level l, Point p, int mergeTerrain) {
-        int cell = l.pointToCell(pointInside(p, 1));
-        return l.map[cell] == Terrain.EMPTY;
-    }
-
-    @Override
     public void paint(Level level) {
         Painter.fill( level, this, Terrain.WALL );
-        Painter.fill( level, this, 1, Terrain.EMPTY );
+        Painter.fill( level, this, 1, Terrain.WATER );
         for (Door door : connected.values()) {
-            door.set( Door.Type.REGULAR );
+            door.set( Door.Type.HIDDEN );
         }
 
         int mines = (int)Math.round(Math.sqrt(square()));
@@ -48,15 +42,9 @@ public class SecretCursedWeaponRoom extends SecretRoom {
                 pos = level.pointToCell(random(1));
             } while (level.traps.get(pos) != null);
 
-            for (int j = 0; j < 8; j ++){
-                int c = PathFinder.NEIGHBOURS8[Random.Int(8)];
-                if (level.traps.get(pos+c) == null && level.map[pos+c] == Terrain.EMPTY){
-                    Painter.set(level, pos+c, Terrain.WATER);
-                }
-            }
 
-            Painter.set(level, pos, Terrain.TRAP);
-            level.setTrap(new CursingTrap(), pos);
+            Painter.set(level, pos, Terrain.SECRET_TRAP);
+            level.setTrap(new CursingTrap().hide(), pos);
 
         }
 
