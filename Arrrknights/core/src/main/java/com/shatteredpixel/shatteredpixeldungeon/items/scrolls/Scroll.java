@@ -172,8 +172,8 @@ public abstract class Scroll extends Item {
 					&& hero.buff(UnstableSpellbook.bookRecharge.class).isCursed()
 					&& !(this instanceof ScrollOfRemoveCurse || this instanceof ScrollOfAntiMagic)){
 				GLog.n( Messages.get(this, "cursed") );}
-				//else if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1 && Dungeon.depth > 20 && Dungeon.bossLevel()){
-				//GLog.n( Messages.get(this, "miniboss") );}
+				else if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1 && Dungeon.depth > 20 && Dungeon.bossLevel()){
+				GLog.n( Messages.get(this, "miniboss") );}
 			else {
 				curUser = hero;
 				curItem = detach( hero.belongings.backpack );

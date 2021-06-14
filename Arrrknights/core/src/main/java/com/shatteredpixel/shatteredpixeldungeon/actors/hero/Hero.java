@@ -24,6 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.hero;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Bones;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
@@ -63,6 +64,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CheckedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
@@ -267,6 +269,7 @@ public class Hero extends Char {
         if (boostHP) {
             HP += Math.max(HT - curHT, 0);
         }
+        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1) HT /= 2;
         HP = Math.min(HP, HT);
     }
 
@@ -1588,6 +1591,12 @@ public class Hero extends Char {
 
                 if (buff(ElixirOfMight.HTBoost.class) != null) {
                     buff(ElixirOfMight.HTBoost.class).onLevelUp();
+                }
+
+                AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
+                if (Gear != null)
+                {
+                    Gear.SPCharge(Gear.chargeCap);
                 }
 
                 updateHT(true);

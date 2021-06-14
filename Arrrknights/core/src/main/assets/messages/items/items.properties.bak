@@ -1958,7 +1958,7 @@ items.weapon.melee.crabgun.desc=_"아, 얘 이름은 완두콩이야. 자, 콩�
 items.weapon.melee.crabgun$metalcrab.name=바위게
 items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수와 무기 강화에 비례해 능력치가 결정됩니다.
 
-items.weapon.melee.ex42.name=EX42
+items.weapon.melee.ex42.name=EX-42
 items.weapon.melee.ex42.stats_desc=사거리 +1, 공격속도 -25%, 명중률 -20%
 items.weapon.melee.ex42.desc=이 오리지늄 아츠 원격 조종 장치는 타고 날아다닐 수도 있습니다.
 
@@ -2242,5 +2242,6 @@ items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아
 
 items.annihilationgear.name=섬멸전장비
 items.annihilationgear.ac_active=방벽 투척
-items.annihilationgear.desc=이 강력한 장비는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.
+items.annihilationgear.desc=이 강력한 장비는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있습니다._
 items.annihilationgear.prompt=목표 지정
+items.annihilationgear.nocharge=충전량이 부족합니다.

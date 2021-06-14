@@ -429,7 +429,7 @@ public class ItemSpriteSheet {
 	private static final int ARTIFACTS          =                            xy(1, 16);  //32 slots
 	public static final int ARTIFACT_CLOAK      = ARTIFACTS+0;
 	public static final int ARTIFACT_ARMBAND    = ARTIFACTS+1;
-	public static final int ARTIFACT_CAPE       = ARTIFACTS+2;
+	public static final int ARTIFACT_ROSEMARY = ARTIFACTS+2;
 	public static final int ARTIFACT_TALISMAN   = ARTIFACTS+3;
 	public static final int ARTIFACT_HOURGLASS  = ARTIFACTS+4;
 	public static final int ARTIFACT_TOOLKIT    = ARTIFACTS+5;
@@ -453,7 +453,7 @@ public class ItemSpriteSheet {
 	static{
 		assignItemRect(ARTIFACT_CLOAK,      16, 16);
 		assignItemRect(ARTIFACT_ARMBAND,    16, 16);
-		assignItemRect(ARTIFACT_CAPE,       16, 16);
+		assignItemRect(ARTIFACT_ROSEMARY,       16, 16);
 		assignItemRect(ARTIFACT_TALISMAN,   16, 16);
 		assignItemRect(ARTIFACT_HOURGLASS,  16, 16);
 		assignItemRect(ARTIFACT_TOOLKIT,    16, 16);

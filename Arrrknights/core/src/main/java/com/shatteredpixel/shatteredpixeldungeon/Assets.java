@@ -250,6 +250,7 @@ public class Assets {
 		public static final String MAGE		= "splashes/mage.jpg";
 		public static final String ROGUE	= "splashes/rogue.jpg";
 		public static final String HUNTRESS	= "splashes/huntress.jpg";
+		public static final String ROSECAT	= "splashes/rosemary.png";
 	}
 
 	public static class Sprites {
@@ -260,6 +261,7 @@ public class Assets {
 		public static final String AMIYA		= "sprites/amiya.png";
 		public static final String RED	= "sprites/red.png";
 		public static final String GREY	= "sprites/greythroat.png";
+		public static final String ROSEMARY	= "sprites/rosemary.png";
 		public static final String AVATARS	= "sprites/avatars.png";
 		public static final String PET		= "sprites/pet.png";
 		public static final String DONUT		= "sprites/Wraith_donut.png";
@@ -356,6 +358,10 @@ public class Assets {
 		public static final String SARKAZ_SNIPER_E	= "sprites/Sarkaz_Sniper_E.png";
 		public static final String LANCER	= "sprites/Lancer.png";
 		public static final String GHOST1	= "sprites/ghost_1.png";
+
+
+		// 방벽
+		public static final String EX42	= "sprites/ex42.png";
 
 		//스킨
 		public static final String TALRU_FIGHT	= "sprites/talru.png";

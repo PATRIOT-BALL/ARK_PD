@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
@@ -110,6 +111,7 @@ public class MissileSprite extends ItemSprite implements Tweener.Listener {
 		
 		ANGULAR_SPEEDS.put(WSprite.TenguShuriken.class,      2160);
 		ANGULAR_SPEEDS.put(TerminationT.SpiritArrow.class,0);
+		ANGULAR_SPEEDS.put(AnnihilationGear.Spriteex.class,0);
 	}
 
 	//TODO it might be nice to have a source and destination angle, to improve thrown weapon visuals

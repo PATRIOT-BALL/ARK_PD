@@ -42,6 +42,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibili
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -161,21 +162,6 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
-
-		/*	new PotionOfLiquidFlame().quantity(5).collect();
-		*/
-
-
-/*
-		RingOfSunLight R;
-		R = new RingOfSunLight();
-		R.level(100);
-		R.quantity(1).collect();
-
-		StaffKit SK;
-		SK = new StaffKit();
-
-		*/
 
 	}
 
@@ -318,7 +304,7 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Assets.Sprites.GREY;
 			case ROSECAT:
-				return Assets.Sprites.GREY;
+				return Assets.Sprites.ROSEMARY;
 		}
 	}
 
@@ -333,7 +319,7 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Assets.Sprites.GREY;
 			case ROSECAT:
-				return Assets.Sprites.GREY;
+				return Assets.Sprites.ROSEMARY;
 		}
 	}
 
@@ -348,7 +334,7 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Assets.Splashes.HUNTRESS;
 			case ROSECAT:
-				return Assets.Splashes.HUNTRESS;
+				return Assets.Splashes.ROSECAT;
 		}
 	}
 	
@@ -403,7 +389,7 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
 			case ROSECAT:
-				return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
+				return false;
 		}
 	}
 	

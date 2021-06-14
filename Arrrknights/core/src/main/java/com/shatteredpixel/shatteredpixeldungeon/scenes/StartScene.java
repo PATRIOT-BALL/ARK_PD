@@ -180,7 +180,7 @@ public class StartScene extends PixelScene {
 							hero = new Image(Icons.GREY.get());
 							break;
 						case ROSECAT:
-							hero = new Image(Icons.BLAZE.get());
+							hero = new Image(Icons.ROSEMARI.get());
 							break;
 					}
 					add(hero);
@@ -209,7 +209,7 @@ public class StartScene extends PixelScene {
 							hero = new Image(Icons.GREY.get());
 							break;
 						case ROSECAT:
-							hero = new Image(Icons.BLAZE.get());
+							hero = new Image(Icons.ROSEMARI.get());
 							break;
 					}
 
