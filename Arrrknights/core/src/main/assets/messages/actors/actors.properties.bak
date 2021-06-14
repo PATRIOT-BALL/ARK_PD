@@ -356,6 +356,9 @@ actors.buffs.silence.name=침묵
 actors.buffs.silence.heromsg=읍읍? 읍읍읍읍?!!
 actors.buffs.silence.desc=읍읍읍...\n\n대원이라면 아츠 스태프를 사용할 수 없으며, 적이라면 특수 능력이 봉인됩니다.\n\n%s 턴 동안 지속됩니다.
 
+actors.buffs.rose_force.name=집중력
+actors.buffs.rose_force.desc=로즈몬티스는 집중 상태입니다.\n\n집중 시간 내에 가하는 방벽 투척은 더욱 강한 피해를 입힐 것입니다.\n\n집중력이 떨어질 때까지 %s 턴 남았습니다.
+
 
 
 ###hero
@@ -532,6 +535,50 @@ actors.hero.talent.sniping.desc=_+1:_ 특수 활 공격의 피해량이 _20%_ �
 actors.hero.talent.savior_belief.title=구제자의 신념
 actors.hero.talent.savior_belief.desc=_+1:_ 화살이 적에게 적중하면 _33%_ 확률로 1턴동안 아츠 면역 상태가 됩니다.\n\n_+2:_ 화살이 적에게 적중하면 _66%_ 확률로 1턴동안 아츠 면역 상태가 됩니다.\n\n_+3:_ 화살이 적에게 적중하면 _100%_ 확률로 1턴동안 아츠 면역 상태가 됩니다.
 
+actors.hero.talent.lightnessmeal.title=몸이 가벼운 식사
+actors.hero.talent.lightnessmeal.desc=_+1:_ 식사 시 _2턴의 부유 효과_ 를 얻습니다.\n\n_+2:_ 식사 시 _3턴의 부유 효과_ 를 얻습니다.
+actors.hero.talent.moremeals.title=더 많은 식사
+actors.hero.talent.moremeals.desc=_+1:_ 식사 시 음식의 포만감이 _10%_ 만큼 상승합니다.\n\n_+2:_ 식사 시 음식의 포만감이 _20%_ 만큼 상승합니다.
+actors.hero.talent.goodmeat.title=좋은 고기
+actors.hero.talent.goodmeat.desc=_+1:_ 조리하지 않은 고기를 먹었을 때 해로운 효과가 _발생할 확률이 감소_ 합니다.\n\n_+2:_ 조리하지 않은 고기를 먹었을 때 해로운 효과가 _발생하지 않습니다._
+actors.hero.talent.nyanging.title=냥력단련
+actors.hero.talent.nyanging.desc=_+1:_ 아이템을 감정하면 _50%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.\n\n_+2:_ 아이템을 감정하면 _100%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.
+actors.hero.talent.fastmeal.title=엄청 빠른 식사
+actors.hero.talent.fastmeal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 시 _최대 체력의 8%_ 만큼 보호막을 얻습니다.\n\n_+2:_ 식사에 1턴만 소모되며, 식사 시 _최대 체력의 16%_ 만큼 보호막을 얻습니다.
+actors.hero.talent.recovery_upgrade.title=정신 회복의 강화
+actors.hero.talent.recovery_upgrade.desc=_+1:_ 강화의 일기장을 사용하면 섬멸전 장비를 _2_ 만큼 충전합니다.\n\n_+2:_ 강화의 일기장을 사용하면 섬멸전 장비를 _3_ 만큼 충전합니다\n\n이 특성은 강화의 일기장을 기반으로 한 주문서 또는 주문을 사용할 때에도 발동합니다.
+actors.hero.talent.delicious_food.title=엄청 맛있는 식사
+actors.hero.talent.delicious_food.desc=_+1:_ 애플 파이 혹은 고기 파이 섭취시 섬멸전 장비를 _1_ 만큼 충전합니다.\n\n_+2:_ 애플 파이 혹은 고기 파이 섭취시 섬멸전 장비를 _2_ 만큼 충전합니다.
+actors.hero.talent.lovemeat.title=고기가 좋아
+actors.hero.talent.lovemeat.desc=_+1:_ 고기류 음식 섭취시 _10 턴_동안 배부름 상태가 됩니다.\n\n_+2:_ 고기류 음식 섭취시 _20 턴_동안 배부름 상태가 됩니다.
+actors.hero.talent.powergear.title=강력한 방벽
+actors.hero.talent.powergear.desc=_+1:_ 방벽 투척이 적을 _약하게_ 밀쳐냅니다.\n\n_+2:_ 방벽 투척이 적을 _조금 강하게_ 밀쳐냅니다.
+actors.hero.talent.aimtraining.title=에임 훈련
+actors.hero.talent.aimtraining.desc=_+1:_ 방벽 투척이 _드론_ 적에게 _15%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _드론_ 적에게 _30%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _드론_ 적에게 _45%_ 의 추가 피해를 줍니다.
+actors.hero.talent.cutlet.title=돈까스
+actors.hero.talent.cutlet.desc=_+1:_ 처치당한 적이 _8%_ 확률로 돈까스를 드롭하게 됩니다.\n\n_+2:_ 처치당한 적이 _16%_ 확률로 돈까스를 드롭하게 됩니다.\n\n_+3:_ 처치당한 적이 _25%_ 확률로 돈까스를 드롭하게 됩니다.\n\n돈까스는 허기 회복량이 매우 적지만, 섭취시 섬멸전 장비를 1 만큼 충전합니다.
+actors.hero.talent.focused_attack.title=집중 포격
+actors.hero.talent.focused_attack.desc=_+1:_ 강화된 방벽 투척의 피해 보너스가 30%에서 _40%_ 로 상승합니다.\n\n_+2:_ 강화된 방벽 투척의 피해 보너스가 30%에서 _50%_ 로 상승합니다.\n\n_+3:_ 강화된 방벽 투척의 피해 보너스가 30%에서 _60%_ 로 상승합니다.
+actors.hero.talent.physical_attack.title=질량 공격
+actors.hero.talent.physical_attack.desc=_+1:_ 강화된 방벽 투척이 대상을을 _25%_ 확률로 1턴 동안 마비시킵니다.\n\n_+2:_ 강화된 방벽 투척이 대상을을 _50%_ 확률로 1턴 동안 마비시킵니다.\n\n_+3:_ 강화된 방벽 투척이 대상을을 _75%_ 확률로 1턴 동안 마비시킵니다.
+actors.hero.talent.battleflow.title=전투의 흐름
+actors.hero.talent.battleflow.desc=_+1:_ 적을 처치하면 _8%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.\n\n_+2:_ 적을 처치하면 _16%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.\n\n_+3:_ 적을 처치하면 _25%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.
+actors.hero.talent.barrier_operation.title=수호 방벽 전개
+actors.hero.talent.barrier_operation.desc=_+1:_ 방벽으로 방어할 때 피해 감소률이 40%에서 _50%_ 로 상승합니다.\n\n_+2:_ 방벽으로 방어할 때 피해 감소률이 40%에서 _60%_ 로 상승합니다.\n\n_+3:_ 방벽으로 방어할 때 피해 감소률이 40%에서 _70%_ 로 상승합니다.
+actors.hero.talent.barrier_repair.title=방벽 재생
+actors.hero.talent.barrier_repair.desc=_+1:_ 섬멸전 장비의 충전이 0일 때 피격 당하면 _10%_ 확률로 1 만큼 충전합니다.\n\n_+2:_ 섬멸전 장비의 충전이 0일 때 피격 당하면 _20%_ 확률로 1 만큼 충전합니다.\n\n_+3:_ 섬멸전 장비의 충전이 0일 때 피격 당하면 _30%_ 확률로 1 만큼 충전합니다.
+actors.hero.talent.rhodes_cat.title=로도스의 필라인
+actors.hero.talent.rhodes_cat.desc=_+1:_ 섬멸전 장비의 충전이 0이라면 근접 공격의 피해량이 _15%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전이 0이라면 근접 공격의 피해량이 _30%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전이 0이라면 근접 공격의 피해량이 _45%_ 상승합니다.
+actors.hero.talent.rhodes_weapon.title=로도스의 병기
+actors.hero.talent.rhodes_weapon.desc=_+1:_ 섬멸전 장비의 공격력이 _4_ 만큼 상승합니다.\n\n_+2:_ 섬멸전 장비의 공격력이 _8_ 만큼 상승합니다.\n\n_+3:_ 섬멸전 장비의 공격력이 _12_ 만큼 상승합니다.
+actors.hero.talent.recall_memory.title=기억 되새기기
+actors.hero.talent.recall_memory.desc=_+1:_ 일기장을 읽으면 아츠 기록장치의 SP가 _4%_ 충전됩니다.\n\n_+2:_ 일기장을 읽으면 아츠 기록장치의 SP가 _8%_ 충전됩니다.\n\n_+3:_ 일기장을 읽으면 아츠 기록장치의 SP가 _12%_ 충전됩니다.
+actors.hero.talent.esthesia.title=본질 의식
+actors.hero.talent.esthesia.desc=_+1:_ 방벽 투척이 _보스_ 에게 _15%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _보스_ 에게 _30%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _보스_ 에게 _45%_ 의 추가 피해를 줍니다.
+actors.hero.talent.speed_comabt.title=고속전투
+actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _33%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _66%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _100%_ 상승합니다.
+
+
 
 actors.hero.hero.name=%s.
 actors.hero.hero.leave=%s, 어서 빨리 박사를 구출해라.
@@ -579,13 +626,13 @@ actors.hero.heroclass.huntress_desc_subclasses=두 번째 보스를 쓰러트리
 
 actors.hero.heroclass.rosecat=로즈몬티스
 actors.hero.heroclass.rosecat_unlock="나도 약속하지. 내가 그녀를 가르치겠어. 그녀는 너희들의 가족이 되고…… 너희들의 친구가 될 거야. 그녀는 해낼 수 있을 거야."
-actors.hero.heroclass.rosecat_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 힘의 물약\n- 공포의 주문서
+actors.hero.heroclass.rosecat_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 힘의 물약\n- 공포의 주문서
 actors.hero.heroclass.rosecat_desc_loadout=로즈몬티스는 사거리가 길지만 명중률과 공격속도에 패널티를 받는 _EX-43_을 가지고 시작합니다.\n\n로즈몬티스는 그녀의 아츠 장치를 사용해 원거리 공격을 할 수 있습니다..\n\n로즈몬티스는 _벨벳 주머니_ 와 _마법 보관집_을 가지고 시작하며, 씨앗과 룬석을 담아두고 투척 무기, 완드를 보관할 수 있습니다.
 actors.hero.heroclass.rosecat_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 로즈몬티스의 두 가지 전문화는 다음과 같습니다.
 
 actors.hero.heroclass.rosecat1=로즈몬티스
 actors.hero.heroclass.rosecat1_unlock=로즈몬티스는 강력한 아츠 사용자로, _특별한 아츠 장치_를 가지고 시작합니다.\n\n로즈몬티스를 해금하려면 _게임을 클리어 하십시오._
-actors.hero.heroclass.rosecat1_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 힘의 물약\n- 공포의 주문서
+actors.hero.heroclass.rosecat1_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 힘의 물약\n- 공포의 주문서
 actors.hero.heroclass.rosecat1_desc_loadout=로즈몬티스는 사거리가 길지만 명중률과 공격속도에 패널티를 받는 _EX-43_을 가지고 시작합니다.\n\n로즈몬티스는 그녀의 아츠 장치를 사용해 원거리 공격을 할 수 있습니다..\n\n로즈몬티스는 _벨벳 주머니_ 와 _마법 보관집_을 가지고 시작하며, 씨앗과 룬석을 담아두고 투척 무기, 완드를 보관할 수 있습니다.
 actors.hero.heroclass.rosecat1_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 로즈몬티스의 두 가지 전문화는 다음과 같습니다.
 

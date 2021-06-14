@@ -160,7 +160,7 @@ public class MagesStaff extends MeleeWeapon {
 			{
 				if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
 					SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
-					Item.GetCharge(2);
+					Item.SetCharge(2);
 				}
 			}
 		}

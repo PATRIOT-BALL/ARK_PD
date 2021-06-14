@@ -41,7 +41,6 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SoulMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Wraith_donut;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Surprise;
@@ -695,7 +694,7 @@ public abstract class Mob extends Char {
 		if (Dungeon.hero.buff(Talent.SWEEPTraker.class) != null) {
 			if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
 				SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
-				Item.GetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
+				Item.SetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
 			}}
 
 		if (!(this instanceof Wraith_donut)

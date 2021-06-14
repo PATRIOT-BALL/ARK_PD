@@ -151,7 +151,7 @@ public class SkillBook extends Item {
         updateQuickslot();
     }
 
-    public void GetCharge(int cha)
+    public void SetCharge(int cha)
     {
         charge += cha;
         if (charge > 150) charge = 150;

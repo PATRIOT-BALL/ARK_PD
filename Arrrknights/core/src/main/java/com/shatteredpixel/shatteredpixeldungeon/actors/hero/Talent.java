@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.CounterBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.EnhancedRings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
@@ -42,6 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
@@ -134,7 +136,24 @@ public enum Talent {
 	//Sniper T4
 	SNIPING(105,3),
 	//Warden T4
-	SAVIOR_BELIEF(112,3);
+	SAVIOR_BELIEF(112,3),
+
+	//RoseCat T1
+	LIGHTNESSMEAL(68), MOREMEALS(68), GOODMEAT(36), NYANGING(10),
+	//RoseCat T2
+	FASTMEAL(68), RECOVERY_UPGRADE(69), DELICIOUS_FOOD(0), LOVEMEAT(36), POWERGEAR(108),
+	//RoseCat T3
+	AIMTRAINING(105,3), CUTLET(0,3),
+	//RoseCat De_T3
+	FOCUSED_ATTACK(105,3), PHYSICAL_ATTACK(105,3), BATTLEFLOW(80,3),
+	//RoseCat Gu_T3
+	BARRIER_OPERATION(3,3), BARRIER_REPAIR(3,3), RHODES_CAT(76,3),
+	//RossCat T4
+	RHODES_WEAPON(106, 3), RECALL_MEMORY(37,3),
+	//RoseCat De_T4
+	ESTHESIA(14, 3),
+	//RoseCat Gu_T4
+	SPEED_COMABT(80,3);
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};
@@ -243,6 +262,10 @@ public enum Talent {
 		if (hero.hasTalent(INVIGORATING_MEAL)){
 			//effectively 1/2 turns of haste
 			Buff.prolong( hero, Haste.class, 0.67f+hero.pointsInTalent(INVIGORATING_MEAL));
+		}
+
+		if (hero.hasTalent(LIGHTNESSMEAL)){
+			Buff.prolong( hero, Levitation.class, 1+hero.pointsInTalent(LIGHTNESSMEAL));
 		}
 	}
 
@@ -378,6 +401,13 @@ public enum Talent {
 			Buff.affect(hero, Recharging.class, 1f + hero.pointsInTalent(TESTED_HYPOTHESIS));
 			ScrollOfRecharging.charge(hero);
 		}
+		if (hero.hasTalent(RECALL_MEMORY)){
+			SkillBook Book = hero.belongings.getItem(SkillBook.class);
+			if (Book!=null){
+				Book.SetCharge(hero.pointsInTalent(RECALL_MEMORY) * 3);
+			}
+
+		}
 	}
 
 	public static int onAttackProc( Hero hero, Char enemy, int dmg ){
@@ -440,6 +470,9 @@ public enum Talent {
 			case HUNTRESS:
 				Collections.addAll(tierTalents, NATURES_BOUNTY, SURVIVALISTS_INTUITION, FOLLOWUP_STRIKE, NATURES_AID);
 				break;
+			case ROSECAT:
+				Collections.addAll(tierTalents, LIGHTNESSMEAL, MOREMEALS, GOODMEAT, NYANGING);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(0).put(talent, 0);
@@ -459,6 +492,9 @@ public enum Talent {
 				break;
 			case HUNTRESS:
 				Collections.addAll(tierTalents, INVIGORATING_MEAL, RESTORED_NATURE, REJUVENATING_STEPS, HEIGHTENED_SENSES, DURABLE_PROJECTILES);
+				break;
+			case ROSECAT:
+				Collections.addAll(tierTalents, FASTMEAL, RECOVERY_UPGRADE, DELICIOUS_FOOD, LOVEMEAT, POWERGEAR);
 				break;
 		}
 		for (Talent talent : tierTalents){
@@ -480,6 +516,9 @@ public enum Talent {
 			case HUNTRESS:
 				Collections.addAll(tierTalents, POINT_BLANK, SEER_SHOT);
 				break;
+			case ROSECAT:
+				Collections.addAll(tierTalents, AIMTRAINING, CUTLET);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(2).put(talent, 0);
@@ -498,7 +537,10 @@ public enum Talent {
 				Collections.addAll(tierTalents, ASSASSINSCREED, CLOCK_UPGRADE);
 				break;
 			case HUNTRESS:
-				Collections.addAll(tierTalents, ARTS_FOCUS,IMPROVED_CROSSBOW);
+				Collections.addAll(tierTalents, ARTS_FOCUS, IMPROVED_CROSSBOW);
+				break;
+			case ROSECAT:
+				Collections.addAll(tierTalents, RHODES_WEAPON, RECALL_MEMORY);
 				break;
 		}
 		for (Talent talent : tierTalents){
@@ -546,6 +588,12 @@ public enum Talent {
 			case WARDEN:
 				Collections.addAll(tierTalents, DURABLE_TIPS, BARKSKIN, SHIELDING_DEW);
 				break;
+			case DESTROYER:
+				Collections.addAll(tierTalents, FOCUSED_ATTACK, PHYSICAL_ATTACK, BATTLEFLOW);
+				break;
+			case GUARDIAN:
+				Collections.addAll(tierTalents, BARRIER_OPERATION, BARRIER_REPAIR, RHODES_CAT);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(2).put(talent, 0);
@@ -577,6 +625,12 @@ public enum Talent {
 				break;
 			case WARDEN:
 				Collections.addAll(tierTalents, SAVIOR_BELIEF);
+				break;
+			case DESTROYER:
+				Collections.addAll(tierTalents, ESTHESIA);
+				break;
+			case GUARDIAN:
+				Collections.addAll(tierTalents, SPEED_COMABT);
 				break;
 		}
 		for (Talent talent : tierTalents){
