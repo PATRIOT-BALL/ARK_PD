@@ -2176,7 +2176,7 @@ public class Hero extends Char {
             SK1 = new Camouflage();
         } else if (SkillNumber == 13) {
             SK1 = new WolfSpirit();
-        } else if (SkillNumber == 13) {
+        } else if (SkillNumber == 14) {
             SK1 = new Thoughts();
         } else SK1 = null;
     }
