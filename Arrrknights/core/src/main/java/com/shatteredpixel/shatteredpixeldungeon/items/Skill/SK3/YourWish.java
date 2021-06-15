@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -25,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.TentacleSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.TargetHealthIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class YourWish extends Skill {
@@ -43,6 +45,7 @@ public class YourWish extends Skill {
                     GameScene.add(EX43);
                     CellEmitter.get(EX43.pos).burst(Speck.factory(Speck.WOOL), 4);
                     Buff.prolong(EX43, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);
+                    Sample.INSTANCE.play(Assets.Sounds.SKILL_YOUWISH);
                 }
                 else if (mob instanceof Mob) {
                     if (mob.alignment != Char.Alignment.ALLY) {
@@ -80,6 +83,12 @@ public class YourWish extends Skill {
             if (this.buff(StoneOfAggression.Aggression.class) == null) {
             Buff.prolong(this, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);}
             return super.act();
+        }
+
+        @Override
+        public int attackProc(Char enemy, int damage) {
+            Sample.INSTANCE.play(Assets.Sounds.HIT_WALL1);
+            return super.attackProc(enemy, damage);
         }
 
         @Override

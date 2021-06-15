@@ -24,6 +24,6 @@ public class Nervous extends Skill {
         identify();
 
         curUser.sprite.centerEmitter().start( Speck.factory( Speck.BONE ), 0.3f, 3 );
-        Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
+        Sample.INSTANCE.play( Assets.Sounds.HIT_WALL2 );
     }
 }

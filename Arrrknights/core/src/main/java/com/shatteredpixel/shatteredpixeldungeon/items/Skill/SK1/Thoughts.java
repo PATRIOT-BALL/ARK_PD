@@ -94,7 +94,7 @@ public class Thoughts extends Skill {
                 dohit(mob);
                 mob.sprite.burst(CharSprite.NEGATIVE, 10);
                 CellEmitter.center(target).burst(BlastParticle.FACTORY, 6);
-                Sample.INSTANCE.play(Assets.Sounds.BLAST);
+                Sample.INSTANCE.play(Assets.Sounds.HIT_WALL1);
                 AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
                 if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
                     Gear.SPCharge(1);
@@ -102,7 +102,7 @@ public class Thoughts extends Skill {
             }
             else {
                 CellEmitter.center(target).burst(BlastParticle.FACTORY, 6);
-                Sample.INSTANCE.play(Assets.Sounds.BLAST);
+                Sample.INSTANCE.play(Assets.Sounds.HIT_WALL1);
             }
 
             Invisibility.dispel();

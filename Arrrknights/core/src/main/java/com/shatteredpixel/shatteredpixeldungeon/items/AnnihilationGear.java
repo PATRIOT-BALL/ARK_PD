@@ -181,11 +181,11 @@ public class Spriteex extends MissileWeapon {
         if (mob != null) {
             dohit(mob);
             CellEmitter.center(target).burst(BlastParticle.FACTORY, 10);
-            Sample.INSTANCE.play(Assets.Sounds.BLAST);
+            Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);
         }
         else {
             CellEmitter.center(target).burst(BlastParticle.FACTORY, 10);
-            Sample.INSTANCE.play(Assets.Sounds.BLAST);
+            Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);
         }
 
         Invisibility.dispel();

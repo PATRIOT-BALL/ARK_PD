@@ -25,7 +25,7 @@ public class SkillBook extends Item {
     }
 
     private static final String AC_ACT = "ACT";
-    public int charge = 30;
+    public int charge = 150;
     public int chargeCap = 150;
 
     @Override
