@@ -700,7 +700,7 @@ public abstract class Mob extends Char {
 			}}
 
 		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {
-			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(12)) {
+			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(15)) {
 				Dungeon.level.drop(new MeatCutlet(), pos).sprite.drop();
 			}
 		}

@@ -17,7 +17,7 @@ public class Cannot extends Mob {
     {
         spriteClass = ImpSprite.class;
 
-        HP = HT = 150;
+        HP = HT = 250;
         defenseSkill = 20;
 
         EXP = 15;

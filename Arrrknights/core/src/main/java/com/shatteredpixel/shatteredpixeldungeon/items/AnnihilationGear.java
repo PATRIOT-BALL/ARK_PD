@@ -6,10 +6,17 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Chargrilled;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Frozen;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Mystery;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Stewed;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
@@ -189,7 +196,8 @@ public class Spriteex extends MissileWeapon {
         }
 
         Invisibility.dispel();
-        curUser.spendAndNext(1);
+        if (Dungeon.hero.buff(MeatPower_Stewed.class) != null) curUser.spendAndNext(0.7f);
+        else curUser.spendAndNext(1);
     }
 
     @Override
@@ -199,6 +207,14 @@ public class Spriteex extends MissileWeapon {
 }
 
     public void dohit(final Char enemy) {
+    // 고기 파워들
+        if (Dungeon.hero.buff(MeatPower_Mystery.class) != null){
+            Buff.affect(enemy, Silence.class, 5f); }
+        if (Dungeon.hero.buff(MeatPower_Chargrilled.class) != null){
+            Buff.affect(enemy, Weakness.class, 7f); }
+        if (Dungeon.hero.buff(MeatPower_Frozen.class) != null){
+            Buff.affect(Dungeon.hero, Healing.class).setHeal(Dungeon.hero.HT / 20, 1f, 1); }
+
         if (Dungeon.hero.hasTalent(Talent.POWERGEAR)) {
             Ballistica trajectory = new Ballistica(curUser.pos, enemy.pos, Ballistica.STOP_TARGET);
             trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);

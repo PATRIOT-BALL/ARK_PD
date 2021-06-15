@@ -222,7 +222,7 @@ public class Hero extends Char {
 
     public float awareness;
 
-    public int lvl = 1;
+    public int lvl = 25;
     public int exp = 0;
 
     public int HTBoost = 0;
@@ -644,7 +644,7 @@ public class Hero extends Char {
         if (Gear != null) {
             if (Gear.charge > 0){
                 if (this.hasTalent(Talent.SPEED_COMABT)) {
-                    speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 3;
+                    speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 5;
                 }
             }
         }
@@ -1217,7 +1217,7 @@ public class Hero extends Char {
         if (this.hasTalent(Talent.RHODES_CAT)) {
             AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
             if (Gear != null)
-                if (Gear.charge == 0) { damage *= 1f + (float)this.pointsInTalent(Talent.RHODES_CAT) * 0.15f; }
+                if (Gear.charge > 0) { damage *= 1f + (float)this.pointsInTalent(Talent.RHODES_CAT) * 0.15f; }
         }
 
         switch (subClass) {
@@ -1285,7 +1285,7 @@ public class Hero extends Char {
                     Gear.discharge(); }}
 
             if (Dungeon.hero.hasTalent(Talent.BARRIER_REPAIR)) {
-                if (Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(10)) {
+                if (Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(20)) {
                     Gear.SPCharge(1); }
             }
         }

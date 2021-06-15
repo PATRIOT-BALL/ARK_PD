@@ -156,7 +156,7 @@ public class Centurion extends Mob {
             maxLvl = -15;
             EXP = 5;
 
-            HP = 12;
+            HP=HT=12;
             baseSpeed = 1f;
 
             properties.add(Property.SARKAZ);
