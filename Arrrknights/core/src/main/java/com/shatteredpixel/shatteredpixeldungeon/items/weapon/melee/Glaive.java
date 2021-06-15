@@ -32,7 +32,7 @@ public class Glaive extends MeleeWeapon {
 		hitSoundPitch = 0.8f;
 
 		tier = 5;
-		DLY = 1.5f; //0.67x speed
+		DLY = 2f; //0.5x speed
 		RCH = 3;    //extra reach
 	}
 

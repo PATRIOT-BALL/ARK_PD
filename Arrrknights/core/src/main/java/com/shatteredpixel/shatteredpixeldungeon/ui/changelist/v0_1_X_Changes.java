@@ -98,7 +98,8 @@ public class v0_1_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
                 "- _해시계_ : 강화 효율이 4 에서 _5_ 로 상승했습니다." + "\n\n" +
-                "- _동야의 마왕_ : 기본 공격력이 2-9 에서 _2-11_로 상승했습니다."));
+                "- _동야의 마왕_ : 기본 공격력이 2-9 에서 _2-11_로 상승했습니다." + "\n\n" +
+                "- _상처투성이 단검_ : 전이 성공률이 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
                 "- 다음 특성들이 상향 조정되었습니다." + "\n\n" +
@@ -109,7 +110,9 @@ public class v0_1_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
-                "- _하야부사_ : 명중률 보정치가 +10%에서 _-15%_로 감소했습니다."));
+                "- _하야부사_ : 명중률 보정치가 +10%에서 _-15%_로 감소했습니다." + "\n\n" +
+                "- _영소_ : 공격속도 보정치가 -33%에서 -50%로 감소했습니다." + "\n\n" +
+                "- "));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
                 "- _스태프 오브 비그나_의 기본 사거리가 상승했지만, 강화에 비례한 사거리 증가량이 감소했습니다."));
