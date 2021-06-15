@@ -60,9 +60,9 @@ public class MidnightSword extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier+1) +  //11 + 2
+        return  4*(tier) +  //9 + 2
                 lvl*(tier)
-                -1;
+                +1;
     }
 
     @Override

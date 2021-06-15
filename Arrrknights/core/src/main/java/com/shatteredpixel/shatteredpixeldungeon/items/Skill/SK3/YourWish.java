@@ -68,7 +68,7 @@ public class YourWish extends Skill {
         {
             spriteClass = EX42_GroundSprite.class;
 
-            HP=HT=300;
+            HP=HT=200;
             state = HUNTING;
 
             properties.add(Property.IMMOVABLE);
