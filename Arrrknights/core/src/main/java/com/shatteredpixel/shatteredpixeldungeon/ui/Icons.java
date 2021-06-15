@@ -301,7 +301,7 @@ public enum Icons {
 		case HUNTRESS:
 			return get( HUNTRESS );
 		case ROSECAT:
-			return get( ROSEMARI );
+			return get( ROSEMON );
 		default:
 			return null;
 		}
