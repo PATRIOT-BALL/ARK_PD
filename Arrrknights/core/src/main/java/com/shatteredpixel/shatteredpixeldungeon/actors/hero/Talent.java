@@ -271,7 +271,7 @@ public enum Talent {
 		}
 
 		if (hero.hasTalent(FASTMEAL)){
-			Buff.affect( hero, Barrier.class).incShield(hero.HT * hero.pointsInTalent(FASTMEAL) / 10);
+			Buff.affect( hero, Barrier.class).incShield(hero.HT * hero.pointsInTalent(FASTMEAL) / 20);
 		}
 	}
 

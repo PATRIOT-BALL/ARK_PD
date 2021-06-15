@@ -1285,7 +1285,7 @@ public class Hero extends Char {
                     Gear.discharge(); }}
 
             if (Dungeon.hero.hasTalent(Talent.BARRIER_REPAIR)) {
-                if (Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(7)) {
+                if (Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(10)) {
                     Gear.SPCharge(1); }
             }
         }
