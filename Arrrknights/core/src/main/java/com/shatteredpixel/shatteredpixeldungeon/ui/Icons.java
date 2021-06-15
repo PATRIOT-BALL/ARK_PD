@@ -64,6 +64,7 @@ public enum Icons {
 	MAGE,
 	RED,
 	HUNTRESS,
+	ROSEMON,
 	
 	//main menu icons
 	ENTER,
@@ -196,6 +197,9 @@ public enum Icons {
 		case HUNTRESS:
 			icon.frame( icon.texture.uvRect( 64, 48, 80, 61 ) );
 			break;
+			case ROSEMON:
+				icon.frame( icon.texture.uvRect( 80, 48, 96, 61 ) );
+				break;
 			case BLAZE:
 				icon.frame(icon.texture.uvRect(0, 140, 20, 160));
 				break;
