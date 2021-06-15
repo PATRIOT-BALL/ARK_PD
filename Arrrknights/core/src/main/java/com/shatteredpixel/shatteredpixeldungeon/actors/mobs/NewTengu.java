@@ -43,6 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BlobEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.FloatingText;
@@ -50,6 +51,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Lightning;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SmokeParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SparkParticle;
@@ -221,6 +223,7 @@ public class NewTengu extends Mob {
         Dungeon.level.drop(new Nullshield(), pos).sprite.drop(pos);
 
         GameScene.bossSlain();
+
         super.die(cause);
 
         Badges.validateBossSlain();
@@ -1106,15 +1109,14 @@ public class NewTengu extends Mob {
     public static boolean throwMine(final Char thrower, final Char target) {
 
         int targetCell = -1;
+        int targetCell2 = -1;
 
         //Targets closest cell which is adjacent to target, and at least 3 tiles away
         for (int i : PathFinder.NEIGHBOURS8) {
             int cell = target.pos + i;
                 if (targetCell == -1 ||
                         Dungeon.level.trueDistance(cell, thrower.pos) < Dungeon.level.trueDistance(targetCell, thrower.pos)) {
-                    targetCell = cell;
-            }
-        }
+                    targetCell = cell; } }
 
         if (targetCell == -1) {
             return false;
@@ -1124,19 +1126,6 @@ public class NewTengu extends Mob {
         throwingChar = thrower;
         final WMine.BombItem item = new WMine.BombItem();
         thrower.sprite.zap(finalTargetCell);
-        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1) {
-            ((MissileSprite) thrower.sprite.parent.recycle(MissileSprite.class)).
-                    reset(thrower.sprite,
-                            finalTargetCell,
-                            item,
-                            new Callback() {
-                                @Override
-                                public void call() {
-                                    item.onThrow(thrower.pos);
-                                    thrower.next();
-                                }
-                            });
-        }
         ((MissileSprite) thrower.sprite.parent.recycle(MissileSprite.class)).
                 reset(thrower.sprite,
                         finalTargetCell,
@@ -1145,6 +1134,7 @@ public class NewTengu extends Mob {
                             @Override
                             public void call() {
                                 item.onThrow(finalTargetCell);
+                                if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1) item.onThrow(finalTargetCell+1);
                                 thrower.next();
                             }
                         });
@@ -1157,13 +1147,12 @@ public class NewTengu extends Mob {
     public static class WMine extends Buff {
 
         public int bombPos = -1;
-        private int timer = 6;
+        private int timer = 12;
 
         private ArrayList<Emitter> smokeEmitters = new ArrayList<>();
 
         @Override
         public boolean act() {
-
             if (smokeEmitters.isEmpty()) {
                 fx(true);
             }
@@ -1183,7 +1172,7 @@ public class NewTengu extends Mob {
 
                     if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
                         Char ch = Actor.findChar(cell);
-                        if (ch != null && !(ch instanceof NewTengu)) {
+                        if (ch != null && !(ch instanceof NewTengu) && !(ch instanceof Shopkeeper)) {
                             int dmg = Random.NormalIntRange(3, 9);
                             if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1) { dmg = Random.NormalIntRange(18, 24);}
                             dmg -= ch.drRoll();
@@ -1213,6 +1202,7 @@ public class NewTengu extends Mob {
                 detach();
                 return true;
             }
+            timer--;
             spend(TICK);
             return true;
         }
