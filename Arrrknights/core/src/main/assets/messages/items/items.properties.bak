@@ -317,7 +317,7 @@ items.skill.sk3.truesilverslash.desc=발동시 시야 안에 있는 모든 적�
 items.skill.sk3.truesilverslash.desc_wnd=발동시 시야 내의 평범한 적들을 즉사시킵니다.
 
 items.skill.sk3.yourwish.name=_"네가 원하는 대로"(3스킬)_
-items.skill.sk3.yourwish.desc=발동시 목표 지점에 EX-43을 소환합니다. EX-43을 이동할 수 없지만 매우 강력합니다.
+items.skill.sk3.yourwish.desc=발동시 목표 지점에 EX-43을 소환합니다. EX-43은 이동할 수 없지만 매우 강력합니다.
 items.skill.sk3.yourwish.desc_wnd=발동시 목표 지점에 EX-43을 소환합니다.
 items.skill.sk3.yourwish.prompt=목표를 지정
 items.skill.sk3.yourwish$ex43.name=EX-43
