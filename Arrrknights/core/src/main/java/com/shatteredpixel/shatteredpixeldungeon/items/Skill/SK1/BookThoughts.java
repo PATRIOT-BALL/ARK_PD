@@ -6,7 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 import java.util.ArrayList;
 
-public class BookCamouflage extends Item {
+public class BookThoughts extends Item {
     private static final String AC_USE = "USE";
 
     {
@@ -33,8 +33,8 @@ public class BookCamouflage extends Item {
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
 
-            hero.SK1 = new Camouflage();
-            hero.SetSkill1Num(12);
+            hero.SK1 = new Thoughts();
+            hero.SetSkill1Num(14);
         }
 
 

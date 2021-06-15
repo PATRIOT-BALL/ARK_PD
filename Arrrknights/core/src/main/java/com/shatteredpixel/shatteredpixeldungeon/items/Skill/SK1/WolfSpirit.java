@@ -24,7 +24,7 @@ public class WolfSpirit extends Skill {
             if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
                 Char ch = Actor.findChar(cell);
                 if (ch != null&& !(ch instanceof Hero)) {
-                    Buff.affect(ch, Silence.class,6f);
+                    Buff.affect(ch, Silence.class,8f);
                     CellEmitter.get( ch.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
                 }}}
         CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.WOOL ), 10 );

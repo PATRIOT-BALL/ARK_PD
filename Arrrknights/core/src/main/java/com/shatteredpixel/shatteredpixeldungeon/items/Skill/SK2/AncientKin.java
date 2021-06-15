@@ -37,7 +37,8 @@ public class AncientKin extends Skill {
                 if (mob instanceof Mob) {
                     if (mob.alignment != Char.Alignment.ALLY) {
                         if (!mob.properties().contains(Char.Property.BOSS)
-                                && !mob.properties().contains(Char.Property.MINIBOSS)) {
+                                && !mob.properties().contains(Char.Property.MINIBOSS)
+                                && !mob.properties().contains(Char.Property.NPC)) {
                             Seaborn seaborn = new Seaborn();
                             seaborn.pos = mob.pos;
 

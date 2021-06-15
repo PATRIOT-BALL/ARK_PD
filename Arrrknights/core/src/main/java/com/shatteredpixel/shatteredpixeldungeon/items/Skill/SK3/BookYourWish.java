@@ -1,16 +1,17 @@
-package com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1;
+package com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.HeroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 import java.util.ArrayList;
 
-public class BookCamouflage extends Item {
+public class BookYourWish extends Item {
     private static final String AC_USE = "USE";
 
     {
-        image = ItemSpriteSheet.SKILL_CHIP1;
+        image = ItemSpriteSheet.SKILL_CHIP3;
 
         stackable = true;
 
@@ -33,8 +34,10 @@ public class BookCamouflage extends Item {
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
 
-            hero.SK1 = new Camouflage();
-            hero.SetSkill1Num(12);
+            hero.SK3 = new YourWish();
+            hero.SetSkill3Num(7);
+            ((HeroSprite)hero.sprite).updateArmor();
+            hero.spendAndNext(1f);
         }
 
 
@@ -52,6 +55,6 @@ public class BookCamouflage extends Item {
 
     @Override
     public int value() {
-        return 25;
+        return 100;
     }
 }

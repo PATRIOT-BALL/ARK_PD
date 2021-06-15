@@ -106,7 +106,7 @@ public class Messages {
 		} else
 			key = k;
 
-		String value = getFromBundle(key.toLowerCase(Locale.ENGLISH));
+		String value = getFromBundle(key.toLowerCase(Locale.KOREAN));
 		if (value != null){
 			if (args.length > 0) return format(value, args);
 			else return value;
@@ -142,7 +142,7 @@ public class Messages {
 
 	public static String format( String format, Object...args ) {
 		try {
-			return String.format(Locale.ENGLISH, format, args);
+			return String.format(Locale.KOREAN, format, args);
 		} catch (IllegalFormatException e) {
 			TomorrowRogueNight.reportException( e );
 			return format;

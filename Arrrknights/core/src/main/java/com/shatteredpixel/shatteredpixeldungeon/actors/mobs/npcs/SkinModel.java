@@ -16,6 +16,7 @@ import javax.swing.DefaultBoundedRangeModel;
 public class SkinModel extends NPC {
     {
         properties.add(Property.IMMOVABLE);
+        properties.add(Property.NPC);
     }
 
     public SkinModel()

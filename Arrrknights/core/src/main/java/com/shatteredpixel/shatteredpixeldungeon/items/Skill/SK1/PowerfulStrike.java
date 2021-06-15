@@ -9,7 +9,7 @@ import com.watabou.noosa.audio.Sample;
 public class PowerfulStrike extends Skill {
     public void doSkill()
     {
-        int value = (curUser.STR * 2 + curUser.lvl) - 20;
+        int value = (curUser.STR * 2 + curUser.lvl) - 12;
         Buff.affect(curUser, Kinetic.ConservedDamage.class).setBonus(value);
         Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
     }

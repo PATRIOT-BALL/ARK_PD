@@ -26,6 +26,7 @@ public class Closure extends NPC {
         spriteClass = ClosureSprite.class;
         HP=HT=60;
         properties.add(Property.IMMOVABLE);
+        properties.add(Property.NPC);
     }
     private static final String AC_ADD = "ADD";
 

@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWolfSpirit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
@@ -45,6 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNervous;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
@@ -56,6 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssaul
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookYourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
@@ -133,6 +136,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
@@ -199,6 +203,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Dagger.class,                     false);
 		WEAPONS.seen.put( MagesStaff.class,                 false);
 		WEAPONS.seen.put( Shortsword.class,                 false);
+		//WEAPONS.seen.put( EX42.class,                     false);
 		WEAPONS.seen.put( HandAxe.class,                    false);
 		WEAPONS.seen.put( Spear.class,                      false);
 		WEAPONS.seen.put( Quarterstaff.class,               false);
@@ -242,6 +247,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookFierceGlare.class,             false);
 		SKILLBOOK.seen.put( BookCamouflage.class,              false);
 		SKILLBOOK.seen.put( BookWolfSpirit.class,              false);
+		//SKILLBOOK.seen.put( BookThoughts.class,              false);
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
 		SKILLBOOK.seen.put( BookReflow.class,                false);
@@ -255,6 +261,7 @@ public enum Catalog {
         SKILLBOOK.seen.put( Bookancientkin.class,          false);
         SKILLBOOK.seen.put( BookLandingStrike.class,          false);
 		SKILLBOOK.seen.put( BookDreamland.class,              false);
+		//SKILLBOOK.seen.put( BookNervous.class,              false);
 		SKILLBOOK.seen.put( BookFlashShield.class,              false);
         SKILLBOOK.seen.put( BookShadowAssault.class,          false);
         SKILLBOOK.seen.put( BookSoaringFeather.class,          false);
@@ -262,6 +269,7 @@ public enum Catalog {
         SKILLBOOK.seen.put( BookNigetRaid.class,          false);
         SKILLBOOK.seen.put( BookTerminationT.class,          false);
         SKILLBOOK.seen.put( BookTrueSilverSlash.class,          false);
+		//SKILLBOOK.seen.put( BookYourWish.class,              false);
 
 		WANDS.seen.put( WandOfMagicMissile.class,           false);
 		WANDS.seen.put( WandOfLightning.class,              false);

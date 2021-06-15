@@ -28,6 +28,7 @@ public class BookChainHook extends Item {
 
         super.execute(hero, action);
         if (action.equals(AC_USE)) {
+            this.identify();
             hero.busy();
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);

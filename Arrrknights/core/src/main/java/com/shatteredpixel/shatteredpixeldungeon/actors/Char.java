@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Electricity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArcaneArmor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
@@ -853,7 +854,9 @@ public abstract class Char extends Actor {
 		DRONE ( new HashSet<Class>(),
 				new HashSet<Class>(Arrays.asList(Bleeding.class, Roots.class))),
 		SARKAZ( new HashSet<Class>( Arrays.asList(Grim.class, WandOfDisintegration.class)),
-				new HashSet<Class>());
+				new HashSet<Class>()),
+		NPC ( new HashSet<Class>(),
+				new HashSet<Class>(Arrays.asList(Corruption.class, Amok.class, Terror.class)));
 
 		private HashSet<Class> resistances;
 		private HashSet<Class> immunities;

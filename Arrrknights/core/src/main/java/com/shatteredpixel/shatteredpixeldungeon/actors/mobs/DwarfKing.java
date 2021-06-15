@@ -51,6 +51,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssaul
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookYourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
@@ -467,6 +468,9 @@ public class DwarfKing extends Mob {
 					case HUNTRESS:
 						Dungeon.level.drop(new BookSoaringFeather(), pos + ofs).sprite.drop(pos);
 						break;
+					case ROSECAT:
+						Dungeon.level.drop(new BookYourWish(), pos + ofs).sprite.drop(pos);
+						break;
 				}
 			} else {
 				switch (Dungeon.hero.heroClass) {
@@ -481,6 +485,9 @@ public class DwarfKing extends Mob {
 						break;
 					case HUNTRESS:
 						Dungeon.level.drop(new BookSoaringFeather(), pos + ofs).sprite.drop(pos);
+						break;
+					case ROSECAT:
+						Dungeon.level.drop(new BookYourWish(), pos + ofs).sprite.drop(pos);
 						break;
 				}
 			}

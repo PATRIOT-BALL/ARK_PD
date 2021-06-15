@@ -23,8 +23,7 @@ public class GreenCat extends NPC {
     {
         spriteClass = GreenCatSprite.class;
         properties.add(Property.IMMOVABLE);
-        immunities.add(Terror.class);
-        immunities.add(Amok.class);
+        properties.add(Property.NPC);
     }
 
     private boolean seenBefore = false;

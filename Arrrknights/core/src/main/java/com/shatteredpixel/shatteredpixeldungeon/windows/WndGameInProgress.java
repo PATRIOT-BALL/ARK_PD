@@ -65,7 +65,7 @@ public class WndGameInProgress extends Window {
 		
 		IconTitle title = new IconTitle();
 		title.icon( HeroSprite.avatar_de(info.heroClass, info.armorTier) );
-		title.label((Messages.get(this, "title", info.level, className)).toUpperCase(Locale.ENGLISH));
+		title.label((Messages.get(this, "title", info.level, className)).toUpperCase(Locale.KOREAN));
 		title.color(Window.TITLE_COLOR);
 		title.setRect( 0, 0, WIDTH, 0 );
 		add(title);

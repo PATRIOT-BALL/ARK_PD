@@ -29,6 +29,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNervous;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookYourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
@@ -254,12 +257,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-
-		//new TomeOfMastery().quantity(1).collect();
-		//new PotionOfExperience().quantity(99).collect();
-
-/*
-		new PotionOfExperience().quantity(99).collect();*/
 	}
 
 	private void initRosecat(Hero hero)

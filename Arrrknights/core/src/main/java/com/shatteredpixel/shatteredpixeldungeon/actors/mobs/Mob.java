@@ -706,7 +706,7 @@ public abstract class Mob extends Char {
 		}
 
 		if (Dungeon.hero.hasTalent(Talent.BATTLEFLOW)) {
-			if (Dungeon.hero.pointsInTalent(Talent.BATTLEFLOW) > Random.Int(12)) {
+			if (Dungeon.hero.pointsInTalent(Talent.BATTLEFLOW) > Random.Int(15)) {
 				AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
 				if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null)
 				{

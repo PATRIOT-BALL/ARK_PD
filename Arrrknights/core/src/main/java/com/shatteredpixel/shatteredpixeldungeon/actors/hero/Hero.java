@@ -81,6 +81,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Shinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Thoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.WolfSpirit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
@@ -93,6 +94,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.FlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.LandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Nervous;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.NeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Reflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.RockfailHammer;
@@ -103,6 +105,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TrueSilverSlash;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.YourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
@@ -226,7 +229,7 @@ public class Hero extends Char {
 
     public String named;
 
-    public Skill SK1 = new FlashShield();
+    public Skill SK1;
     public Skill SK2;
     public Skill SK3;
 
@@ -1282,7 +1285,7 @@ public class Hero extends Char {
                     Gear.discharge(); }}
 
             if (Dungeon.hero.hasTalent(Talent.BARRIER_REPAIR)) {
-                if (Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(10)) {
+                if (Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(7)) {
                     Gear.SPCharge(1); }
             }
         }
@@ -2173,6 +2176,8 @@ public class Hero extends Char {
             SK1 = new Camouflage();
         } else if (SkillNumber == 13) {
             SK1 = new WolfSpirit();
+        } else if (SkillNumber == 13) {
+            SK1 = new Thoughts();
         } else SK1 = null;
     }
 
@@ -2205,6 +2210,8 @@ public class Hero extends Char {
             SK2 = new Dreamland();
         } else if (SkillNumber == 14) {
             SK2 = new FlashShield();
+        } else if (SkillNumber == 15) {
+            SK2 = new Nervous();
         } else SK2 = null;
     }
 
@@ -2221,6 +2228,8 @@ public class Hero extends Char {
             SK3 = new TerminationT();
         } else if (SkillNumber == 6) {
             SK3 = new TrueSilverSlash();
+        } else if (SkillNumber == 7) {
+            SK3 = new YourWish();
         } else SK3 = null;
     }
 

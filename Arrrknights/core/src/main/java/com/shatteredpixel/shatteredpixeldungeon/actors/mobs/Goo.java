@@ -35,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMod
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.HuntressArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.MageArmor;
@@ -277,6 +278,9 @@ public class Goo extends Mob {
 				break;
 			case HUNTRESS:
 				Dungeon.level.drop(new BookPowerfulStrike(), pos).sprite.drop(pos);
+				break;
+			case ROSECAT:
+				Dungeon.level.drop(new BookThoughts(), pos).sprite.drop(pos);
 				break;
 		}
 		

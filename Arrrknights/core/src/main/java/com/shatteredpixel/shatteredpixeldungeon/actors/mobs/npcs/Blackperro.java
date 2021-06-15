@@ -26,6 +26,7 @@ public class Blackperro extends NPC {
     {
         spriteClass = DobermannSprite.class;
         properties.add(Char.Property.IMMOVABLE);
+        properties.add(Property.NPC);
     }
 
     @Override
