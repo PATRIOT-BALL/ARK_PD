@@ -333,8 +333,8 @@ public class WndStartGame extends Window {
 							heroMisc.icon(new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16 ));
 							break;
 						case ROSECAT:
-							heroItem.icon(new ItemSprite(ItemSpriteSheet.SPIRIT_BOW, null));
-							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.GLOVES, null));
+							heroItem.icon(new ItemSprite(ItemSpriteSheet.ARTIFACT_ROSEMARY, null));
+							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.TRIDENT, null));
 							heroMisc.icon(new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16 ));
 							break;
 					}
