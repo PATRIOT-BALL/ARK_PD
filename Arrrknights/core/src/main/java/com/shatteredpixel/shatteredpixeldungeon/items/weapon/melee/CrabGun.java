@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class CrabGun extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.ENFILD;
+        image = ItemSpriteSheet.BEENS;
         hitSound = Assets.Sounds.SKILL_BEEP;
         hitSoundPitch = 1f;
 
