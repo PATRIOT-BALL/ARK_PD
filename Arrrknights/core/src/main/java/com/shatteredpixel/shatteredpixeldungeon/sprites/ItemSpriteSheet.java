@@ -1,4 +1,4 @@
-/*
+a/*
  * Pixel Dungeon
  * Copyright (C) 2012-2015 Oleg Dolya
  *
@@ -248,6 +248,7 @@ public class ItemSpriteSheet {
 	public static final int SAI             = WEP_TIER3+4;
 	public static final int WHIP            = WEP_TIER3+5;
 	public static final int GAMZA_SHIELD     = WEP_TIER3+6;
+	public static final int BEENS     = WEP_TIER3+7;
 	static{
 		assignItemRect(SWORD,           16, 16);
 		assignItemRect(MACE,            16, 16);
@@ -255,6 +256,9 @@ public class ItemSpriteSheet {
 		assignItemRect(ROUND_SHIELD,    16, 16);
 		assignItemRect(SAI,             16, 16);
 		assignItemRect(WHIP,            16, 16);
+		assignItemRect(GAMZA_SHIELD,            16, 16);
+		assignItemRect(BEENS,            16, 16);
+
 	}
 
 	private static final int WEP_TIER4      =                               xy(9, 8);   //8 slots
