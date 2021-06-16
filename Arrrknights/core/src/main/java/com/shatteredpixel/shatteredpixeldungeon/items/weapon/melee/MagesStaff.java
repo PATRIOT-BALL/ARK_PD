@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.Artifact;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
@@ -190,6 +191,11 @@ public class MagesStaff extends MeleeWeapon {
 		int reach = super.reachFactor(owner);
 		if (owner instanceof Hero
 				&& wand instanceof WandOfDisintegration
+				&& ((Hero)owner).subClass == HeroSubClass.BATTLEMAGE){
+			reach++;
+		}
+		else if (owner instanceof Hero
+				&& wand instanceof StaffOfVigna
 				&& ((Hero)owner).subClass == HeroSubClass.BATTLEMAGE){
 			reach++;
 		}
