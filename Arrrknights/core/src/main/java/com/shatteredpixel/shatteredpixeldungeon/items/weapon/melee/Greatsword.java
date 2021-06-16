@@ -40,7 +40,7 @@ public class Greatsword extends MeleeWeapon {
 	}
 	@Override
 	public int max(int lvl) {
-		return  3*(tier) +    // 15 + 3
+		return  3*(tier) + 1 +    // 16 + 3
 				lvl*Math.round(0.5f*(tier+1));   //scaling unchanged
 	}
 

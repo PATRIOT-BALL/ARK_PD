@@ -88,6 +88,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.CoverSmoke;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.DeepHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Dreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.FlashShield;
@@ -2212,6 +2213,8 @@ public class Hero extends Char {
             SK2 = new FlashShield();
         } else if (SkillNumber == 15) {
             SK2 = new Nervous();
+        } else if (SkillNumber == 16) {
+            SK2 = new DeepHealing();
         } else SK2 = null;
     }
 

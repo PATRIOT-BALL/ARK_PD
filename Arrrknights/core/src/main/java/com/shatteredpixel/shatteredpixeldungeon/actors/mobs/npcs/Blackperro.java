@@ -41,7 +41,7 @@ public class Blackperro extends NPC {
     @Override
     public boolean interact(Char c) {
         sprite.turnTo(pos, c.pos);
-        if (Challenges.activeChallenges() == 0) {
+        if (Challenges.activeChallenges() == 0 && Dungeon.hero.lvl == 1) {
             if (Dungeon.eazymode == -1) {
             Game.runOnRenderThread(new Callback() {
                 @Override

@@ -60,7 +60,7 @@ public class RandomBox extends Item {
     { new Gold(Random.IntRange(100,550)).doPickUp(Dungeon.hero); }
 
     public void GetGold_high()
-    { new Gold(Random.IntRange(350,800)).doPickUp(Dungeon.hero); }
+    { new Gold(Random.IntRange(150,800)).doPickUp(Dungeon.hero); }
 
     public void GetSkill(){
         int chance = Random.IntRange(0, 50);

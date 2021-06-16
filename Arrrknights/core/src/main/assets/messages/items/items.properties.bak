@@ -126,6 +126,10 @@ items.skill.sk2.booknervous.name=말초 차단의 스킬개론
 items.skill.sk2.booknervous.desc=_말초 차단_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내의 적들에게 마비 부여\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.booknervous.ac_use=읽는다
 
+items.skill.sk2.bookdeephealing.name=심화 치료의 스킬개론
+items.skill.sk2.bookdeephealing.desc=_심화 치료_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 전부 회목 및 지속 치유. 사용시 스킬 제거\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookdeephealing.ac_use=읽는다
+
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookshadowassault.ac_use=읽는다
@@ -290,6 +294,10 @@ items.skill.sk2.flashshield.desc_wnd=발동시 시야 내의 적들에게 마비
 items.skill.sk2.nervous.name=_말초 차단(2스킬)_
 items.skill.sk2.nervous.desc=발동시 시야 내의 적을 마비시킵니다.
 items.skill.sk2.nervous.desc_wnd=발동시 시야 내의 적들에게 마비와 침묵 부여
+
+items.skill.sk2.deephealing.name=_심화 치료(2스킬)_
+items.skill.sk2.deephealing.desc=발동시 체력을 전부 회복하고 일정 시간동안 지속 회복 상태가 됩니다. 사용시 _스킬이 제거_됩니다.
+items.skill.sk2.deephealing.desc_wnd=발동시 체력 전부 회복 및 지속 회복. 1회용
 
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
 items.skill.sk3.shadowassault.desc=발동시 목표 지점으로 도약하여 가장 가까운 적에게 _10회의 일반 공격_을 가하고, 짧은 시간동안 충전 효과를 얻습니다.
@@ -744,7 +752,7 @@ items.artifacts.unstablespellbook.prompt=일기장를 선택하세요
 items.artifacts.unstablespellbook.infuse_scroll=일기장의 아츠를 일기장과 합쳤다.
 items.artifacts.unstablespellbook.unable_scroll=이 일기장는 합칠 수 없다.
 items.artifacts.unstablespellbook.unknown_scroll=당신은 아직 이 일기장이 어떤 종류인지 모른다.
-items.artifacts.unstablespellbook.desc무언가 자주 까먹는 로즈마리가 항상 들고 다니는 일기장 겸 수첩. 별볼일 없어보이는 내용에도 그녀가 생각하던 아츠가 담겨있어, 당신이 이 책을 읽을 때, 어떤 아츠가 시전될 것인지는 아무도 모릅니다.
+items.artifacts.unstablespellbook.desc=무언가 자주 까먹는 로즈마리가 항상 들고 다니는 일기장 겸 수첩. 별볼일 없어보이는 내용에도 그녀가 생각하던 아츠가 담겨있어, 당신이 이 책을 읽을 때, 어떤 아츠가 시전될 것인지는 아무도 모릅니다.
 items.artifacts.unstablespellbook.desc_cursed=저주받은 일기장은 당신과 꼭 붙어 있으며, 일기장의 사용을 막고 있습니다. 숙녀의 일기장은 함부로 훔쳐보는게 아니다.
 items.artifacts.unstablespellbook.desc_index="박사, 이 단어, 알려 줘."\n이 책의 빈 부분은 다음과 같습니다:
 items.artifacts.unstablespellbook.desc_empowered=책에 추가된 일기장이 강력한 힘을 발산하고 있습니다. 당신은 이 일기장의 신비로운 힘을 일깨워 사용할 수 있지만, 추가 SP를 요구할 것입니다.
