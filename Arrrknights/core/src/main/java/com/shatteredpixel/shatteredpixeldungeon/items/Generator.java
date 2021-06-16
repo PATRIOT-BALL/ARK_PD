@@ -143,6 +143,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
@@ -365,9 +366,10 @@ public class Generator {
                     WornShortsword.class,
                     Gloves.class,
                     Dagger.class,
-                    MagesStaff.class
+                    MagesStaff.class,
+                    EX42.class
             };
-            WEP_T1.probs = new float[]{1, 1, 1, 0};
+            WEP_T1.probs = new float[]{1, 1, 1, 0, 1};
 
             WEP_T2.classes = new Class<?>[]{
                     Shortsword.class,
@@ -388,7 +390,7 @@ public class Generator {
                     Whip.class,
                     CrabGun.class
             };
-            WEP_T3.probs = new float[]{6, 5, 5, 4, 4, 4, 4};
+            WEP_T3.probs = new float[]{6, 5, 5, 4, 4, 4, 3};
 
             WEP_T4.classes = new Class<?>[]{
                     Longsword.class,
@@ -400,7 +402,7 @@ public class Generator {
                     M1887.class,
                     Naginata.class
             };
-            WEP_T4.probs = new float[]{5, 5, 5, 4, 4, 4, 4};
+            WEP_T4.probs = new float[]{4, 5, 5, 4, 4, 4, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,

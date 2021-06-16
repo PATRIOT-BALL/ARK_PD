@@ -42,8 +42,7 @@ public class AncientKin extends Skill {
                             Seaborn seaborn = new Seaborn();
                             seaborn.pos = mob.pos;
 
-                            mob.destroy();
-                            mob.sprite.killAndErase();
+                            mob.die(Dungeon.hero);
                             Dungeon.level.mobs.remove(mob);
                             TargetHealthIndicator.instance.target(null);
                             GameScene.add(seaborn);
