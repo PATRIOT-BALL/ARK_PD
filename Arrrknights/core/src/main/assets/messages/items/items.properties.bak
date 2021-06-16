@@ -1994,7 +1994,7 @@ items.weapon.melee.ex42.stats_desc=사거리 +1, 공격속도 -20%, 명중률 -1
 items.weapon.melee.ex42.desc=이 오리지늄 아츠 원격 조종 장치는 타고 날아다닐 수도 있습니다.
 
 items.weapon.melee.naginata.name=나기나타
-items.weapon.melee.naginata.stats_desc=사거리 +1, 공격속도 -20%, 명중률 -10%
+items.weapon.melee.naginata.stats_desc=사거리 +1, 공격속도 -20%
 items.weapon.melee.naginata.desc=정답은? 정답은 없다, 선택만이 있을 수도 있다.
 
 

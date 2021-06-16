@@ -86,10 +86,10 @@ public class MidnightSword extends MeleeWeapon {
         if (action.equals(AC_ZAP) && charge > 0) {
             if (this.cursed != true) {
                 GameScene.selectCell(zapper);
-                cursedKnown = true;
             }
             else {
                 Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero,4f);
+                cursedKnown = true;
                 charge -= 1;
             }
         }

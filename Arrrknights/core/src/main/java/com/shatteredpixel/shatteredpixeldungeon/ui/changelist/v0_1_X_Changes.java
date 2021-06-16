@@ -69,7 +69,7 @@ public class v0_1_X_Changes {
                 "- _[1티어] 늑대의 혼_ : 사거리 3의 범위 상태이상 공격을 가합니다. 범위 내 적들은 _침묵하여 특수 능력이 봉인_됩니다." + "\n\n" +
                         "- _[2티어]꿈나라의 요람_ : 사거리 5의 범위 상태이상 공격을 가합니다. 범위 내 적들은 _수면 상태에 빠지며, 수면이 끝날 때 피해_를 받습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "가챠 박스",
+        changes.addButton(new ChangeButton(Icons.get(Icons.GOLD), "가챠 박스",
                 "- 이 _수상한 상자_는 합성옥, 무기, 스킬개론 중 하나를 _무작위_로 줍니다. _플레이어 능력치 기반 확률 변동 시스템_이라는 획기적인 시스템이 탑재되어있습니다!"));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);

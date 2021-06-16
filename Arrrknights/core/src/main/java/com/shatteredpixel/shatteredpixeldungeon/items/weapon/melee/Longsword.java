@@ -95,10 +95,10 @@ public class Longsword extends MeleeWeapon {
 		if (action.equals(AC_ZAP) && charge > 0) {
 			if (this.cursed != true) {
 				GameScene.selectCell(zapper);
-				cursedKnown = true;
 			}
 			else {
 				Buff.affect(Dungeon.hero, Silence.class, 45f);
+				cursedKnown = true;
 				charge -= 1;
 			}
 		}
