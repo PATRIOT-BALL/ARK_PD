@@ -214,7 +214,7 @@ public abstract class Scroll extends Item {
 		}
 
 		if (curUser.hasTalent(Talent.RHODES)){
-			Buff.affect(curUser, ArcaneArmor.class).set(curUser.pointsInTalent(Talent.RHODES) * 5, 5);
+			Buff.affect(curUser, ArcaneArmor.class).set(curUser.pointsInTalent(Talent.RHODES) * 5, 15);
 		}
 
 	}
