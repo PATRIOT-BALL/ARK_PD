@@ -86,7 +86,7 @@ public class SupporterScene extends PixelScene {
 				DeviceCompat.openURI(link);
 			}
 		};
-		link.icon(Icons.get(Icons.ROSEMARI));
+		link.icon(Icons.get(Icons.MONNY));
 		link.textColor(Window.TITLE_COLOR);
 		link.setSize(elementWidth, BTN_HEIGHT);
 		add(link);

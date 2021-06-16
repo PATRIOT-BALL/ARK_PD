@@ -16,6 +16,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Rock_CrabSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -109,7 +110,7 @@ public class CrabGun extends MeleeWeapon {
 
     public class MetalCrab extends Mob {
         {
-            spriteClass = Bug_ASprite.class;
+            spriteClass = Rock_CrabSprite.class;
             baseSpeed = 1f;
 
             immunities.add(Silence.class);

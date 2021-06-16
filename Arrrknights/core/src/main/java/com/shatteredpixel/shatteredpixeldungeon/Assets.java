@@ -342,6 +342,7 @@ public class Assets {
 
 
 		public static final String LOTUS	= "sprites/lotus.png";
+
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";
 		public static final String CLOSURE	= "sprites/closure.png";
@@ -353,6 +354,7 @@ public class Assets {
 		public static final String FAUST	= "sprites/Faust.png";
 
 		public static final String LENS	= "sprites/lens.png";
+		public static final String ROCK_CRAB	= "sprites/rock_crab.png";
 		public static final String FANATIC	= "sprites/fanatic.png";
 		public static final String AIRBORNE	= "sprites/airborne.png";
 		public static final String URSUS_INFANTRI	= "sprites/Ursus_Infantri.png";

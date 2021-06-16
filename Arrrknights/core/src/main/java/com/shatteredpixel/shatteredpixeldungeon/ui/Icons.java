@@ -94,7 +94,8 @@ public enum Icons {
 	GREY,
 	NEARL,
 	ROSEMARI,
-	HYPER;
+	HYPER,
+	MONNY;
 
 	public Image get() {
 		return get( this );
@@ -223,6 +224,9 @@ public enum Icons {
 			case HYPER:
 				icon.frame(icon.texture.uvRect(0, 160, 32, 192));
 				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			case MONNY:
+				icon.frame(icon.texture.uvRect(32, 172, 52, 192));
 				break;
 
 

@@ -31,7 +31,7 @@ public class BugSprite extends MobSprite {
 		
 		texture( Assets.Sprites.BUG );
 		
-		TextureFilm frames = new TextureFilm( texture, 16, 16 );
+		TextureFilm frames = new TextureFilm( texture, 22, 16 );
 		
 		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 0, 0 );
