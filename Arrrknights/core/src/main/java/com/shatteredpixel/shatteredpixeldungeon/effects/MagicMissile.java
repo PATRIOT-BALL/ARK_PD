@@ -41,7 +41,7 @@ import com.watabou.utils.Random;
 
 public class MagicMissile extends Emitter {
 
-	private static final float SPEED	= 200f;
+	private static final float SPEED	= 800f;
 	
 	private Callback callback;
 	

@@ -14,6 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.CorrosionParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -42,11 +43,12 @@ public class StaffOfBreeze extends Wand {
 
     @Override
     protected void onZap(Ballistica bolt) {
-        HealingGas gas = Blob.seed(bolt.collisionPos, 30 + 10 * (buffedLvl() * 2), HealingGas.class);
+        HealingGas gas = Blob.seed(bolt.collisionPos, 30 + 10 * (curCharges * 2), HealingGas.class);
         CellEmitter.get(bolt.collisionPos).burst(Speck.factory(Speck.HEALING), 10 );
         gas.setStrength(1);
         GameScene.add(gas);
         Sample.INSTANCE.play(Assets.Sounds.GAS);
+        curCharges = 1;
 
         for (int i : PathFinder.NEIGHBOURS9) {
             Char ch = Actor.findChar(bolt.collisionPos + i);
