@@ -744,12 +744,11 @@ items.artifacts.unstablespellbook.prompt=일기장를 선택하세요
 items.artifacts.unstablespellbook.infuse_scroll=일기장의 아츠를 일기장과 합쳤다.
 items.artifacts.unstablespellbook.unable_scroll=이 일기장는 합칠 수 없다.
 items.artifacts.unstablespellbook.unknown_scroll=당신은 아직 이 일기장이 어떤 종류인지 모른다.
-items.artifacts.unstablespellbook.desc=간단한 것 아닌가.네가 바로 그녀의 세상이다. 네가 어떻게 그녀를 대하는지에 따라 그녀가 어떻게 세상을 대하는지가 결정날 것이다.\n\n 사용시 무작위 일기장 효과가 발동합니다.
+items.artifacts.unstablespellbook.desc무언가 자주 까먹는 로즈마리가 항상 들고 다니는 일기장 겸 수첩. 별볼일 없어보이는 내용에도 그녀가 생각하던 아츠가 담겨있어, 당신이 이 책을 읽을 때, 어떤 아츠가 시전될 것인지는 아무도 모릅니다.
 items.artifacts.unstablespellbook.desc_cursed=저주받은 일기장은 당신과 꼭 붙어 있으며, 일기장의 사용을 막고 있습니다. 숙녀의 일기장은 함부로 훔쳐보는게 아니다.
 items.artifacts.unstablespellbook.desc_index="박사, 이 단어, 알려 줘."\n이 책의 빈 부분은 다음과 같습니다:
 items.artifacts.unstablespellbook.desc_empowered=책에 추가된 일기장이 강력한 힘을 발산하고 있습니다. 당신은 이 일기장의 신비로운 힘을 일깨워 사용할 수 있지만, 추가 SP를 요구할 것입니다.
 items.artifacts.unstablespellbook.read_empowered=당신이 일기장에 넣은 일기장이 힘으로 요동칩니다. 해당 일기장의 기존 효과와 신비로운 효과를 선택해서 사용할 수 있게 되었습니다.\n\n신비로운 효과를 사용하면 일기장의 SP를 2만큼 사용합니다.
-
 
 
 ###bags
