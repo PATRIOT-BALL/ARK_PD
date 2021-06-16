@@ -413,7 +413,7 @@ actors.hero.talent.tactical_shield.desc=_+1:_ 블레이즈의 갑옷 강화 수�
 actors.hero.talent.chainsaw_extend.title=전기톱 연장
 actors.hero.talent.chainsaw_extend.desc=_+1:_ 무기 사정거리가 1 상승합니다. 대신 명중률이 _크게_ 감소합니다.\n\n_+2:_ 무기 사정거리가 1 상승합니다. 대신 명중률이 _어느정도_ 감소합니다.\n\n_+3:_ 무기 사정거리가 1 상승합니다. 대신 명중률이 _약간_ 감소합니다.
 actors.hero.talent.infinite_rage.title=무한의 분노
-actors.hero.talent.infinite_rage.desc=_+1:_ 분노가 _100%_이상일 때 30%의 피해 저항을 얻습니다.\n\n_+2:_ 분노가 _75%%_이상일 때 30%의 피해 저항을 얻습니다.\n\n_+3:_ 분노가 _50%_이상일 때 30%의 피해 저항을 얻습니다.
+actors.hero.talent.infinite_rage.desc=_+1:_ 분노가 _100%_이상일 때 30%의 피해 저항을 얻습니다.\n\n_+2:_ 분노가 _75%_이상일 때 30%의 피해 저항을 얻습니다.\n\n_+3:_ 분노가 _50%_이상일 때 30%의 피해 저항을 얻습니다.
 actors.hero.talent.sparkoflife.title=생명의 불꽃
 actors.hero.talent.sparkoflife.desc=_+1:_ 공격시 _5%_ 확률로 체력을 5%회복합니다.\n\n_+2:_ 공격시 _10%_ 확률로 체력을 5%회복합니다.\n\n_+3:_ 공격시 _15%_ 확률로 체력을 5%회복합니다.
 

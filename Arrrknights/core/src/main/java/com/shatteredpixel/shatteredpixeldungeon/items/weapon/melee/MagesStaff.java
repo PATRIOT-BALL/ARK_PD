@@ -261,6 +261,39 @@ public class MagesStaff extends MeleeWeapon {
 		return this;
 	}
 
+	public Item imbueWand_kit(Wand wand, Char owner){
+
+		int oldStaffcharges = this.wand.curCharges;
+
+		this.wand = null;
+
+		//syncs the level of the two items.
+		int targetLevel = Math.max(this.level() - (curseInfusionBonus ? 1 : 0), wand.level());
+
+		//if the staff's level is being overridden by the wand, preserve 1 upgrade
+		if (wand.level() >= this.level() && this.level() > (curseInfusionBonus ? 1 : 0)) targetLevel++;
+
+		level(targetLevel);
+		this.wand = wand;
+		updateWand(false);
+		wand.curCharges = Math.min(wand.maxCharges, wand.curCharges+oldStaffcharges);
+		if (owner != null) wand.charge(owner);
+
+		//This is necessary to reset any particles.
+		//FIXME this is gross, should implement a better way to fully reset quickslot visuals
+		int slot = Dungeon.quickslot.getSlot(this);
+		if (slot != -1){
+			Dungeon.quickslot.clearSlot(slot);
+			updateQuickslot();
+			Dungeon.quickslot.setSlot( slot, this );
+			updateQuickslot();
+		}
+
+		Badges.validateItemLevelAquired(this);
+
+		return this;
+	}
+
 	public void gainCharge( float amt ){
 		gainCharge(amt, false);
 	}
@@ -457,7 +490,7 @@ public class MagesStaff extends MeleeWeapon {
 		curUser.sprite.emitter().burst( ElmoParticle.FACTORY, 12 );
 		evoke(curUser);
 		Dungeon.quickslot.clearItem(wand);
-		imbueWand( wand, curUser );
+		imbueWand_kit( wand, curUser );
 
 		wand.identify();
 
