@@ -48,7 +48,7 @@ public class MeatPie extends Food {
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
 			if (hero.belongings.getItem(AnnihilationGear.class) != null)
 			{
-				Gear.SPCharge(hero.pointsInTalent(Talent.DELICIOUS_FOOD));
+				Gear.SPCharge(hero.pointsInTalent(Talent.DELICIOUS_FOOD) * 2);
 			}
 		}
 	}

@@ -452,11 +452,6 @@ public class YogDzewa extends Mob {
 				Dungeon.hero.SK3 = null;
 				Dungeon.hero.HT /= 2;
 				Dungeon.hero.HP /= 2;
-
-				while (Dungeon.hero.belongings.getItem(PotionOfExperience.class) != null)
-				{
-					Dungeon.hero.belongings.getItem(PotionOfExperience.class).detach(Dungeon.hero.belongings.backpack);
-				}
 			}
 				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1) {
 					Buff.affect(Dungeon.hero, Doom.class);

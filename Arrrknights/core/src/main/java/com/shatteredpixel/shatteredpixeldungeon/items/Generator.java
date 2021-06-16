@@ -44,6 +44,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHamm
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Bookancientkin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookYourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
@@ -157,6 +158,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
@@ -395,7 +397,8 @@ public class Generator {
                     RunicBlade.class,
                     AssassinsBlade.class,
                     Crossbow.class,
-                    M1887.class
+                    M1887.class,
+                    Naginata.class
             };
             WEP_T4.probs = new float[]{5, 5, 5, 4, 4, 4, 4};
 
@@ -523,9 +526,10 @@ public class Generator {
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
-                    BookTerminationT.class
+                    BookTerminationT.class,
+                    BookYourWish.class // 로즈몬티스 정식 패치 시 삭제
             };
-            SKL_T3.probs = new float[]{1, 1};
+            SKL_T3.probs = new float[]{2, 2, 1};
 
 
             SKL_RND.classes = new Class<?>[]{
@@ -537,12 +541,12 @@ public class Generator {
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
                     BookLandingStrike.class, BookDreamland.class,
 
-                    BookTrueSilverSlash.class, BookTerminationT.class
+                    BookTrueSilverSlash.class, BookTerminationT.class, BookYourWish.class
             };
             SKL_RND.probs = new float[]{
                     4, 4, 4, 4, 4, 4, 4, 4, 4,
                     3, 3, 3, 3, 3, 3, 3, 3, 3,
-                    1, 1
+                    2, 2, 1
             };
         }
     }

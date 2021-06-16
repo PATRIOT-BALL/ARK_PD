@@ -578,9 +578,9 @@ actors.hero.talent.battleflow.desc=_+1:_ 누군가가 사망할 때 _6%_ 확률�
 actors.hero.talent.barrier_operation.title=수호 방벽 전개
 actors.hero.talent.barrier_operation.desc=_+1:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _60%_ 로 상승합니다.\n\n_+2:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _70%_ 로 상승합니다.\n\n_+3:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _80%_ 로 상승합니다.
 actors.hero.talent.barrier_repair.title=방벽 재생
-actors.hero.talent.barrier_repair.desc=_+1:_ 피격 당하면 _6%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.\n\n_+2:_ 피격 당하면 _13%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.\n\n_+3:_ 피격 당하면 _20%_ 확률로 섬멸전 장비를 1 만큼 충전합니다.
+actors.hero.talent.barrier_repair.desc=_+1:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 5%에서 _10%_ 로 상승합니다.\n\n_+2:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 5%에서 _15%_ 로 상승합니다.\n\n_+3:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 5%에서 _20%_ 로 상승합니다.
 actors.hero.talent.rhodes_cat.title=로도스의 필라인
-actors.hero.talent.rhodes_cat.desc=_+1:_ 섬멸전 장비의 충전이 1 이상이면 근접 공격의 피해량이 _15%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전이 1 이상이면 근접 공격의 피해량이 _30%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전이 1 이상이면 근접 공격의 피해량이 _45%_ 상승합니다.
+actors.hero.talent.rhodes_cat.desc=_+1:_ 섬멸전 장비의 충전이 1 이상이면 근접 공격의 피해량이 _20%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전이 1 이상이면 근접 공격의 피해량이 _40%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전이 1 이상이면 근접 공격의 피해량이 _60%_ 상승합니다.
 actors.hero.talent.rhodes_weapon.title=로도스의 병기
 actors.hero.talent.rhodes_weapon.desc=_+1:_ 섬멸전 장비의 공격력이 _4_ 만큼 상승합니다.\n\n_+2:_ 섬멸전 장비의 공격력이 _8_ 만큼 상승합니다.\n\n_+3:_ 섬멸전 장비의 공격력이 _12_ 만큼 상승합니다.
 actors.hero.talent.recall_memory.title=기억 되새기기
@@ -588,7 +588,7 @@ actors.hero.talent.recall_memory.desc=_+1:_ 일기장을 읽으면 아츠 기록
 actors.hero.talent.esthesia.title=본질 의식
 actors.hero.talent.esthesia.desc=_+1:_ 방벽 투척이 _보스_ 에게 _15%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _보스_ 에게 _30%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _보스_ 에게 _45%_ 의 추가 피해를 줍니다.
 actors.hero.talent.speed_comabt.title=고속전투
-actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _33%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _66%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _100%_ 상승합니다.
+actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _40%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _60%_ 상승합니다.
 
 
 
@@ -674,10 +674,10 @@ actors.hero.herosubclass.warden_changename=자연 전문화
 actors.hero.herosubclass.warden_desc=_자연 전문화_ 는 자연과의 강한 결속을 통해 긴 수풀 너머를 볼 수 있고, 헤쳐나간 풀을 그녀가 키우는 식물 근처에 자라나게 할 수 있습니다. 그녀가 밟은 식물들은 추가 효과를 줄 것입니다.
 actors.hero.herosubclass.destroyer=파괴 로즈몬티스
 actors.hero.herosubclass.destroyer_changename=파괴 전문화
-actors.hero.herosubclass.destroyer_desc=_파괴 전문화_ 는 방벽의 공격력을 끌어올려 한 번에 쏟아내는데 특화되어있습니다. 방벽 투척 후 _집중_ 상태가 되며, 이 상태일 때 사용하는 방벽 투척은 30%의 추가 피해를 줍니다.\n\n또한, 고기를 섭취하면 조리 상태에 따라 다른 효과를 얻습니다.
+actors.hero.herosubclass.destroyer_desc=_파괴 전문화_ 는 방벽의 공격력을 끌어올려 한 번에 쏟아내는데 특화되어있습니다. 방벽 투척 후 _집중_ 상태가 되며, 이 상태일 때 사용하는 방벽 투척은 30%의 추가 피해를 줍니다. 또한 고기를 섭취하면 조리 상태에 따라 다른 효과를 얻습니다.
 actors.hero.herosubclass.guardian=수호 로즈몬티스
 actors.hero.herosubclass.guardian_changename=수호 전문화
-actors.hero.herosubclass.guardian_desc=_수호 전문화_ 는 자신의 방벽을 방어적으로 사용합니다. 피격시 섬멸전장치의 충전량을 소모해 피해를 감소시킬 수 있습니다.
+actors.hero.herosubclass.guardian_desc=_수호 전문화_ 는 자신의 방벽을 방어적으로 사용합니다. 피격시 섬멸전 장비의 충전량을 소모해 피해를 감소시킬 수 있습니다. 또한 적의 공격을 받으면 낮은 확률로 섬멸전 장비를 충전합니다.
 
 
 
