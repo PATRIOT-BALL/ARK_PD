@@ -80,7 +80,7 @@ public class v0_1_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 변경",
                 "- _스태프 오브 브리즈_ 가 사용시 모든 SP를 소모하는 대신 회복의 안개가 소모 SP에 비례하며, 안개의 영향을 받는 _모든_ 캐릭터는 _아츠 면역_ 상태가 됩니다!" + "\n\n" +
-                        "- 이제 흑요석 반지를 스태프 개조 키트로 개조할 수 있습니다."));
+                        "- 이제 흑요석 반지를 스태프 개조 키트로 개조할 수 있게되었지만, 스태프 개조 키트의 제작에 필요한 가공소 에너지가 6에서 _15_ 로 상승했습니다."));
 
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLOOD_SHAMAN, 6, 7, 16, 16), "몬스터 변경",
                 "- _블러드 위치_ : 자해 피해로 사망하지 않게됩니다." + "\n\n" +
@@ -115,12 +115,14 @@ public class v0_1_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
-                "- _하야부사_ : 명중률 보정치가 +10%에서 _-15%_ 로 감소했습니다." + "\n\n" +
+                "- _동야의 마왕_ : 마왕 에너지 발사의 기본 피해량이 2-8에서 _1-6_ 으로 감소했습니다." + "\n\n" +
+                        "- _하야부사_ : 명중률 보정치가 +10%에서 _-15%_ 로 감소했습니다." + "\n\n" +
                 "- _영소_ : 공격속도 보정치가 -33%에서 -_50%_ 로 감소했습니다." + "\n\n" +
                 "- _끓어오르는 투지_ : 공격력이 5-18에서 _5-16_ 으로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
-                "- _스태프 오브 비그나_의 기본 사거리가 상승했지만, 강화에 비례한 사거리 증가량이 감소했습니다."));
+                "- _스태프 오브 비그나_의 기본 사거리가 상승했지만, 강화에 비례한 사거리 증가량이 감소했습니다." + "\n\n" +
+                "- _스태프 오브 커럽팅_의 효율이 감소했으며, 소환되는 혈족이 이제 _체력이 절반_ 인 상태로 소환됩니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "- 다음과 같은 특성들이 하향 조정되었습니다." + "\n\n" +

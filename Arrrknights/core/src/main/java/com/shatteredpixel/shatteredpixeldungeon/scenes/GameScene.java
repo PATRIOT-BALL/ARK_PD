@@ -32,6 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DemonSpawner;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -1078,11 +1079,16 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void gameOver() {
-		Banner gameOver = new Banner( BannerSprites.get( BannerSprites.Type.GAME_OVER ) );
-		gameOver.show( 0x000000, 1f );
-		scene.showBanner( gameOver );
+			Banner gameOver = new Banner(BannerSprites.get(BannerSprites.Type.GAME_OVER));
+			gameOver.show(0x000000, 1f);
+			scene.showBanner(gameOver);
 		
 		Sample.INSTANCE.play( Assets.Sounds.DEATH );
+
+		final String[] LINE_KEYS = {"DM1", "DM2", "DM3", "DM4", "DM5", "DM6", "DM7", "DM8"};
+
+		if (!Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_2)) {
+			GLog.h(Messages.get(Hero.class, Random.element( LINE_KEYS ))); }
 	}
 	
 	public static void bossSlain() {

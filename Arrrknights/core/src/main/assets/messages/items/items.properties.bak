@@ -127,7 +127,7 @@ items.skill.sk2.booknervous.desc=_말초 차단_ 스킬의 정보가 기록되�
 items.skill.sk2.booknervous.ac_use=읽는다
 
 items.skill.sk2.bookdeephealing.name=심화 치료의 스킬개론
-items.skill.sk2.bookdeephealing.desc=_심화 치료_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 전부 회목 및 지속 치유. 사용시 스킬 제거\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookdeephealing.desc=_심화 치료_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 전부 회목 및 지속 치유. 사용 후 기록장치에서 스킬 제거\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookdeephealing.ac_use=읽는다
 
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론

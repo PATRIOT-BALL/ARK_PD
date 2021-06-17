@@ -143,7 +143,7 @@ public class StaffOfCorrupting extends Wand {
                 enemyResist = 1 + 3;
             }
 
-            enemyResist *= 4*Math.pow(enemy.HP/(float)enemy.HT, 2);
+            enemyResist *= 0.75f + 4*Math.pow(enemy.HP/(float)enemy.HT, 2);
 
             //debuffs placed on the enemy reduce their resistance
             for (Buff buff : enemy.buffs()){

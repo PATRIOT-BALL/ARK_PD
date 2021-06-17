@@ -493,7 +493,7 @@ public class StaffKit extends Item {
             inputs =  new Class[]{MetalShard.class, AlchemicalCatalyst.class};
             inQuantity = new int[]{1, 1};
 
-            cost = 6;
+            cost = 15;
 
             output = StaffKit.class;
             outQuantity = 1;

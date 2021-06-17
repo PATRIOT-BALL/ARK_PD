@@ -22,7 +22,17 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Bundle;
+import com.watabou.utils.PathFinder;
+import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Enfild extends MeleeWeapon {
 
@@ -36,16 +46,50 @@ public class Enfild extends MeleeWeapon {
         RCH = 50;    //extra reach
     }
 
+    private int charge = 100;
+    private int chargeCap = 100;
+
     @Override
-    public int min(int lvl) {
-        return  3*(tier) +  //base
-                lvl*(tier);     //level scaling
+    public int min(int lvl) { return  10; }
+
+    @Override
+    public int max(int lvl) { return  10; }
+
+    @Override
+    public int value() { return super.value() + 30; }
+
+    @Override
+    public boolean isUpgradable() { return false; }
+
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        if (charge >= chargeCap) {
+            damage *= 1.5f;
+            charge = 0;
+        }
+        else SPCharge(20);
+        return super.proc(attacker, defender, damage);
+    }
+
+    public void SPCharge(int n) {
+        charge += n;
+        if (chargeCap < charge) charge = chargeCap;
+        updateQuickslot();
+    }
+
+
+    private static final String CHARGE = "charge";
+
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(CHARGE, charge);
     }
 
     @Override
-    public int max(int lvl) {
-        return  3*(tier) +    //base
-                lvl*(tier);   //level scaling
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
+        else charge = bundle.getInt(CHARGE);
     }
-
 }
