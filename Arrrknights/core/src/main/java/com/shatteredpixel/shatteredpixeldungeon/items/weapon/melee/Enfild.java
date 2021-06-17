@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Bundle;
@@ -75,6 +76,22 @@ public class Enfild extends MeleeWeapon {
         charge += n;
         if (chargeCap < charge) charge = chargeCap;
         updateQuickslot();
+    }
+
+    @Override
+    public String status() {
+
+        //if the artifact isn't IDed, or is cursed, don't display anything
+        if (!isIdentified() || cursed) {
+            return null;
+        }
+        //display as percent
+        if (chargeCap == 100)
+            return Messages.format("%d%%", charge);
+
+
+        //otherwise, if there's no charge, return null.
+        return null;
     }
 
 

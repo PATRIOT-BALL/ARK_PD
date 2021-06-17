@@ -126,7 +126,7 @@ public class v0_1_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
                 "- _스태프 오브 비그나_의 기본 사거리가 상승했지만, 강화에 비례한 사거리 증가량이 감소했습니다." + "\n\n" +
-                "- _스태프 오브 커럽팅_의 효율이 감소했으며, 소환되는 혈족이 이제 _체력이 절반_ 인 상태로 소환됩니다."));
+                "- _스태프 오브 커럽팅_의 타락 효율이 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "- 다음과 같은 특성들이 하향 조정되었습니다." + "\n\n" +
