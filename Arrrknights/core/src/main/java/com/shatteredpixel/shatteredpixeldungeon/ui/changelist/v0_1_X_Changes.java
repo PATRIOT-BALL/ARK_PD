@@ -82,8 +82,10 @@ public class v0_1_X_Changes {
                 "- _스태프 오브 브리즈_ 가 사용시 모든 SP를 소모하는 대신 회복의 안개가 소모 SP에 비례하며, 안개의 영향을 받는 _모든_ 캐릭터는 _아츠 면역_ 상태가 됩니다!" + "\n\n" +
                         "- 이제 흑요석 반지를 스태프 개조 키트로 개조할 수 있습니다."));
 
-        changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLOOD_SHAMAN, 6, 7, 16, 16), "블러드 위치 변경",
-                "- 자해 피해로 사망하지 않게됩니다."));
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.BLOOD_SHAMAN, 6, 7, 16, 16), "몬스터 변경",
+                "- _블러드 위치_ : 자해 피해로 사망하지 않게됩니다." + "\n\n" +
+                "- _W_ : 특수 지뢰 패턴의 카운트가 2배로 상승했지만, 대신 매 턴마다 카운트가 진행됩니다. (플레이어가 감지되면 매 턴 카운트 2 진행, 감지되지 않았다면 카운트 1 진행)" +
+                "\n통합 운동 적용시 특수 지뢰 패턴의 시전 방식이 약간 변경되었으며, 보스 클리어 후 맵의 낭떠러지가 사라졌습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
