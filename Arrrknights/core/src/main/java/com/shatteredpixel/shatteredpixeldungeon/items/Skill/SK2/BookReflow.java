@@ -46,8 +46,6 @@ public class BookReflow extends Item {
     }
 
     @Override
-    public boolean isIdentified() {
-        return false;
-    }
+    public boolean isIdentified() { return true; }
 }
 

@@ -45,12 +45,9 @@ public class BookNervous extends Item {
     }
 
     @Override
-    public boolean isIdentified() {
-        return false;
-    }
+    public boolean isIdentified() { return true; }
 
     @Override
     public int value() {
-        return 45;
-    }
+        return 45; }
 }

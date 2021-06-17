@@ -72,21 +72,7 @@ public class ArcaneArmor extends Buff {
 	public int icon() {
 		return BuffIndicator.ARMOR;
 	}
-	
-	@Override
-	public void tintIcon(Image icon) {
-		icon.hardlight(1f, 0.5f, 2f);
-	}
 
-	@Override
-	public float iconFadePercent() {
-		if (target instanceof Hero){
-			float max = ((Hero) target).lvl/2 + 5;
-			return (max-level)/max;
-		}
-		return 0;
-	}
-	
 	@Override
 	public String toString() {
 		return Messages.get(this, "name");
