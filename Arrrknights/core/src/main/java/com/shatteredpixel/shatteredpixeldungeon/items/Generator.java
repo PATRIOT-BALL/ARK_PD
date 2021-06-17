@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookBenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDeepHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
@@ -523,8 +524,9 @@ public class Generator {
                     Bookancientkin.class,
                     BookLandingStrike.class,
                     BookDreamland.class,
+                    BookDeepHealing.class,
             };
-            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1,1};
+            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1,1,1};
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
@@ -541,13 +543,13 @@ public class Generator {
 
                     BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
-                    BookLandingStrike.class, BookDreamland.class,
+                    BookLandingStrike.class, BookDreamland.class, BookDeepHealing.class,
 
                     BookTrueSilverSlash.class, BookTerminationT.class, BookYourWish.class
             };
             SKL_RND.probs = new float[]{
                     4, 4, 4, 4, 4, 4, 4, 4, 4,
-                    3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                     2, 2, 1
             };
         }

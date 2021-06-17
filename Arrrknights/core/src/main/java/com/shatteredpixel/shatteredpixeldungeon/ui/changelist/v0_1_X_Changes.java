@@ -110,6 +110,10 @@ public class v0_1_X_Changes {
                 "- 다음 특성들이 상향 조정되었습니다." + "\n\n" +
                         "- _지배 아미야_ : _환영 생성_ 특성의 발동 확률이 _14-42%_로 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "스킬 버프",
+                "- _[1티어] 바람의 언어_ : 사거리가 2에서 _4_로 상승했습니다." + "\n\n" +
+                        "- _[1티어] 격노의 눈_ : 마비 조건이 체력 33% 이하에서 _체력 50% 이하_ 로 상승했습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);

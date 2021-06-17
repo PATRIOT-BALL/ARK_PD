@@ -35,7 +35,7 @@ public class FierceGlare extends Skill {
     public void dohit(final Char enemy) {
         int dmg = Random.NormalIntRange(6 + curUser.STR / 2, 6 + curUser.STR + curUser.lvl/2);
         CellEmitter.get(enemy.pos).burst(Speck.factory(Speck.BLIZZARD), 10);
-        if (enemy.HP <= enemy.HT / 3) Buff.affect(enemy, Paralysis.class, 2f);
+        if (enemy.HP <= enemy.HT / 2) Buff.affect(enemy, Paralysis.class, 2f);
         enemy.damage(dmg, enemy);
     }
 }
