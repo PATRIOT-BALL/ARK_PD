@@ -533,7 +533,7 @@ public class Generator {
                     BookTerminationT.class,
                     BookYourWish.class // 로즈몬티스 정식 패치 시 삭제
             };
-            SKL_T3.probs = new float[]{2, 2, 1};
+            SKL_T3.probs = new float[]{7, 7, 1};
 
 
             SKL_RND.classes = new Class<?>[]{
@@ -545,12 +545,12 @@ public class Generator {
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
                     BookLandingStrike.class, BookDreamland.class, BookDeepHealing.class,
 
-                    BookTrueSilverSlash.class, BookTerminationT.class, BookYourWish.class
+                    BookTrueSilverSlash.class, BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
                     4, 4, 4, 4, 4, 4, 4, 4, 4,
                     3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
-                    2, 2, 1
+                    2, 2
             };
         }
     }
