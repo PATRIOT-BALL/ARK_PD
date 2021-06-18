@@ -66,7 +66,6 @@ public class Amulet extends Item {
         GameScene.cancel();
         curUser = hero;
         curItem = this;
-        Dungeon.level.drop(new BookWhispers(), Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
        // GLog.w(Messages.get(Hero.class, "name", curUser.pos)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
       //  new ScrollOfPassage().collect();
 
