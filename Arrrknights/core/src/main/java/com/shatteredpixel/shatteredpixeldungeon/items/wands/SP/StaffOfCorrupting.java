@@ -224,6 +224,8 @@ public class StaffOfCorrupting extends Wand {
 
             AncientKin.Seaborn seaborn = new AncientKin.Seaborn();
             seaborn.pos = enemy.pos;
+            seaborn.HP = Math.min(50, 5 + buffedLvl() * 5);
+            Buff.affect(seaborn, Weakness.class, 60f - buffedLvl() * 3);
             enemy.die(Dungeon.hero);
             Dungeon.level.mobs.remove(enemy);
             TargetHealthIndicator.instance.target(null);
