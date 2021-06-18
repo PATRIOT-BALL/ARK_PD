@@ -5,7 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Naginata extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.SPEAR;
+        image = ItemSpriteSheet.NAGINATA;
         hitSound = Assets.Sounds.HIT_SPEAR;
         hitSoundPitch = 1.18f;
 
