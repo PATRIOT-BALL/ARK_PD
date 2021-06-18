@@ -148,7 +148,7 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Badges.Badge.MASTERY_HUNTRESS;
 			case ROSECAT:
-				return Badges.Badge.MASTERY_HUNTRESS; // 울부짖는 광명으로 대체
+				return Badges.Badge.MASTERY_ROSECAT;
 		}
 		return null;
 	}
