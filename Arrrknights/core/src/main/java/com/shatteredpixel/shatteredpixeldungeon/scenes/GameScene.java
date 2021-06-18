@@ -1087,7 +1087,7 @@ public class GameScene extends PixelScene {
 
 		final String[] LINE_KEYS = {"DM1", "DM2", "DM3", "DM4", "DM5", "DM6", "DM7", "DM8"};
 
-		if (!Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_2)) {
+		if (!Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_2) || Dungeon.eazymode == 1) {
 			GLog.h(Messages.get(Hero.class, Random.element( LINE_KEYS ))); }
 	}
 	
