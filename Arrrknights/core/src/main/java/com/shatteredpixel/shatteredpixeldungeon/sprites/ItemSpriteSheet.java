@@ -96,7 +96,7 @@ public class ItemSpriteSheet {
 		assignItemRect(GOLD,        16, 16);
 		assignItemRect(DEWDROP,     10, 10);
 		assignItemRect(PETAL,       16,  16);
-		assignItemRect(SANDBAG,     10, 10);
+		assignItemRect(SANDBAG,     16, 16);
 		assignItemRect(SPIRIT_ARROW,11, 11);
 		
 		assignItemRect(GUIDE_PAGE,  10, 11);
