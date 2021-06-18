@@ -147,13 +147,13 @@ public class Badges {
 		VICTORY_ALL_CLASSES         ( 98, true ),
 		GAMES_PLAYED_3              ( 99, true ),
 		CHAMPION_1                  ( 100 ),
-		ROARINGFLARE                  ( 114 ),
+		ROARINGFLARE                  ( 116 ),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
 		CHAMPION_2                  ( 113 ),
 		CHAMPION_3                  ( 114 ),
-		EVILTIME_END                  ( 114 );
+		EVILTIME_END                  ( 115 );
 
 		public boolean meta;
 
