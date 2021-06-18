@@ -243,7 +243,7 @@ public class NewPrisonBossLevel extends Level {
 			e, e, e, W, W, W, W, W, W, W, e, e, e, W,
 			e, W, W, W, W, W, W, W, W, W, W, e, e, W,
 			e, e, e, W, W, W, W, W, W, W, W, E, E, W,
-			e, e, e, e, e, W, W, W, W, W, W, E, E, W,
+			e, e, e, e, e, W, W, W, W, W, W, W, W, W,
 			e, e, e, W, W, W, W, W, W, W, W, W, W, W,
 			W, e, W, W, W, W, W, W, W, W, W, W, W, W,
 			W, e, e, W, W, W, W, W, W, W, W, W, W, W,

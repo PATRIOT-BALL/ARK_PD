@@ -212,5 +212,7 @@ public class MidnightSword extends MeleeWeapon {
 
         charge -=1;
         updateQuickslot();
+
+        if (charge <= 0) curUser.spend(1f);
     }
 }
