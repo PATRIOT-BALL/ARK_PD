@@ -800,8 +800,8 @@ items.bombs.flashbang.desc=이 개조된 미보는 폭발과 동시에 엄청난
 items.bombs.frostbomb.name=서리별 인형
 items.bombs.frostbomb.desc=이 그리운 느낌의 인형은 폭발할 때 폭발 범위보다 넓은 지역을 오랫동안 냉기 돌풍으로 뒤덮도록 개조되었습니다.
 
-items.bombs.holybomb.name=신성한 미보탄
-items.bombs.holybomb.desc=이 미보는 폭발할 때 폭발 범위보다 넓은 지역에 신성한 빛을 내뿜어, 언데드와 악마 적에게 추가 피해를 줍니다.
+items.bombs.holybomb.name=신성한 미보
+items.bombs.holybomb.desc=이 미보는 폭발할 때 폭발 범위보다 넓은 지역에 신성한 빛을 내뿜어, 살카즈 적에게 추가 피해를 줍니다.
 
 items.bombs.noisemaker.name=소음 폭탄
 items.bombs.noisemaker.desc=이 개조된 미보는 도화선이 다 타들어감과 동시에 반복적으로 시끄러운 소음을 낼 것입니다. 누군가가 폭탄을 건드리면, 폭발할 것입니다!
@@ -813,8 +813,8 @@ items.bombs.shockbomb.desc=이 미보는 폭발할 때 여러 갈래의 전기�
 items.bombs.regrowthbomb.name=Lancet-2
 items.bombs.regrowthbomb.desc=이 로봇은 폭발하는 대신 일정 범위 내에 생명의 영약을 흩뿌릴 것입니다. 흩뿌려진 범위 내의 구역은 풀과 식물이 빠르게 자라날 것이며, 당신과 범위 내의 아군도 함께 치유될 것입니다. \n\n_미안해 Lancet-2! 클로저가 곧 고쳐줄거야.._
 
-items.bombs.shrapnelbomb.name=파편 폭탄
-items.bombs.shrapnelbomb.desc=이 미보는 DM-300의 쇳조각으로 강화되어 격발하면 사방에 쇳조각을 발사하여 엄청나게 넓은 범위에 피해를 줍니다. 터트리기 전에 반드시 어딘가에 숨어 있어야 할 것입니다...
+items.bombs.shrapnelbomb.name=파편 미보
+items.bombs.shrapnelbomb.desc=이 미보는 머드락의 갑옷에서 떨어져나온 쇳조각으로 강화되어 격발하면 사방에 쇳조각을 발사하여 엄청나게 넓은 범위에 피해를 줍니다. 터트리기 전에 반드시 어딘가에 숨어 있어야 할 것입니다...
 
 items.bombs.woollybomb.name=시민 폭탄
 items.bombs.woollybomb.desc=이 개조된 미보는 폭발 이후 시민의 거울상을 소환합니다. 시민들은 이동을 막고 일정 시간동안 형태를 유지할 것입니다.
@@ -898,8 +898,8 @@ items.food.stewedmeat.desc=고기를 삶으면서 병균과 기생충 등이 사
 items.journal.documentpage.name=찢긴 쪽지
 items.journal.documentpage.desc=책 같은 것에서 찢겨나간 페이지 한 장이다. 먼저 읽기 위해서는 주워야 할 것 같다.
 
-items.journal.alchemypage.name=찢어진 연금술서 페이지
-items.journal.alchemypage.desc=연금술과 관련된 도서에서 찢겨 나온 페이지입니다.\n\n글자가 거리를 두고서는 도저히 읽을 수 없을 정도로 작게 쓰여져 있으며, 제목만 겨우 읽을 수 있을 정도입니다.\n\n제목은 _"%s"_ 라고 쓰여 있습니다.
+items.journal.alchemypage.name=찢어진 가공소 가이드
+items.journal.alchemypage.desc=가공소와 관련된 도서에서 찢겨 나온 페이지입니다.\n\n글자가 거리를 두고서는 도저히 읽을 수 없을 정도로 작게 쓰여져 있으며, 제목만 겨우 읽을 수 있을 정도입니다.\n\n제목은 _"%s"_ 라고 쓰여 있습니다.
 
 items.journal.guidepage.name=찢긴 가이드북 쪽지
 items.journal.guidepage.desc=모험가의 가이드에서 뜯겨져 나온 페이지입니다.\n\n대부분의 글자는 멀리서 알아볼 순 없지만, 해당 페이지의 제목은 겨우 읽을 수 있을 정도입니다.\n\n_"%s"_ 라고 쓰여 있습니다.
@@ -1113,10 +1113,10 @@ items.quest.embers.name=장치
 items.quest.embers.desc=세트로 갖추어진 기계장치. 대량의 전자 부품으로 만들어졌다. 간단하면서도 실용적으로 설계되었기에 드라이브의 용량은 작지만 데이터로 꽉 차 있다.
 
 items.quest.gooblob.name=악몽 연료
-items.quest.gooblob.desc=구가 죽을 때 떨어져 나온 점액 조각입니다. 커다란 젤리 방울처럼 생겼지만, 먹을 수 있을 것 같지 않습니다.\n\n점액 그  자체로는 효과가 없지만, 특정한 물약 또는 폭탄에 섞을 때 유용하게 쓰일 수 있을 것 같습니다. 아니면 적당한 가격에 팔아버릴 수 있을 것 같습니다.
+items.quest.gooblob.desc=구가 죽을 때 떨어져 나온 점액 조각입니다. 커다란 젤리 방울처럼 생겼지만, 먹을 수 있을 것 같지 않습니다.\n\n점액 그  자체로는 효과가 없지만, 특정한 물약 또는 미보에 섞을 때 유용하게 쓰일 수 있을 것 같습니다. 아니면 적당한 가격에 팔아버릴 수 있을 것 같습니다.
 
 items.quest.metalshard.name=저주받은 쇳조각
-items.quest.metalshard.desc=머드락의 강화슈트가 파괴 될 때 그것으로부터 떨어져 나온 녹슨 금속 조각입니다. 당신은 그것으로부터 비활성화된 악의적인 아츠를 느낄 수 있습니다.\n\n쇳조각은 그 자체로는 아무런 효과는 없지만, 특정한 일기장 또는 폭탄, _특별한 물건_을 만들 때 유용하게 쓰일 수 있을 것 같습니다. 아니면 괜찮은 가격에 팔아버릴 수 있을 것 같습니다.
+items.quest.metalshard.desc=머드락의 강화슈트가 파괴 될 때 그것으로부터 떨어져 나온 녹슨 금속 조각입니다. 당신은 그것으로부터 비활성화된 악의적인 아츠를 느낄 수 있습니다.\n\n쇳조각은 그 자체로는 아무런 효과는 없지만, 특정한 일기장 또는 미보, _특별한 물건_을 만들 때 유용하게 쓰일 수 있을 것 같습니다. 아니면 괜찮은 가격에 팔아버릴 수 있을 것 같습니다.
 
 items.quest.pickaxe.name=곡괭이
 items.quest.pickaxe.ac_mine=채굴한다
@@ -1960,7 +1960,7 @@ items.weapon.melee.spear.desc=키가 작은 그라니를 위해 빅토리아에�
 
 items.weapon.melee.enfild.name=리-엔필드
 items.weapon.melee.enfild.stats_desc=사거리 _무한_, 공격속도 -33%
-items.weapon.melee.enfild.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.5배의 피해를 입힙니다. 또한, 이 무기는 _강화할 수 없습니다._
+items.weapon.melee.enfild.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.sword.name=범고래 쿠션
 items.weapon.melee.sword.desc=귀여운 범고래모양 쿠션. 보기와 다르게 굉장히 무겁다. 이런 걸 휘두르면 분명 아프겠지?

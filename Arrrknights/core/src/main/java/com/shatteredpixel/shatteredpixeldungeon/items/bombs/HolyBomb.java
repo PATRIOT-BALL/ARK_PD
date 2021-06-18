@@ -64,7 +64,7 @@ public class HolyBomb extends Bomb {
 		}
 		
 		for (Char ch : affected){
-			if (ch.properties().contains(Char.Property.UNDEAD) || ch.properties().contains(Char.Property.DEMONIC)){
+			if (ch.properties().contains(Char.Property.SARKAZ)){
 				ch.sprite.emitter().start( ShadowParticle.UP, 0.05f, 10 );
 				
 				//bomb deals an additional 67% damage to unholy enemies in a 5x5 range
