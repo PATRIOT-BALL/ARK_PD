@@ -51,13 +51,13 @@ public class Enfild extends MeleeWeapon {
     private int chargeCap = 100;
 
     @Override
-    public int min(int lvl) { return  10; }
+    public int min(int lvl) { return  6 + buffedLvl() * 2; }
 
     @Override
-    public int max(int lvl) { return  10; }
+    public int max(int lvl) {return  6 + buffedLvl() * 2; }
 
     @Override
-    public int value() { return super.value() + 30; }
+    public int value() { return super.value() + 20; }
 
     @Override
     public boolean isUpgradable() { return false; }
@@ -65,7 +65,7 @@ public class Enfild extends MeleeWeapon {
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         if (charge >= chargeCap) {
-            damage *= 1.5f;
+            damage *= 1.3f;
             charge = 0;
         }
         else SPCharge(20);

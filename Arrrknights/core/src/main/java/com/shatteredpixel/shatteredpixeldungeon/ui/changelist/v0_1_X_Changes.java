@@ -104,7 +104,8 @@ public class v0_1_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
                 "- _해시계_ : 강화 효율이 4 에서 _5_ 로 상승했습니다." + "\n\n" +
-                "- _상처투성이 단검_ : 전이 성공률이 상승했습니다."));
+                "- _상처투성이 단검_ : 전이 성공률이 상승했습니다." + "\n\n" +
+                "- _리-엔필드_ : 공격시 SP를 20%충전하며, 100%일 때 공격시 1.3배의 피해를 입히는 기능이 추가되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
                 "- 다음 특성들이 상향 조정되었습니다." + "\n\n" +
