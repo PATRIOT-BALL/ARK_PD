@@ -137,5 +137,14 @@ public class v0_1_X_Changes {
                 "- _레드_ : _향상된 반지_ 특성의 지속시간이 _2.5-7.5_턴으로 감소했습니다." + "\n\n" +
                 "- _사격 그레이스롯_ : _강화 공유_ 특성의 특수 쇠뇌 공격 피해 상승량이 _5-15%_로 감소했습니다." + "\n\n" +
                 "- _자연 그레이스롯_ : _블러드라인_ 특성의 나무 껍질 획득량이 _현재 레벨 -3_으로 감소했습니다."));
+
+
+        changes = new ChangeInfo("0.1.5a", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
+                "- _스태프 오브 커럽팅_으로 소환되는 혈족의 체력이 강화 단계에 비례하게 변경되었으며, 소환될 때 약화 상태를 얻습니다."));
     }
+
 }
