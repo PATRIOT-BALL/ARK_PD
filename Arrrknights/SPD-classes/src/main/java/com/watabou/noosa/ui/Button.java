@@ -31,7 +31,7 @@ import com.watabou.utils.Signal;
 
 public class Button extends Component {
 
-	public static float longClick = 1f;
+	public static float longClick = 0.5f; // 긴 클릭에 필요한 시간.
 	
 	protected PointerArea hotArea;
 	

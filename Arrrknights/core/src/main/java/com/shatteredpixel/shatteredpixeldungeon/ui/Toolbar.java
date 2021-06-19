@@ -153,8 +153,8 @@ public class Toolbar extends Component {
 			
 			@Override
 			protected boolean onLongClick() {
-				WndJournal.last_index = 3; //catalog page
-				GameScene.show(new WndJournal());
+				Dungeon.quickslot.changeslot_seting();
+				Dungeon.quickslot.changeSlot();
 				return true;
 			}
 
