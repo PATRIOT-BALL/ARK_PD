@@ -1886,7 +1886,7 @@ items.weapon.melee.longsword.desc=동양풍의 검으로, 특수한 설계 과�
 items.weapon.melee.longsword.stats_desc=이 무기를 사용하면 특이한 힘을 발사해 적중한 적을 침묵시킵니다. 침묵당한 적은 특수 능력을 쓸 수 없습니다. 침묵의 지속시간은 강화 수치에 비례해 상승하며, 적의 강함에 비례해 감소합니다.
 items.weapon.melee.longsword.prompt=목표를 지정해주세요.
 items.weapon.melee.longsword.self_target=자신에게는 발사할 수 없습니다.
-items.weapon.melee.longsword.no_magic=아츠 면역, 혹은 침묵 상태일 땐 발사할 수 없습니다.
+items.weapon.melee.longsword.no_magic=아츠 면역 상태일 땐 발사할 수 없습니다.
 items.weapon.melee.longsword.fizzles=SP가 부족합니다.
 
 items.weapon.melee.mace.name=테르밋 블레이드
@@ -1952,8 +1952,11 @@ items.weapon.melee.heamyo.stats_desc=_개발자 테스트 무기. 이게 필드�
 items.weapon.melee.heamyo.desc=해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치! 해묘펀치!
 
 items.weapon.melee.scimitar.name=캐슬 브레이커
-items.weapon.melee.scimitar.stats_desc=공격속도 +25%
-items.weapon.melee.scimitar.desc=빅토리아에서 만들어진 건 랜스. 사격 기능이 제거됐지만 약실의 장약을 터트려 순간적으로 빠르게 적을 공격할 수 있습니다.
+items.weapon.melee.scimitar.stats_desc=SP 45%%를 소모해 _3-%d의 피해_ 를 입히는 충격파를 3발 발사할 수 있습니다.\n\n공격속도 +25%%
+items.weapon.melee.scimitar.desc=_"생명을 구제할 수 있는 것은 자애!"_\n\n빅토리아에서 만들어진 건 랜스. 사격 기능이 제거됐지만 약실의 장약을 터트려 순간적으로 빠르게 적을 공격할 수 있습니다.
+items.weapon.melee.scimitar.ac_zap=클로즈드 볼트 연발
+items.weapon.melee.scimitar.prompt=목표를 지정해주세요.
+items.weapon.melee.scimitar.self_target=자신에게는 발사할 수 없습니다.
 
 items.weapon.melee.spear.name=기병창ㆍ카빈
 items.weapon.melee.spear.stats_desc=사거리 +2, 공격속도 -33%
@@ -1969,7 +1972,7 @@ items.weapon.melee.sword.desc=귀여운 범고래모양 쿠션. 보기와 다르
 items.weapon.melee.warhammer.name=레바테인
 items.weapon.melee.warhammer.stats_desc=명중률 +35%
 items.weapon.melee.warhammer.desc=대검이 휘둘릴 때, 맹렬한 화염은 천지를 불태우고 신의 정원을 몰락시킬 것이다. 이는 신들의 황혼이자 신사의 폐막이나 그것은 끝이 아니니, 옛 죄악을 태워버린 초토 위에서 희망의 싹이 새로 태어날 것이기 때문이다. \n\n능력을 사용하면 무기에 깃든 거인의 힘을 사용합니다. 사용시 체력이 _1_ 이 되지만, _공격력이 2배_ 가 되고 _모든 피해를 0_ 으로 받으며, 사거리가 증가합니다. 대신 지속 중 물약을 사용할 수 없으며, 이 능력은 한 번만 사용할 수 있습니다.
-items.weapon.melee.warhammer.ac_zap=황혼
+items.weapon.melee.warhammer.ac_zap=_황혼_
 items.weapon.melee.warhammer.skillfail=더 이상 거인의 힘을 쓸 수 없다.
 items.weapon.melee.warhammer.dont_equ=거인의 힘은 레바테인을 장착해야 사용할 수 있다.
 
@@ -1987,7 +1990,7 @@ items.weapon.melee.midnightsword.desc="고객님, 제게 최고의 웃는 얼굴
 items.weapon.melee.midnightsword.stats_desc=이 무기를 사용하면 마왕 에너지를 발사해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
 items.weapon.melee.midnightsword.prompt=목표를 지정해주세요.
 items.weapon.melee.midnightsword.self_target=자신에게는 발사할 수 없습니다.
-items.weapon.melee.midnightsword.no_magic=아츠 면역, 혹은 침묵 상태일 땐 발사할 수 없습니다.
+items.weapon.melee.midnightsword.no_magic=아츠 면역 상태일 땐 발사할 수 없습니다.
 items.weapon.melee.midnightsword.fizzles=당신의 마왕 에너지가 부족합니다.
 
 items.weapon.melee.m1887.name=M1887

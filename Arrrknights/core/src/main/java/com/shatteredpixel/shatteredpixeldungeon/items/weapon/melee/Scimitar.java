@@ -22,9 +22,31 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Bundle;
+import com.watabou.utils.Callback;
+import com.watabou.utils.Random;
+
+import java.util.ArrayList;
 
 public class Scimitar extends MeleeWeapon {
+	public static final String AC_ZAP = "ZAP";
 
 	{
 		image = ItemSpriteSheet.SCIMITAR;
@@ -33,12 +55,163 @@ public class Scimitar extends MeleeWeapon {
 
 		tier = 3;
 		DLY = 0.8f; //1.25x speed
+
+		defaultAction = AC_ZAP;
+		usesTargeting = true;
 	}
+
+	private int charge = 100;
+	private int chargeCap = 100;
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier+1) +    //16 base, down from 20
-				lvl*(tier+1);   //scaling unchanged
+		return  4*(tier+1) +    //15 base, down from 20
+				lvl*(tier+1) - 1;   //scaling unchanged
+	}
+
+	@Override
+	public int proc(Char attacker, Char defender, int damage) {
+		SPCharge(4);
+		return super.proc(attacker, defender, damage);
+	}
+
+	@Override
+	public ArrayList<String> actions(Hero hero) {
+		ArrayList<String> actions = super.actions(hero);
+		actions.add(AC_ZAP);
+		return actions;
+	}
+
+	@Override
+	public void execute(Hero hero, String action) {
+
+		super.execute(hero, action);
+
+		if (Dungeon.hero.belongings.weapon == this) {
+			if (action.equals(AC_ZAP) && charge >= 40) {
+				if (this.cursed != true) {
+					cursedKnown = true;
+					GameScene.selectCell(zapper);
+				} else {
+					Buff.affect(Dungeon.hero, Paralysis.class, 2f);
+					cursedKnown = true;
+					charge -= 45;
+				}
+			}
+		}
+	}
+
+	@Override
+	public String statsInfo() {
+		return Messages.get(this, "stats_desc", 4+buffedLvl() * 2);
+	}
+
+	public void SPCharge(int n) {
+			charge += n;
+			if (chargeCap < charge) charge = chargeCap;
+			updateQuickslot();
+	}
+
+	@Override
+	public String status() {
+		if (chargeCap == 100)
+			return Messages.format("%d%%", charge);
+
+
+		//otherwise, if there's no charge, return null.
+		return null;
+	}
+
+	private static final String CHARGE = "charge";
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(CHARGE, charge);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
+		else charge = bundle.getInt(CHARGE);
+	}
+
+	protected static CellSelector.Listener zapper = new CellSelector.Listener() {
+
+		@Override
+		public void onSelect(Integer target) {
+
+			if (target != null) {
+
+				final Scimitar ss;
+				if (curItem instanceof Scimitar) {
+					Sample.INSTANCE.play( Assets.Sounds.HIT_SLASH, 1f, 0.44f );
+					ss = (Scimitar) Scimitar.curItem;
+
+					Ballistica shot = new Ballistica(curUser.pos, target, Ballistica.PROJECTILE);
+					int cell = shot.collisionPos;
+
+					if (target == curUser.pos || cell == curUser.pos) {
+						GLog.i(Messages.get(Scimitar.class, "self_target"));
+						return;
+					}
+
+					curUser.sprite.zap(cell);
+
+					//attempts to target the cell aimed at if something is there, otherwise targets the collision pos.
+					if (Actor.findChar(target) != null)
+						QuickSlotButton.target(Actor.findChar(target));
+					else
+						QuickSlotButton.target(Actor.findChar(cell));
+
+					if (ss.tryToZap(curUser, target)) {
+						ss.fx(shot, new Callback() {
+							public void call() {
+								ss.onZap(shot);
+							}
+						});
+					}
+
+
+				}
+			}
+		}
+
+		@Override
+		public String prompt() {
+			return Messages.get(Scimitar.class, "prompt");
+		}
+	};
+
+	protected void fx( Ballistica bolt, Callback callback ) {
+		MagicMissile.boltFromChar( curUser.sprite.parent,
+				MagicMissile.FORCE,
+				curUser.sprite,
+				bolt.collisionPos,
+				callback);
+	}
+
+	public boolean tryToZap(Hero owner, int target) {
+		return true;
+	}
+
+
+	protected void onZap( Ballistica bolt ) {
+		Char ch = Actor.findChar( bolt.collisionPos );
+		if (ch != null) {
+			ch.damage(Random.Int(3, 4+buffedLvl() * 2), this);
+			ch.damage(Random.Int(3, 4+buffedLvl() * 2), this);
+			ch.damage(Random.Int(3, 4+buffedLvl() * 2), this);
+
+			ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
+
+		} else {
+			Dungeon.level.pressCell(bolt.collisionPos);
+		}
+		charge -=40;
+		updateQuickslot();
+		curUser.spendAndNext(0.8f);
 	}
 
 }
