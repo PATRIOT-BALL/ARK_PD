@@ -32,6 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Fire;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
@@ -46,6 +47,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfCor
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfShroudingFog;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfSnapFreeze;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfStormClouds;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -234,25 +236,27 @@ public class Potion extends Item {
 			GameScene.show(new WndUseItem(null, this) );
 			
 		} else if (action.equals( AC_DRINK )) {
-			
-			if (isKnown() && mustThrowPots.contains(getClass())) {
-				
+
+			if (Dungeon.hero.buff(Twilight.class) == null) {
+				if (isKnown() && mustThrowPots.contains(getClass())) {
+
 					GameScene.show(
-						new WndOptions( Messages.get(Potion.class, "harmful"),
-								Messages.get(Potion.class, "sure_drink"),
-								Messages.get(Potion.class, "yes"), Messages.get(Potion.class, "no") ) {
-							@Override
-							protected void onSelect(int index) {
-								if (index == 0) {
-									drink( hero );
+							new WndOptions(Messages.get(Potion.class, "harmful"),
+									Messages.get(Potion.class, "sure_drink"),
+									Messages.get(Potion.class, "yes"), Messages.get(Potion.class, "no")) {
+								@Override
+								protected void onSelect(int index) {
+									if (index == 0) {
+										drink(hero);
+									}
 								}
 							}
-						}
 					);
-					
+
 				} else {
-					drink( hero );
+					drink(hero);
 				}
+			} else GLog.w(Messages.get(this, "fail"));
 			
 		}
 	}

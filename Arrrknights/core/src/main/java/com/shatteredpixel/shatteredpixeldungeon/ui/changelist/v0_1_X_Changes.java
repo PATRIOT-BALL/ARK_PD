@@ -175,6 +175,9 @@ public class v0_1_X_Changes {
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
+                "- _레바테인_ : 단 한 번, _황혼_을 사용해 체력이 1이 되는 대신 강력한 버프를 받을 수 있습니다.\n명중률 보정치가 +40%에서 _+22%_ 로 하향 조정 되었습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
