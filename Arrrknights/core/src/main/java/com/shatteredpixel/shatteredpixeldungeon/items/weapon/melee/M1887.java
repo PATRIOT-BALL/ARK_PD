@@ -28,7 +28,7 @@ public class M1887 extends MeleeWeapon {
         if (attacker instanceof Hero) {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
-                    mob.damage(Dungeon.hero.damageRoll() - mob.drRoll() * 2, this);
+                    mob.damage(Dungeon.hero.damageRoll() - Math.max(defender.drRoll(), defender.drRoll()), this);
                     target++;
                 }
             }
