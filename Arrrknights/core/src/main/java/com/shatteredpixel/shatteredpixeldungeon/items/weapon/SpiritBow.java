@@ -26,7 +26,9 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
@@ -36,7 +38,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -184,7 +188,7 @@ public class SpiritBow extends Weapon {
 					damage = Math.round(damage * 0.667f);
 					break;
 				case SPEED:
-					damage = Math.round(damage * 0.5f);
+					damage = Math.round(damage * 1f);
 					break;
 				case DAMAGE:
 					//as distance increases so does damage, capping at 3x:
@@ -293,7 +297,11 @@ public class SpiritBow extends Weapon {
 				if (!curUser.shoot( enemy, this )) {
 					Splash.at(cell, 0xCC99FFFF, 1);
 				}
-				if (sniperSpecial && SpiritBow.this.augment != Augment.SPEED) sniperSpecial = false;
+				if (sniperSpecial && SpiritBow.this.augment == Augment.SPEED)
+				{
+					Buff.affect(enemy, Cripple.class, 2f);
+				}
+				sniperSpecial = false;
 			}
 		}
 
@@ -308,56 +316,6 @@ public class SpiritBow extends Weapon {
 		public void cast(final Hero user, final int dst) {
 			final int cell = throwPos( user, dst );
 			SpiritBow.this.targetPos = cell;
-			if (sniperSpecial && SpiritBow.this.augment == Augment.SPEED){
-				if (flurryCount == -1) flurryCount = 3;
-				
-				final Char enemy = Actor.findChar( cell );
-				
-				if (enemy == null){
-					user.spendAndNext(castDelay(user, dst));
-					sniperSpecial = false;
-					flurryCount = -1;
-					return;
-				}
-				QuickSlotButton.target(enemy);
-				
-				final boolean last = flurryCount == 1;
-				
-				user.busy();
-				
-				throwSound();
-				
-				((MissileSprite) user.sprite.parent.recycle(MissileSprite.class)).
-						reset(user.sprite,
-								cell,
-								this,
-								new Callback() {
-									@Override
-									public void call() {
-										if (enemy.isAlive()) {
-											curUser = user;
-											onThrow(cell);
-										}
-										
-										if (last) {
-											user.spendAndNext(castDelay(user, dst));
-											sniperSpecial = false;
-											flurryCount = -1;
-										}
-									}
-								});
-				
-				user.sprite.Sattack(cell, new Callback() {
-					@Override
-					public void call() {
-						flurryCount--;
-						if (flurryCount > 0){
-							cast(user, dst);
-						}
-					}
-				});
-				
-			} else {
 
 				if (user.hasTalent(Talent.SEER_SHOT)
 						&& user.buff(Talent.SeerShotCooldown.class) == null){
@@ -373,7 +331,7 @@ public class SpiritBow extends Weapon {
 				super.cast(user, dst);
 			}
 		}
-	}
+
 	
 	private CellSelector.Listener shooter = new CellSelector.Listener() {
 		@Override

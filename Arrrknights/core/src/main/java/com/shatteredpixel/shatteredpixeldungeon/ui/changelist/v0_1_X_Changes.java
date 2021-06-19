@@ -38,6 +38,7 @@ public class v0_1_X_Changes {
 
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
         add_v0_1_5_Changes(changeInfos);
+        add_v0_1_6_Changes(changeInfos);
     }
 
     public static void add_v0_1_5_Changes(ArrayList<ChangeInfo> changeInfos) {
@@ -145,6 +146,41 @@ public class v0_1_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
                 "- _스태프 오브 커럽팅_으로 소환되는 혈족의 체력이 강화 단계에 비례하게 변경되었으며, 소환될 때 약화 상태를 얻습니다."));
+    }
+
+
+    public static void add_v0_1_6_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.1.5", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
+                "- _M1887_ : 명중률 패널티가 사라졌지만, 범위 피해가 주 대상이 아닌 적들에겐 이전보다 적은 피해를 입힙니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "그레이스롯 특수 능력 변경",
+                "- _사격 전문화_를 익힌 그레이스롯의 _속도 증강_ 특수 사격이 변경되었습니다." + "\n\n" +
+                "- 이제 3연발 사격 대신, 100%의 피해를 입히는 화살을 발사합니다. 또한, 해당 화살은 _대상이 회피해도_ 무조건 _불구_ 상태를 부여합니다."));
+        
+        
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
+                "- _블레이즈_\n_전술 방어막_ 특성의 방어력 상승 최대치가 6-18에서 _12_ 로 고정되었습니다."));
     }
 
 }

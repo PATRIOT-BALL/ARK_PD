@@ -428,7 +428,7 @@ items.armor.armor.inscribed=_%s_ 가 새겨져 있습니다.
 items.armor.armor.cursed_worn=이 갑옷은 저주받았기 때문에, 당신은 이 갑옷을 벗을 수 없습니다.
 items.armor.armor.cursed=당신은 악의로 가득 찬 아츠가 이 갑옷에 깃든 것을 느낍니다.
 items.armor.armor.not_cursed=이 갑옷에는 악의적인 아츠가 없습니다.
-items.armor.armor.seal_attached=전사의 행운의 부적이 이 갑옷에 붙어 있습니다.
+items.armor.armor.seal_attached=블레이즈의 행운의 부적이 이 갑옷에 붙어 있습니다.
 items.armor.armor$glyph.glyph=상형문자
 items.armor.armor$glyph.killed=%s에 의해 죽었습니다...
 

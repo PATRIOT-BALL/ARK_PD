@@ -580,7 +580,7 @@ public class Hero extends Char {
 
         if (Dungeon.hero.hasTalent(Talent.TACTICAL_SHIELD)){
             int drplus = Dungeon.hero.belongings.armor.buffedLvl() * Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD);
-            drplus = Math.min(drplus, Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD) * 6);
+            drplus = Math.min(drplus, 12);
             dr += drplus;
         }
 

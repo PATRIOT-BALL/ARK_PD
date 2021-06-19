@@ -14,7 +14,6 @@ public class M1887 extends MeleeWeapon {
         hitSoundPitch = 1f;
 
         tier = 4;
-        ACC = 0.9f; // -10%
     }
 
     @Override
@@ -26,11 +25,14 @@ public class M1887 extends MeleeWeapon {
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         int target = 1;
-        for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
-            if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
-                mob.damage(Dungeon.hero.damageRoll()-mob.drRoll(), this);
-                target++;
-            }}
+        if (attacker instanceof Hero) {
+            for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
+                    mob.damage(Dungeon.hero.damageRoll() - mob.drRoll() * 2, this);
+                    target++;
+                }
+            }
+        }
 
         if (target == 1) damage *= 2;
 
