@@ -29,10 +29,12 @@ ui.renamebutton.title=영웅의 이름을 입력하세요
 ui.renamebutton.rename=결정
 ui.renamebutton.revert=되돌리기
 
+피까츄
+
 
 windows.wndanalytics.title=데이터를 공유한다
 windows.wndanalytics.policy=전체 개인 정보 보호 정책
-windows.wndanalytics.text=게임플레이 데이터를 공유하여 Shattered Pixel Dungeon을 지원할 수 있습니다.\n\n이 정보는 게임 디자인을 결정할 때 매우 유용하기 때문에 데이터 전송은 게임을 하는 것만으로도 게임을 지원하는 좋은 방법입니다.\n\n개인정보는 일절 수집하지 않으며, 데이터 사용량도 미미합니다.
+windows.wndanalytics.text=게임플레이 데이터를 공유하여 Tomorrow's Roguenight을 지원할 수 있습니다.\n\n이 정보는 게임 디자인을 결정할 때 매우 유용하기 때문에 데이터 전송은 게임을 하는 것만으로도 게임을 지원하는 좋은 방법입니다.\n\n개인정보는 일절 수집하지 않으며, 데이터 사용량도 미미합니다.
 windows.wndanalytics.games=게임플레이 데이터 공유는 구글 플레이 게임 서비스와 연결하면 자동으로 허용됩니다.
 
 windows.wndsupportertiers$tier1info.title=은 등급 후원자
@@ -76,13 +78,13 @@ windows.wndgame.dialog_rename=결정
 windows.wndgame.dialog_revert=되돌리기
 
 windows.wndgoogleplaygames.title=구글 플레이 게임
-windows.wndgoogleplaygames.text=Shattered Pixel Dungeon은 구글 플레이 게임 서비스를 통해 여러가지 추가 기능을 사용할 수 있습니다!\n\n구글 플레이 게임 서비스에 연결하시면\n- 서로 다른 기기에 배지와 최고 기록을 연동 가능\n- 구글 플레이 도전과제를 달성할 수 있음\n- 게임을 발전시킬 수 있는 데이터 제공\n등이 가능해집니다.\n\n언제라도 연결을 해제하여 데이터 사용량을 최소화 할 수도 있습니다.
+windows.wndgoogleplaygames.text=Tomorrow's Roguenight는 구글 플레이 게임 서비스를 통해 여러가지 추가 기능을 사용할 수 있습니다!\n\n구글 플레이 게임 서비스에 연결하시면\n- 서로 다른 기기에 배지와 최고 기록을 연동 가능\n- 구글 플레이 도전과제를 달성할 수 있음\n- 게임을 발전시킬 수 있는 데이터 제공\n등이 가능해집니다.\n\n언제라도 연결을 해제하여 데이터 사용량을 최소화 할 수도 있습니다.
 windows.wndgoogleplaygames.connect=연결하기
 windows.wndgoogleplaygames.disconnect=연결 끊기
 windows.wndgoogleplaygames.policy=전체 개인 정보 보호 정책
 windows.wndgoogleplaygames.close=닫기
 windows.wndgoogleplaygames.data_use_title=정보 사용에 관하여
-windows.wndgoogleplaygames.data_use_text=Shattered Pixel Dungeon에서는 다음과 같은 목적으로 Google Play 서비스를 사용합니다.\n\n- 데이터 동기화 및 Google Play 성과와 같은 추가 게임 기능을 제공합니다.\n\n- 게임을 하는 사람을 더 잘 이해하는 데 사용되는 익명 인구통계 정보를 수집합니다.\n\n- 게임 개선 방법을 더 잘 이해하는 데 사용되는 게임 플레이 데이터를 수집합니다.\n\nShattered Pixel Dungeon에서는 개인 식별 정보를 수집하지 않습니다.
+windows.wndgoogleplaygames.data_use_text=Tomorrow's Roguenight에서는 다음과 같은 목적으로 Google Play 서비스를 사용합니다.\n\n- 데이터 동기화 및 Google Play 성과와 같은 추가 게임 기능을 제공합니다.\n\n- 게임을 하는 사람을 더 잘 이해하는 데 사용되는 익명 인구통계 정보를 수집합니다.\n\n- 게임 개선 방법을 더 잘 이해하는 데 사용되는 게임 플레이 데이터를 수집합니다.\n\nTomorrow's Roguenight에서는 개인 식별 정보를 수집하지 않습니다.
 windows.wndgoogleplaygames.outdated_warn=다음 업데이트(%1$s) 부터 구글 플레이 게임을 실행하기 위해 안드로이드 %2$s버전 이상이 필요합니다. 그러므로 이 기기에서는 더 이상 동작하지 않을 것입니다.\n\n연동된 정보가 사라지지는 않습니다만, 더 이상 이 기기에서 정보를 연동시키거나 구글 플레이 도전과제를 달성하는게 불가능해집니다.
 
 windows.wndranking.copy=영웅의 전당으로 복사
