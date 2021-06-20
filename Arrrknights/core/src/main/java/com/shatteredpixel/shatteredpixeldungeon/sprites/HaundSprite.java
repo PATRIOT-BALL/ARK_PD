@@ -37,10 +37,10 @@ public class HaundSprite extends MobSprite {
 		idle.frames( frames, 0, 0, 0 );
 
 		run = new Animation( 10, true );
-		run.frames( frames, 0 );
+		run.frames( frames, 1, 2, 3, 4, 5, 6 );
 
 		attack = new Animation( 15, false );
-		attack.frames( frames, 0 );
+		attack.frames( frames, 7, 8, 9, 10, 11, 12, 13 );
 
 		die = new Animation( 10, false );
 		die.frames( frames, 0 );

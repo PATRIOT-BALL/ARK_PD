@@ -48,11 +48,11 @@ public class ScoutSprite extends MobSprite {
 		run = new Animation( 8, true );
 		run.frames( film, 0, 0 );
 		
-		zap = new Animation( 10, false );
-		zap.frames( film, 0 );
+		zap = new Animation( 15, false );
+		zap.frames( film, 1, 2, 3, 4, 4, 5, 6, 7, 8 );
 		
 		charging = new Animation( 5, true );
-		charging.frames( film, 0 );
+		charging.frames( film, 6 );
 		
 		die = new Animation( 10, false );
 		die.frames( film, 0 );
