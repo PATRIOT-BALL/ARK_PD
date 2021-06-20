@@ -24,14 +24,14 @@ public class Niansword extends MeleeWeapon {
 
     @Override
     public int defenseFactor( Char owner ) {
-        return 2+2*buffedLvl();    //6 extra defence, plus 3 per level;
+        return 4+buffedLvl();    //6 extra defence, plus 3 per level;
     }
 
     public String statsInfo(){
         if (isIdentified()){
-            return Messages.get(this, "stats_desc", 2+2*buffedLvl(), 3+3*buffedLvl());
+            return Messages.get(this, "stats_desc", 4+buffedLvl(), 3+3*buffedLvl());
         } else {
-            return Messages.get(this, "typical_stats_desc", 2,3);
+            return Messages.get(this, "typical_stats_desc", 4,3);
         }
 
     }

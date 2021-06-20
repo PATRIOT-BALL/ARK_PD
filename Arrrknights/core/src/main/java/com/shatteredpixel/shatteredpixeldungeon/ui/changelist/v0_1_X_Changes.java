@@ -183,6 +183,9 @@ public class v0_1_X_Changes {
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
+                "- _동의 인장_ : 방어력 상승량이 0-2(+2) 에서 _0-4(+1)_ 로 하향 조정되었습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "- _블레이즈_\n_전술 방어막_ 특성의 방어력 상승 최대치가 6-18에서 _12_ 로 고정되었습니다."));
     }

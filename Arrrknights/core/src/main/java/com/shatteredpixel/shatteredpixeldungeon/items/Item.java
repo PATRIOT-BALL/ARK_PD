@@ -26,10 +26,15 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Degrade;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RageThrowCooldown;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
@@ -557,6 +562,21 @@ public class Item implements Bundlable {
 									Buff.affect(enemy, Blindness.class, 1f + curUser.pointsInTalent(Talent.IMPROVISED_PROJECTILES));
 									Buff.affect(curUser, Talent.ImprovisedProjectileCooldown.class, 30f);
 								}
+							}
+							if (curUser.subClass == HeroSubClass.BERSERKER
+									&& !(Item.this instanceof MissileWeapon)
+									&& curUser.buff(RageThrowCooldown.class) == null){
+								Sample.INSTANCE.play(Assets.Sounds.HIT);
+
+								Berserk berserk;
+								if (curUser.buff(Berserk.class) == null){
+									berserk = Buff.affect(curUser, Berserk.class);}
+
+								berserk = curUser.buff(Berserk.class);
+								Buff.affect(enemy, Amok.class, 5f);
+								berserk.damage(curUser.HT);
+								Buff.affect(curUser, RageThrowCooldown.class, 180f);
+								Buff.affect(curUser, MagicImmune.class, 3f);
 							}
 							if (user.buff(Talent.LethalMomentumTracker.class) != null){
 								user.buff(Talent.LethalMomentumTracker.class).detach();
