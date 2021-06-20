@@ -235,7 +235,7 @@ public class Hero extends Char {
 
     public String named;
 
-    public Skill SK1 = new Spikes();
+    public Skill SK1;
     public Skill SK2;
     public Skill SK3;
 
