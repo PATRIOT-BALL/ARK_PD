@@ -42,6 +42,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookSpikes;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Bookancientkin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
@@ -205,6 +206,7 @@ import com.watabou.utils.GameMath;
 import com.watabou.utils.Random;
 import com.watabou.utils.Reflection;
 
+import java.awt.print.Book;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -525,8 +527,9 @@ public class Generator {
                     BookLandingStrike.class,
                     BookDreamland.class,
                     BookDeepHealing.class,
+                    BookSpikes.class
             };
-            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1,1,1};
+            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
@@ -543,13 +546,13 @@ public class Generator {
 
                     BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
-                    BookLandingStrike.class, BookDreamland.class, BookDeepHealing.class,
+                    BookLandingStrike.class, BookDreamland.class, BookDeepHealing.class, BookSpikes.class,
 
                     BookTrueSilverSlash.class, BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
                     4, 4, 4, 4, 4, 4, 4, 4, 4,
-                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                     2, 2
             };
         }

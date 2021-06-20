@@ -1591,7 +1591,7 @@ items.wands.sp.staffofweedy.name=스태프 오브 위디
 items.wands.sp.staffofweedy.staff_name=개조 충격파의 흑요석 반지
 items.wands.sp.staffofweedy.ondeath=당신은 당신이 발사한 충격파에 맞아 죽었다...
 items.wands.sp.staffofweedy.desc=_"내가 그들을 위해 뭔가를 해줘도 괜찮을까?"_\n\n이 개조된 충격파의 아츠 스태프는 위디 대원의 능력이 반영되었습니다.
-items.wands.sp.staffofweedy.stats_desc=이 막대는 _모든 SP_를 소모해 대상에게 강력한 충격의 화살을 발사합니다. 충격의 화살은 _%1$d-%2$d 의 피해_ 를 입히며 적중한 적을 적을 날려보낼 만큼 강력합니다. 소모한 SP에 비례해 피해량과 밀쳐내는 거리가 상승합니다.
+items.wands.sp.staffofweedy.stats_desc=이 막대는 _모든 SP_를 소모해 대상에게 강력한 충격의 화살을 발사합니다. 충격의 화살은 _%1$d-%2$d 의 피해_ 를 입히며 적중한 적을 날려보낼 만큼 강력합니다. 소모한 SP에 비례해 피해량과 밀쳐내는 거리가 상승합니다.
 items.wands.sp.staffofweedy.bmage_desc=_아미야_ 가 개조 충격파의 흑요석 반지로 적을 공격하면, 탄성의 아츠 무기로 공격한 것처럼 대상을 밀쳐낼 수 있습니다.
 
 items.wands.sp.staffofcorrupting.name=스태프 오브 커럽팅
@@ -1936,7 +1936,7 @@ items.weapon.melee.gamzashield.desc=_"명심해. 총은 나쁜 놈들에게 겨�
 items.weapon.melee.gamzashield.prompt=목표를 지정해주세요.
 items.weapon.melee.gamzashield.ac_zap=눈뿅 발사!
 items.weapon.melee.gamzashield.self_target=자신에게는 발사할 수 없습니다.
-items.weapon.melee.gamzashield.no_magic=아츠 면역, 혹은 침묵 상태일 땐 발사할 수 없습니다.
+items.weapon.melee.gamzashield.no_magic=아츠 면역 상태일 땐 발사할 수 없습니다.
 items.weapon.melee.gamzashield.fizzles=당신의 섬광 방패의 충전량이 부족합니다.
 
 items.weapon.melee.runicblade.name=오리지늄 검
