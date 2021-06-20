@@ -158,6 +158,12 @@ public class v0_1_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "새로운 기능",
+                "- 배낭 버튼을 길게 누르면 퀵슬롯을 변경할 수 있습니다. 이로써 총 8개의 퀵슬롯을 사용할 수 있게 되었습니다.\n\n현재 기술적 문제로 세이브-로드시 활성화하지 않은 퀵슬롯은 초기화됩니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "새로운 스킬",
+                "- _[2티어] 호신용 가시_ : 받는 피해가 감소하며, 피격시 주위 적에게 방어력 비례 피해를 줍니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);

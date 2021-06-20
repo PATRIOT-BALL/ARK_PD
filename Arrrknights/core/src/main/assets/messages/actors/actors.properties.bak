@@ -374,6 +374,9 @@ actors.buffs.meatpower_chargrilled.desc=이 고기는 정석의 맛이 납니다
 actors.buffs.twilight.name=라그나로크
 actors.buffs.twilight.desc=_"한 마리도 도망칠 수 있을 거라 생각 마라!"_\n\n거인의 힘을 사용하여 자신의 몸을 불태우고 있습니다. 지속 중 공격력이 2배로 상승하고 공격 사거리가 늘어나며, 받는 피해가 0으로 고정됩니다. 하지만 거인의 힘을 쓰는 동안 물약을 사용할 수 없습니다.\n\n거인의 힘이 사라질 때까지 %s 턴 남았습니다.
 
+actors.buffs.spikesbuff.name=가시
+actors.buffs.spikesbuff.desc=피격 시 주위 적에게 피해를 입힙니다. \n\n가시 상태가 끝날 때까지 %s 턴 남았습니다.
+
 
 ###hero
 actors.hero.talent.hearty_meal.title=푸짐한 식사

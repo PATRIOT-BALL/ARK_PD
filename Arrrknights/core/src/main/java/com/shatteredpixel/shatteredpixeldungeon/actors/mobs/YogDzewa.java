@@ -450,8 +450,7 @@ public class YogDzewa extends Mob {
 				Dungeon.hero.SK1 = null;
 				Dungeon.hero.SK2 = null;
 				Dungeon.hero.SK3 = null;
-				Dungeon.hero.HT /= 2;
-				Dungeon.hero.HP /= 2;
+				Dungeon.hero.updateHT(true);
 			}
 				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss19 == 1) {
 					Buff.affect(Dungeon.hero, Doom.class);
