@@ -575,7 +575,7 @@ public class Item implements Bundlable {
 								berserk = curUser.buff(Berserk.class);
 								Buff.affect(enemy, Amok.class, 5f);
 								berserk.damage(curUser.HT);
-								Buff.affect(curUser, RageThrowCooldown.class, 180f);
+								Buff.affect(curUser, RageThrowCooldown.class, RageThrowCooldown.DURATION);
 								Buff.affect(curUser, MagicImmune.class, 3f);
 							}
 							if (user.buff(Talent.LethalMomentumTracker.class) != null){
