@@ -901,7 +901,7 @@ actors.mobs.dm200.desc=머드락의 오리지늄 아츠 피조물. 의식이 없
 
 actors.mobs.dm201.name=길 잃은 석상
 actors.mobs.dm201.vent=길 잃은 석상이 돌을 던졌다!
-actors.mobs.dm201.desc=라이타니엔에 있는 어느 고탑의 늙은 캐스터가 만든 실험용 피조물. 이 거대 석상은 본래 '하인' 역할을 하도록 만들어진 것이지만, '누구'를 모셔야 할지 알려주는 것을 깜빡했다고 한다..\n\n시에스타 흑요석으로 만들어진 이 거대한 골렘은 경이로운 내구성을 갖게 됐지만, 너무 무거운 탓에 움직일 수 없게 됐습니다. 하지만 그의 주먹은 당신을 일격에 으깨버릴 만큼 위협적입니다.\n\nDM-201은 배기가스를 배출할 엔진이 없기 때문에 드워프들은 대신 부식성 가스 수류탄을 장착시켰습니다! 그러나 DM-201은 이 수류탄들을 조심히 다루며, 먼 곳에서 공격할 때만 수류탄을 던질 것입니다.
+actors.mobs.dm201.desc=라이타니엔에 있는 어느 고탑의 늙은 캐스터가 만든 실험용 피조물. 이 거대 석상은 본래 '하인' 역할을 하도록 만들어진 것이지만, '누구'를 모셔야 할지 알려주는 것을 깜빡했다고 한다..\n\n시에스타 흑요석으로 만들어진 이 거대한 골렘은 경이로운 내구성을 갖게 됐지만, 너무 무거운 탓에 움직일 수 없게 됐습니다. 하지만 그의 주먹은 당신을 일격에 으깨버릴 만큼 위협적입니다.
 
 actors.mobs.olddm300.name=머드락
 actors.mobs.olddm300.notice=무단 침입자 감지.
@@ -1128,7 +1128,7 @@ actors.mobs.newtengu$shockerability$shockeritem.desc=W가 여기에 전기를 �
 actors.mobs.newtengu$wmine$bombblob.desc=뭔가 수상한 연기 구름이 피어오르고 있습니다.
 actors.mobs.newtengu$wmine$bombitem.name=특수 지뢰
 actors.mobs.newtengu$wmine$bombitem.cant_pickup=이 녀석은 바닥에 들러붙어 있다. 옮길 수 없다!
-actors.mobs.newtengu$wmine$bombitem.desc=W가 도망치면서 설치한 이 지뢰는 다른 지뢰들과 다르게, 주위에 W를 제외한 누군가가 감지되었을 때 타이머가 돌아갑니다.\n\n특이한 방식으로 만들어진 이 지뢰는 일반적인 지뢰보다 늦게 터지며, _의외로 위력이 낮은 대신 대상을 실명시킬 것입니다!_
+actors.mobs.newtengu$wmine$bombitem.desc=W가 도망치면서 설치한 이 지뢰는 다른 지뢰들과 다르게, 주위에 W를 제외한 누군가가 감지되었을 때 더욱 빠르게 타이머가 돌아갑니다.\n\n특이한 방식으로 만들어진 이 지뢰는 일반적인 지뢰보다 늦게 터지며, _의외로 위력이 낮은 대신 대상을 실명시킬 것입니다!_
 
 actors.mobs.oldtengu.name=W
 actors.mobs.oldtengu.notice_gotcha=오랫만이네, %s!
