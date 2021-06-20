@@ -186,7 +186,7 @@ public enum HeroClass {
 		new ScrollOfRage().identify();
 
 		new DewVial().collect();
-		
+
 
 	}
 
