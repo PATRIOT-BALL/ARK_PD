@@ -60,7 +60,7 @@ public class Enfild extends MeleeWeapon {
     public int value() { return super.value() + 20; }
 
     @Override
-    public boolean isUpgradable() { return false; }
+    public boolean isUpgradable() { return true; }
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
