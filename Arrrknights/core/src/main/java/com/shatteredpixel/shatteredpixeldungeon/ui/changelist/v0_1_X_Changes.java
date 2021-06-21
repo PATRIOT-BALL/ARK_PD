@@ -150,7 +150,7 @@ public class v0_1_X_Changes {
 
 
     public static void add_v0_1_6_Changes(ArrayList<ChangeInfo> changeInfos) {
-        ChangeInfo changes = new ChangeInfo("v0.1.5", true, "");
+        ChangeInfo changes = new ChangeInfo("v0.1.6", true, "");
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
@@ -163,6 +163,9 @@ public class v0_1_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "새로운 스킬",
                 "- _[2티어] 호신용 가시_ : 받는 피해가 감소하며, 피격시 주위 적에게 방어력 비례 피해를 줍니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "새로운 배지",
+                "- _원암 25개 채취_ 배지와 _우리들의 빛(원암 40개 채취)_ 배지가 추가되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);

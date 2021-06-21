@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Cannot;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -48,6 +49,15 @@ public class ImpShopkeeper extends Shopkeeper {
 		}
 		
 		return super.act();
+	}
+
+	@Override
+	public int defenseSkill(Char enemy) {
+		return INFINITE_EVASION;
+	}
+
+	@Override
+	public void damage(int dmg, Object src) {
 	}
 	
 	@Override

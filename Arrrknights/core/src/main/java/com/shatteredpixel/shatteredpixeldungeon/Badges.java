@@ -136,6 +136,7 @@ public class Badges {
 		BOSS_SLAIN_3_GUARDIAN,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
 		GAMES_PLAYED_2              ( 81, true ),
+		Get_25_STONES                (96),
 
 		//platinum
 		HAPPY_END                   ( 96 ),
@@ -148,6 +149,7 @@ public class Badges {
 		GAMES_PLAYED_3              ( 99, true ),
 		CHAMPION_1                  ( 100 ),
 		ROARINGFLARE                  ( 116 ),
+		Get_40_STONES                (96),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
@@ -866,6 +868,24 @@ public class Badges {
 			local.add(Badge.EVILTIME_END);
 		displayBadge( Badge.EVILTIME_END );}
 	}
+
+	public static void validatestone25()
+	{
+		if (!local.contains( Badge.Get_25_STONES )){
+			global.add(Badge.Get_25_STONES);
+			saveNeeded = true;
+			local.add(Badge.Get_25_STONES);
+			displayBadge( Badge.Get_25_STONES );}
+	}
+
+	public static void validatestone40()
+	{
+		if (!local.contains( Badge.Get_40_STONES )){
+			global.add(Badge.Get_40_STONES);
+			saveNeeded = true;
+			local.add(Badge.Get_40_STONES);
+			displayBadge( Badge.Get_40_STONES );}
+	}
 	
 	private static void displayBadge( Badge badge ) {
 		
@@ -943,7 +963,8 @@ public class Badges {
 			{Badge.POTIONS_COOKED_1, Badge.POTIONS_COOKED_2, Badge.POTIONS_COOKED_3, Badge.POTIONS_COOKED_4 },
 			{Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4},
 			{Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4},
-			{Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3}
+			{Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3},
+			{Badge.Get_25_STONES, Badge.Get_40_STONES}
 	};
 
 	private static final Badge[][] metaBadgeReplacements = new Badge[][]{
@@ -975,6 +996,7 @@ public class Badges {
 		leaveBest( badges, Badge.POTIONS_COOKED_1, Badge.POTIONS_COOKED_2, Badge.POTIONS_COOKED_3, Badge.POTIONS_COOKED_4 );
 		leaveBest( badges, Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4 );
 		leaveBest( badges, Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3 );
+		leaveBest(badges,Badge.Get_25_STONES, Badge.Get_40_STONES);
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
 			leaveBest( badges, tierReplace );

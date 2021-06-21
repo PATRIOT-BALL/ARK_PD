@@ -267,7 +267,7 @@ public enum Talent {
 		}
 
 		if (hero.hasTalent(LIGHTNESSMEAL)){
-			Buff.prolong( hero, Levitation.class, 1+hero.pointsInTalent(LIGHTNESSMEAL));
+			Buff.prolong( hero, Levitation.class, 2 + 2 * hero.pointsInTalent(LIGHTNESSMEAL));
 		}
 
 		if (hero.hasTalent(FASTMEAL)){

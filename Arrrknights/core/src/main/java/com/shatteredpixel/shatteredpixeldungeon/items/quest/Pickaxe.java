@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.quest;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -65,6 +66,7 @@ public class Pickaxe extends Weapon {
 	}
 	
 	public boolean bloodStained = false;
+	private int stone = 0;
 
 	@Override
 	public int min(int lvl) {
@@ -125,6 +127,9 @@ public class Pickaxe extends Weapon {
 							} else {
 								Dungeon.level.drop( gold, hero.pos ).sprite.drop();
 							}
+							stone++;
+							if (stone == 25) { Badges.validatestone25();}
+							if (stone == 40) { Badges.validatestone40();}
 							
 							hero.onOperateComplete();
 						}
@@ -174,12 +179,14 @@ public class Pickaxe extends Weapon {
 	}
 	
 	private static final String BLOODSTAINED = "bloodStained";
+	private static final String STONES = "stone";
 	
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle( bundle );
 		
 		bundle.put( BLOODSTAINED, bloodStained );
+		bundle.put(STONES,stone);
 	}
 	
 	@Override
@@ -187,6 +194,7 @@ public class Pickaxe extends Weapon {
 		super.restoreFromBundle( bundle );
 		
 		bloodStained = bundle.getBoolean( BLOODSTAINED );
+		stone = bundle.getInt(STONES);
 	}
 	
 	@Override
