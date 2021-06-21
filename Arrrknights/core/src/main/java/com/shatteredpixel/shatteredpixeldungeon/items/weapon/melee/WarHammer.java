@@ -85,7 +85,7 @@ public class WarHammer extends MeleeWeapon {
 				if (skill == true) {
 					Dungeon.hero.HP = 1;
 					GameScene.flash(0x00FF0000);
-					Buff.affect(Dungeon.hero, Twilight.class, 15f);
+					Buff.affect(Dungeon.hero, Twilight.class, 30f);
 					Sample.INSTANCE.play(Assets.Sounds.SKILL_BASIC);
 					skill = false;
 					Dungeon.hero.spendAndNext(1f);
