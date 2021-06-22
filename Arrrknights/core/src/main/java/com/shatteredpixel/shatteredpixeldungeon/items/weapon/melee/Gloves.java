@@ -47,8 +47,9 @@ public class Gloves extends MeleeWeapon {
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
 		int df = damage;
-		damage = Math.max(damage + defender.drRoll(), damage + defender.drRoll());
-		damage = Math.min(damage, df + 2);
+		damage = Math.min(damage + defender.drRoll(), damage + defender.drRoll());
+
+		if (damage >= df+2) damage = df+2;
 
 		return super.proc(attacker, defender, damage);
 	}

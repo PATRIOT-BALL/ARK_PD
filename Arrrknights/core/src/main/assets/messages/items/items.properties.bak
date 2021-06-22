@@ -1859,7 +1859,7 @@ items.weapon.melee.glaive.stats_desc=사거리 +2, 공격속도 -50%
 items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니라 일종의 아츠 스태프다. 두려운 붉은색으로 빛나는 적소는 멀리 떨어진 적도 공격할 수 있지만 사용자에게 큰 부담을 준다.
 
 items.weapon.melee.gloves.name=슈팅 글러브
-items.weapon.melee.gloves.stats_desc=공격속도 +200%
+items.weapon.melee.gloves.stats_desc=공격속도 +150%
 items.weapon.melee.gloves.desc=이 징 박힌 장갑은 실질적인 보호를 제공하지는 않지만, 손을 자유롭게 유지하면서 튼튼한 무기로 활용할 수 있습니다.
 
 items.weapon.melee.greataxe.name=딥 어비스
