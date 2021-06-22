@@ -177,6 +177,9 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "그레이스롯 특수 능력 변경",
                 "- _사격 전문화_를 익힌 그레이스롯의 _속도 증강_ 특수 사격이 변경되었습니다." + "\n\n" +
                 "- 이제 3연발 사격 대신, 100%의 피해를 입히는 화살을 발사합니다. 또한, 해당 화살은 _대상이 회피해도_ 무조건 _불구_ 상태를 부여합니다."));
+
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 변경",
+                "- _살카즈 백부장_\n폭주 조건이 변경되었으며, 소환 쿨타임이 감소했습니다. 폭주 돌입시 이전보다 매우 빠른 속도로 소환할 것입니다."));
         
         
 
@@ -187,7 +190,7 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
                 "- _레바테인_ : 단 한 번, _황혼_을 사용해 체력이 1이 되는 대신 강력한 버프를 받을 수 있습니다.\n명중률 보정치가 +40%에서 _+22%_ 로 하향 조정 되었습니다." + "\n\n" +
                 "- _캐슬 브레이커_ : 공격력이 3-16 에서 _3-15_ 로 감소했습니다. 대신 공격할 때마다 SP를 회복하며 SP를 소모해 _클로즈드 볼트 연발_ 을 사용할 수 있습니다." + "\n\n" +
-                "- _슈팅 글러브_ : 공격속도 보정치가 +200%에서 _+150%_ 로 감소했습니다. 대신 표시되지 않는 데미지 보정이 추가되어, 이전보다 높은 피해를 줄 수 있습니다."));
+                "- _슈팅 글러브_ :  피해량 보정이 추가되어, 이전보다 높은 피해를 줄 수 있습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
