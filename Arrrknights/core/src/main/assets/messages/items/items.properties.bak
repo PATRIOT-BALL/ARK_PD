@@ -451,14 +451,14 @@ items.armor.huntressarmor.ac_special=날개깃
 items.armor.huntressarmor.desc=이 망토를 두른 그레이스롯은 날개깃을 발동하여 자신에게 아드레날린을 부여할 수 있습니다. 하지만 짧은 시간동안 속박과 불구를 같이 얻습니다.\n\n이 능력을 사용하면 갑옷의 SP를 25% 사용합니다. 충전량은 그레이스롯이 경험치를 얻을 때마다 증가합니다.
 
 items.armor.leatherarmor.name=카시미어 경갑
-items.armor.leatherarmor.desc="이렇게 입는 게 맞아? 왜 가슴만 보호하는건데.."\n\일부 기동성을 중시하는 카시미어 기사들이 사용하는 경량형 갑옷. 신체의 급소를 보호하지만 기타 신체부위는 신경쓰지 않았다.  
+items.armor.leatherarmor.desc="이렇게 입는 게 맞아? 왜 가슴만 보호하는건데.."\n\n일부 기동성을 중시하는 카시미어 기사들이 사용하는 경량형 갑옷. 신체의 급소를 보호하지만 기타 신체부위는 신경쓰지 않았다.  
 
 items.armor.magearmor.name=박사의 외투
 items.armor.magearmor.ac_special=영소 절영
 items.armor.magearmor.desc=로도스 고위 간부들의 공용 외투, 원래는 박사의 외투지만 아미야는 이 옷을 입음으로 도약하여 원하는 위치로 이동한 뒤, 근처에 적이 있으면 그 중 하나에게 강력한 10연격을 가할 수 있습니다.\n\n이 능력을 사용하면 갑옷의 SP를 100% 사용합니다. 충전량은 아미야가 경험치를 얻을 때마다 증가합니다.
 
 items.armor.mailarmor.name=로도스 전술조끼
-items.armor.mailarmor.desc="다시한번 말하지만 두르나르. 거기는 간식을 담아두는 곳이 아니다."\n\ 전방에서 싸우는 모든 로도스 전투대원들을 위해 제작된 전술조끼, 전방의 조끼 주머니에 구호품이나 의약품, 냉병기를 방호할 수 있는 증가장갑을 넣어둘 수 있습니다.
+items.armor.mailarmor.desc="다시한번 말하지만 두르나르. 거기는 간식을 담아두는 곳이 아니다."\n\n 전방에서 싸우는 모든 로도스 전투대원들을 위해 제작된 전술조끼, 전방의 조끼 주머니에 구호품이나 의약품, 냉병기를 방호할 수 있는 증가장갑을 넣어둘 수 있습니다.
 
 items.armor.platearmor.name=제국의 방패 2형식
 items.armor.platearmor.desc=과거 우르수스 유격대 중 무거운 방패를 들고 선봉에 나서는 정예 병력들에게 지급됐던 중갑. 그 동안 우르수스가 모든 전투에서 승리했던 이유를 몸으로 깨닫게 될 것이다. 
@@ -2236,7 +2236,7 @@ items.heap.chest_desc=아무도 찾아가지 않은 화물, 땅에 반쯤 묻힌
 items.heap.locked_chest=전술 보급 물자
 items.heap.locked_chest_desc=로도스아일랜드 지원이라고 표시된 거대한 상자. 로도스 아일랜드에서 전투원의 전장에 제공하는 보급품 같지만, 무거운 자물쇠가 걸려있어 열쇠 없이는 열 방법이 없어 보인다.
 items.heap.crystal_chest=전략 보급 물자
-items.heap.crystal_chest_desc=안에 _%s_ 이/가 들어있는 것이 보이지만, 상자를 여는 데 수정 열쇠가 필요하다.
+items.heap.crystal_chest_desc=안에 _%s_ 이/가 들어있는 것이 보이지만, 상자를 여는 데 오리지늄 열쇠가 필요하다.
 items.heap.artifact=아츠 깃든 유물
 items.heap.wand=아츠 스태프
 items.heap.ring=반지
