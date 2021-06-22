@@ -68,7 +68,7 @@ public class AncientKin extends Skill {
         {
             spriteClass = TentacleSprite.class;
 
-            HP=HT=50;
+            HP=HT=75;
             baseSpeed = 1f;
 
             state = HUNTING;
@@ -84,7 +84,7 @@ public class AncientKin extends Skill {
         public int damageRoll() { return Random.NormalIntRange( 1 + Dungeon.hero.lvl, Dungeon.hero.lvl * 2 ); }
 
         @Override
-        public int drRoll() { return Random.NormalIntRange( 0, Dungeon.hero.lvl / 2 ); }
+        public int drRoll() { return Random.NormalIntRange( 0, 6 + Dungeon.hero.lvl / 2 ); }
 
         @Override
         public int attackSkill(Char target) {
@@ -92,7 +92,7 @@ public class AncientKin extends Skill {
         }
 
         @Override
-        public int defenseSkill(Char enemy) { return 5 +Dungeon.hero.lvl; }
+        public int defenseSkill(Char enemy) { return 5 +Dungeon.hero.lvl / 2; }
 
         @Override
         public float speed() {

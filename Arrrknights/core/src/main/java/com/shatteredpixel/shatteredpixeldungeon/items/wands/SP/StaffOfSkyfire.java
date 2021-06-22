@@ -56,7 +56,7 @@ public class StaffOfSkyfire extends DamageWand {
 
     //1x/2x/3x damage
     public int max(int lvl) {
-        return (6 + 4 * lvl);
+        return (8 + 4 * lvl);
     }
 
     @Override

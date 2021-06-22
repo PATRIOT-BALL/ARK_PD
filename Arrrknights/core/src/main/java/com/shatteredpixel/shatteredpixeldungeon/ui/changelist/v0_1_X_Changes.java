@@ -177,6 +177,9 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
                 "- _M1887_ : 명중률 패널티가 사라졌지만, 범위 피해가 주 대상이 아닌 적들에겐 이전보다 적은 피해를 입힙니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "스킬 변경",
+                "- _[2티어] 먼 옛날의 혈족_ : 소환되는 혈족의 체력과 방어력이 상승했습니다. 대신 회피율이 감소했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "그레이스롯 특수 능력 변경",
                 "- _사격 전문화_를 익힌 그레이스롯의 _속도 증강_ 특수 사격이 변경되었습니다." + "\n\n" +
                 "- 이제 3연발 사격 대신, 100%의 피해를 입히는 화살을 발사합니다. 또한, 해당 화살은 _대상이 회피해도_ 무조건 _불구_ 상태를 부여합니다."));
@@ -192,10 +195,14 @@ public class v0_1_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
-                "- _레바테인_ : 단 한 번, _황혼_을 사용해 체력이 1이 되는 대신 강력한 버프를 받을 수 있습니다.\n공격력이 6-24 에서 _6-28_ 로 상승했으며, " +
+                "- _레바테인_ : 단 한 번, _황혼_을 사용해 체력이 1이 되는 대신 강력한 버프를 받을 수 있습니다.\n공격력이 6-24 에서 _6-30_ 으로 상승했으며, " +
                         "명중률 보정치가 +40%에서 _+22%_ 로 하향 조정 되었습니다." + "\n\n" +
                 "- _캐슬 브레이커_ : 공격력이 3-16 에서 _3-15_ 로 감소했습니다. 대신 공격할 때마다 SP를 회복하며 SP를 소모해 _클로즈드 볼트 연발_ 을 사용할 수 있습니다." + "\n\n" +
                 "- _슈팅 글러브_ :  피해량 보정이 추가되어, 이전보다 높은 피해를 줄 수 있습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 버프",
+                "- _스태프 오브 압생트_ 의 피해량이 2-8(+2) 에서 _2-10(+3)_ 으로 상승했습니다." + "\n\n" +
+                       "- _스태프 오브 스카이파이어_ 의 피해량이 3-6에서 _3-8_로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
@@ -205,7 +212,11 @@ public class v0_1_X_Changes {
                 "- _동의 인장_ : 방어력 상승량이 0-2(+2) 에서 _0-2(+1)_ 로 하향 조정되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
-                "- _블레이즈_\n_전술 방어막_ 특성의 방어력 상승 최대치가 6-18에서 _12_ 로 고정되었습니다."));
+                "- _블레이즈_\n_전술 방어막_ 특성의 방어력 상승 최대치가 6-18에서 _6_ 으로 고정되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
+                "- _스태프 오브 커럽팅_ 으로 소환하는 혈족의 체력이 적의 강함에 비례하도록 변경되였으며, 대신 강화 단계에 비례해 보호막을 얻고 소환됩니다." + "\n\n"
+        + "또한, 베이스가 되는 [먼 옛날의 혈족]의 성능 조정에 따라, 혈족의 방어력이 상승하고 회피율이 감소했습니다."));
     }
 
 }

@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -33,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Bee;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.King;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mimic;
@@ -224,7 +226,10 @@ public class StaffOfCorrupting extends Wand {
 
             AncientKin.Seaborn seaborn = new AncientKin.Seaborn();
             seaborn.pos = enemy.pos;
-            seaborn.HP = Math.min(50, 5 + buffedLvl() * 5);
+            seaborn.HT=seaborn.HP = Math.max(5, 5 + enemy.maxLvl);
+            GLog.w(Messages.get(Hero.class, "name", seaborn.HP)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
+            int sbuff = Math.max(3, 3 + buffedLvl() * 3);
+            Buff.affect(seaborn, Barrier.class).incShield(sbuff);
             Buff.affect(seaborn, Weakness.class, 60f - buffedLvl() * 3);
             enemy.die(Dungeon.hero);
             Dungeon.level.mobs.remove(enemy);
