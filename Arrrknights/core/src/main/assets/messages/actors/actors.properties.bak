@@ -650,12 +650,12 @@ actors.hero.heroclass.huntress_desc_loadout=그레이스롯은 다른 시작 무
 actors.hero.heroclass.huntress_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 그레이스롯의 두 가지 전문화는 다음과 같습니다.
 
 actors.hero.heroclass.rosecat=로즈몬티스
-actors.hero.heroclass.rosecat_unlock=You're her world. However you treat her, that's how she'll treat this world.
+actors.hero.heroclass.rosecat_unlock=과거 신화 속에 존재하던 '기억을 마주하지 못하는 자를 결국에는 용감하게 만드는 신기한 식물'의 이름을 따, _그녀의 코드네임은 '로즈몬티스'가 되었다._
 actors.hero.heroclass.rosecat_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 힘의 물약\n- 공포의 주문서
 actors.hero.heroclass.rosecat_desc_loadout=로즈몬티스는 사거리가 길지만 명중률과 공격속도에 패널티를 받는 _EX-43_을 가지고 시작합니다.\n\n로즈몬티스는 그녀의 아츠 장치를 사용해 원거리 공격을 할 수 있습니다..\n\n로즈몬티스는 _벨벳 주머니_ 와 _마법 보관집_을 가지고 시작하며, 씨앗과 룬석을 담아두고 투척 무기, 완드를 보관할 수 있습니다.
 actors.hero.heroclass.rosecat_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 로즈몬티스의 두 가지 전문화는 다음과 같습니다.
 
-//0.1.? unlcok = 과거 신화 속에 존재하던 '기억을 마주하지 못하는 자를 결국에는 용감하게 만드는 신기한 식물'의 이름을 따, 그녀의 코드네임은 '로즈몬티스'가 되었다.
+//0.1.? unlcok =로도스의 강력한 아츠 사용자인 작은 필라인 _로즈몬티스_ 가 곧 합류합니다!
 
 actors.hero.heroclass.rosecat1=로즈몬티스
 actors.hero.heroclass.rosecat1_unlock=로즈몬티스는 강력한 아츠 사용자로, _특별한 아츠 장치_를 가지고 시작합니다.\n\n로즈몬티스를 해금하려면 _게임을 클리어 하십시오._
@@ -825,7 +825,7 @@ actors.mobs.miniboss.sentinel.hit=살카즈 보초가 이 층 내의 모든 적�
 actors.mobs.miniboss.sentinel.die=살카즈 저주술사와 탈룰라의 힘이 약해지는 것이 느껴졌다.
 
 actors.mobs.miniboss.centurion.name=살카즈 백부장
-actors.mobs.miniboss.centurion.desc=리유니온의 간부이자 살카즈의 용병. 살카즈의 용병을 일부 선동하여 정면 돌파를 시도한다.\n주기적으로 살카즈 용병을 불러오며, _체력을 어느정도 잃는다면_ 매우 빠른 속도로 용병들을 불러온다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
+actors.mobs.miniboss.centurion.desc=리유니온의 간부이자 살카즈의 용병. 살카즈의 용병을 일부 선동하여 정면 돌파를 시도한다.\n주기적으로 살카즈 용병을 불러오며, _체력이 절반 이하라면_ 매우 빠른 속도로 용병들을 불러온다.\n\n_미니보스_ : 처치하지 않으면 다음 층 보스와 탈룰라가 강화됩니다!
 actors.mobs.miniboss.centurion.tep=소환된 살카즈 용병이 이 층의 다른 곳으로 전이하였다!
 actors.mobs.miniboss.centurion.die=W와 탈룰라의 힘이 약해지는 것이 느껴졌다.
 actors.mobs.miniboss.centurion$centurionminion.name=무명의 살카즈 용병

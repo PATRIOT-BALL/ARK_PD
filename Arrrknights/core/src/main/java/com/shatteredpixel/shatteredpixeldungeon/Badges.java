@@ -101,6 +101,7 @@ public class Badges {
 		BOSS_SLAIN_1_ROSECAT,
 		BOSS_SLAIN_1_ALL_CLASSES    ( 53, true ),
 		GAMES_PLAYED_1              ( 54, true ),
+		Get_25_STONES                (96),
 
 		//gold
 		PIRANHAS                    ( 64 ),
@@ -136,7 +137,7 @@ public class Badges {
 		BOSS_SLAIN_3_GUARDIAN,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
 		GAMES_PLAYED_2              ( 81, true ),
-		Get_25_STONES                (96),
+		Get_40_STONES                (96),
 
 		//platinum
 		HAPPY_END                   ( 96 ),
@@ -150,12 +151,12 @@ public class Badges {
 		GAMES_PLAYED_3              ( 99, true ),
 		CHAMPION_1                  ( 100 ),
 		ROARINGFLARE                  ( 116 ),
-		Get_40_STONES                (96),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
 		CHAMPION_2                  ( 113 ),
 		CHAMPION_3                  ( 114 ),
+		CHAMPION_4                  ( 114 ),
 		EVILTIME_END                  ( 115 );
 
 		public boolean meta;
@@ -851,6 +852,13 @@ public class Badges {
 			}
 			badge = Badge.CHAMPION_3;
 		}
+		if (challenges >= 8){
+			if (!global.contains(badge)){
+				global.add(badge);
+				saveNeeded = true;
+			}
+			badge = Badge.CHAMPION_4;
+		}
 		local.add(badge);
 		displayBadge( badge );
 	}
@@ -965,7 +973,7 @@ public class Badges {
 			{Badge.POTIONS_COOKED_1, Badge.POTIONS_COOKED_2, Badge.POTIONS_COOKED_3, Badge.POTIONS_COOKED_4 },
 			{Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4},
 			{Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4},
-			{Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3},
+			{Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3, Badge.CHAMPION_4},
 			{Badge.Get_25_STONES, Badge.Get_40_STONES}
 	};
 

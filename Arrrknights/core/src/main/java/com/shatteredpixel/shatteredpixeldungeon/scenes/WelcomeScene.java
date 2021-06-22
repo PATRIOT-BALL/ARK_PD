@@ -190,6 +190,7 @@ public class WelcomeScene extends PixelScene {
 				if (highestChalInRankings >= 1) Badges.addGlobal(Badges.Badge.CHAMPION_1);
 				if (highestChalInRankings >= 3) Badges.addGlobal(Badges.Badge.CHAMPION_2);
 				if (highestChalInRankings >= 6) Badges.addGlobal(Badges.Badge.CHAMPION_3);
+				if (highestChalInRankings >= 8) Badges.addGlobal(Badges.Badge.CHAMPION_4);
 				Badges.saveGlobal();
 			}
 		}

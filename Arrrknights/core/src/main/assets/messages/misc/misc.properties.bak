@@ -65,12 +65,15 @@ badges$badge.happy_end=행복한 결말
 badges$badge.champion_1=1개의 위기협약을 활성화하고 클리어
 badges$badge.champion_2=3개의 위기협약을 활성화하고 클리어
 badges$badge.champion_3=6개의 위기협약을 활성화하고 클리어
+badges$badge.champion_3=8개의 위기협약을 활성화하고 클리어
 badges$badge.unlock_mage=아미야 해금
 badges$badge.unlock_rogue=레드 해금
 badges$badge.unlock_huntress=그레이스롯 해금
 
 badges$badge.roaringflare=울부짖는 광명
 badges$badge.eviltime_end=암흑 시대의 끝
+badges$badge.get_25_stones=원암 25개 채취
+badges$badge.get_40_stones=우리들의 빛
 
 challenges.no_food=환경: 식량배급 중단
 challenges.no_food_desc=음식은 이미 부족하지만, 양 또한 주의해야 합니다!\n\n- 음식과 풍요의 뿔이 1/3의 허기만을 회복시켜 줍니다.\n- 허기를 채우는 다른 수단은 기존과 같습니다.

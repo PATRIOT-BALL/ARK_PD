@@ -534,9 +534,8 @@ public class Generator {
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
                     BookTerminationT.class,
-                    BookYourWish.class // 로즈몬티스 정식 패치 시 삭제
             };
-            SKL_T3.probs = new float[]{7, 7, 1};
+            SKL_T3.probs = new float[]{1, 1};
 
 
             SKL_RND.classes = new Class<?>[]{
