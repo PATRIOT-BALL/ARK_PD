@@ -108,7 +108,7 @@ public class Centurion extends Mob {
                 Actor.addDelayed(new Pushing(summon, pos, summon.pos), -1);
                 CellEmitter.get(spawnPos).burst(ShadowParticle.CURSE, 4);
                 summon.beckon(Dungeon.hero.pos);
-                skillcooldown = Random.Int(25,30);
+                skillcooldown = Random.Int(45,55);
 
                 if (Dungeon.level.map[spawnPos] == Terrain.WALL)
                 {
@@ -122,7 +122,7 @@ public class Centurion extends Mob {
 
         if (skillcooldown > 0) {
             if (HP < HT / 2) {
-                skillcooldown -= 15;
+                skillcooldown -= 30;
             } else skillcooldown -= 1;
         }
 
@@ -165,7 +165,7 @@ public class Centurion extends Mob {
 
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange(4, 12);
+            return Random.NormalIntRange(4, 14);
         }
 
         @Override
