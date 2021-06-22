@@ -44,25 +44,25 @@ public class Effects {
 				icon.frame(icon.texture.uvRect(0, 0, 16, 16));
 				break;
 			case LIGHTNING:
-				icon.frame(icon.texture.uvRect(16, 0, 32, 8));
+				icon.frame(icon.texture.uvRect(16, 0, 32, 6));
 				break;
 			case WOUND:
-				icon.frame(icon.texture.uvRect(16, 8, 32, 16));
+				icon.frame(icon.texture.uvRect(16, 6, 32, 17));
 				break;
 			case EXCLAMATION:
 				icon.frame(icon.texture.uvRect(0, 16, 6, 25));
 				break;
 			case CHAIN:
-				icon.frame(icon.texture.uvRect(6, 16, 12, 24));
+				icon.frame(icon.texture.uvRect(6, 16, 12, 23));
 				break;
 			case DEATH_RAY:
-				icon.frame(icon.texture.uvRect(16, 16, 32, 24));
+				icon.frame(icon.texture.uvRect(16, 17, 32, 23));
 				break;
 			case LIGHT_RAY:
-				icon.frame(icon.texture.uvRect(16, 23, 32, 31));
+				icon.frame(icon.texture.uvRect(16, 24, 32, 30));
 				break;
 			case HEALTH_RAY:
-				icon.frame(icon.texture.uvRect(16, 30, 32, 38));
+				icon.frame(icon.texture.uvRect(16, 31, 32, 37));
 				break;
 		}
 		return icon;

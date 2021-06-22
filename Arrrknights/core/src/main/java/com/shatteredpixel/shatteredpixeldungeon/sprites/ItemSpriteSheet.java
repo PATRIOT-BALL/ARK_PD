@@ -206,7 +206,7 @@ public class ItemSpriteSheet {
 
 	private static final int WEP_TIER1      =                               xy(1, 7);   //8 slots
 	public static final int WORN_SHORTSWORD = WEP_TIER1+0;
-	public static final int BLITZE          = WEP_TIER1+1;
+	public static final int EX41          = WEP_TIER1+1;
 	public static final int GLOVES          = WEP_TIER1+2;
 	public static final int CHAINSAW          = WEP_TIER1+3;
 	public static final int DAGGER          = WEP_TIER1+4;
@@ -214,7 +214,7 @@ public class ItemSpriteSheet {
 	public static final int HEAMYO     = WEP_TIER1+6;
 	static{
 		assignItemRect(WORN_SHORTSWORD, 16, 16);
-		assignItemRect(BLITZE, 			16, 16);
+		assignItemRect(EX41, 			16, 16);
 		assignItemRect(GLOVES,          16, 16);
 		assignItemRect(CHAINSAW, 			16, 16);
 		assignItemRect(DAGGER,          16, 16);
@@ -518,6 +518,7 @@ public class ItemSpriteSheet {
 	public static final int EXOTIC_BERKANAN = EXOTIC_SCROLLS+9;
 	public static final int EXOTIC_ODAL     = EXOTIC_SCROLLS+10;
 	public static final int EXOTIC_TIWAZ    = EXOTIC_SCROLLS+11;
+	public static final int EXOTIC_BLAZE    = EXOTIC_SCROLLS+12;
 	static {
 		for (int i = EXOTIC_SCROLLS; i < EXOTIC_SCROLLS+31; i++)
 			assignItemRect(i, 16, 16);

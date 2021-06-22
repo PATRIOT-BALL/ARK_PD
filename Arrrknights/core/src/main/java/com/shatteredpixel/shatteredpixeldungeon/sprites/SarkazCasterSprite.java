@@ -33,7 +33,7 @@ public class SarkazCasterSprite extends MobSprite {
 
 		texture( Assets.Sprites.S_CASTER );
 
-		TextureFilm frames = new TextureFilm( texture, 38, 38 );
+		TextureFilm frames = new TextureFilm( texture, 44, 44 );
 
 		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 0, 0 );
@@ -41,8 +41,8 @@ public class SarkazCasterSprite extends MobSprite {
 		run = new MovieClip.Animation( 15, true );
 		run.frames( frames, 0, 0, 0 );
 
-		attack = new MovieClip.Animation( 12, false );
-		attack.frames( frames, 0, 0, 0 );
+		attack = new MovieClip.Animation( 17, false );
+		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 );
 
 		die = new MovieClip.Animation( 8, false );
 		die.frames( frames, 0, 0, 0 );

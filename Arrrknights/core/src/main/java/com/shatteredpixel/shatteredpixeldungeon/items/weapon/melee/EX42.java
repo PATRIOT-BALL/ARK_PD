@@ -5,7 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class EX42 extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.TRIDENT;
+        image = ItemSpriteSheet.EX41;
         hitSound = Assets.Sounds.HIT_WALL1;
         hitSoundPitch = 0.65f;
 

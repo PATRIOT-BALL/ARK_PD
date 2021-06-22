@@ -39,6 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.MagicalHolster;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
@@ -70,7 +71,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfAntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPrismaticImage;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
@@ -244,6 +249,26 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(2,skillB);
 
 		new DewVial().collect();
+
+		/*TomeOfMastery ski;
+		ski = new TomeOfMastery();
+		ski.quantity(1).collect();
+
+		WandOfTransfusion wandOfTransfusion;
+		wandOfTransfusion = new WandOfTransfusion();
+		wandOfTransfusion.quantity(1).collect();
+
+		WandOfPrismaticLight wandO;
+		wandO = new WandOfPrismaticLight();
+		wandO.quantity(1).collect();
+
+		WandOfDisintegration wand;
+		wand = new WandOfDisintegration();
+		wand.quantity(1).collect();
+
+		EtherealChains w;
+		w = new EtherealChains();
+		w.quantity(1).collect();*/
 	}
 
 	private static void initHuntress( Hero hero ) {
