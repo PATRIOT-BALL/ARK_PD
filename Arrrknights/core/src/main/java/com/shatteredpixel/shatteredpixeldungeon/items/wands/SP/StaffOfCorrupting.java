@@ -227,7 +227,6 @@ public class StaffOfCorrupting extends Wand {
             AncientKin.Seaborn seaborn = new AncientKin.Seaborn();
             seaborn.pos = enemy.pos;
             seaborn.HT=seaborn.HP = Math.max(5, 5 + enemy.maxLvl);
-            GLog.w(Messages.get(Hero.class, "name", seaborn.HP)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
             int sbuff = Math.max(3, 3 + buffedLvl() * 3);
             Buff.affect(seaborn, Barrier.class).incShield(sbuff);
             Buff.affect(seaborn, Weakness.class, 60f - buffedLvl() * 3);
