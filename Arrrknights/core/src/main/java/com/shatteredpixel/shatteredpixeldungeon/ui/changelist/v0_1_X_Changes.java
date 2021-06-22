@@ -167,6 +167,9 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "새로운 배지",
                 "- _원암 25개 채취_ 배지와 _우리들의 빛(원암 40개 채취)_ 배지가 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WARRIOR), "분노 전문화 새로운 능력",
+                "- 적에게 투척 무기가 아닌 물건을 던지면 _광란_ 을 부여하고 자신은 즉시 _분노와 아츠 면역_ 을 얻는 능력이 새로 생겼습니다. 이 효과는 240턴마다 발동할 수 있습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
