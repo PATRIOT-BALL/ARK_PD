@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Gloves extends MeleeWeapon {
@@ -32,7 +33,7 @@ public class Gloves extends MeleeWeapon {
 		hitSoundPitch = 1.3f;
 
 		tier = 1;
-		DLY = 0.333f; //2x speed
+		DLY = 0.4f; // 2.5회. +150%
 		
 		bones = false;
 	}
@@ -43,4 +44,12 @@ public class Gloves extends MeleeWeapon {
 				lvl*Math.round(1.5f*(tier+1));  //+1 per level, down from +2
 	}
 
+	@Override
+	public int proc(Char attacker, Char defender, int damage) {
+		int df = damage;
+		damage = Math.max(damage + defender.drRoll(), damage + defender.drRoll());
+		damage = Math.min(damage, df + 2);
+
+		return super.proc(attacker, defender, damage);
+	}
 }

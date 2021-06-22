@@ -130,9 +130,9 @@ items.skill.sk2.bookdeephealing.name=심화 치료의 스킬개론
 items.skill.sk2.bookdeephealing.desc=_심화 치료_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 전부 회목 및 지속 치유. 사용 후 기록장치에서 스킬 제거\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookdeephealing.ac_use=읽는다
 
-items.skill.sk2.booknervous.name=말초 차단의 스킬개론
-items.skill.sk2.booknervous.desc=_말초 차단_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내의 적들에게 마비 부여\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
-items.skill.sk2.booknervous.ac_use=읽는다
+items.skill.sk2.bookspikes.name=가시의 스킬개론
+items.skill.sk2.bookspikes.desc=_호신용 가시_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 피격시 주위 적에게 피해\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookspikes.ac_use=읽는다
 
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
