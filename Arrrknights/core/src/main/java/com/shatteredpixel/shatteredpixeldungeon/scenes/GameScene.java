@@ -276,6 +276,9 @@ public class GameScene extends PixelScene {
 
 		terrainFeatures = new TerrainFeaturesTilemap(Dungeon.level.plants, Dungeon.level.traps);
 		terrain.add(terrainFeatures);
+
+		raisedTerrain = new RaisedTerrainTilemap();
+		add( raisedTerrain );
 		
 		levelVisuals = Dungeon.level.addVisuals();
 		add(levelVisuals);
@@ -295,7 +298,7 @@ public class GameScene extends PixelScene {
 		healthIndicators = new Group();
 		emoicons = new Group();
 		overFogEffects = new Group();
-		
+
 		mobs = new Group();
 		add( mobs );
 
@@ -310,9 +313,6 @@ public class GameScene extends PixelScene {
 				mob.beckon( Dungeon.hero.pos );
 			}
 		}
-		
-		raisedTerrain = new RaisedTerrainTilemap();
-		add( raisedTerrain );
 
 		walls = new DungeonWallsTilemap();
 		add(walls);
