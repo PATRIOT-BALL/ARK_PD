@@ -141,6 +141,7 @@ public class AnnihilationGear extends Item {
 
                 curUser.sprite.zap(targetCell);
 
+                charge--;
                 ((MissileSprite) curUser.sprite.parent.recycle(MissileSprite.class)).
                         reset(curUser.sprite,
                                 finalTargetCell,
@@ -149,7 +150,6 @@ public class AnnihilationGear extends Item {
                                     @Override
                                     public void call() {
                                         Arrow.onThrow(target);
-                                        charge--;
                                         updateQuickslot();
                                     }
                                 });

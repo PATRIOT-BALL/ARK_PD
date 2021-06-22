@@ -1430,7 +1430,7 @@ items.spells.phaseshift.desc=이 혼돈 아츠는 대상 캐릭터를 현재 층
 items.spells.reclaimtrap.name=함정 흡수기
 items.spells.reclaimtrap.no_trap=그곳에는 함정이 없다.
 items.spells.reclaimtrap.desc_trap=이 아츠는 현재 _%s_ 와 융합했습니다.
-items.spells.reclaimtrap.desc=이 아츠는 DM-300 내부에 존재하던 기계적 에너지를 담고 있습니다. 발동 가능한 함정에 시전하면, 그 함정의 힘이 아츠에 스며들어 당신이 해당 함정 효과를 원하는 장소에 발휘할 수 있게 합니다.\n\n그러나, 일부 함정은 어떤 곳에서는 작동하지 않을 수 있으며 아츠는 한 번에 단 하나의 함정만 저장할 수 있습니다.
+items.spells.reclaimtrap.desc=이 아츠는 머드락 내부에 존재하던 기계적 에너지를 담고 있습니다. 발동 가능한 함정에 시전하면, 그 함정의 힘이 아츠에 스며들어 당신이 해당 함정 효과를 원하는 장소에 발휘할 수 있게 합니다.\n\n그러나, 일부 함정은 어떤 곳에서는 작동하지 않을 수 있으며 아츠는 한 번에 단 하나의 함정만 저장할 수 있습니다.
 
 items.spells.recycle.name=재활용
 items.spells.recycle.inv_title=재활용할 아이템을 선택하세요
@@ -1441,7 +1441,7 @@ items.spells.targetedspell.prompt=대상을 선택하세요
 items.spells.targetedspell.inv_title=융합할 아이템을 선택하세요
 
 items.spells.wildenergy.name=격렬한 에너지
-items.spells.wildenergy.desc=이 아츠는 DM-300의 동력이었던 저주받은 에너지의 일부를 담고 있습니다. 이 아츠를 시전하면 아츠가 당신의 아츠 스태프와 착용중인 유물을 충전해 주지만, 동시에 임의의 저주받은 아츠 스태프 효과 또한 발휘할 것입니다. 그러나 저주받은 아츠를 발사할 위치 정도는 정할 수 있습니다.
+items.spells.wildenergy.desc=이 아츠는 머드락의 동력이었던 저주받은 에너지의 일부를 담고 있습니다. 이 아츠를 시전하면 아츠가 당신의 아츠 스태프와 착용중인 유물을 충전해 주지만, 동시에 임의의 저주받은 아츠 스태프 효과 또한 발휘할 것입니다. 그러나 저주받은 아츠를 발사할 위치 정도는 정할 수 있습니다.
 
 
 ###runestones
