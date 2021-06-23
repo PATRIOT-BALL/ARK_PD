@@ -1025,7 +1025,7 @@ items.potions.elixirs.elixirofarcanearmor.name=신비한 갑옷 영약
 items.potions.elixirs.elixirofarcanearmor.desc=이 영약은 마신 사람에게 오랫동안 지속되는 아츠 저항 효과를 부여합니다.
 
 items.potions.elixirs.elixirofaquaticrejuvenation.name=수상 회복의 영약
-items.potions.elixirs.elixirofaquaticrejuvenation.desc=이 영약은 치유 물약에 구의 조각을 섞어 향상시킨 것입니다. 이 영약은 즉각적인 치유 효과를 주지 않지만, 대신 물 위에 서 있을 때 지속적으로 더욱 많은 양의 치유 효과를 줍니다.
+items.potions.elixirs.elixirofaquaticrejuvenation.desc=이 영약은 치유 물약에 뿔조각을 섞어 향상시킨 것입니다. 이 영약은 즉각적인 치유 효과를 주지 않지만, 대신 물 위에 서 있을 때 지속적으로 더욱 많은 양의 치유 효과를 줍니다.
 items.potions.elixirs.elixirofaquaticrejuvenation$aquahealing.name=수상 회복
 items.potions.elixirs.elixirofaquaticrejuvenation$aquahealing.desc=당신은 일시적으로 구와 비슷한 재생 능력을 얻었습니다.\n\n물 위에 서 있는 동안, 당신은 매 턴마다 약간의 체력을 회복합니다. 이 효과는 당신의 체력이 꽉 차 있거나 물 위에 있지 않다면 일시적으로 멈춥니다.\n\n남은 치유량: %d.
 
@@ -2304,6 +2304,6 @@ items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아
 
 items.annihilationgear.name=섬멸전 장비
 items.annihilationgear.ac_active=방벽 투척
-items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다.\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있습니다._
+items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다.\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._
 items.annihilationgear.prompt=목표 지정
 items.annihilationgear.nocharge=충전량이 부족합니다.

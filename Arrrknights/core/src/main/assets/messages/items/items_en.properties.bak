@@ -676,7 +676,7 @@ items.potions.elixirs.elixirofarcanearmor.name=elixir of arcane armor
 items.potions.elixirs.elixirofarcanearmor.desc=This elixir will grant the drinker a long lasting resistance to magical damage.
 
 items.potions.elixirs.elixirofaquaticrejuvenation.name=elixir of aquatic rejuvenation
-items.potions.elixirs.elixirofaquaticrejuvenation.desc=This elixir contains the remains of horn enhanced with a healing potion. While it will not provide immediate healing, it will steadily restore a greater amount of health while you are standing in water.
+items.potions.elixirs.elixirofaquaticrejuvenation.desc=This elixir contains the remains of Goo enhanced with a healing potion. While it will not provide immediate healing, it will steadily restore a greater amount of health while you are standing in water.
 items.potions.elixirs.elixirofaquaticrejuvenation$aquahealing.name=Aquatic Healing
 items.potions.elixirs.elixirofaquaticrejuvenation$aquahealing.desc=You have temporarily gained restorative properties similar to that of Goo.\n\nWhile standing in water, you will recover a small amount of health per turn. The effect is paused when you are at full health or are out of water.\n\nHealing left: %d.
 
