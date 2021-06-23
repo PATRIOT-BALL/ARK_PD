@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportat
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTerror;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.watabou.utils.Reflection;
 
@@ -86,6 +87,9 @@ public abstract class ExoticScroll extends Scroll {
 		
 		regToExo.put(ScrollOfTransmutation.class, ScrollOfPolymorph.class);
 		exoToReg.put(ScrollOfPolymorph.class, ScrollOfTransmutation.class);
+
+		regToExo.put(ScrollOfWarp.class, ScrollOfDominate.class);
+		exoToReg.put(ScrollOfDominate.class, ScrollOfWarp.class);
 	}
 	
 	@Override

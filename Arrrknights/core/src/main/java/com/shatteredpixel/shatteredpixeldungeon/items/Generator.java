@@ -112,6 +112,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportat
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTerror;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAffection;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
@@ -323,9 +324,10 @@ public class Generator {
                     ScrollOfRage.class,
                     ScrollOfRetribution.class,
                     ScrollOfTerror.class,
-                    ScrollOfTransmutation.class
+                    ScrollOfTransmutation.class,
+                    //ScrollOfWarp.class
             };
-            SCROLL.defaultProbs = new float[]{0, 6, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1};
+            SCROLL.defaultProbs = new float[]{0, 6, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1, /*0*/};
             SCROLL.probs = SCROLL.defaultProbs.clone();
 
             STONE.classes = new Class<?>[]{
@@ -534,9 +536,8 @@ public class Generator {
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
                     BookTerminationT.class,
-                    BookYourWish.class // 로즈몬티스 정식 패치 시 삭제
             };
-            SKL_T3.probs = new float[]{7, 7, 1};
+            SKL_T3.probs = new float[]{1, 1};
 
 
             SKL_RND.classes = new Class<?>[]{
