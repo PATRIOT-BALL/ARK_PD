@@ -325,9 +325,9 @@ public class Generator {
                     ScrollOfRetribution.class,
                     ScrollOfTerror.class,
                     ScrollOfTransmutation.class,
-                    //ScrollOfWarp.class
+                    ScrollOfWarp.class
             };
-            SCROLL.defaultProbs = new float[]{0, 6, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1, /*0*/};
+            SCROLL.defaultProbs = new float[]{0, 6, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1, 0};
             SCROLL.probs = SCROLL.defaultProbs.clone();
 
             STONE.classes = new Class<?>[]{

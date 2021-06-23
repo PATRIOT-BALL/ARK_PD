@@ -808,14 +808,14 @@ items.bombs.flashbang.desc=이 개조된 미보는 폭발과 동시에 엄청난
 items.bombs.frostbomb.name=서리별 인형
 items.bombs.frostbomb.desc=이 그리운 느낌의 인형은 폭발할 때 폭발 범위보다 넓은 지역을 오랫동안 냉기 돌풍으로 뒤덮도록 개조되었습니다.
 
-items.bombs.holybomb.name=신성한 미보
+items.bombs.holybomb.name=라인랩의 신성한 미보탄
 items.bombs.holybomb.desc=이 미보는 폭발할 때 폭발 범위보다 넓은 지역에 신성한 빛을 내뿜어, 살카즈 적에게 추가 피해를 줍니다.
 
-items.bombs.noisemaker.name=소음 폭탄
+items.bombs.noisemaker.name=미보 -소음기
 items.bombs.noisemaker.desc=이 개조된 미보는 도화선이 다 타들어감과 동시에 반복적으로 시끄러운 소음을 낼 것입니다. 누군가가 폭탄을 건드리면, 폭발할 것입니다!
-items.bombs.noisemaker.desc_burning=소음 폭탄이 째깍거리고 있으며, 누군가가 접근하면 폭발할 것입니다!
+items.bombs.noisemaker.desc_burning=이 미보는 째깍거리고 있으며, 누군가가 접근하면 폭발할 것입니다!
 
-items.bombs.shockbomb.name=전격 폭탄
+items.bombs.shockbomb.name=미보 -전격폭발
 items.bombs.shockbomb.desc=이 미보는 폭발할 때 여러 갈래의 전기를 방출합니다. 주위에 있는 모든 것들이 피해를 입고 기절할 것이며, 그 강도는 폭탄과의 거리에 따라 달라집니다.
 
 items.bombs.regrowthbomb.name=Lancet-2
@@ -2017,7 +2017,7 @@ items.weapon.melee.crabgun$metalcrab.name=바위게
 items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수와 무기 강화에 비례해 능력치가 결정됩니다.
 
 items.weapon.melee.ex42.name=EX-42
-items.weapon.melee.ex42.stats_desc=사거리 +1, 공격속도 -20%, 명중률 -10%
+items.weapon.melee.ex42.stats_desc=사거리 +1, 공격속도 -20%, 명중률 -5%
 items.weapon.melee.ex42.desc=이 오리지늄 아츠 원격 조종 장치는 타고 날아다닐 수도 있습니다.
 
 items.weapon.melee.naginata.name=나기나타
