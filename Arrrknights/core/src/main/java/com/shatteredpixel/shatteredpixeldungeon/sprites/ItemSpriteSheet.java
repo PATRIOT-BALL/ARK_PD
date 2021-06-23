@@ -806,7 +806,7 @@ public class ItemSpriteSheet {
 			assignIconRect( RING_SHARPSHOOT,    7, 7 );
 			assignIconRect( RING_TENACITY,      6, 6 );
 			assignIconRect( RING_WEALTH,        7, 6 );
-			assignIconRect( RING_SUNLIGHT,        7, 6 );
+			assignIconRect( RING_SUNLIGHT,        7, 7 );
 		}
 
 		                                                                                //16 free slots
@@ -824,6 +824,7 @@ public class ItemSpriteSheet {
 		public static final int SCROLL_RETRIB   = SCROLLS+9;
 		public static final int SCROLL_TERROR   = SCROLLS+10;
 		public static final int SCROLL_TRANSMUTE= SCROLLS+11;
+		public static final int SCROLL_WARP= SCROLLS+12;
 		static {
 			assignIconRect( SCROLL_UPGRADE,     7, 7 );
 			assignIconRect( SCROLL_IDENTIFY,    4, 7 );
@@ -837,6 +838,7 @@ public class ItemSpriteSheet {
 			assignIconRect( SCROLL_RETRIB,      5, 6 );
 			assignIconRect( SCROLL_TERROR,      5, 7 );
 			assignIconRect( SCROLL_TRANSMUTE,   7, 7 );
+			assignIconRect( SCROLL_WARP,   7, 7 );
 		}
 
 		private static final int EXOTIC_SCROLLS =                            xy(1, 4);  //16 slots
@@ -852,6 +854,7 @@ public class ItemSpriteSheet {
 		public static final int SCROLL_PSIBLAST = EXOTIC_SCROLLS+9;
 		public static final int SCROLL_PETRIF   = EXOTIC_SCROLLS+10;
 		public static final int SCROLL_POLYMORPH= EXOTIC_SCROLLS+11;
+		public static final int SCROLL_DOMINATE= EXOTIC_SCROLLS+12;
 		static {
 			assignIconRect( SCROLL_ENCHANT,     7, 7 );
 			assignIconRect( SCROLL_DIVINATE,    7, 6 );
@@ -865,6 +868,7 @@ public class ItemSpriteSheet {
 			assignIconRect( SCROLL_PSIBLAST,    5, 6 );
 			assignIconRect( SCROLL_PETRIF,      7, 5 );
 			assignIconRect( SCROLL_POLYMORPH,   7, 6 );
+			assignIconRect( SCROLL_DOMINATE,   7, 7 );
 		}
 
 		                                                                                //16 free slots
