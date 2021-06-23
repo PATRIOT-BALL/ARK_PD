@@ -49,7 +49,7 @@ public class WarHammer extends MeleeWeapon {
 		hitSoundPitch = 1f;
 
 		tier = 5;
-		ACC = 1.22f; //20% boost to accuracy
+		ACC = 1.3f; //20% boost to accuracy
 	}
 
 	private boolean skill = true; // fasle == skill non-active
