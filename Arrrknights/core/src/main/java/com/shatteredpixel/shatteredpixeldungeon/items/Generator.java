@@ -112,6 +112,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportat
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTerror;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAffection;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
@@ -323,9 +324,10 @@ public class Generator {
                     ScrollOfRage.class,
                     ScrollOfRetribution.class,
                     ScrollOfTerror.class,
-                    ScrollOfTransmutation.class
+                    ScrollOfTransmutation.class,
+                    //ScrollOfWarp.class
             };
-            SCROLL.defaultProbs = new float[]{0, 6, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1};
+            SCROLL.defaultProbs = new float[]{0, 6, 4, 3, 3, 3, 2, 2, 2, 2, 2, 1, /*0*/};
             SCROLL.probs = SCROLL.defaultProbs.clone();
 
             STONE.classes = new Class<?>[]{

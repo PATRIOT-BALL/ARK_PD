@@ -167,6 +167,9 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "새로운 배지",
                 "- _원암 25개 채취_ 배지와 _우리들의 빛(원암 40개 채취)_ 배지가 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.SCROLL_HOLDER), "새로운 일기장",
+                "- _워프의 일기장_ 과 _지배의 일기장_ 이 추가되었습니다. 해당 일기장들은 매우 강력하지만 획득이 어렵습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.WARRIOR), "분노 전문화 새로운 능력",
                 "- 적에게 투척 무기가 아닌 물건을 던지면 _광란_ 을 부여하고 자신은 즉시 _분노와 아츠 면역_ 을 얻는 능력이 새로 생겼습니다. 이 효과는 240턴마다 발동할 수 있습니다."));
 
@@ -209,7 +212,7 @@ public class v0_1_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
-                "- _동의 인장_ : 방어력 상승량이 0-2(+2) 에서 _0-2(+1)_ 로 하향 조정되었습니다."));
+                "- _동의 인장_ : 방어력 상승량이 0-2(+2) 에서 _0-2(+1)_ 로 하향 조정되었습니다. 또한, 적들이 반사 피해를 더 효율적으로 방어합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "- _블레이즈_\n_전술 방어막_ 특성의 방어력 상승 최대치가 6-18에서 _6_ 으로 고정되었습니다."));

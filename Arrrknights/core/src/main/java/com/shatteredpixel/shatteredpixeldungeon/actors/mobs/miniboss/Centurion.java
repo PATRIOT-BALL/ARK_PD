@@ -110,7 +110,7 @@ public class Centurion extends Mob {
                 summon.beckon(Dungeon.hero.pos);
                 skillcooldown = Random.Int(45,55);
 
-                if (Dungeon.level.map[spawnPos] == Terrain.WALL)
+                if (Dungeon.level.map[spawnPos] == Terrain.WALL || Dungeon.level.map[spawnPos] == Terrain.CHASM || Dungeon.level.map[spawnPos] == Terrain.BOOKSHELF)
                 {
                     GLog.w(Messages.get(this,"tep"));
                     new Fadeleaf().activate(summon);

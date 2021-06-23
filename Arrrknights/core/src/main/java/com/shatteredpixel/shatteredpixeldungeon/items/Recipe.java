@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.Artifact;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Blandfruit;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatPie;
@@ -42,6 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMi
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfToxicEssence;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.ExoticPotion;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ExoticScroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Alchemize;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.AquaBlast;
@@ -130,7 +132,7 @@ public abstract class Recipe {
 
             for (Item ingredient : ingredients) {
                 for (int i = 0; i < inputs.length; i++) {
-                    if (ingredient.getClass() == inputs[i] && needed[i] > 0) {
+                     if (ingredient.getClass() == inputs[i] && needed[i] > 0) {
                         if (needed[i] <= ingredient.quantity()) {
                             ingredient.quantity(ingredient.quantity() - needed[i]);
                             needed[i] = 0;
@@ -199,7 +201,8 @@ public abstract class Recipe {
             new WildEnergy.Recipe(),
             new StewedMeat.twoMeat(),
             // 명픽던 추가
-            new StaffKit.Recipe()
+            new StaffKit.Recipe(),
+            new ScrollOfWarp.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{
