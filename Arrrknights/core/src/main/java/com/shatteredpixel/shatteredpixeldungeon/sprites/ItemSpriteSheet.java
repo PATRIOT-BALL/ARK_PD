@@ -496,7 +496,8 @@ public class ItemSpriteSheet {
 	public static final int SCROLL_NAUDIZ   = SCROLLS+8;
 	public static final int SCROLL_BERKANAN = SCROLLS+9;
 	public static final int SCROLL_ODAL     = SCROLLS+10;
-	public static final int SCROLL_TIWAZ    = SCROLLS+11;
+	public static final int SCROLL_ROSE    = SCROLLS+11;
+	public static final int SCROLL_TIWAZ    = SCROLLS+12;
 	
 	public static final int SCROLL_CATALYST = SCROLLS+13;
 	static {

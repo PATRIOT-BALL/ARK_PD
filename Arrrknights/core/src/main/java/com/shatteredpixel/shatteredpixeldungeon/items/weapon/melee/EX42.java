@@ -11,7 +11,7 @@ public class EX42 extends MeleeWeapon {
 
         tier = 1;
         DLY = 1.25f;
-        ACC = 0.9f;
+        ACC = 0.95f;
         RCH = 2;
 
         bones = false;
