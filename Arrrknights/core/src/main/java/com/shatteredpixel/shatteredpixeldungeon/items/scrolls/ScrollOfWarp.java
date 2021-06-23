@@ -28,6 +28,11 @@ public class ScrollOfWarp extends Scroll {
     @Override
     public void doRead() {
 
+        if (Dungeon.bossLevel()){
+            GLog.w( Messages.get(ScrollOfTeleportation.class, "no_tele") );
+            return;
+        }
+
         for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
             if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
                 new Fadeleaf().activate(mob);
