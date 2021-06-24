@@ -21,7 +21,9 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
@@ -40,6 +42,16 @@ public class Heamyo extends MeleeWeapon {
     public int max(int lvl) {
         return  Math.round(6.67f*(tier+1000)) +    //40 base, up from 30
                 lvl*Math.round(1.33f*(tier+1000)); //+8 per level, up from +6
+    }
+
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+            if (mob.alignment != Char.Alignment.ALLY) {
+                mob.damage(99999,this);
+            }
+        }
+        return super.proc(attacker, defender, damage);
     }
 
     @Override

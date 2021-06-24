@@ -21,10 +21,17 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPsi
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ArcaneCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Fadeleaf;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
 import com.watabou.noosa.audio.Sample;
 
 public class ScrollOfWarp extends Scroll {
+    {
+        icon = ItemSpriteSheet.Icons.SCROLL_WARP;
+
+        unique = true;
+    }
     @Override
     public void doRead() {
 
@@ -55,7 +62,7 @@ public class ScrollOfWarp extends Scroll {
             inputs =  new Class[]{ScrollOfPassage.class, StaffKit.class};
             inQuantity = new int[]{1,1};
 
-            cost = 15;
+            cost = 30;
 
             output = ScrollOfWarp.class;
             outQuantity = 1;

@@ -18,6 +18,7 @@ import com.watabou.noosa.audio.Sample;
 
 public class ScrollOfDominate extends ExoticScroll {
     {
+        icon = ItemSpriteSheet.Icons.SCROLL_DOMINATE;
         unique = true;
     }
 

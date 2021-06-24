@@ -73,7 +73,7 @@ public class BloodMagister extends Mob {
         {
             Buff.affect(this, rage.class);
         }
-        else if (buff(rage.class) != null && buff(MagicalSleep.class) != null)
+        else if (buff(rage.class) != null && buff(MagicalSleep.class) == null)
         {
             if (HP >= 16) damage(15,this);
         }

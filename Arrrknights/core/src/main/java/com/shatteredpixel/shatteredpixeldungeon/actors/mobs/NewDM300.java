@@ -585,9 +585,7 @@ public class NewDM300 extends Mob {
         GameScene.bossSlain();
         Dungeon.level.unseal();
 
-        //60% chance of 2 shards, 30% chance of 3, 10% chance for 4. Average of 2.5
-        int shards = Random.chances(new float[]{0, 0, 6, 3, 1});
-        for (int i = 0; i < shards; i++) {
+        for (int i = 0; i < 2; i++) {
             int ofs;
             do {
                 ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
