@@ -76,7 +76,6 @@ public class MassGraveRoom extends SpecialRoom {
 
 		ArrayList<Item> items = new ArrayList<>();
 		//100% corpse dust, 2x100% 1 coin, 2x30% coins, 1x60% random item, 1x30% armor
-		items.add(new CorpseDust());
 		items.add(new Gold(1));
 		items.add(new Gold(1));
 		if (Random.Float() <= 0.3f) items.add(new Gold());
@@ -93,6 +92,9 @@ public class MassGraveRoom extends SpecialRoom {
 			h.setHauntedIfCursed();
 			h.type = Heap.Type.SKELETON;
 		}
+
+		CorpseDust dust = new CorpseDust();
+		level.drop(dust , level.pointToCell(random(1)) ).type = Heap.Type.SKELETON;
 	}
 
 	public static class Bones extends CustomTilemap {
