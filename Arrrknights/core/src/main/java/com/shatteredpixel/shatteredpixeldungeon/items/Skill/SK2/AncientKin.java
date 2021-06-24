@@ -23,6 +23,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SeabornSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.TentacleSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.TargetHealthIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -66,7 +67,7 @@ public class AncientKin extends Skill {
     public static class Seaborn extends Mob
     {
         {
-            spriteClass = TentacleSprite.class;
+            spriteClass = SeabornSprite.class;
 
             HP=HT=75;
             baseSpeed = 1f;

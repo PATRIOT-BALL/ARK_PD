@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class EX42 extends MeleeWeapon {
@@ -10,10 +11,23 @@ public class EX42 extends MeleeWeapon {
         hitSoundPitch = 0.65f;
 
         tier = 1;
-        DLY = 1.25f;
-        ACC = 0.95f;
         RCH = 2;
 
         bones = false;
+    }
+    @Override
+    public int max(int lvl) {
+        return  Math.round(2.5f*(tier+2)) +     //6
+                lvl*Math.round(1.5f*(tier+1));  //+1 per level, down from +2
+    }
+
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        int df = damage;
+        damage = Math.min(damage + defender.drRoll(), damage + defender.drRoll());
+
+        if (damage >= df+2) damage = df+2;
+
+        return super.proc(attacker, defender, damage);
     }
 }
