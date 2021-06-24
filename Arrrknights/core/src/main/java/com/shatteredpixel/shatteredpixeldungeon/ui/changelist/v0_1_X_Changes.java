@@ -221,6 +221,9 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
                 "- _스태프 오브 커럽팅_ 으로 소환하는 혈족의 체력이 적의 강함에 비례하도록 변경되였으며, 대신 강화 단계에 비례해 보호막을 얻고 소환됩니다." + "\n\n"
         + "또한, 베이스가 되는 [먼 옛날의 혈족]의 성능 조정에 따라, 혈족의 방어력이 상승하고 회피율이 감소했습니다."));
+
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 너프",
+                "- _블러드 위치_\n공격력이 25-40 에서 _16-24_ 로 감소했습니다.\n대신 공격할 때마다 공격력이 _2-4_ 만큼 상승하며, 이 공격력 상승은 영구적입니다."));
     }
 
 }

@@ -435,7 +435,7 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
 			case ROSECAT:
-				return false;
+				return true;
 		}
 	}
 	

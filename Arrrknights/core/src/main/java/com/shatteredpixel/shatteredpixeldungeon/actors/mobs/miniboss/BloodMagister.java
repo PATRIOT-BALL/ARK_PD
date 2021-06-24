@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperEliteSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Image;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class BloodMagister extends Mob {
@@ -38,9 +39,11 @@ public class BloodMagister extends Mob {
 
     }
 
+    private int attackpower = 0;
+
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(25, 40);
+        return Random.NormalIntRange(16 + attackpower / 2, 24 + attackpower);
     }
 
     @Override
@@ -59,12 +62,18 @@ public class BloodMagister extends Mob {
     }
 
     @Override
+    public int attackProc(Char enemy, int damage) {
+        attackpower +=4;
+        return super.attackProc(enemy, damage);
+    }
+
+    @Override
     public boolean act() {
         if (buff(rage.class) == null && state == HUNTING)
         {
             Buff.affect(this, rage.class);
         }
-        else if (buff(rage.class) != null)
+        else if (buff(rage.class) != null && buff(MagicalSleep.class) != null)
         {
             if (HP >= 16) damage(15,this);
         }
@@ -87,6 +96,21 @@ public class BloodMagister extends Mob {
         GLog.w(Messages.get(BloodMagister.class, "die"));
         Dungeon.mboss14 = 0;
         super.die(cause);
+    }
+
+    private static final String POWER   = "attackpower";
+
+    @Override
+    public void storeInBundle( Bundle bundle ) {
+        super.storeInBundle( bundle );
+        bundle.put( POWER, attackpower );
+    }
+
+    @Override
+    public void restoreFromBundle( Bundle bundle ) {
+        super.restoreFromBundle( bundle );
+        attackpower = bundle.getInt(POWER);
+
     }
 
     public static class rage extends Buff {

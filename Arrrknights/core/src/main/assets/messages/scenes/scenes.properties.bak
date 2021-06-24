@@ -111,7 +111,7 @@ scenes.titlescene.patreon_button=Patreon 페이지로 이동
 
 scenes.welcomescene.welcome_msg=Tomorrow`s RogueNight는 오픈 소스 게임 Shattered Pixel Dungeon을 기반으로 제작되었습니다. 당신은 로도스 아일랜드의 오퍼레이터로써, 탈룰라에게 잡혀간 박사를 구출해야만합니다. 행운을 빕니다!
 scenes.welcomescene.update_intro=Tomorrow`s RogueNight가 업데이트되었습니다!
-scenes.welcomescene.update_msg=Test v0.1.6으로 돌입하면서 구글 플레이에 정식 출시되었습니다! 자세한 변경점은 개발노트를 참조해주세요!
+scenes.welcomescene.update_msg=Tomorrow`s RogueNight가 업데이트되었습니다!
 scenes.welcomescene.patch_intro=Tomorrow`s RogueNight가 패치되었습니다!
 scenes.welcomescene.patch_bugfixes=버그 수정이 있습니다.
 scenes.welcomescene.patch_translations=번역 업데이트가 있습니다.
