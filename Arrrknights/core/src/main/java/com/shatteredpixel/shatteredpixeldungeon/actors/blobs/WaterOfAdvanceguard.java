@@ -36,7 +36,7 @@ public class WaterOfAdvanceguard extends WellWater {
         } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode) {
             item = new BookWhispers();
         } else if (item instanceof Gamza) {
-            if (Random.IntRange(0,100) < 21) { item = new Nmould();}
+            if (Random.IntRange(0,100) < 25) { item = new Nmould();}
             else if  (Random.IntRange(0,11) < 5) item = new Gamza();
             else item = new Thunderbolt();
         } else {
