@@ -87,6 +87,9 @@ public enum Icons {
 	CUBE_CODE,
 	PURIGRO,
 	ARCNOR,
+	ARKPD,
+	NAMSEK,
+	MIZQ,
 
 	BLAZE,
 	AMIYA,
@@ -120,13 +123,13 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 64, 0, 80, 14 ) );
 			break;
 		case PREFS:
-			icon.frame( icon.texture.uvRect( 80, 0, 94, 14 ) );
+			icon.frame( icon.texture.uvRect( 80, 0, 94, 12 ) );
 			break;
 		case LANGS:
-			icon.frame( icon.texture.uvRect( 96, 0, 110, 11 ) );
+			icon.frame( icon.texture.uvRect( 96, 0, 110, 12 ) );
 			break;
 		case EXIT:
-			icon.frame( icon.texture.uvRect( 112, 0, 127, 11 ) );
+			icon.frame( icon.texture.uvRect( 112, 0, 127, 12 ) );
 			break;
 		case CLOSE:
 			icon.frame( icon.texture.uvRect( 0, 16, 11, 27 ) );
@@ -184,7 +187,7 @@ public enum Icons {
 			break;
 			
 		case DEPTH:
-			icon.frame( icon.texture.uvRect( 0, 48, 13, 64 ) );
+			icon.frame( icon.texture.uvRect( 0, 48, 14, 64 ) );
 			break;
 		case WARRIOR:
 			icon.frame( icon.texture.uvRect( 16, 48, 32, 61 ) );
@@ -202,34 +205,6 @@ public enum Icons {
 				icon.frame( icon.texture.uvRect( 96, 48, 112, 61 ) );
 				break;
 
-			case BLAZE:
-				icon.frame(icon.texture.uvRect(0, 140, 20, 160));
-				break;
-			case AMIYA:
-				icon.frame(icon.texture.uvRect(20, 140, 40, 160));
-				break;
-			case P_RED:
-				icon.frame(icon.texture.uvRect(40, 140, 60, 160));
-				break;
-			case GREY:
-				icon.frame(icon.texture.uvRect(60, 140, 80, 160));
-				break;
-			case NEARL:
-				icon.frame(icon.texture.uvRect(80, 140, 100, 160));
-				break;
-			case ROSEMARI:
-				icon.frame(icon.texture.uvRect(100, 140, 120, 160));
-				break;
-
-			case HYPER:
-				icon.frame(icon.texture.uvRect(0, 160, 32, 192));
-				icon.scale.set(PixelScene.align(0.49f));
-				break;
-			case MONNY:
-				icon.frame(icon.texture.uvRect(32, 172, 52, 192));
-				break;
-
-
 			case ENTER:
 			icon.frame( icon.texture.uvRect( 0, 64, 16, 80 ) );
 			break;
@@ -246,8 +221,7 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 68, 64, 83, 79 ) );
 			break;
 		case SHPX:
-			icon.frame( icon.texture.uvRect( 0, 96, 32, 128 ) );
-			icon.scale.set(PixelScene.align(0.49f));
+			icon.frame( icon.texture.uvRect( 85, 64, 101, 80 ) );
 			break;
 		case GOLD:
 			icon.frame( icon.texture.uvRect( 102, 64, 119, 80 ) );
@@ -263,31 +237,70 @@ public enum Icons {
 			icon.frame(icon.texture.uvRect(34, 81, 48, 95));
 			break;
 
-			case PATRIOT:
-				icon.frame(icon.texture.uvRect(48, 80, 64, 96));
+			case CUBE_CODE:
+				icon.frame( icon.texture.uvRect( 101, 16, 128, 46 ) );
+				icon.scale.set(PixelScene.align(0.49f));
 				break;
 
 
-		case ALEKS:
-			icon.frame( icon.texture.uvRect( 32, 96, 64, 128 ) );
-			icon.scale.set(PixelScene.align(0.49f));
-			break;
-		case CHARLIE:
-			icon.frame( icon.texture.uvRect( 64, 96, 96, 128 ) );
-			icon.scale.set(PixelScene.align(0.49f));
-			break;
-		case ARCNOR:
-			icon.frame( icon.texture.uvRect( 64, 96, 96, 128 ) );
-			icon.scale.set(PixelScene.align(0.49f));
-			break;
-		case PURIGRO:
-			icon.frame( icon.texture.uvRect( 96, 96, 128, 128 ) );
-			icon.scale.set(PixelScene.align(0.49f));
-			break;
-		case CUBE_CODE:
-			icon.frame( icon.texture.uvRect( 101, 16, 128, 46 ) );
-			icon.scale.set(PixelScene.align(0.49f));
-			break;
+
+			case ALEKS:
+				icon.frame( icon.texture.uvRect( 0, 96, 32, 128 ) );
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			case CHARLIE:
+				icon.frame( icon.texture.uvRect( 32, 96, 64, 128 ) );
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			case ARCNOR:
+				icon.frame( icon.texture.uvRect( 64, 96, 96, 128 ) );
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			case PURIGRO:
+				icon.frame( icon.texture.uvRect( 96, 96, 128, 128 ) );
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			//타이틀 이미지들 ↓
+			case ARKPD:
+				icon.frame( icon.texture.uvRect( 0, 192, 32, 224 ) );
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			case NAMSEK:
+				icon.frame( icon.texture.uvRect( 32, 192, 64, 224 ) );
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			case MIZQ:
+				icon.frame( icon.texture.uvRect( 64, 192, 96, 224 ) );
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+			case HYPER:
+				icon.frame(icon.texture.uvRect(96, 192, 128, 224));
+				icon.scale.set(PixelScene.align(0.49f));
+				break;
+
+				//캐릭터 선택창 이미지
+			case BLAZE:
+				icon.frame(icon.texture.uvRect(0, 128, 20, 148));
+				break;
+			case AMIYA:
+				icon.frame(icon.texture.uvRect(20, 128, 40, 148));
+				break;
+			case P_RED:
+				icon.frame(icon.texture.uvRect(40, 128, 60, 148));
+				break;
+			case GREY:
+				icon.frame(icon.texture.uvRect(60, 128, 80, 148));
+				break;
+			case NEARL:
+				icon.frame(icon.texture.uvRect(80, 128, 100, 148));
+				break;
+			case ROSEMARI:
+				icon.frame(icon.texture.uvRect(100, 128, 120, 148));
+				break;
+			case MONNY:
+				icon.frame(icon.texture.uvRect(0, 148, 20, 168));
+				break;
+
 
 
 		}

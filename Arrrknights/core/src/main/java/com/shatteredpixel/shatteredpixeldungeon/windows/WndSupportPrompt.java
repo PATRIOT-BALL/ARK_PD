@@ -41,7 +41,7 @@ public class WndSupportPrompt extends Window {
 
 		int width = PixelScene.landscape() ? WIDTH_L : WIDTH_P;
 
-		IconTitle title = new IconTitle(Icons.get(Icons.SHPX), Messages.get(WndSupportPrompt.class, "title"));
+		IconTitle title = new IconTitle(Icons.get(Icons.NAMSEK), Messages.get(WndSupportPrompt.class, "title"));
 		title.setRect( 0, 0, width, 0 );
 		add(title);
 

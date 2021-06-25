@@ -59,6 +59,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlam
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMight;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nullshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
@@ -253,11 +255,14 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		/*TomeOfMastery ski;
-		ski = new TomeOfMastery();
+		Nullshield ski;
+		ski = new Nullshield();
 		ski.quantity(1).collect();
+		MetalShard ski1;
+		ski1 = new MetalShard();
+		ski1.quantity(1).collect();
 
-		WandOfTransfusion wandOfTransfusion;
+		/*WandOfTransfusion wandOfTransfusion;
 		wandOfTransfusion = new WandOfTransfusion();
 		wandOfTransfusion.quantity(1).collect();
 

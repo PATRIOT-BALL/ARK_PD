@@ -64,7 +64,7 @@ public class AboutScene extends PixelScene {
 		shpxLink += "&utm_medium=about_page";
 		shpxLink += "&utm_campaign=ingame_link";
 
-		CreditsBlock shpx = new CreditsBlock(true, Window.TITLE_COLOR,
+		CreditsBlock shpx = new CreditsBlock(true, Window.SHPX_COLOR,
 				"Shattered Pixel Dungeon",
 				Icons.SHPX.get(),
 				"Developed by: _Evan Debenham_\nBased on Pixel Dungeon's open source",
@@ -73,7 +73,7 @@ public class AboutScene extends PixelScene {
 		shpx.setRect((w - fullWidth)/2f, 6, 120, 0);
 		content.add(shpx);
 
-		CreditsBlock alex = new CreditsBlock(false, Window.TITLE_COLOR,
+		CreditsBlock alex = new CreditsBlock(false, Window.SHPX_COLOR,
 				"Hero Art & Design:",
 				Icons.ALEKS.get(),
 				"Aleksandar Komitov",
@@ -87,7 +87,7 @@ public class AboutScene extends PixelScene {
 		}
 		content.add(alex);
 
-		CreditsBlock charlie = new CreditsBlock(false, Window.TITLE_COLOR,
+		CreditsBlock charlie = new CreditsBlock(false, Window.SHPX_COLOR,
 				"Sound Effects:",
 				Icons.CHARLIE.get(),
 				"Charlie",
@@ -99,9 +99,9 @@ public class AboutScene extends PixelScene {
 
 
 
-		CreditsBlock rogu = new CreditsBlock(true, Window.TITLE_COLOR,
+		CreditsBlock rogu = new CreditsBlock(true, Window.ARKPD_COLOR,
 				"Tomorrow's RogueNights",
-				Icons.SHPX.get(),
+				Icons.ARKPD.get(),
 				"Developed by: _Team Rosemari_\nBased on Shattered Pixel Dungeon's open source",
 				"",
 				null);
@@ -109,9 +109,9 @@ public class AboutScene extends PixelScene {
 		content.add(rogu);
 
 
-		CreditsBlock nam = new CreditsBlock(false, Window.TITLE_COLOR,
+		CreditsBlock nam = new CreditsBlock(false, Window.ARKPD_COLOR,
 				"Hero Art & Design:",
-				Icons.ALEKS.get(),
+				Icons.NAMSEK.get(),
 				"NamSek",
 				"pixiv.net",
 				"https://www.pixiv.net/users/14086167");
@@ -123,9 +123,9 @@ public class AboutScene extends PixelScene {
 		}
 		content.add(nam);
 
-		CreditsBlock mizq = new CreditsBlock(false, Window.TITLE_COLOR,
+		CreditsBlock mizq = new CreditsBlock(false, Window.SHPX_COLOR,
 				"Programming:",
-				Icons.CHARLIE.get(),
+				Icons.MIZQ.get(),
 				"mizq4482",
 				"blog",
 				"https://mizq4482.tistory.com/");
@@ -151,7 +151,6 @@ public class AboutScene extends PixelScene {
 		content.add(hyper);
 
 		addLine(hyper.top() - 4, content);
-
 
 		//*** libGDX Credits ***
 
@@ -180,7 +179,7 @@ public class AboutScene extends PixelScene {
 
 		CreditsBlock arcnor = new CreditsBlock(false, GDX_COLOR,
 				"Pixel Dungeon GDX:",
-				Icons.LIBGDX.get(),
+				Icons.ARCNOR.get(),
 				"Edu García",
 				"twitter.com/arcnor",
 				"https://twitter.com/arcnor");
@@ -194,7 +193,7 @@ public class AboutScene extends PixelScene {
 
 		CreditsBlock purigro = new CreditsBlock(false, GDX_COLOR,
 				"Shattered GDX Help:",
-				Icons.LIBGDX.get(),
+				Icons.PURIGRO.get(),
 				"Kevin MacMartin",
 				"github.com/prurigro",
 				"https://github.com/prurigro/");
@@ -218,6 +217,20 @@ public class AboutScene extends PixelScene {
 		content.add(wata);
 
 		addLine(wata.top() - 4, content);
+
+		CreditsBlock cube = new CreditsBlock(false, WATA_COLOR,
+				"Music:",
+				Icons.CUBE_CODE.get(),
+				"Cube Code",
+				null,
+				null);
+		cube.setSize(colWidth/2f, 0);
+		if (landscape()){
+			cube.setPos(wata.right(), wata.top() + (wata.height() - cube.height())/2f);
+		} else {
+			cube.setPos(wata.left(), wata.bottom()+5);
+		}
+		content.add(cube);
 
 
 		//*** Transifex Credits ***

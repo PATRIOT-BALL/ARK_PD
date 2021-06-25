@@ -168,7 +168,7 @@ public class TitleScene extends PixelScene {
 				TomorrowRogueNight.switchScene( AboutScene.class );
 			}
 		};
-		btnAbout.icon(Icons.get(Icons.SHPX));
+		btnAbout.icon(Icons.get(Icons.ARKPD));
 		add(btnAbout);
 		
 		final int BTN_HEIGHT = 20;
