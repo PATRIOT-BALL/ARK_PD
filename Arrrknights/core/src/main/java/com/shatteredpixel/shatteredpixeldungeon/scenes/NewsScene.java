@@ -99,12 +99,12 @@ public class NewsScene extends PixelScene {
 				DeviceCompat.openURI(link);
 			}
 		};
-		btnSite.icon(Icons.get(Icons.ALEKS));
+		btnSite.icon(Icons.get(Icons.NAMSEK));
 		btnSite.textColor(Window.TITLE_COLOR);
 		btnSite.setRect(left, top, fullWidth, BTN_HEIGHT);
 		add(btnSite);
 
-		btnSite2.icon(Icons.get(Icons.CHARLIE));
+		btnSite2.icon(Icons.get(Icons.MIZQ));
 		btnSite2.textColor(Window.TITLE_COLOR);
 		btnSite2.setRect(left, top*4, fullWidth, BTN_HEIGHT);
 		add(btnSite2);
