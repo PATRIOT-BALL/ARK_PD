@@ -210,7 +210,8 @@ public class v0_1_X_Changes {
                        "- _스태프 오브 스카이파이어_ 의 피해량이 3-6에서 _3-8_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.FANATIC, 6, 7, 16, 16), "리유니온 버프",
-                "- _무뢰한_\n체력이 기존에 비해 약 _20~30%_, 공격력이 _33%_ 상승했습니다."));
+                "- _무뢰한_\n체력이 기존에 비해 약 _20~30%_, 공격력이 _33%_ 상승했습니다." + "\n\n" +
+                "- _파우스트_\n체력이 180에서 _225_ 로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
@@ -227,7 +228,7 @@ public class v0_1_X_Changes {
         + "또한, 베이스가 되는 [먼 옛날의 혈족]의 성능 조정에 따라, 혈족의 방어력이 상승하고 회피율이 감소했습니다."));
 
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 너프",
-                "- _블러드 위치_\n공격력이 25-40 에서 _16-24_ 로 감소했습니다.\n대신 공격할 때마다 공격력이 _2-4_ 만큼 상승하며, 이 공격력 상승은 영구적입니다.\n\n또한, 체력이 최저값이 되면 이동속도가 감소합니다." + "\n\n" +
+                "- _블러드 위치_\n공격력이 25-40 에서 _16-24_ 로 감소했습니다.\n대신 공격할 때마다 공격력이 _3-6_ 만큼 상승하며, 이 공격력 상승은 영구적입니다.\n\n또한, 체력이 최저값이 되면 이동속도가 감소합니다." + "\n\n" +
                 "- _머드락_\n드롭하는 쇳조각의 갯수가 _2개_ 로 고정되었습니다."));
     }
 

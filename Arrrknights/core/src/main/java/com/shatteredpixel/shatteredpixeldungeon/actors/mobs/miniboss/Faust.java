@@ -27,7 +27,7 @@ public class Faust extends Mob {
         immunities.add(ScrollOfRage.class);
         immunities.add(ScrollOfPsionicBlast.class);
 
-        HP = HT = 180;
+        HP = HT = 225;
         defenseSkill = 20;
         baseSpeed = 1f;
 

@@ -64,7 +64,7 @@ public class BloodMagister extends Mob {
 
     @Override
     public int attackProc(Char enemy, int damage) {
-        attackpower +=4;
+        attackpower +=6;
         return super.attackProc(enemy, damage);
     }
 
