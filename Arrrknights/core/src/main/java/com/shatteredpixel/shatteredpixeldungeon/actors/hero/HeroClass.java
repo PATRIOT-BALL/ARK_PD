@@ -255,13 +255,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		Nullshield ski;
-		ski = new Nullshield();
-		ski.quantity(1).collect();
-		MetalShard ski1;
-		ski1 = new MetalShard();
-		ski1.quantity(1).collect();
-
 		/*WandOfTransfusion wandOfTransfusion;
 		wandOfTransfusion = new WandOfTransfusion();
 		wandOfTransfusion.quantity(1).collect();
