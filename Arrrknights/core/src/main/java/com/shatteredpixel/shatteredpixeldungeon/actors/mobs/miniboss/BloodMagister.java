@@ -40,6 +40,7 @@ public class BloodMagister extends Mob {
     }
 
     private int attackpower = 0;
+    private boolean powerdown = false;
 
     @Override
     public int damageRoll() {
@@ -76,6 +77,7 @@ public class BloodMagister extends Mob {
         else if (buff(rage.class) != null && buff(MagicalSleep.class) == null)
         {
             if (HP >= 16) damage(15,this);
+            else powerdown = true;
         }
         return super.act();
     }
@@ -92,6 +94,12 @@ public class BloodMagister extends Mob {
     }
 
     @Override
+    public float speed() {
+        if (powerdown) return super.speed() / 4;
+        else return super.speed();
+    }
+
+    @Override
     public void die(Object cause) {
         GLog.w(Messages.get(BloodMagister.class, "die"));
         Dungeon.mboss14 = 0;
@@ -99,17 +107,20 @@ public class BloodMagister extends Mob {
     }
 
     private static final String POWER   = "attackpower";
-
+    private static final String PDOWN   = "powerdown";
     @Override
+
     public void storeInBundle( Bundle bundle ) {
         super.storeInBundle( bundle );
         bundle.put( POWER, attackpower );
+        bundle.put( PDOWN, powerdown );
     }
 
     @Override
     public void restoreFromBundle( Bundle bundle ) {
         super.restoreFromBundle( bundle );
         attackpower = bundle.getInt(POWER);
+        powerdown = bundle.getBoolean(PDOWN);
 
     }
 

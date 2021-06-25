@@ -33,7 +33,7 @@ public class PurgatoryKnife extends MissileWeapon {
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         if (defender.properties().contains(Char.Property.MINIBOSS) != true && defender.properties().contains(Char.Property.BOSS) != true)
-        if (Random.Int(24) < 23) {
+        if (Random.Int(76) < 74) {
             Ballistica route = new Ballistica(defender.pos, attacker.pos, Ballistica.PROJECTILE);
             int cell = route.collisionPos;
 

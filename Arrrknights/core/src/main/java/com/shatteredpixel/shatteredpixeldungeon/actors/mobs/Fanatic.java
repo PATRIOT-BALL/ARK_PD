@@ -35,13 +35,13 @@ public class Fanatic extends Mob {
     public Fanatic() {
         super();
 
-        HP = HT = Dungeon.depth * 4 - 8;
+        HP = HT = Dungeon.depth * 5 - 8;
         defenseSkill = Dungeon.depth;
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 1 + Dungeon.depth / 2, (Dungeon.depth * 3) / 2);
+        return Random.NormalIntRange( 1 + Dungeon.depth / 2, Dungeon.depth * 2);
     }
 
     @Override

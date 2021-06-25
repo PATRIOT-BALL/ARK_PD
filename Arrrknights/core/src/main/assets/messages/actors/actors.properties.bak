@@ -571,7 +571,7 @@ actors.hero.talent.lovemeat.desc=_+1:_ 고기류 음식 섭취시 _10턴_동안 
 actors.hero.talent.powergear.title=강력한 방벽
 actors.hero.talent.powergear.desc=_+1:_ 방벽 투척이 적을 _약하게_ 밀쳐냅니다.\n\n_+2:_ 방벽 투척이 적을 _조금 강하게_ 밀쳐냅니다.
 actors.hero.talent.aimtraining.title=에임 훈련
-actors.hero.talent.aimtraining.desc=_+1:_ 방벽 투척이 _드론_ 에게 _15%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _드론_ 에게 _30%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _드론_ 에게 _45%_ 의 추가 피해를 줍니다.
+actors.hero.talent.aimtraining.desc=_+1:_ 방벽 투척이 _드론_ 에게 _15%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _드론_ 에게 _30%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _드론_ 에게 _45%_ 의 추가 피해를 줍니다.\n\n또한, 드론들에게 적중시키면 대상을 짧게 실명시킵니다.
 actors.hero.talent.cutlet.title=돈까스 메이커
 actors.hero.talent.cutlet.desc=_+1:_ 누군가가 사망할 때 _6%_ 확률로 돈까스를 드롭하게 됩니다.\n\n_+2:_ 누군가가 사망할 때 _13%_ 확률로 돈까스를 드롭하게 됩니다.\n\n_+3:_ 누군가가 사망할 때 _20%_ 확률로 돈까스를 드롭하게 됩니다.\n\n돈까스는 허기 회복량이 매우 적지만, 섭취시 섬멸전 장비를 1 만큼 충전합니다.
 actors.hero.talent.focused_attack.title=집중 포격
@@ -593,7 +593,7 @@ actors.hero.talent.recall_memory.desc=_+1:_ 일기장을 읽으면 아츠 기록
 actors.hero.talent.esthesia.title=본질 의식
 actors.hero.talent.esthesia.desc=_+1:_ 방벽 투척이 _보스_ 에게 _15%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _보스_ 에게 _30%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _보스_ 에게 _45%_ 의 추가 피해를 줍니다.
 actors.hero.talent.speed_comabt.title=고속전투
-actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _40%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _60%_ 상승합니다.
+actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _12.5%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _25%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _67.5%_ 상승합니다.
 
 
 

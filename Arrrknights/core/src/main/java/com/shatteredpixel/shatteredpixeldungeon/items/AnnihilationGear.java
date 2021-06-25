@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Frozen;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Mystery;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Stewed;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RageThrowCooldown;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
@@ -213,7 +214,9 @@ public class Spriteex extends MissileWeapon {
         if (Dungeon.hero.buff(MeatPower_Chargrilled.class) != null){
             Buff.affect(enemy, Weakness.class, 7f); }
         if (Dungeon.hero.buff(MeatPower_Frozen.class) != null){
-            Buff.affect(Dungeon.hero, Healing.class).setHeal(Dungeon.hero.HT / 20, 1f, 1); }
+            Dungeon.hero.HP += Dungeon.hero.HT/20;
+            Dungeon.hero.updateHT(true);
+        }
 
         if (Dungeon.hero.hasTalent(Talent.POWERGEAR)) {
             Ballistica trajectory = new Ballistica(curUser.pos, enemy.pos, Ballistica.STOP_TARGET);
@@ -224,7 +227,7 @@ public class Spriteex extends MissileWeapon {
         int dmg = Random.NormalIntRange(min(), max());
         if (curUser.buff(Rose_Force.class) != null) {
             if (Dungeon.hero.hasTalent(Talent.FOCUSED_ATTACK)) {
-                dmg *= 1.3f + (float) Dungeon.hero.pointsInTalent(Talent.FOCUSED_ATTACK) * 0.1f;
+                dmg *= 1.3f + (float) Dungeon.hero.pointsInTalent(Talent.FOCUSED_ATTACK) * 0.15f;
             } else dmg *= 1.3f;
 
         }
@@ -233,6 +236,7 @@ public class Spriteex extends MissileWeapon {
             if (enemy instanceof Mob) {
                 if (enemy.properties().contains(Char.Property.DRONE) == true) {
                     dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.AIMTRAINING) * 0.15f;
+                    if (Random.IntRange(0,1) == 1) charge+=1;
                 }
             }
         }
