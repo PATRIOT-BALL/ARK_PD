@@ -50,7 +50,7 @@ public class v0_1_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ALEKS), "스킨 시스템 추가",
+        changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "스킨 시스템 추가",
                 "- 로도스 아일랜드(27층)에서 _스킨 시스템_을 사용할 수 있습니다." + "\n\n" +
                         "- 각 스킨마다 _특정 배지를 요구_하며, 해당 배지가 있다면 캐릭터의 이미지를 스킨으로 덮어씌울 수 있습니다."));
 

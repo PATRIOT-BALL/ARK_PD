@@ -181,7 +181,7 @@ public class ChangesScene extends PixelScene {
 				panel.innerHeight() + 2);
 		list.scrollTo(0, 0);
 
-		StyledButton btn0_1 = new StyledButton(Chrome.Type.GREY_BUTTON_TR, "β"){
+		StyledButton btn0_1 = new StyledButton(Chrome.Type.GREY_BUTTON_TR, "0.1"){
 			@Override
 			protected void onClick() {
 				super.onClick();

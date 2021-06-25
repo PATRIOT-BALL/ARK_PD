@@ -55,29 +55,30 @@ public class AboutScene extends PixelScene {
 		Component content = list.content();
 		content.clear();
 
+
 		//*** Shattered Pixel Dungeon Credits ***
 
-		String shpxLink = "https://www.patreon.com/roguenight";
+		String shpxLink = "https://ShatteredPixel.com";
 		//tracking codes, so that the website knows where this pageview came from
 		shpxLink += "?utm_source=shatteredpd";
 		shpxLink += "&utm_medium=about_page";
 		shpxLink += "&utm_campaign=ingame_link";
 
-		CreditsBlock shpx = new CreditsBlock(true, Window.ARKPD_COLOR,
-				"Tomorrow's Roguenight",
+		CreditsBlock shpx = new CreditsBlock(true, Window.TITLE_COLOR,
+				"Shattered Pixel Dungeon",
 				Icons.SHPX.get(),
-				"Developed by: _NamSek & mizq4482_\nBased on Pixel Dungeon's open source",
-				"www.patreon.com/roguenight",
+				"Developed by: _Evan Debenham_\nBased on Pixel Dungeon's open source",
+				"ShatteredPixel.com",
 				shpxLink);
 		shpx.setRect((w - fullWidth)/2f, 6, 120, 0);
 		content.add(shpx);
 
-		CreditsBlock alex = new CreditsBlock(false, Window.ARKPD_COLOR,
-				"Pixel Art & Design:",
+		CreditsBlock alex = new CreditsBlock(false, Window.TITLE_COLOR,
+				"Hero Art & Design:",
 				Icons.ALEKS.get(),
-				"NamSek",
-				"Pixiv.net",
-				"https://www.pixiv.net/users/14086167");
+				"Aleksandar Komitov",
+				"alekskomitov.com",
+				"https://www.alekskomitov.com");
 		alex.setSize(colWidth/2f, 0);
 		if (landscape()){
 			alex.setPos(shpx.right(), shpx.top() + (shpx.height() - alex.height())/2f);
@@ -86,34 +87,70 @@ public class AboutScene extends PixelScene {
 		}
 		content.add(alex);
 
-		CreditsBlock charlie = new CreditsBlock(false, Window.ARKPD_COLOR,
-				"Programming:",
+		CreditsBlock charlie = new CreditsBlock(false, Window.TITLE_COLOR,
+				"Sound Effects:",
 				Icons.CHARLIE.get(),
-				"mizq4482",
-				"tistroy.com",
-				"https://mizq4482.tistory.com/");
+				"Charlie",
+				"s9menine.itch.io",
+				"https://s9menine.itch.io");
 		charlie.setRect(alex.right(), alex.top(), colWidth/2f, 0);
 		content.add(charlie);
 
 
-		//*** hypergraph Credits ***
+
+
+		CreditsBlock rogu = new CreditsBlock(true, Window.TITLE_COLOR,
+				"Tomorrow's RogueNights",
+				Icons.SHPX.get(),
+				"Developed by: _Team Rosemari_\nBased on Shattered Pixel Dungeon's open source",
+				"",
+				null);
+		rogu.setRect((w - fullWidth)/2f, alex.bottom() + 8, 120, 0);
+		content.add(rogu);
+
+
+		CreditsBlock nam = new CreditsBlock(false, Window.TITLE_COLOR,
+				"Hero Art & Design:",
+				Icons.ALEKS.get(),
+				"NamSek",
+				"pixiv.net",
+				"https://www.pixiv.net/users/14086167");
+		nam.setSize(colWidth/2f, 0);
+		if (landscape()){
+			nam.setPos(shpx.right(), rogu.top() + (rogu.height() - nam.height())/2f);
+		} else {
+			nam.setPos(w/2f - colWidth/2f, rogu.bottom() + 8);
+		}
+		content.add(nam);
+
+		CreditsBlock mizq = new CreditsBlock(false, Window.TITLE_COLOR,
+				"Programming:",
+				Icons.CHARLIE.get(),
+				"mizq4482",
+				"blog",
+				"https://mizq4482.tistory.com/");
+		mizq.setRect(nam.right(), nam.top(), colWidth/2f, 0);
+		content.add(mizq);
+
+		addLine(rogu.top() - 2, content);
+
+
 
 		final int HYPER_COLOR = 0xFFFFFF;
 		CreditsBlock hyper = new CreditsBlock(true, HYPER_COLOR,
 				"Hypergryph",
 				Icons.HYPER.get(),
-				"Graphic & Sound ip used",
+				"Graphic & Sound ip used\n",
 				"hypergryph.com",
 				"https://ak.hypergryph.com/");
 		if (landscape()){
-			hyper.setRect(shpx.left(), shpx.top() + 8, colWidth, 0);
+			hyper.setRect(shpx.left(), mizq.top() + 8, colWidth, 0);
 		} else {
-			hyper.setRect(shpx.left(), alex.bottom() + 8, colWidth, 0);
+			hyper.setRect(shpx.left(), mizq.bottom() + 8, colWidth, 0);
 		}
 		content.add(hyper);
 
 		addLine(hyper.top() - 4, content);
-
 
 
 		//*** libGDX Credits ***
@@ -182,6 +219,7 @@ public class AboutScene extends PixelScene {
 
 		addLine(wata.top() - 4, content);
 
+
 		//*** Transifex Credits ***
 
 		CreditsBlock transifex = new CreditsBlock(true,
@@ -191,7 +229,7 @@ public class AboutScene extends PixelScene {
 				"Tomorrow's Roguenight is community-translated via _Transifex_! Thank you so much to all of Shattered's volunteer translators!",
 				"www.transifex.com/team-rosemari/",
 				"https://www.transifex.com/team-rosemari/tomorrows-roguenight/");
-		transifex.setRect((Camera.main.width - colWidth)/2f, wata.bottom() + 8, colWidth, 0);
+		transifex.setRect((Camera.main.width - colWidth)/2f, wata.bottom() +4 , colWidth, 0);
 		content.add(transifex);
 
 		addLine(transifex.top() - 4, content);
