@@ -274,17 +274,18 @@ public class AndroidPlatformSupport extends PlatformSupport {
 			//typefaces are 0-JP, 1-KR, 2-SC, 3-TC.
 			int typeFace;
 			switch (SPDSettings.language()) {
-				case JAPANESE:
-					typeFace = 0;
-					break;
+				//case JAPANESE:
+				//	typeFace = 0;
+				//	break;
 				case KOREAN:
 					typeFace = 1;
 					break;
-				case CHINESE:
+			//	case CHINESE:
 				default:
 					typeFace = 2;
 			}
-			KRFontGenerator = SCFontGenerator = JPFontGenerator = new FreeTypeFontGenerator(Gdx.files.absolute("/system/fonts/NotoSansCJK-Regular.ttc"), typeFace);
+			KRFontGenerator = new FreeTypeFontGenerator(Gdx.files.absolute("/system/fonts/NotoSansCJK-Regular.ttc"), typeFace);
+			//KRFontGenerator = SCFontGenerator = JPFontGenerator = new FreeTypeFontGenerator(Gdx.files.absolute("/system/fonts/NotoSansCJK-Regular.ttc"), typeFace);
 			
 		//otherwise we have to go over a few possibilities.
 		} else {
@@ -296,7 +297,8 @@ public class AndroidPlatformSupport extends PlatformSupport {
 				KRFontGenerator = new FreeTypeFontGenerator(Gdx.files.absolute("/system/fonts/NotoSansKR-Regular.otf"));
 				koreanAndroid6OTF = true;
 			}
-			
+
+			/*
 			//Chinese font generators
 			if (Gdx.files.absolute("/system/fonts/NotoSansSC-Regular.otf").exists()){
 				SCFontGenerator = new FreeTypeFontGenerator(Gdx.files.absolute("/system/fonts/NotoSansSC-Regular.otf"));
@@ -308,6 +310,8 @@ public class AndroidPlatformSupport extends PlatformSupport {
 			if (Gdx.files.absolute("/system/fonts/NotoSansJP-Regular.otf").exists()){
 				JPFontGenerator = new FreeTypeFontGenerator(Gdx.files.absolute("/system/fonts/NotoSansJP-Regular.otf"));
 			}
+			*/
+
 			
 			//set up a fallback generator for any remaining fonts
 			FreeTypeFontGenerator fallbackGenerator;
@@ -319,15 +323,15 @@ public class AndroidPlatformSupport extends PlatformSupport {
 			}
 			
 			if (KRFontGenerator == null) KRFontGenerator = fallbackGenerator;
-			if (SCFontGenerator == null) SCFontGenerator = fallbackGenerator;
-			if (JPFontGenerator == null) JPFontGenerator = fallbackGenerator;
+	//		if (SCFontGenerator == null) SCFontGenerator = fallbackGenerator;
+	//		if (JPFontGenerator == null) JPFontGenerator = fallbackGenerator;
 			
 		}
 		
 		if (basicFontGenerator != null) fonts.put(basicFontGenerator, basicFonts);
 		if (KRFontGenerator != null) fonts.put(KRFontGenerator, KRFonts);
-		if (SCFontGenerator != null) fonts.put(SCFontGenerator, SCFonts);
-		if (JPFontGenerator != null) fonts.put(JPFontGenerator, JPFonts);
+	//	if (SCFontGenerator != null) fonts.put(SCFontGenerator, SCFonts);
+	//	if (JPFontGenerator != null) fonts.put(JPFontGenerator, JPFonts);
 		
 		//would be nice to use RGBA4444 to save memory, but this causes problems on some gpus =S
 		packer = new PixmapPacker(pageSize, pageSize, Pixmap.Format.RGBA8888, 1, false);
@@ -382,11 +386,11 @@ public class AndroidPlatformSupport extends PlatformSupport {
 	private static FreeTypeFontGenerator getGeneratorForString( String input ){
 		if (KRMatcher.matcher(input).find()){
 			return KRFontGenerator;
-		} else if (SCMatcher.matcher(input).find()){
+	/*	} else if (SCMatcher.matcher(input).find()){
 			return SCFontGenerator;
 		} else if (JPMatcher.matcher(input).find()){
 			return JPFontGenerator;
-		} else {
+		*/} else {
 			return basicFontGenerator;
 		}
 	}
