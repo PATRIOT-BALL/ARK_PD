@@ -135,6 +135,12 @@ public class QuickSlot {
 	}
 
 	public void clearItem(Item item){
+		changeslot_seting();
+		changeSlot();
+		if (contains(item))
+			clearSlot(getSlot(item));
+		changeslot_seting();
+		changeSlot();
 		if (contains(item))
 			clearSlot(getSlot(item));
 	}
