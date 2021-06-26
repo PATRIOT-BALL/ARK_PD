@@ -239,9 +239,9 @@ public class AboutScene extends PixelScene {
 				Window.TITLE_COLOR,
 				null,
 				null,
-				"Tomorrow's Roguenight is community-translated via _Transifex_! Thank you so much to all of Shattered's volunteer translators!",
-				"www.transifex.com/team-rosemari/",
-				"https://www.transifex.com/team-rosemari/tomorrows-roguenight/");
+				"",
+				"",
+				"");
 		transifex.setRect((Camera.main.width - colWidth)/2f, wata.bottom() +4 , colWidth, 0);
 		content.add(transifex);
 
