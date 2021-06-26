@@ -427,11 +427,14 @@ public enum HeroClass {
 			case WARRIOR: default:
 				return true;
 			case MAGE:
-				return Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE);
+				return true;
+			//	return Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE);
 			case ROGUE:
-				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROGUE);
+				return true;
+			//	return Badges.isUnlocked(Badges.Badge.UNLOCK_ROGUE);
 			case HUNTRESS:
-				return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
+				return true;
+			//	return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
 			case ROSECAT:
 				return false;
 		}
