@@ -175,6 +175,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Whip;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Bolas;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.FishingSpear;
@@ -418,9 +419,10 @@ public class Generator {
                     Greataxe.class,
                     Greatshield.class,
                     Gauntlet.class,
-                   SwordofArtorius.class
+                    WintersScar.class,
+                    SwordofArtorius.class
             };
-            WEP_T5.probs = new float[]{6, 5, 5, 4, 4, 4, /*3*/};
+            WEP_T5.probs = new float[]{5, 5, 5, 4, 4, 4, 3, 3};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{
