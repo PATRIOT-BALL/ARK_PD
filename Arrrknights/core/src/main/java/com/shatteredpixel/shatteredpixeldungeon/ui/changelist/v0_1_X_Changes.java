@@ -230,6 +230,19 @@ public class v0_1_X_Changes {
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 너프",
                 "- _블러드 위치_\n공격력이 25-40 에서 _16-24_ 로 감소했습니다.\n대신 공격할 때마다 공격력이 _3-6_ 만큼 상승하며, 이 공격력 상승은 영구적입니다.\n\n또한, 체력이 최저값이 되면 이동속도가 감소합니다." + "\n\n" +
                 "- _머드락_\n드롭하는 쇳조각의 갯수가 _2개_ 로 고정되었습니다."));
+
+        changes = new ChangeInfo("0.1.6a", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WARRIOR), "기타 수정사항",
+                "G52 전술 섬광 방패와 관련된 버그 일부가 수정되었으며, 고대 주물의 드롭 확률이 높아졌습니다." + "\n\n"
+        + "대신 동의 인장의 방어력이 0-2(+1) 에서 0-2(+0.5)로 감소했습니다."));
+
+        changes = new ChangeInfo("", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
+        changeInfos.add(changes);
+
     }
 
 }

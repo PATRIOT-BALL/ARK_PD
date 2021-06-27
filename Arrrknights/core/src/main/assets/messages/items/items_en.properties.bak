@@ -1125,7 +1125,7 @@ items.quest.gooblob.name=nightmare fuel
 items.quest.gooblob.desc=A jiggly blob, split off from his as it died. It's almost like a big ball of jelly, though you wouldn't dare eat it.\n\nIt does nothing on its own, but it might be useful when combined with certain potions, or a bomb. At the very least it should sell for a decent price.
 
 items.quest.metalshard.name=Reclaimed Metal
-items.quest.metalshard.desc=A shard of Reclaimed metal, which broke off Mudrock`s armor as it was destroyed.\n\nIt does nothing on its own, but it might be useful when combined with certain scrolls, or a meeboo. At the very least it should sell for a decent price.
+items.quest.metalshard.desc=A Reclaimed Metal Shard, which Mudrock`s armor as it was destroyed.\n\nIt does nothing on its own, but it might be useful when combined with certain scrolls, or a meeboo. At the very least it should sell for a decent price.
 
 items.quest.pickaxe.name=pickaxe
 items.quest.pickaxe.ac_mine=MINE
@@ -1983,7 +1983,7 @@ items.weapon.melee.enfild.desc=It's an old-fashioned look, but it doesn't lose t
 items.weapon.melee.sword.name=orca cushion
 items.weapon.melee.sword.desc=Cute Orca Cushion. This is definitely not the sound coming from the cushion. If it's right, it hurts.
 
-items.weapon.melee.warhammer.name=Leviathan
+items.weapon.melee.warhammer.name=Laevateinn
 items.weapon.melee.warhammer.stats_desc=Accuracy +30%
 items.weapon.melee.warhammer.desc=This is the twilight of the gods, but it's not the end.\n\nWhen you activate an ability, your _attack damage is doubled_ and weapon _range is increased_. Also, _you take all damage to 0._ However, the potion cannot be used while it lasts, and this power can only be used once.\n\nAlso, when used, your HP is 1.
 items.weapon.melee.warhammer.ac_zap=_TWILIGHT_

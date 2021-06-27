@@ -38,6 +38,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDeepHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDreamland;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
@@ -171,6 +172,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scimitar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Spear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Whip;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
@@ -415,9 +417,10 @@ public class Generator {
                     Glaive.class,
                     Greataxe.class,
                     Greatshield.class,
-                    Gauntlet.class
+                    Gauntlet.class,
+                   SwordofArtorius.class
             };
-            WEP_T5.probs = new float[]{6, 5, 5, 4, 4, 4};
+            WEP_T5.probs = new float[]{6, 5, 5, 4, 4, 4, /*3*/};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{
@@ -526,12 +529,13 @@ public class Generator {
                     BookCoverSmoke.class,
                     BookBenasProtracto.class,
                     Bookancientkin.class,
+                    BookFlashShield.class,
                     BookLandingStrike.class,
                     BookDreamland.class,
                     BookDeepHealing.class,
                     BookSpikes.class
             };
-            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
@@ -547,13 +551,13 @@ public class Generator {
 
                     BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
-                    BookLandingStrike.class, BookDreamland.class, BookDeepHealing.class, BookSpikes.class,
+                    BookLandingStrike.class, BookFlashShield.class, BookDreamland.class, BookDeepHealing.class, BookSpikes.class,
 
                     BookTrueSilverSlash.class, BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
                     4, 4, 4, 4, 4, 4, 4, 4, 4,
-                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                     2, 2
             };
         }

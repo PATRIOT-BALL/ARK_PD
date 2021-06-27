@@ -69,18 +69,6 @@ public class Gamzashield extends MeleeWeapon {
     }
 
     @Override
-    public Item upgrade() {
-        if (buffedLvl() == 8)
-        {
-            if (Random.Int(8) < 5)
-            {
-                Dungeon.level.drop(new BookFlashShield(), Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
-            }
-        }
-        return super.upgrade();
-    }
-
-    @Override
     public int proc(Char attacker, Char defender, int damage) {
         SPCharge(Random.IntRange(5,5+buffedLvl()));
         return super.proc(attacker, defender, damage);

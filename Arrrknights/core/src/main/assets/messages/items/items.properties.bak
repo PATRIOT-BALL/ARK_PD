@@ -1124,8 +1124,8 @@ items.quest.embers.desc=세트로 갖추어진 기계장치. 대량의 전자 �
 items.quest.gooblob.name=악몽 연료
 items.quest.gooblob.desc=저주술사가 죽을 때 떨어져 나온 이상한 조각입니다. 커다란 젤리 방울처럼 생겼지만, 먹을 수 있을 것 같지 않습니다.\n\n자체적으로 효과가 없지만, 특정한 물약 또는 미보에 섞을 때 유용하게 쓰일 수 있을 것 같습니다. 아니면 적당한 가격에 팔아버릴 수 있을 것 같습니다.
 
-items.quest.metalshard.name=저주받은 쇳조각
-items.quest.metalshard.desc=머드락의 강화슈트가 파괴 될 때 그것으로부터 떨어져 나온 녹슨 금속 조각입니다. 당신은 그것으로부터 비활성화된 악의적인 아츠를 느낄 수 있습니다.\n\n쇳조각은 그 자체로는 아무런 효과는 없지만, 특정한 일기장 또는 미보, _특별한 물건_을 만들 때 유용하게 쓰일 수 있을 것 같습니다. 아니면 괜찮은 가격에 팔아버릴 수 있을 것 같습니다.
+items.quest.metalshard.name=재활용 금속
+items.quest.metalshard.desc=머드락의 강화슈트가 파괴 될 때 그것으로부터 떨어져 나온 녹슨 금속 조각입니다.\n\n이 금속은 그 자체로는 아무런 효과는 없지만, 특정한 일기장 또는 미보, _특별한 물건_을 만들 때 유용하게 쓰일 수 있을 것 같습니다. 아니면 괜찮은 가격에 팔아버릴 수 있을 것 같습니다.
 
 items.quest.pickaxe.name=곡괭이
 items.quest.pickaxe.ac_mine=채굴한다
@@ -1141,11 +1141,11 @@ items.quest.gamza.desc=어딘가에선 감자로 서버를 돌린다는 소문�
 items.quest.nmould.name=고대 주물
 items.quest.nmould.desc=하늘에는 커다란 용광로가, 땅에는 금, 은, 동, 석, 철, 다섯 가지 금속이 난다\n\n...근데 이거 감자 아니였나요?
 
-items.quest.nullshield.name=빈 방패
-items.quest.nullshield.desc=무언가를 끼우면 쓸 수 있을 것 같습니다...
-items.quest.nullshield.ac_use=합성
-items.quest.nullshield.prompt=합성할 재료 선택
-items.quest.nullshield.suc=방패가 힘을 되찾았다!
+items.quest.nullshield.name=정제 금속
+items.quest.nullshield.desc=다른 특별한 아이템과 조합해 좋은 물건을 만들 수 있을 것 같습니다.
+items.quest.nullshield.ac_use=조합
+items.quest.nullshield.prompt=조합할 재료 선택
+items.quest.nullshield.suc=조합 완료!
 items.quest.nullshield.fail=이 재료가 아닌 것 같다.
 
 
@@ -2024,6 +2024,11 @@ items.weapon.melee.ex42.desc=이 오리지늄 아츠 원격 조종 장치는 타
 items.weapon.melee.naginata.name=나기나타
 items.weapon.melee.naginata.stats_desc=사거리 +1, 공격속도 -20%
 items.weapon.melee.naginata.desc=정답은? 정답은 없다, 선택만이 있을 수도 있다.
+
+items.weapon.melee.swordofartorius.name=아트리아스의 검
+items.weapon.melee.swordofartorius.stats_desc=이 무기로 공격할 때마다 아츠 광선을 발사하여 적들에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
+items.weapon.melee.swordofartorius.stats_desc=일반적으로 이 무기로 공격할 때마다 아츠 광선을 발사하여 적들에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
+items.weapon.melee.swordofartorius.desc=_"진실은 모두 타버렸고, 이제 불바다에는 악의 화신만이 우뚝 서 있다."_
 
 
 
