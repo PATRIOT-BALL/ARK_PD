@@ -67,7 +67,7 @@ public class SkillBook extends Item {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
                                         float chargeDown = 60 / (RingOfSunLight.SPBonus(Dungeon.hero));
-                                        if (chargeDown < 5) chargeDown = 5;
+                                        if (chargeDown < 10) chargeDown = 10;
                                         charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK2.doSkill();
@@ -79,7 +79,7 @@ public class SkillBook extends Item {
                                         GLog.w(Messages.get(SkillBook.class, "low_charge"));
                                     } else {
                                         float chargeDown = 100 / (RingOfSunLight.SPBonus(Dungeon.hero));
-                                        if (chargeDown < 5) chargeDown = 5;
+                                        if (chargeDown < 15) chargeDown = 15;
                                         charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK3.doSkill();

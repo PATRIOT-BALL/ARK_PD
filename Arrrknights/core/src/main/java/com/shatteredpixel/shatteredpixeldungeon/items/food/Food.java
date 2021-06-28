@@ -32,6 +32,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -84,6 +86,17 @@ public class Food extends Item {
 			
 			Statistics.foodEaten++;
 			Badges.validateFoodEaten();
+
+			int preservesLeft = Dungeon.hero.pointsInTalent(Talent.SMARTMEALS);
+			if (Dungeon.hero.buff(Talent.foodIdentify.class) != null){
+				preservesLeft -= Dungeon.hero.buff(Talent.foodIdentify.class).count();
+			}
+			if (preservesLeft > 0){
+				new ScrollOfIdentify().execute(curUser);
+				Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
+				if (counter.count() < Dungeon.hero.pointsInTalent(Talent.SMARTMEALS)) {
+					counter.countUp(1); }
+			}
 			
 		}
 	}
@@ -102,9 +115,6 @@ public class Food extends Item {
 	
 	protected void satisfy( Hero hero ){
 		float EN = energy;
-		if (Dungeon.hero.hasTalent(Talent.MOREMEALS)) {
-			EN *= 1f + (float)Dungeon.hero.pointsInTalent(Talent.MOREMEALS) / 10;
-		}
 		if (Dungeon.isChallenged(Challenges.NO_FOOD)){
 			Buff.affect(hero, Hunger.class).satisfy(EN/3f);
 		} else {

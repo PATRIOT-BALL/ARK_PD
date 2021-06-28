@@ -51,6 +51,7 @@ public class Closure extends NPC {
                           //      if (Badges.isUnlocked(Badges.Badge.EVILTIME_END)) {
                                     Dungeon.hero.CharSkin = Hero.TALULAH;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
                           //      } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
                          //           Game.runOnRenderThread(new Callback() {
                            //             @Override

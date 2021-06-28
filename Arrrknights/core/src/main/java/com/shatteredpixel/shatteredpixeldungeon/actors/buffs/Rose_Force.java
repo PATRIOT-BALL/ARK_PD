@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 
 public class Rose_Force extends FlavourBuff {
-    public static final float DURATION = 3f;
+    public static final float DURATION = 15f;
     {
         type = buffType.POSITIVE;
     }

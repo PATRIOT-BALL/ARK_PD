@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WandEmpower;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
@@ -45,7 +46,6 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
@@ -141,7 +141,7 @@ public enum Talent {
 	SAVIOR_BELIEF(112,3),
 
 	//RoseCat T1
-	LIGHTNESSMEAL(68), MOREMEALS(68), GOODMEAT(36), NYANGING(10),
+	LIGHTNESSMEAL(68), SMARTMEALS(68), GOODMEAT(36), NYANGING(10),
 	//RoseCat T2
 	FASTMEAL(68), RECOVERY_UPGRADE(69), DELICIOUS_FOOD(0), LOVEMEAT(36), POWERGEAR(108),
 	//RoseCat T3
@@ -165,6 +165,7 @@ public enum Talent {
 	public static class SWEEPTraker extends FlavourBuff{};
 	public static class RejuvenatingStepsCooldown extends FlavourBuff{};
 	public static class SeerShotCooldown extends FlavourBuff{};
+	public static class foodIdentify extends CounterBuff{};
 
 	int icon;
 	int maxPoints;
@@ -273,6 +274,9 @@ public enum Talent {
 		if (hero.hasTalent(FASTMEAL)){
 			Buff.affect( hero, Barrier.class).incShield(hero.HT * hero.pointsInTalent(FASTMEAL) / 20);
 		}
+
+		if (hero.subClass == HeroSubClass.DESTROYER)
+			Buff.affect(hero, Rose_Force.class, Rose_Force.DURATION);
 	}
 
 	public static class WarriorFoodImmunity extends FlavourBuff{
@@ -488,7 +492,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, NATURES_BOUNTY, SURVIVALISTS_INTUITION, FOLLOWUP_STRIKE, NATURES_AID);
 				break;
 			case ROSECAT:
-				Collections.addAll(tierTalents, LIGHTNESSMEAL, MOREMEALS, GOODMEAT, NYANGING);
+				Collections.addAll(tierTalents, LIGHTNESSMEAL, SMARTMEALS, GOODMEAT, NYANGING);
 				break;
 		}
 		for (Talent talent : tierTalents){

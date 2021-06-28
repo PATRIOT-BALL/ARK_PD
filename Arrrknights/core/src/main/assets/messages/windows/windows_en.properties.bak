@@ -138,7 +138,7 @@ windows.wndsadghost.gnoll=thank you. We don't have ranged weapons or arts, so at
 windows.wndsadghost.crab=thank you. It was difficult to even scratch his heavy armor with our weapons. If there was a boss, he would have been a hammer...
 windows.wndsadghost.give_item=Please take one of these items, you'll probably need it for a longer period of time in the operation.\n\nI'm leaving the battlefield to heal wounds, but if I get a chance, I'll be able to summon me again. So let's go back for a moment...
 windows.wndsadghost.confirm=Confirm
-windows.wndsadghost.cancel=Cancer
+windows.wndsadghost.cancel=Cancel
 windows.wndsadghost.farewell=See you later. Please be careful!
 
 windows.wndsettings$displaytab.title=Display Settings
@@ -196,7 +196,7 @@ windows.wndsupportprompt.close=Close
 
 windows.wndeazymode.act=eazy mode start!
 windows.wndeazymode.bt=eazy mode start
-windows.wndeazymode.desc=Easy Mode provides the following benefits:\n\n-_Potion of Strength_, _Potion of Experience_, _Potion of Healing_ identify\n\n-_Scroll of Upgrade_, _Scroll of Remove Curse_, Scroll of Transmutation_ identify\n\n-you gain two _Scroll of Divination_ and _Elixir of Aquatic Rejuvenation_.\n\n-More HP when level up\n\nHowever, it is not possible to proceed after the 20th floor
+windows.wndeazymode.desc=Easy Mode provides the following benefits:\n\n-_Potion of Strength_, _Potion of Experience_, _Potion of Healing_ identify\n\n-_Scroll of Upgrade_, _Scroll of Remove Curse_, _Scroll of Transmutation_ identify\n\n-you gain two _Scroll of Divination_ and _Elixir of Aquatic Rejuvenation_.\n\n-More HP when level up\n\nHowever, it is not possible to proceed after the 20th floor
 
 
 windows.wndtradeitem.buy=Purchase Price : %dg

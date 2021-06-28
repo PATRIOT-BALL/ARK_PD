@@ -16,7 +16,7 @@ public class Shinkageryu extends Skill {
 
         curUser.HP /= 2;
         Buff.affect(curUser, Barrier.class).incShield(dmg);
-        Buff.affect(curUser, Adrenaline.class, 1 + dmg / 8);
+        Buff.affect(curUser, Adrenaline.class, 2 + dmg / 4);
 
         Camera.main.shake(2, 0.25f);
         CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.BONE ), 10 );
