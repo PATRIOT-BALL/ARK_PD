@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Bones;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -772,7 +773,8 @@ public class NewCavesBossLevel extends Level {
 						Char ch = Actor.findChar(cell);
 						if (ch != null && !(ch instanceof NewDM300)) {
 							Sample.INSTANCE.play( Assets.Sounds.LIGHTNING );
-							ch.damage( Random.NormalIntRange(6, 12), Electricity.class);
+							if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) ch.damage( Random.NormalIntRange(9, 18), Electricity.class);
+							else ch.damage( Random.NormalIntRange(6, 12), Electricity.class);
 							ch.sprite.flash();
 
 							if (ch == Dungeon.hero && !ch.isAlive()) {

@@ -106,6 +106,15 @@ public class NewDM300 extends Mob {
         properties.add(Property.LARGE);
     }
 
+    public NewDM300()
+    {
+        super();
+
+        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+            HP=HT=450;
+        }
+    }
+
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(12, 22 + DamageUP);
@@ -389,9 +398,7 @@ public class NewDM300 extends Mob {
     }
 
     @Override
-    public float speed() {
-        return super.speed() * (supercharged ? 1.8f : 1);
-    }
+    public float speed() { return super.speed() * (supercharged ? 1.8f : 1); }
 
     @Override
     public void notice() {

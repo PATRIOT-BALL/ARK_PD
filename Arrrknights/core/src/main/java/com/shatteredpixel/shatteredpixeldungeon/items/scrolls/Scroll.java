@@ -29,6 +29,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ScrollEmpower;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
@@ -166,7 +167,9 @@ public abstract class Scroll extends Item {
 
 		if (action.equals( AC_READ )) {
 			
-			if (hero.buff(MagicImmune.class) != null){
+			if (hero.buff(MagicImmune.class) != null) {
+				GLog.w(Messages.get(this, "no_magic"));
+			}else if (hero.buff(Silence.class) != null){
 				GLog.w( Messages.get(this, "no_magic") );
 			} else if (hero.buff( Blindness.class ) != null) {
 				GLog.w( Messages.get(this, "blinded") );

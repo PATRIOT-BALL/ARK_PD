@@ -32,6 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Frost;
@@ -198,7 +199,9 @@ public class YogDzewa extends Mob {
 					Dungeon.observe();
 				}
 				for (Char ch : affected) {
-					ch.damage(Random.NormalIntRange(20, 30), new Eye.DeathGaze());
+					if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) ch.damage(Random.NormalIntRange(30, 45), new Eye.DeathGaze());
+					else ch.damage(Random.NormalIntRange(20, 30), new Eye.DeathGaze());
+
 					if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss9 == 1) Buff.affect(ch, Paralysis.class, 20f);
 
 					if (Dungeon.level.heroFOV[pos]) {

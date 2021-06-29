@@ -204,7 +204,8 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-		new Enfild2().collect();
+		new Heamyo().collect();
+		new ScrollOfAntiMagic().collect();
 	}
 
 	private static void initMage( Hero hero ) {

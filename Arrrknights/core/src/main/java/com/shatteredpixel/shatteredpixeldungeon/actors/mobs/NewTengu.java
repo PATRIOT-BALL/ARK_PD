@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
@@ -135,6 +136,15 @@ public class NewTengu extends Mob {
         } else {
             return 20;
         }
+    }
+
+    @Override
+    public int attackProc(Char enemy, int damage) {
+        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE))
+        {
+            if (Random.Int(8) < 1) Buff.affect(enemy, Blindness.class, 2f);
+        }
+        return super.attackProc(enemy, damage);
     }
 
     @Override
@@ -316,6 +326,10 @@ public class NewTengu extends Mob {
                 Sample.INSTANCE.play(Assets.Sounds.PUFF);
 
                 MineThrow = 1;
+
+                if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+                    Buff.affect(this, MagicImmune.class, 4f);
+                }
             }
 
             //if we're on another type of level

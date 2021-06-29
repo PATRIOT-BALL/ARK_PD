@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -30,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
@@ -109,6 +111,9 @@ public class Pylon extends Mob {
 		if (ch != null && !(ch instanceof NewDM300)){
 			ch.sprite.flash();
 			ch.damage(Random.NormalIntRange(10, 20), new Electricity());
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+				Buff.affect(ch, Silence.class,50f);
+			}
 
 			if (ch == Dungeon.hero && !ch.isAlive()){
 				Dungeon.fail(NewDM300.class);

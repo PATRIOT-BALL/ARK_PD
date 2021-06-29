@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Bones;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -39,6 +40,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.IronKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.HeavyBoomerang;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
+import com.shatteredpixel.shatteredpixeldungeon.levels.traps.CorrosionTrap;
+import com.shatteredpixel.shatteredpixeldungeon.levels.traps.DisintegrationTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.TenguDartTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.Trap;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -602,12 +605,13 @@ public class NewPrisonBossLevel extends Level {
 		}
 		
 		GameScene.updateMap();
-		
+
 		FadingTraps t = new FadingTraps();
 		t.fadeDelay = 2f;
 		t.setCoveringArea(tenguCell);
 		GameScene.add(t, false);
 		customTiles.add(t);
+
 	}
 	
 	@Override

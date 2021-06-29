@@ -46,11 +46,11 @@ public class Heamyo extends MeleeWeapon {
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+      /*  for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
             if (mob.alignment != Char.Alignment.ALLY) {
                 mob.damage(99999,this);
             }
-        }
+        }*/
         return super.proc(attacker, defender, damage);
     }
 

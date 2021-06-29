@@ -28,12 +28,17 @@ import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barkskin;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FireImbue;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LifeLink;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ToxicImbue;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
@@ -85,6 +90,11 @@ public class DwarfKing extends Mob {
 		defenseSkill = 22;
 
 		properties.add(Property.BOSS);
+	}
+
+	public DwarfKing()
+	{
+		super();
 	}
 
 	@Override
@@ -610,6 +620,16 @@ public class DwarfKing extends Mob {
 					Mob m = Reflection.newInstance(summon);
 					m.pos = pos;
 					m.maxLvl = -2;
+					if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+						Buff.affect(m, Barrier.class).incShield(12);
+						int rnd = Random.Int(6);
+						switch (rnd) {
+							case 0: Buff.affect(m, MagicImmune.class, 30f); break;
+							case 1: Buff.affect(m, ToxicImbue.class).set(30); break;
+							case 2: Buff.affect(m, FireImbue.class).set(30f); break;
+							default: Buff.affect(m, Barkskin.class).set(5, 30); break;
+						}
+					}
 					GameScene.add(m);
 					m.state = m.HUNTING;
 					if (((DwarfKing)target).phase == 2){

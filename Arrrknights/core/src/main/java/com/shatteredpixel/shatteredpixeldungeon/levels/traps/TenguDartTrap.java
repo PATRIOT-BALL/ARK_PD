@@ -21,6 +21,8 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.levels.traps;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.NewTengu;
 
@@ -33,7 +35,8 @@ public class TenguDartTrap extends PoisonDartTrap {
 	
 	@Override
 	protected int poisonAmount() {
-		return 8; //17 damage total
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) return 15;
+		else return 8; //17 damage total
 	}
 	
 	@Override

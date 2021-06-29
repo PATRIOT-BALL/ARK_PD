@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -32,14 +33,19 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -67,6 +73,15 @@ public abstract class YogFist extends Mob {
 		state = HUNTING;
 
 		properties.add(Property.BOSS);
+	}
+
+	public YogFist()
+	{
+		super();
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+			HP=HT=400;
+		}
+		GLog.w(Messages.get(Hero.class, "name", HP)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
 	}
 
 	private float rangedCooldown;
@@ -150,6 +165,10 @@ public abstract class YogFist extends Mob {
 	}
 
 	@Override
+	public float speed() { if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) return super.speed() * 1.3f;
+	else return super.speed();}
+
+	@Override
 	public String description() {
 		return Messages.get(YogFist.class, "desc") + "\n\n" + Messages.get(this, "desc");
 	}
@@ -188,7 +207,10 @@ public abstract class YogFist extends Mob {
 			}
 
 			//타일 증발
-			int evaporatedTiles = Random.chances(new float[]{0, 2, 1, 1});
+			int evaporatedTiles;
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+			evaporatedTiles = Random.chances(new float[]{3, 7, 5, 6});}
+			else evaporatedTiles = Random.chances(new float[]{0, 2, 1, 1});
 
 			for (int i = 0; i < evaporatedTiles; i++) {
 				int cell = pos + PathFinder.NEIGHBOURS8[Random.Int(8)];
@@ -245,8 +267,11 @@ public abstract class YogFist extends Mob {
 
 			boolean result = super.act();
 
-			//1.33 grass tiles on average
-			int furrowedTiles = Random.chances(new float[]{0, 2, 1});
+			int furrowedTiles;
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+				furrowedTiles = Random.chances(new float[]{1, 3, 2, 2});
+			}
+			else furrowedTiles = Random.chances(new float[]{0, 2, 1}); //1.33 grass tiles on average
 
 			for (int i = 0; i < furrowedTiles; i++) {
 				int cell = pos + PathFinder.NEIGHBOURS9[Random.Int(9)];
@@ -279,7 +304,7 @@ public abstract class YogFist extends Mob {
 					grassCells++;
 				}
 			}
-			if (grassCells > 0) dmg = Math.round(dmg * (6-grassCells)/6f);
+		if (grassCells > 0) dmg = Math.round(dmg * (6 - grassCells) / 6f);
 
 			super.damage(dmg, src);
 		}
@@ -290,7 +315,9 @@ public abstract class YogFist extends Mob {
 
 			if (hit( this, enemy, true )) {
 
-				Buff.affect( enemy, Roots.class, 3f );
+				if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+				Buff.affect( enemy, Roots.class, 8f );}
+				else Buff.affect( enemy, Roots.class, 3f );
 
 			} else {
 
@@ -336,6 +363,9 @@ public abstract class YogFist extends Mob {
 		}
 
 		@Override
+		public float speed() { return super.speed(); }
+
+		@Override
 		protected boolean act() {
 			//ensures toxic gas acts at the appropriate time when added
 			GameScene.add(Blob.seed(pos, 0, ToxicGas.class));
@@ -359,7 +389,9 @@ public abstract class YogFist extends Mob {
 					b = new Bleeding();
 				}
 				b.announced = false;
-				b.set(dmg*.67f);
+				if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+				b.set(dmg*.5f);}
+				else b.set(dmg*.67f);
 				b.attachTo(this);
 				sprite.showStatus(CharSprite.WARNING, b.toString() + " " + (int)b.level());
 			} else{
@@ -380,6 +412,13 @@ public abstract class YogFist extends Mob {
 			if (Random.Int( 2 ) == 0) {
 				Buff.affect( enemy, Ooze.class ).set( Ooze.DURATION );
 				enemy.sprite.burst( 0xFF000000, 5 );
+			}
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE))
+			{
+				Ballistica trajectory = new Ballistica(this.pos, enemy.pos, Ballistica.STOP_TARGET);
+				trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
+				WandOfBlastWave.throwChar(enemy, trajectory, 1); // 넉백 효과
+				Buff.affect(enemy, Paralysis.class, 1f);
 			}
 
 			return damage;
@@ -402,7 +441,8 @@ public abstract class YogFist extends Mob {
 
 		@Override
 		public int damageRoll() {
-			return Random.NormalIntRange( 22, 44 );
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) { return Random.NormalIntRange( 26, 50 ); }
+			else return Random.NormalIntRange( 22, 44 );
 		}
 
 		@Override
@@ -420,7 +460,10 @@ public abstract class YogFist extends Mob {
 		@Override
 		protected void zap() {
 			spend( 1f );
-			Buff.affect(enemy, Cripple.class, 4f);
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+			Buff.affect(enemy, Cripple.class, 6f);
+			Buff.affect(enemy, Hex.class, 30f);}
+			else Buff.affect(enemy, Cripple.class, 4f);
 		}
 
 	}
@@ -433,6 +476,12 @@ public abstract class YogFist extends Mob {
 			properties.add(Property.ELECTRIC);
 
 			canRangedInMelee = false;
+		}
+
+		@Override
+		public int drRoll() {
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) { return Random.NormalIntRange( 0, 25 ); }
+			else return Random.NormalIntRange( 0,15 );
 		}
 
 		@Override
@@ -449,8 +498,11 @@ public abstract class YogFist extends Mob {
 
 			if (hit( this, enemy, true )) {
 
-				enemy.damage( Random.NormalIntRange(10, 20), new LightBeam() );
-				Buff.prolong( enemy, Blindness.class, Blindness.DURATION/2f );
+				if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+				enemy.damage( Random.NormalIntRange(15, 30), new LightBeam() );
+					Buff.prolong( enemy, Blindness.class, Blindness.DURATION );}
+				else {enemy.damage( Random.NormalIntRange(10, 20), new LightBeam() );
+				Buff.prolong( enemy, Blindness.class, Blindness.DURATION/2f );}
 
 				if (!enemy.isAlive() && enemy == Dungeon.hero) {
 					Dungeon.fail( getClass() );
@@ -513,6 +565,9 @@ public abstract class YogFist extends Mob {
 			if (hit( this, enemy, true )) {
 
 				enemy.damage( Random.NormalIntRange(10, 20), new DarkBolt() );
+				if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+					Buff.affect(enemy, Silence.class, 5f);
+				}
 
 				Light l = enemy.buff(Light.class);
 				if (l != null){
