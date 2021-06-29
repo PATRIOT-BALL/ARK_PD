@@ -58,12 +58,12 @@ public class AnnihilationGear extends Item {
         unique = true;
     }
 
-    public int charge = 3;
-    public int chargeCap = 3;
+    public int charge = 2;
+    public int chargeCap = 2;
 
-    public int min() { return 4 + Dungeon.hero.lvl; }
+    public int min() { return 4 + Dungeon.hero.lvl + buffedLvl(); }
 
-    public int max() { return 6 + Dungeon.hero.lvl + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 4); }
+    public int max() { return 6 + Dungeon.hero.lvl + buffedLvl() * 2 + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 4); }
 
     @Override
     public String desc() { return Messages.get(this, "desc", min(), max()); }
@@ -104,7 +104,8 @@ public class AnnihilationGear extends Item {
 
     @Override
     public Item upgrade() {
-        charge++; chargeCap++;
+        charge+=2;
+        chargeCap+=2;
         chargeCap = Math.min(chargeCap,10);
         return super.upgrade();
     }

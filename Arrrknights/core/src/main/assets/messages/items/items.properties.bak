@@ -230,6 +230,10 @@ items.skill.sk1.thoughts.desc=발동시 목표 지점에 폭격을 가합니다.
 items.skill.sk1.thoughts.desc_wnd=발동시 목표 지점의 적에게 피해를 주며, 적중시 섬멸전 장비를 충전합니다.
 iitems.skill.sk1.thoughts.prompt=폭격 지점을 선택하세요
 
+items.skill.sk1.hotblade.name=_엄청 뜨거운 칼(1스킬)_
+items.skill.sk1.hotblade.desc=시야 내 적들에게 뜨거운 단검을 던져 2히트 피해를 입힙니다. 저격의 반지가 있다면 피해량이 상승합니다.
+items.skill.sk1.hotblade.desc_wnd= 엄청 뜨거어!!! (by.케쨩)
+
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 도약_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
 items.skill.sk2.wolfpack.desc_wnd=발동시 지정한 위치로 도약해 피해를 주고 마비시킵니다.
@@ -2032,7 +2036,7 @@ items.weapon.melee.swordofartorius.desc=_"진실은 모두 타버렸고, 이제 
 
 items.weapon.melee.wintersscar.name=겨울의 상처
 items.weapon.melee.wintersscar.stats_desc=기습 시 최소 데미지 보정 +33%\n한기를 느끼는 적에게 추가 피해
-items.weapon.melee.wintersscar.desc=대지의 차가움엔 이미 각오가 깃들었다.\n\n이 단검을 적을 기습 공격하면 추위를 느끼게 하며, 추위를 느끼는 적에게 추가 피해를 줄 수 있습니다.
+items.weapon.melee.wintersscar.desc=대지의 차가움엔 이미 각오가 깃들었다.\n\n이 단검으로 적을 기습 공격하면 추위를 느끼게 하며, 추위를 느끼는 적에게 추가 피해를 줄 수 있습니다.
 
 
 

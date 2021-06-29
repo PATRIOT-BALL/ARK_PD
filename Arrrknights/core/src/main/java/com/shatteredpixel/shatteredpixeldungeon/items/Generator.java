@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCrimsonCutte
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
@@ -519,9 +520,10 @@ public class Generator {
                     BookShinkageryu.class,
                     BookFierceGlare.class,
                     BookCamouflage.class,
-                    BookWolfSpirit.class
+                    BookWolfSpirit.class,
+                    BookHotBlade.class
             };
-            SKL_T1.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1};
+            SKL_T1.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
             SKL_T2.classes = new Class<?>[]{
                     BookJackinthebox.class,
@@ -549,7 +551,7 @@ public class Generator {
             SKL_RND.classes = new Class<?>[]{
                     BookFate.class, Bookpanorama.class, BookFoodPrep.class,
                     BookChainHook.class, BookCrimsonCutter.class, BookShinkageryu.class,  BookFierceGlare.class,
-                    BookCamouflage.class, BookWolfSpirit.class,
+                    BookCamouflage.class, BookWolfSpirit.class, BookHotBlade.class,
 
                     BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
@@ -558,7 +560,7 @@ public class Generator {
                     BookTrueSilverSlash.class, BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
-                    4, 4, 4, 4, 4, 4, 4, 4, 4,
+                    4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
                     3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                     2, 2
             };

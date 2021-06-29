@@ -66,6 +66,10 @@ items.skill.sk1.bookthoughts.name=Skill Summary of Expanded Thoughts
 items.skill.sk1.bookthoughts.desc=_Expanded Thoughts_ is recorded Summary. learn skill 1 by reading it. \n\nEffect: Damage to enemies at target location + Charge your gear\n_Caution: When used, the existing skill 1 is removed._
 items.skill.sk1.bookthoughts.ac_use=READ
 
+items.skill.sk1.bookhotblade.name=Skill Summary of Very Hot
+items.skill.sk1.bookhotblade.desc=_Very Hot Blade_ is recorded Summary. learn skill 1 by reading it. \n\nEffect: Damage to enemies in sight. Increases damage with Ring of Sharpshooting.\n_Caution: When used, the existing skill 1 is removed._
+items.skill.sk1.bookhotblade.ac_use=Very Hot!
+
 items.skill.sk2.bookwolfpack.name=Skill Summary of Wolfpack
 items.skill.sk2.bookwolfpack.desc=_Wolfpack_ is recorded Summary. learn skill 2 by reading it. \n\nEffect: Teleports to the target location and inflicts damage and paralysis around it.\n_Caution: When used, the existing skill 2 is removed._
 items.skill.sk2.bookwolfpack.ac_use=READ
@@ -229,6 +233,10 @@ items.skill.sk1.thoughts.name=_Expanded Thoughts (Skill 1)_
 items.skill.sk1.thoughts.desc=ACTIVE: Air strike on target point. Gear recharges on hit
 items.skill.sk1.thoughts.desc_wnd=ACTIVE: Air strike on target point. Gear recharges on hit
 iitems.skill.sk1.thoughts.prompt=Point designation
+
+items.skill.sk1.hotblade.name=_Very hot blade (Skill 1)_
+items.skill.sk1.hotblade.desc=ACTIVE: Throws a dagger at an enemy in sight, dealing damage twice. Increases damage with Ring of Sharpshooting.
+items.skill.sk1.hotblade.desc_wnd=ACTIVE: Throws a dagger at an enemy in sight, dealing damage twice.
 
 items.skill.sk2.wolfpack.name=_Wolf Pack (Skill 2)_
 items.skill.sk2.wolfpack.desc=ACTIVE: Inflicts damage and paralysis to nearby enemies after _ jumping to the target point_. Stealth after cast
@@ -2028,6 +2036,10 @@ items.weapon.melee.swordofartorius.name=sword of artorius
 items.weapon.melee.swordofartorius.stats_desc=attacking with this weapon, it fires an arts beam, dealing _%1$d-%2$d damage_.
 items.weapon.melee.swordofartorius.typical_stats_desc=Typically attacking with this weapon, it fires an arts beam, dealing _%1$d-%2$d damage_.
 items.weapon.melee.swordofartorius.desc=_"The truth has been turned to ash, and only an evil god stands in the flames."_
+
+items.weapon.melee.wintersscar.name=winter`s scar
+items.weapon.melee.wintersscar.stats_desc=Surprise attack bonus +33%\ndamage bonus to enemies in Chilled
+items.weapon.melee.wintersscar.desc=The biting cold of the land has already been released\n\nA surprise attack with this weapon will make the enemy Chilled. Also deals more damage to Chilled enemies.
 
 
 

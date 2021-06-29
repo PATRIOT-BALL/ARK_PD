@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMod
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
@@ -258,6 +259,8 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookCamouflage.class,              false);
 		SKILLBOOK.seen.put( BookWolfSpirit.class,              false);
 		//SKILLBOOK.seen.put( BookThoughts.class,              false);
+		SKILLBOOK.seen.put( BookHotBlade.class,              false);
+
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
 		SKILLBOOK.seen.put( BookReflow.class,                false);
@@ -275,6 +278,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookDeepHealing.class,              false);
 		SKILLBOOK.seen.put( BookSpikes.class,              false);
 		SKILLBOOK.seen.put( BookFlashShield.class,              false);
+
         SKILLBOOK.seen.put( BookShadowAssault.class,          false);
         SKILLBOOK.seen.put( BookSoaringFeather.class,          false);
         SKILLBOOK.seen.put( BookSBurst.class,          false);

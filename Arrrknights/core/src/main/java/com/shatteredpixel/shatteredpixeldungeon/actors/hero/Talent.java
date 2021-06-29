@@ -421,13 +421,9 @@ public enum Talent {
 			ScrollOfRecharging.charge(hero);
 		}
 
-		if (hero.hasTalent(NYANGING))
-		{
-			if (Random.Int(0,1) < hero.pointsInTalent(NYANGING))
-			{
-				AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
-				if (Gear != null) Gear.SPCharge(1);
-			}
+		if (hero.hasTalent(NYANGING)) {
+			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
+		if (Gear != null) Gear.SPCharge(hero.pointsInTalent(NYANGING));
 		}
 	}
 

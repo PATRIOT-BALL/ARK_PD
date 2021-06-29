@@ -63,7 +63,7 @@ public class ScrollOfWarp extends Scroll {
             inputs =  new Class[]{ScrollOfPassage.class, StaffKit.class};
             inQuantity = new int[]{1,1};
 
-            cost = 30;
+            cost = 35;
 
             output = ScrollOfWarp.class;
             outQuantity = 1;

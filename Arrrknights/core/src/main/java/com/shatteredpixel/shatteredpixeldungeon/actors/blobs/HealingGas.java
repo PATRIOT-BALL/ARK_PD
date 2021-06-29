@@ -40,7 +40,7 @@ public class HealingGas extends Blob {
                 for (int j = area.top; j < area.bottom; j++) {
                     cell = i + j * Dungeon.level.width();
                     if (cur[cell] > 0 && (ch = Actor.findChar(cell)) != null) {
-                            Buff.affect(ch, Healing.class).setHeal(1, 1f, 1);
+                            if (ch.HT > ch.HP) ch.HP+=1;
                             Buff.affect(ch, MagicImmune.class, 1f);
                             switch (bb) {
                                 case 1:
