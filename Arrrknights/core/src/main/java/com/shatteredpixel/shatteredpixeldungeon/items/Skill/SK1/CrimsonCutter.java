@@ -48,8 +48,6 @@ public class CrimsonCutter extends Skill {
         else {
             dmg = Random.NormalIntRange(5, 5+curUser.STR);
             Buff.affect(enemy, Bleeding.class).set(curUser.STR / 5);}
-
-        dmg -= enemy.drRoll();
         enemy.damage(dmg, enemy);
     }
 }
