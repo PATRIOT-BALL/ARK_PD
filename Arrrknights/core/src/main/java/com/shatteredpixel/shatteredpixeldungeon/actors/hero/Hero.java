@@ -143,6 +143,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocking;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -251,7 +253,7 @@ public class Hero extends Char {
     public Hero() {
         super();
 
-        HP = HT = 20;
+        HP = HT = 2000;
         //HP = HT = 2000;
         STR = STARTING_STR;
 
@@ -659,6 +661,7 @@ public class Hero extends Char {
         if (belongings.weapon == null || !(belongings.weapon instanceof Weapon)) return true;
         if (STR() < ((Weapon) belongings.weapon).STRReq()) return false;
         if (belongings.weapon instanceof Flail) return false;
+        if (belongings.weapon instanceof Enfild2) return false;
 
         return true;
     }

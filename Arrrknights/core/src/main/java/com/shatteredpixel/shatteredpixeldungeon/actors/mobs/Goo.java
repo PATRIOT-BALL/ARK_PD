@@ -29,6 +29,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
@@ -44,9 +45,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.WarriorArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.SkeletonKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingClub;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Fadeleaf;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
@@ -71,6 +76,7 @@ public class Goo extends Mob {
 	}
 
 	private int pumpedUp = 0;
+
 
 	@Override
 	public int damageRoll() {
@@ -99,7 +105,8 @@ public class Goo extends Mob {
 
 	@Override
 	public int drRoll() {
-		return Random.NormalIntRange(0, 2);
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE) && HP*2 <= HT) { return Random.NormalIntRange(1, 3); }
+		else return Random.NormalIntRange(0, 2);
 	}
 
 	@Override
@@ -147,7 +154,19 @@ public class Goo extends Mob {
 			Camera.main.shake( 3, 0.2f );
 		}
 
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+			Ballistica trajectory = new Ballistica(this.pos, enemy.pos, Ballistica.STOP_TARGET);
+			trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
+			WandOfBlastWave.throwChar(enemy, trajectory, 1); // 넉백 효과
+			Buff.affect(enemy, Paralysis.class, 1f);
+		}
+
 		return damage;
+	}
+
+	@Override
+	public int defenseProc(Char enemy, int damage) {
+		return super.defenseProc(enemy, damage);
 	}
 
 	@Override
@@ -193,7 +212,7 @@ public class Goo extends Mob {
 
 			pumpedUp++;
 
-			((HandclapSprite)sprite).pumpUp( 1 );
+		 ((HandclapSprite)sprite).pumpUp( 1 );
 
 			if (Dungeon.level.heroFOV[pos]) {
 				sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "!!!") );
