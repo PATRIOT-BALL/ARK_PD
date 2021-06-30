@@ -87,14 +87,14 @@ public class Food extends Item {
 			Statistics.foodEaten++;
 			Badges.validateFoodEaten();
 
-			int preservesLeft = Dungeon.hero.pointsInTalent(Talent.SMARTMEALS);
+			int preservesLeft = Dungeon.hero.pointsInTalent(Talent.SMARTMEALS) * 2 - 1;
 			if (Dungeon.hero.buff(Talent.foodIdentify.class) != null){
 				preservesLeft -= Dungeon.hero.buff(Talent.foodIdentify.class).count();
 			}
 			if (preservesLeft > 0){
 				new ScrollOfIdentify().execute(curUser);
 				Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
-				if (counter.count() < Dungeon.hero.pointsInTalent(Talent.SMARTMEALS)) {
+				if (counter.count() < Dungeon.hero.pointsInTalent(Talent.SMARTMEALS) * 2 - 1) {
 					counter.countUp(1); }
 			}
 			

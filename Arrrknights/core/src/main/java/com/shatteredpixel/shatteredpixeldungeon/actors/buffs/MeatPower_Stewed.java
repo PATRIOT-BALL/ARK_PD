@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 
 public class MeatPower_Stewed extends FlavourBuff {
-    public static final float DURATION = 150f;
+    public static final float DURATION = 200f;
     {
         type = Buff.buffType.POSITIVE;
     }

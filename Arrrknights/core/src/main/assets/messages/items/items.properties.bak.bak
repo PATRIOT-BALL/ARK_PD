@@ -1990,7 +1990,7 @@ items.weapon.melee.enfild.stats_desc=사거리 _무한_, 공격속도 66%
 items.weapon.melee.enfild.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.enfild2.name=리-엔필드 II
-items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 명중률 +25%, 공격속도 33%\n기습 공격 불가
+items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 명중률 +25%, 공격속도 33%, 기습 공격 불가
 items.weapon.melee.enfild2.desc=잘 튜닝된 _특별한_ 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.sword.name=범고래 쿠션
@@ -2326,6 +2326,6 @@ items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아
 
 items.annihilationgear.name=섬멸전 장비
 items.annihilationgear.ac_active=방벽 투척
-items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다.\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._\n\n장비를 사용하면 더욱 빨리 배고파집니다.
+items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다.\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._
 items.annihilationgear.prompt=목표 지정
 items.annihilationgear.nocharge=충전량이 부족합니다.

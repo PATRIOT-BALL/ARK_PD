@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNervous;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookSpikes;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookYourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
+import com.shatteredpixel.shatteredpixeldungeon.items.StaffKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
@@ -59,6 +60,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLevitation
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
@@ -204,8 +206,6 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-		new Heamyo().collect();
-		new ScrollOfAntiMagic().collect();
 	}
 
 	private static void initMage( Hero hero ) {
@@ -323,14 +323,15 @@ public enum HeroClass {
 		new MagicalHolster().collect();
 		Dungeon.LimitedDrops.MAGICAL_HOLSTER.drop();
 
-		new PotionOfStrength().identify();
-		new ScrollOfTerror().identify();
 		new ScrollOfWarp().identify();
 
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
+
+		new PotionOfExperience().quantity(2).collect();
+		new Food().quantity(8).collect();
 
 		new DewVial().collect();
 	}
@@ -449,7 +450,7 @@ public enum HeroClass {
 				return true;
 			//	return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
 			case ROSECAT:
-				return false;
+				return true;
 		}
 	}
 	

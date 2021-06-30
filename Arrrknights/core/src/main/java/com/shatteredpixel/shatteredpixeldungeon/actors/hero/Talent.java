@@ -272,11 +272,11 @@ public enum Talent {
 		}
 
 		if (hero.hasTalent(FASTMEAL)){
-			Buff.affect( hero, Barrier.class).incShield(hero.HT * hero.pointsInTalent(FASTMEAL) / 20);
+			Buff.affect( hero, Barrier.class).incShield(hero.HT * hero.pointsInTalent(FASTMEAL) / 33);
 		}
 
 		if (hero.subClass == HeroSubClass.DESTROYER)
-			Buff.affect(hero, Rose_Force.class, Rose_Force.DURATION);
+			Buff.affect(hero, Rose_Force.class, 2f);
 	}
 
 	public static class WarriorFoodImmunity extends FlavourBuff{

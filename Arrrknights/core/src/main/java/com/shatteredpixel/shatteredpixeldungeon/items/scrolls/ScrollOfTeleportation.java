@@ -118,6 +118,35 @@ public class ScrollOfTeleportation extends Scroll {
 			
 		}
 	}
+
+	public static void teleportChar_unobstructed( Char ch ) {
+		int count = 20;
+		int pos;
+		do {
+			pos = Dungeon.level.randomRespawnCell( ch );
+			if (count-- <= 0) {
+				break;
+			}
+		} while (pos == -1 || Dungeon.level.secret[pos]);
+
+		if (pos == -1) {
+
+			GLog.w( Messages.get(ScrollOfTeleportation.class, "no_tele") );
+
+		} else {
+
+			appear( ch, pos );
+			Dungeon.level.occupyCell( ch );
+
+			if (ch == Dungeon.hero) {
+				GLog.i( Messages.get(ScrollOfTeleportation.class, "tele") );
+
+				Dungeon.observe();
+				GameScene.updateFog();
+			}
+
+		}
+	}
 	
 	public static void teleportPreferringUnseen( Hero hero ){
 		

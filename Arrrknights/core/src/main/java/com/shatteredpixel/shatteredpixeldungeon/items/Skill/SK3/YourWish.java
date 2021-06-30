@@ -14,11 +14,14 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Fadeleaf;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EX42_GroundSprite;
@@ -27,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.TargetHealthIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class YourWish extends Skill {
@@ -46,6 +50,11 @@ public class YourWish extends Skill {
                     CellEmitter.get(EX43.pos).burst(Speck.factory(Speck.WOOL), 4);
                     Buff.prolong(EX43, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);
                     Sample.INSTANCE.play(Assets.Sounds.SKILL_YOUWISH);
+
+                    if (Dungeon.level.map[targetCell] != Terrain.SOLID)
+                    {
+                        ScrollOfTeleportation.teleportChar_unobstructed(EX43);
+                    }
                 }
                 else if (mob instanceof Mob) {
                     if (mob.alignment != Char.Alignment.ALLY) {
@@ -53,8 +62,7 @@ public class YourWish extends Skill {
                     } }}}
 
         @Override
-        public String prompt() {
-            return Messages.get(AncientKin.class, "prompt");
+        public String prompt() { return Messages.get(YourWish.class, "prompt");
         }};
 
     public void dohit(final Char enemy) {

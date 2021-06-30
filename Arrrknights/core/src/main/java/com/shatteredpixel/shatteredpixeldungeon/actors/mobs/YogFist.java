@@ -165,10 +165,6 @@ public abstract class YogFist extends Mob {
 	}
 
 	@Override
-	public float speed() { if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) return super.speed() * 1.3f;
-	else return super.speed();}
-
-	@Override
 	public String description() {
 		return Messages.get(YogFist.class, "desc") + "\n\n" + Messages.get(this, "desc");
 	}
@@ -193,6 +189,12 @@ public abstract class YogFist extends Mob {
 			spriteClass = FistSprite.Burning.class;
 
 			properties.add(Property.FIERY);
+		}
+
+		@Override
+		public float speed() {
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) return super.speed() * 1.5f;
+			else return super.speed();
 		}
 
 		@Override
@@ -363,9 +365,6 @@ public abstract class YogFist extends Mob {
 		}
 
 		@Override
-		public float speed() { return super.speed(); }
-
-		@Override
 		protected boolean act() {
 			//ensures toxic gas acts at the appropriate time when added
 			GameScene.add(Blob.seed(pos, 0, ToxicGas.class));
@@ -500,7 +499,8 @@ public abstract class YogFist extends Mob {
 
 				if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
 				enemy.damage( Random.NormalIntRange(15, 30), new LightBeam() );
-					Buff.prolong( enemy, Blindness.class, Blindness.DURATION );}
+					Buff.prolong( enemy, Blindness.class, Blindness.DURATION );
+					if (Random.Int(12) < 1) ScrollOfTeleportation.teleportChar_unobstructed(enemy);}
 				else {enemy.damage( Random.NormalIntRange(10, 20), new LightBeam() );
 				Buff.prolong( enemy, Blindness.class, Blindness.DURATION/2f );}
 
@@ -567,6 +567,7 @@ public abstract class YogFist extends Mob {
 				enemy.damage( Random.NormalIntRange(10, 20), new DarkBolt() );
 				if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
 					Buff.affect(enemy, Silence.class, 5f);
+					if (Random.Int(12) < 1) ScrollOfTeleportation.teleportChar_unobstructed(enemy);
 				}
 
 				Light l = enemy.buff(Light.class);

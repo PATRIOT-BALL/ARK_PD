@@ -295,9 +295,6 @@ public class StaffKit extends Item {
         if (wand instanceof WandOfMagicMissile) {
             n = new StaffOfAbsinthe(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -309,9 +306,6 @@ public class StaffKit extends Item {
         else if (wand instanceof WandOfLightning) {
             n = new StaffOfGreyy(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -323,9 +317,6 @@ public class StaffKit extends Item {
         else if (wand instanceof WandOfDisintegration) {
             n = new StaffOfVigna(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -338,9 +329,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfBreeze(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -353,9 +341,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfMudrock(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -368,9 +353,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfLeaf(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -383,9 +365,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfShining(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -398,9 +377,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfSkyfire(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -413,9 +389,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfMayer(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -428,9 +401,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfAngelina(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -443,9 +413,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfWeedy(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;
@@ -458,9 +425,6 @@ public class StaffKit extends Item {
         {
             n = new StaffOfCorrupting(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
-            int level = wand.level();
-            if (wand.curseInfusionBonus) level--;
-            n.upgrade(level);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;
             n.cursed = wand.cursed;

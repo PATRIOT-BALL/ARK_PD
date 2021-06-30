@@ -58,12 +58,12 @@ public class AnnihilationGear extends Item {
         unique = true;
     }
 
-    public int charge = 2;
-    public int chargeCap = 2;
+    public int charge = 4;
+    public int chargeCap = 4;
 
-    public int min() { return 4 + Dungeon.hero.lvl + buffedLvl(); }
+    public int min() { return 5 + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
-    public int max() { return 6 + Dungeon.hero.lvl + buffedLvl() * 2 + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 4); }
+    public int max() { return 7 + Dungeon.hero.lvl + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
     @Override
     public String desc() { return Messages.get(this, "desc", min(), max()); }
@@ -104,8 +104,7 @@ public class AnnihilationGear extends Item {
 
     @Override
     public Item upgrade() {
-        charge+=2;
-        chargeCap+=2;
+        charge++; chargeCap++;
         chargeCap = Math.min(chargeCap,10);
         return super.upgrade();
     }
@@ -209,13 +208,15 @@ public class Spriteex extends MissileWeapon {
 }
 
     public void dohit(final Char enemy) {
-    // 고기 파워들
-        if (Dungeon.hero.buff(MeatPower_Mystery.class) != null){
-            Buff.affect(enemy, Silence.class, 5f); }
-        if (Dungeon.hero.buff(MeatPower_Chargrilled.class) != null){
-            Buff.affect(enemy, Weakness.class, 7f); }
-        if (Dungeon.hero.buff(MeatPower_Frozen.class) != null){
-            Dungeon.hero.HP += Dungeon.hero.HT/20;
+        // 고기 파워들
+        if (Dungeon.hero.buff(MeatPower_Mystery.class) != null) {
+            Buff.affect(enemy, Silence.class, 5f);
+        }
+        if (Dungeon.hero.buff(MeatPower_Chargrilled.class) != null) {
+            Buff.affect(enemy, Weakness.class, 7f);
+        }
+        if (Dungeon.hero.buff(MeatPower_Frozen.class) != null) {
+            Dungeon.hero.HP += Dungeon.hero.HT / 20;
             Dungeon.hero.updateHT(true);
         }
 
@@ -237,7 +238,7 @@ public class Spriteex extends MissileWeapon {
             if (enemy instanceof Mob) {
                 if (enemy.properties().contains(Char.Property.DRONE) == true) {
                     dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.AIMTRAINING) * 0.15f;
-                    if (Random.IntRange(0,1) == 1) charge+=1;
+                    if (Random.IntRange(0, 1) == 1) charge += 1;
                 }
             }
         }
@@ -245,10 +246,19 @@ public class Spriteex extends MissileWeapon {
         if (Dungeon.hero.hasTalent(Talent.ESTHESIA)) {
             if (enemy instanceof Mob) {
                 if (enemy.properties().contains(Char.Property.BOSS) == true || enemy.properties().contains(Char.Property.MINIBOSS) == true) {
-                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.ESTHESIA) * 0.15f;
+                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.ESTHESIA) * 0.1f;
                 }
             }
         }
+
+        if (curUser.buff(MeatPower_Frozen.class) != null ||
+                curUser.buff(MeatPower_Chargrilled.class) != null ||
+                curUser.buff(MeatPower_Mystery.class) != null ||
+                curUser.buff(MeatPower_Stewed.class) != null)
+        {
+            dmg *= 1.3f;
+        }
+
         enemy.damage(dmg, enemy);
 
         // 서브 직업이 파괴라면, 집중 버프 부여
@@ -258,7 +268,7 @@ public class Spriteex extends MissileWeapon {
         // 마비
         if (enemy.isAlive()) {
             if (curUser.hasTalent(Talent.PHYSICAL_ATTACK)) {
-                if (curUser.pointsInTalent(Talent.PHYSICAL_ATTACK) > Random.Int(4)) {
+                if (curUser.pointsInTalent(Talent.PHYSICAL_ATTACK) > Random.Int(3)) {
                     Buff.affect(enemy,Paralysis.class, 1f);
                 }}} }
 }

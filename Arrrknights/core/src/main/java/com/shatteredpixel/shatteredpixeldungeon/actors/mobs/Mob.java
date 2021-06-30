@@ -702,13 +702,15 @@ public abstract class Mob extends Char {
 			}}
 
 		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {
-			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(15)) {
+			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(25)) {
+				if (this instanceof Sheep) {}
+				else {
 				Dungeon.level.drop(new MeatCutlet(), pos).sprite.drop();
-			}
+			}}
 		}
 
 		if (Dungeon.hero.subClass== HeroSubClass.DESTROYER)
-			if (1 + Dungeon.hero.pointsInTalent(Talent.BATTLEFLOW) > Random.Int(20)) {
+			if (2 + Dungeon.hero.pointsInTalent(Talent.BATTLEFLOW) > Random.Int(25)) {
 				AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
 				if (this instanceof Sheep) {}
 					else{

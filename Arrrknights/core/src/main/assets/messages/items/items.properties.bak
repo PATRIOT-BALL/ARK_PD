@@ -1990,7 +1990,7 @@ items.weapon.melee.enfild.stats_desc=사거리 _무한_, 공격속도 66%
 items.weapon.melee.enfild.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.enfild2.name=리-엔필드 II
-items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 명중률 +25%, 공격속도 33%, 기습 공격 불가
+items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 명중률 +25%, 공격속도 33%\n기습 공격 불가
 items.weapon.melee.enfild2.desc=잘 튜닝된 _특별한_ 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.sword.name=범고래 쿠션
