@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -41,25 +42,24 @@ public class YourWish extends Skill {
             if (target != null) {
                 Camera.main.shake(5, 0.5f);
                 Char mob = Actor.findChar(target);
+                int targetCell = target;
+                YourWish.EX43 EX43 = new YourWish.EX43();
                 if (mob == null) {
-
-                    int targetCell = target;
-                    YourWish.EX43 EX43 = new YourWish.EX43();
                     EX43.pos = targetCell;
                     GameScene.add(EX43);
                     CellEmitter.get(EX43.pos).burst(Speck.factory(Speck.WOOL), 4);
                     Buff.prolong(EX43, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);
                     Sample.INSTANCE.play(Assets.Sounds.SKILL_YOUWISH);
 
-                    if (Dungeon.level.map[targetCell] != Terrain.SOLID)
+                    if (Dungeon.level.map[targetCell] != Terrain.EMPTY && Dungeon.level.map[targetCell] != Terrain.GRASS && Dungeon.level.map[targetCell] != Terrain.WATER
+                            && Dungeon.level.map[targetCell] != Terrain.HIGH_GRASS  && Dungeon.level.map[targetCell] != Terrain.EMPTY_SP)
                     {
                         ScrollOfTeleportation.teleportChar_unobstructed(EX43);
                     }
                 }
-                else if (mob instanceof Mob) {
-                    if (mob.alignment != Char.Alignment.ALLY) {
-                        dohit(mob);
-                    } }}}
+                else {
+                        ScrollOfTeleportation.teleportChar_unobstructed(EX43);
+                    } }}
 
         @Override
         public String prompt() { return Messages.get(YourWish.class, "prompt");

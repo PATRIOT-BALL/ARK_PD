@@ -81,7 +81,6 @@ public abstract class YogFist extends Mob {
 		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
 			HP=HT=400;
 		}
-		GLog.w(Messages.get(Hero.class, "name", HP)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
 	}
 
 	private float rangedCooldown;
