@@ -276,7 +276,7 @@ public enum Talent {
 		}
 
 		if (hero.subClass == HeroSubClass.DESTROYER)
-			Buff.affect(hero, Rose_Force.class, 2f);
+			Buff.affect(hero, Rose_Force.class, 10f);
 	}
 
 	public static class WarriorFoodImmunity extends FlavourBuff{
