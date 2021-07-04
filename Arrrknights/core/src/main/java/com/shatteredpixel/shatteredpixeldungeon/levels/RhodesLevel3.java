@@ -70,8 +70,8 @@ public class RhodesLevel3 extends Level {
         Painter.fill( this, MID, 8, 1, 20, Terrain.WALL);
         Painter.fill( this, MID -4, 8, 1, 20, Terrain.WALL);
 
-        Painter.fill( this, 0, 7, 6, 11, Terrain.WALL);
-        Painter.fill( this, 10, 7, 6, 11, Terrain.WALL);
+        Painter.fill( this, 0, 7, 6, 20, Terrain.WALL);
+        Painter.fill( this, 10, 7, 6, 20, Terrain.WALL);
 
         // 외각 벽부분
         Painter.fill( this, 0, 0, 15, 1, Terrain.WALL);
@@ -98,6 +98,14 @@ public class RhodesLevel3 extends Level {
         Painter.set(this, 135, Terrain.WALL);
         Painter.set(this, 150, Terrain.WALL);
         Painter.set(this, 152, Terrain.WALL);
+
+        // 기타 처리
+        Painter.set(this, 122, Terrain.WALL);
+        Painter.set(this, 104, Terrain.WALL);
+        Painter.set(this, 86, Terrain.WALL);
+        Painter.set(this, 68, Terrain.WALL);
+        Painter.set(this, 50, Terrain.WALL);
+        Painter.set(this, 32, Terrain.WALL);
 
         feeling = Feeling.NONE;
 

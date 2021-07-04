@@ -193,7 +193,7 @@ public abstract class Recipe {
             new BeaconOfReturning.Recipe(),
             new CurseInfusion.Recipe(),
             new FeatherFall.Recipe(),
-            //new MagicalInfusion.Recipe(),
+            new MagicalInfusion.Recipe(),
             new MagicalPorter.Recipe(),
             new PhaseShift.Recipe(),
             new ReclaimTrap.Recipe(),
