@@ -140,9 +140,8 @@ public class NewTengu extends Mob {
 
     @Override
     public int attackProc(Char enemy, int damage) {
-        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE))
-        {
-            if (Random.Int(8) < 1) Buff.affect(enemy, Blindness.class, 2f);
+        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+            if (Random.Int(8) < 1) Buff.affect(enemy, Blindness.class, 1f);
         }
         return super.attackProc(enemy, damage);
     }
@@ -469,15 +468,17 @@ public class NewTengu extends Mob {
     public boolean canUseAbility() {
 
         if (HP > HT / 2) return false;
-        if (MineThrow == 1) return  true;
+        if (MineThrow == 1) return true;
 
-        if (abilitiesUsed >= targetAbilityUses()) {
+        if (abilitiesUsed >= targetAbilityUses() && !Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
             return false;
         } else {
 
             abilityCooldown--;
 
-            if (targetAbilityUses() - abilitiesUsed >= 4) {
+            if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+                if (abilityCooldown == -1) abilityCooldown = 3;
+            } else if (targetAbilityUses() - abilitiesUsed >= 4) {
                 //Very behind in ability uses, use one right away!
                 abilityCooldown = 0;
 
@@ -490,7 +491,7 @@ public class NewTengu extends Mob {
                 if (abilityCooldown == -1) abilityCooldown = Random.IntRange(1, 4);
             }
 
-            if (abilityCooldown == 0) {
+            if (abilityCooldown <= 0) {
                 return true;
             } else {
                 return false;

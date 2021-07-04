@@ -92,6 +92,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
@@ -329,9 +330,6 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
-
-		new PotionOfExperience().quantity(2).collect();
-		new Food().quantity(8).collect();
 
 		new DewVial().collect();
 	}

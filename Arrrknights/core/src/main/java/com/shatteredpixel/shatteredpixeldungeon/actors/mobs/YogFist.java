@@ -79,7 +79,7 @@ public abstract class YogFist extends Mob {
 	{
 		super();
 		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
-			HP=HT=400;
+			HP=HT=450;
 		}
 	}
 

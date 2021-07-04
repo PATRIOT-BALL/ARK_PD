@@ -258,7 +258,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookFierceGlare.class,             false);
 		SKILLBOOK.seen.put( BookCamouflage.class,              false);
 		SKILLBOOK.seen.put( BookWolfSpirit.class,              false);
-		//SKILLBOOK.seen.put( BookThoughts.class,              false);
+		SKILLBOOK.seen.put( BookThoughts.class,              false);
 		SKILLBOOK.seen.put( BookHotBlade.class,              false);
 
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
@@ -274,7 +274,7 @@ public enum Catalog {
         SKILLBOOK.seen.put( Bookancientkin.class,          false);
         SKILLBOOK.seen.put( BookLandingStrike.class,          false);
 		SKILLBOOK.seen.put( BookDreamland.class,              false);
-		//SKILLBOOK.seen.put( BookNervous.class,              false);
+		SKILLBOOK.seen.put( BookNervous.class,              false);
 		SKILLBOOK.seen.put( BookDeepHealing.class,              false);
 		SKILLBOOK.seen.put( BookSpikes.class,              false);
 		SKILLBOOK.seen.put( BookFlashShield.class,              false);
@@ -285,7 +285,7 @@ public enum Catalog {
         SKILLBOOK.seen.put( BookNigetRaid.class,          false);
         SKILLBOOK.seen.put( BookTerminationT.class,          false);
         SKILLBOOK.seen.put( BookTrueSilverSlash.class,          false);
-		//SKILLBOOK.seen.put( BookYourWish.class,              false);
+		SKILLBOOK.seen.put( BookYourWish.class,              false);
 
 		WANDS.seen.put( WandOfMagicMissile.class,           false);
 		WANDS.seen.put( WandOfLightning.class,              false);

@@ -268,7 +268,7 @@ public enum Talent {
 		}
 
 		if (hero.hasTalent(LIGHTNESSMEAL)){
-			Buff.prolong( hero, Levitation.class, 2 + 2 * hero.pointsInTalent(LIGHTNESSMEAL));
+			Buff.prolong( hero, Levitation.class, 3 + 3 * hero.pointsInTalent(LIGHTNESSMEAL));
 		}
 
 		if (hero.hasTalent(FASTMEAL)){
@@ -359,7 +359,7 @@ public enum Talent {
 		if (hero.hasTalent(MYSTICAL_UPGRADE)){
 			CloakOfShadows cloak = hero.belongings.getItem(CloakOfShadows.class);
 			if (cloak != null){
-				cloak.overCharge(1 + hero.pointsInTalent(MYSTICAL_UPGRADE));
+				cloak.overCharge(1 + hero.pointsInTalent(MYSTICAL_UPGRADE) * 2);
 				ScrollOfRecharging.charge( Dungeon.hero );
 				SpellSprite.show( hero, SpellSprite.CHARGE );
 			}
@@ -431,7 +431,7 @@ public enum Talent {
 		if (hero.hasTalent(Talent.ASSASSINSCREED)
 				&& enemy instanceof Mob && ((Mob) enemy).surprisedBy(hero)
 				&& enemy.buff(SuckerPunchTracker.class) == null){
-			dmg *= 1f + hero.pointsInTalent(Talent.ASSASSINSCREED) * 0.1;
+			dmg *= 1f + hero.pointsInTalent(Talent.ASSASSINSCREED) * 0.06;
 			Buff.affect(enemy, SuckerPunchTracker.class);
 		}
 

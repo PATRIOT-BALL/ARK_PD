@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.StyledButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
 import com.shatteredpixel.shatteredpixeldungeon.ui.changelist.ChangeInfo;
 import com.shatteredpixel.shatteredpixeldungeon.ui.changelist.v0_1_X_Changes;
+import com.shatteredpixel.shatteredpixeldungeon.ui.changelist.v0_2_X_Changes;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.audio.Music;
@@ -125,8 +126,11 @@ public class ChangesScene extends PixelScene {
 		
 		switch (changesSelected){
 			case 0: default:
-				v0_1_X_Changes.addAllChanges(changeInfos);
+				v0_2_X_Changes.addAllChanges(changeInfos);
 				break;
+			case 1:
+				v0_1_X_Changes.addAllChanges(changeInfos);
+		     	break;
 		}
 
 		ScrollPane list = new ScrollPane( new Component() ){
@@ -181,7 +185,7 @@ public class ChangesScene extends PixelScene {
 				panel.innerHeight() + 2);
 		list.scrollTo(0, 0);
 
-		StyledButton btn0_1 = new StyledButton(Chrome.Type.GREY_BUTTON_TR, "0.1"){
+		StyledButton btn0_2 = new StyledButton(Chrome.Type.GREY_BUTTON_TR, "0.2"){
 			@Override
 			protected void onClick() {
 				super.onClick();
@@ -191,8 +195,22 @@ public class ChangesScene extends PixelScene {
 				}
 			}
 		};
-		if (changesSelected != 0) btn0_1.textColor( 0xBBBBBB );
-		btn0_1.setRect(list.left()-4f, list.bottom(), 26, changesSelected == 0 ? 19 : 15);
+		if (changesSelected != 0) btn0_2.textColor( 0xBBBBBB );
+		btn0_2.setRect(list.left()-4f, list.bottom(), 26, changesSelected == 0 ? 19 : 15);
+		addToBack(btn0_2);
+
+		StyledButton btn0_1 = new StyledButton(Chrome.Type.GREY_BUTTON_TR, "0.1"){
+			@Override
+			protected void onClick() {
+				super.onClick();
+				if (changesSelected != 1) {
+					changesSelected = 1;
+					TomorrowRogueNight.seamlessResetScene();
+				}
+			}
+		};
+		if (changesSelected != 1) btn0_1.textColor( 0xBBBBBB );
+		btn0_1.setRect(btn0_2.right() + 1, list.bottom(), 26, changesSelected == 0 ? 19 : 15);
 		addToBack(btn0_1);
 
 

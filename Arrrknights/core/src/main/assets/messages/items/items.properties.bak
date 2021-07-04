@@ -341,7 +341,7 @@ items.skill.sk3.truesilverslash.desc=발동시 시야 안에 있는 모든 적�
 items.skill.sk3.truesilverslash.desc_wnd=발동시 시야 내의 평범한 적들을 즉사시킵니다.
 
 items.skill.sk3.yourwish.name=_"네가 원하는 대로"(3스킬)_
-items.skill.sk3.yourwish.desc=발동시 목표 지점에 EX-43을 소환합니다. EX-43은 이동할 수 없지만 매우 강력합니다.
+items.skill.sk3.yourwish.desc=발동시 목표 지점에 EX-43을 소환합니다. EX-43은 이동할 수 없지만 매우 강력합니다.\n주의 : 소환 지점에 적이나 문같은 것이 있다면 무작위 위치에 소환됩니다!
 items.skill.sk3.yourwish.desc_wnd=발동시 목표 지점에 EX-43을 소환합니다.
 items.skill.sk3.yourwish.prompt=목표를 지정
 items.skill.sk3.yourwish$ex43.name=EX-43
@@ -1325,7 +1325,7 @@ items.scrolls.scrollofupgrade.name=강화의 일기장
 items.scrolls.scrollofupgrade.inv_title=강화할 아이템을 선택하세요
 items.scrolls.scrollofupgrade.weaken_curse=강화의 일기장이 아이템의 저주를 약화했다.
 items.scrolls.scrollofupgrade.remove_curse=강화의 일기장이 아이템의 저주를 없애버렸다!
-items.scrolls.scrollofupgrade.desc=이 일기장는 하나의 아이템을 강화하여 품질을 높입니다. 아츠 스태프는 위력이 상승하고 충전량이 증가하며, 무기는 더 높은 피해를 입히고, 방어구는 더 높은 피해량을 흡수할 수 있으며, 반지는 그 효과가 강화됩니다.\n\n이 일기장는 저주 해제의 일기장보다는 못하지만, 저주를 약화시키거나 심지어는 저주를 완전히 없앨 수도 있습니다.\n\n이 일기장의 아츠는 무기에 깃든 아츠가나 갑옷에 깃든 상형문자와 마찰을 일으켜 아츠를 사그라지게 할 수 있습니다. 이 확률은 +4 이상의 장비를 강화할 때부터 생기며, +8 이상의 장비에서는 100%입니다.
+items.scrolls.scrollofupgrade.desc=이 일기장는 하나의 아이템을 강화하여 품질을 높입니다. 아츠 스태프는 위력이 상승하고 충전량이 증가하며, 무기는 더 높은 피해를 입히고, 방어구는 더 높은 피해량을 흡수할 수 있으며, 반지는 그 효과가 강화됩니다.\n\n이 일기장는 저주 해제의 일기장보다는 못하지만, 저주를 약화시키거나 심지어는 저주를 완전히 없앨 수도 있습니다.
 
 items.scrolls.scrollofwarp.name=워프의 일기장
 items.scrolls.scrollofwarp.active=일기장의 아츠가 주위의 적들을 날려버렸다!
@@ -1796,6 +1796,9 @@ items.weapon.curses.wayward.desc=혼잡한 무기는 사용자의 집중을 아�
 items.weapon.enchantments.blazing.name=불타는 %s
 items.weapon.enchantments.blazing.desc=이 아츠는 무기에서 화염을 내뿜어 적을 불태우고, 이미 불타는 적에게 추가 피해를 줍니다.
 
+items.weapon.enchantments.penetrate.name=관통의 %s
+items.weapon.enchantments.penetrate.desc=이 아츠는 적의 방어력에 비례해 추가 피해를 입힐 수 있습니다.
+
 items.weapon.enchantments.blocking.name=방어의 %s
 items.weapon.enchantments.blocking.desc=이 아츠는 공격 이후 당신의 방어 능력을 늘려줍니다.
 items.weapon.enchantments.blocking$blockbuff.name=방어
@@ -1913,7 +1916,7 @@ items.weapon.melee.longsword.no_magic=아츠 면역 상태일 땐 발사할 수 
 items.weapon.melee.longsword.fizzles=SP가 부족합니다.
 
 items.weapon.melee.mace.name=테르밋 블레이드
-items.weapon.melee.mace.stats_desc=명중률 +28%
+items.weapon.melee.mace.stats_desc=명중률 +28%\n_이 무기는 적의 방어력을 무시합니다._
 items.weapon.melee.mace.desc=2500도까지 달아오르는 고열로 대상을 관통하는 레이피어. 이글거리는 테르밋 블레이드가 뚫을 수 없는 방어는 존재하지 않는다.
 
 items.weapon.melee.magesstaff.name=흑요석 반지
@@ -2326,6 +2329,6 @@ items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아
 
 items.annihilationgear.name=섬멸전 장비
 items.annihilationgear.ac_active=방벽 투척
-items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다.\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._
+items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._
 items.annihilationgear.prompt=목표 지정
 items.annihilationgear.nocharge=충전량이 부족합니다.

@@ -33,6 +33,7 @@ public class Unstable extends Weapon.Enchantment {
 
 	private static Class<?extends Weapon.Enchantment>[] randomEnchants = new Class[]{
 			Blazing.class,
+			Penetrate.class,
 			Blocking.class,
 			Blooming.class,
 			Chilling.class,

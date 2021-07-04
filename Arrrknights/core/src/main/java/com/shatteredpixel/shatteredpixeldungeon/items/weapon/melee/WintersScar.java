@@ -20,13 +20,13 @@ public class WintersScar extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) +    //20 base
-                lvl*(tier);
+        return  4*(tier+1) +    //20 base
+                lvl*(tier+1);
     }
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        if (defender.buff(Chill.class) != null) damage = Math.round(damage * 1.3f);
+        if (defender.buff(Chill.class) != null) damage = Math.round(damage * 1.15f);
 
         if (defender instanceof Mob && ((Mob) defender).surprisedBy(attacker)) {
             Buff.affect(defender, Chill.class, 4f);

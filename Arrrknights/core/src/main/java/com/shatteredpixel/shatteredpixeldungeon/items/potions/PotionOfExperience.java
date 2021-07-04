@@ -22,6 +22,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.potions;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class PotionOfExperience extends Potion {
@@ -34,8 +36,13 @@ public class PotionOfExperience extends Potion {
 	
 	@Override
 	public void apply( Hero hero ) {
+		int oldcharge = 0;
 		identify();
+		AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
+		if (hero.belongings.getItem(AnnihilationGear.class) != null) { oldcharge = Gear.charge; }
 		hero.earnExp( hero.maxExp(), getClass() );
+		if (hero.belongings.getItem(AnnihilationGear.class) != null) { Gear.charge = oldcharge; updateQuickslot(); }
+
 	}
 	
 	@Override
