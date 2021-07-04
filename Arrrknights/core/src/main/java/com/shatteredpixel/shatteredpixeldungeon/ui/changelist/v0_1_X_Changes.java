@@ -146,6 +146,10 @@ public class v0_1_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
                 "- _스태프 오브 커럽팅_으로 소환되는 혈족의 체력이 강화 단계에 비례하게 변경되었으며, 소환될 때 약화 상태를 얻습니다."));
+
+        changes = new ChangeInfo("", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
+        changeInfos.add(changes);
     }
 
 
