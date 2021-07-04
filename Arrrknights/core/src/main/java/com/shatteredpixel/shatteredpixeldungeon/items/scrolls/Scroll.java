@@ -353,7 +353,7 @@ public abstract class Scroll extends Item {
 			amnts.put(ScrollOfUpgrade.class,        2);
 
 			stones.put(ScrollOfWarp.class,       StoneOfAdvanceguard.class);
-			amnts.put(ScrollOfWarp.class,        2);
+			amnts.put(ScrollOfWarp.class,        4);
 		}
 		
 		@Override

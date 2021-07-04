@@ -47,9 +47,8 @@ public class v0_2_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.SCROLL_HOLDER), "일기장 및 주문 변경",
-                "- 이제 _강화의 일기장_ 이 장비에 깃든 아츠를 제거하지 않습니다." + "\n\n" +
-                "- 마법 융합 주문을 더 이상 만들 수 없습니다. 후에 다른 주문으로 대체될 예정입니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.SCROLL_HOLDER), "아츠 부여 관련",
+                "- 아츠 부여의 돌이 일반적인 룬석 드롭 테이블에서 생성될 수 있습니다. 확률은 당신이 단챠로 픽뚫 6성을 뽑을 확률보다도 낮습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
                 "- _테르밋 블레이드_ : 공격력이 4-16에서 _3-12_로 감소했으며, 강화 효율이 4에서 _3_으로 감소했습니다.\n대신 공격이 적의 방어력을 무시합니다."));

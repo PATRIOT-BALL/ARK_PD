@@ -348,7 +348,7 @@ public class Generator {
                     StoneOfAffection.class,
                     StoneOfAugmentation.class  //1 is sold in each shop
             };
-            STONE.defaultProbs = new float[]{0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0};
+            STONE.defaultProbs = new float[]{1, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 0};
             STONE.probs = STONE.defaultProbs.clone();
 
             WAND.classes = new Class<?>[]{
