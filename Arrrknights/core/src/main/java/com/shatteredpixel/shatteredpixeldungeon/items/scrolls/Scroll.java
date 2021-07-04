@@ -41,6 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellboo
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ExoticScroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfAntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAffection;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAugmentation;
@@ -350,6 +351,9 @@ public abstract class Scroll extends Item {
 			
 			stones.put(ScrollOfUpgrade.class,       StoneOfEnchantment.class);
 			amnts.put(ScrollOfUpgrade.class,        2);
+
+			stones.put(ScrollOfWarp.class,       StoneOfAdvanceguard.class);
+			amnts.put(ScrollOfWarp.class,        2);
 		}
 		
 		@Override
