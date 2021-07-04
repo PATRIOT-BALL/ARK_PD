@@ -24,6 +24,12 @@ import com.watabou.utils.Random;
 public class TrueSilverSlash extends Skill {
     @Override
     public void doSkill() {
+        float oldtime = 0;
+        if (Dungeon.hero.buff(MindVision.class) != null)
+        {
+            oldtime = Dungeon.hero.buff(MindVision.class).visualcooldown();
+            Dungeon.hero.buff(MindVision.class).detach();
+        }
 
         curUser.sprite.zap(0);
 
@@ -43,6 +49,8 @@ public class TrueSilverSlash extends Skill {
         Invisibility.dispel();
         identify();
         curUser.spendAndNext(1f);
+
+        if (oldtime != 0) Buff.affect(Dungeon.hero, MindVision.class, oldtime);
     }
 
     public void dohit(final Char enemy) {

@@ -8,8 +8,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -24,6 +26,13 @@ public class ScrollOfDominate extends ExoticScroll {
 
     @Override
     public void doRead() {
+
+        float oldtime = 0;
+        if (Dungeon.hero.buff(MindVision.class) != null)
+        {
+            oldtime = Dungeon.hero.buff(MindVision.class).visualcooldown();
+            Dungeon.hero.buff(MindVision.class).detach();
+        }
 
         for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
             if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
@@ -55,5 +64,7 @@ public class ScrollOfDominate extends ExoticScroll {
 
             readAnimation();
         }
+
+        if (oldtime != 0) Buff.affect(Dungeon.hero, MindVision.class, oldtime);
     }
 }

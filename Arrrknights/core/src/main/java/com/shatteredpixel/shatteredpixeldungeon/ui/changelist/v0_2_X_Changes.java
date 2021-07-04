@@ -78,8 +78,11 @@ public class v0_2_X_Changes {
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "스킬 너프",
+                "- _진은참 (3스킬)_ 이 심안 버프와 연계할 수 없게 변경되었습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.SCROLL_HOLDER), "일기장 너프",
-                "- _워프의 일기장_을 만들 때 필요한 가공소 에너지가 30에서 _35_ 로 상승했습니다."));
+                "- _지배의 일기장_ 이 심안 버프와 연계할 수 없게 변경되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "- 다음 특성들이 하향 조정되었습니다." + "\n\n" +

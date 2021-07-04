@@ -337,7 +337,7 @@ items.skill.sk3.terminationt.desc_wnd=ACTIVE: Inflicts heavy damage and Vulnerab
 items.skill.sk3.terminationt.prompt=Sniper!
 
 items.skill.sk3.truesilverslash.name=_True Silver Slash (Skill 3)_
-items.skill.sk3.truesilverslash.desc=ACTIVE: Slashes enemies within sight. executes enemies other than the boss or mini-boss
+items.skill.sk3.truesilverslash.desc=ACTIVE: Slashes enemies within sight. executes enemies other than the boss or mini-boss.\n\nUnable to link with _MindVision_
 items.skill.sk3.truesilverslash.desc_wnd=ACTIVE: Damage to enemies in sight. normal enemies is executed
 
 items.skill.sk3.yourwish.name=_"As your wish" (Skill 3)_
@@ -1391,7 +1391,7 @@ items.scrolls.exotic.scrollofpsionicblast.ondeath=The Psionic Blast tears your m
 items.scrolls.exotic.scrollofpsionicblast.desc=This scroll contains incredible destructive energy that can be channeled to destroy the minds of all visible creatures.\n\nThere is significant feedback however, and the reader will also be damaged, blinded, and weakened. The more targets the scroll hits, the less self-damage will be taken.
 
 items.scrolls.exotic.scrollofdominate.name=Scroll Of Dominate
-items.scrolls.exotic.scrollofdominate.desc=Using this scroll activates the arts of lord Sarkaz. The mighty powers of Arts will corrupt the souls of enemies within sight.
+items.scrolls.exotic.scrollofdominate.desc=Using this scroll activates the arts of lord Sarkaz. The mighty powers of Arts will corrupt the souls of enemies within sight.\n\nUnable to link with _MindVision_
 
 
 
@@ -1915,7 +1915,7 @@ items.weapon.melee.longsword.no_magic=you cannot use wands while magic immune.
 items.weapon.melee.longsword.fizzles=it must not have enough charge.
 
 items.weapon.melee.mace.name=thermite blade
-items.weapon.melee.mace.stats_desc=Accuracy +28%
+items.weapon.melee.mace.stats_desc=Accuracy +28%\n_True Damage(ignore defense)_
 items.weapon.melee.mace.desc=The high heat of 2,500 degrees pierces the enemy. There is no defense that this sword cannot penetrate.
 
 items.weapon.melee.magesstaff.name=Obsidian ring
