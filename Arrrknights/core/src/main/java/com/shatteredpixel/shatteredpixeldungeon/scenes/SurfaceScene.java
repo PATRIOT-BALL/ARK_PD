@@ -141,12 +141,7 @@ public class SurfaceScene extends PixelScene {
 		a.x = (SKY_WIDTH - a.width) / 2;
 		a.y = SKY_HEIGHT - a.height;
 		align(a);
-		
-		final Pet pet = new Pet();
-		pet.rm = pet.gm = pet.bm = 1.2f;
-		pet.x = SKY_WIDTH / 2 + 2;
-		pet.y = SKY_HEIGHT - pet.height;
-		align(pet);
+
 		
 		//allies. Attempts to pick highest level, but prefers rose > earth > ward.
 		//Rose level is halved because it's easier to upgrade
@@ -197,14 +192,7 @@ public class SurfaceScene extends PixelScene {
 		}
 		
 		window.add( a );
-		window.add( pet );
-		
-		window.add( new PointerArea( sky ) {
-			protected void onClick( PointerEvent event ) {
-				pet.jump();
-			}
-		} );
-		
+
 		for (int i=0; i < nPatches; i++) {
 			GrassPatch patch = new GrassPatch( (i - 0.5f) * GrassPatch.WIDTH, SKY_HEIGHT, dayTime );
 			patch.brightness( dayTime ? 1.0f : 0.8f );
@@ -220,7 +208,6 @@ public class SurfaceScene extends PixelScene {
 
 		if (dayTime) {
 			a.brightness( 1.2f );
-			pet.brightness( 1.2f );
 		} else {
 			frame.hardlight( 0xDDEEFF );
 		}
@@ -367,26 +354,12 @@ public class SurfaceScene extends PixelScene {
 
 	private static class Avatar extends Image {
 		
-		private static final int WIDTH	= 24;
+		private static final int WIDTH	= 32;
 		private static final int HEIGHT	= 32;
 		
 		public Avatar( HeroClass cl ) {
 			super( Assets.Sprites.AVATARS );
 			frame( new TextureFilm( texture, WIDTH, HEIGHT ).get( cl.ordinal() ) );
-		}
-	}
-	
-	private static class Pet extends BugSprite {
-		
-		public void jump() {
-			play( run );
-		}
-		
-		@Override
-		public void onComplete( Animation anim ) {
-			if (anim == run) {
-				idle();
-			}
 		}
 	}
 	
