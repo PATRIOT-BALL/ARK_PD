@@ -1325,7 +1325,7 @@ items.scrolls.scrollofupgrade.name=강화의 일기장
 items.scrolls.scrollofupgrade.inv_title=강화할 아이템을 선택하세요
 items.scrolls.scrollofupgrade.weaken_curse=강화의 일기장이 아이템의 저주를 약화했다.
 items.scrolls.scrollofupgrade.remove_curse=강화의 일기장이 아이템의 저주를 없애버렸다!
-items.scrolls.scrollofupgrade.desc=이 일기장는 하나의 아이템을 강화하여 품질을 높입니다. 아츠 스태프는 위력이 상승하고 충전량이 증가하며, 무기는 더 높은 피해를 입히고, 방어구는 더 높은 피해량을 흡수할 수 있으며, 반지는 그 효과가 강화됩니다.\n\n이 일기장는 저주 해제의 일기장보다는 못하지만, 저주를 약화시키거나 심지어는 저주를 완전히 없앨 수도 있습니다.
+items.scrolls.scrollofupgrade.desc=이 일기장는 하나의 아이템을 강화하여 품질을 높입니다. 아츠 스태프는 위력이 상승하고 충전량이 증가하며, 무기는 더 높은 피해를 입히고, 방어구는 더 높은 피해량을 흡수할 수 있으며, 반지는 그 효과가 강화됩니다.\n\n이 일기장는 저주 해제의 일기장보다는 못하지만, 저주를 약화시키거나 심지어는 저주를 완전히 없앨 수도 있습니다.\n\n이 일기장의 아츠는 무기에 깃든 아츠가나 갑옷에 깃든 상형문자와 마찰을 일으켜 아츠를 사그라지게 할 수 있습니다. 이 확률은 +4 이상의 장비를 강화할 때부터 생기며, +8 이상의 장비에서는 100%입니다.
 
 items.scrolls.scrollofwarp.name=워프의 일기장
 items.scrolls.scrollofwarp.active=일기장의 아츠가 주위의 적들을 날려버렸다!

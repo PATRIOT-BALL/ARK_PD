@@ -56,6 +56,7 @@ public class Badges {
 		UNLOCK_MAGE                 ( 1 ),
 		UNLOCK_ROGUE                ( 2 ),
 		UNLOCK_HUNTRESS             ( 3 ),
+		UNLOCK_ROSECAT             ( 118 ),
 		MONSTERS_SLAIN_1            ( 4 ),
 		MONSTERS_SLAIN_2            ( 5 ),
 		GOLD_COLLECTED_1            ( 6 ),
@@ -101,7 +102,6 @@ public class Badges {
 		BOSS_SLAIN_1_ROSECAT,
 		BOSS_SLAIN_1_ALL_CLASSES    ( 53, true ),
 		GAMES_PLAYED_1              ( 54, true ),
-		Get_25_STONES                (96),
 
 		//gold
 		PIRANHAS                    ( 64 ),
@@ -137,7 +137,7 @@ public class Badges {
 		BOSS_SLAIN_3_GUARDIAN,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
 		GAMES_PLAYED_2              ( 81, true ),
-		Get_40_STONES                (96),
+
 
 		//platinum
 		HAPPY_END                   ( 96 ),
@@ -157,7 +157,11 @@ public class Badges {
 		CHAMPION_2                  ( 113 ),
 		CHAMPION_3                  ( 114 ),
 		CHAMPION_4                  ( 114 ),
-		EVILTIME_END                  ( 115 );
+		EVILTIME_END                  ( 115 ),
+
+		//Puple
+		Get_25_STONES                (117),
+		Get_40_STONES                (117);
 
 		public boolean meta;
 

@@ -209,7 +209,7 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		Amulet w;
+		/*Amulet w;
 		w = new Amulet();
 		w.quantity(1).collect();
 
@@ -217,9 +217,13 @@ public enum HeroClass {
 		w1 = new M1887();
 		w1.quantity(1).collect();
 
+		Enfild2 w2;
+		w2 = new Enfild2();
+		w2.quantity(1).collect();
+
 		PotionOfStrength w3;
 		w3 = new PotionOfStrength();
-		w3.quantity(8).collect();
+		w3.quantity(8).collect();*/
 	}
 
 	private static void initMage( Hero hero ) {

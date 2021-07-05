@@ -8,8 +8,8 @@ import com.watabou.utils.Bundle;
 
 public class Enfild2 extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.ENFILD;
-        hitSound = Assets.Sounds.SKILL_BEEP;
+        image = ItemSpriteSheet.ANDREANA;
+        hitSound = Assets.Sounds.HIT_SNIPER;
         hitSoundPitch = 0.9f;
 
         tier = 3;

@@ -146,7 +146,7 @@ public class Scimitar extends MeleeWeapon {
 
 				final Scimitar ss;
 				if (curItem instanceof Scimitar) {
-					Sample.INSTANCE.play( Assets.Sounds.HIT_SLASH, 1f, 0.44f );
+					Sample.INSTANCE.play( Assets.Sounds.HIT_GUNLANCE, 1f);
 					ss = (Scimitar) Scimitar.curItem;
 
 					Ballistica shot = new Ballistica(curUser.pos, target, Ballistica.PROJECTILE);
