@@ -48,17 +48,16 @@ public class Closure extends NPC {
                         int a = ((SkinModel) mob).Skin;
                         switch (a) {
                             case 0:
-                          //      if (Badges.isUnlocked(Badges.Badge.EVILTIME_END)) {
+                                if (Badges.isUnlocked(Badges.Badge.EVILTIME_END)) {
                                     Dungeon.hero.CharSkin = Hero.TALULAH;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
-                          //      } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
-                         //           Game.runOnRenderThread(new Callback() {
-                           //             @Override
-                          //              public void call() {
-                          //                  GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin1", Dungeon.hero.heroClass.title())));
-                         //               }});}
-                       //         break;
+                                } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
+                                    Game.runOnRenderThread(new Callback() {
+                                        @Override
+                                        public void call() {
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin1", Dungeon.hero.heroClass.title())));
+                                        }});}
                             case 1:
                                /* if (Badges.isUnlocked(Badges.Badge.VICTORY_ALL_CLASSES)) {
                                     Dungeon.hero.CharSkin = Hero.F_NOVA;
