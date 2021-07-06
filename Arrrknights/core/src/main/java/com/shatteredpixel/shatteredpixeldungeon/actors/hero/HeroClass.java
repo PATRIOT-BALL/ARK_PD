@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookSpreadSpores;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDeepHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNervous;
@@ -466,7 +467,7 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
 			case ROSECAT:
-				return Badges.isUnlocked(Badges.Badge.FOOD_EATEN_3);
+				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROSECAT);
 		}
 	}
 	

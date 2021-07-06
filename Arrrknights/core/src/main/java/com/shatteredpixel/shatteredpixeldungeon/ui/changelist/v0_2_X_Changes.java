@@ -37,7 +37,7 @@ public class v0_2_X_Changes {
                 "- _관통_ : 적의 방어력에 비례해 추가 피해를 입힙니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "새로운 스킬",
-                "- _[1티어] 포자 확신_ : 목표 지점의 적을 불구, 침묵으로 만들고 부식 가스를 생성합니다." + "\n\n" +
+                "- _[1티어] 포자 확신_ : 목표 지점의 적을 속박, 침묵으로 만들고 부식 가스를 생성합니다." + "\n\n" +
                         "- _[1티어] 엄청 뜨거운 칼_ : 시야 내의 적에게 단검 2개를 던집니다. 저격의 반지로 피해량이 상승합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "신규 캐릭터",
@@ -65,6 +65,7 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "스킬 버프",
                 "- _[1티어] 신영류_ : 아드레날린 획득량이 _2배_로 상승했습니다." + "\n\n" +
                         "- _[1티어] 크림슨 커터_ : 방어력을 무시합니다." + "\n\n"+
+                        "- _[1티어] 늑대의 혼_ : 사거리가 3에서 _5_로 상승했습니다." + "\n\n" +
                         "- _[2티어] 낙지참_ : 저주당 축복 획득량이 150 턴에서 _250 턴_으로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 버프",

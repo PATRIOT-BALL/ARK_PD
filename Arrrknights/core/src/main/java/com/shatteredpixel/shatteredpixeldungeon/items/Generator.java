@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookSpreadSpores;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWolfSpirit;
@@ -521,9 +522,10 @@ public class Generator {
                     BookFierceGlare.class,
                     BookCamouflage.class,
                     BookWolfSpirit.class,
-                    BookHotBlade.class
+                    BookHotBlade.class,
+                    BookSpreadSpores.class,
             };
-            SKL_T1.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+            SKL_T1.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
             SKL_T2.classes = new Class<?>[]{
                     BookJackinthebox.class,
@@ -551,7 +553,7 @@ public class Generator {
             SKL_RND.classes = new Class<?>[]{
                     BookFate.class, Bookpanorama.class, BookFoodPrep.class,
                     BookChainHook.class, BookCrimsonCutter.class, BookShinkageryu.class,  BookFierceGlare.class,
-                    BookCamouflage.class, BookWolfSpirit.class, BookHotBlade.class,
+                    BookCamouflage.class, BookWolfSpirit.class, BookHotBlade.class, BookSpreadSpores.class,
 
                     BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
@@ -560,7 +562,7 @@ public class Generator {
                     BookTrueSilverSlash.class, BookTerminationT.class
             };
             SKL_RND.probs = new float[]{
-                    4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+                    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
                     3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                     2, 2
             };

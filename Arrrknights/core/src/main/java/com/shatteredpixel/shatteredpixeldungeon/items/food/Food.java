@@ -86,6 +86,7 @@ public class Food extends Item {
 			
 			Statistics.foodEaten++;
 			Badges.validateFoodEaten();
+			Badges.validateRoseUnlock();
 
 			int preservesLeft = Dungeon.hero.pointsInTalent(Talent.SMARTMEALS) * 2 - 1;
 			if (Dungeon.hero.buff(Talent.foodIdentify.class) != null){

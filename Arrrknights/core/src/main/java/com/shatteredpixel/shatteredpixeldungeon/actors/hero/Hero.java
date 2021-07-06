@@ -81,6 +81,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Shinkageryu;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.SpreadSpores;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Thoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
@@ -2203,6 +2204,8 @@ public class Hero extends Char {
             SK1 = new Thoughts();
         } else if (SkillNumber == 15) {
             SK1 = new HotBlade();
+        } else if (SkillNumber == 16) {
+            SK1 = new SpreadSpores();
         } else SK1 = null;
     }
 

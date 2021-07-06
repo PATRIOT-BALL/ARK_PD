@@ -19,7 +19,7 @@ import com.watabou.utils.PathFinder;
 public class WolfSpirit extends Skill {
     public void doSkill() {
         curUser.sprite.zap(0);
-        PathFinder.buildDistanceMap(curUser.pos, BArray.not(Dungeon.level.solid, null), 3);
+        PathFinder.buildDistanceMap(curUser.pos, BArray.not(Dungeon.level.solid, null), 5);
         for (int cell = 0; cell < PathFinder.distance.length; cell++) {
             if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
                 Char ch = Actor.findChar(cell);

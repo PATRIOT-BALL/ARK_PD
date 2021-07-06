@@ -746,6 +746,12 @@ public class Badges {
 			displayBadge( Badge.UNLOCK_HUNTRESS );
 		}
 	}
+
+	public static void validateRoseUnlock(){
+		if (Statistics.foodEaten >= 25 && !global.contains(Badge.UNLOCK_ROSECAT)){
+			displayBadge( Badge.UNLOCK_ROSECAT );
+		}
+	}
 	
 	public static void validateMasteryCombo( int n ) {
 		if (!local.contains( Badge.MASTERY_COMBO ) && n == 10) {

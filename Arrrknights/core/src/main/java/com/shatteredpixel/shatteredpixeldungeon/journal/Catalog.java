@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookSpreadSpores;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
@@ -260,6 +261,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookWolfSpirit.class,              false);
 		SKILLBOOK.seen.put( BookThoughts.class,              false);
 		SKILLBOOK.seen.put( BookHotBlade.class,              false);
+		SKILLBOOK.seen.put( BookSpreadSpores.class,              false);
 
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
