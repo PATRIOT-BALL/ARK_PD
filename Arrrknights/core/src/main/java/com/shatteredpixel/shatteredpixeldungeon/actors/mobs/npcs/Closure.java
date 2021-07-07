@@ -71,7 +71,7 @@ public class Closure extends NPC {
                             sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "incomplete"));
                                 break;
                             case 2: // 바병슼 스킨
-                               /* if (Badges.isUnlocked(Badges.Badge.VICTORY_ALL_CLASSES)) {
+                               /* if (Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_2)) {
                                     Dungeon.hero.CharSkin = Hero.F_NOVA;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
