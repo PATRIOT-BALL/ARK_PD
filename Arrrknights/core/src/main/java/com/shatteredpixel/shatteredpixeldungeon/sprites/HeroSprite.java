@@ -57,6 +57,8 @@ public class HeroSprite extends CharSprite {
 			break;
 			case 2: texture(Assets.Sprites.FNOVA);
 			break;
+			//case 3: texture(Assets.Sprites.FNOVA); // 바병슼
+			//break;
 		}
 		updateArmor();
 

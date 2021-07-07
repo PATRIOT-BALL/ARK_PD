@@ -190,6 +190,7 @@ public class Hero extends Char {
     // 스킨 관련
     public static final int TALULAH      = 1;
     public static final int F_NOVA      = 2;
+    public static final int SKADI      = 3;
 
     {
         actPriority = HERO_PRIO;
