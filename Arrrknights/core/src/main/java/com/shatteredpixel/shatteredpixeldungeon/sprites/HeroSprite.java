@@ -57,8 +57,8 @@ public class HeroSprite extends CharSprite {
 			break;
 			case 2: texture(Assets.Sprites.FNOVA);
 			break;
-			//case 3: texture(Assets.Sprites.SKD); // 바병슼
-			//break;
+			case 3: texture(Assets.Sprites.SKD); // 바병슼
+			break;
 		}
 		updateArmor();
 
@@ -78,6 +78,8 @@ public class HeroSprite extends CharSprite {
 			case 1: texture(Assets.Sprites.TALRU_FIGHT);
 				break;
 			case 2: texture(Assets.Sprites.FNOVA);
+				break;
+			case 3: texture(Assets.Sprites.SKD); // 바병슼
 				break;
 		}
 		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 32, 32);
