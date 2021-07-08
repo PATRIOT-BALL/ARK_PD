@@ -375,5 +375,6 @@ public class Assets {
 		//스킨
 		public static final String TALRU_FIGHT	= "sprites/talru.png";
 		public static final String FNOVA	= "sprites/nova.png";
+		public static final String SKD	= "sprites/skadi.png";
 	}
 }
