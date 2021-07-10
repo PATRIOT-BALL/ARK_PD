@@ -29,7 +29,7 @@ public class EX42 extends MeleeWeapon {
         int df = damage;
         damage = Math.min(damage + defender.drRoll(), damage + defender.drRoll());
 
-        if (damage >= df+4) damage = df+4;
+        if (damage >= df+3) damage = df+3;
 
         return super.proc(attacker, defender, damage);
     }
