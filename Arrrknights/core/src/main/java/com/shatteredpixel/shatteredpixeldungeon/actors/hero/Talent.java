@@ -166,6 +166,7 @@ public enum Talent {
 	public static class RejuvenatingStepsCooldown extends FlavourBuff{};
 	public static class SeerShotCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};
+	public static class BlazeBurstBuff extends CounterBuff{};
 
 	int icon;
 	int maxPoints;

@@ -406,7 +406,7 @@ actors.hero.talent.endless_rage.desc=_+1:_ 블레이즈는 분노를 최대 _120
 actors.hero.talent.berserking_stamina.title=타오르는 투쟁
 actors.hero.talent.berserking_stamina.desc=_+1:_ 블레이즈는 격노 중에 _10%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _50%_가 됩니다.\n\n_+2:_ 블레이즈는 격노 중에 _20%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _70%_가 됩니다.\n\n_+3:_ 블레이즈는 격노 중에 _30%의 추가 보호막_ 을 얻고, 분노의 이동속도의 최대 상승량이 _90%_가 됩니다.
 actors.hero.talent.enraged_catalyst.title=광분의 전기톱
-actors.hero.talent.enraged_catalyst.desc=_+1:_ 블레이즈의 무기에 부여된 아츠 또는 저주가 분노에 비례해서 더 자주 발동하게 되며, 100%의 분노에서 최대 _25% 더 자주 발동_ 합니다.\n\n_+2:_ 블레이즈의 무기에 부여된 아츠 또는 저주가 분노에 비례해서 더 자주 발동하게 되며, 100%의 분노에서 최대 _50% 더 자주 발동_ 합니다.\n\n_+3:_ 블레이즈의 무기에 부여된 아츠 또는 저주가 분노에 비례해서 더 자주 발동하게 되며, 100%의 분노에서 최대 _75% 더 자주 발동_ 합니다.
+actors.hero.talent.enraged_catalyst.desc=_+1:_ 블레이즈가 10회의 공격을 받았다면, 다음 공격시 시야 내 모든 적들에게 _75%_의 피래를 입히고 1턴 동안 마비시킵니다.\n\n_+2:_ 블레이즈가 10회의 공격을 받았다면, 다음 공격시 시야 내 모든 적들에게 _150%_의 피래를 입히고 1턴 동안 마비시킵니다.\n\n_+3:_ 블레이즈가 10회의 공격을 받았다면, 다음 공격시 시야 내 모든 적들에게 _225%_의 피래를 입히고 1턴 동안 마비시킵니다.
 actors.hero.talent.cleave.title=콤보 어택
 actors.hero.talent.cleave.desc=_+1:_ 블레이즈가 적을 처치했을 때, 다음 공격 전까지 콤보 지속 시간이 _10 턴_ 으로 늘어납니다.\n\n_+2:_ 블레이즈가 적을 처치했을 때, 다음 공격 전까지 콤보 지속 시간이 _20 턴_ 으로 늘어납니다.\n\n_+3:_ 블레이즈가 적을 처치했을 때, 다음 공격 전까지 콤보 지속 시간이 _30 턴_ 으로 늘어납니다.
 actors.hero.talent.lethal_defense.title=치명적인 방어
@@ -794,7 +794,7 @@ actors.mobs.npcs.closure.no=이 옷은 못 입어!
 actors.mobs.npcs.closure.incomplete=이 옷은 아직 덜 만들었어!
 actors.mobs.npcs.closure.fail_skin1=암흑시대의 끝 배지가 필요합니다.\n위기협약 : 통합운동 을 적용하고 미니보스를 1마리도 잡지 않은 채 클리어
 actors.mobs.npcs.closure.fail_skin2=모든 오퍼레이터로 박사를 구출 배지가 필요합니다. \n모든 캐릭터로 26층에 있는 박사 획득
-actors.mobs.npcs.closure.fail_skin2=게임을 50회 클리어해야합니다.
+actors.mobs.npcs.closure.fail_skin3=게임을 50회 클리어해야합니다.
 actors.mobs.npcs.closure.die=끄악~
 
 actors.mobs.npcs.skinmodel.name=신형 모델 생성기

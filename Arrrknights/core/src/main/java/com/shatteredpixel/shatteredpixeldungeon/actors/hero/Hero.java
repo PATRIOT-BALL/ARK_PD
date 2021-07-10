@@ -230,7 +230,7 @@ public class Hero extends Char {
 
     public float awareness;
 
-    public int lvl = 1;
+    public int lvl = 21;
     public int exp = 0;
 
     public int HTBoost = 0;
@@ -1262,6 +1262,12 @@ public class Hero extends Char {
         if (damage > 0 && subClass == HeroSubClass.BERSERKER) {
             Berserk berserk = Buff.affect(this, Berserk.class);
             berserk.damage(damage);
+
+           if (this.hasTalent(Talent.ENRAGED_CATALYST))
+           {
+               Talent.BlazeBurstBuff counter = Buff.affect(Dungeon.hero, Talent.BlazeBurstBuff.class);
+               if (counter.count() < 10) counter.countUp(1);
+           }
         }
 
         if (belongings.armor != null) {
