@@ -49,7 +49,7 @@ public abstract class CasterSprite extends MobSprite {
 		run = new Animation( 12, true );
 		run.frames( frames, c+0, c+0, c+0 );
 		
-		attack = new Animation( 16, false );
+		attack = new Animation( 18, false );
 		attack.frames( frames, c+1, c+2, c+3, c+4, c+3, c+4, c+3, c+4, c+5, c+6, c+1 );
 		
 		zap = attack.clone();

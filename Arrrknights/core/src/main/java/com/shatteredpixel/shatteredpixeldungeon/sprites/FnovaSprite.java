@@ -10,7 +10,7 @@ public class FnovaSprite extends MobSprite{
 
             texture( Assets.Sprites.FNOVA );
 
-            TextureFilm frames = new TextureFilm( texture, 32, 32 );
+            TextureFilm frames = new TextureFilm( texture, 32, 34 );
 
             idle = new MovieClip.Animation( 2, true );
             idle.frames( frames, 50 );

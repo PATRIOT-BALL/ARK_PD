@@ -91,10 +91,10 @@ public class HeroSprite extends CharSprite {
 		run.frames( film, 1, 2, 3, 4, 5, 6, 7, 8 );
 		
 		die = new Animation( 10, false );
-		die.frames( film, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 );
+		die.frames( film, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 );
 		
 		attack = new Animation( 18, false );
-		attack.frames( film, 9, 10, 11, 12, 13, 14, 15, 16 );
+		attack.frames( film, 9, 10, 11, 12, 13, 14, 15, 16, 17 );
 
 		Sattack = new Animation(15, false);
 		Sattack.frames(film, 9,11,14,16);
@@ -102,13 +102,13 @@ public class HeroSprite extends CharSprite {
 		zap = attack.clone();
 		
 		operate = new Animation( 8, false );
-		operate.frames( film, 36, 37, 36, 37 );
+		operate.frames( film, 37, 38, 37, 38 );
 		
 		fly = new Animation( 1, true );
-		fly.frames( film, 38, 39 );
+		fly.frames( film, 39, 40 );
 
-		read = new Animation( 8, false );
-		read.frames( film, 17, 18, 19, 20, 21, 22, 23, 24, 24, 24 );
+		read = new Animation( 10, false );
+		read.frames( film, 18, 19, 20, 21, 22, 23, 24, 25, 25, 25 );
 		
 		if (Dungeon.hero.isAlive())
 			idle();
