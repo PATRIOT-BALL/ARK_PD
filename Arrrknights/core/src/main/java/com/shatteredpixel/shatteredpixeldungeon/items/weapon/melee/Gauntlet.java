@@ -76,16 +76,22 @@ public class Gauntlet extends MeleeWeapon {
 		}
 
 	private static final String SWICH = "swiching";
+	private static final String RCHSAVE = "RCH";
+	private static final String DLYSAVE = "DLY";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		bundle.put(SWICH, swiching);
+		bundle.put(RCHSAVE, RCH);
+		bundle.put(DLYSAVE, DLY);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 		swiching = bundle.getBoolean(SWICH);
+		RCH = bundle.getInt(RCHSAVE);
+		DLY = bundle.getFloat(DLYSAVE);
 	}
 }
