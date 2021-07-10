@@ -243,8 +243,8 @@ items.skill.sk1.hotblade.desc=ACTIVE: Throws a dagger at an enemy in sight, deal
 items.skill.sk1.hotblade.desc_wnd=ACTIVE: Throws a dagger at an enemy in sight, dealing damage twice.
 
 items.skill.sk1.spreadspores.name=_Spread Spores (Skill 1)_
-items.skill.sk1.spreadspores.desc=Inflicts silence, roots and corrosive gas on the target
-items.skill.sk1.spreadspores.desc_wnd=Inflicts silence, roots and corrosive gas on the target
+items.skill.sk1.spreadspores.desc=ACTIVE: Inflicts silence, roots and corrosive gas on the target
+items.skill.sk1.spreadspores.desc_wnd=ACTIVE: Inflicts silence, roots and corrosive gas on the target
 
 items.skill.sk2.wolfpack.name=_Wolf Pack (Skill 2)_
 items.skill.sk2.wolfpack.desc=ACTIVE: Inflicts damage and paralysis to nearby enemies after _ jumping to the target point_. Stealth after cast
@@ -1877,7 +1877,8 @@ items.weapon.melee.flail.desc=Hwando of the Far East, which is bigger than a hum
 
 items.weapon.melee.gauntlet.name=mountain breaker
 items.weapon.melee.gauntlet.stats_desc=Attack Speed 500%
-items.weapon.melee.gauntlet.desc=It can attack very quickly, but it is very heavy.
+items.weapon.melee.gauntlet.ac_zap=Sweeping Stance
+items.weapon.melee.gauntlet.desc=It can attack very quickly, but it is very heavy.\n\nWhen Sweeping Stance is ON, attack power increases, but attack speed decreases.
 
 items.weapon.melee.glaive.name=shadow firmament
 items.weapon.melee.glaive.stats_desc=Range +2, Attack Speed 50%

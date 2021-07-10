@@ -22,23 +22,70 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Bundle;
+
+import java.util.ArrayList;
 
 public class Gauntlet extends MeleeWeapon {
-	
+	public static final String AC_ZAP = "ZAP";
+
 	{
 		image = ItemSpriteSheet.GAUNTLETS;
 		hitSound = Assets.Sounds.HIT_PUNCH;
 		hitSoundPitch = 1.2f;
-		
+
 		tier = 5;
 		DLY = 0.2f; //2x speed
 	}
-	
+
+	private boolean swiching = false;
+
 	@Override
 	public int max(int lvl) {
-		return  Math.round(1f*(tier+1)) +     //15 base, down from 30
-				lvl*Math.round(0.5f*(tier+1));  //+3 per level, down from +6
+		if (swiching == false) {
+			return Math.round(1f * (tier + 1)) +
+					lvl * Math.round(0.5f * (tier + 1));
+		} else {
+			return Math.round(2f * (tier + 1)) +
+					lvl * Math.round(1f * (tier + 1)); }
 	}
 
+	@Override
+	public ArrayList<String> actions(Hero hero) {
+		ArrayList<String> actions = super.actions(hero);
+		actions.add(AC_ZAP);
+		return actions;
+	}
+
+	@Override
+	public void execute(Hero hero, String action) {
+
+		super.execute(hero, action);
+
+		if (swiching == true) {swiching = false; DLY = 0.2f;}
+		else {swiching = true; DLY = 0.33f;}
+		}
+
+	private static final String SWICH = "swiching";
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(SWICH, swiching);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		swiching = bundle.getBoolean(SWICH);
+	}
 }

@@ -22,24 +22,63 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Bundle;
+
+import java.util.ArrayList;
 
 public class Spear extends MeleeWeapon {
-
+	public static final String AC_ZAP = "ZAP";
 	{
 		image = ItemSpriteSheet.SPEAR;
 		hitSound = Assets.Sounds.HIT_SPEAR;
 		hitSoundPitch = 0.9f;
 
 		tier = 2;
-		DLY = 1.5f; //0.67x speed
-		RCH = 3;    //extra reach
+		DLY = 1f; //0.67x speed
+		RCH = 1;    //extra reach
 	}
 
 	@Override
 	public int max(int lvl) {
+		if (swiching == true)
 		return  Math.round(6.67f*(tier+1)) +    //20 base, up from 15
-				lvl*Math.round(1.33f*(tier+1)); //+4 per level, up from +3
+				lvl*Math.round(1.33f*(tier+1)); //+4 per level, up from +
+		else return  4*(tier+1) +                	//12 + 3
+				lvl*(tier+1);
 	}
 
+	private boolean swiching = false;
+
+
+	@Override
+	public ArrayList<String> actions(Hero hero) {
+		ArrayList<String> actions = super.actions(hero);
+		actions.add(AC_ZAP);
+		return actions;
+	}
+
+	@Override
+	public void execute(Hero hero, String action) {
+
+		super.execute(hero, action);
+
+		if (swiching == true) {swiching = false; DLY = 1.5f; RCH = 3;}
+		else {swiching = true; DLY = 1f; RCH = 1;}
+	}
+
+	private static final String SWICH = "swiching";
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(SWICH, swiching);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		swiching = bundle.getBoolean(SWICH);
+	}
 }
