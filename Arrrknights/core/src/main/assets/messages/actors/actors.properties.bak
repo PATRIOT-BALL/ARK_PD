@@ -145,7 +145,7 @@ actors.buffs.corruption.name=정신지배
 actors.buffs.corruption.desc=정신지배 아츠는 존재의 근원을 조작하여, 대상을 아군과 적대하도록 만듭니다.\n\n타락한 생물체는 자신의 동료를 공격하며, 자신의 원래 적을 무시합니다. 정신지배는 또한 걸린 대상에게 피해를 입히며, 시간이 지남에 따라 체력이 천천히 사라집니다.\n\n정신지배는 영구적으로 지속되며, 오직 죽어야만 끝이 납니다.
 
 actors.buffs.seethingburst.name=끓어오르는 투지
-actors.buffs.seethingburst.desc=블레이즈의 투지가 몸을 불태웁니다. 방어력이 2배 상승하며, 받은 피해들을 저장한 후 버프가 끝난 뒤에 가하는 다음 공격에 더할 수 있습니다. \n\n효과가 끝나기까지 %s 턴 남았습니다.
+actors.buffs.seethingburst.desc=블레이즈의 투지가 몸을 불태웁니다. 방어력이 3배로 상승하며, 받은 피해들을 저장한 후 버프가 끝난 뒤에 가하는 다음 공격에 더할 수 있습니다. \n\n효과가 끝나기까지 %s 턴 남았습니다.
 
 actors.buffs.cripple.name=불구
 actors.buffs.cripple.heromsg=당신은 불구가 되었다!

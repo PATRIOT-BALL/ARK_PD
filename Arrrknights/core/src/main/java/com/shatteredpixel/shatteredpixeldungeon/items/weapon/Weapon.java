@@ -142,6 +142,7 @@ abstract public class Weapon extends KindOfWeapon {
 					if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
 						int dmg = damageRoll(curUser);
 						dmg = dmg - mob.drRoll();
+						dmg /= (4-Dungeon.hero.pointsInTalent(Talent.ENRAGED_CATALYST));
 						mob.damage(dmg, this);
 						mob.sprite.burst(0xFFFFFFFF, 15);
 

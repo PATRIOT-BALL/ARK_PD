@@ -145,7 +145,7 @@ actors.buffs.corruption.name=Corrupted
 actors.buffs.corruption.desc=Corruption seeps into the essence of a being, twisting them against their former nature.\n\nCorrupted creatures will attack their allies, and ignore their former enemies. Corruption is damaging as well, and will slowly cause its target to succumb.\n\nCorruption is permanent, its effects only end in death.
 
 actors.buffs.seethingburst.name=Burning spirit
-actors.buffs.seethingburst.desc=Blaze's fighting spirit burns. 3x defense and Attack range increased. Also, when the effect ends, the next attack is strengthened in proportion to the damage received for the duration.\n\nTurns of Spirit: %s.
+actors.buffs.seethingburst.desc=Blaze's fighting spirit burns. Defense is doubled. Also, when the effect ends, the next attack is strengthened in proportion to the damage received for the duration.\n\nTurns of Spirit: %s.
 
 actors.buffs.cripple.name=Crippled
 actors.buffs.cripple.heromsg=You are crippled!
@@ -406,7 +406,7 @@ actors.hero.talent.endless_rage.desc=_+1:_ The Blaze can reach a max of _120% ra
 actors.hero.talent.berserking_stamina.title=burning heart
 actors.hero.talent.berserking_stamina.desc=_+1:_ The Blaze gains _10% more shield_ when berserking, and Maximum movement speed increase during rage increased from 30% to _50%_\n\n_+2:_ The Blaze gains _20% more shield_ when berserking, and Maximum movement speed increase during rage increased from 30% to _70%_\n\n_+3:_ The Blaze gains _30% more shield_ when berserking, and Maximum movement speed increase during rage increased from 30% to 90%
 actors.hero.talent.enraged_catalyst.title=Frenzy Chainsaw
-actors.hero.talent.enraged_catalyst.desc=_+1:_ Blaze is After being hit 10 times, the next attack inflicts _75%_ damage to all enemies in sight and paralyzes them for 1 turn.\n\n_+2:_ Blaze is After being hit 10 times, the next attack inflicts _150%_ damage to all enemies in sight and paralyzes them for 1 turn.\n\n_+3:_ Blaze is After being hit 10 times, the next attack inflicts _225%_ damage to all enemies in sight and paralyzes them for 1 turn.
+actors.hero.talent.enraged_catalyst.desc=_+1:_ Enchantments and curses on the Blaze`s weapon trigger more often the more rage she has, to a maximum of _25% more often_ at 100% rage.\n\n_+2:_ Enchantments and curses on the Blaze`s weapon trigger more often the more rage she has, to a maximum of _50% more often_ at 100% rage.\n\n_+3:_ Enchantments and curses on the Blaze`s weapon trigger more often the more rage she has, to a maximum of _75% more often_ at 100% rage.
 actors.hero.talent.cleave.title=cleave
 actors.hero.talent.cleave.desc=_+1:_ When the Blaze kills an enemy, the combo cooldown for his next hit is increased to _10 turns_.\n\n_+2:_ When the Blaze kills an enemy, the combo cooldown for his next hit is increased to _20 turns_.\n\n_+3:_ When the Blaze kills an enemy, the combo cooldown for his next hit is increased to _30 turns_.
 actors.hero.talent.lethal_defense.title=lethal defense
@@ -801,6 +801,7 @@ actors.mobs.npcs.closure.no=Can't wear this!
 actors.mobs.npcs.closure.incomplete=Less made!
 actors.mobs.npcs.closure.fail_skin1=Need a End of EVIL TIME badge\nEnvironment: Reunion in challenge Defeat Tallulah without killing a single mini-boss.
 actors.mobs.npcs.closure.fail_skin2=not use
+actors.mobs.npcs.closure.fail_skin3=Need a 50 games played badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model Generator
