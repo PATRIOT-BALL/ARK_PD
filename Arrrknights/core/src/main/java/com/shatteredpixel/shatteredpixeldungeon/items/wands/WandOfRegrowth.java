@@ -275,18 +275,6 @@ public class WandOfRegrowth extends Wand {
 		return desc;
 	}
 
-	@Override
-	public void staffFx(MagesStaff.StaffParticle particle) {
-		particle.color( ColorMath.random(0x004400, 0x88CC44) );
-		particle.am = 1f;
-		particle.setLifespan(1f);
-		particle.setSize( 1f, 1.5f);
-		particle.shuffleXY(0.5f);
-		float dst = Random.Float(11f);
-		particle.x -= dst;
-		particle.y += dst;
-	}
-	
 	private static final String TOTAL = "totChrgUsed";
 	private static final String OVER = "chargesOverLimit";
 	

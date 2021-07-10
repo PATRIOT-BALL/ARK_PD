@@ -387,7 +387,6 @@ public class MagesStaff extends MeleeWeapon {
 		Emitter emitter = new Emitter();
 		emitter.pos(12.5f, 3);
 		emitter.fillTarget = false;
-		emitter.pour(StaffParticleFactory, 0.1f);
 		return emitter;
 	}
 
@@ -501,79 +500,5 @@ public class MagesStaff extends MeleeWeapon {
 		wand.identify();
 
 		updateQuickslot();
-	}
-
-	private final Emitter.Factory StaffParticleFactory = new Emitter.Factory() {
-		@Override
-		//reimplementing this is needed as instance creation of new staff particles must be within this class.
-		public void emit( Emitter emitter, int index, float x, float y ) {
-			StaffParticle c = (StaffParticle)emitter.getFirstAvailable(StaffParticle.class);
-			if (c == null) {
-				c = new StaffParticle();
-				emitter.add(c);
-			}
-			c.reset(x, y);
-		}
-
-		@Override
-		//some particles need light mode, others don't
-		public boolean lightMode() {
-			return !((wand instanceof WandOfDisintegration)
-					|| (wand instanceof WandOfCorruption)
-					|| (wand instanceof WandOfCorrosion)
-					|| (wand instanceof WandOfRegrowth)
-					|| (wand instanceof WandOfLivingEarth));
-		}
-	};
-
-	//determines particle effects to use based on wand the staff owns.
-	public class StaffParticle extends PixelParticle{
-
-		private float minSize;
-		private float maxSize;
-		public float sizeJitter = 0;
-
-		public StaffParticle(){
-			super();
-		}
-
-		public void reset( float x, float y ) {
-			revive();
-
-			speed.set(0);
-
-			this.x = x;
-			this.y = y;
-
-			if (wand != null)
-				wand.staffFx( this );
-
-		}
-
-		public void setSize( float minSize, float maxSize ){
-			this.minSize = minSize;
-			this.maxSize = maxSize;
-		}
-
-		public void setLifespan( float life ){
-			lifespan = left = life;
-		}
-
-		public void shuffleXY(float amt){
-			x += Random.Float(-amt, amt);
-			y += Random.Float(-amt, amt);
-		}
-
-		public void radiateXY(float amt){
-			float hypot = (float)Math.hypot(speed.x, speed.y);
-			this.x += speed.x/hypot*amt;
-			this.y += speed.y/hypot*amt;
-		}
-
-		@Override
-		public void update() {
-			super.update();
-			size(minSize + (left / lifespan)*(maxSize-minSize) + Random.Float(sizeJitter));
-		}
 	}
 }

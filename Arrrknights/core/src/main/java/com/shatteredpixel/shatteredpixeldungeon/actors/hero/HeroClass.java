@@ -85,6 +85,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSnowsant;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfSilence;
@@ -255,7 +256,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-
 	}
 
 	private static void initRogue( Hero hero ) {

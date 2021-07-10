@@ -127,19 +127,4 @@ public class StaffOfGreyy extends DamageWand {
         Sample.INSTANCE.play( Assets.Sounds.LIGHTNING );
         callback.call();
     }
-
-    @Override
-    public void staffFx(MagesStaff.StaffParticle particle) {
-        particle.color(0xFFFFFF);
-        particle.am = 0.6f;
-        particle.setLifespan(0.6f);
-        particle.acc.set(0, +10);
-        particle.speed.polar(-Random.Float(3.1415926f), 6f);
-        particle.setSize(0f, 1.5f);
-        particle.sizeJitter = 1f;
-        particle.shuffleXY(1f);
-        float dst = Random.Float(1f);
-        particle.x -= dst;
-        particle.y += dst;
-    }
 }

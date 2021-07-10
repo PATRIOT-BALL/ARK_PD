@@ -199,22 +199,6 @@ public class StaffOfMudrock extends DamageWand {
         }
     }
 
-    @Override
-    public void staffFx(MagesStaff.StaffParticle particle) {
-        if (Random.Int(10) == 0){
-            particle.color(ColorMath.random(0xFFF568, 0x80791A));
-        } else {
-            particle.color(ColorMath.random(0x805500, 0x332500));
-        }
-        particle.am = 1f;
-        particle.setLifespan(2f);
-        particle.setSize( 1f, 2f);
-        particle.shuffleXY(0.5f);
-        float dst = Random.Float(11f);
-        particle.x -= dst;
-        particle.y += dst;
-    }
-
     public static class RockArmor extends Buff {
 
         private int wandLevel;

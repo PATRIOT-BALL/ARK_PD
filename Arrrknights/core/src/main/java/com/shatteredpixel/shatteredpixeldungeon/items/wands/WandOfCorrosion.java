@@ -97,16 +97,6 @@ public class WandOfCorrosion extends Wand {
 	}
 
 	@Override
-	public void staffFx(MagesStaff.StaffParticle particle) {
-		particle.color( ColorMath.random( 0xAAAAAA, 0xFF8800) );
-		particle.am = 0.6f;
-		particle.setLifespan( 1f );
-		particle.acc.set(0, 20);
-		particle.setSize( 0.5f, 3f );
-		particle.shuffleXY( 1f );
-	}
-
-	@Override
 	public String statsDesc() {
 		if (levelKnown)
 			return Messages.get(this, "stats_desc", 2+buffedLvl());

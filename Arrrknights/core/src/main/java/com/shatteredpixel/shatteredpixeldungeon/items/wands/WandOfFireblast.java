@@ -182,14 +182,5 @@ public class WandOfFireblast extends DamageWand {
 			return Messages.get(this, "stats_desc", chargesPerCast(), min(0), max(0));
 	}
 
-	@Override
-	public void staffFx(MagesStaff.StaffParticle particle) {
-		particle.color( 0xEE7722 );
-		particle.am = 0.5f;
-		particle.setLifespan(0.6f);
-		particle.acc.set(0, -40);
-		particle.setSize( 0f, 3f);
-		particle.shuffleXY( 1.5f );
-	}
 
 }

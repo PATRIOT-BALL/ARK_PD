@@ -341,14 +341,6 @@ public abstract class Wand extends Item {
 		Sample.INSTANCE.play( Assets.Sounds.ZAP );
 	}
 
-	public void staffFx( MagesStaff.StaffParticle particle ){
-		particle.color(0xFFFFFF); particle.am = 0.3f;
-		particle.setLifespan( 1f);
-		particle.speed.polar( Random.Float(PointF.PI2), 2f );
-		particle.setSize( 1f, 2f );
-		particle.radiateXY(0.5f);
-	}
-
 	protected void wandUsed() {
 		if (!isIdentified()) {
 			float uses = Math.min( availableUsesToID, Talent.itemIDSpeedFactor(Dungeon.hero, this) );
