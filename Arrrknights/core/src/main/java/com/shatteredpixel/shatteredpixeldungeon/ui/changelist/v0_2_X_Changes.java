@@ -53,6 +53,10 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
                 "- _테르밋 블레이드_ : 공격력이 4-16에서 _3-12_로 감소했으며, 강화 효율이 4에서 _3_으로 감소했습니다.\n대신 공격이 적의 방어력을 무시합니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 리메이크",
+                "_분노 블레이즈_의 _광분의 전기톱_ 특성이 다음과 같이 리메이크되었습니다." + "\n\n" +
+                        "- 10회 피격당한 후, 다음 공격이 시야 내 모든 적들에게 피해를 입히고 마비시킵니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
@@ -66,7 +70,9 @@ public class v0_2_X_Changes {
                 "- _[1티어] 신영류_ : 아드레날린 획득량이 _2배_로 상승했습니다." + "\n\n" +
                         "- _[1티어] 크림슨 커터_ : 방어력을 무시합니다." + "\n\n"+
                         "- _[1티어] 늑대의 혼_ : 사거리가 3에서 _5_로 상승했습니다." + "\n\n" +
-                        "- _[2티어] 낙지참_ : 저주당 축복 획득량이 150 턴에서 _250 턴_으로 상승했습니다."));
+                        "- _[2티어] 낙지참_ : 저주당 축복 획득량이 150 턴에서 _250 턴_으로 상승했습니다." + "\n\n" +
+                        "- _[3티어] 끓어오르는 투지 : 방어력 상승량이 2배에서 _3배_ 로 상승했습니다." + "\n\n" +
+                        "- _[3티어] 날개깃 : 아드레날린 지속 시간이 50 턴에서 _65 턴_ 으로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 버프",
                 "- _스태프 오브 위디_ 로 적을 벽에 부딪히게 만들면 더욱 큰 피해를 입힙니다."));

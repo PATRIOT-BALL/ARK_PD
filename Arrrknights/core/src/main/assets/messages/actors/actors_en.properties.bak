@@ -145,7 +145,7 @@ actors.buffs.corruption.name=Corrupted
 actors.buffs.corruption.desc=Corruption seeps into the essence of a being, twisting them against their former nature.\n\nCorrupted creatures will attack their allies, and ignore their former enemies. Corruption is damaging as well, and will slowly cause its target to succumb.\n\nCorruption is permanent, its effects only end in death.
 
 actors.buffs.seethingburst.name=Burning spirit
-actors.buffs.seethingburst.desc=Blaze's fighting spirit burns. Defense is doubled. Also, when the effect ends, the next attack is strengthened in proportion to the damage received for the duration.\n\nTurns of Spirit: %s.
+actors.buffs.seethingburst.desc=Blaze's fighting spirit burns. 3x defense and Attack range increased. Also, when the effect ends, the next attack is strengthened in proportion to the damage received for the duration.\n\nTurns of Spirit: %s.
 
 actors.buffs.cripple.name=Crippled
 actors.buffs.cripple.heromsg=You are crippled!

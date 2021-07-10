@@ -575,7 +575,7 @@ public class Hero extends Char {
         Barkskin bark = buff(Barkskin.class);
         SeethingBurst Burst = buff(SeethingBurst.class);
         if (bark != null) dr += Random.NormalIntRange(0, bark.level());
-        if (Burst != null) dr *= 2;
+        if (Burst != null) dr *= 3;
 
         Blocking.BlockBuff block = buff(Blocking.BlockBuff.class);
         if (block != null) dr += block.blockingRoll();
