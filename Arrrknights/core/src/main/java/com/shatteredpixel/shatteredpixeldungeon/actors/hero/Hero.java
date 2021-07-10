@@ -1925,8 +1925,7 @@ public class Hero extends Char {
         {
             if (Dungeon.hero.pointsInTalent(Talent.SPARKOFLIFE) > Random.IntRange(0, 19))
             {
-                HP += HT / 20;
-                HP = Math.min(HP, HT);
+                HP = Math.min( HP + HT / 20, HT );
             }
         }
 
