@@ -39,8 +39,6 @@ public class Ergate extends Mob {
         loot = new Dewdrop();
         lootChance = 1f; //initially, see rollToDropLoot
 
-        immunities.add(Charm.class);
-
     }
 
     @Override
