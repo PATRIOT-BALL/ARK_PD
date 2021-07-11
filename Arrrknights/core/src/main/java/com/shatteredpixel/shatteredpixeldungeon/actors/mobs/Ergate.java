@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
@@ -38,7 +39,7 @@ public class Ergate extends Mob {
         loot = new Dewdrop();
         lootChance = 1f; //initially, see rollToDropLoot
 
-        immunities.add(Amok.class);
+        immunities.add(Charm.class);
 
     }
 
@@ -90,11 +91,13 @@ public class Ergate extends Mob {
     public int attackProc( Char enemy, int damage ) {
         damage = super.attackProc( enemy, damage );
 
-        if (alignment == Alignment.ENEMY && item == null
-                && enemy instanceof Hero) {
-            if (Random.Int(4) < 1) {
-                ((Hero) enemy).belongings.weapon.doDrop((Hero) enemy);
-                Buff.affect(this, Terror.class, 20f);
+        if (this.buff(Silence.class) != null) {
+            if (alignment == Alignment.ENEMY && item == null
+                    && enemy instanceof Hero) {
+                if (Random.Int(4) < 1) {
+                    ((Hero) enemy).belongings.weapon.doDrop((Hero) enemy);
+                    Buff.affect(this, Terror.class, 20f);
+                }
             }
         }
 

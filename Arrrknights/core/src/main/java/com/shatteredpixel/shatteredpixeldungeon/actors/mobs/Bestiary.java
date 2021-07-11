@@ -180,11 +180,28 @@ public class Bestiary {
 						Eye.class, Eye.class,
 						Scorpio.class, Scorpio.class, Scorpio.class));
 
-				//Siesta part1
+			//Siesta part1
 			case 31:
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class, Infantry.class,
 						Ergate.class));
+			case 32:
+				return new ArrayList<>(Arrays.asList(
+						Infantry.class, Infantry.class,
+						Ergate.class, Ergate.class,
+						Sniper.class));
+			case 33:
+				return new ArrayList<>(Arrays.asList(
+						Infantry.class, Infantry.class,
+						Ergate.class, Ergate.class,
+						Sniper.class, Sniper.class,
+						Agent.class));
+			case 34:
+				return new ArrayList<>(Arrays.asList(
+						Infantry.class,
+						Ergate.class, Ergate.class,
+						Sniper.class, Sniper.class,
+						Agent.class, Agent.class, Agent.class));
 		}
 		
 	}
