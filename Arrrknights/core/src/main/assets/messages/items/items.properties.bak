@@ -1632,6 +1632,12 @@ items.wands.sp.staffofcorrupting.desc=_"있지, 나랑 함께 가자. 당신의 
 items.wands.sp.staffofcorrupting.stats_desc=이 막대는 강한 타락의 에너지를 발사하여, 적을 약화시키다가 끝내는 _이 육지에 존재해서는 안될 존재_로 만들어버립니다. 적들은 타락에 저항할 수 있지만, 약화된 적들은 훨씬 더 쉽게 타락시킬 수 있습니다.
 items.wands.sp.staffofcorrupting.bmage_desc=_아미야_ 가 이 ■■■ ■■로 적을 공격하면, 대상에게 일정 확률로 광란을 부여합니다.
 
+items.wands.staffofsnowsant.name=스태프 오브 스노우상트
+items.wands.staffofsnowsant.staff_name=개조 침묵의 흑요석 반지
+items.wands.staffofsnowsant.desc='스노우상트의 동전' 이야기가 한때 젊은 오퍼레이터들 사이에서 유행한 적이 있다. 물론 별다른 악의는 없지만 말이다.
+items.wands.staffofsnowsant.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다. 또한, 적중당한 대상을 자신의 앞으로 끌어당길 수 있습니다.
+items.wands.staffofsnowsant.bmage_desc=_아미야_ 가 개조 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
+
 
 
 ###wands
@@ -1765,6 +1771,13 @@ items.wands.wandofwarding$ward.dismiss_title=이 미보를 해체하겠습니까
 items.wands.wandofwarding$ward.dismiss_body=당신은 미보를 더 이상 유지할 필요가 없다고 생각할 경우 이 미보를 해체할 수 있습니다. 이 행동을 하면 즉시 미보를 파괴합니다.\n\n미보를 해체하시겠습니까?
 items.wands.wandofwarding$ward.dismiss_confirm=예
 items.wands.wandofwarding$ward.dismiss_cancel=아니오
+
+items.wands.wandofsilence.name=침묵의 아츠 스태프
+items.wands.wandofsilence.staff_name=침묵의 흑요석 반지
+items.wands.wandofsilence.desc='스노우상트의 동전' 이야기가 한때 젊은 오퍼레이터들 사이에서 유행한 적이 있다. 물론 별다른 악의는 없지만 말이다.
+items.wands.wandofsilence.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다.
+items.wands.wandofsilence.bmage_desc=_아미야_ 가 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
+
 
 ###weapon curses
 items.weapon.curses.annoying.name=짜증나는 %s
@@ -1994,6 +2007,7 @@ items.weapon.melee.scimitar.prompt=목표를 지정해주세요.
 items.weapon.melee.scimitar.self_target=자신에게는 발사할 수 없습니다.
 
 items.weapon.melee.spear.name=기병창ㆍ카빈
+items.weapon.melee.spear.ac_zap=가변
 items.weapon.melee.spear.desc=키가 작은 그라니를 위해 빅토리아에서 맞춤 제작된 수축형 장창. 카탈로그 상 창의 길이를 두배가량 늘릴 수 있지만, 그라니 본인은 무게 중심이 불안정해져서 거의 사용하지 않는 기능이라고 한다...\n\n가변 기능 사용시 사거리가 2증가하고 공격력이 대폭 상승하지만, 공격속도가 감소합니다.
 
 items.weapon.melee.enfild.name=리-엔필드

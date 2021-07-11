@@ -1631,6 +1631,12 @@ items.wands.sp.staffofcorrupting.desc=_"There you go, come with me. Your true fo
 items.wands.sp.staffofcorrupting.stats_desc=This wand will release a blast of corrupting energy which will debuff enemies and eventually bend them transform monster. Enemies are able to resist the transform, but weakened enemies are much easier to corrupt than healthy ones.
 items.wands.sp.staffofcorrupting.bmage_desc=When _Guard Amiya_ strikes an enemy with a ring of ■■■■■■ting, the enemy has a chance to become amoked.
 
+items.wands.staffofsnowsant.name=staff of snowsant
+items.wands.staffofsnowsant.staff_name=ring of snowsant
+items.wands.staffofsnowsant.desc=The story of "Snowsant's Coin" was once popular among younger Operators, without any malicious intent of course.
+items.wands.staffofsnowsant.stats_desc=This wand can fire silent power`s energy, silencing targets hit. Silenced targets cannot use special abilities. Enemies that are silenced are limited, but silenced most enemies that use magic attacks. also, pulls enemies hit.
+items.wands.staffofsnowsant.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of snowsant, extra damage to silent enemies.
+
 
 
 ###wands
@@ -1764,6 +1770,12 @@ items.wands.wandofwarding$ward.dismiss_title=Dismiss this meeboo?
 items.wands.wandofwarding$ward.dismiss_body=You can dispel this meeboo if you no longer want your wand to maintain it. Doing so immediately destroys the meeboo.\n\nDismiss this meeboo?
 items.wands.wandofwarding$ward.dismiss_confirm=yes
 items.wands.wandofwarding$ward.dismiss_cancel=no
+
+items.wands.wandofsilence.name=wand of silence
+items.wands.wandofsilence.staff_name=ring of silence
+items.wands.wandofsilence.desc=The story of "Snowsant's Coin" was once popular among younger Operators, without any malicious intent of course.
+items.wands.wandofsilence.stats_desc=This wand can fire silent power`s energy, silencing targets hit. Silenced targets cannot use special abilities. Enemies that are silenced are limited, but silenced most enemies that use magic attacks.
+items.wands.wandofsilence.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of silence, extra damage to silent enemies.
 
 ###weapon curses
 items.weapon.curses.annoying.name=annoying %s
@@ -1993,8 +2005,8 @@ items.weapon.melee.scimitar.prompt=Choose a location to zap
 items.weapon.melee.scimitar.self_target=You can't target yourself!
 
 items.weapon.melee.spear.name=carbine cavalry spear
-items.weapon.melee.spear.stats_desc=Range +2, Attack Speed 66%
-items.weapon.melee.spear.desc=A spear made for the short Grani. It is possible to increase the length of the window, but it is said that it is not used because it is inconvenient to use...
+items.weapon.melee.spear.ac_zap=transform
+items.weapon.melee.spear.desc=A spear made for the short Grani. It is possible to increase the length of the window, but it is said that it is not used because it is inconvenient to use...\n\nuse Transform, increases the attack range by 2 and increases attack power, but decreases attack speed.
 
 items.weapon.melee.enfild.name=Lee-Enfield
 items.weapon.melee.enfild.stats_desc=_Infinite range_, Attack Speed 66%
