@@ -40,6 +40,8 @@ public class Spear extends MeleeWeapon {
 		RCH = 1;    //extra reach
 	}
 
+	private boolean swiching = true;
+
 	@Override
 	public int max(int lvl) {
 		if (swiching == true)
@@ -48,8 +50,6 @@ public class Spear extends MeleeWeapon {
 		else return  4*(tier+1) +                	//12 + 3
 				lvl*(tier+1);
 	}
-
-	private boolean swiching = false;
 
 
 	@Override
@@ -64,8 +64,11 @@ public class Spear extends MeleeWeapon {
 
 		super.execute(hero, action);
 
-		if (swiching == true) {swiching = false; DLY = 1.5f; RCH = 3;}
-		else {swiching = true; DLY = 1f; RCH = 1;}
+		if (swiching == true) {swiching = false; DLY = 1f; RCH = 1;}
+		else {swiching = true; DLY = 1.5f; RCH = 3;}
+
+		updateQuickslot();
+		curUser.spendAndNext(0.5f);
 	}
 
 	private static final String SWICH = "swiching";

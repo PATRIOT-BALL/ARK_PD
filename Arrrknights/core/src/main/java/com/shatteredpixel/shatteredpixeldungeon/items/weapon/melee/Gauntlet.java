@@ -73,6 +73,8 @@ public class Gauntlet extends MeleeWeapon {
 
 		if (swiching == true) {swiching = false; DLY = 0.2f;}
 		else {swiching = true; DLY = 0.33f;}
+
+		curUser.spendAndNext(0.5f);
 		}
 
 	private static final String SWICH = "swiching";
