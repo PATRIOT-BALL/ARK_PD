@@ -29,7 +29,7 @@ public class Ergate extends Mob {
     {
         spriteClass = ThiefSprite.class;
 
-        HP = HT = 90;
+        HP = HT = 65;
         defenseSkill = 30;
 
         EXP = 16;
