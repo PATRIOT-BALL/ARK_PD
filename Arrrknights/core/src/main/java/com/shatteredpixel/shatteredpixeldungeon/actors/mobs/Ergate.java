@@ -30,7 +30,7 @@ public class Ergate extends Mob {
         spriteClass = ThiefSprite.class;
 
         HP = HT = 65;
-        defenseSkill = 30;
+        defenseSkill = 40;
 
         EXP = 16;
         maxLvl = 30;
