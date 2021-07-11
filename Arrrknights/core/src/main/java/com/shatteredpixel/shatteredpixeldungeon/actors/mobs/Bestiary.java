@@ -179,6 +179,12 @@ public class Bestiary {
 						Succubus.class,
 						Eye.class, Eye.class,
 						Scorpio.class, Scorpio.class, Scorpio.class));
+
+				//Siesta part1
+			case 31:
+				return new ArrayList<>(Arrays.asList(
+						Infantry.class, Infantry.class, Infantry.class,
+						Ergate.class));
 		}
 		
 	}

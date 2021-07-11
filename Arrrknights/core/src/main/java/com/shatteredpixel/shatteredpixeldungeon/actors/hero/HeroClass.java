@@ -215,6 +215,11 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
+		new PotionOfStrength().identify();
+		new ScrollOfUpgrade().identify();
+		new Heamyo().collect();
+		new PotionOfExperience().quantity(15).collect();
+
 		/*Amulet w;
 		w = new Amulet();
 		w.quantity(1).collect();

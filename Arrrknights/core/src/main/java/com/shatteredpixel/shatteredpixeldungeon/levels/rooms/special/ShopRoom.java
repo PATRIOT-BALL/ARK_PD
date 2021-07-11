@@ -51,6 +51,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAugmentation;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
@@ -184,6 +185,14 @@ public class ShopRoom extends SpecialRoom {
 			itemsToSpawn.add( new Torch() );
 			itemsToSpawn.add( new Torch() );
 			itemsToSpawn.add( new Torch() );
+			break;
+
+		case 31: case 36:
+			w = (MeleeWeapon) Generator.random(Generator.wepTiers[4]);
+			itemsToSpawn.add( Generator.random(Generator.misTiers[4]).quantity(2).identify() );
+			itemsToSpawn.add( new PlateArmor().identify() );
+			itemsToSpawn.add( new ScrollOfUpgrade() );
+			itemsToSpawn.add( new ScrollOfUpgrade() );
 			break;
 		}
 		w.enchant(null);

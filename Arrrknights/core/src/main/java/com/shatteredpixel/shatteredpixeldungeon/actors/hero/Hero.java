@@ -1593,7 +1593,7 @@ public class Hero extends Char {
             curAction = new HeroAction.Unlock(cell);
 
         } else if ((cell == Dungeon.level.exit || Dungeon.level.map[cell] == Terrain.EXIT || Dungeon.level.map[cell] == Terrain.UNLOCKED_EXIT)
-                && Dungeon.depth < 29) {
+                && Dungeon.depth < 41) {
 
             curAction = new HeroAction.Descend(cell);
 

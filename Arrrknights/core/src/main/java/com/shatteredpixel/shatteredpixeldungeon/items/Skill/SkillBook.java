@@ -143,6 +143,7 @@ public class SkillBook extends Item {
 
         float chargepur = 10 + (Dungeon.hero.lvl * 6) - 72;
         if (chargepur < 10) chargepur = 10;
+        if (chargepur > 100) chargepur = 100;
 
         if (charge > 100) chargepur /= 2;
 

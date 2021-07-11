@@ -61,6 +61,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.SiestaLevel_part1;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.SecretRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.SpecialRoom;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -211,7 +212,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 0;
+		depth = 30;
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
@@ -339,6 +340,13 @@ public class Dungeon {
 		case 29:
 			level = new RhodesLevel3();
 			break;
+		case 31:
+			case 32:
+			case 33:
+			case 34:
+				level = new SiestaLevel_part1();
+				break;
+			case 35:
 		default:
 			level = new DeadEndLevel();
 			Statistics.deepestFloor--;
@@ -376,7 +384,7 @@ public class Dungeon {
 	}
 	
 	public static boolean shopOnLevel() {
-		return depth == 6 || depth == 11 || depth == 16;
+		return depth == 6 || depth == 11 || depth == 16 || depth == 31 || depth == 36;
 	}
 	
 	public static boolean bossLevel() {
@@ -384,7 +392,7 @@ public class Dungeon {
 	}
 	
 	public static boolean bossLevel( int depth ) {
-		return depth == 5 || depth == 10 || depth == 15 || depth == 20 || depth == 25;
+		return depth == 5 || depth == 10 || depth == 15 || depth == 20 || depth == 25 || depth == 35 || depth == 40;
 	}
 	
 	public static void switchLevel( final Level level, int pos ) {
@@ -443,16 +451,19 @@ public class Dungeon {
 
 	public static boolean posNeeded() {
 		//2 POS each floor set
-		int posLeftThisSet = 2 - (LimitedDrops.STRENGTH_POTIONS.count - (depth / 5) * 2);
-		if (posLeftThisSet <= 0) return false;
+		if (Dungeon.depth < 30) {
+			int posLeftThisSet = 2 - (LimitedDrops.STRENGTH_POTIONS.count - (depth / 5) * 2);
+			if (posLeftThisSet <= 0) return false;
 
-		int floorThisSet = (depth % 5);
+			int floorThisSet = (depth % 5);
 
-		//pos drops every two floors, (numbers 1-2, and 3-4) with a 50% chance for the earlier one each time.
-		int targetPOSLeft = 2 - floorThisSet/2;
-		if (floorThisSet % 2 == 1 && Random.Int(2) == 0) targetPOSLeft --;
+			//pos drops every two floors, (numbers 1-2, and 3-4) with a 50% chance for the earlier one each time.
+			int targetPOSLeft = 2 - floorThisSet / 2;
+			if (floorThisSet % 2 == 1 && Random.Int(2) == 0) targetPOSLeft--;
 
-		if (targetPOSLeft < posLeftThisSet) return true;
+			if (targetPOSLeft < posLeftThisSet) return true;
+			else return false;
+		}
 		else return false;
 
 	}
@@ -460,16 +471,19 @@ public class Dungeon {
 	public static boolean souNeeded() {
 		int souLeftThisSet;
 		//3 SOU each floor set, 1.5 (rounded) on forbidden runes challenge
-		if (isChallenged(Challenges.NO_SCROLLS)){
-			souLeftThisSet = Math.round(1.5f - (LimitedDrops.UPGRADE_SCROLLS.count - (depth / 5) * 1.5f));
-		} else {
-			souLeftThisSet = 3 - (LimitedDrops.UPGRADE_SCROLLS.count - (depth / 5) * 3);
-		}
-		if (souLeftThisSet <= 0) return false;
+		if (Dungeon.depth < 30) {
+			if (isChallenged(Challenges.NO_SCROLLS)) {
+				souLeftThisSet = Math.round(1.5f - (LimitedDrops.UPGRADE_SCROLLS.count - (depth / 5) * 1.5f));
+			} else {
+				souLeftThisSet = 3 - (LimitedDrops.UPGRADE_SCROLLS.count - (depth / 5) * 3);
+			}
+			if (souLeftThisSet <= 0) return false;
 
-		int floorThisSet = (depth % 5);
-		//chance is floors left / scrolls left
-		return Random.Int(5 - floorThisSet) < souLeftThisSet;
+			int floorThisSet = (depth % 5);
+			//chance is floors left / scrolls left
+			return Random.Int(5 - floorThisSet) < souLeftThisSet;
+		}
+		return false;
 	}
 	
 	public static boolean asNeeded() {
