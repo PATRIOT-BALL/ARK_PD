@@ -224,7 +224,7 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 85, 64, 101, 80 ) );
 			break;
 		case GOLD:
-			icon.frame( icon.texture.uvRect( 102, 64, 119, 80 ) );
+			icon.frame( icon.texture.uvRect( 102, 64, 118, 81 ) );
 			break;
 		
 		case LIBGDX:

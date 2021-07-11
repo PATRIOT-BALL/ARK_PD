@@ -41,16 +41,16 @@ public class S_GolemSprite extends MobSprite {
 		TextureFilm frames = new TextureFilm( texture, 50, 50 );
 
 		idle = new Animation( 10, true );
-		idle.frames( frames, 0, 1 );
+		idle.frames( frames, 0 );
 
 		run = new Animation( 10, true );
-		run.frames( frames, 2, 3 );
+		run.frames( frames, 0 );
 
-		attack = new Animation( 15, false );
-		attack.frames( frames, 1, 2,3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 );
+		attack = new Animation( 17, false );
+		attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 );
 
 		zap = new Animation( 15, false );
-		zap.frames( frames, 1, 2,3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 );
+		zap.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 );
 
 		die = new Animation( 8, false );
 		die.frames( frames, 9, 10, 11 );
