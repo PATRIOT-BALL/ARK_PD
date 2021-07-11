@@ -40,7 +40,7 @@ public class Spear extends MeleeWeapon {
 		RCH = 1;    //extra reach
 	}
 
-	private boolean swiching = true;
+	private boolean swiching = false;
 
 	@Override
 	public int max(int lvl) {
