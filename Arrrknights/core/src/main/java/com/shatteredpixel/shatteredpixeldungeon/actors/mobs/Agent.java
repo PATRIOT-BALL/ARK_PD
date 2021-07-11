@@ -40,12 +40,12 @@ public class Agent extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 30, 42 );
+        return Random.NormalIntRange( 35, 50 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 40;
+        return 42;
     }
 
     @Override
