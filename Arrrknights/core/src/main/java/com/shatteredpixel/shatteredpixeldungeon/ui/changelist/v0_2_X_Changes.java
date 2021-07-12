@@ -64,6 +64,9 @@ public class v0_2_X_Changes {
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
+                "- _바위게 사육사_ : SP 충전 속도가 상승했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
                 "- 다음 특성들이 상향 조정되었습니다." + "\n\n" +
                         "- _아미야_ : _신비한 힘의 일기장_ 의 지속시간이 30 턴에서 _45 턴_ 으로 상승했습니다." + "\n\n" +
