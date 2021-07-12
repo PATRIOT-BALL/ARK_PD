@@ -68,6 +68,15 @@ public class Pylon extends Mob {
 		alignment = Alignment.NEUTRAL;
 	}
 
+	public Pylon()
+	{
+		super();
+
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+			HP=HT=100;
+		}
+	}
+
 	private int targetNeighbor = Random.Int(8);
 
 	@Override
@@ -113,6 +122,7 @@ public class Pylon extends Mob {
 			ch.damage(Random.NormalIntRange(10, 20), new Electricity());
 			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
 				Buff.affect(ch, Silence.class,50f);
+				Buff.affect(ch, Paralysis.class,1f);
 			}
 
 			if (ch == Dungeon.hero && !ch.isAlive()){
