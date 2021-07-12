@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.RipperDemon;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
@@ -77,7 +78,7 @@ public class YourWish extends Skill {
         {
             spriteClass = EX42_GroundSprite.class;
 
-            HP=HT=300;
+            HP=HT=200;
             state = HUNTING;
 
             properties.add(Property.IMMOVABLE);
@@ -102,7 +103,7 @@ public class YourWish extends Skill {
         }
 
         @Override
-        public int damageRoll() { return Random.NormalIntRange( Dungeon.hero.lvl / 2, Dungeon.hero.lvl); }
+        public int damageRoll() { return Random.NormalIntRange( Dungeon.hero.lvl, Dungeon.hero.lvl * 2); }
 
         @Override
         public int drRoll() { return Random.NormalIntRange( 0, Dungeon.hero.lvl / 2 ); }
@@ -113,6 +114,12 @@ public class YourWish extends Skill {
 
         @Override
         public int defenseSkill(Char enemy) { return 0; }
+
+        @Override
+        public int defenseProc(Char enemy, int damage) {
+            if (enemy instanceof RipperDemon) damage *= 2;
+            return super.defenseProc(enemy, damage);
+        }
 
         @Override
         protected boolean getCloser(int target) {
