@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -76,12 +77,13 @@ public class YourWish extends Skill {
         {
             spriteClass = EX42_GroundSprite.class;
 
-            HP=HT=200;
+            HP=HT=300;
             state = HUNTING;
 
             properties.add(Property.IMMOVABLE);
             alignment = Alignment.ALLY;
             immunities.add(WandOfCorruption.class);
+            immunities.add(StaffOfCorrupting.class);
             immunities.add(Terror.class);
             immunities.add(Amok.class);
         }
@@ -100,10 +102,10 @@ public class YourWish extends Skill {
         }
 
         @Override
-        public int damageRoll() { return Random.NormalIntRange( Dungeon.hero.lvl, Dungeon.hero.lvl * 2); }
+        public int damageRoll() { return Random.NormalIntRange( Dungeon.hero.lvl / 2, Dungeon.hero.lvl); }
 
         @Override
-        public int drRoll() { return Random.NormalIntRange( Dungeon.hero.lvl / 3, 10 + Dungeon.hero.lvl ); }
+        public int drRoll() { return Random.NormalIntRange( 0, Dungeon.hero.lvl / 2 ); }
 
         @Override
         public int attackSkill(Char target) {
