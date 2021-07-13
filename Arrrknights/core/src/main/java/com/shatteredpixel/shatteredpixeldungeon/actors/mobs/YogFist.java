@@ -155,7 +155,8 @@ public abstract class YogFist extends Mob {
 
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 22, 36 );
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {return Random.NormalIntRange( 28, 40 ); }
+		else return Random.NormalIntRange( 22, 36 );
 	}
 
 	@Override
@@ -439,7 +440,7 @@ public abstract class YogFist extends Mob {
 
 		@Override
 		public int damageRoll() {
-			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) { return Random.NormalIntRange( 26, 50 ); }
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) { return Random.NormalIntRange( 30, 50 ); }
 			else return Random.NormalIntRange( 22, 44 );
 		}
 
