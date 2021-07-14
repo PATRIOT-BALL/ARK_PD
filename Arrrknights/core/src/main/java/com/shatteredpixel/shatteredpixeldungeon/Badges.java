@@ -748,10 +748,7 @@ public class Badges {
 	}
 
 	public static void validateRoseUnlock(){
-		/*if (Statistics.foodEaten >= 25 && !global.contains(Badge.UNLOCK_ROSECAT)){
-			displayBadge( Badge.UNLOCK_ROSECAT );
-		}*/
-		if (!global.contains(Badge.UNLOCK_ROSECAT)){
+		if (Statistics.foodEaten >= 25 && !global.contains(Badge.UNLOCK_ROSECAT)){
 			displayBadge( Badge.UNLOCK_ROSECAT );}
 	}
 	
