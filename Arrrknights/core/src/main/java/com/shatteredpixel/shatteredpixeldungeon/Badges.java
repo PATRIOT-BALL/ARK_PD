@@ -687,9 +687,9 @@ public class Badges {
 					global.contains( Badge.BOSS_SLAIN_3_FREERUNNER ) &&
 					global.contains( Badge.BOSS_SLAIN_3_ASSASSIN ) &&
 					global.contains( Badge.BOSS_SLAIN_3_SNIPER ) &&
-					global.contains( Badge.BOSS_SLAIN_3_WARDEN ))/* &&
+					global.contains( Badge.BOSS_SLAIN_3_WARDEN ) &&
 					global.contains( Badge.BOSS_SLAIN_3_DESTROY ) &&
-					global.contains( Badge.BOSS_SLAIN_3_GUARDIAN ))*/ {
+					global.contains( Badge.BOSS_SLAIN_3_GUARDIAN )) {
 					
 					badge = Badge.BOSS_SLAIN_3_ALL_SUBCLASSES;
 					if (!global.contains( badge )) {
