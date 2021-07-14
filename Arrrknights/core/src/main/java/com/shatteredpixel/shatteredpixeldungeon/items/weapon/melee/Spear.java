@@ -64,11 +64,16 @@ public class Spear extends MeleeWeapon {
 
 		super.execute(hero, action);
 
-		if (swiching == true) {swiching = false; DLY = 1f; RCH = 1;}
-		else {swiching = true; DLY = 1.5f; RCH = 3;}
+		if (action.equals(AC_ZAP)) {
+			if (swiching == true) {
+				swiching = false;DLY = 1f;RCH = 1;
+			} else {
+				swiching = true;DLY = 1.5f;RCH = 3;
+			}
 
-		updateQuickslot();
-		curUser.spendAndNext(0.5f);
+			updateQuickslot();
+			curUser.spendAndNext(0.5f);
+		}
 	}
 
 	private static final String SWICH = "swiching";

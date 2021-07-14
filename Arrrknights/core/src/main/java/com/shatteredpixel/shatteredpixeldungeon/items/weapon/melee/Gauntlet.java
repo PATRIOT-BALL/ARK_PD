@@ -71,10 +71,11 @@ public class Gauntlet extends MeleeWeapon {
 
 		super.execute(hero, action);
 
+		if (action.equals(AC_ZAP)) {
 		if (swiching == true) {swiching = false; DLY = 0.2f;}
 		else {swiching = true; DLY = 0.33f;}
 
-		curUser.spendAndNext(0.5f);
+		curUser.spendAndNext(0.5f);}
 		}
 
 	private static final String SWICH = "swiching";

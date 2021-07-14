@@ -52,7 +52,7 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
                 "- _기병창 카빈_ : 공격력이 2-20에서 _2-12_로, 사거리가 3에서 _1_로 감소했습니다. 대신 공격속도가 66%에서 _100%_로 상승했습니다." +
-                        "\n특수 기능 _가변_이 추가되었습니다. 활성화시 공격력" + "\n\n" +
+                        "\n특수 기능 _가변_이 추가되었습니다. 활성화시 공격력과 사거리가 상승하지만 공격속도가 감소합니다." + "\n\n" +
                         "- _테르밋 블레이드_ : 공격력이 4-16에서 _3-12_로 감소했으며, 강화 효율이 4에서 _3_으로 감소했습니다.\n대신 공격이 적의 방어력을 무시합니다." + "\n\n" +
                         "- _마운틴 브레이커_ : 특수 기능 _스탠스 스위칭_이 추가되었습니다. 자유롭게 ON/OFF할 수 있으며, 활성화시 공격력이 2배로 상승하지만 공격속도가 감소합니다."));
 
@@ -102,8 +102,15 @@ public class v0_2_X_Changes {
                         "- _그레이스롯_ : _접근 금지!_의 발동 확률이 8 ~ 25%에서 _6 ~ 20%_ 로 감소했습니다."));
 
 
-       // changes = new ChangeInfo("0.1.5a", false, null);
-     //   changes.hardlight(CharSprite.NEUTRAL);
-     //   changeInfos.add(changes);
+        changes = new ChangeInfo("0.2.0a", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARKPD), "난 버그가 싫어요",
+                "- 기병창 카빈과 마운틴 브레이커에 관련된 버그가 수정되었습니다."));
+
+        changes = new ChangeInfo("", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
+        changeInfos.add(changes);
     }
 }
