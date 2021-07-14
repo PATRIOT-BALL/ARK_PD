@@ -74,6 +74,7 @@ public class Closure extends NPC {
                                 if (Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_2)) {
                                     Dungeon.hero.CharSkin = Hero.SKADI;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
                                     Game.runOnRenderThread(new Callback() {
                                         @Override
