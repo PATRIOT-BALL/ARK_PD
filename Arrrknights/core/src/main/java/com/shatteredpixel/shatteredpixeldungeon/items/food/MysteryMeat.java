@@ -105,7 +105,7 @@ public class MysteryMeat extends Food {
 
 		if (hero.hasTalent(Talent.LOVEMEAT))
 		{
-			Buff.affect(hero, WellFed.class).set(hero.pointsInTalent(Talent.LOVEMEAT) * 10);
+			Buff.affect(hero, WellFed.class).set(hero.pointsInTalent(Talent.LOVEMEAT) * 20);
 		}
 	}
 	

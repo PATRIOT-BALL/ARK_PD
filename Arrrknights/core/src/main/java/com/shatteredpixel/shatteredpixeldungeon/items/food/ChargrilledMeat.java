@@ -62,7 +62,7 @@ public class ChargrilledMeat extends Food {
 		if (Dungeon.hero.subClass == HeroSubClass.DESTROYER) { Buff.affect(hero, MeatPower_Chargrilled.class, MeatPower_Chargrilled.DURATION); }
 		if (hero.hasTalent(Talent.LOVEMEAT))
 		{
-			Buff.affect(hero, WellFed.class).set(hero.pointsInTalent(Talent.LOVEMEAT) * 10);
+			Buff.affect(hero, WellFed.class).set(hero.pointsInTalent(Talent.LOVEMEAT) * 20);
 		}
 	}
 	
