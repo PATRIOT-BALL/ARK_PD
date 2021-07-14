@@ -748,9 +748,11 @@ public class Badges {
 	}
 
 	public static void validateRoseUnlock(){
-		if (Statistics.foodEaten >= 25 && !global.contains(Badge.UNLOCK_ROSECAT)){
+		/*if (Statistics.foodEaten >= 25 && !global.contains(Badge.UNLOCK_ROSECAT)){
 			displayBadge( Badge.UNLOCK_ROSECAT );
-		}
+		}*/
+		if (!global.contains(Badge.UNLOCK_ROSECAT)){
+			displayBadge( Badge.UNLOCK_ROSECAT );}
 	}
 	
 	public static void validateMasteryCombo( int n ) {
@@ -818,7 +820,7 @@ public class Badges {
 		if (Rankings.INSTANCE.totalNumber >= 10) {
 			badge = Badge.GAMES_PLAYED_1;
 		}
-		if (Rankings.INSTANCE.totalNumber >= 1) {
+		if (Rankings.INSTANCE.totalNumber >= 50) {
 			badge = Badge.GAMES_PLAYED_2;
 		}
 		if (Rankings.INSTANCE.totalNumber >= 250) {

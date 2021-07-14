@@ -168,7 +168,6 @@ public enum HeroClass {
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -370,6 +369,7 @@ public enum HeroClass {
 			switch (Dungeon.hero.CharSkin) {
 				case 1: return Assets.Sprites.TALRU_FIGHT;
 				case 2: return Assets.Sprites.FNOVA;
+				case 3: return Assets.Sprites.SKD;
 			}
 		}
 		switch (this) {
