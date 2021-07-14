@@ -412,7 +412,7 @@ public class Generator {
                     M1887.class,
                     Naginata.class
             };
-            WEP_T4.probs = new float[]{4, 5, 5, 4, 4, 4, 4};
+            WEP_T4.probs = new float[]{4, 5, 5, 4, 4, 4, 4, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,
