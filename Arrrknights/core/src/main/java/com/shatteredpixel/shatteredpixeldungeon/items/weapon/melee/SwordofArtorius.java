@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class SwordofArtorius extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.SWORD;
+        image = ItemSpriteSheet.ARTORIUS;
         hitSound = Assets.Sounds.HIT_SLASH;
         hitSoundPitch = 1.12f;
 

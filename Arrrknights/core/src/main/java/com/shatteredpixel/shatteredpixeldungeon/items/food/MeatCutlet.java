@@ -10,7 +10,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class MeatCutlet extends Food {
     {
-        image = ItemSpriteSheet.STEWED;
+        image = ItemSpriteSheet.CUTLET;
         energy = Hunger.HUNGRY/10f;
     }
 

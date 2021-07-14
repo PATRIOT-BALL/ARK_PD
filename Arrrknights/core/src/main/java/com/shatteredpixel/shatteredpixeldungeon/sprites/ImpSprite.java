@@ -55,12 +55,8 @@ public class ImpSprite extends MobSprite {
 	@Override
 	public void link( Char ch ) {
 		super.link( ch );
-		
-		if (ch instanceof Imp) {
-			alpha( 0.4f );
-		}
 	}
-	
+
 	@Override
 	public void onComplete( Animation anim ) {
 		if (anim == die) {

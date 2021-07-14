@@ -818,7 +818,7 @@ public class Badges {
 		if (Rankings.INSTANCE.totalNumber >= 10) {
 			badge = Badge.GAMES_PLAYED_1;
 		}
-		if (Rankings.INSTANCE.totalNumber >= 50) {
+		if (Rankings.INSTANCE.totalNumber >= 1) {
 			badge = Badge.GAMES_PLAYED_2;
 		}
 		if (Rankings.INSTANCE.totalNumber >= 250) {

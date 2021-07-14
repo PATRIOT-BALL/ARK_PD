@@ -11,8 +11,8 @@ import com.watabou.utils.Random;
 
 public class WintersScar extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.WAR_HAMMER;
-        hitSound = Assets.Sounds.HIT_CRUSH;
+        image = ItemSpriteSheet.WINTER;
+        hitSound = Assets.Sounds.FROST;
         hitSoundPitch = 1.12f;
 
         tier = 5;
