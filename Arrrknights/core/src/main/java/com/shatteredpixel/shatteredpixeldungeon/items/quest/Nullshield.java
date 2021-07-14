@@ -5,7 +5,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -64,7 +67,23 @@ public class Nullshield extends Item {
                     item.detach( curUser.belongings.backpack );
                     detach(curUser.belongings.backpack);
                 }
+                else if (item instanceof Enfild)
+                {
+                    GLog.h(Messages.get(Nullshield.class, "suc"));
+                    Enfild2 nya = new Enfild2();
+                    nya.identify();
+                    nya.enchantment = ((Enfild) item).enchantment;
+                    nya.curseInfusionBonus = ((Enfild) item).curseInfusionBonus;
+                    nya.levelKnown = ((Enfild) item).levelKnown;
+                    nya.cursedKnown = ((Enfild) item).cursedKnown;
+                    nya.cursed = ((Enfild) item).cursed;
+                    nya.augment = ((Enfild) item).augment;
+                    Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                    item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
+                }
                 else {
+
                     GLog.h(Messages.get(Nullshield.class, "fail"));}
             }
         }
