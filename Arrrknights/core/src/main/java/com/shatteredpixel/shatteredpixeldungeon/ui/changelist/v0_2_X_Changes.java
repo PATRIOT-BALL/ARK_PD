@@ -108,7 +108,7 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ARKPD), "난 버그가 싫어요",
                 "- 기병창 카빈과 마운틴 브레이커에 관련된 버그가 수정되었습니다." + "\n\n" +
-                "- 그리고 어째선지 무기 1개가 드롭테이블에서 빠져있었습니다."));
+                "- 그리고 어째선지 무기 1개가 드롭테이블에서 빠져있었습니다. "));
 
         changes = new ChangeInfo("", false, null);
         changes.hardlight(CharSprite.NEUTRAL);
