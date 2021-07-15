@@ -126,8 +126,10 @@ abstract public class Weapon extends KindOfWeapon {
 			float Resists = 100 * enemyResist;
 
 			if (Random.Int((int)Resists) < RingOfDominate.Dominate(Dungeon.hero)) {
-				Buff.affect(defender, Corruption.class);
-				defender.HP=defender.HT;
+				if (defender.isAlive() && !defender.isImmune(Corruption.class)) {
+					Buff.affect(defender, Corruption.class);
+					defender.HP = defender.HT;
+				}
 				damage = 0;
 				boolean droppingLoot = defender.alignment != Char.Alignment.ALLY;
 				if (defender instanceof Mob) {
