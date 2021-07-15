@@ -160,7 +160,8 @@ public class ShopRoom extends SpecialRoom {
 		MeleeWeapon w;
 		switch (Dungeon.depth) {
 		case 6: default:
-			w = new Enfild();
+			if (Random.Int(5) < 4) { w = (MeleeWeapon) Generator.random(Generator.wepTiers[1]); }
+	     	else w = new Enfild();
 			itemsToSpawn.add( Generator.random(Generator.misTiers[1]).quantity(2).identify() );
 			itemsToSpawn.add( new LeatherArmor().identify() );
 			break;

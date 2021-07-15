@@ -14,7 +14,6 @@ public class Enfild2 extends MeleeWeapon {
 
         tier = 3;
         DLY = 3f; //0.33x speed
-        ACC = 1.25f;
         RCH = 50;    //extra reach
 
         //also cannot surprise attack, see Hero.canSurpriseAttack
@@ -30,7 +29,7 @@ public class Enfild2 extends MeleeWeapon {
     }
 
     @Override
-    public int value() { return super.value() + 20; }
+    public int value() { return super.value() + 100; }
 
     @Override
     public boolean isUpgradable() { return true; }

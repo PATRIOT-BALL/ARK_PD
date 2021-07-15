@@ -51,13 +51,13 @@ public class Enfild extends MeleeWeapon {
     private int chargeCap = 100;
 
     @Override
-    public int min(int lvl) { return  6 + buffedLvl() * 2; }
+    public int min(int lvl) { return  9 + buffedLvl() * 2; }
 
     @Override
-    public int max(int lvl) {return  6 + buffedLvl() * 2; }
+    public int max(int lvl) {return  9 + buffedLvl() * 2; }
 
     @Override
-    public int value() { return super.value() + 20; }
+    public int value() { return super.value() + 60; }
 
     @Override
     public boolean isUpgradable() { return true; }

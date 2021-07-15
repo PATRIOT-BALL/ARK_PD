@@ -230,7 +230,7 @@ public class Hero extends Char {
 
     public float awareness;
 
-    public int lvl = 1;
+    public int lvl = 23;
     public int exp = 0;
 
     public int HTBoost = 0;
@@ -1265,8 +1265,9 @@ public class Hero extends Char {
 
            if (this.hasTalent(Talent.ENRAGED_CATALYST))
            {
-               Talent.BlazeBurstBuff counter = Buff.affect(Dungeon.hero, Talent.BlazeBurstBuff.class);
-               if (counter.count() < 10) counter.countUp(1);
+                   Talent.BlazeBurstBuff counter = Buff.affect(Dungeon.hero, Talent.BlazeBurstBuff.class);
+                   if (counter.count() < 10) { counter.countUp(1); }
+                   if (HT/2 < HP) { counter.countDown(1);}
            }
         }
 
