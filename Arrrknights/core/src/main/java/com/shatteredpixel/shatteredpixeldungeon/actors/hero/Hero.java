@@ -42,6 +42,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Foresight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Fury;
@@ -66,6 +67,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
+import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
 import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap.Type;
@@ -131,7 +133,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfForce;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
@@ -1221,6 +1225,8 @@ public class Hero extends Char {
 
         if (wep != null) damage = wep.proc(this, enemy, damage);
 
+        if(buff(Bonk.BonkBuff.class) != null) Buff.detach(this, Bonk.BonkBuff.class);
+
         damage = Talent.onAttackProc(this, enemy, damage);
 
         if (this.hasTalent(Talent.RHODES_CAT)) {
@@ -1258,6 +1264,15 @@ public class Hero extends Char {
 
     @Override
     public int defenseProc(Char enemy, int damage) {
+        if(RingOfDominate.Dominate_curse(this) == true) {
+            if (Random.Int(HT) > HP * 3) {
+                Buff.affect(this, Corruption.class);
+                Dungeon.hero.die(RingOfDominate.class);
+
+                if (Dungeon.hero.isAlive()) { Buff.detach(this, Corruption.class); }
+                else GLog.w(Messages.get(RingOfDominate.class, "soulless"));
+            }
+        }
 
         if (damage > 0 && subClass == HeroSubClass.BERSERKER) {
             Berserk berserk = Buff.affect(this, Berserk.class);
@@ -1363,6 +1378,7 @@ public class Hero extends Char {
 
 
         if(buff(Twilight.class) != null) dmg = 0;
+        if(buff(Bonk.BonkBuff.class) != null) dmg = 0;
 
 
         int preHP = HP + shielding();

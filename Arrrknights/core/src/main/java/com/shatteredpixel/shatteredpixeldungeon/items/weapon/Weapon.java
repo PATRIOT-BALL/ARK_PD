@@ -24,9 +24,11 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SeethingBurst;
@@ -36,6 +38,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Annoying;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Displacing;
@@ -62,6 +65,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Unstab
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Vampiric;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
@@ -113,6 +117,36 @@ abstract public class Weapon extends KindOfWeapon {
 
 	@Override
 	public int proc( Char attacker, Char defender, int damage ) {
+
+		if (Dungeon.hero.belongings.ring instanceof RingOfDominate)
+		{
+			float enemyResist = 1;
+			enemyResist *= 1 + 2*Math.pow(defender.HP/(float)defender.HT, 2);
+
+			float Resists = 100 * enemyResist;
+
+			if (Random.Int((int)Resists) < RingOfDominate.Dominate(Dungeon.hero)) {
+				Buff.affect(defender, Corruption.class);
+				defender.HP=defender.HT;
+				damage = 0;
+				boolean droppingLoot = defender.alignment != Char.Alignment.ALLY;
+				if (defender instanceof Mob) {
+					if (defender.isAlive() && !defender.isImmune(Corruption.class)) {
+						Statistics.enemiesSlain++;
+						Badges.validateMonstersSlain();
+						Statistics.qualifiedForNoKilling = false;
+						if (((Mob) defender).EXP > 0 && curUser.lvl <= ((Mob) defender).maxLvl) {
+							curUser.sprite.showStatus(CharSprite.POSITIVE, Messages.get(defender, "exp", ((Mob) defender).EXP));
+							curUser.earnExp(((Mob) defender).EXP, defender.getClass());
+						} else {
+							curUser.earnExp(0, defender.getClass());
+						}
+					}
+				}
+			}
+			}
+
+
 		int conservedDamage = 0;
 		if (attacker.buff(Kinetic.ConservedDamage.class) != null) {
 			conservedDamage = attacker.buff(Kinetic.ConservedDamage.class).damageBonus();

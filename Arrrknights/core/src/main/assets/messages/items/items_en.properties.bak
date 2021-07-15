@@ -916,6 +916,9 @@ items.food.stewedmeat.name=stewed meat
 items.food.stewedmeat.eat_msg=That food tasted ok.
 items.food.stewedmeat.desc=Stewing the meat has cleansed it of any disease or parasites. It should be safe to eat.
 
+items.food.sandvich.name=sandvich
+items.food.sandvich.desc=Sandvich make me strong!\Mikhail's favorite this food is less full, but it restores stamina.\n\ncan eat this Sandvich _%d_ times.
+
 
 
 ##journal items
@@ -2013,7 +2016,7 @@ items.weapon.melee.enfild.stats_desc=_Infinite range_, Attack Speed 66%
 items.weapon.melee.enfild.desc=It's an old-fashioned look, but it doesn't lose to modern guns.\n\nCharges when attacking, dealing 1.3x damage to enemies at 100% charge.
 
 items.weapon.melee.enfild2.name=HM-200
-items.weapon.melee.enfild2.stats_desc=_Infinite range_, Accuracy +25%\nAttack Speed 33%, No surprise attack
+items.weapon.melee.enfild2.stats_desc=_Infinite range_\nAttack Speed 33%, No surprise attack
 items.weapon.melee.enfild2.desc=this is _special_ gun. It's an old-fashioned look, but it doesn't lose to modern guns.\n\nCharges when attacking, dealing 1.3x damage to enemies at 100% charge.
 
 items.weapon.melee.sword.name=orca cushion
@@ -2352,3 +2355,9 @@ items.annihilationgear.ac_active=Gear Attack
 items.annihilationgear.desc=This gear amplifies the arts of Rosmontis. charges are consumed to use gear attacks, which deal _%1$d-%2$d_ damage.\n\nThis gear normally only charges when leveling up. _However, it cannot be recharged with Potion Of Experience_\n\nIt does not support auto-targeting, but _can attack any area._
 items.annihilationgear.prompt=target lock-on
 items.annihilationgear.nocharge=gear has insufficient charge.
+
+items.bonk.name='bonk' energy drink
+items.bonk.ac_drink=DRINK
+items.bonk.desc=Abundant radiation!\n\nIf you drink it, you take damage is 0 for 10 turns. Attacking an enemy or using a wand will immediately dispel the buff.
+items.bonk$bonkbuff.name=radioactive!!
+items.bonk$bonkbuff.desc=radioactive power!! you take damage is 0\nAttacking an enemy or using a wand will immediately dispel the buff.\n\nRadiation : %s

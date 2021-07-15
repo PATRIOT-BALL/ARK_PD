@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BloodParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAmplified;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -94,7 +95,7 @@ public class StaffOfAngelina extends Wand {
                 if (!ch.properties().contains(Char.Property.DRONE)) {
                     Buff.affect(ch, Roots.class,2 + buffedLvl() / 2);
                     ch.sprite.centerEmitter().start( Speck.factory( Speck.WOOL ), 0.2f, 3 );
-                    ch.damage(Random.NormalIntRange(3 + buffedLvl()/2, 6+buffedLvl() * 2), this);
+                    ch.damage(Random.NormalIntRange(3 + buffedLvl()/2, 6+buffedLvl() * 2+ RingOfAmplified.DamageBonus(Dungeon.hero) * 2), this);
 
                 } else {
                     Buff.affect(ch, Paralysis.class,1 + buffedLvl() / 2);
@@ -141,7 +142,7 @@ public class StaffOfAngelina extends Wand {
     public String statsDesc() {
         int selfDMG = Math.round(Dungeon.hero.HT*0.03f);
         if (levelKnown)
-            return Messages.get(this, "stats_desc", selfDMG, selfDMG + 3*buffedLvl(), 3+buffedLvl()/2, 6+ buffedLvl() * 2);
+            return Messages.get(this, "stats_desc", selfDMG, selfDMG + 3*buffedLvl(), 3+buffedLvl()/2, 6+ buffedLvl() * 2+ RingOfAmplified.DamageBonus(Dungeon.hero) * 2);
         else
             return Messages.get(this, "stats_desc", selfDMG, selfDMG, 3, 6);
     }

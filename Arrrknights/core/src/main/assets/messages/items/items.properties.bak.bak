@@ -70,6 +70,10 @@ items.skill.sk1.bookhotblade.name=엄청 뜨거운 스킬개론
 items.skill.sk1.bookhotblade.desc=_엄청 뜨거운 칼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내 적에게 피해. 저격의 반지로 피해 상승\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookhotblade.ac_use=엄청 뜨거워!
 
+items.skill.sk1.bookspreadspores.name=포자 확산의 스킬개론
+items.skill.sk1.bookspreadspores.desc=_포자 확산_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점의 적 침묵 + 부식 가스 생성\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookspreadspores.ac_use=읽는다
+
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookwolfpack.ac_use=읽는다
@@ -131,7 +135,7 @@ items.skill.sk2.booknervous.desc=_말초 차단_ 스킬의 정보가 기록되�
 items.skill.sk2.booknervous.ac_use=읽는다
 
 items.skill.sk2.bookdeephealing.name=심화 치료의 스킬개론
-items.skill.sk2.bookdeephealing.desc=_심화 치료_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 전부 회목 및 지속 치유. 사용 후 기록장치에서 스킬 제거\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookdeephealing.desc=_심화 치료_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 체력 전부 회복 및 지속 치유. 사용 후 기록장치에서 스킬 제거\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookdeephealing.ac_use=읽는다
 
 items.skill.sk2.bookspikes.name=가시의 스킬개론
@@ -226,7 +230,7 @@ items.skill.sk1.camouflage.desc=발동시 투명화하며, 체력을 소량 회�
 items.skill.sk1.camouflage.desc_wnd=발동시 투명화하고 체력을 소량 회복합니다.
 
 items.skill.sk1.wolfspirit.name=_늑대의 혼(1스킬)_
-items.skill.sk1.wolfspirit.desc=발동시 사거리 3의 범위 상태이상 공격을 가해 적들을 _침묵_시킵니다. 침묵당한 적은 특수 능력이 봉인됩니다.
+items.skill.sk1.wolfspirit.desc=발동시 사거리 5의 범위 상태이상 공격을 가해 적들을 _침묵_시킵니다. 침묵당한 적은 특수 능력이 봉인됩니다.
 items.skill.sk1.wolfspirit.desc_wnd=발동시 주위 적들을 침묵시킵니다.
 
 items.skill.sk1.thoughts.name=_사고 팽창(1스킬)_
@@ -237,6 +241,10 @@ iitems.skill.sk1.thoughts.prompt=폭격 지점을 선택하세요
 items.skill.sk1.hotblade.name=_엄청 뜨거운 칼(1스킬)_
 items.skill.sk1.hotblade.desc=시야 내 적들에게 뜨거운 단검을 던져 2히트 피해를 입힙니다. 저격의 반지가 있다면 피해량이 상승합니다.
 items.skill.sk1.hotblade.desc_wnd= 엄청 뜨거어!!! (by.케쨩)
+
+items.skill.sk1.spreadspores.name=_포자 확산(1스킬)_
+items.skill.sk1.spreadspores.desc=목표 지점에 있는 적에게 속박, 침묵을 걸고 부식 가스를 생성합니다.
+items.skill.sk1.spreadspores.desc_wnd=목표 지점의 적을 속박, 침묵시키고 부식 가스 생성
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 도약_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
@@ -337,11 +345,11 @@ items.skill.sk3.terminationt.desc_wnd=발동시 목표 지점의 적에게 피�
 items.skill.sk3.terminationt.prompt=사격 위치를 지정하세요.
 
 items.skill.sk3.truesilverslash.name=_진은참(3스킬)_
-items.skill.sk3.truesilverslash.desc=발동시 시야 안에 있는 모든 적들을 베어버립니다.\n_충분한 강함을 갖추지 못한 적들은 이 공격을 절대 버틸 수 없습니다._ 하지만 강한 힘에는 그만한 대가가 따를 것입니다...
+items.skill.sk3.truesilverslash.desc=발동시 시야 안에 있는 모든 적들을 베어버립니다. 충분한 강함을 갖추지 못한 적들은 이 공격을 절대 버틸 수 없습니다.\n_심안_ 상태와 연계할 수 없습니다.
 items.skill.sk3.truesilverslash.desc_wnd=발동시 시야 내의 평범한 적들을 즉사시킵니다.
 
 items.skill.sk3.yourwish.name=_"네가 원하는 대로"(3스킬)_
-items.skill.sk3.yourwish.desc=발동시 목표 지점에 EX-43을 소환합니다. EX-43은 이동할 수 없지만 매우 강력합니다.
+items.skill.sk3.yourwish.desc=발동시 목표 지점에 EX-43을 소환합니다. EX-43은 이동할 수 없지만 매우 강력합니다.\n주의 : 소환 지점에 적이나 문같은 것이 있다면 무작위 위치에 소환됩니다!
 items.skill.sk3.yourwish.desc_wnd=발동시 목표 지점에 EX-43을 소환합니다.
 items.skill.sk3.yourwish.prompt=목표를 지정
 items.skill.sk3.yourwish$ex43.name=EX-43
@@ -908,6 +916,9 @@ items.food.stewedmeat.name=삶은 고기
 items.food.stewedmeat.eat_msg=이 음식은 괜찮은 맛이 났다.
 items.food.stewedmeat.desc=고기를 삶으면서 병균과 기생충 등이 사멸된 것 같습니다. 안심하고 먹으세요!
 
+items.food.sandvich.name=샌드비치
+items.food.sandvich.desc=샌드비치는 날 강하게 해주지!\n미하일이 좋아하는 이 음식은 포만감이 적지만 섭취시 체력을 회복할 수 있습니다.\n\n이 샌드비치는 앞으로 _%d_ 번 먹을 수 있을 것 같습니다.
+
 
 
 ##journal items
@@ -1173,6 +1184,8 @@ items.rings.ring.sapphire=사파이어 반지
 items.rings.ring.quartz=수정 반지
 items.rings.ring.agate=아게이트 반지
 items.rings.ring.dingdong=링딩동 반지
+items.rings.ring.jojo=기묘한 반지
+items.rings.ring.gray=구조체 반지
 items.rings.ring.equip_cursed=반지가 당신의 손가락을 고통스럽게 옥죄였다!
 items.rings.ring.unknown_desc=어둠 속에서 반짝이는 커다란 보석이 박힌 금속 고리입니다. 이걸 꼈을 때 어떤 일이 일어날까요?
 items.rings.ring.known=이것은 %s 입니다.
@@ -1240,6 +1253,17 @@ items.rings.ringofsunlight.name=햇빛의 반지
 items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 성능이 _%s%%_ 만큼 상승합니다.
 items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록장치의 성능이 약 _%s%%_ 만큼 상승합니다.
 items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP 효율을 높혀줍니다. 저주받은 반지는 오히려 효율을 감소시킵니다.
+
+items.rings.ringofamplified.name=증폭의 반지
+items.rings.ringofamplified.stats=이 반지를 장착했을 때, 피해를 입힐 수 있는 스태프들의 최대 공격력이 상승합니다. 강화할수록 효율이 증가합니다.
+items.rings.ringofamplified.desc=이 반지는 착용자의 아츠 적합성을 올려 스태프의 효율을 상승시킵니다. 저주받은 반지는 아츠 적합성을 낮춰 스태프의 공격력을 감소시킵니다.
+
+items.rings.ringofdominate.name=지배의 반지
+items.rings.ringofdominate.stats=이 반지를 장착했을 때, 적을 공격하면 _%d%%_의 확률로 적의 정신을 지배합니다. 건강한 적은 지배에 저항합니다.
+items.rings.ringofdominate.typical_stats=이 반지를 장착했을 때, 일반적으로 적을 공격하면 _%d%%_의 확률로 적의 정신을 지배합니다. 건강한 적은 지배에 저항합니다.
+items.rings.ringofdominate.desc=이 반지는 강력한 살카즈 군주의 아츠가 담겨있어, 공격한 적의 영혼을 지배할 수 있습니다. 저주받은 반지는 당신이 피격당할 때마다 육신을 빼앗는 시도를 할 것입니다.
+items.rings.ringofdominate.soulless=저주받은 반지가 당신의 육신을 강탈했다.
+items.rings.ringofdominate.rankings_desc=살카즈 군주에게 몸을 빼앗김
 
 
 
@@ -1392,7 +1416,7 @@ items.scrolls.exotic.scrollofpsionicblast.ondeath=정신 폭발이 당신의 정
 items.scrolls.exotic.scrollofpsionicblast.desc=이 일기장에는 시야 내에 들어온 모든 대상의 정신을 찢어버릴 수 있는 파괴의 에너지가 들어 있습니다.\n\n이 일기장에서 나온 힘은 독자를 일시적으로 눈이 멀게 만들고, 기절시키며, 상당한 피해를 입힙니다. 피해를 입은 대상이 많을수록 자가 피해가 적어집니다.
 
 items.scrolls.exotic.scrollofdominate.name=지배의 일기장
-items.scrolls.exotic.scrollofdominate.desc=이 일기장을 읽으면 살카즈 마왕의 아츠가 시야 내의 적들의 영혼을 강탈하여 정신 지배 상태로 만들 수 있습니다.
+items.scrolls.exotic.scrollofdominate.desc=이 일기장을 읽으면 살카즈 마왕의 아츠가 시야 내의 적들의 영혼을 강탈하여 정신 지배 상태로 만들 수 있습니다.\n\n_심안_ 상태와 연계할 수 없습니다.
 
 
 
@@ -1562,7 +1586,7 @@ items.wands.sp.staffofmudrock$earthguardian.desc=당신의 대지의 아츠 스�
 items.wands.sp.staffofleaf.name=스태프 오브 리프
 items.wands.sp.staffofleaf.staff_name=개조 서리의 흑요석 반지
 items.wands.sp.staffofleaf.desc=_"싸움이 끝난 후 황폐해진 땅… 이젠 몇 번이나 봤는지도 모르겠어."_\n\n이 개조된 서리 아츠의 스태프는 프로스트리프 대원의 능력이 반영되었습니다.
-items.wands.sp.staffofleaf.stats_desc=이 아츠 스태프는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d - %2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 한기를 느끼는 적에게 더 강한 피해를 줍니다.
+items.wands.sp.staffofleaf.stats_desc=이 아츠 스태프는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d-%2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 한기를 느끼는 적에게 더 강한 피해를 줍니다.
 items.wands.sp.staffofleaf.bmage_desc=_아미야_ 가 개조 서리의 흑요석 반지로 한기에 걸린 적을 공격하면, 대상을 일정 확률로 즉시 빙결시킵니다. 대상이 더 많이 한기를 느낄수록 빙결시킬 확률이 높아집니다.
 
 items.wands.sp.staffofshining.name=스태프 오브 샤이닝
@@ -1623,6 +1647,12 @@ items.wands.sp.staffofcorrupting.already_corrupted=그 대상에게 더 영향�
 items.wands.sp.staffofcorrupting.desc=_"있지, 나랑 함께 가자. 당신의 진정한 모습이 바닷속 깊은 곳에서 기다리고 있어."_\n\n이 아츠 스태프는 스■디였던 대원의 능력이 반영되었습니다.
 items.wands.sp.staffofcorrupting.stats_desc=이 막대는 강한 타락의 에너지를 발사하여, 적을 약화시키다가 끝내는 _이 육지에 존재해서는 안될 존재_로 만들어버립니다. 적들은 타락에 저항할 수 있지만, 약화된 적들은 훨씬 더 쉽게 타락시킬 수 있습니다.
 items.wands.sp.staffofcorrupting.bmage_desc=_아미야_ 가 이 ■■■ ■■로 적을 공격하면, 대상에게 일정 확률로 광란을 부여합니다.
+
+items.wands.staffofsnowsant.name=스태프 오브 스노우상트
+items.wands.staffofsnowsant.staff_name=개조 침묵의 흑요석 반지
+items.wands.staffofsnowsant.desc=이상이 뭘까? 당연히 출세다! 천조자조(天道酬勤)는 그녀의 유일한 신념이다! 노력이다! 보상이 있을거다! 맞아! 아마도......!
+items.wands.staffofsnowsant.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다. 또한, 적중당한 대상을 자신의 앞으로 끌어당길 수 있습니다.
+items.wands.staffofsnowsant.bmage_desc=_아미야_ 가 개조 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
 
 
 
@@ -1758,6 +1788,13 @@ items.wands.wandofwarding$ward.dismiss_body=당신은 미보를 더 이상 유�
 items.wands.wandofwarding$ward.dismiss_confirm=예
 items.wands.wandofwarding$ward.dismiss_cancel=아니오
 
+items.wands.wandofsilence.name=침묵의 아츠 스태프
+items.wands.wandofsilence.staff_name=침묵의 흑요석 반지
+items.wands.wandofsilence.desc='스노우상트의 동전' 이야기가 한때 젊은 오퍼레이터들 사이에서 유행한 적이 있다. 물론 별다른 악의는 없지만 말이다.
+items.wands.wandofsilence.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다.
+items.wands.wandofsilence.bmage_desc=_아미야_ 가 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
+
+
 ###weapon curses
 items.weapon.curses.annoying.name=짜증나는 %s
 items.weapon.curses.annoying.msg_1="우후후, 그럼… 로도스에서 오리지늄을 숨겨놓은 곳을, 알려줄 수 있겠니?"
@@ -1795,6 +1832,9 @@ items.weapon.curses.wayward.desc=혼잡한 무기는 사용자의 집중을 아�
 ###enchantments
 items.weapon.enchantments.blazing.name=불타는 %s
 items.weapon.enchantments.blazing.desc=이 아츠는 무기에서 화염을 내뿜어 적을 불태우고, 이미 불타는 적에게 추가 피해를 줍니다.
+
+items.weapon.enchantments.penetrate.name=관통의 %s
+items.weapon.enchantments.penetrate.desc=이 아츠는 적의 방어력에 비례해 추가 피해를 입힐 수 있습니다.
 
 items.weapon.enchantments.blocking.name=방어의 %s
 items.weapon.enchantments.blocking.desc=이 아츠는 공격 이후 당신의 방어 능력을 늘려줍니다.
@@ -1867,7 +1907,8 @@ items.weapon.melee.flail.desc=사람의 키보다 거대한 극동식 환도, �
 
 items.weapon.melee.gauntlet.name=마운틴 브레이커
 items.weapon.melee.gauntlet.stats_desc=공격속도 500%
-items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.
+items.weapon.melee.gauntlet.ac_zap=스탠스 스위칭
+items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n스탠스 스위칭 활성화시 공격력이 상승하지만 공격속도가 감소합니다.
 
 items.weapon.melee.glaive.name=영소
 items.weapon.melee.glaive.stats_desc=사거리 +2, 공격속도 50%
@@ -1913,7 +1954,7 @@ items.weapon.melee.longsword.no_magic=아츠 면역 상태일 땐 발사할 수 
 items.weapon.melee.longsword.fizzles=SP가 부족합니다.
 
 items.weapon.melee.mace.name=테르밋 블레이드
-items.weapon.melee.mace.stats_desc=명중률 +28%
+items.weapon.melee.mace.stats_desc=명중률 +28%\n_고정 피해(방어 무시)_
 items.weapon.melee.mace.desc=2500도까지 달아오르는 고열로 대상을 관통하는 레이피어. 이글거리는 테르밋 블레이드가 뚫을 수 없는 방어는 존재하지 않는다.
 
 items.weapon.melee.magesstaff.name=흑요석 반지
@@ -1982,16 +2023,16 @@ items.weapon.melee.scimitar.prompt=목표를 지정해주세요.
 items.weapon.melee.scimitar.self_target=자신에게는 발사할 수 없습니다.
 
 items.weapon.melee.spear.name=기병창ㆍ카빈
-items.weapon.melee.spear.stats_desc=사거리 +2, 공격속도 66%
-items.weapon.melee.spear.desc=키가 작은 그라니를 위해 빅토리아에서 맞춤 제작된 수축형 장창. 카탈로그 상 창의 길이를 두배가량 늘릴 수 있지만, 그라니 본인은 무게 중심이 불안정해져서 거의 사용하지 않는 기능이라고 한다...
+items.weapon.melee.spear.ac_zap=가변
+items.weapon.melee.spear.desc=키가 작은 그라니를 위해 빅토리아에서 맞춤 제작된 수축형 장창. 카탈로그 상 창의 길이를 두배가량 늘릴 수 있지만, 그라니 본인은 무게 중심이 불안정해져서 거의 사용하지 않는 기능이라고 한다...\n\n가변 기능 사용시 사거리가 2증가하고 공격력이 대폭 상승하지만, 공격속도가 감소합니다.
 
 items.weapon.melee.enfild.name=리-엔필드
 items.weapon.melee.enfild.stats_desc=사거리 _무한_, 공격속도 66%
 items.weapon.melee.enfild.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
-items.weapon.melee.enfild2.name=리-엔필드 II
-items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 명중률 +25%, 공격속도 33%, 기습 공격 불가
-items.weapon.melee.enfild2.desc=잘 튜닝된 _특별한_ 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
+items.weapon.melee.enfild2.name=HM-200
+items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 공격속도 33%, 기습공격 불가
+items.weapon.melee.enfild2.desc=그녀가 직접 만든 모형 총. 상당히 정교하게 만들어졌다.\n\n라테라노의 총을 모방해서 제작한 모방품이다. 그 총의 구조와 기능은 진짜 라테라노의 총들과는 무척이나 다르다. 그녀가 이렇게 한 이유는 이베리아보단 라테라노 문화의 영향을 더 받았기 때문인데, 그녀는 라테라노 총 문화를 사랑하는 애호가 중 한 명이었던 것이다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.sword.name=범고래 쿠션
 items.weapon.melee.sword.desc=귀여운 범고래모양 쿠션. 보기와 다르게 굉장히 무겁다. 이런 걸 휘두르면 분명 아프겠지?
@@ -2326,6 +2367,12 @@ items.torch.desc="난 태어날 때부터 라테라노 사람이었어. 아, 아
 
 items.annihilationgear.name=섬멸전 장비
 items.annihilationgear.ac_active=방벽 투척
-items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다.\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._
+items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._
 items.annihilationgear.prompt=목표 지정
 items.annihilationgear.nocharge=충전량이 부족합니다.
+
+items.bonk.name=봉크! 원자맛 음료
+items.bonk.ac_drink=마신다
+items.bonk.desc=봉크!는 우리가 알다시피 아주 쩔어주는 능력을 주는 방사능으로 가득 차있습니다.\n\n이 음료수를 마시면 10턴동안 무적이 됩니다. 단, 적을 공격하거나 스태프를 사용하면 즉시 해제됩니다.
+items.bonk$bonkbuff.name=방사능 파워
+items.bonk$bonkbuff.desc=방사능의 힘이 솟아납니다. 받는 피해가 0이 됩니다.\n공격 혹은 스태프 시전을 시도한다면 방사능의 힘이 즉시 사라집니다.\n\n방사능의 힘이 %s턴 남았습니다.

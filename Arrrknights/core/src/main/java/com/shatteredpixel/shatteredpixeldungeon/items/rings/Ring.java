@@ -62,6 +62,8 @@ public class Ring extends KindofMisc {
 			put("agate",ItemSpriteSheet.RING_AGATE);
 			put("diamond",ItemSpriteSheet.RING_DIAMOND);
 			put("dingdong",ItemSpriteSheet.RING_DIAMOND);
+			put("jojo",ItemSpriteSheet.RING_DIAMOND);
+			put("gray",ItemSpriteSheet.RING_DIAMOND);
 		}
 	};
 	
@@ -312,6 +314,15 @@ public class Ring extends KindofMisc {
 		}
 		return bonus;
 	}
+
+	public static boolean getCursed_domi(Char target, Class<?extends RingBuff> type){
+		for (RingBuff buff : target.buffs(type)) {
+			if (buff.cursd() == true) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	public int soloBonus(){
 		if (cursed){
@@ -346,6 +357,8 @@ public class Ring extends KindofMisc {
 		public int buffedLvl(){
 			return Ring.this.soloBuffedBonus();
 		}
+
+		public boolean cursd(){ return Ring.this.cursed; }
 
 	}
 }

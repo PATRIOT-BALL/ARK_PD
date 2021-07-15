@@ -916,6 +916,9 @@ items.food.stewedmeat.name=삶은 고기
 items.food.stewedmeat.eat_msg=이 음식은 괜찮은 맛이 났다.
 items.food.stewedmeat.desc=고기를 삶으면서 병균과 기생충 등이 사멸된 것 같습니다. 안심하고 먹으세요!
 
+items.food.sandvich.name=샌드비치
+items.food.sandvich.desc=샌드비치는 날 강하게 해주지!\n미하일이 좋아하는 이 음식은 포만감이 적지만 섭취시 체력을 회복할 수 있습니다.\n\n이 샌드비치는 앞으로 _%d_ 번 먹을 수 있을 것 같습니다.
+
 
 
 ##journal items
@@ -1181,6 +1184,8 @@ items.rings.ring.sapphire=사파이어 반지
 items.rings.ring.quartz=수정 반지
 items.rings.ring.agate=아게이트 반지
 items.rings.ring.dingdong=링딩동 반지
+items.rings.ring.jojo=기묘한 반지
+items.rings.ring.gray=구조체 반지
 items.rings.ring.equip_cursed=반지가 당신의 손가락을 고통스럽게 옥죄였다!
 items.rings.ring.unknown_desc=어둠 속에서 반짝이는 커다란 보석이 박힌 금속 고리입니다. 이걸 꼈을 때 어떤 일이 일어날까요?
 items.rings.ring.known=이것은 %s 입니다.
@@ -1248,6 +1253,17 @@ items.rings.ringofsunlight.name=햇빛의 반지
 items.rings.ringofsunlight.stats=이 반지를 장착했을 때, 아츠 기록장치의 성능이 _%s%%_ 만큼 상승합니다.
 items.rings.ringofsunlight.typical_stats=이 반지를 장착했을 때, 일반적으로 아츠 기록장치의 성능이 약 _%s%%_ 만큼 상승합니다.
 items.rings.ringofsunlight.desc=이 반지는 착용자의 아츠와 반응하여 아츠 기록장치의 SP 효율을 높혀줍니다. 저주받은 반지는 오히려 효율을 감소시킵니다.
+
+items.rings.ringofamplified.name=증폭의 반지
+items.rings.ringofamplified.stats=이 반지를 장착했을 때, 피해를 입힐 수 있는 스태프들의 최대 공격력이 상승합니다. 강화할수록 효율이 증가합니다.
+items.rings.ringofamplified.desc=이 반지는 착용자의 아츠 적합성을 올려 스태프의 효율을 상승시킵니다. 저주받은 반지는 아츠 적합성을 낮춰 스태프의 공격력을 감소시킵니다.
+
+items.rings.ringofdominate.name=지배의 반지
+items.rings.ringofdominate.stats=이 반지를 장착했을 때, 적을 공격하면 _%d%%_의 확률로 적의 정신을 지배합니다. 건강한 적은 지배에 저항합니다.
+items.rings.ringofdominate.typical_stats=이 반지를 장착했을 때, 일반적으로 적을 공격하면 _%d%%_의 확률로 적의 정신을 지배합니다. 건강한 적은 지배에 저항합니다.
+items.rings.ringofdominate.desc=이 반지는 강력한 살카즈 군주의 아츠가 담겨있어, 공격한 적의 영혼을 지배할 수 있습니다. 저주받은 반지는 당신이 피격당할 때마다 육신을 빼앗는 시도를 할 것입니다. (체력이 33%미만이면 지배당할 확률이 생깁니다.)
+items.rings.ringofdominate.soulless=저주받은 반지가 당신의 육신을 강탈했다.
+items.rings.ringofdominate.rankings_desc=살카즈 군주에게 몸을 빼앗김
 
 
 
@@ -1570,7 +1586,7 @@ items.wands.sp.staffofmudrock$earthguardian.desc=당신의 대지의 아츠 스�
 items.wands.sp.staffofleaf.name=스태프 오브 리프
 items.wands.sp.staffofleaf.staff_name=개조 서리의 흑요석 반지
 items.wands.sp.staffofleaf.desc=_"싸움이 끝난 후 황폐해진 땅… 이젠 몇 번이나 봤는지도 모르겠어."_\n\n이 개조된 서리 아츠의 스태프는 프로스트리프 대원의 능력이 반영되었습니다.
-items.wands.sp.staffofleaf.stats_desc=이 아츠 스태프는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d - %2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 한기를 느끼는 적에게 더 강한 피해를 줍니다.
+items.wands.sp.staffofleaf.stats_desc=이 아츠 스태프는 적에게 얼어붙은 에너지를 쏘아내어, _%1$d-%2$d의 피해_ 를 입히고 한기를 부여합니다. 이 효과는 물에서 더 강력해집니다. 한기를 느끼는 적에게 더 강한 피해를 줍니다.
 items.wands.sp.staffofleaf.bmage_desc=_아미야_ 가 개조 서리의 흑요석 반지로 한기에 걸린 적을 공격하면, 대상을 일정 확률로 즉시 빙결시킵니다. 대상이 더 많이 한기를 느낄수록 빙결시킬 확률이 높아집니다.
 
 items.wands.sp.staffofshining.name=스태프 오브 샤이닝
@@ -2015,7 +2031,7 @@ items.weapon.melee.enfild.stats_desc=사거리 _무한_, 공격속도 66%
 items.weapon.melee.enfild.desc=잘 튜닝된 클래식 소총. 외관은 낡았으나 집탄성은 현대식 수호총에 밀리지 않는다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.enfild2.name=HM-200
-items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 명중률 +25%, 공격속도 33%, 기습공격 불가
+items.weapon.melee.enfild2.stats_desc=사거리 _무한_, 공격속도 33%, 기습공격 불가
 items.weapon.melee.enfild2.desc=그녀가 직접 만든 모형 총. 상당히 정교하게 만들어졌다.\n\n라테라노의 총을 모방해서 제작한 모방품이다. 그 총의 구조와 기능은 진짜 라테라노의 총들과는 무척이나 다르다. 그녀가 이렇게 한 이유는 이베리아보단 라테라노 문화의 영향을 더 받았기 때문인데, 그녀는 라테라노 총 문화를 사랑하는 애호가 중 한 명이었던 것이다.\n\n공격시 SP를 충전하며, SP가 100%일 때 공격하면 1.3배의 피해를 입힙니다.
 
 items.weapon.melee.sword.name=범고래 쿠션
@@ -2354,3 +2370,9 @@ items.annihilationgear.ac_active=방벽 투척
 items.annihilationgear.desc=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._
 items.annihilationgear.prompt=목표 지정
 items.annihilationgear.nocharge=충전량이 부족합니다.
+
+items.bonk.name=봉크! 원자맛 음료
+items.bonk.ac_drink=마신다
+items.bonk.desc=봉크!는 우리가 알다시피 아주 쩔어주는 능력을 주는 방사능으로 가득 차있습니다.\n\n이 음료수를 마시면 10턴동안 무적이 됩니다. 단, 적을 공격하거나 스태프를 사용하면 즉시 해제됩니다.
+items.bonk$bonkbuff.name=방사능 파워
+items.bonk$bonkbuff.desc=방사능의 힘이 솟아납니다. 받는 피해가 0이 됩니다.\n공격 혹은 스태프 시전을 시도한다면 방사능의 힘이 즉시 사라집니다.\n\n방사능의 힘이 %s턴 남았습니다.

@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.Artifact;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Blandfruit;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatPie;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
@@ -210,7 +211,8 @@ public abstract class Recipe {
             new ExoticPotion.PotionToExotic(),
             new ExoticScroll.ScrollToExotic(),
             new StewedMeat.threeMeat(),
-            new MeatPie.Recipe()
+            new MeatPie.Recipe(),
+            new Sandvich.Recipe()
     };
 
     public static Recipe findRecipe(ArrayList<Item> ingredients) {

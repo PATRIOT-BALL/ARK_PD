@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAmplified;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.DamageWand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
@@ -31,7 +32,7 @@ public class StaffOfAbsinthe extends DamageWand {
     public int min(int lvl){ return 2+lvl; }
 
     public int max(int lvl){
-        return 10+3*lvl;
+        return 10+3*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 3;
     }
 
     @Override

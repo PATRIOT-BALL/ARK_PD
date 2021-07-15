@@ -39,6 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
@@ -504,6 +505,7 @@ public abstract class Wand extends Item {
 				}
 
 				curUser.sprite.zap(cell);
+				if(curUser.buff(Bonk.BonkBuff.class) != null) Buff.detach(curUser, Bonk.BonkBuff.class);
 
 				//attempts to target the cell aimed at if something is there, otherwise targets the collision pos.
 				if (Actor.findChar(target) != null)

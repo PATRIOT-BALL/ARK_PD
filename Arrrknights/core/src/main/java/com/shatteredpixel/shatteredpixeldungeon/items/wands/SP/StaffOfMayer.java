@@ -409,8 +409,7 @@ public class StaffOfMayer extends Wand
             for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
                 Char ch = findChar( pos + PathFinder.NEIGHBOURS8[i] );
                 if (ch != null && ch.isAlive()) {
-                    int damage = Random.NormalIntRange(wandLevel + (tier * 2), wandLevel* (2 * (tier - 1)));
-                    damage = Math.max( 0,  damage - ch.drRoll());
+                    int damage = Random.NormalIntRange(4 + wandLevel + (tier * 2), 8 + wandLevel* (2 * (tier - 1)));
                     ch.damage( damage, this );
                     if (ch == Dungeon.hero && !ch.isAlive()) {
                         heroKilled = true;

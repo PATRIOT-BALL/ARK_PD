@@ -12,13 +12,16 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.EquipableItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Sungrass;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+
+import java.util.ArrayList;
 
 public class Sandvich extends Food {
     {
         image = ItemSpriteSheet.STEWED;
-        energy = Hunger.HUNGRY/3f;
+        energy = Hunger.HUNGRY/4f;
     }
 
     private int eat = 0; // 3일때 사용시 아이템 제거
@@ -49,7 +52,59 @@ public class Sandvich extends Food {
     }
 
     @Override
+    public String desc() {
+        return Messages.get(this, "desc", 4-eat);
+    }
+
+    @Override
     public int value() {
-        return 20 * quantity;
+        return 20 * eat;
+    }
+
+    public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe {
+
+        @Override
+        public boolean testIngredients(ArrayList<Item> ingredients) {
+            boolean seed = false;
+            boolean ration = false;
+            boolean meat = false;
+
+            for (Item ingredient : ingredients){
+                if (ingredient.quantity() > 0) {
+                    if (ingredient instanceof Sungrass.Seed) {
+                        seed = true;
+                    } else if (ingredient.getClass() == Food.class) {
+                        ration = true;
+                    } else if (ingredient instanceof MysteryMeat
+                            || ingredient instanceof StewedMeat
+                            || ingredient instanceof ChargrilledMeat
+                            || ingredient instanceof FrozenCarpaccio) {
+                        meat = true;
+                    }
+                }
+            }
+
+            return seed && ration && meat;
+        }
+
+        @Override
+        public int cost(ArrayList<Item> ingredients) {
+            return 6;
+        }
+
+        @Override
+        public Item brew(ArrayList<Item> ingredients) {
+            if (!testIngredients(ingredients)) return null;
+
+            for (Item ingredient : ingredients){
+                ingredient.quantity(ingredient.quantity() - 1);
+            }
+
+            return sampleOutput(null);
+        }
+
+        @Override
+        public Item sampleOutput(ArrayList<Item> ingredients) { return new Sandvich();
+        }
     }
 }
