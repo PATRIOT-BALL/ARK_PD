@@ -12,7 +12,7 @@ public class Enfild2 extends MeleeWeapon {
         hitSound = Assets.Sounds.HIT_SNIPER;
         hitSoundPitch = 0.9f;
 
-        tier = 3;
+        tier = 5;
         DLY = 3f; //0.33x speed
         RCH = 50;    //extra reach
 
@@ -24,8 +24,8 @@ public class Enfild2 extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  8*(tier+3) +    // 48 + 15
-                lvl*(tier+12);   //scaling unchanged
+        return  8*(tier+1) +    // 48 + 15
+                lvl*(tier+10);   //scaling unchanged
     }
 
     @Override

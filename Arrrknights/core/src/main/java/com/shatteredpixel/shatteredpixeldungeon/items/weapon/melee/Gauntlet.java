@@ -78,6 +78,12 @@ public class Gauntlet extends MeleeWeapon {
 		curUser.spendAndNext(0.5f);}
 		}
 
+	@Override
+	public String desc() {
+		if (swiching) return Messages.get(this, "desc_mode");
+		else return Messages.get(this, "desc");
+	}
+
 	private static final String SWICH = "swiching";
 	private static final String RCHSAVE = "RCH";
 	private static final String DLYSAVE = "DLY";

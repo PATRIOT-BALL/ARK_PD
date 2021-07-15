@@ -29,7 +29,7 @@ public class MeatCutlet extends Food {
         AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
         if (hero.belongings.getItem(AnnihilationGear.class) != null)
         {
-            Gear.SPCharge(1);
+            Gear.SPCharge(2);
         }
     }
 }

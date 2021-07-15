@@ -8,6 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Chargrilled;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Frozen;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Mystery;
@@ -142,7 +143,10 @@ public class AnnihilationGear extends Item {
 
                 curUser.sprite.zap(targetCell);
 
-                charge--;
+                if (Dungeon.hero.hasTalent(Talent.LIGHTNESSMEAL) && Dungeon.hero.buff(Levitation.class) != null) {
+                    Buff.detach(Dungeon.hero, Levitation.class);
+                }
+                else charge--;
                 ((MissileSprite) curUser.sprite.parent.recycle(MissileSprite.class)).
                         reset(curUser.sprite,
                                 finalTargetCell,
@@ -229,8 +233,8 @@ public class Spriteex extends MissileWeapon {
         int dmg = Random.NormalIntRange(min(), max());
         if (curUser.buff(Rose_Force.class) != null) {
             if (Dungeon.hero.hasTalent(Talent.FOCUSED_ATTACK)) {
-                dmg *= 1.3f + (float) Dungeon.hero.pointsInTalent(Talent.FOCUSED_ATTACK) * 0.15f;
-            } else dmg *= 1.3f;
+                dmg *= 1.5f + (float) Dungeon.hero.pointsInTalent(Talent.FOCUSED_ATTACK) * 0.15f;
+            } else dmg *= 1.5f;
 
         }
 

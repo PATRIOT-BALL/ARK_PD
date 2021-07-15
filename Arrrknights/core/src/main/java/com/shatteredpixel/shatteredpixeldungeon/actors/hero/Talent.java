@@ -269,7 +269,8 @@ public enum Talent {
 		}
 
 		if (hero.hasTalent(LIGHTNESSMEAL)){
-			Buff.prolong( hero, Levitation.class, 3 + 3 * hero.pointsInTalent(LIGHTNESSMEAL));
+			if (foodSource instanceof HornOfPlenty == false) {
+			Buff.prolong( hero, Levitation.class, 5 + 5 * hero.pointsInTalent(LIGHTNESSMEAL));}
 		}
 
 		if (hero.hasTalent(FASTMEAL)){

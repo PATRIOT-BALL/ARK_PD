@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Bundle;
 
@@ -74,6 +75,12 @@ public class Spear extends MeleeWeapon {
 			updateQuickslot();
 			curUser.spendAndNext(0.5f);
 		}
+	}
+
+	@Override
+	public String desc() {
+		if (swiching) return Messages.get(this, "desc_mode");
+		else return Messages.get(this, "desc");
 	}
 
 	private static final String SWICH = "swiching";
