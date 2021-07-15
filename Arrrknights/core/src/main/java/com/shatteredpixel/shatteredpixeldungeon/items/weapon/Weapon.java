@@ -118,6 +118,7 @@ abstract public class Weapon extends KindOfWeapon {
 	@Override
 	public int proc( Char attacker, Char defender, int damage ) {
 
+		if (attacker instanceof Hero) {
 		if (Dungeon.hero.belongings.ring instanceof RingOfDominate)
 		{
 			float enemyResist = 1;
@@ -147,6 +148,7 @@ abstract public class Weapon extends KindOfWeapon {
 				}
 			}
 			}
+		}
 
 
 		int conservedDamage = 0;
