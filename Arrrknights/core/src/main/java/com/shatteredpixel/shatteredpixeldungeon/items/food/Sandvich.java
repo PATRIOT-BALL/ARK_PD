@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Sungrass;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,8 @@ public class Sandvich extends Food {
     {
         image = ItemSpriteSheet.STEWED;
         energy = Hunger.HUNGRY/4f;
+
+        stackable = false;
     }
 
     private int eat = 0; // 3일때 사용시 아이템 제거
@@ -59,6 +62,20 @@ public class Sandvich extends Food {
     @Override
     public int value() {
         return 20 * eat;
+    }
+
+    private static final String stack = "eat";
+
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(stack, eat);
+    }
+
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        eat = bundle.getInt(stack);
     }
 
     public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe {
@@ -106,5 +123,7 @@ public class Sandvich extends Food {
         @Override
         public Item sampleOutput(ArrayList<Item> ingredients) { return new Sandvich();
         }
+
+
     }
 }
