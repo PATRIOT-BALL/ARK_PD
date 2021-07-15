@@ -1907,8 +1907,8 @@ items.weapon.melee.flail.desc=사람의 키보다 거대한 극동식 환도, �
 items.weapon.melee.gauntlet.name=마운틴 브레이커
 items.weapon.melee.gauntlet.stats_desc=공격속도 500%
 items.weapon.melee.gauntlet.ac_zap=스탠스 스위칭
-items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n_스탠스 스위칭_\n공격력이 상승했지만 공격속도가 소폭 감소했습니다.
-items.weapon.melee.gauntlet.desc_mode=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n_기본 모드_\n일반적인 상태입니다. 공격속도가 빠르지만 공격력이 낮습니다.
+items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n_기본 모드_\n일반적인 상태입니다. 공격속도가 빠르지만 공격력이 낮습니다.
+items.weapon.melee.gauntlet.desc_mode=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n_스탠스 스위칭_\n공격력이 상승했지만 공격속도가 소폭 감소했습니다.
 
 items.weapon.melee.glaive.name=영소
 items.weapon.melee.glaive.stats_desc=사거리 +2, 공격속도 50%

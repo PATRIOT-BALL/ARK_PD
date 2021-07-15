@@ -69,18 +69,30 @@ public class Nullshield extends Item {
                 }
                 else if (item instanceof Enfild)
                 {
-                    GLog.h(Messages.get(Nullshield.class, "suc"));
-                    Enfild2 nya = new Enfild2();
-                    nya.identify();
-                    nya.enchantment = ((Enfild) item).enchantment;
-                    nya.curseInfusionBonus = ((Enfild) item).curseInfusionBonus;
-                    nya.levelKnown = ((Enfild) item).levelKnown;
-                    nya.cursedKnown = ((Enfild) item).cursedKnown;
-                    nya.cursed = ((Enfild) item).cursed;
-                    nya.augment = ((Enfild) item).augment;
-                    Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
-                    item.detach( curUser.belongings.backpack );
-                    detach(curUser.belongings.backpack);
+                    if (curUser.belongings.weapon != item) {
+                        GLog.h(Messages.get(Nullshield.class, "suc"));
+                        Enfild2 nya = new Enfild2();
+                        nya.identify();
+
+                        int level = item.level();
+                        if (((Enfild) item).curseInfusionBonus) level--;
+                        if (level > 0) {
+                            nya.upgrade( level );
+                        } else if (level < 0) {
+                            nya.degrade( -level );
+                        }
+
+                        nya.enchantment = ((Enfild) item).enchantment;
+                        nya.curseInfusionBonus = ((Enfild) item).curseInfusionBonus;
+                        nya.levelKnown = ((Enfild) item).levelKnown;
+                        nya.cursedKnown = ((Enfild) item).cursedKnown;
+                        nya.cursed = ((Enfild) item).cursed;
+                        nya.augment = ((Enfild) item).augment;
+                        Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                        item.detach(curUser.belongings.backpack);
+                        detach(curUser.belongings.backpack);
+                    }
+                    else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));
                 }
                 else {
 
