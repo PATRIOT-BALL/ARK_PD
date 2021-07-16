@@ -21,7 +21,15 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.food;
 
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Stewed;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WellFed;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class SmallRation extends Food {
@@ -30,7 +38,25 @@ public class SmallRation extends Food {
 		image = ItemSpriteSheet.OVERPRICED;
 		energy = Hunger.HUNGRY/2f;
 	}
-	
+
+	@Override
+	protected void satisfy(Hero hero) {
+		super.satisfy(hero);
+		effect(hero);
+	}
+
+	public static void effect(Hero hero){
+		if (hero.hasTalent(Talent.DELICIOUS_FOOD))
+		{
+			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
+			if (hero.belongings.getItem(AnnihilationGear.class) != null)
+			{
+				Gear.SPCharge(hero.pointsInTalent(Talent.DELICIOUS_FOOD));
+			}
+		}
+	}
+
+
 	@Override
 	public int value() {
 		return 10 * quantity;

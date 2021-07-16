@@ -97,6 +97,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Dreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.FlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.HotBlade;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Genesis;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.LandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.MentalBurst;
@@ -2267,6 +2268,8 @@ public class Hero extends Char {
             SK2 = new DeepHealing();
         } else if (SkillNumber == 17) {
             SK2 = new Spikes();
+        } else if (SkillNumber == 18) {
+            SK2 = new Genesis();
         } else SK2 = null;
     }
 

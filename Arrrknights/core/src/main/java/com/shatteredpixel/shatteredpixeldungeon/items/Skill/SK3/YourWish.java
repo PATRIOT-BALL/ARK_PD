@@ -41,11 +41,11 @@ public class YourWish extends Skill {
 
     protected CellSelector.Listener Kin = new CellSelector.Listener() {
         public void onSelect(Integer target) {
+            YourWish.EX43 EX43 = new YourWish.EX43();
             if (target != null) {
                 Camera.main.shake(5, 0.5f);
                 Char mob = Actor.findChar(target);
                 int targetCell = target;
-                YourWish.EX43 EX43 = new YourWish.EX43();
                 if (mob == null) {
                     EX43.pos = targetCell;
                     GameScene.add(EX43);

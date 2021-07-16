@@ -50,6 +50,11 @@ public class Bonk extends Item {
         return true;
     }
 
+    @Override
+    public int value() {
+        return 40;
+    }
+
     public static class BonkBuff extends FlavourBuff {
         {
             type = buffType.POSITIVE;

@@ -142,6 +142,10 @@ items.skill.sk2.bookspikes.name=Skill Summary of Thorns
 items.skill.sk2.bookspikes.desc=_Protective Spikes_ is recorded Summary. learn skill 2 by reading it. \n\nEffect: Damage to nearby enemies when attacked\n_Caution: When used, the existing skill 2 is removed._
 items.skill.sk2.bookspikes.ac_use=READ
 
+items.skill.sk2.bookgenesis.name=Skill Summary of Genesis
+items.skill.sk2.bookgenesis.desc=_Genesis_ is recorded Summary. learn skill 2 by reading it. \n\nEffect: Test your luck!\n_Caution: When used, the existing skill 2 is removed._
+items.skill.sk2.bookgenesis.ac_use=읽는다
+
 items.skill.sk3.bookshadowassault.name=Skill Summary of Shadow Assault
 items.skill.sk3.bookshadowassault.desc=_Shadow Assault_ is recorded Summary. learn skill 3 by reading it. \n\nEffect: jumping to the target point, attack the nearest enemy 10 times.\n_Caution: When used, the existing skill 3 is removed._
 items.skill.sk3.bookshadowassault.ac_use=READ
@@ -322,6 +326,10 @@ items.skill.sk2.deephealing.desc_wnd=ACTIVE: Recover all HP, and long time recov
 items.skill.sk2.spikes.name=_Protective Spikes (Skill 2)_
 items.skill.sk2.spikes.desc=ACTIVE: Defense increase and when attacked, damage proportional to the defense to nearby enemies
 items.skill.sk2.spikes.desc_wnd=ACTIVE: when attacked, damage to nearby enemies
+
+items.skill.sk2.genesis.name=Genesis (Skill 2)_
+items.skill.sk2.genesis.desc=ACTIVE: fatal damage to enemies within sight or paralyzes oneself
+items.skill.sk2.genesis.desc_wnd=ACTIVE: fatal damage to enemies within sight or paralyzes oneself
 
 items.skill.sk3.shadowassault.name=_Shadow Assault (Skill 3)_
 items.skill.sk3.shadowassault.desc=ACTIVE: After jumping, attack the nearest enemy 10 times.
@@ -1166,6 +1174,7 @@ items.quest.nullshield.ac_use=ADD
 items.quest.nullshield.prompt=material to add
 items.quest.nullshield.suc=The combination was successful!
 items.quest.nullshield.fail=this is not
+items.quest.nullshield.fail_weapon=Please unequipment.
 
 
 

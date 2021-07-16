@@ -8,7 +8,6 @@ public class Gamza extends Item {
         image = ItemSpriteSheet.GAMZA;
 
         stackable = true;
-        unique = true;
     }
 
     @Override
@@ -19,5 +18,10 @@ public class Gamza extends Item {
     @Override
     public boolean isIdentified() {
         return true;
+    }
+
+    @Override
+    public int value() {
+        return 25;
     }
 }

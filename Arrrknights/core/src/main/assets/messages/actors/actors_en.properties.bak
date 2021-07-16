@@ -553,7 +553,7 @@ actors.hero.talent.savior_belief.title=savior`s belief
 actors.hero.talent.savior_belief.desc=_+1:_ arrow hits the enemy, _33%_ chance to gain 1 Turn Arts immunity.\n\n_+2_ arrow hits the enemy, _66%_ chance to gain 1 Turn Arts immunity.\n\n_+3:_ arrow hits the enemy, _100%_ chance to gain 1 Turn Arts immunity.
 
 actors.hero.talent.lightnessmeal.title=lightness meal
-actors.hero.talent.lightnessmeal.desc=_+1:_ Eating food grants the Rosmontis gain _10 Turns_ levitation.\n\n_+2:_ Eating food grants the Rosmontis gain _15 Turns_ levitation.\n\nIf you have this talent, using gear while levitation does not consume any charge. When this effect is triggered, the levitation effect is immediately removed.
+actors.hero.talent.lightnessmeal.desc=_+1:_ Eating food grants the Rosmontis gain _10 Turns_ levitation.\n\n_+2:_ Eating food grants the Rosmontis gain _15 Turns_ levitation.\n\nIf you have this talent, using gear while levitation does not consume any charge. When this effect is triggered, the levitation effect is immediately removed.\n\nGum doll cannot active talent
 actors.hero.talent.smartmeals.title=smart meal
 actors.hero.talent.smartmeals.desc=_+1:_ If you eat food, you read Scroll of Identify. This talent can be max activated up to _1_ time.\n\n_+2:_ If you eat food, you read Scroll of Identify. This talent can be max activated up to _3_ time.
 actors.hero.talent.goodmeat.title=good meat

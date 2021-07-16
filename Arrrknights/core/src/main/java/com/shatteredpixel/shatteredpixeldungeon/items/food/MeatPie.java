@@ -43,14 +43,6 @@ public class MeatPie extends Food {
 	protected void satisfy(Hero hero) {
 		super.satisfy( hero );
 		Buff.affect(hero, WellFed.class).reset();
-		if (hero.hasTalent(Talent.DELICIOUS_FOOD))
-		{
-			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
-			if (hero.belongings.getItem(AnnihilationGear.class) != null)
-			{
-				Gear.SPCharge(hero.pointsInTalent(Talent.DELICIOUS_FOOD) * 2);
-			}
-		}
 	}
 	
 	@Override

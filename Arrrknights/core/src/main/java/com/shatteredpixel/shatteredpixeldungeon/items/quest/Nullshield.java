@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
@@ -58,6 +59,16 @@ public class Nullshield extends Item {
                     detach(curUser.belongings.backpack);
                 }
                 else if (item instanceof Nmould)
+                {
+                    GLog.h(Messages.get(Nullshield.class, "suc"));
+                    Niansword nya = new Niansword();
+                    nya.enchant(Weapon.Enchantment.randomUncommon());
+                    nya.identify();
+                    Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                    item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
+                }
+                else if (item instanceof Scroll)
                 {
                     GLog.h(Messages.get(Nullshield.class, "suc"));
                     Niansword nya = new Niansword();

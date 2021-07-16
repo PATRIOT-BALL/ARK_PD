@@ -553,7 +553,7 @@ actors.hero.talent.savior_belief.title=구제자의 신념
 actors.hero.talent.savior_belief.desc=_+1:_ 화살이 적에게 적중하면 _33%_ 확률로 1턴동안 아츠 면역 상태가 됩니다.\n\n_+2:_ 화살이 적에게 적중하면 _66%_ 확률로 1턴동안 아츠 면역 상태가 됩니다.\n\n_+3:_ 화살이 적에게 적중하면 _100%_ 확률로 1턴동안 아츠 면역 상태가 됩니다.
 
 actors.hero.talent.lightnessmeal.title=몸이 가벼운 식사
-actors.hero.talent.lightnessmeal.desc=_+1:_ 식사 시 _10턴의 부유 효과_ 를 얻습니다.\n\n_+2:_ 식사 시 _15턴의 부유 효과_ 를 얻습니다.\n\n이 특성을 찍었다면, 부유 상태일 때 섬멸전 장비를 사용하면 충전을 소모하지 않습니다. 효과가 발동하면 부유 효과가 즉시 사라집니다.\n\n이 특성은 굼 인형으로 발동하지 않습니다.
+actors.hero.talent.lightnessmeal.desc=_+1:_ 식사 시 _10턴의 부유 효과_ 를 얻습니다.\n\n_+2:_ 식사 시 _15턴의 부유 효과_ 를 얻습니다.\n\n이 특성을 찍었다면, 부유 상태일 때 섬멸전 장비를 사용하면 충전을 소모하지 않습니다.\n효과가 발동하면 부유 효과가 즉시 사라집니다.\n\n이 특성은 굼 인형으로 발동하지 않습니다.
 actors.hero.talent.smartmeals.title=똑똑한 식사
 actors.hero.talent.smartmeals.desc=_+1:_ 음식을 먹으면 감정의 일기장이 발동합니다. 이 효과는 최대 _1 번까지_ 발동합니다.\n\n_+2:_ 음식을 먹으면 감정의 일기장이 발동합니다. 이 효과는 최대 _3 번까지_ 발동합니다.
 actors.hero.talent.goodmeat.title=좋은 고기
@@ -565,7 +565,7 @@ actors.hero.talent.fastmeal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 �
 actors.hero.talent.recovery_upgrade.title=정신 회복의 강화
 actors.hero.talent.recovery_upgrade.desc=_+1:_ 강화의 일기장을 사용하면 섬멸전 장비를 _2_ 만큼 충전합니다.\n\n_+2:_ 강화의 일기장을 사용하면 섬멸전 장비를 _3_ 만큼 충전합니다\n\n이 특성은 강화의 일기장을 기반으로 한 주문서 또는 주문을 사용할 때에도 발동합니다.
 actors.hero.talent.delicious_food.title=엄청 맛있는 식사
-actors.hero.talent.delicious_food.desc=_+1:_ 애플 파이 혹은 고기 파이 섭취시 섬멸전 장비를 _2_ 만큼 충전합니다.\n\n_+2:_ 애플 파이 혹은 고기 파이 섭취시 섬멸전 장비를 _4_ 만큼 충전합니다.
+actors.hero.talent.delicious_food.desc=_+1:_ 벌꿀 쿠키 섭취시 섬멸전 장비를 _1_ 만큼 충전합니다.\n\n_+2:_ 벌꿀 쿠키 섭취시 섬멸전 장비를 _2_ 만큼 충전합니다.
 actors.hero.talent.lovemeat.title=고기가 좋아
 actors.hero.talent.lovemeat.desc=_+1:_ 고기류 음식 섭취시 _20턴_동안 배부름 상태가 됩니다.\n\n_+2:_ 고기류 음식 섭취시 _40턴_동안 배부름 상태가 됩니다.\n\n고기 파이는 해당하지 않습니다.
 actors.hero.talent.powergear.title=강력한 방벽
@@ -1038,8 +1038,8 @@ actors.mobs.piranha.name=촉수
 actors.mobs.piranha.desc=이 촉수는 원래 지하 물웅덩이에 살던 종은 아니었습니다. 이 녀석들은 이베리아에서 수입해온 일종의 "보안장치"입니다.
 
 actors.mobs.pylon.name=축음기
-actors.mobs.pylon.desc_inactive=축음기은 이 구역의 기계들에게 전력을 안정적으로 공급하기 위해 세워졌습니다.\n\n현재 축음기은 비활성화되어 피해를 입지 않습니다.
-actors.mobs.pylon.desc_active=축음기은 이 구역의 기계들에게 전력을 안정적으로 공급하기 위해 세워졌습니다. 현재 머드락의 아츠에 침식되어 머드락에게 힘을 주는 것 같습니다!\n\n충전된 축음기은 피해를 입을 수 있지만, 시계 방향으로 전기를 방출할 것입니다. 또한 축음기은 무거운 금속으로 만들어져 있어 강력한 피해에 저항할 수 있습니다.
+actors.mobs.pylon.desc_inactive=축음기는 이 구역의 기계들에게 전력을 안정적으로 공급하기 위해 세워졌습니다.\n\n현재 축음기는 비활성화되어 피해를 입지 않습니다.
+actors.mobs.pylon.desc_active=축음기는 이 구역의 기계들에게 전력을 안정적으로 공급하기 위해 세워졌습니다. 현재 머드락의 아츠에 침식되어 머드락에게 힘을 주는 것 같습니다!\n\n충전된 축음기는 피해를 입을 수 있지만, 시계 방향으로 전기를 방출할 것입니다. 또한 축음기는 무거운 금속으로 만들어져 있어 강력한 피해에 저항할 수 있습니다.
 
 actors.mobs.rat.name=원석충
 actors.mobs.rat.desc=야생의 감염 생물. 이런 저지능 생물은 적의 캐스터에게 조종당할 가능성이 있으며, 인공설비에 침입하여 무리지어 공격한다.
