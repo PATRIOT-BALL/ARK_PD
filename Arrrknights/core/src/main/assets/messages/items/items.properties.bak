@@ -328,7 +328,7 @@ items.skill.sk2.spikes.desc=발동시 방어력이 상승하며, 물리 공격�
 items.skill.sk2.spikes.desc_wnd=발동시 피격 당할 때마다 주위 적에게 피해
 
 items.skill.sk2.genesis.name=_창세기(2스킬)_
-items.skill.sk2.genesis.desc=발동시 시야 내의 모든 적에게 강력한 피해를 입히거나, 자신에게 긴 마비에 걸립니다.
+items.skill.sk2.genesis.desc=발동시 시야 내의 모든 적에게 강력한 피해를 입히거나, 자신이 긴 마비에 걸립니다.
 items.skill.sk2.genesis.desc_wnd=발동시 시야 내 적에게 강한 피해 or 자신에게 마비
 
 items.skill.sk3.shadowassault.name=_영소 절영(3스킬)_
@@ -1656,11 +1656,11 @@ items.wands.sp.staffofcorrupting.desc=_"있지, 나랑 함께 가자. 당신의 
 items.wands.sp.staffofcorrupting.stats_desc=이 막대는 강한 타락의 에너지를 발사하여, 적을 약화시키다가 끝내는 _이 육지에 존재해서는 안될 존재_로 만들어버립니다. 적들은 타락에 저항할 수 있지만, 약화된 적들은 훨씬 더 쉽게 타락시킬 수 있습니다.
 items.wands.sp.staffofcorrupting.bmage_desc=_아미야_ 가 이 ■■■ ■■로 적을 공격하면, 대상에게 일정 확률로 광란을 부여합니다.
 
-items.wands.staffofsnowsant.name=스태프 오브 스노우상트
-items.wands.staffofsnowsant.staff_name=개조 침묵의 흑요석 반지
-items.wands.staffofsnowsant.desc=이상이 뭘까? 당연히 출세다! 천조자조(天道酬勤)는 그녀의 유일한 신념이다! 노력이다! 보상이 있을거다! 맞아! 아마도......!
-items.wands.staffofsnowsant.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다. 또한, 적중당한 대상을 자신의 앞으로 끌어당길 수 있습니다.
-items.wands.staffofsnowsant.bmage_desc=_아미야_ 가 개조 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
+items.wands.sp.staffofsnowsant.name=스태프 오브 스노우상트
+items.wands.sp.staffofsnowsant.staff_name=개조 침묵의 흑요석 반지
+items.wands.sp.staffofsnowsant.desc=이상이 뭘까? 당연히 출세다! 천조자조(天道酬勤)는 그녀의 유일한 신념이다! 노력이다! 보상이 있을거다! 맞아! 아마도......!
+items.wands.sp.staffofsnowsant.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다. 또한, 적중당한 대상을 자신의 앞으로 끌어당길 수 있습니다.
+items.wands.sp.staffofsnowsant.bmage_desc=_아미야_ 가 개조 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
 
 
 

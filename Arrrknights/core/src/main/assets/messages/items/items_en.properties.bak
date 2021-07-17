@@ -144,7 +144,7 @@ items.skill.sk2.bookspikes.ac_use=READ
 
 items.skill.sk2.bookgenesis.name=Skill Summary of Genesis
 items.skill.sk2.bookgenesis.desc=_Genesis_ is recorded Summary. learn skill 2 by reading it. \n\nEffect: Test your luck!\n_Caution: When used, the existing skill 2 is removed._
-items.skill.sk2.bookgenesis.ac_use=읽는다
+items.skill.sk2.bookgenesis.ac_use=READ
 
 items.skill.sk3.bookshadowassault.name=Skill Summary of Shadow Assault
 items.skill.sk3.bookshadowassault.desc=_Shadow Assault_ is recorded Summary. learn skill 3 by reading it. \n\nEffect: jumping to the target point, attack the nearest enemy 10 times.\n_Caution: When used, the existing skill 3 is removed._
