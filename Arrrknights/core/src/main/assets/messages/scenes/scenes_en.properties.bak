@@ -109,7 +109,7 @@ scenes.titlescene$changesbutton.changes=Current Changes Screen
 scenes.titlescene.patreon_body=Tomorrow`s RogueNight is a free game.\n\nIf you are interested in supporting. provides a steady income and can give something back to the people who support me.\n\nSupporters can periodically read posts about content in development.\n\nThank you for considering sponsoring!
 scenes.titlescene.patreon_button=Go to support age
 
-scenes.welcomescene.welcome_msg=Tomorrow`s RogueNight was base on Shattered Pixel Dungeon, an open source game. This is a fan game of Arknight, and if you like tower defense, please enjoy Arknight!\n\nAs an Rhodes Island's operator, You should rescued Doctor who kidnapped by Talulah. Good luck!
+scenes.welcomescene.welcome_msg=Tomorrow`s RogueNight was base on Shattered Pixel Dungeon, an open source game. This game is a fan game of arknights. Distribution and development of this game may be discontinued at any time at the request of Yostar or Hypergryph.\n\nAs an Rhodes Island's operator, You should rescued Doctor who kidnapped by Talulah. Good luck!
 scenes.welcomescene.update_intro= Tomorrow`s RogueNight has been updated!
 scenes.welcomescene.update_msg=Tomorrow`s RogueNight update!
 scenes.welcomescene.patch_intro=Tomorrow`s RogueNight has been patched!

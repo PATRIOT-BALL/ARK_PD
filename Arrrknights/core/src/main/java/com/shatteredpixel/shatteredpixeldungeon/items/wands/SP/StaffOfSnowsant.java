@@ -97,7 +97,6 @@ public class StaffOfSnowsant extends Wand {
                         Dungeon.level.occupyCell(enemy);
                         Dungeon.observe();
                         GameScene.updateFog();
-                        hero.spendAndNext(1f);
                     }
                 }));
                 hero.next();

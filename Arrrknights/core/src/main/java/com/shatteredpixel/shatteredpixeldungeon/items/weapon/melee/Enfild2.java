@@ -12,7 +12,7 @@ public class Enfild2 extends MeleeWeapon {
         hitSound = Assets.Sounds.HIT_SNIPER;
         hitSoundPitch = 0.9f;
 
-        tier = 5;
+        tier = 3;
         DLY = 3f; //0.33x speed
         RCH = 50;    //extra reach
 
@@ -48,6 +48,11 @@ public class Enfild2 extends MeleeWeapon {
         charge += n;
         if (chargeCap < charge) charge = chargeCap;
         updateQuickslot();
+    }
+
+    @Override
+    public int STRReq(int lvl) {
+        return STRReq(tier+2, lvl); //20 base strength req, up from 18
     }
 
     @Override

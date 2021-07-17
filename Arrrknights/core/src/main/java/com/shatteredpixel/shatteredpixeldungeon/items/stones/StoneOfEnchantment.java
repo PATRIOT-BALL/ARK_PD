@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.stones;
 
 import com.shatteredpixel.shatteredpixeldungeon.effects.Enchanting;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
@@ -30,11 +31,12 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
+import com.watabou.utils.Random;
 
 public class StoneOfEnchantment extends InventoryStone {
 	
 	{
-		mode = WndBag.Mode.ENCHANTABLE;
+		mode = WndBag.Mode.ENCHANTABLE_STONE;
 		image = ItemSpriteSheet.STONE_ENCHANT;
 
 		unique = true;
@@ -47,18 +49,26 @@ public class StoneOfEnchantment extends InventoryStone {
 			
 			((Weapon)item).enchant();
 			
+		} else if (item instanceof AnnihilationGear) {
+			int result;
+			while(true) {
+			result = Random.IntRange(1,3);
+			if (((AnnihilationGear) item).arts != result) break; }
+			((AnnihilationGear) item).arts = result;
+			((AnnihilationGear) item).artsused = 0;
 		} else {
 			
 			((Armor)item).inscribe();
-			
 		}
 		
 		curUser.sprite.emitter().start( Speck.factory( Speck.LIGHT ), 0.1f, 5 );
-		Enchanting.show( curUser, item );
+		if (item instanceof AnnihilationGear == false) Enchanting.show( curUser, item );
 		
 		if (item instanceof Weapon) {
 			GLog.p(Messages.get(this, "weapon"));
-		} else {
+		} else if (item instanceof AnnihilationGear) {
+			GLog.p(Messages.get(this, "gear"));
+		}else {
 			GLog.p(Messages.get(this, "armor"));
 		}
 		

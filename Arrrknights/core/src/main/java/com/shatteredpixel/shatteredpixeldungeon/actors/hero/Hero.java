@@ -657,7 +657,7 @@ public class Hero extends Char {
         if (Gear != null) {
             if (Gear.charge > 0){
                 if (this.hasTalent(Talent.SPEED_COMABT)) {
-                    speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 8;
+                    speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 10;
                 }
             }
         }
@@ -1674,6 +1674,7 @@ public class Hero extends Char {
                 if (Gear != null)
                 {
                     Gear.SPCharge(Gear.chargeCap);
+                    Gear.artsused = 0;
                 }
 
                 updateHT(true);

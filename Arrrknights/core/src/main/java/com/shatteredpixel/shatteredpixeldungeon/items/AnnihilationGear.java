@@ -9,12 +9,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Chargrilled;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Frozen;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Mystery;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Stewed;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RageThrowCooldown;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
@@ -61,13 +63,31 @@ public class AnnihilationGear extends Item {
 
     public int charge = 4;
     public int chargeCap = 4;
+    public int arts = 0; // 0 = false, 1,2 = true 파괴1=부유 파괴2=충격 파괴3=저격 수호1=면역 수호2=압살 수호3=제압
+    public int artsused = 0; // 일정 횟수 이상이면 마법부여 발동안함.
 
     public int min() { return 5 + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
-    public int max() { return 7 + Dungeon.hero.lvl + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
+    public int max() { return 7 + Dungeon.hero.lvl + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
     @Override
-    public String desc() { return Messages.get(this, "desc", min(), max()); }
+    public String desc() {
+        if (curUser.subClass == null) return Messages.get(this, "desc", min(), max());
+        else if (curUser.subClass == HeroSubClass.DESTROYER) {
+            switch (arts) {
+                case 0: default: break;
+                case 1: return Messages.get(this, "desc_arts1_destroy", min(), max());
+                case 2: return Messages.get(this, "desc_arts2_destroy", min(), max());
+                case 3: return Messages.get(this, "desc_arts3_destroy", min(), max());
+            }}
+        else if (curUser.subClass == HeroSubClass.GUARDIAN) {
+            switch (arts) {
+                case 0: default: break;
+                case 1: return Messages.get(this, "desc_arts1_guardian", min(), max());
+                case 2: return Messages.get(this, "desc_arts2_guardian", min(), max());
+                case 3: return Messages.get(this, "desc_arts3_guardian", min(), max());
+        }}
+        return Messages.get(this, "desc", min(), max()); }
 
     @Override
     public ArrayList<String> actions(Hero hero) {
@@ -116,11 +136,16 @@ public class AnnihilationGear extends Item {
     }
 
     private static final String CHARGE = "charge";
+    private static final String MAGICARTS = "arts";
+    private static final String ARTSUSED = "artsused";
 
     @Override
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
         bundle.put(CHARGE, charge);
+        bundle.put(MAGICARTS, arts);
+        bundle.put(ARTSUSED, artsused);
+
     }
 
     @Override
@@ -128,6 +153,9 @@ public class AnnihilationGear extends Item {
         super.restoreFromBundle(bundle);
         if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
         else charge = bundle.getInt(CHARGE);
+
+        arts = bundle.getInt(MAGICARTS);
+        artsused = bundle.getInt(ARTSUSED);
     }
 
 
@@ -250,7 +278,7 @@ public class Spriteex extends MissileWeapon {
         if (Dungeon.hero.hasTalent(Talent.ESTHESIA)) {
             if (enemy instanceof Mob) {
                 if (enemy.properties().contains(Char.Property.BOSS) == true || enemy.properties().contains(Char.Property.MINIBOSS) == true) {
-                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.ESTHESIA) * 0.1f;
+                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.ESTHESIA) * 0.05f;
                 }
             }
         }
@@ -260,10 +288,60 @@ public class Spriteex extends MissileWeapon {
                 curUser.buff(MeatPower_Mystery.class) != null ||
                 curUser.buff(MeatPower_Stewed.class) != null)
         {
-            dmg *= 1.3f;
+            dmg *= 1.25f;
         }
 
+        // 마법 부여 효과
+
+        if (curUser.subClass == HeroSubClass.DESTROYER){
+            switch (arts) {
+                case 0: default: break;
+                case 1:
+                    if (5 + buffedLvl() > Random.Int(100)) Buff.affect(curUser, Levitation.class, 3f);
+                    break;
+                case 2:
+                    for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                    if (Dungeon.level.adjacent(mob.pos, enemy.pos) && mob.alignment != Char.Alignment.ALLY && mob != enemy) {
+                        mob.damage(buffedLvl() * 3, curUser);
+                    }}
+                    break;
+                case 3:
+                    int distance = Dungeon.level.distance(curUser.pos, enemy.pos) - 1;
+                    float DamageLevel = 1.1f + (0.005f * buffedLvl());
+                    DamageLevel = Math.min(1.15f, DamageLevel);
+                    if (distance < 3) break;
+                    else if (distance < 8) dmg = Math.round(dmg * DamageLevel);
+                    else dmg = Math.round(dmg * (DamageLevel * 1.2f));
+                    break;
+            }}
+        else if (curUser.subClass == HeroSubClass.GUARDIAN){
+            switch (arts) {
+                case 0: default: break;
+                case 1:
+                    if (artsused < 2) {
+                        Buff.affect(curUser, MagicImmune.class, 1f);
+                        artsused++;
+                    }
+                    break;
+                case 2:
+                    if (artsused < 2) {
+                        if (enemy.HP < enemy.HT /3 && enemy.properties().contains(Char.Property.BOSS) == false && enemy.properties().contains(Char.Property.MINIBOSS) == false) {
+                            dmg = 999;
+                            artsused++;
+                        }
+                    }
+                    break;
+                case 3:
+                    if (artsused < 4) {
+                        Buff.affect(enemy, Roots.class, 4f);
+                        Buff.affect(enemy, Silence.class, 4f);
+                        artsused++;
+                    }
+                    break;
+            }}
+
         enemy.damage(dmg, enemy);
+
 
         // 서브 직업이 파괴라면, 집중 버프 부여
         if (curUser.subClass == HeroSubClass.DESTROYER)

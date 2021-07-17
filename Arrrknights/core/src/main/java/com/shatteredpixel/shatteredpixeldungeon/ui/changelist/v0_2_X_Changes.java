@@ -13,7 +13,69 @@ import java.util.ArrayList;
 public class v0_2_X_Changes {
 
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_2_1_Changes(changeInfos);
         add_v0_2_0_Changes(changeInfos);
+    }
+
+    public static void add_v0_2_1_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.2.1", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
+                "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
+                "_침묵의 아츠 스태프_ : 적에게 적중시키면 침묵을 부여하는 스태프입니다." + "\n\n" +
+                "_스태프 오브 스노우상트_ : 침묵의 아츠 스태프의 개조 스태프로, 침묵을 부여함과 동시에 적중당한 적을 자신의 앞으로 끌어옵니다." + "\n\n" +
+                "_지배의 반지_ : 근접 공격시 확률적으로 대상의 정신을 지배합니다. 저주받은 반지는 플레이어가 피격당했을 때 플레이어에게 정신 지배를 시도합니다." + "\n\n" +
+                "_증폭의 반지_ : 보유하고있는 피해를 입힐 수 있는 스태프들의 공격력을 상승시킵니다. 저주받은 반지는 역으로 감소시킵니다." + "\n\n" +
+                "_샌드비치_ : 가공소 조합 음식으로, 허기 회복량은 낮지만 섭취시마다 체력을 회복합니다. 이 음식은 4번에 걸쳐 섭취할 수 있습니다." + "\n\n" +
+                "_봉크! 원자맛 음료_ : 상점 전용 아이템으로, 사용시 10턴동안 무적이 됩니다. 단, 공격이나 스태프 사용시 즉시 버프가 해제됩니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 관련",
+                "시작 아이템으로 돈까스 2장이 추가되었습니다." +"\n\n" +
+                        "로즈몬티스의 전용 아이템 _섬멸전 장비_에 아츠 부여의 돌을 사용할 수 있도록 변경되었습니다. 단, 로즈몬티스가 전문화를 얻기 전에는 부여된 아츠의 힘을 쓸 수 없습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "새로운 스킬",
+                "특별한 스킬 1개가 추가되었습니다. 일반적인 적 드롭 등으로는 얻을 수 없습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
+                "- _EX-42_ : 공격력이 1-6에서 _1-9_로 상승했지만, 사거리가 1로 감소했습니다." + "\n" +
+                        "변형 기능이 추가되었습니다. 변형시 공격력이 1-3으로 감소하지만 사거리가 무제한이 되며, 명중률이 대폭 상승합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
+                "- 로즈몬티스 대원의 _엄청 맛있는 식사_ 특성의 발동 조건이 애플 파이, 고기 파이 섭취에서 _벌꿀 쿠키_ 섭취로 변경되었습니다." + "\n" +
+                        "대신 획득할 수 있는 장치 충전량이 2-4에서 _1-2_로 감소했습니다." + "\n\n" +
+                        "- 로즈몬티스 대원의 _돈까스 메이커_ 특성의 확률이 4-12%에서 _3-9%_로 감소했지만, 돈까스 섭취시 한 번에 장치를 2만큼 충전할 수 있도록 변경되었습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 상향",
+                "- _스태프 오브 메이어_ : 자폭 피해가 방어력을 무시하도록 변경되었습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
+                "- _리-엔필드_ : 공격력이 6-6에서 _9-9_로 상승했지만, 더 이상 6층 상점에서 확정으로 등장하지 않습니다. 또한, 가격이 대폭 상승했습니다." + "\n\n" +
+                "- _HM-200_ : 힘 제한이 14에서 _18_로 상승했으며, 명중률 보너스가 삭제되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
+                "- 분노 전문화 블레이즈의 _광분의 전기톱_ 특성의 발동 조건이 _체력 50%이하일 때 10회 피격_ 으로 변경되었습니다." + "\n\n" +
+                        "- 파괴 전문화 로즈몬티스의 _본질 의식_ 특성의 보스 추가 피해량이 10-30%에서 _5-15%_로 감소했습니다." + "\n\n" +
+                "- 수호 전문화 로즈몬티스의 _고속전투_ 특성의 이동속도 상승량이 12.5-37.5%에서 _10-30%_로 감소했습니다."));
+
+
     }
 
     public static void add_v0_2_0_Changes(ArrayList<ChangeInfo> changeInfos) {

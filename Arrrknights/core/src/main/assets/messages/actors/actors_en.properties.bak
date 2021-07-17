@@ -565,7 +565,7 @@ actors.hero.talent.fastmeal.desc=_+1:_ Eating food takes the Rosmontis 1 turn an
 actors.hero.talent.recovery_upgrade.title=recovery upgrade
 actors.hero.talent.recovery_upgrade.desc=_+1:_ Using a scroll of upgrade instantly recharges the Rosmontis`s gear _for 2 charges_\n\n_+2:_ Using a scroll of upgrade instantly recharges the Rosmontis`s gear _for 3 charges_\n\nTher talent also triggers when using scrolls or spells based on scrolls of upgrade.
 actors.hero.talent.delicious_food.title=delicious food
-actors.hero.talent.delicious_food.desc=_+1:_ Eating apple pie or meat pie, recharges the Rosmontis`s gear _for 2 charges_\n\n_+2:_ Eating apple pie or meat pie, recharges the Rosmontis`s gear _for 4 charges_
+actors.hero.talent.delicious_food.desc=_+1:_ Eating cookie, recharges the Rosmontis`s gear _for 1 charges_\n\n_+2:_ Eating cookie, recharges the Rosmontis`s gear _for 2 charges_
 actors.hero.talent.lovemeat.title=love meat
 actors.hero.talent.lovemeat.desc=_+1_ : Eating meat, gain _20 Turn _ Well Fed effect.\n\n_+2_ : Eating meat, gain _40 Turn _ Well Fed effect.
 actors.hero.talent.powergear.title=power gear
@@ -583,7 +583,7 @@ actors.hero.talent.battleflow.desc=_+1:_ Increases the chance of a gear to recha
 actors.hero.talent.barrier_operation.title=barrier operation
 actors.hero.talent.barrier_operation.desc=_+1_ : Gear`s Defense damage reduction increased from 50% to _60%_.\n\n_+2:_ Gear`s Defense damage reduction increased from 50% to _70%_.\n\n_+3_ : Gear`s Defense damage reduction increased from 50% to _80%_.
 actors.hero.talent.barrier_repair.title=barrier repair
-actors.hero.talent.barrier_repair.desc=_+1_ : chance to recharge gear when attacked increased from 5% to _10%_.\n\n_+2_ : chance to recharge gear when attacked increased from 5% to _15%_.\n\n_+3_ : chance to recharge gear when attacked increased from 5% to _20%_.
+actors.hero.talent.barrier_repair.desc=_+1_ : chance to recharge gear when attacked increased from 10% to _15%_.\n\n_+2_ : chance to recharge gear when attacked increased from 10% to _20%_.\n\n_+3_ : chance to recharge gear when attacked increased from 10% to _25%_.
 actors.hero.talent.rhodes_cat.title=rhodes cat
 actors.hero.talent.rhodes_cat.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, attack power is increased by _20%_.\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, attack power is increased by _40%_.\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, attack power is increased by _60%_.
 actors.hero.talent.rhodes_weapon.title=rhodes weapon
@@ -591,9 +591,9 @@ actors.hero.talent.rhodes_weapon.desc=_+1:_ Rosmontis's Gear damage increased by
 actors.hero.talent.recall_memory.title=recall memory
 actors.hero.talent.recall_memory.desc=_+1:_ Using scroll, recorder is recharged by _3%_.\n\n_+2:_ Using scroll, recorder is recharged by _6%_.\n\n_+3:_ Using scroll, recorder is recharged by _9%_.
 actors.hero.talent.esthesia.title=esthesia
-actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _10%_ bonus damage to boss enemies.\n\n_+2__ Gear attacks deal _20%_ bonus damage to boss enemies.\n\n_+3:_ Gear attacks deal _30%_ bonus damage to boss enemies.
+actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _10%_ bonus damage to boss enemies.\n\n_+2_ Gear attacks deal _20%_ bonus damage to boss enemies.\n\n_+3:_ Gear attacks deal _30%_ bonus damage to boss enemies.
 actors.hero.talent.speed_comabt.title=speed comabt
-actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _12.5%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _25%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _37.5%_
+actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _30%_
 
 
 

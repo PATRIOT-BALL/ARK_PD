@@ -30,11 +30,6 @@ public class WaterOfAdvanceguard extends WellWater {
 
         if (item instanceof Runestone) { // 아이템이 돌일 경우
             item = new StoneOfAdvanceguard();
-        } else if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
-        {
-            Price = item.value() * 3;
-            item = new Gold(Price);
-            GLog.p(String.format(Messages.get(this, "procced"), Price));
         } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode || item instanceof BookThoughts) {
             if (Random.IntRange(0,21) < 12) item = new BookWhispers();
             else item = new BookGenesis();
@@ -42,6 +37,11 @@ public class WaterOfAdvanceguard extends WellWater {
             if (Random.IntRange(0,100) < 31) { item = new Nmould();}
             else if  (Random.IntRange(0,11) < 7) item = new Gamza();
             else item = new Thunderbolt();
+        } else if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
+        {
+            Price = item.value() * 3;
+            item = new Gold(Price);
+            GLog.p(String.format(Messages.get(this, "procced"), Price));
         } else {
             item = null;
         }

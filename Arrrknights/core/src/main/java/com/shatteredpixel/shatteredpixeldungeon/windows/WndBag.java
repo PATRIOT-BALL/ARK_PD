@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.SPDAction;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Belongings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.EquipableItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -83,6 +84,7 @@ public class WndBag extends WndTabbed {
 		WEAPON,
 		ARMOR,
 		ENCHANTABLE,
+		ENCHANTABLE_STONE,
 		WAND,
 		SEED,
 		FOOD,
@@ -439,6 +441,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.WEAPON && (item instanceof MeleeWeapon) ||
 						mode == Mode.ARMOR && (item instanceof Armor) ||
 						mode == Mode.ENCHANTABLE && (item instanceof MeleeWeapon || item instanceof SpiritBow || item instanceof Armor) ||
+						mode == Mode.ENCHANTABLE_STONE && (item instanceof MeleeWeapon || item instanceof SpiritBow || item instanceof Armor || item instanceof AnnihilationGear) ||
 						mode == Mode.WAND && (item instanceof Wand) ||
 						mode == Mode.SEED && SandalsOfNature.canUseSeed(item) ||
 						mode == Mode.FOOD && (item instanceof Food) ||
