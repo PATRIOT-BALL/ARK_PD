@@ -54,7 +54,8 @@ public class YourWish extends Skill {
                     Sample.INSTANCE.play(Assets.Sounds.SKILL_YOUWISH);
 
                     if (Dungeon.level.map[targetCell] != Terrain.EMPTY && Dungeon.level.map[targetCell] != Terrain.GRASS && Dungeon.level.map[targetCell] != Terrain.WATER
-                            && Dungeon.level.map[targetCell] != Terrain.HIGH_GRASS  && Dungeon.level.map[targetCell] != Terrain.EMPTY_SP && Dungeon.level.map[targetCell] != Terrain.EMPTY_DECO)
+                            && Dungeon.level.map[targetCell] != Terrain.HIGH_GRASS  && Dungeon.level.map[targetCell] != Terrain.EMPTY_SP && Dungeon.level.map[targetCell] != Terrain.EMPTY_DECO
+                            && Dungeon.level.map[targetCell] != Terrain.FURROWED_GRASS)
                     {
                         ScrollOfTeleportation.teleportChar_unobstructed(EX43);
                     }
