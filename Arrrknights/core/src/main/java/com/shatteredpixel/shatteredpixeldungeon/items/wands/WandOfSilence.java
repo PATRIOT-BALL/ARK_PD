@@ -53,7 +53,7 @@ public class WandOfSilence extends Wand {
     }
 
     protected int initialCharges() {
-        return 3;
+        return 2;
     }
 
 }

@@ -64,7 +64,7 @@ public class AnnihilationGear extends Item {
 
     public int min() { return 5 + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
-    public int max() { return 7 + Dungeon.hero.lvl + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
+    public int max() { return 7 + Dungeon.hero.lvl + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
     @Override
     public String desc() { return Messages.get(this, "desc", min(), max()); }
