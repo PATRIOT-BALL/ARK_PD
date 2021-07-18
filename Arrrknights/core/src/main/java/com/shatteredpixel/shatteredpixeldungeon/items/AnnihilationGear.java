@@ -72,22 +72,35 @@ public class AnnihilationGear extends Item {
 
     @Override
     public String desc() {
-        if (curUser.subClass == null) return Messages.get(this, "desc", min(), max());
-        else if (curUser.subClass == HeroSubClass.DESTROYER) {
-            switch (arts) {
-                case 0: default: break;
-                case 1: return Messages.get(this, "desc_arts1_destroy", min(), max());
-                case 2: return Messages.get(this, "desc_arts2_destroy", min(), max());
-                case 3: return Messages.get(this, "desc_arts3_destroy", min(), max());
-            }}
-        else if (curUser.subClass == HeroSubClass.GUARDIAN) {
-            switch (arts) {
-                case 0: default: break;
-                case 1: return Messages.get(this, "desc_arts1_guardian", min(), max());
-                case 2: return Messages.get(this, "desc_arts2_guardian", min(), max());
-                case 3: return Messages.get(this, "desc_arts3_guardian", min(), max());
-        }}
-        return Messages.get(this, "desc", min(), max()); }
+        if (arts != 0) {
+            if (curUser.subClass == HeroSubClass.DESTROYER) {
+                switch (arts) {
+                    case 0:
+                    default:
+                        break;
+                    case 1:
+                        return Messages.get(this, "desc_arts1_destroy", min(), max());
+                    case 2:
+                        return Messages.get(this, "desc_arts2_destroy", min(), max());
+                    case 3:
+                        return Messages.get(this, "desc_arts3_destroy", min(), max());
+                }
+            } else if (curUser.subClass == HeroSubClass.GUARDIAN) {
+                switch (arts) {
+                    case 0:
+                    default:
+                        break;
+                    case 1:
+                        return Messages.get(this, "desc_arts1_guardian", min(), max());
+                    case 2:
+                        return Messages.get(this, "desc_arts2_guardian", min(), max());
+                    case 3:
+                        return Messages.get(this, "desc_arts3_guardian", min(), max());
+                }
+            }
+        }
+        return Messages.get(this, "desc", min(), max());
+    }
 
     @Override
     public ArrayList<String> actions(Hero hero) {

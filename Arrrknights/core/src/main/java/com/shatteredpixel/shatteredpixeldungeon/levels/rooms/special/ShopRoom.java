@@ -227,6 +227,7 @@ public class ShopRoom extends SpecialRoom {
 
 		itemsToSpawn.add( new SmallRation() );
 		itemsToSpawn.add( new SmallRation() );
+		itemsToSpawn.add( new SmallRation() );
 		
 		switch (Random.Int(7)){
 			case 0:
