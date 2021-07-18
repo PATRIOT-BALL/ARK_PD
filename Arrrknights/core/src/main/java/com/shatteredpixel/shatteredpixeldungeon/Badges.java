@@ -788,8 +788,8 @@ public class Badges {
 		if (global.contains( Badge.VICTORY_WARRIOR ) &&
 			global.contains( Badge.VICTORY_MAGE ) &&
 			global.contains( Badge.VICTORY_ROGUE ) &&
-			global.contains( Badge.VICTORY_HUNTRESS )) /*&&
-			global.contains( Badge.VICTORY_ROSECAT )) */{
+			global.contains( Badge.VICTORY_HUNTRESS ) &&
+			global.contains( Badge.VICTORY_ROSECAT )) {
 			
 			badge = Badge.VICTORY_ALL_CLASSES;
 			displayBadge( badge );
