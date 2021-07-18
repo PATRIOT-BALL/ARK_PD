@@ -59,7 +59,10 @@ public class v0_2_X_Changes {
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 상향",
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
+                "- _상처투성이 단검_ : 구매 및 판매 가격이 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 버프",
                 "- _스태프 오브 메이어_ : 자폭 피해가 방어력을 무시하도록 변경되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
