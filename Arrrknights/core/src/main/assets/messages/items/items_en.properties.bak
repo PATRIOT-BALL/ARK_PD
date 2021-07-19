@@ -1534,6 +1534,7 @@ items.stones.stoneofdisarming.desc=This runestone holds magic that can disable m
 items.stones.stoneofenchantment.name=stone of enchantment
 items.stones.stoneofenchantment.inv_title=Enchant an item
 items.stones.stoneofenchantment.weapon=Your weapon glows in the darkness!
+items.stones.stoneofenchantment.gear=Your gear glows in the darkness!
 items.stones.stoneofenchantment.armor=Your armor glows in the darkness!
 items.stones.stoneofenchantment.desc=This runestone possesses enchanting arts. Unlike a scroll of upgrade, it will not increase the direct power of an item, but will instead imbue a weapon or armor with an enchantment, granting it a new power.
 
@@ -2093,7 +2094,10 @@ items.weapon.melee.wintersscar.name=winter`s scar
 items.weapon.melee.wintersscar.stats_desc=Surprise attack bonus +33%\ndamage bonus to enemies in Chilled
 items.weapon.melee.wintersscar.desc=The biting cold of the land has already been released\n\nA surprise attack with this weapon will make the enemy Chilled. Also deals more damage to Chilled enemies.
 
-
+items.weapon.melee.patriotspear.name=Requiem
+items.weapon.melee.patriotspear.desc=He has long struggled with fate, and now resolves to slit the throat of fate.\n\nThis _uniquaa_ weapon deals damage per attack 4 time.
+items.weapon.melee.patriotspear.typical_stats_desc=Attack Speed 50%%, Typically this weapon blocks 0-%d damage. This blocking scales with upgrades.
+items.weapon.melee.patriotspear.stats_desc=Attack Speed 50%%, this weapon blocks 0-%d damage. This blocking scales with upgrades.
 
 ###missile weapons
 items.weapon.missiles.darts.adrenalinedart.name=adrenaline arrow

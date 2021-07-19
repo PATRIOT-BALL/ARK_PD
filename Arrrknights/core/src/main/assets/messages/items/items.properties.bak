@@ -1451,7 +1451,7 @@ items.spells.beaconofreturning.desc=이 복잡한 아츠는 사용자에게 지�
 
 items.spells.curseinfusion.name=저주 융합
 items.spells.curseinfusion.inv_title=저주를 걸 아이템을 선택하세요
-items.spells.curseinfusion.desc=이 아츠는 장비 하나에 머드락의 갑옷 내부에 존재하던 강력한 아츠를 주입합니다. 이 아츠를 사용한 아이템은 즉시 저주받으며, 아츠가나 상형문자가 있었다면 덮어씌워질 것입니다.\n\n무기, 방어구, 아츠 스태프에 사용한 경우, 그 아이템은 저주받음과 동시에 강화됩니다. 이 아츠로 얻는 강화는 중첩되지 않으며, 저주가 사라지면 강화 효과 역시 사라질 것입니다.
+items.spells.curseinfusion.desc=이 아츠는 장비 하나에 머드락의 갑옷 내부에 존재하던 강력한 아츠를 주입합니다. 이 아츠를 사용한 아이템은 즉시 저주받으며, 아츠나 상형문자가 있었다면 덮어씌워질 것입니다.\n\n무기, 방어구, 아츠 스태프에 사용한 경우, 그 아이템은 저주받음과 동시에 강화됩니다. 이 아츠로 얻는 강화는 중첩되지 않으며, 저주가 사라지면 강화 효과 역시 사라질 것입니다.
 
 items.spells.featherfall.name=반중력
 items.spells.featherfall.light=당신은 깃털과도 같이 가벼워짐을 느낀다!
@@ -2098,6 +2098,11 @@ items.weapon.melee.swordofartorius.desc=_"진실은 모두 타버렸고, 이제 
 items.weapon.melee.wintersscar.name=겨울의 상처
 items.weapon.melee.wintersscar.stats_desc=기습 시 최소 데미지 보정 +33%\n한기를 느끼는 적에게 추가 피해
 items.weapon.melee.wintersscar.desc=대지의 차가움엔 이미 각오가 깃들었다.\n\n이 단검으로 적을 기습 공격하면 추위를 느끼게 하며, 추위를 느끼는 적에게 추가 피해를 줄 수 있습니다.
+
+items.weapon.melee.patriotspear.name=레퀴엠
+items.weapon.melee.patriotspear.desc=오랜 세월동안 운명과 싸워왔던 그는, 이제 운명의 숨통을 찢어버리려 한다.\n\n이 _특별한_ 무기는 한 번의 공격에 4번의 피해를 입힙니다.
+items.weapon.melee.patriotspear.typical_stats_desc=공격속도 50%, 일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
+items.weapon.melee.patriotspear.stats_desc=공격속도 50%, 이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
 
 
 

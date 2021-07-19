@@ -16,6 +16,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nmould;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -33,6 +36,9 @@ public class WaterOfAdvanceguard extends WellWater {
         } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode || item instanceof BookThoughts) {
             if (Random.IntRange(0,21) < 12) item = new BookWhispers();
             else item = new BookGenesis();
+        } else if (item instanceof SwordofArtorius || item instanceof WintersScar) {
+            item = new PatriotSpear();
+            item.identify();
         } else if (item instanceof Gamza) {
             if (Random.IntRange(0,100) < 31) { item = new Nmould();}
             else if  (Random.IntRange(0,11) < 7) item = new Gamza();

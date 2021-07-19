@@ -166,6 +166,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
@@ -252,6 +253,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Gamzashield.class,               false);
 		WEAPONS.seen.put( Enfild2.class,                       false);
 		WEAPONS.seen.put( Niansword.class,                   false);
+		WEAPONS.seen.put( PatriotSpear.class,                   false);
 
 		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);
 		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);
