@@ -303,8 +303,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		new MeatCutlet().quantity(2).collect();
-
-		new StoneOfEnchantment().quantity(99).collect();
 	}
 
 	public String title() {
