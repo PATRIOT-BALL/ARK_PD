@@ -70,6 +70,9 @@ public class v0_2_X_Changes {
                 "- _스태프 오브 압생트_ : 추가 피해 배율이 50%에서 _75%_ 로 상승했습니다." + "\n\n" +
                 "- _스태프 오브 위디_ : 공격력이 1-1에서 _2-4_로 상승했습니다. 충전량 비례 추가 피해 배율이 상승했으며, 이 스태프로 적을 직접 처치하면 즉시 1만큼 재충전되는 기능이 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
+                "- 수호 전문화 로즈몬티스의 _수호 방벽 전개_ 특성의 피해 감소률이 60-80%에서 _65-95%_로 상승했습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
@@ -84,6 +87,7 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "- 분노 전문화 블레이즈의 _광분의 전기톱_ 특성의 발동 조건이 _체력 50%이하일 때 10회 피격_ 으로 변경되었습니다." + "\n\n" +
                         "- 파괴 전문화 로즈몬티스의 _본질 의식_ 특성의 보스 추가 피해량이 10-30%에서 _5-15%_로 감소했습니다." + "\n\n" +
+                        "- 수호 전문화 로즈몬티스의 _로도스의 필라인_ 특성의 피해 상승량이 20-60%에서 _15-45%_로 감소했습니다." + "\n\n" +
                 "- 수호 전문화 로즈몬티스의 _고속전투_ 특성의 이동속도 상승량이 12.5-37.5%에서 _10-30%_로 감소했습니다."));
 
 

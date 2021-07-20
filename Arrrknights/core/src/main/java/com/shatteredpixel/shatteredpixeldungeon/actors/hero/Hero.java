@@ -1234,7 +1234,7 @@ public class Hero extends Char {
         if (this.hasTalent(Talent.RHODES_CAT)) {
             AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
             if (Gear != null)
-                if (Gear.charge > 0) { damage *= 1f + (float)this.pointsInTalent(Talent.RHODES_CAT) * 0.2f; }
+                if (Gear.charge > 0) { damage *= 1f + (float)this.pointsInTalent(Talent.RHODES_CAT) * 0.15f; }
         }
 
         switch (subClass) {
