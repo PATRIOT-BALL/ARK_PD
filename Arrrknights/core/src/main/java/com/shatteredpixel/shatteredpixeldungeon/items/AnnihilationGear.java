@@ -315,7 +315,7 @@ public class Spriteex extends MissileWeapon {
                 case 2:
                     for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                     if (Dungeon.level.adjacent(mob.pos, enemy.pos) && mob.alignment != Char.Alignment.ALLY && mob != enemy) {
-                        mob.damage(buffedLvl() * 3, curUser);
+                        mob.damage(5 + buffedLvl() * 3, curUser);
                     }}
                     break;
                 case 3:
