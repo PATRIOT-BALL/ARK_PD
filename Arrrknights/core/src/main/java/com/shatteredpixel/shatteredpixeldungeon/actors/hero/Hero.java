@@ -1315,13 +1315,12 @@ public class Hero extends Char {
         if (Gear != null) {
             if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN) {
                 if (Gear.charge > 0) {
-                    damage *= 0.5f - (float) this.pointsInTalent(Talent.BARRIER_OPERATION) * 0.1f;
+                    damage *= 0.5f - (float) this.pointsInTalent(Talent.BARRIER_OPERATION) * 0.15f;
                     Gear.discharge(); }}
 
-            if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN) {
                 if (2 + Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(20)) {
                     Gear.SPCharge(1); }
-            }
+
         }
 
         if (buff(SpikesBuff.class) != null) {
