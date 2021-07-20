@@ -68,7 +68,7 @@ public class AnnihilationGear extends Item {
 
     public int min() { return 5 + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
-    public int max() { return 7 + Dungeon.hero.lvl + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
+    public int max() { return 7 + Dungeon.hero.lvl + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
     @Override
     public String desc() {
@@ -301,7 +301,7 @@ public class Spriteex extends MissileWeapon {
                 curUser.buff(MeatPower_Mystery.class) != null ||
                 curUser.buff(MeatPower_Stewed.class) != null)
         {
-            dmg *= 1.25f;
+            dmg *= 1.15f;
         }
 
         // 마법 부여 효과

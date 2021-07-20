@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArtifactRecharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.noosa.audio.Sample;
@@ -37,7 +38,13 @@ public class ScrollOfMysticalEnergy extends ExoticScroll {
 	
 	@Override
 	public void doRead() {
-		
+
+		AnnihilationGear Gear = curUser.belongings.getItem(AnnihilationGear.class);
+		if (curUser.belongings.getItem(AnnihilationGear.class) != null)
+		{
+			Gear.SPCharge(2);
+		}
+
 		//append buff
 		Buff.affect(curUser, ArtifactRecharge.class).set( 30 ).ignoreHornOfPlenty = false;
 

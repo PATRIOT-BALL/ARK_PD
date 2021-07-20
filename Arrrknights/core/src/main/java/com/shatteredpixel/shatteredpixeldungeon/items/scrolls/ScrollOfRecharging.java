@@ -25,8 +25,10 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.EnergyParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -41,6 +43,12 @@ public class ScrollOfRecharging extends Scroll {
 
 	@Override
 	public void doRead() {
+
+		AnnihilationGear Gear = curUser.belongings.getItem(AnnihilationGear.class);
+		if (curUser.belongings.getItem(AnnihilationGear.class) != null)
+		{
+			Gear.SPCharge(2);
+		}
 
 		Buff.affect(curUser, Recharging.class, Recharging.DURATION);
 		charge(curUser);
