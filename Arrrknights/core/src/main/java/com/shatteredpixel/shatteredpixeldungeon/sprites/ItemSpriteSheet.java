@@ -294,6 +294,7 @@ public class ItemSpriteSheet {
 	public static final int NIANSWORD       = WEP_TIER5+6;
 	public static final int ARTORIUS      = WEP_TIER5+7;
 	public static final int WINTER       = WEP_TIER5+8;
+	public static final int REQUIEM       = WEP_TIER5+9;
 
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
@@ -305,6 +306,8 @@ public class ItemSpriteSheet {
 		assignItemRect(NIANSWORD,   16, 16);
 		assignItemRect(ARTORIUS,   16, 16);
 		assignItemRect(WINTER,   16, 16);
+		assignItemRect(REQUIEM,   16, 16);
+
 	}
 
 	                                                                                    //8 free slots
@@ -686,6 +689,8 @@ public class ItemSpriteSheet {
 	public static final int BLAND_CHUNKS= FOOD+11;
 	public static final int BERRY =       FOOD+12;
 	public static final int CUTLET =       FOOD+13;
+	public static final int SANDBITCH =       FOOD+14;
+	public static final int BONK =       FOOD+14;
 	static{
 		assignItemRect(MEAT,        16, 16);
 		assignItemRect(STEAK,       16, 16);
@@ -701,6 +706,8 @@ public class ItemSpriteSheet {
 		assignItemRect(BLAND_CHUNKS,16, 16);
 		assignItemRect(BERRY,       16, 16);
 		assignItemRect(CUTLET,       16, 16);
+		assignItemRect(SANDBITCH,       16, 16);
+		assignItemRect(BONK,       16, 16);
 	}
 
 	private static final int QUEST  =                                       xy(1, 29);  //32 slots

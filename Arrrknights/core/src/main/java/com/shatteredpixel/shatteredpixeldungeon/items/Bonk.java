@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class Bonk extends Item {
     public static final String AC_DRINK = "DRINK";
     {
-        image = ItemSpriteSheet.CAUTUS;
+        image = ItemSpriteSheet.BONK;
     }
 
     @Override

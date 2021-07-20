@@ -9,7 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class PatriotSpear extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.BATTLE_AXE;
+        image = ItemSpriteSheet.REQUIEM;
         hitSound = Assets.Sounds.HIT_SPEAR;
         hitSoundPitch = 1.01f;
 

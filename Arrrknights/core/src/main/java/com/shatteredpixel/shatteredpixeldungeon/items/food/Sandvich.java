@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class Sandvich extends Food {
     {
-        image = ItemSpriteSheet.STEWED;
+        image = ItemSpriteSheet.SANDBITCH;
         energy = Hunger.HUNGRY/4f;
 
         stackable = false;
