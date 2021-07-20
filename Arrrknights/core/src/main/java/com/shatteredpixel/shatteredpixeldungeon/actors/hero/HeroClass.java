@@ -305,9 +305,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		new MeatCutlet().quantity(2).collect();
-
-		new ScrollOfRecharging().collect();
-		new ScrollOfMysticalEnergy().collect();
 	}
 
 	public String title() {
