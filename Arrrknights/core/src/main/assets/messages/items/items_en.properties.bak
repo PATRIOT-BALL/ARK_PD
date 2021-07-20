@@ -2389,6 +2389,6 @@ items.annihilationgear.desc_arts3_guardian=This gear amplifies the arts of Rosmo
 
 items.bonk.name='bonk' energy drink
 items.bonk.ac_drink=DRINK
-items.bonk.desc=Abundant radiation!\n\nIf you drink it, you take damage is 0 for 10 turns. Attacking an enemy or using a wand will immediately dispel the buff.\n\nAttempting to enhance civilight eterna with this item will have disastrous results.
+items.bonk.desc=Abundant radiation!\n\nIf you drink it, you take damage is 0 for 10 turns. Attacking an enemy or using a wand will immediately dispel the buff.\n\nAttempting to enhance _civilight eterna_ with this item will have disastrous results.
 items.bonk$bonkbuff.name=radioactive!!
 items.bonk$bonkbuff.desc=radioactive power!! you take damage is 0\nAttacking an enemy or using a wand will immediately dispel the buff.\n\nRadiation : %s
