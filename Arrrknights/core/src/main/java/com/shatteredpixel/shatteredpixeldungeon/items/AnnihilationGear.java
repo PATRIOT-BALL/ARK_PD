@@ -337,7 +337,7 @@ public class Spriteex extends MissileWeapon {
                     break;
                 case 2:
                     if (artsused < 2) {
-                        if (enemy.HP < enemy.HT /3 && enemy.properties().contains(Char.Property.BOSS) == false && enemy.properties().contains(Char.Property.MINIBOSS) == false) {
+                        if (enemy.HP < enemy.HT /2 && enemy.properties().contains(Char.Property.BOSS) == false && enemy.properties().contains(Char.Property.MINIBOSS) == false) {
                             dmg = 999;
                             artsused++;
                         }
