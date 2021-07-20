@@ -35,16 +35,19 @@ public class v0_2_X_Changes {
                 "_샌드비치_ : 가공소 조합 음식으로, 허기 회복량은 낮지만 섭취시마다 체력을 회복합니다. 이 음식은 4번에 걸쳐 섭취할 수 있습니다." + "\n\n" +
                 "_봉크! 원자맛 음료_ : 상점 전용 아이템으로, 사용시 10턴동안 무적이 됩니다. 단, 공격이나 스태프 사용시 즉시 버프가 해제됩니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 관련",
-                "시작 아이템으로 돈까스 2장이 추가되었습니다." +"\n\n" +
-                        "로즈몬티스의 전용 아이템 _섬멸전 장비_에 아츠 부여의 돌을 사용할 수 있도록 변경되었습니다. 단, 로즈몬티스가 전문화를 얻기 전에는 부여된 아츠의 힘을 쓸 수 없습니다."));
-
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "새로운 스킬",
                 "특별한 스킬 1개가 추가되었습니다. 일반적인 적 드롭 등으로는 얻을 수 없습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 관련",
+                "시작 아이템으로 돈까스 2장이 추가되었습니다." +"\n" +
+                        "_섬멸전 장비_의 강화 효율이 상승했습니다." + "\n" +
+                        "_충전의 일기장_과 _신비한 에너지의 일기장_ 사용시 섬멸전 장비를 2만큼 충전할 수 있도록 변경되었습니다." + "\n\n" +
+                        "파괴 전문화 전직시, 고기를 먹었을 때 피해 보너스가 30%에서 15%로 감소했습니다." + "\n\n" +
+                        "_섬멸전 장비_에 아츠 부여의 돌을 사용할 수 있도록 변경되었습니다. 단, 로즈몬티스가 전문화를 얻기 전에는 부여된 아츠의 힘을 쓸 수 없습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
                 "- _EX-42_ : 공격력이 1-6에서 _1-9_로 상승했지만, 사거리가 1로 감소했습니다." + "\n" +
@@ -63,7 +66,9 @@ public class v0_2_X_Changes {
                 "- _상처투성이 단검_ : 구매 및 판매 가격이 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 버프",
-                "- _스태프 오브 메이어_ : 자폭 피해가 방어력을 무시하도록 변경되었습니다."));
+                "- _스태프 오브 메이어_ : 자폭 피해가 상승했으며, 방어력을 무시하도록 변경되었습니다." + "\n\n" +
+                "- _스태프 오브 압생트_ : 추가 피해 배율이 50%에서 _75%_ 로 상승했습니다." + "\n\n" +
+                "- _스태프 오브 위디_ : 공격력이 1-1에서 _2-4_로 상승했습니다. 충전량 비례 추가 피해 배율이 상승했으며, 이 스태프로 적을 직접 처치하면 즉시 1만큼 재충전되는 기능이 추가되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
@@ -72,6 +77,9 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
                 "- _리-엔필드_ : 공격력이 6-6에서 _9-9_로 상승했지만, 더 이상 6층 상점에서 확정으로 등장하지 않습니다. 또한, 가격이 대폭 상승했습니다." + "\n\n" +
                 "- _HM-200_ : 힘 제한이 14에서 _18_로 상승했으며, 명중률 보너스가 삭제되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "유물 너프",
+                "- _문명의 존속_ : 레바테인의 _황혼_ 능력으로 강화 시도시, 피해 무효화 후 버프가 사라지도록 변경되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "- 분노 전문화 블레이즈의 _광분의 전기톱_ 특성의 발동 조건이 _체력 50%이하일 때 10회 피격_ 으로 변경되었습니다." + "\n\n" +

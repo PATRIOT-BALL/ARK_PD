@@ -45,17 +45,19 @@ public class StaffOfWeedy extends DamageWand {
         return COL;
     }
 
-    public int min(int lvl){ return 1+lvl;
+    public int min(int lvl){ return 2+lvl;
     }
 
     public int max(int lvl){
-        return 1+2*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 2;
+        return 4+2*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 2;
     }
 
     @Override
     protected void onZap(Ballistica bolt) {
         Sample.INSTANCE.play( Assets.Sounds.BLAST );
         StaffOfWeedy.BlastWave.blast(bolt.collisionPos);
+
+        curCharges = 1;
 
         //presses all tiles in the AOE first, with the exception of tengu dart traps
         for (int i : PathFinder.NEIGHBOURS9){
@@ -72,11 +74,10 @@ public class StaffOfWeedy extends DamageWand {
                 processSoulMark(ch, chargesPerCast());
                 if (ch.alignment != Char.Alignment.ALLY) {
                     if (ch == curUser) {
-                        int dmg = (int) Math.round(damageRoll() * Math.pow(1.077f, curCharges));
+                        int dmg = (int) Math.round(damageRoll() * Math.pow(1.088f, curCharges));
                         ch.damage(dmg, this);
                     }
                     else ch.damage(damageRoll(), this);
-
                 }
 
                 if (ch.isAlive() && ch.pos == bolt.collisionPos + i) {
@@ -94,7 +95,7 @@ public class StaffOfWeedy extends DamageWand {
         Char ch = Actor.findChar(bolt.collisionPos);
         if (ch != null){
             processSoulMark(ch, chargesPerCast());
-            int dmg = (int)Math.round(damageRoll() * Math.pow(1.3f, curCharges));
+            int dmg = (int)Math.round(damageRoll() * Math.pow(1.35f, curCharges));
             ch.damage(dmg, this);
 
             if (ch.isAlive() && bolt.path.size() > bolt.dist+1 && ch.pos == bolt.collisionPos) {
@@ -104,9 +105,11 @@ public class StaffOfWeedy extends DamageWand {
             }
         }
 
-        Camera.main.shake(curCharges * 0.65f, 0.25f);
+        if (!ch.isAlive()) {
+            curCharges++;
+        }
 
-       curCharges = 1;
+        Camera.main.shake(curCharges * 0.65f, 0.25f);
 
     }
 

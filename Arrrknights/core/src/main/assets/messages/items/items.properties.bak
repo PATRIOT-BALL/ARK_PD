@@ -1560,7 +1560,7 @@ items.stones.stoneofshock.desc=이 돌은 던져진 지점에 짧은 시간 동�
 items.wands.sp.staffofabsinthe.name=스태프 오브 압생트
 items.wands.sp.staffofabsinthe.staff_name=개조 마탄의 흑요석 반지
 items.wands.sp.staffofabsinthe.desc=_"박사, 아버지가 한 일은 정말로 가치가 있는 걸까?"_\n\n이 개조된 마탄의 스태프는 압생트 대원의 능력이 반영되어있습니다. 다른 스태프에 비해 더 많은 SP를 보유했습니다.
-items.wands.sp.staffofabsinthe.stats_desc=이 아츠 스태프가 발사하는 에너지는 _%1$d-%2$d의 피해_ 를 입히며, 체력이 50%%미만인 적에게는 1.5배의 피해를 줍니다.
+items.wands.sp.staffofabsinthe.stats_desc=이 아츠 스태프가 발사하는 에너지는 _%1$d-%2$d의 피해_ 를 입히며, 체력이 50%%미만인 적에게는 1.75배의 피해를 줍니다.
 items.wands.sp.staffofabsinthe.bmage_desc=_아미야_ 가 개조 마탄의 흑요석 반지로 적을 공격하면, 가지고 있는 모든 아츠 스태프와 흑요석 반지가 추가 SP를 얻습니다.
 
 items.wands.sp.staffofgreyy.name=스태프 오브 그레이
@@ -1646,7 +1646,7 @@ items.wands.sp.staffofangelina.bmage_desc=_아미야_ 가 개조 이식의 흑�
 items.wands.sp.staffofweedy.name=스태프 오브 위디
 items.wands.sp.staffofweedy.staff_name=개조 충격파의 흑요석 반지
 items.wands.sp.staffofweedy.ondeath=당신은 당신이 발사한 충격파에 맞아 죽었다...
-items.wands.sp.staffofweedy.desc=_"내가 그들을 위해 뭔가를 해줘도 괜찮을까?"_\n\n이 개조된 충격파의 아츠 스태프는 위디 대원의 능력이 반영되었습니다.
+items.wands.sp.staffofweedy.desc=_"내가 그들을 위해 뭔가를 해줘도 괜찮을까?"_\n\n이 개조된 충격파의 아츠 스태프는 위디 대원의 능력이 반영되었습니다.\n\n이 스태프로 직접 적을 처치하면 충전량을 1만큼 돌려받습니다.
 items.wands.sp.staffofweedy.stats_desc=이 막대는 _모든 SP_를 소모해 대상에게 강력한 충격의 화살을 발사합니다. 충격의 화살은 _%1$d-%2$d 의 피해_ 를 입히며 적중한 적을 날려보낼 만큼 강력합니다. 소모한 SP에 비례해 피해량과 밀쳐내는 거리가 상승합니다.
 items.wands.sp.staffofweedy.bmage_desc=_아미야_ 가 개조 충격파의 흑요석 반지로 적을 공격하면, 탄성의 아츠 무기로 공격한 것처럼 대상을 밀쳐낼 수 있습니다.
 
@@ -1660,7 +1660,7 @@ items.wands.sp.staffofcorrupting.bmage_desc=_아미야_ 가 이 ■■■ ■■
 items.wands.sp.staffofsnowsant.name=스태프 오브 스노우상트
 items.wands.sp.staffofsnowsant.staff_name=개조 침묵의 흑요석 반지
 items.wands.sp.staffofsnowsant.desc=이상이 뭘까? 당연히 출세다! 천조자조는 그녀의 유일한 신념이다! 노력이다! 보상이 있을거다! 맞아! 아마도......!
-items.wands.sp.staffofsnowsant.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다. 또한, 적중당한 대상을 자신의 앞으로 끌어당길 수 있습니다.
+items.wands.sp.staffofsnowsant.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다. 또한, 적중당한 대상을 자신의 앞으로 끌어당길 수 있습니다.
 items.wands.sp.staffofsnowsant.bmage_desc=_아미야_ 가 개조 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
 
 
@@ -1800,7 +1800,7 @@ items.wands.wandofwarding$ward.dismiss_cancel=아니오
 items.wands.wandofsilence.name=침묵의 아츠 스태프
 items.wands.wandofsilence.staff_name=침묵의 흑요석 반지
 items.wands.wandofsilence.desc='스노우상트의 동전' 이야기가 한때 젊은 오퍼레이터들 사이에서 유행한 적이 있다. 물론 별다른 악의는 없지만 말이다.
-items.wands.wandofsilence.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 다만 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다.
+items.wands.wandofsilence.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다.
 items.wands.wandofsilence.bmage_desc=_아미야_ 가 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
 
 
@@ -2101,8 +2101,8 @@ items.weapon.melee.wintersscar.desc=대지의 차가움엔 이미 각오가 깃�
 
 items.weapon.melee.patriotspear.name=레퀴엠
 items.weapon.melee.patriotspear.desc=오랜 세월동안 운명과 싸워왔던 그는, 이제 운명의 숨통을 찢어버리려 한다.\n\n이 _특별한_ 무기는 한 번의 공격에 4번의 피해를 입힙니다.
-items.weapon.melee.patriotspear.typical_stats_desc=공격속도 50%, 일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
-items.weapon.melee.patriotspear.stats_desc=공격속도 50%, 이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
+items.weapon.melee.patriotspear.typical_stats_desc=공격속도 50%%, 일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
+items.weapon.melee.patriotspear.stats_desc=공격속도 50%%, 이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
 
 
 

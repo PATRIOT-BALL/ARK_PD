@@ -120,6 +120,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CapeOfThorns;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
@@ -1378,8 +1379,14 @@ public class Hero extends Char {
             }}}
 
 
-        if(buff(Twilight.class) != null) dmg = 0;
-        if(buff(Bonk.BonkBuff.class) != null) dmg = 0;
+        if (src instanceof ChaliceOfBlood) {
+        if(buff(Twilight.class) != null) {
+            Buff.detach(this, Twilight.class);
+            dmg = 0;} }
+        else {
+            if(buff(Twilight.class) != null) { dmg = 0;}
+            if(buff(Bonk.BonkBuff.class) != null) dmg = 0;
+        }
 
 
         int preHP = HP + shielding();
