@@ -49,7 +49,7 @@ public class StaffOfWeedy extends DamageWand {
     }
 
     public int max(int lvl){
-        return 4+2*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 2;
+        return 7+2*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 2;
     }
 
     @Override
@@ -103,10 +103,6 @@ public class StaffOfWeedy extends DamageWand {
                 int strength = buffedLvl() + 3 + (curCharges * 2);
                 throwChar(ch, trajectory, strength, false);
             }
-        }
-
-        if (!ch.isAlive()) {
-            curCharges++;
         }
 
         Camera.main.shake(curCharges * 0.65f, 0.25f);
