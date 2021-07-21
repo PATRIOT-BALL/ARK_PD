@@ -88,17 +88,16 @@ public class Food extends Item {
 			Badges.validateFoodEaten();
 			Badges.validateRoseUnlock();
 
-			int preservesLeft = Dungeon.hero.pointsInTalent(Talent.SMARTMEALS) * 2 - 1;
-			if (Dungeon.hero.buff(Talent.foodIdentify.class) != null){
-				preservesLeft -= Dungeon.hero.buff(Talent.foodIdentify.class).count();
+			if (Dungeon.hero.buff(Talent.foodIdentify.class) != null) {
+				if (Dungeon.hero.buff(Talent.foodIdentify.class) != null) {
+					Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
+					counter.countUp(1);
+				}
 			}
-			if (preservesLeft > 0){
-				new ScrollOfIdentify().execute(curUser);
-				Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
-				if (counter.count() < Dungeon.hero.pointsInTalent(Talent.SMARTMEALS) * 2 - 1) {
-					counter.countUp(1); }
-			}
-			
+			else Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
+			Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
+			counter.countUp(1);
+
 		}
 	}
 

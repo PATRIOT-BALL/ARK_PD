@@ -694,7 +694,7 @@ public class ItemSpriteSheet {
 	public static final int BERRY =       FOOD+12;
 	public static final int CUTLET =       FOOD+13;
 	public static final int SANDBITCH =       FOOD+14;
-	public static final int BONK =       FOOD+14;
+	public static final int BONK =       FOOD+15;
 	static{
 		assignItemRect(MEAT,        16, 16);
 		assignItemRect(STEAK,       16, 16);

@@ -37,7 +37,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -111,7 +115,18 @@ public class Item implements Bundlable {
 	
 	public boolean doPickUp( Hero hero ) {
 		if (collect( hero.belongings.backpack )) {
-			
+
+			if (hero.hasTalent(Talent.SMARTMEALS)) {
+				if (this.isIdentified() == false && Dungeon.hero.buff(Talent.foodIdentify.class) != null) {
+					if (Dungeon.hero.buff(Talent.foodIdentify.class).count() > 7 - hero.pointsInTalent(Talent.SMARTMEALS) * 2) {
+						if (this instanceof MeleeWeapon || this instanceof Wand || this instanceof Ring || this instanceof Armor) {
+							this.identify();
+							Buff.detach(Dungeon.hero, Talent.foodIdentify.class);
+						}
+					}
+				}
+			}
+
 			GameScene.pickUp( this, hero.pos );
 			Sample.INSTANCE.play( Assets.Sounds.ITEM );
 			Talent.onItemCollected( hero, this );
