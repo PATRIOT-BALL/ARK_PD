@@ -71,6 +71,8 @@ public class v0_2_X_Changes {
                 "- _스태프 오브 위디_ : 공격력이 1-1에서 _2-7_로 상승했습니다. 충전량 비례 추가 피해 배율이 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
+                "- 로즈몬티스의 _몸이 가벼운 식사_ 특성을 찍을 경우, 부유 상태에서 섬멸전 장비 사용시 충전을 소모하지 않는 기능이 추가되었습니다." + "\n\n" +
+                        "- 로즈몬티스의 _좋은 고기_ 특성을 찍을 경우, 조리되지않은 고기 섭취시 섬멸전 장비를 충전하는 기능이 추가되었습니다." +"\n\n" +
                 "- 수호 전문화 로즈몬티스의 _수호 방벽 전개_ 특성의 피해 감소률이 60-80%에서 _65-95%_로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
