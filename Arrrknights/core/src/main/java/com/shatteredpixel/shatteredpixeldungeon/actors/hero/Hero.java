@@ -155,6 +155,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
@@ -670,6 +671,7 @@ public class Hero extends Char {
         if (belongings.weapon == null || !(belongings.weapon instanceof Weapon)) return true;
         if (STR() < ((Weapon) belongings.weapon).STRReq()) return false;
         if (belongings.weapon instanceof Flail) return false;
+        if (belongings.weapon instanceof SHISHIOH) return false;
         if (belongings.weapon instanceof Enfild2) return false;
 
         return true;
