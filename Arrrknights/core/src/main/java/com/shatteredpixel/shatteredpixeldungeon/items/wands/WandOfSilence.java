@@ -22,7 +22,7 @@ import com.watabou.utils.Random;
 public class WandOfSilence extends Wand {
 
     {
-        image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
+        image = ItemSpriteSheet.WAND_SNOWSANT;
     }
 
     @Override

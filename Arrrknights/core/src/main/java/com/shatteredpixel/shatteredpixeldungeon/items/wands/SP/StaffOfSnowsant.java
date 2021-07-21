@@ -25,7 +25,7 @@ import com.watabou.utils.Random;
 public class StaffOfSnowsant extends Wand {
     private static ItemSprite.Glowing COL = new ItemSprite.Glowing(0xFF1493);
     {
-        image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
+        image = ItemSpriteSheet.WAND_SNOWSANT;
     }
 
     @Override

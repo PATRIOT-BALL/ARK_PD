@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
 
 public class RingOfAmplified extends Ring {
     {
-        icon = ItemSpriteSheet.Icons.RING_SUNLIGHT;
+        icon = ItemSpriteSheet.Icons.RING_AMPLIFIED;
     }
 
     public String statsInfo() {

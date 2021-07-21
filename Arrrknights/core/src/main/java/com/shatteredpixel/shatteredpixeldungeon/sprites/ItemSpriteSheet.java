@@ -419,6 +419,7 @@ public class ItemSpriteSheet {
 	public static final int WAND_WARDING        = WANDS+10;
 	public static final int WAND_REGROWTH       = WANDS+11;
 	public static final int WAND_TRANSFUSION    = WANDS+12;
+	public static final int WAND_SNOWSANT    = WANDS+13;
 	static {
 		for (int i = WANDS; i < WANDS+31; i++)
 			assignItemRect(i, 16, 16);
@@ -437,7 +438,10 @@ public class ItemSpriteSheet {
 	public static final int RING_QUARTZ     = RINGS+9;
 	public static final int RING_AGATE      = RINGS+10;
 	public static final int RING_DIAMOND    = RINGS+11;
-	public static final int FIRESTEEL    = RINGS+12;
+	public static final int RING_HYDROGEN    = RINGS+12;
+	public static final int RING_HELIUM    = RINGS+13;
+	public static final int RING_LITHIUM    = RINGS+14;
+
 	static {
 		for (int i = RINGS; i < RINGS+31; i++)
 			assignItemRect(i, 16, 16);
@@ -810,6 +814,8 @@ public class ItemSpriteSheet {
 		public static final int RING_TENACITY   = RINGS+9;
 		public static final int RING_WEALTH     = RINGS+10;
 		public static final int RING_SUNLIGHT     = RINGS+11;
+		public static final int RING_AMPLIFIED     = RINGS+12;
+		public static final int RING_DOMINATE     = RINGS+11;
 
 		static {
 			assignIconRect( RING_ACCURACY,      7, 7 );
@@ -824,6 +830,8 @@ public class ItemSpriteSheet {
 			assignIconRect( RING_TENACITY,      6, 6 );
 			assignIconRect( RING_WEALTH,        7, 6 );
 			assignIconRect( RING_SUNLIGHT,        7, 7 );
+			assignIconRect( RING_SUNLIGHT,        7, 7 );
+			assignIconRect( RING_SUNLIGHT,        5, 7 );
 		}
 
 		                                                                                //16 free slots

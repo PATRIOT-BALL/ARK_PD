@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
 
 public class RingOfDominate extends Ring {
     {
-        icon = ItemSpriteSheet.Icons.RING_SUNLIGHT;
+        icon = ItemSpriteSheet.Icons.RING_DOMINATE;
     }
 
     public String statsInfo() {
