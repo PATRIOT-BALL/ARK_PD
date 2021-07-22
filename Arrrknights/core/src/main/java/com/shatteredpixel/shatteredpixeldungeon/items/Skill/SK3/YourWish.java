@@ -61,6 +61,8 @@ public class YourWish extends Skill {
                     }
                 }
                 else {
+                    EX43.pos = targetCell;
+                    GameScene.add(EX43);
                         ScrollOfTeleportation.teleportChar_unobstructed(EX43);
                     } }}
 
