@@ -237,7 +237,7 @@ public class Hero extends Char {
 
     public float awareness;
 
-    public int lvl = 5;
+    public int lvl = 1;
     public int exp = 0;
 
     public int HTBoost = 0;
