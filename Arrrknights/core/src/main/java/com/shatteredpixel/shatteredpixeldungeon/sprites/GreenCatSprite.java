@@ -23,8 +23,10 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.particles.Emitter;
 
 public class GreenCatSprite extends MobSprite {
+    private Emitter summoningBones;
 
     public GreenCatSprite() {
         super();

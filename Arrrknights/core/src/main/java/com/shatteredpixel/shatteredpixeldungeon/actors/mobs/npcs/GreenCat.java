@@ -4,9 +4,11 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Kaltsit;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
@@ -21,6 +23,7 @@ import com.watabou.utils.Callback;
 
 public class GreenCat extends NPC {
     {
+        HP=HT=1000;
         spriteClass = GreenCatSprite.class;
         properties.add(Property.IMMOVABLE);
         properties.add(Property.NPC);
@@ -29,12 +32,25 @@ public class GreenCat extends NPC {
     private boolean seenBefore = false;
 
     @Override
-    public int defenseSkill(Char enemy) {
-        return INFINITE_EVASION;
+    public void damage( int dmg, Object src ) {
+        // flee();
     }
 
     @Override
-    public void damage(int dmg, Object src) {
+    public void add( Buff buff ) {
+     //  flee();
+    }
+
+    public void flee() {
+        if (Dungeon.depth == 29) { this.yell(Messages.get(this, "fury"));
+        sprite.killAndErase();
+        CellEmitter.get( pos ).burst( ElmoParticle.FACTORY, 6 );
+
+        destroy();
+
+        Kaltsit not = new Kaltsit();
+        not.pos = this.pos;
+        GameScene.add(not);}
     }
 
     @Override

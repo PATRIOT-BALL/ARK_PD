@@ -39,7 +39,7 @@ public class CrabGun extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  5*(tier-1) +    //10 + 3
+        return  4*(tier-1) +    //8 + 3
                 lvl*(tier); }
 
     @Override

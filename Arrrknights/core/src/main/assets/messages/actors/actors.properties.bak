@@ -651,7 +651,7 @@ actors.hero.heroclass.huntress_desc_subclasses=두 번째 보스를 쓰러트리
 
 actors.hero.heroclass.rosecat=로즈몬티스
 actors.hero.heroclass.rosecat_unlock=로즈몬티스는 강력한 아츠 사용자로, _특별한 아츠 장치_를 가지고 시작합니다.\n\n로즈몬티스를 해금하려면 _음식을 25개 먹으십시오._
-actors.hero.heroclass.rosecat_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n그레이스롯은 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 부유의 물약
+actors.hero.heroclass.rosecat_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 부유의 물약
 actors.hero.heroclass.rosecat_desc_loadout=로즈몬티스는 사거리가 길지만 명중률과 공격속도에 패널티를 받는 _EX-43_을 가지고 시작합니다.\n\n로즈몬티스는 그녀의 아츠 장치를 사용해 원거리 공격을 할 수 있습니다..\n\n로즈몬티스는 _벨벳 주머니_ 와 _마법 보관집_을 가지고 시작하며, 씨앗과 룬석을 담아두고 투척 무기, 완드를 보관할 수 있습니다.
 actors.hero.heroclass.rosecat_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 로즈몬티스의 두 가지 전문화는 다음과 같습니다.
 
@@ -785,6 +785,7 @@ actors.mobs.npcs.lens.t4=타임 랩스~!
 actors.mobs.npcs.greencat.name=닥터 켈시
 actors.mobs.npcs.greencat.desc=로도스 아일랜드의 수석 관리자 중 한 명이자, 로도스 아일랜드 의료 프로젝트의 리더. 그리고 당신의 상사다.
 actors.mobs.npcs.greencat.wellcom=그렇군, 작전 성공인가... 수고했다, %s.
+actors.mobs.npcs.greencat.fury=그것이 너의 선택인가.
 
 actors.mobs.npcs.closure.name=클로저
 actors.mobs.npcs.closure.desc=로도스 아일랜드의 고참. _클로저가 있을 때 물건을 버리고 체르노보그르 돌아간다면, 버렸던 물건은 다른 대원한테 판매될 것이다._ \n\n클릭하면 스킨을 활성화 / 비활성화 할 수 있습니다.
@@ -1199,6 +1200,22 @@ actors.mobs.yogfist$brightfist.desc=석관에서 나타난 신비한 괴물, 당
 actors.mobs.yogfist$darkfist.name=황제의 칼날
 actors.mobs.yogfist$darkfist.teleport=황제의 칼날은 당신의 광원을 없애는 어둠의 폭발 속에서 순간이동했다!
 actors.mobs.yogfist$darkfist.desc=_탈룰라가 불러낸 과거의 환영,_이 환영은 순수한 어둠의 에너지로 이루어져 있습니다. 이 환영은 강력한 어둠 아츠의 폭발을 발사할 수 있습니다. 이 폭발들은 당신의 광원을 약하게 하며, 또한 커다란 피해를 입힙니다. 그리고 환영은 달아나기 위해 잠시동안 전투 지역을 어둠 속으로 집어삼킬 수 있습니다.\n\n하지만 이 환영은 근거리에서 사용할 수 있는 특별한 능력은 가지고 있지 않습니다.
+
+
+
+// 스페셜 몹
+
+actors.mobs.miniboss.kaltsit.name=켈시
+actors.mobs.miniboss.kaltsit.desc=Mon3tr, 나를 따라라.
+actors.mobs.miniboss.kaltsit.fail=...
+actors.mobs.miniboss.kaltsit.summon=죽여라, Mon3tr.
+actors.mobs.miniboss.kaltsit.skill1=구조 보강 명령. Mon3tr, 역할을 다해라.
+actors.mobs.miniboss.kaltsit.skill2=전술 협동 명령. 적을 배제해라, Mon3tr.
+actors.mobs.miniboss.kaltsit.skill3=용해 명령. 적을 분쇄해라, Mon3tr.
+
+actors.mobs.miniboss.mon3tr.name=mon3tr
+actors.mobs.miniboss.mon3tr.desc=켈시의 사역마로, 그녀가 만들어낸 정체불명의 괴생물이다.
+
 
 
 actors.char.kill=%s에 의해 죽었습니다...
