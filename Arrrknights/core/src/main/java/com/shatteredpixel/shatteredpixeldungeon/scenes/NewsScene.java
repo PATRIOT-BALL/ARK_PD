@@ -94,7 +94,7 @@ public class NewsScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				String link = "https://docs.google.com/forms/d/1izth0WIlms1CIn07abyl0XTX7L1icdEvhRudemDuTsM";
+				String link = "https://docs.google.com/forms/d/1Ku1SIeOZidO7AOuJX56G6optuRhqybiwArpKmmp9y1w";
 				//tracking codes, so that the website knows where this pageview came from
 				DeviceCompat.openURI(link);
 			}
