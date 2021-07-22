@@ -322,7 +322,7 @@ public class Spriteex extends MissileWeapon {
                     int distance = Dungeon.level.distance(curUser.pos, enemy.pos) - 1;
                     float DamageLevel = 1.07f + (0.008f * buffedLvl());
                     if (distance < 3) break;
-                    else if (distance < 8) dmg = Math.round(dmg * DamageLevel);
+                    else if (distance < 5) dmg = Math.round(dmg * DamageLevel);
                     else dmg = Math.round(dmg * (DamageLevel * 1.2f));
                     break;
             }}
