@@ -46,6 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -442,6 +443,8 @@ public class DwarfKing extends Mob {
 	public void die(Object cause) {
 		// 이지모드라면 플레이어 사망
 		if (Dungeon.eazymode == 1) {
+			Item item = Dungeon.hero.belongings.getItem(Ankh.class);
+			if (item != null) item.detachAll(Dungeon.hero.belongings.backpack);
 			while (Dungeon.hero.isAlive() == true) {
 				Dungeon.hero.die(Dungeon.hero);
 			}

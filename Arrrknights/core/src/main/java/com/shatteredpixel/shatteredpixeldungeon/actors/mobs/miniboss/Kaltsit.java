@@ -15,9 +15,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
+import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
+import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.SurfaceScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -88,8 +91,11 @@ public class Kaltsit extends Mob {
                 CellEmitter.get( SummontPos ).burst( ShadowParticle.CURSE, 10 );
 
                 if (SummontPos == Dungeon.hero.pos) {
+                    Item item = Dungeon.hero.belongings.getItem(Ankh.class);
+                    if (item != null) item.detachAll(Dungeon.hero.belongings.backpack);
                     while (Dungeon.hero.isAlive() == true) {
-                        Dungeon.hero.damage(9999, new Kaltsit());
+                        Dungeon.hero.damage(Random.NormalIntRange( 87, 154 ), new Kaltsit());
+                        Dungeon.hero.sprite.burst(CharSprite.NEGATIVE, 10);
                     }
                     Camera.main.shake(3, 0.5f);
                 }

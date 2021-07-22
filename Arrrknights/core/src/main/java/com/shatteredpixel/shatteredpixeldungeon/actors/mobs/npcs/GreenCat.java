@@ -38,7 +38,7 @@ public class GreenCat extends NPC {
 
     @Override
     public void add( Buff buff ) {
-     //  flee();
+      // flee();
     }
 
     public void flee() {
