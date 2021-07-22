@@ -34,28 +34,37 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
+import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MissileSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SpiritBow extends Weapon {
 	
 	public static final String AC_SHOOT		= "SHOOT";
+	public static final String AC_SEED		= "SEED";
 
 	{
 		image = ItemSpriteSheet.SPIRIT_BOW;
@@ -69,12 +78,15 @@ public class SpiritBow extends Weapon {
 	
 	public boolean sniperSpecial = false;
 	public float sniperSpecialBonusDamage = 0f;
+	protected WndBag.Mode mode = WndBag.Mode.SEED;
+	private int EatSeed = 0;
 	
 	@Override
 	public ArrayList<String> actions(Hero hero) {
 		ArrayList<String> actions = super.actions(hero);
 		actions.remove(AC_EQUIP);
 		actions.add(AC_SHOOT);
+		if (hero.subClass == HeroSubClass.WARDEN) actions.add(AC_SEED);
 		return actions;
 	}
 	
@@ -88,8 +100,13 @@ public class SpiritBow extends Weapon {
 			curUser = hero;
 			curItem = this;
 			GameScene.selectCell( shooter );
-			
+
 		}
+
+		if (action.equals(AC_SEED)) {
+			GameScene.selectItem(itemSelector, mode, Messages.get(this, "prompt"));
+		}
+
 	}
 	
 	@Override
@@ -131,6 +148,14 @@ public class SpiritBow extends Weapon {
 		}
 		
 		info += "\n\n" + Messages.get(MissileWeapon.class, "distance");
+
+		if (Dungeon.hero.subClass==HeroSubClass.WARDEN) {
+			info+="\n\n"+Messages.get(SpiritBow.class, "seed", EatSeed, 30);
+			if (EatSeed == 30) info+="\n\n"+Messages.get(SpiritBow.class, "power3");
+			else if (EatSeed >= 20) info+="\n\n"+Messages.get(SpiritBow.class, "power2");
+			else if (EatSeed >= 10) info+="\n\n"+Messages.get(SpiritBow.class, "power1");
+			else info+="\n\n"+Messages.get(SpiritBow.class, "power0");
+		}
 		
 		return info;
 	}
@@ -154,12 +179,14 @@ public class SpiritBow extends Weapon {
 					+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 					+ (curseInfusionBonus ? 2 : 0)
 			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4
-					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3;
+					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
+					+ EatSeed / 3;
 		}
 		else return 6 + (int)(Dungeon.hero.lvl/2.5f)
 				+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 				+ (curseInfusionBonus ? 2 : 0)
-				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3;
+				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
+				+ EatSeed / 3;
 	}
 
 	@Override
@@ -345,4 +372,36 @@ public class SpiritBow extends Weapon {
 			return Messages.get(SpiritBow.class, "prompt");
 		}
 	};
+
+	protected WndBag.Listener itemSelector = new WndBag.Listener() {
+		@Override
+		public void onSelect( Item item ) {
+			if (item != null && item instanceof Plant.Seed) {
+				if (EatSeed < 30) {
+					Hero hero = Dungeon.hero;
+					hero.sprite.operate(hero.pos);
+					Sample.INSTANCE.play(Assets.Sounds.PLANT);
+					hero.busy();
+					hero.spend(1f);
+					EatSeed++;
+					item.detach(hero.belongings.backpack);
+				}
+			else GLog.w( Messages.get(SpiritBow.class, "seedfail") );
+			}
+		}
+	};
+
+	private static final String SEEDS = "EatSeed";
+
+	@Override
+	public void storeInBundle( Bundle bundle ) {
+		super.storeInBundle(bundle);
+		bundle.put(SEEDS, EatSeed);
+	}
+
+	@Override
+	public void restoreFromBundle( Bundle bundle ) {
+		super.restoreFromBundle(bundle);
+		EatSeed = bundle.getInt(SEEDS);
+	}
 }

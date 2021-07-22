@@ -2076,7 +2076,7 @@ items.weapon.melee.m1887.name=M1887
 items.weapon.melee.m1887.desc=그래서 이렇게도 말할 수 있다. 공증소는 원래 가장 성가신 프로젝트에만 집행자를 파견한다고.\n\n이 라테라노의 샷건은 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.
 
 items.weapon.melee.crabgun.name=바위게 사육사
-items.weapon.melee.crabgun.stats_desc=사거리 +1, 공격속도 133%
+items.weapon.melee.crabgun.stats_desc=사거리 +1
 items.weapon.melee.crabgun.desc=_"아, 얘 이름은 완두콩이야. 자, 콩콩아, 박사랑 인사하자."_\n\n이 석궁은 신비한 바위게들을 부릴 수 있습니다. 공격시 SP가 충전되며, SP가 100%일 때 공격시 바위게가 소환됩니다.
 items.weapon.melee.crabgun$metalcrab.name=바위게
 items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수와 무기 강화에 비례해 능력치가 결정됩니다.
@@ -2240,9 +2240,16 @@ items.weapon.missiles.thunderbolt.desc=이 _특별한_ 캡슐은 대상의 체�
 
 items.weapon.spiritbow.name=리버스 크로스보우
 items.weapon.spiritbow.ac_shoot=발사한다
+items.weapon.spiritbow.ac_seed=씨앗 부여
 items.weapon.spiritbow.prompt=대상을 선택하세요
 items.weapon.spiritbow.stats=이 쇠뇌는 직접적으로 강화를 할 수 없지만, 대신에 당신의 레벨이 오르면서 지속적으로 강해질 것입니다. 현재 당신의 레벨에서, 쇠뇌로부터의 화살 발사는 _%1$d-%2$d_ 의 피해를 입히며, 제대로 사용하기 위해서 _%3$d_ 의 힘이 필요합니다.
 items.weapon.spiritbow.desc=리버스 드로우 방식을 채택해 컴팩트한 크기와 강력한 장력을 자랑하는 쇠뇌. 자동장전 기능을 채택해 사용자는 화살만 걸어주면 바로 사격할 수 있다.
+items.weapon.spiritbow.seed=씨앗을 먹여 강화할 수 있습니다.\n씨앗 강화 횟수 : %1$d / %2$d
+items.weapon.spiritbow.seedfail=더 이상 쇠뇌에 씨앗을 사용할 수 없습니다.
+items.weapon.spiritbow.power0=많은 씨앗을 부여하면 특수 능력이 개방됩니다.
+items.weapon.spiritbow.power1=_특수 능력 1단계_\n적의 방어력을 절반으로 계산합니다.
+items.weapon.spiritbow.power2=_특수 능력 2단계_\n적의 방어력을 절반으로 계산합니다.\n3번 적중시킬 때마다 보호막을 얻습니다.
+items.weapon.spiritbow.power3=_특수 능력 3단계_\n적의 방어력을 절반으로 계산합니다.\n적중하면 20%확률로 무작위 식물 효과를 발동시킵니다.\n3번 적중시킬 때마다 보호막을 얻습니다.
 
 items.weapon.weapon.identify=당신은 현재 사용하고 있는 무기가 무엇인지 알 만큼 충분히 익숙해졌습니다.
 items.weapon.weapon.too_heavy=당신의 힘이 충분하지 않기 때문에, 이 무기를 들 때의 공격 속도와 정확성이 감소됩니다. 또한 기습 공격을 할 수 없게 됩니다.
