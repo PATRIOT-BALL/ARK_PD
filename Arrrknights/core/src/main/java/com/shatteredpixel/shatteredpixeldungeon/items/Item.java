@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RageThrowCooldown;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Kaltsit;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
@@ -121,6 +122,7 @@ public class Item implements Bundlable {
 					if (Dungeon.hero.buff(Talent.foodIdentify.class).count() > 7 - hero.pointsInTalent(Talent.SMARTMEALS) * 2) {
 						if (this instanceof MeleeWeapon || this instanceof Wand || this instanceof Ring || this instanceof Armor) {
 							this.identify();
+							GLog.i(Messages.get(Hero.class, "identify"));
 							Buff.detach(Dungeon.hero, Talent.foodIdentify.class);
 						}
 					}

@@ -617,6 +617,7 @@ actors.hero.hero.revive=앙크는 부활의 에너지로 폭발했다!
 actors.hero.hero.yam1=굼의 특제 요리다!
 actors.hero.hero.yam2=맛있는거 먹자!
 actors.hero.hero.eazymode=이지 모드는 여기까지!
+actors.hero.hero.identify=이성을 소모하여 아이템을 감정했다.
 actors.hero.hero.dm1=1층에서 위로 올라가는 계단에 올라가면 로도스 아일랜드로 갈 수 있으며, 오른쪽 방에 있는 도베르만에게 말을 걸면 이지 모드를 활성화할 수 있답니다!
 actors.hero.hero.dm2=기습에 대해 아시나요? 대표적으로 적이 문(빨간, 파란색 박스)에 들어왔을 때 공격하면 기습 판정을 발생시킬 수 있습니다!
 actors.hero.hero.dm3=나무로된 벽으로 막힌 방 등이 있다면, 무조건 해당 방의 기믹을 공략할 수 있는 물약들이 던전에 출현한답니다!
@@ -1207,7 +1208,7 @@ actors.mobs.yogfist$darkfist.desc=_탈룰라가 불러낸 과거의 환영,_이 
 
 actors.mobs.miniboss.kaltsit.name=켈시
 actors.mobs.miniboss.kaltsit.desc=Mon3tr, 나를 따라라.
-actors.mobs.miniboss.kaltsit.fail=...
+actors.mobs.miniboss.kaltsit.burst=그런 잔재주는 통하지않아.
 actors.mobs.miniboss.kaltsit.summon=죽여라, Mon3tr.
 actors.mobs.miniboss.kaltsit.skill1=구조 보강 명령. Mon3tr, 역할을 다해라.
 actors.mobs.miniboss.kaltsit.skill2=전술 협동 명령. 적을 배제해라, Mon3tr.
