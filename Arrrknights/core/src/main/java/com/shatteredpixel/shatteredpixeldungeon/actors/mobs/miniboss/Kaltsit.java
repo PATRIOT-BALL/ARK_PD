@@ -89,7 +89,7 @@ public class Kaltsit extends Mob {
 
                 if (SummontPos == Dungeon.hero.pos) {
                     while (Dungeon.hero.isAlive() == true) {
-                        Dungeon.hero.die(this);
+                        Dungeon.hero.damage(9999, new Kaltsit());
                     }
                     Camera.main.shake(3, 0.5f);
                 }
