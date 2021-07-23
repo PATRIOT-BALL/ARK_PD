@@ -132,7 +132,7 @@ public enum Talent {
 	//Sniper T3
 	FARSIGHT(107, 3), SHARED_ENCHANTMENT(108, 3), SHARED_UPGRADES(109, 3),
 	//Warden T3
-	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SHIELDING_DEW(112, 3),
+	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SAVIOR_PRAY(108, 3),
 	//Huntress T4
 	ARTS_FOCUS(108,3), IMPROVED_CROSSBOW(109,3),
 	//Sniper T4
@@ -605,7 +605,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, FARSIGHT, SHARED_ENCHANTMENT, SHARED_UPGRADES);
 				break;
 			case WARDEN:
-				Collections.addAll(tierTalents, DURABLE_TIPS, BARKSKIN, SHIELDING_DEW);
+				Collections.addAll(tierTalents, DURABLE_TIPS, BARKSKIN, SAVIOR_PRAY);
 				break;
 			case DESTROYER:
 				Collections.addAll(tierTalents, FOCUSED_ATTACK, PHYSICAL_ATTACK, BATTLEFLOW);

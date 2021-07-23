@@ -24,14 +24,20 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.PinCushion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.MagicalHolster;
@@ -40,9 +46,19 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Projecting;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.Dart;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Blindweed;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Dreamfoil;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Sorrowmoss;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Starflower;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Stormvine;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -58,7 +74,7 @@ abstract public class MissileWeapon extends Weapon {
 		defaultAction = AC_THROW;
 		usesTargeting = true;
 	}
-	
+
 	protected boolean sticky = true;
 	
 	protected static final float MAX_DURABILITY = 100;
@@ -215,7 +231,88 @@ abstract public class MissileWeapon extends Weapon {
 			}
 		}
 
+		if (Dungeon.hero.hasTalent(Talent.SAVIOR_BELIEF));
+		{
+			if (Random.Int(2) < 1) Buff.affect(defender, Roots.class, Dungeon.hero.pointsInTalent(Talent.SAVIOR_BELIEF));
+		}
+
+		if (Dungeon.hero.hasTalent(Talent.BARKSKIN)) {
+			if (Random.Int(3) < Dungeon.hero.pointsInTalent(Talent.BARKSKIN)) {
+				int furrowedTiles;
+				furrowedTiles = Random.chances(new float[]{0, 0, 2, 1, 1});
+				for (int i = 0; i < furrowedTiles; i++) {
+					for (int z : PathFinder.NEIGHBOURS9){
+						int cell2 = defender.pos + z;
+						if (canSpreadGrass(cell2)){
+							if (Random.Int(5) == 3){
+								Level.set(cell2, Terrain.FURROWED_GRASS);
+								GameScene.updateMap( cell2 );
+							}
+							CellEmitter.get( cell2 ).burst( LeafParticle.GENERAL, 10 );
+						}
+					}
+					Dungeon.observe();
+					}
+				}
+			}
+
+
+		SpiritBow weapon = Dungeon.hero.belongings.getItem(SpiritBow.class);
+		if (Dungeon.hero.pointsInTalent(Talent.SAVIOR_PRAY) >= 2) {
+		if (weapon != null) {
+		if (weapon.EatSeed >= 20) weapon.SeedHit++;
+		if (weapon.SeedHit == 3) {Buff.affect(Dungeon.hero, Barrier.class).incShield(Dungeon.hero.HT/10);
+		weapon.SeedHit = 0;}}}
+
+		if (Dungeon.hero.pointsInTalent(Talent.SAVIOR_PRAY) >= 3) {
+			if (weapon.EatSeed >= 30) {
+				if (Random.Int(5) == 0) {
+					int Chance = Random.Int(7);
+					switch (Chance) {
+						case 0:
+							new Blindweed().activate(defender);
+							break;
+						case 1:
+							new FlavourBuff() {
+								{
+									actPriority = VFX_PRIO;
+								}
+
+								public boolean act() {
+									Buff.affect(defender, Sleep.class);
+									return super.act();
+								}
+							}.attachTo(defender); // 꿈풀 효과
+							break;
+						case 2:
+							new Sorrowmoss().activate(defender);
+							break;
+						case 3:
+							new Stormvine().activate(defender);
+							break;
+						case 4:
+							new Starflower().activate(attacker);
+							break;
+						case 5:
+							new Swiftthistle().activate(attacker);
+							break;
+						case 6:
+							new Dreamfoil().activate(attacker);
+							break;
+						default:
+					}
+				}
+			}
+		}
+
 		return super.proc(attacker, defender, damage);
+	}
+
+	private boolean canSpreadGrass(int cell){
+		int yogPos = Dungeon.level.exit + Dungeon.level.width()*3;
+		return Dungeon.level.distance(cell, yogPos) > 4 && !Dungeon.level.solid[cell]
+				&& !(Dungeon.level.map[cell] == Terrain.FURROWED_GRASS || Dungeon.level.map[cell] == Terrain.HIGH_GRASS
+				|| Dungeon.level.map[cell] == Terrain.CHASM);
 	}
 
 	@Override

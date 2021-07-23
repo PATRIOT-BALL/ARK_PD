@@ -1210,6 +1210,17 @@ actors.mobs.yogfist$darkfist.teleport=The shadow teleports away in a blast of da
 actors.mobs.yogfist$darkfist.desc=This shadow is formed out of pure dark energy. It is capable of shooting powerful blasts of dark magic every turn! These blasts will weaken your light source in addition to dealing heavy damage. The shadow is also capable of briefly engulfing the arena in darkness in order to escape!\n\nThe shadow has no special abilities which it can use in melee range however.
 
 
+actors.mobs.miniboss.kaltsit.name=켈시
+actors.mobs.miniboss.kaltsit.desc=Mon3tr, 나를 따라라.
+actors.mobs.miniboss.kaltsit.burst=그런 잔재주는 통하지않아.
+actors.mobs.miniboss.kaltsit.summon=죽여라, Mon3tr.
+actors.mobs.miniboss.kaltsit.skill1=구조 보강 명령. Mon3tr, 역할을 다해라.
+actors.mobs.miniboss.kaltsit.skill2=전술 협동 명령. 적을 배제해라, Mon3tr.
+actors.mobs.miniboss.kaltsit.skill3=용해 명령. 적을 분쇄해라, Mon3tr.
+
+actors.mobs.miniboss.mon3tr.name=mon3tr
+actors.mobs.miniboss.mon3tr.desc=켈시의 사역마로, 그녀가 만들어낸 정체불명의 괴생물이다.
+
 actors.char.kill=%s killed you...
 actors.char.defeat=You defeated %s.
 actors.char.def_verb=dodged

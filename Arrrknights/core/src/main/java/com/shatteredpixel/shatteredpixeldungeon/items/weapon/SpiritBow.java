@@ -25,17 +25,23 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Lightning;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
@@ -45,9 +51,17 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Blindweed;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Dreamfoil;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Earthroot;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Sorrowmoss;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Starflower;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Stormvine;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MissileSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
@@ -56,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
+import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -79,7 +94,8 @@ public class SpiritBow extends Weapon {
 	public boolean sniperSpecial = false;
 	public float sniperSpecialBonusDamage = 0f;
 	protected WndBag.Mode mode = WndBag.Mode.SEED;
-	private int EatSeed = 0;
+	public int EatSeed = 0;
+	public int SeedHit = 0; // 2일때 적중시키면 보호막 생성
 	
 	@Override
 	public ArrayList<String> actions(Hero hero) {
@@ -180,13 +196,13 @@ public class SpiritBow extends Weapon {
 					+ (curseInfusionBonus ? 2 : 0)
 			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4
 					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
-					+ EatSeed / 3;
+					+ EatSeed / 2;
 		}
 		else return 6 + (int)(Dungeon.hero.lvl/2.5f)
 				+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 				+ (curseInfusionBonus ? 2 : 0)
 				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
-				+ EatSeed / 3;
+				+ EatSeed / 2;
 	}
 
 	@Override
@@ -292,6 +308,34 @@ public class SpiritBow extends Weapon {
 			if (Random.Int(14) < Dungeon.hero.pointsInTalent(Talent.ARTS_FOCUS)) {
 				Buff.affect(defender, Vulnerable.class, 4f);
 			}
+			if (EatSeed >= 20) SeedHit++;
+
+			if (SeedHit == 3) {Buff.affect(Dungeon.hero, Barrier.class).incShield(Dungeon.hero.HT/10);
+			SeedHit = 0;}
+
+			if (EatSeed >= 30) {
+				if (Random.Int(5) == 0) {
+					int Chance = Random.Int(7);
+					switch (Chance) {
+						case 0: new Blindweed().activate(defender); break;
+						case 1:	new FlavourBuff(){
+							{actPriority = VFX_PRIO;}
+							public boolean act() {
+								Buff.affect( defender, Sleep.class );
+								return super.act();
+							}
+						}.attachTo(defender); // 꿈풀 효과
+						break;
+						case 2: new Sorrowmoss().activate(defender); break;
+						case 3:
+							new Stormvine().activate(defender); break;
+						case 4: new Starflower().activate(attacker); break;
+						case 5: new Swiftthistle().activate(attacker); break;
+						case 6: new Dreamfoil().activate(attacker); break;
+						default:
+					}
+				}
+			}
 			return SpiritBow.this.proc(attacker, defender, damage);
 		}
 		
@@ -392,16 +436,19 @@ public class SpiritBow extends Weapon {
 	};
 
 	private static final String SEEDS = "EatSeed";
+	private static final String HIT = "SeedHit";
 
 	@Override
 	public void storeInBundle( Bundle bundle ) {
 		super.storeInBundle(bundle);
 		bundle.put(SEEDS, EatSeed);
+		bundle.put(HIT, SeedHit);
 	}
 
 	@Override
 	public void restoreFromBundle( Bundle bundle ) {
 		super.restoreFromBundle(bundle);
 		EatSeed = bundle.getInt(SEEDS);
+		SeedHit = bundle.getInt(HIT);
 	}
 }

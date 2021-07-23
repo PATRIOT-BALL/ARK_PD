@@ -88,6 +88,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLightning;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blazing;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Grim;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Penetrate;
@@ -310,8 +311,17 @@ public abstract class Char extends Actor {
 				if (h.belongings.weapon instanceof MissileWeapon
 						&& h.subClass == HeroSubClass.SNIPER
 						&& !Dungeon.level.adjacent(h.pos, enemy.pos)){
-					dr = 0;
-				}
+					dr = 0; }
+
+				SpiritBow weapon = h.belongings.getItem(SpiritBow.class);
+					if (weapon != null && h.belongings.weapon instanceof SpiritBow.SpiritArrow
+							&& h.subClass == HeroSubClass.WARDEN) {
+						if (weapon.EatSeed >= 10) dr/=2;
+					}
+					if (weapon != null && h.belongings.weapon instanceof MissileWeapon
+							&& h.subClass == HeroSubClass.WARDEN && h.hasTalent(Talent.SAVIOR_PRAY)) {
+						if (weapon.EatSeed >= 10) dr/=2;
+					}
 
 				if (h.belongings.weapon instanceof Mace) dr = 0;
 			}

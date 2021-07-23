@@ -54,6 +54,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Regeneration;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SeethingBurst;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SpikesBuff;
@@ -509,7 +510,7 @@ public class Hero extends Char {
 
         if (wep instanceof MissileWeapon) {
             if (Dungeon.level.adjacent(pos, target.pos)) {
-                accuracy *= 0.5f;
+                accuracy *= (0.5f + 0.25f*pointsInTalent(Talent.DURABLE_PROJECTILES));
             } else {
                 accuracy *= 1.5f;
             }
@@ -816,10 +817,6 @@ public class Hero extends Char {
             } else {
                 actResult = false;
             }
-        }
-
-        if (hasTalent(Talent.BARKSKIN) && Dungeon.level.map[pos] == Terrain.FURROWED_GRASS) {
-            Buff.affect(this, Barkskin.class).set(lvl - 3, pointsInTalent(Talent.BARKSKIN));
         }
 
         return actResult;
@@ -1263,6 +1260,10 @@ public class Hero extends Char {
             default:
         }
 
+        if (hasTalent(Talent.SAVIOR_BELIEF) && enemy.buff(Roots.class) != null || enemy.buff(Paralysis.class) != null) {
+            damage *= 1f + pointsInTalent(Talent.SAVIOR_BELIEF) * 0.12f;
+        }
+
         return damage;
     }
 
@@ -1378,6 +1379,20 @@ public class Hero extends Char {
             {
                 dmg = Math.round(dmg * 0.7f);
             }}}
+
+        if (Dungeon.hero.hasTalent(Talent.BARKSKIN)) {
+            int grassCells = 0;
+            for (int i : PathFinder.NEIGHBOURS9) {
+                if (Dungeon.level.map[pos+i] == Terrain.FURROWED_GRASS
+                        || Dungeon.level.map[pos+i] == Terrain.HIGH_GRASS){
+                    grassCells++;
+                }
+            }
+
+            float Reg = 1f;
+            if (grassCells > 0) Reg -= 0.04f + grassCells * 0.04f;
+            dmg *= Reg;
+        }
 
 
         if (src instanceof ChaliceOfBlood) {
