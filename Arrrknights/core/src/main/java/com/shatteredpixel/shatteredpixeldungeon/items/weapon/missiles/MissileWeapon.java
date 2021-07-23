@@ -231,11 +231,6 @@ abstract public class MissileWeapon extends Weapon {
 			}
 		}
 
-		if (Dungeon.hero.hasTalent(Talent.SAVIOR_BELIEF));
-		{
-			if (Random.Int(2) < 1) Buff.affect(defender, Roots.class, Dungeon.hero.pointsInTalent(Talent.SAVIOR_BELIEF));
-		}
-
 		if (Dungeon.hero.hasTalent(Talent.BARKSKIN)) {
 			if (Random.Int(3) < Dungeon.hero.pointsInTalent(Talent.BARKSKIN)) {
 				int furrowedTiles;
