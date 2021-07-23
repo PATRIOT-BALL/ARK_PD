@@ -94,7 +94,7 @@ public class SpiritBow extends Weapon {
 	public boolean sniperSpecial = false;
 	public float sniperSpecialBonusDamage = 0f;
 	protected WndBag.Mode mode = WndBag.Mode.SEED;
-	public int EatSeed = 0;
+	public int EatSeed = 29;
 	public int SeedHit = 0; // 2일때 적중시키면 보호막 생성
 	
 	@Override
@@ -102,7 +102,7 @@ public class SpiritBow extends Weapon {
 		ArrayList<String> actions = super.actions(hero);
 		actions.remove(AC_EQUIP);
 		actions.add(AC_SHOOT);
-		if (hero.subClass == HeroSubClass.WARDEN) actions.add(AC_SEED);
+		if (hero.subClass == HeroSubClass.WARDEN && EatSeed < 30) actions.add(AC_SEED);
 		return actions;
 	}
 	

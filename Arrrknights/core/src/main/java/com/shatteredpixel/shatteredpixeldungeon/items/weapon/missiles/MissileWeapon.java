@@ -234,7 +234,7 @@ abstract public class MissileWeapon extends Weapon {
 		if (Dungeon.hero.hasTalent(Talent.BARKSKIN)) {
 			if (Random.Int(3) < Dungeon.hero.pointsInTalent(Talent.BARKSKIN)) {
 				int furrowedTiles;
-				furrowedTiles = Random.chances(new float[]{0, 0, 2, 1, 1});
+				furrowedTiles = Random.chances(new float[]{1, 1, 2, 1, 1});
 				for (int i = 0; i < furrowedTiles; i++) {
 					for (int z : PathFinder.NEIGHBOURS9){
 						int cell2 = defender.pos + z;
