@@ -299,8 +299,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-		new Icecap.Seed().collect();
-		new TomeOfMastery().collect();
 	}
 
 	private void initRosecat(Hero hero)
