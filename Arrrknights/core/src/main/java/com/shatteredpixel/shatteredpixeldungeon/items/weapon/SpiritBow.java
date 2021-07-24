@@ -224,14 +224,14 @@ public class SpiritBow extends Weapon {
 		}
 
 		if (sniperSpecial){
-			damage = Math.round(damage * (1f + sniperSpecialBonusDamage + Dungeon.hero.pointsInTalent(Talent.SNIPING)*0.2f));
+			damage = Math.round(damage * (1f + sniperSpecialBonusDamage + Dungeon.hero.pointsInTalent(Talent.SNIPING)*0.25f));
 
 			switch (augment){
 				case NONE:
-					damage = Math.round(damage * 0.667f);
+					damage = Math.round(damage * 0.75f);
 					break;
 				case SPEED:
-					damage = Math.round(damage * 1f);
+					damage = Math.round(damage * 1.1f);
 					break;
 				case DAMAGE:
 					//as distance increases so does damage, capping at 3x:
@@ -241,6 +241,9 @@ public class SpiritBow extends Weapon {
 					damage = Math.round(damage * multiplier);
 					break;
 			}
+		}
+		else if (curUser.subClass == HeroSubClass.SNIPER) {
+			damage = Math.round(damage * 1.1f);
 		}
 		
 		return damage;

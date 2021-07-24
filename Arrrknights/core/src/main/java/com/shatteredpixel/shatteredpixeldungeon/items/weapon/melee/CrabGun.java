@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Brute;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -31,7 +32,6 @@ public class CrabGun extends MeleeWeapon {
 
         tier = 3;
         RCH = 2;
-        DLY = 0.75f;
     }
 
     private int charge = 0;
@@ -39,7 +39,7 @@ public class CrabGun extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier-1) +    //8 + 3
+        return  4*(tier) + 1 +   //13 + 3
                 lvl*(tier); }
 
     @Override
@@ -67,7 +67,7 @@ public class CrabGun extends MeleeWeapon {
             }
             charge = 0;
         }
-        else SPCharge(Random.IntRange(9+buffedLvl() / 3 / 4,12+buffedLvl()));
+        else SPCharge(Random.IntRange(7+buffedLvl() / 4,11+buffedLvl() / 2));
         return super.proc(attacker, defender, damage);
     }
 
@@ -121,24 +121,27 @@ public class CrabGun extends MeleeWeapon {
 
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange( 2 + Dungeon.depth / 2, 6 + Dungeon.depth + crabLevel );
+            return Random.NormalIntRange( 2 + Dungeon.depth / 2, 6 + (Dungeon.depth / 2) + crabLevel * 2 );
         }
 
         @Override
         public int attackSkill( Char target ) {
-            return 10 + Dungeon.depth + crabLevel;
+            return 10 + Dungeon.depth / 2 + crabLevel;
         }
 
         @Override
         public int drRoll() {
-            return Random.NormalIntRange(0, 3 + crabLevel);
+            return Random.NormalIntRange(0, 3 + crabLevel / 2);
         }
 
         public void setting(int setlvl)
         {
-            HP=HT=20 + setlvl * 8;
-            defenseSkill = 1 + setlvl * 2;
-            crabLevel = setlvl;
+            CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
+            int itembuff = 0;
+            if (setBuff != null) itembuff = setBuff.itemLevel();
+            HP=HT=25 + setlvl * 6 + itembuff * 5;
+            defenseSkill = 1 + setlvl + itembuff;
+            crabLevel = setlvl + itembuff / 2;
         }
     }
 }

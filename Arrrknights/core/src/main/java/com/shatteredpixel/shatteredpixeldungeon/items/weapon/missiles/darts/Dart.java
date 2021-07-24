@@ -41,7 +41,6 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndOptions;
-import com.sun.org.apache.bcel.internal.generic.DUP;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 

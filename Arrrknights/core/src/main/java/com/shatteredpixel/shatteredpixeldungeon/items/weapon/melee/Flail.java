@@ -22,7 +22,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Random;
 
 public class Flail extends MeleeWeapon {
 
@@ -31,14 +35,49 @@ public class Flail extends MeleeWeapon {
 		hitSound = Assets.Sounds.HIT_CRUSH;
 		hitSoundPitch = 0.8f;
 
-		tier = 4;
-		ACC = 0.85f; //0.9x accuracy
+		tier = 5;
+		ACC = 1.2f; //0.9x accuracy
 		//also cannot surprise attack, see Hero.canSurpriseAttack
 	}
 
 	@Override
-	public int max(int lvl) {
-		return  Math.round(7*(tier+1)) +        //35 base, up from 25
-				lvl*Math.round(1.6f*(tier+1));  //+8 per level, up from +5
+	public int proc(Char attacker, Char defender, int damage) {
+		int thisHP = attacker.HP;
+		int thisHT = attacker.HT;
+		if (thisHP <= thisHT/4) {
+			damage *= 1.5f;
+
+			if (Random.Int(2) < 1) {
+				int healAmt = Math.round(damage * 0.1f);
+				healAmt = Math.min(healAmt, attacker.HT - attacker.HP);
+
+				if (healAmt > 0 && attacker.isAlive()) {
+
+					attacker.HP += healAmt;
+					attacker.sprite.emitter().start(Speck.factory(Speck.HEALING), 0.4f, 1);
+					attacker.sprite.showStatus(CharSprite.POSITIVE, Integer.toString(healAmt));
+
+				}
+			}
+		}
+		else if (thisHP <= thisHT / 2){
+			damage *= 1.3f;
+			if (Random.Int(4) < 1) {
+				int healAmt = Math.round(damage * 0.1f);
+				healAmt = Math.min(healAmt, attacker.HT - attacker.HP);
+
+				if (healAmt > 0 && attacker.isAlive()) {
+
+					attacker.HP += healAmt;
+					attacker.sprite.emitter().start(Speck.factory(Speck.HEALING), 0.4f, 1);
+					attacker.sprite.showStatus(CharSprite.POSITIVE, Integer.toString(healAmt));
+
+				}
+			}
+		}
+		else if (thisHP <= thisHT - thisHT/4) {
+			damage *= 1.1f;
+		}
+		return super.proc(attacker, defender, damage);
 	}
 }

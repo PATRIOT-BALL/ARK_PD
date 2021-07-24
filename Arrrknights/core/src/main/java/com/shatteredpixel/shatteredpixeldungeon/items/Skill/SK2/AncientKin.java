@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPsionicBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
@@ -93,7 +94,11 @@ public class AncientKin extends Skill {
         }
 
         @Override
-        public int defenseSkill(Char enemy) { return 5 +Dungeon.hero.lvl / 2; }
+        public int defenseSkill(Char enemy) {
+            CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
+            int itembuff = 0;
+            if (setBuff != null) itembuff = setBuff.itemLevel();
+            return 5 +(Dungeon.hero.lvl / 2) + itembuff; }
 
         @Override
         public float speed() {

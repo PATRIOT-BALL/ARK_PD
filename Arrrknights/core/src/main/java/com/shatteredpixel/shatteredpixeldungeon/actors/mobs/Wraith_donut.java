@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.I_GolemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LurkerSprite;
@@ -49,12 +50,18 @@ public void restoreFromBundle( Bundle bundle ) {
 
 @Override
 public int damageRoll() {
-        return Random.NormalIntRange( 1 + level/2, 2 + level );
+        CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
+        int itembuff = 0;
+        if (setBuff != null) itembuff = setBuff.itemLevel();
+        return Random.NormalIntRange( 1 + level/2, 2 + level + itembuff );
         }
 
 @Override
 public int attackSkill( Char target ) {
-        return 10 + level;
+        CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
+        int itembuff = 0;
+        if (setBuff != null) itembuff = setBuff.itemLevel();
+        return 10 + level + itembuff;
         }
 
 public void adjustStats( int level ) {
@@ -82,7 +89,6 @@ public static void spawnAround( int pos ) {
 
 public static Wraith_donut spawnAt( int pos ) {
         if (!Dungeon.level.solid[pos] && Actor.findChar( pos ) == null) {
-
                 Wraith_donut w = new Wraith_donut();
         w.adjustStats( Dungeon.depth );
         w.pos = pos;
@@ -97,7 +103,5 @@ public static Wraith_donut spawnAt( int pos ) {
         return w;
         } else {
         return null;
-        }
-        }
-
+        } }
         }

@@ -39,6 +39,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.ItemStatusHandler;
 import com.shatteredpixel.shatteredpixeldungeon.items.Recipe;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfHoneyedHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.ExoticPotion;
@@ -238,8 +240,8 @@ public class Potion extends Item {
 		} else if (action.equals( AC_DRINK )) {
 
 			if (Dungeon.hero.buff(Twilight.class) == null) {
-				if (isKnown() && mustThrowPots.contains(getClass())) {
-
+				if (hero.buff(CustomeSet.CustomSetBuff.class) != null && hero.buff(CustomeSet.CustomSetBuff.class).isCursed()) GLog.w(Messages.get(this, "fail"));
+				else if (isKnown() && mustThrowPots.contains(getClass())) {
 					GameScene.show(
 							new WndOptions(Messages.get(Potion.class, "harmful"),
 									Messages.get(Potion.class, "sure_drink"),

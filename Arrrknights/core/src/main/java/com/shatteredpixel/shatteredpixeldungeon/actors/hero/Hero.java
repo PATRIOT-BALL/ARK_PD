@@ -122,6 +122,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CapeOfThorns;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
@@ -510,9 +511,10 @@ public class Hero extends Char {
 
         if (wep instanceof MissileWeapon) {
             if (Dungeon.level.adjacent(pos, target.pos)) {
-                accuracy *= (0.5f + 0.25f*pointsInTalent(Talent.DURABLE_PROJECTILES));
+                accuracy *= (0.5f + 0.25f*pointsInTalent(Talent.DURABLE_TIPS));
             } else {
-                accuracy *= 1.5f;
+                if (this.subClass == HeroSubClass.SNIPER) accuracy *= 1.75f + (pointsInTalent(Talent.FARSIGHT) * 0.25f);
+                else accuracy *= 1.5f;
             }
         }
 
