@@ -98,8 +98,8 @@ public class CustomeSet extends Artifact {
         public boolean act() {
             spend( TICK );
             if (charge < chargeCap && !cursed) {
-                // 500 턴마다 100%충전 (기본)
-                float chargeGain = 0.2f;
+                // 800 턴마다 100%충전 (기본)
+                float chargeGain = 0.125f;
                 chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
                 partialCharge += chargeGain;
 
