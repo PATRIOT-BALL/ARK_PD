@@ -778,6 +778,9 @@ public class Badges {
 		case HUNTRESS:
 			badge = Badge.VICTORY_HUNTRESS;
 			break;
+		case ROSECAT:
+			badge = Badge.VICTORY_ROSECAT;
+			break;
 		}
 		local.add( badge );
 		if (!global.contains( badge )) {

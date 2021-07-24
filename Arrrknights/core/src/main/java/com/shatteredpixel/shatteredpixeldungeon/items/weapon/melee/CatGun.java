@@ -33,7 +33,7 @@ public class CatGun extends MeleeWeapon {
         RCH = 2;
     }
 
-    private int charge = 100;
+    private int charge = 0;
     private int chargeCap = 100;
 
     @Override

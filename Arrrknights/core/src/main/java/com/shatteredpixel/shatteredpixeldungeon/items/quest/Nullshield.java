@@ -6,12 +6,18 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -69,15 +75,18 @@ public class Nullshield extends Item {
                     item.detach( curUser.belongings.backpack );
                     detach(curUser.belongings.backpack);
                 }
-                else if (item instanceof Scroll)
+                else if (item instanceof WornShortsword || item instanceof Dagger || item instanceof MagesStaff || item instanceof EX42 || item instanceof Gloves)
                 {
-                    GLog.h(Messages.get(Nullshield.class, "suc"));
-                    Niansword nya = new Niansword();
-                    nya.enchant(Weapon.Enchantment.randomUncommon());
-                    nya.identify();
-                    Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
-                    item.detach( curUser.belongings.backpack );
-                    detach(curUser.belongings.backpack);
+                    if (curUser.belongings.weapon != item) {
+                        GLog.h(Messages.get(Nullshield.class, "suc"));
+                        RhodesSword nya = new RhodesSword();
+                        nya.identify();
+
+                        Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                        item.detach(curUser.belongings.backpack);
+                        detach(curUser.belongings.backpack);
+                    }
+                    else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));
                 }
                 else if (item instanceof Enfild)
                 {
