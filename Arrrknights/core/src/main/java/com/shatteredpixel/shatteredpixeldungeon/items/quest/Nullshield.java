@@ -20,9 +20,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
+import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
@@ -78,13 +80,25 @@ public class Nullshield extends Item {
                 else if (item instanceof WornShortsword || item instanceof Dagger || item instanceof MagesStaff || item instanceof EX42 || item instanceof Gloves)
                 {
                     if (curUser.belongings.weapon != item) {
-                        GLog.h(Messages.get(Nullshield.class, "suc"));
-                        RhodesSword nya = new RhodesSword();
-                        nya.identify();
+                        if (Random.Int(2) < 1) {
+                            GLog.h(Messages.get(Nullshield.class, "suc"));
+                            RhodesSword nya = new RhodesSword();
+                            nya.identify();
 
-                        Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
-                        item.detach(curUser.belongings.backpack);
-                        detach(curUser.belongings.backpack);
+                            int level = item.level();
+                            if (((MeleeWeapon) item).curseInfusionBonus) level--;
+                            if (level > 0) {
+                                nya.upgrade(level);
+                            } else if (level < 0) {
+                                nya.degrade(-level);
+                            }
+
+                            Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                            item.detach(curUser.belongings.backpack);
+                            detach(curUser.belongings.backpack);
+                        }
+                        else { curUser.sprite.showStatus( CharSprite.NEUTRAL, Messages.get(this, "^$%!@#!") );
+                            detach(curUser.belongings.backpack);}
                     }
                     else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));
                 }
