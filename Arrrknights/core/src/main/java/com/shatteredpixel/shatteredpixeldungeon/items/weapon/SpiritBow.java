@@ -102,7 +102,7 @@ public class SpiritBow extends Weapon {
 		ArrayList<String> actions = super.actions(hero);
 		actions.remove(AC_EQUIP);
 		actions.add(AC_SHOOT);
-		if (hero.subClass == HeroSubClass.WARDEN && EatSeed < 30) actions.add(AC_SEED);
+		if (hero.subClass == HeroSubClass.WARDEN && EatSeed < 45) actions.add(AC_SEED);
 		return actions;
 	}
 	
@@ -166,10 +166,10 @@ public class SpiritBow extends Weapon {
 		info += "\n\n" + Messages.get(MissileWeapon.class, "distance");
 
 		if (Dungeon.hero.subClass==HeroSubClass.WARDEN) {
-			info+="\n\n"+Messages.get(SpiritBow.class, "seed", EatSeed, 30);
-			if (EatSeed == 30) info+="\n\n"+Messages.get(SpiritBow.class, "power3");
-			else if (EatSeed >= 20) info+="\n\n"+Messages.get(SpiritBow.class, "power2");
-			else if (EatSeed >= 10) info+="\n\n"+Messages.get(SpiritBow.class, "power1");
+			info+="\n\n"+Messages.get(SpiritBow.class, "seed", EatSeed, 45);
+			if (EatSeed == 45) info+="\n\n"+Messages.get(SpiritBow.class, "power3");
+			else if (EatSeed >= 30) info+="\n\n"+Messages.get(SpiritBow.class, "power2");
+			else if (EatSeed >= 15) info+="\n\n"+Messages.get(SpiritBow.class, "power1");
 			else info+="\n\n"+Messages.get(SpiritBow.class, "power0");
 		}
 		
@@ -196,13 +196,13 @@ public class SpiritBow extends Weapon {
 					+ (curseInfusionBonus ? 2 : 0)
 			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4
 					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
-					+ EatSeed / 2;
+					+ EatSeed / 3;
 		}
 		else return 6 + (int)(Dungeon.hero.lvl/2.5f)
 				+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 				+ (curseInfusionBonus ? 2 : 0)
 				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
-				+ EatSeed / 2;
+				+ EatSeed / 3;
 	}
 
 	@Override
@@ -311,12 +311,12 @@ public class SpiritBow extends Weapon {
 			if (Random.Int(14) < Dungeon.hero.pointsInTalent(Talent.ARTS_FOCUS)) {
 				Buff.affect(defender, Vulnerable.class, 4f);
 			}
-			if (EatSeed >= 20) SeedHit++;
+			if (EatSeed >= 30) SeedHit++;
 
 			if (SeedHit == 3) {Buff.affect(Dungeon.hero, Barrier.class).incShield(Dungeon.hero.HT/10);
 			SeedHit = 0;}
 
-			if (EatSeed >= 30) {
+			if (EatSeed >= 45) {
 				if (Random.Int(5) == 0) {
 					int Chance = Random.Int(7);
 					switch (Chance) {
@@ -424,7 +424,7 @@ public class SpiritBow extends Weapon {
 		@Override
 		public void onSelect( Item item ) {
 			if (item != null && item instanceof Plant.Seed) {
-				if (EatSeed < 30) {
+				if (EatSeed < 45) {
 					Hero hero = Dungeon.hero;
 					hero.sprite.operate(hero.pos);
 					Sample.INSTANCE.play(Assets.Sounds.PLANT);

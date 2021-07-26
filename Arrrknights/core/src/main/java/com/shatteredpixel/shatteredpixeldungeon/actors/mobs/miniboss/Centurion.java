@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.levels.PrisonLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -29,6 +30,8 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 import com.watabou.utils.Reflection;
+
+import java.util.ArrayList;
 
 public class Centurion extends Mob {
     {
@@ -51,7 +54,7 @@ public class Centurion extends Mob {
         flying = true;
     }
 
-    private int skillcooldown = 10;
+    private int skillcooldown = 8;
 
     @Override
     public int damageRoll() {
@@ -90,40 +93,32 @@ public class Centurion extends Mob {
     @Override
     public boolean act() {
         while (skillcooldown <= 0) {
-            int spawnPos = -1;
-            for (int i : PathFinder.NEIGHBOURS8) {
-                if (Actor.findChar(pos + i) == null) {
-                    if (spawnPos == -1 || Dungeon.level.trueDistance(Dungeon.hero.pos, spawnPos) > Dungeon.level.trueDistance(Dungeon.hero.pos, pos + i) ||
-                       Dungeon.level.map[spawnPos] != Terrain.WALL)
-                    {
-                        spawnPos = pos + i;
-                    }
-                    }
-                }
 
-            if (spawnPos != -1) {
+            ArrayList<Integer> respawnPoints = new ArrayList<>();
+            for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
+                int p = Dungeon.hero.pos + PathFinder.NEIGHBOURS8[i];
+                if (Actor.findChar( p ) == null && Dungeon.level.passable[p]) {
+                    respawnPoints.add( p );
+                }
+            }
+
+            if (respawnPoints.size() > 0) {
+                int index = Random.index( respawnPoints );
+
                 Mob summon = Reflection.newInstance(Centurion.CenturionMinion.class);
-                summon.pos = spawnPos;
                 GameScene.add(summon);
+                ScrollOfTeleportation.appear( summon, respawnPoints.get( index ) );
                 Actor.addDelayed(new Pushing(summon, pos, summon.pos), -1);
-                CellEmitter.get(spawnPos).burst(ShadowParticle.CURSE, 4);
+                CellEmitter.get(summon.pos).burst(ShadowParticle.CURSE, 4);
                 summon.beckon(Dungeon.hero.pos);
-                skillcooldown = Random.Int(45,55);
-
-                if (Dungeon.level.map[spawnPos] == Terrain.WALL || Dungeon.level.map[spawnPos] == Terrain.CHASM || Dungeon.level.map[spawnPos] == Terrain.BOOKSHELF)
-                {
-                    GLog.w(Messages.get(this,"tep"));
-                    new Fadeleaf().activate(summon);
-                }
+                skillcooldown = Random.Int(6, 8);
 
             }
             else break;
         }
 
         if (skillcooldown > 0) {
-            if (HP < HT / 2) {
-                skillcooldown -= 30;
-            } else skillcooldown -= 1;
+             skillcooldown -= 1;
         }
 
         return super.act();
@@ -157,7 +152,7 @@ public class Centurion extends Mob {
             maxLvl = -15;
             EXP = 5;
 
-            HP=HT=12;
+            HP=HT=22;
             baseSpeed = 1f;
 
             properties.add(Property.SARKAZ);

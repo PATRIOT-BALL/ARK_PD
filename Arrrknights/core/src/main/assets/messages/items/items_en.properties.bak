@@ -1908,7 +1908,7 @@ items.weapon.melee.dirk.desc=stabbing dagger. You can dig deeper.
 
 items.weapon.melee.flail.name=hayabusa
 items.weapon.melee.flail.stats_desc=Accuracy -15%, No surprise attack
-items.weapon.melee.flail.desc=Hwando of the Far East, which is bigger than a human's height. It cannot make surprise attacks, but it is very powerful.
+items.weapon.melee.flail.desc=Hwando of the Far East, which is bigger than a human's height. It cannot make surprise attacks, but it is very powerful.\n\nThe lower the health, the higher the damage, and if it is below 50%, the Life Drain is activated.
 
 items.weapon.melee.gauntlet.name=mountain breaker
 items.weapon.melee.gauntlet.stats_desc=Attack Speed 500%
@@ -2071,7 +2071,7 @@ items.weapon.melee.m1887.name=M1887
 items.weapon.melee.m1887.desc=It is clear that the Notarial Hall deploys its executors only to the most challenging of missions.\n\nThis shotgun also deals damage to enemies around the target. If the target is alone, it deals double damage.
 
 items.weapon.melee.crabgun.name=crab breeder
-items.weapon.melee.crabgun.stats_desc=Range +1, Attack Speed 133%
+items.weapon.melee.crabgun.stats_desc=Range +1
 items.weapon.melee.crabgun.desc=Take control of this mysterious metal crab with a crossbow. Charges with each attack, and attacks when fully charged to summon a Metal Crab.
 items.weapon.melee.crabgun$metalcrab.name=Metal crab
 items.weapon.melee.crabgun$metalcrab.desc=summoned by your crab breeder. It becomes stronger in proportion to the upgrade of the weapon and the current number of floors.
@@ -2098,6 +2098,22 @@ items.weapon.melee.patriotspear.name=Requiem
 items.weapon.melee.patriotspear.desc=He has long struggled with fate, and now resolves to slit the throat of fate.\n\nThis _unique_ weapon deals damage per attack 4 time.
 items.weapon.melee.patriotspear.typical_stats_desc=Attack Speed 50%%, Typically this weapon blocks 0-%d damage. This blocking scales with upgrades.
 items.weapon.melee.patriotspear.stats_desc=Attack Speed 50%%, this weapon blocks 0-%d damage. This blocking scales with upgrades.
+
+items.weapon.melee.shishioh.name=Shishiou
+items.weapon.melee.shishioh.stats_desc=Accuracy +20%, No surprise attack
+items.weapon.melee.shishioh.desc="you really know how to appeal to people."\n\nThe lower the health, the higher the damage, and if it is below 50%, the Life Drain is activated.
+
+items.weapon.melee.rhodessword.name=Rhodes-style longsword
+items.weapon.melee.rhodessword.stats_desc=Surprise attack bonus +100%\n_True Damage(ignore defense)_, you kill an enemy, get invisible.
+items.weapon.melee.rhodessword.desc=if she were to suddenly disappear one day, it's unclear how many people would actually notice.
+
+items.weapon.melee.catgun.name=My wish
+items.weapon.melee.catgun.stats_desc=Range +1
+items.weapon.melee.catgun.desc=_"나는 끝까지 여기에 서 있을 생각이다. 우리들은 과거를 망각할 수는 없지만, 너에게는 또 다른 미래가 기다릴테니까."_\n\n이 무기로 적을 공격하면 에너지를 충전합니다. 에너지가 전부 충전되면 강력한 괴생물체 _Mon3tr_를 일시적으로 전투에 참전시킬 수 있습니다.
+items.weapon.melee.catgun.ac_zap=깨어나라
+items.weapon.melee.catgun$mon3tr.name=Mon3tr
+items.weapon.melee.catgun$mon3tr.desc=켈시의 기술력이 응집된 미지의 괴생물체. 비록 불안정한 복제품이기때문에 유지 시간은 짧지만, 눈에 보이는 모든 것들을 파괴해버린다.
+
 
 ###missile weapons
 items.weapon.missiles.darts.adrenalinedart.name=adrenaline arrow
@@ -2229,9 +2245,16 @@ items.weapon.missiles.thunderbolt.desc=This _special_ capsule deals up to 2x dam
 
 items.weapon.spiritbow.name=reverse crossbow
 items.weapon.spiritbow.ac_shoot=SHOOT
+items.weapon.spiritbow.ac_seed=PUT SEEDS
 items.weapon.spiritbow.prompt=Choose a target
 items.weapon.spiritbow.stats=The crossbow cannot be directly upgraded, but will instead steadily grow stronger as you level up. At your current level, arrows shot from the crossbow will deal _%1$d-%2$d damage_ and require _%3$d strength_ to use properly.
 items.weapon.spiritbow.desc=A crossbow with a compact size and strong tension using the reverse draw method.
+items.weapon.spiritbow.seed=Can be upgraded by adding seeds\nSEEDS : %1$d / %2$d
+items.weapon.spiritbow.seedfail=더 이상 쇠뇌에 씨앗을 사용할 수 없습니다.
+items.weapon.spiritbow.power0=많은 씨앗을 부여하면 특수 능력이 개방됩니다.
+items.weapon.spiritbow.power1=_Ability Level 1_\nhalves enemy's defense
+items.weapon.spiritbow.power2=_Ability Level 2_\nhalves enemy's defense\nHit 3 times to get a shield
+items.weapon.spiritbow.power3=_Ability Level 3_\nhalves enemy's defense\nHit 3 times to get a shield\n20% chance to trigger a random plant effect
 
 items.weapon.weapon.identify=You are now familiar enough with your weapon to identify it.
 items.weapon.weapon.too_heavy=Because of your inadequate strength this weapon will hinder your attack speed, accuracy, and ability to surprise attack.
