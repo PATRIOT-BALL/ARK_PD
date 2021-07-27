@@ -32,15 +32,18 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Lightning;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -195,13 +198,13 @@ public class SpiritBow extends Weapon {
 					+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 					+ (curseInfusionBonus ? 2 : 0)
 			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4
-					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
+					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 2
 					+ EatSeed / 3;
 		}
 		else return 6 + (int)(Dungeon.hero.lvl/2.5f)
 				+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 				+ (curseInfusionBonus ? 2 : 0)
-				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 3
+				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 2
 				+ EatSeed / 3;
 	}
 
@@ -395,10 +398,15 @@ public class SpiritBow extends Weapon {
 						&& user.buff(Talent.SeerShotCooldown.class) == null){
 					int shotPos = throwPos(user, dst);
 					if (Actor.findChar(shotPos) == null) {
-						RevealedArea a = Buff.affect(user, RevealedArea.class, 3f);
+						RevealedArea a = Buff.affect(user, RevealedArea.class, user.pointsInTalent(Talent.SEER_SHOT));
+						for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+							if (Dungeon.level.adjacent(mob.pos, shotPos) && mob.alignment != Char.Alignment.ALLY) {
+								Buff.affect(mob, Roots.class, user.pointsInTalent(Talent.SEER_SHOT));
+							}
+						}
 						a.depth = Dungeon.depth;
 						a.pos = shotPos;
-						Buff.affect(user, Talent.SeerShotCooldown.class, 30 - (user.pointsInTalent(Talent.SEER_SHOT) * 7));
+						Buff.affect(user, Talent.SeerShotCooldown.class, 30);
 					}
 				}
 

@@ -322,11 +322,6 @@ public abstract class Char extends Actor {
 							&& h.subClass == HeroSubClass.WARDEN) {
 						if (weapon.EatSeed >= 15) dr/=2;
 					}
-					if (weapon != null && h.belongings.weapon instanceof MissileWeapon
-							&& h.subClass == HeroSubClass.WARDEN && h.hasTalent(Talent.SAVIOR_PRAY)) {
-						if (weapon.EatSeed >= 15) dr/=2;
-					}
-
 				if (h.belongings.weapon instanceof Mace) dr = 0;
 				if (h.belongings.weapon instanceof RhodesSword) dr = 0;
 			}

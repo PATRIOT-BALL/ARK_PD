@@ -499,7 +499,7 @@ items.armor.scalearmor.desc=용문 전투경찰들이 사용하는 제식 전술
 items.armor.warriorarmor.name=블레이즈의 전투복
 items.armor.warriorarmor.ac_special=끓어오르는 투지
 items.armor.warriorarmor.prompt=도약할 지역을 선택하세요
-items.armor.warriorarmor.desc=\ㅠ가벼운 옷과 단련된 신체가 조화를 이뤄 블레이즈는 끓어오르는 투지를 발동시켜 공격 사거리가 늘어나고 방어력이 2배가 됩니다. 지속시간이 끝나면 받은 피해에 비례해 피해 증가 효과를 얻습니다. \n\ 그 어떤 옷보다 가볍지만, 블레이즈는 이미 오랜 전투로 단련된 상태입니다. 그녀에게 상처 따위는 전투의지를 더욱 고양시키는 증표일 뿐입니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 전사가 경험치를 얻을 때마다 증가합니다.
+items.armor.warriorarmor.desc=가벼운 옷과 단련된 신체가 조화를 이뤄 블레이즈는 끓어오르는 투지를 발동시켜 공격 사거리가 늘어나고 방어력이 2배가 됩니다. 지속시간이 끝나면 받은 피해에 비례해 피해 증가 효과를 얻습니다. \n\ 그 어떤 옷보다 가볍지만, 블레이즈는 이미 오랜 전투로 단련된 상태입니다. 그녀에게 상처 따위는 전투의지를 더욱 고양시키는 증표일 뿐입니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 전사가 경험치를 얻을 때마다 증가합니다.
 
 
 
@@ -1669,6 +1669,12 @@ items.wands.sp.staffofsnowsant.staff_name=개조 침묵의 흑요석 반지
 items.wands.sp.staffofsnowsant.desc=이상이 뭘까? 당연히 출세다! 천조자조는 그녀의 유일한 신념이다! 노력이다! 보상이 있을거다! 맞아! 아마도......!
 items.wands.sp.staffofsnowsant.stats_desc=이 막대는 침묵의 에너지를 발사하여 적중당한 대상의 특수 능력을 봉인합니다. 침묵에 당하는 적은 비교적 한정적인 편이지만, 아츠를 사용하는 평범한 적들은 대부분 통합니다. 또한, 적중당한 대상을 자신의 앞으로 끌어당길 수 있습니다.
 items.wands.sp.staffofsnowsant.bmage_desc=_아미야_ 가 개조 침묵의 흑요석 반지로 적을 공격했을 때, 대상이 침묵 상태라면 추가 피해를 줍니다.
+
+items.wands.sp.staffoflena.name=스태프 오브 레나
+items.wands.sp.staffoflena.staff_name=개조 재성장의 흑요석 반지
+items.wands.sp.staffoflena.desc=_"사실은 그런 야만스러운 싸움은 그리 좋아하지 않는데 말이야."_\n\n이 개조된 재성장의 스태프는 퍼퓨머 대원의 능력이 반영되었습니다.
+items.wands.sp.staffoflena.stats_desc=이 아츠 스태프는 식물의 힘을 발사합니다. 이 막대가 발사하는 에너지 _%1$d-%2$d의 피해를_ 입히며, 적중당한 대상에게 현기증을 부여합니다. 또한, 에너지가 휩쓸은 곳에는 헤쳐진 풀이 자라납니다.
+items.wands.sp.staffoflena.bmage_desc=_아미야_ 가 개조 재성장의 흑요석 반지로 적을 공격했을 때, 자신과 대상 중 하나라도 풀 위에 서 있다면 준 피해에 비례한 자연의 치유 효과를 얻습니다.
 
 
 

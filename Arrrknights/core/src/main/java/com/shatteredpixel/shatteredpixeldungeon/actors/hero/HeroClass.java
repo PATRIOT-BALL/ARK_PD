@@ -66,6 +66,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfMys
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfShock;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLena;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfWeedy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
@@ -83,6 +84,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingSt
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.Dart;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Icecap;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Sungrass;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.DeviceCompat;
 

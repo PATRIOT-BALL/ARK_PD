@@ -13,8 +13,87 @@ import java.util.ArrayList;
 public class v0_2_X_Changes {
 
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_2_2_Changes(changeInfos);
         add_v0_2_1_Changes(changeInfos);
         add_v0_2_0_Changes(changeInfos);
+    }
+
+    public static void add_v0_2_2_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.2.2", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
+                "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
+                        "시시오 : 3티어 무기로, 체력이 낮을수록 공격력이 상승하지만 기습 공격이 불가능합니다." + "\n\n" +
+                        "로도스 제식 장검 : 1티어 무기로, 정제 금속과 1티어 무기 융합시 확률적으로 얻습니다. 기습시 피해 보정이 높고 적 처치시 즉시 투명화를 얻습니다." + "\n\n" +
+                        "스태프 오브 레나 : 재성장의 아츠 스태프의 개조 스태프로, 직선 방향으로 식물의 힘을 발사해 피해를 입히고 현기증을 부여합니다. 또한, 발사 경로에 헤쳐진 풀을 생성합니다." + "\n\n" +
+                        "커스텀 탐험 세트 : 새로운 유물로, 사용시 거울상을 소환합니다. 이 유물의 레벨에 따라 소환수들이 강력해집니다." ));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
+                "그레이스롯의 _음파 화살_ 특성이 _속박 화살_로 변경되었습니다. 속박 화살 특성은 착탄 지점 주위의 적들을 속박합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "자연 그레이스롯 리메이크",
+                "쇠뇌에 씨앗을 사용하여 강화하는 기능이 추가되었습니다. 최대 45개의 씨앗을 소모할 수 있습니다." + "\n\n" +
+                "_튼튼한 화살촉_ 특성이 투척 무기의 근거리 명중률을 높히는 특성으로 변경되었습니다." + "\n\n" +
+                "_블러드라인_ 특성이 투척 무기 적중시 대상 주위에 풀을 생성하며, 그레이스롯은 주위에 풀에 따라 피해 저항을 얻는 특성으로 변경되었습니다." + "\n\n" +
+                "_보호의 이슬_ 특성은 _구제자의 기도_ 특성으로 변경되었으며, 시야 안에서 식물이 발동할 때 시야 내의 적들의 명중,회피를 감소시킬 수 있게됩니다." + "\n\n" +
+                "_구제자의 신념_ 특성은 속박, 마비된 적에게 추가 피해를 입히는 특성으로 변경되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
+                "_하야부사_ : 5티어로 상승했으며, 추가된 무기 시시오와 동일하게 변경되어 그에 따라 공격력과 명중률 등이 변경되었습니다." + "\n\n" +
+                "_오리지늄 검_ : 공격할 때마다 SP를 충전하며, SP를 전부 소모하면 주위 적들에게 피해와 마비를 주고 유물 충전을 얻는 기능이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "유물 삭제",
+                "_공구 상자_ 유물이 삭제되었습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
+                "_테르밋 블레이드_ : 공격력이 3-12에서 _5-12_ 로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "사격 그레이스롯 버프",
+                "사격 전문화시 다음의 보너스를 얻습니다." +"\n\n" +
+                        "투척 무기 원거리 명중 보너스가 +50%에서 _+75%_로 상승합니다." + "\n\n" +
+                        "일반 쇠뇌 공격이 1.1배의 피해를 입히며, 공격 증강을 제외한 특수 쇠뇌 사격의 피해량이 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프 1",
+                "블레이즈의 _장인의 직감_ 1레벨의 감정 속도 보너스가 2배에서 _3배_ 로 상승했습니다." + "\n\n" +
+                "블레이즈의 _엘리트 오퍼레이터_ 특성의 회복량이 2-3에서 _4-6_으로 상승했습니다." + "\n\n" +
+                "블레이즈의 _급조한 투척물_ 특성의 쿨타임이 30턴에서 _25턴_ 으로 감소했습니다." + "\n\n" +
+                "연계 블레이즈의 _콤보 어택_ 특성의 지속시간이 10-30턴에서 _15-45턴_으로 상승했습니다." + "\n\n" +
+                "아미야의 _해답 찾기_ 특성의 충전 획득량이 2-3턴에서 _3-4턴_으로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프 2",
+                "사격 그레이스롯의 _천리안_ 특성에 투척 무기의 원거리 명중 상승이 추가되었습니다." + "\n\n" +
+                "사격 그레이스롯의 _저격_ 특성의 피해 보너스가 20-60%에서 _25-75%_로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 버프",
+                "_살카즈 백부장_의 소환 쿨타임이 대폭 감소했으며, 플레이어 주위에 소환을 시도합니다." + "\n" +
+                        "소환되는 용병들의 체력이 12에서 _22_ 로 상승했습니다." +"\n" +
+                        "대신 체력 50%이하일 때 소환 쿨타임 대폭 감소 능력이 삭제되었습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
+                "블레이즈의 _전기톱 축제_ 특성의 발동 확률이 67-100%에서 _55-80%_로 감소햇습니다." + "\n\n" +
+                "그레이스롯의 _활력의 발걸음_ 특성의 쿨타임이 16-8턴에서 _18-12턴_ 으로 상승했습니다." + "\n\n" +
+                "그레이스롯의 _개량 쇠뇌_ 특성의 공격력 상승량이 3-9에서 _2-6_으로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
+                "_바위게 사육사_ : 공격력이 3-8에서 _3-13_으로 상승했지만, SP 충전량과 바위게의 능력치가 감소했습니다."));
     }
 
     public static void add_v0_2_1_Changes(ArrayList<ChangeInfo> changeInfos) {

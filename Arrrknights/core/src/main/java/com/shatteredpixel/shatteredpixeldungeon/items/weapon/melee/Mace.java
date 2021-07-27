@@ -36,6 +36,9 @@ public class Mace extends MeleeWeapon {
 	}
 
 	@Override
+	public int min(int lvl) { return  5 + buffedLvl(); }
+
+	@Override
 	public int max(int lvl) {
 		return  4*(tier) +    //12 + 3
 				lvl*(tier);

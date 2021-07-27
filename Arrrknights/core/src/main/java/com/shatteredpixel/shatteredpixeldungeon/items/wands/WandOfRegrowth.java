@@ -106,7 +106,7 @@ public class WandOfRegrowth extends Wand {
 			} else {
 				if (terr != Terrain.HIGH_GRASS && terr != Terrain.FURROWED_GRASS) {
 					Level.set(cell, Terrain.GRASS);
-					GameScene.updateMap( cell );
+
 				}
 				Char ch = Actor.findChar(cell);
 				if (ch != null){

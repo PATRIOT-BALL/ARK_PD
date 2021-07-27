@@ -252,54 +252,6 @@ abstract public class MissileWeapon extends Weapon {
 			}
 
 
-		SpiritBow weapon = Dungeon.hero.belongings.getItem(SpiritBow.class);
-		if (Dungeon.hero.pointsInTalent(Talent.SAVIOR_PRAY) >= 2) {
-		if (weapon != null) {
-		if (weapon.EatSeed >= 30) weapon.SeedHit++;
-		if (weapon.SeedHit == 3) {Buff.affect(Dungeon.hero, Barrier.class).incShield(Dungeon.hero.HT/10);
-		weapon.SeedHit = 0;}}}
-
-		if (Dungeon.hero.pointsInTalent(Talent.SAVIOR_PRAY) >= 3) {
-			if (weapon.EatSeed >= 45) {
-				if (Random.Int(5) == 0) {
-					int Chance = Random.Int(7);
-					switch (Chance) {
-						case 0:
-							new Blindweed().activate(defender);
-							break;
-						case 1:
-							new FlavourBuff() {
-								{
-									actPriority = VFX_PRIO;
-								}
-
-								public boolean act() {
-									Buff.affect(defender, Sleep.class);
-									return super.act();
-								}
-							}.attachTo(defender); // 꿈풀 효과
-							break;
-						case 2:
-							new Sorrowmoss().activate(defender);
-							break;
-						case 3:
-							new Stormvine().activate(defender);
-							break;
-						case 4:
-							new Starflower().activate(attacker);
-							break;
-						case 5:
-							new Swiftthistle().activate(attacker);
-							break;
-						case 6:
-							new Dreamfoil().activate(attacker);
-							break;
-						default:
-					}
-				}
-			}
-		}
-
 		return super.proc(attacker, defender, damage);
 	}
 

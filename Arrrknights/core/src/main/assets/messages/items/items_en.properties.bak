@@ -790,6 +790,14 @@ items.artifacts.unstablespellbook.desc_index=The book is incomplete. Its index i
 items.artifacts.unstablespellbook.desc_empowered=The scrolls that you've added to the book are glowing with power. You will be able to choose the exotic version of these scroll's effects, but at the cost of an additional charge.
 items.artifacts.unstablespellbook.read_empowered=The scroll you added to the book surges with energy. You are able to channel either the regular, or exotic version of this scroll's effect.\n\nChoosing the exotic variant will cost 2 charges instead of 1.
 
+items.artifacts.customeset.name=custom expedition set
+items.artifacts.customeset.ac_shadow=CREATE
+items.artifacts.customeset.desc=Summons a mirror image around you when used. The higher the level, the more summons.\n\nYour Summons are strengthened in proportion to their level.
+items.artifacts.customeset.no_charge=Your expedition set hasn't recharged enough to be usable yet.
+items.artifacts.customeset.need_to_equip=You need to equip your artifact to do that.
+items.artifacts.customeset.cursed=You cannot use from a cursed expedition set.
+items.artifacts.customeset.desc_cursed=The expedition set has bound itself to you, it is inhibiting your drink portion.
+
 
 ###bags
 items.bags.bag.name=backpack
@@ -1656,10 +1664,15 @@ items.wands.sp.staffofcorrupting.bmage_desc=When _Guard Amiya_ strikes an enemy 
 
 items.wands.sp.staffofsnowsant.name=staff of snowsant
 items.wands.sp.staffofsnowsant.staff_name=ring of snowsant
-items.wands.sp.staffofsnowsant.desc=most Operators watch over her fondly as this frail girl carefully and painstakingly goes about her work.
+items.wands.sp.staffofsnowsant.desc=most Operators watch over her fondly as this frail girl carefully and painstakingly goes about her work.\n\nThis Retrofitted wand is Has the power of operator Snowsant.
 items.wands.sp.staffofsnowsant.stats_desc=This wand can fire silent power`s energy, silencing targets hit. Silenced targets cannot use special abilities. Enemies that are silenced are limited, but silenced most enemies that use magic attacks. also, pulls enemies hit.
 items.wands.sp.staffofsnowsant.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of snowsant, extra damage to silent enemies.
 
+items.wands.sp.staffoflena.name=staff of lena
+items.wands.sp.staffoflena.staff_name=ring of lena
+items.wands.sp.staffoflena.desc=_"Fighting when you could have just talked it out... I don't like that kind of unnecessary violence."_\n\nThis Retrofitted wand is Has the power of operator Perfumer.
+items.wands.sp.staffoflena.stats_desc=This wand shoots plant power. The plant power deals _%1$d-%2$d damage,_ and Grants Vertigo.
+items.wands.sp.staffoflena.bmage_desc=_아미야_ 가 개조 재성장의 흑요석 반지로 적을 공격했을 때, 자신과 대상 중 하나라도 풀 위에 서 있다면 준 피해에 비례한 자연의 치유 효과를 얻습니다.
 
 
 ###wands
@@ -2109,10 +2122,10 @@ items.weapon.melee.rhodessword.desc=if she were to suddenly disappear one day, i
 
 items.weapon.melee.catgun.name=My wish
 items.weapon.melee.catgun.stats_desc=Range +1
-items.weapon.melee.catgun.desc=_"나는 끝까지 여기에 서 있을 생각이다. 우리들은 과거를 망각할 수는 없지만, 너에게는 또 다른 미래가 기다릴테니까."_\n\n이 무기로 적을 공격하면 에너지를 충전합니다. 에너지가 전부 충전되면 강력한 괴생물체 _Mon3tr_를 일시적으로 전투에 참전시킬 수 있습니다.
-items.weapon.melee.catgun.ac_zap=깨어나라
+items.weapon.melee.catgun.desc=attack replenishes energy. When fully charged, Mon3tr can temporarily enter battle.
+items.weapon.melee.catgun.ac_zap=AWAKE
 items.weapon.melee.catgun$mon3tr.name=Mon3tr
-items.weapon.melee.catgun$mon3tr.desc=켈시의 기술력이 응집된 미지의 괴생물체. 비록 불안정한 복제품이기때문에 유지 시간은 짧지만, 눈에 보이는 모든 것들을 파괴해버린다.
+items.weapon.melee.catgun$mon3tr.desc=A monster created by an unknown technology.
 
 
 ###missile weapons

@@ -132,13 +132,13 @@ public enum Talent {
 	//Sniper T3
 	FARSIGHT(107, 3), SHARED_ENCHANTMENT(108, 3), SHARED_UPGRADES(109, 3),
 	//Warden T3
-	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SAVIOR_PRAY(108, 3),
+	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SAVIOR_PRAY(112, 3),
 	//Huntress T4
 	ARTS_FOCUS(108,3), IMPROVED_CROSSBOW(109,3),
 	//Sniper T4
 	SNIPING(105,3),
 	//Warden T4
-	SAVIOR_BELIEF(112,3),
+	SAVIOR_BELIEF(108,3),
 
 	//RoseCat T1
 	LIGHTNESSMEAL(113), SMARTMEALS(114), GOODMEAT(115), NYANGING(116),
@@ -291,7 +291,7 @@ public enum Talent {
 
 		// 2x/instant for Warrior (see onItemEquipped)
 		if (item instanceof MeleeWeapon || item instanceof Armor){
-			factor *= 1f + hero.pointsInTalent(ARMSMASTERS_INTUITION);
+			factor *= 1f + hero.pointsInTalent(ARMSMASTERS_INTUITION) * 2;
 		}
 		// 3x/instant for mage (see Wand.wandUsed())
 		if (item instanceof Wand){
@@ -412,14 +412,14 @@ public enum Talent {
 	//note that IDing can happen in alchemy scene, so be careful with VFX here
 	public static void onItemIdentified( Hero hero, Item item ){
 		if (hero.hasTalent(TEST_SUBJECT)){
-			//heal for 2/3 HP
-			hero.HP = Math.min(hero.HP + 1 + hero.pointsInTalent(TEST_SUBJECT), hero.HT);
+			//heal for 4 / 6
+			hero.HP = Math.min(hero.HP + 2 + (hero.pointsInTalent(TEST_SUBJECT) * 2), hero.HT);
 			Emitter e = hero.sprite.emitter();
 			if (e != null) e.burst(Speck.factory(Speck.HEALING), hero.pointsInTalent(TEST_SUBJECT));
 		}
 		if (hero.hasTalent(TESTED_HYPOTHESIS)){
 			//2/3 turns of wand recharging
-			Buff.affect(hero, Recharging.class, 1f + hero.pointsInTalent(TESTED_HYPOTHESIS));
+			Buff.affect(hero, Recharging.class, 2f + hero.pointsInTalent(TESTED_HYPOTHESIS));
 			ScrollOfRecharging.charge(hero);
 		}
 
