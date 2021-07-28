@@ -43,7 +43,7 @@ public class ScrollOfPassage extends ExoticScroll {
 
 		identify();
 		
-		if (Dungeon.bossLevel() || Dungeon.depth > 26) {
+		if (Dungeon.bossLevel() || Dungeon.depth == 27 || Dungeon.depth == 28 || Dungeon.depth == 29 || Dungeon.depth == 30) {
 			
 			GLog.w( Messages.get(ScrollOfTeleportation.class, "no_tele") );
 			return;

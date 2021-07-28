@@ -36,11 +36,6 @@ public class GreenCat extends NPC {
         flee();
     }
 
-    @Override
-    public void add( Buff buff ) {
-       flee();
-    }
-
     public void flee() {
         if (Dungeon.depth == 29) { this.yell(Messages.get(this, "fury"));
         sprite.killAndErase();
