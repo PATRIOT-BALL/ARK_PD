@@ -158,10 +158,11 @@ public class Badges {
 		CHAMPION_3                  ( 114 ),
 		CHAMPION_4                  ( 114 ),
 		EVILTIME_END                  ( 115 ),
+		FRAGGING                       ( 121 ),
 
 		//Puple
 		Get_25_STONES                (117),
-		Get_40_STONES                (117);
+		Get_40_STONES                (120);
 
 		public boolean meta;
 
@@ -839,9 +840,19 @@ public class Badges {
 			local.add( Badge.HAPPY_END );
 		}
 	}
+
+	//하극상 배지용
+	public static void silentValidateFragging() {
+		if (!local.contains( Badge.FRAGGING )){
+			local.add( Badge.FRAGGING );
+		}
+	}
 	
 	public static void validateHappyEnd() {
 		displayBadge( Badge.HAPPY_END );
+	}
+	public static void validateFragging() {
+		displayBadge( Badge.FRAGGING );
 	}
 
 	public static void validateChampion( int challenges ) {

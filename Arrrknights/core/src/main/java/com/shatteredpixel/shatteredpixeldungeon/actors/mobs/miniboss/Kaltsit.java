@@ -63,7 +63,7 @@ public class Kaltsit extends Mob {
 
     @Override
     public void die(Object cause) {
-        Badges.silentValidateHappyEnd();
+        Badges.silentValidateFragging();
         Dungeon.win(Amulet.class);
         Dungeon.deleteGame(GamesInProgress.curSlot, true);
         Game.switchScene(SurfaceScene.class);

@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Mon3terSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Rock_CrabSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -33,7 +34,7 @@ public class CatGun extends MeleeWeapon {
         RCH = 2;
     }
 
-    private int charge = 0;
+    private int charge = 100;
     private int chargeCap = 100;
 
     @Override
@@ -127,7 +128,7 @@ public class CatGun extends MeleeWeapon {
 
     public class Mon3tr extends Mob {
         {
-            spriteClass = Rock_CrabSprite.class;
+            spriteClass = Mon3terSprite.class;
             baseSpeed = 1f;
 
             state = HUNTING;
