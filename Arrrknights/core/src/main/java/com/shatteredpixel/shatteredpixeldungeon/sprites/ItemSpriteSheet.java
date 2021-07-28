@@ -212,6 +212,7 @@ public class ItemSpriteSheet {
 	public static final int DAGGER          = WEP_TIER1+4;
 	public static final int MAGES_STAFF     = WEP_TIER1+5;
 	public static final int HEAMYO     = WEP_TIER1+6;
+	public static final int YATO     = WEP_TIER1+7;
 	static{
 		assignItemRect(WORN_SHORTSWORD, 16, 16);
 		assignItemRect(EX41, 			16, 16);
@@ -220,6 +221,7 @@ public class ItemSpriteSheet {
 		assignItemRect(DAGGER,          16, 16);
 		assignItemRect(MAGES_STAFF,     16, 16);
 		assignItemRect(HEAMYO,     16, 16);
+		assignItemRect(YATO,     16, 16);
 	}
 
 	private static final int WEP_TIER2      =                               xy(17, 7);   //8 slots
@@ -250,6 +252,7 @@ public class ItemSpriteSheet {
 	public static final int GAMZA_SHIELD     = WEP_TIER3+6;
 	public static final int BEENS     = WEP_TIER3+7;
 	public static final int ANDREANA     = WEP_TIER3+8;
+	public static final int SHISHIOH     = WEP_TIER3+9;
 	static{
 		assignItemRect(SWORD,           16, 16);
 		assignItemRect(MACE,            16, 16);
@@ -260,6 +263,7 @@ public class ItemSpriteSheet {
 		assignItemRect(GAMZA_SHIELD,            16, 16);
 		assignItemRect(BEENS,            16, 16);
 		assignItemRect(ANDREANA,            16, 16);
+		assignItemRect(SHISHIOH,            16, 16);
 
 
 	}
@@ -295,6 +299,7 @@ public class ItemSpriteSheet {
 	public static final int ARTORIUS      = WEP_TIER5+7;
 	public static final int WINTER       = WEP_TIER5+8;
 	public static final int REQUIEM       = WEP_TIER5+9;
+	public static final int CATGUN       = WEP_TIER5+10;
 
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
@@ -307,6 +312,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ARTORIUS,   16, 16);
 		assignItemRect(WINTER,   16, 16);
 		assignItemRect(REQUIEM,   16, 16);
+		assignItemRect(CATGUN,   16, 16);
 
 	}
 

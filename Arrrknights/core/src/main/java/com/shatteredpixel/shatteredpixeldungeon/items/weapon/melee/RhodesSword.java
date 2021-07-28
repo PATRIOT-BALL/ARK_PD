@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 
 public class RhodesSword extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.DAGGER;
+        image = ItemSpriteSheet.YATO;
         hitSound = Assets.Sounds.HIT_SLASH;
         hitSoundPitch = 1.06f;
 
