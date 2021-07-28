@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class CatGun extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.BEENS;
+        image = ItemSpriteSheet.CATGUN;
         hitSound = Assets.Sounds.ATK_SPIRITBOW;
         hitSoundPitch = 1f;
 

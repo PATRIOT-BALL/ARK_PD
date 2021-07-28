@@ -16,13 +16,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Mon3terSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Mon3tr extends Mob {
     {
-        spriteClass = BreakerSprite.class;
+        spriteClass = Mon3terSprite.class;
 
         HP = HT = 500;
         defenseSkill = 30;

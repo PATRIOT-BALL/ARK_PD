@@ -19,30 +19,32 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
+package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.TextureFilm;
 
-public class Mace extends MeleeWeapon {
+public class Mon3terSprite extends MobSprite {
 
-	{
-		image = ItemSpriteSheet.MACE;
-		hitSound = Assets.Sounds.ATK_SPIRITBOW;
-		hitSoundPitch = 1f;
+    public Mon3terSprite() {
+        super();
 
-		tier = 3;
-		ACC = 1.28f; //28% boost to accuracy
-	}
+        texture( Assets.Sprites.MON3TER );
 
-	@Override
-	public int min(int lvl) { return  5 + buffedLvl(); }
+        TextureFilm frames = new TextureFilm( texture, 44, 44 );
 
+        idle = new Animation( 2, true );
+        idle.frames( frames, 0, 0, 0 );
 
-	@Override
-	public int max(int lvl) {
-		return  4*(tier) +    //12 + 3
-				lvl*(tier);
-	}
+        run = new Animation( 10, true );
+        run.frames( frames, 0 );
 
+        attack = new Animation( 15, false );
+        attack.frames( frames, 0 );
+
+        die = new Animation( 10, false );
+        die.frames( frames, 0 );
+
+        play( idle );
+    }
 }

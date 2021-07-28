@@ -9,7 +9,7 @@ import com.watabou.utils.Random;
 
 public class SHISHIOH extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.NAGINATA;
+        image = ItemSpriteSheet.SHISHIOH;
         hitSound = Assets.Sounds.HIT_SLASH;
         hitSoundPitch = 1.22f;
 
