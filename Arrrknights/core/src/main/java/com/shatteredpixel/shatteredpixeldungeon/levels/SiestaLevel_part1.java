@@ -45,15 +45,14 @@ public class SiestaLevel_part1 extends RegularLevel {
     @Override
     protected int standardRooms(boolean forceMax) {
         if (forceMax) return 10;
-        //7 to 10, average 8.0
-        return 7+ Random.chances(new float[]{4, 3, 2, 1});
+        //8 to 10, average 8.67
+        return 9+Random.chances(new float[]{3, 2, 1});
     }
 
     @Override
     protected int specialRooms(boolean forceMax) {
         if (forceMax) return 3;
-        //2 to 3, average 2.33
-        return 2 + Random.chances(new float[]{2, 1});
+        return 1 + Random.chances(new float[]{1, 1});
     }
 
     @Override
@@ -63,13 +62,19 @@ public class SiestaLevel_part1 extends RegularLevel {
     }
 
     @Override
+    public int nMobs() {
+        // 다른 계층보다 몬스터가 2마리 많이 등장합니다.
+        return super.nMobs()+2;
+    }
+
+    @Override
     public String tilesTex() {
-        return Assets.Environment.TILES_CITY;
+        return Assets.Environment.TILES_SEWERS;
     }
 
     @Override
     public String waterTex() {
-        return Assets.Environment.WATER_CITY;
+        return Assets.Environment.WATER_SEWERS;
     }
 
     @Override

@@ -16,8 +16,8 @@ public class Agent extends Mob {
     {
         spriteClass = BreakerSprite.class;
 
-        HP = HT = 135;
-        defenseSkill = 28;
+        HP = HT = 140;
+        defenseSkill = 30;
 
         EXP = 17;
         maxLvl = 32;
@@ -42,7 +42,7 @@ public class Agent extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 35, 50 );
+        return Random.NormalIntRange( 38, 50 );
     }
 
     @Override

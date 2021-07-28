@@ -16,6 +16,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Honeypot;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThiefSprite;
@@ -30,14 +31,16 @@ public class Ergate extends Mob {
     {
         spriteClass = ThiefSprite.class;
 
-        HP = HT = 65;
+        HP = HT = 75;
         defenseSkill = 40;
 
         EXP = 16;
         maxLvl = 30;
 
-        loot = new Dewdrop();
-        lootChance = 1f; //initially, see rollToDropLoot
+        state = WANDERING;
+
+        loot = new MysteryMeat();
+        lootChance = 0.2f;
 
     }
 
@@ -89,7 +92,7 @@ public class Ergate extends Mob {
     public int attackProc( Char enemy, int damage ) {
         damage = super.attackProc( enemy, damage );
 
-        if (this.buff(Silence.class) != null) {
+        if (this.buff(Silence.class) == null) {
             if (alignment == Alignment.ENEMY && item == null
                     && enemy instanceof Hero) {
                 if (Random.Int(4) < 1) {

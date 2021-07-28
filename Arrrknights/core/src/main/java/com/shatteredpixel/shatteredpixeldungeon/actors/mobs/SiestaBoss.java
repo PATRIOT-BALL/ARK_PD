@@ -4,12 +4,15 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewPrisonBossLevel;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
@@ -18,9 +21,11 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CivilianSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.YogSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class SiestaBoss extends Mob {
+    private static final String[] LINE_KEYS = {"skill1", "skill2"};
     {
         spriteClass = YogSprite.class;
 
@@ -90,6 +95,11 @@ public class SiestaBoss extends Mob {
             HP = hpBracket * ((beforeHitHP / hpBracket) - 1) + 1;
         }
 
+        if (phase == 1 && HP <= HT/2) {
+            yell(Messages.get(this, "phase2"));
+            phase++;
+        }
+
         if (isAlive()) {
             if (beforeHitHP / hpBracket != HP / hpBracket) {
                 Skill();
@@ -105,6 +115,7 @@ public class SiestaBoss extends Mob {
 
     @Override
     public void notice() {
+        yell(Messages.get(this, "notice"));
         if (!BossHealthBar.isAssigned()) {
             BossHealthBar.assignBoss(this);
         }
@@ -117,6 +128,8 @@ public class SiestaBoss extends Mob {
                 mob.die( cause );
             }
         }
+
+        yell(Messages.get(this, "defeated"));
 
         GameScene.bossSlain();
         Dungeon.level.unseal();
@@ -215,14 +228,46 @@ public class SiestaBoss extends Mob {
             mySchwarz.sprite.move(pos,SwPos);
         }
 
+
+        // Phase2의 강화 판정
+        if (phase == 2) {
+            Buff.affect(Agent1, Stamina.class, 30f);
+            Buff.affect(Agent2, Stamina.class, 30f);
+            if (mySchwarz != null && mySchwarz.Phase != 2) mySchwarz.Phase = 2;
+        }
+
         this.pos = ThisPos;
         sprite.place(pos);
+
+        yell(Messages.get(this, Random.element( LINE_KEYS )));
 
         Dungeon.observe();
         GameScene.updateFog();
 
         if (TelType < 3) TelType++;
         else TelType = Random.IntRange(0,4);
+
+
+    }
+
+    private static final String PHASE   = "phase";
+    private static final String LIFE   = "Life";
+    private static final String TTYPE   = "TelType";
+
+    @Override
+    public void storeInBundle( Bundle bundle ) {
+        super.storeInBundle( bundle );
+        bundle.put( PHASE, phase );
+        bundle.put( LIFE, Life );
+        bundle.put( TTYPE, TelType );
+    }
+
+    @Override
+    public void restoreFromBundle( Bundle bundle ) {
+        super.restoreFromBundle( bundle );
+        phase = bundle.getInt(PHASE);
+        Life = bundle.getInt(LIFE);
+        TelType = bundle.getInt(TTYPE);
 
     }
 

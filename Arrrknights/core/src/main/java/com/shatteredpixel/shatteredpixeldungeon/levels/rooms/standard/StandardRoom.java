@@ -133,6 +133,10 @@ public abstract class StandardRoom extends Room {
 		rooms.add(ChasmRoom.class);
 		rooms.add(SkullsRoom.class);
 
+		rooms.add(FloodingRoom.class);
+		rooms.add(BeachRoom.class);
+		rooms.add(FloodingRoom2.class);
+
 
 		rooms.add(PlantsRoom.class);
 		rooms.add(AquariumRoom.class);
@@ -151,29 +155,29 @@ public abstract class StandardRoom extends Room {
 	
 	private static float[][] chances = new float[41][];
 	static {
-		chances[1] =  new float[]{15,  10,10,5, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,0,1,0,1,0,1,1,0,0,0};
-		chances[2] =  new float[]{15,  10,10,5, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,0,1,1,1,1,1};
+		chances[1] =  new float[]{15,  10,10,5, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 1,0,1,0,1,0,1,1,0,0,0};
+		chances[2] =  new float[]{15,  10,10,5, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 1,1,1,1,1,0,1,1,1,1,1};
 		chances[3] = chances[2];
-		chances[4] =  new float[]{15,  10,10,5, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,0,1,1,1,1,2};
-		chances[5] =  new float[]{15,  10,10,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  0,0,0,0,0,0,0,0,0,0,0};
+		chances[4] =  new float[]{15,  10,10,5, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,0,1,1,1,1,2};
+		chances[5] =  new float[]{15,  10,10,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  0,0,0,0,0,0,0,0,0,0,0};
 
-		chances[6] =  new float[]{15,  0,0,0, 10,10,5, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,1};
+		chances[6] =  new float[]{15,  0,0,0, 10,10,5, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,1};
 		chances[10] = chances[9] = chances[8] = chances[7] = chances[6];
 
-		chances[11] = new float[]{20,  0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,1};
-		chances[12] = new float[]{20,  0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
+		chances[11] = new float[]{20,  0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,1};
+		chances[12] = new float[]{20,  0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
 		chances[15] = chances[14] = chances[13] = chances[12];
 
-		chances[16] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 10,10,5, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
+		chances[16] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 10,10,5, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
 		chances[20] = chances[19] = chances[18] = chances[17] = chances[16];
 
-		chances[21] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 0,0,0, 10,10,5,  1,1,1,1,1,1,1,1,1,1,0};
+		chances[21] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 0,0,0, 10,10,5, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
 		chances[26] = chances[25] = chances[24] = chances[23] = chances[22] = chances[21];
 
-		chances[31] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
+		chances[31] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 15,5,5,  1,1,1,1,1,1,1,1,1,1,0};
 		chances[35] = chances[34] = chances[33] = chances[32] = chances[31];
 
-		chances[36] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
+		chances[36] = new float[]{15,  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,  1,1,1,1,1,1,1,1,1,1,0};
 		chances[40] = chances[39] = chances[38] = chances[37] = chances[36];
 	}
 	

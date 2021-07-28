@@ -394,9 +394,9 @@ actors.hero.talent.restored_willpower.desc=_+1:_ 치유의 물약을 마시면 �
 actors.hero.talent.runic_transference.title=아츠 전이
 actors.hero.talent.runic_transference.desc=_+1:_ 블레이즈의 깃털 부적이 강화수치를 옮길 때와 같은 방식으로 _평범한 상형문자_ 를 옮길 수 있습니다.\n\n_+2:_ 블레이즈의 깃털 부적이 강화수치를 옮길 때와 같은 방식으로 _평범한, 강력한, 저주 상형문자_ 를 옮길 수 있습니다.
 actors.hero.talent.lethal_momentum.title=전기톱 축제
-actors.hero.talent.lethal_momentum.desc=_+1:_ 적을 처치하는 마지막 공격이 _67% 확률_ 로 턴을 소모하지 않습니다.\n\n_+2:_ 적을 처치하는 마지막 공격이 _100% 확률_ 로 턴을 소모하지 않습니다.
+actors.hero.talent.lethal_momentum.desc=_+1:_ 적을 처치하는 마지막 공격이 _55% 확률_ 로 턴을 소모하지 않습니다.\n\n_+2:_ 적을 처치하는 마지막 공격이 _80% 확률_ 로 턴을 소모하지 않습니다.
 actors.hero.talent.improvised_projectiles.title=급조한 투척물
-actors.hero.talent.improvised_projectiles.desc=_+1:_ 투척 무기가 아닌 아이템을 적에게 던질 경우 맞은 적을 _2 턴_ 간 실명시킵니다. 30 턴의 재사용 대기 시간이 있습니다.\n\n_+2:_ 투척 무기가 아닌 아이템을 적에게 던질 경우 맞은 적을 _3 턴_ 간 실명시킵니다. 30 턴의 재사용 대기 시간이 있습니다.
+actors.hero.talent.improvised_projectiles.desc=_+1:_ 투척 무기가 아닌 아이템을 적에게 던질 경우 맞은 적을 _2 턴_ 간 실명시킵니다. 25 턴의 재사용 대기 시간이 있습니다.\n\n_+2:_ 투척 무기가 아닌 아이템을 적에게 던질 경우 맞은 적을 _3 턴_ 간 실명시킵니다. 25 턴의 재사용 대기 시간이 있습니다.
 actors.hero.talent.hold_fast.title=굳건한 태세
 actors.hero.talent.hold_fast.desc=_+1:_ 블레이즈는 대기 시  _+2의 방어력_ 을 이동하기 전까지 얻습니다.\n\n_+2:_ 블레이즈는 대기 시 _+4의 방어력_ 을 이동하기 전까지 얻습니다.\n\n_+3:_ 블레이즈는 대기 시 _+6의 방어력_ 을 이동하기 전까지 얻습니다.
 actors.hero.talent.strongman.title=철인
@@ -1057,7 +1057,7 @@ actors.mobs.rotlasher.name=썩은 휘감개
 actors.mobs.rotlasher.desc=썩은 휘감개는 성숙한 썩은열매 식물의 뿌리 구조의 일부이며, 또한 그들의 주된 방어 수단이기도 합니다. 휘감개는 땅속에 갇혀있지만, 자신들에게 다가가는 어떠한 위협에도 격렬하게 공격할 것입니다. 근처에 적이 없을 때, 그것들은 움직이지 않고 서서 주변의 식물들과 섞이려고 시도합니다.
 actors.mobs.rotlasher$waiting.status=이 %s 은/는 가만히 있습니다.
 
-actors.mobs.scorpio.name=스나이퍼
+actors.mobs.scorpio.name=살카즈 스나이퍼
 actors.mobs.scorpio.desc=살카즈의 용병. 거대한 몸집은 사격 능력에 전혀 영향을 주지 않았다. 오히려 다른 사람들보다 강한 육체를 활용하여, 더 막강한 위력의 원거리 무기를 운용할 수 있게 되었고, 그만큼 쓰러뜨리기가 더욱 어려워졌다.
 
 actors.mobs.senior.name=숙주 리더(폭주)
@@ -1202,6 +1202,38 @@ actors.mobs.yogfist$darkfist.name=황제의 칼날
 actors.mobs.yogfist$darkfist.teleport=황제의 칼날은 당신의 광원을 없애는 어둠의 폭발 속에서 순간이동했다!
 actors.mobs.yogfist$darkfist.desc=_탈룰라가 불러낸 과거의 환영,_이 환영은 순수한 어둠의 에너지로 이루어져 있습니다. 이 환영은 강력한 어둠 아츠의 폭발을 발사할 수 있습니다. 이 폭발들은 당신의 광원을 약하게 하며, 또한 커다란 피해를 입힙니다. 그리고 환영은 달아나기 위해 잠시동안 전투 지역을 어둠 속으로 집어삼킬 수 있습니다.\n\n하지만 이 환영은 근거리에서 사용할 수 있는 특별한 능력은 가지고 있지 않습니다.
 
+
+// 31~35
+
+actors.mobs.infantry.name=보병
+actors.mobs.yogfist.infantry.desc=초급 근거리 전투원. 그럴싸한 특징은 없다.
+
+actors.mobs.ergate.name=일개미
+actors.mobs.ergate.desc=엔지니어링 기술 수단을 사용하여 파괴를 감행하며, 무기를 거의 휴대하고 있지 않다. 일개미의 전투 능력은 낮지만, 상대의 무기를 강제로 떨어트린 후 도망쳐 전투를 방해한다.
+
+actors.mobs.sniper.name=스나이퍼
+actors.mobs.sniper.desc=초급 스나이퍼. 초원거리에서 공격할 수 있다. 장비하고 있는 특수 저격 무기는 특수 탄약을 발사하여 아군 유닛에 기절 상태를 줄 수 있다.\n\n제자리에서 3회 연속 공격하면 대상을 마비시킵니다.
+
+actors.mobs.agent.name=특공대원
+actors.mobs.agent.desc=그가 사용하는 다양한 전술 수단은 아군의 방어선을 손쉽게 무너뜨릴 수 있을 것이다.
+
+actors.mobs.agent.name=특공대원
+actors.mobs.agent.desc=그가 사용하는 다양한 전술 수단은 아군의 방어선을 손쉽게 무너뜨릴 수 있을 것이다.
+
+actors.mobs.schwarz.name=슈바르츠
+actors.mobs.schwarz.desc=기밀 작전, 조사, 기밀 정보 보호, 야외 생존, 크로스보우 사용 등의 기술에 매우 조예가 깊다. 주기적으로 플레이어에게 저격을 시도한다.
+actors.mobs.schwarz.snipe1=놓치지 않겠습니다.
+actors.mobs.schwarz.snipe2=딱 좋은 과녁입니다.
+actors.mobs.schwarz.snipe3=보입니다.
+
+// OF-6 작전 후 대사
+actors.mobs.siestaboss.name=시장 크로닌
+actors.mobs.siestaboss.desc=화람지심 다시 읽기 귀찮다
+actors.mobs.siestaboss.notice=로, 로도스 아일랜드 놈들, 왜 여기로 온 거지!
+actors.mobs.siestaboss.skill1=인원들 싹 다 투입시켜!
+actors.mobs.siestaboss.skill2=빨리 저 녀석을 잡아!
+actors.mobs.siestaboss.phase2=너희들... 너희들...
+actors.mobs.siestaboss.defeated=젠장.. 젠장...!
 
 
 // 스페셜 몹

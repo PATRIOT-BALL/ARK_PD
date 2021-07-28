@@ -11,10 +11,10 @@ public class Infantry extends Mob {
     {
         spriteClass = InfantrySprite.class;
 
-        HP = HT = 110;
-        defenseSkill = 24;
+        HP = HT = 120;
+        defenseSkill = 28;
 
-        EXP = 15;
+        EXP = 16;
         maxLvl = 29;
 
         loot = Gold.class;
@@ -25,7 +25,7 @@ public class Infantry extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 30, 42 );
+        return Random.NormalIntRange( 30, 40 );
     }
 
     @Override
@@ -35,6 +35,6 @@ public class Infantry extends Mob {
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 16);
+        return Random.NormalIntRange(0, 18);
     }
 }

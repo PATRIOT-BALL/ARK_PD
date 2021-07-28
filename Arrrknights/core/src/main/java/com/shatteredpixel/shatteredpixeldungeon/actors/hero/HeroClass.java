@@ -192,18 +192,6 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-		new CatGun().collect();
-		new ScrollOfUpgrade().quantity(20).collect();
-		new PlateArmor().collect();
-		new RingOfEvasion().collect();
-		new RingOfForce().collect();
-		new PotionOfMindVision().quantity(3).collect();
-		new PotionOfStrength().quantity(12).collect();
-		new PotionOfExperience().quantity(33).collect();
-		new PotionOfHealing().quantity(6).collect();
-		new ScrollOfEnchantment().quantity(2).collect();
-		new ScrollOfIdentify().quantity(99).collect();
-		new TomeOfMastery().collect();
 
 		/*Amulet w;
 		w = new Amulet();

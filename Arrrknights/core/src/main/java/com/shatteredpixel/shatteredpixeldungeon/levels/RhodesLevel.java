@@ -37,8 +37,8 @@ import java.util.Arrays;
 // 다른 맵 베이스는 이거로!!
 public class RhodesLevel extends Level
 {
-    {
-        color1 = 0x801500;
+
+        {  color1 = 0x801500;
         color2 = 0xa68521;
 
         viewDistance = 18;

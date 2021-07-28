@@ -25,7 +25,7 @@ public class Sniper extends Mob {
         HP = HT = 120;
         defenseSkill = 25;
 
-        EXP = 16;
+        EXP = 17;
         maxLvl = 31;
 
         loot = Generator.Category.WEP_T5;
@@ -38,7 +38,7 @@ public class Sniper extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(34, 48);
+        return Random.NormalIntRange(34, 44);
     }
 
     @Override
