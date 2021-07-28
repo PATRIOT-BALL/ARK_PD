@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
@@ -85,6 +86,7 @@ public class Kaltsit extends Mob {
                 CellEmitter.get( SummontPos ).burst( ShadowParticle.UP, 10 );
                 CellEmitter.get( SummontPos ).burst( ShadowParticle.UP, 7 );
                 CellEmitter.get( SummontPos ).burst( ShadowParticle.CURSE, 4 );
+                sprite.parent.addToBack(new TargetedCell(SummontPos, 0xFF0000));
                 SummonTurn++;}
             else if (SummonTurn > 0) {
                 Sample.INSTANCE.play( Assets.Sounds.CURSED );
