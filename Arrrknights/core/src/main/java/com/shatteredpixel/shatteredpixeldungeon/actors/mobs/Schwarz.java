@@ -1,0 +1,97 @@
+package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
+
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ClosureSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperEliteSprite;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.PathFinder;
+import com.watabou.utils.Random;
+
+public class Schwarz extends Mob {
+    {
+        spriteClass = SarkazSniperEliteSprite.class;
+
+        HP = HT = 1000;
+        defenseSkill = 100;
+
+        state = HUNTING;
+
+        maxLvl = 45;
+        EXP = -1;
+        properties.add(Property.BOSS);
+        immunities.add(Amok.class);
+        immunities.add(Drowsy.class);
+        immunities.add(MagicalSleep.class);
+        immunities.add(Terror.class);
+        immunities.add(Silence.class);
+    }
+
+    private int Phase = 1;
+    private int CoolDown = 8;
+    private int LastPos = -1;
+
+    @Override
+    public int damageRoll()
+    {
+        if (Phase==2) return Random.NormalIntRange( 75, 100 );
+        return Random.NormalIntRange( 55, 70 );
+    }
+
+    @Override
+    public int attackSkill( Char target ) {return 50; }
+
+    @Override
+    public void damage(int dmg, Object src) {
+    }
+
+    @Override
+    protected boolean act() {
+        if (CoolDown == 0) {
+            if (LastPos == -1) {
+                LastPos = Dungeon.hero.pos;
+                sprite.parent.addToBack(new TargetedCell(LastPos, 0xFF0000));
+                spend( TICK );
+                return true;
+            }
+            else  {
+                if (LastPos == Dungeon.hero.pos) {
+                    Dungeon.hero.damage(damageRoll(), this);
+                    Dungeon.hero.sprite.burst(CharSprite.NEGATIVE, 10);
+                    CellEmitter.center(Dungeon.hero.pos).burst(HandclapSprite.GooParticle.FACTORY, 60);
+                    Camera.main.shake(5, 0.5f);
+                    Sample.INSTANCE.play(Assets.Sounds.SKILL_CROSSBOW);
+                    CoolDown = 8;
+                    LastPos = -1;
+                    spend( TICK );
+                    return true;
+                }
+                else {
+                    CellEmitter.center(LastPos).burst(HandclapSprite.GooParticle.FACTORY, 60);
+                    Camera.main.shake(5, 0.5f);
+                    Sample.INSTANCE.play(Assets.Sounds.SKILL_CROSSBOW);
+                    CoolDown = 8;
+                    LastPos = -1;
+                }
+            }
+
+        }
+        else CoolDown--;
+
+        return super.act();
+    }
+}

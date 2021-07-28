@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLena;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
@@ -35,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLightning;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfRegrowth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfSilence;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
@@ -289,6 +291,21 @@ public class StaffKit extends Item {
             n.collect();
             wand.detach( curUser.belongings.backpack );
         }
+        else if (wand instanceof WandOfRegrowth)
+        {
+            n = new StaffOfLena(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            int level = wand.level();
+            if (wand.curseInfusionBonus) level--;
+            n.upgrade(level);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            n.collect();
+            wand.detach( curUser.belongings.backpack );
+        }
         else {
             GLog.w( Messages.get(this, "fail") );
             StaffKit S = new StaffKit();
@@ -453,6 +470,18 @@ public class StaffKit extends Item {
         else if (wand instanceof WandOfSilence)
         {
             n = new StaffOfSnowsant(); // 이 부분이랑 조건만 바꾸면 됨.
+            n.level(0);
+            n.levelKnown = wand.levelKnown;
+            n.cursedKnown = wand.cursedKnown;
+            n.cursed = wand.cursed;
+            n.curseInfusionBonus = wand.curseInfusionBonus;
+
+            wand = n;
+            Staff.staffkitwand(wand);
+        }
+        else if (wand instanceof WandOfRegrowth)
+        {
+            n = new StaffOfLena(); // 이 부분이랑 조건만 바꾸면 됨.
             n.level(0);
             n.levelKnown = wand.levelKnown;
             n.cursedKnown = wand.cursedKnown;

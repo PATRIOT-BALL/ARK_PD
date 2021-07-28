@@ -121,6 +121,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfGreyy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLena;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
@@ -169,6 +170,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
@@ -253,6 +255,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Flail.class,                      false);
 		WEAPONS.seen.put( WintersScar.class,                   false);
 		WEAPONS.seen.put( SwordofArtorius.class,                   false);
+		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Gamzashield.class,               false);
 		WEAPONS.seen.put( Enfild2.class,                       false);
 		WEAPONS.seen.put( Niansword.class,                   false);
@@ -328,6 +331,7 @@ public enum Catalog {
 		WANDS.seen.put( StaffOfMayer.class,               false);
 		WANDS.seen.put( StaffOfAngelina.class,               false);
 		WANDS.seen.put( StaffOfCorrupting.class,             false);
+		WANDS.seen.put( StaffOfLena.class,             false);
 		WANDS.seen.put( StaffOfSnowsant.class,             false);
 
 		RINGS.seen.put( RingOfAccuracy.class,               false);

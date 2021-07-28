@@ -1,0 +1,244 @@
+package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
+
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.levels.NewPrisonBossLevel;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CivilianSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.YogSprite;
+import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
+import com.watabou.utils.Random;
+
+public class SiestaBoss extends Mob {
+    {
+        spriteClass = YogSprite.class;
+
+        HP = HT = 1200;
+        defenseSkill = 0;
+
+        EXP = 40;
+
+        state = HUNTING;
+        baseSpeed = 0;
+
+        properties.add(Property.BOSS);
+        properties.add(Property.IMMOVABLE);
+        immunities.add(Amok.class);
+        immunities.add(Terror.class);
+        immunities.add(Silence.class);
+    }
+
+    private int phase = 0;
+    private int Life = 5;
+    private int TelType = 0;
+
+    private SiestaBoss.BossAgent Agent1;
+    private SiestaBoss.BossAgent Agent2;
+    private Schwarz mySchwarz;
+
+    @Override
+    protected Char chooseEnemy() {
+        return null;
+    }
+
+    @Override
+    public int drRoll() {
+        return Random.NormalIntRange(0, 20);
+    }
+
+    @Override
+    protected boolean act() {
+        if (phase == 0) {
+            if (Dungeon.hero.viewDistance >= Dungeon.level.distance(pos, Dungeon.hero.pos)) {
+                Dungeon.observe();
+            }
+            if (Dungeon.level.heroFOV[pos]) {
+                notice();
+            }
+        }
+
+        if (phase == 0){
+            damage(1,this);
+            spend(TICK);
+            phase++;
+            return true;}
+
+        return super.act();
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        int hpBracket = 200;
+
+        int beforeHitHP = HP;
+        super.damage(dmg, src);
+        dmg = beforeHitHP - HP;
+
+        //tengu cannot be hit through multiple brackets at a time
+        if ((beforeHitHP / hpBracket - HP / hpBracket) >= 2) {
+            HP = hpBracket * ((beforeHitHP / hpBracket) - 1) + 1;
+        }
+
+        if (isAlive()) {
+            if (beforeHitHP / hpBracket != HP / hpBracket) {
+                Skill();
+                Life--;
+            }
+        }
+    }
+
+    @Override
+    public boolean isAlive() {
+        return HP > 0 || Life > 0;
+    }
+
+    @Override
+    public void notice() {
+        if (!BossHealthBar.isAssigned()) {
+            BossHealthBar.assignBoss(this);
+        }
+    }
+
+    @Override
+    public void die(Object cause) {
+        for (Mob mob : (Iterable<Mob>)Dungeon.level.mobs.clone()) {
+            if (mob instanceof BossAgent || mob instanceof Schwarz) {
+                mob.die( cause );
+            }
+        }
+
+        GameScene.bossSlain();
+        Dungeon.level.unseal();
+        super.die( cause );
+    }
+
+    public static int[] TelPos = new int[]{
+            35, 49, 71, 81,
+            93,124,130,174,
+            182, 226, 232, 263,
+            275, 285, 307, 321};
+
+
+    private void Skill() {
+        int A1pos;
+        int A2pos;
+        int SwPos;
+        int ThisPos;
+
+        switch (TelType) {
+            case 0: default:
+                ThisPos = TelPos[Random.IntRange(0,3)];
+                SwPos = TelPos[Random.IntRange(4,7)];
+                A2pos = TelPos[Random.IntRange(8,11)];
+                A1pos = TelPos[Random.IntRange(12,15)];
+                break;
+            case 1:
+                A2pos = TelPos[Random.IntRange(0,3)];
+                A1pos = TelPos[Random.IntRange(4,7)];
+                ThisPos = TelPos[Random.IntRange(8,11)];
+                SwPos = TelPos[Random.IntRange(12,15)];
+                break;
+            case 2:
+                A1pos = TelPos[Random.IntRange(0,3)];
+                A2pos = TelPos[Random.IntRange(4,7)];
+                SwPos = TelPos[Random.IntRange(8,11)];
+                ThisPos = TelPos[Random.IntRange(12,15)];
+                break;
+            case 3:
+                SwPos = TelPos[Random.IntRange(0,3)];
+                ThisPos = TelPos[Random.IntRange(4,7)];
+                A1pos = TelPos[Random.IntRange(8,11)];
+                A2pos = TelPos[Random.IntRange(12,15)];
+                break;
+        }
+
+        // 소환 몬스터 생존 확인
+        if (Agent1 != null &&
+                (!Agent1.isAlive()
+                        || !Dungeon.level.mobs.contains(Agent1)
+                        || Agent1.alignment != alignment)){
+            Agent1 = null;
+        }
+        if (Agent2 != null &&
+                (!Agent2.isAlive()
+                        || !Dungeon.level.mobs.contains(Agent2)
+                        || Agent2.alignment != alignment)){
+            Agent2 = null;
+        }
+        if (mySchwarz != null &&
+                (!mySchwarz.isAlive()
+                        || !Dungeon.level.mobs.contains(mySchwarz)
+                        || mySchwarz.alignment != alignment)){
+            mySchwarz = null;
+        }
+
+
+        // 텔레포트 발동
+        if (Agent1 == null) {
+            Agent1 = new SiestaBoss.BossAgent();
+            Agent1.pos = A1pos;
+            GameScene.add( Agent1 );
+        }
+        else {
+            Agent1.pos = A1pos;
+            Agent1.sprite.move(pos,A1pos);
+        }
+
+        if (Agent2 == null) {
+            Agent2 = new SiestaBoss.BossAgent();
+            Agent2.pos = A2pos;
+            GameScene.add( Agent2 );
+        }
+        else {
+            Agent2.pos = A2pos;
+            Agent2.sprite.move(pos,A2pos);
+        }
+
+        if (mySchwarz == null) {
+            mySchwarz = new Schwarz();
+            mySchwarz.pos = SwPos;
+            GameScene.add( mySchwarz );
+        }
+        else {
+            mySchwarz.pos = SwPos;
+            mySchwarz.sprite.move(pos,SwPos);
+        }
+
+        this.pos = ThisPos;
+        sprite.place(pos);
+
+        Dungeon.observe();
+        GameScene.updateFog();
+
+        if (TelType < 3) TelType++;
+        else TelType = Random.IntRange(0,4);
+
+    }
+
+
+    public static class BossAgent extends Agent {
+
+        {
+            state = HUNTING;
+
+            spriteClass = BreakerSprite.class;
+            immunities.add(Drowsy.class);
+            immunities.add(MagicalSleep.class);
+            immunities.add(Corruption.class);
+
+            //no loot or exp
+            maxLvl = -5;
+        }
+    }
+}

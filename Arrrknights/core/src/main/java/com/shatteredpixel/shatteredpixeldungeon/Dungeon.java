@@ -61,6 +61,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.SiestaBossLevel_part1;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SiestaLevel_part1;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.SecretRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.SpecialRoom;
@@ -212,7 +213,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 0;
+		depth = 34;
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
@@ -347,6 +348,8 @@ public class Dungeon {
 				level = new SiestaLevel_part1();
 				break;
 			case 35:
+				level = new SiestaBossLevel_part1();
+				break;
 		default:
 			level = new DeadEndLevel();
 			Statistics.deepestFloor--;
