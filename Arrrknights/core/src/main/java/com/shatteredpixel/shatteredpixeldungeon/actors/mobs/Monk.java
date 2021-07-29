@@ -59,7 +59,7 @@ public class Monk extends Mob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 18, 28 );
+		return Random.NormalIntRange( 16, 28 );
 	}
 	
 	@Override
@@ -131,7 +131,7 @@ public class Monk extends Mob {
 		} else {
 			f.detach();
 			Sample.INSTANCE.play( Assets.Sounds.HIT_PARRY, 1, Random.Float(0.96f, 1.05f));
-			focusCooldown = Random.NormalFloat( 6, 7 );
+			focusCooldown = Random.NormalFloat( 7,8 );
 			return Messages.get(this, "parried");
 		}
 	}

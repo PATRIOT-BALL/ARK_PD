@@ -66,6 +66,10 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
                 "_테르밋 블레이드_ : 공격력이 3-12에서 _5-12_ 로 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 버프",
+                "_스태프 오브 압생트_의 피해 보너스가 75%에서 _100%_로 상승했습니다." + "\n\n" +
+                "_스태프 오브 위디_의 공격력이 2-7에서 _4-7_로 상승했으며, 피해 공식이 변경되어 이전보다 큰 피해를 입힙니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "사격 그레이스롯 버프",
                 "사격 전문화시 다음의 보너스를 얻습니다." +"\n\n" +
                         "투척 무기 원거리 명중 보너스가 +50%에서 _+75%_로 상승합니다." + "\n\n" +
@@ -98,6 +102,9 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
                 "_바위게 사육사_ : 공격력이 3-8에서 _3-13_으로 상승했지만, SP 충전량과 바위게의 능력치가 감소했습니다."));
+
+        changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 너프",
+                "_숙주병사(폭주)_ 의 공격력이 18-28에서 _16-28_로 감소했으며, 집중 스킬의 쿨타임이 1턴 상승했습니다."));
     }
 
     public static void add_v0_2_1_Changes(ArrayList<ChangeInfo> changeInfos) {

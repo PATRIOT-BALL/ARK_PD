@@ -1,16 +1,22 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FireImbue;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Necromancer;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -18,6 +24,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Mon3terSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -58,11 +65,23 @@ public class Mon3tr extends Mob {
             spell = Random.Int(1,4);
             switch (spell) {
                 case 1:
-                    GLog.w(Messages.get(Kaltsit.class, "skill1")); break;
+                    GLog.w(Messages.get(Kaltsit.class, "skill1"));
+                    Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
+                    CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
+                    Buff.affect(this, MagicImmune.class, 3f);
+                    break;
                 case 2:
-                    GLog.w(Messages.get(Kaltsit.class, "skill2")); break;
+                    GLog.w(Messages.get(Kaltsit.class, "skill2"));
+                    Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
+                    CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
+                    Buff.affect(this, Stamina.class, 3f);
+                    break;
                 case 3:
-                    GLog.w(Messages.get(Kaltsit.class, "skill3")); break;
+                    GLog.w(Messages.get(Kaltsit.class, "skill3"));
+                    Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
+                    CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
+                    Buff.affect(this, FireImbue.class).set(3f);
+                    break;
             }
             cooldown = Random.Int(4,8);
             return super.act();
@@ -90,12 +109,12 @@ public class Mon3tr extends Mob {
 
     @Override
     public int attackSkill( Char target ) {
-        return 45;
+        return 55;
     }
 
     @Override
     public int drRoll() {
-        if (spell == 1) return Random.NormalIntRange( 18, 36 );
+        if (spell == 1) return Random.NormalIntRange( 16, 32 );
         return Random.NormalIntRange(0, 20);
     }
 

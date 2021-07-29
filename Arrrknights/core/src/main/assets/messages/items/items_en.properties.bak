@@ -1672,7 +1672,7 @@ items.wands.sp.staffoflena.name=staff of lena
 items.wands.sp.staffoflena.staff_name=ring of lena
 items.wands.sp.staffoflena.desc=_"Fighting when you could have just talked it out... I don't like that kind of unnecessary violence."_\n\nThis Retrofitted wand is Has the power of operator Perfumer.
 items.wands.sp.staffoflena.stats_desc=This wand shoots plant power. The plant power deals _%1$d-%2$d damage,_ and Grants Vertigo.
-items.wands.sp.staffoflena.bmage_desc=_아미야_ 가 개조 재성장의 흑요석 반지로 적을 공격했을 때, 자신과 대상 중 하나라도 풀 위에 서 있다면 준 피해에 비례한 자연의 치유 효과를 얻습니다.
+items.wands.sp.staffoflena.bmage_desc=When _Guard Amiya_ strikes an enemy with a ring of lena, and either are standing on grass, she will gain herbal healing in proportion with the damage dealt.
 
 
 ###wands

@@ -47,8 +47,8 @@ public class StaffOfAbsinthe extends DamageWand {
         if (ch != null) {
 
             processSoulMark(ch, chargesPerCast());
-            if (ch.HP < ch.HT / 2) {
-                ch.damage((damageRoll() * 3) / 2, this);
+            if (ch.HP <= ch.HT / 2) {
+                ch.damage((damageRoll() * 2), this);
             }
             else  ch.damage(damageRoll(), this);
             Sample.INSTANCE.play( Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f) );

@@ -45,7 +45,7 @@ public class StaffOfWeedy extends DamageWand {
         return COL;
     }
 
-    public int min(int lvl){ return 2+lvl;
+    public int min(int lvl){ return 4+lvl;
     }
 
     public int max(int lvl){
@@ -74,7 +74,7 @@ public class StaffOfWeedy extends DamageWand {
                 processSoulMark(ch, chargesPerCast());
                 if (ch.alignment != Char.Alignment.ALLY) {
                     if (ch == curUser) {
-                        int dmg = (int) Math.round(damageRoll() * Math.pow(1.088f, curCharges));
+                        int dmg = damageRoll() * (1 + curCharges / 2);
                         ch.damage(dmg, this);
                     }
                     else ch.damage(damageRoll(), this);
@@ -95,7 +95,7 @@ public class StaffOfWeedy extends DamageWand {
         Char ch = Actor.findChar(bolt.collisionPos);
         if (ch != null){
             processSoulMark(ch, chargesPerCast());
-            int dmg = (int)Math.round(damageRoll() * Math.pow(1.35f, curCharges));
+            int dmg = damageRoll() * 1 + curCharges;
             ch.damage(dmg, this);
 
             if (ch.isAlive() && bolt.path.size() > bolt.dist+1 && ch.pos == bolt.collisionPos) {

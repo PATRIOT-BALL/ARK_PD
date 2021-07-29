@@ -1767,7 +1767,7 @@ items.wands.wandofprismaticlight.bmage_desc=_아미야_ 가 섬광의 흑요석 
 
 items.wands.wandofregrowth.name=재성장의 아츠 스태프
 items.wands.wandofregrowth.staff_name=재성장의 흑요석 반지
-items.wands.wandofregrowth.desc=이 막대는 전문적인 솜씨로 조각된 얇은 나무 줄기로 만들어졌습니다. 어린 나무처럼 밝고 생기있는 초록색이 마치 진짜 살아있는 나무 같습니다. "한 생명이 죽으면 또 다른 생명이 태어나는 법... 그리고 영원한 순환은 언제나 계속될지니!"
+items.wands.wandofregrowth.desc="꽤나 오랫동안 자고 있었던 것 같은데, 이번엔 어떤 꿈을 꾸었니?"
 items.wands.wandofregrowth.stats_desc=이 막대를 사용하면 방사형으로 아츠의 재성장 에너지를 발사합니다. 에너지가 지나간 곳에 잔디, 뿌리, 그리고 희귀 식물이 자라납니다. 다음 발사할 때 _SP를 %1$d 소모_ 합니다. SP를 더 소모할수록 범위와 효과가 증가합니다.
 items.wands.wandofregrowth.degradation=이 아츠 스태프는 SP를 _%d_ 소모한 후에는 식물을 만드는 데 실패할 수 있습니다. 레벨을 올리거나 아츠 스태프를 강화해 상한을 늘릴 수 있습니다.
 items.wands.wandofregrowth.bmage_desc=_아미야_ 가 재성장의 흑요석 반지로 적을 공격했을 때, 자신과 대상 중 하나라도 풀 위에 서 있다면 준 피해에 비례한 자연의 치유 효과를 얻습니다.
