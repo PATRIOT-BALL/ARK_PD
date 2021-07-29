@@ -199,13 +199,13 @@ public class SpiritBow extends Weapon {
 					+ (curseInfusionBonus ? 2 : 0)
 			        + Dungeon.hero.lvl /2 + Dungeon.hero.STR /4
 					+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 2
-					+ EatSeed / 3;
+					+ EatSeed / 5;
 		}
 		else return 6 + (int)(Dungeon.hero.lvl/2.5f)
 				+ 2*RingOfSharpshooting.levelDamageBonus(Dungeon.hero)
 				+ (curseInfusionBonus ? 2 : 0)
 				+ Dungeon.hero.pointsInTalent(Talent.IMPROVED_CROSSBOW) * 2
-				+ EatSeed / 3;
+				+ EatSeed / 5;
 	}
 
 	@Override
