@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -7,9 +8,12 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 public class Niansword extends MeleeWeapon {
     {
         image = ItemSpriteSheet.NIANSWORD;
+        hitSound = Assets.Sounds.HIT_RINGOUT;
+        hitSoundPitch = 1f;
 
         tier = 5;
     }
+
 
     @Override
     public int max(int lvl) {

@@ -218,9 +218,13 @@ public class Assets {
 		public static final String HIT_WALL1        = "sounds/hit_wall1.mp3";
 		public static final String HIT_WALL2        = "sounds/hit_wall2.mp3";
 		public static final String HIT_GUNLANCE        = "sounds/hit_gunlance.mp3";
-		public static final String HIT_SNIPER        = "sounds/hit_sniping.mp3";//
+		public static final String HIT_SNIPER        = "sounds/hit_sniping.mp3";
+		public static final String HIT_RINGOUT        = "sounds/hit_ringout.mp3";
+		public static final String HIT_BREAK        = "sounds/hit_break.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
+		public static final String SKILL_MON1       = "sounds/skill_mon1.mp3";
+		public static final String SKILL_MON2       = "sounds/skill_mon2.mp3";
 		public static final String SKILL_BEEP       = "sounds/skill_beep.mp3";
 		public static final String SKILL_CHAINSAW        = "sounds/skill_chainsaw.mp3";
 		public static final String SKILL_WOLFPACK        = "sounds/skill_wolfpack.mp3";
@@ -235,7 +239,7 @@ public class Assets {
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
 				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY,
-				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL,
+				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, LIGHTNING, LEVELUP, DEATH,
 				CHALLENGE, CURSED, TRAP, EVOKE, TOMB, ALERT, MELD, BOSS, BLAST, PLANT, RAY, BEACON,
@@ -246,7 +250,8 @@ public class Assets {
 				TIMESTOP,
 				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2, HIT_BIRD, HIT_WALL1, HIT_WALL2, HIT_SHOTGUN, HIT_GUNLANCE,
 				HIT_SNIPER, FROST, SHINNING, AJIMU,
-				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW, SKILL_SILVERSLASH, SKILL_YOUWISH
+				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW, SKILL_SILVERSLASH, SKILL_YOUWISH,
+				SKILL_MON1, SKILL_MON2
 		};
 	}
 

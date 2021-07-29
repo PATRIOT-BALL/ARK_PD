@@ -66,19 +66,19 @@ public class Mon3tr extends Mob {
             switch (spell) {
                 case 1:
                     GLog.w(Messages.get(Kaltsit.class, "skill1"));
-                    Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
+                    Sample.INSTANCE.play( Assets.Sounds.SKILL_MON1 );
                     CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
                     Buff.affect(this, MagicImmune.class, 3f);
                     break;
                 case 2:
                     GLog.w(Messages.get(Kaltsit.class, "skill2"));
-                    Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
+                    Sample.INSTANCE.play( Assets.Sounds.SKILL_MON2 );
                     CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
                     Buff.affect(this, Stamina.class, 3f);
                     break;
                 case 3:
                     GLog.w(Messages.get(Kaltsit.class, "skill3"));
-                    Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
+                    Sample.INSTANCE.play( Assets.Sounds.SKILL_MON2 );
                     CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
                     Buff.affect(this, FireImbue.class).set(3f);
                     break;

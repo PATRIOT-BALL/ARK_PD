@@ -81,6 +81,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
@@ -193,6 +195,10 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
+
+		new SHISHIOH().collect();
+		new CatGun().collect();
+		new Niansword().collect();
 
 		/*Amulet w;
 		w = new Amulet();
@@ -334,6 +340,9 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		new MeatCutlet().quantity(2).collect();
+
+		new SHISHIOH().collect();
+		new CatGun().collect();
 	}
 
 	public String title() {
