@@ -85,7 +85,7 @@ public class Mon3tr extends Mob {
     @Override
     public int damageRoll() {
         if (spell == 3) return Random.NormalIntRange( 50, 75 );
-        return Random.NormalIntRange( 32, 48 );
+        return Random.NormalIntRange( 42, 55 );
     }
 
     @Override

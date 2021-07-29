@@ -11,7 +11,7 @@ public class Infantry extends Mob {
     {
         spriteClass = InfantrySprite.class;
 
-        HP = HT = 120;
+        HP = HT = 135;
         defenseSkill = 28;
 
         EXP = 16;
@@ -25,7 +25,7 @@ public class Infantry extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 30, 40 );
+        return Random.NormalIntRange( 36, 46 );
     }
 
     @Override
