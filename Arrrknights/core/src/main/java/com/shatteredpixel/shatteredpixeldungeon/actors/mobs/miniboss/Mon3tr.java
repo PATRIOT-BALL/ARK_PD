@@ -98,6 +98,8 @@ public class Mon3tr extends Mob {
             trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
             WandOfBlastWave.throwChar(enemy, trajectory, 3); // 넉백 효과
         }
+
+        Sample.INSTANCE.play( Assets.Sounds.HIT_BREAK );
         return super.attackProc(enemy, damage);
     }
 

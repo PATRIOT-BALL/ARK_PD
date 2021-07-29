@@ -106,6 +106,8 @@ public class Kaltsit extends Mob {
                 ter.pos = SummontPos;
                 GameScene.add(ter);}
 
+                Sample.INSTANCE.play( Assets.Sounds.SKILL_MON1 );
+
                 firstSummon = false;
 
             }

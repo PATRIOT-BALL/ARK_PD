@@ -196,10 +196,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 
-		new SHISHIOH().collect();
-		new CatGun().collect();
-		new Niansword().collect();
-
 		/*Amulet w;
 		w = new Amulet();
 		w.quantity(1).collect();
@@ -340,9 +336,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		new MeatCutlet().quantity(2).collect();
-
-		new SHISHIOH().collect();
-		new CatGun().collect();
 	}
 
 	public String title() {

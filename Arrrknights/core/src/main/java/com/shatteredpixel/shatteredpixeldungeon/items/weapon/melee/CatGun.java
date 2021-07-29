@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Mon3terSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Rock_CrabSprite;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -86,6 +87,7 @@ public class CatGun extends MeleeWeapon {
                     ScrollOfTeleportation.appear(tr, respawnPoints.get(index));
 
                     respawnPoints.remove(index);
+                    Sample.INSTANCE.play( Assets.Sounds.SKILL_MON1 );
                     spawnd++;
                 }
                 charge = 0;
@@ -181,6 +183,7 @@ public class CatGun extends MeleeWeapon {
             }
 
             ScrollOfTeleportation.appear( this, cell );
+            Sample.INSTANCE.play( Assets.Sounds.SKILL_MON2 );
 
             blinkCooldown = 1;
         }
@@ -191,6 +194,12 @@ public class CatGun extends MeleeWeapon {
                 Buff.prolong(this, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);}
             damage(HT/30, this);
             return super.act();
+        }
+
+        @Override
+        public int attackProc(Char enemy, int damage) {
+            Sample.INSTANCE.play( Assets.Sounds.HIT_BREAK );
+            return super.attackProc(enemy, damage);
         }
 
         @Override
