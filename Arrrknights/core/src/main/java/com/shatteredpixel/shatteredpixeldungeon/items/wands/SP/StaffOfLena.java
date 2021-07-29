@@ -73,6 +73,7 @@ public class StaffOfLena extends DamageWand {
 
         for (int c : beam.subPath(1, maxDistance)) {
             Char ch;
+            CellEmitter.get( c ).burst( LeafParticle.GENERAL, 10 );
             if ((ch = Actor.findChar( c )) != null) {
 
                 chars.add( ch );
@@ -81,7 +82,6 @@ public class StaffOfLena extends DamageWand {
             int terr = Dungeon.level.map[c];
             if (terr == Terrain.EMPTY || terr == Terrain.EMBERS || terr == Terrain.EMPTY_DECO ||
                     terr == Terrain.GRASS || terr == Terrain.HIGH_GRASS) {
-                CellEmitter.get( c ).burst( LeafParticle.GENERAL, 10 );
             Level.set(c, Terrain.FURROWED_GRASS);
                 GameScene.updateMap( c );}
         }

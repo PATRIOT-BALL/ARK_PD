@@ -45,19 +45,17 @@ public class StaffOfWeedy extends DamageWand {
         return COL;
     }
 
-    public int min(int lvl){ return 4+lvl;
+    public int min(int lvl){ return 4+2*lvl;
     }
 
     public int max(int lvl){
-        return 7+2*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 2;
+        return 8+4*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 4;
     }
 
     @Override
     protected void onZap(Ballistica bolt) {
         Sample.INSTANCE.play( Assets.Sounds.BLAST );
         StaffOfWeedy.BlastWave.blast(bolt.collisionPos);
-
-        curCharges = 1;
 
         //presses all tiles in the AOE first, with the exception of tengu dart traps
         for (int i : PathFinder.NEIGHBOURS9){
@@ -80,13 +78,10 @@ public class StaffOfWeedy extends DamageWand {
                     else ch.damage(damageRoll(), this);
                 }
 
-                if (ch.isAlive() && ch.pos == bolt.collisionPos + i) {
+                if (ch.isAlive() && ch.pos == bolt.collisionPos + i && ch != curUser)  {
                     Ballistica trajectory = new Ballistica(ch.pos, ch.pos + i, Ballistica.MAGIC_BOLT);
                     int strength = 1 + Math.round(buffedLvl() / 2f) + Math.round(curCharges / 4);
                     throwChar(ch, trajectory, strength, false);
-                } else if (ch == Dungeon.hero){
-                    Dungeon.fail( getClass() );
-                    GLog.n( Messages.get( this, "ondeath") );
                 }
             }
         }
@@ -95,10 +90,10 @@ public class StaffOfWeedy extends DamageWand {
         Char ch = Actor.findChar(bolt.collisionPos);
         if (ch != null){
             processSoulMark(ch, chargesPerCast());
-            int dmg = damageRoll() * 1 + curCharges;
+            int dmg = damageRoll() * (1 + curCharges);
             ch.damage(dmg, this);
 
-            if (ch.isAlive() && bolt.path.size() > bolt.dist+1 && ch.pos == bolt.collisionPos) {
+            if (ch.isAlive() && bolt.path.size() > bolt.dist+1 && ch.pos == bolt.collisionPos && ch != curUser) {
                 Ballistica trajectory = new Ballistica(ch.pos, bolt.path.get(bolt.dist + 1), Ballistica.MAGIC_BOLT);
                 int strength = buffedLvl() + 3 + (curCharges * 2);
                 throwChar(ch, trajectory, strength, false);
@@ -106,6 +101,7 @@ public class StaffOfWeedy extends DamageWand {
         }
 
         Camera.main.shake(curCharges * 0.65f, 0.25f);
+        curCharges = 1;
 
     }
 
