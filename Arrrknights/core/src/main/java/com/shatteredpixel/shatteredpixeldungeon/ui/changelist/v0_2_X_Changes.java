@@ -34,12 +34,16 @@ public class v0_2_X_Changes {
                         "스태프 오브 레나 : 재성장의 아츠 스태프의 개조 스태프로, 직선 방향으로 식물의 힘을 발사해 피해를 입히고 현기증을 부여합니다. 또한, 발사 경로에 헤쳐진 풀을 생성합니다." + "\n\n" +
                         "커스텀 탐험 세트 : 새로운 유물로, 사용시 거울상을 소환합니다. 이 유물의 레벨에 따라 소환수들이 강력해집니다." ));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "새로운 엔딩",
+                "29층의 켈시를 쓰러트려 하극상을 할 수 있게되었습니다. 하극상 성공시 즉시 게임이 끝납니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
-                "그레이스롯의 _음파 화살_ 특성이 _속박 화살_로 변경되었습니다. 속박 화살 특성은 착탄 지점 주위의 적들을 속박합니다."));
+                "그레이스롯의 _음파 화살_ 특성이 _속박 화살_로 변경되었습니다. 속박 화살 특성은 착탄 지점 주위의 적들을 속박합니다." + "\n\n" +
+                "그레이스롯의 _아츠 집속_ 특성이 3티어 특성으로 변경되었으며, _접근 금지!_ 특성이 4티어 특성이 되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "자연 그레이스롯 리메이크",
                 "쇠뇌에 씨앗을 사용하여 강화하는 기능이 추가되었습니다. 최대 45개의 씨앗을 소모할 수 있습니다." + "\n\n" +

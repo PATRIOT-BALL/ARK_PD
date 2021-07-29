@@ -128,13 +128,13 @@ public enum Talent {
 	//Huntress T2
 	INVIGORATING_MEAL(100), RESTORED_NATURE(101), REJUVENATING_STEPS(102), HEIGHTENED_SENSES(103), DURABLE_PROJECTILES(104),
 	//Huntress T3
-	POINT_BLANK(105, 3), SEER_SHOT(106, 3),
+	ARTS_FOCUS(108,3), SEER_SHOT(106, 3),
 	//Sniper T3
 	FARSIGHT(107, 3), SHARED_ENCHANTMENT(108, 3), SHARED_UPGRADES(109, 3),
 	//Warden T3
 	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SAVIOR_PRAY(112, 3),
 	//Huntress T4
-	ARTS_FOCUS(108,3), IMPROVED_CROSSBOW(109,3),
+	POINT_BLANK(105, 3), IMPROVED_CROSSBOW(109,3),
 	//Sniper T4
 	SNIPING(105,3),
 	//Warden T4
@@ -533,7 +533,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, ENHANCED_RINGS, LIGHT_CLOAK);
 				break;
 			case HUNTRESS:
-				Collections.addAll(tierTalents, POINT_BLANK, SEER_SHOT);
+				Collections.addAll(tierTalents, ARTS_FOCUS, SEER_SHOT);
 				break;
 			case ROSECAT:
 				Collections.addAll(tierTalents, AIMTRAINING, CUTLET);
@@ -556,7 +556,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, ASSASSINSCREED, CLOCK_UPGRADE);
 				break;
 			case HUNTRESS:
-				Collections.addAll(tierTalents, ARTS_FOCUS, IMPROVED_CROSSBOW);
+				Collections.addAll(tierTalents, POINT_BLANK, IMPROVED_CROSSBOW);
 				break;
 			case ROSECAT:
 				Collections.addAll(tierTalents, RHODES_WEAPON, RECALL_MEMORY);
