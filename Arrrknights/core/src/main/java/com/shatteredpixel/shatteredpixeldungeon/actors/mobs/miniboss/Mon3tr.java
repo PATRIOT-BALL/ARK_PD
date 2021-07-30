@@ -35,8 +35,9 @@ public class Mon3tr extends Mob {
         HP = HT = 500;
         defenseSkill = 30;
 
-        EXP = 0;
-        maxLvl = 45;
+        EXP = 50;
+        maxLvl = 30;
+        flying = true;
 
         state = HUNTING;
 
@@ -69,18 +70,21 @@ public class Mon3tr extends Mob {
                     Sample.INSTANCE.play( Assets.Sounds.SKILL_MON1 );
                     CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
                     Buff.affect(this, MagicImmune.class, 3f);
+                    this.beckon( Dungeon.hero.pos );
                     break;
                 case 2:
                     GLog.w(Messages.get(Kaltsit.class, "skill2"));
                     Sample.INSTANCE.play( Assets.Sounds.SKILL_MON2 );
                     CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
                     Buff.affect(this, Stamina.class, 3f);
+                    this.beckon( Dungeon.hero.pos );
                     break;
                 case 3:
                     GLog.w(Messages.get(Kaltsit.class, "skill3"));
                     Sample.INSTANCE.play( Assets.Sounds.SKILL_MON2 );
                     CellEmitter.get( this.pos ).burst( ShadowParticle.UP, 10 );
                     Buff.affect(this, FireImbue.class).set(3f);
+                    this.beckon( Dungeon.hero.pos );
                     break;
             }
             cooldown = Random.Int(4,8);
@@ -106,7 +110,7 @@ public class Mon3tr extends Mob {
     @Override
     public int damageRoll() {
         if (spell == 3) return Random.NormalIntRange( 50, 75 );
-        return Random.NormalIntRange( 42, 55 );
+        return Random.NormalIntRange( 30, 40 );
     }
 
     @Override

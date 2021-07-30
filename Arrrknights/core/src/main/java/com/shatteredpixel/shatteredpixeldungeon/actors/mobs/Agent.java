@@ -90,7 +90,7 @@ public class Agent extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 30, 40 );
+        return Random.NormalIntRange( 25, 35 );
     }
 
     @Override
