@@ -100,6 +100,7 @@ public class Dungeon {
 		NECRO_HP,
 		BAT_HP,
 		WARLOCK_HP,
+		SNIPER_HP,
 		//Demon spawners are already limited in their spawnrate, no need to limit their health drops
 		//alchemy
 		COOKING_HP,
