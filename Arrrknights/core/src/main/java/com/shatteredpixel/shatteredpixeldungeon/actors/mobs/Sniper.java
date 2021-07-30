@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Faust;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPsionicBlast;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
@@ -28,8 +29,8 @@ public class Sniper extends Mob {
         EXP = 17;
         maxLvl = 31;
 
-        loot = Generator.Category.WEP_T5;
-        lootChance = 0.33f;
+        loot = new PotionOfHealing();
+        lootChance = 0.25f;
 
         immunities.add(Silence.class);
     }
@@ -38,12 +39,12 @@ public class Sniper extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(34, 44);
+        return Random.NormalIntRange(26, 44);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 42;
+        return 44;
     }
 
     @Override
@@ -84,6 +85,12 @@ public class Sniper extends Mob {
         } else {
             return super.getCloser( target );
         }
+    }
+
+    @Override
+    public void rollToDropLoot() {
+        lootChance *= (5f - Dungeon.LimitedDrops.SNIPER_HP.count) / 5f;
+        super.rollToDropLoot();
     }
 
     private static final String SKILLCD   = "charge";

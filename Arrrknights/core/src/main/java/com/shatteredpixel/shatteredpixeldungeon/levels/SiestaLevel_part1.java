@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Faust;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.PhaseShift;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
@@ -64,7 +65,7 @@ public class SiestaLevel_part1 extends RegularLevel {
 
         if (Dungeon.depth == 32 || Dungeon.depth == 34) {
         addItemToSpawn(new PotionOfStrength());}
-        else addItemToSpawn(new StoneOfEnchantment());
+        else addItemToSpawn(new PotionOfHealing());
         super.createItems();
     }
 
