@@ -555,7 +555,7 @@ actors.hero.talent.savior_belief.desc=_+1:_ Deals _12%_ additional damage to roo
 actors.hero.talent.lightnessmeal.title=lightness meal
 actors.hero.talent.lightnessmeal.desc=_+1:_ Eating food grants the Rosmontis gain _10 Turns_ levitation.\n\n_+2:_ Eating food grants the Rosmontis gain _15 Turns_ levitation.\n\nIf you have this talent, using gear while levitation does not consume any charge. When this effect is triggered, the levitation effect is immediately removed.\n\nGum doll cannot active talent
 actors.hero.talent.smartmeals.title=smart meal
-actors.hero.talent.smartmeals.desc=_+1:_ If you eat food _5_ times, it will be Identifyd when you pick up a Melee Weapon/Armor/Wand/Ring.\n\n_+2:_ If you eat food _3_ times, it will be Identifyd when you pick up a Melee Weapon/Armor/Wand/Ring.
+actors.hero.talent.smartmeals.desc=_+1:_ If you eat food _5_ times, it will be Identifyd when you pick up a Melee Weapon/Armor/Wand/Ring.\n\n_+2:_ If you eat food _4_ times, it will be Identifyd when you pick up a Melee Weapon/Armor/Wand/Ring.
 actors.hero.talent.goodmeat.title=good meat
 actors.hero.talent.goodmeat.desc=_+1:_ Eating Mystery Meat's chance to inflict a _negative effect is reduced_.\n\n_+2:_ Eating Mystery Meat's _no negative effect_.\n\nIf you have this talent, Eating Mystery Meat, recharges the Rosmontis`s gear for 1.
 actors.hero.talent.nyanging.title=nyanging
@@ -726,7 +726,7 @@ actors.mobs.npcs.ghost.find_me=Thanks, I'll go now!
 actors.mobs.npcs.ghost.desc=New operator our Rhodes. We are weak now, but we will be strong when we meet again.
 actors.mobs.npcs.ghost.stop=Uuuh?! stop!
 
-actors.mobs.npcs.imp.name=Cannot, Suspicious Merchant
+actors.mobs.npcs.imp.name=Cannot
 actors.mobs.npcs.imp.golems_1=Rhodes Island is a business and I am a business person, so it can be said to be the same industry. That's right, why don't we help each other with friends? friend?\n\nWhat you need to get rid of is the _Possessed Junkman._ As you can see, I'm in business here and those stupid beggars don't help the business.\n\nSo... by the way, _kill about 4_ of those guys. Then I will reward you.
 actors.mobs.npcs.imp.monks_1=Rhodes Island is a business and I am a business person, so it can be said to be the same industry. That's right, why don't we help each other with friends? friend?\n\nWhat you need to get rid of is the _Enraged Soldier._ The monsters keep screaming and the guests run away!\n\nSo... by the way, _kill about 5_ of those guys. Then I will reward you.
 actors.mobs.npcs.imp.golems_2=Get what the Junkman`s drop. where do use? I do not know.
@@ -735,7 +735,7 @@ actors.mobs.npcs.imp.cya=See you later, %s!
 actors.mobs.npcs.imp.hey=Hey, %s!
 actors.mobs.npcs.imp.desc=It's not about picking up trash, it's about picking up treasures you don't need.\n\nThere are people who like neutrality, neither team nor foe.
 
-actors.mobs.npcs.impshopkeeper.name=Cannot, Suspicious Merchant
+actors.mobs.npcs.impshopkeeper.name=Cannot
 actors.mobs.npcs.impshopkeeper.greetings=Good Morning, Good Afternoon, and Good Evening!
 actors.mobs.npcs.impshopkeeper.thief=I used to believe you... I'm kill off you!
 actors.mobs.npcs.impshopkeeper.desc=Need help? But help is not free.\n\nThere are people who like neutrality, neither team nor foe.
@@ -766,7 +766,7 @@ actors.mobs.npcs.shopkeeper.thief=Thief, thief!
 actors.mobs.npcs.shopkeeper.sell=Sell an item
 actors.mobs.npcs.shopkeeper.desc=Penguin Logistics`s workers. came here under a contract with Rhodes Island.
 
-actors.mobs.npcs.wandmaker.name=Elite Operator "Ace"
+actors.mobs.npcs.wandmaker.name="Ace"
 actors.mobs.npcs.wandmaker.intro_warrior=I'm glad you look healthy, Blaze. have a request to you.
 actors.mobs.npcs.wandmaker.intro_rogue=Did you come here on orders from Kal'tsit? Anyway, I have a favor little wolf.
 actors.mobs.npcs.wandmaker.intro_mage=Amiya, Were you also involved in this operation? The situation seems serious. Can I ask you one favor before you leave?
@@ -784,7 +784,7 @@ actors.mobs.npcs.wandmaker.def_verb=blockad
 actors.mobs.npcs.wandmaker.desc=An elite operator of Rhodes. He went out to rescue the Doctor.
 actors.mobs.npcs.wandmaker.stop=just one, %s.
 
-actors.mobs.npcs.lens.name=Lens, Photo shoot vehicle
+actors.mobs.npcs.lens.name=Lens
 actors.mobs.npcs.lens.desc=A machine that assists Scene, a Rhodes operator and photojournalist. her have been dispatched to help you.\n\n"Please give any tasks that require doing directly to Lens!"
 actors.mobs.npcs.lens.t1=Shooting——
 actors.mobs.npcs.lens.t2=Lights——
@@ -806,13 +806,25 @@ actors.mobs.npcs.closure.fail_skin2=not use
 actors.mobs.npcs.closure.fail_skin3=Need a 50 games played badge
 actors.mobs.npcs.closure.die=ugh~
 
-actors.mobs.npcs.skinmodel.name=New Model Generator
+actors.mobs.npcs.skinmodel.name=New Model
 actors.mobs.npcs.skinmodel.desc=A machine that creates realistic holograms.\n\nTouch to check the next skin
 
 actors.mobs.npcs.blackperro.name=Dobermann
 actors.mobs.npcs.blackperro.desc=Rhodes Island`s Drill instructor. has a strict personality.\n\n_Touch to activate Easy Mode_
 actors.mobs.npcs.blackperro.no=You don't need.
 actors.mobs.npcs.blackperro.active=Training started.
+
+actors.mobs.npcs.blackperroperro.name=Hologram
+actors.mobs.npcs.blackperroperro.desc=A hologram in the shape of a Doberman. give hints.
+actors.mobs.npcs.blackperroperro.hint1=Hint(1/9)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
+actors.mobs.npcs.blackperroperro.hint2=Hint(2/9)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
+actors.mobs.npcs.blackperroperro.hint3=Hint(3/9)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
+actors.mobs.npcs.blackperroperro.hint4=Hint(4/9)\n\n_Potato_ can be combined with something to make a shield.
+actors.mobs.npcs.blackperroperro.hint5=Hint(5/9)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
+actors.mobs.npcs.blackperroperro.hint6=Hint(6/9)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
+actors.mobs.npcs.blackperroperro.hint7=Hint(7/9)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
+actors.mobs.npcs.blackperroperro.hint8=Hint(8/9)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
+actors.mobs.npcs.blackperroperro.hint9=Hint(9/9)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
 
 
 
