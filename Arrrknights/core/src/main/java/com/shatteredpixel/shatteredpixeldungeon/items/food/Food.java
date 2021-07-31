@@ -69,34 +69,39 @@ public class Food extends Item {
 		super.execute( hero, action );
 
 		if (action.equals( AC_EAT )) {
-			
+
 			detach( hero.belongings.backpack );
-			
+
 			satisfy(hero);
 			GLog.i( Messages.get(this, "eat_msg") );
-			
+
 			hero.sprite.operate( hero.pos );
 			hero.busy();
 			SpellSprite.show( hero, SpellSprite.FOOD );
 			Sample.INSTANCE.play( Assets.Sounds.EAT );
-			
+
 			hero.spend( eatingTime() );
 
 			Talent.onFoodEaten(hero, energy, this);
-			
+
 			Statistics.foodEaten++;
 			Badges.validateFoodEaten();
 			Badges.validateRoseUnlock();
 
-			if (Dungeon.hero.buff(Talent.foodIdentify.class) != null) {
+			if (Dungeon.hero.hasTalent(Talent.SMARTMEALS)) {
 				if (Dungeon.hero.buff(Talent.foodIdentify.class) != null) {
-					Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
-					counter.countUp(1);
+					if (Dungeon.hero.buff(Talent.foodIdentify.class) != null) {
+						Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
+						counter.countUp(1);
+					}
+				} else Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
+				Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
+				counter.countUp(1);
+
+				if (counter.count() > 9 - (Dungeon.hero.pointsInTalent(Talent.SMARTMEALS) * 2)) {
+					GLog.i(Messages.get(this, "smart"));
 				}
 			}
-			else Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
-			Talent.foodIdentify counter = Buff.affect(Dungeon.hero, Talent.foodIdentify.class);
-			counter.countUp(1);
 
 		}
 	}

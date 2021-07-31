@@ -104,7 +104,7 @@ public class RunicBlade extends MeleeWeapon {
 						if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
 							Char ch = Actor.findChar(cell);
 							if (ch != null&& !(ch instanceof Hero)) {
-								ch.damage(Dungeon.hero.damageRoll(), Dungeon.hero);
+								ch.damage(Dungeon.hero.damageRoll() / 2, Dungeon.hero);
 								ch.sprite.burst(CharSprite.NEGATIVE, 10);
 								if (ch.isAlive()) Buff.prolong(ch, Paralysis.class, 2);
 								 }}}

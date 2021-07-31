@@ -70,7 +70,7 @@ public class Longsword extends MeleeWeapon {
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier) +   //16 + 5
+		return  4*(tier) + 2 +   //18 + 5
 				lvl*(tier+1);
 	}
 

@@ -145,6 +145,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
@@ -260,6 +261,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Enfild2.class,                       false);
 		WEAPONS.seen.put( Niansword.class,                   false);
 		WEAPONS.seen.put( PatriotSpear.class,                   false);
+		WEAPONS.seen.put( CatGun.class,                   false);
 
 		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);
 		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);
@@ -301,9 +303,9 @@ public enum Catalog {
         SKILLBOOK.seen.put( BookSoaringFeather.class,          false);
         SKILLBOOK.seen.put( BookSBurst.class,          false);
         SKILLBOOK.seen.put( BookNigetRaid.class,          false);
+		SKILLBOOK.seen.put( BookYourWish.class,              false);
         SKILLBOOK.seen.put( BookTerminationT.class,          false);
         SKILLBOOK.seen.put( BookTrueSilverSlash.class,          false);
-		SKILLBOOK.seen.put( BookYourWish.class,              false);
 
 		WANDS.seen.put( WandOfMagicMissile.class,           false);
 		WANDS.seen.put( WandOfLightning.class,              false);

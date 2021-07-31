@@ -119,7 +119,7 @@ public class Item implements Bundlable {
 
 			if (hero.hasTalent(Talent.SMARTMEALS)) {
 				if (this.isIdentified() == false && Dungeon.hero.buff(Talent.foodIdentify.class) != null) {
-					if (Dungeon.hero.buff(Talent.foodIdentify.class).count() > 7 - hero.pointsInTalent(Talent.SMARTMEALS) * 2) {
+					if (Dungeon.hero.buff(Talent.foodIdentify.class).count() > 9 - (hero.pointsInTalent(Talent.SMARTMEALS) * 2)) {
 						if (this instanceof MeleeWeapon || this instanceof Wand || this instanceof Ring || this instanceof Armor) {
 							this.identify();
 							GLog.i(Messages.get(Hero.class, "identify"));

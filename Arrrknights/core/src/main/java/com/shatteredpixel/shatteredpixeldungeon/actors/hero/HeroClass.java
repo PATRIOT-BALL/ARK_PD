@@ -195,10 +195,6 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-
-		new SHISHIOH().collect();
-		new CatGun().collect();
-		new Niansword().collect();
 	}
 
 	private static void initMage( Hero hero ) {
@@ -257,21 +253,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(2,skillB);
 
 		new DewVial().collect();
-		/*WandOfTransfusion wandOfTransfusion;
-		wandOfTransfusion = new WandOfTransfusion();
-		wandOfTransfusion.quantity(1).collect();
-
-		WandOfPrismaticLight wandO;
-		wandO = new WandOfPrismaticLight();
-		wandO.quantity(1).collect();
-
-		WandOfDisintegration wand;
-		wand = new WandOfDisintegration();
-		wand.quantity(1).collect();
-
-		EtherealChains w;
-		w = new EtherealChains();
-		w.quantity(1).collect();*/
 	}
 
 	private static void initHuntress( Hero hero ) {

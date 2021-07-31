@@ -5,11 +5,13 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Brute;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -44,30 +46,31 @@ public class CrabGun extends MeleeWeapon {
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        if (charge >= chargeCap) {
-            ArrayList<Integer> respawnPoints = new ArrayList<>();
+        if (attacker instanceof Hero || attacker instanceof DriedRose.GhostHero) {
+            if (charge >= chargeCap) {
+                ArrayList<Integer> respawnPoints = new ArrayList<>();
 
-            for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
-                int p = defender.pos + PathFinder.NEIGHBOURS8[i];
-                if (Actor.findChar( p ) == null && Dungeon.level.passable[p]) {
-                    respawnPoints.add( p );
+                for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
+                    int p = defender.pos + PathFinder.NEIGHBOURS8[i];
+                    if (Actor.findChar(p) == null && Dungeon.level.passable[p]) {
+                        respawnPoints.add(p);
+                    }
                 }
-            }
-            int spawnd = 0;
-            while (respawnPoints.size() > 0 && spawnd == 0) {
-                int index = Random.index( respawnPoints );
+                int spawnd = 0;
+                while (respawnPoints.size() > 0 && spawnd == 0) {
+                    int index = Random.index(respawnPoints);
 
-                CrabGun.MetalCrab crab = new CrabGun.MetalCrab();
-                crab.setting(buffedLvl());
-                GameScene.add( crab );
-                ScrollOfTeleportation.appear( crab, respawnPoints.get( index ) );
+                    CrabGun.MetalCrab crab = new CrabGun.MetalCrab();
+                    crab.setting(buffedLvl());
+                    GameScene.add(crab);
+                    ScrollOfTeleportation.appear(crab, respawnPoints.get(index));
 
-                respawnPoints.remove( index );
-                spawnd++;
-            }
-            charge = 0;
+                    respawnPoints.remove(index);
+                    spawnd++;
+                }
+                charge = 0;
+            } else SPCharge(Random.IntRange(7 + buffedLvl() / 4, 11 + buffedLvl() / 2));
         }
-        else SPCharge(Random.IntRange(7+buffedLvl() / 4,11+buffedLvl() / 2));
         return super.proc(attacker, defender, damage);
     }
 

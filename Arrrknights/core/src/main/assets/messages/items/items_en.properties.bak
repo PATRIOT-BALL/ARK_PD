@@ -1565,7 +1565,7 @@ items.stones.stoneofshock.desc=This runestone unleashes a blast of electrical en
 items.wands.sp.staffofabsinthe.name=staff of absinthe
 items.wands.sp.staffofabsinthe.staff_name=ring of absinthe
 items.wands.sp.staffofabsinthe.desc=_"Doctor, everything my father did, was it really worth it?"_\n\nThis Retrofitted wand is Has the power of operator absinthe. it has many available charges our wands
-items.wands.sp.staffofabsinthe.stats_desc=Each bolt from this wand deals _%1$d-%2$d damage,_ and 1.75x damage to enemies with less than 50%% HP
+items.wands.sp.staffofabsinthe.stats_desc=Each bolt from this wand deals _%1$d-%2$d damage,_ and 2x damage to enemies with less than 50%% HP
 items.wands.sp.staffofabsinthe.bmage_desc=When _Guard Amiya_ strikes an enemy with a ring of absinthe, all of her wands will gain charge in addition to her ring.
 
 items.wands.sp.staffofgreyy.name=staff of greyy
@@ -2096,7 +2096,7 @@ items.weapon.melee.ex42.ac_zap=TRANSFORMED
 
 items.weapon.melee.naginata.name=naginata
 items.weapon.melee.naginata.stats_desc=Range +1, Attack Speed 80%
-items.weapon.melee.naginata.desc=there is no answer. There may be only choices.
+items.weapon.melee.naginata.desc=there is no answer. There may be only choices.\n\nattacking an ordinary enemy, if the target's HP is 12.5% ​​or less, it is immediately enemy killed.
 
 items.weapon.melee.swordofartorius.name=sword of artorius
 items.weapon.melee.swordofartorius.stats_desc=attacking with this weapon, it fires an arts beam, dealing _%1$d-%2$d damage_.

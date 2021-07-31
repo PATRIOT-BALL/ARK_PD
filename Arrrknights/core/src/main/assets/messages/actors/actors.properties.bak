@@ -424,7 +424,7 @@ actors.hero.talent.sparkoflife.desc=_+1:_ 공격시 _5%_ 확률로 체력을 5%�
 
 
 actors.hero.talent.empowering_meal.title=힘이 나는 식사
-actors.hero.talent.empowering_meal.desc=_+1:_ 식사 후 다음 3번의 아츠 스태프 발사에 _2 만큼의 추가 피해_ 를 줍니다.\n\n_+2:_ 식사 후 다음 3번의 아츠 스태프 발사에 _3 만큼의 추가 피해_ 를 줍니다.
+actors.hero.talent.empowering_meal.desc=_+1:_ 식사 후 다음 3번의 아츠 스태프 발사에 _3 만큼의 추가 피해_ 를 줍니다.\n\n_+2:_ 식사 후 다음 3번의 아츠 스태프 발사에 _4 만큼의 추가 피해_ 를 줍니다.
 actors.hero.talent.scholars_intuition.title=사장의 권능
 actors.hero.talent.scholars_intuition.desc=_+1:_ 아츠 스태프를 _3배 빠르게_ 감정합니다.\n\n_+2:_ 아츠 스태프를 _사용하는 즉시_ 감정합니다.
 actors.hero.talent.tested_hypothesis.title=해답찾기
@@ -438,7 +438,7 @@ actors.hero.talent.energizing_upgrade.desc=_+1:_ 강화의 일기장을 사용�
 actors.hero.talent.wand_preservation.title=아츠 스태프 보존
 actors.hero.talent.wand_preservation.desc=_+1:_ 아미야의 흑요석 반지에 새로운 아츠 스태프를 융합할 때, 흑요석 반지에 융합되어 있던 아츠 스태프가 _67% 확률_로 +0인 상태로 반환됩니다.\n\n_+2:_ 아미야의 흑요석 반지에 새로운 아츠 스태프를 융합할 때, 흑요석 반지에 융합되어 있던 아츠 스태프가 _100% 확률_로 +0인 상태로 반환됩니다.\n\n이 특성은 아츠 스태프를 최대 세 번까지 반환할 수 있습니다.
 actors.hero.talent.arcane_vision.title=아츠 시야
-actors.hero.talent.arcane_vision.desc=_+1:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _10 턴의 심안 효과_ 를 얻습니다.\n\n_+2:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _15 턴의 심안 효과_ 를 얻습니다.
+actors.hero.talent.arcane_vision.desc=_+1:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _5 턴의 심안 효과_ 를 얻습니다.\n\n_+2:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _10 턴의 심안 효과_ 를 얻습니다.
 actors.hero.talent.shield_battery.title=보호막 충전
 actors.hero.talent.shield_battery.desc=_+1:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 5%_ 에 해당하는 방어막을 얻습니다.\n\n_+2:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 7.5%_ 에 해당하는 방어막을 얻습니다.
 actors.hero.talent.empowering_scrolls.title=신비한 힘의 일기장
@@ -1206,7 +1206,7 @@ actors.mobs.yogfist$darkfist.desc=_탈룰라가 불러낸 과거의 환영,_이 
 // 31~35
 
 actors.mobs.infantry.name=보병
-actors.mobs.yogfist.infantry.desc=초급 근거리 전투원. 그럴싸한 특징은 없다.
+actors.mobs.infantry.desc=초급 근거리 전투원. 그럴싸한 특징은 없다.
 
 actors.mobs.ergate.name=일개미
 actors.mobs.ergate.desc=엔지니어링 기술 수단을 사용하여 파괴를 감행하며, 무기를 거의 휴대하고 있지 않다. 일개미의 전투 능력은 낮지만, 상대의 무기를 강제로 떨어트린 후 도망쳐 전투를 방해한다.
