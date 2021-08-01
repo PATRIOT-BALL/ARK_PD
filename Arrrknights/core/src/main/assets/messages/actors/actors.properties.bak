@@ -610,6 +610,7 @@ actors.hero.hero.locked_chest=이 상자는 잠겨있어서, 맞는 열쇠가 �
 actors.hero.hero.locked_door=맞는 열쇠를 갖고 있지 않다.
 actors.hero.hero.noticed_smth=당신은 무언가를 눈치챘다.
 actors.hero.hero.wait=...
+actors.hero.hero.wtf="!??!?!?"
 actors.hero.hero.search=탐색
 actors.hero.hero.search_distracted=집중할 수 없어 탐색에 약간 시간이 걸린다.
 actors.hero.hero.pain_resist=고통으로 인해 당신은 수면 욕구에 저항했다.
@@ -808,7 +809,7 @@ actors.mobs.npcs.blackperro.no=훈련은 필요없을 것 같은데?
 actors.mobs.npcs.blackperro.active=이미 훈련은 시작했다.
 
 actors.mobs.npcs.prts.name=???
-actors.mobs.npcs.prts.desc=그날이 올 때까지 나는 너를 기다릴 거야. 무슨 일이 있더라도 기다릴게. 그러니 너도, 너도 꼭 나를 기다려줘.\n\n나를 잊지 말아줘.
+actors.mobs.npcs.prts.desc=그날이 올 때까지 나는 너를 기다릴 거야. 무슨 일이 있더라도 기다릴게. 그러니 너도, 너도 꼭 나를 기다려줘.\n\n...나를 잊지 말아줘.
 actors.mobs.npcs.prts.hint1=힌트(1/9)\n\n가공소에서 _스태프 개조 키트_를 만들어 스태프(완드)를 개조할 수 있다.
 actors.mobs.npcs.prts.hint2=힌트(2/9)\n\n1층에서 위로 올라가면 27층이 나온다.\n27층에선 스킨을 바꿀 수 있고, 박사를 구출했다면 더 올라갈 수 있다.
 actors.mobs.npcs.prts.hint3=힌트(3/9)\n\n_아방가르드 우물_에 넣으면 특별한 아이템이 되는 것들이 있다. 대표적으론 _감자_다.

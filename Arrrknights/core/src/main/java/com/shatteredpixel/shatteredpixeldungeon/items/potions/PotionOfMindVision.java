@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 
@@ -38,13 +39,18 @@ public class PotionOfMindVision extends Potion {
 	@Override
 	public void apply( Hero hero ) {
 		identify();
-		Buff.affect( hero, MindVision.class, MindVision.DURATION );
-		Dungeon.observe();
-		
-		if (Dungeon.level.mobs.size() > 0) {
-			GLog.i( Messages.get(this, "see_mobs") );
-		} else {
-			GLog.i( Messages.get(this, "see_none") );
+		if (Dungeon.depth != 35) {
+			Buff.affect(hero, MindVision.class, MindVision.DURATION);
+			Dungeon.observe();
+
+			if (Dungeon.level.mobs.size() > 0) {
+				GLog.i(Messages.get(this, "see_mobs"));
+			} else {
+				GLog.i(Messages.get(this, "see_none"));
+			}
+		}
+		else {
+			curUser.sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Hero.class,"wtf") );
 		}
 	}
 	

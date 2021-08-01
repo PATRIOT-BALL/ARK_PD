@@ -29,13 +29,16 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
                 "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
-                        "시시오 : 3티어 무기로, 체력이 낮을수록 공격력이 상승하지만 기습 공격이 불가능합니다." + "\n\n" +
-                        "로도스 제식 장검 : 1티어 무기로, 정제 금속과 1티어 무기 융합시 확률적으로 얻습니다. 기습시 피해 보정이 높고 적 처치시 즉시 투명화를 얻습니다." + "\n\n" +
-                        "스태프 오브 레나 : 재성장의 아츠 스태프의 개조 스태프로, 직선 방향으로 식물의 힘을 발사해 피해를 입히고 현기증을 부여합니다. 또한, 발사 경로에 헤쳐진 풀을 생성합니다." + "\n\n" +
-                        "커스텀 탐험 세트 : 새로운 유물로, 사용시 거울상을 소환합니다. 이 유물의 레벨에 따라 소환수들이 강력해집니다." ));
+                        "_시시오_ : 3티어 무기로, 체력이 낮을수록 공격력이 상승하지만 기습 공격이 불가능합니다." + "\n\n" +
+                        "-_로도스 제식 장검_ : 1티어 무기로, 정제 금속과 1티어 무기 융합시 확률적으로 얻습니다. 기습시 피해 보정이 높고 적 처치시 즉시 투명화를 얻습니다." + "\n\n" +
+                        "스태프 오브 레나_ : 재성장의 아츠 스태프의 개조 스태프로, 직선 방향으로 식물의 힘을 발사해 피해를 입히고 현기증을 부여합니다. 또한, 발사 경로에 헤쳐진 풀을 생성합니다." + "\n\n" +
+                        "_커스텀 탐험 세트_ : 새로운 유물로, 사용시 거울상을 소환합니다. 이 유물의 레벨에 따라 소환수들이 강력해집니다." ));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "새로운 엔딩",
                 "29층의 켈시를 쓰러트려 하극상을 할 수 있게되었습니다. 하극상 성공시 즉시 게임이 끝납니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "새로운 NPC",
+                "10층 보스 클리어시 추가 요소 혹은 정제 금속 조합법과 관련된 힌트를 주는 NPC가 추가되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -100,8 +103,9 @@ public class v0_2_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
-                "블레이즈의 _전기톱 축제_ 특성의 발동 확률이 67-100%에서 _55-80%_로 감소햇습니다." + "\n\n" +
+                "블레이즈의 _전기톱 축제_ 특성의 발동 확률이 67-100%에서 _55-80%_로 감소했습니다." + "\n\n" +
                         "아미야의 _아츠 시야_ 특성의 지속시간이 10-15턴에서 _5-10턴_으로 감소했습니다." + "\n\n" +
+                        "레드의 _망토 강화_ 특성의 충전 가속이 10-30%에서 _6-18%_로 감소했습니다." + "\n\n" +
                 "그레이스롯의 _활력의 발걸음_ 특성의 쿨타임이 16-8턴에서 _18-12턴_ 으로 상승했습니다." + "\n\n" +
                 "그레이스롯의 _개량 쇠뇌_ 특성의 공격력 상승량이 3-9에서 _2-6_으로 감소했습니다." + "\n\n" +
                 "로즈몬티스의 _똑똑한 식사_ 특성의 이성 요구량이 5-3에서 _5-4_로 상승했습니다."));
@@ -111,10 +115,14 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 너프",
                 "_숙주병사(폭주)_ 의 공격력이 18-28에서 _16-28_로 감소했으며, 집중 스킬의 쿨타임이 1턴 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 너프",
+                "다음 보스들이 _섬멸전 장비_로 가하는 공격에 피해 저항을 얻습니다." + "\n\n" +
+                "_머드락_ : 12% 감소" + "\n" + "_탈룰라?_ : 35%감소" + "\n" + "_Mon3tr_ : 35%감소"));
     }
 
     public static void add_v0_2_1_Changes(ArrayList<ChangeInfo> changeInfos) {
-        ChangeInfo changes = new ChangeInfo("v0.2.1", true, "");
+        ChangeInfo changes = new ChangeInfo("v0.2.2", true, "");
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 

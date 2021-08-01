@@ -97,7 +97,7 @@ public class Nullshield extends Item {
                             item.detach(curUser.belongings.backpack);
                             detach(curUser.belongings.backpack);
                         }
-                        else { curUser.sprite.showStatus( CharSprite.NEUTRAL, Messages.get("^$%!@#!") );
+                        else { 	curUser.sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Hero.class,"wtf") );
                             detach(curUser.belongings.backpack);}
                     }
                     else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));

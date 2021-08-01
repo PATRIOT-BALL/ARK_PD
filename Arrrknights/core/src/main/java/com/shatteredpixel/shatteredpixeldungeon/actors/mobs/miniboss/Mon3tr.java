@@ -46,6 +46,7 @@ public class Mon3tr extends Mob {
         immunities.add(Silence.class);
         immunities.add(Amok.class);
         immunities.add(Terror.class);
+        immunities.add(WandOfBlastWave.class);
     }
 
     private int spell = 0; // 1 def, 2 knokback, 3 atk

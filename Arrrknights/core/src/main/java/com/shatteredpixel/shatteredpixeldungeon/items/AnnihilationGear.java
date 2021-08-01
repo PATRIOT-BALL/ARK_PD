@@ -25,6 +25,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.NewDM300;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.YogDzewa;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Mon3tr;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
@@ -351,6 +354,14 @@ public class Spriteex extends MissileWeapon {
                     }
                     break;
             }}
+
+
+
+        // 보스별 피해 저항
+
+        if (enemy instanceof NewDM300) { dmg *= 0.88f; } // 머드락을 상대로 피해 12%감소
+        else if (enemy instanceof YogDzewa) { dmg *= 0.65f; } // 탈룰라? 를 상대로 피해 35%감소
+        else if (enemy instanceof Mon3tr) { dmg *= 0.65f; } // Mon3tr를 상대로 피해 35%감소
 
         enemy.damage(dmg, enemy);
 

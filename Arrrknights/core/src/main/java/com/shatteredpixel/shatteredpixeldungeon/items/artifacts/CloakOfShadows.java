@@ -229,7 +229,7 @@ public class CloakOfShadows extends Artifact {
 						chargeToGain *= (0.1f*Dungeon.hero.pointsInTalent(Talent.LIGHT_CLOAK) - 0.1f);
 					}
 					if (Dungeon.hero.hasTalent(Talent.CLOCK_UPGRADE)) {
-						chargeToGain *= 1 + Dungeon.hero.pointsInTalent(Talent.CLOCK_UPGRADE) * 0.1f;
+						chargeToGain *= 1 + Dungeon.hero.pointsInTalent(Talent.CLOCK_UPGRADE) * 0.06f;
 					}
 					partialCharge += chargeToGain;
 				}

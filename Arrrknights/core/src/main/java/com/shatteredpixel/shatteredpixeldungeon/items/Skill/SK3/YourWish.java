@@ -55,7 +55,7 @@ public class YourWish extends Skill {
 
                     if (Dungeon.level.map[targetCell] != Terrain.EMPTY && Dungeon.level.map[targetCell] != Terrain.GRASS && Dungeon.level.map[targetCell] != Terrain.WATER
                             && Dungeon.level.map[targetCell] != Terrain.HIGH_GRASS  && Dungeon.level.map[targetCell] != Terrain.EMPTY_SP && Dungeon.level.map[targetCell] != Terrain.EMPTY_DECO
-                            && Dungeon.level.map[targetCell] != Terrain.FURROWED_GRASS)
+                            && Dungeon.level.map[targetCell] != Terrain.FURROWED_GRASS &&  Dungeon.level.map[targetCell] != Terrain.EMBERS)
                     {
                         ScrollOfTeleportation.teleportChar_unobstructed(EX43);
                     }
