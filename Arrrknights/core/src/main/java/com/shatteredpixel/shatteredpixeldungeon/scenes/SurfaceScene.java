@@ -32,6 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EarthGuardianSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.WardSprite;
@@ -143,7 +144,7 @@ public class SurfaceScene extends PixelScene {
 		align(a);
 
 		
-		//allies. Attempts to pick highest level, but prefers rose > earth > ward.
+		//allies. Attempts to pick highest level, but prefers prts > rose > earth > ward.
 		//Rose level is halved because it's easier to upgrade
 		CharSprite allySprite = null;
 		
@@ -181,6 +182,7 @@ public class SurfaceScene extends PixelScene {
 			allySprite = new WardSprite();
 			((WardSprite) allySprite).updateTier(Math.min(wardLevel+2, 6));
 		}
+
 		
 		if (allySprite != null){
 			allySprite.add(CharSprite.State.PARALYSED);
@@ -189,6 +191,18 @@ public class SurfaceScene extends PixelScene {
 			allySprite.y = SKY_HEIGHT - allySprite.height();
 			align(allySprite);
 			window.add(allySprite);
+		}
+
+		CharSprite prtsSprtie = null;
+		if (Dungeon.isPray == true){
+			prtsSprtie = new GreenCatSprite();
+			prtsSprtie.add(CharSprite.State.PARALYSED);
+			prtsSprtie.scale = new PointF(1, 1);
+			prtsSprtie.x = a.x - prtsSprtie.width()*-0.88f;
+			prtsSprtie.y = SKY_HEIGHT - prtsSprtie.height();
+			align(prtsSprtie);
+			prtsSprtie.alpha(0.33f);
+			window.add(prtsSprtie);
 		}
 		
 		window.add( a );
