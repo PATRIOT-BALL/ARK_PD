@@ -196,7 +196,6 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-		new Amulet().collect();
 		new Rose().collect();
 	}
 

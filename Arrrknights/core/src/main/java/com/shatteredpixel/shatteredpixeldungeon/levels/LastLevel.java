@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.PRTS;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.PRTS_corpse;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPassage;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -132,6 +133,8 @@ public class LastLevel extends Level {
 		vis = new CenterPieceWalls();
 		vis.pos(0, height - ROOM_TOP-1);
 		customWalls.add(vis);
+
+		PRTS_corpse.spawn(this, 152);
 
 		return true;
 	}

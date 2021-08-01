@@ -9,10 +9,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Rose;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
+import com.shatteredpixel.shatteredpixeldungeon.levels.LastLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DobermannSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 
-public class prts_corpse extends NPC{
+public class PRTS_corpse extends NPC{
 
     {
         spriteClass = GreenCatSprite.class;
@@ -44,5 +46,13 @@ public class prts_corpse extends NPC{
         }
 
         return true;
+    }
+
+    public static void spawn(LastLevel level, int ppos) {
+        PRTS_corpse PRTS = new PRTS_corpse();
+        do {
+            PRTS.pos = ppos;
+        } while (PRTS.pos == -1);
+        level.mobs.add(PRTS);
     }
 }
