@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Cat_HeadSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EarthGuardianSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
@@ -194,8 +195,19 @@ public class SurfaceScene extends PixelScene {
 			window.add(allySprite);
 		}
 
+		// 하극상 발생시 프리스티스는 출현하지 않습니다.
 		CharSprite prtsSprtie = null;
-		if (Dungeon.isPray == true){
+		if (Dungeon.killcat == true) {
+			prtsSprtie = new Cat_HeadSprite();
+			prtsSprtie.add(CharSprite.State.PARALYSED);
+			prtsSprtie.scale = new PointF(1, 1);
+			prtsSprtie.x = a.x - prtsSprtie.width()*-1.25f;
+			prtsSprtie.y = SKY_HEIGHT - prtsSprtie.height() * 6;
+			align(prtsSprtie);
+			prtsSprtie.alpha(0.33f);
+			window.add(prtsSprtie);
+		}
+		else if (Dungeon.isPray == true){
 			prtsSprtie = new PRTS_endSprite();
 			prtsSprtie.add(CharSprite.State.PARALYSED);
 			prtsSprtie.scale = new PointF(1, 1);
