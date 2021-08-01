@@ -81,6 +81,7 @@ public class GreenCat extends NPC {
             });
         } else {
             Badges.silentValidateHappyEnd();
+            if (Dungeon.isPray) Badges.validatepray();
             Dungeon.win(Amulet.class);
             Dungeon.deleteGame(GamesInProgress.curSlot, true);
             Game.switchScene(SurfaceScene.class);

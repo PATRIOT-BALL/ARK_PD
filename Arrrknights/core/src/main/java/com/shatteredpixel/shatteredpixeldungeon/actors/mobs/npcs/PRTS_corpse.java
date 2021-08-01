@@ -10,6 +10,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Rose;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.LastLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DobermannSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
@@ -41,14 +42,16 @@ public class PRTS_corpse extends NPC{
 
             destroy();
 
-            sprite.killAndErase();
+            Dungeon.isPray = true;
+
+            die(this);
             CellEmitter.get( pos ).burst( Speck.factory( Speck.DISCOVER ), 8 );
         }
 
         return true;
     }
 
-    public static void spawn(LastLevel level, int ppos) {
+    public static void spawn(Level level, int ppos) {
         PRTS_corpse PRTS = new PRTS_corpse();
         do {
             PRTS.pos = ppos;

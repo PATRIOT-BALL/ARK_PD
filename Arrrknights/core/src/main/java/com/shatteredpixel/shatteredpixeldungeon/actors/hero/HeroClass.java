@@ -196,7 +196,6 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-		new Rose().collect();
 	}
 
 	private static void initMage( Hero hero ) {

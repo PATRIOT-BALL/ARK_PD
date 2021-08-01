@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShaftParticle;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.particles.Emitter;
 
@@ -48,5 +49,14 @@ public class GreenCatSprite extends MobSprite {
         die.frames( frames, 0 );
 
         play( idle );
+    }
+
+
+    // 나중에 프리스티스 시체 나오면 옮겨넣을 것.
+    @Override
+    public void die() {
+        super.die();
+        emitter().start( ShaftParticle.FACTORY, 0.3f, 4 );
+        //emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
     }
 }

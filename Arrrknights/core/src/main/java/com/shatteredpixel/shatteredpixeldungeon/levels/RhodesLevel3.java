@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.GreenCat;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.PRTS_corpse;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.noosa.Group;
@@ -81,7 +82,7 @@ public class RhodesLevel3 extends Level {
         Painter.fill( this, 17, 0, 1, 28, Terrain.WALL);
 
         entrance = 403;
-        exit = 25;
+        exit = 120;
 
         map[entrance] = Terrain.ENTRANCE;
         Painter.set( this, exit, Terrain.EXIT ); // 0.2.2배포땐 주석처리할 것!!
@@ -108,6 +109,8 @@ public class RhodesLevel3 extends Level {
         Painter.set(this, 32, Terrain.WALL);
 
         feeling = Feeling.NONE;
+
+        PRTS_corpse.spawn(this, 44);
 
         return true;
     }

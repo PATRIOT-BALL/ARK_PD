@@ -927,7 +927,6 @@ public class Badges {
 			saveNeeded = true;
 			local.add(Badge.PRAY);
 			displayBadge( Badge.PRAY );}
-		else displayBadge( Badge.PRAY );
 	}
 	
 	private static void displayBadge( Badge badge ) {
