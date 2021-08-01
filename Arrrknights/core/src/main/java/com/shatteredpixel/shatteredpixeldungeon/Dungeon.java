@@ -179,7 +179,7 @@ public class Dungeon {
 	public static int mboss19;
 
 	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
-	public static boolean killcat;
+	public static boolean killcat; // 엔딩 씬에서 켈시 하극상 출현용.
 	
 	public static HashSet<Integer> chapters;
 
@@ -533,6 +533,7 @@ public class Dungeon {
 	private static final String MBOSS19		= "mboss19";
 	private static final String EAZYMODE    = "eazymode";
 	private static final String PRAY    = "isPray";
+	private static final String END_CAT    = "killcat";
 
 	public static void saveGame(int save ) {
 		try {
@@ -554,6 +555,8 @@ public class Dungeon {
 			bundle.put (MBOSS19, mboss19);
 			bundle.put (EAZYMODE, eazymode);
 			bundle.put (PRAY, isPray);
+			bundle.put (END_CAT, killcat);
+
 
 			for (int d : droppedItems.keyArray()) {
 				bundle.put(Messages.format(DROPPED, d), droppedItems.get(d));
@@ -712,6 +715,7 @@ public class Dungeon {
 		eazymode = bundle.getInt(EAZYMODE);
 
 		isPray = bundle.getBoolean(PRAY);
+		killcat = bundle.getBoolean(END_CAT);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );
