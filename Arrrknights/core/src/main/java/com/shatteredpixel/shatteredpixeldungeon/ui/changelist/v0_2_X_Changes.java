@@ -34,8 +34,9 @@ public class v0_2_X_Changes {
                         "스태프 오브 레나_ : 재성장의 아츠 스태프의 개조 스태프로, 직선 방향으로 식물의 힘을 발사해 피해를 입히고 현기증을 부여합니다. 또한, 발사 경로에 헤쳐진 풀을 생성합니다." + "\n\n" +
                         "_커스텀 탐험 세트_ : 새로운 유물로, 사용시 거울상을 소환합니다. 이 유물의 레벨에 따라 소환수들이 강력해집니다." ));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "새로운 엔딩",
-                "29층의 켈시를 쓰러트려 하극상을 할 수 있게되었습니다. 하극상 성공시 즉시 게임이 끝납니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.BADGES), "새로운 배지",
+                "_하극상_\n29층의 켈시를 쓰러트려 하극상을 할 수 있게되었습니다. 하극상 성공시 즉시 게임이 끝납니다." + "\n\n" +
+                "_널 기다릴게_\n이 배지는 해금 조건이 공개되어있지 않습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "새로운 NPC",
                 "10층 보스 클리어시 추가 요소 혹은 정제 금속 조합법과 관련된 힌트를 주는 NPC가 추가되었습니다."));
