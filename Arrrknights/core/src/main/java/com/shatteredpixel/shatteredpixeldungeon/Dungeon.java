@@ -179,6 +179,7 @@ public class Dungeon {
 	public static int mboss19;
 
 	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
+	public static boolean killcat;
 	
 	public static HashSet<Integer> chapters;
 
@@ -231,6 +232,7 @@ public class Dungeon {
 		mboss19 = 1;
 
 		isPray = false;
+		killcat = false;
 
 		droppedItems = new SparseArray<>();
 		portedItems = new SparseArray<>();
