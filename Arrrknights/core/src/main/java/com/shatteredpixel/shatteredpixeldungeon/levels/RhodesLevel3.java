@@ -110,8 +110,6 @@ public class RhodesLevel3 extends Level {
 
         feeling = Feeling.NONE;
 
-        PRTS_corpse.spawn(this, 44);
-
         return true;
     }
 

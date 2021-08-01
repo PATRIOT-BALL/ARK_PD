@@ -25,5 +25,7 @@ public class PRTS_Sprite extends MobSprite {
         die.frames( frames, 0 );
 
         play( idle );
+
+        alpha(0.66f);
     }
 }

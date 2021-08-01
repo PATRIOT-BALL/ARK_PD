@@ -141,7 +141,6 @@ public class Badges {
 
 		//platinum
 		HAPPY_END                   ( 96 ),
-		PRAY (122),
 		ALL_ITEMS_IDENTIFIED        ( 97, true ),
 		VICTORY_WARRIOR,
 		VICTORY_MAGE,
@@ -160,6 +159,7 @@ public class Badges {
 		CHAMPION_4                  ( 114 ),
 		EVILTIME_END                  ( 115 ),
 		FRAGGING                       ( 121 ),
+		PRAY (122),
 
 		//Puple
 		Get_25_STONES                (117),

@@ -35,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.EarthGuardianSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.PRTS_endSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.WardSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Archs;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
@@ -195,7 +196,7 @@ public class SurfaceScene extends PixelScene {
 
 		CharSprite prtsSprtie = null;
 		if (Dungeon.isPray == true){
-			prtsSprtie = new GreenCatSprite();
+			prtsSprtie = new PRTS_endSprite();
 			prtsSprtie.add(CharSprite.State.PARALYSED);
 			prtsSprtie.scale = new PointF(1, 1);
 			prtsSprtie.x = a.x - prtsSprtie.width()*-0.88f;
