@@ -503,7 +503,7 @@ actors.hero.talent.speedy_stealth.desc=_+1:_ 레드는 은신 중에 매 턴마�
 actors.hero.talent.assassinscreed.title=암살자의 신조
 actors.hero.talent.assassinscreed.desc=_+1:_ 적을 처음 기습할 때 피해량이 _6%_ 상승합니다.\n\n_+2:_ 적을 처음 기습할 때 피해량이 _12%_ 상승합니다.\n\n_+3:_ 적을 처음 기습할 때 피해량이 _18%_ 상승합니다.
 actors.hero.talent.clock_upgrade.title=망토 강화
-actors.hero.talent.clock_upgrade.desc=_+1:_ 그림자의 망토의 충전 속도가 _10%_ 상승합니다.\n\n_+2:_ 그림자의 망토의 충전 속도가 _20%_ 상승합니다.\n\n_+3:_ 그림자의 망토의 충전 속도가 _30%_ 상승합니다.
+actors.hero.talent.clock_upgrade.desc=_+1:_ 그림자의 망토의 충전 속도가 _6%_ 상승합니다.\n\n_+2:_ 그림자의 망토의 충전 속도가 _12%_ 상승합니다.\n\n_+3:_ 그림자의 망토의 충전 속도가 _18%_ 상승합니다.
 actors.hero.talent.sweep.title=SWEEP
 actors.hero.talent.sweep.desc=_+1:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 2% 충전합니다.\n\n_+2:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 4% 충전합니다.\n\n_+3:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 6% 충전합니다.
 actors.hero.talent.special_operations.title=특수작전
@@ -820,6 +820,8 @@ actors.mobs.npcs.prts.hint7=힌트(7/9)\n\n_처음의 무기_는 무언가와 �
 actors.mobs.npcs.prts.hint8=힌트(8/9)\n\n_빔이 나가는 검_ 혹은 _냉기를 다루는 단검_을 _아방가르드 우물_에 넣으면 매우 강력한 창이 된다.
 actors.mobs.npcs.prts.hint9=힌트(9/9)\n\n_게_를 소환하는 석궁을 _아방가르드 우물_에 넣으면 강력한 괴물을 소환하는 총이 된다.
 
+actors.mobs.npcs.prts_corpse.name=???
+actors.mobs.npcs.prts_corpse.desc=...과연 이 시체는 진짜인 것일까요? 그 누구도 진실을 알지 못합니다.\n\n그녀를 애도하기 위한 _꽃 한 송이_가 있다면 좋을텐데...
 
 
 

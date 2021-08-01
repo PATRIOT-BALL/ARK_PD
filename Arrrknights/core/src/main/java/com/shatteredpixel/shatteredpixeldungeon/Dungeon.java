@@ -177,6 +177,8 @@ public class Dungeon {
 	public static int mboss9;
 	public static int mboss14;
 	public static int mboss19;
+
+	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
 	
 	public static HashSet<Integer> chapters;
 
@@ -215,7 +217,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 0;
+		depth = 25;
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
@@ -227,6 +229,8 @@ public class Dungeon {
 		mboss9 = 1;
 		mboss14 = 1;
 		mboss19 = 1;
+
+		isPray = false;
 
 		droppedItems = new SparseArray<>();
 		portedItems = new SparseArray<>();
@@ -526,6 +530,7 @@ public class Dungeon {
 	private static final String MBOSS14		= "mboss14";
 	private static final String MBOSS19		= "mboss19";
 	private static final String EAZYMODE    = "eazymode";
+	private static final String PRAY    = "isPray";
 
 	public static void saveGame(int save ) {
 		try {
@@ -546,6 +551,7 @@ public class Dungeon {
 			bundle.put (MBOSS14, mboss14);
 			bundle.put (MBOSS19, mboss19);
 			bundle.put (EAZYMODE, eazymode);
+			bundle.put (PRAY, isPray);
 
 			for (int d : droppedItems.keyArray()) {
 				bundle.put(Messages.format(DROPPED, d), droppedItems.get(d));
@@ -702,6 +708,8 @@ public class Dungeon {
 		mboss19 = bundle.getInt(MBOSS19);
 
 		eazymode = bundle.getInt(EAZYMODE);
+
+		isPray = bundle.getBoolean(PRAY);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );

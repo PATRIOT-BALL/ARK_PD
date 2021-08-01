@@ -891,6 +891,7 @@ items.food.chargrilledmeat.desc=괜찮게 구워진 고기가 된 것 같다.
 items.food.food.name=우르수스 빵
 items.food.food.ac_eat=먹는다
 items.food.food.eat_msg=이 음식은 매우 맛있었다!
+items.food.food.smart=똑똑해진 느낌이 난다!
 items.food.food.desc=우르수스에서 온 음식. 강력한 발효향이 느껴지는 것 같다. 그러니까, 시큼하단 소리다.
 
 items.food.meatcutlet.name=돈까스

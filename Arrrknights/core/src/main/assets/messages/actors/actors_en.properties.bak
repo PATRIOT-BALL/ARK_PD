@@ -538,7 +538,7 @@ actors.hero.talent.shared_enchantment.desc=_+1:_ Thrown weapons have a _33% chan
 actors.hero.talent.shared_upgrades.title=shared upgrades
 actors.hero.talent.shared_upgrades.desc=_+1:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _5%_.\n\n_+2:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _10%_.\n\n_+3:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _15%_.
 actors.hero.talent.durable_tips.title=durable tips
-actors.hero.talent.durable_tips.desc=_+1:_ When the Huntress uses a thrown weapon at melee range it has _-25% accuracy,_ instead of -50%.\n\n_+2:_ When the Huntress uses a thrown weapon at melee range it has _0% accuracy,_ instead of -50%.\n\n_+3:_ When the Huntress uses a thrown weapon at melee range it has _+25% accuracy,_ instead of -50%
+actors.hero.talent.durable_tips.desc=_+1:_ When the GreyThroat uses a thrown weapon at melee range it has _-25% accuracy,_ instead of -50%.\n\n_+2:_ When the GreyThroat uses a thrown weapon at melee range it has _0% accuracy,_ instead of -50%.\n\n_+3:_ When the GreyThroat uses a thrown weapon at melee range it has _+25% accuracy,_ instead of -50%
 actors.hero.talent.barkskin.title=bloodline
 actors.hero.talent.barkskin.desc=_+1:_ Thrown weapons have a _low_ chance to generate grass around the target on hit.\n\n_+2:_ Thrown weapons have a _middle_ chance to generate grass around the target on hit.\n\n_+3:_ Thrown weapons have a _high_ chance to generate grass around the target on hit.\n\nWhen you activate this talent, you gain up to _40% damage resistance_ based on the nearby high grass.
 actors.hero.talent.savior_pray.title=savior`s pray
@@ -825,6 +825,9 @@ actors.mobs.npcs.prts.hint6=Hint(6/9)\n\n_Guns sold only in shops_ can be streng
 actors.mobs.npcs.prts.hint7=Hint(7/9)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
 actors.mobs.npcs.prts.hint8=Hint(8/9)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
 actors.mobs.npcs.prts.hint9=Hint(9/9)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
+
+actors.mobs.npcs.prts_corpse.name=???
+actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her.
 
 
 

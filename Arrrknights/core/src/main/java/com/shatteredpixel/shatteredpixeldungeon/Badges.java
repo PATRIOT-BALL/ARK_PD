@@ -137,6 +137,7 @@ public class Badges {
 		BOSS_SLAIN_3_GUARDIAN,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
 		GAMES_PLAYED_2              ( 81, true ),
+		PRAY (121),
 
 
 		//platinum
@@ -918,6 +919,15 @@ public class Badges {
 			saveNeeded = true;
 			local.add(Badge.Get_40_STONES);
 			displayBadge( Badge.Get_40_STONES );}
+	}
+
+	public static void validatepray() {
+		if (!local.contains( Badge.PRAY )){
+			global.add(Badge.PRAY);
+			saveNeeded = true;
+			local.add(Badge.PRAY);
+			displayBadge( Badge.PRAY );}
+		else displayBadge( Badge.PRAY );
 	}
 	
 	private static void displayBadge( Badge badge ) {
