@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DobermannSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.PRTS_Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndMessage;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
@@ -14,7 +15,7 @@ public class PRTS extends NPC {
     private int hint = 0;
 
     {
-        spriteClass = DobermannSprite.class;
+        spriteClass = PRTS_Sprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
     }

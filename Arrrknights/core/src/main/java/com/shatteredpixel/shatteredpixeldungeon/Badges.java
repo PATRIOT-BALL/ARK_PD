@@ -141,7 +141,7 @@ public class Badges {
 
 		//platinum
 		HAPPY_END                   ( 96 ),
-		PRAY (121),
+		PRAY (122),
 		ALL_ITEMS_IDENTIFIED        ( 97, true ),
 		VICTORY_WARRIOR,
 		VICTORY_MAGE,

@@ -5,7 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Rose extends Item {
     {
-        image = ItemSpriteSheet.CAUTUS;
+        image = ItemSpriteSheet.MYOSOTIS;
         unique = true;
     }
 

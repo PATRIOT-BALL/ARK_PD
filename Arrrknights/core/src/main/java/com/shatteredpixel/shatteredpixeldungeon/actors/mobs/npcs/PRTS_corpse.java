@@ -14,11 +14,12 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DobermannSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.PRTS_corpseSprite;
 
 public class PRTS_corpse extends NPC{
 
     {
-        spriteClass = GreenCatSprite.class;
+        spriteClass = PRTS_corpseSprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
     }
