@@ -137,11 +137,11 @@ public class Badges {
 		BOSS_SLAIN_3_GUARDIAN,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
 		GAMES_PLAYED_2              ( 81, true ),
-		PRAY (121),
 
 
 		//platinum
 		HAPPY_END                   ( 96 ),
+		PRAY (121),
 		ALL_ITEMS_IDENTIFIED        ( 97, true ),
 		VICTORY_WARRIOR,
 		VICTORY_MAGE,
