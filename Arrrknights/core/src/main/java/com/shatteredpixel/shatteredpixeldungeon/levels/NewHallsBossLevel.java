@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Talu_BlackSnake;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.YogDzewa;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
@@ -200,8 +201,12 @@ public class NewHallsBossLevel extends Level {
 		CellEmitter.get( entrance ).start( FlameParticle.FACTORY, 0.1f, 10 );
 
 		Dungeon.observe();
-
+		/*
 		YogDzewa boss = new YogDzewa();
+		boss.pos = exit + width*3;
+		GameScene.add( boss ); *?
+		 */
+		Talu_BlackSnake boss = new Talu_BlackSnake();
 		boss.pos = exit + width*3;
 		GameScene.add( boss );
 	}

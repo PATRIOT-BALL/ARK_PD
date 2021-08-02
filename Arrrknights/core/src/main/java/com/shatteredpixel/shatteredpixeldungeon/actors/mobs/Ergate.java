@@ -34,8 +34,8 @@ public class Ergate extends Mob {
         HP = HT = 75;
         defenseSkill = 40;
 
-        EXP = 16;
-        maxLvl = 30;
+        EXP = 15;
+        maxLvl = 29;
 
         state = WANDERING;
 

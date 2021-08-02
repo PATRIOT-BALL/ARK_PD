@@ -26,8 +26,8 @@ public class Sniper extends Mob {
         HP = HT = 120;
         defenseSkill = 25;
 
-        EXP = 17;
-        maxLvl = 31;
+        EXP = 16;
+        maxLvl = 30;
 
         loot = new PotionOfHealing();
         lootChance = 0.25f;
@@ -39,7 +39,7 @@ public class Sniper extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(26, 44);
+        return Random.NormalIntRange(34, 46);
     }
 
     @Override

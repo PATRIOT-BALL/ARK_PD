@@ -25,22 +25,22 @@ public class Agent extends Mob {
         HP = HT = 140;
         defenseSkill = 30;
 
-        EXP = 17;
-        maxLvl = 32;
+        EXP = 16;
+        maxLvl = 31;
 
         loot = Generator.Category.SKL_RND;
         lootChance = 0.1f;
 
         immunities.add(Charm.class);
-        immunities.add(Silence.class);
     }
 
     @Override
     public int attackProc(Char enemy, int damage) {
-        if (Random.Int(3) < 1)
-        {
-            Buff.affect(enemy, Hex.class, 5f);
-            Buff.affect(enemy, Vulnerable.class, 5f);
+        if (buff(Silence.class) == null) {
+            if (Random.Int(3) < 1) {
+                Buff.affect(enemy, Hex.class, 5f);
+                Buff.affect(enemy, Vulnerable.class, 5f);
+            }
         }
 
         return super.attackProc(enemy, damage);
@@ -68,6 +68,8 @@ public class Agent extends Mob {
             enemy.damage( dmg, this );
             enemy.sprite.bloodBurstA( sprite.center(), dmg );
             enemy.sprite.flash();
+
+            Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1f, Random.Float(0.96f, 1.05f));
 
             if (enemy == Dungeon.hero && !enemy.isAlive()) {
                 Dungeon.fail( getClass() );

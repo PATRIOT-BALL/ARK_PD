@@ -827,7 +827,7 @@ actors.mobs.npcs.prts.hint8=Hint(8/9)\n\nIf you put a _beaming sword_ or _a cold
 actors.mobs.npcs.prts.hint9=Hint(9/9)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
 
 actors.mobs.npcs.prts_corpse.name=???
-actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her.
+actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her...
 
 
 
@@ -911,7 +911,7 @@ actors.mobs.demonspawner.desc=This altar has no combat power of its own, but has
 
 actors.mobs.dm100.name=Arts Master A1
 actors.mobs.dm100.zap_kill=The lightning arts killed you...
-actors.mobs.dm100.desc=An unmanned enemy drone with extremely high movement speed, modified from the product of an Arts Education competition. It is equipped with an Arts Weapon module that allows it to launch long-range Arts attacks, so proceed with caution. Based on available data, its weapon module also allows it to block some Arts damage.
+actors.mobs.dm100.desc=An unmanned enemy drone with extremely high movement speed, modified from the product of an Arts Education competition. It is equipped with an Arts Weapon module that allows it to launch long-range Arts attacks, so proceed with caution. Based on available data, its weapon module also allows it to block some Arts damage.\n\n_silence possible_
 
 actors.mobs.dm200.name=Mudrock Colossus
 actors.mobs.dm200.vent=Colossus threw a stone!

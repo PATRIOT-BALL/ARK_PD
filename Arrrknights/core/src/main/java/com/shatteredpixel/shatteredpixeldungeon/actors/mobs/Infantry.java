@@ -14,8 +14,8 @@ public class Infantry extends Mob {
         HP = HT = 135;
         defenseSkill = 28;
 
-        EXP = 16;
-        maxLvl = 29;
+        EXP = 15;
+        maxLvl = 28;
 
         loot = Gold.class;
         lootChance = 0.5f;
@@ -25,7 +25,7 @@ public class Infantry extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 30, 42 );
+        return Random.NormalIntRange( 32, 44 );
     }
 
     @Override
@@ -36,5 +36,15 @@ public class Infantry extends Mob {
     @Override
     public int drRoll() {
         return Random.NormalIntRange(0, 18);
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+
+        if (HP == HT) {
+            dmg = Math.min(HT-1, dmg);
+        }
+
+        super.damage(dmg, src);
     }
 }
