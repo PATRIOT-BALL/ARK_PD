@@ -113,8 +113,6 @@ public class PRTS extends NPC {
                 break;
         }
 
-        Badges.validatepray(); // 후원자 빌드용
-
         return true;
     }
 

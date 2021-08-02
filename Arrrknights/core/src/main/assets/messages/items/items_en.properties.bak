@@ -892,6 +892,7 @@ items.food.chargrilledmeat.desc=It looks like a decent steak.
 items.food.food.name=Ursus Bread
 items.food.food.ac_eat=EAT
 items.food.food.eat_msg=That food tasted delicious!
+items.food.food.smart=I feel smarter!
 items.food.food.desc=Food From Ursus with a strong, fermented taste. Quite sour.
 
 items.food.meatcutlet.name=pork cutlet
