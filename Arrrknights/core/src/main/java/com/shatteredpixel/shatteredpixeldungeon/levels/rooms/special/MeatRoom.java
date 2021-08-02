@@ -22,7 +22,7 @@ public class MeatRoom extends SpecialRoom {
 
         Heap.Type heapType = Random.Int( 2 ) == 0 ? Heap.Type.SKELETON : Heap.Type.HEAP;
 
-        int n = Random.IntRange( 2, 3 );
+        int n = Random.IntRange( 1, 2 );
         for (int i=0; i < n; i++) {
             int pos;
             do {
@@ -34,7 +34,7 @@ public class MeatRoom extends SpecialRoom {
         }
 
         if (heapType == Heap.Type.HEAP) {
-            for (int i=0; i < 6; i++) {
+            for (int i=0; i < 1; i++) {
                 int pos;
                 do {
                     pos = level.pointToCell(random());

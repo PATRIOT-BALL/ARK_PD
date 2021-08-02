@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -111,6 +112,8 @@ public class PRTS extends NPC {
                 });
                 break;
         }
+
+        Badges.validatepray(); // 후원자 빌드용
 
         return true;
     }
