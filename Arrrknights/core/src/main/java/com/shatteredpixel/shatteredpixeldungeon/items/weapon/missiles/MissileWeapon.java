@@ -240,8 +240,10 @@ abstract public class MissileWeapon extends Weapon {
 						int cell2 = defender.pos + z;
 						if (canSpreadGrass(cell2)){
 							if (Random.Int(5) == 3){
-								Level.set(cell2, Terrain.FURROWED_GRASS);
-								GameScene.updateMap( cell2 );
+								int terr = Dungeon.level.map[cell2];
+								if (terr == Terrain.EMPTY || terr == Terrain.EMBERS || terr == Terrain.EMPTY_DECO ||
+										terr == Terrain.GRASS || terr == Terrain.HIGH_GRASS) {
+									Level.set(cell2, Terrain.FURROWED_GRASS); }
 							}
 							CellEmitter.get( cell2 ).burst( LeafParticle.GENERAL, 10 );
 						}

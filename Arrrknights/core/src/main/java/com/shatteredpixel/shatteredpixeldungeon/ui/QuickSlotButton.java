@@ -82,7 +82,10 @@ public class QuickSlotButton extends Button implements WndBag.Listener {
 					return;
 				}
 				if (targeting) {
-					int cell = autoAim(lastTarget, select(slotNum));
+
+					int cell;
+					if(Dungeon.quickslot.change == false) cell = autoAim(lastTarget, select(slotNum));
+					else cell = autoAim(lastTarget, select(slotNum+4));
 
 					if (cell != -1){
 						GameScene.handleCell(cell);
@@ -91,7 +94,10 @@ public class QuickSlotButton extends Button implements WndBag.Listener {
 						GameScene.handleCell( lastTarget.pos );
 					}
 				} else {
-					Item item = select(slotNum);
+					Item item;
+					if(Dungeon.quickslot.change == false) item = select(slotNum);
+					else item = select(slotNum +4);
+
 					if (item.usesTargeting) {
 						useTargeting();
 					}
@@ -174,13 +180,17 @@ public class QuickSlotButton extends Button implements WndBag.Listener {
 	}
 
 	private static Item select(int slotNum){
+		if (Dungeon.quickslot.change == false)
 		return Dungeon.quickslot.getItem( slotNum );
+
+		else return Dungeon.quickslot.getItem( slotNum+4 );
 	}
 
 	@Override
 	public void onSelect( Item item ) {
 		if (item != null) {
-			Dungeon.quickslot.setSlot( slotNum , item );
+			if (Dungeon.quickslot.change == false) Dungeon.quickslot.setSlot( slotNum , item );
+			else Dungeon.quickslot.setSlot( slotNum+4 , item );
 			refresh();
 		}
 	}
@@ -200,7 +210,8 @@ public class QuickSlotButton extends Button implements WndBag.Listener {
 	}
 	
 	private void enableSlot() {
-		slot.enable(Dungeon.quickslot.isNonePlaceholder( slotNum ));
+		if (Dungeon.quickslot.change == false)slot.enable(Dungeon.quickslot.isNonePlaceholder( slotNum ));
+		else slot.enable(Dungeon.quickslot.isNonePlaceholder( slotNum+4 ));
 	}
 	
 	private void useTargeting() {

@@ -64,6 +64,9 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "유물 삭제",
                 "_공구 상자_ 유물이 삭제되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "퀵슬롯 버튼 버그 수정",
+                "이제 퀵슬롯 버튼 변경 시스템이 제대로 작동합니다! 변경전 / 변경후 퀵슬롯이 전부 저장됨으로, 안심하고 사용해주세요!"));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);

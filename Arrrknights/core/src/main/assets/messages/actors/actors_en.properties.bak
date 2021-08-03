@@ -816,15 +816,16 @@ actors.mobs.npcs.blackperro.active=Training started.
 
 actors.mobs.npcs.prts.name=???
 actors.mobs.npcs.prts.desc=I will wait until that day comes. I promise you I will. Wait for me. You must wait for me too.\n\n... Don't ever forget about me.
-actors.mobs.npcs.prts.hint1=Hint(1/9)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
-actors.mobs.npcs.prts.hint2=Hint(2/9)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
-actors.mobs.npcs.prts.hint3=Hint(3/9)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
-actors.mobs.npcs.prts.hint4=Hint(4/9)\n\n_Potato_ can be combined with something to make a shield.
-actors.mobs.npcs.prts.hint5=Hint(5/9)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
-actors.mobs.npcs.prts.hint6=Hint(6/9)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
-actors.mobs.npcs.prts.hint7=Hint(7/9)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
-actors.mobs.npcs.prts.hint8=Hint(8/9)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
-actors.mobs.npcs.prts.hint9=Hint(9/9)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
+actors.mobs.npcs.prts.hint1=Hint(1/10)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
+actors.mobs.npcs.prts.hint2=Hint(2/10)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
+actors.mobs.npcs.prts.hint3=Hint(3/10)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
+actors.mobs.npcs.prts.hint4=Hint(4/10)\n\n_Potato_ can be combined with something to make a shield.
+actors.mobs.npcs.prts.hint5=Hint(5/10)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
+actors.mobs.npcs.prts.hint6=Hint(6/10)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
+actors.mobs.npcs.prts.hint7=Hint(7/10)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
+actors.mobs.npcs.prts.hint8=Hint(8/10)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
+actors.mobs.npcs.prts.hint9=Hint(9/10)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
+actors.mobs.npcs.prts.hint10=힌트(10/10)\n\nYou can change the quickslot by long-clicking the backpack button.
 
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her...
@@ -979,7 +980,7 @@ actors.mobs.elemental$chaoselemental.desc=An unmanned enemy drone, its design an
 
 actors.mobs.eye.name=Arts Master A2
 actors.mobs.eye.deathgaze_kill=pierced by the arts beam...
-actors.mobs.eye.desc=An unmanned enemy drone that had some of its Flight Support modules swapped out, trading speed for a more powerful Arts Weapon module. Capable of using long-range Arts attacks. Proceed with caution. Based on available data, its weapon module also allows it to block some Arts damage.
+actors.mobs.eye.desc=An unmanned enemy drone that had some of its Flight Support modules swapped out, trading speed for a more powerful Arts Weapon module. Capable of using long-range Arts attacks. Proceed with caution. Based on available data, its weapon module also allows it to block some Arts damage.\n\n_silence possible_
 
 actors.mobs.fanatic.name=Fanatic
 actors.mobs.fanatic.desc=Special combatant wielding a huge hammer
@@ -1088,9 +1089,9 @@ actors.mobs.senior.desc=An enemy combatant who has completely given in to primal
 actors.mobs.shaman.name=Spec Ops Caster
 actors.mobs.shaman.bolt_kill=The arts killed you...
 actors.mobs.shaman.desc=One of Reunion's Casters. Their armor makes them more resistant to physical damage compared to regular Casters.
-actors.mobs.shaman$redshaman.spell_desc=This Caster wore a red robe. They use arts that _reduce your attack power._
-actors.mobs.shaman$blueshaman.spell_desc=This Caster wore a blue robe. They use arts that _increase damage taken_
-actors.mobs.shaman$purpleshaman.spell_desc=This Caster wore a purple robe. They use arts that _reduces accuracy and evasion_
+actors.mobs.shaman$redshaman.spell_desc=This Caster wore a red robe. They use arts that _reduce your attack power._\n\n_silence possible_
+actors.mobs.shaman$blueshaman.spell_desc=This Caster wore a blue robe. They use arts that _increase damage taken_\n\n_silence possible_
+actors.mobs.shaman$purpleshaman.spell_desc=This Caster wore a purple robe. They use arts that _reduces accuracy and evasion_\n\n_silence possible_
 
 actors.mobs.armoredbrute.name=Hateful Avenger
 actors.mobs.armoredbrute.desc=An unidentified combatant who attacks using unconventional methods, more dangerous than a normal Avenger. Equipped with a special weapon, they are known to change their attack patterns during combat, making them difficult to defend against. Proceed with caution.
@@ -1109,7 +1110,7 @@ actors.mobs.snake.hint=Try using the examine button on a slug to learn how to co
 actors.mobs.snake.desc=An infected wild creature. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions. Various seeds and fruits are blooming.\n\nYou can perform a surprise attack by attacking while out of the slug`s vision. One way is to let a slug chase you through a doorway and then _strike just as it moves into the door._
 
 actors.mobs.spinner.name=Originium Slug
-actors.mobs.spinner.desc=they are easily controlled by enemy casters for use as cannon fodder during invasions. prefer to wait in the distance while their victim struggles in their excreted cobweb, slowly dying from their venomous bite. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.
+actors.mobs.spinner.desc=they are easily controlled by enemy casters for use as cannon fodder during invasions. prefer to wait in the distance while their victim struggles in their excreted cobweb, slowly dying from their venomous bite. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.\n\n_silence possible_
 
 actors.mobs.statue.name=animated statue
 actors.mobs.statue.def_verb=blocked
@@ -1165,7 +1166,7 @@ actors.mobs.thief.desc=One of Reunion's engineers. Though unarmed, they utilize 
 
 actors.mobs.warlock.name=slave thrower
 actors.mobs.warlock.bolt_kill=died with piercing...
-actors.mobs.warlock.desc=An enemy ranged combatant who has slowly descended into primal madness as their lifeforce is consumed. The infection has penetrated their bone marrow, and they will hurl whatever they can get their hands on at their targets. The appearance of such an aberration on the battlefield is almost beyond imagination.
+actors.mobs.warlock.desc=An enemy ranged combatant who has slowly descended into primal madness as their lifeforce is consumed. The infection has penetrated their bone marrow, and they will hurl whatever they can get their hands on at their targets. The appearance of such an aberration on the battlefield is almost beyond imagination.\n\n_silence possible_
 
 actors.mobs.wraith_donut.name=Shadow of the soul
 actors.mobs.wraith_donut.desc=AMIYA's own illusion created from the souls of the enemies she defeated. It is difficult to attack this formless illusion.

@@ -39,9 +39,8 @@ public class QuickSlot {
 
 	//note that the current max size is coded at 4, due to UI constraints, but it could be much much bigger with no issue.
 	public static int SIZE = 8;
-	private boolean change = false;
+	public boolean change = false;
 	private Item[] slots = new Item[SIZE];
-	private Item[] saveslots = new Item[SIZE];
 
 
 	//direct array interaction methods, everything should build from these methods.
@@ -50,55 +49,14 @@ public class QuickSlot {
 		slots[slot] = item;
 	}
 
-	public void setsaveSlot(int slot, Item item){
-		saveslots[slot] = item;
+	public void changeSlot() {
+		if (change == true) change = false;
+		else change = true;
+		Item.updateQuickslot();
 	}
 
-	public void changeslot_seting() {
-		if (change == true)
-		{
-			saveslots[4] = slots[0];
-			saveslots[5] = slots[1];
-			saveslots[6] = slots[2];
-			saveslots[7] = slots[3];
-		}
-		else {
-			saveslots[0] = slots[0];
-			saveslots[1] = slots[1];
-			saveslots[2] = slots[2];
-			saveslots[3] = slots[3];
-		}
-	}
 
 	//direct array interaction methods, everything should build from these methods.
-	public void changeSlot(){
-		if (change == false) {
-			if (saveslots[4] != null) slots[0] = saveslots[4];
-			else clearSlot(0);
-			if (saveslots[5] != null) slots[1] = saveslots[5];
-			else clearSlot(1);
-			if (saveslots[6] != null) slots[2] = saveslots[6];
-			else clearSlot(2);
-			if (saveslots[7] != null) slots[3] = saveslots[7];
-			else clearSlot(3);
-
-			change = true;
-			Item.updateQuickslot();
-		}
-		else{
-			if (saveslots[0] != null) slots[0] = saveslots[0];
-			else clearSlot(0);
-			if (saveslots[1] != null) slots[1] = saveslots[1];
-			else clearSlot(1);
-			if (saveslots[2] != null) slots[2] = saveslots[2];
-			else clearSlot(2);
-			if (saveslots[3] != null) slots[3] = saveslots[3];
-			else clearSlot(3);
-
-			change = false;
-			Item.updateQuickslot();
-		}
-	}
 
 	public void clearSlot(int slot){
 		slots[slot] = null;
@@ -106,15 +64,11 @@ public class QuickSlot {
 
 	public void reset(){
 		slots = new Item[SIZE];
-		saveslots = new Item[SIZE];
 		change = false;
 	}
 
 	public Item getItem(int slot){
 		return slots[slot];
-	}
-	public Item getsaveItem(int slot){
-		return saveslots[slot];
 	}
 
 
@@ -130,17 +84,14 @@ public class QuickSlot {
 		return getItem(slot) != null && getItem(slot).quantity() == 0;
 	}
 
+
 	public Boolean isNonePlaceholder(int slot){
 		return getItem(slot) != null && getItem(slot).quantity() > 0;
 	}
 
 	public void clearItem(Item item){
-		changeslot_seting();
-		changeSlot();
 		if (contains(item))
 			clearSlot(getSlot(item));
-		changeslot_seting();
-		changeSlot();
 		if (contains(item))
 			clearSlot(getSlot(item));
 	}
@@ -193,26 +144,26 @@ public class QuickSlot {
 
 		for (int i = 0; i < SIZE; i++)
 			if (isPlaceholder(i)) {
-				placeholders.add(getsaveItem(i));
+				placeholders.add(getItem(i));
 				placements[i] = true;
 			}
 		bundle.put( PLACEHOLDERS, placeholders );
 		bundle.put( PLACEMENTS, placements );
-		bundle.put(CCC, change);
+		bundle.put (CCC, change);
 	}
 
 	public void restorePlaceholders(Bundle bundle){
 		Collection<Bundlable> placeholders = bundle.getCollection(PLACEHOLDERS);
 		boolean[] placements = bundle.getBooleanArray( PLACEMENTS );
-		change = bundle.getBoolean(CCC);
 
 		int i = 0;
 		for (Bundlable item : placeholders){
 			while (!placements[i]) i++;
-			setsaveSlot(i,(Item)item);
+			setSlot( i, (Item)item );
 			i++;
 		}
 
+		change = bundle.getBoolean(CCC);
 
 	}
 

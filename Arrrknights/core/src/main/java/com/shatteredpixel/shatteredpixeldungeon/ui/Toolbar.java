@@ -153,7 +153,6 @@ public class Toolbar extends Component {
 			
 			@Override
 			protected boolean onLongClick() {
-				Dungeon.quickslot.changeslot_seting();
 				Dungeon.quickslot.changeSlot();
 				return true;
 			}
