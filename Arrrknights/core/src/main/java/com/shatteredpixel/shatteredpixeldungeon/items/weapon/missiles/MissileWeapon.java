@@ -243,7 +243,8 @@ abstract public class MissileWeapon extends Weapon {
 								int terr = Dungeon.level.map[cell2];
 								if (terr == Terrain.EMPTY || terr == Terrain.EMBERS || terr == Terrain.EMPTY_DECO ||
 										terr == Terrain.GRASS || terr == Terrain.HIGH_GRASS) {
-									Level.set(cell2, Terrain.FURROWED_GRASS); }
+									Level.set(cell2, Terrain.FURROWED_GRASS);
+								GameScene.updateMap( cell2 );}
 							}
 							CellEmitter.get( cell2 ).burst( LeafParticle.GENERAL, 10 );
 						}
