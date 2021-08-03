@@ -709,15 +709,16 @@ public abstract class Mob extends Char {
 			}}
 		}
 
-		if (Dungeon.hero.subClass== HeroSubClass.DESTROYER)
+		if (Dungeon.hero.subClass== HeroSubClass.DESTROYER) {
 			if (2 + Dungeon.hero.pointsInTalent(Talent.BATTLEFLOW) > Random.Int(25)) {
 				AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
-				if (this instanceof Sheep) {}
-					else{
+				if (this instanceof Sheep) {
+				} else {
 					if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
 						Gear.SPCharge(1);
 					}
 				}
+			}
 		}
 
 		if (!(this instanceof Wraith_donut)

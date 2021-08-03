@@ -96,19 +96,24 @@ public class CustomeSet extends Artifact {
     public class CustomSetBuff extends ArtifactBuff {
         @Override
         public boolean act() {
-            spend( TICK );
-            if (charge < chargeCap && !cursed) {
-                // 800 턴마다 100%충전 (기본)
-                float chargeGain = 0.125f;
-                chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
-                partialCharge += chargeGain;
+            LockedFloor lock = target.buff(LockedFloor.class);
+            if (activeBuff == null && (lock == null || lock.regenOn())) {
+                if (charge < chargeCap && !cursed) {
+                    // 800 턴마다 100%충전 (기본)
+                    float chargeGain = 0.125f;
+                    chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
+                    partialCharge += chargeGain;
 
-                if (partialCharge > 1 && charge < chargeCap) {
-                    partialCharge--;
-                    charge++;
-                    updateQuickslot();
+                    if (partialCharge > 1 && charge < chargeCap) {
+                        partialCharge--;
+                        charge++;
+                        updateQuickslot();
+                    }
                 }
             }
+            else partialCharge = 0;
+
+            spend(TICK);
             return true;
         }
     }
