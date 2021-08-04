@@ -180,10 +180,7 @@ public class QuickSlotButton extends Button implements WndBag.Listener {
 	}
 
 	private static Item select(int slotNum){
-		if (Dungeon.quickslot.change == false)
 		return Dungeon.quickslot.getItem( slotNum );
-
-		else return Dungeon.quickslot.getItem( slotNum+4 );
 	}
 
 	@Override
@@ -268,7 +265,8 @@ public class QuickSlotButton extends Button implements WndBag.Listener {
 	public static void refresh() {
 		for (int i = 0; i < instance.length; i++) {
 			if (instance[i] != null) {
-				instance[i].item(select(i));
+				if (Dungeon.quickslot.change == false) instance[i].item(select(i));
+				else instance[i].item(select(i+4));
 			}
 		}
 	}

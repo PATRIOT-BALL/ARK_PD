@@ -52,6 +52,7 @@ public class QuickSlot {
 	public void changeSlot() {
 		if (change == true) change = false;
 		else change = true;
+
 		Item.updateQuickslot();
 	}
 
