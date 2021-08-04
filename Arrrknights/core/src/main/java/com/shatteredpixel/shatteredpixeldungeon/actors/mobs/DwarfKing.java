@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barkskin;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FireImbue;
@@ -627,12 +628,13 @@ public class DwarfKing extends Mob {
 					m.maxLvl = -2;
 					if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
 						Buff.affect(m, Barrier.class).incShield(12);
+						Buff.affect(m, BlobImmunity.class, 30f);
 						int rnd = Random.Int(6);
 						switch (rnd) {
 							case 0: Buff.affect(m, MagicImmune.class, 30f); break;
 							case 1: Buff.affect(m, ToxicImbue.class).set(30); break;
 							case 2: Buff.affect(m, FireImbue.class).set(30f); break;
-							default: Buff.affect(m, Barkskin.class).set(5, 30); break;
+							default: Buff.affect(m, Barkskin.class).set(12, 30); break;
 						}
 					}
 					GameScene.add(m);

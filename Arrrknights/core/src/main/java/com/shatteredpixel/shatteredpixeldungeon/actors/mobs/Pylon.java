@@ -73,7 +73,7 @@ public class Pylon extends Mob {
 		super();
 
 		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
-			HP=HT=100;
+			HP=HT=150;
 		}
 	}
 

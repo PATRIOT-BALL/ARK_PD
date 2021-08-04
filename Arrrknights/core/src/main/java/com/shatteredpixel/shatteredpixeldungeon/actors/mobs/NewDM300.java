@@ -724,6 +724,12 @@ public class NewDM300 extends Mob {
             for (int i : rockPositions) {
                 CellEmitter.get(i).start(Speck.factory(Speck.ROCK), 0.07f, 10);
 
+                if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+                    if (Random.IntRange(0,3) < 2)
+                    Level.set(i, Terrain.WATER);
+                      GameScene.updateMap( i );
+                }
+
                 Char ch = Actor.findChar(i);
                 if (ch != null && !(ch instanceof NewDM300)) {
                     Buff.prolong(ch, Paralysis.class, 3);

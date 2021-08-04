@@ -61,7 +61,7 @@ badges$badge.games_played_1=게임을 10판 플레이
 badges$badge.games_played_2=게임을 50판 플레이\n-스카디 스킨 해금 
 badges$badge.games_played_3=게임을 250판 플레이
 badges$badge.games_played_4=게임을 1000판 플레이
-badges$badge.happy_end=행복한 결말
+badges$badge.happy_end=엔딩-행복한 결말
 badges$badge.champion_1=1개의 위기협약을 활성화하고 클리어
 badges$badge.champion_2=3개의 위기협약을 활성화하고 클리어
 badges$badge.champion_3=6개의 위기협약을 활성화하고 클리어
@@ -75,7 +75,8 @@ badges$badge.roaringflare=울부짖는 광명
 badges$badge.eviltime_end=암흑 시대의 끝\n-탈룰라 스킨 해금
 badges$badge.get_25_stones=원암 25개 채취
 badges$badge.get_40_stones=우리들의 빛 (원암 40개 채취)
-badges$badge.fragging=하극상
+badges$badge.fragging=엔딩-하극상
+badges$badge.pray=널 기다릴게
 
 
 challenges.no_food=환경: 식량배급 중단

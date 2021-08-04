@@ -361,7 +361,7 @@ public class Spriteex extends MissileWeapon {
 
         if (enemy instanceof NewDM300) { dmg *= 0.88f; } // 머드락을 상대로 피해 12%감소
         else if (enemy instanceof YogDzewa) { dmg *= 0.65f; } // 탈룰라? 를 상대로 피해 35%감소
-        else if (enemy instanceof Mon3tr) { dmg *= 0.65f; } // Mon3tr를 상대로 피해 35%감소
+        else if (enemy instanceof Mon3tr) { dmg *= 0.85f; } // Mon3tr를 상대로 피해 15%감소
 
         enemy.damage(dmg, enemy);
 

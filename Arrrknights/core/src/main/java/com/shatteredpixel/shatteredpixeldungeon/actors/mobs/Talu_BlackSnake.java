@@ -10,7 +10,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Fire;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
@@ -264,9 +266,10 @@ public class Talu_BlackSnake extends Mob {
             Ballistica trajectory = new Ballistica(this.pos, Dungeon.hero.pos, Ballistica.STOP_TARGET);
             trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
 
-            if (phase == 5) WandOfBlastWave.throwChar(Dungeon.hero, trajectory, 3); // 넉백 효과
-            else WandOfBlastWave.throwChar(Dungeon.hero, trajectory, 2); // 넉백 효과
+            WandOfBlastWave.throwChar(Dungeon.hero, trajectory, 1); // 넉백 효과
 
+
+            if (phase == 5) Buff.affect( this, Barrier.class).incShield(40);
             if (phase == 5) OverwhelmCooldown = Random.NormalIntRange(7,11);
             else OverwhelmCooldown = Random.NormalIntRange(12,16);
 

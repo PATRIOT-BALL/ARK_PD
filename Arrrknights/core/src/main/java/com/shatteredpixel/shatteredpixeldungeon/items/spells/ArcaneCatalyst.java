@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTerror;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ExoticScroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
@@ -89,7 +90,6 @@ public class ArcaneCatalyst extends Spell {
 		public boolean testIngredients(ArrayList<Item> ingredients) {
 			boolean scroll = false;
 			boolean secondary = false;
-			
 			for (Item i : ingredients){
 				if (i instanceof Plant.Seed || i instanceof Runestone){
 					secondary = true;
@@ -109,8 +109,7 @@ public class ArcaneCatalyst extends Spell {
 				if (i instanceof Plant.Seed){
 					return 2;
 				} else if (i instanceof Runestone){
-					return 1;
-				}
+					return 1; }
 			}
 			return 1;
 		}
@@ -121,7 +120,7 @@ public class ArcaneCatalyst extends Spell {
 			for (Item i : ingredients){
 				i.quantity(i.quantity()-1);
 			}
-			
+
 			return sampleOutput(null);
 		}
 		

@@ -9,8 +9,10 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClassArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ExoticScroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Alchemize;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ArcaneCatalyst;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAngelina;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfBreeze;
@@ -42,6 +44,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HeroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -510,16 +513,42 @@ public class StaffKit extends Item {
         }
     };
 
-    public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe.SimpleRecipe {
+    public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe {
 
-        {
-            inputs =  new Class[]{MetalShard.class, AlchemicalCatalyst.class};
-            inQuantity = new int[]{1, 1};
+        @Override
+        public boolean testIngredients(ArrayList<Item> ingredients) {
+            boolean shard = false;
+            boolean arcne = false;
+            for (Item i : ingredients){
+                if (i instanceof MetalShard || i instanceof Wand){
+                    shard = true;
+                    //if it is a regular or exotic potion
+                } else if (i instanceof ArcaneCatalyst) {
+                    arcne = true;
+                }
+            }
 
-            cost = 15;
+            return shard && arcne;
+        }
 
-            output = StaffKit.class;
-            outQuantity = 1;
+        @Override
+        public int cost(ArrayList<Item> ingredients) {
+            return 15;
+        }
+
+        @Override
+        public Item brew(ArrayList<Item> ingredients) {
+
+            for (Item i : ingredients){
+                i.quantity(i.quantity()-1);
+            }
+
+            return sampleOutput(null);
+        }
+
+        @Override
+        public Item sampleOutput(ArrayList<Item> ingredients) {
+            return new StaffKit();
         }
     }
 

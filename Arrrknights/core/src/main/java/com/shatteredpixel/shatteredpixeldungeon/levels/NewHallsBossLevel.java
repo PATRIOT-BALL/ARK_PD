@@ -201,14 +201,16 @@ public class NewHallsBossLevel extends Level {
 		CellEmitter.get( entrance ).start( FlameParticle.FACTORY, 0.1f, 10 );
 
 		Dungeon.observe();
-		/*
+
 		YogDzewa boss = new YogDzewa();
 		boss.pos = exit + width*3;
-		GameScene.add( boss ); *?
-		 */
+		GameScene.add( boss );
+		 /*
 		Talu_BlackSnake boss = new Talu_BlackSnake();
 		boss.pos = exit + width*3;
 		GameScene.add( boss );
+		*/
+
 	}
 
 	@Override

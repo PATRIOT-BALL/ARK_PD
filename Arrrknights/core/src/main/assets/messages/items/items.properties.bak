@@ -1184,6 +1184,9 @@ items.quest.nullshield.suc=조합 완료!
 items.quest.nullshield.fail=이 재료가 아닌 것 같다.
 items.quest.nullshield.fail_weapon=장비를 해제해주세요.
 
+items.quest.rose.name=꽃 한송이
+items.quest.rose.desc=누군가를 위한 꽃 한송이.
+
 
 
 

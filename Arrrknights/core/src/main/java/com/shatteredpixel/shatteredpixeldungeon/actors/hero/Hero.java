@@ -37,8 +37,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.AdrenalineSurge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Awareness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barkskin;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
@@ -1808,11 +1810,13 @@ public class Hero extends Char {
         }
 
         if (ankh != null && ankh.isBlessed()) {
-            this.HP = HT / 4;
+            this.HP = HT / 10;
 
             //ensures that you'll get to act first in almost any case, to prevent reviving and then instantly dieing again.
             PotionOfHealing.cure(this);
             Buff.detach(this, Paralysis.class);
+            Buff.affect( this, Barrier.class).incShield(this.HT / 2);
+            Buff.prolong( this, BlobImmunity.class, BlobImmunity.DURATION / 4 );
             spend(-cooldown());
 
             new Flare(8, 32).color(0xFFFF66, true).show(sprite, 2f);

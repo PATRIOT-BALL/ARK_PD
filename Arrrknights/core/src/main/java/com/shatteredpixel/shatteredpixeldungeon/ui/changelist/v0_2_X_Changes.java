@@ -4,6 +4,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.ChangesScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
 import com.watabou.noosa.Image;
@@ -67,6 +69,15 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "퀵슬롯 버튼 버그 수정",
                 "이제 퀵슬롯 버튼 변경 시스템이 제대로 작동합니다! 변경전 / 변경후 퀵슬롯이 전부 저장됨으로, 안심하고 사용해주세요!"));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.NAMSEK), "축복받은 앙크 변경",
+                "축복받은 앙크 발동시 체력 회복량이 25%에서 _10%_로 감소했습니다." + "\n\n" +
+                "대신 발동시 최대 체력 50%의 보호막을 얻으며, 5턴동안 정화의 보호막 상태를 얻습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "스태프 개조 키트 조합법 변경",
+                "스태프 개조 키트의 조합법이 다음과 같이 변경되었습니다." + "\n\n" +
+                        "1 : _재활용 금속_ + _아케인 촉매제_" + "\n" +
+                        "2 : _무작위 스태프_ + _아케친 촉매제_"));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
@@ -80,7 +91,7 @@ public class v0_2_X_Changes {
                 "_스태프 오브 위디_의 공격력이 2-7에서 _4-8_로 상승했으며, 강화 효율이 1-2에서 _2-4_로 상승했습니다. 또한 피해 공식이 변경되어 이전보다 큰 피해를 입힙니다." + "\n" +
                 "또한, 이제 스태프 오브 위디의 충격파로 플레이어는 넉백되지 않습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.NAMSEK), "반지 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "반지 버프",
                 "_힘의 반지_ 의 최대 체력 상승량이 기본 3.5%에서 _4.5%_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "사격 그레이스롯 버프",
@@ -103,7 +114,10 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 버프",
                 "_살카즈 백부장_의 소환 쿨타임이 대폭 감소했으며, 플레이어 주위에 소환을 시도합니다." + "\n" +
                         "소환되는 용병들의 체력이 12에서 _22_ 로 상승했습니다." +"\n" +
-                        "대신 체력 50%이하일 때 소환 쿨타임 대폭 감소 능력이 삭제되었습니다."));
+                        "대신 체력 50%이하일 때 소환 쿨타임 대폭 감소 능력이 삭제되었습니다." + "\n\n" +
+                "_체르노보그 섬멸 강화_" + "\n" +
+                "_머드락_ : 낙석 패턴이 돌이 떨어진 곳의 타일을 물 타일로 강제로 변환시키며, 축음기의 체력이 상승했습니다." + "\n\n" +
+                "_메피스토_ : 소환되는 숙주병들이 _정화의 보호막_을 얻습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
@@ -125,7 +139,7 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 너프",
                 "다음 보스들이 _섬멸전 장비_로 가하는 공격에 피해 저항을 얻습니다." + "\n\n" +
-                "_머드락_ : 12% 감소" + "\n" + "_탈룰라?_ : 35%감소" + "\n" + "_Mon3tr_ : 35%감소"));
+                "_머드락_ : 12% 감소" + "\n" + "_탈룰라?_ : 35%감소" + "\n" + "_Mon3tr_ : 15%감소"));
     }
 
     public static void add_v0_2_1_Changes(ArrayList<ChangeInfo> changeInfos) {
