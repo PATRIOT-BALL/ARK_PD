@@ -550,7 +550,7 @@ actors.hero.talent.improved_crossbow.desc=_+1:_  GrayThroat`s crossbow damage in
 actors.hero.talent.sniping.title=sniping
 actors.hero.talent.sniping.desc=_+1:_ increases the and the damage of her special attack by _20%_.\n\n_+2:_ increases the and the damage of her special attack by _40%_.\n\n_+3:_ increases the and the damage of her special attack by _60%_.
 actors.hero.talent.savior_belief.title=savior`s belief
-actors.hero.talent.savior_belief.desc=_+1:_ Deals _20%_ additional damage to roots or paralyzed enemies.\n\n_+2:_ Deals _40%_ additional damage to roots or paralyzed enemies.\n\n_+3:_ Deals _60%_ additional damage to roots or paralyzed enemies.\n\nWhen you activate this talent, you gain up to _40% damage bouns_ based on the nearby high grass.
+actors.hero.talent.savior_belief.desc=_+1:_ Deals _20%_ additional damage to roots or paralyzed enemies.\n\n_+2:_ Deals _40%_ additional damage to roots or paralyzed enemies.\n\n_+3:_ Deals _60%_ additional damage to roots or paralyzed enemies.\n\nWhen you activate this talent, you gain up to _25% damage bouns_ based on the nearby high grass.
 
 actors.hero.talent.lightnessmeal.title=lightness meal
 actors.hero.talent.lightnessmeal.desc=_+1:_ Eating food grants the Rosmontis gain _10 Turns_ levitation.\n\n_+2:_ Eating food grants the Rosmontis gain _15 Turns_ levitation.\n\nIf you have this talent, using gear while levitation does not consume any charge. When this effect is triggered, the levitation effect is immediately removed.\n\nGum doll cannot active talent
