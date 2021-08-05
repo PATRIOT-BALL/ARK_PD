@@ -1264,9 +1264,25 @@ public class Hero extends Char {
             default:
         }
 
+        float BounsDamage = 0;
         if (hasTalent(Talent.SAVIOR_BELIEF) && enemy.buff(Roots.class) != null || enemy.buff(Paralysis.class) != null) {
-            damage *= 1f + pointsInTalent(Talent.SAVIOR_BELIEF) * 0.12f;
+            BounsDamage = damage * (pointsInTalent(Talent.SAVIOR_BELIEF) * 0.2f);
         }
+
+        if (Dungeon.hero.hasTalent(Talent.SAVIOR_BELIEF)) {
+            int grassCells = 0;
+            for (int i : PathFinder.NEIGHBOURS9) {
+                if (Dungeon.level.map[pos + i] == Terrain.FURROWED_GRASS
+                        || Dungeon.level.map[pos + i] == Terrain.HIGH_GRASS) {
+                    grassCells++;
+                }
+            }
+            float Reg = 1f;
+            if (grassCells > 0) Reg += 0.025f + grassCells * 0.025f;
+            damage *= Reg;
+        }
+
+        damage += BounsDamage;
 
         return damage;
     }

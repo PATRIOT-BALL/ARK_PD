@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
@@ -311,9 +312,6 @@ public class SpiritBow extends Weapon {
 			if (Random.Int(12) < Dungeon.hero.pointsInTalent(Talent.POINT_BLANK)) {
 				Buff.affect(defender, Vertigo.class, 2f);
 			}
-			if (Random.Int(14) < Dungeon.hero.pointsInTalent(Talent.ARTS_FOCUS)) {
-				Buff.affect(defender, Vulnerable.class, 4f);
-			}
 			if (EatSeed >= 30) SeedHit++;
 
 			if (SeedHit == 3) {Buff.affect(Dungeon.hero, Barrier.class).incShield(Dungeon.hero.HT/10);
@@ -401,14 +399,27 @@ public class SpiritBow extends Weapon {
 						RevealedArea a = Buff.affect(user, RevealedArea.class, user.pointsInTalent(Talent.SEER_SHOT));
 						for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
 							if (Dungeon.level.adjacent(mob.pos, shotPos) && mob.alignment != Char.Alignment.ALLY) {
-								Buff.affect(mob, Roots.class, user.pointsInTalent(Talent.SEER_SHOT));
+								Buff.affect(mob, Roots.class, 3f);
 							}
 						}
 						a.depth = Dungeon.depth;
 						a.pos = shotPos;
-						Buff.affect(user, Talent.SeerShotCooldown.class, 30);
+						Buff.affect(user, Talent.SeerShotCooldown.class, 80 - (user.pointsInTalent(Talent.SEER_SHOT) * 20));
 					}
 				}
+
+			if (user.hasTalent(Talent.ARTS_FOCUS)
+					&& user.buff(Talent.SilShotCooldown.class) == null){
+				int shotPos = throwPos(user, dst);
+				if (Actor.findChar(shotPos) == null) {
+					for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+						if (Dungeon.level.adjacent(mob.pos, shotPos) && mob.alignment != Char.Alignment.ALLY) {
+							Buff.affect(mob, Silence.class,3f);
+						}
+					}
+					Buff.affect(user, Talent.SilShotCooldown.class, 80 - (user.pointsInTalent(Talent.ARTS_FOCUS) * 20));
+				}
+			}
 
 				super.cast(user, dst);
 			}

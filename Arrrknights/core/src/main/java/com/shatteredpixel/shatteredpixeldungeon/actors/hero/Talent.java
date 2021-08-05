@@ -165,6 +165,7 @@ public enum Talent {
 	public static class SWEEPTraker extends FlavourBuff{};
 	public static class RejuvenatingStepsCooldown extends FlavourBuff{};
 	public static class SeerShotCooldown extends FlavourBuff{};
+	public static class SilShotCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};
 	public static class BlazeBurstBuff extends CounterBuff{};
 
