@@ -62,7 +62,7 @@ public class SiestaBoss extends Mob {
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 20);
+        return Random.NormalIntRange(0, 10);
     }
 
     @Override

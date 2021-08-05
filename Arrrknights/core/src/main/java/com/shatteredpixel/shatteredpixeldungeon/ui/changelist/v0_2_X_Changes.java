@@ -93,7 +93,7 @@ public class v0_2_X_Changes {
                 "_스태프 오브 위디_의 공격력이 2-7에서 _4-8_로 상승했으며, 강화 효율이 1-2에서 _2-4_로 상승했습니다. 또한 피해 공식이 변경되어 이전보다 큰 피해를 입힙니다." + "\n" +
                 "또한, 이제 스태프 오브 위디의 충격파로 플레이어는 넉백되지 않습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "반지 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "반지 버프",
                 "_힘의 반지_ 의 최대 체력 상승량이 기본 3.5%에서 _4.5%_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "사격 그레이스롯 버프",
@@ -112,6 +112,9 @@ public class v0_2_X_Changes {
                 "아먀이의 _힘이 나는 식사_의 추가 피해량이 2-3에서 _3-4_로 상승했습니다." + "\n\n" +
                 "사격 그레이스롯의 _천리안_ 특성에 투척 무기의 원거리 명중 상승이 추가되었습니다." + "\n\n" +
                 "사격 그레이스롯의 _저격_ 특성의 피해 보너스가 20-60%에서 _25-75%_로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "스킬 버프",
+                "다음 스킬들의 공격력이 상승했습니다.\n\n스콜피온 테일, 바위를 깨는 망치, 창세기"));
 
         changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 버프",
                 "_살카즈 백부장_의 소환 쿨타임이 대폭 감소했으며, 플레이어 주위에 소환을 시도합니다." + "\n" +
