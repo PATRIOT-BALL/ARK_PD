@@ -30,7 +30,7 @@ public class Sniper extends Mob {
         maxLvl = 30;
 
         loot = new PotionOfHealing();
-        lootChance = 0.25f;
+        lootChance = 0.1f;
 
         immunities.add(Silence.class);
     }

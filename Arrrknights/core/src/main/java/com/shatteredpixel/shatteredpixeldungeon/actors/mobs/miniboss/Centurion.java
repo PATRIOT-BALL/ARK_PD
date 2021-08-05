@@ -164,8 +164,10 @@ public class Centurion extends Mob {
         }
 
         @Override
-        public int drRoll() {
-            return Random.NormalIntRange(0, 3);
+        public int attackSkill(Char target) { return 10; }
+
+        @Override
+        public int drRoll() { return Random.NormalIntRange(0, 3);
         }
 
         @Override

@@ -18,7 +18,7 @@ public class Infantry extends Mob {
         maxLvl = 28;
 
         loot = Gold.class;
-        lootChance = 0.5f;
+        lootChance = 0.28f;
 
         immunities.add(Silence.class);
     }
