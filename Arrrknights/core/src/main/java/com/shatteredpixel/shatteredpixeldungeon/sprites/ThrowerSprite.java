@@ -43,8 +43,8 @@ public class ThrowerSprite extends MobSprite {
 		run = new Animation( 15, true );
 		run.frames( frames, 0 );
 		
-		attack = new Animation( 25, false );
-		attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 0 );
+		attack = new Animation( 23, false );
+		attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 );
 		
 		zap = attack.clone();
 		
