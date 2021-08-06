@@ -173,7 +173,7 @@ abstract public class Weapon extends KindOfWeapon {
 			}
 		}
 
-		if (Dungeon.hero.hasTalent(Talent.ENRAGED_CATALYST)) {
+		if (Dungeon.hero.hasTalent(Talent.ENRAGED_CATALYST) && attacker instanceof Hero) {
 			Talent.BlazeBurstBuff counter = Buff.affect(Dungeon.hero, Talent.BlazeBurstBuff.class);
 			if (counter.count() >= 10){
 				for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
