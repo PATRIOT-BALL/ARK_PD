@@ -2,17 +2,24 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CivilianSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LensSprite;
+import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class Lens extends NPC {
@@ -24,11 +31,13 @@ public class Lens extends NPC {
         baseSpeed = 2f;
         state = WANDERING;
         flying = false;
+
+        viewDistance = 5;
     }
 
     public Lens() {
         super();
-        HP = 45;
+        HT=HP = 45;
         defenseSkill = 5 + Dungeon.hero.lvl;
     }
 
@@ -45,12 +54,35 @@ public class Lens extends NPC {
     @Override
     protected boolean act() {
 
-        if (this.buff(Invisibility.class) == null) {
-            baseSpeed = 0.25f;
-            damage(3, this);
-        }
-        else Buff.affect(Dungeon.hero, TalismanOfForesight.CharAwareness.class, 12).charID = this.id();
+        damage(1, this);
+        PathFinder.buildDistanceMap(pos, BArray.not(Dungeon.level.solid, null), 4);
+        for (int cell = 0; cell < PathFinder.distance.length; cell++) {
+            if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
+                if (!Dungeon.level.insideMap(cell)) {
+                    continue;
+                }
+                    if (Dungeon.level.discoverable[cell])
+                        Dungeon.level.mapped[cell] = true;
+
+                    int terr = Dungeon.level.map[cell];
+                    if ((Terrain.flags[terr] & Terrain.SECRET) != 0) {
+
+                        Dungeon.level.discover(cell);
+
+                        GameScene.discoverTile(cell, terr);
+                        ScrollOfMagicMapping.discover(cell);
+
+
+                }
+
+            }}
+        GameScene.updateFog();
         return super.act();
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy();
     }
 
     @Override

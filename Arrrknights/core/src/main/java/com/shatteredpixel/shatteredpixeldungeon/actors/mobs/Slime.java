@@ -39,7 +39,7 @@ public class Slime extends Mob {
 	{
 		spriteClass = ShieldedSprite.class;
 		
-		HP = HT = 20;
+		HP = HT = 22;
 		defenseSkill = 5;
 		
 		EXP = 4;
@@ -53,7 +53,7 @@ public class Slime extends Mob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 2, 5 );
+		return Random.NormalIntRange( 2, 6 );
 	}
 	
 	@Override

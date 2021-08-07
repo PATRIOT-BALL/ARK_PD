@@ -126,7 +126,7 @@ public enum Talent {
 	//Huntress T1
 	NATURES_BOUNTY(96), SURVIVALISTS_INTUITION(97), FOLLOWUP_STRIKE(98), NATURES_AID(99),
 	//Huntress T2
-	INVIGORATING_MEAL(100), RESTORED_NATURE(101), REJUVENATING_STEPS(102), HEIGHTENED_SENSES(103), DURABLE_PROJECTILES(104),
+	INVIGORATING_MEAL(100), RESTORED_NATURE(101), REJUVENATING_STEPS(102), HEIGHTENED_SENSES(98), DURABLE_PROJECTILES(104),
 	//Huntress T3
 	ARTS_FOCUS(108,3), SEER_SHOT(106, 3),
 	//Sniper T3
@@ -164,6 +164,7 @@ public enum Talent {
 	public static class BountyHunterTracker extends FlavourBuff{};
 	public static class SWEEPTraker extends FlavourBuff{};
 	public static class RejuvenatingStepsCooldown extends FlavourBuff{};
+	public static class bombshotooldown extends FlavourBuff{};
 	public static class SeerShotCooldown extends FlavourBuff{};
 	public static class SilShotCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};

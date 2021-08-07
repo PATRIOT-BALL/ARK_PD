@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.WolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -36,8 +37,8 @@ public class Panorama extends Skill {
                 Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
                 Lens Lens = new Lens();
                 Lens.pos = cell;
-                Buff.affect(Lens, Invisibility.class,30);
-                GameScene.add(Lens, 3f);
+                Buff.affect(Dungeon.hero, TalismanOfForesight.CharAwareness.class, 999).charID = Lens.id();
+                GameScene.add(Lens, 1f);
                 CellEmitter.get( Lens.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
                 Dungeon.level.occupyCell(Lens);
             }

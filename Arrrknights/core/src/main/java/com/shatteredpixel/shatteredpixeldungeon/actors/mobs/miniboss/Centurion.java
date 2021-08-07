@@ -51,7 +51,6 @@ public class Centurion extends Mob {
         lootChance = 1.0f;
 
         state = HUNTING;
-        flying = true;
     }
 
     private int skillcooldown = 8;
