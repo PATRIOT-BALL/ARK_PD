@@ -39,7 +39,7 @@ public class Flag extends MeleeWeapon  {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) +   //12 + 3
+        return  3*(tier+2) +   //15 + 3
                 lvl*(tier); }
 
     @Override

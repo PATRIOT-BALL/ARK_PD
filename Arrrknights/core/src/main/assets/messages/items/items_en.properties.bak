@@ -467,7 +467,7 @@ items.armor.armor$glyph.killed=%s killed you...
 items.armor.classarmor.not_equipped=not use
 items.armor.classarmor.low_charge=not use
 
-items.armor.clotharmor.name=Clothes Armor
+items.armor.clotharmor.name=just clothes
 items.armor.clotharmor.desc=Clothes that operators wear comfortably. It is difficult to expect defense.
 
 items.armor.huntressarmor.name=not use
@@ -2151,7 +2151,7 @@ items.weapon.melee.flag.ac_zap=Healing Wings
 
 items.weapon.melee.scythe.name=Rafaela`s scythe
 items.weapon.melee.scythe.stats_desc=Surprise attack bonus +25%\nRecovers HP every 5 hit dealt
-items.weapon.melee.scythe.desc=This scythe also deals damage to nearby enemies and deals x2 damage to enemies below 50% health.
+items.weapon.melee.scythe.desc=This scythe also deals damage to nearby enemies and deals x1.5 damage to enemies below 50% health.
 
 items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies

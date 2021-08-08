@@ -34,7 +34,7 @@ public class Scythe extends MeleeWeapon {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
                     int dmg = Dungeon.hero.damageRoll() - Math.max(defender.drRoll(), defender.drRoll());
-                    if (mob.HP <= mob.HT / 2) dmg *= 2;
+                    if (mob.HP <= mob.HT / 2) dmg *= 2f;
                     mob.damage(dmg, this);
                     HealCount++;
                 }
@@ -71,7 +71,7 @@ public class Scythe extends MeleeWeapon {
 
 
     private void Heal(Char attacker) {
-        if (HealCount >= 5) {
+        if (HealCount >= 8) {
             int heal = 3 + level();
 
             if (attacker instanceof Hero) {

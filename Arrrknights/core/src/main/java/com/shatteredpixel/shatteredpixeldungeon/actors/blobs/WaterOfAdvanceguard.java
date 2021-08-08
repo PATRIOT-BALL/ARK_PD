@@ -1,9 +1,14 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.blobs;
 
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.scenes.scene2d.ui.Cell;
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Crab;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BlobEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -26,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbol
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class WaterOfAdvanceguard extends WellWater {
@@ -44,7 +50,10 @@ public class WaterOfAdvanceguard extends WellWater {
             item.identify();
         } else if (item instanceof Gamza) {
             if (Random.IntRange(0,100) < 31) { item = new Nmould();}
-            else if  (Random.IntRange(0,11) < 7) item = new Gamza();
+            else if (Random.IntRange(0,11) < 7) {
+                Sample.INSTANCE.play(Assets.Sounds.HIT_PARRY);
+                item = new Gamza();
+            }
             else item = new Thunderbolt();
         } else if (item instanceof CrabGun) {
             if (Random.Int(2) < 1) {  item = new CatGun();
