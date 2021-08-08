@@ -467,7 +467,7 @@ items.armor.armor$glyph.killed=%s killed you...
 items.armor.classarmor.not_equipped=not use
 items.armor.classarmor.low_charge=not use
 
-items.armor.clotharmor.name=not use
+items.armor.clotharmor.name=Clothes Armor
 items.armor.clotharmor.desc=Clothes that operators wear comfortably. It is difficult to expect defense.
 
 items.armor.huntressarmor.name=not use
@@ -1678,6 +1678,12 @@ items.wands.sp.staffoflena.desc=_"Fighting when you could have just talked it ou
 items.wands.sp.staffoflena.stats_desc=This wand shoots plant power. The plant power deals _%1$d-%2$d damage,_ and Grants Vertigo.
 items.wands.sp.staffoflena.bmage_desc=When _Guard Amiya_ strikes an enemy with a ring of lena, and either are standing on grass, she will gain herbal healing in proportion with the damage dealt.
 
+items.wands.sp.staffofsussurro.name=staff of sussurro
+items.wands.sp.staffofsussurro.staff_name=ring of sussurro
+items.wands.sp.staffofsussurro.desc=_"Look over here for a doctor!"_\n\nThis Retrofitted wand is Has the power of operator Sussurro.
+items.wands.sp.staffofsussurro.stats_desc=This wand`s arts deals _%1$d-%2$d damage,_ Hit it 2 times Recover _%3$d_ health. Also, When the recovery effect is activated _%4$d_ times, the effect is reduced.
+items.wands.sp.staffofsussurro.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of sussurro, Weakens the enemy to reduce attack damage.
+
 
 ###wands
 items.wands.cursedwand.ondeath=You were killed by your own %s.
@@ -1696,6 +1702,7 @@ items.wands.wand.cursed=This wand is cursed, making its arts chaotic and random.
 items.wands.wand.not_cursed=This wand is free of malevolent arts.
 items.wands.wand.curse_discover=This %s is cursed!
 items.wands.wand.prompt=Choose a location to zap
+items.wands.wand$placeholder.name=wand
 
 items.wands.wandofblastwave.name=Wand of Blast Wave
 items.wands.wandofblastwave.staff_name=ring of blast wave
@@ -1816,6 +1823,12 @@ items.wands.wandofsilence.staff_name=ring of silence
 items.wands.wandofsilence.desc=The story of "Snowsant's Coin" was once popular among younger Operators, without any malicious intent of course.
 items.wands.wandofsilence.stats_desc=This wand can fire silent power`s energy, silencing targets hit. Silenced targets cannot use special abilities. Enemies that are silenced are limited, but silenced most enemies that use magic attacks.
 items.wands.wandofsilence.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of silence, extra damage to silent enemies.
+
+items.wands.wandofhealing.name=wand of healing
+items.wands.wandofhealing.staff_name=ring of healing
+items.wands.wandofhealing.desc=and she found genuine purpose.\n\nThis wand contains the life energy arts.
+items.wands.wandofhealing.stats_desc=This wand`s arts deals _%1$d-%2$d damage,_ Hit it 3 times Recover _%3$d_ health. Also, When the recovery effect is activated _%4$d_ times, the effect is reduced.
+items.wands.wandofhealing.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of healing, Weakens the enemy to reduce attack damage.
 
 ###weapon curses
 items.weapon.curses.annoying.name=annoying %s
@@ -2130,6 +2143,20 @@ items.weapon.melee.catgun.desc=attack replenishes energy. When fully charged, Mo
 items.weapon.melee.catgun.ac_zap=AWAKE
 items.weapon.melee.catgun$mon3tr.name=Mon3tr
 items.weapon.melee.catgun$mon3tr.desc=A monster created by an unknown technology.
+
+items.weapon.melee.flag.name=tablecloth
+items.weapon.melee.flag.stats_desc=Chance to knockback on hit
+items.weapon.melee.flag.desc="Who would! Use a flag! As a weapon! On the battlefield!"\n- Anonymous Liberi\n\nRecharges SP when attacking, and _Healing Wings_ can be used by consuming 100% of SP. _Healing Wings_ restores the SP of the Arts Recorder and your own HP.
+items.weapon.melee.flag.ac_zap=Healing Wings
+
+items.weapon.melee.scythe.name=Rafaela`s scythe
+items.weapon.melee.scythe.stats_desc=Surprise attack bonus +25%\nRecovers HP every 5 hit dealt
+items.weapon.melee.scythe.desc=This scythe also deals damage to nearby enemies and deals x2 damage to enemies below 50% health.
+
+items.weapon.melee.divineavatar.name=Divine Avatar
+items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies
+items.weapon.melee.divineavatar.desc="Does this kid want to date an anvil or something?!"\n\nHas a chance to blind enemies when attacking. Recharges SP when blinding an enemy. Consumes 100% of SP to put enemies in sight to sleep and recover HP.
+items.weapon.melee.divineavatar.ac_zap=Hikkari are!
 
 
 ###missile weapons
