@@ -524,7 +524,7 @@ actors.hero.talent.restored_nature.desc=_+1:_ Drinking a potion of healing spawn
 actors.hero.talent.rejuvenating_steps.title=rejuvenating steps
 actors.hero.talent.rejuvenating_steps.desc=_+1:_ When the GreyThroat steps on short grass or embers, they spring up into tall grass which the GreyThroat immediately furrows. Ther has a _18 turn cooldown_.\n\n_+2:_ When the GreyThroat steps on short grass or embers, they spring up into tall grass which the GreyThroat immediately furrows. Ther has a _12 turn cooldown_.
 actors.hero.talent.heightened_senses.title=explo shot
-actors.hero.talent.heightened_senses.desc=_+1:_ The GreyThroat gains mind vision on any enemy within _2 tiles of her position_.\n\n_+2:_ The GreyThroat gains mind vision on any enemy within _3 tiles of her position_.
+actors.hero.talent.heightened_senses.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s _80% damage_ in a 3x3 area. Ther has a _30 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s _120% damage_ in a 3x3 area. Ther has a _20 turn_ cooldown.
 actors.hero.talent.durable_projectiles.title=durable projectiles
 actors.hero.talent.durable_projectiles.desc=_+1:_ Thrown weapons have _+50% durability_ when used by the GreyThroat.\n\n_+2:_ Thrown weapons have _+75% durability_ when used by the GreyThroat.
 actors.hero.talent.arts_focus.title=silence shot
@@ -1224,6 +1224,19 @@ actors.mobs.yogfist$brightfist.desc=You seem to recognize the mysterious, mythic
 actors.mobs.yogfist$darkfist.name=Emperor’s Blade
 actors.mobs.yogfist$darkfist.teleport=The shadow teleports away in a blast of darkness that extinguishes your light source!
 actors.mobs.yogfist$darkfist.desc=This shadow is formed out of pure dark energy. It is capable of shooting powerful blasts of dark magic every turn! These blasts will weaken your light source in addition to dealing heavy damage. The shadow is also capable of briefly engulfing the arena in darkness in order to escape!\n\nThe shadow has no special abilities which it can use in melee range however.
+
+// 탈루 추가 보스전
+actors.mobs.talu_blacksnake.name=The Deathless Black Snake
+actors.mobs.talu_blacksnake.desc=An ancient consciousness that refuses to relinquish the lands of Ursus from its vicelike grip, even after countless deaths.
+actors.mobs.talu_blacksnake.notice=Come.
+actors.mobs.talu_blacksnake.phase2=To Ursus, all lives are equal. We are all grains of sand in Ursus.
+actors.mobs.talu_blacksnake.phase3=Some people must be punished.
+actors.mobs.talu_blacksnake.phase4=I love everyone on this land... It has been so for a thousand years.
+actors.mobs.talu_blacksnake.phase5=I will change everything.
+actors.mobs.talu_blacksnake.invincibility=immune
+actors.mobs.talu_blacksnake.invincibility1=I am the will of Ursus.
+actors.mobs.talu_blacksnake.invincibility2=Why can you not see the future?
+actors.mobs.talu_blacksnake.invincibility3=Do you think you can stop me?
 
 
 actors.mobs.miniboss.kaltsit.name=kaltsit

@@ -1684,7 +1684,7 @@ items.wands.sp.staffofsussurro.name=스태프 오브 수수로
 items.wands.sp.staffofsussurro.staff_name=개조 생명의 흑요석 반지
 items.wands.sp.staffofsussurro.desc=_"의사는 여기에 있어요, 여기에요!"_\n\n이 개조된 생명의 스태프는 수수로 대원의 능력이 반영되었습니다.
 items.wands.sp.staffofsussurro.stats_desc= 이 에너지에 닿은 적은 _%1$d-%2$d_의 피해를 받습니다. 또한, 이 스태프로 적을 2번 적중시키면 _%3$d_의 체력을 회복합니다. 단, 이 회복 효과는 _%4$d_번 발동한 후에는 큰 폭으로 감소합니다.
-items.wands.sp.staffofsussurro.bmage_desc=_아미야_ 가 개조 생명의 흑요석 반지로 적을 공격하면 대상에게 주술을 부여해 명중과 회피를 감소시킵니다.
+items.wands.sp.staffofsussurro.bmage_desc=_아미야_ 가 개조 생명의 흑요석 반지로 적을 공격하면 대상을 약화시켜 공격력을 감소시킵니다.
 
 
 
@@ -1831,7 +1831,7 @@ items.wands.wandofhealing.name=생명의 아츠 스태프
 items.wands.wandofhealing.staff_name=생명의 흑요석 반지
 items.wands.wandofhealing.desc=그리고 그때, 그녀는 비로소 의학도로서의 진정한 삶의 의미를 찾았다고 느꼈다.\n\n이 막대는 생명의 아츠 에너지가 담겨있습니다.
 items.wands.wandofhealing.stats_desc= 이 에너지에 닿은 적은 _%1$d-%2$d_의 피해를 받습니다. 또한, 이 스태프로 적을 3번 적중시키면 _%3$d_의 체력을 회복합니다. 단, 이 회복 효과는 _%4$d_번 발동한 후에는 큰 폭으로 감소합니다.
-items.wands.wandofhealing.bmage_desc=_아미야_ 가 생명의 흑요석 반지로 적을 공격하면 대상에게 주술을 부여해 명중과 회피를 감소시킵니다.
+items.wands.wandofhealing.bmage_desc=_아미야_ 가 생명의 흑요석 반지로 적을 공격하면 대상을 약화시켜 공격력을 감소시킵니다.
 
 
 ###weapon curses
@@ -2155,6 +2155,7 @@ items.weapon.melee.catgun$mon3tr.desc=켈시의 기술력이 응집된 미지의
 items.weapon.melee.flag.name=식탁보
 items.weapon.melee.flag.stats_desc=적중시 일정 확률로 밀쳐내기
 items.weapon.melee.flag.desc="누가! 전장에서! 깃발을 무기로 삼는 거야!"\n- 어떤 리베리\n\n공격시 SP를 충전하며, SP를 소모해 _치유의 날개_를 발동할 수 있습니다. _치유의 날개_ 사용시 사용자의 HP와 아츠 기록장치의 SP를 회복합니다.
+items.weapon.melee.flag.ac_zap=치유의 날개
 
 items.weapon.melee.scythe.name=라피엘라의 낫
 items.weapon.melee.scythe.stats_desc=기습시 최소 데미지 보정 +25%\n적에게 5번 피해를 줄 때마다 체력 회복

@@ -234,6 +234,10 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new WandOfHealing().identify().collect();
+		new Flag().identify().collect();
+		new Scythe().identify().collect();
+		new DivineAvatar().identify().collect();
+		new PotionOfStrength().quantity(8).collect();
 
 		new DewVial().collect();
 	}
