@@ -725,9 +725,11 @@ public class NewDM300 extends Mob {
                 CellEmitter.get(i).start(Speck.factory(Speck.ROCK), 0.07f, 10);
 
                 if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
-                    if (Random.IntRange(0,3) < 2)
-                    Level.set(i, Terrain.WATER);
-                      GameScene.updateMap( i );
+                    if (Random.IntRange(0,3) < 2) {
+                        if (Dungeon.level.map[i] == Terrain.EMPTY || Dungeon.level.map[i] == Terrain.EMPTY_DECO || Dungeon.level.map[i] == Terrain.EMPTY_SP) {
+                        Level.set(i, Terrain.WATER);
+                        GameScene.updateMap(i);}
+                    }
                 }
 
                 Char ch = Actor.findChar(i);
