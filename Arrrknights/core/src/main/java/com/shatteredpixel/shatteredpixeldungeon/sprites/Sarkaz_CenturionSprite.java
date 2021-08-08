@@ -10,13 +10,13 @@ public class Sarkaz_CenturionSprite extends MobSprite {
 
         texture( Assets.Sprites.SARKAZ_CENTURION );
 
-        TextureFilm frames = new TextureFilm( texture, 38, 36 );
+        TextureFilm frames = new TextureFilm( texture, 42, 38 );
 
         idle = new Animation( 2, true );
         idle.frames( frames, 0, 0, 0 );
 
-        run = new Animation( 10, true );
-        run.frames( frames, 0 );
+        run = new Animation( 14, true );
+        run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
         attack = new Animation( 15, false );
         attack.frames( frames, 0 );

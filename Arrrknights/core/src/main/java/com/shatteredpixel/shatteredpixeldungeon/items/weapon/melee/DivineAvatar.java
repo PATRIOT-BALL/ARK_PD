@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class DivineAvatar extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.WEAPON_HOLDER;
+        image = ItemSpriteSheet.BABY_KNIGHT;
         hitSound = Assets.Sounds.HIT;
         hitSoundPitch = 1f;
 

@@ -41,7 +41,7 @@ public class SarkazCasterSprite extends MobSprite {
 		run = new MovieClip.Animation( 15, true );
 		run.frames( frames, 0, 0, 0 );
 
-		attack = new MovieClip.Animation( 17, false );
+		attack = new MovieClip.Animation( 19, false );
 		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 );
 
 		die = new MovieClip.Animation( 8, false );

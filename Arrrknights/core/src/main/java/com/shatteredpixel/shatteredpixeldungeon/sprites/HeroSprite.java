@@ -97,7 +97,7 @@ public class HeroSprite extends CharSprite {
 		attack.frames( film, 9, 10, 11, 12, 13, 14, 15, 16, 17 );
 
 		Sattack = new Animation(15, false);
-		Sattack.frames(film, 9,11,14,16);
+		Sattack.frames(film, 9, 11, 14, 16);
 		
 		zap = attack.clone();
 		

@@ -300,6 +300,7 @@ public class ItemSpriteSheet {
 	public static final int WINTER       = WEP_TIER5+8;
 	public static final int REQUIEM       = WEP_TIER5+9;
 	public static final int CATGUN       = WEP_TIER5+10;
+	public static final int BABY_KNIGHT       = WEP_TIER5+11;
 
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
@@ -313,6 +314,7 @@ public class ItemSpriteSheet {
 		assignItemRect(WINTER,   16, 16);
 		assignItemRect(REQUIEM,   16, 16);
 		assignItemRect(CATGUN,   16, 16);
+		assignItemRect(BABY_KNIGHT,   16, 16);
 
 	}
 
@@ -426,6 +428,7 @@ public class ItemSpriteSheet {
 	public static final int WAND_REGROWTH       = WANDS+11;
 	public static final int WAND_TRANSFUSION    = WANDS+12;
 	public static final int WAND_SNOWSANT    = WANDS+13;
+	public static final int WAND_SUSSURRO    = WANDS+14;
 	static {
 		for (int i = WANDS; i < WANDS+31; i++)
 			assignItemRect(i, 16, 16);

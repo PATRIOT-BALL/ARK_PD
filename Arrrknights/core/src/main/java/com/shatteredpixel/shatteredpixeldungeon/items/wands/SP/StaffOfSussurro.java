@@ -28,7 +28,7 @@ import com.watabou.utils.Random;
 
 public class StaffOfSussurro extends DamageWand {
     {
-        image = ItemSpriteSheet.WAND_HOLDER;
+        image = ItemSpriteSheet.WAND_SUSSURRO;
     }
 
     public int min(int lvl) {
