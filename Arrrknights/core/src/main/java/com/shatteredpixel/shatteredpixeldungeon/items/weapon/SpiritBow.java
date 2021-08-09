@@ -234,7 +234,7 @@ public class SpiritBow extends Weapon {
 		}
 
 		if (sniperSpecial){
-			damage = Math.round(damage * (1f + sniperSpecialBonusDamage + Dungeon.hero.pointsInTalent(Talent.SNIPING)*0.25f));
+			damage = Math.round(damage * (1f + sniperSpecialBonusDamage + Dungeon.hero.pointsInTalent(Talent.SNIPING)*0.2f));
 
 			switch (augment){
 				case NONE:
