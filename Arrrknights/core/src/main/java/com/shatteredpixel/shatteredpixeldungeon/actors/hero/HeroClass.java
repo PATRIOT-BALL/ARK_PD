@@ -206,11 +206,6 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-
-		new WandOfHealing().identify().collect();
-		new Flag().identify().collect();
-		new Scythe().identify().collect();
-		new DivineAvatar().identify().collect();
 	}
 
 	private static void initMage( Hero hero ) {
@@ -239,11 +234,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-
-		new WandOfHealing().identify().collect();
-		new PlateArmor().identify().collect();
-		new PotionOfStrength().quantity(12).collect();
-		new DivineAvatar().identify().collect();
 	}
 
 	private static void initRogue( Hero hero ) {
@@ -274,11 +264,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(2,skillB);
 
 		new DewVial().collect();
-
-		new WandOfHealing().identify().collect();
-		new Flag().identify().collect();
-		new Scythe().identify().collect();
-		new DivineAvatar().identify().collect();
 	}
 
 	private static void initHuntress( Hero hero ) {
@@ -305,11 +290,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-
-		new WandOfHealing().identify().collect();
-		new Flag().identify().collect();
-		new Scythe().identify().collect();
-		new DivineAvatar().identify().collect();
 	}
 
 	private void initRosecat(Hero hero)
@@ -336,11 +316,6 @@ public enum HeroClass {
 
 		new DewVial().collect();
 		new MeatCutlet().quantity(2).collect();
-
-		new WandOfHealing().identify().collect();
-		new Flag().identify().collect();
-		new Scythe().identify().collect();
-		new DivineAvatar().identify().collect();
 	}
 
 	public String title() {
