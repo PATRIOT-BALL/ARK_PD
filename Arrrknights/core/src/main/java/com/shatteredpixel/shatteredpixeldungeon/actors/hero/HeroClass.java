@@ -241,8 +241,8 @@ public enum HeroClass {
 		new DewVial().collect();
 
 		new WandOfHealing().identify().collect();
-		new Flag().identify().collect();
-		new Scythe().identify().collect();
+		new PlateArmor().identify().collect();
+		new PotionOfStrength().quantity(12).collect();
 		new DivineAvatar().identify().collect();
 	}
 

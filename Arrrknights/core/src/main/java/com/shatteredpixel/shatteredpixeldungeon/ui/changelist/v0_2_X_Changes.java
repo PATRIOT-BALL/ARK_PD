@@ -40,7 +40,7 @@ public class v0_2_X_Changes {
                 "_하극상_\n29층의 켈시를 쓰러트려 하극상을 할 수 있게되었습니다. 하극상 성공시 즉시 게임이 끝납니다." + "\n\n" +
                 "_널 기다릴게_\n이 배지는 해금 조건이 공개되어있지 않습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "새로운 NPC",
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENTER), "새로운 NPC",
                 "10층 보스 클리어시 추가 요소 혹은 정제 금속 조합법과 관련된 힌트를 주는 NPC가 추가되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
@@ -61,22 +61,22 @@ public class v0_2_X_Changes {
                 "_보호의 이슬_ 특성은 _구제자의 기도_ 특성으로 변경되었으며, 시야 안에서 식물이 발동할 때 시야 내의 적들의 명중,회피를 감소시킬 수 있게됩니다." + "\n\n" +
                 "_구제자의 신념_ 특성은 속박, 마비된 적에게 추가 피해를 입히는 특성으로 변경되었습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 변경",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
                 "_하야부사_ : 5티어로 상승했으며, 추가된 무기 시시오와 동일하게 변경되어 그에 따라 공격력과 명중률 등이 변경되었습니다." + "\n\n" +
                 "_오리지늄 검_ : 공격할 때마다 SP를 충전하며, SP를 전부 소모하면 주위 적들에게 피해와 마비를 주고 유물 충전을 얻는 기능이 추가되었습니다." + "\n\n" +
                 "_나기나타_ : 공격력이 4-25에서 _4-20_으로 감소했습니다. 이 무기로 공격받은 평범한 적이 체력이 15%이하면 즉사시키는 기능이 추가되었습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "유물 삭제",
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 삭제",
                 "_공구 상자_ 유물이 삭제되었습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "퀵슬롯 버튼 버그 수정",
+        changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "퀵슬롯 버튼 버그 수정",
                 "이제 퀵슬롯 버튼 변경 시스템이 제대로 작동합니다! 변경전 / 변경후 퀵슬롯이 전부 저장됨으로, 안심하고 사용해주세요!"));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.NAMSEK), "축복받은 앙크 변경",
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "축복받은 앙크 변경",
                 "축복받은 앙크 발동시 체력 회복량이 25%에서 _10%_로 감소했습니다." + "\n\n" +
                 "대신 발동시 최대 체력 50%의 보호막을 얻으며, 5턴동안 정화의 보호막 상태를 얻습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "스태프 개조 키트 조합법 변경",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 개조 키트 조합법 변경",
                 "스태프 개조 키트의 조합법이 다음과 같이 변경되었습니다." + "\n\n" +
                         "1 : _재활용 금속_ + _아케인 촉매제_" + "\n" +
                         "2 : _무작위 스태프_ + _아케친 촉매제_"));
@@ -85,17 +85,17 @@ public class v0_2_X_Changes {
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 버프",
                 "_테르밋 블레이드_ : 공격력이 3-12에서 _5-12_ 로 상승했습니다." + "\n\n" +
                 "_해시계_ : 공격력이 4-16에서 _4-18_로 상승했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 버프",
                 "_스태프 오브 압생트_의 피해 보너스가 75%에서 _100%_로 상승했습니다." + "\n\n" +
                         "_스태프 오브 메이어_가 개조 이전처럼 시야를 제공해줍니다." + "\n\n" +
                 "_스태프 오브 위디_의 공격력이 2-7에서 _4-8_로 상승했으며, 강화 효율이 1-2에서 _2-4_로 상승했습니다. 또한 피해 공식이 변경되어 이전보다 큰 피해를 입힙니다." + "\n" +
                 "또한, 이제 스태프 오브 위디의 충격파로 플레이어는 넉백되지 않습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "반지 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.RING), "반지 버프",
                 "_힘의 반지_ 의 최대 체력 상승량이 기본 3.5%에서 _4.5%_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "사격 그레이스롯 버프",
@@ -116,11 +116,11 @@ public class v0_2_X_Changes {
                 "사격 그레이스롯의 _천리안_ 특성에 투척 무기의 원거리 명중 상승이 추가되었습니다." + "\n\n" +
                 "사격 그레이스롯의 _저격_ 특성의 피해 보너스가 20-60%에서 _25-75%_로 상승했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "스킬 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 버프",
                 "_파노라마 오버로드 촬영_으로 소환되는 렌즈의 전체적인 성능이 대폭 개선되었습니다." + "\n\n" +
                 "다음 스킬들의 공격력이 상승했습니다.\n\n스콜피온 테일, 바위를 깨는 망치, 창세기"));
 
-        changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS),  "리유니온 버프",
                 "_기동 방패병_의 체력이 20에서 _22_로, 공격력이 2-5에서 _2-6_으로 상승했습니다." + "\n\n" +
                 "_살카즈 백부장_의 소환 쿨타임이 대폭 감소했으며, 플레이어 주위에 소환을 시도합니다." + "\n" +
                         "소환되는 용병들의 체력이 12에서 _22_ 로 상승했습니다." +"\n" +
@@ -141,10 +141,10 @@ public class v0_2_X_Changes {
                 "그레이스롯의 _개량 쇠뇌_ 특성의 공격력 상승량이 3-9에서 _2-6_으로 감소했습니다." + "\n\n" +
                 "로즈몬티스의 _똑똑한 식사_ 특성의 이성 요구량이 5-3에서 _5-4_로 상승했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "무기 너프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.MONNY), "무기 너프",
                 "_바위게 사육사_ : 공격력이 3-8에서 _3-13_으로 상승했지만, SP 충전량과 바위게의 능력치가 감소했습니다."));
 
-        changes.addButton(new ChangeButton(new Image(Assets.Sprites.FAUST, 6, 7, 16, 16), "리유니온 너프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "리유니온 너프",
                 "_흉폭한 사냥개_의 공격력이 1-7에서 _1-6_으로 감소했습니다." + "\n\n" +
                 "_숙주병사(폭주)_ 의 공격력이 18-28에서 _16-28_로 감소했으며, 집중 스킬의 쿨타임이 1턴 상승했습니다."));
 

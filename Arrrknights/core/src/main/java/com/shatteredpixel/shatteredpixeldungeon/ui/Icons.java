@@ -98,7 +98,23 @@ public enum Icons {
 	NEARL,
 	ROSEMARI,
 	HYPER,
-	MONNY;
+	MONNY,
+
+	//변경화면용 아이콘
+	BUG_KILL,
+	ENEMY_BUFFS,
+	ENEMY_NERFS,
+	SKILL,
+	WEP_ARROW,
+	WEP,
+	WEP_WOND,
+	RING,
+	ARTI,
+	POTION,
+	STONE,
+	SCROLL;
+
+
 
 	public Image get() {
 		return get( this );
@@ -300,6 +316,45 @@ public enum Icons {
 			case MONNY:
 				icon.frame(icon.texture.uvRect(0, 148, 20, 168));
 				break;
+			//변경화면 아이콘들
+			case BUG_KILL:
+				icon.frame(icon.texture.uvRect(40, 148, 60, 168));
+				break;
+			case ENEMY_BUFFS:
+				icon.frame(icon.texture.uvRect(48, 80, 64, 95));
+				break;
+			case ENEMY_NERFS:
+				icon.frame(icon.texture.uvRect(64, 81, 80, 95));
+				break;
+			case SKILL:
+				icon.frame(icon.texture.uvRect(80, 81, 96, 95));
+				break;
+			case WEP_ARROW:
+				icon.frame(icon.texture.uvRect(60, 148, 80, 168));
+				break;
+			case WEP:
+				icon.frame(icon.texture.uvRect(80, 148, 100, 168));
+				break;
+			case WEP_WOND:
+				icon.frame(icon.texture.uvRect(100, 148, 120, 168));
+				break;
+			case RING:
+				icon.frame(icon.texture.uvRect(0, 168, 12, 188));
+				break;
+			case ARTI:
+				icon.frame(icon.texture.uvRect(12, 168, 32, 188));
+				break;
+			case POTION:
+				icon.frame(icon.texture.uvRect(32, 168, 51, 188));
+				break;
+			case STONE:
+				icon.frame(icon.texture.uvRect(51, 168, 68, 188));
+				break;
+			case SCROLL:
+				icon.frame(icon.texture.uvRect(68, 168, 86, 188));
+				break;
+
+
 
 
 
