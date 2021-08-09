@@ -56,7 +56,7 @@ public class Badges {
 		UNLOCK_MAGE                 ( 1 ),
 		UNLOCK_ROGUE                ( 2 ),
 		UNLOCK_HUNTRESS             ( 3 ),
-		UNLOCK_ROSECAT             ( 118 ),
+		UNLOCK_ROSECAT             ( 19 ),
 		MONSTERS_SLAIN_1            ( 4 ),
 		MONSTERS_SLAIN_2            ( 5 ),
 		GOLD_COLLECTED_1            ( 6 ),
@@ -100,8 +100,8 @@ public class Badges {
 		BOSS_SLAIN_1_ROGUE,
 		BOSS_SLAIN_1_HUNTRESS,
 		BOSS_SLAIN_1_ROSECAT,
-		BOSS_SLAIN_1_ALL_CLASSES    ( 53, true ),
-		GAMES_PLAYED_1              ( 54, true ),
+		BOSS_SLAIN_1_ALL_CLASSES    ( 52, true ),
+		GAMES_PLAYED_1              ( 53, true ),
 
 		//gold
 		PIRANHAS                    ( 64 ),
@@ -150,20 +150,25 @@ public class Badges {
 		VICTORY_ALL_CLASSES         ( 98, true ),
 		GAMES_PLAYED_3              ( 99, true ),
 		CHAMPION_1                  ( 100 ),
-		ROARINGFLARE                  ( 116 ),
+		ROARINGFLARE                  ( 115 ),
+		FRAGGING                       ( 101 ),
+		PRAY (102),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
 		CHAMPION_2                  ( 113 ),
 		CHAMPION_3                  ( 114 ),
 		CHAMPION_4                  ( 114 ),
-		EVILTIME_END                  ( 115 ),
-		FRAGGING                       ( 121 ),
-		PRAY (122),
+		EVILTIME_END                  ( 116 ),
 
 		//Puple
-		Get_25_STONES                (117),
-		Get_40_STONES                (120);
+		Get_25_STONES                (137),
+		Get_40_STONES                (137),
+
+		//GREEN
+		SKIN_BABOSKADI(160),
+		SKIN_TALU(161),
+		SKIN_NOVA(162);
 
 		public boolean meta;
 
@@ -832,6 +837,21 @@ public class Badges {
 			badge = Badge.GAMES_PLAYED_4;
 		}
 		
+		displayBadge( badge );
+	}
+
+	public static void validateskadiskin() {
+		Badge badge = Badge.SKIN_BABOSKADI;
+		displayBadge( badge );
+	}
+
+	public static void validatetaluskin() {
+		Badge badge = Badge.SKIN_TALU;
+		displayBadge( badge );
+	}
+
+	public static void validatenovaskin() {
+		Badge badge = Badge.SKIN_NOVA;
 		displayBadge( badge );
 	}
 	

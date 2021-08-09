@@ -49,6 +49,7 @@ public class Closure extends NPC {
                         switch (a) {
                             case 0:
                                 if (Badges.isUnlocked(Badges.Badge.EVILTIME_END)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_TALU)) {Badges.validatetaluskin();}
                                     Dungeon.hero.CharSkin = Hero.TALULAH;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
@@ -61,6 +62,7 @@ public class Closure extends NPC {
                                 break;
                             case 1:
                                 if (Badges.isUnlocked(Badges.Badge.FRAGGING)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_NOVA)) { Badges.validatenovaskin();}
                                     Dungeon.hero.CharSkin = Hero.F_NOVA;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
@@ -72,6 +74,7 @@ public class Closure extends NPC {
                                 break;
                             case 2: // 바병슼 스킨
                                 if (Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_2)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_BABOSKADI)) {Badges.validateskadiskin();}
                                     Dungeon.hero.CharSkin = Hero.SKADI;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
