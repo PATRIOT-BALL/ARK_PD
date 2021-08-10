@@ -107,17 +107,20 @@ public class HighGrass {
 
 				// Dew, scales from 1/6 to 1/3
 				if (Random.Int(24 - naturalismLevel * 3) <= 3) {
+					if (pos == Dungeon.hero.pos) {
 					if (Dungeon.hero.belongings.getItem(DewVial.class) != null) {
 						DewVial dd = Dungeon.hero.belongings.getItem(DewVial.class);
 						if (!dd.isFull()) {
-							if (new Dewdrop().doPickUp(Dungeon.hero)) {
+							new Dewdrop().doPickUp_auto(Dungeon.hero);
 								Hunger hunger = Buff.affect(Dungeon.hero, Hunger.class);
 								if (!hunger.isStarving()) {
 									hunger.affectHunger(-1);
 								}
-							} else level.drop(new Dewdrop(), pos).sprite.drop();
+						}
+						else level.drop(new Dewdrop(), pos).sprite.drop();
 						} else level.drop(new Dewdrop(), pos).sprite.drop();
-					}
+					} else level.drop(new Dewdrop(), pos).sprite.drop();
+
 				}
 			}
 			

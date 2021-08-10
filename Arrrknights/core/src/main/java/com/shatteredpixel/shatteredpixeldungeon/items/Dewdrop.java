@@ -65,6 +65,28 @@ public class Dewdrop extends Item {
 		return true;
 	}
 
+
+	public boolean doPickUp_auto( Hero hero ) {
+
+		DewVial vial = hero.belongings.getItem( DewVial.class );
+
+		if (vial != null && !vial.isFull()){
+
+			vial.collectDew( this );
+
+		} else {
+
+			if (!consumeDew(1, hero)){
+				return false;
+			}
+
+		}
+
+		Sample.INSTANCE.play( Assets.Sounds.DEWDROP );
+
+		return true;
+	}
+
 	public static boolean consumeDew(int quantity, Hero hero){
 		//20 drops for a full heal
 		int heal = Math.round( hero.HT * 0.05f * quantity );
