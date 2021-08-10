@@ -644,7 +644,7 @@ actors.hero.heroclass.huntress_desc=The GreyThroat starts with a _unique crossbo
 
 actors.hero.heroclass.rosecat=Rosmontis
 actors.hero.heroclass.rosecat_unlock=The Rosmontis is a strong arts user, and has a _unique gear_ with ranged attack.\n\nTo unlock her _you eat 25 food in one run._
-actors.hero.heroclass.rosecat_desc=The Rosmontis is strong arts user, and has a _unique gear_ which fire an can attack all locations.\n\nThe Rosmontis`s gear is Cannot be recharged in the usual way, and you level up by gaining experience, everything is recharged.\n\nRosemontis`s gear is can attack all locations.\n\nThe Rosmontis automatically identifies:\n- Scrolls of Identify\n- Potion Of Levitation
+actors.hero.heroclass.rosecat_desc=The Rosmontis is strong arts user, and has a _unique gear_ which fire an can attack all locations.gear is Cannot be recharged in the usual way, and you level up by gaining experience, everything is recharged.\n\nRosemontis`s gear is can attack all locations.\n\nThe Rosmontis automatically identifies:\n- Scrolls of Identify\n- Potion Of Levitation
 
 actors.hero.herosubclass.gladiator=Master
 actors.hero.herosubclass.gladiator_short_desc=_Master_ start a combo. Building combo allows him to use unique combo moves.
@@ -669,7 +669,7 @@ actors.hero.herosubclass.sniper_short_desc=_Shooter_ master of ranged combat
 actors.hero.herosubclass.sniper_desc=The _Shooter Elite_ is a master of ranged combat. Her ranged attacks pierce armor, and after striking with a thrown weapon she can follow up with a special attack from her bow.
 actors.hero.herosubclass.warden=Warden
 actors.hero.herosubclass.warden_short_desc=_Warden_ Strong connection to nature which allows her to see through tall grass and command furrowed grass to sprout around plants she grows
-actors.hero.herosubclass.warden_desc=The _Warden Elite_ has a strong connection to nature which allows her to see through tall grass and command furrowed grass to sprout around plants she grows. Plants she tramples will also give bonus effects.
+actors.hero.herosubclass.warden_desc=The _Warden Elite_ has a strong connection to nature which allows her to see through tall grass and command furrowed grass to sprout around plants she grows. Plants she tramples will also give bonus effects.\n\Also, she can use the seed to strengthen the crossbow.
 actors.hero.herosubclass.destroyer=Destroyer
 actors.hero.herosubclass.destroyer_short_desc=_Destroyer_ Maximizes the gear's attack power.
 actors.hero.herosubclass.destroyer_desc=The _Destroy Elite_ is Maximizes the gear's attack power. After gear attack, it becomes focus state, and next gear attack is deals 50% more damage Also, if you eat meat, you get an effect depending on how the meat is cooked.
