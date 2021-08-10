@@ -67,7 +67,7 @@ public class Bat extends Mob {
 		damage = super.attackProc( enemy, damage );
 		int reg = Math.min( damage - 4, HT - HP );
 
-		if(this.buff(Silence.class) != null) {
+		if(this.buff(Silence.class) == null) {
 			if (reg > 0) {
 				HP += reg;
 				sprite.emitter().burst(Speck.factory(Speck.HEALING), 1);

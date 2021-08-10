@@ -82,6 +82,7 @@ public class WndBag extends WndTabbed {
 		QUICKSLOT,
 		FOR_SALE,
 		WEAPON,
+		MISSILEWEAPON,
 		ARMOR,
 		ENCHANTABLE,
 		ENCHANTABLE_STONE,
@@ -439,6 +440,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.CURSABLE && ((item instanceof EquipableItem && !(item instanceof MissileWeapon)) || item instanceof Wand) ||
 						mode == Mode.QUICKSLOT && (item.defaultAction != null) ||
 						mode == Mode.WEAPON && (item instanceof MeleeWeapon) ||
+						mode == Mode.MISSILEWEAPON && (item instanceof MissileWeapon) ||
 						mode == Mode.ARMOR && (item instanceof Armor) ||
 						mode == Mode.ENCHANTABLE && (item instanceof MeleeWeapon || item instanceof SpiritBow || item instanceof Armor) ||
 						mode == Mode.ENCHANTABLE_STONE && (item instanceof MeleeWeapon || item instanceof SpiritBow || item instanceof Armor || item instanceof AnnihilationGear) ||

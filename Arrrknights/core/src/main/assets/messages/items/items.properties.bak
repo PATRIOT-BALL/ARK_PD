@@ -2120,7 +2120,7 @@ items.weapon.melee.ex42.ac_zap=변형
 
 items.weapon.melee.naginata.name=나기나타
 items.weapon.melee.naginata.stats_desc=사거리 +1, 공격속도 80%
-items.weapon.melee.naginata.desc=정답은 없다. 그저 선택만이 있을 뿐.\n\n평범한 적은 이 무기로 피해를 받은 후 체력이 12.5%이하면 즉시 처형당합니다.
+items.weapon.melee.naginata.desc=정답은 없다. 그저 선택만이 있을 뿐.\n\n평범한 적은 이 무기로 피해를 받은 후 체력이 15%이하면 즉시 처형당합니다.
 items.weapon.melee.naginata.skill=아부리아게~
 
 items.weapon.melee.swordofartorius.name=아트리아스의 검
@@ -2157,7 +2157,7 @@ items.weapon.melee.flag.stats_desc=적중시 일정 확률로 밀쳐내기
 items.weapon.melee.flag.desc="누가! 전장에서! 깃발을 무기로 삼는 거야!"\n- 어떤 리베리\n\n공격시 SP를 충전하며, SP를 소모해 _치유의 날개_를 발동할 수 있습니다. _치유의 날개_ 사용시 사용자의 HP와 아츠 기록장치의 SP를 회복합니다.
 items.weapon.melee.flag.ac_zap=치유의 날개
 
-items.weapon.melee.scythe.name=라피엘라의 낫
+items.weapon.melee.scythe.name=맹목적인 순종
 items.weapon.melee.scythe.stats_desc=기습시 최소 데미지 보정 +25%\n적에게 8번 피해를 줄 때마다 체력 회복
 items.weapon.melee.scythe.desc=누구도 판단할 수 없다. 오직 시간만이 답이다.\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 대상의 체력이 50%이하면 2배의 피해를 입힐 수 있습니다.
 
@@ -2165,6 +2165,15 @@ items.weapon.melee.divineavatar.name=선현의 화신
 items.weapon.melee.divineavatar.stats_desc=실명한 적에게 공격시 축복 획득
 items.weapon.melee.divineavatar.desc="이 녀석은 모루랑 연애라도 하려는 거야!?"\n\n공격시 확률적으로 실명을 부여하며, 그 때마다 SP를 회복합니다. SP 100%를 소모해 시야 내의 적들을 잠재우고 체력을 회복할 수 있습니다.
 items.weapon.melee.divineavatar.ac_zap=히까리아레!
+
+items.weapon.melee.dp27.name=DP27
+items.weapon.melee.dp27.desc="where do you want me?"\n\n이 무기는 _사격_ 무기입니다. 투척 무기나 탄창을 이용해 탄약을 장전할 수 있습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
+items.weapon.melee.dp27.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
+items.weapon.melee.dp27.prompt=목표를 지정해주세요.
+items.weapon.melee.dp27.self_target=자신에게는 발사할 수 없습니다.
+items.weapon.melee.dp27.fizzles=탄약이 부족합니다.
+items.weapon.melee.dp27.ac_zap=사격
+items.weapon.melee.dp27.ac_reload=재장전
 
 
 

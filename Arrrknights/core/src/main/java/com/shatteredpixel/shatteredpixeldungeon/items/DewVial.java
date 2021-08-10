@@ -22,6 +22,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
@@ -31,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.GameMath;
+import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
@@ -95,7 +98,8 @@ public class DewVial extends Item {
 				if (Dewdrop.consumeDew(dropsNeeded, hero)){
 					volume -= dropsNeeded;
 
-					hero.spend(TIME_TO_DRINK);
+					if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) hero.spend(TIME_TO_DRINK);
+					else hero.spend(TIME_TO_DRINK + 2f);
 					hero.busy();
 
 					Sample.INSTANCE.play(Assets.Sounds.DRINK);
@@ -128,7 +132,12 @@ public class DewVial extends Item {
 		return volume >= MAX_VOLUME;
 	}
 
-	public void collectDew( Dewdrop dew ) {
+	@Override
+	public int value() {
+		return 20;
+	}
+
+	public void collectDew(Dewdrop dew ) {
 
 		GLog.i( Messages.get(this, "collected") );
 		volume += dew.quantity;

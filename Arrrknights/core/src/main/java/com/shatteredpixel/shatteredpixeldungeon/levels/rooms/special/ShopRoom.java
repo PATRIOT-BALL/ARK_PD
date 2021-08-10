@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Belongings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -164,7 +165,8 @@ public class ShopRoom extends SpecialRoom {
 			if (Random.Int(5) < 4) { w = (MeleeWeapon) Generator.random(Generator.wepTiers[1]); }
 	     	else w = new Enfild();
 			itemsToSpawn.add( Generator.random(Generator.misTiers[1]).quantity(2).identify() );
-			itemsToSpawn.add( new LeatherArmor().identify() );
+            itemsToSpawn.add( new LeatherArmor().identify() );
+			if (Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( new StoneOfAugmentation() );
 			break;
 			
 		case 11:
@@ -186,7 +188,7 @@ public class ShopRoom extends SpecialRoom {
 			itemsToSpawn.add( new PlateArmor().identify() );
 			itemsToSpawn.add( new Torch() );
 			itemsToSpawn.add( new Torch() );
-			itemsToSpawn.add( new Torch() );
+			if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( new Torch() );
 			break;
 
 		case 31: case 36:
@@ -208,21 +210,22 @@ public class ShopRoom extends SpecialRoom {
 		itemsToSpawn.add( new MerchantsBeacon() );
 
 
-		itemsToSpawn.add(ChooseBag(Dungeon.hero.belongings));
+		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM) || Dungeon.depth != 6)itemsToSpawn.add(ChooseBag(Dungeon.hero.belongings));
 
 
 		itemsToSpawn.add( new PotionOfHealing() );
-		itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.POTION ) );
-		itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.POTION ) );
+		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.POTION ) );
+		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.POTION ) );
 
 		itemsToSpawn.add( new ScrollOfIdentify() );
 		itemsToSpawn.add( new ScrollOfRemoveCurse() );
-		itemsToSpawn.add( new ScrollOfMagicMapping() );
+		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( new ScrollOfMagicMapping() );
 
-		for (int i=0; i < 2; i++)
-			itemsToSpawn.add( Random.Int(2) == 0 ?
-					Generator.randomUsingDefaults( Generator.Category.POTION ) :
-					Generator.randomUsingDefaults( Generator.Category.SCROLL ) );
+			for (int i = 0; i < 2; i++)
+				itemsToSpawn.add(Random.Int(2) == 0 ?
+						Generator.randomUsingDefaults(Generator.Category.POTION) :
+						Generator.randomUsingDefaults(Generator.Category.SCROLL));
+
 
 
 		itemsToSpawn.add( new SmallRation() );
@@ -235,7 +238,7 @@ public class ShopRoom extends SpecialRoom {
 				break;
 			case 1:
 			case 2:
-				itemsToSpawn.add( new Bomb.DoubleBomb() );
+				if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( new Bomb.DoubleBomb() );
 				break;
 			case 3:
 				itemsToSpawn.add( new Honeypot() );
@@ -247,12 +250,12 @@ public class ShopRoom extends SpecialRoom {
 				itemsToSpawn.add( new RandomBox());
 				break;
 			case 6:
-				itemsToSpawn.add( new Bonk());
+				if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( new Bonk());
 				break;
 		}
 
-		itemsToSpawn.add( new Ankh() );
-		itemsToSpawn.add( new StoneOfAugmentation() );
+		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( new Ankh() );
+		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( new StoneOfAugmentation() );
 
 		TimekeepersHourglass hourglass = Dungeon.hero.belongings.getItem(TimekeepersHourglass.class);
 		if (hourglass != null && hourglass.isIdentified() && !hourglass.cursed){
@@ -294,7 +297,7 @@ public class ShopRoom extends SpecialRoom {
 		}
 		rare.cursed = false;
 		rare.cursedKnown = true;
-		itemsToSpawn.add( rare );
+		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) itemsToSpawn.add( rare );
 
 		//hard limit is 63 items + 1 shopkeeper, as shops can't be bigger than 8x8=64 internally
 		if (itemsToSpawn.size() > 63)

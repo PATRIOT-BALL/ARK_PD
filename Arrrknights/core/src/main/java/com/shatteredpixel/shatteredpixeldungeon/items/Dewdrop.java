@@ -22,6 +22,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
@@ -32,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Random;
 
 public class Dewdrop extends Item {
 	
@@ -46,11 +49,14 @@ public class Dewdrop extends Item {
 	public boolean doPickUp( Hero hero ) {
 		
 		DewVial vial = hero.belongings.getItem( DewVial.class );
-		
-		if (vial != null && !vial.isFull()){
-			
-			vial.collectDew( this );
-			
+
+		if (vial != null && !vial.isFull()) {
+
+			if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) {
+				vial.collectDew(this);
+			}
+			else if (Random.Int(4) < 2) vial.collectDew(this);
+
 		} else {
 
 			if (!consumeDew(1, hero)){
@@ -68,23 +74,26 @@ public class Dewdrop extends Item {
 
 	public boolean doPickUp_auto( Hero hero ) {
 
-		DewVial vial = hero.belongings.getItem( DewVial.class );
+			DewVial vial = hero.belongings.getItem(DewVial.class);
 
-		if (vial != null && !vial.isFull()){
+			if (vial != null && !vial.isFull()) {
 
-			vial.collectDew( this );
+				if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) {
+					vial.collectDew(this);
+				}
+				else if (Random.Int(4) < 2) vial.collectDew(this);
 
-		} else {
+			} else {
 
-			if (!consumeDew(1, hero)){
-				return false;
+				if (!consumeDew(1, hero)) {
+					return false;
+				}
+
 			}
 
-		}
+			Sample.INSTANCE.play(Assets.Sounds.DEWDROP);
 
-		Sample.INSTANCE.play( Assets.Sounds.DEWDROP );
-
-		return true;
+			return true;
 	}
 
 	public static boolean consumeDew(int quantity, Hero hero){
