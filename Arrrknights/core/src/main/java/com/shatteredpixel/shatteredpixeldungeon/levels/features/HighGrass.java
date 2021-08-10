@@ -27,12 +27,14 @@ import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Camouflage;
@@ -102,10 +104,20 @@ public class HighGrass {
 				if (Random.Int(25 - (naturalismLevel * 5)) == 0) {
 					level.drop(Generator.random(Generator.Category.SEED), pos).sprite.drop();
 				}
-				
+
 				// Dew, scales from 1/6 to 1/3
-				if (Random.Int(24 - naturalismLevel*3) <= 3) {
-					level.drop(new Dewdrop(), pos).sprite.drop();
+				if (Random.Int(24 - naturalismLevel * 3) <= 3) {
+					if (Dungeon.hero.belongings.getItem(DewVial.class) != null) {
+						DewVial dd = Dungeon.hero.belongings.getItem(DewVial.class);
+						if (!dd.isFull()) {
+							if (new Dewdrop().doPickUp(Dungeon.hero)) {
+								Hunger hunger = Buff.affect(Dungeon.hero, Hunger.class);
+								if (!hunger.isStarving()) {
+									hunger.affectHunger(-1);
+								}
+							} else level.drop(new Dewdrop(), pos).sprite.drop();
+						} else level.drop(new Dewdrop(), pos).sprite.drop();
+					}
 				}
 			}
 			

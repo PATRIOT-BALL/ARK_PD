@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
@@ -32,7 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndChooseWay;
+import com.shatteredpixel.shatteredpixeldungeon.windows.WndChooseSubclass;
 import com.watabou.noosa.audio.Sample;
 
 import java.util.ArrayList;
@@ -65,32 +66,8 @@ public class TomeOfMastery extends Item {
 		if (action.equals( AC_READ )) {
 			
 			curUser = hero;
-			
-			HeroSubClass way1 = null;
-			HeroSubClass way2 = null;
-			switch (hero.heroClass) {
-			case WARRIOR:
-				way1 = HeroSubClass.GLADIATOR;
-				way2 = HeroSubClass.BERSERKER;
-				break;
-			case MAGE:
-				way1 = HeroSubClass.BATTLEMAGE;
-				way2 = HeroSubClass.WARLOCK;
-				break;
-			case ROGUE:
-				way1 = HeroSubClass.FREERUNNER;
-				way2 = HeroSubClass.ASSASSIN;
-				break;
-			case HUNTRESS:
-				way1 = HeroSubClass.SNIPER;
-				way2 = HeroSubClass.WARDEN;
-				break;
-			case ROSECAT:
-				way1 = HeroSubClass.DESTROYER;
-				way2 = HeroSubClass.GUARDIAN;
-					break;
-			}
-			GameScene.show( new WndChooseWay( this, way1, way2 ) );
+
+			GameScene.show( new WndChooseSubclass( this, Dungeon.hero) );
 			
 		}
 	}
@@ -126,7 +103,6 @@ public class TomeOfMastery extends Item {
 		
 		SpellSprite.show( curUser, SpellSprite.MASTERY );
 		curUser.sprite.emitter().burst( Speck.factory( Speck.MASTERY ), 12 );
-		GLog.w( Messages.get(this, "way", way.ChangeName()) );
 		
 	}
 }

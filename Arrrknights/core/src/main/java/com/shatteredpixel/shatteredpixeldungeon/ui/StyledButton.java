@@ -35,6 +35,7 @@ public class StyledButton extends Button {
 	protected NinePatch bg;
 	protected RenderedTextBlock text;
 	protected Image icon;
+	public boolean leftJustify = false;
 
 	public boolean multiline;
 	

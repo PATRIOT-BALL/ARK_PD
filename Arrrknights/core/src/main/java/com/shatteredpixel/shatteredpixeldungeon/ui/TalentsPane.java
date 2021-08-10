@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.ui;
 
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
@@ -81,32 +82,25 @@ public class TalentsPane extends ScrollPane {
 			content.add(sep);
 		}
 
-		if (tiersAvailable == 4) {
-			sep = new ColorBlock(0, 0, 0xFF000000);
-			content.add(sep);
+		sep = new ColorBlock(0, 1, 0xFF000000);
+		content.add(sep);
 
-			blocker = new ColorBlock(0, 0, 0xFF222222);
-			content.add(blocker);
-		}
-		else {
-			sep = new ColorBlock(0, 1, 0xFF000000);
-			content.add(sep);
+		blocker = new ColorBlock(0, 0, 0xFF222222);
+		content.add(blocker);
 
-			blocker = new ColorBlock(0, 0, 0xFF222222);
-			content.add(blocker);
-		}
-
-			if (tiersAvailable == 1) {
-				blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier2"), 6);
-			} else if (tiersAvailable == 2) {
-				blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier3"), 6);
-			} else if (tiersAvailable == 3) {
-				blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier4"), 6);
-			} else {
-				blockText = PixelScene.renderTextBlock(0);
-			}
+		if (tiersAvailable == 1) {
+			blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier2"), 6);
 			content.add(blockText);
+		} else if (tiersAvailable == 2) {
+			blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier3"), 6);
+			content.add(blockText);
+		} else if (tiersAvailable == 3) {
+			blockText = PixelScene.renderTextBlock(Messages.get(this, "unlock_tier4"), 6);
+			content.add(blockText);
+		} else {
+			blockText = null;
 		}
+	}
 
 	@Override
 	protected void layout() {
@@ -126,15 +120,22 @@ public class TalentsPane extends ScrollPane {
 
 		}
 
-		float bottom = Math.max(height, top + 20);
+		float bottom;
+		if (blockText != null) {
+			bottom = Math.max(height, top + 20);
 
-		blocker.x = 0;
-		blocker.y = top;
-		blocker.size(width, bottom - top);
+			blocker.x = 0;
+			blocker.y = top;
+			blocker.size(width, bottom - top);
 
-		blockText.maxWidth((int)width);
-		blockText.align(RenderedTextBlock.CENTER_ALIGN);
-		blockText.setPos((width - blockText.width())/2f, blocker.y + (bottom - blocker.y - blockText.height())/2);
+			blockText.maxWidth((int) width);
+			blockText.align(RenderedTextBlock.CENTER_ALIGN);
+			blockText.setPos((width - blockText.width()) / 2f, blocker.y + (bottom - blocker.y - blockText.height()) / 2);
+		} else {
+			bottom = Math.max(height, top);
+
+			blocker.visible = false;
+		}
 
 		content.setSize(width, bottom);
 	}
@@ -143,7 +144,7 @@ public class TalentsPane extends ScrollPane {
 
 		private int tier;
 
-		RenderedTextBlock title;
+		public RenderedTextBlock title;
 		ArrayList<TalentButton> buttons;
 
 		ArrayList<Image> stars = new ArrayList<>();

@@ -322,6 +322,10 @@ public enum HeroClass {
 		return Messages.get(HeroClass.class, title);
 	}
 
+	public String desc(){
+		return Messages.get(HeroClass.class, name()+"_desc");
+	}
+
 	public HeroSubClass[] subClasses() {
 		return subClasses;
 	}

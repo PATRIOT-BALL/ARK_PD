@@ -50,23 +50,22 @@ import com.watabou.noosa.ui.Component;
 import com.watabou.utils.DeviceCompat;
 
 public class WndStartGame extends Window {
-	
 	private static final int WIDTH    = 120;
 	private static final int HEIGHT   = 140;
 
 	public WndStartGame(final int slot){
-		
+
 		Badges.loadGlobal();
 		Journal.loadGlobal();
-		
+
 		RenderedTextBlock title = PixelScene.renderTextBlock(Messages.get(this, "title"), 12 );
 		title.hardlight(Window.TITLE_COLOR);
 		title.setPos( (WIDTH - title.width())/2f, 3);
 		PixelScene.align(title);
 		add(title);
-		
+
 		float heroBtnSpacing = (WIDTH - 4*HeroBtn.WIDTH)/5f;
-		
+
 		float curX = heroBtnSpacing;
 		for (HeroClass cl : HeroClass.values()){
 			HeroBtn button = new HeroBtn(cl);
@@ -74,29 +73,29 @@ public class WndStartGame extends Window {
 			curX += HeroBtn.WIDTH + heroBtnSpacing;
 			add(button);
 		}
-		
+
 		ColorBlock separator = new ColorBlock(1, 1, 0xFF222222);
 		separator.size(WIDTH, 1);
 		separator.x = 0;
 		separator.y = title.bottom() + 6 + HeroBtn.HEIGHT;
 		add(separator);
-		
+
 		HeroPane ava = new HeroPane();
 		ava.setRect(20, separator.y + 2, WIDTH-30, 80);
 		add(ava);
-		
+
 		RedButton start = new RedButton(Messages.get(this, "start")){
 			@Override
 			protected void onClick() {
 				if (GamesInProgress.selectedClass == null) return;
-				
+
 				super.onClick();
-				
+
 				GamesInProgress.curSlot = slot;
 				Dungeon.hero = null;
 				ActionIndicator.action = null;
 				InterlevelScene.mode = InterlevelScene.Mode.DESCEND;
-				
+
 				if (SPDSettings.intro()) {
 					SPDSettings.intro( false );
 					Game.switchScene( IntroScene.class );
@@ -104,7 +103,7 @@ public class WndStartGame extends Window {
 					Game.switchScene( InterlevelScene.class );
 				}
 			}
-			
+
 			@Override
 			public void update() {
 				if( !visible && GamesInProgress.selectedClass != null){
@@ -116,7 +115,7 @@ public class WndStartGame extends Window {
 		start.visible = false;
 		start.setRect(0, HEIGHT - 20, WIDTH, 20);
 		add(start);
-		
+
 		if (DeviceCompat.isDebug() || Badges.isUnlocked(Badges.Badge.VICTORY)){
 			IconButton challengeButton = new IconButton(
 					Icons.get( SPDSettings.challenges() > 0 ? Icons.CHALLENGE_ON :Icons.CHALLENGE_OFF)){
@@ -132,7 +131,7 @@ public class WndStartGame extends Window {
 						}
 					} );
 				}
-				
+
 				@Override
 				public void update() {
 					if( !visible && GamesInProgress.selectedClass != null){
@@ -144,34 +143,34 @@ public class WndStartGame extends Window {
 			challengeButton.setRect(WIDTH - 20, HEIGHT - 20, 20, 20);
 			challengeButton.visible = false;
 			add(challengeButton);
-			
+
 		} else {
 			Dungeon.challenges = 0;
 			SPDSettings.challenges(0);
 		}
-		
+
 		resize(WIDTH, HEIGHT);
-		
+
 	}
-	
+
 	private static class HeroBtn extends Button {
-		
+
 		private HeroClass cl;
-		
+
 		private Image hero;
-		
+
 		private static final int WIDTH = 24;
 		private static final int HEIGHT = 16;
-		
+
 		HeroBtn ( HeroClass cl ){
 			super();
-			
+
 			this.cl = cl;
 
 			add(hero = new Image(cl.spritesheet(), 0, 90, 12, 15));
-			
+
 		}
-		
+
 		@Override
 		protected void layout() {
 			super.layout();
@@ -181,7 +180,7 @@ public class WndStartGame extends Window {
 				PixelScene.align(hero);
 			}
 		}
-		
+
 		@Override
 		public void update() {
 			super.update();
@@ -195,11 +194,11 @@ public class WndStartGame extends Window {
 				hero.brightness(1f);
 			}
 		}
-		
+
 		@Override
 		protected void onClick() {
 			super.onClick();
-			
+
 			if( !cl.isUnlocked() ){
 				TomorrowRogueNight.scene().addToFront( new WndMessage(cl.unlockMsg()));
 			} else {
@@ -207,30 +206,30 @@ public class WndStartGame extends Window {
 			}
 		}
 	}
-	
+
 	private class HeroPane extends Component {
-		
+
 		private HeroClass cl;
-		
+
 		private Image avatar;
-		
+
 		private IconButton heroItem;
 		private IconButton heroLoadout;
 		private IconButton heroMisc;
 		private IconButton heroSubclass;
-		
+
 		private RenderedTextBlock name;
-		
+
 		private static final int BTN_SIZE = 20;
-		
+
 		@Override
 		protected void createChildren() {
 			super.createChildren();
-			
+
 			avatar = new Image(Assets.Sprites.AVATARS);
 			avatar.scale.set(2f);
 			add(avatar);
-			
+
 			heroItem = new IconButton(){
 				@Override
 				protected void onClick() {
@@ -240,7 +239,7 @@ public class WndStartGame extends Window {
 			};
 			heroItem.setSize(BTN_SIZE, BTN_SIZE);
 			add(heroItem);
-			
+
 			heroLoadout = new IconButton(){
 				@Override
 				protected void onClick() {
@@ -250,7 +249,7 @@ public class WndStartGame extends Window {
 			};
 			heroLoadout.setSize(BTN_SIZE, BTN_SIZE);
 			add(heroLoadout);
-			
+
 			heroMisc = new IconButton(){
 				@Override
 				protected void onClick() {
@@ -260,47 +259,47 @@ public class WndStartGame extends Window {
 			};
 			heroMisc.setSize(BTN_SIZE, BTN_SIZE);
 			add(heroMisc);
-			
+
 			heroSubclass = new IconButton(new ItemSprite(ItemSpriteSheet.MASTERY, null)){
 				@Override
 				protected void onClick() {
 					if (cl == null) return;
 					String msg = Messages.get(cl, cl.name() + "_desc_subclasses");
 					for (HeroSubClass sub : cl.subClasses()){
-						msg += "\n\n" + sub.desc();
+						msg += "\n\n" + sub.shortDesc();
 					}
 					TomorrowRogueNight.scene().addToFront(new WndMessage(msg));
 				}
 			};
 			heroSubclass.setSize(BTN_SIZE, BTN_SIZE);
 			add(heroSubclass);
-			
+
 			name = PixelScene.renderTextBlock(12);
 			add(name);
-			
+
 			visible = false;
 		}
-		
+
 		@Override
 		protected void layout() {
 			super.layout();
-			
+
 			avatar.x = x;
 			avatar.y = y + (height - avatar.height() - name.height() - 4)/2f;
 			PixelScene.align(avatar);
-			
+
 			name.setPos(
 					x + (avatar.width() - name.width())/2f,
 					avatar.y + avatar.height() + 3
 			);
 			PixelScene.align(name);
-			
+
 			heroItem.setPos(x + width - BTN_SIZE, y);
 			heroLoadout.setPos(x + width - BTN_SIZE, heroItem.bottom());
 			heroMisc.setPos(x + width - BTN_SIZE, heroLoadout.bottom());
 			heroSubclass.setPos(x + width - BTN_SIZE, heroMisc.bottom());
 		}
-		
+
 		@Override
 		public synchronized void update() {
 			super.update();
@@ -308,9 +307,9 @@ public class WndStartGame extends Window {
 				cl = GamesInProgress.selectedClass;
 				if (cl != null) {
 					avatar.frame(cl.ordinal() * 24, 0, 24, 32);
-					
+
 					name.text(Messages.capitalize(cl.title()));
-					
+
 					switch(cl){
 						case WARRIOR:
 							heroItem.icon(new ItemSprite(ItemSpriteSheet.SEAL, null));
@@ -338,9 +337,9 @@ public class WndStartGame extends Window {
 							heroMisc.icon(new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16 ));
 							break;
 					}
-					
+
 					layout();
-					
+
 					visible = true;
 				} else {
 					visible = false;
@@ -348,5 +347,4 @@ public class WndStartGame extends Window {
 			}
 		}
 	}
-
 }

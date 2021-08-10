@@ -548,7 +548,7 @@ actors.hero.talent.point_blank.desc=_+1:_ 그레이스롯의 쇠뇌에 적중당
 actors.hero.talent.improved_crossbow.title=개량 쇠뇌
 actors.hero.talent.improved_crossbow.desc=_+1:_ 그레이스롯의 쇠뇌의 공격력이 _2_ 상승합니다.\n\n_+2:_ 그레이스롯의 쇠뇌의 공격력이 _4_ 상승합니다.\n\n_+3:_ 그레이스롯의 쇠뇌의 공격력이 _6_ 상승합니다.
 actors.hero.talent.sniping.title=저격
-actors.hero.talent.sniping.desc=_+1:_ 특수 쇠뇌 공격의 피해량이 _25%_ 상승합니다.\n\n_+2:_ 특수 쇠뇌 공격의 피해량이 _50%_ 상승합니다.\n\n_+3:_ 특수 쇠뇌 공격의 피해량이 _75%_ 상승합니다.
+actors.hero.talent.sniping.desc=_+1:_ 특수 쇠뇌 공격의 피해량이 _20%_ 상승합니다.\n\n_+2:_ 특수 쇠뇌 공격의 피해량이 _40%_ 상승합니다.\n\n_+3:_ 특수 쇠뇌 공격의 피해량이 _60%_ 상승합니다.
 actors.hero.talent.savior_belief.title=구제자의 신념
 actors.hero.talent.savior_belief.desc=_+1:_ 그레이스롯의 물리 공격이 속박 혹은 마비된 적에게 _20%_의 추가 피해를 입힙니다.\n\n_+2:_ 그레이스롯의 물리 공격이 속박 혹은 마비된 적에게 _40%_의 추가 피해를 입힙니다.\n\n_+3:_ 그레이스롯의 물리 공격이 속박 혹은 마비된 적에게 _60%_의 추가 피해를 입힙니다.\n\n이 특성을 찍었다면, 그레이스롯은 자신 주위에 있는 길게 자란 풀의 갯수에 비례하여 최대 25%의 피해 보너스를 얻습니다.
 
@@ -629,63 +629,53 @@ actors.hero.hero.dm7=강화의 일기장은 매우 중요하니, 초심자라면
 actors.hero.hero.dm8=체력이 부족할 때 주위에 적이 없다면 태양초 씨앗이나 자장가의 일기장을 활용해보세요!
 
 actors.hero.heroclass.warrior=블레이즈
-actors.hero.heroclass.warrior_desc_innate=블레이즈는 방어구에 붙일 수 있는 _특별한 깃털 부적_ 을 가지고 시작합니다.블레이즈는 깃털 부적이 붙은 방어구를 입고 있을 때 천천히 재생하는 방어막을 얻습니다.\n\n블레이즈의 깃털 부적은 다른 방어구들에 옮겨 붙일 수 있으며, 1만큼의 강화 수치를 이전할 수 있습니다.\n\n블레이즈는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 치유의 물약\n- 분노의 주문서
-actors.hero.heroclass.warrior_desc_loadout=블레이즈는 _전기톱_ 을 가지고 시작합니다. 전기톱은 다른 시작 무기들보다 조금 더 강력합니다.\n\n블레이즈는 3개의 _투척용 돌_ 을 가지고 시작합니다. 투척용 돌은 약한 원거리 피해를 줍니다.\n\n블레이즈는 _물약 보관대_와 _벨벳 주머니_ 를 가지고 시작하여 물약이 얼어버리는 것을 방지하고 씨앗과 룬 석을 담아둘 수 있습니다.
-actors.hero.heroclass.warrior_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 블레이즈의 두 가지 전문화는 다음과 같습니다.
+actors.hero.heroclass.warrior_desc=블레이즈는 초기 무기가 다른 대원보다 강력합니다.\n\n블레이즈는 _특별한 깃털 부적_을 다른 방어구들에 옮겨 붙일 수 있으며, 1만큼의 강화 수치를 이전할 수 있습니다.\n\n블레이즈는 다음 아이템들을 감정한 채로 시작합니다.\n- 감정의 주문서\n- 치유의 물약\n- 분노의 주문서
 
 actors.hero.heroclass.mage=아미야
 actors.hero.heroclass.mage_unlock=아미야는 아츠 스태프의 전문가이며, _특별한 흑요석 반지_ 를 가지고 시작합니다.\n\n아미야를 해금하려면 _아이템을 강화하기 위해 강화의 일기장을 사용하십시오._
-actors.hero.heroclass.mage_desc_innate=아미야는 마탄을 발사하는 _특별한 흑요석 반지_ 를 가지고 시작합니다. 이 흑요석 반지는 아츠 스태프보다 훨씬 더 빠르게 충전되며, 최대 충전량이 1 높습니다.\n\n아미야의 흑요석 반지에 던전에서 발견한 다른 아츠 스태프를 융합할 수 있습니다. 융합한 아츠 스태프의 효과를 사용할 수 있으며, 아츠 스태프의 강화 수치를 일부 이전할 수 있습니다.\n\n아미야는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 액체 화염의 물약\n- 강화의 주문서
-actors.hero.heroclass.mage_desc_loadout=아미야는 그녀의 흑요석 반지를 근접 무기로 사용합니다. 흑요석 반지는 다른 시작 무기에 비해 적은 피해를 입힙니다.\n\n아미야는 그녀의 흑요석 반지에 깃든 아츠을 발사해 원거리의 적을 공격할 수 있습니다.\n\n아미야는 _주문서 보관함_과 _물약 보관대_ 를 가지고 시작하여 일기장이 불에 타는 것을 방지하며, 물약이 얼어버리는 것을 방지할 수 있습니다.
-actors.hero.heroclass.mage_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 아미야의 두 가지 전문화는 다음과 같습니다.
+actors.hero.heroclass.mage_desc=아미야는 마탄을 발사하는 _특별한 흑요석 반지_ 를 가지고 시작합니다. 이 흑요석 반지는 아츠 스태프보다 훨씬 더 빠르게 충전되며, 최대 충전량이 1 높습니다.\n\n아미야의 흑요석 반지에 던전에서 발견한 다른 아츠 스태프를 융합할 수 있습니다. 융합한 아츠 스태프의 효과를 사용할 수 있으며, 아츠 스태프의 강화 수치를 일부 이전할 수 있습니다.\n\n아미야는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 액체 화염의 물약\n- 강화의 주문서
 
 actors.hero.heroclass.rogue=레드
 actors.hero.heroclass.rogue_unlock=레드는 그녀의 _특별한 그림자의 망토_ 를 통한 투명화로 전투의 흐름을 조절하고 강력한 한 방을 먹일 수 있습니다.\n\n레드을 해금하려면 _한 판에서 10번의 기습 공격을 시행하십시오._
-actors.hero.heroclass.rogue_desc_innate=레드는 언제든지 투명화가 가능한 특별한 아츠 유물인 _그림자의 망토_ 를 가지고 시작합니다. 망토는 다른 유물처럼 직접 강화가 불가능한 대신, 사용할수록 강력해집니다.\n\n레드는 더 먼 거리에 있는 숨겨진 비밀과 함정들을 감지할 수 있습니다.\n\n레드는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 투명화의 물약\n- 아츠 지도의 주문서
-actors.hero.heroclass.rogue_desc_loadout=레드는 _단검_ 을 가지고 시작합니다. 단검은 적에게 기습 공격을 할때 추가 피해를 줍니다.\n\n레드는 3개의 _투척용 칼_ 을 가지고 시작합니다. 먼 거리에 있는 적을 기습 공격할 때 추가 피해를 줍니다.\n\n레드는 _벨벳 주머니_와 _주문서 보관함_ 를 가지고 시작하며, 씨앗과 룬석을 담아두고 일기장이 불에 타는 것을 방지할 수 있습니다.
-actors.hero.heroclass.rogue_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 레드의 두 가지 전문화는 다음과 같습니다.
+actors.hero.heroclass.rogue_desc=레드는 언제든지 투명화가 가능한 특별한 아츠 유물인 _그림자의 망토_ 를 가지고 시작합니다. 망토는 다른 유물처럼 직접 강화가 불가능한 대신, 사용할수록 강력해집니다.\n\n레드는 더 먼 거리에 있는 숨겨진 비밀과 함정들을 감지할 수 있습니다.\n\n레드는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 투명화의 물약\n- 아츠 지도의 주문서
 
 actors.hero.heroclass.huntress=그레이스롯
 actors.hero.heroclass.huntress_unlock=그레이스롯은 투척 무기의 숙련자로, 무한한 화살을 가진 _특별한 쇠뇌_ 를 가지고 시작합니다.\n\n그레이스롯을 해금하려면 _한 판에서 투척 무기로 적 15마리를 맞추십시오._
-actors.hero.heroclass.huntress_desc_innate=그레이스롯은 화살을 무한히 발사할 수 있는 _특별한 쇠뇌_ 를 가지고 시작합니다. 활은 그레이스롯의 레벨에 따라 강해지며, 증강하거나 아츠을 부여할 수 있습니다.\n\n그레이스롯은 길게 자란 풀을 짓밟지 않고 지나갈 수 있습니다.\n\n그레이스롯은 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 심안의 물약\n- 자장가의 주문서
-actors.hero.heroclass.huntress_desc_loadout=그레이스롯은 다른 시작 무기보다 빠르게 공격할 수 있는 한 쌍의 _슈팅 글러브_ 를 가지고 시작합니다.\n\n그레이스롯은 원거리 공격 수단으로 쇠뇌를 가지고 시작합니다.\n\n그레이스롯은 _벨벳 주머니_ 와 _마법 보관집_을 가지고 시작하며, 씨앗과 룬석을 담아두고 투척 무기, 완드를 보관할 수 있습니다.
-actors.hero.heroclass.huntress_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 그레이스롯의 두 가지 전문화는 다음과 같습니다.
+actors.hero.heroclass.huntress_desc=그레이스롯은 화살을 무한히 발사할 수 있는 _특별한 쇠뇌_ 를 가지고 시작합니다. 쇠뇌는 그레이스롯의 레벨에 따라 강해지며, 증강하거나 아츠을 부여할 수 있습니다.\n\n그레이스롯은 길게 자란 풀을 짓밟지 않고 지나갈 수 있습니다.\n\n그레이스롯은 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 심안의 물약\n- 자장가의 주문서
 
 actors.hero.heroclass.rosecat=로즈몬티스
 actors.hero.heroclass.rosecat_unlock=로즈몬티스는 강력한 아츠 사용자로, _특별한 아츠 장치_를 가지고 시작합니다.\n\n로즈몬티스를 해금하려면 _음식을 25개 먹으십시오._
-actors.hero.heroclass.rosecat_desc_innate=로즈몬티스는 강력한 아츠 사용자로, _특별한 섬멸전 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다.\n\n섬멸전 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 부유의 물약
-actors.hero.heroclass.rosecat_desc_loadout=로즈몬티스는 사거리가 길지만 명중률과 공격속도에 패널티를 받는 _EX-43_을 가지고 시작합니다.\n\n로즈몬티스는 그녀의 아츠 장치를 사용해 원거리 공격을 할 수 있습니다..\n\n로즈몬티스는 _벨벳 주머니_ 와 _마법 보관집_을 가지고 시작하며, 씨앗과 룬석을 담아두고 투척 무기, 완드를 보관할 수 있습니다.
-actors.hero.heroclass.rosecat_desc_subclasses=두 번째 보스를 쓰러트리면 전문화를 선택할 수 있습니다. 로즈몬티스의 두 가지 전문화는 다음과 같습니다.
+actors.hero.heroclass.rosecat_desc=로즈몬티스는 _강력한 아츠 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다. 이 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 부유의 물약
 
 actors.hero.herosubclass.gladiator=연계 블레이즈
-actors.hero.herosubclass.gladiator_changename=연계 전문화
+actors.hero.herosubclass.gladiator_short_desc=_연계_ 콤보를 이용해 강력한 필살기를 사용합니다. 공격속도와 명중률이 중요합니다.
 actors.hero.herosubclass.gladiator_desc=_연계 전문화_ 는 근접 공격을 성공시킬 때 마다 연속 타격 중첩을 얻습니다. 연속 타격 중첩을 쌓아 고유한 필살기를 사용할 수 있습니다.
 actors.hero.herosubclass.berserker=분노 블레이즈
-actors.hero.herosubclass.berserker_changename=분노 전문화
+actors.hero.herosubclass.berserker_short_desc=_분노_ 받은 피해를 분노로 전환해 전투 능력을 상승시킵니다. 방어력이 중요합니다.
 actors.hero.herosubclass.berserker_desc=_분노 전문화_ 는 받은 피해에 비례해 분노를 쌓아 추가 피해를 입히고 이동속도를 끌어올립니다. \n최대로 분노한 블레이즈는 짧은 시간 동안 죽음을 유예할 수 있으며, 그 후 탈진 상태에 빠집니다. 또한, 투척 무기가 아닌 것을 적에게 던지면 적을 광란시키고 분노를 회복할 수 있습니다.
 actors.hero.herosubclass.warlock=지배 아미야
-actors.hero.herosubclass.warlock_changename=지배 전문화
+actors.hero.herosubclass.warlock_short_desc=_지배_ 영혼 표식을 이용해 전투에서 어드벤티지를 얻습니다.
 actors.hero.herosubclass.warlock_desc=_지배 전문화_ 는 적에게 아츠 스태프를 사용함으로써 영혼의 낙인을 걸 확률이 있습니다. 낙인이 걸린 적들은 물리 피해를 입을 때마다 아미야의 체력을 회복시키고 허기를 충족시킵니다.
 actors.hero.herosubclass.battlemage=검술 아미야
-actors.hero.herosubclass.battlemage_changename=검술 전문화
+actors.hero.herosubclass.battlemage_short_desc=_검술_ 흑요석 반지의 힘을 끌어올립니다. 흑요석 반지의 강화가 중요합니다.
 actors.hero.herosubclass.battlemage_desc=_검술 전문화_ 는 자신의 흑요석 반지로 물리 공격을 할 때, 흑요석 반지가 흡수한 특성에 따른 추가 효과를 줄 수 있습니다. 또한 피해를 입힐 때 마다 추가 충전량을 얻을 수 있습니다.
 actors.hero.herosubclass.assassin=암살 레드
-actors.hero.herosubclass.assassin_changename=암살 전문화
+actors.hero.herosubclass.assassin_short_desc=_암살_ 은신한 후 적을 강력하게 공격합니다. 강력한 일격 무기도 좋지만, 전체적으로 무난합니다.
 actors.hero.herosubclass.assassin_desc=_암살 전문화_ 는 투명화 상태가 되면 다음 공격을 신중하게 준비합니다. 투명화 한 시간이 길어질수록 더욱 강력한 공격을 할 수 있습니다.
 actors.hero.herosubclass.freerunner=신속 레드
-actors.hero.herosubclass.freerunner_changename=신속 전문화
+actors.hero.herosubclass.freerunner_short_desc=_신속_ 이동속도를 이용한 전투를 합니다. 이동속도를 살릴 사거리 긴 무기나 투척 무기 등이 유용합니다.
 actors.hero.herosubclass.freerunner_desc=_신속 전문화_ 는 이동할 때 마다 가속력을 쌓습니다. 가속력으로 프리러닝 상태에 돌입해 짧은 시간 동안 2배의 이동 속도와 추가 회피를 얻을 수 있습니다.
 actors.hero.herosubclass.sniper=사격 그레이스롯
-actors.hero.herosubclass.sniper_changename=사격 전문화
+actors.hero.herosubclass.sniper_short_desc=_사격_ 원거리 전투를 전문으로 합니다. 저격의 반지나 강화된 투척 무기가 중요합니다.
 actors.hero.herosubclass.sniper_desc=_사격 전문화_ 는 자신의 기술을 극단적으로 강화합니다. 원거리 공격이 방어구를 꿰뚫으며, 투척 무기로 공격한 후 활로 특별한 공격을 할 수 있습니다. 또한, 투척 무기의 원거리 명중률이 상승합니다.
 actors.hero.herosubclass.warden=자연 그레이스롯
-actors.hero.herosubclass.warden_changename=자연 전문화
+actors.hero.herosubclass.warden_short_desc=_자연_ 풀과 씨앗으로 자신을 강화합니다. 씨앗 확보가 중요합니다.
 actors.hero.herosubclass.warden_desc=_자연 전문화_ 는 자연과의 강한 결속을 통해 긴 수풀 너머를 볼 수 있고, 헤쳐나간 풀을 그녀가 키우는 식물 근처에 자라나게 할 수 있습니다. 그녀가 밟은 식물들은 추가 효과를 줄 것입니다.
 actors.hero.herosubclass.destroyer=파괴 로즈몬티스
-actors.hero.herosubclass.destroyer_changename=파괴 전문화
+actors.hero.herosubclass.destroyer_short_desc=_파괴_ 방벽을 통한 강력한 공격을 합니다. 장비의 충전을 회복할 수단이 중요합니다.
 actors.hero.herosubclass.destroyer_desc=_파괴 전문화_ 는 방벽의 공격력을 끌어올려 한 번에 쏟아내는데 특화되어있습니다. 방벽 투척 후 _집중_ 상태가 되며, 이 상태일 때 사용하는 방벽 투척은 50%의 추가 피해를 줍니다. 또한 고기를 섭취하면 조리 상태에 따라 다른 효과를 얻습니다.
 actors.hero.herosubclass.guardian=수호 로즈몬티스
-actors.hero.herosubclass.guardian_changename=수호 전문화
+actors.hero.herosubclass.guardian_short_desc=_수호_ 방벽을 유지하며 자신의 전투력을 상승시킵니다. 방벽의 충전량 유지가 중요합니다.
 actors.hero.herosubclass.guardian_desc=_수호 전문화_ 는 자신의 방벽을 방어적으로 사용합니다. 피격시 섬멸전 장비의 충전량을 소모해 피해를 감소시킬 수 있습니다. 또한 적의 공격을 받으면 낮은 확률로 섬멸전 장비를 충전합니다.
 
 

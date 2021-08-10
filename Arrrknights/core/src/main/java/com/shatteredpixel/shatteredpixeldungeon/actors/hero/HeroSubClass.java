@@ -21,80 +21,103 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.hero;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.watabou.noosa.Game;
+import com.watabou.noosa.Image;
 import com.watabou.utils.Bundle;
 
 public enum HeroSubClass {
 
-	NONE( null ),
-	
-	GLADIATOR( "gladiator" ),
-	BERSERKER( "berserker" ),
-	
-	WARLOCK( "warlock" ),
-	BATTLEMAGE( "battlemage" ),
-	
-	ASSASSIN( "assassin" ),
-	FREERUNNER( "freerunner" ),
-	
-	SNIPER( "sniper" ),
-	WARDEN( "warden" ),
+	NONE,
 
-	DESTROYER("destroyer"),
-	GUARDIAN("guardian");
-	
-	private String title;
+	GLADIATOR,
+	BERSERKER,
 
-	public String ChangeName() {
-		if (this.title == "gladiator") {
-			return Messages.get(this, "gladiator_changename");
-		}
-		else if (this.title == "berserker") {
-			return Messages.get(this, "berserker_changename");
-		}
-		else if (this.title == "warlock") {
-			return Messages.get(this, "warlock_changename");}
-		else if (this.title == "battlemage") {
-			return Messages.get(this, "battlemage_changename");}
-		else if (this.title == "assassin") {
-			return Messages.get(this, "assassin_changename");}
-		else if (this.title == "freerunner") {
-			return Messages.get(this, "freerunner_changename");}
-		else if (this.title == "sniper") {
-			return Messages.get(this, "sniper_changename");}
-		else if (this.title == "warden") {
-			return Messages.get(this, "warden_changename");}
-		else if (this.title == "destroyer") {
-			return Messages.get(this, "destroyer_changename");}
-		else if (this.title == "guardian") {
-			return Messages.get(this, "guardian_changename");}
-		else
-			return title;
+	WARLOCK,
+	BATTLEMAGE,
 
+	ASSASSIN,
+	FREERUNNER,
 
-	}
-	
-	HeroSubClass( String title ) {
-		this.title = title;
-	}
-	
+	SNIPER,
+	WARDEN,
+
+	DESTROYER,
+	GUARDIAN;
+
 	public String title() {
-		return Messages.get(this, title);
+		return Messages.get(this, name());
 	}
-	
+
+	public String shortDesc() {
+		return Messages.get(this, name()+"_short_desc");
+	}
+
 	public String desc() {
-		return Messages.get(this, title+"_desc");
+		//Include the staff effect description in the battlemage's desc if possible
+		if (this == BATTLEMAGE){
+			String desc = Messages.get(this, name() + "_desc");
+			if (Game.scene() instanceof GameScene){
+				MagesStaff staff = Dungeon.hero.belongings.getItem(MagesStaff.class);
+				if (staff != null && staff.wandClass() != null){
+					desc += "\n\n" + Messages.get(staff.wandClass(), "bmage_desc");
+					desc = desc.replaceAll("_", "");
+				}
+			}
+			return desc;
+		} else {
+			return Messages.get(this, name() + "_desc");
+		}
 	}
-	
+
 	private static final String SUBCLASS	= "subClass";
-	
+
 	public void storeInBundle( Bundle bundle ) {
 		bundle.put( SUBCLASS, toString() );
 	}
-	
+
 	public static HeroSubClass restoreInBundle( Bundle bundle ) {
 		String value = bundle.getString( SUBCLASS );
 		return valueOf( value );
+	}
+
+	public Image icon(){
+		switch (this){
+			case GLADIATOR: default:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 16, 16, 16, 16);
+			case BERSERKER:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 32, 16, 16, 16);
+
+			case WARLOCK:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 64, 32, 16, 16);
+			case BATTLEMAGE:
+				Image im = new Image(Assets.Interfaces.BUFFS_LARGE, 208, 32, 16, 16);
+				im.hardlight(1f, 1f, 0f);
+				return im;
+
+			case ASSASSIN:
+				im = new Image(Assets.Interfaces.BUFFS_LARGE, 160, 32, 16, 16);
+				im.hardlight(1f, 0f, 0f);
+				return im;
+			case FREERUNNER:
+				im = new Image(Assets.Interfaces.BUFFS_LARGE, 48, 48, 16, 16);
+				im.hardlight(1f, 1f, 0f);
+				return im;
+
+			case SNIPER:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 16, 48, 16, 16);
+			case WARDEN:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 208, 0, 16, 16);
+
+			case DESTROYER:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 0, 16, 16, 16);
+			case GUARDIAN:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 224, 32, 16, 16);
+		}
 	}
 	
 }

@@ -65,6 +65,12 @@ windows.wndjournal$guidetab$guideitem.missing=No such page
 windows.wndjournal$notestab.keys=Keys
 windows.wndjournal$notestab.landmarks=Special terrain
 
+windows.wndchoosesubclass.message=As the chip fits over your face, your eyesight fades and visions of new power flood into your mind. How will you direct the subclass?
+windows.wndchoosesubclass.cancel=I'll decide later
+windows.wndchoosesubclass.are_you_sure=Are you sure you want to choose this subclass?
+windows.wndchoosesubclass.yes=Yes, I've made my choice.
+windows.wndchoosesubclass.no=No, I'll decide later.
+
 windows.wndkeybindings.ttl_action=Action
 windows.wndkeybindings.ttl_key1=Key 1
 windows.wndkeybindings.ttl_key2=Key 2
@@ -146,7 +152,7 @@ windows.wndsettings$displaytab.scale=Display Scale
 windows.wndsettings$displaytab.saver=Power Saver
 windows.wndsettings$displaytab.saver_desc=Power Saver mode draws the game at a reduced size and scales it up to fit your screen.\n\nThis will make graphics less crisp and enlarge the UI slightly, but will also improve performance and battery life.\n\nYou may need to restart the game for changes to take effect.
 windows.wndsettings$displaytab.okay=Okay
-windows.wndsettings$displaytab.cancel=Cancer
+windows.wndsettings$displaytab.cancel=Cancel
 windows.wndsettings$displaytab.portrait=Switch to portrait
 windows.wndsettings$displaytab.landscape=Switch to landscape
 windows.wndsettings$displaytab.brightness=Brightness
