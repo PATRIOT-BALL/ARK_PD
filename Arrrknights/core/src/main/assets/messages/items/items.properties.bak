@@ -1815,7 +1815,7 @@ items.wands.wandofwarding$ward.desc_4=이 작은 미보는 상급 미보과 동�
 items.wands.wandofwarding$ward.name_5=전투용 미보
 items.wands.wandofwarding$ward.desc_5=이 강화된 미보는 하급 미보보다 크기가 더 크고 내구력이 높습니다. 이 미보로부터 나가는 각 공격은 _%1$d-%2$d_ 의 피해를 줍니다.\n\n이 미보를 대상으로 소환의 아츠 스태프를 사용하면 미보를 강화하고 동시에 체력을 회복시킵니다.\n\n이 미보은 적을 공격할 때마다 약간의 체력을 소비하지만, 미보에 소환의 아츠 스태프를 사용하는 것으로 체력을 회복시킬 수 있습니다.\n\n당신의 소환의 아츠 스태프가 이 미보를 유지하기 위해 _%3$d 만큼의 미보 에너지_ 를 사용하고 있습니다.
 items.wands.wandofwarding$ward.name_6=미보?
-items.wands.wandofwarding$ward.desc_6=이 완전히 강화된 미보는 이전에 비해 훨씬 더 내구성이 좋습니다. 이 미보로부터 나가는 각 공격은 _%1$d-%2$d_ 의 피해를 줍니다.\n\n이 미보를 대상으로 소환의 아츠 스태프를 사용하면 미보의 체력을 회복시킵니다.\n\n이 미보는 적을 공격할 때마다 약간의 체력을 소비하지만, 미보에 소환의 아츠 스태프를 사용하는 것으로 체력을 회복시킬 수 있습니다.\n\n당신의 소환의 아츠 스태프가 이 미보를 유지하기 위해 _%3$d 만큼의 미보 에너지_ 를 사용하고 있습니다.
+items.wands.wandofwarding$ward.desc_6=...이거 미보 맞음? 이 미보로부터 나가는 각 공격은 _%1$d-%2$d_ 의 피해를 줍니다.\n\n이 미보를 대상으로 소환의 아츠 스태프를 사용하면 미보의 체력을 회복시킵니다.\n\n이 미보는 적을 공격할 때마다 약간의 체력을 소비하지만, 미보에 소환의 아츠 스태프를 사용하는 것으로 체력을 회복시킬 수 있습니다.\n\n당신의 소환의 아츠 스태프가 이 미보를 유지하기 위해 _%3$d 만큼의 미보 에너지_ 를 사용하고 있습니다.
 items.wands.wandofwarding$ward.dismiss_title=이 미보를 해체하겠습니까?
 items.wands.wandofwarding$ward.dismiss_body=당신은 미보를 더 이상 유지할 필요가 없다고 생각할 경우 이 미보를 해체할 수 있습니다. 이 행동을 하면 즉시 미보를 파괴합니다.\n\n미보를 해체하시겠습니까?
 items.wands.wandofwarding$ward.dismiss_confirm=예
@@ -2159,7 +2159,7 @@ items.weapon.melee.flag.ac_zap=치유의 날개
 
 items.weapon.melee.scythe.name=라피엘라의 낫
 items.weapon.melee.scythe.stats_desc=기습시 최소 데미지 보정 +25%\n적에게 8번 피해를 줄 때마다 체력 회복
-items.weapon.melee.scythe.desc="박사님의 마스크 안은 어떨까. 살짝 보고싶어......"\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 대상의 체력이 50%이하면 2배의 피해를 입힐 수 있습니다.
+items.weapon.melee.scythe.desc=누구도 판단할 수 없다. 오직 시간만이 답이다.\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 대상의 체력이 50%이하면 2배의 피해를 입힐 수 있습니다.
 
 items.weapon.melee.divineavatar.name=선현의 화신
 items.weapon.melee.divineavatar.stats_desc=실명한 적에게 공격시 축복 획득
