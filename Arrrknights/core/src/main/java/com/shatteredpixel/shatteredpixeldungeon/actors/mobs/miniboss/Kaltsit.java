@@ -35,7 +35,7 @@ public class Kaltsit extends Mob {
     {
         spriteClass = GreenCatSprite.class;
 
-        HP = HT = 900;
+        HP = HT = 1100;
         defenseSkill = 20;
 
         EXP = 0;

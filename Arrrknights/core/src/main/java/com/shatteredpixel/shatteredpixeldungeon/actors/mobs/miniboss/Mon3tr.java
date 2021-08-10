@@ -32,7 +32,7 @@ public class Mon3tr extends Mob {
     {
         spriteClass = Mon3terSprite.class;
 
-        HP = HT = 500;
+        HP = HT = 600;
         defenseSkill = 30;
 
         EXP = 50;
@@ -111,7 +111,7 @@ public class Mon3tr extends Mob {
     @Override
     public int damageRoll() {
         if (spell == 3) return Random.NormalIntRange( 50, 75 );
-        return Random.NormalIntRange( 30, 40 );
+        return Random.NormalIntRange( 35, 45 );
     }
 
     @Override
@@ -123,6 +123,15 @@ public class Mon3tr extends Mob {
     public int drRoll() {
         if (spell == 1) return Random.NormalIntRange( 16, 32 );
         return Random.NormalIntRange(0, 20);
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        if (spell == 1) dmg /= 2;
+
+        if (dmg > 100) dmg = 100 + ((dmg-100)/10);
+
+        super.damage(dmg, src);
     }
 
     private static final String SPELL	    = "spell";
