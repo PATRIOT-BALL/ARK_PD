@@ -66,6 +66,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token1;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token3;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewCavesBossLevel;
@@ -598,6 +600,13 @@ public class NewDM300 extends Mob {
                 ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
             } while (!Dungeon.level.passable[pos + ofs]);
             Dungeon.level.drop(new MetalShard(), pos + ofs).sprite.drop(pos);
+        }
+        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+            int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+            do {
+                ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+            } while (!Dungeon.level.passable[pos + ofs]);
+            Dungeon.level.drop(new Token3(), pos + ofs).sprite.drop(pos);
         }
 
         switch (Dungeon.hero.heroClass) {

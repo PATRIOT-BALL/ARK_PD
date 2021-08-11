@@ -13,4 +13,9 @@ public class Rose extends Item {
     public boolean isIdentified() {
         return true;
     }
+
+    @Override
+    public boolean isUpgradable() {
+        return false;
+    }
 }

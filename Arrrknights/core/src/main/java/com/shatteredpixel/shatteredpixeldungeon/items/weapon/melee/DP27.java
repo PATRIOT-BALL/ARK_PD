@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -21,6 +22,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
@@ -72,9 +74,11 @@ public class DP27 extends MeleeWeapon {
         return actions;
     }
 
-    public void reload(int tier) {
+    public void reload(int tier, boolean sp) {
         bullettier = tier;
         bullet = bulletCap;
+
+        spshot = sp;
 
         Dungeon.hero.spendAndNext(RELOAD_TIME);
         Dungeon.hero.sprite.operate( Dungeon.hero.pos );
@@ -153,8 +157,10 @@ public class DP27 extends MeleeWeapon {
     };
 
     protected void fx( Ballistica bolt, Callback callback ) {
+        int a = 0;
+        if (spshot) a = 1;
         MagicMissile.boltFromChar( curUser.sprite.parent,
-                MagicMissile.MAGIC_MISSILE,
+                MagicMissile.GUN_SHOT+a,
                 curUser.sprite,
                 bolt.collisionPos,
                 callback);
@@ -179,6 +185,8 @@ public class DP27 extends MeleeWeapon {
             if (ch.hit(Dungeon.hero, ch, false)) {
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f));
+
+                if (spshot) Buff.affect(ch, Burning.class).reignite(ch);
 
                 ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
             }
@@ -205,7 +213,8 @@ public class DP27 extends MeleeWeapon {
         @Override
         public void onSelect( final Item item ) {
             if (item != null) {
-                reload(((MissileWeapon)item).tier);
+                if (item instanceof UpMagazine) {reload(((MissileWeapon)item).tier, true); }
+                else reload(((MissileWeapon)item).tier, false);
                 item.detach(Dungeon.hero.belongings.backpack);
             }
         }
@@ -217,6 +226,30 @@ public class DP27 extends MeleeWeapon {
     }
 
     public String statsInfo() {
+        if (spshot) return Messages.get(this, "stats_desc_sp", shotmin(),shotmax());
         return Messages.get(this, "stats_desc", shotmin(),shotmax());
+    }
+
+
+    private static final String BULLET = "charge";
+    private static final String TIER = "bullettier";
+    private static final String SP = "spshot";
+
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(BULLET, bullet);
+        bundle.put(TIER, bullettier);
+        bundle.put(SP, spshot);
+    }
+
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        if (bulletCap > 0) bullet = Math.min(bulletCap, bundle.getInt(BULLET));
+        else bullet = bundle.getInt(BULLET);
+
+        bullettier = bundle.getInt(TIER);
+        spshot = bundle.getBoolean(SP);
     }
 }

@@ -62,6 +62,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookYourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token1;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token4;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewCityBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -460,6 +462,13 @@ public class DwarfKing extends Mob {
 			GameScene.bossSlain();
 
 			super.die(cause);
+
+			if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+				do {
+					ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+				} while (!Dungeon.level.passable[pos + ofs]);
+				Dungeon.level.drop(new Token4(), pos + ofs).sprite.drop(pos);
+			}
 
 			if (Dungeon.level.solid[pos]) {
 

@@ -202,13 +202,14 @@ public class NewHallsBossLevel extends Level {
 
 		Dungeon.observe();
 
+		if (Dungeon.talucount < 4) {
 		YogDzewa boss = new YogDzewa();
 		boss.pos = exit + width*3;
-		GameScene.add( boss );
-		 /*
+		GameScene.add( boss ); }
+		else {
 		Talu_BlackSnake boss = new Talu_BlackSnake();
-		*/
-
+			boss.pos = exit + width*3;
+			GameScene.add( boss ); }
 	}
 
 	@Override

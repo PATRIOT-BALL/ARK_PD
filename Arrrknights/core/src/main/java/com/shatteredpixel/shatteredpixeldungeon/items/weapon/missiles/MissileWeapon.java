@@ -463,7 +463,13 @@ abstract public class MissileWeapon extends Weapon {
 		
 		return info;
 	}
-	
+
+	/* 0.2.4 패치에서 적용할 것
+	@Override
+	public boolean isUpgradable() {
+		return false;
+	}*/
+
 	@Override
 	public int value() {
 		return 6 * tier * quantity * (level() + 1);

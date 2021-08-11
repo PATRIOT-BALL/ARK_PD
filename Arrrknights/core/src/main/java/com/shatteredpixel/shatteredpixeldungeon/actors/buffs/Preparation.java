@@ -55,10 +55,10 @@ public class Preparation extends Buff implements ActionIndicator.Action {
 	}
 	
 	public enum AttackLevel{
-		LVL_1( 1, 0.15f, 1),
-		LVL_2( 3, 0.30f, 1),
-		LVL_3( 5, 0.45f, 2),
-		LVL_4( 9, 0.60f, 3);
+		LVL_1( 1, 0.12f, 1),
+		LVL_2( 3, 0.24f, 1),
+		LVL_3( 5, 0.36f, 2),
+		LVL_4( 9, 0.48f, 3);
 
 		final int turnsReq;
 		final float baseDmgBonus;

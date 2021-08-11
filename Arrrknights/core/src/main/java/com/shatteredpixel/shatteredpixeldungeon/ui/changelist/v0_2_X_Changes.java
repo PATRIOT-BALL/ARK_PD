@@ -33,7 +33,7 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
                 "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
                         "_식탁보_ : 3티어 무기로, 적을 밀쳐내고 특수 능력으로 체력과 아츠 기록장치의 SP를 회복할 수 있습니다." + "\n\n" +
-                        "-_맹목적인 순종_ : 4티어 무기로, 공격력이 낮지만 광역 공격을 가하며, 체력 50%이하 적에게 2배의 피해를 주고 체력을 회복할 수 있습니다." + "\n\n" +
+                        "_맹목적인 순종_ : 4티어 무기로, 공격력이 낮지만 광역 공격을 가하며, 체력 50%이하 적에게 2배의 피해를 주고 체력을 회복할 수 있습니다." + "\n\n" +
                         "_선현의 화신_ : 5티어 무기로, 공격시 확률적으로 실명을 걸고 SP를 충전합니다. SP를 소모해 시야 내 적들을 잠재우고 체력을 회복할 수 있습니다." + "\n\n" +
                         "_생명의 아츠 스태프_ : 새로운 아츠 스태프로, 3번 적중시킬 때마다 체력을 회복합니다. 회복 횟수에는 제한이 있습니다." + "\n\n" +
                 "_스태프 오브 수수로_ : 생명의 아츠 스태프의 개조 스태프로, 회복 조건이 3회에서 2회로 감소하지만 피해량도 감소했습니다."));
@@ -49,24 +49,26 @@ public class v0_2_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
-                "_성좌의 수호자_ : 2턴을 소모해 별의 힘을 모을 수 있으며, 최대 5회까지 모을 수 있게됩니다. 공격시 별의 힘을 소모해 시야 내 적들에게 광역 피해를 입힙니다."));
+                "_성좌의 수호자_ : 명중률이 35%에서 _15%_로 감소했습니다. 2턴을 소모해 별의 힘을 모을 수 있으며, 최대 5회까지 모을 수 있게됩니다. 공격시 별의 힘을 소모해 시야 내 적들에게 광역 피해를 입힙니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.RING), " 캔낫 퀘스트 보상 변경",
                 "16-19층의 _캔낫 퀘스트_의 보상이 변경되었습니다." + "\n\n" +
                 "캔낫은 이제 _반지 강화 키트_를 보상으로 줍니다. 이 키트를 반지에 사용하여 반지의 강화 수치를 1단계 올릴 수 있습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 조정",
+                "_살카즈 백부장_ : 체력이 70에서 _85_로, 공격력이 4-16에서 _6-18_로, 명중률이 12에서 _15_로 상승했습니다." + "\n\n" +
+                        "대신 소환하는 용병의 공격력이 4-14에서 _2-12_로, 방어력이 0-3에서 _0_으로 감소했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 버프",
+                "_동야의 마왕_ : 공격력이 2-9에서 _2-10_으로 상승했습니다." + "\n\n" +
                 "_끓어오르는 투지_ : 명중률 보정치가 -30%에서 _-25%_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 버프",
                 "_스태프 오브 리프_ : 빙결된 적에게도 피해를 입힐 수 있게됩니다. 단, 이 경우 피해량이 감소합니다."));
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 버프",
-                "_살카즈 백부장_ : 체력이 70에서 _85_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
                 "_수호 로즈몬티스_의 _수호 방벽 전개_ 특성에, 방벽 방어시 공격자에게 자신의 공격력 15-45%만큼 피해를 주는 기능이 추가되었습니다."));
@@ -77,6 +79,9 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
                 "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _70%_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "암살 전문화 너프",
+                "뼈찌르기 공격의 추가 피해가 15~60%에서 _12~48%_로 감소했습니다."));
     }
 
 

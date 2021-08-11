@@ -119,7 +119,7 @@ public class Berserk extends Buff {
 			WarriorShield shield = target.buff(WarriorShield.class);
 			if (shield != null){
 				state = State.BERSERK;
-				int shieldAmount = shield.maxShield() * 8;
+				int shieldAmount = shield.maxShield() * 6;
 				shieldAmount = Math.round(shieldAmount * (1f + Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA)/10f));
 				shield.supercharge(shieldAmount);
 
@@ -136,7 +136,7 @@ public class Berserk extends Buff {
 	public void damage(int damage){
 		if (state == State.RECOVERING) return;
 		float maxPower = 1f + 0.2f*((Hero)target).pointsInTalent(Talent.ENDLESS_RAGE);
-		power = Math.min(maxPower, power + (damage/(float)target.HT)/2f );
+		power = Math.min(maxPower, power + (damage/(float)target.HT)/2.2f );
 		BuffIndicator.refreshHero(); //show new power immediately
 	}
 

@@ -22,14 +22,29 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Preparation;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.Camera;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Bundle;
+
+import java.util.ArrayList;
 
 public class BattleAxe extends MeleeWeapon {
-
+	public static final String AC_ZAP = "ZAP";
 	{
 		image = ItemSpriteSheet.BATTLE_AXE;
 		hitSound = Assets.Sounds.HIT_SLASH;
 		hitSoundPitch = 0.9f;
+
+		defaultAction = AC_ZAP;
 
 		tier = 4;
 		ACC = 1.35f; //24% boost to accuracy
@@ -41,4 +56,66 @@ public class BattleAxe extends MeleeWeapon {
 				lvl*(tier+1);   //scaling unchanged
 	}
 
+	private int starpower = 0 ;
+	private int starpowercap = 5;
+
+	@Override
+	public ArrayList<String> actions(Hero hero) {
+		ArrayList<String> actions = super.actions(hero);
+		actions.add(AC_ZAP);
+		return actions;
+	}
+
+	@Override
+	public void execute(Hero hero, String action) {
+
+		super.execute(hero, action);
+
+		if (action.equals(AC_ZAP) && Dungeon.hero.belongings.weapon == this) {
+			if (starpower < starpowercap) {
+				starpower++;
+				hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "charge"));
+				curUser.spendAndNext(2f);
+			} else
+				hero.sprite.showStatus(CharSprite.NEGATIVE, Messages.get(BattleAxe.class, "charge_fail"));
+		}
+	}
+
+
+	@Override
+	public int proc(Char attacker, Char defender, int damage) {
+
+		if (starpower >= 1) {
+			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
+					int dmg = attacker.damageRoll() - defender.drRoll();
+					dmg = Math.round(dmg * (starpower*0.2f));
+
+					mob.damage(dmg, attacker);
+				}
+			}
+			if (starpower > 3) GameScene.flash( 0x80FFFFFF );
+			Camera.main.shake(2, starpower*0.3f);
+
+			Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1.76f, 1.76f);
+			attacker.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "attack"));
+			starpower = 0;
+		}
+		return super.proc(attacker, defender, damage);
+	}
+
+	private static final String POWER = "starpower";
+
+	@Override
+	public void storeInBundle(Bundle bundle) {
+		super.storeInBundle(bundle);
+		bundle.put(POWER, starpower);
+	}
+
+	@Override
+	public void restoreFromBundle(Bundle bundle) {
+		super.restoreFromBundle(bundle);
+		if (starpowercap > 0) starpower = Math.min(starpowercap, bundle.getInt(POWER));
+		else starpower = bundle.getInt(POWER);
+	}
 }

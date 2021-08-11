@@ -49,7 +49,12 @@ public class HeavyBoomerang extends MissileWeapon {
 		return  4 * tier +                  //16 base, down from 20
 				(tier) * lvl;               //scaling unchanged
 	}
-	
+
+	@Override
+	public boolean isUpgradable() {
+		return true;
+	}
+
 	@Override
 	protected void rangedHit(Char enemy, int cell) {
 		decrementDurability();

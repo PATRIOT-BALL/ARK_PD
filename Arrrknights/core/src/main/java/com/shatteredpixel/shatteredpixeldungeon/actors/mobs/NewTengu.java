@@ -65,6 +65,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nullshield;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token1;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewPrisonBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
@@ -228,6 +230,9 @@ public class NewTengu extends Mob {
 
         if (Dungeon.hero.subClass == HeroSubClass.NONE) {
             Dungeon.level.drop(new TomeOfMastery(), pos).sprite.drop();
+            if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+                Dungeon.level.drop(new Token2(), pos).sprite.drop(pos);
+            }
         }
         Dungeon.level.drop(new Nullshield(), pos).sprite.drop(pos);
 

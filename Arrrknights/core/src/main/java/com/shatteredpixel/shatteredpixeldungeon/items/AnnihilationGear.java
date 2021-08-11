@@ -69,9 +69,12 @@ public class AnnihilationGear extends Item {
     public int arts = 0; // 0 = false, 1,2 = true 파괴1=부유 파괴2=충격 파괴3=저격 수호1=면역 수호2=압살 수호3=제압
     public int artsused = 0; // 일정 횟수 이상이면 마법부여 발동안함.
 
-    public int min() { return 5 + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
+    public int min() {
+        return 5 + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
-    public int max() { return 7 + Dungeon.hero.lvl + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
+    public int max() {
+        if (Dungeon.hero.subClass == HeroSubClass.DESTROYER) return 7 + Dungeon.hero.lvl + (buffedLvl() * 2) + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3);
+        return 7 + Dungeon.hero.lvl + buffedLvl() + (Dungeon.hero.pointsInTalent(Talent.RHODES_WEAPON) * 3); }
 
     @Override
     public String desc() {

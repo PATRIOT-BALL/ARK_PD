@@ -45,6 +45,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.WarriorArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.SkeletonKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token1;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
@@ -283,6 +284,13 @@ public class Goo extends Mob {
 				ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
 			} while (!Dungeon.level.passable[pos + ofs]);
 			Dungeon.level.drop(new Firesteel(), pos + ofs).sprite.drop(pos);
+		}
+		if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+			int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+			do {
+				ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
+			} while (!Dungeon.level.passable[pos + ofs]);
+			Dungeon.level.drop(new Token1(), pos + ofs).sprite.drop(pos);
 		}
 
 		switch (Dungeon.hero.heroClass) {

@@ -57,12 +57,12 @@ public class Centurion extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(4, 16);
+        return Random.NormalIntRange(6, 18);
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 12;
+        return 15;
     }
 
     @Override
@@ -159,15 +159,14 @@ public class Centurion extends Mob {
 
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange(4, 14);
+            return Random.NormalIntRange(2, 12);
         }
 
         @Override
         public int attackSkill(Char target) { return 10; }
 
         @Override
-        public int drRoll() { return Random.NormalIntRange(0, 3);
-        }
+        public int drRoll() { return 0; }
 
         @Override
         public float speed() {

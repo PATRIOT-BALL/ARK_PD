@@ -1187,6 +1187,28 @@ items.quest.nullshield.fail_weapon=장비를 해제해주세요.
 items.quest.rose.name=꽃 한송이
 items.quest.rose.desc=누군가를 위한 꽃 한송이.
 
+// 딸루 히든보스용
+
+items.quest.token1.name="증오"
+items.quest.token1.desc="발도의 기술, 부숴야 할 땐 부숴야 하느니."
+items.quest.token1.ac_add=정의
+items.quest.token1.suc="프로스트노바가 이를 악문 채 질러대던 비명을 기억해냈다."
+
+items.quest.token2.name="악의"
+items.quest.token2.desc="발도의 기술, 부숴야 할 땐 부숴야 하느니."
+items.quest.token2.ac_add=불의
+items.quest.token2.suc="우뚝 선 채 쓰러지지 않던 웬디고의 육체가 보였다."
+
+items.quest.token3.name="분노"
+items.quest.token3.desc="절영의 검, 버려야 할 땐 버려야 하느니."
+items.quest.token3.ac_add=천 년의 사랑
+items.quest.token3.suc="억누를 수 없는 알리나의 가쁜 숨소리가 들렸다."
+
+items.quest.token4.name="최후"
+items.quest.token4.desc="운열의 검, 세워야 할 땐 세워야 하느니."
+items.quest.token4.ac_add=불사의 검은 뱀
+items.quest.token4.suc="에이스와 스카우트가 보엿고, 정예 오퍼레이터들이 파티에서 춤을 추는 모습이 떠올랐다."
+
 
 
 
@@ -1923,8 +1945,12 @@ items.weapon.melee.assassinsblade.stats_desc=기습 시 최소 데미지 보정 
 items.weapon.melee.assassinsblade.desc=카시미어의 검투사들이 사용하던 단검. 시에스타의 흑요석으로 가공 된 날카로운 두 개의 단도는 적의 생명을 순식간에 앗아갈 것이다.
 
 items.weapon.melee.battleaxe.name=성좌의 수호자
-items.weapon.melee.battleaxe.stats_desc=명중률 +35%
-items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.
+items.weapon.melee.battleaxe.stats_desc=명중률 +15%
+items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.\n\n2턴을 소모해 별의 힘을 충전할 수 있습니다. 공격시 충전한 별의 힘을 모두 소모해 시야 내 적들에게 피해를 입힐 수 있습니다.
+items.weapon.melee.battleaxe.ac_zap=집중
+items.weapon.melee.battleaxe.charge=별의...
+items.weapon.melee.battleaxe.charge_fail=최대 충전!
+items.weapon.melee.battleaxe.attack=힘이야!
 
 items.weapon.melee.crossbow.name=핸드 발리스타
 items.weapon.melee.crossbow.stats_desc=강화에 비례한 화살의 데미지 증가\n무기의 특수효과를 화살에 적용가능
@@ -2167,6 +2193,7 @@ items.weapon.melee.divineavatar.ac_zap=히까리아레!
 items.weapon.melee.dp27.name=DP27
 items.weapon.melee.dp27.desc="where do you want me?"\n\n이 무기는 _사격_ 무기입니다. 투척 무기나 탄창을 이용해 탄약을 장전할 수 있습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
 items.weapon.melee.dp27.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
+items.weapon.melee.dp27.stats_desc_sp=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.\n_특수 탄환 소이탄_\n - 적중시킨 대상을 불태웁니다.
 items.weapon.melee.dp27.prompt=지정해주세요.
 items.weapon.melee.dp27.self_target=자신에게는 발사할 수 없습니다.
 items.weapon.melee.dp27.fizzles=탄약이 부족합니다.
@@ -2363,6 +2390,11 @@ items.staffkit.fail=이 스태프는 개조할 수 없는 것 같다.
 items.staffkit.fail_ring=흑요석 반지가 없는 것 같다.
 items.staffkit.prompt=개조할 스태프를 선택하세요
 items.staffkit.desc=이 도구는 당신의 스태프를 로도스 대원들의 능력을 반영한 _특별한 스태프_로 개조할 수 있습니다. 개조된 도구는 원본 스태프에서 약간 수정되거나, 아에 달라진 능력을 가집니다.
+
+items.ringkit.name=반지 강화 키트
+items.ringkit.ac_apply=강화한다
+items.ringkit.prompt=강화할 반지를 선택하세요.
+items.ringkit.desc=이 도구는 반지를 강화하기 위해 만들어진 정교한 도구입니다. 반지의 강화 수치를 올려줄 수 있지만, 다른 아이템을 강화하는덴 쓸 수 없을 것 같습니다.
 
 items.brokenseal.name=행운의 부적
 items.brokenseal.ac_affix=부적을 붙인다

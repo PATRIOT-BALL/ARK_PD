@@ -262,7 +262,7 @@ public enum Talent {
 		}
 		if (hero.hasTalent(MYSTICAL_MEAL)){
 			//3/5 turns of recharging
-			Buff.affect( hero, ArtifactRecharge.class).set(1 + 2*(hero.pointsInTalent(MYSTICAL_MEAL))).ignoreHornOfPlenty = foodSource instanceof HornOfPlenty;
+			Buff.affect( hero, ArtifactRecharge.class).set(1.5f*(hero.pointsInTalent(MYSTICAL_MEAL))).ignoreHornOfPlenty = foodSource instanceof HornOfPlenty;
 			ScrollOfRecharging.charge( hero );
 		}
 		if (hero.hasTalent(INVIGORATING_MEAL)){
@@ -363,7 +363,7 @@ public enum Talent {
 		if (hero.hasTalent(MYSTICAL_UPGRADE)){
 			CloakOfShadows cloak = hero.belongings.getItem(CloakOfShadows.class);
 			if (cloak != null){
-				cloak.overCharge(1 + hero.pointsInTalent(MYSTICAL_UPGRADE) * 2);
+				cloak.overCharge(2 + hero.pointsInTalent(MYSTICAL_UPGRADE) * 2);
 				ScrollOfRecharging.charge( Dungeon.hero );
 				SpellSprite.show( hero, SpellSprite.CHARGE );
 			}
