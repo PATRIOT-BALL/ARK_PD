@@ -44,19 +44,16 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "특별한 최종보스전",
                 "특별한 조건을 만족하면 25층의 최종 보스가 변경되는 기믹이 추가되었습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.RING), "반지 개조 시스템",
-                "16-19층의 _캔낫 퀘스트_의 보상이 변경되어, _반지 개조 시스템_이 추가되었습니다." + "\n\n" +
-                "이제 더 이상 캔낫은 저주받은 반지를 퀘스트 보상으로 주지않으며, 대신 _반지 개조 키트_를 퀘스트 보상으로 줄 것입니다." + "\n" +
-                "_반지 개조 키트_로 반지에 추가 기능을 부여할 수 있으며, 아직 개조가 추가되지않은 반지는 강화 수치를 올려줍니다." + "\n\n" +
-                "개조가 추가된 반지는 다음과 같습니다." + " \n" +
-                "증폭의 반지, 인내의 반지, 완력의 반지, 힘의 반지, 부유함의 반지"));
-
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
                 "_성좌의 수호자_ : 2턴을 소모해 별의 힘을 모을 수 있으며, 최대 5회까지 모을 수 있게됩니다. 공격시 별의 힘을 소모해 시야 내 적들에게 광역 피해를 입힙니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RING), " 캔낫 퀘스트 보상 변경",
+                "16-19층의 _캔낫 퀘스트_의 보상이 변경되었습니다." + "\n\n" +
+                "캔낫은 이제 _반지 강화 키트_를 보상으로 줍니다. 이 키트를 반지에 사용하여 반지의 강화 수치를 1단계 올릴 수 있습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);

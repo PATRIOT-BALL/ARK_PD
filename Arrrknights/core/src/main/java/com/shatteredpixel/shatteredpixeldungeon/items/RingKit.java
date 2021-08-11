@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
@@ -8,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
+import com.watabou.noosa.audio.Sample;
 
 import java.util.ArrayList;
 
@@ -51,6 +53,19 @@ public class RingKit extends Item {
         item.upgrade();
 
         this.detach(Dungeon.hero.belongings.backpack);
+
+        curUser.sprite.operate(curUser.pos);
+        Sample.INSTANCE.play(Assets.Sounds.EVOKE);
         Dungeon.hero.spendAndNext(1f);
+    }
+
+    @Override
+    public boolean isUpgradable() {
+        return false;
+    }
+
+    @Override
+    public boolean isIdentified() {
+        return true;
     }
 }
