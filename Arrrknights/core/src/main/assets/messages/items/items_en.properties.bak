@@ -1974,7 +1974,7 @@ items.weapon.melee.gauntlet.desc_mode=It can attack very quickly, but it is very
 
 items.weapon.melee.glaive.name=shadow firmament
 items.weapon.melee.glaive.stats_desc=Range +2, Attack Speed 50%
-items.weapon.melee.glaive.desc=Crimson Firmament made with Amiya's arts. It places a very heavy burden on the user. This is already more like an arts staff, not a sword.
+items.weapon.melee.glaive.desc=Crimson Firmament made with Amiya's arts. It places a very heavy burden on the user. This is already more like an arts staff, not a sword.\n\n"As sword of stratus rent, once stood stand fast."
 
 items.weapon.melee.gloves.name=shooting glove
 items.weapon.melee.gloves.stats_desc=Attack Speed 300%
