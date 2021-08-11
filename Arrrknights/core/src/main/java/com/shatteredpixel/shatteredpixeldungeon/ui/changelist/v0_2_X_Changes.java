@@ -67,11 +67,12 @@ public class v0_2_X_Changes {
                 "_동야의 마왕_ : 공격력이 2-9에서 _2-10_으로 상승했습니다." + "\n\n" +
                 "_끓어오르는 투지_ : 명중률 보정치가 -30%에서 _-25%_로 상승했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 버프",
-                "_스태프 오브 리프_ : 빙결된 적에게도 피해를 입힐 수 있게됩니다. 단, 이 경우 피해량이 감소합니다."));
-
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
+                "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다." + "\n\n" +
                 "_수호 로즈몬티스_의 _수호 방벽 전개_ 특성에, 방벽 방어시 공격자에게 자신의 공격력 15-45%만큼 피해를 주는 기능이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "파괴 로즈몬티스 버프",
+                "파괴 전문화 전직시 섬멸전 장비의 강화 효율이 상승하는 능력이 추가되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
@@ -80,8 +81,14 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
                 "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _70%_로 감소했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "암살 전문화 너프",
-                "뼈찌르기 공격의 추가 피해가 15~60%에서 _12~48%_로 감소했습니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
+                "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다." + "\n\n" +
+                        "_수호 로즈몬티스_의 _수호 방벽 전개_ 특성에, 방벽 방어시 공격자에게 자신의 공격력 15-45%만큼 피해를 주는 기능이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.MONNY), "전문화 너프",
+                "_분노 전문화_ : 분노 획득량과 격노시 보호막량이 감소했습니다." + "\n\n" +
+                        "_검술 전문화_ : 흑요석 반지로 근접 공격시 스태프 충전량이 감소했습니다." + "\n\n" +
+                "_암살 전문화_ : 뼈찌르기 공격의 추가 피해가 15~60%에서 _12~48%_로 감소했습니다."));
     }
 
 
