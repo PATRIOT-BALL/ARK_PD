@@ -102,7 +102,7 @@ public class Shopkeeper extends NPC {
 	//shopkeepers are greedy!
 	public static int sellPrice(Item item){
 		if (!Dungeon.isChallenged(Challenges.NO_HERBALISM)) return item.value() * 5 * (Dungeon.depth / 5 + 1);
-		return item.value() * 8 * (Dungeon.depth / 5 + 1);
+		return item.value() * 7 * (Dungeon.depth / 5 + 1);
 	}
 	
 	public static WndBag sell() {

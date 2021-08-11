@@ -41,6 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
@@ -84,6 +85,7 @@ public class WndBag extends WndTabbed {
 		WEAPON,
 		MISSILEWEAPON,
 		ARMOR,
+		RING,
 		ENCHANTABLE,
 		ENCHANTABLE_STONE,
 		WAND,
@@ -442,6 +444,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.WEAPON && (item instanceof MeleeWeapon) ||
 						mode == Mode.MISSILEWEAPON && (item instanceof MissileWeapon) ||
 						mode == Mode.ARMOR && (item instanceof Armor) ||
+						mode == Mode.RING && (item instanceof Ring) ||
 						mode == Mode.ENCHANTABLE && (item instanceof MeleeWeapon || item instanceof SpiritBow || item instanceof Armor) ||
 						mode == Mode.ENCHANTABLE_STONE && (item instanceof MeleeWeapon || item instanceof SpiritBow || item instanceof Armor || item instanceof AnnihilationGear) ||
 						mode == Mode.WAND && (item instanceof Wand) ||

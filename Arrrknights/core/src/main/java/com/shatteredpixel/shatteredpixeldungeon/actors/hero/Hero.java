@@ -148,6 +148,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfHaste;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.sp.RingOfLife;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.sp.RingofProtection;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
@@ -1339,6 +1341,11 @@ public class Hero extends Char {
             if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN) {
                 if (Gear.charge > 0) {
                     damage *= 0.5f - (float) this.pointsInTalent(Talent.BARRIER_OPERATION) * 0.15f;
+                    int redamage = 0;
+                    redamage += damageRoll() * (float) pointsInTalent(Talent.BARRIER_OPERATION) * 0.15f;
+                    if (Dungeon.hero.hasTalent(Talent.BARRIER_OPERATION)) {
+                        enemy.damage( redamage,this);
+                    }
                     Gear.discharge(); }
 
                 if (2 + Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(20)) {

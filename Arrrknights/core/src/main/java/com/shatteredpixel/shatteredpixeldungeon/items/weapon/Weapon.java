@@ -127,7 +127,7 @@ abstract public class Weapon extends KindOfWeapon {
 			float Resists = 100 * enemyResist;
 
 			if (Random.Int((int)Resists) < RingOfDominate.Dominate(Dungeon.hero)) {
-				if (defender.isAlive() && !defender.isImmune(Corruption.class)) {
+				if (defender.isAlive() && !defender.isImmune(Corruption.class) && defender.buff(Corruption.class) == null) {
 					Buff.affect(defender, Corruption.class);
 					defender.HP = defender.HT;
 				}

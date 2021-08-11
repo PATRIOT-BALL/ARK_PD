@@ -15,10 +15,73 @@ import java.util.ArrayList;
 public class v0_2_X_Changes {
 
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_2_3_Changes(changeInfos);
         add_v0_2_2_Changes(changeInfos);
         add_v0_2_1_Changes(changeInfos);
         add_v0_2_0_Changes(changeInfos);
     }
+
+    public static void add_v0_2_3_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.2.3", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
+                "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
+                        "_식탁보_ : 3티어 무기로, 적을 밀쳐내고 특수 능력으로 체력과 아츠 기록장치의 SP를 회복할 수 있습니다." + "\n\n" +
+                        "-_맹목적인 순종_ : 4티어 무기로, 공격력이 낮지만 광역 공격을 가하며, 체력 50%이하 적에게 2배의 피해를 주고 체력을 회복할 수 있습니다." + "\n\n" +
+                        "_선현의 화신_ : 5티어 무기로, 공격시 확률적으로 실명을 걸고 SP를 충전합니다. SP를 소모해 시야 내 적들을 잠재우고 체력을 회복할 수 있습니다." + "\n\n" +
+                        "_생명의 아츠 스태프_ : 새로운 아츠 스태프로, 3번 적중시킬 때마다 체력을 회복합니다. 회복 횟수에는 제한이 있습니다." + "\n\n" +
+                "_스태프 오브 수수로_ : 생명의 아츠 스태프의 개조 스태프로, 회복 조건이 3회에서 2회로 감소하지만 피해량도 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "새로운 위기협약",
+                "_창렬 : 클로저식 운영_ 제약이 추가되었습니다. 이 제약은 기존의 오리지늄 침식 제약을 대체합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "특별한 최종보스전",
+                "특별한 조건을 만족하면 25층의 최종 보스가 변경되는 기믹이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RING), "반지 개조 시스템",
+                "16-19층의 _캔낫 퀘스트_의 보상이 변경되어, _반지 개조 시스템_이 추가되었습니다." + "\n\n" +
+                "이제 더 이상 캔낫은 저주받은 반지를 퀘스트 보상으로 주지않으며, 대신 _반지 개조 키트_를 퀘스트 보상으로 줄 것입니다." + "\n" +
+                "_반지 개조 키트_로 반지에 추가 기능을 부여할 수 있으며, 아직 개조가 추가되지않은 반지는 강화 수치를 올려줍니다." + "\n\n" +
+                "개조가 추가된 반지는 다음과 같습니다." + " \n" +
+                "증폭의 반지, 인내의 반지, 완력의 반지, 힘의 반지, 부유함의 반지"));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
+                "_성좌의 수호자_ : 2턴을 소모해 별의 힘을 모을 수 있으며, 최대 5회까지 모을 수 있게됩니다. 공격시 별의 힘을 소모해 시야 내 적들에게 광역 피해를 입힙니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 버프",
+                "_끓어오르는 투지_ : 명중률 보정치가 -30%에서 _-25%_로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 버프",
+                "_스태프 오브 리프_ : 빙결된 적에게도 피해를 입힐 수 있게됩니다. 단, 이 경우 피해량이 감소합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 버프",
+                "_살카즈 백부장_ : 체력이 70에서 _85_로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
+                "_수호 로즈몬티스_의 _수호 방벽 전개_ 특성에, 방벽 방어시 공격자에게 자신의 공격력 15-45%만큼 피해를 주는 기능이 추가되었습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
+                "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _70%_로 감소했습니다."));
+    }
+
 
     public static void add_v0_2_2_Changes(ArrayList<ChangeInfo> changeInfos) {
         ChangeInfo changes = new ChangeInfo("v0.2.2", true, "");

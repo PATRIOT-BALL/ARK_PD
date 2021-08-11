@@ -40,7 +40,7 @@ public class Centurion extends Mob {
         properties.add(Property.MINIBOSS);
         properties.add(Property.SARKAZ);
 
-        HP = HT = 70;
+        HP = HT = 85;
         defenseSkill = 0;
         baseSpeed = 1f;
 

@@ -103,25 +103,24 @@ public class Dewdrop extends Item {
 		int effect = Math.min( hero.HT - hero.HP, heal );
 		int shield = 0;
 
-		if (effect > 0 || shield > 0) {
-			hero.HP += effect;
-			if (shield > 0) Buff.affect(hero, Barrier.class).incShield(shield);
-			hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
-			if (effect > 0 && shield > 0){
-				hero.sprite.showStatus( CharSprite.POSITIVE, Messages.get(Dewdrop.class, "both", effect, shield) );
-			} else if (effect > 0){
-				hero.sprite.showStatus( CharSprite.POSITIVE, Messages.get(Dewdrop.class, "heal", effect) );
+			if (effect > 0 || shield > 0) {
+				hero.HP += effect;
+				if (shield > 0) Buff.affect(hero, Barrier.class).incShield(shield);
+				hero.sprite.emitter().burst(Speck.factory(Speck.HEALING), 1);
+				if (effect > 0 && shield > 0) {
+					hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(Dewdrop.class, "both", effect, shield));
+				} else if (effect > 0) {
+					hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(Dewdrop.class, "heal", effect));
+				} else {
+					hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(Dewdrop.class, "shield", shield));
+				}
+
 			} else {
-				hero.sprite.showStatus( CharSprite.POSITIVE, Messages.get(Dewdrop.class, "shield", shield) );
+				GLog.i(Messages.get(Dewdrop.class, "already_full"));
+				return false;
 			}
-
-		} else {
-			GLog.i( Messages.get(Dewdrop.class, "already_full") );
-			return false;
-		}
-
 		return true;
-	}
+		}
 
 	@Override
 	//max of one dew in a stack
