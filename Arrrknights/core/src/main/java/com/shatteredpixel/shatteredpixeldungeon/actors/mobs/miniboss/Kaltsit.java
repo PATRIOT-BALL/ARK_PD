@@ -18,6 +18,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -102,6 +103,8 @@ public class Kaltsit extends Mob {
 
                     Dungeon.hero.damage(Dungeon.hero.HP/2, this);
                     Dungeon.hero.sprite.burst(CharSprite.NEGATIVE, 10);
+
+                    ScrollOfTeleportation.teleportChar_unobstructed(Dungeon.hero);
 
                     Camera.main.shake(3, 0.5f);
                 }

@@ -2536,5 +2536,6 @@ items.w0502.desc=이 물건 안에 압축된 액화 오리지늄 기체를 아�
 items.w0502.ac_fire=불이야!
 items.w0502.ac_reload=재충전
 items.w0502.prompt2=방향을 지정해주세요.
+items.w0502.noflame=액체 화염 물약이 없습니다.
 items.w0502.self_target=자신에게 불을 지를 수 없습니다.
 items.w0502.fizzles=연료가 부족합니다.

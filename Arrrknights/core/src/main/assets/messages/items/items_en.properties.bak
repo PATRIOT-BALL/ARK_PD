@@ -2374,7 +2374,7 @@ items.staffkit.desc=This kit can transform your wand into _special_ staff the po
 items.ringkit.name=Ring Upgrade Kit
 items.ringkit.ac_apply=UPGRADE
 items.ringkit.prompt=chose ring
-items.ringkit.desc=This kit can be used to strengthen the ring.
+items.ringkit.desc=This kit can be used to Upgrade the ring.
 
 items.brokenseal.name=lucky feather
 items.brokenseal.ac_affix=AFFIX

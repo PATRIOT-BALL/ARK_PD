@@ -47,7 +47,7 @@ public class BattleAxe extends MeleeWeapon {
 		defaultAction = AC_ZAP;
 
 		tier = 4;
-		ACC = 1.35f; //24% boost to accuracy
+		ACC = 1.15f; //24% boost to accuracy
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class BattleAxe extends MeleeWeapon {
 			if (starpower < starpowercap) {
 				starpower++;
 				hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "charge"));
-				curUser.spendAndNext(2f);
+				curUser.spendAndNext(4f);
 			} else
 				hero.sprite.showStatus(CharSprite.NEGATIVE, Messages.get(BattleAxe.class, "charge_fail"));
 		}
@@ -85,7 +85,7 @@ public class BattleAxe extends MeleeWeapon {
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
 
-		if (starpower >= 1) {
+		if (starpower >= 1 && attacker instanceof Hero) {
 			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
 				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
 					int dmg = attacker.damageRoll() - defender.drRoll();
