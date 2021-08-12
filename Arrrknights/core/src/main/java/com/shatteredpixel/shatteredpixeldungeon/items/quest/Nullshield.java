@@ -4,7 +4,9 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
+import com.shatteredpixel.shatteredpixeldungeon.items.W0502;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
@@ -128,6 +130,15 @@ public class Nullshield extends Item {
                         detach(curUser.belongings.backpack);
                     }
                     else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));
+                }
+                else if (item instanceof WandOfFireblast)
+                {
+                    GLog.h(Messages.get(Nullshield.class, "suc"));
+                    W0502 nya = new W0502();
+                    nya.identify();
+                    Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                    item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
                 }
                 else {
 

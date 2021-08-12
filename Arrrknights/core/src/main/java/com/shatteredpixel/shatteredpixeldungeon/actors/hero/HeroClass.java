@@ -83,6 +83,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLena;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSussurro;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfWeedy;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;

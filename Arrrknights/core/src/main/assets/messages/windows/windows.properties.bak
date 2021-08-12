@@ -218,4 +218,5 @@ windows.wndchoosesubclass.no=선택을 미룬다.
 windows.wndheroinfo.talents=특성
 windows.wndheroinfo.talents2=4단계 특성
 windows.wndheroinfo.talents_msg=다음과 같은 특성을 보유했습니다.
+windows.wndheroinfo.subclasses=전문화
 windows.wndheroinfo.subclasses_msg=10층의 보스를 클리어하면 얻는 정예화 칩으로 전문화를 선택할 수 있습니다.

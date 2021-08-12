@@ -177,6 +177,8 @@ public class W0502 extends Item {
 
         Sample.INSTANCE.play( Assets.Sounds.BURNING, 1.32f, 1.12f );
         updateQuickslot();
+
+        Dungeon.hero.spendAndNext(1f);
     }
 
     protected void fx( Ballistica beam, Callback callback ) {
@@ -230,5 +232,10 @@ public class W0502 extends Item {
     @Override
     public boolean isUpgradable() {
         return false;
+    }
+
+    @Override
+    public int value() {
+        return 100;
     }
 }

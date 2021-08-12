@@ -14,8 +14,8 @@ allprojects {
         appName = 'RogueNights'
         appPackageName = 'com.shatteredpixel.tomorrowpixel'
 
-        appVersionCode = 554
-        appVersionName = '0.2.2'
+        appVersionCode = 555
+        appVersionName = '0.2.3'
 
         appJavaCompatibility = JavaVersion.VERSION_1_8
 

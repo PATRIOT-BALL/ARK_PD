@@ -2323,8 +2323,8 @@ items.weapon.spiritbow.seed=SEEDS : %1$d / %2$d
 items.weapon.spiritbow.seedfail=fail
 items.weapon.spiritbow.power0=add seed, get Ability.
 items.weapon.spiritbow.power1=_Ability Level 1_\nhalves enemy's defense
-items.weapon.spiritbow.power2=_Ability Level 2_\nhalves enemy's defense\nHit 3 times to get a shield
-items.weapon.spiritbow.power3=_Ability Level 3_\nhalves enemy's defense\nHit 3 times to get a shield\n20% chance to trigger a random plant effect
+items.weapon.spiritbow.power2=_Ability Level 2_\nhalves enemy's defense\nHit 5 times to get a shield
+items.weapon.spiritbow.power3=_Ability Level 3_\nhalves enemy's defense\nHit 5 times to get a shield\n20% chance to trigger a random plant effect
 
 items.weapon.weapon.identify=You are now familiar enough with your weapon to identify it.
 items.weapon.weapon.too_heavy=Because of your inadequate strength this weapon will hinder your attack speed, accuracy, and ability to surprise attack.
@@ -2370,6 +2370,11 @@ items.staffkit.fail=this wand not transform.
 items.staffkit.fail_ring=You don't have a special ring.
 items.staffkit.prompt=wand selection
 items.staffkit.desc=This kit can transform your wand into _special_ staff the powers of a Rhodes Operator.
+
+items.ringkit.name=Ring Upgrade Kit
+items.ringkit.ac_apply=UPGRADE
+items.ringkit.prompt=chose ring
+items.ringkit.desc=This kit can be used to strengthen the ring.
 
 items.brokenseal.name=lucky feather
 items.brokenseal.ac_affix=AFFIX
@@ -2485,3 +2490,12 @@ items.bonk.ac_drink=DRINK
 items.bonk.desc=Abundant radiation!\n\nIf you drink it, you take damage is 0 for 10 turns. Attacking an enemy or using a wand will immediately dispel the buff.\n\nAttempting to enhance _civilight eterna_ with this item will have disastrous results.
 items.bonk$bonkbuff.name=radioactive!!
 items.bonk$bonkbuff.desc=radioactive power!! you take damage is 0\nAttacking an enemy or using a wand will immediately dispel the buff.\n\nRadiation : %s
+
+items.w0502.name=W-0502
+items.w0502.desc=nCan fire powerful flames to evaporate water and destroy traps. Recharges can be done by consuming a Potion Of LiquidFlame.
+items.w0502.ac_fire=FIRE
+items.w0502.ac_reload=RECHARGE
+items.w0502.prompt2=direction
+items.w0502.noflame=do not have Potion Of LiquidFlame.
+items.w0502.self_target=You must not burn yourself.
+items.w0502.fizzles=no fuel.

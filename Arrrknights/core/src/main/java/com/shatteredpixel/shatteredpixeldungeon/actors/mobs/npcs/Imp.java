@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Golem;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Monk;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
+import com.shatteredpixel.shatteredpixeldungeon.items.RingKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.DwarfToken;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
@@ -146,8 +147,8 @@ public class Imp extends NPC {
 		private static boolean spawned;
 		private static boolean given;
 		private static boolean completed;
-		
-		public static Ring reward;
+
+		public static RingKit reward;
 		
 		public static void reset() {
 			spawned = false;
@@ -161,7 +162,6 @@ public class Imp extends NPC {
 		private static final String SPAWNED		= "spawned";
 		private static final String GIVEN		= "given";
 		private static final String COMPLETED	= "completed";
-		private static final String REWARD		= "reward";
 		
 		public static void storeInBundle( Bundle bundle ) {
 			
@@ -174,7 +174,6 @@ public class Imp extends NPC {
 				
 				node.put( GIVEN, given );
 				node.put( COMPLETED, completed );
-				node.put( REWARD, reward );
 			}
 			
 			bundle.put( NODE, node );
@@ -189,7 +188,6 @@ public class Imp extends NPC {
 				
 				given = node.getBoolean( GIVEN );
 				completed = node.getBoolean( COMPLETED );
-				reward = (Ring)node.get( REWARD );
 			}
 		}
 		
@@ -225,12 +223,8 @@ public class Imp extends NPC {
 				}
 				
 				given = false;
-				
-				do {
-					reward = (Ring)Generator.random( Generator.Category.RING );
-				} while (reward.cursed);
-				reward.upgrade( 2 );
-				reward.cursed = true;
+
+				reward = new RingKit();
 			}
 		}
 		

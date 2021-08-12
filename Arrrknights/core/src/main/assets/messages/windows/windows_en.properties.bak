@@ -215,3 +215,9 @@ windows.wndwandmaker.dust=I see you have the weapon! Don't worry about the lurke
 windows.wndwandmaker.ember=You got the parts as expected, too, the transmitter should be working properly.\n\This is the arts staff left behind by another operator. take one.
 windows.wndwandmaker.berry=Oh, I see you have the berry! I do hope the rotberry plant didn't trouble you too much.\n \This is the arts staff left behind by another operator. You can choose one.
 windows.wndwandmaker.farewell=Good luck in your quest, %s
+
+windows.wndheroinfo.talents=talents
+windows.wndheroinfo.talents2=tier 4 talents
+windows.wndheroinfo.talents_msg=You have the following talents.
+windows.wndheroinfo.subclasses=subclasses
+windows.wndheroinfo.subclasses_msg=Defeat the 10th floor boss and choose a subclass.
