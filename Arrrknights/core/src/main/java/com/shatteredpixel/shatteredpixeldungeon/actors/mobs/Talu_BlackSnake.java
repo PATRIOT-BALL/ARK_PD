@@ -321,6 +321,12 @@ public class Talu_BlackSnake extends Mob {
     }
 
     @Override
+    public int attackProc(Char enemy, int damage) {
+        enemy.damage(8, this);
+        return super.attackProc(enemy, damage);
+    }
+
+    @Override
     public void notice() {
         if (!BossHealthBar.isAssigned()) {
             BossHealthBar.assignBoss(this);

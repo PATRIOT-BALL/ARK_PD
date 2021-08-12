@@ -35,26 +35,11 @@ public class Token4 extends Item {
 
         super.execute(hero, action);
         if (action.equals(AC_ADD)) {
-            GameScene.selectItem(itemSelector, WndBag.Mode.WEAPON, "...");
+            GLog.h(Messages.get(Token4.class, "suc"));
+            Dungeon.talucount++;
+            detach(curUser.belongings.backpack);
         }
     }
-
-    private final WndBag.Listener itemSelector = new WndBag.Listener()  {
-        @Override
-        public void onSelect(final Item item) {
-            if (item != null) {
-                if (item instanceof Glaive) {
-                    GLog.h(Messages.get(Token4.class, "suc"));
-                    if (Dungeon.hero.belongings.weapon == item) {
-                        Dungeon.hero.belongings.weapon = null;
-                    }
-                    else item.detach(Dungeon.hero.belongings.backpack);
-
-                    Dungeon.talucount++;
-                    detach(curUser.belongings.backpack);
-                }
-            }
-        }};
 
     @Override
     public boolean isUpgradable() {

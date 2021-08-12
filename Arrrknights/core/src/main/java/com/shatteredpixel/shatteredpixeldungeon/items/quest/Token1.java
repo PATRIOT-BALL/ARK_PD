@@ -36,26 +36,11 @@ public class Token1 extends Item {
 
         super.execute(hero, action);
         if (action.equals(AC_ADD)) {
-            GameScene.selectItem(itemSelector, WndBag.Mode.ARMOR, "...");
+            GLog.h(Messages.get(Token1.class, "suc"));
+            Dungeon.talucount++;
+            detach(curUser.belongings.backpack);
         }
     }
-
-    private final WndBag.Listener itemSelector = new WndBag.Listener()  {
-        @Override
-        public void onSelect(final Item item) {
-            if (item != null) {
-                if (item instanceof ScaleArmor) {
-                    GLog.h(Messages.get(Token1.class, "suc"));
-                    if (Dungeon.hero.belongings.armor == item) {
-                        Dungeon.hero.belongings.armor = null;
-                    }
-                    else item.detach(Dungeon.hero.belongings.backpack);
-
-                    Dungeon.talucount++;
-                    detach(curUser.belongings.backpack);
-                }
-            }
-        }};
 
     @Override
     public boolean isUpgradable() {

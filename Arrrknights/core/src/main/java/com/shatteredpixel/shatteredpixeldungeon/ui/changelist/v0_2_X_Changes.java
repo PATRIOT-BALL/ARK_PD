@@ -82,8 +82,10 @@ public class v0_2_X_Changes {
                 "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _70%_로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
-                "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다." + "\n\n" +
-                        "_수호 로즈몬티스_의 _수호 방벽 전개_ 특성에, 방벽 방어시 공격자에게 자신의 공격력 15-45%만큼 피해를 주는 기능이 추가되었습니다."));
+                "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "스태프 너프",
+                "- _스태프 오브 위디_의 강화 효율이 2-4에서 _1-4_로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.MONNY), "전문화 너프",
                 "_분노 전문화_ : 분노 획득량과 격노시 보호막량이 감소했습니다." + "\n\n" +

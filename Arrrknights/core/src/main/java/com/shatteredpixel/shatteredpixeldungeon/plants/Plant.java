@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfRegrowth;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -81,6 +82,10 @@ public abstract class Plant implements Bundlable {
 			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
 				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
 					Buff.prolong(mob, Hex.class, 1 + Dungeon.hero.pointsInTalent(Talent.SAVIOR_PRAY));
+					if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
+						SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
+						Item.SetCharge(3);
+					}
 				}
 			}
 		}

@@ -79,6 +79,8 @@ public class MagicMissile extends Emitter {
 
 	public static final int GUN_SHOT    = 102;
 	public static final int GUN_SHOT_FIRE    = 103;
+
+	public static final int FIRE_SHOT    = 104;
 	
 	public void reset( int type, int from, int to, Callback callback ) {
 		reset( type,
@@ -198,6 +200,11 @@ public class MagicMissile extends Emitter {
 			case GUN_SHOT_FIRE:
 				size( 8 );
 				pour( FlameParticle.FACTORY, 0.0037f );
+				break;
+
+			case FIRE_SHOT:
+				size( 15 );
+				pour( FlameParticle.FACTORY, 0.0005f );
 				break;
 		}
 

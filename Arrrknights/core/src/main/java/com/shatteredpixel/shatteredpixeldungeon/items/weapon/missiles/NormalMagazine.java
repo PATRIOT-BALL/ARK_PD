@@ -9,7 +9,7 @@ public class NormalMagazine extends MissileWeapon {
         hitSound = Assets.Sounds.HIT;
         hitSoundPitch = 1f;
 
-        tier = 2;
+        tier = 3;
         baseUses = 1;
     }
 

@@ -494,7 +494,7 @@ items.armor.roguearmor.prompt=이동할 지역을 선택하세요
 items.armor.roguearmor.desc=이 핏빛 망토를 두른 레드는 이리떼를 발동해 시야가 밝혀진 지역으로 순간이동할 수 있습니다. 이 능력은 프로젝트 레드를 잠시 동안 투명하게 만들고, 처음 위치 주변 적들을 기절시키고 피해를 줍니다.\n\n이 능력을 사용하면 갑옷의 SP를 35% 사용합니다. 충전량은 레드가 경험치를 얻을 때마다 증가합니다.
 
 items.armor.scalearmor.name=용문 제식 전술조끼
-items.armor.scalearmor.desc=용문 전투경찰들이 사용하는 제식 전술조끼. 폭동 진압, 외부 세력과의 교전을 고려해 만들어진 조끼로 전방의 3열의 강철 플레이트가 착용자를 안전하게 보호합니다.\n\n"발도의 기술, 부숴야 할 땐 부숴야 하느니."
+items.armor.scalearmor.desc=용문 전투경찰들이 사용하는 제식 전술조끼. 폭동 진압, 외부 세력과의 교전을 고려해 만들어진 조끼로 전방의 3열의 강철 플레이트가 착용자를 안전하게 보호합니다.
 
 items.armor.warriorarmor.name=블레이즈의 전투복
 items.armor.warriorarmor.ac_special=끓어오르는 투지
@@ -1976,7 +1976,7 @@ items.weapon.melee.gauntlet.desc_mode=거대한 톱니바퀴 모양의 너클. �
 
 items.weapon.melee.glaive.name=영소
 items.weapon.melee.glaive.stats_desc=사거리 +2, 공격속도 50%
-items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니라 일종의 아츠 스태프다. 두려운 붉은색으로 빛나는 적소는 멀리 떨어진 적도 공격할 수 있지만 사용자에게 큰 부담을 준다.\n\n"운열의 검, 세워야 할 땐 세워야 하느니."
+items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니라 일종의 아츠 스태프다. 두려운 붉은색으로 빛나는 적소는 멀리 떨어진 적도 공격할 수 있지만 사용자에게 큰 부담을 준다.
 
 items.weapon.melee.gloves.name=슈팅 글러브
 items.weapon.melee.gloves.stats_desc=공격속도 300%
@@ -1992,7 +1992,7 @@ items.weapon.melee.greatshield.stats_desc=이 무기는 0-%d의 피해를 감소
 items.weapon.melee.greatshield.desc=그는 자신의 생명이 다하는 순간까지도 자신의 신념을 버리지 않았다.
 
 items.weapon.melee.greatsword.name=끓어오르는 투지
-items.weapon.melee.greatsword.stats_desc=사거리 +1, 공격속도 200%, 명중률 -30%
+items.weapon.melee.greatsword.stats_desc=사거리 +1, 공격속도 200%, 명중률 -25%
 items.weapon.melee.greatsword.desc=로도스 아일랜드 기술진이 만든 사거리 연장모듈이 도착했다. 전기톱 우는 소리 들리지? 덤으로 새로운 모터와 무딘 칼날들도 새로 교체됐다구! 
 
 items.weapon.melee.niansword.name=동의 인장
@@ -2046,7 +2046,7 @@ items.weapon.melee.meleeweapon.probably_too_heavy=아마도 이 무기는 당신
 items.weapon.melee.meleeweapon.stats_desc=
 
 items.weapon.melee.shortsword.name=적소ㆍ프로토타입
-items.weapon.melee.shortsword.desc=용문 전경들의 백병전 장비를 토대로 만든 실험용 장검.\n\n"절영의 검, 버려야 할 땐 버려야 하느니."
+items.weapon.melee.shortsword.desc=용문 전경들의 백병전 장비를 토대로 만든 실험용 장검.
 
 items.weapon.melee.quarterstaff.name=카시미어 전쟁도끼
 items.weapon.melee.quarterstaff.stats_desc=이 무기는 0-2의 피해를 감소시킵니다.
@@ -2083,7 +2083,7 @@ items.weapon.melee.heamyo.desc=돈미짱
 
 items.weapon.melee.scimitar.name=캐슬 브레이커
 items.weapon.melee.scimitar.stats_desc=SP 40%%를 소모해 _3-%d의 피해_ 를 입히는 충격파를 3발 발사할 수 있습니다.\n\n공격속도 +25%%
-items.weapon.melee.scimitar.desc=빅토리아에서 만들어진 건 랜스. 사격 기능이 제거됐지만 약실의 장약을 터트려 순간적으로 빠르게 적을 공격할 수 있습니다.\n\n"누봉의 기술, 잘라야 할 땐 잘라야 하느니."
+items.weapon.melee.scimitar.desc=빅토리아에서 만들어진 건 랜스. 사격 기능이 제거됐지만 약실의 장약을 터트려 순간적으로 빠르게 적을 공격할 수 있습니다.
 items.weapon.melee.scimitar.ac_zap=클로즈드 볼트 연발
 items.weapon.melee.scimitar.prompt=목표를 지정해주세요.
 items.weapon.melee.scimitar.self_target=자신에게는 발사할 수 없습니다.
@@ -2199,6 +2199,26 @@ items.weapon.melee.dp27.self_target=자신에게는 발사할 수 없습니다.
 items.weapon.melee.dp27.fizzles=탄약이 부족합니다.
 items.weapon.melee.dp27.ac_zap=사격
 items.weapon.melee.dp27.ac_reload=재장전
+
+items.weapon.melee.c1_9mm.name=9mm C1 기관단총
+items.weapon.melee.c1_9mm.desc="Ready for company."\n\n이 무기는 _사격_ 무기입니다. 투척 무기나 탄창을 이용해 탄약을 장전할 수 있습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
+items.weapon.melee.c1_9mm.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
+items.weapon.melee.c1_9mm.stats_desc_sp=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.\n\n_특수 탄환 침묵탄_\n - 적중시킨 대상을 침묵시킵니다.
+items.weapon.melee.c1_9mm.prompt=지정해주세요.
+items.weapon.melee.c1_9mm.self_target=자신에게는 발사할 수 없습니다.
+items.weapon.melee.c1_9mm.fizzles=탄약이 부족합니다.
+items.weapon.melee.c1_9mm.ac_zap=사격
+items.weapon.melee.c1_9mm.ac_reload=재장전
+
+items.weapon.melee.r4c.name=R4-C 돌격소총
+items.weapon.melee.r4c.desc="You have my respect, Doc."\n\n이 무기는 _사격_ 무기입니다. 투척 무기나 탄창을 이용해 탄약을 장전할 수 있습니다. 이 총은 다른 사격 무기보다 사격 속도가 빠릅니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
+items.weapon.melee.r4c.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
+items.weapon.melee.r4c.stats_desc_sp=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.\n\n_특수 탄환 파쇄탄_\n - 적중시킨 대상을 밀쳐냅니다.
+items.weapon.melee.r4c.prompt=지정해주세요.
+items.weapon.melee.r4c.self_target=자신에게는 발사할 수 없습니다.
+items.weapon.melee.r4c.fizzles=탄약이 부족합니다.
+items.weapon.melee.r4c.ac_zap=사격
+items.weapon.melee.r4c.ac_reload=재장전
 
 
 
@@ -2337,14 +2357,14 @@ items.weapon.spiritbow.name=리버스 크로스보우
 items.weapon.spiritbow.ac_shoot=발사한다
 items.weapon.spiritbow.ac_seed=씨앗 부여
 items.weapon.spiritbow.prompt=대상을 선택하세요
-items.weapon.spiritbow.stats=이 쇠뇌는 직접적으로 강화를 할 수 없지만, 대신에 당신의 레벨이 오르면서 지속적으로 강해질 것입니다. 현재 당신의 레벨에서, 쇠뇌로부터의 화살 발사는 _%1$d-%2$d_ 의 피해를 입히며, 제대로 사용하기 위해서 _%3$d_ 의 힘이 필요합니다.
+items.weapon.spiritbow.stats=이 쇠뇌는 직접적으로 강화를 할 수 없지만, 대신에 당신의 레벨이 오르면서 지속적으로 강해질 것입니다. 현재 쇠뇌는 _%1$d-%2$d_ 의 피해를 입히며, 제대로 사용하기 위해서 _%3$d_ 의 힘이 필요합니다.
 items.weapon.spiritbow.desc=리버스 드로우 방식을 채택해 컴팩트한 크기와 강력한 장력을 자랑하는 쇠뇌. 자동장전 기능을 채택해 사용자는 화살만 걸어주면 바로 사격할 수 있다.
-items.weapon.spiritbow.seed=씨앗을 먹여 강화할 수 있습니다.\n씨앗 강화 횟수 : %1$d / %2$d
+items.weapon.spiritbow.seed=씨앗 강화 횟수 : %1$d / %2$d
 items.weapon.spiritbow.seedfail=더 이상 쇠뇌에 씨앗을 사용할 수 없습니다.
 items.weapon.spiritbow.power0=많은 씨앗을 부여하면 특수 능력이 개방됩니다.
 items.weapon.spiritbow.power1=_특수 능력 1단계_\n적의 방어력을 절반으로 계산합니다.
-items.weapon.spiritbow.power2=_특수 능력 2단계_\n적의 방어력을 절반으로 계산합니다.\n3번 적중시킬 때마다 보호막을 얻습니다.
-items.weapon.spiritbow.power3=_특수 능력 3단계_\n적의 방어력을 절반으로 계산합니다.\n3번 적중시킬 때마다 보호막을 얻습니다.\n적중하면 20%확률로 무작위 식물 효과를 발동시킵니다.
+items.weapon.spiritbow.power2=_특수 능력 2단계_\n적의 방어력을 절반으로 계산합니다.\n5번 적중시킬 때마다 보호막을 얻습니다.
+items.weapon.spiritbow.power3=_특수 능력 3단계_\n적의 방어력을 절반으로 계산합니다.\n5번 적중시킬 때마다 보호막을 얻습니다.\n적중하면 20%확률로 무작위 식물 효과를 발동시킵니다.
 
 items.weapon.weapon.identify=당신은 현재 사용하고 있는 무기가 무엇인지 알 만큼 충분히 익숙해졌습니다.
 items.weapon.weapon.too_heavy=당신의 힘이 충분하지 않기 때문에, 이 무기를 들 때의 공격 속도와 정확성이 감소됩니다. 또한 기습 공격을 할 수 없게 됩니다.
@@ -2510,3 +2530,11 @@ items.bonk.ac_drink=마신다
 items.bonk.desc=봉크!는 우리가 알다시피 아주 쩔어주는 능력을 주는 방사능으로 가득 차있습니다.\n\n이 음료수를 마시면 10턴동안 무적이 됩니다. 단, 적을 공격하거나 스태프를 사용하면 즉시 해제됩니다.\n\n추신 : 이 물건으로 문명의 존속 강화를 시도하는 것은 좋지않은 결과를 불러올 것입니다.
 items.bonk$bonkbuff.name=방사능 파워
 items.bonk$bonkbuff.desc=방사능의 힘이 솟아납니다. 받는 피해가 0이 됩니다.\n공격 혹은 스태프 시전을 시도한다면 방사능의 힘이 즉시 사라집니다.\n\n방사능의 힘이 %s턴 남았습니다.
+
+items.w0502.name=W-0502
+items.w0502.desc=이 물건 안에 압축된 액화 오리지늄 기체를 아주 소량만 갖고 있어도, 큰 건물 내에 모든 사람을 광석병에 감염시킬 수 있다고!\n\n이 도구는 전방으로 강력한 화염을 발사해 물을 증밠시키며, 함정조차 파괴할 수 있습니다. 액체 화염 물약으로 이 도구를 충전할 수 있습니다.
+items.w0502.ac_fire=불이야!
+items.w0502.ac_reload=재충전
+items.w0502.prompt2=방향을 지정해주세요.
+items.w0502.self_target=자신에게 불을 지를 수 없습니다.
+items.w0502.fizzles=연료가 부족합니다.

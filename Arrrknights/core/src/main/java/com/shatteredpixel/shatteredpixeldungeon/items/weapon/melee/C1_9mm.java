@@ -6,7 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -28,11 +28,9 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-import javax.management.DynamicMBean;
-
-public class DP27 extends MeleeWeapon {
+public class C1_9mm extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
-        public static final String AC_RELOAD = "RELOAD";
+    public static final String AC_RELOAD = "RELOAD";
     {
         image = ItemSpriteSheet.ENFILD;
         hitSound = Assets.Sounds.HIT_SHOTGUN;
@@ -47,7 +45,7 @@ public class DP27 extends MeleeWeapon {
 
     private int bullettier = 3;
     private int bullet = 5;
-    private int bulletCap = 22;
+    private int bulletCap = 20;
     private boolean spshot = false; // 특수 사격 여부
 
     private float RELOAD_TIME = 3f;
@@ -117,15 +115,15 @@ public class DP27 extends MeleeWeapon {
 
             if (target != null) {
 
-                final DP27 ss;
-                if (curItem instanceof DP27) {
-                    ss = (DP27) DP27.curItem;
+                final C1_9mm ss;
+                if (curItem instanceof C1_9mm) {
+                    ss = (C1_9mm) C1_9mm.curItem;
 
                     Ballistica shot = new Ballistica(curUser.pos, target, Ballistica.PROJECTILE);
                     int cell = shot.collisionPos;
 
                     if (target == curUser.pos || cell == curUser.pos) {
-                        GLog.i(Messages.get(DP27.class, "self_target"));
+                        GLog.i(Messages.get(C1_9mm.class, "self_target"));
                         return;
                     }
 
@@ -152,15 +150,13 @@ public class DP27 extends MeleeWeapon {
 
         @Override
         public String prompt() {
-            return Messages.get(DP27.class, "prompt");
+            return Messages.get(C1_9mm.class, "prompt");
         }
     };
 
     protected void fx( Ballistica bolt, Callback callback ) {
-        int a = 0;
-        if (spshot) a = 1;
         MagicMissile.boltFromChar( curUser.sprite.parent,
-                MagicMissile.GUN_SHOT+a,
+                MagicMissile.GUN_SHOT,
                 curUser.sprite,
                 bolt.collisionPos,
                 callback);
@@ -186,16 +182,16 @@ public class DP27 extends MeleeWeapon {
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f));
 
-                if (spshot) Buff.affect(ch, Burning.class).reignite(ch);
+                if (spshot) Buff.affect(ch, Silence.class, 1.5f);
 
                 ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
             }
             else {
-                    String defense = ch.defenseVerb();
+                String defense = ch.defenseVerb();
                 ch.sprite.showStatus( CharSprite.NEUTRAL, defense );
 
-                    //TODO enemy.defenseSound? currently miss plays for monks/crab even when they parry
-                    Sample.INSTANCE.play(Assets.Sounds.MISS);
+                //TODO enemy.defenseSound? currently miss plays for monks/crab even when they parry
+                Sample.INSTANCE.play(Assets.Sounds.MISS);
 
             }
 
@@ -218,7 +214,7 @@ public class DP27 extends MeleeWeapon {
                 item.detach(Dungeon.hero.belongings.backpack);
             }
         }
-        };
+    };
 
     @Override
     public String desc() {

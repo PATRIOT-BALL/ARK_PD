@@ -6,10 +6,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -28,11 +29,9 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-import javax.management.DynamicMBean;
-
-public class DP27 extends MeleeWeapon {
+public class R4C extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
-        public static final String AC_RELOAD = "RELOAD";
+    public static final String AC_RELOAD = "RELOAD";
     {
         image = ItemSpriteSheet.ENFILD;
         hitSound = Assets.Sounds.HIT_SHOTGUN;
@@ -42,12 +41,12 @@ public class DP27 extends MeleeWeapon {
 
         defaultAction = AC_ZAP;
 
-        tier = 3;
+        tier = 5;
     }
 
-    private int bullettier = 3;
+    private int bullettier = 5;
     private int bullet = 5;
-    private int bulletCap = 22;
+    private int bulletCap = 25;
     private boolean spshot = false; // 특수 사격 여부
 
     private float RELOAD_TIME = 3f;
@@ -117,15 +116,15 @@ public class DP27 extends MeleeWeapon {
 
             if (target != null) {
 
-                final DP27 ss;
-                if (curItem instanceof DP27) {
-                    ss = (DP27) DP27.curItem;
+                final R4C ss;
+                if (curItem instanceof R4C) {
+                    ss = (R4C) C1_9mm.curItem;
 
                     Ballistica shot = new Ballistica(curUser.pos, target, Ballistica.PROJECTILE);
                     int cell = shot.collisionPos;
 
                     if (target == curUser.pos || cell == curUser.pos) {
-                        GLog.i(Messages.get(DP27.class, "self_target"));
+                        GLog.i(Messages.get(R4C.class, "self_target"));
                         return;
                     }
 
@@ -152,15 +151,13 @@ public class DP27 extends MeleeWeapon {
 
         @Override
         public String prompt() {
-            return Messages.get(DP27.class, "prompt");
+            return Messages.get(R4C.class, "prompt");
         }
     };
 
     protected void fx( Ballistica bolt, Callback callback ) {
-        int a = 0;
-        if (spshot) a = 1;
         MagicMissile.boltFromChar( curUser.sprite.parent,
-                MagicMissile.GUN_SHOT+a,
+                MagicMissile.GUN_SHOT,
                 curUser.sprite,
                 bolt.collisionPos,
                 callback);
@@ -186,16 +183,20 @@ public class DP27 extends MeleeWeapon {
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f));
 
-                if (spshot) Buff.affect(ch, Burning.class).reignite(ch);
+                if (spshot) {
+                    Ballistica trajectory = new Ballistica(curUser.pos, ch.pos, Ballistica.STOP_TARGET);
+                    trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size()-1), Ballistica.PROJECTILE);
+                    WandOfBlastWave.throwChar(ch, trajectory, 2); // 넉백 효과
+                }
 
                 ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
             }
             else {
-                    String defense = ch.defenseVerb();
+                String defense = ch.defenseVerb();
                 ch.sprite.showStatus( CharSprite.NEUTRAL, defense );
 
-                    //TODO enemy.defenseSound? currently miss plays for monks/crab even when they parry
-                    Sample.INSTANCE.play(Assets.Sounds.MISS);
+                //TODO enemy.defenseSound? currently miss plays for monks/crab even when they parry
+                Sample.INSTANCE.play(Assets.Sounds.MISS);
 
             }
 
@@ -206,7 +207,7 @@ public class DP27 extends MeleeWeapon {
         bullet -=1;
         updateQuickslot();
 
-        curUser.spendAndNext(1f);
+        curUser.spendAndNext(0.8f);
     }
 
     private final WndBag.Listener itemSelector = new WndBag.Listener() {
@@ -218,7 +219,7 @@ public class DP27 extends MeleeWeapon {
                 item.detach(Dungeon.hero.belongings.backpack);
             }
         }
-        };
+    };
 
     @Override
     public String desc() {
