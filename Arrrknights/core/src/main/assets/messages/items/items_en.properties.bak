@@ -1944,7 +1944,7 @@ items.weapon.melee.assassinsblade.desc=A dagger used by Kazimierz`s gladiators. 
 
 items.weapon.melee.battleaxe.name= constellation guardian
 items.weapon.melee.battleaxe.stats_desc=Accuracy +15%
-items.weapon.melee.battleaxe.desc=Astrology is divining the future from celestial alignments. It's not quite augury, but with same result.\n\nConsumes 2 turns to charge Star Power. consumes star power when attacking to damage enemies in sight.
+items.weapon.melee.battleaxe.desc=Astrology is divining the future from celestial alignments. It's not quite augury, but with same result.\n\nConsumes 4 turns to charge Star Power. consumes star power when attacking to damage enemies in sight.
 items.weapon.melee.battleaxe.ac_zap=charge
 items.weapon.melee.battleaxe.charge=star...
 items.weapon.melee.battleaxe.charge_fail=full charge!
@@ -2371,10 +2371,13 @@ items.staffkit.fail_ring=You don't have a special ring.
 items.staffkit.prompt=wand selection
 items.staffkit.desc=This kit can transform your wand into _special_ staff the powers of a Rhodes Operator.
 
-items.ringkit.name=Ring Upgrade Kit
+items.ringkit.name=Ring Kit
 items.ringkit.ac_apply=UPGRADE
 items.ringkit.prompt=chose ring
-items.ringkit.desc=This kit can be used to Upgrade the ring.
+items.ringkit.desc=This kit can be used, You can choose to either change the ring or keep it in shape. Whichever you choose, the ring will be upgraded.
+items.ringkit.ring=What are you going to do?
+items.ringkit.cancel_warn=Cancellation is considered an upgrade.
+items.ringkit.upgrade=UPGRADE
 
 items.brokenseal.name=lucky feather
 items.brokenseal.ac_affix=AFFIX

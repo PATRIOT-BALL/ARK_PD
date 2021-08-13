@@ -250,7 +250,9 @@ public class AlchemyScene extends PixelScene {
 		ExitButton btnExit = new ExitButton(){
 			@Override
 			protected void onClick() {
-				Game.switchScene(GameScene.class);
+				Dungeon.quickslot.change=false;
+				 Game.switchScene(GameScene.class);
+				 Item.updateQuickslot();
 			}
 		};
 		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );

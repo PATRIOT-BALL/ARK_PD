@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SeethingBurst;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -135,6 +136,7 @@ abstract public class Weapon extends KindOfWeapon {
 				boolean droppingLoot = defender.alignment != Char.Alignment.ALLY;
 				if (defender instanceof Mob) {
 					if (defender.isAlive() && !defender.isImmune(Corruption.class)) {
+						if (droppingLoot) ((Mob)defender).rollToDropLoot();
 						Statistics.enemiesSlain++;
 						Badges.validateMonstersSlain();
 						Statistics.qualifiedForNoKilling = false;
@@ -303,6 +305,8 @@ abstract public class Weapon extends KindOfWeapon {
 
 		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 2) req--;
 		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 4) req--;
+
+		if (Dungeon.hero.subClass == HeroSubClass.FREERUNNER) req--;
 
 		return req;
 	}

@@ -39,7 +39,7 @@ public class RivengerSprite extends MobSprite {
 		run = new Animation( 12, true );
 		run.frames( frames, 11 );
 
-		attack = new Animation( 17, false );
+		attack = new Animation( 24, false );
 		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 );
 
 		die = new Animation( 12, false );

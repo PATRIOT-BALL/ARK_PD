@@ -166,7 +166,7 @@ public class MagesStaff extends MeleeWeapon {
 			}
 		}
 
-		if (wand.curCharges >= wand.maxCharges && attacker instanceof Hero && Random.Int(9) < ((Hero) attacker).pointsInTalent(Talent.EXCESS_CHARGE)){
+		if (wand.curCharges >= wand.maxCharges && attacker instanceof Hero && Random.Int(8) < ((Hero) attacker).pointsInTalent(Talent.EXCESS_CHARGE)){
 			Buff.affect(attacker, Barrier.class).setShield(buffedLvl()*2);
 		}
 

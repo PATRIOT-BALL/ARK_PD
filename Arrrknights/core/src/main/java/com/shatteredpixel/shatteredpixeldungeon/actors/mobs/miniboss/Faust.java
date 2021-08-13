@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -75,6 +76,15 @@ public class Faust extends Mob {
         }
 
         return damage;
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        super.damage(dmg, src);
+
+        if (dmg > 40) {
+            Buff.affect(Dungeon.hero, Blindness.class, 2f);
+        }
     }
 
     @Override

@@ -1946,7 +1946,7 @@ items.weapon.melee.assassinsblade.desc=카시미어의 검투사들이 사용하
 
 items.weapon.melee.battleaxe.name=성좌의 수호자
 items.weapon.melee.battleaxe.stats_desc=명중률 +15%
-items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.\n\n2턴을 소모해 별의 힘을 충전할 수 있습니다. 공격시 충전한 별의 힘을 모두 소모해 시야 내 적들에게 피해를 입힐 수 있습니다.
+items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.\n\n4턴을 소모해 별의 힘을 충전할 수 있습니다. 공격시 충전한 별의 힘을 모두 소모해 시야 내 적들에게 피해를 입힐 수 있습니다.
 items.weapon.melee.battleaxe.ac_zap=집중
 items.weapon.melee.battleaxe.charge=별의...
 items.weapon.melee.battleaxe.charge_fail=최대 충전!
@@ -2411,10 +2411,13 @@ items.staffkit.fail_ring=흑요석 반지가 없는 것 같다.
 items.staffkit.prompt=개조할 스태프를 선택하세요
 items.staffkit.desc=이 도구는 당신의 스태프를 로도스 대원들의 능력을 반영한 _특별한 스태프_로 개조할 수 있습니다. 개조된 도구는 원본 스태프에서 약간 수정되거나, 아에 달라진 능력을 가집니다.
 
-items.ringkit.name=반지 강화 키트
+items.ringkit.name=반지 개조 키트
 items.ringkit.ac_apply=강화한다
 items.ringkit.prompt=강화할 반지를 선택하세요.
-items.ringkit.desc=이 도구는 반지를 강화하기 위해 만들어진 정교한 도구입니다. 반지의 강화 수치를 올려줄 수 있지만, 다른 아이템을 강화하는덴 쓸 수 없을 것 같습니다.
+items.ringkit.desc=이 도구는 반지를 개조하기 위해 만들어진 정교한 도구입니다. 다른 아이템을 개조하는덴 쓸 수 없을 것 같습니다.
+items.ringkit.ring=어떻게 개조하시겠습니까?
+items.ringkit.cancel_warn=취소시 강화 수치 상승으로 판정됩니다.
+items.ringkit.upgrade=강화 수치 상승
 
 items.brokenseal.name=행운의 부적
 items.brokenseal.ac_affix=부적을 붙인다

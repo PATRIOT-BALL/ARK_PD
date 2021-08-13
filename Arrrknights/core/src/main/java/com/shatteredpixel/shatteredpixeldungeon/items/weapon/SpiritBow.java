@@ -320,7 +320,7 @@ public class SpiritBow extends Weapon {
 			}
 			if (EatSeed >= 30) SeedHit++;
 
-			if (SeedHit == 5) {Buff.affect(Dungeon.hero, Barrier.class).setShield(Dungeon.hero.HT/7);
+			if (SeedHit == 5) {Buff.affect(Dungeon.hero, Barrier.class).setShield(Dungeon.hero.HT/8);
 			SeedHit = 0;}
 
 			if (EatSeed >= 45) {

@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -45,6 +46,7 @@ public class Kaltsit extends Mob {
         state = HUNTING;
 
         properties.add(Property.BOSS);
+        properties.add(Property.LARGE);
         immunities.add(Charm.class);
         immunities.add(Silence.class);
         immunities.add(Amok.class);
@@ -97,22 +99,20 @@ public class Kaltsit extends Mob {
                 CellEmitter.get(SummontPos).burst(ShadowParticle.CURSE, 10);
 
                 if (SummontPos == Dungeon.hero.pos) {
-                    Ballistica trajectory = new Ballistica(this.pos, Dungeon.hero.pos, Ballistica.STOP_TARGET);
-                    trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
-                    WandOfBlastWave.throwChar(Dungeon.hero, trajectory, 3); // 넉백 효과
-
                     Dungeon.hero.damage(Dungeon.hero.HP/2, this);
                     Dungeon.hero.sprite.burst(CharSprite.NEGATIVE, 10);
-
-                    ScrollOfTeleportation.teleportChar_unobstructed(Dungeon.hero);
 
                     Camera.main.shake(3, 0.5f);
                 }
                 Mon3tr ter = new Mon3tr();
-                ter.pos = SummontPos;
+                ter.pos = 259;
                 GameScene.add(ter);
 
+                GameScene.flash(0x80FF0000);
+                ScrollOfTeleportation.appear(Dungeon.hero, Dungeon.level.entrance);
                 Sample.INSTANCE.play(Assets.Sounds.SKILL_MON1);
+
+                ter.beckon( Dungeon.hero.pos );
 
                 firstSummon = false;
             }

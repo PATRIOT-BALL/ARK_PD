@@ -43,8 +43,8 @@ public class W0502 extends Item {
         defaultAction = AC_FIRE;
     }
 
-    private int charge = 2;
-    private int chargecap = 2;
+    private int charge = 3;
+    private int chargecap = 3;
 
     @Override
     public ArrayList<String> actions(Hero hero) {

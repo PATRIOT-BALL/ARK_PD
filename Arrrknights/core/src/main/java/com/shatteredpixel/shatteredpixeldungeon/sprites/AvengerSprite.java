@@ -40,7 +40,7 @@ public class AvengerSprite extends MobSprite {
 		run = new Animation( 12, true );
 		run.frames( frames, c+11 );
 
-		attack = new Animation( 17, false );
+		attack = new Animation( 24, false );
 		attack.frames( frames, c+0, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
 
 		die = new Animation( 12, false );

@@ -307,7 +307,7 @@ public class Spriteex extends MissileWeapon {
                 curUser.buff(MeatPower_Mystery.class) != null ||
                 curUser.buff(MeatPower_Stewed.class) != null)
         {
-            dmg *= 1.15f;
+            dmg *= 1.1f;
         }
 
         // 마법 부여 효과

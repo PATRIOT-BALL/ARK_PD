@@ -57,8 +57,9 @@ public class v0_2_X_Changes {
                 "캔낫은 이제 _반지 강화 키트_를 보상으로 줍니다. 이 키트를 반지에 사용하여 반지의 강화 수치를 1단계 올릴 수 있습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 조정",
-                "_살카즈 백부장_ : 체력이 70에서 _85_로, 공격력이 4-16에서 _6-18_로, 명중률이 12에서 _15_로 상승했습니다." + "\n\n" +
-                        "대신 소환하는 용병의 공격력이 4-14에서 _2-12_로, 방어력이 0-3에서 _0_으로 감소했습니다."));
+                "_살카즈 백부장_ : 체력이 70에서 _110_으로, 명중률이 12에서 _15_로 상승했습니다." + "\n\n" +
+                        "용병 소환의 쿨타임이 상승했으며, 대신 물리 공격을 받을 때마다 소환 쿨타임이 감소합니다." + "\n\n" +
+                        "소환하는 용병의 공격력이 4-14에서 _2-13_으로, 방어력이 0-3에서 _0_으로 감소했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
@@ -66,22 +67,36 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 버프",
                 "_동야의 마왕_ : 공격력이 2-9에서 _2-10_으로 상승했습니다." + "\n\n" +
-                "_끓어오르는 투지_ : 명중률 보정치가 -30%에서 _-25%_로 상승했습니다."));
+                "_끓어오르는 투지_ : 명중률 보정치가 -30%에서 _-25%_로 상승했습니다." + "\n\n" +
+                "_나의 소원_ : Mon3tr의 체력 소모율이 감소한 대신 공격할 때마다 체력을 일정량 소모하도록 변경되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
+                "_검술 아미야_의 _과충전 공격_ 특성의 학률이 11-33%에서 _12.5-37.5%_로 상승했습니다." + "\n\n" +
+                        "_지배 아미야_의 _지배력 강화_ 특성의 효율이 10-30%에서 _15-45%_로 상승했습니다." + "\n\n" +
                 "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다." + "\n\n" +
                         "_그레이스롯_의 _구제자의 기도_ 특성에, 효과 발동시 아츠 기록장치의 SP 3% 충전 효과가 추가되었습니다." +" \n\n" +
                 "_수호 로즈몬티스_의 _수호 방벽 전개_ 특성에, 방벽 방어시 공격자에게 자신의 공격력 15-45%만큼 피해를 주는 기능이 추가되었습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "파괴 로즈몬티스 버프",
-                "파괴 전문화 전직시 섬멸전 장비의 강화 효율이 상승하는 능력이 추가되었습니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "신속 레드 버프",
+                "신속 전문화 전직시, 무기와 방어구의 요구 힘이 1만큼 감소하는 능력이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 버프",
+                "수호 전문화 전직시, 방벽 방어가 발동할 때마다 일정량의 보호막을 얻는 능력이 추가되었습니다." + "\n\n" +
+                        "수호 전문화의 방벽 방어 효과가 보호막이 있을 땐 발동하지 않도록 변경되었습니다." + "\n\n" +
+                "파괴 전문화 전직시 섬멸전 장비의 강화 효율이 상승하는 능력이 추가되었습니다. 대신 고기의 힘 추가 피해 배율은 약간 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 버프",
+                "_파우스트_ : 1회 공격으로 일정량 이상의 체력을 잃을 때마다 플레이어를 실명시킵니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "리유니온? 버프",
+                "_켈시_ : Mon3tr 소환시, 플레이어를 입구 부분으로 강제로 텔레포트시키고 Mon3tr를 그 근처에 소환하도록 변경되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
-                "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _70%_로 감소했습니다."));
+                "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _85%_로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다."));
@@ -92,7 +107,7 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.MONNY), "전문화 너프",
                 "_분노 전문화_ : 분노 획득량과 격노시 보호막량이 감소했습니다." + "\n\n" +
                         "_검술 전문화_ : 흑요석 반지로 근접 공격시 스태프 충전량이 감소했습니다." + "\n\n" +
-                "_암살 전문화_ : 뼈찌르기 공격의 추가 피해가 15~60%에서 _12~48%_로 감소했습니다." + "\n\n" +
+                "_암살 전문화_ : 뼈찌르기 공격의 추가 피해가 15~60%에서 _13~52%_로 감소했습니다." + "\n\n" +
                 "_자연 전문화_ : 쇠뇌 강화의 2단계 능력의 발동 조건이 3회 타격에서 _5회 타격_으로 변경되고, 보호막 획득량이 상승했습니다. 하지만 이제 보호막을 중첩시킬 수 없습니다."));
     }
 

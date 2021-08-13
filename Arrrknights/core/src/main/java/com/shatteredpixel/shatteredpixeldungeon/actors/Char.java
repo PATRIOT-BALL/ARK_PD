@@ -73,6 +73,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Elemental;
+import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.NeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
@@ -414,6 +415,8 @@ public abstract class Char extends Actor {
 				!enemy.properties().contains(Char.Property.BOSS) && !enemy.properties().contains(Char.Property.MINIBOSS)) {
 				sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Naginata.class, "skill") );
 				enemy.die(this);
+				enemy.sprite.killAndErase();
+				SpellSprite.show( enemy, SpellSprite.FOOD );
 			}
 			
 			return true;

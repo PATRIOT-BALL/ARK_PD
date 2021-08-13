@@ -602,7 +602,7 @@ public abstract class Mob extends Char {
 			
 			//physical damage that doesn't come from the hero is less effective
 			if (enemy != Dungeon.hero){
-				restoration = Math.round(restoration * 0.1f*Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON));
+				restoration = Math.round(restoration * 0.14f*Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON));
 			}
 			if (restoration > 0) {
 				Buff.affect(Dungeon.hero, Hunger.class).affectHunger(restoration*Dungeon.hero.pointsInTalent(Talent.SOUL_EATER)/3f);

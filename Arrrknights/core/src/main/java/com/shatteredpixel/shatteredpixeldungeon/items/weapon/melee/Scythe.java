@@ -24,7 +24,7 @@ public class Scythe extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  3*(tier) - 2 +   //10 + 3
+        return  3*(tier) +   //12 + 3
                 lvl*(tier-1); }
 
     @Override

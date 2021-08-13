@@ -192,12 +192,13 @@ public class CatGun extends MeleeWeapon {
         protected boolean act() {
             if (this.buff(StoneOfAggression.Aggression.class) == null) {
                 Buff.prolong(this, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);}
-            damage(HT/30, this);
+            damage(HT/50, this);
             return super.act();
         }
 
         @Override
         public int attackProc(Char enemy, int damage) {
+            damage(HT/20, this);
             Sample.INSTANCE.play( Assets.Sounds.HIT_BREAK );
             return super.attackProc(enemy, damage);
         }

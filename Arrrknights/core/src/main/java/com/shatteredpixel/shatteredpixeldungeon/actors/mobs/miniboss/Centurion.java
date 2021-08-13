@@ -40,7 +40,7 @@ public class Centurion extends Mob {
         properties.add(Property.MINIBOSS);
         properties.add(Property.SARKAZ);
 
-        HP = HT = 85;
+        HP = HT = 110;
         defenseSkill = 0;
         baseSpeed = 1f;
 
@@ -57,7 +57,7 @@ public class Centurion extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(6, 18);
+        return Random.NormalIntRange(4, 16);
     }
 
     @Override
@@ -90,6 +90,14 @@ public class Centurion extends Mob {
     }
 
     @Override
+    public int defenseProc(Char enemy, int damage) {
+        if (skillcooldown > 0) {
+            skillcooldown -= 1;
+        }
+        return super.defenseProc(enemy, damage);
+    }
+
+    @Override
     public boolean act() {
         while (skillcooldown <= 0) {
 
@@ -110,7 +118,7 @@ public class Centurion extends Mob {
                 Actor.addDelayed(new Pushing(summon, pos, summon.pos), -1);
                 CellEmitter.get(summon.pos).burst(ShadowParticle.CURSE, 4);
                 summon.beckon(Dungeon.hero.pos);
-                skillcooldown = Random.Int(6, 8);
+                skillcooldown = 12;
 
             }
             else break;
@@ -159,7 +167,7 @@ public class Centurion extends Mob {
 
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange(2, 12);
+            return Random.NormalIntRange(2, 13);
         }
 
         @Override

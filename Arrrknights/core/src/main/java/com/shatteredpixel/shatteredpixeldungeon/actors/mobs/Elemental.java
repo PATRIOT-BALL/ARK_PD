@@ -92,7 +92,7 @@ public abstract class Elemental extends Mob {
 	
 	@Override
 	protected boolean canAttack( Char enemy ) {
-		if (rangedCooldown <= 0 && this.buff(Silence.class) != null) {
+		if (rangedCooldown <= 0 && this.buff(Silence.class) == null) {
 			return new Ballistica( pos, enemy.pos, Ballistica.MAGIC_BOLT ).collisionPos == enemy.pos;
 		} else {
 			return super.canAttack( enemy );
