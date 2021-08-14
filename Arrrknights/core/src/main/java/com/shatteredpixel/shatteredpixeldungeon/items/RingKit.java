@@ -99,8 +99,7 @@ public class RingKit extends Item {
                                         }
 
                                         n.identify();
-                                        detachaa();
-
+                                        RingKit.this.detachaa();
                                         RingKit.this.upgrade((Ring) n);
 
                                         Sample.INSTANCE.play(Assets.Sounds.EVOKE);
