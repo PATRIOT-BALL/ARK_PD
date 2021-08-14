@@ -1356,12 +1356,11 @@ public class Hero extends Char {
                             enemy.damage(redamage, this);
                         }
                         Gear.discharge();
-
-                        if (2 + Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(20) && Gear.charge < Gear.chargeCap) {
-                            Gear.SPCharge(1);
                         }
-                    }
                 }
+                if (buff(Barrier.class) == null) {
+                if (2 + Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(20) && Gear.charge < Gear.chargeCap) {
+                    Gear.SPCharge(1); }}
             }
 
         }
