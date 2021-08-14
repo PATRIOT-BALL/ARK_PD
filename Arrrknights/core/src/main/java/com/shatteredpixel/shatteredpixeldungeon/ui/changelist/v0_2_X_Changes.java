@@ -45,6 +45,10 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "특별한 최종보스전",
                 "특별한 조건을 만족하면 25층의 최종 보스가 변경되는 기믹이 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
+                "_거울 속의 환영(1스킬)_ : 점멸의 돌과 같은 효과를 발동시킵니다." + "\n\n" +
+                "_'다같이 가자!'(3스킬)_ : 자신의 주위에 바위게를 최대 4마리 소환합니다. 바위게의 레벨은 무기 강화에 어느정도 영향을 받습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
@@ -77,6 +81,9 @@ public class v0_2_X_Changes {
                         "_그레이스롯_의 _구제자의 기도_ 특성에, 효과 발동시 아츠 기록장치의 SP 3% 충전 효과가 추가되었습니다." +" \n\n" +
                 "_수호 로즈몬티스_의 _수호 방벽 전개_ 특성에, 방벽 방어시 공격자에게 자신의 공격력 15-45%만큼 피해를 주는 기능이 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 버프",
+                "_네가 원하는 대로(3스킬)_ : 소환되는 방벽의 방어력이 상승했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "신속 레드 버프",
                 "신속 전문화 전직시, 무기와 방어구의 요구 힘이 1만큼 감소하는 능력이 추가되었습니다."));
 
@@ -96,7 +103,7 @@ public class v0_2_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
-                "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _85%_로 감소했습니다."));
+                "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _70%_로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다."));

@@ -80,6 +80,13 @@ public class CrabGun extends MeleeWeapon {
         updateQuickslot();
     }
 
+    public void SpawnCrab(int lvl, int pos) {
+        CrabGun.MetalCrab crab = new CrabGun.MetalCrab();
+        crab.setting(lvl);
+        GameScene.add(crab);
+        ScrollOfTeleportation.appear(crab, pos);
+    }
+
     private static final String CHARGE = "charge";
 
     @Override
@@ -118,6 +125,8 @@ public class CrabGun extends MeleeWeapon {
 
             immunities.add(Silence.class);
             alignment = Alignment.ALLY;
+
+            state = WANDERING;
         }
 
         private int crabLevel = 0;

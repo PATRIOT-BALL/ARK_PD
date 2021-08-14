@@ -324,7 +324,7 @@ public class SpiritBow extends Weapon {
 			SeedHit = 0;}
 
 			if (EatSeed >= 45) {
-				if (Random.Int(5) == 0) {
+				if (Random.Int(7) == 0) {
 					int Chance = Random.Int(7);
 					switch (Chance) {
 						case 0: new Blindweed().activate(defender); break;

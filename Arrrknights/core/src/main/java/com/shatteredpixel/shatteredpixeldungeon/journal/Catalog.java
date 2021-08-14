@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPhantomMirror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookSpreadSpores;
@@ -57,6 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHamm
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookSpikes;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookWolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Bookancientkin;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookEveryone;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
@@ -227,6 +229,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Dagger.class,                     false);
 		WEAPONS.seen.put( MagesStaff.class,                 false);
 		WEAPONS.seen.put( EX42.class,                     false);
+
 		WEAPONS.seen.put( Shortsword.class,                 false);
 		WEAPONS.seen.put( HandAxe.class,                    false);
 		WEAPONS.seen.put( Spear.class,                      false);
@@ -236,7 +239,7 @@ public enum Catalog {
 		WEAPONS.seen.put( MidnightSword.class,                   false);
 		WEAPONS.seen.put( Sword.class,                      false);
 		WEAPONS.seen.put( Mace.class,                       false);
-		WEAPONS.seen.put( Enfild.class,                       false);
+
 		WEAPONS.seen.put( Scimitar.class,                   false);
 		WEAPONS.seen.put( RoundShield.class,                false);
 		WEAPONS.seen.put( Sai.class,                        false);
@@ -244,6 +247,7 @@ public enum Catalog {
 		WEAPONS.seen.put( CrabGun.class,                       false);
 		WEAPONS.seen.put( SHISHIOH.class,                      false);
 		WEAPONS.seen.put( Flag.class,                false);
+
 		WEAPONS.seen.put( Longsword.class,                  false);
 		WEAPONS.seen.put( BattleAxe.class,                  false);
 		WEAPONS.seen.put( RunicBlade.class,                 false);
@@ -252,6 +256,7 @@ public enum Catalog {
 		WEAPONS.seen.put( M1887.class,                       false);
 		WEAPONS.seen.put( Naginata.class,                       false);
 		WEAPONS.seen.put( Scythe.class,                false);
+
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( WarHammer.class,                  false);
 		WEAPONS.seen.put( Glaive.class,                     false);
@@ -262,6 +267,7 @@ public enum Catalog {
 		WEAPONS.seen.put( WintersScar.class,                   false);
 		WEAPONS.seen.put( SwordofArtorius.class,                   false);
 		WEAPONS.seen.put( DivineAvatar.class,                false);
+
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Gamzashield.class,               false);
 		WEAPONS.seen.put( Enfild2.class,                       false);
@@ -285,6 +291,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookThoughts.class,              false);
 		SKILLBOOK.seen.put( BookHotBlade.class,              false);
 		SKILLBOOK.seen.put( BookSpreadSpores.class,              false);
+		SKILLBOOK.seen.put( BookPhantomMirror.class,              false);
 
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
@@ -312,6 +319,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookYourWish.class,              false);
         SKILLBOOK.seen.put( BookTerminationT.class,          false);
         SKILLBOOK.seen.put( BookTrueSilverSlash.class,          false);
+		SKILLBOOK.seen.put( BookEveryone.class,          false);
 
 		WANDS.seen.put( WandOfMagicMissile.class,           false);
 		WANDS.seen.put( WandOfLightning.class,              false);

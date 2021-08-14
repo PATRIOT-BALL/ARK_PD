@@ -74,6 +74,10 @@ items.skill.sk1.bookspreadspores.name=포자 확산의 스킬개론
 items.skill.sk1.bookspreadspores.desc=_포자 확산_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점의 적 침묵 + 부식 가스 생성\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookspreadspores.ac_use=읽는다
 
+items.skill.sk1.bookphantommirror.name=환영의 스킬개론
+items.skill.sk1.bookphantommirror.desc=_거울 속의 환영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 점멸\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.bookphantommirror.ac_use=읽는다
+
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookwolfpack.ac_use=읽는다
@@ -250,6 +254,10 @@ items.skill.sk1.spreadspores.name=_포자 확산(1스킬)_
 items.skill.sk1.spreadspores.desc=목표 지점에 있는 적에게 속박, 침묵을 걸고 부식 가스를 생성합니다.
 items.skill.sk1.spreadspores.desc_wnd=목표 지점의 적을 속박, 침묵시키고 부식 가스 생성
 
+items.skill.sk1.phantommirror.name=_거울 속의 환영(1스킬)_
+items.skill.sk1.phantommirror.desc=목표 지점으로 점멸합니다. (점멸의 돌 사용과 같은 효과)
+items.skill.sk1.phantommirror.desc_wnd=목표 지점으로 점멸
+
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 도약_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
 items.skill.sk2.wolfpack.desc_wnd=발동시 지정한 위치로 도약해 피해를 주고 마비시킵니다.
@@ -362,6 +370,10 @@ items.skill.sk3.yourwish.desc_wnd=발동시 목표 지점에 EX-43을 소환합�
 items.skill.sk3.yourwish.prompt=목표를 지정
 items.skill.sk3.yourwish$ex43.name=EX-43
 items.skill.sk3.yourwish$ex43.desc=이 강력한 장치는 매우 튼튼하며, 주위 적들에게 공격을 가합니다. 정말 무겁습니다.
+
+items.skill.sk3.everyonetogether.name=_"다 같이 가자!"(3스킬)_
+items.skill.sk3.everyonetogether.desc=발동시 주위에 바위게를 최대 4마리 소환합니다. 바위게의 레벨은 무기 강화 수치의 영향을 어느정도 받습니다.
+items.skill.sk3.everyonetogether.desc_wnd=발동시 주위에 바위게 최대 4마리 소환
 
 
 
@@ -2166,7 +2178,7 @@ items.weapon.melee.shishioh.stats_desc=명중률 +20%, 기습공격 불가
 items.weapon.melee.shishioh.desc="나쁜 녀석은 서걱서걱해버렸지. 박사는 말이야, 사람을 꽤 부려 먹는 거 같아."\n\n이 무기는 착용자의 체력이 낮을수록 피해량이 상승해 최대 50%까지 상승합니다. 또한, 착용자의 생명이 위험하면 적의 피를 흡수해 착용자를 회복시켜줍니다.
 
 items.weapon.melee.rhodessword.name=로도스 제식 장검
-items.weapon.melee.rhodessword.stats_desc=기습시 최소 데미지 보정 +100%\n_고정 피해(방어 무시)_, 적 처치시 즉시 투명화
+items.weapon.melee.rhodessword.stats_desc=기습시 최소 데미지 보정 +70%\n_고정 피해(방어 무시)_, 적 처치시 즉시 투명화
 items.weapon.melee.rhodessword.desc="그녀는 마치 처음부터 있었던 사람처럼 로도스 아일랜드에 존재하고 있다. 어쩌면 어느 날 그녀가 돌연히 사라지더라도, 이를 알아채는 사람이 몇 없을지도 모른다."
 
 items.weapon.melee.catgun.name=나의 소원
@@ -2364,7 +2376,7 @@ items.weapon.spiritbow.seedfail=더 이상 쇠뇌에 씨앗을 사용할 수 없
 items.weapon.spiritbow.power0=많은 씨앗을 부여하면 특수 능력이 개방됩니다.
 items.weapon.spiritbow.power1=_특수 능력 1단계_\n적의 방어력을 절반으로 계산합니다.
 items.weapon.spiritbow.power2=_특수 능력 2단계_\n적의 방어력을 절반으로 계산합니다.\n5번 적중시킬 때마다 보호막을 얻습니다.
-items.weapon.spiritbow.power3=_특수 능력 3단계_\n적의 방어력을 절반으로 계산합니다.\n5번 적중시킬 때마다 보호막을 얻습니다.\n적중하면 20%확률로 무작위 식물 효과를 발동시킵니다.
+items.weapon.spiritbow.power3=_특수 능력 3단계_\n적의 방어력을 절반으로 계산합니다.\n5번 적중시킬 때마다 보호막을 얻습니다.\n적중하면 14%확률로 무작위 식물 효과를 발동시킵니다.
 
 items.weapon.weapon.identify=당신은 현재 사용하고 있는 무기가 무엇인지 알 만큼 충분히 익숙해졌습니다.
 items.weapon.weapon.too_heavy=당신의 힘이 충분하지 않기 때문에, 이 무기를 들 때의 공격 속도와 정확성이 감소됩니다. 또한 기습 공격을 할 수 없게 됩니다.
@@ -2414,10 +2426,10 @@ items.staffkit.desc=이 도구는 당신의 스태프를 로도스 대원들의 
 items.ringkit.name=반지 개조 키트
 items.ringkit.ac_apply=강화한다
 items.ringkit.prompt=강화할 반지를 선택하세요.
-items.ringkit.desc=이 도구는 반지를 개조하기 위해 만들어진 정교한 도구입니다. 다른 아이템을 개조하는덴 쓸 수 없을 것 같습니다.
+items.ringkit.desc=이 도구는 반지를 개조하기 위해 만들어진 정교한 도구입니다. 반지의 형태를 유지하거나 변형시킬 수 있으며, 어느 선택을 하든 반지는 강화됩니다.
 items.ringkit.ring=어떻게 개조하시겠습니까?
-items.ringkit.cancel_warn=취소시 강화 수치 상승으로 판정됩니다.
-items.ringkit.upgrade=강화 수치 상승
+items.ringkit.cancel_warn=취소시 형태를 변형하지 않습니다.
+items.ringkit.upgrade=변형하지 않는다
 
 items.brokenseal.name=행운의 부적
 items.brokenseal.ac_affix=부적을 붙인다

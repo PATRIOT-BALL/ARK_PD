@@ -84,6 +84,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PhantomMirror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Shinkageryu;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.SpreadSpores;
@@ -110,6 +111,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Reflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.RockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Spikes;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.WolfPack;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.EveryoneTogether;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.NigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
@@ -199,9 +201,9 @@ import java.util.LinkedHashMap;
 public class Hero extends Char {
 
     // 스킨 관련
-    public static final int TALULAH      = 1;
-    public static final int F_NOVA      = 2;
-    public static final int SKADI      = 3;
+    public static final int TALULAH = 1;
+    public static final int F_NOVA = 2;
+    public static final int SKADI = 3;
 
     {
         actPriority = HERO_PRIO;
@@ -279,8 +281,8 @@ public class Hero extends Char {
     public void updateHT(boolean boostHP) {
         int curHT = HT;
 
-        if (Dungeon.eazymode == 1)  HT = 20 + 10 * (lvl - 1) + (HTBoost * 2);
-        else  HT = 20 + 5 * (lvl - 1) + HTBoost;
+        if (Dungeon.eazymode == 1) HT = 20 + 10 * (lvl - 1) + (HTBoost * 2);
+        else HT = 20 + 5 * (lvl - 1) + HTBoost;
         float multiplier = RingOfMight.HTMultiplier(this);
         HT = Math.round(multiplier * HT);
 
@@ -291,7 +293,8 @@ public class Hero extends Char {
         if (boostHP) {
             HP += Math.max(HT - curHT, 0);
         }
-        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 25 && Dungeon.bossLevel()) HT /= 2;
+        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 25 && Dungeon.bossLevel())
+            HT /= 2;
         HP = Math.min(HP, HT);
     }
 
@@ -513,9 +516,10 @@ public class Hero extends Char {
 
         if (wep instanceof MissileWeapon) {
             if (Dungeon.level.adjacent(pos, target.pos)) {
-                accuracy *= (0.5f + 0.25f*pointsInTalent(Talent.DURABLE_TIPS));
+                accuracy *= (0.5f + 0.25f * pointsInTalent(Talent.DURABLE_TIPS));
             } else {
-                if (this.subClass == HeroSubClass.SNIPER) accuracy *= 1.75f + (pointsInTalent(Talent.FARSIGHT) * 0.25f);
+                if (this.subClass == HeroSubClass.SNIPER)
+                    accuracy *= 1.75f + (pointsInTalent(Talent.FARSIGHT) * 0.25f);
                 else accuracy *= 1.5f;
             }
         }
@@ -596,7 +600,7 @@ public class Hero extends Char {
             dr += Random.NormalIntRange(0, 2 * pointsInTalent(Talent.HOLD_FAST));
         }
 
-        if (Dungeon.hero.hasTalent(Talent.TACTICAL_SHIELD)){
+        if (Dungeon.hero.hasTalent(Talent.TACTICAL_SHIELD)) {
             int drplus = Dungeon.hero.belongings.armor.buffedLvl() * Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD);
             drplus = Math.min(drplus, 12);
             dr += drplus;
@@ -655,14 +659,14 @@ public class Hero extends Char {
         if (berserk != null)
             spup = berserk.getPower() / 1.3f;
 
-        spup = Math.min(spup, 0.3f+(float)Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
+        spup = Math.min(spup, 0.3f + (float) Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
 
         speed *= (1 + spup);
 
         // 쪽냥이 수호
         AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
         if (Gear != null) {
-            if (Gear.charge > 0){
+            if (Gear.charge > 0) {
                 if (this.hasTalent(Talent.SPEED_COMABT)) {
                     speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 10;
                 }
@@ -1122,7 +1126,7 @@ public class Hero extends Char {
 
             return false;
 
-        }else if (getCloser(stairs)) {
+        } else if (getCloser(stairs)) {
 
             return true;
 
@@ -1142,8 +1146,7 @@ public class Hero extends Char {
             //there can be multiple entrance tiles, so descend on any of them
             //TODO this is slightly brittle, it assumes there are no disjointed sets of entrance tiles
         } else if (Dungeon.level.map[pos] == Terrain.ENTRANCE) {
-            if (Dungeon.depth == 1)
-            {
+            if (Dungeon.depth == 1) {
                 curAction = null;
 
                 Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
@@ -1155,8 +1158,7 @@ public class Hero extends Char {
                 Game.switchScene(InterlevelScene.class);
 
                 return true;
-            }
-            else {
+            } else {
                 curAction = null;
 
                 Buff buff = buff(TimekeepersHourglass.timeFreeze.class);
@@ -1178,7 +1180,7 @@ public class Hero extends Char {
             ready();
             return false;
         }
-        }
+    }
 
     private boolean actAttack(HeroAction.Attack action) {
 
@@ -1230,14 +1232,16 @@ public class Hero extends Char {
 
         if (wep != null) damage = wep.proc(this, enemy, damage);
 
-        if(buff(Bonk.BonkBuff.class) != null) Buff.detach(this, Bonk.BonkBuff.class);
+        if (buff(Bonk.BonkBuff.class) != null) Buff.detach(this, Bonk.BonkBuff.class);
 
         damage = Talent.onAttackProc(this, enemy, damage);
 
         if (this.hasTalent(Talent.RHODES_CAT)) {
             AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
             if (Gear != null)
-                if (Gear.charge > 0) { damage *= 1f + (float)this.pointsInTalent(Talent.RHODES_CAT) * 0.15f; }
+                if (Gear.charge > 0) {
+                    damage *= 1f + (float) this.pointsInTalent(Talent.RHODES_CAT) * 0.15f;
+                }
         }
 
         switch (subClass) {
@@ -1289,13 +1293,14 @@ public class Hero extends Char {
 
     @Override
     public int defenseProc(Char enemy, int damage) {
-        if(RingOfDominate.Dominate_curse(this) == true) {
+        if (RingOfDominate.Dominate_curse(this) == true) {
             if (Random.Int(HT) > HP * 3) {
                 Buff.affect(this, Corruption.class);
                 Dungeon.hero.die(RingOfDominate.class);
 
-                if (Dungeon.hero.isAlive()) { Buff.detach(this, Corruption.class); }
-                else GLog.w(Messages.get(RingOfDominate.class, "soulless"));
+                if (Dungeon.hero.isAlive()) {
+                    Buff.detach(this, Corruption.class);
+                } else GLog.w(Messages.get(RingOfDominate.class, "soulless"));
             }
         }
 
@@ -1303,23 +1308,25 @@ public class Hero extends Char {
             Berserk berserk = Buff.affect(this, Berserk.class);
             berserk.damage(damage);
 
-           if (this.hasTalent(Talent.ENRAGED_CATALYST))
-           {
-                   Talent.BlazeBurstBuff counter = Buff.affect(Dungeon.hero, Talent.BlazeBurstBuff.class);
-                   if (counter.count() < 10) { counter.countUp(1); }
-                   if (HT/2 < HP) { counter.countDown(1);}
-           }
+            if (this.hasTalent(Talent.ENRAGED_CATALYST)) {
+                Talent.BlazeBurstBuff counter = Buff.affect(Dungeon.hero, Talent.BlazeBurstBuff.class);
+                if (counter.count() < 10) {
+                    counter.countUp(1);
+                }
+                if (HT / 2 < HP) {
+                    counter.countDown(1);
+                }
+            }
         }
 
         if (belongings.armor != null) {
             damage = belongings.armor.proc(enemy, this, damage);
         }
 
-        if (belongings.weapon instanceof Niansword)
-        {
-            int dmg = Random.IntRange(0,3+belongings.weapon.buffedLvl() * 3);
+        if (belongings.weapon instanceof Niansword) {
+            int dmg = Random.IntRange(0, 3 + belongings.weapon.buffedLvl() * 3);
             int dr = Math.max(enemy.drRoll(), enemy.drRoll());
-            enemy.damage(dmg - dr,this);
+            enemy.damage(dmg - dr, this);
         }
 
         Earthroot.Armor armor = buff(Earthroot.Armor.class);
@@ -1332,7 +1339,8 @@ public class Hero extends Char {
         if (MudrockArmor != null) {
             damage = MudrockArmor.absorb(damage);
         } else if (rockArmor != null) {
-            damage = rockArmor.absorb(damage); }
+            damage = rockArmor.absorb(damage);
+        }
 
         AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
         if (Gear != null) {
@@ -1348,11 +1356,13 @@ public class Hero extends Char {
                             enemy.damage(redamage, this);
                         }
                         Gear.discharge();
+
+                        if (2 + Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(20) && Gear.charge < Gear.chargeCap) {
+                            Gear.SPCharge(1);
+                        }
                     }
                 }
-
-                if (2 + Dungeon.hero.pointsInTalent(Talent.BARRIER_REPAIR) > Random.Int(20)) {
-                    Gear.SPCharge(1); }}
+            }
 
         }
 
@@ -1404,17 +1414,19 @@ public class Hero extends Char {
         if (Dungeon.hero.hasTalent(Talent.INFINITE_RAGE)) {
             Berserk berserk = buff(Berserk.class);
             float ber;
-            if (berserk != null){ ber =  1.25f - (Dungeon.hero.pointsInTalent(Talent.INFINITE_RAGE) * 0.25f);
-            if (berserk.getPower() >= ber)
-            {
-                dmg = Math.round(dmg * 0.7f);
-            }}}
+            if (berserk != null) {
+                ber = 1.25f - (Dungeon.hero.pointsInTalent(Talent.INFINITE_RAGE) * 0.25f);
+                if (berserk.getPower() >= ber) {
+                    dmg = Math.round(dmg * 0.7f);
+                }
+            }
+        }
 
         if (Dungeon.hero.hasTalent(Talent.BARKSKIN)) {
             int grassCells = 0;
             for (int i : PathFinder.NEIGHBOURS9) {
-                if (Dungeon.level.map[pos+i] == Terrain.FURROWED_GRASS
-                        || Dungeon.level.map[pos+i] == Terrain.HIGH_GRASS){
+                if (Dungeon.level.map[pos + i] == Terrain.FURROWED_GRASS
+                        || Dungeon.level.map[pos + i] == Terrain.HIGH_GRASS) {
                     grassCells++;
                 }
             }
@@ -1426,12 +1438,15 @@ public class Hero extends Char {
 
 
         if (src instanceof ChaliceOfBlood) {
-        if(buff(Twilight.class) != null) {
-            Buff.detach(this, Twilight.class);
-            dmg = 0;} }
-        else {
-            if(buff(Twilight.class) != null) { dmg = 0;}
-            if(buff(Bonk.BonkBuff.class) != null) dmg = 0;
+            if (buff(Twilight.class) != null) {
+                Buff.detach(this, Twilight.class);
+                dmg = 0;
+            }
+        } else {
+            if (buff(Twilight.class) != null) {
+                dmg = 0;
+            }
+            if (buff(Bonk.BonkBuff.class) != null) dmg = 0;
         }
 
 
@@ -1724,9 +1739,8 @@ public class Hero extends Char {
                 }
 
                 AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
-                if (Gear != null)
-                {
-                    Gear.SPCharge(Gear.chargeCap);
+                if (Gear != null) {
+                    if (Gear.charge < Gear.chargeCap) Gear.SPCharge(Gear.chargeCap);
                     Gear.artsused = 0;
                 }
 
@@ -1841,8 +1855,8 @@ public class Hero extends Char {
             //ensures that you'll get to act first in almost any case, to prevent reviving and then instantly dieing again.
             PotionOfHealing.cure(this);
             Buff.detach(this, Paralysis.class);
-            Buff.affect( this, Barrier.class).incShield(this.HT / 2);
-            Buff.prolong( this, BlobImmunity.class, BlobImmunity.DURATION / 4 );
+            Buff.affect(this, Barrier.class).incShield(this.HT / 2);
+            Buff.prolong(this, BlobImmunity.class, BlobImmunity.DURATION / 4);
             spend(-cooldown());
 
             new Flare(8, 32).color(0xFFFF66, true).show(sprite, 2f);
@@ -2001,11 +2015,9 @@ public class Hero extends Char {
             spend(attackDelay() * 0.5f);
         }
 
-        if (Dungeon.hero.hasTalent(Talent.SPARKOFLIFE))
-        {
-            if (Dungeon.hero.pointsInTalent(Talent.SPARKOFLIFE) > Random.IntRange(0, 19))
-            {
-                HP = Math.min( HP + HT / 20, HT );
+        if (Dungeon.hero.hasTalent(Talent.SPARKOFLIFE)) {
+            if (Dungeon.hero.pointsInTalent(Talent.SPARKOFLIFE) > Random.IntRange(0, 19)) {
+                HP = Math.min(HP + HT / 20, HT);
             }
         }
 
@@ -2254,39 +2266,62 @@ public class Hero extends Char {
     }
 
     private void loadSkill1(int SkillNumber) {
-        if (SkillNumber == 1) {
-            SK1 = new TacticalChanting();
-        } else if (SkillNumber == 2) {
-            SK1 = new PowerfulStrike();
-        } else if (SkillNumber == 3) {
-            SK1 = new ExecutionMode();
-        } else if (SkillNumber == 4) {
-            SK1 = new Fate();
-        } else if (SkillNumber == 5) {
-            SK1 = new Panorama();
-        } else if (SkillNumber == 6) {
-            SK1 = new FoodPrep();
-        } else if (SkillNumber == 7) {
-            SK1 = new ChainHook();
-        } else if (SkillNumber == 8) {
-            SK1 = new Whispers();
-        } else if (SkillNumber == 9) {
-            SK1 = new CrimsonCutter();
-        } else if (SkillNumber == 10) {
+        switch (SkillNumber) {
+            default:
+                SK1 = null;
+                break;
+            case 1:
+                SK1 = new TacticalChanting();
+                break;
+            case 2:
+                SK1 = new PowerfulStrike();
+                break;
+            case 3:
+                SK1 = new ExecutionMode();
+                break;
+            case 4:
+                SK1 = new Fate();
+                break;
+            case 5:
+                SK1 = new Panorama();
+                break;
+            case 6:
+                SK1 = new FoodPrep();
+                break;
+            case 7:
+                SK1 = new ChainHook();
+                break;
+            case 8:
+                SK1 = new Whispers();
+                break;
+            case 9:
+                SK1 = new CrimsonCutter();
+                break;
+            case 10:
                 SK1 = new Shinkageryu();
-        } else if (SkillNumber == 11) {
-            SK1 = new FierceGlare();
-        } else if (SkillNumber == 12) {
-            SK1 = new Camouflage();
-        } else if (SkillNumber == 13) {
-            SK1 = new WolfSpirit();
-        } else if (SkillNumber == 14) {
-            SK1 = new Thoughts();
-        } else if (SkillNumber == 15) {
-            SK1 = new HotBlade();
-        } else if (SkillNumber == 16) {
-            SK1 = new SpreadSpores();
-        } else SK1 = null;
+                break;
+            case 11:
+                SK1 = new FierceGlare();
+                break;
+            case 12:
+                SK1 = new Camouflage();
+                break;
+            case 13:
+                SK1 = new WolfSpirit();
+                break;
+            case 14:
+                SK1 = new Thoughts();
+                break;
+            case 15:
+                SK1 = new HotBlade();
+                break;
+            case 16:
+                SK1 = new SpreadSpores();
+                break;
+            case 17:
+                SK1 = new PhantomMirror();
+                break;
+        }
     }
 
     private void loadSkill2(int SkillNumber) {
@@ -2330,21 +2365,35 @@ public class Hero extends Char {
     }
 
     private void loadSkill3(int SkillNumber) {
-        if (SkillNumber == 1) {
-            SK3 = new ShadowAssault();
-        } else if (SkillNumber == 2) {
-            SK3 = new SoaringFeather();
-        } else if (SkillNumber == 3) {
-            SK3 = new SBurst();
-        } else if (SkillNumber == 4) {
-            SK3 = new NigetRaid();
-        } else if (SkillNumber == 5) {
-            SK3 = new TerminationT();
-        } else if (SkillNumber == 6) {
-            SK3 = new TrueSilverSlash();
-        } else if (SkillNumber == 7) {
-            SK3 = new YourWish();
-        } else SK3 = null;
-    }
+        switch (SkillNumber) {
+            default:
+                SK3 = null;
+                break;
+            case 1:
+                SK3 = new ShadowAssault();
+                break;
+            case 2:
+                SK3 = new SoaringFeather();
+                break;
+            case 3:
+                SK3 = new SBurst();
+                break;
+            case 4:
+                SK3 = new NigetRaid();
+                break;
+            case 5:
+                SK3 = new TerminationT();
+                break;
+            case 6:
+                SK3 = new TrueSilverSlash();
+                break;
+            case 7:
+                SK3 = new YourWish();
+                break;
+            case 8:
+                SK3 = new EveryoneTogether();
+                break;
+        }
 
+    }
 }

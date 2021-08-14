@@ -74,6 +74,10 @@ items.skill.sk1.bookspreadspores.name=Skill Summary of Spores
 items.skill.sk1.bookspreadspores.desc=_Spread Spores_ is recorded Summary. learn skill 1 by reading it. \n\nEffect: Silences targets at target points and generates corrosive gases\n_Caution: When used, the existing skill 1 is removed._
 items.skill.sk1.bookspreadspores.ac_use=READ
 
+items.skill.sk1.bookphantommirror.name=Skill Summary of Phantom
+items.skill.sk1.bookphantommirror.desc=_Phanto Mirror_ is recorded Summary. learn skill 1 by reading it. \n\nEffect: Blink\n_Caution: When used, the existing skill 1 is removed._
+items.skill.sk1.bookphantommirror.ac_use=READ
+
 items.skill.sk2.bookwolfpack.name=Skill Summary of Wolfpack
 items.skill.sk2.bookwolfpack.desc=_Wolfpack_ is recorded Summary. learn skill 2 by reading it. \n\nEffect: Teleports to the target location and inflicts damage and paralysis around it.\n_Caution: When used, the existing skill 2 is removed._
 items.skill.sk2.bookwolfpack.ac_use=READ
@@ -250,6 +254,10 @@ items.skill.sk1.spreadspores.name=_Spread Spores (Skill 1)_
 items.skill.sk1.spreadspores.desc=ACTIVE: Inflicts silence, roots and corrosive gas on the target
 items.skill.sk1.spreadspores.desc_wnd=ACTIVE: Inflicts silence, roots and corrosive gas on the target
 
+items.skill.sk1.phantommirror.name=_Phantom Mirror (Skill 1)_
+items.skill.sk1.phantommirror.desc=ACTIVE: Blink in the target direction (Same as Stone Of Blink)
+items.skill.sk1.phantommirror.desc_wnd=ACTIVE: Blink in the target direction
+
 items.skill.sk2.wolfpack.name=_Wolf Pack (Skill 2)_
 items.skill.sk2.wolfpack.desc=ACTIVE: Inflicts damage and paralysis to nearby enemies after _ jumping to the target point_. Stealth after cast
 items.skill.sk2.wolfpack.desc_wnd=ACTIVE: Inflict damage and paralysis after jumping to the target point
@@ -362,6 +370,10 @@ items.skill.sk3.yourwish.desc_wnd=ACTIVE: Summon EX-43 to target location.
 items.skill.sk3.yourwish.prompt=ACTIVE: Summon EX-43 to target location.
 items.skill.sk3.yourwish$ex43.name=EX-43
 items.skill.sk3.yourwish$ex43.desc=This sturdy and massive device is very powerful.
+
+items.skill.sk3.everyonetogether.name=_"Everyone Together!" (Skill 3)_
+items.skill.sk3.everyonetogether.desc=ACTIVE: Summons up to 4 crabs around. Leveling the crab in proportion to the weapons upgrade value
+items.skill.sk3.everyonetogether.desc_wnd==ACTIVE: Summons up to 4 crabs around
 
 
 
@@ -2160,7 +2172,7 @@ items.weapon.melee.shishioh.stats_desc=Accuracy +20%, No surprise attack
 items.weapon.melee.shishioh.desc="you really know how to appeal to people."\n\nThe lower the health, the higher the damage, and if it is below 50%, the Life Drain is activated.
 
 items.weapon.melee.rhodessword.name=Rhodes-style longsword
-items.weapon.melee.rhodessword.stats_desc=Surprise attack bonus +100%\n_True Damage(ignore defense)_, you kill an enemy, get invisible.
+items.weapon.melee.rhodessword.stats_desc=Surprise attack bonus +70%\n_True Damage(ignore defense)_\nyou kill an enemy, get invisible.
 items.weapon.melee.rhodessword.desc=if she were to suddenly disappear one day, it's unclear how many people would actually notice.
 
 items.weapon.melee.catgun.name=My wish
@@ -2324,7 +2336,7 @@ items.weapon.spiritbow.seedfail=fail
 items.weapon.spiritbow.power0=add seed, get Ability.
 items.weapon.spiritbow.power1=_Ability Level 1_\nhalves enemy's defense
 items.weapon.spiritbow.power2=_Ability Level 2_\nhalves enemy's defense\nHit 5 times to get a shield
-items.weapon.spiritbow.power3=_Ability Level 3_\nhalves enemy's defense\nHit 5 times to get a shield\n20% chance to trigger a random plant effect
+items.weapon.spiritbow.power3=_Ability Level 3_\nhalves enemy's defense\nHit 5 times to get a shield\n14% chance to trigger a random plant effect
 
 items.weapon.weapon.identify=You are now familiar enough with your weapon to identify it.
 items.weapon.weapon.too_heavy=Because of your inadequate strength this weapon will hinder your attack speed, accuracy, and ability to surprise attack.
@@ -2376,7 +2388,7 @@ items.ringkit.ac_apply=UPGRADE
 items.ringkit.prompt=chose ring
 items.ringkit.desc=This kit can be used, You can choose to either change the ring or keep it in shape. Whichever you choose, the ring will be upgraded.
 items.ringkit.ring=What are you going to do?
-items.ringkit.cancel_warn=Cancellation is considered an upgrade.
+items.ringkit.cancel_warn=Cancel : It retains its shape and strengthens it.
 items.ringkit.upgrade=UPGRADE
 
 items.brokenseal.name=lucky feather

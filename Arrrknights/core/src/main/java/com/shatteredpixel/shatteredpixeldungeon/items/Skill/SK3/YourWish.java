@@ -109,7 +109,7 @@ public class YourWish extends Skill {
         public int damageRoll() { return Random.NormalIntRange( Dungeon.hero.lvl, Dungeon.hero.lvl * 2); }
 
         @Override
-        public int drRoll() { return Random.NormalIntRange( 0, Dungeon.hero.lvl / 2 ); }
+        public int drRoll() { return Random.NormalIntRange( 4, 8 + Dungeon.hero.lvl / 2 ); }
 
         @Override
         public int attackSkill(Char target) {
