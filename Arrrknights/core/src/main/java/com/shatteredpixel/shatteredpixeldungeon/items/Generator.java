@@ -141,6 +141,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfDisintegration;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFrost;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLightning;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
@@ -376,8 +377,9 @@ public class Generator {
                     WandOfTransfusion.class,
                     WandOfCorruption.class,
                     WandOfRegrowth.class,
-                    WandOfSilence.class};
-            WAND.probs = new float[]{4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+                    WandOfSilence.class,
+                    WandOfHealing.class};
+            WAND.probs = new float[]{3, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 2};
 
             //see generator.randomWeapon
             WEAPON.classes = new Class<?>[]{};
