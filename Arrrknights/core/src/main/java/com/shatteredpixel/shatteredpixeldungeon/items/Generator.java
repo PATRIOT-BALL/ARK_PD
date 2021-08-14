@@ -413,7 +413,7 @@ public class Generator {
                     SHISHIOH.class,
                     Flag.class
             };
-            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 3};
+            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 4};
 
             WEP_T4.classes = new Class<?>[]{
                     Longsword.class,
@@ -425,7 +425,7 @@ public class Generator {
                     Naginata.class,
                     Scythe.class
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 4, 4, 4, 3};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 4, 4, 4, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,
