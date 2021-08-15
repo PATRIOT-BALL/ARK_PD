@@ -169,7 +169,8 @@ public class Badges {
 		//GREEN
 		SKIN_BABOSKADI(160),
 		SKIN_TALU(161),
-		SKIN_NOVA(162);
+		SKIN_NOVA(162),
+		SKIN_SUSUU(162);
 
 		public boolean meta;
 
@@ -853,6 +854,11 @@ public class Badges {
 
 	public static void validatenovaskin() {
 		Badge badge = Badge.SKIN_NOVA;
+		displayBadge( badge );
+	}
+
+	public static void validatesusuuskin() {
+		Badge badge = Badge.SKIN_SUSUU;
 		displayBadge( badge );
 	}
 	

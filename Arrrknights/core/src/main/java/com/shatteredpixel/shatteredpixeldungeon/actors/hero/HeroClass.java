@@ -360,6 +360,7 @@ public enum HeroClass {
 				case 1: return Assets.Sprites.TALRU_FIGHT;
 				case 2: return Assets.Sprites.FNOVA;
 				case 3: return Assets.Sprites.SKD;
+				case 4: return Assets.Sprites.SKD;
 			}
 		}
 		switch (this) {

@@ -77,11 +77,12 @@ badges$badge.get_25_stones=원암 25개 채취
 badges$badge.get_40_stones=원암 40개 채취
 badges$badge.fragging=엔딩-하극상
 badges$badge.pray=널 기다릴게
-badges$badge.will=의지
+badges$badge.will=엔딩-의지
 
 badges$badge.skin_baboskadi=스카디 스킨 해금
 badges$badge.skin_talu=탈룰라 스킨 해금
 badges$badge.skin_nova=서리별 스킨 해금
+badges$badge.skin_susuu=대학원생 스킨 해금
 
 
 challenges.no_food=환경: 식량배급 중단

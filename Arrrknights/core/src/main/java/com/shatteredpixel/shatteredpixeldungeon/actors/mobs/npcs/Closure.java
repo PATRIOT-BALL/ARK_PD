@@ -85,6 +85,19 @@ public class Closure extends NPC {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin3", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
+                            case 3: // 쑤수로 스킨
+                                if (Badges.isUnlocked(Badges.Badge.ALL_POTIONS_IDENTIFIED)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_SUSUU)) {Badges.validatesusuuskin();}
+                                    Dungeon.hero.CharSkin = Hero.POSTGRAD;
+                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
+                                } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
+                                    Game.runOnRenderThread(new Callback() {
+                                        @Override
+                                        public void call() {
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin4", Dungeon.hero.heroClass.title())));
+                                        }});}
+                                break;
                         }
                     }
                 }

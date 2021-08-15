@@ -664,7 +664,7 @@ actors.hero.herosubclass.assassin_short_desc=_암살_\n은신한 후 적을 강�
 actors.hero.herosubclass.assassin_desc=_암살 전문화_ 는 투명화 상태가 되면 다음 공격을 신중하게 준비합니다. 투명화 한 시간이 길어질수록 더욱 강력한 공격을 할 수 있습니다.
 actors.hero.herosubclass.freerunner=신속 레드
 actors.hero.herosubclass.freerunner_short_desc=_신속_\n이동속도를 이용한 전투를 합니다. 이동속도를 살릴 사거리 긴 무기나 투척 무기 등이 유용합니다.
-actors.hero.herosubclass.freerunner_desc=_신속 전문화_ 는 이동할 때 마다 가속력을 쌓습니다. 가속력으로 프리러닝 상태에 돌입해 짧은 시간 동안 2배의 이동 속도와 추가 회피를 얻을 수 있습니다.
+actors.hero.herosubclass.freerunner_desc=_신속 전문화_ 는 이동할 때 마다 가속력을 쌓습니다. 가속력으로 프리러닝 상태에 돌입해 짧은 시간 동안 2배의 이동 속도와 추가 회피를 얻을 수 있습니다.\n또한, 무기와 방어구의 힘 요구치를 1만큼 감소시킵니다.
 actors.hero.herosubclass.sniper=사격 그레이스롯
 actors.hero.herosubclass.sniper_short_desc=_사격_\n원거리 전투를 전문으로 합니다. 저격의 반지나 강화된 투척 무기가 중요합니다.
 actors.hero.herosubclass.sniper_desc=_사격 전문화_ 는 자신의 기술을 극단적으로 강화합니다. 원거리 공격이 방어구를 꿰뚫으며, 투척 무기로 공격한 후 활로 특별한 공격을 할 수 있습니다. 또한, 투척 무기의 원거리 명중률이 상승합니다.
@@ -788,6 +788,7 @@ actors.mobs.npcs.closure.incomplete=이 옷은 아직 덜 만들었어!
 actors.mobs.npcs.closure.fail_skin1=암흑시대의 끝 배지가 필요합니다.\n위기협약 : 통합운동 을 적용하고 미니보스를 1마리도 잡지 않은 채 클리어
 actors.mobs.npcs.closure.fail_skin2=하극상 배지가 필요합니다.
 actors.mobs.npcs.closure.fail_skin3=게임을 50회 클리어해야합니다.
+actors.mobs.npcs.closure.fail_skin4=대학원생 스킨 해금을 하려면 모든 물약을 감정해야합니다.
 actors.mobs.npcs.closure.die=끄악~
 
 actors.mobs.npcs.skinmodel.name=신형 모델 생성기

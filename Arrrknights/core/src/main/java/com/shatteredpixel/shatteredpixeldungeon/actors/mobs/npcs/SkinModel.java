@@ -32,6 +32,8 @@ public class SkinModel extends NPC {
            break;
            case 2: spriteClass= SkadiSprite.class;
            break;
+           case 3: spriteClass= LensSprite.class;
+           break;
 
        }
     }
@@ -67,7 +69,7 @@ public class SkinModel extends NPC {
     public void SkinChange()
     {
         skin_ch++;
-        if (skin_ch > 2) skin_ch = 0;
+        if (skin_ch > 3) skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();
