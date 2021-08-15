@@ -287,7 +287,7 @@ public class Spriteex extends MissileWeapon {
         if (Dungeon.hero.hasTalent(Talent.AIMTRAINING)) {
             if (enemy instanceof Mob) {
                 if (enemy.properties().contains(Char.Property.DRONE) == true) {
-                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.AIMTRAINING) * 0.15f;
+                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.AIMTRAINING) * 0.2f;
                     if (Random.IntRange(0, 1) == 1) charge += 1;
                 }
             }
@@ -306,7 +306,7 @@ public class Spriteex extends MissileWeapon {
                 curUser.buff(MeatPower_Mystery.class) != null ||
                 curUser.buff(MeatPower_Stewed.class) != null)
         {
-            dmg *= 1.1f;
+            dmg *= 1.08f;
         }
 
         // 마법 부여 효과

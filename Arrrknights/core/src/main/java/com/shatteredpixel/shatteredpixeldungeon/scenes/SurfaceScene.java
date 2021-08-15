@@ -206,6 +206,7 @@ public class SurfaceScene extends PixelScene {
 			align(prtsSprtie);
 			prtsSprtie.alpha(0.33f);
 			window.add(prtsSprtie);
+			Badges.validateFragging();
 		}
 		else if (Dungeon.isPray == true){
 			prtsSprtie = new PRTS_endSprite();
@@ -249,7 +250,6 @@ public class SurfaceScene extends PixelScene {
 		add( gameOver );
 		
 		Badges.validateHappyEnd();
-		Badges.validateFragging();
 		
 		fadeIn();
 	}
