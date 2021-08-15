@@ -160,7 +160,7 @@ public class Badges {
 		CHAMPION_3                  ( 114 ),
 		CHAMPION_4                  ( 114 ),
 		EVILTIME_END                  ( 116 ),
-		WILL    ( 103 ),
+		WILL    ( 117 ),
 
 		//Puple
 		Get_25_STONES                (137),
