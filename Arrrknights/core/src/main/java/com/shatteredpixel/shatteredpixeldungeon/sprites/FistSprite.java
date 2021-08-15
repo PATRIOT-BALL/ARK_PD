@@ -66,8 +66,8 @@ public abstract class FistSprite extends MobSprite {
 		run = new Animation( 8, true );
 		run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
 
-		attack = new Animation( 10, false );
-		attack.frames( frames, c+11 );
+		attack = new Animation( 18, false );
+		attack.frames( frames, c+11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 );
 
 		zap = new Animation( 8, false );
 		zap.frames( frames, c+11 );

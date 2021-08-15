@@ -160,7 +160,7 @@ public class Badges {
 		CHAMPION_3                  ( 114 ),
 		CHAMPION_4                  ( 114 ),
 		EVILTIME_END                  ( 116 ),
-		WILL    ( 116 ),
+		WILL    ( 103 ),
 
 		//Puple
 		Get_25_STONES                (137),
@@ -170,7 +170,7 @@ public class Badges {
 		SKIN_BABOSKADI(160),
 		SKIN_TALU(161),
 		SKIN_NOVA(162),
-		SKIN_SUSUU(162);
+		SKIN_SUSUU(163);
 
 		public boolean meta;
 

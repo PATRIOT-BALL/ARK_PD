@@ -13,8 +13,8 @@ import com.watabou.utils.Random;
 
 public class Scythe extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.WEAPON_HOLDER;
-        hitSound = Assets.Sounds.HIT;
+        image = ItemSpriteSheet.SICKEL;
+        hitSound = Assets.Sounds.HIT_SLASH;
         hitSoundPitch = 1f;
 
         tier = 4;

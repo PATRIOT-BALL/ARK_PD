@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SkadiSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SussurroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.talrufightSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.FnovaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
@@ -32,7 +33,7 @@ public class SkinModel extends NPC {
            break;
            case 2: spriteClass= SkadiSprite.class;
            break;
-           case 3: spriteClass= LensSprite.class;
+           case 3: spriteClass= SussurroSprite.class;
            break;
 
        }

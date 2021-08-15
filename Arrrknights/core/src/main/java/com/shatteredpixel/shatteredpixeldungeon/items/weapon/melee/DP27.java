@@ -34,8 +34,8 @@ public class DP27 extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
         public static final String AC_RELOAD = "RELOAD";
     {
-        image = ItemSpriteSheet.ENFILD;
-        hitSound = Assets.Sounds.HIT_SHOTGUN;
+        image = ItemSpriteSheet.DP27;
+        hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
         usesTargeting = true;

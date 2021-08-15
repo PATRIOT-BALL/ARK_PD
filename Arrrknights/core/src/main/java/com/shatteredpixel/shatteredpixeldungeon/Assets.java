@@ -221,6 +221,7 @@ public class Assets {
 		public static final String HIT_SNIPER        = "sounds/hit_sniping.mp3";
 		public static final String HIT_RINGOUT        = "sounds/hit_ringout.mp3";
 		public static final String HIT_BREAK        = "sounds/hit_break.mp3";
+		public static final String HIT_GUN        = "sounds/hit_gun.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
 		public static final String SKILL_MON1       = "sounds/skill_mon1.mp3";
@@ -249,7 +250,7 @@ public class Assets {
 				//명픽던에서만 추가된  효과음들↓
 				TIMESTOP,
 				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2, HIT_BIRD, HIT_WALL1, HIT_WALL2, HIT_SHOTGUN, HIT_GUNLANCE,
-				HIT_SNIPER, FROST, SHINNING, AJIMU,
+				HIT_SNIPER, HIT_GUN, FROST, SHINNING, AJIMU,
 				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW, SKILL_SILVERSLASH, SKILL_YOUWISH,
 				SKILL_MON1, SKILL_MON2
 		};
@@ -386,5 +387,7 @@ public class Assets {
 		public static final String TALRU_FIGHT	= "sprites/talru.png";
 		public static final String FNOVA	= "sprites/nova.png";
 		public static final String SKD	= "sprites/skadi.png";
+		public static final String SSR	= "sprites/sussurro.png";
+
 	}
 }

@@ -25,8 +25,8 @@ import java.util.ArrayList;
 public class Flag extends MeleeWeapon  {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.WEAPON_HOLDER;
-        hitSound = Assets.Sounds.HIT;
+        image = ItemSpriteSheet.FLAG;
+        hitSound = Assets.Sounds.HIT_MAGIC;
         hitSoundPitch = 1f;
 
         defaultAction = AC_ZAP;
