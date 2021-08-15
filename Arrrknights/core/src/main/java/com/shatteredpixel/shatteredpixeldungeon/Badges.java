@@ -150,7 +150,6 @@ public class Badges {
 		VICTORY_ALL_CLASSES         ( 98, true ),
 		GAMES_PLAYED_3              ( 99, true ),
 		CHAMPION_1                  ( 100 ),
-		ROARINGFLARE                  ( 115 ),
 		FRAGGING                       ( 101 ),
 		PRAY (102),
 
@@ -159,6 +158,7 @@ public class Badges {
 		CHAMPION_2                  ( 113 ),
 		CHAMPION_3                  ( 114 ),
 		CHAMPION_4                  ( 114 ),
+		ROARINGFLARE                  ( 115 ),
 		EVILTIME_END                  ( 116 ),
 		WILL    ( 117 ),
 
@@ -928,6 +928,14 @@ public class Badges {
 			saveNeeded = true;
 			local.add(Badge.EVILTIME_END);
 		displayBadge( Badge.EVILTIME_END );}
+	}
+
+	public static void validatewill() {
+		if (!local.contains( Badge.WILL )){
+			global.add(Badge.WILL);
+			saveNeeded = true;
+			local.add(Badge.WILL);
+			displayBadge( Badge.WILL );}
 	}
 
 	public static void validatestone25()

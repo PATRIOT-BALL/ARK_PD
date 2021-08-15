@@ -76,8 +76,6 @@ public abstract class FistSprite extends MobSprite {
 		die.frames( frames, c+0 );
 
 		play( idle );
-
-		alpha(0.5f);
 	}
 
 	@Override

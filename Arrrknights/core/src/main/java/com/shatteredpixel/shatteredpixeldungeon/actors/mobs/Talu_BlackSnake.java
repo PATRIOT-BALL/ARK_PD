@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.SurfaceScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.FistSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.YogSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
@@ -52,7 +53,7 @@ import java.util.ArrayList;
 public class Talu_BlackSnake extends Mob {
     private static final String[] LINE_KEYS = {"invincibility1", "invincibility2", "invincibility3"};
     {
-        spriteClass = YogSprite.class;
+        spriteClass = FistSprite.Burning.class;
 
         HP = HT = 2500;
 
@@ -350,6 +351,7 @@ public class Talu_BlackSnake extends Mob {
 
     @Override
     public void die(Object cause) {
+        Badges.validatewill();
         Dungeon.win(Amulet.class);
         Dungeon.deleteGame(GamesInProgress.curSlot, true);
         Game.switchScene(SurfaceScene.class);
