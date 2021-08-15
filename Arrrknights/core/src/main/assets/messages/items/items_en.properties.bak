@@ -175,8 +175,12 @@ items.skill.sk3.booktruesilverslash.desc=_True Silver Slash_ is recorded Summary
 items.skill.sk3.booktruesilverslash.ac_use=READ
 
 items.skill.sk3.bookyourwish.name=Skill Summary of Your Wish
-items.skill.sk3.bookyourwish.desc=_"As your wish_ is recorded Summary. learn skill 3 by reading it. \n\nEffect: Summons an EX-43 to the target location.\n_Caution: When used, the existing skill 3 is removed._
+items.skill.sk3.bookyourwish.desc=_"As your wish"_ is recorded Summary. learn skill 3 by reading it. \n\nEffect: Summons an EX-43 to the target location.\n_Caution: When used, the existing skill 3 is removed._
 items.skill.sk3.bookyourwish.ac_use=READ
+
+items.skill.sk3.bookeveryone.name=Skill Summary of Crab
+items.skill.sk3.bookeveryone.desc=_"Everyone Together"_ is recorded Summary. learn skill 3 by reading it. \n\nEffect: Summons an 4 crab\n_Caution: When used, the existing skill 3 is removed._
+items.skill.sk3.bookeveryone.ac_use=READ
 
 
 

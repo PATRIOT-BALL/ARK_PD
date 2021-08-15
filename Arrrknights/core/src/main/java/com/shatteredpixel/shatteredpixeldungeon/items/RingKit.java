@@ -50,7 +50,7 @@ public class RingKit extends Item {
             @Override
             public void onSelect(Item item) {
                 if (item != null) {
-                    if (item instanceof Ring){
+                    if (item instanceof Ring && item != Dungeon.hero.belongings.ring && item != Dungeon.hero.belongings.misc){
 
                         final Ring rings[] = new Ring[2];
 
