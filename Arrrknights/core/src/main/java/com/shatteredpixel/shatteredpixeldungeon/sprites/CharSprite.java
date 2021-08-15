@@ -80,7 +80,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	protected float shadowOffset    = 0.25f;
 
 	public enum State {
-		BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED, CHILLED, DARKENED, MARKED, HEALING, SHIELDED
+		BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED, CHILLED, DARKENED, MARKED, HEALING, SHIELDED, TALU_BOSS
 	}
 	private int stunStates = 0;
 	
@@ -101,6 +101,8 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	protected Emitter marked;
 	protected Emitter levitation;
 	protected Emitter healing;
+	protected Emitter taluboss;
+	protected Emitter taluboss2;
 	
 	protected IceBlock iceBlock;
 	protected DarkBlock darkBlock;
@@ -403,6 +405,12 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 				break;
 			case SHIELDED:
 				GameScene.effect( shield = new ShieldHalo( this ));
+				break;
+			case TALU_BOSS:
+				taluboss = emitter();
+				taluboss.pour(FlameParticle.FACTORY, 0.03f);
+				taluboss2 = emitter();
+				taluboss2.pour(ShadowParticle.UP, 0.018f);
 				break;
 		}
 	}

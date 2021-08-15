@@ -82,6 +82,7 @@ public class Talu_BlackSnake extends Mob {
     private int BurstPos = -1; // 화염 폭발 패턴의 발동 지점
     private int BurstTime = 0; // 화염 폭발 발동 시간. 2가 되면 발동함
     private int drup = 0; // 방어 상승 상태 지속시간. 있을 경우 받는 피해 50%감소
+    private boolean fx = false;
 
 
 
@@ -144,6 +145,11 @@ public class Talu_BlackSnake extends Mob {
 
     @Override
     protected boolean act() {
+        if (phase > 3 && fx == false) {
+            this.sprite.add(CharSprite.State.TALU_BOSS);
+            fx = true;
+        }
+
         if (phase == 0) {
             if (Dungeon.hero.viewDistance >= Dungeon.level.distance(pos, Dungeon.hero.pos)) {
                 Dungeon.observe();
