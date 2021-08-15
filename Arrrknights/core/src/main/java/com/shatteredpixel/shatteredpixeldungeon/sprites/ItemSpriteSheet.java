@@ -281,7 +281,7 @@ public class ItemSpriteSheet {
 	public static final int CROSSBOW        = WEP_TIER4+5;
 	public static final int M1887       = WEP_TIER4+6;
 	public static final int NAGINATA       = WEP_TIER4+7;
-	public static final int SICKEL       = WEP_TIER4+7;
+	public static final int SICKEL       = WEP_TIER4+8;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
