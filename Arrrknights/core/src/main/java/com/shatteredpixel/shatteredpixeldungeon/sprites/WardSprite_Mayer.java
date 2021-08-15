@@ -21,7 +21,7 @@ public class WardSprite_Mayer extends MobSprite {
 
         texture(Assets.Sprites.WARDS);
 
-        TextureFilm frames = new TextureFilm(texture, 32, 32);
+        TextureFilm frames = new TextureFilm(texture, 42, 32);
 
         tierIdles[1] = new Animation(1, true);
         tierIdles[1].frames(frames, 0);

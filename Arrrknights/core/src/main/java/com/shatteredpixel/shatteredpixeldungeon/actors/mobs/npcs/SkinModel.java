@@ -64,7 +64,7 @@ public class SkinModel extends NPC {
         do {
             Modle.pos = poss;
         } while (Modle.pos == -1);
-        
+
         level.mobs.add(Modle);
     }
 
