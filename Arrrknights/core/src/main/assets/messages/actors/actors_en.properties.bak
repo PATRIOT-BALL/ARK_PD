@@ -663,7 +663,7 @@ actors.hero.herosubclass.assassin_short_desc=_Assassin_ The longer spent invisib
 actors.hero.herosubclass.assassin_desc=While invisible the _Assassin Elite_ prepares a deadly strike on her next attack. The longer spent invisible, the more powerful the attack will be.
 actors.hero.herosubclass.freerunner=Runner
 actors.hero.herosubclass.freerunner_short_desc=_Runner_ Momentum can be used to start freerunning, which grants her 2x movespeed and bonus evasion for a short while.
-actors.hero.herosubclass.freerunner_desc=The _Runner Elite_ builds momentum as she runs. Momentum can be used to start freerunning, which grants her 2x movespeed and bonus evasion for a short while.
+actors.hero.herosubclass.freerunner_desc=The _Runner Elite_ builds momentum as she runs. Momentum can be used to start freerunning, which grants her 2x movespeed and bonus evasion for a short while.\nneeds _1 less strength_ to use armor and weapons.
 actors.hero.herosubclass.sniper=Shooter
 actors.hero.herosubclass.sniper_short_desc=_Shooter_ master of ranged combat
 actors.hero.herosubclass.sniper_desc=The _Shooter Elite_ is a master of ranged combat. Her ranged attacks pierce armor, and after striking with a thrown weapon she can follow up with a special attack from her bow.
@@ -786,7 +786,6 @@ actors.mobs.npcs.closure.incomplete=Less made!
 actors.mobs.npcs.closure.fail_skin1=Need a End of EVIL TIME badge\nEnvironment: Reunion in challenge Defeat Tallulah without killing a single mini-boss.
 actors.mobs.npcs.closure.fail_skin2=Need a FRAGGING badge
 actors.mobs.npcs.closure.fail_skin3=Need a 50 games played badge
-actors.mobs.npcs.closure.fail_skin4=Need a All potions identified badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model

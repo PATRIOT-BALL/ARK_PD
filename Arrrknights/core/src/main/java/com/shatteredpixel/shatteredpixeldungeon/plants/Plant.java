@@ -84,7 +84,7 @@ public abstract class Plant implements Bundlable {
 					Buff.prolong(mob, Hex.class, 1 + Dungeon.hero.pointsInTalent(Talent.SAVIOR_PRAY));
 					if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
 						SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
-						Item.SetCharge(3);
+						Item.SetCharge(5);
 					}
 				}
 			}
