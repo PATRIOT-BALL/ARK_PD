@@ -16,6 +16,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.Trap;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -68,7 +69,7 @@ public class W0502 extends Item {
             if (item != null) {
                 item.identify();
                 item.detach(Dungeon.hero.belongings.backpack);
-                charge = 2;
+                charge = chargecap;
                 updateQuickslot();
             }
             else GLog.i(Messages.get(W0502.class, "noflame"));
@@ -150,7 +151,7 @@ public class W0502 extends Item {
             }
 
             if (Dungeon.level.map[c] == Terrain.WATER || Dungeon.level.map[c] == Terrain.EMPTY) {
-                Dungeon.level.map[c] = Terrain.EMBERS;
+                Level.set(c, Terrain.EMBERS);
                 CellEmitter.get(c).burst(Speck.factory(Speck.STEAM), 6);
                 GameScene.updateMap( c );
             }

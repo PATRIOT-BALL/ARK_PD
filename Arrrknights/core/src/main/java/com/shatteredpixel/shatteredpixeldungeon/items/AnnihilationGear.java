@@ -175,8 +175,7 @@ public class AnnihilationGear extends Item {
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        bundle.getInt(CHARGE);
-
+        charge = bundle.getInt(CHARGE);
         arts = bundle.getInt(MAGICARTS);
         artsused = bundle.getInt(ARTSUSED);
     }
