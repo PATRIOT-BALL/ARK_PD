@@ -85,7 +85,7 @@ public class v0_2_X_Changes {
                 "_네가 원하는 대로(3스킬)_ : 소환되는 방벽의 방어력이 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "신속 레드 버프",
-                "신속 전문화 전직시, 무기와 방어구의 요구 힘이 1만큼 감소하는 능력이 추가되었습니다."));
+                "신속 전문화 전직시, 방어구의 요구 힘이 1만큼 감소하는 능력이 추가되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 버프",
                 "수호 전문화 전직시, 방벽 방어가 발동할 때마다 일정량의 보호막을 얻는 능력이 추가되었습니다." + "\n\n" +

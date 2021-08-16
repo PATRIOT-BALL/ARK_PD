@@ -306,8 +306,6 @@ abstract public class Weapon extends KindOfWeapon {
 		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 2) req--;
 		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 4) req--;
 
-		if (Dungeon.hero.subClass == HeroSubClass.FREERUNNER) req--;
-
 		return req;
 	}
 
