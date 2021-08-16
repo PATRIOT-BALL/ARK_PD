@@ -253,6 +253,8 @@ public class YogDzewa extends Mob {
 					}
 				}
 
+				sprite.zap( Dungeon.hero.pos );
+
 				//don't want to overly punish players with slow move or attack speed
 				spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 3*TICK));
 				Dungeon.hero.interrupt();

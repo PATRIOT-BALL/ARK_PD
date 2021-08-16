@@ -701,14 +701,6 @@ public abstract class Mob extends Char {
 				Item.SetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
 			}}
 
-		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {
-			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(33)) {
-				if (this instanceof Sheep) {}
-				else {
-				Dungeon.level.drop(new MeatCutlet(), pos).sprite.drop();
-			}}
-		}
-
 		if (Dungeon.hero.subClass== HeroSubClass.DESTROYER) {
 			if (2 + Dungeon.hero.pointsInTalent(Talent.BATTLEFLOW) > Random.Int(25)) {
 				AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
@@ -775,6 +767,12 @@ public abstract class Mob extends Char {
 		//bounty hunter talent
 		if (Dungeon.hero.buff(Talent.BountyHunterTracker.class) != null) {
 			Dungeon.level.drop(new Gold(8 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+		}
+
+		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {
+			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(33)) {
+					Dungeon.level.drop(new MeatCutlet(), pos).sprite.drop();
+				}
 		}
 
 	}
