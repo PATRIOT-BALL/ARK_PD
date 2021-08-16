@@ -49,7 +49,7 @@ public class SmallRation extends Food {
 		if (hero.hasTalent(Talent.DELICIOUS_FOOD))
 		{
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
-			if (hero.belongings.getItem(AnnihilationGear.class) != null)
+			if (hero.belongings.getItem(AnnihilationGear.class) != null && Gear.charge < Gear.chargeCap)
 			{
 				Gear.SPCharge(hero.pointsInTalent(Talent.DELICIOUS_FOOD));
 			}

@@ -107,7 +107,7 @@ public class MysteryMeat extends Food {
 		if (hero.hasTalent(Talent.GOODMEAT))
 		{
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
-			if (hero.belongings.getItem(AnnihilationGear.class) != null)
+			if (hero.belongings.getItem(AnnihilationGear.class) != null && Gear.charge < Gear.chargeCap)
 			{
 				Gear.SPCharge(1);
 			}

@@ -45,7 +45,7 @@ public class ScrollOfRecharging extends Scroll {
 	public void doRead() {
 
 		AnnihilationGear Gear = curUser.belongings.getItem(AnnihilationGear.class);
-		if (curUser.belongings.getItem(AnnihilationGear.class) != null)
+		if (curUser.belongings.getItem(AnnihilationGear.class) != null && Gear.charge < Gear.chargeCap)
 		{
 			Gear.SPCharge(2);
 		}

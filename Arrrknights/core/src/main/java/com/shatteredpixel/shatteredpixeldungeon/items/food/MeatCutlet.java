@@ -27,7 +27,7 @@ public class MeatCutlet extends Food {
 
     public static void effect(Hero hero){
         AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
-        if (hero.belongings.getItem(AnnihilationGear.class) != null)
+        if (hero.belongings.getItem(AnnihilationGear.class) != null && Gear.charge < Gear.chargeCap)
         {
             Gear.SPCharge(2);
         }

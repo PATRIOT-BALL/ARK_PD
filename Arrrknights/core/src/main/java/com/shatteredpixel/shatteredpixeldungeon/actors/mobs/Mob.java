@@ -714,7 +714,7 @@ public abstract class Mob extends Char {
 				AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
 				if (this instanceof Sheep) {
 				} else {
-					if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
+					if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null && Gear.charge < Gear.chargeCap) {
 						Gear.SPCharge(1);
 					}
 				}
