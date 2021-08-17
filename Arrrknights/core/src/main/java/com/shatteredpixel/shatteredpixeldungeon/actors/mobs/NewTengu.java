@@ -58,6 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SmokeParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SparkParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Pombbay;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Jackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
@@ -235,6 +236,8 @@ public class NewTengu extends Mob {
             }
         }
         Dungeon.level.drop(new Nullshield(), pos).sprite.drop(pos);
+
+        if (Dungeon.hero.CharSkin == Dungeon.hero.POSTGRAD) Dungeon.level.drop(new Pombbay(), pos).sprite.drop(pos);
 
         GameScene.bossSlain();
 

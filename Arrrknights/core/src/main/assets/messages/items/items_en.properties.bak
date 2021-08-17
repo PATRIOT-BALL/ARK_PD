@@ -2390,7 +2390,7 @@ items.staffkit.desc=This kit can transform your wand into _special_ staff the po
 items.ringkit.name=Ring Kit
 items.ringkit.ac_apply=UPGRADE
 items.ringkit.prompt=chose ring
-items.ringkit.desc=This kit can be used, You can choose to either change the ring or keep it in shape. Whichever you choose, the ring will be upgraded.
+items.ringkit.desc=This kit can be used, You can choose to either change the ring or keep it in shape. Whichever you choose, the ring will be upgraded.\n\nCan only be used when unequipped
 items.ringkit.ring=What are you going to do?
 items.ringkit.cancel_warn=Cancel : It retains its shape and strengthens it.
 items.ringkit.upgrade=UPGRADE
@@ -2518,3 +2518,8 @@ items.w0502.prompt2=direction
 items.w0502.noflame=do not have Potion Of LiquidFlame.
 items.w0502.self_target=You must not burn yourself.
 items.w0502.fizzles=no fuel.
+
+items.pombbay.name=pombbay sapphire
+items.pombbay.desc=BAKAdi Limited`s Gin brand. Unfortunately, you don't like the taste of this gin.
+items.pombbay.ac_drink=DRINK
+items.pombbay.ssibal=I will yield to the earth

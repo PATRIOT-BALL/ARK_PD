@@ -7,6 +7,7 @@ public class Rose extends Item {
     {
         image = ItemSpriteSheet.MYOSOTIS;
         unique = true;
+        cursed = false;
     }
 
     @Override
