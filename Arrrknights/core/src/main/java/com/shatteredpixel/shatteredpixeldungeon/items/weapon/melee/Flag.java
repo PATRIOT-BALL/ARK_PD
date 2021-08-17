@@ -26,7 +26,7 @@ public class Flag extends MeleeWeapon  {
     public static final String AC_ZAP = "ZAP";
     {
         image = ItemSpriteSheet.FLAG;
-        hitSound = Assets.Sounds.HIT_MAGIC;
+        hitSound = Assets.Sounds.HIT;
         hitSoundPitch = 1f;
 
         defaultAction = AC_ZAP;
@@ -34,7 +34,7 @@ public class Flag extends MeleeWeapon  {
         tier = 3;
     }
 
-    private int charge = 100;
+    private int charge = 0;
     private int chargeCap = 100;
     private int backchane = 0;
 

@@ -24,8 +24,8 @@ public class DivineAvatar extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
         image = ItemSpriteSheet.BABY_KNIGHT;
-        hitSound = Assets.Sounds.HIT;
-        hitSoundPitch = 1f;
+        hitSound = Assets.Sounds.HIT_SLASH;
+        hitSoundPitch = 0.86f;
 
         defaultAction = AC_ZAP;
 

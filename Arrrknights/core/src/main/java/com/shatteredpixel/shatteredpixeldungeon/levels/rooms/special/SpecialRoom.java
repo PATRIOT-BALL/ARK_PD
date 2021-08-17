@@ -129,6 +129,7 @@ public abstract class SpecialRoom extends Room {
 			floorSpecials.remove( TreasuryRoom.class );
 			floorSpecials.remove( VaultRoom.class );
 			floorSpecials.remove( WeakFloorRoom.class );
+			floorSpecials.remove( MeatRoom.class );
 			
 			return new PitRoom();
 			

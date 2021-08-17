@@ -15,7 +15,7 @@ public class Scythe extends MeleeWeapon {
     {
         image = ItemSpriteSheet.SICKEL;
         hitSound = Assets.Sounds.HIT_SLASH;
-        hitSoundPitch = 1f;
+        hitSoundPitch = 1.17f;
 
         tier = 4;
     }
