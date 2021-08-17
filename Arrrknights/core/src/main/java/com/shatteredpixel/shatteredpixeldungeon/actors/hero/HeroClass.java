@@ -258,8 +258,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-		new LeatherArmor().collect();
-		new PotionOfStrength().quantity(12).collect();
 	}
 
 	private static void initRogue( Hero hero ) {
