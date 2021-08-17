@@ -1352,7 +1352,7 @@ public class Hero extends Char {
 
                         damage *= 0.5f - (float) this.pointsInTalent(Talent.BARRIER_OPERATION) * 0.15f;
                         int redamage = 0;
-                        redamage += damageRoll() * (float) pointsInTalent(Talent.BARRIER_OPERATION) * 0.15f;
+                        redamage += damageRoll() * (float) pointsInTalent(Talent.BARRIER_OPERATION) * 0.3f;
                         if (Dungeon.hero.hasTalent(Talent.BARRIER_OPERATION)) {
                             enemy.damage(redamage, this);
                         }
