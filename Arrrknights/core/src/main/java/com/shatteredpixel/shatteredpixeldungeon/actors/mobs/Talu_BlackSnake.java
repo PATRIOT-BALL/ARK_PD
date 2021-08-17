@@ -131,14 +131,13 @@ public class Talu_BlackSnake extends Mob {
         else if (phase==3 && HP < 1300) {
             HP = 1300;
             phase = 4;
-
             GameScene.flash(0x80FF0000);
             yell(Messages.get(this, "phase4"));
         }
         else if (phase==4 && HP < 500) {
             HP = 500;
             phase = 5;
-            drup += 3;
+            drup += 25;
             GameScene.flash(0x80FF0000);
             yell(Messages.get(this, "phase5"));
         }
@@ -194,7 +193,7 @@ public class Talu_BlackSnake extends Mob {
         if (OverwhelmCooldown > 0) OverwhelmCooldown--;
         if (InvincibilityCooldown > 0) InvincibilityCooldown--;
         if (InvincibilityTime > 0) InvincibilityTime--;
-        if (drup > 0) drup--;
+        if (drup > 0 && phase != 5) drup--;
 
         return super.act();
     }
