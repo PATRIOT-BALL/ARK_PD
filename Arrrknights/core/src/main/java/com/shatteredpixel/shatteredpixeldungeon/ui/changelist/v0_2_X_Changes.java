@@ -74,6 +74,9 @@ public class v0_2_X_Changes {
                 "_끓어오르는 투지_ : 명중률 보정치가 -30%에서 _-25%_로 상승했습니다." + "\n\n" +
                 "_나의 소원_ : Mon3tr의 체력 소모율이 감소한 대신 공격할 때마다 체력을 일정량 소모하도록 변경되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 버프",
+                "_로즈마리의 일기장, 붉은 사슬_ : 충전 속도가 20%상승했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
                 "_검술 아미야_의 _과충전 공격_ 특성의 학률이 11-33%에서 _12.5-37.5%_로 상승했습니다." + "\n\n" +
                         "_지배 아미야_의 _지배력 강화_ 특성의 효율이 10-30%에서 _15-45%_로 상승했습니다." + "\n\n" +
@@ -104,6 +107,9 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
                 "_로도스 제식 장검_ : 기습시 최소 피해 보정이 100%에서 _70%_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 너프",
+                "_문명의 존속_ : 체력 재생 상승량이 10%감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "_레드_의 _신비한 강화_ 특성의 효과가 3-5턴에서 _4-6_으로 상승했습니다." + "\n\n" +

@@ -57,10 +57,10 @@ public class RandomBox extends Item {
     }
 
     public void GetGold_low()
-    { new Gold(Random.IntRange(100,550)).doPickUp(Dungeon.hero); }
+    { new Gold(Random.IntRange(150,650)).doPickUp(Dungeon.hero); }
 
     public void GetGold_high()
-    { new Gold(Random.IntRange(150,800)).doPickUp(Dungeon.hero); }
+    { new Gold(Random.IntRange(300,1000)).doPickUp(Dungeon.hero); }
 
     public void GetSkill(){
         int chance = Random.IntRange(0, 50);
@@ -69,12 +69,12 @@ public class RandomBox extends Item {
         chance += Random.IntRange(0,Dungeon.hero.STR);
         chance += Random.IntRange(0,Dungeon.depth);
 
-        if (chance > 70)
+        if (chance > 60)
         {
             Item n = Generator.random( Generator.Category.SKL_T3 );
             n.doPickUp(Dungeon.hero);
         }
-        else if (chance > Random.IntRange(30,70)){
+        else if (chance > Random.IntRange(20,60)){
             Item n = Generator.random( Generator.Category.SKL_T2 );
             n.doPickUp(Dungeon.hero);
         }
@@ -87,7 +87,7 @@ public class RandomBox extends Item {
         int chance = Random.IntRange(0, 50);
 
         chance += Random.IntRange(-5, Dungeon.hero.STR);
-        chance += Random.IntRange(0, Dungeon.hero.belongings.weapon.buffedLvl() * 7);
+        chance += Random.IntRange(0, Dungeon.hero.belongings.weapon.buffedLvl() * 8);
 
         Weapon n;
 
@@ -106,10 +106,10 @@ public class RandomBox extends Item {
         upchacne += Random.IntRange(-5, Dungeon.hero.belongings.armor.buffedLvl() * 3);
 
         if(upchacne > 35) n.level(4);
-        else if(upchacne > 20) n.level(2);
-        else if (upchacne > 12) n.level(1);
+        else if(upchacne > 20) n.level(3);
+        else if (upchacne > 12) n.level(2);
         else if (upchacne < -8) n.level(-2);
-        else if(upchacne < 0) n.level(-1);
+        else if(upchacne < 0) n.level(1);
         else n.level(0);
 
 

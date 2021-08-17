@@ -2193,7 +2193,7 @@ items.weapon.melee.flag.ac_zap=Healing Wings
 
 items.weapon.melee.scythe.name=blind obedience
 items.weapon.melee.scythe.stats_desc=Surprise attack bonus +25%\nRecovers HP every 8 hit dealt
-items.weapon.melee.scythe.desc=This scythe also deals damage to nearby enemies and deals x2 damage to enemies below 50% health.
+items.weapon.melee.scythe.desc=Deals additional damage to the primary target in proportion to the number of targets hit. (Maximum x1.9)
 
 items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies
@@ -2520,6 +2520,6 @@ items.w0502.self_target=You must not burn yourself.
 items.w0502.fizzles=no fuel.
 
 items.pombbay.name=pombbay sapphire
-items.pombbay.desc=BAKAdi Limited`s Gin brand. Unfortunately, you don't like the taste of this gin.
+items.pombbay.desc=BAKAdi Limited`s Gin brand. Unfortunately, you don't like the taste of this gin. W knew you liked this and left it behind.\n\nBut you are only borrowing the appearance of a woman who likes this drink...
 items.pombbay.ac_drink=DRINK
 items.pombbay.ssibal=I will yield to the earth

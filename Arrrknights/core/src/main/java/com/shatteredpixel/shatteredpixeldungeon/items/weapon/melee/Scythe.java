@@ -24,24 +24,27 @@ public class Scythe extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  3*(tier) +   //12 + 3
+        return  4*(tier) - 2 +   //14 + 3
                 lvl*(tier-1); }
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         HealCount++;
+        int extratarget = 0;
         if (attacker instanceof Hero) {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
                     int dmg = Dungeon.hero.damageRoll() - Math.max(defender.drRoll(), defender.drRoll());
-                    if (mob.HP <= mob.HT / 2) dmg *= 2f;
                     mob.damage(dmg, this);
+                    extratarget++;
                     HealCount++;
                 }
             }
         }
 
-        if (defender.HP <= defender.HT / 2) damage *= 2;
+        float bounsdmg = Math.min(1.9f, 1f+(extratarget*0.3f));
+
+        damage = Math.round(damage * bounsdmg);
 
         Heal(attacker);
 

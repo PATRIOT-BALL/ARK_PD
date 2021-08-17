@@ -128,7 +128,7 @@ public class RingKit extends Item {
 
         curUser.sprite.operate(curUser.pos);
         Sample.INSTANCE.play(Assets.Sounds.EVOKE);
-        Dungeon.hero.spendAndNext(1f);
+        Dungeon.hero.spendAndNext(TIME_TO_UPGRADE);
     }
 
     private void detachaa() {

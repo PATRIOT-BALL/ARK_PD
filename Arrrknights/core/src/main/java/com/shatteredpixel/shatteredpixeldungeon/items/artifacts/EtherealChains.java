@@ -257,7 +257,7 @@ public class EtherealChains extends Artifact {
 	public void charge(Hero target, float amount) {
 		int chargeTarget = 5+(level()*2);
 		if (charge < chargeTarget*2){
-			partialCharge += 0.5f*amount;
+			partialCharge += 0.6f*amount;
 			if (partialCharge >= 1){
 				partialCharge--;
 				charge++;

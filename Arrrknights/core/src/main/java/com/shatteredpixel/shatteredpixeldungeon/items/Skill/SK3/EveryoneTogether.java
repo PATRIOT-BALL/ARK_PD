@@ -41,7 +41,9 @@ public class EveryoneTogether extends Skill {
             int index = Random.index(respawnPoints);
 
             CrabGun cc = new CrabGun();
-            cc.SpawnCrab(Dungeon.hero.belongings.weapon.level()/2, respawnPoints.get(index));
+            int lvl = (Dungeon.hero.belongings.weapon.level()/2) - 1;
+            lvl = Math.max(0, lvl);
+            cc.SpawnCrab(lvl, respawnPoints.get(index));
 
             respawnPoints.remove(index);
             spawnd++;
