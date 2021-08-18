@@ -131,8 +131,8 @@ abstract public class Weapon extends KindOfWeapon {
 				if (defender.isAlive() && !defender.isImmune(Corruption.class) && defender.buff(Corruption.class) == null) {
 					Buff.affect(defender, Corruption.class);
 					defender.HP = defender.HT;
+					damage = 0;
 				}
-				damage = 0;
 				boolean droppingLoot = defender.alignment != Char.Alignment.ALLY;
 				if (defender instanceof Mob) {
 					if (defender.isAlive() && !defender.isImmune(Corruption.class)) {

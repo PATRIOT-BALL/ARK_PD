@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Slow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -53,7 +54,9 @@ public class StoneOfDeepenedSleep extends Runestone {
 				if ((c instanceof Mob && ((Mob) c).state == ((Mob) c).SLEEPING)){
 					
 					Buff.affect(c, MagicalSleep.class);
-					
+				}
+				else if (c instanceof Mob) {
+					Buff.affect(c, Slow.class, 3f);
 				}
 				
 			}

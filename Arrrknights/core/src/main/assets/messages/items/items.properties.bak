@@ -1576,7 +1576,7 @@ items.stones.stoneofclairvoyance.name=청명의 돌
 items.stones.stoneofclairvoyance.desc=이 돌은 던져진 곳을 중심으로 매우 넓은 구역에 있는 모든 숨겨진 타일들을 드러냅니다. 이 효과는 심지어 벽 너머로도 적용됩니다.
 
 items.stones.stoneofdeepenedsleep.name=수면의 돌
-items.stones.stoneofdeepenedsleep.desc=이 돌을 자고 있는 적에게 던지면 그 적의 수면이 더욱 깊어지게 됩니다. 대상은 방해받기 전까지는 계속 잠든 상태를 유지합니다.
+items.stones.stoneofdeepenedsleep.desc=이 돌을 자고 있는 적에게 던지면 그 적의 수면이 더욱 깊어지게 됩니다. 대상은 방해받기 전까지는 계속 잠든 상태를 유지합니다.\n\n자고 있는 적이 아니라면, 대상에게 피로감을 부여해 짧은 시간동안 느리게 만듭니다.
 
 items.stones.stoneofdisarming.name=해체의 돌
 items.stones.stoneofdisarming.desc=이 룬석은 던전에 숨겨진 사악한 함정들을 무력화시킬 수 있는 아츠가 담겨있습니다. 던져진 곳 주변의 함정을 최대 9개까지 무력화시킬 것입니다.
@@ -2199,7 +2199,7 @@ items.weapon.melee.flag.ac_zap=치유의 날개
 
 items.weapon.melee.scythe.name=맹목적인 순종
 items.weapon.melee.scythe.stats_desc=기습시 최소 데미지 보정 +25%\n적에게 8번 피해를 줄 때마다 체력 회복
-items.weapon.melee.scythe.desc=누구도 판단할 수 없다. 오직 시간만이 답이다.\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 공격 대상이 많을수록 주 대상이 받는 피해량이 상승합니다. (최대 75%)
+items.weapon.melee.scythe.desc=누구도 판단할 수 없다. 오직 시간만이 답이다.\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 공격 대상이 많을수록 주 대상이 받는 피해량이 상승합니다. (최대 90%)
 
 items.weapon.melee.divineavatar.name=선현의 화신
 items.weapon.melee.divineavatar.stats_desc=실명한 적에게 공격시 축복 획득

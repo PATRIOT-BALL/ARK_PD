@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -50,6 +51,7 @@ public class StoneOfAffection extends Runestone {
 			
 			if (ch != null && ch.alignment == Char.Alignment.ENEMY){
 				Buff.prolong(ch, Charm.class, Charm.DURATION).object = curUser.id();
+				Buff.affect(ch, Silence.class, 10f);
 			}
 		}
 		

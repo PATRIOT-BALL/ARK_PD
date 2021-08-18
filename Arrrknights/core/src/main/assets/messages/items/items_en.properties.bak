@@ -1564,7 +1564,7 @@ items.stones.stoneofaugmentation$wndaugment.none=Remove Augmentation
 items.stones.stoneofaugmentation$wndaugment.cancel=Never mind
 
 items.stones.stoneofaffection.name=stone of affection
-items.stones.stoneofaffection.desc=When this stone is thrown on or next to an enemy they will be temporarily charmed, and will attempt to target your allies instead of you.
+items.stones.stoneofaffection.desc=When this stone is thrown on or next to an enemy they will be temporarily charmed, and will attempt to target your allies instead of you.\n\nAlso, silences enemies hit, sealing their abilities.
 
 items.stones.stoneofblast.name=stone of blast
 items.stones.stoneofblast.desc=This runestone will instantly explode at the location it is thrown to. Just like a bomb, the explosion will deal damage to anything nearby.
@@ -2193,7 +2193,7 @@ items.weapon.melee.flag.ac_zap=Healing Wings
 
 items.weapon.melee.scythe.name=blind obedience
 items.weapon.melee.scythe.stats_desc=Surprise attack bonus +25%\nRecovers HP every 8 hit dealt
-items.weapon.melee.scythe.desc=Deals additional damage to the primary target in proportion to the number of targets hit. (Maximum x1.9)
+items.weapon.melee.scythe.desc=Deals additional damage to the main target in proportion to the number of targets hit. (Maximum x1.9)
 
 items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies

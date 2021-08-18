@@ -87,6 +87,10 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 버프",
                 "_네가 원하는 대로(3스킬)_ : 소환되는 방벽의 방어력이 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.STONE), "룬석 버프",
+                "_애정의 돌_ : 적중당한 적이 10턴동안 침묵 상태가 됩니다." + "\n\n" +
+                "_수면의 돌_ : 적중당한 적이 수면 상태가 아니라면, 3턴동안 감속 상태를 겁니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "신속 레드 버프",
                 "신속 전문화 전직시, 방어구의 요구 힘이 1만큼 감소하는 능력이 추가되었습니다."));
 
@@ -95,11 +99,9 @@ public class v0_2_X_Changes {
                         "수호 전문화의 방벽 방어 효과가 보호막이 있을 땐 발동하지 않도록 변경되었습니다." + "\n\n" +
                 "파괴 전문화 전직시 섬멸전 장비의 강화 효율이 상승하는 능력이 추가되었습니다. 대신 고기의 힘 추가 피해 배율은 약간 감소했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 버프",
-                "_파우스트_ : 1회 공격으로 일정량 이상의 체력을 잃을 때마다 플레이어를 실명시킵니다."));
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "리유니온? 버프",
-                "_켈시_ : Mon3tr 소환시, 플레이어를 입구 부분으로 강제로 텔레포트시키고 Mon3tr를 그 근처에 소환하도록 변경되었습니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적군 버프",
+                "_파우스트_ : 1회 공격으로 일정량 이상의 체력을 잃을 때마다 플레이어를 실명시킵니다." + "\n\n" +
+                        "_켈시_ : Mon3tr 소환시, 플레이어를 입구 부분으로 강제로 텔레포트시키고 Mon3tr를 그 근처에 소환하도록 변경되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
