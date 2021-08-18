@@ -1564,7 +1564,7 @@ items.stones.stoneofaugmentation$wndaugment.none=증강 제거
 items.stones.stoneofaugmentation$wndaugment.cancel=돌아가기
 
 items.stones.stoneofaffection.name=애정의 돌
-items.stones.stoneofaffection.desc=이 돌을 적 주변에 던지게 되면 일시적으로 당신에게 매혹되어, 당신 대신 당신의 아군을 먼저 공격 대상으로 삼을 것입니다.
+items.stones.stoneofaffection.desc=이 돌을 적 주변에 던지게 되면 일시적으로 당신에게 매혹되어, 당신 대신 당신의 아군을 먼저 공격 대상으로 삼을 것이며, 이 돌의 아츠로 인해 특수 능력을 봉인당할 것입니다.
 
 items.stones.stoneofblast.name=폭발의 돌
 items.stones.stoneofblast.desc=이 돌은 던져진 지점에 즉시 폭발을 일으킵니다. 일반 폭탄처럼 주변의 모든 대상에게 피해를 줍니다.

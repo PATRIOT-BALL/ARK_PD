@@ -43,7 +43,7 @@ actors.blobs.waterofhealth.desc=회복의 힘이 이 우물의 물에서 뿜어�
 actors.blobs.waterofadvanceguard.procced=아이템 점검 보상으로 %d 합성옥이 지급되었다.
 actors.blobs.waterofadvanceguard.desc=아방가르드한 기운이 이 우물의 물에서 뿜어져 나오고 있다. 이 물에 아이템을 던져 넣으면 합성옥이 될 것이다.\n\n_몇몇 아이템은 합성옥이 아닌 특별한 무언가가 될 것입니다._
 
-actors.blobs.wateroftransmutation.desc=변화의 힘이 이 우물의 물에서 뿜어져 나오고 있다. 이 우물에 아이템을 던져 넣으면 다른 것으로 변하게 된다.
+actors.blobs.wateroftransmutation.desc=변화의 힘이 이 우물의 물에서 뿜어져 나오고 있다. 이 우물에 아이템을 던져 넣으면 다른 것으로 변하게 된다.\n\n_이거가지고 버그 제보하면 무시합니다._
 
 actors.blobs.web.desc=모든 것이 굵은 거미줄로 뒤덮혀 있다. 무언가가 거미줄을 건드리거나 거미줄에 던져진다면 거미줄이 끊어지지만, 그 대상은 거미줄에 걸려 꼼짝도 못 할 것이다.
 
@@ -581,7 +581,7 @@ actors.hero.talent.physical_attack.desc=_+1:_ 강화된 방벽 투척이 대상�
 actors.hero.talent.battleflow.title=전투의 흐름
 actors.hero.talent.battleflow.desc=_+1:_ 누군가가 사망할 때 섬멸전 장비를 충전할 확률이 8%에서 _12%_ 로 상승합니다.\n\n_+2:_ 누군가가 사망할 때 섬멸전 장비를 충전할 확률이 8%에서 _16%_ 로 상승합니다.\n\n_+3:_ 누군가가 사망할 때 섬멸전 장비를 충전할 확률이 8%에서 _20%_ 로 상승합니다.
 actors.hero.talent.barrier_operation.title=수호 방벽 전개
-actors.hero.talent.barrier_operation.desc=_+1:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _65%_ 로 상승하며, 공격자에게 공격력의 _15%_만큼 피해를 입힙니다.\n\n_+2:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _80%_ 로 상승하며, 공격자에게 공격력의 _30%_만큼 피해를 입힙니다.\n\n_+3:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _95%_ 로 상승하며, 공격자에게 공격력의 _45%_만큼 피해를 입힙니다.
+actors.hero.talent.barrier_operation.desc=_+1:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _65%_ 로 상승하며, 공격자에게 공격력의 _30%_만큼 피해를 입힙니다.\n\n_+2:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _80%_ 로 상승하며, 공격자에게 공격력의 _60%_만큼 피해를 입힙니다.\n\n_+3:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _95%_ 로 상승하며, 공격자에게 공격력의 _90%_만큼 피해를 입힙니다.
 actors.hero.talent.barrier_repair.title=방벽 재생
 actors.hero.talent.barrier_repair.desc=_+1:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _15%_ 로 상승합니다.\n\n_+2:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _20%_ 로 상승합니다.\n\n_+3:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _25%_ 로 상승합니다.
 actors.hero.talent.rhodes_cat.title=로도스의 필라인
