@@ -43,7 +43,7 @@ public class YogSprite extends MobSprite {
 		run = new Animation( 12, true );
 		run.frames( frames, 0 );
 		
-		attack = new Animation( 16, false );
+		attack = new Animation( 10, false );
 		attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 );
 
 		zap = attack.clone();

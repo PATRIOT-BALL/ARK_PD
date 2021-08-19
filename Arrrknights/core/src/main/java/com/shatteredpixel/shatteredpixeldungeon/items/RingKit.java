@@ -25,7 +25,7 @@ public class RingKit extends Item {
     private static final float TIME_TO_UPGRADE = 2;
 
     {
-        image = ItemSpriteSheet.KIT;
+        image = ItemSpriteSheet.RINGKIT;
     }
 
     @Override

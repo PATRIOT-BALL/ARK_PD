@@ -1187,7 +1187,7 @@ items.quest.ratskull.name=거대한 생쥐 두개골
 items.quest.ratskull.desc=놀랍도록 커다란 생쥐 두개골입니다. 벽에 걸어둘 수만 있다면 멋진 사냥 기념물이 될 것 같습니다.
 
 items.quest.gamza.name=감자 전지
-items.quest.gamza.desc=어딘가에선 감자로 서버를 돌린다는 소문이 있다.\n\n아방가르드한 힘의 우물에 던지면 뭔가 일어날 수도 있습니다.
+items.quest.gamza.desc=어딘가에선 감자로 서버를 돌린다는 소문이 있다.\n\n아방가르드한 힘의 우물에 던지면 뭔가 일어날 수도 있습니다.\n\n_※우물에 넣어서 그대로 나와도 버그 아니니까 제보하지 마세요_
 
 items.quest.nmould.name=고대 주물
 items.quest.nmould.desc=하늘에는 커다란 용광로가, 땅에는 금, 은, 동, 석, 철, 다섯 가지 금속이 난다\n\n...근데 이거 감자 아니였나요?
@@ -2307,7 +2307,7 @@ items.weapon.missiles.boomerang.desc=이 구부러진 나무 부메랑은 적에
 items.weapon.missiles.boomerang.durability=부메랑은 단단한 구조로 인해 절대 부서지지 않습니다.
 
 items.weapon.missiles.firesteel.name=라이터
-items.weapon.missiles.firesteel.desc=...이건 마인크(검열됨)\n\n_뭔가 잘 터질거같은 적에게는 매우 효과적입니다!_
+items.weapon.missiles.firesteel.desc=담뱃불 좀 빌려줄래?\n\n_뭔가 잘 터질거같은 적에게는 매우 효과적입니다!_
 
 items.weapon.missiles.fishingspear.name=작살
 items.weapon.missiles.fishingspear.desc=물속의 생물들을 잡기 위한 작은 투창입니다. 무기로도 그럭저럭 사용할 수 있습니다. \n\n절대 에기르 출신 사람들에게 들이대지 말아줘.\nㅡ위디

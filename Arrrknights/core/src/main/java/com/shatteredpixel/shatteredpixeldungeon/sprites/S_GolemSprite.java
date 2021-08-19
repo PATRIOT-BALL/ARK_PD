@@ -46,7 +46,7 @@ public class S_GolemSprite extends MobSprite {
 		run = new Animation( 10, true );
 		run.frames( frames, 0 );
 
-		attack = new Animation( 22, false );
+		attack = new Animation( 25, false );
 		attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 );
 
 		zap = new Animation( 20, false );

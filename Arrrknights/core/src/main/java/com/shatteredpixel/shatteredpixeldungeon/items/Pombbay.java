@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Pombbay extends Item {
     public static final String AC_DRINK = "DRINK";
     {
-        image = ItemSpriteSheet.BONK;
+        image = ItemSpriteSheet.POMBBAY;
     }
 
     @Override

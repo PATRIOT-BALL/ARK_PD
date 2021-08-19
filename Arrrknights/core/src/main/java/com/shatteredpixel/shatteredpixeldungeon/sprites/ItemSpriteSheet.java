@@ -153,6 +153,7 @@ public class ItemSpriteSheet {
 	public static final int MASTERY         = SINGLE_USE+13;
 	public static final int KIT             = SINGLE_USE+14;
 	public static final int AMULET          = SINGLE_USE+15;
+	public static final int RINGKIT          = SINGLE_USE+16;
 	static{
 		assignItemRect(ANKH,            10, 16);
 		assignItemRect(STYLUS,          16, 16);
@@ -170,6 +171,7 @@ public class ItemSpriteSheet {
 		assignItemRect(MASTERY,         16, 16);
 		assignItemRect(KIT,             16, 15);
 		assignItemRect(AMULET,          16, 16);
+		assignItemRect(RINGKIT,          16, 16);
 	}
 	
 	private static final int BOMBS          =                               xy(1, 5);   //16 slots
@@ -710,6 +712,7 @@ public class ItemSpriteSheet {
 	public static final int CUTLET =       FOOD+13;
 	public static final int SANDBITCH =       FOOD+14;
 	public static final int BONK =       FOOD+15;
+	public static final int POMBBAY =       FOOD+16;
 	static{
 		assignItemRect(MEAT,        16, 16);
 		assignItemRect(STEAK,       16, 16);
@@ -727,6 +730,7 @@ public class ItemSpriteSheet {
 		assignItemRect(CUTLET,       16, 16);
 		assignItemRect(SANDBITCH,       16, 16);
 		assignItemRect(BONK,       16, 16);
+		assignItemRect(POMBBAY,       16, 16);
 	}
 
 	private static final int QUEST  =                                       xy(1, 29);  //32 slots
@@ -744,6 +748,7 @@ public class ItemSpriteSheet {
 	public static final int NULL_DEF   = QUEST+11;
 	public static final int GAMZA   = QUEST+12;
 	public static final int MYOSOTIS   = QUEST+13;
+	public static final int W0520   = QUEST+14;
 	static{
 		assignItemRect(SKULL,   16, 16);
 		assignItemRect(DUST,    16, 16);
@@ -759,6 +764,7 @@ public class ItemSpriteSheet {
 		assignItemRect(NULL_DEF,    16, 16);
 		assignItemRect(GAMZA,    16, 16);
 		assignItemRect(MYOSOTIS,    16, 16);
+		assignItemRect(W0520,    16, 16);
 	}
 
 	private static final int BAGS       =                                   xy(1, 31);  //16 slots

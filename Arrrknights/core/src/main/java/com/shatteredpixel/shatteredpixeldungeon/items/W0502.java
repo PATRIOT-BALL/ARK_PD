@@ -39,7 +39,7 @@ public class W0502 extends Item {
     public static final String AC_FIRE = "FIRE";
     public static final String AC_RELOAD = "RELOAD";
     {
-        image = ItemSpriteSheet.WAND_FIREBOLT;
+        image = ItemSpriteSheet.W0520;
 
         defaultAction = AC_FIRE;
     }
