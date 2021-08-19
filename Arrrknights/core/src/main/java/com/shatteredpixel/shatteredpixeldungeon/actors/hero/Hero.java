@@ -68,6 +68,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CheckedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
@@ -1328,6 +1329,10 @@ public class Hero extends Char {
             int dmg = Random.IntRange(0, 3 + belongings.weapon.buffedLvl() * 3);
             int dr = Math.max(enemy.drRoll(), enemy.drRoll());
             enemy.damage(dmg - dr, this);
+            if (!enemy.isAlive()) {
+                CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 10);
+                enemy.sprite.killAndErase();
+            }
         }
 
         Earthroot.Armor armor = buff(Earthroot.Armor.class);
