@@ -76,6 +76,12 @@ public class Fanatic extends Mob {
         return super.act();
     }
 
+    @Override
+    public void die(Object cause) {
+        this.sprite.remove(CharSprite.State.LEVITATING);
+        super.die(cause);
+    }
+
     public static void spawnAround( int pos ) {
         for (int n : PathFinder.NEIGHBOURS4) {
             spawnAt( pos + n );

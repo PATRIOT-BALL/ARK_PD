@@ -97,6 +97,12 @@ public class Wraith extends Mob {
 	}
 
 	@Override
+	public void die(Object cause) {
+		this.sprite.remove(CharSprite.State.LEVITATING);
+		super.die(cause);
+	}
+
+	@Override
 	public float spawningWeight() {
 		return 0f;
 	}
