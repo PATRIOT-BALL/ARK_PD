@@ -69,6 +69,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.Recycle;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WildEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Sungrass;
@@ -320,6 +322,10 @@ public class QuickRecipe extends Component {
 					result.add(new QuickRecipe( r, in, r.sampleOutput(in)));
 					i++;
 				}
+				result.add(new QuickRecipe( new NormalMagazine.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new Runestone.PlaceHolder(), new Plant.Seed.PlaceHolder())),
+						new NormalMagazine()));
+				result.add(new QuickRecipe(new UpMagazine.Recipe()));
 				return result;
 			case 4:
 				r = new ExoticPotion.PotionToExotic();

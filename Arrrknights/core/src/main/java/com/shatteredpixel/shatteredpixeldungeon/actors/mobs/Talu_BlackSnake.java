@@ -96,7 +96,7 @@ public class Talu_BlackSnake extends Mob {
     public int attackSkill(Char target) { return 50; }
 
     @Override
-    public int defenseSkill(Char enemy) { return 35; }
+    public int defenseSkill(Char enemy) { return 29; }
 
     @Override
     public int drRoll() { return Random.NormalIntRange(0, 20); }

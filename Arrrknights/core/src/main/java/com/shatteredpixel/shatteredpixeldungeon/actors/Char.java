@@ -73,6 +73,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Elemental;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ghoul;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.NeverBackDown;
@@ -413,10 +414,18 @@ public abstract class Char extends Actor {
 			if (enemy.isAlive() && enemy.HP < enemy.HT/8 &&
 			enemy != Dungeon.hero && Dungeon.hero.belongings.weapon instanceof Naginata && this instanceof Hero &&
 				!enemy.properties().contains(Char.Property.BOSS) && !enemy.properties().contains(Char.Property.MINIBOSS)) {
-				sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Naginata.class, "skill") );
-				enemy.die(this);
-				enemy.sprite.killAndErase();
-				SpellSprite.show( enemy, SpellSprite.FOOD );
+				if (enemy instanceof Ghoul) {
+					sprite.showStatus(CharSprite.NEUTRAL, Messages.get(Naginata.class, "skill"));
+					enemy.die(this);
+					SpellSprite.show(enemy, SpellSprite.FOOD);
+
+				}
+				else {
+					sprite.showStatus(CharSprite.NEUTRAL, Messages.get(Naginata.class, "skill"));
+					enemy.die(this);
+					enemy.sprite.killAndErase();
+					SpellSprite.show(enemy, SpellSprite.FOOD);
+				}
 			}
 			
 			return true;

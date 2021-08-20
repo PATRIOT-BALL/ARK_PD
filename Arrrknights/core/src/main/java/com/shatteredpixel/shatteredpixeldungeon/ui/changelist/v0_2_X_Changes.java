@@ -15,10 +15,57 @@ import java.util.ArrayList;
 public class v0_2_X_Changes {
 
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_2_4_Changes(changeInfos);
         add_v0_2_3_Changes(changeInfos);
         add_v0_2_2_Changes(changeInfos);
         add_v0_2_1_Changes(changeInfos);
         add_v0_2_0_Changes(changeInfos);
+    }
+
+    public static void add_v0_2_4_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.2.3", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "사격 무기",
+                "_사격 무기_는 투척 무기를 탄환으로 사용하는 무기 계열로, 근접 공격력은 낮지만 원거리 물리 공격을 가할 수 있습니다." + "\n\n" +
+                        "_사격 무기_는 사격 그레이스롯의 특수 사격을 발생시킬 수 있으며, 장전한 투척 무기의 티어에 따라 원거리 공격의 피해량이 결정됩니다." + "\n\n" +
+                        "_사격 무기_는 3티어의 _DP27_, _9mm C1 기관단총_, 5티어인 _R4-C 돌격소총_이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
+                "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
+                        "_여분 탄창_ : 가공소에서 제작할 수 있는 투척무기입니다. 3티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. (내구도 매우 낮음)" + "\n\n" +
+                        "_강화 탄창_ : 가공소에서 제작할 수 있는 투척무기입니다. 4티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. 또한, 이 탄창으로 사격 무기를 장전하면 추가 효과를 얻습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "투척 무기",
+                "더 이상 강화할 수 없습니다. 단, _풍차 수리검_은 여전히 강화할 수 있습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "전문화 능력 추가",
+                "_신속 전문화_ 레드는 사격 무기의 재장전을 다른 캐릭터보다 빠르게 할 수 있습니다." + "\n\n" +
+                "_사격 전문화_ 그레이스롯은 사격 무기의 사격 능력이 방어력을 50%무시합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
+        "_신속 전문화_의 _투사체 가속_ 특성이 사격 무기에도 적용되어, 최대 +30%의 피해 보너스를 얻을 수 있습니다." + "\n\n" +
+                "_사격 전문화_의 _강화 공유_ 특성이 사격 무기에도 적용됩니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "리유니온 너프",
+                "_불사의 검은 뱀_ : 회피율이 35에서 29로 감소했습니다."));
     }
 
     public static void add_v0_2_3_Changes(ArrayList<ChangeInfo> changeInfos) {
@@ -54,7 +101,7 @@ public class v0_2_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
-                "_성좌의 수호자_ : 명중률이 35%에서 _15%_로 감소했습니다. 2턴을 소모해 별의 힘을 모을 수 있으며, 최대 5회까지 모을 수 있게됩니다. 공격시 별의 힘을 소모해 시야 내 적들에게 광역 피해를 입힙니다."));
+                "_성좌의 수호자_ : 명중률이 35%에서 _15%_로 감소했습니다. 4턴을 소모해 별의 힘을 모을 수 있으며, 최대 5회까지 모을 수 있게됩니다. 공격시 별의 힘을 소모해 시야 내 적들에게 광역 피해를 입힙니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.RING), " 캔낫 퀘스트 보상 변경",
                 "16-19층의 _캔낫 퀘스트_의 보상이 변경되었습니다." + "\n\n" +

@@ -7,7 +7,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -80,7 +85,8 @@ public class DP27 extends MeleeWeapon {
 
         spshot = sp;
 
-        Dungeon.hero.spendAndNext(RELOAD_TIME);
+        if (Dungeon.hero.subClass == HeroSubClass.FREERUNNER) Dungeon.hero.spendAndNext(RELOAD_TIME / 2);
+        else Dungeon.hero.spendAndNext(RELOAD_TIME);
         Dungeon.hero.sprite.operate( Dungeon.hero.pos );
     }
 
@@ -181,14 +187,21 @@ public class DP27 extends MeleeWeapon {
         Char ch = Actor.findChar( bolt.collisionPos );
         if (ch != null) {
             int dmg = Random.Int(shotmin(), shotmax());
-            dmg -= ch.drRoll();
+            if (Dungeon.hero.subClass == HeroSubClass.SNIPER) dmg -= (ch.drRoll() / 2);
+            else dmg -= ch.drRoll();
             if (ch.hit(Dungeon.hero, ch, false)) {
-                ch.damage(dmg, this);
+                if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
+                    dmg *= 1 + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) / 10); }
+
+                ch.damage(1, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) Buff.affect(ch, Burning.class).reignite(ch);
 
                 ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
+
+                int bonusTurns = Dungeon.hero.hasTalent(Talent.SHARED_UPGRADES) ? this.buffedLvl() : 0;
+                if (Dungeon.hero.subClass == HeroSubClass.SNIPER) Buff.prolong(Dungeon.hero, SnipersMark.class, SnipersMark.DURATION).set(ch.id(), bonusTurns);
             }
             else {
                     String defense = ch.defenseVerb();

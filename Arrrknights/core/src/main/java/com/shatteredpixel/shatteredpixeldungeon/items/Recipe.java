@@ -59,6 +59,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.ReclaimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Recycle;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WildEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
 import com.watabou.utils.Reflection;
 
 import java.util.ArrayList;
@@ -203,7 +205,9 @@ public abstract class Recipe {
             new StewedMeat.twoMeat(),
             // 명픽던 추가
             new StaffKit.Recipe(),
-            new ScrollOfWarp.Recipe()
+            new ScrollOfWarp.Recipe(),
+            new NormalMagazine.Recipe(),
+            new UpMagazine.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{

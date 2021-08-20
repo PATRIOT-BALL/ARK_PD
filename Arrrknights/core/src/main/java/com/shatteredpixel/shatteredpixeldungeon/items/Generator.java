@@ -152,8 +152,10 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
@@ -176,6 +178,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
@@ -413,9 +416,11 @@ public class Generator {
                     Whip.class,
                     CrabGun.class,
                     SHISHIOH.class,
-                    Flag.class
+                    Flag.class,
+                    DP27.class,
+                    C1_9mm.class
             };
-            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 4};
+            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3};
 
             WEP_T4.classes = new Class<?>[]{
                     Longsword.class,
@@ -439,9 +444,10 @@ public class Generator {
                     Flail.class,
                     WintersScar.class,
                     SwordofArtorius.class,
-                    DivineAvatar.class
+                    DivineAvatar.class,
+                    R4C.class
             };
-            WEP_T5.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 3, 3, 4};
+            WEP_T5.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 3, 3, 4,3};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{
