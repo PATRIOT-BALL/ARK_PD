@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.A_master2Sprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.FanaticSprite;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Bundle;
@@ -26,17 +27,24 @@ public class Fanatic extends Mob {
 
         EXP = 1;
         maxLvl = -8;
-        flying = false;
+        flying = true;
 
         immunities.add(Paralysis.class);
         immunities.add(Silence.class);
     }
+
+    private boolean add = false;
 
     public Fanatic() {
         super();
 
         HP = HT = Dungeon.depth * 5 - 8;
         defenseSkill = Dungeon.depth;
+    }
+
+    @Override
+    public void restoreFromBundle( Bundle bundle ) {
+        super.restoreFromBundle( bundle );
     }
 
     @Override
@@ -59,6 +67,15 @@ public class Fanatic extends Mob {
         return super.speed() * 1.1f;
     }
 
+    @Override
+    protected boolean act() {
+        if (!add) {
+            add = true;
+            this.sprite.add(CharSprite.State.LEVITATING);
+        }
+        return super.act();
+    }
+
     public static void spawnAround( int pos ) {
         for (int n : PathFinder.NEIGHBOURS4) {
             spawnAt( pos + n );
@@ -75,6 +92,7 @@ public class Fanatic extends Mob {
                 GameScene.add(w, SPAWN_DELAY);
 
                 w.sprite.emitter().burst(ShadowParticle.CURSE, 5);
+                w.sprite.add(CharSprite.State.LEVITATING);
                 return w;
             }
         } else {

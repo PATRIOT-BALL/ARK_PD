@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LurkerSprite;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Bundle;
@@ -47,11 +48,13 @@ public class Wraith extends Mob {
 
 		maxLvl = -2;
 		
-		flying = false;
+		flying = true;
 
 		immunities.add(Silence.class);
 
 	}
+
+	private boolean add = false;
 	
 	private static final String LEVEL = "level";
 	
@@ -85,6 +88,15 @@ public class Wraith extends Mob {
 	}
 
 	@Override
+	protected boolean act() {
+		if (!add) {
+			add = true;
+			this.sprite.add(CharSprite.State.LEVITATING);
+		}
+		return super.act();
+	}
+
+	@Override
 	public float spawningWeight() {
 		return 0f;
 	}
@@ -112,6 +124,7 @@ public class Wraith extends Mob {
 			
 			w.sprite.alpha( 0 );
 			w.sprite.parent.add( new AlphaTweener( w.sprite, 1, 0.5f ) );
+			w.sprite.add(CharSprite.State.LEVITATING);
 			
 			w.sprite.emitter().burst( ShadowParticle.CURSE, 5 );
 			
