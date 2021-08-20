@@ -88,21 +88,6 @@ public class Wraith extends Mob {
 	}
 
 	@Override
-	protected boolean act() {
-		if (!add) {
-			add = true;
-			this.sprite.add(CharSprite.State.LEVITATING);
-		}
-		return super.act();
-	}
-
-	@Override
-	public void die(Object cause) {
-		this.sprite.remove(CharSprite.State.LEVITATING);
-		super.die(cause);
-	}
-
-	@Override
 	public float spawningWeight() {
 		return 0f;
 	}
@@ -130,7 +115,6 @@ public class Wraith extends Mob {
 			
 			w.sprite.alpha( 0 );
 			w.sprite.parent.add( new AlphaTweener( w.sprite, 1, 0.5f ) );
-			w.sprite.add(CharSprite.State.LEVITATING);
 			
 			w.sprite.emitter().burst( ShadowParticle.CURSE, 5 );
 			

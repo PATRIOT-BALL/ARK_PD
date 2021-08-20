@@ -411,7 +411,7 @@ public abstract class Char extends Actor {
 			}
 
 			if (enemy.isAlive() && enemy.HP < enemy.HT/8 &&
-			enemy != Dungeon.hero && Dungeon.hero.belongings.weapon instanceof Naginata &&
+			enemy != Dungeon.hero && Dungeon.hero.belongings.weapon instanceof Naginata && this instanceof Hero &&
 				!enemy.properties().contains(Char.Property.BOSS) && !enemy.properties().contains(Char.Property.MINIBOSS)) {
 				sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Naginata.class, "skill") );
 				enemy.die(this);

@@ -67,21 +67,6 @@ public class Fanatic extends Mob {
         return super.speed() * 1.1f;
     }
 
-    @Override
-    protected boolean act() {
-        if (!add) {
-            add = true;
-            this.sprite.add(CharSprite.State.LEVITATING);
-        }
-        return super.act();
-    }
-
-    @Override
-    public void die(Object cause) {
-        this.sprite.remove(CharSprite.State.LEVITATING);
-        super.die(cause);
-    }
-
     public static void spawnAround( int pos ) {
         for (int n : PathFinder.NEIGHBOURS4) {
             spawnAt( pos + n );
@@ -98,7 +83,6 @@ public class Fanatic extends Mob {
                 GameScene.add(w, SPAWN_DELAY);
 
                 w.sprite.emitter().burst(ShadowParticle.CURSE, 5);
-                w.sprite.add(CharSprite.State.LEVITATING);
                 return w;
             }
         } else {
