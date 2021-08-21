@@ -2360,7 +2360,7 @@ items.weapon.missiles.ragesawblade.name=분노 톱날
 items.weapon.missiles.ragesawblade.desc=강력한 오리지늄의 영향을 받은 원형 톱날로, 내구도가 크게 낮아졌다. \n\n적중한 대상에게 _광란_을 부여합니다.
 
 items.weapon.missiles.purgatoryknife.name=상처투성이 단검
-items.weapon.missiles.purgatoryknife.desc=_"만약 또다시, 모두와 함께 싸울 수 있다면..."_ ​​\n\n적중한 적을 자신의 근처로 순간이동시킵니다. 단, 낮은 확률로 전이가 실패하며, 강한 적은 전이시킬 수 없습니다.\n강화할 수 없습니다.
+items.weapon.missiles.purgatoryknife.desc=_"만약 또다시, 모두와 함께 싸울 수 있다면..."_ ​​\n\n적중한 적을 자신의 근처로 순간이동시킵니다. 단, 낮은 확률로 전이가 실패하며, 강한 적은 전이시킬 수 없습니다.
 
 items.weapon.missiles.thunderbolt.name=썬더볼트
 items.weapon.missiles.thunderbolt.desc=이 번개탄은 건강한 적에게 최대 2배의 피해를 입힙니다. 대상의 체력이 50%이하라면 1배 이하의 피해를 입힙니다.
@@ -2369,7 +2369,7 @@ items.weapon.missiles.normalmagazine.name=일반 탄창
 items.weapon.missiles.normalmagazine.desc=이것은 사격 무기의 탄약 용도로 설계되었습니다. 던질 순 있지만 좋은 선택은 아닐 것입니다...
 
 items.weapon.missiles.upmagazine.name=고급 탄창
-items.weapon.missiles.upmagazine.desc=이것은 사격 무기의 탄약 용도로 설계되었습니다. 던질 순 있지만 좋은 선택은 아닐 것입니다...
+items.weapon.missiles.upmagazine.desc=이것은 사격 무기의 탄약 용도로 설계되었습니다. 던질 순 있지만 좋은 선택은 아닐 것입니다...\n이 탄약으로 사격 무기를 장전하면 특수 효과를 얻습니다.
 
 
 items.weapon.spiritbow.name=리버스 크로스보우
