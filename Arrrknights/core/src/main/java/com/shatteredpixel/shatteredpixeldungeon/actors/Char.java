@@ -411,21 +411,13 @@ public abstract class Char extends Actor {
 				}
 			}
 
-			if (enemy.isAlive() && enemy.HP < enemy.HT/8 &&
+			if (enemy.isAlive() && enemy.HP < enemy.HT * 0.15f &&
 			enemy != Dungeon.hero && Dungeon.hero.belongings.weapon instanceof Naginata && this instanceof Hero &&
 				!enemy.properties().contains(Char.Property.BOSS) && !enemy.properties().contains(Char.Property.MINIBOSS)) {
-				if (enemy instanceof Ghoul) {
 					sprite.showStatus(CharSprite.NEUTRAL, Messages.get(Naginata.class, "skill"));
-					enemy.die(this);
+					enemy.damage(108108, this);
 					SpellSprite.show(enemy, SpellSprite.FOOD);
 
-				}
-				else {
-					sprite.showStatus(CharSprite.NEUTRAL, Messages.get(Naginata.class, "skill"));
-					enemy.die(this);
-					enemy.sprite.killAndErase();
-					SpellSprite.show(enemy, SpellSprite.FOOD);
-				}
 			}
 			
 			return true;
