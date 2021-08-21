@@ -62,6 +62,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SpikesBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ghoul;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Monk;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
@@ -1329,7 +1330,7 @@ public class Hero extends Char {
             int dmg = Random.IntRange(0, 3 + belongings.weapon.buffedLvl() * 3);
             int dr = Math.max(enemy.drRoll(), enemy.drRoll());
             enemy.damage(dmg - dr, this);
-            if (!enemy.isAlive()) {
+            if (!enemy.isAlive() && enemy instanceof Ghoul == false) {
                 CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 10);
                 enemy.sprite.killAndErase();
             }
@@ -1360,6 +1361,10 @@ public class Hero extends Char {
                         redamage += damageRoll() * (float) pointsInTalent(Talent.BARRIER_OPERATION) * 0.3f;
                         if (Dungeon.hero.hasTalent(Talent.BARRIER_OPERATION)) {
                             enemy.damage(redamage, this);
+                            if (!enemy.isAlive() && enemy instanceof Ghoul == false) {
+                                CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 10);
+                                enemy.sprite.killAndErase();
+                            }
                         }
                         Gear.discharge();
                         }
@@ -1376,6 +1381,10 @@ public class Hero extends Char {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 if (Dungeon.level.adjacent(mob.pos, this.pos) && mob.alignment != Char.Alignment.ALLY) {
                     mob.damage(Math.min(drRoll(), mob.HT / 3), this);
+                    if (!enemy.isAlive() && enemy instanceof Ghoul == false) {
+                        CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 10);
+                        enemy.sprite.killAndErase();
+                    }
                 }
             }
         }
