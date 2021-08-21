@@ -192,13 +192,24 @@ public class CatGun extends MeleeWeapon {
         protected boolean act() {
             if (this.buff(StoneOfAggression.Aggression.class) == null) {
                 Buff.prolong(this, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);}
-            damage(HT/50, this);
+
+            CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
+            if (setBuff != null) {
+                int n = 50 + setBuff.itemLevel() * 3;
+                damage(HT/n, this);
+            }
+            else damage(HT/50, this);
             return super.act();
         }
 
         @Override
         public int attackProc(Char enemy, int damage) {
-            damage(HT/20, this);
+            CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
+            if (setBuff != null) {
+                int n = 20 + setBuff.itemLevel() * 3;
+                damage(HT/n, this);
+            }
+            else damage(HT/20, this);
             Sample.INSTANCE.play( Assets.Sounds.HIT_BREAK );
             return super.attackProc(enemy, damage);
         }

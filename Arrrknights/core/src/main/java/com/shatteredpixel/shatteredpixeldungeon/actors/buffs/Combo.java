@@ -329,7 +329,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 						trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
 						//knock them back along that ballistica, ensuring they don't fall into a pit
 						int dist = 2;
-						if (count >= 7 && hero.pointsInTalent(Talent.ENHANCED_COMBO) >= 1){
+						if (count >= 6 && hero.pointsInTalent(Talent.ENHANCED_COMBO) >= 1){
 							dist ++;
 							Buff.prolong(enemy, Vertigo.class, 3);
 						} else if (!enemy.flying) {

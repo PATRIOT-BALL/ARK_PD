@@ -22,7 +22,7 @@ public class PRTS extends NPC {
     }
 
     public PRTS() {
-        hint = Random.IntRange(0,11);
+        hint = Random.IntRange(0,12);
     }
 
     @Override
@@ -124,6 +124,14 @@ public class PRTS extends NPC {
                     @Override
                     public void call() {
                         GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint11")));
+                    }
+                });
+                break;
+            case 11:
+                Game.runOnRenderThread(new Callback() {
+                    @Override
+                    public void call() {
+                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint12")));
                     }
                 });
                 break;

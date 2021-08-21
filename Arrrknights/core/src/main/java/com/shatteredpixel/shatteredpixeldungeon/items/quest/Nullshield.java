@@ -14,11 +14,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GoldDogSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -139,6 +141,33 @@ public class Nullshield extends Item {
                     Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
                     item.detach( curUser.belongings.backpack );
                     detach(curUser.belongings.backpack);
+                }
+                else if (item instanceof Scythe)
+                {
+                    if (curUser.belongings.weapon != item) {
+                        GLog.h(Messages.get(Nullshield.class, "suc"));
+                        GoldDogSword nya = new GoldDogSword();
+                        nya.identify();
+
+                        int level = item.level();
+                        if (((Scythe) item).curseInfusionBonus) level--;
+                        if (level > 0) {
+                            nya.upgrade( level );
+                        } else if (level < 0) {
+                            nya.degrade( -level );
+                        }
+
+                        nya.enchantment = ((Scythe) item).enchantment;
+                        nya.curseInfusionBonus = ((Scythe) item).curseInfusionBonus;
+                        nya.levelKnown = ((Scythe) item).levelKnown;
+                        nya.cursedKnown = ((Scythe) item).cursedKnown;
+                        nya.cursed = ((Scythe) item).cursed;
+                        nya.augment = ((Scythe) item).augment;
+                        Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                        item.detach(curUser.belongings.backpack);
+                        detach(curUser.belongings.backpack);
+                    }
+                    else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));
                 }
                 else {
 

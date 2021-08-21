@@ -105,6 +105,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GoldDogSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;

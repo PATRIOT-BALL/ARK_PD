@@ -68,23 +68,26 @@ public class Kaltsit extends Mob {
     }
 
     @Override
-    public void die(Object cause) {
-        Dungeon.killcat = true;
-        Badges.silentValidateFragging();
-        Dungeon.win(Amulet.class);
-        Dungeon.deleteGame(GamesInProgress.curSlot, true);
-        Game.switchScene(SurfaceScene.class);
-        super.die(cause);
-    }
-
-    @Override
     protected boolean canAttack(Char enemy) {
         if (this.fieldOfView[enemy.pos]){ return true; }
         return false;
     }
 
     @Override
+    public boolean isAlive() {
+        return true;
+    }
+
+    @Override
     protected boolean act() {
+        if (HP < 1) {
+            Dungeon.killcat = true;
+            Badges.silentValidateFragging();
+            Dungeon.win(Amulet.class);
+            Dungeon.deleteGame(GamesInProgress.curSlot, true);
+            Game.switchScene(SurfaceScene.class);
+        }
+
         if (firstSummon == true) {
             if (SummonTurn == 0) {
                 this.yell(Messages.get(this, "summon"));

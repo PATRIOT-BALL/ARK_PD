@@ -57,7 +57,7 @@ public class C1_9mm extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  3*(tier) +    // 9 + 1
+        return  1*(tier) +    // 6 + 1
                 lvl*(tier-2);
     }
 
@@ -190,7 +190,7 @@ public class C1_9mm extends MeleeWeapon {
                     dmg *= 1 + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) / 10); }
 
                 ch.damage(dmg, this);
-                Sample.INSTANCE.play(Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f));
+                Sample.INSTANCE.play(Assets.Sounds.HIT_SHOTGUN, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) Buff.affect(ch, Silence.class, 1.5f);
 
@@ -203,6 +203,12 @@ public class C1_9mm extends MeleeWeapon {
                 // 연계 블레이즈 판정
                 if (Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
                     Buff.affect(Dungeon.hero, Combo.class).hit(ch);
+
+                    if (Dungeon.hero.hasTalent(Talent.CLEAVE)) {
+                        if (Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.CLEAVE)) {
+                            Buff.affect(Dungeon.hero, Combo.class).hit(ch);
+                        }
+                    }
                 }
             }
             else {

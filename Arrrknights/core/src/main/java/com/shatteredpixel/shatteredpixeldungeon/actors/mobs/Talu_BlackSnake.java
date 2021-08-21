@@ -146,6 +146,13 @@ public class Talu_BlackSnake extends Mob {
 
     @Override
     protected boolean act() {
+        if (phase == 5 && HP < 1) {
+            Badges.validatewill();
+            Dungeon.win(Amulet.class);
+            Dungeon.deleteGame(GamesInProgress.curSlot, true);
+            Game.switchScene(SurfaceScene.class);
+        }
+
         if (phase > 3 && fx == false) {
             this.sprite.add(CharSprite.State.TALU_BOSS);
             fx = true;
@@ -350,17 +357,8 @@ public class Talu_BlackSnake extends Mob {
     }
 
     @Override
-    public void die(Object cause) {
-        Badges.validatewill();
-        Dungeon.win(Amulet.class);
-        Dungeon.deleteGame(GamesInProgress.curSlot, true);
-        Game.switchScene(SurfaceScene.class);
-        super.die(cause);
-    }
-
-    @Override
     public boolean isAlive() {
-        return (phase<5 || HP > 0);
+        return true;
     }
 
 

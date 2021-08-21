@@ -166,6 +166,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GoldDogSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
@@ -279,6 +280,7 @@ public enum Catalog {
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Gamzashield.class,               false);
 		WEAPONS.seen.put( Enfild2.class,                       false);
+		WEAPONS.seen.put( GoldDogSword.class,                false);
 		WEAPONS.seen.put( Niansword.class,                   false);
 		WEAPONS.seen.put( PatriotSpear.class,                   false);
 		WEAPONS.seen.put( CatGun.class,                   false);

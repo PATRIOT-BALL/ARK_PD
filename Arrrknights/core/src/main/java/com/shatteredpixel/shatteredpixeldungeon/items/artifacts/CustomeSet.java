@@ -99,8 +99,8 @@ public class CustomeSet extends Artifact {
             LockedFloor lock = target.buff(LockedFloor.class);
             if (activeBuff == null && (lock == null || lock.regenOn())) {
                 if (charge < chargeCap && !cursed) {
-                    // 800 턴마다 100%충전 (기본)
-                    float chargeGain = 0.125f;
+                    // 667 턴마다 100%충전 (기본)
+                    float chargeGain = 0.15f;
                     chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
                     partialCharge += chargeGain;
 
