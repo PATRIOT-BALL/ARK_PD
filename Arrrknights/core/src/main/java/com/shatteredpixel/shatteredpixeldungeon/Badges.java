@@ -933,6 +933,115 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validateChampion_char( int challenges ) {
+		if (challenges == 0) return;
+		Badge badge = null;
+
+		switch (Dungeon.hero.heroClass) {
+			case WARRIOR:
+				if (challenges >= 1) {
+					badge = Badge.BLAZE_CHAMPION1;
+				}
+				if (challenges >= 3) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.BLAZE_CHAMPION2;
+				}
+				if (challenges >= 6) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.BLAZE_CHAMPION3;
+				}
+				break;
+			case MAGE:
+				if (challenges >= 1) {
+					badge = Badge.AMIYA_CHAMPION1;
+				}
+				if (challenges >= 3) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.AMIYA_CHAMPION2;
+				}
+				if (challenges >= 6) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.AMIYA_CHAMPION3;
+				}
+				break;
+			case ROGUE:
+				if (challenges >= 1) {
+					badge = Badge.RED_CHAMPION1;
+				}
+				if (challenges >= 3) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.RED_CHAMPION2;
+				}
+				if (challenges >= 6) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.RED_CHAMPION3;
+				}
+				break;
+			case HUNTRESS:
+				if (challenges >= 1) {
+					badge = Badge.GREY_CHAMPION1;
+				}
+				if (challenges >= 3) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.GREY_CHAMPION2;
+				}
+				if (challenges >= 6) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.GREY_CHAMPION3;
+				}
+				break;
+			case ROSECAT:
+				if (challenges >= 1) {
+					badge = Badge.ROSE_CHAMPION1;
+				}
+				if (challenges >= 3) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.ROSE_CHAMPION2;
+				}
+				if (challenges >= 6) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.ROSE_CHAMPION3;
+				}
+				break;
+			default:
+				break;
+		}
+
+
+		local.add(badge);
+		displayBadge( badge );
+	}
+
 	public static void validateroaringflare() {
 		if (!local.contains( Badge.ROARINGFLARE )){
 			global.add(Badge.ROARINGFLARE);
@@ -1060,7 +1169,12 @@ public class Badges {
 			{Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4},
 			{Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4},
 			{Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3, Badge.CHAMPION_4},
-			{Badge.Get_25_STONES, Badge.Get_40_STONES}
+			{Badge.Get_25_STONES, Badge.Get_40_STONES},
+			{Badge.BLAZE_CHAMPION1, Badge.BLAZE_CHAMPION2, Badge.BLAZE_CHAMPION3},
+			{Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3},
+			{Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3},
+			{Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3},
+			{Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3}
 	};
 
 	private static final Badge[][] metaBadgeReplacements = new Badge[][]{
@@ -1091,8 +1205,13 @@ public class Badges {
 		leaveBest( badges, Badge.ITEM_LEVEL_1, Badge.ITEM_LEVEL_2, Badge.ITEM_LEVEL_3, Badge.ITEM_LEVEL_4 );
 		leaveBest( badges, Badge.POTIONS_COOKED_1, Badge.POTIONS_COOKED_2, Badge.POTIONS_COOKED_3, Badge.POTIONS_COOKED_4 );
 		leaveBest( badges, Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4 );
-		leaveBest( badges, Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3 );
+		leaveBest( badges, Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3, Badge.CHAMPION_4 );
 		leaveBest(badges,Badge.Get_25_STONES, Badge.Get_40_STONES);
+		leaveBest( badges, Badge.BLAZE_CHAMPION1, Badge.BLAZE_CHAMPION2, Badge.BLAZE_CHAMPION3 );
+		leaveBest( badges, Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3 );
+		leaveBest( badges, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3 );
+		leaveBest( badges, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION3, Badge.GREY_CHAMPION3 );
+		leaveBest( badges, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3 );
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
 			leaveBest( badges, tierReplace );

@@ -79,10 +79,30 @@ badges$badge.fragging=엔딩-하극상
 badges$badge.pray=널 기다릴게
 badges$badge.will=엔딩-의지
 
+badges$badge.blaze_champion1=숙련 블레이즈
+badges$badge.blaze_champion2=정예 블레이즈
+badges$badge.blaze_champion3=전설 블레이즈
+
+badges$badge.amiya_champion1=숙련 아미야
+badges$badge.amiya_champion2=정예 아미야
+badges$badge.amiya_champion3=전설 아미야
+
+badges$badge.red_champion1=숙련 레드
+badges$badge.red_champion2=정예 레드
+badges$badge.red_champion3=전설 레드
+
+badges$badge.grey_champion1=숙련 그레이스롯
+badges$badge.grey_champion2=정예 그레이스롯
+badges$badge.grey_champion3=전설 그레이스롯
+
+badges$badge.rose_champion1=숙련 로즈몬티스
+badges$badge.rose_champion2=정예 로즈몬티스
+badges$badge.rose_champion3=전설 로즈몬티스
+
 badges$badge.skin_baboskadi=스카디 스킨 해금
 badges$badge.skin_talu=탈룰라 스킨 해금
 badges$badge.skin_nova=서리별 스킨 해금
-badges$badge.skin_susuu=대학원생 스킨 해금
+badges$badge.skin_susuu=수수로 스킨 해금
 
 
 challenges.no_food=환경: 식량배급 중단
