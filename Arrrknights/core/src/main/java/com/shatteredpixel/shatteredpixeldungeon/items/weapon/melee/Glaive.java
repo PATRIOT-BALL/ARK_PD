@@ -42,4 +42,11 @@ public class Glaive extends MeleeWeapon {
 				lvl*Math.round(1.33f*(tier+1)); //+8 per level, up from +6
 	}
 
+	/*
+	@Override
+	public int max(int lvl) {
+		return  3*(tier+1) +    //18 + 4. 공식상 2회 타격
+				lvl*(tier-1);   //scaling unchanged
+	}*/
+
 }
