@@ -21,6 +21,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperEliteSprite;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.GameMath;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
@@ -69,7 +70,10 @@ public class Schwarz extends Mob {
                 LastPos = Dungeon.hero.pos;
                 sprite.parent.addToBack(new TargetedCell(LastPos, 0xFF0000));
                 yell(Messages.get(this, Random.element( LINE_KEYS )));
-                spend( TICK );
+
+                // 패턴 딜레이 추가
+                spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 3*TICK));
+                Dungeon.hero.interrupt();
                 return true;
             }
             else  {
