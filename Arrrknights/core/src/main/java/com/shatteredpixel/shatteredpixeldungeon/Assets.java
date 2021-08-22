@@ -168,6 +168,7 @@ public class Assets {
 		public static final String DRINK	= "sounds/drink.mp3";
 		public static final String SHATTER	= "sounds/shatter.mp3";
 		public static final String ZAP		= "sounds/zap.mp3";
+		public static final String ZAP_GUN		= "sounds/zap_gun.mp3";
 		public static final String LIGHTNING= "sounds/lightning.mp3";
 		public static final String LEVELUP	= "sounds/levelup.mp3";
 		public static final String DEATH	= "sounds/death.mp3";
@@ -222,6 +223,7 @@ public class Assets {
 		public static final String HIT_RINGOUT        = "sounds/hit_ringout.mp3";
 		public static final String HIT_BREAK        = "sounds/hit_break.mp3";
 		public static final String HIT_GUN        = "sounds/hit_gun.mp3";
+		public static final String HIT_AR        = "sounds/hit_ar.mp3";
 		public static final String HIT_BONK        = "sounds/hit_bonk.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
@@ -243,7 +245,7 @@ public class Assets {
 				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY,
 				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK,
 
-				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, LIGHTNING, LEVELUP, DEATH,
+				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, ZAP_GUN, LIGHTNING, LEVELUP, DEATH,
 				CHALLENGE, CURSED, TRAP, EVOKE, TOMB, ALERT, MELD, BOSS, BLAST, PLANT, RAY, BEACON,
 				TELEPORT, CHARMS, MASTERY, PUFF, ROCKS, BURNING, FALLING, GHOST, SECRET, BONES,
 				BEE, DEGRADE, MIMIC, DEBUFF, CHARGEUP, GAS, CHAINS, SCAN, SHEEP,
@@ -251,7 +253,7 @@ public class Assets {
 				//명픽던에서만 추가된  효과음들↓
 				TIMESTOP,
 				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2, HIT_BIRD, HIT_WALL1, HIT_WALL2, HIT_SHOTGUN, HIT_GUNLANCE,
-				HIT_SNIPER, HIT_GUN, FROST, SHINNING, AJIMU,
+				HIT_SNIPER, HIT_GUN, HIT_AR, FROST, SHINNING, AJIMU,
 				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW, SKILL_SILVERSLASH, SKILL_YOUWISH,
 				SKILL_MON1, SKILL_MON2
 		};

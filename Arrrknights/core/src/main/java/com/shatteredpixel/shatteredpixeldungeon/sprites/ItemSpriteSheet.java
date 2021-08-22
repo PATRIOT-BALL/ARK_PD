@@ -257,6 +257,7 @@ public class ItemSpriteSheet {
 	public static final int SHISHIOH     = WEP_TIER3+9;
 	public static final int FLAG     = WEP_TIER3+10;
 	public static final int DP27     = WEP_TIER3+11;
+	public static final int C1     = WEP_TIER3+12;
 	static{
 		assignItemRect(SWORD,           16, 16);
 		assignItemRect(MACE,            16, 16);
@@ -270,6 +271,7 @@ public class ItemSpriteSheet {
 		assignItemRect(SHISHIOH,            16, 16);
 		assignItemRect(FLAG,            16, 16);
 		assignItemRect(DP27,            16, 16);
+		assignItemRect(C1,            16, 16);
 
 
 	}
@@ -309,6 +311,7 @@ public class ItemSpriteSheet {
 	public static final int REQUIEM       = WEP_TIER5+9;
 	public static final int CATGUN       = WEP_TIER5+10;
 	public static final int BABY_KNIGHT       = WEP_TIER5+11;
+	public static final int R4C       = WEP_TIER5+12;
 
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
@@ -323,6 +326,7 @@ public class ItemSpriteSheet {
 		assignItemRect(REQUIEM,   16, 16);
 		assignItemRect(CATGUN,   16, 16);
 		assignItemRect(BABY_KNIGHT,   16, 16);
+		assignItemRect(R4C,   16, 16);
 
 	}
 
@@ -352,6 +356,8 @@ public class ItemSpriteSheet {
 	public static final int FORCE_CUBE      = MISSILE_WEP+15;
 	public static final int FLINT  		= MISSILE_WEP+16;
 	public static final int LAVA  		= MISSILE_WEP+17;
+	public static final int AMMO1  		= MISSILE_WEP+18;
+	public static final int AMMO2 		= MISSILE_WEP+19;
 	
 	static{
 		assignItemRect(SPIRIT_BOW,      16, 16);
@@ -377,6 +383,8 @@ public class ItemSpriteSheet {
 		assignItemRect(FORCE_CUBE,      16, 16);
 		assignItemRect(FLINT,      16, 16);
 		assignItemRect(LAVA,      16, 16);
+		assignItemRect(AMMO1,      16, 16);
+		assignItemRect(AMMO2,      16, 16);
 	}
 	
 	public static final int TIPPED_DARTS    =                               xy(1, 11);  //16 slots

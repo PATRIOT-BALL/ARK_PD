@@ -2332,7 +2332,7 @@ items.weapon.missiles.normalmagazine.name=basic magazine
 items.weapon.missiles.normalmagazine.desc=It is designed with the ammunition of the gun. It's not good to throw and use.
 
 items.weapon.missiles.upmagazine.name=custom magazine
-items.weapon.missiles.upmagazine.desc=It is designed with the ammunition of the gun. It's not good to throw and use.
+items.weapon.missiles.upmagazine.desc=It is designed with the ammunition of the gun. It's not good to throw and use. You can get special effects when you load your gun with this ammo.
 
 
 items.weapon.spiritbow.name=reverse crossbow

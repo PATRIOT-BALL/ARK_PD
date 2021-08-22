@@ -171,7 +171,7 @@ public class DP27 extends MeleeWeapon {
                 curUser.sprite,
                 bolt.collisionPos,
                 callback);
-        Sample.INSTANCE.play( Assets.Sounds.ZAP );
+        Sample.INSTANCE.play( Assets.Sounds.ZAP_GUN );
     }
     public boolean tryToZap(Hero owner, int target) {
 
@@ -195,7 +195,7 @@ public class DP27 extends MeleeWeapon {
                     dmg *= 1 + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) / 10); }
 
                 ch.damage(1, this);
-                Sample.INSTANCE.play(Assets.Sounds.HIT_SHOTGUN, 1, Random.Float(0.87f, 1.15f));
+                Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) Buff.affect(ch, Burning.class).reignite(ch);
 

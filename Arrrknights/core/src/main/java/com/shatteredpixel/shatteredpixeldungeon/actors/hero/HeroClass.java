@@ -121,6 +121,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.HeavyBoomerang;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
@@ -315,6 +316,14 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
+
+		new DP27().collect();
+		new C1_9mm().collect();
+		new R4C().collect();
+		new NormalMagazine().quantity(30).collect();
+		new UpMagazine().quantity(10).collect();
+		new PotionOfStrength().quantity(10).collect();
+		new ScrollOfUpgrade().quantity(10).collect();
 	}
 
 	private void initRosecat(Hero hero)

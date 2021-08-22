@@ -38,8 +38,8 @@ public class R4C extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     public static final String AC_RELOAD = "RELOAD";
     {
-        image = ItemSpriteSheet.ENFILD;
-        hitSound = Assets.Sounds.HIT_SHOTGUN;
+        image = ItemSpriteSheet.R4C;
+        hitSound = Assets.Sounds.HIT_AR;
         hitSoundPitch = 0.9f;
 
         usesTargeting = true;
@@ -167,7 +167,7 @@ public class R4C extends MeleeWeapon {
                 curUser.sprite,
                 bolt.collisionPos,
                 callback);
-        Sample.INSTANCE.play( Assets.Sounds.ZAP );
+        Sample.INSTANCE.play( Assets.Sounds.ZAP_GUN );
     }
     public boolean tryToZap(Hero owner, int target) {
 
@@ -191,7 +191,7 @@ public class R4C extends MeleeWeapon {
                     dmg *= 1 + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) / 10); }
 
                 ch.damage(dmg, this);
-                Sample.INSTANCE.play(Assets.Sounds.HIT_SHOTGUN, 1, Random.Float(0.87f, 1.15f));
+                Sample.INSTANCE.play(Assets.Sounds.HIT_AR, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) {
                     Ballistica trajectory = new Ballistica(curUser.pos, ch.pos, Ballistica.STOP_TARGET);

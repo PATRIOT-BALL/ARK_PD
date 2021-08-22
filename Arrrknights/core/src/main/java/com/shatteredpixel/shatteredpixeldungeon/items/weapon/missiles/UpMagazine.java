@@ -8,8 +8,8 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class UpMagazine extends MissileWeapon {
     {
-        image = ItemSpriteSheet.STONE_HOLDER;
-        hitSound = Assets.Sounds.HIT;
+        image = ItemSpriteSheet.AMMO2;
+        hitSound = Assets.Sounds.HIT_MAGIC;
         hitSoundPitch = 1f;
 
         tier = 4;

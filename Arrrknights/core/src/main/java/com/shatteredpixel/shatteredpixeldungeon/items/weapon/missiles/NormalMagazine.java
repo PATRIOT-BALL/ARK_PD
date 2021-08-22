@@ -18,8 +18,8 @@ import java.util.ArrayList;
 
 public class NormalMagazine extends MissileWeapon {
     {
-        image = ItemSpriteSheet.STONE_HOLDER;
-        hitSound = Assets.Sounds.HIT;
+        image = ItemSpriteSheet.AMMO1;
+        hitSound = Assets.Sounds.HIT_MAGIC;
         hitSoundPitch = 1f;
 
         tier = 3;

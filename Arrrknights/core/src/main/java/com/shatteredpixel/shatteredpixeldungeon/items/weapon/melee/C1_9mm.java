@@ -37,8 +37,8 @@ public class C1_9mm extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     public static final String AC_RELOAD = "RELOAD";
     {
-        image = ItemSpriteSheet.ENFILD;
-        hitSound = Assets.Sounds.HIT_SHOTGUN;
+        image = ItemSpriteSheet.C1;
+        hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
         usesTargeting = true;
@@ -166,7 +166,7 @@ public class C1_9mm extends MeleeWeapon {
                 curUser.sprite,
                 bolt.collisionPos,
                 callback);
-        Sample.INSTANCE.play( Assets.Sounds.ZAP );
+        Sample.INSTANCE.play( Assets.Sounds.ZAP_GUN );
     }
     public boolean tryToZap(Hero owner, int target) {
 
@@ -190,7 +190,7 @@ public class C1_9mm extends MeleeWeapon {
                     dmg *= 1 + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) / 10); }
 
                 ch.damage(dmg, this);
-                Sample.INSTANCE.play(Assets.Sounds.HIT_SHOTGUN, 1, Random.Float(0.87f, 1.15f));
+                Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) Buff.affect(ch, Silence.class, 1.5f);
 
