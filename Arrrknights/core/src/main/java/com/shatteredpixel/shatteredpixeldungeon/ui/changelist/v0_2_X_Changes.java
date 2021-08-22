@@ -23,7 +23,7 @@ public class v0_2_X_Changes {
     }
 
     public static void add_v0_2_4_Changes(ArrayList<ChangeInfo> changeInfos) {
-        ChangeInfo changes = new ChangeInfo("v0.2.3", true, "");
+        ChangeInfo changes = new ChangeInfo("v0.2.4", true, "");
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
@@ -57,12 +57,14 @@ public class v0_2_X_Changes {
                 "_사격 전문화_ 그레이스롯은 사격 무기의 사격 능력이 방어력을 50%무시합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 버프",
+        "_블레이즈_의 _정신력 강화_ 특성에 해당 특성 발동시 자신에게 붙은 불을 즉시 끄는 기능이 추가되었습니다." + "\n\n" +
         "_연계 전문화_의 _콤보 어택_ 특성에 사격 무기의 사격으로 콤보 획득시 확률적으로 추가 콤보를 얻는 기능이 추가되었습니다." + "\n\n" +
                 "_연계 전문화_의 _기술 향상_의 +1 효과의 발동 조건이 콤보 7에서 _콤보 6_으로 감소했습니다." + "\n\n" +
         "_신속 전문화_의 _투사체 가속_ 특성이 사격 무기에도 적용되어, 최대 +30%의 피해 보너스를 얻을 수 있습니다." + "\n\n" +
                 "_사격 전문화_의 _강화 공유_ 특성이 사격 무기에도 적용됩니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 버프",
+        "_동야의 마왕_ : 마탄 사격의 피해량이 1-6에서 _2-11_로 상승했습니다. 대신 마탄 사격이 정상적으로 턴을 소모합니다." + "\n\n" +
         "_해시계_ : 침묵 공격의 충전량이 최대 1에서 _2_ 로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 버프",

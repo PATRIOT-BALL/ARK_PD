@@ -96,7 +96,7 @@ public class MidnightSword extends MeleeWeapon {
     }
 
     public String statsInfo() {
-            return Messages.get(this, "stats_desc", 1+buffedLvl(),6+buffedLvl()*2);
+            return Messages.get(this, "stats_desc", 2+buffedLvl(),11+buffedLvl()*2);
     }
 
     public void SPCharge(int n) {
@@ -199,7 +199,7 @@ public class MidnightSword extends MeleeWeapon {
     protected void onZap( Ballistica bolt ) {
         Char ch = Actor.findChar( bolt.collisionPos );
         if (ch != null) {
-            int dmg = Random.Int(1+buffedLvl(), 6+buffedLvl()*2);
+            int dmg = Random.Int(2+buffedLvl(), 11+buffedLvl()*2);
             ch.damage(dmg, this);
             Sample.INSTANCE.play( Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f) );
 
@@ -212,6 +212,6 @@ public class MidnightSword extends MeleeWeapon {
         charge -=1;
         updateQuickslot();
 
-        if (charge <= 0) curUser.spendAndNext(1f);
+       curUser.spendAndNext(1f);
     }
 }
