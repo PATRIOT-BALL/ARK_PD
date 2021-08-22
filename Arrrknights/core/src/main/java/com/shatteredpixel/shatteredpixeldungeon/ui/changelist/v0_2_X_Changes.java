@@ -33,7 +33,7 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "사격 무기",
                 "_사격 무기_는 투척 무기를 탄환으로 사용하는 무기 계열로, 근접 공격력은 심각할 정도로 없습니다. 원거리 물리 공격을 가할 수 있습니다." + "\n\n" +
-                        "_사격 무기_는 사격 그레이스롯의 특수 사격을 발생시킬 수 있으며, 장전한 투척 무기의 티어에 따라 원거리 공격의 피해량이 결정됩니다." + "\n\n" +
+                        "_사격 무기_는 연계 블레이즈의 콤보와 사격 그레이스롯의 특수 사격을 발생시킬 수 있으며, 장전한 투척 무기의 티어에 따라 원거리 공격의 피해량이 결정됩니다." + "\n\n" +
                         "_사격 무기_는 3티어의 _DP27_, _9mm C1 기관단총_, 5티어인 _R4-C 돌격소총_이 추가되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
