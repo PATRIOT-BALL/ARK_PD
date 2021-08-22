@@ -1166,15 +1166,15 @@ public class Badges {
 			{Badge.STRENGTH_ATTAINED_1, Badge.STRENGTH_ATTAINED_2, Badge.STRENGTH_ATTAINED_3, Badge.STRENGTH_ATTAINED_4},
 			{Badge.FOOD_EATEN_1, Badge.FOOD_EATEN_2, Badge.FOOD_EATEN_3, Badge.FOOD_EATEN_4},
 			{Badge.POTIONS_COOKED_1, Badge.POTIONS_COOKED_2, Badge.POTIONS_COOKED_3, Badge.POTIONS_COOKED_4 },
-			{Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4},
+			{Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4, Badge.VICTORY, Badge.VICTORY_ALL_CLASSES},
 			{Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4},
 			{Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3, Badge.CHAMPION_4},
 			{Badge.Get_25_STONES, Badge.Get_40_STONES},
 			{Badge.BLAZE_CHAMPION1, Badge.BLAZE_CHAMPION2, Badge.BLAZE_CHAMPION3},
-			{Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3},
-			{Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3},
-			{Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3},
-			{Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3}
+			{Badge.UNLOCK_MAGE, Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3},
+			{Badge.UNLOCK_ROGUE, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3},
+			{Badge.UNLOCK_HUNTRESS, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3},
+			{Badge.UNLOCK_ROSECAT, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3}
 	};
 
 	private static final Badge[][] metaBadgeReplacements = new Badge[][]{
@@ -1195,10 +1195,9 @@ public class Badges {
 	};
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {
-
 		leaveBest( badges, Badge.MONSTERS_SLAIN_1, Badge.MONSTERS_SLAIN_2, Badge.MONSTERS_SLAIN_3, Badge.MONSTERS_SLAIN_4 );
 		leaveBest( badges, Badge.GOLD_COLLECTED_1, Badge.GOLD_COLLECTED_2, Badge.GOLD_COLLECTED_3, Badge.GOLD_COLLECTED_4 );
-		leaveBest( badges, Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4 );
+		leaveBest( badges, Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4, Badge.VICTORY, Badge.VICTORY_ALL_CLASSES );
 		leaveBest( badges, Badge.LEVEL_REACHED_1, Badge.LEVEL_REACHED_2, Badge.LEVEL_REACHED_3, Badge.LEVEL_REACHED_4 );
 		leaveBest( badges, Badge.STRENGTH_ATTAINED_1, Badge.STRENGTH_ATTAINED_2, Badge.STRENGTH_ATTAINED_3, Badge.STRENGTH_ATTAINED_4 );
 		leaveBest( badges, Badge.FOOD_EATEN_1, Badge.FOOD_EATEN_2, Badge.FOOD_EATEN_3, Badge.FOOD_EATEN_4 );
@@ -1208,10 +1207,10 @@ public class Badges {
 		leaveBest( badges, Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3, Badge.CHAMPION_4 );
 		leaveBest(badges,Badge.Get_25_STONES, Badge.Get_40_STONES);
 		leaveBest( badges, Badge.BLAZE_CHAMPION1, Badge.BLAZE_CHAMPION2, Badge.BLAZE_CHAMPION3 );
-		leaveBest( badges, Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3 );
-		leaveBest( badges, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3 );
-		leaveBest( badges, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION3, Badge.GREY_CHAMPION3 );
-		leaveBest( badges, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3 );
+		leaveBest( badges, Badge.UNLOCK_MAGE, Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3 );
+		leaveBest( badges, Badge.UNLOCK_ROGUE, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3 );
+		leaveBest( badges, Badge.UNLOCK_HUNTRESS, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION3, Badge.GREY_CHAMPION3 );
+		leaveBest( badges, Badge.UNLOCK_ROSECAT, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3 );
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
 			leaveBest( badges, tierReplace );

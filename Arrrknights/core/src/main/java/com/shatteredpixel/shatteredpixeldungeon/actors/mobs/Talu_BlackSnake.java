@@ -147,6 +147,10 @@ public class Talu_BlackSnake extends Mob {
     @Override
     protected boolean act() {
         if (phase == 5 && HP < 1) {
+            Badges.validateVictory();
+            Badges.validateChampion(Challenges.activeChallenges());
+            Badges.validateChampion_char(Challenges.activeChallenges());
+            Badges.saveGlobal();
             Badges.validatewill();
             Dungeon.win(Amulet.class);
             Dungeon.deleteGame(GamesInProgress.curSlot, true);
