@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
@@ -173,7 +174,7 @@ public class AlchemyKit extends Artifact {
                 int result = 0;
                 result += level(); // 유물 10레벨이면 기본적으로 10의 충전이 보장됨
 
-                if (item instanceof Weapon) {
+                if (item instanceof MeleeWeapon) {
                     result += ((Weapon) item).STRReq() * 2;
                     result += ((Weapon) item).level() * 3;
 
