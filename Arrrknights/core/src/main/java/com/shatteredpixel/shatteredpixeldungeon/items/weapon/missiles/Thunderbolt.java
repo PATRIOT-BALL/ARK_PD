@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class Thunderbolt extends MissileWeapon {
     {
-        image = ItemSpriteSheet.TENGU_SHOCKER;
+        image = ItemSpriteSheet.LISKARM_DOLL;
         hitSound = Assets.Sounds.LIGHTNING;
         hitSoundPitch = 0.8f;
 
