@@ -138,6 +138,13 @@ public class Badges {
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
 		GAMES_PLAYED_2              ( 81, true ),
 
+		BLAZE_CHAMPION1              ( 82, true ),
+		AMIYA_CHAMPION1              ( 83, true ),
+		RED_CHAMPION1              ( 84, true ),
+		GREY_CHAMPION1              ( 85, true ),
+		ROSE_CHAMPION1              ( 86, true ),
+
+
 
 		//platinum
 		HAPPY_END                   ( 96 ),
@@ -153,6 +160,12 @@ public class Badges {
 		FRAGGING                       ( 101 ),
 		PRAY (102),
 
+		BLAZE_CHAMPION2              ( 104, true ),
+		AMIYA_CHAMPION2              ( 105, true ),
+		RED_CHAMPION2              ( 106, true ),
+		GREY_CHAMPION2              ( 107, true ),
+		ROSE_CHAMPION2              ( 108, true ),
+
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
 		CHAMPION_2                  ( 113 ),
@@ -161,6 +174,12 @@ public class Badges {
 		ROARINGFLARE                  ( 115 ),
 		EVILTIME_END                  ( 116 ),
 		WILL    ( 117 ),
+
+		BLAZE_CHAMPION3              ( 120, true ),
+		AMIYA_CHAMPION3              ( 121, true ),
+		RED_CHAMPION3             ( 122, true ),
+		GREY_CHAMPION3              ( 123, true ),
+		ROSE_CHAMPION3              ( 124, true ),
 
 		//Puple
 		Get_25_STONES                (137),
