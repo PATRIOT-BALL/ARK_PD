@@ -194,7 +194,7 @@ public class DP27 extends MeleeWeapon {
                 if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
                     dmg *= 1 + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) / 10); }
 
-                ch.damage(1, this);
+                ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) Buff.affect(ch, Burning.class).reignite(ch);

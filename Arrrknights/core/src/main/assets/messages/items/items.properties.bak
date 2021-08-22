@@ -814,6 +814,15 @@ items.artifacts.customeset.need_to_equip=탐험 세트를 장착해야만 사용
 items.artifacts.customeset.cursed=저주받은 탐험 세트를 사용할 수 없습니다.
 items.artifacts.customeset.desc_cursed=저주받은 탐험 세트는 착용자의 물약 섭취를 방해합니다.
 
+items.artifacts.alchemykit.name=이베리아 연금술 세트
+items.artifacts.alchemykit.ac_crate=연금술
+items.artifacts.alchemykit.ac_add=재료 투입
+items.artifacts.alchemykit.desc=이 이베리아 연금술 세트는 쓸모없는 아이템을 뭔가로 바꾸어줍니다. 아이템을 이 연금술 세트에 투입한 후, 충전이 100%가 되면 사용하여 무작위 아이템을 창조할 수 있습니다!\n\n저주받은 연금술 세트는 가공소의 사용을 막습니다.
+items.artifacts.alchemykit.prompt=투입할 재료를 선택하세요.
+items.artifacts.alchemykit.cursed=저주받은 연금술 세트가 가공소의 사용을 억제한다.
+items.artifacts.alchemykit.chargeless=충전량이 부족합니다.
+items.artifacts.alchemykit.getitem=연금술에 성공했다!
+
 ###bags
 items.bags.bag.name=배낭
 
@@ -2368,13 +2377,13 @@ items.weapon.missiles.ragesawblade.desc=강력한 오리지늄의 영향을 받�
 items.weapon.missiles.purgatoryknife.name=상처투성이 단검
 items.weapon.missiles.purgatoryknife.desc=_"만약 또다시, 모두와 함께 싸울 수 있다면..."_ ​​\n\n적중한 적을 자신의 근처로 순간이동시킵니다. 단, 낮은 확률로 전이가 실패하며, 강한 적은 전이시킬 수 없습니다.
 
-items.weapon.missiles.thunderbolt.name=썬더볼트
-items.weapon.missiles.thunderbolt.desc=이 번개탄은 건강한 적에게 최대 2배의 피해를 입힙니다. 대상의 체력이 50%이하라면 1배 이하의 피해를 입힙니다.
+items.weapon.missiles.thunderbolt.name=리스캄 인형
+items.weapon.missiles.thunderbolt.desc=당신의 애정이 감자를 리스캄으로 변화시켰습니다. 이 인형은 던지면 건강한 적에게 최대 2배의 피해를 입힙니다. 대상의 체력이 50%이하라면 1배 이하의 피해를 입힙니다.
 
-items.weapon.missiles.normalmagazine.name=일반 탄창
+items.weapon.missiles.normalmagazine.name=표준 탄약통
 items.weapon.missiles.normalmagazine.desc=이것은 사격 무기의 탄약 용도로 설계되었습니다. 던질 순 있지만 좋은 선택은 아닐 것입니다...
 
-items.weapon.missiles.upmagazine.name=고급 탄창
+items.weapon.missiles.upmagazine.name=특수 탄약통
 items.weapon.missiles.upmagazine.desc=이것은 사격 무기의 탄약 용도로 설계되었습니다. 던질 순 있지만 좋은 선택은 아닐 것입니다...\n이 탄약으로 사격 무기를 장전하면 특수 효과를 얻습니다.
 
 

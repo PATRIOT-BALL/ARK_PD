@@ -38,8 +38,9 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
                 "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
-                        "_여분 탄창_ : 가공소에서 제작할 수 있는 투척무기입니다. 3티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. (내구도 매우 낮음)" + "\n\n" +
-                        "_강화 탄창_ : 가공소에서 제작할 수 있는 투척무기입니다. 4티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. 또한, 이 탄창으로 사격 무기를 장전하면 추가 효과를 얻습니다."));
+                        "_표준 탄약통_ : 가공소에서 제작할 수 있는 투척무기입니다. 3티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. (내구도 매우 낮음)" + "\n\n" +
+                        "_특수 탄약통_ : 가공소에서 제작할 수 있는 투척무기입니다. 4티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. 또한, 이 탄창으로 사격 무기를 장전하면 추가 효과를 얻습니다." +"\n\n" +
+                "_이베리아 연금술 세트_ : 새로운 유물로, 사용하지않는 아이템을 분해해 충전을 얻습니다. 충전 100%를 소모해 무작위 아이템을 창조할 수 있습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -47,6 +48,9 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "투척 무기",
                 "더 이상 강화할 수 없습니다. 단, _풍차 수리검_은 여전히 강화할 수 있습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
+        "_블레이즈_의 _전술 방어막_ 특성의 방어 상승치가 1로 고정되었으며, 최대 상승치가 6에서 _4-8_로 변경되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);

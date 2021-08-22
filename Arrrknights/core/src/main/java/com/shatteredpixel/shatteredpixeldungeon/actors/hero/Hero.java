@@ -126,6 +126,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemyKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CapeOfThorns;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
@@ -604,8 +605,8 @@ public class Hero extends Char {
         }
 
         if (Dungeon.hero.hasTalent(Talent.TACTICAL_SHIELD)) {
-            int drplus = Dungeon.hero.belongings.armor.buffedLvl() * Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD);
-            drplus = Math.min(drplus, 12);
+            int drplus = Dungeon.hero.belongings.armor.buffedLvl();
+            drplus = Math.min(drplus, 2 + Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD) * 2);
             dr += drplus;
         }
 
@@ -937,6 +938,12 @@ public class Hero extends Char {
             AlchemistsToolkit.kitEnergy kit = buff(AlchemistsToolkit.kitEnergy.class);
             if (kit != null && kit.isCursed()) {
                 GLog.w(Messages.get(AlchemistsToolkit.class, "cursed"));
+                return false;
+            }
+
+            AlchemyKit.AlchemyBuff AKit = buff(AlchemyKit.AlchemyBuff.class);
+            if (AKit != null && AKit.isCursed()) {
+                GLog.w(Messages.get(AlchemyKit.class, "cursed"));
                 return false;
             }
 
