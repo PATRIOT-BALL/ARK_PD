@@ -537,7 +537,7 @@ public class Generator {
                     CustomeSet.class,
                     AlchemyKit.class
             };
-            ARTIFACT.defaultProbs = new float[]{0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0};
+            ARTIFACT.defaultProbs = new float[]{0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1};
             ARTIFACT.probs = ARTIFACT.defaultProbs.clone();
 
             SKL_T1.classes = new Class<?>[]{
