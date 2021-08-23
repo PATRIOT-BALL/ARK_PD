@@ -53,6 +53,9 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "투척 무기",
                 "더 이상 강화할 수 없습니다. 단, _풍차 수리검_은 여전히 강화할 수 있습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
+                "_영소_ : 기존의 사거리가 길고 공격속도가 느린 무기에서, 1회 공격시 2번 타격하는 무기로 개편되었습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
         "_블레이즈_의 _전술 방어막_ 특성의 방어 상승치가 1로 고정되었으며, 최대 상승치가 6에서 _4-8_로 변경되었습니다."));
 
