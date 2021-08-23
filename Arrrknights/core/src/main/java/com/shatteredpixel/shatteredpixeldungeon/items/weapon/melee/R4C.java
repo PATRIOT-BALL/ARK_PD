@@ -18,6 +18,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -54,6 +55,7 @@ public class R4C extends MeleeWeapon {
     private int bullet = 5;
     private int bulletCap = 25;
     private boolean spshot = false; // 특수 사격 여부
+    private boolean gamza = false; // 썬더볼트 장착 여부
 
     private float RELOAD_TIME = 3f;
 
@@ -245,6 +247,9 @@ public class R4C extends MeleeWeapon {
         @Override
         public void onSelect( final Item item ) {
             if (item != null) {
+                if (item instanceof Thunderbolt) {
+                    bulletCap+=3;
+                    gamza = true;}
                 if (item instanceof UpMagazine) {reload(((MissileWeapon)item).tier, true); }
                 else reload(((MissileWeapon)item).tier, false);
                 item.detach(Dungeon.hero.belongings.backpack);
@@ -257,6 +262,12 @@ public class R4C extends MeleeWeapon {
         return Messages.get(this, "desc", bullettier);
     }
 
+    @Override
+    public String name() {
+        if (gamza) return Messages.get(this, "gamza_name");
+        return super.name();
+    }
+
     public String statsInfo() {
         if (spshot) return Messages.get(this, "stats_desc_sp", shotmin(),shotmax());
         return Messages.get(this, "stats_desc", shotmin(),shotmax());
@@ -264,6 +275,8 @@ public class R4C extends MeleeWeapon {
 
 
     private static final String BULLET = "bullet";
+    private static final String BULLET_CAP = "bulletCap";
+    private static final String GAMZA = "gamza";
     private static final String TIER = "bullettier";
     private static final String SP = "spshot";
 
@@ -271,6 +284,8 @@ public class R4C extends MeleeWeapon {
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
         bundle.put(BULLET, bullet);
+        bundle.put(BULLET_CAP, bulletCap);
+        bundle.put(GAMZA, gamza);
         bundle.put(TIER, bullettier);
         bundle.put(SP, spshot);
     }
@@ -278,10 +293,12 @@ public class R4C extends MeleeWeapon {
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
+        bulletCap = bundle.getInt(BULLET_CAP);
         if (bulletCap > 0) bullet = Math.min(bulletCap, bundle.getInt(BULLET));
         else bullet = bundle.getInt(BULLET);
 
         bullettier = bundle.getInt(TIER);
         spshot = bundle.getBoolean(SP);
+        gamza = bundle.getBoolean(GAMZA);
     }
 }

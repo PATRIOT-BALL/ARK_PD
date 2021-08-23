@@ -2219,7 +2219,8 @@ items.weapon.melee.divineavatar.desc="이 녀석은 모루랑 연애라도 하�
 items.weapon.melee.divineavatar.ac_zap=히까리아레!
 
 items.weapon.melee.dp27.name=DP27
-items.weapon.melee.dp27.desc="where do you want me?"\n\n이 무기는 _사격_ 무기입니다. 투척 무기나 탄창을 이용해 탄약을 장전할 수 있습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
+items.weapon.melee.dp27.gamza_name=DP27 Custom
+items.weapon.melee.dp27.desc="where do you want me?"\n\n이 무기는 _사격_ 무기입니다. 투척 무기로 장전할 수 있습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
 items.weapon.melee.dp27.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
 items.weapon.melee.dp27.stats_desc_sp=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.\n\n_특수 탄환 소이탄_\n - 적중시킨 대상을 불태웁니다.
 items.weapon.melee.dp27.prompt=지정해주세요.
@@ -2229,6 +2230,7 @@ items.weapon.melee.dp27.ac_zap=사격
 items.weapon.melee.dp27.ac_reload=재장전
 
 items.weapon.melee.c1_9mm.name=9mm C1 기관단총
+items.weapon.melee.c1_9mm.gamza_name=9mm C1-LSK 기관단총
 items.weapon.melee.c1_9mm.desc="Ready for company."\n\n이 무기는 _사격_ 무기입니다. 투척 무기나 탄창을 이용해 탄약을 장전할 수 있습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
 items.weapon.melee.c1_9mm.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
 items.weapon.melee.c1_9mm.stats_desc_sp=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.\n\n_특수 탄환 침묵탄_\n - 적중시킨 대상을 침묵시킵니다.
@@ -2239,6 +2241,7 @@ items.weapon.melee.c1_9mm.ac_zap=사격
 items.weapon.melee.c1_9mm.ac_reload=재장전
 
 items.weapon.melee.r4c.name=R4-C 돌격소총
+items.weapon.melee.r4c.gamza_name=BS R4-C 돌격소총
 items.weapon.melee.r4c.desc="You have my respect, Doc."\n\n이 무기는 _사격_ 무기입니다. 투척 무기나 탄창을 이용해 탄약을 장전할 수 있습니다. 이 총은 다른 사격 무기보다 사격 속도가 빠릅니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
 items.weapon.melee.r4c.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
 items.weapon.melee.r4c.stats_desc_sp=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.\n\n_특수 탄환 파쇄탄_\n - 적중시킨 대상을 밀쳐냅니다.
@@ -2248,11 +2251,11 @@ items.weapon.melee.r4c.fizzles=탄약이 부족합니다.
 items.weapon.melee.r4c.ac_zap=사격
 items.weapon.melee.r4c.ac_reload=재장전
 
-items.weapon.melee.golddogsword.name=golden beach
-items.weapon.melee.golddogsword.desc=You can _accumulate_ by consuming 3 turns. When attacking in the accumulated state, the accumulated stack is consumed and the attack power increases. (max 100%)
-items.weapon.melee.golddogsword.ac_zap=accumulate
-items.weapon.melee.golddogsword.charge=accumulate
-items.weapon.melee.golddogsword.charge_fail=impossible
+items.weapon.melee.golddogsword.name=살라스의 칼날
+items.weapon.melee.golddogsword.desc=특수 능력 발동시 3턴을 소모해 _축적_할 수 있습니다. 축적 상태라면 공격 피해량이 상승합니다. (최대 100%)\n\n축적 중첩은 공격할 때마다 감소하며, 축적이 1이라도 남았다면 축적할 수 없습니다.
+items.weapon.melee.golddogsword.ac_zap=검주편봉
+items.weapon.melee.golddogsword.charge=축적
+items.weapon.melee.golddogsword.charge_fail=축적 불가능!
 
 
 
