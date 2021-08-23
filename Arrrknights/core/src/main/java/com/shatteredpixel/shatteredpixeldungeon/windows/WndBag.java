@@ -462,7 +462,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.NOT_EQUIPPED && !item.isEquipped(Dungeon.hero) ||
 						mode == Mode.RECYCLABLE && Recycle.isRecyclable(item) ||
 						mode == Mode.ALCHEMYKIT_ONLY && (item instanceof MeleeWeapon || item instanceof MissileWeapon || item instanceof Armor || item instanceof Plant.Seed
-								|| item instanceof Runestone || item instanceof Wand) ||
+								|| item instanceof Runestone || item instanceof Wand || item instanceof Ring) ||
 						mode == Mode.ALL
 					);
 				}

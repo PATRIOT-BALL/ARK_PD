@@ -22,7 +22,18 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Callback;
+import com.watabou.utils.Random;
 
 public class Glaive extends MeleeWeapon {
 
@@ -32,21 +43,48 @@ public class Glaive extends MeleeWeapon {
 		hitSoundPitch = 0.8f;
 
 		tier = 5;
-		DLY = 2f; //0.5x speed
-		RCH = 3;    //extra reach
 	}
 
-	@Override
-	public int max(int lvl) {
-		return  Math.round(6.67f*(tier+1)) +    //40 base, up from 30
-				lvl*Math.round(1.33f*(tier+1)); //+8 per level, up from +6
-	}
+	private boolean doubleattack = true;
 
-	/*
+
 	@Override
 	public int max(int lvl) {
 		return  3*(tier+1) +    //18 + 4. 공식상 2회 타격
 				lvl*(tier-1);   //scaling unchanged
-	}*/
+	}
 
+	@Override
+	public int proc(Char attacker, Char defender, int damage) {
+		if (doubleattack) {
+			doubleattack = false;
+			if (!attacker.attack(defender)) {
+				doubleattack = true; }
+			else {
+				if (attacker instanceof Hero && Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
+					Buff.affect(attacker, Combo.class).hit(defender);
+				}
+				defender.sprite.bloodBurstA( defender.sprite.center(), 4 );
+				defender.sprite.flash();
+			}
+			}
+		else doubleattack = true;
+
+		if (attacker instanceof Hero) {
+			if (((Hero) attacker).belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero)) {
+				if (Random.Int(20) < 1)
+				damage *= 1.5f;
+			}
+		}
+		return super.proc(attacker, defender, damage);
+	}
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero))
+			info += "\n\n" + Messages.get( Glaive.class, "setbouns");
+
+		return info;
+	}
 }

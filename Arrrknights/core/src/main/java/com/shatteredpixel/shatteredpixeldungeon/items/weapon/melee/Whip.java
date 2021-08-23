@@ -22,7 +22,16 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemyKit;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Random;
 
 public class Whip extends MeleeWeapon {
 
@@ -41,4 +50,27 @@ public class Whip extends MeleeWeapon {
 				lvl*(tier);     //+3 per level, down from +4
 	}
 
+	@Override
+	public int proc(Char attacker, Char defender, int damage) {
+
+		if (attacker instanceof Hero) {
+			if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero)) {
+				if (Random.Int(12 + buffedLvl()) > 10) {
+					if (defender.buff(Poison.class) == null) Buff.affect(defender, Poison.class).set(5f);
+					else Buff.affect(defender, Poison.class).extend(5f);
+				}
+			}
+		}
+
+		return super.proc(attacker, defender, damage);
+	}
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero))
+			info += "\n\n" + Messages.get( Whip.class, "setbouns");
+
+		return info;
+	}
 }

@@ -820,9 +820,9 @@ items.artifacts.alchemykit.ac_add=ADD MATERIAL
 items.artifacts.alchemykit.desc=This alchemy kit can create a random item by putting the item and then charging it to 100%.
 items.artifacts.alchemykit.desc_cused=The cursed kit has bound itself to your side, and refuses to let you use processing.
 items.artifacts.alchemykit.prompt=Select the material to be fed
-items.artifacts.alchemykit.cursed=저주받은 연금술 세트가 가공소의 사용을 억제한다.
-items.artifacts.alchemykit.chargeless=충전량이 부족합니다.
-items.artifacts.alchemykit.getitem=연금술에 성공했다!
+items.artifacts.alchemykit.cursed=Your cursed kit prevents you from using processing
+items.artifacts.alchemykit.chargeless=Your Alchemy Kit hasn't recharged enough to be usable yet.
+items.artifacts.alchemykit.getitem=Alchemy Success!
 
 
 ###bags
@@ -1971,6 +1971,7 @@ items.weapon.melee.assassinsblade.desc=A dagger used by Kazimierz`s gladiators. 
 items.weapon.melee.battleaxe.name= constellation guardian
 items.weapon.melee.battleaxe.stats_desc=Accuracy +15%
 items.weapon.melee.battleaxe.desc=Astrology is divining the future from celestial alignments. It's not quite augury, but with same result.\n\nConsumes 4 turns to charge Star Power. consumes star power when attacking to damage enemies in sight.
+items.weapon.melee.battleaxe.setbouns=_Stellar Way_\nTurns used for charging is reduced to 3 turns.
 items.weapon.melee.battleaxe.ac_zap=charge
 items.weapon.melee.battleaxe.charge=star...
 items.weapon.melee.battleaxe.charge_fail=full charge!
@@ -1999,8 +2000,8 @@ items.weapon.melee.gauntlet.desc=It can attack very quickly, but it is very heav
 items.weapon.melee.gauntlet.desc_mode=It can attack very quickly, but it is very heavy.\n\n_Sweeping Stance_\nattack power increases, but attack speed decreases.
 
 items.weapon.melee.glaive.name=shadow firmament
-items.weapon.melee.glaive.stats_desc=Range +2, Attack Speed 50%
-items.weapon.melee.glaive.desc=Crimson Firmament made with Amiya's arts. It places a very heavy burden on the user. This is already more like an arts staff, not a sword.
+items.weapon.melee.glaive.desc=Crimson Firmament made with Amiya's arts.\n\nAttack 2 times in a row
+items.weapon.melee.glaive.setbouns=_Succession Monarch_\n5% chance to increase the damage of the by 50% 
 
 items.weapon.melee.gloves.name=shooting glove
 items.weapon.melee.gloves.stats_desc=Attack Speed 300%
@@ -2135,6 +2136,7 @@ items.weapon.melee.warhammer.dont_equ=This power can only be used with a weapon 
 items.weapon.melee.whip.name=destreza
 items.weapon.melee.whip.stats_desc=Range +3
 items.weapon.melee.whip.desc="Watch carefully, this is the Destreza of Iberia!"
+items.weapon.melee.whip.setbouns=_Toxicity_\nCan poison the target when attacking
 
 items.weapon.melee.wornshortsword.name=crimson chainsaw
 items.weapon.melee.wornshortsword.stats_desc=Attack Speed 200%, Accuracy -40%
@@ -2209,6 +2211,42 @@ items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies
 items.weapon.melee.divineavatar.desc="Does this kid want to date an anvil or something?!"\n\nHas a chance to blind enemies when attacking. Recharges SP when blinding an enemy. Consumes 100% of SP to put enemies in sight to sleep and recover HP.
 items.weapon.melee.divineavatar.ac_zap=Hikkari are!
+
+items.weapon.melee.dp27.name=DP27
+items.weapon.melee.dp27.desc="where do you want me?"\n\nThis weapon is a _gun_. It can be reloaded using a missile weapon, and it can fire agun for a long-range attack.\n\nCurrently loaded ammo level is _%d_
+items.weapon.melee.dp27.stats_desc=You can fire with this weapon to inflict _%1$d-%2$d damage_
+items.weapon.melee.dp27.stats_desc_sp=You can fire with this weapon to inflict _%1$d-%2$d damage_\n\n_Special Bullet_: Can burn enemies
+items.weapon.melee.dp27.prompt=Choose
+items.weapon.melee.dp27.self_target=You can't shoot yourself.
+items.weapon.melee.dp27.fizzles=You need to reload.
+items.weapon.melee.dp27.ac_zap=FIRE
+items.weapon.melee.dp27.ac_reload=RELOAD
+
+items.weapon.melee.c1_9mm.name=9mm C1
+items.weapon.melee.c1_9mm.desc="Ready for company."\n\nThis weapon is a _gun_. It can be reloaded using a missile weapon, and it can fire agun for a long-range attack.\n\nCurrently loaded ammo level is _%d_
+items.weapon.melee.c1_9mm.stats_desc=You can fire with this weapon to inflict _%1$d-%2$d damage_
+items.weapon.melee.c1_9mm.stats_desc_sp=You can fire with this weapon to inflict _%1$d-%2$d damage_\n\n_Special Bullet_: Can silence enemies
+items.weapon.melee.c1_9mm.prompt=Choose
+items.weapon.melee.c1_9mm.self_target=You can't shoot yourself.
+items.weapon.melee.c1_9mm.fizzles=You need to reload.
+items.weapon.melee.c1_9mm.ac_zap=FIRE
+items.weapon.melee.c1_9mm.ac_reload=RELOAD
+
+items.weapon.melee.r4c.name=R4-C
+items.weapon.melee.r4c.desc="You have my respect, Doc."\n\nThis weapon is a _gun_. It can be reloaded using a missile weapon, and it can fire agun for a long-range attack.\n\nCurrently loaded ammo level is _%d_
+items.weapon.melee.r4c.stats_desc=You can fire with this weapon to inflict _%1$d-%2$d damage_
+items.weapon.melee.r4c.stats_desc_sp=You can fire with this weapon to inflict _%1$d-%2$d damage_\n\n_Special Bullet_: Can knock back enemies
+items.weapon.melee.r4c.prompt=Choose
+items.weapon.melee.r4c.self_target=You can't shoot yourself.
+items.weapon.melee.r4c.fizzles=You need to reload.
+items.weapon.melee.r4c.ac_zap=FIRE
+items.weapon.melee.r4c.ac_reload=RELOAD
+
+items.weapon.melee.golddogsword.name=살라스의 칼날
+items.weapon.melee.golddogsword.desc=특수 능력 발동시 3턴을 소모해 _축적_할 수 있습니다. 축적 상태라면 공격 피해량이 상승합니다. (최대 100%)\n\n축적 중첩은 공격할 때마다 감소하며, 축적이 1이라도 남았다면 축적할 수 없습니다.
+items.weapon.melee.golddogsword.ac_zap=검주편봉
+items.weapon.melee.golddogsword.charge=축적
+items.weapon.melee.golddogsword.charge_fail=축적 불가능!
 
 
 ###missile weapons

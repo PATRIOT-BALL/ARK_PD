@@ -8,6 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
@@ -204,6 +205,11 @@ public class R4C extends MeleeWeapon {
                 // 사격 그레이스롯 판정
                 int bonusTurns = Dungeon.hero.hasTalent(Talent.SHARED_UPGRADES) ? this.buffedLvl() : 0;
                 if (Dungeon.hero.subClass == HeroSubClass.SNIPER) Buff.prolong(Dungeon.hero, SnipersMark.class, SnipersMark.DURATION).set(ch.id(), bonusTurns);
+
+                // 신속 레드 판정
+                if (Dungeon.hero.pointsInTalent(Talent.SPEEDY_STEALTH) >= 2 && ch.isAlive()) {
+                    Buff.affect(ch, Paralysis.class, 1f);
+                }
 
                 // 연계 블레이즈 판정
                 if (Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {

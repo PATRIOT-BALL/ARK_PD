@@ -27,6 +27,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Preparation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -75,7 +77,10 @@ public class BattleAxe extends MeleeWeapon {
 			if (starpower < starpowercap) {
 				starpower++;
 				hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "charge"));
-				curUser.spendAndNext(4f);
+				if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class).isEquipped(Dungeon.hero)) {
+					curUser.spendAndNext(3f);
+				}
+				else curUser.spendAndNext(4f);
 			} else
 				hero.sprite.showStatus(CharSprite.NEGATIVE, Messages.get(BattleAxe.class, "charge_fail"));
 		}
@@ -102,6 +107,15 @@ public class BattleAxe extends MeleeWeapon {
 			starpower = 0;
 		}
 		return super.proc(attacker, defender, damage);
+	}
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class).isEquipped(Dungeon.hero))
+			info += "\n\n" + Messages.get( BattleAxe.class, "setbouns");
+
+		return info;
 	}
 
 	private static final String POWER = "starpower";

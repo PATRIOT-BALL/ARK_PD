@@ -817,7 +817,8 @@ items.artifacts.customeset.desc_cursed=저주받은 탐험 세트는 착용자�
 items.artifacts.alchemykit.name=이베리아 연금술 세트
 items.artifacts.alchemykit.ac_crate=연금술
 items.artifacts.alchemykit.ac_add=재료 투입
-items.artifacts.alchemykit.desc=이 이베리아 연금술 세트는 쓸모없는 아이템을 뭔가로 바꾸어줍니다. 아이템을 이 연금술 세트에 투입한 후, 충전이 100%가 되면 사용하여 무작위 아이템을 창조할 수 있습니다!\n\n저주받은 연금술 세트는 가공소의 사용을 막습니다.
+items.artifacts.alchemykit.desc=이 이베리아 연금술 세트는 쓸모없는 아이템을 뭔가로 바꾸어줍니다. 아이템을 이 연금술 세트에 투입한 후, 충전이 100%가 되면 사용하여 무작위 아이템을 창조할 수 있습니다!
+items.artifacts.alchemykit.desc_cursed=저주받은 연금술 세트는 가공소의 사용을 막습니다.
 items.artifacts.alchemykit.prompt=투입할 재료를 선택하세요.
 items.artifacts.alchemykit.cursed=저주받은 연금술 세트가 가공소의 사용을 억제한다.
 items.artifacts.alchemykit.chargeless=충전량이 부족합니다.
@@ -1972,6 +1973,7 @@ items.weapon.melee.assassinsblade.desc=카시미어의 검투사들이 사용하
 items.weapon.melee.battleaxe.name=성좌의 수호자
 items.weapon.melee.battleaxe.stats_desc=명중률 +15%
 items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.\n\n4턴을 소모해 별의 힘을 충전할 수 있습니다. 공격시 충전한 별의 힘을 모두 소모해 시야 내 적들에게 피해를 입힐 수 있습니다.
+items.weapon.melee.battleaxe.setbouns=_아이템 시너지 : 별의 검_\n충전에 필요한 턴이 3턴으로 감소합니다.
 items.weapon.melee.battleaxe.ac_zap=집중
 items.weapon.melee.battleaxe.charge=별의...
 items.weapon.melee.battleaxe.charge_fail=최대 충전!
@@ -2000,8 +2002,8 @@ items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교
 items.weapon.melee.gauntlet.desc_mode=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n_스탠스 스위칭_\n공격력이 상승했지만 공격속도가 소폭 감소했습니다.
 
 items.weapon.melee.glaive.name=영소
-items.weapon.melee.glaive.stats_desc=사거리 +2, 공격속도 50%
-items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니라 일종의 아츠 스태프다. 두려운 붉은색으로 빛나는 적소는 멀리 떨어진 적도 공격할 수 있지만 사용자에게 큰 부담을 준다.
+items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀에게 적소는 단순한 검이 아니다.\n\n공격시 2번의 공격을 동시에 가합니다.
+items.weapon.melee.glaive.setbouns=_아이템 시너지 : 계승자_\n5%확률로 50%의 추가 피해를 입힙니다.
 
 items.weapon.melee.gloves.name=슈팅 글러브
 items.weapon.melee.gloves.stats_desc=공격속도 300%
@@ -2139,6 +2141,7 @@ items.weapon.melee.warhammer.dont_equ=거인의 힘은 레바테인을 장착해
 items.weapon.melee.whip.name=데스트레자
 items.weapon.melee.whip.stats_desc=사거리 +3
 items.weapon.melee.whip.desc=이베리아에서 만들어진 이 특이한 모양의 장검은 사실 날붙이가 아닌 일종의 아츠 스태프입니다. 쏜즈 본인은 이곳에 독을 발라 자신의 아츠로 멀리 날려보내곤 합니다.
+items.weapon.melee.whip.setbouns=_아이템 시너지 : 신경 부식_\n공격시 적에게 중독을 부여합니다.
 
 items.weapon.melee.wornshortsword.name=크림슨 체인소우
 items.weapon.melee.wornshortsword.stats_desc=공격속도 +100%, 명중률 -40%
@@ -2245,11 +2248,11 @@ items.weapon.melee.r4c.fizzles=탄약이 부족합니다.
 items.weapon.melee.r4c.ac_zap=사격
 items.weapon.melee.r4c.ac_reload=재장전
 
-items.weapon.melee.golddogsword.name=살라스의 칼날
-items.weapon.melee.golddogsword.desc=특수 능력 발동시 3턴을 소모해 _축적_할 수 있습니다. 축적 상태라면 공격 피해량이 상승합니다. (최대 100%)\n\n축적 중첩은 공격할 때마다 감소하며, 축적이 1이라도 남았다면 축적할 수 없습니다.
-items.weapon.melee.golddogsword.ac_zap=검주편봉
-items.weapon.melee.golddogsword.charge=축적
-items.weapon.melee.golddogsword.charge_fail=축적 불가능!
+items.weapon.melee.golddogsword.name=golden beach
+items.weapon.melee.golddogsword.desc=You can _accumulate_ by consuming 3 turns. When attacking in the accumulated state, the accumulated stack is consumed and the attack power increases. (max 100%)
+items.weapon.melee.golddogsword.ac_zap=accumulate
+items.weapon.melee.golddogsword.charge=accumulate
+items.weapon.melee.golddogsword.charge_fail=impossible
 
 
 
