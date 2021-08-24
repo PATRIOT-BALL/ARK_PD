@@ -813,7 +813,7 @@ actors.mobs.npcs.prts.hint7=힌트(7/12)\n\n_처음의 무기_는 무언가와 �
 actors.mobs.npcs.prts.hint8=힌트(8/12)\n\n_빔이 나가는 검_ 혹은 _냉기를 다루는 단검_을 _아방가르드 우물_에 넣으면 매우 강력한 창이 된다.
 actors.mobs.npcs.prts.hint9=힌트(9/12)\n\n_게_를 소환하는 석궁을 _아방가르드 우물_에 넣으면 강력한 괴물을 소환하는 총이 된다.
 actors.mobs.npcs.prts.hint10=힌트(10/12)\n\n인벤토리 버튼을 꾹 누르면 퀵슬롯을 변경할 수 있다.
-actors.mobs.npcs.prts.hint11=힌트(11/12)\n\n_불을 뿜는 막대_와 무언가를 조합하여 공격력은 없지만 함정을 부수는 화염방사기를 만들 수 있다.
+actors.mobs.npcs.prts.hint11=힌트(11/12)\n\n_불속성 인형_과 무언가를 조합하여 공격력은 없지만 함정을 부수는 화염방사기를 만들 수 있다.
 actors.mobs.npcs.prts.hint12=힌트(12/12)\n\n_어떤 소녀의 낫_은 무언가와 조합해 그녀의 오빠가 쓰는 검을 만들 수 있다.
 
 actors.mobs.npcs.prts_corpse.name=???
