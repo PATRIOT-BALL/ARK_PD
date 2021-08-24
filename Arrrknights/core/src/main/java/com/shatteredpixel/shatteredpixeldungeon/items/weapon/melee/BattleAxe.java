@@ -112,8 +112,9 @@ public class BattleAxe extends MeleeWeapon {
 	@Override
 	public String desc() {
 		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class) != null) {
 		if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class).isEquipped(Dungeon.hero))
-			info += "\n\n" + Messages.get( BattleAxe.class, "setbouns");
+			info += "\n\n" + Messages.get( BattleAxe.class, "setbouns");}
 
 		return info;
 	}

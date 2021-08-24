@@ -58,8 +58,9 @@ public class Sword extends MeleeWeapon {
 	@Override
 	public String desc() {
 		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(SandalsOfNature.class) != null) {
 		if (Dungeon.hero.belongings.getItem(SandalsOfNature.class).isEquipped(Dungeon.hero))
-			info += "\n\n" + Messages.get( Sword.class, "setbouns");
+			info += "\n\n" + Messages.get( Sword.class, "setbouns");}
 
 		return info;
 	}

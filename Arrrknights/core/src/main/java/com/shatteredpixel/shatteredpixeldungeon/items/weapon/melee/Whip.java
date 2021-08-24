@@ -68,8 +68,8 @@ public class Whip extends MeleeWeapon {
 	@Override
 	public String desc() {
 		String info = Messages.get(this, "desc");
-		if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero))
-			info += "\n\n" + Messages.get( Whip.class, "setbouns");
+		if (Dungeon.hero.belongings.getItem(AlchemyKit.class) != null) {
+		if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero)) info += "\n\n" + Messages.get( Whip.class, "setbouns");}
 
 		return info;
 	}

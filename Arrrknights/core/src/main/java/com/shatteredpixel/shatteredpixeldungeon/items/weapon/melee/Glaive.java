@@ -82,8 +82,9 @@ public class Glaive extends MeleeWeapon {
 	@Override
 	public String desc() {
 		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null) {
 		if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero))
-			info += "\n\n" + Messages.get( Glaive.class, "setbouns");
+			info += "\n\n" + Messages.get( Glaive.class, "setbouns");}
 
 		return info;
 	}
