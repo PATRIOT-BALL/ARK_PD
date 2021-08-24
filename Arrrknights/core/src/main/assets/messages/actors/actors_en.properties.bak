@@ -808,7 +808,7 @@ actors.mobs.npcs.prts.hint7=Hint(7/12)\n\n_The first weapon_ has a probability o
 actors.mobs.npcs.prts.hint8=Hint(8/12)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
 actors.mobs.npcs.prts.hint9=Hint(9/12)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
 actors.mobs.npcs.prts.hint10=Hint(10/12)\n\nYou can change the quickslot by long-clicking the backpack button.
-actors.mobs.npcs.prts.hint11=Hint(11/12)\n\n_Fire wand_ can be combined with something to make a A fire tool that destroys traps
+actors.mobs.npcs.prts.hint11=Hint(11/12)\n\n_Fire Doll_ can be combined with something to make a A fire tool that destroys traps
 actors.mobs.npcs.prts.hint12=Hint(12/12)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
 
 actors.mobs.npcs.prts_corpse.name=???

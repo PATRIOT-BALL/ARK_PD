@@ -60,9 +60,10 @@ public class W0502 extends Item {
 
         super.execute(hero, action);
 
+        if (!Dungeon.bossLevel()){
         if (action.equals(AC_FIRE) && charge > 0) {
                 GameScene.selectCell(zapper);
-        }
+        }}
 
         if (action.equals(AC_RELOAD)) {
             Item item = Dungeon.hero.belongings.getItem(PotionOfLiquidFlame.class);

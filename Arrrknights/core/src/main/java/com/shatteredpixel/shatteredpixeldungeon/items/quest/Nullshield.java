@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.W0502;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
@@ -133,7 +134,7 @@ public class Nullshield extends Item {
                     }
                     else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));
                 }
-                else if (item instanceof WandOfFireblast)
+                else if (item instanceof Firebomb)
                 {
                     GLog.h(Messages.get(Nullshield.class, "suc"));
                     W0502 nya = new W0502();
