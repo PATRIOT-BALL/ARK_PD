@@ -42,7 +42,9 @@ public class RingKit extends Item {
 
         if (action.equals(AC_APPLY)) {
             curUser = hero;
+            detachaa();
             GameScene.selectItem(itemSelector, WndBag.Mode.RING, Messages.get(this, "prompt"));
+
         }
     }
 
@@ -99,7 +101,6 @@ public class RingKit extends Item {
                                         }
 
                                         n.identify();
-                                        RingKit.this.detachaa();
                                         RingKit.this.upgrade((Ring) n);
 
                                         Sample.INSTANCE.play(Assets.Sounds.EVOKE);
@@ -112,7 +113,6 @@ public class RingKit extends Item {
 
                             @Override
                             public void onBackPressed() {
-                                detachaa();
                             }
                         });
 
@@ -123,8 +123,6 @@ public class RingKit extends Item {
 
     private void upgrade(Ring item) {
         item.upgrade();
-
-        this.detach(Dungeon.hero.belongings.backpack);
 
         curUser.sprite.operate(curUser.pos);
         Sample.INSTANCE.play(Assets.Sounds.EVOKE);
