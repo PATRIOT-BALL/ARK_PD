@@ -1337,10 +1337,6 @@ public class Hero extends Char {
             int dmg = Random.IntRange(0, 3 + belongings.weapon.buffedLvl() * 3);
             int dr = Math.max(enemy.drRoll(), enemy.drRoll());
             enemy.damage(dmg - dr, this);
-            if (!enemy.isAlive() && enemy instanceof Ghoul == false) {
-                CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 10);
-                enemy.sprite.killAndErase();
-            }
         }
 
         Earthroot.Armor armor = buff(Earthroot.Armor.class);
@@ -1368,10 +1364,7 @@ public class Hero extends Char {
                         redamage += damageRoll() * (float) pointsInTalent(Talent.BARRIER_OPERATION) * 0.3f;
                         if (Dungeon.hero.hasTalent(Talent.BARRIER_OPERATION)) {
                             enemy.damage(redamage, this);
-                            if (!enemy.isAlive() && enemy instanceof Ghoul == false) {
-                                CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 10);
-                                enemy.sprite.killAndErase();
-                            }
+                            CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 10);
                         }
                         Gear.discharge();
                         }

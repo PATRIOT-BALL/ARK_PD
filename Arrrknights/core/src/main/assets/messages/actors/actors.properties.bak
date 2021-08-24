@@ -550,7 +550,7 @@ actors.hero.talent.point_blank.desc=_+1:_ 그레이스롯의 쇠뇌에 적중당
 actors.hero.talent.improved_crossbow.title=개량 쇠뇌
 actors.hero.talent.improved_crossbow.desc=_+1:_ 그레이스롯의 쇠뇌의 공격력이 _2_ 상승합니다.\n\n_+2:_ 그레이스롯의 쇠뇌의 공격력이 _4_ 상승합니다.\n\n_+3:_ 그레이스롯의 쇠뇌의 공격력이 _6_ 상승합니다.
 actors.hero.talent.sniping.title=저격
-actors.hero.talent.sniping.desc=_+1:_ 특수 쇠뇌 공격의 피해량이 _15%_ 상승합니다.\n\n_+2:_ 특수 쇠뇌 공격의 피해량이 _30%_ 상승합니다.\n\n_+3:_ 특수 쇠뇌 공격의 피해량이 _45%_ 상승합니다.
+actors.hero.talent.sniping.desc=_+1:_ 특수 쇠뇌 공격의 피해량이 _20%_ 상승합니다.\n\n_+2:_ 특수 쇠뇌 공격의 피해량이 _40%_ 상승합니다.\n\n_+3:_ 특수 쇠뇌 공격의 피해량이 _60%_ 상승합니다.
 actors.hero.talent.savior_belief.title=구제자의 신념
 actors.hero.talent.savior_belief.desc=_+1:_ 그레이스롯의 물리 공격이 속박 혹은 마비된 적에게 _20%_의 추가 피해를 입힙니다.\n\n_+2:_ 그레이스롯의 물리 공격이 속박 혹은 마비된 적에게 _40%_의 추가 피해를 입힙니다.\n\n_+3:_ 그레이스롯의 물리 공격이 속박 혹은 마비된 적에게 _60%_의 추가 피해를 입힙니다.\n\n이 특성을 찍었다면, 그레이스롯은 자신 주위에 있는 길게 자란 풀의 갯수에 비례하여 최대 25%의 피해 보너스를 얻습니다.
 

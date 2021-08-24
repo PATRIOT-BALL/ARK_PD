@@ -112,7 +112,7 @@ public class RingKit extends Item {
 
                             @Override
                             public void onBackPressed() {
-                                //do nothing, reader has to cancel
+                                detachaa();
                             }
                         });
 
