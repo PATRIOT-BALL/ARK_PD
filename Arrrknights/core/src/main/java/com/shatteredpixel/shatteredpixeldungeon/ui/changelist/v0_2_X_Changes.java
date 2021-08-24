@@ -44,7 +44,7 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.NAMSEK), "아이템 시너지",
                 "특정 무기 + 아이템을 장착하면 시너지 효과가 발생해 추가 능력을 얻을 수 있는 기능이 추가되었습니다." + "\n\n" +
-                "현 버전에서 추가된 시너지 효과는 3종류입니다. 시너지 발동시 무기에 텍스트가 추가되어 확인할 수 있습니다."));
+                "현 버전에서 추가된 시너지 효과는 6종류입니다. 시너지 발동시 무기에 텍스트가 추가되어 확인할 수 있습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);

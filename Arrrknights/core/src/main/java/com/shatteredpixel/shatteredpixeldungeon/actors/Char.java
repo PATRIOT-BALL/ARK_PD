@@ -78,6 +78,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.NeverBackDown;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Potential;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
@@ -98,6 +99,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blazin
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Grim;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Penetrate;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Shocking;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
@@ -462,6 +464,7 @@ public abstract class Char extends Actor {
 		float defRoll = Random.Float( defStat );
 		if (defender.buff(Bless.class) != null) defRoll *= 1.25f;
 		if (defender.buff(ExecutMode.class) != null) defRoll *= 1.3f;
+		if (defender instanceof Hero && Dungeon.hero.belongings.weapon instanceof AssassinsBlade && Dungeon.hero.belongings.armor instanceof LeatherArmor) defRoll *= 1.1f;
 		if (defender.buff(  Hex.class) != null) defRoll *= 0.8f;
 		for (ChampionEnemy buff : defender.buffs(ChampionEnemy.class)){
 			defRoll *= buff.evasionAndAccuracyFactor();

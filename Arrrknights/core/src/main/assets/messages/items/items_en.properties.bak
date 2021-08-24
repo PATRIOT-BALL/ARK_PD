@@ -857,8 +857,8 @@ items.bombs.bomb.desc_burning=_You press this switch to... WHUAH?! Wrong one! Th
 items.bombs.bomb$doublebomb.name=two meeboo
 items.bombs.bomb$doublebomb.desc=One is service!
 
-items.bombs.firebomb.name=meeboo type: flame
-items.bombs.firebomb.desc=This meeboo has been modified to burst into a sustained flame in a larger area when it explodes.
+items.bombs.firebomb.name=ifrit doll
+items.bombs.firebomb.desc=This burning kiditems.weapon.melee.assassinsblade.setbouns=_아이템 시너지 : 세노미_\n기습 피해 보정과 회피율이 10%상승합니다. doll explodes over time, covering a large area with freezing air.
 
 items.bombs.flashbang.name=meeboo type: flash
 items.bombs.flashbang.desc=This customized meeboo will erupt into a burst of blinding light when it explodes. Anything nearby will be disoriented based on how close it was to the meeboo.
@@ -1967,6 +1967,7 @@ items.weapon.enchantments.vampiric.desc=This powerful enchantment leeches life f
 items.weapon.melee.assassinsblade.name= kazimierz dagger
 items.weapon.melee.assassinsblade.stats_desc=Surprise attack bonus +50%
 items.weapon.melee.assassinsblade.desc=A dagger used by Kazimierz`s gladiators. Made of obsidian, these daggers quickly take the lives of their enemies.
+items.weapon.melee.assassinsblade.setbouns=_Slave Knight_\nSurprise attack bonus & evasion rate +10%
 
 items.weapon.melee.battleaxe.name= constellation guardian
 items.weapon.melee.battleaxe.stats_desc=Accuracy +15%
@@ -2010,6 +2011,7 @@ items.weapon.melee.gloves.desc=These gloves protect your hands. Let's hit it wit
 items.weapon.melee.greataxe.name=deep abyss
 items.weapon.melee.greataxe.stats_desc=Upgrade Efficiency +
 items.weapon.melee.greataxe.desc=A huge sword made of deep sea minerals. It is too heavy to handle except for the reticent woman of Rhodes Island.
+items.weapon.melee.greataxe.setbouns=_Babodi_\nAcquire Arcane Armor when attacking
 
 items.weapon.melee.greatshield.name=patriotism
 items.weapon.melee.greatshield.typical_stats_desc=Typically this weapon blocks 0-%d damage. This blocking scales with upgrades.
@@ -2125,6 +2127,7 @@ items.weapon.melee.enfild2.desc=this is _special_ gun. It's an old-fashioned loo
 
 items.weapon.melee.sword.name=orca cushion
 items.weapon.melee.sword.desc=Cute Orca Cushion. This is definitely not the sound coming from the cushion. If it's right, it hurts.
+items.weapon.melee.sword.setbouns=_Bakadi_\nIt hurts a lot.
 
 items.weapon.melee.warhammer.name=Laevateinn
 items.weapon.melee.warhammer.stats_desc=Accuracy +30%

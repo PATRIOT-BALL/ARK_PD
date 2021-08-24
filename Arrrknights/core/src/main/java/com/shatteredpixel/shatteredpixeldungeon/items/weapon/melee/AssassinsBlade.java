@@ -22,9 +22,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
 
@@ -47,22 +51,35 @@ public class AssassinsBlade extends MeleeWeapon {
 	@Override
 	public int damageRoll(Char owner) {
 		if (owner instanceof Hero) {
-			Hero hero = (Hero)owner;
+			Hero hero = (Hero) owner;
 			Char enemy = hero.enemy();
-			if (enemy instanceof Mob && ((Mob) enemy).surprisedBy(hero)) {
-				//deals 50% toward max to max on surprise, instead of min to max.
-				int diff = max() - min();
-				int damage = augment.damageFactor(Random.NormalIntRange(
-						min() + Math.round(diff*0.50f),
-						max()));
-				int exStr = hero.STR() - STRReq();
-				if (exStr > 0) {
-					damage += Random.IntRange(0, exStr);
-				}
-				return damage;
+				if (enemy instanceof Mob && ((Mob) enemy).surprisedBy(hero)) {
+					//deals 50% toward max to max on surprise, instead of min to max.
+					int diff = max() - min();
+					int damage;
+					if (Dungeon.hero.belongings.armor instanceof LeatherArmor) {
+						damage = augment.damageFactor(Random.NormalIntRange(min() + Math.round(diff * 0.60f), max()));
+					}
+					else {
+						damage = augment.damageFactor(Random.NormalIntRange(min() + Math.round(diff * 0.50f), max()));
+					}
+					int exStr = hero.STR() - STRReq();
+					if (exStr > 0) {
+						damage += Random.IntRange(0, exStr);
+					}
+					return damage;
+
 			}
 		}
 		return super.damageRoll(owner);
+	}
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.armor instanceof LeatherArmor) info += "\n\n" + Messages.get( AssassinsBlade.class, "setbouns");
+
+		return info;
 	}
 
 }
