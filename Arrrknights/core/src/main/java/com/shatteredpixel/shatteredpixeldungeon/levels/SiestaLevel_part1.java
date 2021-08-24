@@ -77,12 +77,12 @@ public class SiestaLevel_part1 extends RegularLevel {
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILES_SEWERS;
+        return Assets.Environment.TILSE_SIESTA;
     }
 
     @Override
     public String waterTex() {
-        return Assets.Environment.WATER_SEWERS;
+        return Assets.Environment.WATER_SIESTA;
     }
 
     @Override

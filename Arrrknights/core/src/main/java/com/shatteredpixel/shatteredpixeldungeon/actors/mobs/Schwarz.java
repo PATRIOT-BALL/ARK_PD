@@ -18,6 +18,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ClosureSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SarkazSniperEliteSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SchwarzSprite;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
@@ -28,7 +29,7 @@ import com.watabou.utils.Random;
 public class Schwarz extends Mob {
     private static final String[] LINE_KEYS = {"snipe1", "snipe2", "snipe3"};
     {
-        spriteClass = SarkazSniperEliteSprite.class;
+        spriteClass = SchwarzSprite.class;
 
         HP = HT = 1000;
         defenseSkill = 100;

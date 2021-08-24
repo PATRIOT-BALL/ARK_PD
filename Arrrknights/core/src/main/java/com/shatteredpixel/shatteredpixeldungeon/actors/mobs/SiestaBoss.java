@@ -20,6 +20,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CivilianSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CroninSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.YogSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
@@ -29,7 +30,7 @@ import com.watabou.utils.Random;
 public class SiestaBoss extends Mob {
     private static final String[] LINE_KEYS = {"skill1", "skill2"};
     {
-        spriteClass = YogSprite.class;
+        spriteClass = CroninSprite.class;
 
         HP = HT = 1200;
         defenseSkill = 0;

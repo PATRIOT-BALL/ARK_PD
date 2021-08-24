@@ -25,40 +25,40 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.utils.GameMath;
 
-public class StatueSprite extends MobSprite {
+public class GuerrillaSprite extends MobSprite {
 	
-	public StatueSprite() {
+	public GuerrillaSprite() {
 		super();
 		
-		texture( Assets.Sprites.STATUE );
+		texture( Assets.Sprites.GUERRILLA );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 15 );
+		TextureFilm frames = new TextureFilm( texture, 42, 42 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, 0, 0, 0, 0, 0, 1, 1 );
+		idle.frames( frames, 0, 0, 0, 0 );
 		
 		run = new Animation( 15, true );
-		run.frames( frames, 2, 3, 4, 5, 6, 7 );
+		run.frames( frames, 1, 2, 3, 4, 5, 6, 7 );
 		
 		attack = new Animation( 12, false );
-		attack.frames( frames, 8, 9, 10 );
+		attack.frames( frames, 1, 3 );
 		
 		die = new Animation( 5, false );
-		die.frames( frames, 11, 12, 13, 14, 15, 15 );
+		die.frames( frames, 0 );
 		
 		play( idle );
 	}
 
-	private static int[] tierFrames = {0, 21, 32, 43, 54, 65};
+	private static int[] tierFrames = {0, 20, 40, 60, 80, 100};
 
 	public void setArmor( int tier ){
 		int c = tierFrames[(int)GameMath.gate(0, tier, 5)];
 
-		TextureFilm frames = new TextureFilm( texture, 12, 15 );
+		TextureFilm frames = new TextureFilm( texture, 42, 42 );
 
-		idle.frames( frames, 0+c, 0+c, 0+c, 0+c, 0+c, 1+c, 1+c );
-		run.frames( frames, 2+c, 3+c, 4+c, 5+c, 6+c, 7+c );
-		attack.frames( frames, 8+c, 9+c, 10+c );
+		idle.frames( frames, 0+c, 0+c, 0+c, 0+c, 0+c);
+		run.frames( frames, 1+c, 2+c, 3+c, 4+c, 5+c, 6+c, 7+c );
+		attack.frames( frames, 1+c, 3+c );
 		//death animation is always armorless
 
 		play( idle, true );

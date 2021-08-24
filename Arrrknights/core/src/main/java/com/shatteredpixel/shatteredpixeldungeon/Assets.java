@@ -42,12 +42,14 @@ public class Assets {
 		public static final String TILES_CITY	= "environment/tiles_city.png";
 		public static final String TILES_HALLS	= "environment/tiles_halls.png";
 		public static final String TILSE_RHODES	= "environment/tiles_rhodos.png";
+		public static final String TILSE_SIESTA	= "environment/tiles_siesta.png";
 
 		public static final String WATER_SEWERS	= "environment/water0.png";
 		public static final String WATER_PRISON	= "environment/water1.png";
 		public static final String WATER_CAVES	= "environment/water2.png";
 		public static final String WATER_CITY	= "environment/water3.png";
 		public static final String WATER_HALLS	= "environment/water4.png";
+		public static final String WATER_SIESTA	= "environment/water5.png";
 
 		public static final String WEAK_FLOOR       = "environment/custom_tiles/weak_floor.png";
 		public static final String SEWER_BOSS       = "environment/custom_tiles/sewer_boss.png";
@@ -325,7 +327,7 @@ public class Assets {
 		public static final String GOLEM	= "sprites/junkman.png";
 		public static final String ENRAGED	= "sprites/enraged.png";
 		public static final String DRONE	= "sprites/drone.png";
-		public static final String STATUE	= "sprites/statue.png";
+		public static final String GUERRILLA	= "sprites/guerrilla.png";
 		public static final String SUCCUBUS	= "sprites/succubus.png";
 		public static final String SCORPIO	= "sprites/scorpio.png";
 		public static final String FISTS	= "sprites/tongvengers.png";
@@ -351,8 +353,12 @@ public class Assets {
 		public static final String POSSESSED	= "sprites/possessed.png";
 		public static final String UNDEAD	= "sprites/possessed.png";
 
-
 		public static final String LOTUS	= "sprites/lotus.png";
+
+		//시에스타
+
+		public static final String CRONIN	= "sprites/cronin.png";
+		public static final String SCHWARZ	= "sprites/schwarz.png";
 
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";
