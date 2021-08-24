@@ -1209,7 +1209,7 @@ public class Badges {
 		leaveBest( badges, Badge.BLAZE_CHAMPION1, Badge.BLAZE_CHAMPION2, Badge.BLAZE_CHAMPION3 );
 		leaveBest( badges, Badge.UNLOCK_MAGE, Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3 );
 		leaveBest( badges, Badge.UNLOCK_ROGUE, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3 );
-		leaveBest( badges, Badge.UNLOCK_HUNTRESS, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION3, Badge.GREY_CHAMPION3 );
+		leaveBest( badges, Badge.UNLOCK_HUNTRESS, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3 );
 		leaveBest( badges, Badge.UNLOCK_ROSECAT, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3 );
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
