@@ -54,10 +54,13 @@ public class Whip extends MeleeWeapon {
 	public int proc(Char attacker, Char defender, int damage) {
 
 		if (attacker instanceof Hero) {
-			if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero)) {
-				if (Random.Int(12 + buffedLvl()) > 10) {
-					if (defender.buff(Poison.class) == null) Buff.affect(defender, Poison.class).set(5f);
-					else Buff.affect(defender, Poison.class).extend(5f);
+			if (Dungeon.hero.belongings.getItem(AlchemyKit.class) != null) {
+				if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero)) {
+					if (Random.Int(12 + buffedLvl()) > 10) {
+						if (defender.buff(Poison.class) == null)
+							Buff.affect(defender, Poison.class).set(5f);
+						else Buff.affect(defender, Poison.class).extend(5f);
+					}
 				}
 			}
 		}

@@ -49,8 +49,10 @@ public class Greataxe extends MeleeWeapon {
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
-		if (attacker instanceof Hero && Dungeon.hero.belongings.getItem(SandalsOfNature.class).isEquipped(Dungeon.hero)) {
-			Buff.affect(attacker, ArcaneArmor.class).set(buffedLvl() + 3,1);
+		if (Dungeon.hero.belongings.getItem(SandalsOfNature.class) != null) {
+			if (attacker instanceof Hero && Dungeon.hero.belongings.getItem(SandalsOfNature.class).isEquipped(Dungeon.hero)) {
+				Buff.affect(attacker, ArcaneArmor.class).set(buffedLvl() + 3, 1);
+			}
 		}
 		return super.proc(attacker, defender, damage);
 	}
