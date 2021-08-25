@@ -132,11 +132,6 @@ public class AnnihilationGear extends Item {
         updateQuickslot();
     }
 
-    public void SPOverCharge(int n) {
-        charge += n;
-        updateQuickslot();
-    }
-
     public void discharge() {
         charge--;
         updateQuickslot();

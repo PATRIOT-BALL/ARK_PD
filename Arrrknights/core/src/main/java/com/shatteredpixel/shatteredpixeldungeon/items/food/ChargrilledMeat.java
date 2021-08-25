@@ -63,6 +63,7 @@ public class ChargrilledMeat extends Food {
 		if (hero.hasTalent(Talent.LOVEMEAT))
 		{
 			Buff.affect(hero, WellFed.class).set(hero.pointsInTalent(Talent.LOVEMEAT) * 20);
+			hero.HP = Math.min(Dungeon.hero.HP+hero.pointsInTalent(Talent.LOVEMEAT) * 3, hero.HT);
 		}
 	}
 	

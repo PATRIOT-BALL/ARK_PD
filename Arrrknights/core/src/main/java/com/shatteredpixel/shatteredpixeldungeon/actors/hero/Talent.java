@@ -376,7 +376,7 @@ public enum Talent {
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
 			if (hero.belongings.getItem(AnnihilationGear.class) != null)
 			{
-				Gear.SPOverCharge(1 + hero.pointsInTalent(RECOVERY_UPGRADE));
+				Gear.SPCharge(hero.pointsInTalent(RECOVERY_UPGRADE) * 2);
 			}
 		}
 	}

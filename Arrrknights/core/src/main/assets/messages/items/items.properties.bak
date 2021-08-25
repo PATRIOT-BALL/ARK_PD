@@ -1997,7 +1997,7 @@ items.weapon.melee.flail.stats_desc=명중률 +20%, 기습공격 불가
 items.weapon.melee.flail.desc=사람의 키보다 거대한 극동식 환도.\n\n이 무기는 착용자의 체력이 낮을수록 피해량이 상승해 최대 50%까지 상승합니다. 또한, 착용자의 생명이 위험하면 적의 피를 흡수해 착용자를 회복시켜줍니다.
 
 items.weapon.melee.gauntlet.name=마운틴 브레이커
-items.weapon.melee.gauntlet.stats_desc=공격속도 330 ~ 500%
+items.weapon.melee.gauntlet.stats_desc=공격속도 300 ~ 500%
 items.weapon.melee.gauntlet.ac_zap=스탠스 스위칭
 items.weapon.melee.gauntlet.desc=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n_기본 모드_\n일반적인 상태입니다. 한 턴에 최대 _5_번까지 공격할 수 있지만 공격력이 낮습니다.
 items.weapon.melee.gauntlet.desc_mode=거대한 톱니바퀴 모양의 너클. 비교적 빠르게 휘두룰 수 있지만, 무거운 만큼 많은 힘을 요구한다.\n\n_스탠스 스위칭_\n공격력이 상승했지만 한 턴에 최대 _3_번까지 공격할 수 있습니다.
@@ -2119,6 +2119,7 @@ items.weapon.melee.scimitar.self_target=자신에게는 발사할 수 없습니�
 
 items.weapon.melee.spear.name=기병창ㆍ카빈
 items.weapon.melee.spear.ac_zap=가변
+items.weapon.melee.sai.stats_desc=공격속도 67 ~ 100%
 items.weapon.melee.spear.desc=키가 작은 그라니를 위해 빅토리아에서 맞춤 제작된 수축형 장창. 카탈로그 상 창의 길이를 두배가량 늘릴 수 있지만, 그라니 본인은 무게 중심이 불안정해져서 거의 사용하지 않는 기능이라고 한다...\n\n_기능 미사용_\n기본적인 형태로, 사용하기 무난합니다.
 items.weapon.melee.spear.desc_mode=키가 작은 그라니를 위해 빅토리아에서 맞춤 제작된 수축형 장창. 카탈로그 상 창의 길이를 두배가량 늘릴 수 있지만, 그라니 본인은 무게 중심이 불안정해져서 거의 사용하지 않는 기능이라고 한다...\n\n_길이 연장_\n공격력과 사거리가 상승했으나, 공격속도가 감소했습니다.
 
