@@ -104,6 +104,11 @@ public class Scythe extends MeleeWeapon {
         }
     }
 
+    @Override
+    public String status() {
+        if (this.isIdentified()) return HealCount + "/" + 8;
+    else return null;}
+
 
     private static final String HEALPOINT = "HealCount";
 

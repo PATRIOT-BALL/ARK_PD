@@ -559,9 +559,9 @@ actors.hero.talent.lightnessmeal.desc=_+1:_ 식사 시 _10턴의 부유 효과_ 
 actors.hero.talent.smartmeals.title=똑똑한 식사
 actors.hero.talent.smartmeals.desc=_+1:_ 음식을 먹으면 이성이 1 충전됩니다. 땅에 떨어진 무기/갑옷/스태프/반지를 주울 때 이성이 _5 이상_ 이면 해당 아이템을 감정합니다.\n\n_+2:_ 음식을 먹으면 이성이 1 충전됩니다. 땅에 떨어진 무기/갑옷/스태프/반지를 주울 때 이성이 _4 이상_ 이면 해당 아이템을 감정합니다.\n\n아이템을 감정하면 이성이 0이 됩니다.
 actors.hero.talent.goodmeat.title=좋은 고기
-actors.hero.talent.goodmeat.desc=_+1:_ 조리하지 않은 고기를 먹었을 때 해로운 효과가 _발생할 확률이 감소_ 합니다.\n\n_+2:_ 조리하지 않은 고기를 먹었을 때 해로운 효과가 _발생하지 않습니다._\n\n조리하지않은 고기를 섭취하면 섬멸전 장비를 1만큼 충전합니다.
+actors.hero.talent.goodmeat.desc=_+1:_ 조리하지 않은 고기를 먹었을 때 해로운 효과가 _발생할 확률이 감소_ 합니다.\n\n_+2:_ 조리하지 않은 고기를 먹었을 때 해로운 효과가 _발생하지 않습니다._\n\n조리하지않은 고기나 얼린 생고기를 섭취하면 섬멸전 장비를 1만큼 충전합니다.
 actors.hero.talent.nyanging.title=초감각
-actors.hero.talent.nyanging.desc=_+1:_ 아이템을 감정하면 섬멸전 장비를 _1_ 만큼 충전합니다.\n\n_+2:_ 아이템을 감정하면 섬멸전 장비를 _2_ 만큼 충전합니다.\n\n이 특성으로 최대 충전량을 넘어서 충전될 수 있습니다.
+actors.hero.talent.nyanging.desc=_+1:_ 아이템을 감정하면 섬멸전 장비를 _1_ 만큼 충전합니다.\n\n_+2:_ 아이템을 감정하면 섬멸전 장비를 _2_ 만큼 충전합니다.\n\n이 특성으로 최대 충전량을 넘어서 충전될 수 있습니다. 단, 최대 충전량 +4까지만 가능합니다.
 actors.hero.talent.fastmeal.title=엄청 빠른 식사
 actors.hero.talent.fastmeal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 시 _최대 체력의 3%_ 만큼 보호막을 얻습니다.\n\n_+2:_ 식사에 1턴만 소모되며, 식사 시 _최대 체력의 6%_ 만큼 보호막을 얻습니다.
 actors.hero.talent.recovery_upgrade.title=정신 회복의 강화
@@ -857,8 +857,8 @@ actors.mobs.acidic.desc=살카즈의 용병. 살카즈 스나이퍼보다 작전
 actors.mobs.albino.name=원석충·α
 actors.mobs.albino.desc=야생의 감염 생물, 일반 원석충보다 위험도가 높은 종이다. 이런 저지능 생물은 적의 캐스터에게 조종당할 가능성이 있으며, 인공설비에 침입하여 무리지어 공격한다. 뾰족한 뿔은 대상에게 출혈을 일으킨다.
 
-actors.mobs.armoredstatue.name=갑옷 입은 석상
-actors.mobs.armoredstatue.desc=단순히 봐서는 던전의 다른 움직임 없는 석상들과 다를 것 없다고 느낄 것입니다. 하지만 붉게 빛나는 눈은 전혀 그렇지 않다고 말합니다.\n\n석상에 입혀진 갑옷 덕분에 꽤 괜찮은 상태를 유지하고 있는 것처럼 보이며, 죽이기 매우 힘들 것 같습니다.\n\n이 석상은 돌로 만들어져 있지만, 석상에 장착된 _%1$s_와 _%2$s_ 만큼은 진짜처럼 보입니다.
+actors.mobs.armoredstatue.name=유격대 중갑 방패병
+actors.mobs.armoredstatue.desc=패트리어트의 정예 호위 전사. 패트리어트의 의지를 따라, 방패병은 '감염자의 방패'에서 견실한 성벽과도 같은 존재다. _그는 당신이 선제공격을 하지 않는 이상 공격해오지 않을 것이다._\n\n유격대 방패병이 입고있는 중갑 덕분에 높은 방호력을 보유하고 있는 것처럼 보이며, 쓰러트리기 매우 힘들 것 같습니다.\n\n이 유격대 방패병을 쓰러트릴 경우, _%1$s_와 _%2$s_ 을/를 드랍합니다.
 
 actors.mobs.airbornesoldier.name=공수부대병
 actors.mobs.airbornesoldier.desc=리유니온의 특수 근거리 전투원. 장비는 상당히 허술하지만 원리는 간단해 쉽게 방어가 취약한 지점에 기습을 감행하기 용이하다. \n\n이들은 보유한 장비를 이용해 대원에게 눈 깜짝할 사이에 접근할 수 있습니다.
@@ -1100,9 +1100,9 @@ actors.mobs.snake.desc=야생의 감염 생물, 일반 원석충보다 위험도
 actors.mobs.spinner.name=고에너지 원석충
 actors.mobs.spinner.desc=야생의 감염 생물. 복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다. 이런 저지능 생물은 적의 캐스터에게 조종당할 가능성이 있으며, 인공설비에 침입하여 무리지어 공격한다. 그들은 독 이빨로 대상을 중독시키고 먼 거리까지 거미줄을 발사할 수 있으며, 그들의 먹잇감이 도망치려는 어떠한 길도 막으려 들 것입니다.\n\n_침묵 가능_
 
-actors.mobs.statue.name=움직이는 석상
+actors.mobs.statue.name=유격대 방패병
 actors.mobs.statue.def_verb=방어
-actors.mobs.statue.desc=단순히 봐서는 던전의 다른 움직임 없는 석상들과 다를 것 없다고 느낄 것입니다. 하지만 붉게 빛나는 눈은 전혀 그렇지 않다고 말합니다.\n\n이 석상은 돌로 만들어져 있지만, 석상의 몸에 박혀있는 _%s_ 만큼은 진짜처럼 보입니다.
+actors.mobs.statue.desc=패트리어트의 정예 호위 전사. 패트리어트의 의지를 따라, 방패병은 '감염자의 방패'에서 견실한 성벽과도 같은 존재다. _그는 당신이 선제공격을 하지 않는 이상 공격해오지 않을 것이다._\n\n이 유격대 방패병을 쓰러트릴 경우, _%s_ 을/를 드랍합니다.
 
 actors.mobs.succubus.name=살카즈 랜서
 actors.mobs.succubus.desc=장창을 사용하여 돌격하는 특수훈련을 받은 살카즈 용병. 돌진 속도가 빠를수록 방어선에 주는 위협은 더 커질 것이다.\n\n이들은 대원을 발견하면 가속 상태에 돌입합니다. 가속 상태일 땐 공격력이 상승하며, 이동할 때마다 추가 공격력과 명중률, 이동속도를 얻습니다. 공격시 가속 상태가 해제됩니다.

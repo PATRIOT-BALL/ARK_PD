@@ -73,15 +73,20 @@ public class v0_2_X_Changes {
                 "_연계 전문화_의 _기술 향상_의 +1 효과의 발동 조건이 콤보 7에서 _콤보 6_으로 감소했습니다." + "\n\n" +
         "_신속 전문화_의 _투사체 가속_ 특성이 사격 무기에도 적용되어, 최대 +30%의 피해 보너스를 얻을 수 있습니다." + "\n\n" +
                 "_신속 전문화_의 _은신 가속_ 특성 +2 효과에 은신 중 사격 무기로 적중시키면 대상을 마비시키는 기능이 추가되었습니다." + "\n\n" +
-                "_사격 전문화_의 _강화 공유_ 특성의 피해 보너스가 5-15%에서 _6-18%_로 상승했으며, 사격 무기에도 적용됩니다. (단, 사격 무기는 효율 50%)"));
+                "_사격 전문화_의 _강화 공유_ 특성의 피해 보너스가 5-15%에서 _6-18%_로 상승했으며, 사격 무기에도 적용됩니다. (단, 사격 무기는 효율 50%)" + "\n\n" +
+                "_로즈몬티스_의 _좋은 고기_ 특성의 충전 효과가 얼린 생고기에도 적용됩니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 버프",
         "_동야의 마왕_ : 마탄 사격의 피해량이 1-6에서 _2-11_로 상승했습니다. 대신 마탄 사격이 정상적으로 턴을 소모합니다." + "\n\n" +
-        "_해시계_ : 침묵 공격의 충전량이 최대 1에서 _2_ 로 상승했습니다."));
+        "_해시계_ : 침묵 공격의 충전량이 최대 1에서 _2_ 로 상승했습니다." + "\n\n" +
+                "_아트리아스의 검_ : 아츠 광선의 피해량이 2-12에서 _4-12_로, 강화 효율이 3에서 _4_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 버프",
                 "_커스텀 탐험 세트_ : 충전 속도가 상승했으며, Mon3tr 강화 효과가 더욱 강력해졌습니다." + "\n" +
                 "커스텀 탐험 세트의 레벨에 비례해 Mon3tr의 체력 소모량이 감소합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 버프",
+                "_섬멸전 장비_의 기본 공격력이 5-7에서 _6-10_으로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
@@ -89,6 +94,11 @@ public class v0_2_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "리유니온 너프",
                 "_불사의 검은 뱀_ : 회피율이 35에서 29로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
+                "_로즈몬티스_의 _몸이 가벼운 식사_의 부유 지속 턴이 10-15턴에거 _5-10턴_으로 감소했습니다." + "\n\n" +
+                "_로즈몬티스_의 _초감각_ 특성이 최대 충젼량 +4까지만 과충전할 수 있도록 변경되었습니다." + "\n\n" +
+                "_로즈몬티스_의 _섬멸 작전_ 특성의 피해 보너스가 3-9에서 _2-6_으로 감소했습니다."));
     }
 
     public static void add_v0_2_3_Changes(ArrayList<ChangeInfo> changeInfos) {

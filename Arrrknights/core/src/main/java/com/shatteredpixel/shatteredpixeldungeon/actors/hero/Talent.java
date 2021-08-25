@@ -273,7 +273,7 @@ public enum Talent {
 
 		if (hero.hasTalent(LIGHTNESSMEAL)){
 			if (foodSource instanceof HornOfPlenty == false) {
-			Buff.prolong( hero, Levitation.class, 5 + 5 * hero.pointsInTalent(LIGHTNESSMEAL));}
+			Buff.prolong( hero, Levitation.class,  5 * hero.pointsInTalent(LIGHTNESSMEAL));}
 		}
 
 		if (hero.hasTalent(FASTMEAL)){
@@ -429,8 +429,9 @@ public enum Talent {
 
 		if (hero.hasTalent(NYANGING)) {
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
-		if (Gear != null) Gear.charge+=(hero.pointsInTalent(NYANGING));
-		}
+		if (Gear != null) {
+			Gear.charge = Math.min(hero.pointsInTalent(NYANGING) + Gear.charge, Gear.chargeCap +4);
+		} }
 	}
 
 	public static int onAttackProc( Hero hero, Char enemy, int dmg ){

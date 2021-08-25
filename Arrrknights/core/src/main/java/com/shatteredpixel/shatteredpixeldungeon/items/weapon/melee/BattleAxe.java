@@ -76,6 +76,7 @@ public class BattleAxe extends MeleeWeapon {
 		if (action.equals(AC_ZAP) && Dungeon.hero.belongings.weapon == this) {
 			if (starpower < starpowercap) {
 				starpower++;
+				updateQuickslot();
 				hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "charge"));
 				if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class) != null) {
 				if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class).isEquipped(Dungeon.hero)) {
@@ -106,6 +107,7 @@ public class BattleAxe extends MeleeWeapon {
 			Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1.76f, 1.76f);
 			attacker.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "attack"));
 			starpower = 0;
+			updateQuickslot();
 		}
 		return super.proc(attacker, defender, damage);
 	}
@@ -119,6 +121,11 @@ public class BattleAxe extends MeleeWeapon {
 
 		return info;
 	}
+
+	@Override
+	public String status() {
+		if (this.isIdentified()) return starpower + "/" + starpowercap;
+		else return null;}
 
 	private static final String POWER = "starpower";
 

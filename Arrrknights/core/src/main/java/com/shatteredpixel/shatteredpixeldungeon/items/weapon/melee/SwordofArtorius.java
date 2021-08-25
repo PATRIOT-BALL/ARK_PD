@@ -35,9 +35,9 @@ public class SwordofArtorius extends MeleeWeapon {
 
     public String statsInfo() {
         if (isIdentified()) {
-            return Messages.get(this, "stats_desc", 2+buffedLvl(), 12+buffedLvl()*3);
+            return Messages.get(this, "stats_desc", 4+buffedLvl(), 12+buffedLvl()*4);
         } else {
-            return Messages.get(this, "typical_stats_desc", 2, 12);
+            return Messages.get(this, "typical_stats_desc", 4, 12);
         }
     }
 
@@ -54,7 +54,7 @@ public class SwordofArtorius extends MeleeWeapon {
 
         Blob web = Dungeon.level.blobs.get(Web.class);
 
-        int terrainPassed = 2, terrainBonus = 0;
+        int terrainPassed = 2;
         for (int c : beam.subPath(1, maxDistance)) {
 
             Char ch;
@@ -62,7 +62,6 @@ public class SwordofArtorius extends MeleeWeapon {
 
                 //we don't want to count passed terrain after the last enemy hit. That would be a lot of bonus levels.
                 //terrainPassed starts at 2, equivalent of rounding up when /3 for integer arithmetic.
-                terrainBonus += terrainPassed/3;
                 terrainPassed = terrainPassed%3;
 
                 chars.add( ch );
@@ -87,7 +86,7 @@ public class SwordofArtorius extends MeleeWeapon {
             Dungeon.observe();
         }
 
-        int dmg = Random.NormalIntRange(2+buffedLvl(), 12+buffedLvl()*3);
+        int dmg = Random.NormalIntRange(4+buffedLvl(), 12+buffedLvl()*4);
         for (Char ch : chars) {
             ch.damage(dmg, this );
             ch.sprite.centerEmitter().burst( PurpleParticle.BURST, Random.IntRange( 1, 2 ) );

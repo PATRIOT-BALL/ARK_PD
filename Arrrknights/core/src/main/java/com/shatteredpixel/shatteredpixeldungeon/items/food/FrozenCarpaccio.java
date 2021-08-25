@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -84,6 +85,15 @@ public class FrozenCarpaccio extends Food {
 		if (hero.hasTalent(Talent.LOVEMEAT))
 		{
 			Buff.affect(hero, WellFed.class).set(hero.pointsInTalent(Talent.LOVEMEAT) * 20);
+		}
+
+		if (hero.hasTalent(Talent.GOODMEAT))
+		{
+			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
+			if (hero.belongings.getItem(AnnihilationGear.class) != null && Gear.charge < Gear.chargeCap)
+			{
+				Gear.SPCharge(1);
+			}
 		}
 	}
 	

@@ -52,6 +52,7 @@ public class GoldDogSword extends MeleeWeapon {
             if (charge <= 0) {
                 charge = chargeCap;
                 hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(GoldDogSword.class, "charge"));
+                updateQuickslot();
                 curUser.spendAndNext(3f);
             } else
                 hero.sprite.showStatus(CharSprite.NEGATIVE, Messages.get(GoldDogSword.class, "charge_fail"));
@@ -63,9 +64,15 @@ public class GoldDogSword extends MeleeWeapon {
         if (charge > 0) {
             damage *= 1 + (charge/12);
             charge--;
-            Dungeon.hero.sprite.showStatus(CharSprite.NEUTRAL, "..." + charge);}
+            updateQuickslot(); }
         return super.proc(attacker, defender, damage);
     }
+
+    @Override
+    public String status() {
+        int a = (100 * charge) / 12;
+        if (this.isIdentified()) return "+" + a + "%";
+        else return null;}
 
     private static final String CHARGE = "charge";
 
