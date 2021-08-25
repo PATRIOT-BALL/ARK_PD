@@ -195,9 +195,6 @@ public enum HeroClass {
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-		new MysteryMeat().collect();
-		new ChargrilledMeat().collect();
-		new SmallRation().collect();
 	}
 
 	public Badges.Badge masteryBadge() {
