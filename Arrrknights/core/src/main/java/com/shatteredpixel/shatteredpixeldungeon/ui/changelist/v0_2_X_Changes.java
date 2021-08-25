@@ -86,7 +86,7 @@ public class v0_2_X_Changes {
                 "커스텀 탐험 세트의 레벨에 비례해 Mon3tr의 체력 소모량이 감소합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 버프",
-                "_섬멸전 장비_의 기본 공격력이 5-7에서 _6-10_으로 상승했습니다."));
+                "_섬멸전 장비_의 기본 공격력이 5-7에서 _6-11_으로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
