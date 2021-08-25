@@ -2013,7 +2013,7 @@ items.weapon.melee.gloves.desc=이 징 박힌 장갑은 실질적인 보호를 �
 items.weapon.melee.greataxe.name=딥 어비스
 items.weapon.melee.greataxe.stats_desc=강화 효율+
 items.weapon.melee.greataxe.desc=에기르의 광물로 제작된 매우 무거운 대검. 로도스의 과묵한 그녀 외엔 아무도 이 검을 자유자재로 다루기는 어려울 것이다.
-items.weapon.melee.sword.setbouns=_아이템 시너지 : 바병슼_\n공격시 아츠 갑옷을 얻습니다.
+items.weapon.melee.greataxe.setbouns=_아이템 시너지 : 바병슼_\n공격시 아츠 갑옷을 얻습니다.
 
 items.weapon.melee.greatshield.name=애국심
 items.weapon.melee.greatshield.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.

@@ -37,7 +37,7 @@ public class GuerrillaSprite extends MobSprite {
 		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 0, 0, 0 );
 		
-		run = new Animation( 12, true );
+		run = new Animation( 10, true );
 		run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 		
 		attack = new Animation( 12, false );
