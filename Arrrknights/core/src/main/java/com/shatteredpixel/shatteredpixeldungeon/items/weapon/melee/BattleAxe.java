@@ -77,9 +77,10 @@ public class BattleAxe extends MeleeWeapon {
 			if (starpower < starpowercap) {
 				starpower++;
 				hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "charge"));
+				if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class) != null) {
 				if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class).isEquipped(Dungeon.hero)) {
 					curUser.spendAndNext(3f);
-				}
+				}}
 				else curUser.spendAndNext(4f);
 			} else
 				hero.sprite.showStatus(CharSprite.NEGATIVE, Messages.get(BattleAxe.class, "charge_fail"));

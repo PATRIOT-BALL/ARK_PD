@@ -71,9 +71,11 @@ public class Glaive extends MeleeWeapon {
 		else doubleattack = true;
 
 		if (attacker instanceof Hero) {
-			if (((Hero) attacker).belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero)) {
-				if (Random.Int(20) < 1)
-				damage *= 1.5f;
+			if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null) {
+				if (((Hero) attacker).belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero)) {
+					if (Random.Int(20) < 1)
+						damage *= 1.5f;
+				}
 			}
 		}
 		return super.proc(attacker, defender, damage);
