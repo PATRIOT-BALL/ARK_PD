@@ -73,6 +73,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token3;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token4;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
@@ -297,10 +298,6 @@ public enum HeroClass {
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(2,skillB);
-
-		new Heamyo().collect();
-		new PotionOfMindVision().quantity(5).collect();
-		new ScrollOfAntiMagic().quantity(3).collect();
 
 		new DewVial().collect();
 	}
