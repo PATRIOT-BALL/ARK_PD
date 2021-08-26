@@ -64,7 +64,7 @@ public class v0_2_X_Changes {
                 "회피율이 35에서 _32_로 감소했습니다." + "\n\n" +
                 "_점화_ 패턴과 _화염 폭발_ 패턴이 물 타일을 증발시킵니다." + "\n\n" +
                 "기본 공격이 물 위에 있는 적에게 _70%_ 의 피해를 입힙니다." + "\n\n" +
-                        "불사의 검은 뱀이 물 위에 있다면 회피율이 _30%_ 감소합니다."));
+                        "불사의 검은 뱀이 물 위에 있다면 매 턴마다 체력을 소량 잃고 회피율이 _50%_ 감소합니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);

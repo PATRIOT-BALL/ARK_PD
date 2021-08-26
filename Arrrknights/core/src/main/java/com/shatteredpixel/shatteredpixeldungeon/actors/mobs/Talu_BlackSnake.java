@@ -97,7 +97,7 @@ public class Talu_BlackSnake extends Mob {
 
     @Override
     public int defenseSkill(Char enemy) {
-        if (Dungeon.level.map[this.pos] == Terrain.WATER) return 22;
+        if (Dungeon.level.map[this.pos] == Terrain.WATER) return 16;
         return 32; }
 
     @Override
@@ -179,6 +179,10 @@ public class Talu_BlackSnake extends Mob {
         }
         else {
             UseAbility();
+        }
+
+        if (Dungeon.level.map[this.pos] == Terrain.WATER) {
+            HP = Math.min(1, HP-9);
         }
 
         if (InvincibilityTime > 0) {
