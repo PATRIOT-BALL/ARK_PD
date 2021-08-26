@@ -359,6 +359,8 @@ public abstract class FistSprite extends MobSprite {
 
 			die = new Animation( 10, false );
 			die.frames( frames, c+0 );
+
+			play( idle );
 		}
 
 		{
@@ -403,7 +405,7 @@ public abstract class FistSprite extends MobSprite {
 
 			TextureFilm frames = new TextureFilm( texture, 72, 44 );
 
-			idle = new Animation( 2, true );
+			idle = new Animation( 9, true );
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
@@ -413,10 +415,12 @@ public abstract class FistSprite extends MobSprite {
 			attack.frames( frames, c+1 );
 
 			zap = new Animation( 8, false );
-			zap.frames( frames, c+0 );
+			zap.frames( frames, c+1 );
 
 			die = new Animation( 10, false );
-			die.frames( frames, c+0 );
+			die.frames( frames, c+1 );
+
+			play( idle );//이 구문이 없을경우 스프라이트 오류가 남(찔러용 그거)
 		}
 
 		{
