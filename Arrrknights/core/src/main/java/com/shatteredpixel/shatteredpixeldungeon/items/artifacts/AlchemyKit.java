@@ -51,7 +51,7 @@ import java.util.Arrays;
 
 public class AlchemyKit extends Artifact {
     {
-        image = ItemSpriteSheet.ARTIFACT_TOOLKIT;
+        image = ItemSpriteSheet.ARTIFACT_THORNS;
         levelCap = 10;
 
         charge = 0;

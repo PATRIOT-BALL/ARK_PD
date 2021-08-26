@@ -18,8 +18,8 @@ import java.util.ArrayList;
 public class GoldDogSword extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.SICKEL;
-        hitSound = Assets.Sounds.HIT_SLASH;
+        image = ItemSpriteSheet.GOLDDOG;
+        hitSound = Assets.Sounds.HIT_KNIFE;
         hitSoundPitch = 1.17f;
 
         defaultAction = AC_ZAP;

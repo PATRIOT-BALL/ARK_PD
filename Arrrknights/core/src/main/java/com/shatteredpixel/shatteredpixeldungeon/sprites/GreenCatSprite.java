@@ -42,11 +42,11 @@ public class GreenCatSprite extends MobSprite {
         run = new Animation( 10, true );
         run.frames( frames, 0 );
 
-        attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack = new Animation( 16, false );
+        attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7 );
 
         die = new Animation( 10, false );
-        die.frames( frames, 0 );
+        die.frames( frames, 8 );
 
         play( idle );
     }

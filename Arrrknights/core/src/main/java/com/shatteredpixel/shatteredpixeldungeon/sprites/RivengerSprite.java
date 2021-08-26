@@ -31,13 +31,13 @@ public class RivengerSprite extends MobSprite {
 
 		texture( Assets.Sprites.RIVENGER );
 
-		TextureFilm frames = new TextureFilm( texture, 46, 32 );
+		TextureFilm frames = new TextureFilm( texture, 46, 30 );
 
 		idle = new Animation( 2, true );
 		idle.frames( frames, 11 );
 
-		run = new Animation( 12, true );
-		run.frames( frames, 11 );
+		run = new Animation( 10, true );
+		run.frames( frames, 12, 13, 14, 15, 16, 17, 18, 19 );
 
 		attack = new Animation( 26, false );
 		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 );

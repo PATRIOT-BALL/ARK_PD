@@ -40,7 +40,7 @@ public class RotLasherSprite extends MobSprite {
 		run = new MovieClip.Animation( 1, true );
 		run.frames( frames, 0 );
 
-		attack = new MovieClip.Animation( 1, false );
+		attack = new MovieClip.Animation( 30, false );
 		attack.frames( frames, 0 );
 
 		die = new MovieClip.Animation( 8, false );

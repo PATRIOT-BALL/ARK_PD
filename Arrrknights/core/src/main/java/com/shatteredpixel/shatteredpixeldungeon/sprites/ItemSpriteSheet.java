@@ -286,6 +286,7 @@ public class ItemSpriteSheet {
 	public static final int M1887       = WEP_TIER4+6;
 	public static final int NAGINATA       = WEP_TIER4+7;
 	public static final int SICKEL       = WEP_TIER4+8;
+	public static final int GOLDDOG       = WEP_TIER4+9;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -296,6 +297,7 @@ public class ItemSpriteSheet {
 		assignItemRect(M1887,        16, 16);
 		assignItemRect(NAGINATA,        16, 16);
 		assignItemRect(SICKEL,        16, 16);
+		assignItemRect(GOLDDOG,        16, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 9);   //8 slots
@@ -498,6 +500,7 @@ public class ItemSpriteSheet {
 	public static final int ARTIFACT_ROSE1      = ARTIFACTS+36;
 	public static final int ARTIFACT_ROSE2      = ARTIFACTS+37;
 	public static final int ARTIFACT_ROSE3      = ARTIFACTS+38;
+	public static final int ARTIFACT_THORNS      = ARTIFACTS+39;
 	static{
 		assignItemRect(ARTIFACT_CLOAK,      16, 16);
 		assignItemRect(ARTIFACT_ARMBAND,    16, 16);
@@ -522,6 +525,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ARTIFACT_ROSE1,      16, 16);
 		assignItemRect(ARTIFACT_ROSE2,      16, 16);
 		assignItemRect(ARTIFACT_ROSE3,      16, 16);
+		assignItemRect(ARTIFACT_THORNS,      16, 16);
 	}
 
 	                                                                                    //16 free slots
