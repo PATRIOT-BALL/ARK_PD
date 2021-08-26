@@ -353,6 +353,14 @@ public class Assets {
 		public static final String POSSESSED	= "sprites/possessed.png";
 		public static final String UNDEAD	= "sprites/possessed.png";
 
+		//통벤저스
+		public static final String BLACK_SNAKE	= "sprites/black_snake.png"; //72x44
+		public static final String BOSS_2	= "sprites/boss_2.png"; //44x40
+		public static final String BOSS_3	= "sprites/boss_3.png"; //46x44
+		public static final String PATRIOT	= "sprites/patriot.png"; //72x48
+		public static final String MEPHI_SINGER	= "sprites/mephi_singer.png"; //58x42
+		public static final String EMPEROR_BLADE	= "sprites/emperor_blade.png"; //72x44
+
 		public static final String LOTUS	= "sprites/lotus.png";
 
 		//시에스타
