@@ -567,7 +567,7 @@ actors.hero.talent.fastmeal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 �
 actors.hero.talent.recovery_upgrade.title=정신 회복의 강화
 actors.hero.talent.recovery_upgrade.desc=_+1:_ 강화의 일기장을 사용하면 섬멸전 장비를 _2_ 만큼 충전합니다.\n\n_+2:_ 강화의 일기장을 사용하면 섬멸전 장비를 _4_ 만큼 충전합니다\n\n이 특성은 강화의 일기장을 기반으로 한 주문서 또는 주문을 사용할 때에도 발동합니다.
 actors.hero.talent.delicious_food.title=엄청 맛있는 식사
-actors.hero.talent.delicious_food.desc=_+1:_ 벌꿀 쿠키 섭취시 섬멸전 장비를 _1_ 만큼 충전합니다.\n\n_+2:_ 벌꿀 쿠키 섭취시 섬멸전 장비를 _2_ 만큼 충전합니다.
+actors.hero.talent.delicious_food.desc=_+1:_ 벌꿀 쿠키 섭취시 허기 감소량이 _50%_ 상승합니다.\n\n_+2:_ 벌꿀 쿠키 섭취시 허기 감소량이 _100%_ 상승합니다.\n\n또한 벌꿀 쿠키 섭취시 섬멸전 장비를 2 만큼 충전합니다.
 actors.hero.talent.lovemeat.title=고기가 좋아
 actors.hero.talent.lovemeat.desc=_+1:_ 고기류 음식 섭취시 _20턴_동안 배부름 상태를 얻고 체력을 _3_ 회복합니다.\n\n_+2:_ 고기류 음식 섭취시 _40턴_동안 배부름 상태를 얻고 체력을 _6_ 회복합니다.\n\n고기 파이는 해당하지 않습니다.
 actors.hero.talent.powergear.title=강력한 방벽
@@ -1061,8 +1061,8 @@ actors.mobs.ripperdemon.name=살카즈 도병
 actors.mobs.ripperdemon.leap=살카즈 도병이 도약하려고 한다!
 actors.mobs.ripperdemon.desc=살카즈 용병. 오랜 세월에 계속된 전쟁은 이들을 만신창이로 만들었지만, 지금도 고용주의 명령을 완수하기 위해 계속해서 싸우고 있다.\n\n살카즈 도병은 그리 위협적인 존재는 아니지만, 민첩하고 위험한 존재입니다. 그들은 목표에 신속하게 접근하여 당신의 목을 취할 것입니다.
 
-actors.mobs.rotheart.name=부패 심장
-actors.mobs.rotheart.desc=썩은열매의 열매는 매우 특이합니다. 썩어서 양분을 주는 대신, 열매가 자라나 단단해지며, 씨앗을 감쌉니다. 그리고 열매 내부에 생명 활동을 주관하는 기관이 자라나며, 단단해진 열매는 이를 보호합니다. 이 거대한 열매는 다 자란 썩은열매 식물의 심장에 비유됩니다.
+actors.mobs.rotheart.name=타락한 심장
+actors.mobs.rotheart.desc=본래에 이 곳에는 부패 심장이라 불리는 식물이 있었다. 하지만─
 
 actors.mobs.rotlasher.name=썩은 휘감개
 actors.mobs.rotlasher.desc=썩은 휘감개는 성숙한 썩은열매 식물의 뿌리 구조의 일부이며, 또한 그들의 주된 방어 수단이기도 합니다. 휘감개는 땅속에 갇혀있지만, 자신들에게 다가가는 어떠한 위협에도 격렬하게 공격할 것입니다. 근처에 적이 없을 때, 그것들은 움직이지 않고 서서 주변의 식물들과 섞이려고 시도합니다.

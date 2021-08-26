@@ -565,7 +565,7 @@ actors.hero.talent.fastmeal.desc=_+1:_ Eating food takes the Rosmontis 1 turn an
 actors.hero.talent.recovery_upgrade.title=recovery upgrade
 actors.hero.talent.recovery_upgrade.desc=_+1:_ Using a scroll of upgrade instantly recharges the Rosmontis`s gear _for 2 charges_\n\n_+2:_ Using a scroll of upgrade instantly recharges the Rosmontis`s gear _for 4 charges_\n\nTher talent also triggers when using scrolls or spells based on scrolls of upgrade.
 actors.hero.talent.delicious_food.title=delicious food
-actors.hero.talent.delicious_food.desc=_+1:_ Eating cookie, recharges the Rosmontis`s gear _for 1_\n\n_+2:_ Eating cookie, recharges the Rosmontis`s gear _for 2_
+actors.hero.talent.delicious_food.desc=_+1:_ Cookies' fullness is _+50%._\n\n_+2:_ Cookies' fullness is _+100%._\n\nEating cookie, recharges the Rosmontis`s gear for 2
 actors.hero.talent.lovemeat.title=love meat
 actors.hero.talent.lovemeat.desc=_+1_ : Eating meat, gain _20 Turn _ Well Fed effect and she heals for _3 HP_\n\n_+2_ : Eating meat, gain _40 Turn _ Well Fed effect and she heals for _6 HP_
 actors.hero.talent.powergear.title=power gear
@@ -1057,8 +1057,8 @@ actors.mobs.ripperdemon.name=Swordsman
 actors.mobs.ripperdemon.leap=Swordsman is Trying to cast a leap attack!
 actors.mobs.ripperdemon.desc=A Sarkaz mercenary. Though scarred by years of war, they are still fighting to fulfill the orders of their employers.
 
-actors.mobs.rotheart.name=rot heart
-actors.mobs.rotheart.desc=A Rotberry's fruit is very unique. Instead of rotting away and providing nutrients, the fruit grows, hardens, and encompasses the seed. It provides protection for the internal organs which grow inside the fruit. This giant orb is referred to as the heart of an adult rotberry plant.
+actors.mobs.rotheart.name=corrupting heart
+actors.mobs.rotheart.desc=Originally there should have been a rot heart. But the Corruption of the Deep Sea has polluted this place.
 
 actors.mobs.rotlasher.name=rot lasher
 actors.mobs.rotlasher.desc=The rot lasher is a part of a mature rotberry plant's root structure, and also their primary means of defense. Lashers are stuck into the ground, but will violently assault any threat that gets near to them. When there is no nearby enemies, they stand motionless, attempting to blend in with surrounding vegetation.

@@ -1238,7 +1238,7 @@ items.quest.token4.suc="에이스와 스카우트가 보엿고, 정예 오퍼레
 items.quest.obsidian.name=시에스타 흑요석
 items.quest.obsidian.desc=시에스타의 특산물. 사용시 크로닌의 도구에 대한 저항력이 상승한다.
 items.quest.obsidian.ac_add=사용
-items.quest.obsidian.suc=크로닌의 능력에 대해 저항할 수 있게된 것 같다.
+items.quest.obsidian.suc=크로닌의 도구에 대한 저항력이 상승한 것 같다.
 
 
 
