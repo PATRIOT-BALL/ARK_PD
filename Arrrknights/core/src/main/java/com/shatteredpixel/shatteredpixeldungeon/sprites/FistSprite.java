@@ -141,13 +141,13 @@ public abstract class FistSprite extends MobSprite {
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
-			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+			run.frames( frames, c+0 );
 
 			attack = new Animation( 18, false );
-			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+			attack.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10, c+11 );
 
-			zap = new Animation( 8, false );
-			zap.frames( frames, c+11 );
+			zap = new Animation( 20, false );
+			zap.frames( frames, c+5, c+6, c+7, c+8, c+9, c+10, c+11 );
 
 			die = new Animation( 10, false );
 			die.frames( frames, c+0 );
@@ -193,13 +193,13 @@ public abstract class FistSprite extends MobSprite {
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
-			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+			run.frames( frames, c+0 );
 
 			attack = new Animation( 18, false );
-			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+			attack.frames( frames, c+0 );
 
 			zap = new Animation( 8, false );
-			zap.frames( frames, c+11 );
+			zap.frames( frames, c+0 );
 
 			die = new Animation( 10, false );
 			die.frames( frames, c+0 );
@@ -245,13 +245,13 @@ public abstract class FistSprite extends MobSprite {
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
-			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+			run.frames( frames, c+0 );
 
 			attack = new Animation( 18, false );
-			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+			attack.frames( frames, c+0 );
 
 			zap = new Animation( 8, false );
-			zap.frames( frames, c+11 );
+			zap.frames( frames, c+0 );
 
 			die = new Animation( 10, false );
 			die.frames( frames, c+0 );
@@ -297,13 +297,13 @@ public abstract class FistSprite extends MobSprite {
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
-			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+			run.frames( frames, c+c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
 
 			attack = new Animation( 18, false );
-			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+			attack.frames( frames, c+0 );
 
 			zap = new Animation( 8, false );
-			zap.frames( frames, c+11 );
+			zap.frames( frames, c+0 );
 
 			die = new Animation( 10, false );
 			die.frames( frames, c+0 );
@@ -349,18 +349,16 @@ public abstract class FistSprite extends MobSprite {
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
-			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+			run.frames( frames, c+0 );
 
 			attack = new Animation( 18, false );
-			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+			attack.frames( frames, c+0 );
 
 			zap = new Animation( 8, false );
-			zap.frames( frames, c+11 );
+			zap.frames( frames, c+0 );
 
 			die = new Animation( 10, false );
 			die.frames( frames, c+0 );
-
-			play( idle );
 		}
 
 		{
@@ -409,18 +407,16 @@ public abstract class FistSprite extends MobSprite {
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
-			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+			run.frames( frames, c+0 );
 
 			attack = new Animation( 18, false );
-			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+			attack.frames( frames, c+1 );
 
 			zap = new Animation( 8, false );
-			zap.frames( frames, c+11 );
+			zap.frames( frames, c+0 );
 
 			die = new Animation( 10, false );
 			die.frames( frames, c+0 );
-
-			play( idle );
 		}
 
 		{
