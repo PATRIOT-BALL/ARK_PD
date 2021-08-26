@@ -858,7 +858,7 @@ items.bombs.bomb$doublebomb.name=two meeboo
 items.bombs.bomb$doublebomb.desc=One is service!
 
 items.bombs.firebomb.name=ifrit doll
-items.bombs.firebomb.desc=This burning kiditems.weapon.melee.assassinsblade.setbouns=_아이템 시너지 : 세노미_\n기습 피해 보정과 회피율이 10%상승합니다. doll explodes over time, covering a large area with freezing air.
+items.bombs.firebomb.desc=This burning kid doll explodes over time, covering a large area with freezing air.
 
 items.bombs.flashbang.name=meeboo type: flash
 items.bombs.flashbang.desc=This customized meeboo will erupt into a burst of blinding light when it explodes. Anything nearby will be disoriented based on how close it was to the meeboo.
@@ -1235,6 +1235,12 @@ items.quest.token4.name="Last"
 items.quest.token4.desc="As sword of stratus rent, once stood stand fast."
 items.quest.token4.ac_add=black snake
 items.quest.token4.suc="She sees Ace and Scout, and remembers the elite operators dancing at the party."
+
+// 시에스타 Part1
+items.quest.obsidian.name=Siesta Obsidian
+items.quest.obsidian.desc=Siesta`s Specialties. When used, it becomes possible to resist the mayor's ability,
+items.quest.obsidian.ac_add=사용
+items.quest.obsidian.suc=크로닌의 도구에 대한 저항력이 상승한 것 같다.
 
 
 

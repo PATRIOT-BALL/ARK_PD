@@ -52,30 +52,6 @@ public abstract class FistSprite extends MobSprite {
 	protected abstract Emitter createEmitter();
 
 	public FistSprite() {
-		super();
-
-		int c = texOffset();
-
-		texture( Assets.Sprites.FISTS );
-
-		TextureFilm frames = new TextureFilm( texture, 72, 50 );
-
-		idle = new Animation( 2, true );
-		idle.frames( frames, c+0 );
-
-		run = new Animation( 8, true );
-		run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
-
-		attack = new Animation( 18, false );
-		attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
-
-		zap = new Animation( 8, false );
-		zap.frames( frames, c+11 );
-
-		die = new Animation( 10, false );
-		die.frames( frames, c+0 );
-
-		play( idle );
 	}
 
 	@Override
@@ -152,6 +128,33 @@ public abstract class FistSprite extends MobSprite {
 
 	public static class Burning extends FistSprite {
 
+		public Burning() {
+			super();
+
+			int c = 0;
+
+			texture( Assets.Sprites.BLACK_SNAKE );
+
+			TextureFilm frames = new TextureFilm( texture, 72, 44 );
+
+			idle = new Animation( 2, true );
+			idle.frames( frames, c+0 );
+
+			run = new Animation( 8, true );
+			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+
+			attack = new Animation( 18, false );
+			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+
+			zap = new Animation( 8, false );
+			zap.frames( frames, c+11 );
+
+			die = new Animation( 10, false );
+			die.frames( frames, c+0 );
+
+			play( idle );
+		}
+
 		{
 			boltType = MagicMissile.FIRE;
 		}
@@ -176,6 +179,33 @@ public abstract class FistSprite extends MobSprite {
 	}
 
 	public static class Soiled extends FistSprite {
+
+		public Soiled() {
+			super();
+
+			int c = 0;
+
+			texture( Assets.Sprites.BOSS_2 );
+
+			TextureFilm frames = new TextureFilm( texture, 44, 40 );
+
+			idle = new Animation( 2, true );
+			idle.frames( frames, c+0 );
+
+			run = new Animation( 8, true );
+			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+
+			attack = new Animation( 18, false );
+			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+
+			zap = new Animation( 8, false );
+			zap.frames( frames, c+11 );
+
+			die = new Animation( 10, false );
+			die.frames( frames, c+0 );
+
+			play( idle );
+		}
 
 		{
 			boltType = MagicMissile.FOLIAGE;
@@ -202,6 +232,33 @@ public abstract class FistSprite extends MobSprite {
 
 	public static class Rotting extends FistSprite {
 
+		public Rotting() {
+			super();
+
+			int c = 0;
+
+			texture( Assets.Sprites.BOSS_3 );
+
+			TextureFilm frames = new TextureFilm( texture, 46, 44 );
+
+			idle = new Animation( 2, true );
+			idle.frames( frames, c+0 );
+
+			run = new Animation( 8, true );
+			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+
+			attack = new Animation( 18, false );
+			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+
+			zap = new Animation( 8, false );
+			zap.frames( frames, c+11 );
+
+			die = new Animation( 10, false );
+			die.frames( frames, c+0 );
+
+			play( idle );
+		}
+
 		{
 			boltType = MagicMissile.TOXIC_VENT;
 		}
@@ -227,6 +284,33 @@ public abstract class FistSprite extends MobSprite {
 
 	public static class Rusted extends FistSprite {
 
+		public Rusted() {
+			super();
+
+			int c = 0;
+
+			texture( Assets.Sprites.PATRIOT );
+
+			TextureFilm frames = new TextureFilm( texture, 72, 48 );
+
+			idle = new Animation( 2, true );
+			idle.frames( frames, c+0 );
+
+			run = new Animation( 8, true );
+			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+
+			attack = new Animation( 18, false );
+			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+
+			zap = new Animation( 8, false );
+			zap.frames( frames, c+11 );
+
+			die = new Animation( 10, false );
+			die.frames( frames, c+0 );
+
+			play( idle );
+		}
+
 		{
 			boltType = MagicMissile.CORROSION;
 		}
@@ -251,6 +335,33 @@ public abstract class FistSprite extends MobSprite {
 	}
 
 	public static class Bright extends FistSprite {
+
+		public Bright() {
+			super();
+
+			int c = 0;
+
+			texture( Assets.Sprites.MEPHI_SINGER );
+
+			TextureFilm frames = new TextureFilm( texture, 58, 42 );
+
+			idle = new Animation( 2, true );
+			idle.frames( frames, c+0 );
+
+			run = new Animation( 8, true );
+			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+
+			attack = new Animation( 18, false );
+			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+
+			zap = new Animation( 8, false );
+			zap.frames( frames, c+11 );
+
+			die = new Animation( 10, false );
+			die.frames( frames, c+0 );
+
+			play( idle );
+		}
 
 		{
 			boltType = MagicMissile.RAINBOW;
@@ -284,6 +395,33 @@ public abstract class FistSprite extends MobSprite {
 	}
 
 	public static class Dark extends FistSprite {
+
+		public Dark() {
+			super();
+
+			int c = 0;
+
+			texture( Assets.Sprites.EMPEROR_BLADE );
+
+			TextureFilm frames = new TextureFilm( texture, 72, 44 );
+
+			idle = new Animation( 2, true );
+			idle.frames( frames, c+0 );
+
+			run = new Animation( 8, true );
+			run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9, c+10 );
+
+			attack = new Animation( 18, false );
+			attack.frames( frames, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19, c+20, c+21 );
+
+			zap = new Animation( 8, false );
+			zap.frames( frames, c+11 );
+
+			die = new Animation( 10, false );
+			die.frames( frames, c+0 );
+
+			play( idle );
+		}
 
 		{
 			boltType = MagicMissile.SHADOW;

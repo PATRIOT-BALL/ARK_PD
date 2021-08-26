@@ -89,14 +89,16 @@ public class Talu_BlackSnake extends Mob {
 
     @Override
     public int damageRoll() {
-        if (InvincibilityTime > 0) return Random.NormalIntRange(50, 70);
-        return Random.NormalIntRange(35, 45); }
+        if (InvincibilityTime > 0) return Random.NormalIntRange(55, 75);
+        return Random.NormalIntRange(40, 50); }
 
     @Override
     public int attackSkill(Char target) { return 50; }
 
     @Override
-    public int defenseSkill(Char enemy) { return 29; }
+    public int defenseSkill(Char enemy) {
+        if (Dungeon.level.map[this.pos] == Terrain.WATER) return 22;
+        return 32; }
 
     @Override
     public int drRoll() { return Random.NormalIntRange(0, 20); }
@@ -249,6 +251,11 @@ public class Talu_BlackSnake extends Mob {
                 PathFinder.buildDistanceMap(BurstPos, BArray.not(Dungeon.level.solid, null), 1);
                 for (int cell = 0; cell < PathFinder.distance.length; cell++) {
                     if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
+                        if (Dungeon.level.map[cell] == Terrain.WATER) {
+                            Level.set(cell, Terrain.EMPTY);
+                            GameScene.updateMap(cell);
+                            CellEmitter.get(cell).burst(Speck.factory(Speck.STEAM), 10);}
+
                         Char ch = Actor.findChar(cell);
                         if (ch != null&& !(ch instanceof Talu_BlackSnake)) {
                             ch.damage(Random.NormalIntRange(48, 72), this);
@@ -299,6 +306,10 @@ public class Talu_BlackSnake extends Mob {
             Dungeon.hero.damage(Random.NormalIntRange(6,12), this);
             Buff.affect( Dungeon.hero, Burning.class).reignite( Dungeon.hero);
 
+                Level.set(Dungeon.hero.pos, Terrain.EMPTY);
+                GameScene.updateMap(Dungeon.hero.pos);
+                CellEmitter.get(Dungeon.hero.pos).burst(Speck.factory(Speck.STEAM), 10);
+
             if (phase == 5) IgniteCooldown = 3;
             else IgniteCooldown = Random.NormalIntRange(5, 6);
 
@@ -341,6 +352,10 @@ public class Talu_BlackSnake extends Mob {
     @Override
     public int attackProc(Char enemy, int damage) {
         enemy.damage(8, this);
+
+        if (Dungeon.level.map[enemy.pos] == Terrain.WATER) {
+            damage *= 0.7f;
+        }
         return super.attackProc(enemy, damage);
     }
 

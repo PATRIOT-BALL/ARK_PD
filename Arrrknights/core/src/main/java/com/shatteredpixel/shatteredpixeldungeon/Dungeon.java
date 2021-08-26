@@ -179,6 +179,7 @@ public class Dungeon {
 	public static int mboss19;
 
 	public static int talucount;
+	public static int siesta1_bosspower;
 
 	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
 	public static boolean killcat; // 엔딩 씬에서 켈시 하극상 출현용.
@@ -234,6 +235,7 @@ public class Dungeon {
 		mboss19 = 1;
 
 		talucount = 0;
+		siesta1_bosspower = 4;
 
 		isPray = false;
 		killcat = false;
@@ -539,6 +541,7 @@ public class Dungeon {
 	private static final String PRAY    = "isPray";
 	private static final String END_CAT    = "killcat";
 	private static final String TALU    = "talucount";
+	private static final String SIEBOSS1    = "siesta1_bosspower";
 
 
 	public static void saveGame(int save ) {
@@ -563,6 +566,7 @@ public class Dungeon {
 			bundle.put (PRAY, isPray);
 			bundle.put (END_CAT, killcat);
 			bundle.put (TALU, talucount);
+			bundle.put (SIEBOSS1, siesta1_bosspower);
 
 
 			for (int d : droppedItems.keyArray()) {
@@ -724,6 +728,7 @@ public class Dungeon {
 		isPray = bundle.getBoolean(PRAY);
 		killcat = bundle.getBoolean(END_CAT);
 		talucount = bundle.getInt(TALU);
+		siesta1_bosspower = bundle.getInt(SIEBOSS1);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );

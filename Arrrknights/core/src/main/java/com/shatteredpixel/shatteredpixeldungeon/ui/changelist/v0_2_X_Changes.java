@@ -59,6 +59,13 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
         "_블레이즈_의 _전술 방어막_ 특성의 방어 상승치가 1로 고정되었으며, 최대 상승치가 6에서 _4-8_로 변경되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "불사의 검은 뱀 변경",
+                "공격력이 35-45에서 _40-50_으로 상승했습니다." + "\n\n" +
+                "회피율이 35에서 _32_로 감소했습니다." + "\n\n" +
+                "_점화_ 패턴과 _화염 폭발_ 패턴이 물 타일을 증발시킵니다." + "\n\n" +
+                "기본 공격이 물 위에 있는 적에게 _70%_ 의 피해를 입힙니다." + "\n\n" +
+                        "불사의 검은 뱀이 물 위에 있다면 회피율이 _30%_ 감소합니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
@@ -93,9 +100,6 @@ public class v0_2_X_Changes {
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "리유니온 너프",
-                "_불사의 검은 뱀_ : 회피율이 35에서 29로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
                 "_로즈몬티스_의 _몸이 가벼운 식사_의 부유 지속 턴이 10-15턴에거 _5-10턴_으로 감소했습니다." + "\n\n" +
