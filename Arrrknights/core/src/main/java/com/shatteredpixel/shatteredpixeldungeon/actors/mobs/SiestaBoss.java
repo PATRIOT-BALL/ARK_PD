@@ -1,7 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
@@ -10,26 +9,17 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Slow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
-import com.shatteredpixel.shatteredpixeldungeon.levels.NewPrisonBossLevel;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.BombtailSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.CivilianSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CroninSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.YogSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
-import com.sun.org.apache.bcel.internal.generic.DUP;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -123,6 +113,7 @@ public class SiestaBoss extends Mob {
         return HP > 0 || Life > 0;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void notice() {
         if (phase == 0) yell(Messages.get(this, "notice"));
@@ -151,7 +142,6 @@ public class SiestaBoss extends Mob {
             93,124,130,174,
             182, 226, 232, 263,
             275, 285, 307, 321};
-
 
     private void Skill() {
         int A1pos;
@@ -251,20 +241,14 @@ public class SiestaBoss extends Mob {
         // 흑요성을 사용할 때마다 능력이 1개씩 무효화됨
         if (Dungeon.siesta1_bosspower > 3) {
             Buff.affect(Dungeon.hero, Paralysis.class, 2f);
+        }
+        if (Dungeon.siesta1_bosspower > 2) {
             Buff.affect(Dungeon.hero, Slow.class, 4f);
-            Buff.affect(Dungeon.hero, Blindness.class, 5f);
-            Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero);
         }
-        else if (Dungeon.siesta1_bosspower > 2) {
-            Buff.affect(Dungeon.hero, Slow.class, 4f);
+        if (Dungeon.siesta1_bosspower > 1) {
             Buff.affect(Dungeon.hero, Blindness.class, 5f);
-            Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero);
         }
-        else if (Dungeon.siesta1_bosspower > 1) {
-            Buff.affect(Dungeon.hero, Blindness.class, 5f);
-            Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero);
-        }
-        else if (Dungeon.siesta1_bosspower > 0) {
+        if (Dungeon.siesta1_bosspower > 0) {
             Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero);
         }
 
@@ -304,7 +288,6 @@ public class SiestaBoss extends Mob {
         TelType = bundle.getInt(TTYPE);
 
     }
-
 
     public static class BossAgent extends Agent {
 
