@@ -237,8 +237,9 @@ public class R4C extends MeleeWeapon {
         }
 
         if (Dungeon.hero.buff(TimekeepersHourglass.timeStasis.class) != null) {
-            Buff.detach(Dungeon.hero,TimekeepersHourglass.timeStasis.class);
-        }
+            if (Dungeon.hero.buff(TimekeepersHourglass.timeFreeze.class) != null) {
+                Buff.detach(Dungeon.hero,TimekeepersHourglass.timeFreeze.class);
+            }
 
         bullet -=1;
         updateQuickslot();
