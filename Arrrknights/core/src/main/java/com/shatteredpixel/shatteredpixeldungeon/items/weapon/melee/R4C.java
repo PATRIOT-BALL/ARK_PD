@@ -16,6 +16,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
@@ -233,6 +234,10 @@ public class R4C extends MeleeWeapon {
 
         } else {
             Dungeon.level.pressCell(bolt.collisionPos);
+        }
+
+        if (Dungeon.hero.buff(TimekeepersHourglass.timeStasis.class) != null) {
+            Buff.detach(Dungeon.hero,TimekeepersHourglass.timeStasis.class);
         }
 
         bullet -=1;
