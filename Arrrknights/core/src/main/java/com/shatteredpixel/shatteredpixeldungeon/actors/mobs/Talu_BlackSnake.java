@@ -182,7 +182,7 @@ public class Talu_BlackSnake extends Mob {
         }
 
         if (Dungeon.level.map[this.pos] == Terrain.WATER) {
-            HP = Math.min(1, HP-9);
+            damage(8, this);
         }
 
         if (InvincibilityTime > 0) {
