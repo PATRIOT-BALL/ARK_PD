@@ -191,11 +191,14 @@ public class DP27 extends MeleeWeapon {
         Char ch = Actor.findChar( bolt.collisionPos );
         if (ch != null) {
             int dmg = Random.Int(shotmin(), shotmax());
+
+            // 사격 스롯 판정
             if (Dungeon.hero.subClass == HeroSubClass.SNIPER) dmg -= (ch.drRoll() / 2);
             else dmg -= ch.drRoll();
+
             if (ch.hit(Dungeon.hero, ch, false)) {
                 if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
-                    dmg *= 1 + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) / 10); }
+                    dmg *= 1f + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.15f); }
 
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
@@ -207,11 +210,6 @@ public class DP27 extends MeleeWeapon {
                 // 사격 그레이스롯 판정
                 int bonusTurns = Dungeon.hero.hasTalent(Talent.SHARED_UPGRADES) ? this.buffedLvl() : 0;
                 if (Dungeon.hero.subClass == HeroSubClass.SNIPER) Buff.prolong(Dungeon.hero, SnipersMark.class, SnipersMark.DURATION).set(ch.id(), bonusTurns);
-
-                // 신속 레드 판정
-                if (Dungeon.hero.pointsInTalent(Talent.SPEEDY_STEALTH) >= 2 && ch.isAlive()) {
-                    Buff.affect(ch, Paralysis.class, 1f);
-                }
 
                 // 연계 블레이즈 판정
                 if (Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
