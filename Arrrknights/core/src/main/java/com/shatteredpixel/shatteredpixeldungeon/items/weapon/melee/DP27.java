@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
@@ -241,6 +242,8 @@ public class DP27 extends MeleeWeapon {
         if (buff != null) buff.detach();
         buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
         if (buff != null) buff.detach();
+
+        Invisibility.dispel();
 
         bullet -=1;
         updateQuickslot();

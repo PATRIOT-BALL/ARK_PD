@@ -33,10 +33,12 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -244,6 +246,11 @@ public class Spriteex extends MissileWeapon {
             CellEmitter.center(target).burst(BlastParticle.FACTORY, 10);
             Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);
         }
+
+        Buff buff = Dungeon.hero.buff(TimekeepersHourglass.timeFreeze.class);
+        if (buff != null) buff.detach();
+        buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
+        if (buff != null) buff.detach();
 
         Invisibility.dispel();
         if (Dungeon.hero.buff(MeatPower_Stewed.class) != null) curUser.spendAndNext(0.7f);
