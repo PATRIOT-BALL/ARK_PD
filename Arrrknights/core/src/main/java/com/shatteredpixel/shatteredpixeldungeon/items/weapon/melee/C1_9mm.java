@@ -231,8 +231,8 @@ public class C1_9mm extends MeleeWeapon {
             Dungeon.level.pressCell(bolt.collisionPos);
         }
 
-        if (Dungeon.hero.buff(TimekeepersHourglass.timeFreeze.class) != null) {
-            Buff.detach(Dungeon.hero,TimekeepersHourglass.timeFreeze.class);
+        if (Dungeon.hero.buff(TimekeepersHourglass.timeStasis.class) != null) {
+           Buff.detach(Dungeon.hero,TimekeepersHourglass.timeStasis.class);
         }
 
         bullet -=1;
