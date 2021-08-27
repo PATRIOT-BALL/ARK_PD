@@ -1239,8 +1239,8 @@ items.quest.token4.suc="She sees Ace and Scout, and remembers the elite operator
 // 시에스타 Part1
 items.quest.obsidian.name=Siesta Obsidian
 items.quest.obsidian.desc=Siesta`s Specialties. When used, it becomes possible to resist the mayor's ability,
-items.quest.obsidian.ac_add=사용
-items.quest.obsidian.suc=크로닌의 도구에 대한 저항력이 상승한 것 같다.
+items.quest.obsidian.ac_add=ADD
+items.quest.obsidian.suc=Resistance to tools used by the mayor has increased.
 
 
 
@@ -2121,6 +2121,7 @@ items.weapon.melee.scimitar.self_target=You can't target yourself!
 
 items.weapon.melee.spear.name=carbine cavalry spear
 items.weapon.melee.spear.ac_zap=transform
+items.weapon.melee.spear.stats_desc=Attack Speed 67 ~ 100%
 items.weapon.melee.spear.desc=A spear made for the short Grani. It is possible to increase the length of the window, but it is said that it is not used because it is inconvenient to use...\n\nBasic\nGrani so cute
 items.weapon.melee.spear.desc_mode=A spear made for the short Grani. It is possible to increase the length of the window, but it is said that it is not used because it is inconvenient to use...\n\n_Transform_\nincreases the attack range by 2 and increases attack power, but decreases attack speed.
 items.weapon.melee.enfild.name=Lee-Enfield

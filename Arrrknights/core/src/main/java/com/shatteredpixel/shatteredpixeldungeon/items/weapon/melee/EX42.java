@@ -19,6 +19,8 @@ public class EX42 extends MeleeWeapon {
         hitSound = Assets.Sounds.HIT_WALL1;
         hitSoundPitch = 0.65f;
 
+        defaultAction = AC_ZAP;
+
         tier = 1;
 
         bones = false;
@@ -62,6 +64,7 @@ public class EX42 extends MeleeWeapon {
             if (swiching == true) {swiching = false; RCH = 1; ACC = 1f;}
             else {swiching = true; RCH = 50; ACC = 3f;}
 
+            updateQuickslot();
             curUser.spendAndNext(0.5f);}
     }
 
@@ -70,6 +73,14 @@ public class EX42 extends MeleeWeapon {
         if (swiching) return Messages.get(this, "desc_mode");
         else return Messages.get(this, "desc");
     }
+
+    @Override
+    public String status() {
+        if (this.isIdentified()) {
+            if (swiching) return "EX";
+            else return "NM";
+        }
+        else return null;}
 
     private static final String SWICH = "swiching";
     private static final String RCHSAVE = "RCH";

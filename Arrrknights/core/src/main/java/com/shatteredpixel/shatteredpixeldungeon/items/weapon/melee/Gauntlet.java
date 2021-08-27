@@ -43,6 +43,8 @@ public class Gauntlet extends MeleeWeapon {
 		hitSound = Assets.Sounds.HIT_PUNCH;
 		hitSoundPitch = 1.2f;
 
+		defaultAction = AC_ZAP;
+
 		tier = 5;
 		DLY = 0.2f; //2x speed
 	}
@@ -75,6 +77,7 @@ public class Gauntlet extends MeleeWeapon {
 		if (swiching == true) {swiching = false; DLY = 0.2f;}
 		else {swiching = true; DLY = 0.33f;}
 
+		updateQuickslot();
 		curUser.spendAndNext(0.5f);}
 		}
 
@@ -83,6 +86,14 @@ public class Gauntlet extends MeleeWeapon {
 		if (swiching) return Messages.get(this, "desc_mode");
 		else return Messages.get(this, "desc");
 	}
+
+	@Override
+	public String status() {
+		if (this.isIdentified()) {
+			if (swiching) return "EX";
+			else return "NM";
+		}
+		else return null;}
 
 	private static final String SWICH = "swiching";
 	private static final String RCHSAVE = "RCH";

@@ -36,6 +36,8 @@ public class Spear extends MeleeWeapon {
 		hitSound = Assets.Sounds.HIT_SPEAR;
 		hitSoundPitch = 0.9f;
 
+		defaultAction = AC_ZAP;
+
 		tier = 2;
 		DLY = 1f; //0.67x speed
 		RCH = 1;    //extra reach
@@ -82,6 +84,14 @@ public class Spear extends MeleeWeapon {
 		if (swiching) return Messages.get(this, "desc_mode");
 		else return Messages.get(this, "desc");
 	}
+
+	@Override
+	public String status() {
+		if (this.isIdentified()) {
+			if (swiching) return "EX";
+			else return "NM";
+		}
+		else return null;}
 
 	private static final String SWICH = "swiching";
 	private static final String RCHSAVE = "RCH";
