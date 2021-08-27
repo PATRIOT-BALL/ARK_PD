@@ -49,7 +49,7 @@ public class Firebomb extends Bomb {
 				if (Dungeon.level.pit[i])
 					GameScene.add(Blob.seed(i, 2, Fire.class));
 				else
-					GameScene.add(Blob.seed(i, 10, Fire.class));
+					GameScene.add(Blob.seed(i, 15, Fire.class));
 				CellEmitter.get(i).burst(FlameParticle.FACTORY, 5);
 			}
 		}

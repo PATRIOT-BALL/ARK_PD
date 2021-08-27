@@ -45,7 +45,7 @@ public class FrostBomb extends Bomb {
 		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.solid, null ), 2 );
 		for (int i = 0; i < PathFinder.distance.length; i++) {
 			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
-				GameScene.add(Blob.seed(i, 10, Freezing.class));
+				GameScene.add(Blob.seed(i, 15, Freezing.class));
 				Char ch = Actor.findChar(i);
 				if (ch != null){
 					Buff.affect(ch, Frost.class, 2f);

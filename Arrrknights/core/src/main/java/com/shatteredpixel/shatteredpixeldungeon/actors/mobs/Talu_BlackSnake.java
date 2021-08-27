@@ -280,7 +280,7 @@ public class Talu_BlackSnake extends Mob {
         else if (InvincibilityCooldown <= 0 && phase >= 4) {
             if (phase == 5) InvincibilityTime = 8;
             else InvincibilityTime = 5;
-            InvincibilityCooldown = 20;
+            InvincibilityCooldown = 22;
 
             yell(Messages.get(this, Random.element( LINE_KEYS )));
             Sample.INSTANCE.play( Assets.Sounds.BLAST, 3f, 0.25f );
@@ -310,11 +310,12 @@ public class Talu_BlackSnake extends Mob {
             Dungeon.hero.damage(Random.NormalIntRange(6,12), this);
             Buff.affect( Dungeon.hero, Burning.class).reignite( Dungeon.hero);
 
+            if (phase == 5) {
                 Level.set(Dungeon.hero.pos, Terrain.EMPTY);
                 GameScene.updateMap(Dungeon.hero.pos);
                 CellEmitter.get(Dungeon.hero.pos).burst(Speck.factory(Speck.STEAM), 10);
-
-            if (phase == 5) IgniteCooldown = 3;
+                IgniteCooldown = 3;
+            }
             else IgniteCooldown = Random.NormalIntRange(5, 6);
 
             Sample.INSTANCE.play( Assets.Sounds.BURNING );

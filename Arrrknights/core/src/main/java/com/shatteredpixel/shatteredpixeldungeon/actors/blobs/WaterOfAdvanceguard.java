@@ -50,7 +50,7 @@ public class WaterOfAdvanceguard extends WellWater {
             item.identify();
         } else if (item instanceof Gamza) {
             if (Random.IntRange(0,100) < 31) { item = new Nmould();}
-            else if (Random.IntRange(0,11) < 7) {
+            else if (Random.IntRange(0,11) < 3) {
                 Sample.INSTANCE.play(Assets.Sounds.HIT_PARRY);
                 item = new Gamza();
             }
