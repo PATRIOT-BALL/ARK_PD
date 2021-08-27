@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Cannot;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -59,7 +60,11 @@ public class ImpShopkeeper extends Shopkeeper {
 	@Override
 	public void damage(int dmg, Object src) {
 	}
-	
+
+	@Override
+	public void add(Buff buff) {
+	}
+
 	@Override
 	public void flee() {
 		for (Heap heap: Dungeon.level.heaps.valueList()) {
