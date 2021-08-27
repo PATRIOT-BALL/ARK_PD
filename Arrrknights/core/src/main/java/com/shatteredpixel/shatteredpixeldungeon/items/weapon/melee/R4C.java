@@ -23,6 +23,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbol
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -236,9 +237,10 @@ public class R4C extends MeleeWeapon {
             Dungeon.level.pressCell(bolt.collisionPos);
         }
 
-        if (Dungeon.hero.buff(TimekeepersHourglass.timeStasis.class) != null) {
-            Buff.detach(Dungeon.hero,TimekeepersHourglass.timeStasis.class);
-        }
+        Buff buff = Dungeon.hero.buff(TimekeepersHourglass.timeFreeze.class);
+        if (buff != null) buff.detach();
+        buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
+        if (buff != null) buff.detach();
 
         bullet -=1;
         updateQuickslot();
