@@ -21,12 +21,15 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.bombs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -44,7 +47,7 @@ public class Flashbang extends Bomb {
 		Level l = Dungeon.level;
 		for (Char ch : Actor.chars()){
 			if (ch.fieldOfView != null && ch.fieldOfView[cell]){
-				int power = 16 - 4*l.distance(ch.pos, cell);
+				int power = 24 - 4*l.distance(ch.pos, cell);
 				if (power > 0){
 					Buff.prolong(ch, Blindness.class, power);
 					Buff.prolong(ch, Cripple.class, power);
@@ -55,6 +58,16 @@ public class Flashbang extends Bomb {
 			}
 		}
 		
+	}
+
+	@Override
+	public boolean collect() {
+		if (Dungeon.hero.belongings.getItem(Thunderbolt.class) != null
+				&& Dungeon.hero.belongings.getItem(Firebomb.class) != null
+				&& Dungeon.hero.belongings.getItem(ShrapnelBomb.class) != null
+				&& Dungeon.hero.belongings.getItem(HornOfPlenty.class) != null) {
+			Badges.validatedoll();}
+		return super.collect();
 	}
 	
 	@Override

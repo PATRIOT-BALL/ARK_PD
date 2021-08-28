@@ -23,10 +23,15 @@ package com.shatteredpixel.shatteredpixeldungeon;
 
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.Artifact;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.MagicalHolster;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.FrostBomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ShrapnelBomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
@@ -182,8 +187,9 @@ public class Badges {
 		ROSE_CHAMPION3              ( 124, true ),
 
 		//Puple
-		Get_25_STONES                (137),
+		Get_25_STONES                (136),
 		Get_40_STONES                (137),
+		DOLL_COLLECTOR                (138),
 
 		//GREEN
 		SKIN_BABOSKADI(160),
@@ -1090,6 +1096,14 @@ public class Badges {
 			saveNeeded = true;
 			local.add(Badge.PRAY);
 			displayBadge( Badge.PRAY );}
+	}
+
+	public static void validatedoll() {
+		if (!local.contains( Badge.DOLL_COLLECTOR )){
+			global.add(Badge.DOLL_COLLECTOR);
+			saveNeeded = true;
+			local.add(Badge.DOLL_COLLECTOR);
+			displayBadge( Badge.DOLL_COLLECTOR );}
 	}
 	
 	private static void displayBadge( Badge badge ) {

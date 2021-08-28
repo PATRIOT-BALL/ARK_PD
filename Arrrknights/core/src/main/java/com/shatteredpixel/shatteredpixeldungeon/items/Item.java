@@ -39,11 +39,16 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Kaltsit;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.FrostBomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ShrapnelBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -237,6 +242,15 @@ public class Item implements Bundlable {
 		Dungeon.quickslot.replacePlaceholder(this);
 		updateQuickslot();
 		Collections.sort( items, itemComparator );
+
+		if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
+		if (Dungeon.hero.belongings.getItem(Firebomb.class) != null
+				&& Dungeon.hero.belongings.getItem(FrostBomb.class) != null
+				&& Dungeon.hero.belongings.getItem(Thunderbolt.class) != null
+				&& Dungeon.hero.belongings.getItem(ShrapnelBomb.class) != null
+				&& Dungeon.hero.belongings.getItem(HornOfPlenty.class) != null) {
+			Badges.validatedoll();}}
+
 		return true;
 
 	}
