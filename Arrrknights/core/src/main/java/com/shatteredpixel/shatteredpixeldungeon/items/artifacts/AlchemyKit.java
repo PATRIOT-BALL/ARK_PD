@@ -260,6 +260,7 @@ public class AlchemyKit extends Artifact {
         @Override
         public void charge(Hero target, float amount) {
             charge += Math.round(3*amount);
+            charge = Math.min(charge, chargeCap);
             updateQuickslot();
         }
     }
