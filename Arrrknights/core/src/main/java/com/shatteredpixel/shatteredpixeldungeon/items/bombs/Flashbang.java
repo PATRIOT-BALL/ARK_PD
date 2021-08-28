@@ -59,16 +59,6 @@ public class Flashbang extends Bomb {
 		}
 		
 	}
-
-	@Override
-	public boolean collect() {
-		if (Dungeon.hero.belongings.getItem(Thunderbolt.class) != null
-				&& Dungeon.hero.belongings.getItem(Firebomb.class) != null
-				&& Dungeon.hero.belongings.getItem(ShrapnelBomb.class) != null
-				&& Dungeon.hero.belongings.getItem(HornOfPlenty.class) != null) {
-			Badges.validatedoll();}
-		return super.collect();
-	}
 	
 	@Override
 	public int value() {
