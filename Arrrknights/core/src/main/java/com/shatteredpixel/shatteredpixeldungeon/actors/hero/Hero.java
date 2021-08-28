@@ -297,7 +297,7 @@ public class Hero extends Char {
         if (boostHP) {
             HP += Math.max(HT - curHT, 0);
         }
-        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 25 && Dungeon.bossLevel())
+        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 25 && Dungeon.bossLevel() && Dungeon.talucount < 4)
             HT /= 2;
         HP = Math.min(HP, HT);
     }

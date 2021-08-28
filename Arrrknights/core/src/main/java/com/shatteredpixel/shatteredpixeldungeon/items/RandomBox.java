@@ -72,14 +72,14 @@ public class RandomBox extends Item {
         if (chance > 60)
         {
             Item n = Generator.random( Generator.Category.SKL_T3 );
-            n.doPickUp(Dungeon.hero);
+            Dungeon.level.drop(n, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
         }
         else if (chance > Random.IntRange(20,60)){
             Item n = Generator.random( Generator.Category.SKL_T2 );
-            n.doPickUp(Dungeon.hero);
+            Dungeon.level.drop(n, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
         }
         else { Item n = Generator.random( Generator.Category.SKL_T1 );
-            n.doPickUp(Dungeon.hero);
+            Dungeon.level.drop(n, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
         }
     }
 
@@ -113,7 +113,7 @@ public class RandomBox extends Item {
         else n.level(0);
 
 
-        n.doPickUp(Dungeon.hero);
+        Dungeon.level.drop(n, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
     }
 
     @Override
