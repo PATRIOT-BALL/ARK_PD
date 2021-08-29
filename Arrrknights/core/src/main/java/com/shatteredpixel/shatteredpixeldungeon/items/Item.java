@@ -41,9 +41,14 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ArcaneBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Flashbang;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.FrostBomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.HolyBomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ShockBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ShrapnelBomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.WoollyBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
@@ -250,6 +255,10 @@ public class Item implements Bundlable {
 			if (Dungeon.hero.belongings.getItem(Thunderbolt.class) != null) count++;
 			if (Dungeon.hero.belongings.getItem(ShrapnelBomb.class) != null) count++;
 			if (Dungeon.hero.belongings.getItem(HornOfPlenty.class) != null) count++;
+			if (Dungeon.hero.belongings.getItem(Flashbang.class) != null) count++;
+			if (Dungeon.hero.belongings.getItem(HolyBomb.class) != null) count++;
+			if (Dungeon.hero.belongings.getItem(WoollyBomb.class) != null) count++;
+			if (Dungeon.hero.belongings.getItem(ShockBomb.class) != null) count++;
 
 			if (count >= 5) Badges.validatedoll(); }
 

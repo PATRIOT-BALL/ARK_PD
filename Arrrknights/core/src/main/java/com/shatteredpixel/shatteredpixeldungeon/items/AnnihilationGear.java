@@ -81,7 +81,7 @@ public class AnnihilationGear extends Item {
     @Override
     public String desc() {
         if (arts != 0) {
-            if (curUser.subClass == HeroSubClass.DESTROYER) {
+            if (Dungeon.hero.subClass == HeroSubClass.DESTROYER) {
                 switch (arts) {
                     case 0:
                     default:
@@ -93,7 +93,7 @@ public class AnnihilationGear extends Item {
                     case 3:
                         return Messages.get(this, "desc_arts3_destroy", min(), max());
                 }
-            } else if (curUser.subClass == HeroSubClass.GUARDIAN) {
+            } else if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN) {
                 switch (arts) {
                     case 0:
                     default:
