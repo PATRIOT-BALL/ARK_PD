@@ -70,7 +70,7 @@ public class Agent extends Mob {
             enemy.sprite.bloodBurstA( sprite.center(), dmg );
             enemy.sprite.flash();
 
-            if (enemy instanceof Hero) Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1f, Random.Float(0.96f, 1.05f));
+            if (Dungeon.level.heroFOV[pos]) Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1f, Random.Float(0.96f, 1.05f));
 
             if (enemy == Dungeon.hero && !enemy.isAlive()) {
                 Dungeon.fail( getClass() );
