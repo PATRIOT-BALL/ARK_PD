@@ -255,6 +255,12 @@ public class Bestiary {
 				} else if (cl == Scorpio.class) {
 					cl = Acidic.class;
 				}
+				else if (cl == Ergate.class) {
+					cl = ErgateElite.class;
+				}
+				else if (cl == Agent.class) {
+					cl = Agent_Elite.class;
+				}
 				rotation.set(i, cl);
 			}
 		}
