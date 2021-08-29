@@ -249,18 +249,21 @@ public class Item implements Bundlable {
 		Collections.sort( items, itemComparator );
 
 		if (Dungeon.hero != null && Dungeon.hero.isAlive()) {
-			int count = 0;
-		if (Dungeon.hero.belongings.getItem(Firebomb.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(FrostBomb.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(Thunderbolt.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(ShrapnelBomb.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(HornOfPlenty.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(Flashbang.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(HolyBomb.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(WoollyBomb.class) != null) count++;
-			if (Dungeon.hero.belongings.getItem(ShockBomb.class) != null) count++;
+			if (!Badges.isdollcollector()) {
+				int count = 0;
+				if (Dungeon.hero.belongings.getItem(Firebomb.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(FrostBomb.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(Thunderbolt.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(ShrapnelBomb.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(HornOfPlenty.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(Flashbang.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(HolyBomb.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(WoollyBomb.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(ShockBomb.class) != null) count++;
 
-			if (count >= 5) Badges.validatedoll(); }
+				if (count >= 5) Badges.validatedoll();
+			}
+		}
 
 		return true;
 

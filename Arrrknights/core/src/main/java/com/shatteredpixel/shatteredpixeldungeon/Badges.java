@@ -1105,7 +1105,12 @@ public class Badges {
 			local.add(Badge.DOLL_COLLECTOR);
 			displayBadge( Badge.DOLL_COLLECTOR );}
 	}
-	
+
+	public static boolean isdollcollector() {
+		return local.contains( Badge.DOLL_COLLECTOR) ;
+	}
+
+
 	private static void displayBadge( Badge badge ) {
 		
 		if (badge == null) {
