@@ -93,7 +93,7 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "투척 무기 버프?",
                 "_리스캄 인형(구 썬더볼트)_를 사격 무기의 탄약으로 사용할 경우, 해당 사격 무기에 영구적인 추가 기능을 부여합니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "폭탄류 버프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.BOMB), "폭탄류 버프",
                 "모든 폭탄류 아이템의 피해량이 소폭 상승했습니다." + "\n\n" +
                 "_이프리트 인형_, _서리별 인형_, _미보 -섬광폭발_의 효과 지속시간이 50%상승했습니다." + "\n\n" +
                 "_THRM-EX_의 폭발에 휘말린 대상들은 취약에 걸립니다." + "\n\n" +

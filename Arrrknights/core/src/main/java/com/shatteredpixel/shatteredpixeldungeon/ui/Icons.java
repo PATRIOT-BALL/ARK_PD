@@ -112,7 +112,8 @@ public enum Icons {
 	ARTI,
 	POTION,
 	STONE,
-	SCROLL;
+	SCROLL,
+	BOMB;
 
 
 
@@ -352,6 +353,9 @@ public enum Icons {
 				break;
 			case SCROLL:
 				icon.frame(icon.texture.uvRect(68, 168, 86, 188));
+				break;
+			case BOMB:
+				icon.frame(icon.texture.uvRect(86, 168, 105, 189));
 				break;
 
 
