@@ -22,12 +22,25 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.bombs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Sheep;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
 import com.watabou.noosa.audio.Sample;
@@ -42,27 +55,40 @@ public class WoollyBomb extends Bomb {
 	
 	@Override
 	public void explode(int cell) {
-		super.explode(cell);
-		
-		PathFinder.buildDistanceMap( cell, BArray.not( Dungeon.level.solid, null ), 2 );
-		for (int i = 0; i < PathFinder.distance.length; i++) {
-			if (PathFinder.distance[i] < Integer.MAX_VALUE) {
-				if (Dungeon.level.insideMap(i)
-						&& Actor.findChar(i) == null
-						&& !(Dungeon.level.pit[i])) {
-					Sheep sheep = new Sheep();
-					sheep.lifespan = Random.NormalIntRange( 8, 16 );
-					sheep.pos = i;
-					Dungeon.level.occupyCell(sheep);
-					GameScene.add(sheep);
-					CellEmitter.get(i).burst(Speck.factory(Speck.WOOL), 4);
+
+		PathFinder.buildDistanceMap(cell, BArray.not(Dungeon.level.solid, null), 2);
+		for (int cell2 = 0; cell2 < PathFinder.distance.length; cell2++) {
+			if (PathFinder.distance[cell2] < Integer.MAX_VALUE) {
+				Char mob = Actor.findChar(cell2);
+				CellEmitter.get(cell2).burst(ShadowParticle.CURSE, 5);
+
+				if (mob instanceof Hero) {
+					Buff.affect(mob, Hex.class, 40f);
+					Buff.affect(mob, Weakness.class, 40f);
+				} else if (mob instanceof Mob) { if (mob.alignment != Char.Alignment.ALLY) {
+						if (!mob.isImmune(Corruption.class)) {
+							Buff.affect(mob, Corruption.class);
+
+							if (mob.buff(Corruption.class) != null) {
+								if (mob.isAlive() && !mob.isImmune(Corruption.class)) { ((Mob)mob).rollToDropLoot(); }
+								Statistics.enemiesSlain++;
+								Badges.validateMonstersSlain();
+								Statistics.qualifiedForNoKilling = false;
+								if (((Mob) mob).EXP > 0 && curUser.lvl <= ((Mob) mob).maxLvl) {
+									curUser.sprite.showStatus(CharSprite.POSITIVE, Messages.get(mob, "exp", ((Mob) mob).EXP));
+									curUser.earnExp(((Mob) mob).EXP, mob.getClass());
+								} else {
+									curUser.earnExp(0, mob.getClass());
+								}
+							}
+						}
+					}
 				}
 			}
 		}
-		
+
 		Sample.INSTANCE.play(Assets.Sounds.PUFF);
-		Sample.INSTANCE.play(Assets.Sounds.SHEEP);
-		
+		Sample.INSTANCE.play(Assets.Sounds.CURSED);
 	}
 	
 	@Override

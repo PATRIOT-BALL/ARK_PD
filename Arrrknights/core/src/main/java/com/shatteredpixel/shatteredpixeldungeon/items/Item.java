@@ -46,6 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Flashbang;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.FrostBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.HolyBomb;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Noisemaker;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ShockBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ShrapnelBomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.WoollyBomb;
@@ -260,6 +261,7 @@ public class Item implements Bundlable {
 				if (Dungeon.hero.belongings.getItem(HolyBomb.class) != null) count++;
 				if (Dungeon.hero.belongings.getItem(WoollyBomb.class) != null) count++;
 				if (Dungeon.hero.belongings.getItem(ShockBomb.class) != null) count++;
+				if (Dungeon.hero.belongings.getItem(Noisemaker.class) != null) count++;
 
 				if (count >= 5) Badges.validatedoll();
 			}

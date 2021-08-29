@@ -431,7 +431,7 @@ items.armor.glyphs.obfuscation.name=흐릿함의 %s
 items.armor.glyphs.obfuscation.desc=이 아츠는 착용자를 눈에 잘 띄지 않게 합니다.
 
 items.armor.glyphs.potential.name=전위의 %s
-items.armor.glyphs.potential.rankings_desc=사망 원인: 전위의 상형문자
+items.armor.glyphs.potential.rankings_desc=사망 원인: 전위의 아츠
 items.armor.glyphs.potential.desc=이 아츠는 공격받을 때 전기 에너지를 충전하며, 발동할 때 착용자의 아츠 스태프에 SP를 제공합니다.
 
 items.armor.glyphs.repulsion.name=반발의 %s
@@ -477,7 +477,7 @@ items.armor.armor.cursed_worn=이 갑옷은 저주받았기 때문에, 당신은
 items.armor.armor.cursed=당신은 악의로 가득 찬 아츠가 이 갑옷에 깃든 것을 느낍니다.
 items.armor.armor.not_cursed=이 갑옷에는 악의적인 아츠가 없습니다.
 items.armor.armor.seal_attached=블레이즈의 행운의 부적이 이 갑옷에 붙어 있습니다.
-items.armor.armor$glyph.glyph=상형문자
+items.armor.armor$glyph.glyph=아츠
 items.armor.armor$glyph.killed=%s에 의해 죽었습니다...
 
 items.armor.classarmor.not_equipped=이 갑옷의 능력을 발동하기 위해선 이걸 먼저 입어야만 합니다!
@@ -846,8 +846,8 @@ items.bombs.arcanebomb.name=THRM-EX
 items.bombs.arcanebomb.desc=이 로봇은 아츠의 힘과 융합되었으며, 작동시키면 잠시 충전 된 후 살카즈 저주술사의 공격과 비슷한 강력한 폭발을 일으킵니다. 이 폭발은 방어를 관통하며 일반적인 미보보다 넓은 범위에 피해를 줍니다. \n\n_로큰롤!_
 
 items.bombs.bomb.name=자폭용 미보
-items.bombs.bomb.ac_lightthrow=폭탄 투척!
-items.bombs.bomb.snuff_fuse=당신은 미보의 폭발 타이머를 재빨리 껐다.
+items.bombs.bomb.ac_lightthrow=투척!
+items.bombs.bomb.snuff_fuse=당신은 폭발 타이머를 재빨리 껐다.
 items.bombs.bomb.ondeath=폭발로 사망
 items.bombs.bomb.rankings_desc=폭발로 사망
 items.bombs.bomb.desc=화약이 잔뜩 들어있는 라인랩의 로봇입니다. 당연히 폭발하면 주위의 모든 것에게 피해를 줄 것입니다.
@@ -859,30 +859,30 @@ items.bombs.bomb$doublebomb.desc=화약이 잔뜩 들어있는 라인랩의 로�
 items.bombs.firebomb.name=이프리트 인형
 items.bombs.firebomb.desc=이 불속성 소녀의 형상을 한 인형은 폭발하면서 주위를 불태우도록 개조되었습니다.
 
-items.bombs.flashbang.name=미보 -섬광폭발
-items.bombs.flashbang.desc=이 개조된 미보는 폭발과 동시에 엄청난 섬광을 내뿜습니다. 주변의 모든 것들이 방향 감각을 잃을 것이며, 그 강도는 폭탄과의 거리에 따라 달라집니다.
+items.bombs.flashbang.name=샤이닝 인형
+items.bombs.flashbang.desc=이 빛나는 인형은 폭발과 동시에 엄청난 섬광을 내뿜습니다. 주변의 모든 것들이 방향 감각을 잃을 것이며, 그 강도는 폭탄과의 거리에 따라 달라집니다.
 
 items.bombs.frostbomb.name=서리별 인형
 items.bombs.frostbomb.desc=이 그리운 느낌의 인형은 폭발할 때 폭발 범위보다 넓은 지역을 오랫동안 냉기 돌풍으로 뒤덮도록 개조되었습니다.
 
-items.bombs.holybomb.name=라인랩의 신성한 미보탄
-items.bombs.holybomb.desc=이 미보는 폭발할 때 폭발 범위보다 넓은 지역에 신성한 빛을 내뿜어, 살카즈 적에게 추가 피해를 줍니다.
+items.bombs.holybomb.name=스펙터 인형
+items.bombs.holybomb.desc=이 상어 인형은 폭발할 때 폭발 범위보다 넓은 지역에 신성한 빛을 내뿜어, 살카즈 적에게 추가 피해를 줍니다.
 
-items.bombs.noisemaker.name=미보 -소음기
-items.bombs.noisemaker.desc=이 개조된 미보는 도화선이 다 타들어감과 동시에 반복적으로 시끄러운 소음을 낼 것입니다. 누군가가 폭탄을 건드리면, 폭발할 것입니다!
-items.bombs.noisemaker.desc_burning=이 미보는 째깍거리고 있으며, 누군가가 접근하면 폭발할 것입니다!
+items.bombs.noisemaker.name=크루스 인형
+items.bombs.noisemaker.desc=이 실눈 인형은 도화선이 다 타들어감과 동시에 모든 존재들에게 혐오감을 부추깁니다. 누군가가 인형을 건드리면, 폭발할 것입니다!
+items.bombs.noisemaker.desc_burning=코코다요
 
-items.bombs.shockbomb.name=미보 -전격폭발
-items.bombs.shockbomb.desc=이 미보는 폭발할 때 여러 갈래의 전기를 방출합니다. 주위에 있는 모든 것들이 피해를 입고 기절할 것이며, 그 강도는 폭탄과의 거리에 따라 달라집니다.
+items.bombs.shockbomb.name=레이즈 인형
+items.bombs.shockbomb.desc=이 좌천된 인형은 폭발할 때 여러 갈래의 전기를 방출합니다. 주위에 있는 모든 것들이 피해를 입고 기절할 것이며, 그 강도는 폭탄과의 거리에 따라 달라집니다.
 
 items.bombs.regrowthbomb.name=Lancet-2
 items.bombs.regrowthbomb.desc=이 로봇은 폭발하는 대신 일정 범위 내에 생명의 영약을 흩뿌릴 것입니다. 흩뿌려진 범위 내의 구역은 풀과 식물이 빠르게 자라날 것이며, 당신과 범위 내의 아군도 함께 치유될 것입니다. \n\n_미안해 Lancet-2! 클로저가 곧 고쳐줄거야.._
 
-items.bombs.shrapnelbomb.name=파편 미보
-items.bombs.shrapnelbomb.desc=이 미보는 머드락의 갑옷에서 떨어져나온 쇳조각으로 강화되어 격발하면 사방에 쇳조각을 발사하여 엄청나게 넓은 범위에 피해를 줍니다. 터트리기 전에 반드시 어딘가에 숨어 있어야 할 것입니다...
+items.bombs.shrapnelbomb.name=머드락 인형
+items.bombs.shrapnelbomb.desc=이 인형은 머드락의 갑옷에서 떨어져나온 쇳조각으로 강화되어 격발하면 사방에 쇳조각을 발사하여 엄청나게 넓은 범위에 피해를 줍니다. 터트리기 전에 반드시 어딘가에 숨어 있어야 할 것입니다...
 
-items.bombs.woollybomb.name=짜증나는 미보
-items.bombs.woollybomb.desc=이 개조된 미보는 폭발 이후 시민의 거울상을 소환합니다. 시민들은 이동을 막고 일정 시간동안 형태를 유지할 것입니다.
+items.bombs.woollybomb.name=염소 인형
+items.bombs.woollybomb.desc=이 게임용 일러스트에서 탈출한 인형은 시민을 소환합니다. 시민들은 이동을 막고 일정 시간동안 형태를 유지할 것입니다. 짜증납니다.
 
 ###food
 items.food.berry.name=체르노보그 열매
@@ -1413,13 +1413,13 @@ items.scrolls.scrolloftransmutation.name=변환의 일기장
 items.scrolls.scrolloftransmutation.inv_title=변환할 아이템을 선택하세요
 items.scrolls.scrolloftransmutation.nothing=뭔가 바뀐 건 없어 보인다.
 items.scrolls.scrolloftransmutation.morph=당신의 아이템이 다른 것으로 변했다!
-items.scrolls.scrolloftransmutation.desc=이 일기장은 강력한 변환 아츠가 담겨 있습니다. 특정한 아이템에 사용하면 같은 종류의 다른 아이템으로 변환시킵니다. 변환한 아이템의 강화 수치, 아츠, 상형문자가 보존됩니다.
+items.scrolls.scrolloftransmutation.desc=이 일기장은 강력한 변환 아츠가 담겨 있습니다. 특정한 아이템에 사용하면 같은 종류의 다른 아이템으로 변환시킵니다. 변환한 아이템의 강화 수치, 아츠가 보존됩니다.
 
 items.scrolls.scrollofupgrade.name=강화의 일기장
 items.scrolls.scrollofupgrade.inv_title=강화할 아이템을 선택하세요
 items.scrolls.scrollofupgrade.weaken_curse=강화의 일기장이 아이템의 저주를 약화했다.
 items.scrolls.scrollofupgrade.remove_curse=강화의 일기장이 아이템의 저주를 없애버렸다!
-items.scrolls.scrollofupgrade.desc=이 일기장은 하나의 아이템을 강화하여 품질을 높입니다. 아츠 스태프는 위력이 상승하고 충전량이 증가하며, 무기는 더 높은 피해를 입히고, 방어구는 더 높은 피해량을 흡수할 수 있으며, 반지는 그 효과가 강화됩니다.\n\n이 일기장은 저주 해제의 일기장보다는 못하지만, 저주를 약화시키거나 심지어는 저주를 완전히 없앨 수도 있습니다.\n\n이 일기장의 아츠는 무기에 깃든 아츠나 갑옷에 깃든 상형문자와 마찰을 일으켜 아츠를 사그라지게 할 수 있습니다. 이 확률은 +4 이상의 장비를 강화할 때부터 생기며, +8 이상의 장비에서는 100%입니다.
+items.scrolls.scrollofupgrade.desc=이 일기장은 하나의 아이템을 강화하여 품질을 높입니다. 아츠 스태프는 위력이 상승하고 충전량이 증가하며, 무기는 더 높은 피해를 입히고, 방어구는 더 높은 피해량을 흡수할 수 있으며, 반지는 그 효과가 강화됩니다.\n\n이 일기장은 저주 해제의 일기장보다는 못하지만, 저주를 약화시키거나 심지어는 저주를 완전히 없앨 수도 있습니다.\n\n이 일기장의 아츠는 무기에 깃든 아츠나 갑옷에 깃든 아츠와 마찰을 일으켜 아츠를 사그라지게 할 수 있습니다. 이 확률은 +4 이상의 장비를 강화할 때부터 생기며, +8 이상의 장비에서는 100%입니다.
 
 items.scrolls.scrollofwarp.name=워프의 일기장
 items.scrolls.scrollofwarp.active=일기장의 아츠가 주위의 적들을 날려버렸다!
@@ -1458,7 +1458,7 @@ items.scrolls.exotic.scrollofdivination$wnddivination.desc=점성술의 일기�
 items.scrolls.exotic.scrollofenchantment.name=아츠 부여의 일기장
 items.scrolls.exotic.scrollofenchantment.inv_title=아츠 부여할 아이템 선택
 items.scrolls.exotic.scrollofenchantment.weapon=무기에 부여할 아츠 선택
-items.scrolls.exotic.scrollofenchantment.armor=갑옷에 부여할 상형문자 선택
+items.scrolls.exotic.scrollofenchantment.armor=갑옷에 부여할 아츠 선택
 items.scrolls.exotic.scrollofenchantment.cancel_warn=취소해도 일기장은 소모됩니다.
 items.scrolls.exotic.scrollofenchantment.cancel=취소
 items.scrolls.exotic.scrollofenchantment.desc=이 일기장은 무기나 갑옷에 강력한 아츠 에너지를 융합합니다. 또한 시전자가 부여할 아츠를 어느정도 결정할 수도 있습니다.
@@ -1513,7 +1513,7 @@ items.spells.beaconofreturning.desc=이 복잡한 아츠는 사용자에게 지�
 
 items.spells.curseinfusion.name=저주 융합
 items.spells.curseinfusion.inv_title=저주를 걸 아이템을 선택하세요
-items.spells.curseinfusion.desc=이 아츠는 장비 하나에 머드락의 갑옷 내부에 존재하던 강력한 아츠를 주입합니다. 이 아츠를 사용한 아이템은 즉시 저주받으며, 아츠나 상형문자가 있었다면 덮어씌워질 것입니다.\n\n무기, 방어구, 아츠 스태프에 사용한 경우, 그 아이템은 저주받음과 동시에 강화됩니다. 이 아츠로 얻는 강화는 중첩되지 않으며, 저주가 사라지면 강화 효과 역시 사라질 것입니다.
+items.spells.curseinfusion.desc=이 아츠는 장비 하나에 머드락의 갑옷 내부에 존재하던 강력한 아츠를 주입합니다. 이 아츠를 사용한 아이템은 즉시 저주받으며, 아츠가 있었다면 덮어씌워질 것입니다.\n\n무기, 방어구, 아츠 스태프에 사용한 경우, 그 아이템은 저주받음과 동시에 강화됩니다. 이 아츠로 얻는 강화는 중첩되지 않으며, 저주가 사라지면 강화 효과 역시 사라질 것입니다.
 
 items.spells.featherfall.name=반중력
 items.spells.featherfall.light=당신은 깃털과도 같이 가벼워짐을 느낀다!
@@ -1525,7 +1525,7 @@ items.spells.spell.no_magic=당신은 아츠 면역, 혹은 침묵 상태 도중
 items.spells.magicalinfusion.name=아츠 융합
 items.spells.magicalinfusion.inv_title=융합할 아이템을 선택하세요
 items.spells.magicalinfusion.infuse=당신의 %s는 신비한 에너지와 합쳐졌다!
-items.spells.magicalinfusion.desc=이 아츠는 강화의 일기장와 동일한 아츠 에너지가 깃들어 있지만, 더 안정된 형태를 띠고 있습니다.\n\n기본적으로 아이템을 강화할 뿐 아니라, 무기와 갑옷에 깃든 아츠나 상형문자를 제거하지 않습니다.
+items.spells.magicalinfusion.desc=이 아츠는 강화의 일기장와 동일한 아츠 에너지가 깃들어 있지만, 더 안정된 형태를 띠고 있습니다.\n\n기본적으로 아이템을 강화할 뿐 아니라, 무기와 갑옷에 깃든 아츠를 제거하지 않습니다.
 
 items.spells.magicalporter.name=아츠 전송기
 items.spells.magicalporter.inv_title=전송할 아이템 선택

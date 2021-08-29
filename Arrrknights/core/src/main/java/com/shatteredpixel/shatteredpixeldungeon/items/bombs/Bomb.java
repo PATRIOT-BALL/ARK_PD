@@ -43,6 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMirrorImag
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurse;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutation;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Languages;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -335,7 +336,7 @@ public class Bomb extends Item {
 		public static final LinkedHashMap<Class<?extends Item>, Class<?extends Bomb>> validIngredients = new LinkedHashMap<>();
 		static {
 			validIngredients.put(PotionOfFrost.class,           FrostBomb.class);
-			validIngredients.put(ScrollOfMirrorImage.class,     WoollyBomb.class);
+			validIngredients.put(ScrollOfTransmutation.class,     WoollyBomb.class);
 			
 			validIngredients.put(PotionOfLiquidFlame.class,     Firebomb.class);
 			validIngredients.put(ScrollOfRage.class,            Noisemaker.class);
@@ -353,7 +354,6 @@ public class Bomb extends Item {
 		private static final HashMap<Class<?extends Bomb>, Integer> bombCosts = new HashMap<>();
 		static {
 			bombCosts.put(FrostBomb.class,      2);
-			bombCosts.put(WoollyBomb.class,     2);
 			
 			bombCosts.put(Firebomb.class,       4);
 			bombCosts.put(Noisemaker.class,     4);
@@ -366,6 +366,8 @@ public class Bomb extends Item {
 			
 			bombCosts.put(ArcaneBomb.class,     10);
 			bombCosts.put(ShrapnelBomb.class,   10);
+
+			bombCosts.put(WoollyBomb.class,     20);
 		}
 		
 		@Override
