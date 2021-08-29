@@ -12,7 +12,7 @@ public class Infantry extends Mob {
         spriteClass = InfantrySprite.class;
 
         HP = HT = 135;
-        defenseSkill = 28;
+        defenseSkill = 25;
 
         EXP = 15;
         maxLvl = 28;

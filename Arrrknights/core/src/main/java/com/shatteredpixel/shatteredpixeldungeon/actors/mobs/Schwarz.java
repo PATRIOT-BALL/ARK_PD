@@ -39,7 +39,6 @@ public class Schwarz extends Mob {
         maxLvl = 45;
         EXP = -1;
         properties.add(Property.BOSS);
-        immunities.add(Amok.class);
         immunities.add(Drowsy.class);
         immunities.add(MagicalSleep.class);
         immunities.add(Terror.class);
@@ -53,12 +52,12 @@ public class Schwarz extends Mob {
     @Override
     public int damageRoll()
     {
-        if (Phase==2) return Random.NormalIntRange( 75, 100 );
-        return Random.NormalIntRange( 55, 70 );
+        if (Phase==2) return Random.NormalIntRange( 65, 80 );
+        return Random.NormalIntRange( 50, 70 );
     }
 
     @Override
-    public int attackSkill( Char target ) {return 50; }
+    public int attackSkill( Char target ) {return 40; }
 
     @Override
     public void damage(int dmg, Object src) {

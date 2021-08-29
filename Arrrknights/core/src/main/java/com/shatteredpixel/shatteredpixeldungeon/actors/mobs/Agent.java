@@ -23,7 +23,7 @@ public class Agent extends Mob {
         spriteClass = BreakerSprite.class;
 
         HP = HT = 140;
-        defenseSkill = 30;
+        defenseSkill = 26;
 
         EXP = 16;
         maxLvl = 31;

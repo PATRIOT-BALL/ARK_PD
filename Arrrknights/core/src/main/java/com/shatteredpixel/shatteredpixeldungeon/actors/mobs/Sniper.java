@@ -24,7 +24,7 @@ public class Sniper extends Mob {
         spriteClass = CrossbowmanSprite.class;
 
         HP = HT = 120;
-        defenseSkill = 25;
+        defenseSkill = 22;
 
         EXP = 16;
         maxLvl = 30;
