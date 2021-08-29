@@ -44,7 +44,7 @@ public class DM200 extends Mob {
 	{
 		spriteClass = S_GolemSprite.class;
 
-		HP = HT = 80;
+		HP = HT = 88;
 		defenseSkill = 12;
 
 		EXP = 9;
@@ -62,7 +62,7 @@ public class DM200 extends Mob {
 
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 24, 28 );
+		return Random.NormalIntRange( 15, 25 );
 	}
 
 	@Override
@@ -122,7 +122,7 @@ public class DM200 extends Mob {
 
 	private void zap( ){
 		spend( TICK );
-		ventCooldown = 30;
+		ventCooldown = 10;
 
 		dropRocks(enemy);
 

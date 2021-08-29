@@ -308,14 +308,12 @@ public class Ghost extends NPC {
 				Generator.Category c = Generator.wepTiers[wepTier - 1];
 				weapon = (MeleeWeapon) Reflection.newInstance(c.classes[Random.chances(c.probs)]);
 
-				//50%:+0, 30%:+1, 15%:+2, 5%:+3
+				//+1 : 87% / +2 : 10% / +3 : 3%
 				float itemLevelRoll = Random.Float();
 				int itemLevel;
-				if (itemLevelRoll < 0.5f){
-					itemLevel = 0;
-				} else if (itemLevelRoll < 0.8f){
+				if (itemLevelRoll < 0.87f){
 					itemLevel = 1;
-				} else if (itemLevelRoll < 0.95f){
+				} else if (itemLevelRoll < 0.97f){
 					itemLevel = 2;
 				} else {
 					itemLevel = 3;

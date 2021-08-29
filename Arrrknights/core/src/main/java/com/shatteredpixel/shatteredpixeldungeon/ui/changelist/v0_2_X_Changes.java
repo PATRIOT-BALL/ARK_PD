@@ -34,13 +34,15 @@ public class v0_2_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "사격 무기",
                 "_사격 무기_는 투척 무기를 탄환으로 사용하는 무기 계열로, 근접 공격력은 심각할 정도로 없습니다. 원거리 물리 공격을 가할 수 있습니다." + "\n\n" +
                         "_사격 무기_는 연계 블레이즈의 콤보와 사격 그레이스롯의 특수 사격을 발생시킬 수 있으며, 장전한 투척 무기의 티어에 따라 원거리 공격의 피해량이 결정됩니다." + "\n\n" +
-                        "_사격 무기_는 3티어의 _DP27_, _9mm C1 기관단총_, 5티어인 _R4-C 돌격소총_이 추가되었습니다."));
+                        "_사격 무기_는 3티어의 _DP27_, _9mm C1 기관단총_, 5티어인 _R4-C 돌격소총_이 추가되었습니다." + "\n\n\n" +
+                "이 무기가 추가되면서, 기존의 _투척 무기_는 더 이상 강화할 수 없습니다. 단, _풍차 수리검_은 예외입니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템들",
                 "다음과 같은 아이템들이 추가되었습니다." + "\n\n" +
                         "_표준 탄약통_ : 가공소에서 제작할 수 있는 투척무기입니다. 3티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. (내구도 매우 낮음)" + "\n\n" +
                         "_특수 탄약통_ : 가공소에서 제작할 수 있는 투척무기입니다. 4티어 투척 무기로, 사격 무기의 탄창으로 사용하시길 바랍니다. 또한, 이 탄창으로 사격 무기를 장전하면 추가 효과를 얻습니다." +"\n\n" +
-                "_이베리아 연금술 세트_ : 새로운 유물로, 사용하지않는 아이템을 분해해 충전을 얻습니다. 충전 100%를 소모해 무작위 아이템을 창조할 수 있습니다."));
+                "_이베리아 연금술 세트_ : 새로운 유물로, 사용하지않는 아이템을 분해해 충전을 얻습니다. 충전 100%를 소모해 무작위 아이템을 창조할 수 있습니다." + "\n\n" +
+                "_군주 인형_ : 기존의 _짜증나는 미보_를 대체합니다. 폭발에 휘말린 대상들의 정신을 지배하는 강력한 개조 폭탄입니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.NAMSEK), "아이템 시너지",
                 "특정 무기 + 아이템을 장착하면 시너지 효과가 발생해 추가 능력을 얻을 수 있는 기능이 추가되었습니다." + "\n\n" +
@@ -50,14 +52,16 @@ public class v0_2_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "투척 무기",
-                "더 이상 강화할 수 없습니다. 단, _풍차 수리검_은 여전히 강화할 수 있습니다."));
-
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
                 "_영소_ : 기존의 사거리가 길고 공격속도가 느린 무기에서, 1회 공격시 2번 타격하는 무기로 개편되었습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
-        "_블레이즈_의 _전술 방어막_ 특성의 방어 상승치가 1로 고정되었으며, 최대 상승치가 6에서 _4-8_로 변경되었습니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "가드 퀘스트 보상 변경",
+                "_가드 오퍼레이터_ 퀘스트의 보상이 _무조건 +1_ 이상이 보장됩니다. 대신 +2, +3 아이템이 나올 확률이 어느정도 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "머드락의 거대 석상 변경",
+                "최대 체력이 80에서 _88_로 상승했습니다." + "\n\n" +
+                "_낙석 패턴_의 쿨타임이 _66%_ 감소했습니다." + "\n\n" +
+                "공격력이 24-28에서 _15-25_로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "불사의 검은 뱀 변경",
                 "공격력이 35-45에서 _40-50_으로 상승했습니다." + "\n\n" +
@@ -90,9 +94,6 @@ public class v0_2_X_Changes {
         "_해시계_ : 침묵 공격의 충전량이 최대 1에서 _2_ 로 상승했습니다." + "\n\n" +
                 "_아트리아스의 검_ : 아츠 광선의 피해량이 2-12에서 _4-12_로, 강화 효율이 3에서 _4_로 상승했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "투척 무기 버프?",
-                "_리스캄 인형(구 썬더볼트)_를 사격 무기의 탄약으로 사용할 경우, 해당 사격 무기에 영구적인 추가 기능을 부여합니다."));
-
         changes.addButton(new ChangeButton(Icons.get(Icons.BOMB), "폭탄류 버프",
                 "모든 폭탄류 아이템의 피해량이 소폭 상승했습니다." + "\n\n" +
                 "_이프리트 인형_, _서리별 인형_, _미보 -섬광폭발_의 효과 지속시간이 50%상승했습니다." + "\n\n" +
@@ -111,6 +112,7 @@ public class v0_2_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 너프",
+                "_블레이즈_의 _전술 방어막_ 특성의 방어 상승치가 1로 고정되었으며, 최대 상승치가 6에서 _4-8_로 변경되었습니다." + "\n\n" +
                 "_자연 그레이스롯_의 _구제자의 기도_ 특성의 지속 턴이 2-4턴에서 _3-5_턴으로 상승했지만, 더 이상 아츠 기록장치 SP를 충전하지 않습니다." + "\n\n" +
                 "_로즈몬티스_의 _몸이 가벼운 식사_의 부유 지속 턴이 10-15턴에거 _5-10턴_으로 감소했습니다." + "\n\n" +
                 "_로즈몬티스_의 _초감각_ 특성이 최대 충젼량 +4까지만 과충전할 수 있도록 변경되었습니다." + "\n\n" +
