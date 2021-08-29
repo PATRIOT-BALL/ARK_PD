@@ -92,7 +92,7 @@ public class Agent extends Mob {
 
     @Override
     public int damageRoll() {
-        if (buff(Silence.class) == null) return Random.NormalIntRange( 12, 24 );
+        if (buff(Silence.class) != null) return Random.NormalIntRange( 12, 24 );
         else return Random.NormalIntRange( 25, 35 );
     }
 
