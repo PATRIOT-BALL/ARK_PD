@@ -495,7 +495,7 @@ actors.hero.talent.enhanced_lethality.desc=_+1:_ 프로젝트 레드는 뼈찌�
 actors.hero.talent.assassins_reach.title=처형 시작
 actors.hero.talent.assassins_reach.desc=_+1:_ 프로젝트 레드가 뼈찌르기 단계에 따라 점멸할 수 있는 거리가 기존 1/2/3/4 타일에서 _2/3/4/6 타일_ 로 증가합니다.\n\n_+2:_ 프로젝트 레드가 뼈찌르기 단계에 따라 점멸할 수 있는 거리가 기존 1/2/3/4 타일에서 _3/5/6/8 타일_ 로 증가합니다.\n\n_+3:_ 프로젝트 레드가 뼈찌르기 단계에 따라 점멸할 수 있는 거리가 기존 1/2/3/4 타일에서 _4/6/8/10 타일_ 로 증가합니다.
 actors.hero.talent.bounty_hunter.title=추가 수당
-actors.hero.talent.bounty_hunter.desc=_+1:_ 프로젝트 레드가 뼈찌르기 공격으로 처치한 적이 _8 합성옥_ 를 추가로 떨어뜨립니다.\n\n_+2:_ 프로젝트 레드가 뼈찌르기 공격으로 처치한 적이 _16 합성옥_ 를 추가로 떨어뜨립니다.\n\n_+3:_ 프로젝트 레드가 전문화는 공격으로 처치한 적이 _24 합성옥_ 를 추가로 떨어뜨립니다.
+actors.hero.talent.bounty_hunter.desc=프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 _추가 보상_을 얻습니다. 특성 레벨이 높으면 더 좋은 보상을 얻을 확률이 상승합니다.
 actors.hero.talent.evasive_armor.title=기민한 갑옷
 actors.hero.talent.evasive_armor.desc=_+1:_ 레드는 프리러닝 중에, 갑옷의 힘 요구 수치를 초과한 레드의 힘 1당 _+1 의 추가 회피_ 를 얻습니다.\n\n_+2:_ 레드는 프리러닝 중에, 갑옷의 힘 요구 수치를 초과한 레드의 힘 1당 _+2 의 추가 회피_ 를 얻습니다.\n\n_+3:_ 레드는 프리러닝 중에, 갑옷의 힘 요구 수치를 초과한 레드의 힘 1당 _+3 의 추가 회피_ 를 얻습니다.
 actors.hero.talent.projectile_momentum.title=투사체 가속
@@ -819,6 +819,16 @@ actors.mobs.npcs.prts.hint12=힌트(12/12)\n\n_어떤 소녀의 낫_은 무언�
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...과연 이 시체는 진짜인 것일까요? 그 누구도 진실을 알지 못합니다.\n\n그녀를 애도하기 위한 _꽃 한송이_가 있다면 좋을텐데...
 
+actors.mobs.npcs.ace_battle.name=에이스
+actors.mobs.npcs.ace_battle.desc=당신의 지원 요청을 받고 이곳으로 왔다.
+actors.mobs.npcs.ace_battle.summon=네 고통을, 우리도 함께 짊어지게 해다오.
+actors.mobs.npcs.ace_battle.fail=가라. 너희의 앞길이 순탄하길 바라마.
+actors.mobs.npcs.ace_battle.move=이동한다.
+actors.mobs.npcs.ace_battle.target=네 명령에 따르지.
+actors.mobs.npcs.ace_battle.battlecry1=네 생각대로 되진 않을 거다!
+
+//summon, fail은 1-8대사
+//배틀크라이 1은 0-10
 
 
 
@@ -938,7 +948,7 @@ actors.mobs.newdm300.desc_supercharged=머드락이 아츠를 가득 충전했�
 actors.mobs.newdm300$fallingrocks.desc=돌멩이들이 천장에서 떨어지고 있다. 머지 않아 천장이 무너질 것 같다!
 
 actors.mobs.dwarfking.name=메피스토
-actors.mobs.dwarfking.notice=무엄하도다! 네놈이 감히 누구한테 덤비는가!
+actors.mobs.dwarfking.notice=동포들이여, 이제 출발하자. 우리의 시대를 맞이하러!!
 actors.mobs.dwarfking.lifelink_1=너희들의 정수가 필요해, 가축들아!
 actors.mobs.dwarfking.lifelink_2=피를 바쳐라, 가축들아!
 actors.mobs.dwarfking.teleport_1=놈을 해치워, 가축들아!

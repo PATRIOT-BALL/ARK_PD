@@ -41,6 +41,9 @@ public class AceSprite extends MobSprite {
 		
 		idle = new Animation( 10, true );
 		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
+
+		attack = new Animation(20, false);
+		attack.frames( frames, 0, 0, 0);
 		
 		run = new Animation( 20, true );
 		run.frames( frames, 0 );
