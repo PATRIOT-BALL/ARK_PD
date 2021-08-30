@@ -82,6 +82,7 @@ public class C1_9mm extends MeleeWeapon {
             if (Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
                 if (Random.Int(10) < 1) {
                     bullet = Math.min(bullet +1, bulletCap);
+                    updateQuickslot();
                 }
             }
         }
