@@ -438,7 +438,7 @@ public enum Talent {
 		if (hero.hasTalent(Talent.ASSASSINSCREED)
 				&& enemy instanceof Mob && ((Mob) enemy).surprisedBy(hero)
 				&& enemy.buff(SuckerPunchTracker.class) == null){
-			dmg *= 1f + hero.pointsInTalent(Talent.ASSASSINSCREED) * 0.06;
+			dmg *= 1f + hero.pointsInTalent(Talent.ASSASSINSCREED) * 0.05;
 			Buff.affect(enemy, SuckerPunchTracker.class);
 		}
 
