@@ -16,6 +16,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -73,6 +74,18 @@ public class C1_9mm extends MeleeWeapon {
 
     public int shotmax() {
         return 7 + bullettier + (level() * bullettier);
+    }
+
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        if (attacker instanceof Hero) {
+            if (Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
+                if (Random.Int(10) < 1) {
+                    bullet = Math.min(bullet +1, bulletCap);
+                }
+            }
+        }
+        return super.proc(attacker, defender, damage);
     }
 
     @Override
@@ -237,6 +250,8 @@ public class C1_9mm extends MeleeWeapon {
         if (buff != null) buff.detach();
         buff = Dungeon.hero.buff(Swiftthistle.TimeBubble.class);
         if (buff != null) buff.detach();
+
+        if (Dungeon.hero.buff(Bonk.BonkBuff.class) != null) Buff.detach(Dungeon.hero, Bonk.BonkBuff.class);
 
         Invisibility.dispel();
 

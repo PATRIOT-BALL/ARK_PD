@@ -80,6 +80,7 @@ public class v0_2_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "전문화 능력 추가",
+                "_연계 전문화_ 블레이즈는 사격 무기로 근접 공격시 확률적으로 총알을 얻습니다." + "\n\n" +
                 "_신속 전문화_ 레드는 사격 무기의 재장전을 다른 캐릭터보다 빠르게 할 수 있습니다." + "\n\n" +
                 "_사격 전문화_ 그레이스롯은 사격 무기의 사격 능력이 방어력을 50%무시합니다."));
 
