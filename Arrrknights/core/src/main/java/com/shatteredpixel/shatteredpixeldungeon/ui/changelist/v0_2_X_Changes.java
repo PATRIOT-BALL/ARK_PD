@@ -52,10 +52,13 @@ public class v0_2_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "사격 무기 관련 특성",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_ARROW), "사격 무기 관련 특성",
                 "_연계 전문화_의 _콤보 어택_ 특성에 사격 무기의 사격으로 콤보 획득시 확률적으로 추가 콤보를 얻는 기능이 추가되었습니다." + "\n\n" +
                         "_신속 전문화_의 _투사체 가속_ 특성이 사격 무기에도 적용되어, 최대 +45%의 피해 보너스를 얻을 수 있습니다." + "\n\n" +
                         "_사격 전문화_의 _강화 공유_ 특성의 피해 보너스가 5-15%에서 _6-18%_로 상승했으며, 사격 무기에도 적용됩니다. (단, 사격 무기는 효율 50%)"));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
+                "_암살 전문화_의 _추가 수당_의 발동 방식이 약간 변경되어, 특성 레벨이 높으면 더 좋은 보상을 얻을 확률이 증가하는 특성으로 변경되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
                 "_영소_ : 기존의 사거리가 길고 공격속도가 느린 무기에서, 1회 공격시 2번 타격하는 무기로 개편되었습니다."));

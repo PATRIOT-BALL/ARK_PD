@@ -55,10 +55,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
+import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatCutlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfDeepenedSleep;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Lucky;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -766,7 +768,27 @@ public abstract class Mob extends Char {
 
 		//bounty hunter talent
 		if (Dungeon.hero.buff(Talent.BountyHunterTracker.class) != null) {
-			Dungeon.level.drop(new Gold(8 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+			int chance = Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER);
+			int rand = Random.IntRange(0+chance, 15+chance);
+
+			if (rand < 4) {
+				Dungeon.level.drop(new Gold(4 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+			}
+			else if (rand < 7) {
+				Dungeon.level.drop(new Gold(8 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+			}
+			else if (rand < 8) {
+				Dungeon.level.drop(new Bomb(), pos).sprite.drop();
+			}
+			else if (rand < 11) {
+				Dungeon.level.drop(new Gold(12 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+			}
+			else if (rand < 15) {
+				Dungeon.level.drop(new Gold(16 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+			}
+			else {
+				Dungeon.level.drop(new StoneOfDeepenedSleep(), pos).sprite.drop();
+			}
 		}
 
 		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {

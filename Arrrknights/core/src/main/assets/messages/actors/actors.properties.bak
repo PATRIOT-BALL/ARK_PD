@@ -507,7 +507,7 @@ actors.hero.talent.assassinscreed.desc=_+1:_ 적을 처음 기습할 때 피해�
 actors.hero.talent.clock_upgrade.title=망토 강화
 actors.hero.talent.clock_upgrade.desc=_+1:_ 그림자의 망토의 충전 속도가 _5%_ 상승합니다.\n\n_+2:_ 그림자의 망토의 충전 속도가 _10%_ 상승합니다.\n\n_+3:_ 그림자의 망토의 충전 속도가 _15%_ 상승합니다.
 actors.hero.talent.sweep.title=SWEEP
-actors.hero.talent.sweep.desc=_+1:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 0% 충전합니다.\n\n_+2:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 4% 충전합니다.\n\n_+3:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 6% 충전합니다.
+actors.hero.talent.sweep.desc=_+1:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 3% 충전합니다.\n\n_+2:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 5% 충전합니다.\n\n_+3:_ 프로젝트 레드가 뼈찌르기 공격으로 적을 처치하면 아츠 기록장치의 SP를 7% 충전합니다.
 actors.hero.talent.special_operations.title=특수작전
 actors.hero.talent.special_operations.desc=_+1:_ 유물을 사용하면 즉시 가속력을 _3_ 얻습니다. 프리러닝의 쿨타임이 _2 턴_ 감소합니다.\n\n_+2:_ 유물을 사용하면 즉시 가속력을 _6_ 얻습니다. 프리러닝의 쿨타임이 _4 턴_ 감소합니다.\n\n_+3:_ 유물을 사용하면 즉시 가속력을 _9_ 얻습니다. 프리러닝의 쿨타임이 _6 턴_ 감소합니다.
 
