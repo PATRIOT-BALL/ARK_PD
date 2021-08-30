@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Token2 extends Item {
     public static String AC_ADD = "ADD";
     {
-        image = ItemSpriteSheet.MOULD;
+        image = ItemSpriteSheet.BOSS_TOKEN;
 
         stackable = true;
         unique = true;
