@@ -54,6 +54,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfFlock;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfIntuition;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfShock;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HeroSprite;
@@ -214,8 +215,13 @@ public abstract class Scroll extends Item {
 		}
 
 		if (curUser.hasTalent(Talent.PSYCHOANALYSIS)) {
-			if (Random.Int(0,2) < curUser.pointsInTalent(Talent.PSYCHOANALYSIS)) {
-				Talent.onFoodEaten(Dungeon.hero, 0, null); }
+			if (Random.Int(0,3) < curUser.pointsInTalent(Talent.PSYCHOANALYSIS)) {
+				Talent.onFoodEaten(Dungeon.hero, 0, null);
+				MagesStaff ring = Dungeon.hero.belongings.getItem(MagesStaff.class);
+				if (ring != null) {
+					ring.gainCharge(1f);
+				}
+			}
 		}
 
 		if (curUser.hasTalent(Talent.RHODES)){

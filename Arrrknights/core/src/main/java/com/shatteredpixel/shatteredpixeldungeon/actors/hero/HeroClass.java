@@ -198,7 +198,6 @@ public enum HeroClass {
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-		new WoollyBomb().collect();
 	}
 
 	public Badges.Badge masteryBadge() {

@@ -1323,7 +1323,7 @@ public class Hero extends Char {
                 if (counter.count() < 10) {
                     counter.countUp(1);
                 }
-                if (HT / 2 < HP) {
+                if (berserk.getPower() <= 0.5f) {
                     counter.countDown(1);
                 }
             }
@@ -1431,7 +1431,7 @@ public class Hero extends Char {
             if (berserk != null) {
                 ber = 1.25f - (Dungeon.hero.pointsInTalent(Talent.INFINITE_RAGE) * 0.25f);
                 if (berserk.getPower() >= ber) {
-                    dmg = Math.round(dmg * 0.7f);
+                    dmg = Math.round(dmg * 0.8f);
                 }
             }
         }
