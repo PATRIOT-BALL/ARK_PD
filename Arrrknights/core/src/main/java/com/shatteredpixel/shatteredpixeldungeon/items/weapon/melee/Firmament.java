@@ -32,13 +32,42 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
 
-public class Shortsword extends MeleeWeapon {
+public class Firmament extends MeleeWeapon {
 
-	{
-		image = ItemSpriteSheet.SHORTSWORD;
-		hitSound = Assets.Sounds.HIT_DUALSTRIKE;
-		hitSoundPitch = 1.1f;
+    {
+        image = ItemSpriteSheet.FIRMAMENT;
+        hitSound = Assets.Sounds.HIT_DUALSTRIKE;
+        hitSoundPitch = 1.1f;
 
-		tier = 2;
-	}
+        tier = 2;
+    }
+    private boolean doubleattack = true;
+
+
+    @Override
+    public int max(int lvl) {
+        return  2+(tier+5) +    //10 + 2. 공식상 2회 타격
+                lvl*(tier);   //scaling unchanged
+    }
+
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        if (doubleattack) {
+            doubleattack = false;
+            if (!attacker.attack(defender)) {
+                doubleattack = true; }
+            else {
+                if (attacker instanceof Hero && Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
+                    Buff.affect(attacker, Combo.class).hit(defender);
+                }
+                defender.sprite.bloodBurstA( defender.sprite.center(), 4 );
+                defender.sprite.flash();
+            }
+        }
+        else doubleattack = true;
+
+        return super.proc(attacker, defender, damage);
+    }
+
 }
+

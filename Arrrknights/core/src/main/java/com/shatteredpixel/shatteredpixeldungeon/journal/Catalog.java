@@ -161,6 +161,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
@@ -246,6 +247,7 @@ public enum Catalog {
 		WEAPONS.seen.put( MidnightSword.class,                   false);
 		WEAPONS.seen.put( Sword.class,                      false);
 		WEAPONS.seen.put( Mace.class,                       false);
+		WEAPONS.seen.put( Firmament.class,                       false);
 
 		WEAPONS.seen.put( Scimitar.class,                   false);
 		WEAPONS.seen.put( RoundShield.class,                false);

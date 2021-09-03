@@ -234,6 +234,7 @@ public class ItemSpriteSheet {
 	public static final int DIRK            = WEP_TIER2+4;
 	public static final int ENFILD           = WEP_TIER2+5;
 	public static final int MIDSWORD           = WEP_TIER2+6;
+	public static final int FIRMAMENT           = WEP_TIER2+7;
 	static{
 		assignItemRect(SHORTSWORD,      16, 16);
 		assignItemRect(HAND_AXE,        16, 16);
@@ -242,6 +243,7 @@ public class ItemSpriteSheet {
 		assignItemRect(DIRK,            16, 16);
 		assignItemRect(ENFILD,            16, 16);
 		assignItemRect(MIDSWORD,            16, 16);
+		assignItemRect(FIRMAMENT,            16, 16);
 	}
 
 	private static final int WEP_TIER3      =                               xy(1, 8);   //8 slots
