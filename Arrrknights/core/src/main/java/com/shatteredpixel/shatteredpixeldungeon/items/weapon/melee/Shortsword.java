@@ -22,16 +22,59 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Random;
 
 public class Shortsword extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.SHORTSWORD;
-		hitSound = Assets.Sounds.HIT_SPEAR;
+		hitSound = Assets.Sounds.HIT_DUALSTRIKE;
 		hitSoundPitch = 1.1f;
 
 		tier = 2;
+	}
+	private boolean doubleattack = true;
+
+
+	@Override
+	public int max(int lvl) {
+		return  2*(tier+2) +    //8 + 2. 공식상 2회 타격
+				lvl*(tier);   //scaling unchanged
+	}
+
+	@Override
+	public int proc(Char attacker, Char defender, int damage) {
+		if (doubleattack) {
+			doubleattack = false;
+			if (!attacker.attack(defender)) {
+				doubleattack = true; }
+			else {
+				if (attacker instanceof Hero && Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
+					Buff.affect(attacker, Combo.class).hit(defender);
+				}
+				defender.sprite.bloodBurstA( defender.sprite.center(), 4 );
+				defender.sprite.flash();
+			}
+		}
+		else doubleattack = true;
+
+		if (attacker instanceof Hero) {
+			if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null) {
+				if (((Hero) attacker).belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero)) {
+					if (Random.Int(20) < 1)
+						damage *= 1.5f;
+				}
+			}
+		}
+		return super.proc(attacker, defender, damage);
 	}
 
 }

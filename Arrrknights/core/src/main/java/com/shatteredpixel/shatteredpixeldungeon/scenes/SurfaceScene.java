@@ -364,7 +364,7 @@ public class SurfaceScene extends PixelScene {
 			if (dayTime) {
 				tint( 0xCCEEFF, 1 - scale.y );
 			} else {
-				rm = gm = bm = +3.0f;
+				rm = gm = bm = +1.5f;
 				ra = ga = ba = -2.1f;
 			}
 		}
@@ -382,8 +382,8 @@ public class SurfaceScene extends PixelScene {
 
 	private static class Avatar extends Image {
 		
-		private static final int WIDTH	= 32;
-		private static final int HEIGHT	= 32;
+		private static final int WIDTH	= 46;
+		private static final int HEIGHT	= 46;
 		
 		public Avatar( HeroClass cl ) {
 			super( Assets.Sprites.AVATARS );

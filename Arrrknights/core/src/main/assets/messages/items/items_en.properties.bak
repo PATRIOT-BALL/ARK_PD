@@ -883,7 +883,7 @@ items.bombs.shrapnelbomb.name=mudrock doll
 items.bombs.shrapnelbomb.desc=This doll has been modified with scraps of Mudrock`s armor metal, which will fragment and fly everywhere when it explodes, damaging anything in a huge range around the bomb. You had better hide behind something when using it...
 
 items.bombs.woollybomb.name=lord doll
-items.bombs.woollybomb.desc=This customized doll will create a field of citizen mirror after exploding. These mirror will block movement and persist for some time.
+items.bombs.woollybomb.desc=This doll will create a field of citizen mirror after exploding. These mirror will block movement and persist for some time.
 
 ###food
 items.food.berry.name=chernobog berry

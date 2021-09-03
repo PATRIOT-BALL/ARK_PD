@@ -152,6 +152,7 @@ public class Assets {
 		public static final String HIT_PUNCH        = "sounds/hit_punch.mp3";
 		public static final String HIT_SPEAR        = "sounds/hit_spear.mp3";
 
+
 		public static final String HIT_STAB         = "sounds/hit_stab.mp3";
 		public static final String HIT_CRUSH        = "sounds/hit_crush.mp3";
 		public static final String HIT_MAGIC        = "sounds/hit_magic.mp3";
@@ -227,6 +228,8 @@ public class Assets {
 		public static final String HIT_GUN        = "sounds/hit_gun.mp3";
 		public static final String HIT_AR        = "sounds/hit_ar.mp3";
 		public static final String HIT_BONK        = "sounds/hit_bonk.mp3";
+		public static final String HIT_SWORD        = "sounds/hit_sword.mp3";
+		public static final String HIT_DUALSTRIKE        = "sounds/hit_dualstrike.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
 		public static final String SKILL_MON1       = "sounds/skill_mon1.mp3";
@@ -244,7 +247,7 @@ public class Assets {
 
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
-				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY,
+				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY, HIT_SWORD, HIT_DUALSTRIKE,
 				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, ZAP_GUN, LIGHTNING, LEVELUP, DEATH,

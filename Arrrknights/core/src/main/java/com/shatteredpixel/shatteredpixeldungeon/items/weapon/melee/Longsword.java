@@ -54,7 +54,7 @@ public class Longsword extends MeleeWeapon {
 	public static final String AC_ZAP = "ZAP";
 	{
 		image = ItemSpriteSheet.LONGSWORD;
-		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSound = Assets.Sounds.HIT_SWORD;
 		hitSoundPitch = 1f;
 
 		tier = 4;
@@ -70,8 +70,8 @@ public class Longsword extends MeleeWeapon {
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier) + 2 +   //18 + 5
-				lvl*(tier+1);
+		return  4*(tier) + 2 +   //18 + 4
+				lvl*(tier-1);
 	}
 
 	@Override

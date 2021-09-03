@@ -39,7 +39,7 @@ public class Glaive extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.GLAIVE;
-		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSound = Assets.Sounds.HIT_DUALSTRIKE;
 		hitSoundPitch = 0.8f;
 
 		tier = 5;
@@ -50,8 +50,8 @@ public class Glaive extends MeleeWeapon {
 
 	@Override
 	public int max(int lvl) {
-		return  3*(tier+1) +    //18 + 4. 공식상 2회 타격
-				lvl*(tier-1);   //scaling unchanged
+		return  3*(tier+1) +    //18 + 5. 공식상 2회 타격
+				lvl*(tier);   //scaling unchanged
 	}
 
 	@Override

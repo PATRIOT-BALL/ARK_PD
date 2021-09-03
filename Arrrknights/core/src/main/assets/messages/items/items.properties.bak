@@ -2598,6 +2598,7 @@ items.pombbay.ac_drink=마신다
 items.pombbay.ssibal=노맛 예스 변기 ㅅㄱ
 
 items.walkietalkie.name=휴대용 무전기
+items.walkietalkie.ac_use=사용한다
 items.walkietalkie.desc_no=아무것도 들리지 않는다...
 items.walkietalkie.desc_active_ok="엘리트 오퍼레이터 에이스, 전투 준비 완료."
 items.walkietalkie.desc_ace_alive="명령을 내려주게."

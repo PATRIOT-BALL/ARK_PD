@@ -23,13 +23,13 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.SeniorSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Enraged_LeaderSprite;
 import com.watabou.utils.Random;
 
 public class Senior extends Monk {
 
 	{
-		spriteClass = SeniorSprite.class;
+		spriteClass = Enraged_LeaderSprite.class;
 
 		loot = new Pasty();
 		lootChance = 1f;

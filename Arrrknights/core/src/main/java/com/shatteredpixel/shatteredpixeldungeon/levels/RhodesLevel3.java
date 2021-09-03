@@ -85,7 +85,7 @@ public class RhodesLevel3 extends Level {
         exit = 120;
 
         map[entrance] = Terrain.ENTRANCE;
-     Painter.set( this, exit, Terrain.EXIT ); // 0.2.2배포땐 주석처리할 것!!
+     //Painter.set( this, exit, Terrain.EXIT ); // 0.2.2배포땐 주석처리할 것!!
 
         // 함교 입구. 장식용
         Painter.set(this, 113, Terrain.WALL);

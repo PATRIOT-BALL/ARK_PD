@@ -25,15 +25,13 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
-import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.MonkSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.EnragedSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
@@ -43,7 +41,7 @@ import com.watabou.utils.Random;
 public class Monk extends Mob {
 	
 	{
-		spriteClass = MonkSprite.class;
+		spriteClass = EnragedSprite.class;
 		
 		HP = HT = 90;
 		defenseSkill = 30;
