@@ -202,14 +202,14 @@ public enum HeroClass {
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-		new Rose().collect();
+		/*new Rose().collect();
 		new Heamyo().collect();
 		new PotionOfExperience().quantity(30).collect();
 		new RingOfHaste().collect();
 		new ScrollOfUpgrade().quantity(30).collect();
 		new ScrollOfTeleportation().quantity(30).collect();
 		new ScrollOfMagicMapping().quantity(30).collect();
-		new PotionOfHealing().quantity(30).collect();
+		new PotionOfHealing().quantity(30).collect();*/
 	}
 
 	public Badges.Badge masteryBadge() {

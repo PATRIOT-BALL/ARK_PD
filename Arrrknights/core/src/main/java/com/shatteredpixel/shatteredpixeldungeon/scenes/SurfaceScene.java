@@ -212,7 +212,7 @@ public class SurfaceScene extends PixelScene {
 			prtsSprtie = new PRTS_endSprite();
 			prtsSprtie.add(CharSprite.State.PARALYSED);
 			prtsSprtie.scale = new PointF(1, 1);
-			prtsSprtie.x = a.x - prtsSprtie.width()*-0.38f;
+			prtsSprtie.x = a.x - prtsSprtie.width()*-0.58f;
 			prtsSprtie.y = SKY_HEIGHT - prtsSprtie.height();
 			align(prtsSprtie);
 			prtsSprtie.alpha(0.33f);
@@ -364,7 +364,7 @@ public class SurfaceScene extends PixelScene {
 			if (dayTime) {
 				tint( 0xCCEEFF, 1 - scale.y );
 			} else {
-				rm = gm = bm = +1.5f;
+				rm = gm = bm = +3.0f;
 				ra = ga = ba = -2.1f;
 			}
 		}
@@ -409,7 +409,7 @@ public class SurfaceScene extends PixelScene {
 			super( Assets.Interfaces.SURFACE );
 			
 			frame( 88 + Random.Int( 4 ) * WIDTH, 60, WIDTH, HEIGHT );
-			
+
 			this.tx = tx;
 			this.ty = ty;
 			
