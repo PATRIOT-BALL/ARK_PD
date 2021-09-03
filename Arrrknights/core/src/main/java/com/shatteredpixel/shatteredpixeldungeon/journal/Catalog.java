@@ -247,7 +247,6 @@ public enum Catalog {
 		WEAPONS.seen.put( MidnightSword.class,                   false);
 		WEAPONS.seen.put( Sword.class,                      false);
 		WEAPONS.seen.put( Mace.class,                       false);
-		WEAPONS.seen.put( Firmament.class,                       false);
 
 		WEAPONS.seen.put( Scimitar.class,                   false);
 		WEAPONS.seen.put( RoundShield.class,                false);
@@ -281,6 +280,7 @@ public enum Catalog {
 		WEAPONS.seen.put( R4C.class,                false);
 
 		WEAPONS.seen.put( RhodesSword.class,               false);
+		WEAPONS.seen.put( Firmament.class,                       false);
 		WEAPONS.seen.put( Gamzashield.class,               false);
 		WEAPONS.seen.put( Enfild2.class,                       false);
 		WEAPONS.seen.put( GoldDogSword.class,                false);

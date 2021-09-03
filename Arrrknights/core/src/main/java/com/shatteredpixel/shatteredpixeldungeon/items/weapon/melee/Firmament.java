@@ -28,6 +28,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Talu_BlackSnake;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.YogDzewa;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
@@ -46,7 +48,7 @@ public class Firmament extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  2+(tier+5) +    //10 + 2. 공식상 2회 타격
+        return  2+(tier+5) +    //9 + 2. 공식상 2회 타격
                 lvl*(tier);   //scaling unchanged
     }
 
@@ -65,6 +67,14 @@ public class Firmament extends MeleeWeapon {
             }
         }
         else doubleattack = true;
+
+
+        if (defender instanceof YogDzewa) {
+            damage = Random.IntRange(3232,8876);
+        }
+        else if (defender instanceof Talu_BlackSnake) {
+            damage *= 1.5f;
+        }
 
         return super.proc(attacker, defender, damage);
     }

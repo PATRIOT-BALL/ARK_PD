@@ -24,7 +24,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
@@ -47,6 +49,9 @@ public class WaterOfAdvanceguard extends WellWater {
             else item = new BookGenesis();
         } else if (item instanceof SwordofArtorius || item instanceof WintersScar) {
             item = new PatriotSpear();
+            item.identify();
+        } else if (item instanceof Shortsword) {
+            item = new Firmament();
             item.identify();
         } else if (item instanceof Gamza) {
             if (Random.IntRange(0,100) < 31) { item = new Nmould();}

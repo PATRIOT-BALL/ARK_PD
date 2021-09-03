@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.RingKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPhantomMirror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookEveryone;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
@@ -114,6 +115,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
@@ -202,14 +204,6 @@ public enum HeroClass {
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-		/*new Rose().collect();
-		new Heamyo().collect();
-		new PotionOfExperience().quantity(30).collect();
-		new RingOfHaste().collect();
-		new ScrollOfUpgrade().quantity(30).collect();
-		new ScrollOfTeleportation().quantity(30).collect();
-		new ScrollOfMagicMapping().quantity(30).collect();
-		new PotionOfHealing().quantity(30).collect();*/
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -283,7 +277,6 @@ public enum HeroClass {
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-		new Shortsword().collect();
 	}
 
 	private static void initRogue( Hero hero ) {
