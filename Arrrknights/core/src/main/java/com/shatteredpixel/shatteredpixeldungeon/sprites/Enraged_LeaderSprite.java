@@ -41,10 +41,10 @@ public class Enraged_LeaderSprite extends MobSprite {
 		idle = new Animation( 6, true );
 		idle.frames( frames, c+0 );
 		
-		run = new Animation( 15, true );
+		run = new Animation( 30, true );
 		run.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 		
-		attack = new Animation( 30, false );
+		attack = new Animation( 40, false );
 		attack.frames( frames, c+1, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 		
 		kick = new Animation( 10, false );

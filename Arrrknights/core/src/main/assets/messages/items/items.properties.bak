@@ -2079,8 +2079,11 @@ items.weapon.melee.meleeweapon.stats_unknown=보통 이 _%1$d단계_ 무기는 _
 items.weapon.melee.meleeweapon.probably_too_heavy=아마도 이 무기는 당신에게 너무 무거울 것입니다.
 items.weapon.melee.meleeweapon.stats_desc=
 
-items.weapon.melee.shortsword.name=적소ㆍ프로토타입
-items.weapon.melee.shortsword.desc=용문 전경들의 백병전 장비를 토대로 만든 실험용 장검.
+items.weapon.melee.shortsword.name=박도
+items.weapon.melee.shortsword.desc=왠지 모를 수박 향기가 난다. \n\n용문 전경들의 제식 장검. 평범해보이지만 어딘가 모르게 _범상찮은_ 느낌이 난다.
+
+items.weapon.melee.firmament.name=적소
+items.weapon.melee.firmament.desc=악행은 결코 용서하지 않아. 무슨 수를 써서라도 저지하겠어.\n\n이 _특별한_ 무기는 2번의 공격을 동시에 가합니다.
 
 items.weapon.melee.quarterstaff.name=카시미어 전쟁도끼
 items.weapon.melee.quarterstaff.stats_desc=이 무기는 0-2의 피해를 감소시킵니다.

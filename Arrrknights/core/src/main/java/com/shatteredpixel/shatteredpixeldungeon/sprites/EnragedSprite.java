@@ -39,7 +39,7 @@ public class EnragedSprite extends MobSprite {
 		idle = new Animation( 6, true );
 		idle.frames( frames, 0 );
 		
-		run = new Animation( 15, true );
+		run = new Animation( 22, true );
 		run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 		
 		attack = new Animation( 30, false );
