@@ -51,8 +51,11 @@ public class WaterOfAdvanceguard extends WellWater {
             item = new PatriotSpear();
             item.identify();
         } else if (item instanceof Shortsword) {
-            item = new Firmament();
-            item.identify();
+            if (Random.Int(4) < 3){ item = new Firmament();
+            item.identify();}
+            else {Price = item.value() * 3;
+                item = new Gold(Price);
+                GLog.p(String.format(Messages.get(this, "procced"), Price));}
         } else if (item instanceof Gamza) {
             if (Random.IntRange(0,100) < 31) { item = new Nmould();}
             else if (Random.IntRange(0,11) < 3) {
