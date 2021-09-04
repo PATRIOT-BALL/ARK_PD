@@ -252,7 +252,7 @@ abstract public class Weapon extends KindOfWeapon {
 			encumbrance = Math.max(2, encumbrance+2);
 
 		float ACC = this.ACC;
-		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND))
+		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND) && owner instanceof Hero)
 		{
 			encumbrance += 4 - Dungeon.hero.pointsInTalent(Talent.CHAINSAW_EXTEND);
 		}
@@ -278,7 +278,7 @@ abstract public class Weapon extends KindOfWeapon {
 	@Override
 	public int reachFactor(Char owner) {
 		int RCHmath = RCH;
-		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND)) {
+		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND) && owner instanceof Hero) {
 			RCHmath +=1;
 		}
 		if (Dungeon.hero.buff(Twilight.class) != null) RCHmath +=1;
