@@ -51,7 +51,7 @@ public class Enraged_LeaderSprite extends MobSprite {
 		kick.frames( frames, c+0 );
 		
 		die = new Animation( 15, false );
-		die.frames( frames, c+9 );
+		die.frames( frames, c+9, c+10, c+11, c+12 );
 		
 		play( idle );
 	}

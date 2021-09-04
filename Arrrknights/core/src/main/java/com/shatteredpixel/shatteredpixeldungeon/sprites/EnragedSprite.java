@@ -48,8 +48,8 @@ public class EnragedSprite extends MobSprite {
 		kick = new Animation( 10, false );
 		kick.frames( frames, 0 );
 		
-		die = new Animation( 15, false );
-		die.frames( frames, 9 );
+		die = new Animation( 8, false );
+		die.frames( frames, 9, 10, 11, 12 );
 		
 		play( idle );
 	}
