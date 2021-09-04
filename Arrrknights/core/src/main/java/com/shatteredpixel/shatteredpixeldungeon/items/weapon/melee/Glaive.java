@@ -61,9 +61,6 @@ public class Glaive extends MeleeWeapon {
 			if (!attacker.attack(defender)) {
 				doubleattack = true; }
 			else {
-				if (attacker instanceof Hero && Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
-					Buff.affect(attacker, Combo.class).hit(defender);
-				}
 				defender.sprite.bloodBurstA( defender.sprite.center(), 4 );
 				defender.sprite.flash();
 			}

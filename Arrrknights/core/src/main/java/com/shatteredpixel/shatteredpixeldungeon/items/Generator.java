@@ -406,7 +406,7 @@ public class Generator {
                     Dirk.class,
                     MidnightSword.class,
             };
-            WEP_T2.probs = new float[]{6, 5, 5, 4, 4, 4};
+            WEP_T2.probs = new float[]{4, 5, 5, 4, 4, 4};
 
             WEP_T3.classes = new Class<?>[]{
                     Sword.class,
@@ -448,7 +448,7 @@ public class Generator {
                     DivineAvatar.class,
                     R4C.class
             };
-            WEP_T5.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 3, 3, 4, 2};
+            WEP_T5.probs = new float[]{5, 5, 3, 4, 4, 4, 4, 3, 3, 4, 3};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{

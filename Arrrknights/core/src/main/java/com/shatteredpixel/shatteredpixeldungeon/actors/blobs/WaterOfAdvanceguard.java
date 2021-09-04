@@ -64,7 +64,7 @@ public class WaterOfAdvanceguard extends WellWater {
             }
             else item = new Thunderbolt();
         } else if (item instanceof CrabGun) {
-            if (Random.Int(2) < 1) {  item = new CatGun();
+            if (Random.Int(3) < 2) {  item = new CatGun();
                 item.identify(); }
             else {Price = item.value() * 3;
             item = new Gold(Price);
