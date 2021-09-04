@@ -34,12 +34,17 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Dragonkill;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.Tilemap;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -202,6 +207,13 @@ public class NewHallsBossLevel extends Level {
 
 		Dungeon.observe();
 
+		if (Dungeon.hero.belongings.weapon instanceof Firmament) {
+			((Firmament) Dungeon.hero.belongings.weapon).enchantment = new Dragonkill();
+			Sample.INSTANCE.play(Assets.Sounds.BURNING,2f,1f);
+			GameScene.flash(0x80FF0000);
+			GLog.n(Messages.get(Dragonkill.class, "awake"));
+		}
+
 		if (Dungeon.talucount < 4) {
 		YogDzewa boss = new YogDzewa();
 		boss.pos = exit + width*3;
@@ -209,7 +221,8 @@ public class NewHallsBossLevel extends Level {
 		else {
 		Talu_BlackSnake boss = new Talu_BlackSnake();
 			boss.pos = exit + width*3;
-			GameScene.add( boss ); }
+			GameScene.add( boss );
+		}
 	}
 
 	@Override

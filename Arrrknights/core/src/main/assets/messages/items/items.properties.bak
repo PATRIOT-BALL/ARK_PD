@@ -1969,6 +1969,9 @@ items.weapon.enchantments.unstable.desc=이 무기는 혼돈의 아츠가 걸려
 items.weapon.enchantments.vampiric.name=흡혈의 %s
 items.weapon.enchantments.vampiric.desc=이 강력한 아츠는 맞은 대상의 생명력을 흡수하여 착용자에게로 전해 줍니다. 이 효과는 착용자의 체력이 적을수록 강력해집니다.
 
+items.weapon.enchantments.dragonkill.name=용살의 %s
+items.weapon.enchantments.dragonkill.desc=이 아츠는 용을 죽이기 위한 힘입니다.
+
 
 ###근접무기 
 items.weapon.melee.assassinsblade.name=카시미어 단도
@@ -1999,7 +2002,7 @@ items.weapon.melee.dirk.desc=찾아다니지 마라. 나는 언제나 여기에 
 
 items.weapon.melee.flail.name=쿠다리키리
 items.weapon.melee.flail.stats_desc=명중률 +20%, 기습공격 불가
-items.weapon.melee.flail.desc=창을 칼삼아, 갑주를 베어버린다! \n\n사람의 키보다 거대한 극동식 환도.\n\n이 무기는 착용자의 체력이 낮을수록 피해량이 상승해 최대 50%까지 상승합니다. 또한, 착용자의 생명이 위험하면 적의 피를 흡수해 착용자를 회복시켜줍니다.
+items.weapon.melee.flail.desc=창을 칼삼아, 갑주를 베어버린다!\n\n사람의 키보다 거대한 극동식 환도.\n\n이 무기는 착용자의 체력이 낮을수록 피해량이 상승해 최대 50%까지 상승합니다. 또한, 착용자의 생명이 위험하면 적의 피를 흡수해 착용자를 회복시켜줍니다.
 
 items.weapon.melee.gauntlet.name=마운틴 브레이커
 items.weapon.melee.gauntlet.stats_desc=공격속도 300 ~ 500%

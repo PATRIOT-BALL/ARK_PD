@@ -68,14 +68,6 @@ public class Firmament extends MeleeWeapon {
         }
         else doubleattack = true;
 
-
-        if (defender instanceof YogDzewa) {
-            damage = Random.IntRange(3232,8876);
-        }
-        else if (defender instanceof Talu_BlackSnake) {
-            damage *= 1.5f;
-        }
-
         return super.proc(attacker, defender, damage);
     }
 
