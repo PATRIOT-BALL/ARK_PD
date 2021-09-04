@@ -212,7 +212,7 @@ public class SurfaceScene extends PixelScene {
 			prtsSprtie = new PRTS_endSprite();
 			prtsSprtie.add(CharSprite.State.PARALYSED);
 			prtsSprtie.scale = new PointF(1, 1);
-			prtsSprtie.x = a.x - prtsSprtie.width()*-0.58f;
+			prtsSprtie.x = a.x - prtsSprtie.width()*-1.2f;
 			prtsSprtie.y = SKY_HEIGHT - prtsSprtie.height();
 			align(prtsSprtie);
 			prtsSprtie.alpha(0.33f);
