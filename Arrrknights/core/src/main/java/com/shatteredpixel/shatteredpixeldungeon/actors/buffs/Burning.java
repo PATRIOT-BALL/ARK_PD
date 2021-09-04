@@ -103,7 +103,7 @@ public class Burning extends Buff implements Hero.Doom {
 					burnIncrement = 0;
 
 					ArrayList<Item> burnable = new ArrayList<>();
-					//does not reach inside of containers
+					//does not reach inside of containers... 아이템 불태우는 판정
 					for (Item i : hero.belongings.backpack.items){
 						if (!i.unique && (i instanceof Scroll || i instanceof MysteryMeat || i instanceof FrozenCarpaccio)){
 							burnable.add(i);
