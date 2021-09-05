@@ -14,6 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DroneSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThiefSprite;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
@@ -81,6 +82,11 @@ public class EmpireDrone extends Mob {
                     CoolDown = 1;
                     LastPos = -1;
                     spend( TICK );
+
+                    if (!Dungeon.hero.isAlive()) {
+                        Dungeon.fail( getClass() );
+                        GLog.n( Messages.get(this, "bomb_kill") );
+                    }
                     return true;
                 }
                 else {

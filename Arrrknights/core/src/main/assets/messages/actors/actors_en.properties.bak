@@ -853,8 +853,8 @@ actors.mobs.acidic.desc=A mercenary from Sarkaz, more dangerous than a normal Sa
 actors.mobs.albino.name=Alpha Slug
 actors.mobs.albino.desc=An infected wild creature that is more dangerous than a normal Originium Slug. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions. The pointed horns of these Slugs cause bleeding.
 
-actors.mobs.armoredstatue.name=armored statue
-actors.mobs.armoredstatue.desc=You would think that it's just another one of this dungeon's inanimate statues, but its red glowing eyes give it away.\n\nIt seems to be in great condition because of the armor it's wearing, it might be very hard to kill.\n\nWhile the statue itself is made of stone, the _%1$s_ and _%2$s_ it's wielding look real.
+actors.mobs.armoredstatue.name=Armored Guerrilla Shieldguard
+actors.mobs.armoredstatue.desc=One of Patriot’s elite defenders. Carrying out Patriot’s will, these shieldguard form the solid foundation of the 'Aegis of the Infected.'.\n\nThe _%1$s_ and _%2$s_ guerrilla is holding looks real.\n\nIt seems to be in great condition because of the armor it's wearing, it might be very hard to kill.
 
 actors.mobs.airbornesoldier.name=Airborne Soldier
 actors.mobs.airbornesoldier.desc=One of Reunion's special melee soldiers. They are equipped with modified disposable jetpacks made from looted parts. Despite their fairly rudimentary equipment, Reunion uses them to great effect when attacking insufficiently protected areas.\n\nThey are approaching very quickly with the power of their equipment.
@@ -1096,9 +1096,9 @@ actors.mobs.snake.desc=An infected wild creature. Due to their low intelligence,
 actors.mobs.spinner.name=Originium Slug
 actors.mobs.spinner.desc=they are easily controlled by enemy casters for use as cannon fodder during invasions. prefer to wait in the distance while their victim struggles in their excreted cobweb, slowly dying from their venomous bite. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.\n\n_silence possible_
 
-actors.mobs.statue.name=animated statue
+actors.mobs.statue.name=Guerrilla Shieldguard
 actors.mobs.statue.def_verb=blocked
-actors.mobs.statue.desc=You would think that it's just another one of this dungeon's inanimate statues, but its red glowing eyes give it away.\n\nWhile the statue itself is made of stone, the _%s,_ it's wielding looks real.
+actors.mobs.statue.desc=One of Patriot’s elite defenders. Carrying out Patriot’s will, these shieldguard form the solid foundation of the 'Aegis of the Infected.'.\n\nThe _%s_ guerrilla is holding looks real.
 
 actors.mobs.succubus.name=Lancer
 actors.mobs.succubus.desc=A Sarkaz mercenary. After special training, they are capable of rushing forward with a long spear, building up speed. The faster they charge, the harder they strike anyone who might stand in their way.\n\nThey are accelerated when they spot an enemy. If you move while in acceleration, your attack power, movement speed, and accuracy will gradually increase! The accelerated state ends on attack.
@@ -1238,3 +1238,37 @@ actors.char.kill=%s killed you...
 actors.char.defeat=You defeated %s.
 actors.char.def_verb=dodged
 actors.char.invulnerable=invulnerable
+
+// 31~35
+
+actors.mobs.infantry.name=infantry
+actors.mobs.infantry.desc=초급 근거리 전투원. 근성이 넘치기때문에 일격에는 쓰러지지 않는다.
+
+actors.mobs.ergate.name=ergate
+actors.mobs.ergate.desc=엔지니어링 기술 수단을 사용하여 파괴를 감행하며, 무기를 거의 휴대하고 있지 않다. 일개미의 전투 능력은 낮지만, 상대의 무기를 강제로 떨어트린 후 도망쳐 전투를 방해한다.
+
+actors.mobs.sniper.name=sniper
+actors.mobs.sniper.desc=초급 스나이퍼. 초원거리에서 공격할 수 있다. 장비하고 있는 특수 저격 무기는 특수 탄약을 발사하여 아군 유닛에 기절 상태를 줄 수 있다.\n\n제자리에서 3회 연속 공격하면 대상을 마비시킵니다.
+
+actors.mobs.agent.name=agent
+actors.mobs.agent.desc=그가 사용하는 다양한 전술 수단은 아군의 방어선을 손쉽게 무너뜨릴 수 있을 것이다.\n\n_침묵 가능_
+
+actors.mobs.schwarz.name=schwarz
+actors.mobs.schwarz.desc=기밀 작전, 조사, 기밀 정보 보호, 야외 생존, 크로스보우 사용 등의 기술에 매우 조예가 깊다. 주기적으로 플레이어에게 저격을 시도한다.
+actors.mobs.schwarz.snipe1=놓치지 않겠습니다.
+actors.mobs.schwarz.snipe2=딱 좋은 과녁입니다.
+actors.mobs.schwarz.snipe3=보입니다.
+
+// OF-6 작전 후 대사
+actors.mobs.siestaboss.name=cronin
+actors.mobs.siestaboss.desc=화람지심 다시 읽기 귀찮다
+actors.mobs.siestaboss.notice=로, 로도스 아일랜드 놈들, 왜 여기로 온 거지!
+actors.mobs.siestaboss.skill1=인원들 싹 다 투입시켜!
+actors.mobs.siestaboss.skill2=빨리 저 녀석을 잡아!
+actors.mobs.siestaboss.phase2=너희들... 너희들...
+actors.mobs.siestaboss.defeated=젠장.. 젠장...!
+
+
+actors.mobs.empiredrone.name=empire drone
+actors.mobs.empiredrone.desc=우르수스군의 포병 캐스터가 조종하는 드론, 두텁고 견고한 재질의 장갑으로 무장하였다. 우르수스 포병의 맹렬한 집중 포격을 유도한다.
+actors.mobs.empiredrone.rankings_desc=destroyd

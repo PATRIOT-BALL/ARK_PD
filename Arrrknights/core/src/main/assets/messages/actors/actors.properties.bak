@@ -825,10 +825,10 @@ actors.mobs.npcs.ace_battle.summon=네 고통을, 우리도 함께 짊어지게 
 actors.mobs.npcs.ace_battle.fail=가라. 너희의 앞길이 순탄하길 바라마.
 actors.mobs.npcs.ace_battle.move=이동한다.
 actors.mobs.npcs.ace_battle.target=네 명령에 따르지.
-actors.mobs.npcs.ace_battle.battlecry1=네 생각대로 되진 않을 거다!
+actors.mobs.npcs.ace_battle.battlecry=네 생각대로 되진 않을 거다!
 
 //summon, fail은 1-8대사
-//배틀크라이 1은 0-10
+//배틀크라이 0-10
 
 
 
@@ -1266,6 +1266,14 @@ actors.mobs.siestaboss.skill1=인원들 싹 다 투입시켜!
 actors.mobs.siestaboss.skill2=빨리 저 녀석을 잡아!
 actors.mobs.siestaboss.phase2=너희들... 너희들...
 actors.mobs.siestaboss.defeated=젠장.. 젠장...!
+
+
+// 추가 21~24층 몬스터
+actors.mobs.empiredrone.name=제국 드론
+actors.mobs.empiredrone.desc=우르수스군의 포병 캐스터가 조종하는 드론, 두텁고 견고한 재질의 장갑으로 무장하였다. 우르수스 포병의 맹렬한 집중 포격을 유도한다.
+actors.mobs.empiredrone.bomb_kill=당신은 폭사했다...
+actors.mobs.empiredrone.rankings_desc=폭사
+
 
 
 // 스페셜 몹
