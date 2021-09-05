@@ -159,6 +159,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 	private static final String CLOBBER_USED = "clobber_used";
 	private static final String PARRY_USED   = "parry_used";
+	private static final String FLARE_USED   = "flareUsed";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -169,6 +170,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 		bundle.put(CLOBBER_USED, clobberUsed);
 		bundle.put(PARRY_USED, parryUsed);
+		bundle.put(FLARE_USED, flareUsed);
 	}
 
 	@Override
@@ -183,6 +185,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 		clobberUsed = bundle.getBoolean(CLOBBER_USED);
 		parryUsed = bundle.getBoolean(PARRY_USED);
+		flareUsed = bundle.getBoolean(FLARE_USED);
 
 		if (getHighestMove() != null) ActionIndicator.setAction(this);
 	}
@@ -230,6 +233,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 	private boolean clobberUsed = false;
 	private boolean parryUsed = false;
+	private boolean flareUsed = false;
 
 	public ComboMove getHighestMove(){
 		ComboMove best = null;
@@ -248,6 +252,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 	public boolean canUseMove(ComboMove move){
 		if (move == ComboMove.CLOBBER && clobberUsed)   return false;
 		if (move == ComboMove.PARRY && parryUsed)       return false;
+		if (move == ComboMove.CRUSH && flareUsed)       return false;
 		return move.comboReq <= count;
 	}
 
@@ -390,6 +395,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
 						if (enemy.isAlive()) {
 							GameScene.flash( 0x80FFFFFF );
+							Sample.INSTANCE.play(Assets.Sounds.BLAST, 1.1f, 1.26f);
 							Buff.affect(enemy, Paralysis.class, 1f);
 							Buff.affect(enemy, Blindness.class, count*0.3f);
 						}
@@ -459,6 +465,12 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 			case CRUSH:
 				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+					flareUsed = true;
+					hero.spendAndNext(hero.attackDelay());
+				} else {
+					detach();
+					Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
+					ActionIndicator.clearAction(Combo.this);
 					hero.spendAndNext(hero.attackDelay());
 				}
 				break;
