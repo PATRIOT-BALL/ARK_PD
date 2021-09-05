@@ -18,7 +18,7 @@ public class M1887 extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier-1) +    //12 + 3 (one target = x2)
+        return  4*(tier-1) - 2 +    //10 + 3 (one target = x2)
                 lvl*(tier-1);
     }
 

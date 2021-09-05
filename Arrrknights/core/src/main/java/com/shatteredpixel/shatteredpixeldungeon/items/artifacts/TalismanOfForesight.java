@@ -192,8 +192,8 @@ public class TalismanOfForesight extends Artifact {
 				}
 
 				exp += earnedExp;
-				if (exp >= 100 + 50*level() && level() < levelCap) {
-					exp -= 100 + 50*level();
+				if (exp >= 100 + 40*level() && level() < levelCap) {
+					exp -= 100 + 40*level();
 					upgrade();
 					GLog.p( Messages.get(TalismanOfForesight.class, "levelup") );
 				}
@@ -304,7 +304,7 @@ public class TalismanOfForesight extends Artifact {
 			LockedFloor lock = target.buff(LockedFloor.class);
 			if (charge < chargeCap && !cursed && (lock == null || lock.regenOn())) {
 				//fully charges in 2000 turns at +0, scaling to 1000 turns at +10.
-				float chargeGain = (0.05f+(level()*0.005f));
+				float chargeGain = (0.04f+(level()*0.004f));
 				chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
 				partialCharge += chargeGain;
 

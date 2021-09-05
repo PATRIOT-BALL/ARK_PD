@@ -48,7 +48,7 @@ public class Firmament extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  2+(tier+5) +    //9 + 2. 공식상 2회 타격
+        return  2+(tier+4) +    //8 + 2. 공식상 2회 타격
                 lvl*(tier);   //scaling unchanged
     }
 

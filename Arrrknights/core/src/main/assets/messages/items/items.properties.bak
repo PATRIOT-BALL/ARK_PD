@@ -1971,6 +1971,7 @@ items.weapon.enchantments.vampiric.desc=이 강력한 아츠는 맞은 대상의
 
 items.weapon.enchantments.dragonkill.name=용살의 %s
 items.weapon.enchantments.dragonkill.desc=이 아츠는 용을 죽이기 위한 힘입니다.
+items.weapon.enchantments.dragonkill.awake="내가 여기에 온 건, 내 소임을 다하기 위해서다."
 
 
 ###근접무기 

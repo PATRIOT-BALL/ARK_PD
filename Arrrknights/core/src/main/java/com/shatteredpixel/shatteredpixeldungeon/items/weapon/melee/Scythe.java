@@ -24,8 +24,8 @@ public class Scythe extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) - 2 +   //14 + 3
-                lvl*(tier-1); }
+        return  4*(tier) +   //16 + 4
+                lvl*(tier); }
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
@@ -42,7 +42,7 @@ public class Scythe extends MeleeWeapon {
             }
         }
 
-        float bounsdmg = Math.min(1.9f, 1f+(extratarget*0.3f));
+        float bounsdmg = Math.min(1.75f, 1f+(extratarget*0.25f));
 
         damage = Math.round(damage * bounsdmg);
 
@@ -78,22 +78,16 @@ public class Scythe extends MeleeWeapon {
             int heal = 3 + level();
 
             if (attacker instanceof Hero) {
-            if (Dungeon.hero.lvl > 6 && Dungeon.depth < 5) {
+            if (Dungeon.hero.lvl > 7 && Dungeon.depth < 5) {
                 heal /= 4;
             }
-            else if (Dungeon.hero.lvl > 11 && Dungeon.depth < 10) {
+            else if (Dungeon.hero.lvl > 12 && Dungeon.depth < 10) {
                 heal /= 4;
             }
-            else if (Dungeon.hero.lvl > 17 && Dungeon.depth < 15) {
+            else if (Dungeon.hero.lvl > 18 && Dungeon.depth < 15) {
                 heal /= 4;
             }
-            else if (Dungeon.hero.lvl > 22 && Dungeon.depth < 20) {
-                heal /= 4;
-            }
-            else if (Dungeon.hero.lvl > 27 && Dungeon.depth < 25) {
-                heal /= 4;
-            }
-            else if (Dungeon.hero.lvl > 31 && Dungeon.depth < 35) {
+            else if (Dungeon.hero.lvl > 23 && Dungeon.depth < 20) {
                 heal /= 4;
             }}
 

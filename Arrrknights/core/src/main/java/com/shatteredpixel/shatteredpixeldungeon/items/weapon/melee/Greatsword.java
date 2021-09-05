@@ -34,14 +34,14 @@ public class Greatsword extends MeleeWeapon {
 
 		tier=5;
 		DLY = 0.5f;
-		ACC = 0.75f;
+		ACC = 0.85f;
 		RCH = 2;
 
 	}
 	@Override
 	public int max(int lvl) {
-		return  3*(tier) + 1 +    // 16 + 3
-				lvl*Math.round(0.5f*(tier+1));   //scaling unchanged
+		return  3*(tier+1) +    // 18 + 3
+				lvl*(tier-1);   //scaling unchanged
 	}
 
 }
