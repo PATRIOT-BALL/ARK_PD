@@ -118,7 +118,8 @@ public class RingKit extends Item {
                         });
 
                 }
-            }}
+                  else new RingKit().collect();
+            }  else new RingKit().collect();}
         };
 
 

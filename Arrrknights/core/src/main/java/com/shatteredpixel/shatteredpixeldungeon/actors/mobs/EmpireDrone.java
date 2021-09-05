@@ -5,9 +5,13 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.Stylus;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.A_master1Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.DroneSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThiefSprite;
 import com.watabou.noosa.Camera;
@@ -18,42 +22,47 @@ import com.watabou.utils.Random;
 
 public class EmpireDrone extends Mob {
     {
-        spriteClass = ThiefSprite.class;
+        spriteClass = A_master1Sprite.class;
 
-        HP = HT = 75;
-        defenseSkill = 12;
+        HP = HT = 130;
+        defenseSkill = 18;
 
-        EXP = 0; // 미정
-        maxLvl = 5; // 미정
+        EXP = 20;
+        maxLvl = 28;
 
-        loot = new MysteryMeat(); // 미정
-        lootChance = 0.2f;
+        loot = new Stylus();
+        lootChance = 1f;
 
+        flying = true;
+
+        baseSpeed = 0.5f;
     }
 
-    private int CoolDown = 8;
+    private int CoolDown = 0;
     private int LastPos = -1;
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 30, 60 );
+        return Random.NormalIntRange( 45, 60 );
     }
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange( 0, 8 );
+        return Random.NormalIntRange( 0, 20 );
     }
 
     @Override
-    protected Char chooseEnemy() {
-        return null;
+    protected boolean canAttack(Char enemy) {
+        return false;
     }
 
     @Override
     protected boolean act() {
         if (CoolDown == 0) {
             if (LastPos == -1) {
-                if (state != HUNTING) return true;
+                if (state != HUNTING) return super.act();
+                else if (!this.fieldOfView[Dungeon.hero.pos]) return super.act();
+
                 LastPos = Dungeon.hero.pos;
                 sprite.parent.addToBack(new TargetedCell(LastPos, 0xFF0000));
 
@@ -64,19 +73,20 @@ public class EmpireDrone extends Mob {
             }
             else  {
                 if (LastPos == Dungeon.hero.pos) {
-                    Dungeon.hero.damage(damageRoll(), this);
+                    int dmg = damageRoll() - Dungeon.hero.drRoll();
+                    Dungeon.hero.damage(dmg, this);
                     Dungeon.hero.sprite.burst(CharSprite.NEGATIVE, 10);
-                    CellEmitter.center(Dungeon.hero.pos).burst(HandclapSprite.GooParticle.FACTORY, 60);
+                    CellEmitter.center(LastPos).burst(BlastParticle.FACTORY, 10);
                     Camera.main.shake(5, 0.5f);
-                    CoolDown = 5;
+                    CoolDown = 1;
                     LastPos = -1;
                     spend( TICK );
                     return true;
                 }
                 else {
-                    CellEmitter.center(LastPos).burst(HandclapSprite.GooParticle.FACTORY, 60);
+                    CellEmitter.center(LastPos).burst(BlastParticle.FACTORY, 10);
                     Camera.main.shake(5, 0.5f);
-                    CoolDown = 5;
+                    CoolDown = 1;
                     LastPos = -1;
                 }
             }

@@ -252,7 +252,9 @@ public class Bestiary {
 					cl = DM201.class;
 				} else if (cl == Monk.class) {
 					cl = Senior.class;
-				} else if (cl == Scorpio.class) {
+				} else if (cl == Eye.class) {
+					cl = EmpireDrone.class;
+				}else if (cl == Scorpio.class) {
 					cl = Acidic.class;
 				}
 				else if (cl == Ergate.class) {
