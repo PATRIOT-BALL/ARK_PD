@@ -1269,6 +1269,16 @@ actors.mobs.siestaboss.phase2=너희들... 너희들...
 actors.mobs.siestaboss.defeated=젠장.. 젠장...!
 
 
-actors.mobs.empiredrone.name=empire drone
+actors.mobs.empiredrone.name=Imperial Drone
 actors.mobs.empiredrone.desc=우르수스군의 포병 캐스터가 조종하는 드론, 두텁고 견고한 재질의 장갑으로 무장하였다. 우르수스 포병의 맹렬한 집중 포격을 유도한다.
-actors.mobs.empiredrone.rankings_desc=destroyd
+actors.mobs.empiredrone.bomb_kill=Destoryd.
+actors.mobs.empiredrone.rankings_desc=body destroyd
+
+actors.mobs.raider.name=Raider
+actors.mobs.raider.desc=우르수스군 중 기동력과 돌파력을 겸비한 병과. 갑옷을 두르고 있으며, 무장이 부족한 상태의 적을 상대할 때 뛰어난 역량을 발휘한다.\n\n이들은 적을 강하게 찌르는 대신 밀쳐내는 공격을 가합니다.
+
+actors.mobs.striker.name=Striker
+actors.mobs.striker.desc=우르수스군의 강력한 보병. 우르수스가 결성한 제국군의 침략 선봉 부대. 공수를 겸비하였으며, 근접전과 투척에 능하다. 어느 정도 대미지를 입으면 사기가 오르고 파괴력이 더 커진다.
+
+actors.mobs.strikerelite.name=백전 정예 선봉
+actors.mobs.strikerelite.desc=풍부한 실전 경험을 지닌 우르수스군의 강력한 보병. 우르수스가 결성한 제국군의 침략 선봉 부대. 공수를 겸비하였으며, 근접전과 투척에 능하다. 어느 정도 대미지를 입으면 사기가 오르고 파괴력이 더 커진다.

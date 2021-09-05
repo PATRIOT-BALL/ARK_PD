@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.A_master1Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
@@ -59,7 +60,7 @@ public class DP27 extends MeleeWeapon {
 
     private int bullettier = 3;
     private int bullet = 5;
-    private int bulletCap = 22;
+    private int bulletCap = 26;
     private boolean spshot = false; // 특수 사격 여부
     private boolean gamza = false; // 썬더볼트 장착 여부
 
@@ -76,7 +77,7 @@ public class DP27 extends MeleeWeapon {
     }
 
     public int shotmax() {
-        return 7 + bullettier + (level() * bullettier);
+        return 4 + (bullettier * 3) + (level() * bullettier);
     }
 
     @Override
@@ -213,6 +214,7 @@ public class DP27 extends MeleeWeapon {
             if (Dungeon.hero.subClass == HeroSubClass.SNIPER) dmg -= (ch.drRoll() / 2);
             else dmg -= ch.drRoll();
 
+            ACC = 1.5f;
             if (ch.hit(Dungeon.hero, ch, false)) {
                 if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
                     dmg *= 1f + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.15f); }
@@ -263,6 +265,8 @@ public class DP27 extends MeleeWeapon {
 
         bullet -=1;
         updateQuickslot();
+
+        ACC = 1;
 
         curUser.spendAndNext(1f);
     }

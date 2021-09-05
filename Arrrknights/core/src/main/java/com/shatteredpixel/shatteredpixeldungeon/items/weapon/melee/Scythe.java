@@ -42,7 +42,7 @@ public class Scythe extends MeleeWeapon {
             }
         }
 
-        float bounsdmg = Math.min(1.75f, 1f+(extratarget*0.25f));
+        float bounsdmg = Math.min(1.6f, 1f+(extratarget*0.15f));
 
         damage = Math.round(damage * bounsdmg);
 

@@ -166,17 +166,20 @@ public class Bestiary {
 				//1x succubus, 1x evil eye
 				return new ArrayList<>(Arrays.asList(
 						Succubus.class,
+						Striker.class,
 						Eye.class));
 			case 23:
 				//1x succubus, 2x evil eye, 1x scorpio
 				return new ArrayList<>(Arrays.asList(
 						Succubus.class,
+						Striker.class, Striker.class,
 						Eye.class, Eye.class,
 						Scorpio.class));
 			case 24: case 25: case 26:
 				//1x succubus, 2x evil eye, 3x scorpio
 				return new ArrayList<>(Arrays.asList(
 						Succubus.class,
+						Striker.class, Striker.class,
 						Eye.class, Eye.class,
 						Scorpio.class, Scorpio.class, Scorpio.class));
 
@@ -254,7 +257,13 @@ public class Bestiary {
 					cl = Senior.class;
 				} else if (cl == Eye.class) {
 					cl = EmpireDrone.class;
-				}else if (cl == Scorpio.class) {
+				}else if (cl == Succubus.class) {
+					cl = Raider.class;
+				}
+				else if (cl == Striker.class) {
+					cl = StrikerElite.class;
+				}
+				else if (cl == Scorpio.class) {
 					cl = Acidic.class;
 				}
 				else if (cl == Ergate.class) {
