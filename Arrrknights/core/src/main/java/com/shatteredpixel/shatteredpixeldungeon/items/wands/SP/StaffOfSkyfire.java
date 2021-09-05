@@ -73,7 +73,9 @@ public class StaffOfSkyfire extends DamageWand {
 
         //throws other chars around the center.
         for (int i : PathFinder.NEIGHBOURS9) {
-            GameScene.add(Blob.seed(bolt.collisionPos + i, 1+this.level(), Fire.class));
+            if (Dungeon.level.map[bolt.collisionPos+i] != Terrain.TRAP && Dungeon.level.map[bolt.collisionPos+i] != Terrain.SECRET_TRAP
+            && Dungeon.level.map[bolt.collisionPos+i] != Terrain.INACTIVE_TRAP) {
+            GameScene.add(Blob.seed(bolt.collisionPos + i, 1+this.level(), Fire.class)); }
             Char ch = Actor.findChar(bolt.collisionPos + i);
 
             if (ch != null) {
