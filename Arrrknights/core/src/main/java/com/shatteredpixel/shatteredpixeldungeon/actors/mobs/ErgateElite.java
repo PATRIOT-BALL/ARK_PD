@@ -2,12 +2,13 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.items.food.FrozenCarpaccio;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ErgateSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThiefSprite;
 import com.watabou.utils.Random;
 
 public class ErgateElite extends Ergate {
     {
-        spriteClass = ThiefSprite.class;
+        spriteClass = ErgateSprite.class;
 
         HP = HT = 90;
 

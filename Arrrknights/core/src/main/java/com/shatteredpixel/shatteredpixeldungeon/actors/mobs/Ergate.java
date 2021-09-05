@@ -19,6 +19,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ErgateSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThiefSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
@@ -29,7 +30,7 @@ public class Ergate extends Mob {
     public Item item;
 
     {
-        spriteClass = ThiefSprite.class;
+        spriteClass = ErgateSprite.class;
 
         HP = HT = 75;
         defenseSkill = 40;

@@ -4,12 +4,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.InfantrySprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Siesta_InfantrySprite;
 import com.watabou.utils.Random;
 
 // 화람지심 보병
 public class Infantry extends Mob {
     {
-        spriteClass = InfantrySprite.class;
+        spriteClass = Siesta_InfantrySprite.class;
 
         HP = HT = 135;
         defenseSkill = 25;
