@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.Skill;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
@@ -59,6 +60,7 @@ public class SkillBook extends Item {
                                         charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK1.doSkill();
+                                        Talent.onSkillUsed(Dungeon.hero);
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
                             } else if (index == 1) {
@@ -71,6 +73,7 @@ public class SkillBook extends Item {
                                         charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK2.doSkill();
+                                        Talent.onSkillUsed(Dungeon.hero);
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
                             } else if (index == 2) {
@@ -83,6 +86,7 @@ public class SkillBook extends Item {
                                         charge -= chargeDown;
                                         updateQuickslot();
                                         hero.SK3.doSkill();
+                                        Talent.onSkillUsed(Dungeon.hero);
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
                             }

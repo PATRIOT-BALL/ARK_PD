@@ -28,11 +28,15 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Raider;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -45,6 +49,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.AttackIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndCombo;
+import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
@@ -215,6 +220,9 @@ public class Combo extends Buff implements ActionIndicator.Action {
 		}
 
 		public String desc(){
+			if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+				if (name() == "FURY" || name() == "CRUSH") return Messages.get(this, name()+"_desc2");
+			}
 			return Messages.get(this, name()+"_desc");
 		}
 
@@ -320,13 +328,25 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					dmg = 0;
 					break;
 				case SLAM:
-					dmg += Math.round(target.drRoll() * count/5f);
+					dmg += Math.round(target.drRoll() * count / 5f);
 					break;
 				case CRUSH:
-					dmg = Math.round(dmg * 0.25f*count);
+					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+					dmg *= 1.25f;
+					}
+					else dmg = Math.round(dmg * 0.25f * count);
 					break;
 				case FURY:
-					dmg = Math.round(dmg * 0.6f);
+					if (Dungeon.hero.belongings.weapon instanceof DP27) {
+						dmg = Random.IntRange(((DP27) Dungeon.hero.belongings.weapon).shotmin(), ((DP27) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Math.round(dmg * 0.4f * count);
+					} else if (Dungeon.hero.belongings.weapon instanceof C1_9mm) {
+						dmg = Random.IntRange(((C1_9mm) Dungeon.hero.belongings.weapon).shotmin(), ((C1_9mm) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Math.round(dmg * 0.4f * count);
+					} else if (Dungeon.hero.belongings.weapon instanceof R4C) {
+						dmg = Random.IntRange(((R4C) Dungeon.hero.belongings.weapon).shotmin(), ((R4C) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Math.round(dmg * 0.4f * count);
+					} else dmg = Math.round(dmg * 0.6f);
 					break;
 			}
 
@@ -343,7 +363,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 			//special effects
 			switch (moveBeingUsed) {
 				case CLOBBER:
-					hit( enemy );
+					hit(enemy);
 					if (enemy.isAlive()) {
 						//trace a ballistica to our target (which will also extend past them
 						Ballistica trajectory = new Ballistica(target.pos, enemy.pos, Ballistica.STOP_TARGET);
@@ -351,8 +371,8 @@ public class Combo extends Buff implements ActionIndicator.Action {
 						trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
 						//knock them back along that ballistica, ensuring they don't fall into a pit
 						int dist = 2;
-						if (count >= 6 && hero.pointsInTalent(Talent.ENHANCED_COMBO) >= 1){
-							dist ++;
+						if (count >= 6 && hero.pointsInTalent(Talent.ENHANCED_COMBO) >= 1) {
+							dist++;
 							Buff.prolong(enemy, Vertigo.class, 3);
 						} else if (!enemy.flying) {
 							while (dist > trajectory.dist ||
@@ -364,29 +384,44 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					}
 					break;
 				case PARRY:
-					hit( enemy );
+					hit(enemy);
 					break;
 				case CRUSH:
-					WandOfBlastWave.BlastWave.blast(enemy.pos);
-					PathFinder.buildDistanceMap(target.pos, Dungeon.level.passable, 3);
-					for (Char ch : Actor.chars()){
-						if (ch != enemy && ch.alignment == Char.Alignment.ENEMY
-								&& PathFinder.distance[ch.pos] < Integer.MAX_VALUE){
-							int aoeHit = Math.round(target.damageRoll() * 0.25f*count);
-							aoeHit /= 2;
-							aoeHit -= ch.drRoll();
-							if (ch.buff(Vulnerable.class) != null) aoeHit *= 1.33f;
-							ch.damage(aoeHit, target);
-							ch.sprite.bloodBurstA(target.sprite.center(), dmg);
-							ch.sprite.flash();
+					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+						if (enemy.isAlive()) {
+							GameScene.flash( 0x80FFFFFF );
+							Buff.affect(enemy, Paralysis.class, 1f);
+							Buff.affect(enemy, Blindness.class, count*0.3f);
+						}
+					}
+					else {
+						WandOfBlastWave.BlastWave.blast(enemy.pos);
+						PathFinder.buildDistanceMap(target.pos, Dungeon.level.passable, 3);
+						for (Char ch : Actor.chars()) {
+							if (ch != enemy && ch.alignment == Char.Alignment.ENEMY
+									&& PathFinder.distance[ch.pos] < Integer.MAX_VALUE) {
+								int aoeHit = Math.round(target.damageRoll() * 0.25f * count);
+								aoeHit /= 2;
+								aoeHit -= ch.drRoll();
+								if (ch.buff(Vulnerable.class) != null) aoeHit *= 1.33f;
+								ch.damage(aoeHit, target);
+								ch.sprite.bloodBurstA(target.sprite.center(), dmg);
+								ch.sprite.flash();
 
-							if (!ch.isAlive()) {
-								if (hero.hasTalent(Talent.LETHAL_DEFENSE) && hero.buff(BrokenSeal.WarriorShield.class) != null){
-									BrokenSeal.WarriorShield shield = hero.buff(BrokenSeal.WarriorShield.class);
-									shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.LETHAL_DEFENSE)/3f));
+								if (!ch.isAlive()) {
+									if (hero.hasTalent(Talent.LETHAL_DEFENSE) && hero.buff(BrokenSeal.WarriorShield.class) != null) {
+										BrokenSeal.WarriorShield shield = hero.buff(BrokenSeal.WarriorShield.class);
+										shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.LETHAL_DEFENSE) / 3f));
+									}
 								}
 							}
 						}
+					}
+					break;
+				case FURY:
+					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C){
+						Camera.main.shake(2, 0.5f);
+						Sample.INSTANCE.play(Assets.Sounds.HIT_SHOTGUN, 1.87f, 1.26f);
 					}
 					break;
 				default:
@@ -422,23 +457,39 @@ public class Combo extends Buff implements ActionIndicator.Action {
 				//do nothing
 				break;
 
+			case CRUSH:
+				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+					hero.spendAndNext(hero.attackDelay());
+				}
+				break;
+
 			case FURY:
-				if (Dungeon.hero.belongings.weapon instanceof Firmament || Dungeon.hero.belongings.weapon instanceof Glaive) count--;
-				count--;
-				//fury attacks as many times as you have combo count
-				if (count > 0 && enemy.isAlive() && hero.canAttack(enemy) &&
-						(wasAlly || enemy.alignment != target.alignment)){
-					target.sprite.attack(enemy.pos, new Callback() {
-						@Override
-						public void call() {
-							doAttack(enemy);
-						}
-					});
-				} else {
+				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C)
+				{
 					detach();
-					Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
 					ActionIndicator.clearAction(Combo.this);
 					hero.spendAndNext(hero.attackDelay());
+					break;
+				}
+				else {
+					if (Dungeon.hero.belongings.weapon instanceof Firmament || Dungeon.hero.belongings.weapon instanceof Glaive)
+						count--;
+					count--;
+					//fury attacks as many times as you have combo count
+					if (count > 0 && enemy.isAlive() && hero.canAttack(enemy) &&
+							(wasAlly || enemy.alignment != target.alignment)) {
+						target.sprite.attack(enemy.pos, new Callback() {
+							@Override
+							public void call() {
+								doAttack(enemy);
+							}
+						});
+					} else {
+						detach();
+						Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
+						ActionIndicator.clearAction(Combo.this);
+						hero.spendAndNext(hero.attackDelay());
+					}
 				}
 				break;
 

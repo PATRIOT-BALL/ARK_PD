@@ -27,9 +27,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArtifactRecharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.CounterBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.EnhancedRings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
@@ -48,7 +50,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
@@ -110,7 +111,7 @@ public enum Talent {
 	//Rogue T1
 	CACHED_RATIONS(64), THIEFS_INTUITION(65), SUCKER_PUNCH(66), PROTECTIVE_SHADOWS(67),
 	//Rogue T2
-	MYSTICAL_MEAL(68), MYSTICAL_UPGRADE(69), WIDE_SEARCH(70), SILENT_STEPS(71), ROGUES_FORESIGHT(72),
+	MYSTICAL_MEAL(68), MYSTICAL_UPGRADE(80), WIDE_SEARCH(70), SILENT_STEPS(71), ROGUES_FORESIGHT(72),
 	//Rogue T3
 	ENHANCED_RINGS(73, 3), LIGHT_CLOAK(74, 3),
 	//Assassin T3
@@ -127,7 +128,7 @@ public enum Talent {
 	//Huntress T1
 	NATURES_BOUNTY(96), SURVIVALISTS_INTUITION(97), FOLLOWUP_STRIKE(98), NATURES_AID(99),
 	//Huntress T2
-	INVIGORATING_MEAL(100), RESTORED_NATURE(101), REJUVENATING_STEPS(102), HEIGHTENED_SENSES(103), DURABLE_PROJECTILES(104),
+	INVIGORATING_MEAL(100), RESTORED_NATURE(101), REJUVENATING_STEPS(102), BOMB_ARROW(103), DURABLE_PROJECTILES(104),
 	//Huntress T3
 	ARTS_FOCUS(105,3), SEER_SHOT(106, 3),
 	//Sniper T3
@@ -354,23 +355,6 @@ public enum Talent {
 	}
 
 	public static void onUpgradeScrollUsed( Hero hero ){
-		if (hero.hasTalent(ENERGIZING_UPGRADE)){
-			MagesStaff staff = hero.belongings.getItem(MagesStaff.class);
-			if (staff != null){
-				staff.gainCharge(1 + hero.pointsInTalent(ENERGIZING_UPGRADE), true);
-				ScrollOfRecharging.charge( Dungeon.hero );
-				SpellSprite.show( hero, SpellSprite.CHARGE );
-			}
-		}
-		if (hero.hasTalent(MYSTICAL_UPGRADE)){
-			CloakOfShadows cloak = hero.belongings.getItem(CloakOfShadows.class);
-			if (cloak != null){
-				cloak.overCharge(2 + hero.pointsInTalent(MYSTICAL_UPGRADE) * 2);
-				ScrollOfRecharging.charge( Dungeon.hero );
-				SpellSprite.show( hero, SpellSprite.CHARGE );
-			}
-		}
-
 		if (hero.hasTalent(RECOVERY_UPGRADE))
 		{
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
@@ -391,6 +375,25 @@ public enum Talent {
 			{
 				p.BounsStack(Dungeon.hero.pointsInTalent(SPECIAL_OPERATIONS) * 3);
 			}
+		}
+	}
+
+
+	public static void onSkillUsed( Hero hero) {
+		if (hero.hasTalent(ENERGIZING_UPGRADE)){
+			MagesStaff staff = hero.belongings.getItem(MagesStaff.class);
+			if (staff != null){
+				staff.gainCharge(hero.pointsInTalent(ENERGIZING_UPGRADE), true);
+				ScrollOfRecharging.charge( Dungeon.hero );
+				SpellSprite.show( hero, SpellSprite.CHARGE );
+			}
+		}
+
+		if (hero.hasTalent(MYSTICAL_UPGRADE)){
+			Buff.affect(hero, Haste.class, hero.pointsInTalent(MYSTICAL_UPGRADE) - 1);
+			Buff.detach(hero, Cripple.class);
+			Buff.detach(hero, Blindness.class);
+			Buff.detach(hero, Roots.class);
 		}
 	}
 
@@ -515,7 +518,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, MYSTICAL_MEAL, MYSTICAL_UPGRADE, WIDE_SEARCH, SILENT_STEPS, ROGUES_FORESIGHT);
 				break;
 			case HUNTRESS:
-				Collections.addAll(tierTalents, INVIGORATING_MEAL, RESTORED_NATURE, REJUVENATING_STEPS, HEIGHTENED_SENSES, DURABLE_PROJECTILES);
+				Collections.addAll(tierTalents, INVIGORATING_MEAL, RESTORED_NATURE, REJUVENATING_STEPS, BOMB_ARROW, DURABLE_PROJECTILES);
 				break;
 			case ROSECAT:
 				Collections.addAll(tierTalents, FASTMEAL, RECOVERY_UPGRADE, DELICIOUS_FOOD, LOVEMEAT, POWERGEAR);
