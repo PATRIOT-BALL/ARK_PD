@@ -31,6 +31,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -102,7 +104,27 @@ public class Combo extends Buff implements ActionIndicator.Action {
 		}
 
 		BuffIndicator.refreshHero(); //refresh the buff visually on-hit
+	}
 
+	public void bounshit( Char enemy ) {
+
+		count++;
+		comboTime = 5f;
+
+		if (!enemy.isAlive() || (enemy.buff(Corruption.class) != null && enemy.HP == enemy.HT)){
+			comboTime = Math.max(comboTime, 15*((Hero)target).pointsInTalent(Talent.CLEAVE));
+		}
+
+		initialComboTime = comboTime;
+
+		if ((getHighestMove() != null)) {
+
+			ActionIndicator.setAction( this );
+			Badges.validateMasteryCombo( count );
+
+		}
+
+		BuffIndicator.refreshHero(); //refresh the buff visually on-hit
 	}
 
 	@Override
@@ -401,6 +423,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 				break;
 
 			case FURY:
+				if (Dungeon.hero.belongings.weapon instanceof Firmament || Dungeon.hero.belongings.weapon instanceof Glaive) count--;
 				count--;
 				//fury attacks as many times as you have combo count
 				if (count > 0 && enemy.isAlive() && hero.canAttack(enemy) &&
