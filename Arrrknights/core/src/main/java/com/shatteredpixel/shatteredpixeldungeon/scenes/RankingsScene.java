@@ -22,8 +22,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.scenes;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Rankings;
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroClass;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -41,6 +44,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.GameMath;
 
 public class RankingsScene extends PixelScene {
@@ -101,6 +105,21 @@ public class RankingsScene extends PixelScene {
 				add(row);
 				
 				pos++;
+
+				if (Dungeon.hero != null) {
+					String HERO = "hero";
+					String CHALLENGES = "challenges";
+
+					Bundle data = rec.gameData;
+					Dungeon.challenges = data.getInt(CHALLENGES);
+					Dungeon.hero = (Hero) data.get(HERO);
+					if (Dungeon.hero.belongings.ring != null) {
+						Rankings.DestroydChack(Dungeon.challenges,0, Dungeon.hero.belongings.ring.level());
+					}
+					if (Dungeon.hero.belongings.misc != null) {
+						Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
+					}
+				}
 			}
 			
 			if (Rankings.INSTANCE.totalNumber >= Rankings.TABLE_SIZE) {

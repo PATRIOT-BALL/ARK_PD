@@ -113,7 +113,6 @@ public class RingKit extends Item {
 
                             @Override
                             public void onBackPressed() {
-                                RingKit.this.upgrade((Ring) item);
                             }
                         });
 

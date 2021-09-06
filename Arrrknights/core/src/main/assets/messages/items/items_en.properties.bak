@@ -2029,7 +2029,7 @@ items.weapon.melee.greatshield.stats_desc=This weapon blocks 0-%d damage. This b
 items.weapon.melee.greatshield.desc=Even when he gave up his life, he never gave up on his beliefs.
 
 items.weapon.melee.greatsword.name=burning struggle
-items.weapon.melee.greatsword.stats_desc=Range +1, Attack Speed 200%, Accuracy -25%
+items.weapon.melee.greatsword.stats_desc=Range +1, Attack Speed 200%, Accuracy -15%
 items.weapon.melee.greatsword.desc=A range extension module made by engineers on Rhodes Island has arrived. As a bonus, the blade was also replaced.
 
 items.weapon.melee.niansword.name=copper seal

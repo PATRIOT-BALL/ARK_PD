@@ -29,6 +29,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Belongings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.RingKit;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HeroSprite;
@@ -40,6 +42,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.TalentsPane;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
+import com.sun.org.apache.bcel.internal.generic.DUP;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -162,7 +165,17 @@ public class WndRanking extends WndTabbed {
 		
 		public StatsTab() {
 			super();
-			
+			boolean Destroyd = false;
+			if (Dungeon.hero.belongings.misc != null) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
+					Destroyd = true;}
+
+			}
+			if (Dungeon.hero.belongings.ring != null) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
+					Destroyd = true;}
+
+			}
 			String heroClass = Dungeon.hero.className();
 			
 			IconTitle title = new IconTitle();
@@ -222,8 +235,11 @@ public class WndRanking extends WndTabbed {
 			}
 
 			pos += GAP;
-			
-			pos = statSlot( this, Messages.get(this, "str"), Integer.toString( Dungeon.hero.STR() ), pos );
+
+			if (Destroyd) {
+				pos = statSlot( this, Messages.get(this, "str"), Integer.toString(7645), pos );
+			}
+			else pos = statSlot( this, Messages.get(this, "str"), Integer.toString( Dungeon.hero.STR() ), pos );
 			pos = statSlot( this, Messages.get(this, "health"), Integer.toString( Dungeon.hero.HT ), pos );
 			
 			pos += GAP;
@@ -240,7 +256,10 @@ public class WndRanking extends WndTabbed {
 			
 			pos = statSlot( this, Messages.get(this, "food"), Integer.toString( Statistics.foodEaten ), pos );
 			pos = statSlot( this, Messages.get(this, "alchemy"), Integer.toString( Statistics.potionsCooked ), pos );
-			pos = statSlot( this, Messages.get(this, "ankhs"), Integer.toString( Statistics.ankhsUsed ), pos );
+			if (Destroyd) {
+				pos = statSlot( this, "???????", Integer.toString(3333), pos );
+			}
+			else pos = statSlot( this, Messages.get(this, "ankhs"), Integer.toString( Statistics.ankhsUsed ), pos );
 		}
 		
 		private float statSlot( Group parent, String label, String value, float pos ) {
@@ -276,10 +295,16 @@ public class WndRanking extends WndTabbed {
 				addItem( stuff.artifact );
 			}
 			if (stuff.misc != null) {
-				addItem( stuff.misc );
-			}
+				if (Dungeon.challenges > 5) {
+					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
+				}
+					else addItem(stuff.misc);
+				}
 			if (stuff.ring != null) {
-				addItem( stuff.ring );
+				if (Dungeon.challenges > 5) {
+					Rankings.DestroydChack(Dungeon.challenges,0, Dungeon.hero.belongings.ring.level());
+				}
+				else addItem( stuff.ring );
 			}
 
 			pos = 0;
@@ -314,6 +339,17 @@ public class WndRanking extends WndTabbed {
 		
 		public BadgesTab() {
 			super();
+
+			if (Dungeon.hero.belongings.misc != null) {
+				if (Dungeon.challenges > 5) {
+					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
+				}
+			}
+			if (Dungeon.hero.belongings.ring != null) {
+				if (Dungeon.challenges > 5) {
+					Rankings.DestroydChack(Dungeon.challenges, 0, Dungeon.hero.belongings.ring.level());
+				}
+			}
 			
 			camera = WndRanking.this.camera;
 
@@ -378,7 +414,20 @@ public class WndRanking extends WndTabbed {
 			PixelScene.align(slot);
 			
 			name.maxWidth((int)(width - slot.width() - 2));
-			name.text(Messages.titleCase(item.name()));
+
+			boolean Destroyd = false;
+			if (Dungeon.hero.belongings.misc != null) {
+					if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
+						Destroyd = true;}
+
+			}
+			if (Dungeon.hero.belongings.ring != null) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
+						Destroyd=true;}
+			}
+
+			if (Destroyd) name.text("??????");
+				else name.text(Messages.titleCase(item.name()));
 			name.setPos(
 					slot.right()+2,
 					y + (height - name.height()) / 2

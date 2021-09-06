@@ -49,6 +49,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Badges {
+
+	public static boolean Destoryd = false;
 	
 	public enum Badge {
 		MASTERY_WARRIOR,
@@ -295,6 +297,16 @@ public class Badges {
 				global = new HashSet<>();
 			}
 		}
+	}
+
+
+	public static void DestroyGlobal() {
+		if(global.contains(Badge.CHAMPION_4)) {
+			global.remove(Badge.CHAMPION_4);
+		}
+
+		local.clear();
+		loadGlobal();
 	}
 
 	public static void saveGlobal() {
@@ -1105,6 +1117,7 @@ public class Badges {
 			local.add(Badge.DOLL_COLLECTOR);
 			displayBadge( Badge.DOLL_COLLECTOR );}
 	}
+
 
 	public static boolean isdollcollector() {
 		return local.contains( Badge.DOLL_COLLECTOR) ;

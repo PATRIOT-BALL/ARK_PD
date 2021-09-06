@@ -189,7 +189,12 @@ public enum Rankings {
 		Statistics.restoreFromBundle(data.getBundle(STATS));
 		
 		Dungeon.challenges = data.getInt(CHALLENGES);
+	}
 
+	public static void DestroydChack(int ch, int misc, int ring) {
+		if (ch > 5 || misc > 28 || ring > 28) {
+			Badges.DestroyGlobal();
+		}
 	}
 	
 	private static final String RECORDS	= "records";
