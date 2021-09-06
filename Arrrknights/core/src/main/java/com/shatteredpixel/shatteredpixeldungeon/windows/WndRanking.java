@@ -295,13 +295,13 @@ public class WndRanking extends WndTabbed {
 				addItem( stuff.artifact );
 			}
 			if (stuff.misc != null) {
-				if (Dungeon.challenges > 5) {
+				if (Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
 					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
 				}
 					else addItem(stuff.misc);
 				}
 			if (stuff.ring != null) {
-				if (Dungeon.challenges > 5) {
+				if (Dungeon.challenges > 5 &&  Dungeon.hero.belongings.ring.level() > 28) {
 					Rankings.DestroydChack(Dungeon.challenges,0, Dungeon.hero.belongings.ring.level());
 				}
 				else addItem( stuff.ring );
@@ -339,17 +339,6 @@ public class WndRanking extends WndTabbed {
 		
 		public BadgesTab() {
 			super();
-
-			if (Dungeon.hero.belongings.misc != null) {
-				if (Dungeon.challenges > 5) {
-					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
-				}
-			}
-			if (Dungeon.hero.belongings.ring != null) {
-				if (Dungeon.challenges > 5) {
-					Rankings.DestroydChack(Dungeon.challenges, 0, Dungeon.hero.belongings.ring.level());
-				}
-			}
 			
 			camera = WndRanking.this.camera;
 
