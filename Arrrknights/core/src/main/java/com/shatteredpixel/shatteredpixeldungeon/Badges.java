@@ -311,7 +311,12 @@ public class Badges {
 		if(global.contains(Badge.SKIN_TALU)) {
 			global.remove(Badge.SKIN_TALU);
 		}
+		if(!global.contains(Badge.BUG)) {
+			global.add( Badge.BUG );
+			saveNeeded = true;
+		}
 
+		saveGlobal();
 		local.clear();
 		loadGlobal();
 	}
