@@ -36,8 +36,8 @@ import com.watabou.utils.RectF;
 
 public class HeroSprite extends CharSprite {
 	
-	private static final int FRAME_WIDTH	= 32;
-	private static final int FRAME_HEIGHT	= 34;
+	private static final int FRAME_WIDTH	= 36;
+	private static final int FRAME_HEIGHT	= 36;
 	
 	private static final int RUN_FRAMERATE	= 20;
 	
@@ -86,7 +86,7 @@ public class HeroSprite extends CharSprite {
 			case 4: texture(Assets.Sprites.SSR); // 수수로
 				break;
 		}
-		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 32, 32);
+		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 36, 34);
 
 		idle = new Animation( 1, true );
 		idle.frames( film, 0 );
