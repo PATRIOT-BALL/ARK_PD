@@ -42,7 +42,6 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.TalentsPane;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
-import com.sun.org.apache.bcel.internal.generic.DUP;
 import com.watabou.noosa.ColorBlock;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
@@ -62,6 +61,8 @@ public class WndRanking extends WndTabbed {
 	private String error = null;
 	
 	private Image busy;
+
+	public static int BugItemLevel = 29;
 	
 	public WndRanking( final Rankings.Record rec ) {
 		
@@ -167,12 +168,12 @@ public class WndRanking extends WndTabbed {
 			super();
 			boolean Destroyd = false;
 			if (Dungeon.hero.belongings.misc != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
 					Destroyd = true;}
 
 			}
 			if (Dungeon.hero.belongings.ring != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
 					Destroyd = true;}
 
 			}
@@ -417,12 +418,12 @@ public class WndRanking extends WndTabbed {
 
 			boolean Destroyd = false;
 			if (Dungeon.hero.belongings.misc != null) {
-					if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
+					if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
 						Destroyd = true;}
 
 			}
 			if (Dungeon.hero.belongings.ring != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
 						Destroyd=true;}
 			}
 

@@ -302,6 +302,10 @@ public class Badges {
 
 
 	public static void DestroyGlobal() {
+		if(!global.contains(Badge.BUG)) {
+			global.add(Badge.BUG);
+			saveNeeded = true;
+		}
 		if(global.contains(Badge.CHAMPION_4)) {
 			global.remove(Badge.CHAMPION_4);
 		}
@@ -314,6 +318,13 @@ public class Badges {
 
 		local.clear();
 		loadGlobal();
+	}
+
+
+	public static void DestroyBUG() {
+		if(global.contains(Badge.BUG)) {
+			global.remove(Badge.BUG);
+		}
 	}
 
 	public static void saveGlobal() {
