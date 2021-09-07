@@ -35,7 +35,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndRanking;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.FileUtils;
@@ -193,7 +192,7 @@ public enum Rankings {
 	}
 
 	public static void DestroydChack(int ch, int misc, int ring) {
-		if (ch > 5 || misc > WndRanking.BugItemLevel || ring > WndRanking.BugItemLevel) {
+		if (ch > 5 || misc > 28 || ring > 28) {
 			Badges.DestroyGlobal();
 		}
 	}

@@ -59,8 +59,6 @@ public class WndRanking extends WndTabbed {
 	
 	private static Thread thread;
 	private String error = null;
-
-	public static int BugItemLevel = 28;
 	
 	private Image busy;
 	
@@ -169,16 +167,16 @@ public class WndRanking extends WndTabbed {
 			boolean Destroyd = false;
 			boolean Destroyd_sami = false;
 			if (Dungeon.hero.belongings.misc != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
 					Destroyd = true;}
-				if(Dungeon.challenges > 0 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
+				if(Dungeon.challenges > 0 && Dungeon.hero.belongings.misc.level() > 28) {
 					Destroyd_sami = true;}
 
 			}
 			if (Dungeon.hero.belongings.ring != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
 					Destroyd = true;}
-				if(Dungeon.challenges > 0 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
+				if(Dungeon.challenges > 0 && Dungeon.hero.belongings.ring.level() > 28) {
 					Destroyd_sami = true;}
 
 			}
@@ -302,13 +300,13 @@ public class WndRanking extends WndTabbed {
 				addItem( stuff.artifact );
 			}
 			if (stuff.misc != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
+				if (Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
 					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
 				}
 					else addItem(stuff.misc);
 				}
 			if (stuff.ring != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
+				if (Dungeon.challenges > 5 &&  Dungeon.hero.belongings.ring.level() > 28) {
 					Rankings.DestroydChack(Dungeon.challenges,0, Dungeon.hero.belongings.ring.level());
 				}
 				else addItem( stuff.ring );
@@ -413,12 +411,12 @@ public class WndRanking extends WndTabbed {
 
 			boolean Destroyd = false;
 			if (Dungeon.hero.belongings.misc != null) {
-					if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
+					if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
 						Destroyd = true;}
 
 			}
 			if (Dungeon.hero.belongings.ring != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
 						Destroyd=true;}
 			}
 
