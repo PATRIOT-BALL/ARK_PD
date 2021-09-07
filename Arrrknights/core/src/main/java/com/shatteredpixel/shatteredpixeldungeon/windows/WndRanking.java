@@ -61,6 +61,8 @@ public class WndRanking extends WndTabbed {
 	private String error = null;
 	
 	private Image busy;
+
+	public static int BugItemLevel = 29;
 	
 	public WndRanking( final Rankings.Record rec ) {
 		
@@ -166,12 +168,12 @@ public class WndRanking extends WndTabbed {
 			super();
 			boolean Destroyd = false;
 			if (Dungeon.hero.belongings.misc != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
 					Destroyd = true;}
 
 			}
 			if (Dungeon.hero.belongings.ring != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
 					Destroyd = true;}
 
 			}
@@ -294,13 +296,13 @@ public class WndRanking extends WndTabbed {
 				addItem( stuff.artifact );
 			}
 			if (stuff.misc != null) {
-				if (Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
+				if (Dungeon.challenges > 5) {
 					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
 				}
 					else addItem(stuff.misc);
 				}
 			if (stuff.ring != null) {
-				if (Dungeon.challenges > 5 &&  Dungeon.hero.belongings.ring.level() > 28) {
+				if (Dungeon.challenges > 5) {
 					Rankings.DestroydChack(Dungeon.challenges,0, Dungeon.hero.belongings.ring.level());
 				}
 				else addItem( stuff.ring );
@@ -338,6 +340,17 @@ public class WndRanking extends WndTabbed {
 		
 		public BadgesTab() {
 			super();
+
+			if (Dungeon.hero.belongings.misc != null) {
+				if (Dungeon.challenges > 5) {
+					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
+				}
+			}
+			if (Dungeon.hero.belongings.ring != null) {
+				if (Dungeon.challenges > 5) {
+					Rankings.DestroydChack(Dungeon.challenges, 0, Dungeon.hero.belongings.ring.level());
+				}
+			}
 			
 			camera = WndRanking.this.camera;
 
@@ -405,12 +418,12 @@ public class WndRanking extends WndTabbed {
 
 			boolean Destroyd = false;
 			if (Dungeon.hero.belongings.misc != null) {
-					if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
+					if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > BugItemLevel) {
 						Destroyd = true;}
 
 			}
 			if (Dungeon.hero.belongings.ring != null) {
-				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
+				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > BugItemLevel) {
 						Destroyd=true;}
 			}
 
