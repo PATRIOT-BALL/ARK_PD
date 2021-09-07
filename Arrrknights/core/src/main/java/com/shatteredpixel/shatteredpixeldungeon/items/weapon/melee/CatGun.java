@@ -30,6 +30,7 @@ public class CatGun extends MeleeWeapon {
         image = ItemSpriteSheet.CATGUN;
         hitSound = Assets.Sounds.ATK_SPIRITBOW;
         hitSoundPitch = 1f;
+        defaultAction = AC_ZAP;
 
         tier = 5;
         RCH = 2;
@@ -211,6 +212,10 @@ public class CatGun extends MeleeWeapon {
             }
             else damage(HT/20, this);
             Sample.INSTANCE.play( Assets.Sounds.HIT_BREAK );
+
+            if (Dungeon.hero.belongings.weapon instanceof CatGun) {
+                ((CatGun)Dungeon.hero.belongings.weapon).SPCharge(1);
+            }
             return super.attackProc(enemy, damage);
         }
 

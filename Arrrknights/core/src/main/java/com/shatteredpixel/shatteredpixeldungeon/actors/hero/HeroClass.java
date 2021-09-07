@@ -250,10 +250,6 @@ public enum HeroClass {
 		new ScrollOfWarp().identify();
 
 		new DewVial().collect();
-		new LeatherArmor().collect();
-		new MailArmor().collect();
-		new ScaleArmor().collect();
-		new PlateArmor().collect();
 	}
 
 	private static void initMage( Hero hero ) {
