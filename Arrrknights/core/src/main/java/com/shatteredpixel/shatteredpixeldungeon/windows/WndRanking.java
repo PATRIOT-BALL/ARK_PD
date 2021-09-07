@@ -165,27 +165,21 @@ public class WndRanking extends WndTabbed {
 		public StatsTab() {
 			super();
 			boolean Destroyd = false;
-			boolean Destroyd_sami = false;
 			if (Dungeon.hero.belongings.misc != null) {
 				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.misc.level() > 28) {
 					Destroyd = true;}
-				if(Dungeon.challenges > 0 && Dungeon.hero.belongings.misc.level() > 28) {
-					Destroyd_sami = true;}
 
 			}
 			if (Dungeon.hero.belongings.ring != null) {
 				if(Dungeon.challenges > 5 && Dungeon.hero.belongings.ring.level() > 28) {
 					Destroyd = true;}
-				if(Dungeon.challenges > 0 && Dungeon.hero.belongings.ring.level() > 28) {
-					Destroyd_sami = true;}
 
 			}
 			String heroClass = Dungeon.hero.className();
-
+			
 			IconTitle title = new IconTitle();
 			title.icon( HeroSprite.avatar( Dungeon.hero.heroClass, Dungeon.hero.tier() ) );
-			if (Destroyd_sami || Destroyd) title.label( "WA! SANS!");
-			else title.label( Messages.get(this, "title", Dungeon.hero.lvl, heroClass ).toUpperCase( Locale.KOREAN ) );
+			title.label( Messages.get(this, "title", Dungeon.hero.lvl, heroClass ).toUpperCase( Locale.KOREAN ) );
 			title.color(Window.TITLE_COLOR);
 			title.setRect( 0, 0, WIDTH, 0 );
 			add( title );
