@@ -10,7 +10,7 @@ public class SussurroSprite extends MobSprite{
 
         texture( Assets.Sprites.SSR );
 
-        TextureFilm frames = new TextureFilm( texture, 32, 34 );
+        TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
         idle = new MovieClip.Animation( 2, true );
         idle.frames( frames, 50 );
