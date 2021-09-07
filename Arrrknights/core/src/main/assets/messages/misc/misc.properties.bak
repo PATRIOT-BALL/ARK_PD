@@ -22,7 +22,7 @@ badges$badge.all_potions_identified=모든 물약 감정됨
 badges$badge.all_scrolls_identified=모든 주문서 감정됨
 badges$badge.all_items_identified=모든 아이템 감정됨
 badges$badge.all_bags_bought=모든 가방 구입함
-badges$badge.death_from_fire=불에 타 사망
+badges$badge.death_from_fire=YES I'M ON FIRE
 badges$badge.death_from_poison=중독으로 사망
 badges$badge.death_from_gas=유독 가스로 사망
 badges$badge.death_from_hunger=영양실조로 사망
@@ -105,6 +105,8 @@ badges$badge.skin_baboskadi=스카디 스킨 해금
 badges$badge.skin_talu=탈룰라 스킨 해금
 badges$badge.skin_nova=서리별 스킨 해금
 badges$badge.skin_susuu=수수로 스킨 해금
+
+badges$badge.bug=통첩
 
 
 challenges.no_food=환경: 식량배급 중단

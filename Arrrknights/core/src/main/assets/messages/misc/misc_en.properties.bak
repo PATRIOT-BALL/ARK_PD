@@ -69,6 +69,7 @@ badges$badge.champion_4=Won with a 8 Contingency
 badges$badge.unlock_mage=Unlocked the Donkey
 badges$badge.unlock_rogue=Unlocked the Projekt Red
 badges$badge.unlock_huntress=Unlocked the GreyThroat
+badges$badge.unlock_rosecat=Unlocked the RoseCat
 
 badges$badge.roaringflare=ROARING FLARE
 badges$badge.eviltime_end=End of EVIL TIME
@@ -94,14 +95,16 @@ badges$badge.grey_champion1=Expert GreyThroat
 badges$badge.grey_champion2=Elite GreyThroat
 badges$badge.grey_champion3=Legend GreyThroat
 
-badges$badge.rose_champion1=Expert Rose
-badges$badge.rose_champion2=Elite
-badges$badge.rose_champion3=Legend
+badges$badge.rose_champion1=Expert RoseCat
+badges$badge.rose_champion2=Elite RoseCat
+badges$badge.rose_champion3=Legend RoseCat
 
 badges$badge.skin_baboskadi=Skadi Skin
 badges$badge.skin_talu=Talu Skin
 badges$badge.skin_nova=FrostNova Skin
 badges$badge.skin_susuu=Sussurro Skin
+
+badges$badge.bug=bug's mark
 
 challenges.no_food=paused food
 challenges.no_food_desc=Food's already scarce, but you have to watch your portions as well!\n\n- Food and the horn of plenty are 1/3 as effective at satisfying hunger\n- Other sources of satiety are unaffected

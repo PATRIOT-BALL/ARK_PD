@@ -151,7 +151,8 @@ public class Badges {
 		GREY_CHAMPION1              ( 85, true ),
 		ROSE_CHAMPION1              ( 86, true ),
 
-
+		//RED , 버그 유저
+		BUG (138),
 
 		//platinum
 		HAPPY_END                   ( 96 ),
@@ -303,6 +304,12 @@ public class Badges {
 	public static void DestroyGlobal() {
 		if(global.contains(Badge.CHAMPION_4)) {
 			global.remove(Badge.CHAMPION_4);
+		}
+		if(global.contains(Badge.EVILTIME_END)) {
+			global.remove(Badge.EVILTIME_END);
+		}
+		if(global.contains(Badge.SKIN_TALU)) {
+			global.remove(Badge.SKIN_TALU);
 		}
 
 		local.clear();
