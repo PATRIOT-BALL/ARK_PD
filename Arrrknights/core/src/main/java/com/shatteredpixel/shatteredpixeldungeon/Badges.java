@@ -152,7 +152,7 @@ public class Badges {
 		ROSE_CHAMPION1              ( 86, true ),
 
 		//RED , 버그 유저
-		BUG (138),
+		BUG (176),
 
 		//platinum
 		HAPPY_END                   ( 96 ),
