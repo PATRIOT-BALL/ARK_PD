@@ -11,7 +11,7 @@ public class talrufightSprite extends MobSprite {
 
         texture( Assets.Sprites.TALRU_FIGHT );
 
-        TextureFilm frames = new TextureFilm( texture, 32, 32 );
+        TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
         idle = new MovieClip.Animation( 2, true );
         idle.frames( frames, 50 );
