@@ -192,18 +192,21 @@ public class Bestiary {
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class,
 						Ergate.class, Ergate.class,
+						Defender.class,
 						Sniper.class));
 			case 33:
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class,
 						Ergate.class, Ergate.class,
 						Sniper.class, Sniper.class,
+						Defender.class,
 						Agent.class));
 			case 34:
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class,
-						Ergate.class, Ergate.class,
+						Ergate.class,
 						Sniper.class, Sniper.class,
+						Defender.class,
 						Agent.class, Agent.class, Agent.class));
 		}
 		
