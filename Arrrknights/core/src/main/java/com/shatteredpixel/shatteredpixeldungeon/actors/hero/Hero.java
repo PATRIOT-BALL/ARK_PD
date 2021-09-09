@@ -206,8 +206,9 @@ public class Hero extends Char {
     // 스킨 관련
     public static final int TALULAH = 1;
     public static final int F_NOVA = 2;
-    public static final int SKADI = 3;
-    public static final int POSTGRAD = 4;
+    public static final int GRANI = 3;
+    public static final int SKADI = 4;
+    public static final int SSR = 5;
 
     {
         actPriority = HERO_PRIO;

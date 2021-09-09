@@ -198,7 +198,8 @@ public class Badges {
 		SKIN_BABOSKADI(160),
 		SKIN_TALU(161),
 		SKIN_NOVA(162),
-		SKIN_SUSUU(163);
+		SKIN_SUSUU(163),
+		SKIN_GRN(164);
 
 		public boolean meta;
 
@@ -902,6 +903,11 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validategrnskin() {
+		Badge badge = Badge.SKIN_GRN;
+		displayBadge( badge );
+	}
+
 	public static void validatetaluskin() {
 		Badge badge = Badge.SKIN_TALU;
 		displayBadge( badge );
@@ -916,7 +922,7 @@ public class Badges {
 		Badge badge = Badge.SKIN_SUSUU;
 		displayBadge( badge );
 	}
-	
+
 	//necessary in order to display the happy end badge in the surface scene
 	public static void silentValidateHappyEnd() {
 		if (!local.contains( Badge.HAPPY_END )){

@@ -29,8 +29,8 @@ import com.watabou.noosa.TextureFilm;
 
 public class PrismaticSprite extends MobSprite {
 	
-	private static final int FRAME_WIDTH	= 32;
-	private static final int FRAME_HEIGHT	= 34;
+	private static final int FRAME_WIDTH	= 36;
+	private static final int FRAME_HEIGHT	= 36;
 	
 	public PrismaticSprite() {
 		super();
