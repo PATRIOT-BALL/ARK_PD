@@ -135,7 +135,7 @@ actors.buffs.combo$combomove.clobber_desc=_2 연속 타격: 밀쳐내기_ 는 �
 actors.buffs.combo$combomove.slam_desc=_4 연속 타격: 메치기_ 는 연속 타격 수치*20%의 피해량에 방어력을 더한 값의 피해를 입힙니다. 발동 후 연속 타격 수치가 초기화됩니다.
 actors.buffs.combo$combomove.parry_desc=_6 연속 타격: 받아치기_ 는 발동 시 다음 1턴 동안의 물리 공격을 막아 낸 후 즉시 반격합니다. 아무것도 막아 내지 못한 경우 연속 타격이 초기화됩니다.
 actors.buffs.combo$combomove.crush_desc=_8 연속 타격: 으깨기_ 는 연속 타격*25%의 근접 피해를 첫 번째 대상에게 입히고, 이후 주변 7x7 구역에 있는 다른 모든 적들에게 절반만큼의 피해를 입힙니다.
-actors.buffs.combo$combomove.crush_desc2=_8 연속 타격: 근접 섬광탄_ 는 125%의 피해를 입히고 1턴의 마비와 연속 타격*0.3턴의 실명을 부여합니다. 콤보가 유지됩니다.
+actors.buffs.combo$combomove.crush_desc2=_8 연속 타격: 근접 섬광탄_ 은 125%의 피해를 입히고 1턴의 마비와 연속 타격*0.3턴의 실명을 부여합니다. 콤보가 유지됩니다.
 actors.buffs.combo$combomove.fury_desc=_10 연속 타격: 분노 폭발_ 은 적 하나에 대해 60%의 피해량으로 연속 타격을 쌓은 수만큼 공격하며, 각 공격마다 무기에 부여된 아츠가 발동할 수 있습니다.
 actors.buffs.combo$combomove.fury_desc2=_10 연속 타격: 영거리 사격_ 은 연속 타격*40%의 피해를 대상에게 입힙니다.\n이 피해량은 사격 기능의 피해량을 따릅니다.
 
@@ -1248,11 +1248,20 @@ actors.mobs.infantry.desc=초급 근거리 전투원. 근성이 넘치기때문�
 actors.mobs.ergate.name=일개미
 actors.mobs.ergate.desc=엔지니어링 기술 수단을 사용하여 파괴를 감행하며, 무기를 거의 휴대하고 있지 않다. 일개미의 전투 능력은 낮지만, 상대의 무기를 강제로 떨어트린 후 도망쳐 전투를 방해한다.
 
+actors.mobs.ergateelite.name=일개미 리더
+actors.mobs.ergateelite.desc=엔지니어링 기술 수단을 사용하여 파괴를 감행하며, 무기를 거의 휴대하고 있지 않다. 일개미의 전투 능력은 낮지만, 상대의 무기를 강제로 떨어트린 후 도망쳐 전투를 방해한다. 이들은 더욱 숙련되었다.
+
+actors.mobs.defender.name=중기갑 디펜더
+actors.mobs.defender.desc=근거리 전투원. 무거운 전신 방어구를 장비하였고, 다양한 물리 공격 수단에 풍부한 경험을 갖고 있어 쓰러뜨리기 상당히 어려우니, 각별히 조심하도록 하자.
+
 actors.mobs.sniper.name=스나이퍼
 actors.mobs.sniper.desc=초급 스나이퍼. 초원거리에서 공격할 수 있다. 장비하고 있는 특수 저격 무기는 특수 탄약을 발사하여 아군 유닛에 기절 상태를 줄 수 있다.\n\n제자리에서 3회 연속 공격하면 대상을 마비시킵니다.
 
 actors.mobs.agent.name=특공대원
 actors.mobs.agent.desc=그가 사용하는 다양한 전술 수단은 아군의 방어선을 손쉽게 무너뜨릴 수 있을 것이다.\n\n_침묵 가능_
+
+actors.mobs.agent_elite.name=특공대원 리더
+actors.mobs.agent_elite.desc=그가 사용하는 다양한 전술 수단은 아군의 방어선을 손쉽게 무너뜨릴 수 있을 것이다.
 
 actors.mobs.schwarz.name=슈바르츠
 actors.mobs.schwarz.desc=기밀 작전, 조사, 기밀 정보 보호, 야외 생존, 크로스보우 사용 등의 기술에 매우 조예가 깊다. 주기적으로 플레이어에게 저격을 시도한다.
