@@ -71,6 +71,7 @@ public class Closure extends NPC {
                                         public void call() {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin2", Dungeon.hero.heroClass.title())));
                                         }});}
+                                break;
                             case 2: // 그라니 스킨
                                 if (Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_1)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_GRN)) {Badges.validategrnskin();}

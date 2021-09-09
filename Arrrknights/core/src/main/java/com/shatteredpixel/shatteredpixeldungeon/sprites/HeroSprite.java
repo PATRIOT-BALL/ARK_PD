@@ -58,7 +58,7 @@ public class HeroSprite extends CharSprite {
 			case 2: texture(Assets.Sprites.FNOVA);
 			break;
 			case 3: texture(Assets.Sprites.GRN); // ㄱㄹㄴ!
-				// break;
+			break;
 			case 4: texture(Assets.Sprites.SKD); // 바병슼
 			break;
 			case 5: texture(Assets.Sprites.SSR); // 수수로
