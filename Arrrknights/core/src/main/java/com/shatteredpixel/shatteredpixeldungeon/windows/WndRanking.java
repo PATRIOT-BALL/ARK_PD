@@ -299,13 +299,13 @@ public class WndRanking extends WndTabbed {
 				if (Dungeon.challenges > 5) {
 					Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
 				}
-					else addItem(stuff.misc);
+				addItem(stuff.misc);
 				}
 			if (stuff.ring != null) {
 				if (Dungeon.challenges > 5) {
 					Rankings.DestroydChack(Dungeon.challenges,0, Dungeon.hero.belongings.ring.level());
 				}
-				else addItem( stuff.ring );
+				addItem( stuff.ring );
 			}
 
 			pos = 0;
