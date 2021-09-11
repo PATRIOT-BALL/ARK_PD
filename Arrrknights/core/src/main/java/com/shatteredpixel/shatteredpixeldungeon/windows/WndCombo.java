@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
@@ -55,11 +56,7 @@ public class WndCombo extends Window {
 		pos = title.bottom() + 3*MARGIN;
 
 		Image icon;
-		if (Dungeon.hero.belongings.weapon != null){
-			icon = new ItemSprite(Dungeon.hero.belongings.weapon.image, null);
-		} else {
-			icon = new ItemSprite(new Item(){ {image = ItemSpriteSheet.WEAPON_HOLDER; }});
-		}
+		icon = Icons.get(Icons.WARRIOR);
 
 		for (Combo.ComboMove move : Combo.ComboMove.values()) {
 			Image ic = new Image(icon);

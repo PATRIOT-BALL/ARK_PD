@@ -304,6 +304,9 @@ public class CloakOfShadows extends Artifact {
 					if (Book != null) {
 						Book.SetCharge(1);
 					}
+					if (curUser.HT/4 > curUser.HP) {
+						curUser.HP+=1;
+					}
 				}
 			}
 			

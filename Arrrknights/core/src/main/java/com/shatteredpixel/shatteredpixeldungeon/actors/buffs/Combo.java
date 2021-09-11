@@ -160,6 +160,8 @@ public class Combo extends Buff implements ActionIndicator.Action {
 	private static final String CLOBBER_USED = "clobber_used";
 	private static final String PARRY_USED   = "parry_used";
 	private static final String FLARE_USED   = "flareUsed";
+	private static final String QUICK_USED   = "quickUsed";
+
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
@@ -171,6 +173,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 		bundle.put(CLOBBER_USED, clobberUsed);
 		bundle.put(PARRY_USED, parryUsed);
 		bundle.put(FLARE_USED, flareUsed);
+		bundle.put(QUICK_USED, quickUsed);
 	}
 
 	@Override
@@ -186,6 +189,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 		clobberUsed = bundle.getBoolean(CLOBBER_USED);
 		parryUsed = bundle.getBoolean(PARRY_USED);
 		flareUsed = bundle.getBoolean(FLARE_USED);
+		quickUsed = bundle.getBoolean(QUICK_USED);
 
 		if (getHighestMove() != null) ActionIndicator.setAction(this);
 	}
@@ -224,7 +228,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 		public String desc(){
 			if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
-				if (name() == "FURY" || name() == "CRUSH") return Messages.get(this, name()+"_desc2");
+				if (name() == "FURY" || name() == "CRUSH" || name() == "SLAM") return Messages.get(this, name()+"_desc2");
 			}
 			return Messages.get(this, name()+"_desc");
 		}
@@ -233,6 +237,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 	private boolean clobberUsed = false;
 	private boolean parryUsed = false;
+	private boolean quickUsed = false;
 	private boolean flareUsed = false;
 
 	public ComboMove getHighestMove(){
@@ -251,6 +256,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 
 	public boolean canUseMove(ComboMove move){
 		if (move == ComboMove.CLOBBER && clobberUsed)   return false;
+		if (move == ComboMove.SLAM && quickUsed)       return false;
 		if (move == ComboMove.PARRY && parryUsed)       return false;
 		if (move == ComboMove.CRUSH && flareUsed)       return false;
 		return move.comboReq <= count;
@@ -333,7 +339,17 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					dmg = 0;
 					break;
 				case SLAM:
-					dmg += Math.round(target.drRoll() * count / 5f);
+					if (Dungeon.hero.belongings.weapon instanceof DP27) {
+						dmg = Random.IntRange(((DP27) Dungeon.hero.belongings.weapon).shotmin(), ((DP27) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Math.round(dmg * 0.15f * count);
+					} else if (Dungeon.hero.belongings.weapon instanceof C1_9mm) {
+						dmg = Random.IntRange(((C1_9mm) Dungeon.hero.belongings.weapon).shotmin(), ((C1_9mm) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Math.round(dmg * 0.15f * count);
+					} else if (Dungeon.hero.belongings.weapon instanceof R4C) {
+						dmg = Random.IntRange(((R4C) Dungeon.hero.belongings.weapon).shotmin(), ((R4C) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Math.round(dmg * 0.15f * count);
+					}
+					else dmg += Math.round(target.drRoll() * count / 5f);
 					break;
 				case CRUSH:
 					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
@@ -386,6 +402,11 @@ public class Combo extends Buff implements ActionIndicator.Action {
 							}
 						}
 						WandOfBlastWave.throwChar(enemy, trajectory, dist, true, false);
+					}
+					break;
+				case SLAM:
+					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+						hit(enemy);
 					}
 					break;
 				case PARRY:
@@ -457,6 +478,19 @@ public class Combo extends Buff implements ActionIndicator.Action {
 				clobberUsed = true;
 				if (getHighestMove() == null) ActionIndicator.clearAction(Combo.this);
 				hero.spendAndNext(hero.attackDelay());
+				break;
+
+			case SLAM:
+				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+					quickUsed = true;
+					if (getHighestMove() == null) ActionIndicator.clearAction(Combo.this);
+					hero.spendAndNext(hero.attackDelay());
+				} else {
+					detach();
+					Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
+					ActionIndicator.clearAction(Combo.this);
+					hero.spendAndNext(hero.attackDelay());
+				}
 				break;
 
 			case PARRY:
