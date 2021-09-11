@@ -5,11 +5,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpinnerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.StrikerSprite;
 import com.watabou.utils.Random;
 
 public class Striker extends Mob{
     {
-        spriteClass = SpinnerSprite.class;
+        spriteClass = StrikerSprite.class;
 
         HP = HT = 100;
         defenseSkill = 20;

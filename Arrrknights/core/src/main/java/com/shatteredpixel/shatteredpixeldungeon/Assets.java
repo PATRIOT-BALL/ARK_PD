@@ -368,6 +368,9 @@ public class Assets {
 
 		public static final String LOTUS	= "sprites/lotus.png";
 
+		//변종
+		public static final String STRIKER	= "sprites/striker.png";
+
 		//시에스타
 		public static final String SIESTA_INFANTRY	= "sprites/siesta_infantry.png";
 		public static final String ERGATE	= "sprites/ergate.png";
