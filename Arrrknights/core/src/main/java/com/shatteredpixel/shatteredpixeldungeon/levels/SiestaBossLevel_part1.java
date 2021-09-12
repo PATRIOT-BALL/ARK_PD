@@ -206,7 +206,7 @@ public class SiestaBossLevel_part1 extends Level {
         set( entrance, Terrain.ENTRANCE );
         GameScene.updateMap( entrance );
 
-        set( exit, Terrain.EXIT );
+       // set( exit, Terrain.EXIT );
         GameScene.updateMap( exit );
 
         Dungeon.observe();

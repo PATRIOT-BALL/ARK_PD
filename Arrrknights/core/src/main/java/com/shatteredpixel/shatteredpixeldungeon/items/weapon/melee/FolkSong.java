@@ -3,7 +3,10 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class FolkSong extends MeleeWeapon {
@@ -34,5 +37,15 @@ public class FolkSong extends MeleeWeapon {
 
         damage *= dmgbouns;
         return super.proc(attacker, defender, damage);
+    }
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+        if (Dungeon.hero.belongings.getItem(RingOfTenacity.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfTenacity.class).isEquipped(Dungeon.hero))
+                info += "\n\n" + Messages.get( FolkSong.class, "setbouns");}
+
+        return info;
     }
 }

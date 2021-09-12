@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
@@ -128,6 +129,8 @@ public class SiestaBoss extends Mob {
             if (mob instanceof BossAgent || mob instanceof Schwarz) {
                 mob.die( cause );
             }
+
+            Badges.validatesiesta1();
         }
 
         yell(Messages.get(this, "defeated"));
@@ -264,8 +267,6 @@ public class SiestaBoss extends Mob {
 
         if (TelType < 3) TelType++;
         else TelType = Random.IntRange(0,4);
-
-
     }
 
     private static final String PHASE   = "phase";

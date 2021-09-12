@@ -82,7 +82,7 @@ public class Closure extends NPC {
                                     Game.runOnRenderThread(new Callback() {
                                         @Override
                                         public void call() {
-                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin4", Dungeon.hero.heroClass.title())));
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin3", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
                             case 3: // 쑤수로 스킨
@@ -95,7 +95,7 @@ public class Closure extends NPC {
                                     Game.runOnRenderThread(new Callback() {
                                         @Override
                                         public void call() {
-                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin5", Dungeon.hero.heroClass.title())));
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin4", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
                             case 4: // 그라니 스킨
@@ -108,7 +108,7 @@ public class Closure extends NPC {
                                     Game.runOnRenderThread(new Callback() {
                                         @Override
                                         public void call() {
-                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin3", Dungeon.hero.heroClass.title())));
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin5", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
                             case 5: // 꼬지리 스킨
@@ -121,7 +121,7 @@ public class Closure extends NPC {
                                     Game.runOnRenderThread(new Callback() {
                                         @Override
                                         public void call() {
-                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin3", Dungeon.hero.heroClass.title())));
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin6", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
                         }

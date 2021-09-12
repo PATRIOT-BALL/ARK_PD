@@ -9,6 +9,7 @@ badges$badge.gold_collected_1=100 합성옥 수집
 badges$badge.gold_collected_2=500 합성옥 수집
 badges$badge.gold_collected_3=2500 합성옥 수집
 badges$badge.gold_collected_4=7500 합성옥 수집
+badges$badge.gold_collected_5=15000 합성옥 수집
 badges$badge.level_reached_1=레벨 6 달성
 badges$badge.level_reached_2=레벨 12 달성
 badges$badge.level_reached_3=레벨 18 달성
@@ -102,11 +103,15 @@ badges$badge.rose_champion2=정예 쪽냥이
 badges$badge.rose_champion3=전설 쪽냥이
 
 badges$badge.skin_baboskadi=스카디 스킨 해금
+badges$badge.skin_grn=그라니 스킨 해금
 badges$badge.skin_talu=탈룰라 스킨 해금
 badges$badge.skin_nova=서리별 스킨 해금
 badges$badge.skin_susuu=수수로 스킨 해금
+badges$badge.skin_lappy=꼬지리 스킨 해금
 
-badges$badge.bug=통첩
+
+
+badges$badge.bug=낙인
 
 
 challenges.no_food=환경: 식량배급 중단

@@ -794,6 +794,8 @@ actors.mobs.npcs.closure.fail_skin1=암흑시대의 끝 배지가 필요합니�
 actors.mobs.npcs.closure.fail_skin2=하극상 배지가 필요합니다.
 actors.mobs.npcs.closure.fail_skin3=게임을 50회 클리어해야합니다.
 actors.mobs.npcs.closure.fail_skin4=모든 물약을 감정해야합니다.
+actors.mobs.npcs.closure.fail_skin5=게임을 10회 클리어해야합니다.
+actors.mobs.npcs.closure.fail_skin6=냄새납니다.
 actors.mobs.npcs.closure.die=끄악~
 
 actors.mobs.npcs.skinmodel.name=신형 모델 생성기

@@ -2088,6 +2088,7 @@ items.weapon.melee.shortsword.desc=왠지 모를 수박 향기가 난다. \n\n�
 
 items.weapon.melee.firmament.name=적소
 items.weapon.melee.firmament.desc=악행은 결코 용서하지 않아. 무슨 수를 써서라도 저지하겠어.\n\n이 _특별한_ 무기는 2번의 공격을 동시에 가합니다.
+items.weapon.melee.firmament.setbouns=_아이템 시너지 : 용문총경_\n피해량이 15%상승합니다.
 
 items.weapon.melee.quarterstaff.name=카시미어 전쟁도끼
 items.weapon.melee.quarterstaff.stats_desc=이 무기는 0-2의 피해를 감소시킵니다.
@@ -2272,6 +2273,9 @@ items.weapon.melee.golddogsword.desc=특수 능력 발동시 3턴을 소모해 _
 items.weapon.melee.golddogsword.ac_zap=검주편봉
 items.weapon.melee.golddogsword.charge=축적
 items.weapon.melee.golddogsword.charge_fail=축적 불가능!
+
+items.weapon.melee.folksong.name=타향의 노래
+items.weapon.melee.folksong.desc=그녀가 비탄할 때 그녀의 광기에 고통이 퍼져나아가네\n\n자신이나 공격 대상이 물 위에 있다면 피해량이 20% 상승합니다. (최대 40%)
 
 
 

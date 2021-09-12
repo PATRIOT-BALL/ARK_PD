@@ -9,6 +9,7 @@ badges$badge.gold_collected_1=100 orundum collected
 badges$badge.gold_collected_2=500 orundum collected
 badges$badge.gold_collected_3=2500 orundum collected
 badges$badge.gold_collected_4=7500 orundum collected
+badges$badge.gold_collected_5=15000 orundum collected
 badges$badge.level_reached_1=Level 6 reached
 badges$badge.level_reached_2=Level 12 reached
 badges$badge.level_reached_3=Level 18 reached
@@ -103,6 +104,8 @@ badges$badge.skin_baboskadi=Skadi Skin
 badges$badge.skin_talu=Talu Skin
 badges$badge.skin_nova=FrostNova Skin
 badges$badge.skin_susuu=Sussurro Skin
+badges$badge.skin_grn=Grani Skin
+badges$badge.skin_lappy=Lappy Skin
 
 badges$badge.bug=stigma of sin
 

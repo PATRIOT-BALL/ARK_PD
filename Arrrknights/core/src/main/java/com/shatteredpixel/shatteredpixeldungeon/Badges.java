@@ -178,7 +178,7 @@ public class Badges {
 		GREY_CHAMPION2              ( 107, true ),
 		ROSE_CHAMPION2              ( 108, true ),
 
-		SIESTA_PART2              ( 111, true ),
+		//SIESTA_PART2              ( 111, true ),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
@@ -395,6 +395,10 @@ public class Badges {
 		}
 		if (!local.contains( Badge.GOLD_COLLECTED_4 ) && Statistics.goldCollected >= 7500) {
 			badge = Badge.GOLD_COLLECTED_4;
+			local.add( badge );
+		}
+		if (!local.contains( Badge.GOLD_COLLECTED_5 ) && Statistics.goldCollected >= 15000) {
+			badge = Badge.GOLD_COLLECTED_5;
 			local.add( badge );
 		}
 		
@@ -1112,6 +1116,14 @@ public class Badges {
 		displayBadge( Badge.EVILTIME_END );}
 	}
 
+	public static void validatesiesta1() {
+		if (!local.contains( Badge.SIESTA_PART1 )){
+			global.add(Badge.SIESTA_PART1);
+			saveNeeded = true;
+			local.add(Badge.SIESTA_PART1);
+			displayBadge( Badge.SIESTA_PART1 );}
+	}
+
 	public static void validatewill() {
 		if (!local.contains( Badge.WILL )){
 			global.add(Badge.WILL);
@@ -1228,7 +1240,7 @@ public class Badges {
 
 	private static final Badge[][] tierBadgeReplacements = new Badge[][]{
 			{Badge.MONSTERS_SLAIN_1, Badge.MONSTERS_SLAIN_2, Badge.MONSTERS_SLAIN_3, Badge.MONSTERS_SLAIN_4},
-			{Badge.GOLD_COLLECTED_1, Badge.GOLD_COLLECTED_2, Badge.GOLD_COLLECTED_3, Badge.GOLD_COLLECTED_4},
+			{Badge.GOLD_COLLECTED_1, Badge.GOLD_COLLECTED_2, Badge.GOLD_COLLECTED_3, Badge.GOLD_COLLECTED_4, Badge.GOLD_COLLECTED_5},
 			{Badge.ITEM_LEVEL_1, Badge.ITEM_LEVEL_2, Badge.ITEM_LEVEL_3, Badge.ITEM_LEVEL_4},
 			{Badge.LEVEL_REACHED_1, Badge.LEVEL_REACHED_2, Badge.LEVEL_REACHED_3, Badge.LEVEL_REACHED_4},
 			{Badge.STRENGTH_ATTAINED_1, Badge.STRENGTH_ATTAINED_2, Badge.STRENGTH_ATTAINED_3, Badge.STRENGTH_ATTAINED_4},
@@ -1264,7 +1276,7 @@ public class Badges {
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {
 		leaveBest( badges, Badge.MONSTERS_SLAIN_1, Badge.MONSTERS_SLAIN_2, Badge.MONSTERS_SLAIN_3, Badge.MONSTERS_SLAIN_4 );
-		leaveBest( badges, Badge.GOLD_COLLECTED_1, Badge.GOLD_COLLECTED_2, Badge.GOLD_COLLECTED_3, Badge.GOLD_COLLECTED_4 );
+		leaveBest( badges, Badge.GOLD_COLLECTED_1, Badge.GOLD_COLLECTED_2, Badge.GOLD_COLLECTED_3, Badge.GOLD_COLLECTED_4, Badge.GOLD_COLLECTED_5 );
 		leaveBest( badges, Badge.BOSS_SLAIN_1, Badge.BOSS_SLAIN_2, Badge.BOSS_SLAIN_3, Badge.BOSS_SLAIN_4, Badge.VICTORY, Badge.VICTORY_ALL_CLASSES );
 		leaveBest( badges, Badge.LEVEL_REACHED_1, Badge.LEVEL_REACHED_2, Badge.LEVEL_REACHED_3, Badge.LEVEL_REACHED_4 );
 		leaveBest( badges, Badge.STRENGTH_ATTAINED_1, Badge.STRENGTH_ATTAINED_2, Badge.STRENGTH_ATTAINED_3, Badge.STRENGTH_ATTAINED_4 );
