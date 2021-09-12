@@ -403,13 +403,13 @@ public abstract class FistSprite extends MobSprite {
 
 			texture( Assets.Sprites.EMPEROR_BLADE );
 
-			TextureFilm frames = new TextureFilm( texture, 72, 44 );
+			TextureFilm frames = new TextureFilm( texture, 72, 46 );
 
 			idle = new Animation( 9, true );
 			idle.frames( frames, c+0 );
 
 			run = new Animation( 8, true );
-			run.frames( frames, c+0 );
+			run.frames( frames, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9 );
 
 			attack = new Animation( 18, false );
 			attack.frames( frames, c+1 );
