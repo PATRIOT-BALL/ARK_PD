@@ -419,6 +419,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 							Sample.INSTANCE.play(Assets.Sounds.BLAST, 1.1f, 1.26f);
 							Buff.affect(enemy, Paralysis.class, 1f);
 							Buff.affect(enemy, Blindness.class, count*0.3f);
+							hit(enemy);
 						}
 					}
 					else {
@@ -500,6 +501,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 			case CRUSH:
 				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
 					flareUsed = true;
+					ActionIndicator.clearAction(Combo.this);
 					hero.spendAndNext(hero.attackDelay());
 				} else {
 					detach();

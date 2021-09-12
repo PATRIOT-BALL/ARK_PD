@@ -3,6 +3,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
@@ -37,6 +38,7 @@ public class EmpireDrone extends Mob {
         flying = true;
 
         baseSpeed = 0.5f;
+        immunities.add(Silence.class);
     }
 
     private int CoolDown = 0;

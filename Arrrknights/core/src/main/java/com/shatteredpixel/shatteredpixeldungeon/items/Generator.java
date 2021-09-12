@@ -164,6 +164,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
@@ -421,7 +422,7 @@ public class Generator {
                     DP27.class,
                     C1_9mm.class
             };
-            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 4, 2, 2};
+            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3};
 
             WEP_T4.classes = new Class<?>[]{
                     Longsword.class,
@@ -431,9 +432,10 @@ public class Generator {
                     Crossbow.class,
                     M1887.class,
                     Naginata.class,
-                    Scythe.class
+                    Scythe.class,
+                    FolkSong.class
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 4, 4, 4, 4};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,
@@ -448,7 +450,7 @@ public class Generator {
                     DivineAvatar.class,
                     R4C.class
             };
-            WEP_T5.probs = new float[]{5, 5, 3, 4, 4, 4, 4, 3, 3, 4, 3};
+            WEP_T5.probs = new float[]{5, 5, 3, 4, 4, 4, 4, 3, 3, 4, 4};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{

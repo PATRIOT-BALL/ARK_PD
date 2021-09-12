@@ -39,7 +39,6 @@ public class PotionOfMindVision extends Potion {
 	@Override
 	public void apply( Hero hero ) {
 		identify();
-		if (Dungeon.depth != 35) {
 			Buff.affect(hero, MindVision.class, MindVision.DURATION);
 			Dungeon.observe();
 
@@ -49,10 +48,7 @@ public class PotionOfMindVision extends Potion {
 				GLog.i(Messages.get(this, "see_none"));
 			}
 		}
-		else {
-			curUser.sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Hero.class,"wtf") );
-		}
-	}
+
 	
 	@Override
 	public int value() {

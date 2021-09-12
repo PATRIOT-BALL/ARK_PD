@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpinnerSprite;
@@ -20,6 +21,7 @@ public class Striker extends Mob{
 
         loot = Gold.class;
         lootChance = 0.25f;
+        immunities.add(Silence.class);
     }
 
     @Override

@@ -23,6 +23,11 @@ public class Enfild2 extends MeleeWeapon {
     private int chargeCap = 100;
 
     @Override
+    public int min(int lvl) {
+       return 8+lvl;
+    }
+
+    @Override
     public int max(int lvl) {
         return  8*(tier+1) +    // 48 + 15
                 lvl*(tier+10);   //scaling unchanged

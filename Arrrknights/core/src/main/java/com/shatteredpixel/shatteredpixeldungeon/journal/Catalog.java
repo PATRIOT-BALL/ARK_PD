@@ -164,6 +164,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
@@ -266,6 +267,7 @@ public enum Catalog {
 		WEAPONS.seen.put( M1887.class,                       false);
 		WEAPONS.seen.put( Naginata.class,                       false);
 		WEAPONS.seen.put( Scythe.class,                false);
+		WEAPONS.seen.put( FolkSong.class,                false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( WarHammer.class,                  false);

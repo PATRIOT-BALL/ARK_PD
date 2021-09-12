@@ -39,7 +39,7 @@ public class ChargingPS extends Skill {
     }
 
     public void dohit(final Char enemy) {
-        int dmg = Random.NormalIntRange(24, 24 + curUser.STR * 3);
+        int dmg = Random.NormalIntRange(35, 35 + curUser.STR * 3);
         CellEmitter.get(enemy.pos).burst(Speck.factory(Speck.WOOL), 10);
         Buff.affect(enemy, Blindness.class, 15f);
         Buff.affect(enemy, Paralysis.class, 6f);

@@ -21,7 +21,7 @@ public class LandingStrike extends Skill {
         if (curUser.belongings.ring != null) if(curUser.belongings.ring.cursed) curs++;
         if (curUser.belongings.misc != null)  if(curUser.belongings.misc.cursed) curs++;
 
-        Buff.affect(curUser, Bless.class, curs * 250f);
+        Buff.affect(curUser, Bless.class, 150 + curs * 250f);
 
         CellEmitter.get( curUser.pos ).start( ShadowParticle.CURSE, 0.05f, 10 );
         Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );

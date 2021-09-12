@@ -292,6 +292,7 @@ public class SiestaBoss extends Mob {
     public static class BossAgent extends Agent {
 
         {
+            HT=HP=70;
             state = HUNTING;
 
             spriteClass = BreakerSprite.class;
