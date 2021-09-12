@@ -1259,7 +1259,7 @@ actors.mobs.sniper.name=스나이퍼
 actors.mobs.sniper.desc=초급 스나이퍼. 초원거리에서 공격할 수 있다. 장비하고 있는 특수 저격 무기는 특수 탄약을 발사하여 아군 유닛에 기절 상태를 줄 수 있다.\n\n제자리에서 3회 연속 공격하면 대상을 마비시킵니다.
 
 actors.mobs.wavecaster.name=조류 제어술사
-actors.mobs.wavecaster.desc=그들의 물의 아츠는 그렇게 위협적인 편은 아니지만, 물 위에 있는 적에게는 매우 치명적으로 변합니다.
+actors.mobs.wavecaster.desc=이들이 사용하는 물의 아츠는 그렇게 위협적인 편은 아니지만, 물 위에 있는 적에게는 매우 치명적으로 변합니다.
 
 actors.mobs.agent.name=특공대원
 actors.mobs.agent.desc=그가 사용하는 다양한 전술 수단은 아군의 방어선을 손쉽게 무너뜨릴 수 있을 것이다.\n\n_침묵 가능_

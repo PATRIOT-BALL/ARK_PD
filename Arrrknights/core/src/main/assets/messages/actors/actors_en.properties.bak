@@ -1253,6 +1253,9 @@ actors.mobs.ergate.desc=엔지니어링 기술 수단을 사용하여 파괴를 
 actors.mobs.sniper.name=sniper
 actors.mobs.sniper.desc=초급 스나이퍼. 초원거리에서 공격할 수 있다. 장비하고 있는 특수 저격 무기는 특수 탄약을 발사하여 아군 유닛에 기절 상태를 줄 수 있다.\n\n제자리에서 3회 연속 공격하면 대상을 마비시킵니다.
 
+actors.mobs.wavecaster.name=wave caster
+actors.mobs.wavecaster.desc=The water arts they use aren't that powerful, but they turn deadly to enemies on the water.
+
 actors.mobs.piersailor.name=Piersailor
 actors.mobs.piersailor.desc=It has strong fighting power. However, it constantly loses stamina on water.
 
