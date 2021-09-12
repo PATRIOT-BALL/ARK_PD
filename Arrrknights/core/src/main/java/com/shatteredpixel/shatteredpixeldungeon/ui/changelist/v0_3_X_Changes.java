@@ -68,6 +68,10 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
         "_그레이스롯_의 _폭발 화살_ 특성의 피해 배율이 80~120%에서 _100~150%_로 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 상향",
+                "_격노의 눈_과 _스콜피온 테일_의 피해량이 상승했습니다." + "\n\n" +
+                "_낙지참_ 사용시 저주 장비 수와 관계없이 기본적으로 150턴의 축복을 얻습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
