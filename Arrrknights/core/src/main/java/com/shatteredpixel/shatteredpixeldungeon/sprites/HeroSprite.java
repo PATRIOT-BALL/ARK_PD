@@ -57,12 +57,14 @@ public class HeroSprite extends CharSprite {
 			break;
 			case 2: texture(Assets.Sprites.FNOVA);
 			break;
-			case 3: texture(Assets.Sprites.GRN); // ㄱㄹㄴ!
+			case 3: texture(Assets.Sprites.SKD); // 바병슼
 			break;
-			case 4: texture(Assets.Sprites.SKD); // 바병슼
+			case 4: texture(Assets.Sprites.SSR); // 수수로
 			break;
-			case 5: texture(Assets.Sprites.SSR); // 수수로
+			case 5: texture(Assets.Sprites.GRN); // ㄱㄹㄴ!
 			break;
+			case 6: texture(Assets.Sprites.LAPPY); // ㄱㄹㄴ!
+				break;
 		}
 		updateArmor();
 
@@ -83,11 +85,13 @@ public class HeroSprite extends CharSprite {
 				break;
 			case 2: texture(Assets.Sprites.FNOVA);
 				break;
-			case 3: texture(Assets.Sprites.GRN); // 그라니
+			case 3: texture(Assets.Sprites.SKD); // 바병슼
 				break;
-			case 4: texture(Assets.Sprites.SKD); // 바병슼
+			case 4: texture(Assets.Sprites.SSR); // 수수로
 				break;
-			case 5: texture(Assets.Sprites.SSR); // 수수로
+			case 5: texture(Assets.Sprites.GRN); // 그라니
+				break;
+			case 6: texture(Assets.Sprites.LAPPY); // 그라니
 				break;
 		}
 		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 36, 34);

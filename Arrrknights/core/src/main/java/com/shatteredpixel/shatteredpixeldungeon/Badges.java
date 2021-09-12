@@ -151,6 +151,10 @@ public class Badges {
 		GREY_CHAMPION1              ( 85, true ),
 		ROSE_CHAMPION1              ( 86, true ),
 
+		GOLD_COLLECTED_5              ( 89, true ),
+
+		SIESTA_PART1              ( 90, true ),
+
 		//RED , 버그 유저
 		BUG (176),
 
@@ -173,6 +177,8 @@ public class Badges {
 		RED_CHAMPION2              ( 106, true ),
 		GREY_CHAMPION2              ( 107, true ),
 		ROSE_CHAMPION2              ( 108, true ),
+
+		SIESTA_PART2              ( 111, true ),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
@@ -199,7 +205,8 @@ public class Badges {
 		SKIN_TALU(161),
 		SKIN_NOVA(162),
 		SKIN_SUSUU(163),
-		SKIN_GRN(164);
+		SKIN_GRN(164),
+		SKIN_LAPPY(165);
 
 		public boolean meta;
 
@@ -905,6 +912,11 @@ public class Badges {
 
 	public static void validategrnskin() {
 		Badge badge = Badge.SKIN_GRN;
+		displayBadge( badge );
+	}
+
+	public static void validatelappyskin() {
+		Badge badge = Badge.SKIN_LAPPY;
 		displayBadge( badge );
 	}
 

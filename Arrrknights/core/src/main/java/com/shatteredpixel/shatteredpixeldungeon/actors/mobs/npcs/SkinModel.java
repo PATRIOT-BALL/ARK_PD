@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GraniSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.LappySprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SkadiSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SussurroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.talrufightSprite;
@@ -32,11 +33,13 @@ public class SkinModel extends NPC {
            break;
            case 1: spriteClass = FnovaSprite.class;
            break;
-           case 2: spriteClass= GraniSprite.class;
+           case 2: spriteClass= SkadiSprite.class;
            break;
-           case 3: spriteClass= SkadiSprite.class;
+           case 3: spriteClass= SussurroSprite.class;
            break;
-           case 4: spriteClass= SussurroSprite.class;
+           case 4: spriteClass= GraniSprite.class;
+           break;
+           case 5: spriteClass= LappySprite.class;
            break;
 
        }
@@ -74,7 +77,7 @@ public class SkinModel extends NPC {
     public void SkinChange()
     {
         skin_ch++;
-        if (skin_ch > 4) skin_ch = 0;
+        if (skin_ch > 5) skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();

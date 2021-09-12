@@ -415,6 +415,7 @@ public class Assets {
 		public static final String GRN	= "sprites/grani.png";
 		public static final String SKD	= "sprites/skadi.png";
 		public static final String SSR	= "sprites/sussurro.png";
+		public static final String LAPPY	= "sprites/lappy.png";
 
 	}
 }

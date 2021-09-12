@@ -380,9 +380,10 @@ public enum HeroClass {
 			switch (Dungeon.hero.CharSkin) {
 				case 1: return Assets.Sprites.TALRU_FIGHT;
 				case 2: return Assets.Sprites.FNOVA;
-				case 3: return Assets.Sprites.GRN;
-				case 4: return Assets.Sprites.SKD;
-				case 5: return Assets.Sprites.SSR;
+				case 3: return Assets.Sprites.SKD;
+				case 4: return Assets.Sprites.SSR;
+				case 5: return Assets.Sprites.GRN;
+				case 6: return Assets.Sprites.LAPPY;
 			}
 		}
 		switch (this) {
