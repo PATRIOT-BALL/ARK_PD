@@ -1622,7 +1622,7 @@ items.stones.stoneofshock.desc=이 돌은 던져진 지점에 짧은 시간 동�
 items.wands.sp.staffofabsinthe.name=스태프 오브 압생트
 items.wands.sp.staffofabsinthe.staff_name=개조 마탄의 흑요석 반지
 items.wands.sp.staffofabsinthe.desc=_"박사, 아버지가 한 일은 정말로 가치가 있는 걸까?"_\n\n이 개조된 마탄의 스태프는 압생트 대원의 능력이 반영되어있습니다. 다른 스태프에 비해 더 많은 SP를 보유했습니다.
-items.wands.sp.staffofabsinthe.stats_desc=이 아츠 스태프가 발사하는 에너지는 _%1$d-%2$d의 피해_ 를 입히며, 체력이 50%%미만인 적에게는 2배의 피해를 줍니다.
+items.wands.sp.staffofabsinthe.stats_desc=이 아츠 스태프가 발사하는 에너지는 _%1$d-%2$d의 피해_ 를 입히며, 체력이 50%%미만인 적에게만 피해를 입힐 수 있습니다.
 items.wands.sp.staffofabsinthe.bmage_desc=_아미야_ 가 개조 마탄의 흑요석 반지로 적을 공격하면, 가지고 있는 모든 아츠 스태프와 흑요석 반지가 추가 SP를 얻습니다.
 
 items.wands.sp.staffofgreyy.name=스태프 오브 그레이
@@ -2276,6 +2276,7 @@ items.weapon.melee.golddogsword.charge_fail=축적 불가능!
 
 items.weapon.melee.folksong.name=타향의 노래
 items.weapon.melee.folksong.desc=그녀가 비탄할 때 그녀의 광기에 고통이 퍼져나아가네\n\n자신이나 공격 대상이 물 위에 있다면 피해량이 20% 상승합니다. (최대 40%)
+items.weapon.melee.folksong.setbouns=_아이템 시너지 : 광기의 노래_\n적의 방어력을 50%무시합니다.
 
 
 

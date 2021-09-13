@@ -40,6 +40,12 @@ public class v0_3_X_Changes {
                 "_연속 타격 8 : 근접 섬광탄_은 대상에게 125%의 피해를 입히고 1턴의 마비와 연속 타격*0.3턴의 실명을 부여하며, 콤보를 1 얻습니다." + "\n\n" +
                 "_연속 타격 10 : 영거리 사격_은 대상에게 연속 타격*40%의 _사격 피해_를 입힙니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지",
+                "아이템 시너지 3종이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
+                "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다."));
+
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -48,11 +54,14 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 개편",
                 "_아미야_의 _에너지 넘치는 강화_ 특성이 _아츠 흡수_로 대체되었습니다. 이 특성은 아츠 기록장치로 스킬 발동시 흑요석 반지를 충전시킵니다." + "\n\n" +
                 "_레드_의 _보호의 그림자_ 특성이 _아츠의 그림자_로 대체되었습니다. 망토로 은신 지속 중 일정 턴마다 아츠 기록장치를 충전합니다." + "\n\n" +
-                "_레드_의 _신비한 강화_ 특성이 _추적자_로 대체되었습니다. 아츠 기록장치로 스킬 사용시 신속을 얻고 속박을 해제합니다." + "\n\n" +
+                "_레드_의 _신비한 강화_ 특성이 _추적자_로 대체되었습니다. 아츠 기록장치로 스킬 사용시 신속을 얻고 속박,불구,실명을 해제합니다." + "\n\n" +
                 "_그레이스롯_의 _무기 손질_ 특성이 _연속처치_로 대체되었습니다. 적 처치시 짧은 턴동안 이동속도가 상승합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유뮬 개편",
                 "_천구_ 의 충전 속도가 감소했지만, 레벨이 오르는 속도가 빨라졌습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 개편",
+                "_스태프 오브 압생트_의 피해량이 2-10에서 _6-18_로 상승했으며, 강화 효율이 1-3에서 _3-7_로 상승했습니다. 대신 체력 50%이하인 적에게만 피해를 입힐 수 있습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "더욱 많은 변종",
                 "변종 몬스터의 등장 확률이 2%에서 _2.5%_ 로 상승했습니다."));
@@ -65,8 +74,12 @@ public class v0_3_X_Changes {
                 "_맹목적인 순종_ 공격력이 4-14에서 _4-15_로 상승했으며, 강화 효율이 3에서 _4_로 증가했습니다. 대신 주 대상 피해 보너스가 최대 90%에서 _60%_로 감소했습니다." + "\n\n"+
         "_끓어오르는 투지_ 공격력이 5-16에서 _5-18_로 상승했으며, 강화 효율이 3에서 _4_로 증가했습니다. 또한, 명중률 보정치가 -25%에서 _-15%_로 상승했습니다." + "\n\n" +
                         "_HM-200_의 공격력이 3-32에서 _8-32_로 상승했습니다." +"\n\n" +
-                        "_나의 소원_으로 소환한 Mon3tr가 공격할 때마다 무기의 SP를 충전시킵니다." + "\n\n" +
+                        "_나의 소원_으로 소환한 Mon3tr의 이동속도가 상승했으며, Mon3tr가 공격할 때마다 무기의 SP를 충전시킵니다." + "\n\n" +
                 "_사격 무기_ 들의 최대 탄창수가 소폭 상승했으며, 사격 공격의 기본 공격력이 상승하고 명중률이 50%상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 상향",
+                "_스태프 오브 브리즈_의 안개 지속시간이 상승했습니다.." + "\n\n" +
+                "_스태프 오브 레나_의 기본 피해량이 2-6에서 _4-6_으로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
         "_그레이스롯_의 _폭발 화살_ 특성의 피해 배율이 80~120%에서 _100~150%_로 상승했습니다."));

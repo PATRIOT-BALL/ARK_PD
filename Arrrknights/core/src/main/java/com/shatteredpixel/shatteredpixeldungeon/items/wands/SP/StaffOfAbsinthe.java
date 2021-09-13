@@ -29,10 +29,10 @@ public class StaffOfAbsinthe extends DamageWand {
         image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
     }
 
-    public int min(int lvl){ return 2+lvl; }
+    public int min(int lvl){ return 6+lvl*3; }
 
     public int max(int lvl){
-        return 10+3*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 3;
+        return 18+7*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 7;
     }
 
     @Override
@@ -48,12 +48,10 @@ public class StaffOfAbsinthe extends DamageWand {
 
             processSoulMark(ch, chargesPerCast());
             if (ch.HP <= ch.HT / 2) {
-                ch.damage((damageRoll() * 2), this);
+                ch.damage(damageRoll(), this);
+                Sample.INSTANCE.play( Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f) );
+                ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
             }
-            else  ch.damage(damageRoll(), this);
-            Sample.INSTANCE.play( Assets.Sounds.HIT_MAGIC, 1, Random.Float(0.87f, 1.15f) );
-
-            ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
 
         } else {
             Dungeon.level.pressCell(bolt.collisionPos);

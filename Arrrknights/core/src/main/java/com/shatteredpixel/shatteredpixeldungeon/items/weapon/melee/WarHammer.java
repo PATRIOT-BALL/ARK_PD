@@ -25,10 +25,14 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -65,6 +69,14 @@ public class WarHammer extends MeleeWeapon {
 		if (Dungeon.hero.buff(Twilight.class) != null) {
 			damage *= 2;
 		}
+
+		if (Dungeon.hero.belongings.getItem(RingOfElements.class) != null && Dungeon.hero.belongings.getItem(RingOfMight.class) != null) {
+			if (Dungeon.hero.belongings.getItem(RingOfElements.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfMight.class).isEquipped(Dungeon.hero)) {
+				if (defender.buff(Burning.class) != null) {
+					damage *= 1.4f;
+				}
+			}
+		}
 		return super.proc(attacker, defender, damage);
 	}
 
@@ -96,6 +108,16 @@ public class WarHammer extends MeleeWeapon {
 			}
 			else GLog.w(Messages.get(this, "dont_equ"));
 		}
+	}
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(RingOfElements.class) != null && Dungeon.hero.belongings.getItem(RingOfMight.class) != null) {
+			if (Dungeon.hero.belongings.getItem(RingOfElements.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfMight.class).isEquipped(Dungeon.hero))
+				info += "\n\n" + Messages.get( WarHammer.class, "setbouns");}
+
+		return info;
 	}
 
 	private static final String SKILL = "skill";

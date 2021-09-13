@@ -1623,7 +1623,7 @@ items.stones.stoneofshock.desc=This runestone unleashes a blast of electrical en
 items.wands.sp.staffofabsinthe.name=staff of absinthe
 items.wands.sp.staffofabsinthe.staff_name=ring of absinthe
 items.wands.sp.staffofabsinthe.desc=_"Doctor, everything my father did, was it really worth it?"_\n\nThis Retrofitted wand is Has the power of operator absinthe. it has many available charges our wands
-items.wands.sp.staffofabsinthe.stats_desc=Each bolt from this wand deals _%1$d-%2$d damage,_ and 2x damage to enemies with less than 50%% HP
+items.wands.sp.staffofabsinthe.stats_desc=Each bolt from this wand deals _%1$d-%2$d damage,_ Only deals damage to enemies with less than 50%% health.
 items.wands.sp.staffofabsinthe.bmage_desc=When _Guard Amiya_ strikes an enemy with a ring of absinthe, all of her wands will gain charge in addition to her ring.
 
 items.wands.sp.staffofgreyy.name=staff of greyy
@@ -2143,6 +2143,7 @@ items.weapon.melee.sword.setbouns=_Bakadi_\nIt hurts a lot.
 items.weapon.melee.warhammer.name=Laevateinn
 items.weapon.melee.warhammer.stats_desc=Accuracy +30%
 items.weapon.melee.warhammer.desc=This is the twilight of the gods, but it's not the end.\n\nWhen you activate an ability, your _attack damage is doubled_ and weapon _range is increased_. Also, _you take all damage to 0._ However, the potion cannot be used while it lasts, and this power can only be used once.\n\nAlso, when used, your HP is 1.
+items.weapon.melee.warhammer.setbouns=_Molten Core_\n40% bouns damage to burning enemies
 items.weapon.melee.warhammer.ac_zap=_TWILIGHT_
 items.weapon.melee.warhammer.skillfail=no longer available
 items.weapon.melee.warhammer.dont_equ=This power can only be used with a weapon equipped.
@@ -2271,7 +2272,7 @@ items.weapon.melee.firmament.setbouns=_Crimson Slash_\nincrease the damage of th
 
 items.weapon.melee.folksong.name=folk song
 items.weapon.melee.folksong.desc=When she lamented Pain accelerated her madness\n\nDamage is increased by 20% if you and the enemy are on water. (up to 40%)
-items.weapon.melee.folksong.setbouns=_Madness Song_\nPenetrates 50% of defense.
+items.weapon.melee.folksong.setbouns=_Madness Song_\nPenetrates 50% of enemy's defense.
 
 
 ###missile weapons

@@ -43,7 +43,7 @@ public class StaffOfLena extends DamageWand {
 
 
     public int min(int lvl){
-        return 2+lvl;
+        return 4+lvl;
     }
 
     public int max(int lvl){
