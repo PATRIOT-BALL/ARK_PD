@@ -132,7 +132,7 @@ public class CatGun extends MeleeWeapon {
     public class Mon3tr extends Mob {
         {
             spriteClass = Mon3terSprite.class;
-            baseSpeed = 1f;
+            baseSpeed = 3f;
 
             state = HUNTING;
             immunities.add(Silence.class);

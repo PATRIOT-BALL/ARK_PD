@@ -374,6 +374,8 @@ public class Assets {
 		//시에스타
 		public static final String SIESTA_INFANTRY	= "sprites/siesta_infantry.png";
 		public static final String ERGATE	= "sprites/ergate.png";
+		public static final String TANK	= "sprites/tank.png";
+		public static final String TANK_MAN	= "sprites/tank_man.png";
 		public static final String CRONIN	= "sprites/cronin.png";
 		public static final String SCHWARZ	= "sprites/schwarz.png";
 

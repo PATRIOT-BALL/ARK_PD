@@ -11,12 +11,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DefenderSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.PiersailorSprite;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Random;
 
 public class Piersailor extends Mob {
     {
-        spriteClass = DefenderSprite.class;
+        spriteClass = PiersailorSprite.class;
 
         HP = HT = 180;
         defenseSkill = 0; //see damage()

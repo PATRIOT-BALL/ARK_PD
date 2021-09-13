@@ -11,12 +11,13 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DefenderSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GolemSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.HeavyBoatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.TargetHealthIndicator;
 import com.watabou.utils.Random;
 
 public class HeavyBoat extends Mob {
     {
-        spriteClass = GolemSprite.class;
+        spriteClass = HeavyBoatSprite.class;
 
         HP = HT = 300;
         defenseSkill = 0; //see damage()
