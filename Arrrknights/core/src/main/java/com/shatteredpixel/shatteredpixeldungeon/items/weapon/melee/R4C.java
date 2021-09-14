@@ -70,8 +70,7 @@ public class R4C extends MeleeWeapon {
     }
 
     public int shotmin() {
-        return 3 + level();
-    }
+        return 4 + bullettier + level(); }
 
     public int shotmax() {
         return 4 + (bullettier * 3) + (level() * bullettier);
