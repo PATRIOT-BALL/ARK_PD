@@ -121,7 +121,7 @@ public class CrabGun extends MeleeWeapon {
     public class MetalCrab extends Mob {
         {
             spriteClass = Rock_CrabSprite.class;
-            baseSpeed = 1f;
+            baseSpeed = 3f;
 
             immunities.add(Silence.class);
             alignment = Alignment.ALLY;
