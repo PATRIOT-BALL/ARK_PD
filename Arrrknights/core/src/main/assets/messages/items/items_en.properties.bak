@@ -2143,7 +2143,7 @@ items.weapon.melee.sword.setbouns=_Bakadi_\nIt hurts a lot.
 items.weapon.melee.warhammer.name=Laevateinn
 items.weapon.melee.warhammer.stats_desc=Accuracy +30%
 items.weapon.melee.warhammer.desc=This is the twilight of the gods, but it's not the end.\n\nWhen you activate an ability, your _attack damage is doubled_ and weapon _range is increased_. Also, _you take all damage to 0._ However, the potion cannot be used while it lasts, and this power can only be used once.\n\nAlso, when used, your HP is 1.
-items.weapon.melee.warhammer.setbouns=_Molten Core_\n40% bouns damage to burning enemies
+items.weapon.melee.warhammer.setbouns=_Molten Core_\nIncreases damage by 40% against burning enemies
 items.weapon.melee.warhammer.ac_zap=_TWILIGHT_
 items.weapon.melee.warhammer.skillfail=no longer available
 items.weapon.melee.warhammer.dont_equ=This power can only be used with a weapon equipped.
@@ -2271,7 +2271,7 @@ items.weapon.melee.firmament.desc=Such evil must be stopped, and by any means ne
 items.weapon.melee.firmament.setbouns=_Crimson Slash_\nincrease the damage of the by 15% 
 
 items.weapon.melee.folksong.name=folk song
-items.weapon.melee.folksong.desc=When she lamented Pain accelerated her madness\n\nDamage is increased by 20% if you and the enemy are on water. (up to 40%)
+items.weapon.melee.folksong.desc=When she lamented Pain accelerated her madness\n\nDamage is increased by 15% if you and the enemy are on water. (up to 30%)
 items.weapon.melee.folksong.setbouns=_Madness Song_\nPenetrates 50% of enemy's defense.
 
 

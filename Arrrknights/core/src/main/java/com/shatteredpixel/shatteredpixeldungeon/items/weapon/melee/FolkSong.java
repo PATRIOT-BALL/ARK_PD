@@ -29,10 +29,10 @@ public class FolkSong extends MeleeWeapon {
     public int proc(Char attacker, Char defender, int damage) {
         float dmgbouns = 1f;
         if (Dungeon.level.map[attacker.pos] == Terrain.WATER) {
-            dmgbouns += 0.2f;
+            dmgbouns += 0.15f;
         }
         if (Dungeon.level.map[defender.pos] == Terrain.WATER) {
-            dmgbouns += 0.2f;
+            dmgbouns += 0.15f;
         }
 
         damage *= dmgbouns;

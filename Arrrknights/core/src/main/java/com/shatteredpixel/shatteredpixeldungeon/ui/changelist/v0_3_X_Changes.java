@@ -41,7 +41,7 @@ public class v0_3_X_Changes {
                 "_연속 타격 10 : 영거리 사격_은 대상에게 연속 타격*40%의 _사격 피해_를 입힙니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지",
-                "아이템 시너지 3종이 추가되었습니다."));
+                "아이템 시너지 4종이 추가되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
                 "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다."));
