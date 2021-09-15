@@ -408,6 +408,7 @@ public class Assets {
 		public static final String GHOST1	= "sprites/ghost_1.png";
 		public static final String IMPERIAL_ARTILLERY	= "sprites/imperial_artillery.png";
 		public static final String RAPTOR	= "sprites/raptor.png";
+		public static final String RAPTOR_FIRE	= "sprites/raptor_fire.png";
 
 
 		// 방벽

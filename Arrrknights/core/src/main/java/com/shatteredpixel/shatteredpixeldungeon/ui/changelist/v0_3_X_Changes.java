@@ -64,7 +64,7 @@ public class v0_3_X_Changes {
                 "_스태프 오브 압생트_의 피해량이 2-10에서 _6-18_로 상승했으며, 강화 효율이 1-3에서 _3-7_로 상승했습니다. 대신 체력 50%이하인 적에게만 피해를 입힐 수 있습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "더욱 많은 변종",
-                "변종 몬스터의 등장 확률이 2%에서 _2.5%_ 로 상승했습니다."));
+                "변종 몬스터의 등장 확률이 2%에서 _3%_ 로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);

@@ -22,9 +22,18 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Elemental;
+import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.RainbowParticle;
 import com.watabou.noosa.TextureFilm;
+import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.Emitter;
+import com.watabou.utils.Callback;
 
 public class RaptorSprite extends MobSprite {
+
+    private Emitter particles;
 
     public RaptorSprite() {
         super();
@@ -46,5 +55,71 @@ public class RaptorSprite extends MobSprite {
         die.frames( frames, 0 );
 
         play( idle );
+    }
+
+    @Override
+    public void link( Char ch ) {
+        super.link( ch );
+
+        if (particles == null) {
+            particles = createEmitter();
+        }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+
+        if (particles != null){
+            particles.visible = visible;
+        }
+    }
+
+    @Override
+    public void die() {
+        super.die();
+        if (particles != null){
+            particles.on = false;
+        }
+    }
+
+    @Override
+    public void kill() {
+        super.kill();
+        if (particles != null){
+            particles.killAndErase();
+        }
+    }
+
+    public void zap( int cell ) {
+
+        turnTo( ch.pos , cell );
+        play( zap );
+
+        MagicMissile.boltFromChar( parent,
+                MagicMissile.RAINBOW,
+                this,
+                cell,
+                new Callback() {
+                    @Override
+                    public void call() {
+                        ((Elemental)ch).onZapComplete();
+                    }
+                } );
+        Sample.INSTANCE.play( Assets.Sounds.ZAP );
+    }
+
+    @Override
+    public void onComplete( Animation anim ) {
+        if (anim == zap) {
+            idle();
+        }
+        super.onComplete( anim );
+    }
+
+    protected Emitter createEmitter() {
+        Emitter emitter = emitter();
+        emitter.pour( RainbowParticle.BURST, 0.025f );
+        return emitter;
     }
 }

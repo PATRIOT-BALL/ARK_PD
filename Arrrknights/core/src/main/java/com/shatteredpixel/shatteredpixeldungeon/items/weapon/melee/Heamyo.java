@@ -47,10 +47,8 @@ public class Heamyo extends MeleeWeapon {
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        defender.sprite.killAndErase();
-        defender.destroy();
-
-        if (defender instanceof SiestaBoss) Dungeon.level.unseal();
+      //  defender.sprite.killAndErase();
+     //   defender.destroy();
         return super.proc(attacker, defender, damage);
     }
 

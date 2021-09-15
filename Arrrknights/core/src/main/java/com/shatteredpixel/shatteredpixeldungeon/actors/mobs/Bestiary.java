@@ -192,21 +192,20 @@ public class Bestiary {
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class,
 						Ergate.class, Ergate.class,
-						Piersailor.class,
+						Piersailor.class, Piersailor.class,
 						Sniper.class));
 			case 33:
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class,
 						Ergate.class, Ergate.class,
 						Sniper.class, Sniper.class,
-						Piersailor.class,
+						Piersailor.class, Piersailor.class,
 						Agent.class));
 			case 34:
 				return new ArrayList<>(Arrays.asList(
-						Infantry.class,
 						Ergate.class,
 						Sniper.class, Sniper.class,
-						Piersailor.class,
+						Piersailor.class, Piersailor.class, Piersailor.class,
 						Agent.class, Agent.class, Agent.class));
 		}
 		
@@ -244,7 +243,7 @@ public class Bestiary {
 	//switches out regular mobs for their alt versions when appropriate
 	private static void swapMobAlts(ArrayList<Class<?extends Mob>> rotation){
 		for (int i = 0; i < rotation.size(); i++){
-			if (Random.Int( 40 ) == 0) {
+			if (Random.Int( 33 ) == 0) {
 				Class<? extends Mob> cl = rotation.get(i);
 				if (cl == Rat.class) {
 					cl = Albino.class;
