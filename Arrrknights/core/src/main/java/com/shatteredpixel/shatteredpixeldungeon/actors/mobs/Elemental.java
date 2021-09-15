@@ -44,6 +44,8 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DroneSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.RaptorSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Raptor_FireSprite;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -209,7 +211,7 @@ public abstract class Elemental extends Mob {
 	public static class NewbornFireElemental extends FireElemental {
 		
 		{
-			spriteClass = DroneSprite.NewbornFire.class;
+			spriteClass = Raptor_FireSprite.class;
 			
 			HT = 60;
 			HP = HT/2; //30
@@ -310,7 +312,7 @@ public abstract class Elemental extends Mob {
 	public static class ChaosElemental extends Elemental {
 		
 		{
-			spriteClass = DroneSprite.Chaos.class;
+			spriteClass = RaptorSprite.class;
 			
 			loot = new ScrollOfTransmutation();
 			lootChance = 1f;

@@ -32,7 +32,7 @@ public class HeavyBoat extends Mob {
 
     public int damageRoll() {
         if (Dungeon.level.map[this.pos] != Terrain.WATER) return Random.NormalIntRange(30, 45);
-        return Random.NormalIntRange(40, 60);
+        return Random.NormalIntRange(45, 60);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class HeavyBoat extends Mob {
 
     @Override
     protected boolean act() {
-        if (Dungeon.level.map[this.pos] != Terrain.WATER && state != SLEEPING) {
+        if (Dungeon.level.map[this.pos] != Terrain.WATER && state != HUNTING) {
             damage(HT/10, this);
         }
         return super.act();

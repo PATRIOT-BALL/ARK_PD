@@ -30,7 +30,7 @@ public class Piersailor extends Mob {
     }
 
     public int damageRoll() {
-        return Random.NormalIntRange(32, 48);
+        return Random.NormalIntRange(36, 48);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class Piersailor extends Mob {
 
     @Override
     protected boolean act() {
-        if (Dungeon.level.map[this.pos] == Terrain.WATER && state != SLEEPING) {
+        if (Dungeon.level.map[this.pos] == Terrain.WATER && state == HUNTING) {
             damage(HT/10, this);
         }
         return super.act();

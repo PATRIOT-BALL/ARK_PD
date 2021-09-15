@@ -142,28 +142,12 @@ public class SiestaBossLevel_part1 extends Level {
         map[45] = Terrain.DOOR;
         map[311] = Terrain.DOOR;
         map[317] = Terrain.DOOR;
-/*
-        // 텔레포트 발동시 스폰 포인트. 나중에 따로 지정
-        map[35] = Terrain.HIGH_GRASS; // 1
-        map[49] = Terrain.HIGH_GRASS; // 2
-        map[71] = Terrain.HIGH_GRASS; // 3
-        map[81] = Terrain.HIGH_GRASS; // 4
-        map[93] = Terrain.HIGH_GRASS; // 5
-        map[124] = Terrain.HIGH_GRASS; // 6
-        map[130] = Terrain.HIGH_GRASS; // 7
-        map[174] = Terrain.HIGH_GRASS; // 8
-        map[182] = Terrain.HIGH_GRASS; // 9
-        map[226] = Terrain.HIGH_GRASS; // 10
-        map[232] = Terrain.HIGH_GRASS; // 11
-        map[263] = Terrain.HIGH_GRASS; // 12
-        map[275] = Terrain.HIGH_GRASS; // 13
-        map[285] = Terrain.HIGH_GRASS; // 14
-        map[307] = Terrain.HIGH_GRASS; // 15
-        map[321] = Terrain.HIGH_GRASS; // 16*/
 
 
         entrance = 331;
-        exit = 25;
+
+        exit = 1; // 36층 이후 아래로 변경
+        //exit = 25;
 
         map[entrance] = Terrain.ENTRANCE;
 
@@ -179,7 +163,8 @@ public class SiestaBossLevel_part1 extends Level {
 
         super.occupyCell( ch );
 
-        if (ch.pos == 212 && ch == Dungeon.hero && map[entrance] == Terrain.ENTRANCE && map[exit] != Terrain.EXIT) {
+        // 36층 이후 개방시 WALL_DECO를 EXIT로 변경
+        if (ch.pos == 212 && ch == Dungeon.hero && map[entrance] == Terrain.ENTRANCE && map[exit] != Terrain.WALL_DECO) {
 
             seal();
 
@@ -190,9 +175,9 @@ public class SiestaBossLevel_part1 extends Level {
     public void seal() {
         super.seal();
         set( entrance, Terrain.EMPTY );
-        set( exit, Terrain.EMPTY );
+        //set( exit, Terrain.EMPTY ); // 36층 이후 처리
         GameScene.updateMap( entrance );
-        GameScene.updateMap( exit );
+        // GameScene.updateMap( exit ); // 36층 이후 처리
         Dungeon.observe();
 
         SiestaBoss boss = new SiestaBoss();
@@ -206,6 +191,7 @@ public class SiestaBossLevel_part1 extends Level {
         set( entrance, Terrain.ENTRANCE );
         GameScene.updateMap( entrance );
 
+        map[exit] = Terrain.WALL_DECO; // 36층 이후 개방시 아래거를 활성화하고 이건 삭제
        // set( exit, Terrain.EXIT );
         GameScene.updateMap( exit );
 
