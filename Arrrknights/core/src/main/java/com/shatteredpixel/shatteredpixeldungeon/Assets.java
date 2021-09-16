@@ -234,9 +234,9 @@ public class Assets {
 		public static final String HIT_DUALSTRIKE        = "sounds/hit_dualstrike.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
-		public static final String SKILL_TEXAS       = "sounds/skill_basic.mp3";
-		public static final String SKILL_SURTR       = "sounds/skill_basic.mp3";
-		public static final String SKILL_BABYNIGHT       = "sounds/skill_basic.mp3";
+		public static final String SKILL_TEXAS       = "sounds/skill_texas.mp3";
+		public static final String SKILL_SURTR       = "sounds/skill_surtr.mp3";
+		public static final String SKILL_BABYNIGHT       = "sounds/skill_babynight.mp3";
 		public static final String SKILL_MON1       = "sounds/skill_mon1.mp3";
 		public static final String SKILL_MON2       = "sounds/skill_mon2.mp3";
 		public static final String SKILL_BEEP       = "sounds/skill_beep.mp3";
