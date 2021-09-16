@@ -289,6 +289,7 @@ public class ItemSpriteSheet {
 	public static final int NAGINATA       = WEP_TIER4+7;
 	public static final int SICKEL       = WEP_TIER4+8;
 	public static final int GOLDDOG       = WEP_TIER4+9;
+	public static final int SPECTER       = WEP_TIER4+10;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -300,6 +301,7 @@ public class ItemSpriteSheet {
 		assignItemRect(NAGINATA,        16, 16);
 		assignItemRect(SICKEL,        16, 16);
 		assignItemRect(GOLDDOG,        16, 16);
+		assignItemRect(SPECTER,        16, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 9);   //8 slots

@@ -24,7 +24,7 @@ public class DivineAvatar extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
         image = ItemSpriteSheet.BABY_KNIGHT;
-        hitSound = Assets.Sounds.HIT_SLASH;
+        hitSound = Assets.Sounds.HIT_SWORD;
         hitSoundPitch = 0.86f;
 
         defaultAction = AC_ZAP;
@@ -66,7 +66,7 @@ public class DivineAvatar extends MeleeWeapon {
                 Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, "+%dHP", heal);
 
                 GameScene.flash( 0x80FFFFFF );
-                Sample.INSTANCE.play(Assets.Sounds.SKILL_BASIC);
+                Sample.INSTANCE.play(Assets.Sounds.SKILL_BABYNIGHT);
                 charge = 0;
             }
         }

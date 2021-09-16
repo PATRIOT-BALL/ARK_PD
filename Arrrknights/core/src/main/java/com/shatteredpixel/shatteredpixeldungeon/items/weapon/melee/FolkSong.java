@@ -11,7 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class FolkSong extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.CHAINSAW;
+        image = ItemSpriteSheet.SPECTER;
         hitSound = Assets.Sounds.HIT_CHAINSAW2;
         hitSoundPitch = 1f;
 

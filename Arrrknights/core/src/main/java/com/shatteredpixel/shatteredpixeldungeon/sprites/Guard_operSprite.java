@@ -47,6 +47,7 @@ public class Guard_operSprite extends MobSprite {
 
 		die = new Animation( 8, false );
 		die.frames( frames, 16 );
+
 		
 		play( idle );
 	}

@@ -50,7 +50,7 @@ public class RunicBlade extends MeleeWeapon {
 	public static final String AC_ZAP = "ZAP";
 	{
 		image = ItemSpriteSheet.RUNIC_BLADE;
-		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSound = Assets.Sounds.HIT_STAB;
 		hitSoundPitch = 1f;
 
 		defaultAction=AC_ZAP;
@@ -111,7 +111,7 @@ public class RunicBlade extends MeleeWeapon {
 
 
 					Buff.affect(Dungeon.hero, ArtifactRecharge.class).set(6).ignoreHornOfPlenty=false;
-					Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1.2f, 1.65f);
+					Sample.INSTANCE.play(Assets.Sounds.SKILL_TEXAS);
 					charge = 0;
 				}
 			}
