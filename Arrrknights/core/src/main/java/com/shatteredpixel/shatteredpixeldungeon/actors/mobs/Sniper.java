@@ -39,7 +39,7 @@ public class Sniper extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(34, 46);
+        return Random.NormalIntRange(32, 48);
     }
 
     @Override

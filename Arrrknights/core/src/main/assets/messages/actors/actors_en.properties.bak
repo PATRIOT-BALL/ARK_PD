@@ -1269,7 +1269,7 @@ actors.mobs.agent.name=agent
 actors.mobs.agent.desc=그가 사용하는 다양한 전술 수단은 아군의 방어선을 손쉽게 무너뜨릴 수 있을 것이다.\n\n_침묵 가능_
 
 actors.mobs.schwarz.name=schwarz
-actors.mobs.schwarz.desc=기밀 작전, 조사, 기밀 정보 보호, 야외 생존, 크로스보우 사용 등의 기술에 매우 조예가 깊다. 주기적으로 플레이어에게 저격을 시도한다.
+actors.mobs.schwarz.desc=A fighter with very good skills. Her Periodically try to sniper.
 actors.mobs.schwarz.snipe1=you won't be able to run away.
 actors.mobs.schwarz.snipe2=That's a good target.
 actors.mobs.schwarz.snipe3=i saw you.

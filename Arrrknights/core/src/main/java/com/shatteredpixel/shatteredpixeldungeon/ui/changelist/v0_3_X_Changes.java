@@ -40,8 +40,8 @@ public class v0_3_X_Changes {
                 "_연속 타격 8 : 근접 섬광탄_은 대상에게 125%의 피해를 입히고 1턴의 마비와 연속 타격*0.3턴의 실명을 부여하며, 콤보를 1 얻습니다." + "\n\n" +
                 "_연속 타격 10 : 영거리 사격_은 대상에게 연속 타격*40%의 _사격 피해_를 입힙니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지",
-                "아이템 시너지 4종이 추가되었습니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 5종",
+                "_최후의 웬디고_ - 레퀴엠\n_용문총경_ - 적소\n_광기의 노래_ - 타향의 노래\n_용암거영_ - 레바테인\n_라인랩 프렌즈!_ - 라인랩 실드"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
                 "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다."));
@@ -101,6 +101,9 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 하향",
                 "_레드_의 _은밀한 이동_ +1 효과의 범위가 3칸에서 _2칸_으로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 하향",
+                "_살카즈 스나이퍼_\n체력이 110에서 _105_, 공격력이 32-44에서 _30-40_, 명중률이 42에서 _36_, 회피율이 24에서 _22_로 감소했습니다."));
 
     }
 }

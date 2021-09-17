@@ -47,7 +47,7 @@ public class Piersailor extends Mob {
     @Override
     protected boolean act() {
         if (Dungeon.level.map[this.pos] == Terrain.WATER && state == HUNTING) {
-            damage(HT/10, this);
+            damage(HT/20, this);
         }
         return super.act();
     }

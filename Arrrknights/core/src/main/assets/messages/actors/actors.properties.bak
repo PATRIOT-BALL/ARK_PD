@@ -382,7 +382,6 @@ actors.buffs.twilight.desc=_"한 마리도 도망칠 수 있을 거라 생각 �
 actors.buffs.spikesbuff.name=가시
 actors.buffs.spikesbuff.desc=피격 시 주위 적에게 피해를 입힙니다. \n\n가시 상태가 끝날 때까지 %s 턴 남았습니다.
 
-
 ###hero
 actors.hero.talent.hearty_meal.title=푸짐한 식사
 actors.hero.talent.hearty_meal.desc=_+1:_ 음식을 섭취할 때 체력이 50% 이하라면 _2 HP_ , 25% 이하라면 _3 HP_ 를 회복합니다.\n\n_+2:_ 음식을 섭취할 때 체력이 50% 이하라면  _3 HP_ , 25% 이하라면 _5 HP_ 를 회복합니다.
@@ -795,7 +794,7 @@ actors.mobs.npcs.closure.fail_skin2=하극상 배지가 필요합니다.
 actors.mobs.npcs.closure.fail_skin3=게임을 50회 클리어해야합니다.
 actors.mobs.npcs.closure.fail_skin4=모든 물약을 감정해야합니다.
 actors.mobs.npcs.closure.fail_skin5=게임을 10회 클리어해야합니다.
-actors.mobs.npcs.closure.fail_skin6=냄새납니다.
+actors.mobs.npcs.closure.fail_skin6=행복한 결말을 봐야합니다.
 actors.mobs.npcs.closure.die=끄악~
 
 actors.mobs.npcs.skinmodel.name=신형 모델 생성기
@@ -1256,6 +1255,7 @@ actors.mobs.piersailor.desc=강력한 근거리 전투원. 하지만 물 안에�
 
 actors.mobs.heavyboat.name=혜비보트
 actors.mobs.heavyboat.desc=이 강력한 배는 물 위에서 강력한 전투력을 발휘하지만, 반대로 물 위에서는 매우 약해지며 계속해서 체력을 잃습니다. 사망시 선원이 탈출하여 즉시 전투에 참여합니다.
+actors.mobs.heavyboat.bang=당신은 교통사고 당했다...
 
 actors.mobs.sniper.name=스나이퍼
 actors.mobs.sniper.desc=초급 스나이퍼. 초원거리에서 공격할 수 있다. 장비하고 있는 특수 저격 무기는 특수 탄약을 발사하여 아군 유닛에 기절 상태를 줄 수 있다.\n\n제자리에서 3회 연속 공격하면 대상을 마비시킵니다.

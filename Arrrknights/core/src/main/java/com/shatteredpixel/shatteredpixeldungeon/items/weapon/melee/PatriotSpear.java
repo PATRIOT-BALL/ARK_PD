@@ -2,7 +2,12 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -19,6 +24,13 @@ public class PatriotSpear extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
+        if (Dungeon.hero.belongings.armor instanceof PlateArmor) {
+            if (Dungeon.hero.belongings.getItem(RingOfMight.class) != null && Dungeon.hero.belongings.getItem(RingOfTenacity.class) != null) {
+                if (Dungeon.hero.belongings.getItem(RingOfTenacity.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfMight.class).isEquipped(Dungeon.hero))
+                    return 2 * (tier + 2) +    //14
+                            lvl * (tier - 2);   // +3
+            }
+        }
         return  2*(tier+1) +    //12
                 lvl*(tier-3);   // +2
     }
@@ -48,5 +60,18 @@ public class PatriotSpear extends MeleeWeapon {
         } else {
             return Messages.get(this, "typical_stats_desc", 4);
         }
+    }
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+        if (Dungeon.hero.belongings.armor instanceof PlateArmor) {
+            if (Dungeon.hero.belongings.getItem(RingOfMight.class) != null && Dungeon.hero.belongings.getItem(RingOfTenacity.class) != null) {
+                if (Dungeon.hero.belongings.getItem(RingOfTenacity.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfMight.class).isEquipped(Dungeon.hero))
+                    info += "\n\n" + Messages.get(PatriotSpear.class, "setbouns");
+            }
+        }
+
+        return info;
     }
 }

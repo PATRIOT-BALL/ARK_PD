@@ -48,6 +48,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Foresight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Fury;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.HoldFast;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
@@ -70,6 +71,8 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CheckedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
@@ -122,6 +125,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.YourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Viscosity;
@@ -156,6 +160,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
@@ -164,6 +169,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
@@ -171,6 +177,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.Trap;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.ShadowCaster;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Earthroot;
@@ -743,6 +750,24 @@ public class Hero extends Char {
             bubble.processTime(time);
             return;
         }
+
+        if (belongings.weapon instanceof PatriotSpear) {
+            if (belongings.armor instanceof PlateArmor) {
+                if (belongings.getItem(RingOfMight.class) != null && belongings.getItem(RingOfTenacity.class) != null) {
+                    if (belongings.getItem(RingOfTenacity.class).isEquipped(this) && belongings.getItem(RingOfMight.class).isEquipped(this)){
+                        for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                            if (Dungeon.level.adjacent(mob.pos, pos) && mob.alignment != Char.Alignment.ALLY && !mob.properties().contains(Property.NPC)) {
+                                mob.sprite.emitter().burst( ShadowParticle.CURSE, 15);
+                                Buff.affect(mob, Hex.class, 3f);
+                                int dmg = mob.HP / 8;
+                                dmg = Math.min(dmg, 30);
+                                dmg = Math.max(3, dmg);
+                                mob.damage( dmg, this );
+                            }
+                        }
+                        this.sprite.emitter().burst( ShadowParticle.UP, 2);
+                    }}}}
+
 
         super.spend(time);
     }
