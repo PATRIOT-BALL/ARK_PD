@@ -27,9 +27,7 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "챕터 5 새로운 적",
                 "_정예 선봉_\n사거리 2의 물리 공격을 가하며, 방어력이 높은 편입니다. 체력이 50%이하가 되면 공격력이 상승합니다." + "\n\n" +
-                "_백전 정예 선봉_\n정예 선봉의 변종으로, 능력치가 더 높습니다."));
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "챕터 5 변종 추가",
+                "_백전 정예 선봉_\n정예 선봉의 변종으로, 능력치가 더 높습니다." + "\n\n" +
                 "_제국 드론_\n아츠마스터 A2의 변종으로, 플레이어를 인식하면 플레이어 위치에 포격 좌표를 찍습니다. 포격 지점에서 벗어나지 않으면 큰일 날 것입니다." + "\n" +
                 "제국 드론을 처치하면 100%확률로 로고스의 골필을 얻을 수 있습니다." + "\n\n" +
                 "_돌격자_\n살카즈 랜서의 변종으로, 가속 중첩으로 공격력을 상승시키는 대신 대상을 밀쳐내는 공격을 가합니다."));
@@ -40,11 +38,12 @@ public class v0_3_X_Changes {
                 "_연속 타격 8 : 근접 섬광탄_은 대상에게 125%의 피해를 입히고 1턴의 마비와 연속 타격*0.3턴의 실명을 부여하며, 콤보를 1 얻습니다." + "\n\n" +
                 "_연속 타격 10 : 영거리 사격_은 대상에게 연속 타격*40%의 _사격 피해_를 입힙니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 5종",
-                "_최후의 웬디고_ - 레퀴엠\n_용문총경_ - 적소\n_광기의 노래_ - 타향의 노래\n_용암거영_ - 레바테인\n_라인랩 프렌즈!_ - 라인랩 실드"));
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 7종 추가",
+                "_최후의 웬디고\n_용문총경\n_광기의 노래\n_용암거영\n_라인랩 프렌즈!\n_친우의 검_\n_이세계 전술_"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
-                "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다."));
+                "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다." + "\n\n" +
+                "_이세계 전술장비_ : 100%충전 후 발동시 미보를 1개 생성하는 유물입니다. 미보 및 파생 인형들의 피해량이 상승하며, 투척시 즉시 폭발하고 마비를 부여합니다."));
 
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
