@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.LloydsBeacon;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
@@ -537,9 +538,10 @@ public class Generator {
                     LloydsBeacon.class,
                     EtherealChains.class,
                     CustomeSet.class,
-                    AlchemyKit.class
+                    AlchemyKit.class,
+                    IsekaiItem.class
             };
-            ARTIFACT.defaultProbs = new float[]{0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1};
+            ARTIFACT.defaultProbs = new float[]{0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1};
             ARTIFACT.probs = ARTIFACT.defaultProbs.clone();
 
             SKL_T1.classes = new Class<?>[]{
