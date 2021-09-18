@@ -28,9 +28,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.AcidSlug_A;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Agent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DM100;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Eye;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Pompeii;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Shaman;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Warlock;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.WaveCaster;
@@ -119,6 +121,9 @@ public class AntiMagic extends Armor.Glyph {
 		RESISTS.add( YogFist.DarkFist.DarkBolt.class );
 		RESISTS.add( Agent.class );
 		RESISTS.add( WaveCaster.WaterBolt.class );
+		RESISTS.add( AcidSlug_A.AcidBolt.class );
+		RESISTS.add( Pompeii.Blast.class );
+		RESISTS.add( Pompeii.Volcano.class );
 	}
 	
 	@Override
