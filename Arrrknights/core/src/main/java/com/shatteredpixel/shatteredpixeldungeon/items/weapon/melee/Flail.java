@@ -22,8 +22,12 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
@@ -42,13 +46,20 @@ public class Flail extends MeleeWeapon {
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
+		float healPer = 0.1f;
 		int thisHP = attacker.HP;
 		int thisHT = attacker.HT;
+
+		if (Dungeon.hero.belongings.getItem(RingOfEvasion.class) != null) {
+			if (Dungeon.hero.belongings.getItem(RingOfEvasion.class).isEquipped(Dungeon.hero)) {
+				healPer = 0.15f;
+			}}
+
 		if (thisHP <= thisHT/4) {
 			damage *= 1.5f;
 
 			if (Random.Int(2) < 1) {
-				int healAmt = Math.round(damage * 0.1f);
+				int healAmt = Math.round(damage * healPer);
 				healAmt = Math.min(healAmt, attacker.HT - attacker.HP);
 
 				if (healAmt > 0 && attacker.isAlive()) {
@@ -63,7 +74,7 @@ public class Flail extends MeleeWeapon {
 		else if (thisHP <= thisHT / 2){
 			damage *= 1.3f;
 			if (Random.Int(4) < 1) {
-				int healAmt = Math.round(damage * 0.1f);
+				int healAmt = Math.round(damage * healPer);
 				healAmt = Math.min(healAmt, attacker.HT - attacker.HP);
 
 				if (healAmt > 0 && attacker.isAlive()) {
@@ -79,5 +90,16 @@ public class Flail extends MeleeWeapon {
 			damage *= 1.1f;
 		}
 		return super.proc(attacker, defender, damage);
+	}
+
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(RingOfEvasion.class) != null) {
+			if (Dungeon.hero.belongings.getItem(RingOfEvasion.class).isEquipped(Dungeon.hero))
+				info += "\n\n" + Messages.get( Flail.class, "setbouns");}
+
+		return info;
 	}
 }

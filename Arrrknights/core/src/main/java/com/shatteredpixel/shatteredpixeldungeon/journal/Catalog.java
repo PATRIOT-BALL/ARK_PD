@@ -74,6 +74,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
@@ -396,6 +397,7 @@ public enum Catalog {
 		ARTIFACTS.seen.put( TimekeepersHourglass.class,     false);
 		ARTIFACTS.seen.put( UnstableSpellbook.class,        false);
 		ARTIFACTS.seen.put( CustomeSet.class,        false);
+		ARTIFACTS.seen.put( IsekaiItem.class,        false);
 		ARTIFACTS.seen.put( AlchemyKit.class,        false);
 
 		POTIONS.seen.put( PotionOfHealing.class,            false);

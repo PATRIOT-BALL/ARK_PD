@@ -24,7 +24,7 @@ public class Scythe extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) - 1 +   //15 + 4
+        return  4*(tier) - 2 +   //14 + 4
                 lvl*(tier); }
 
     @Override
@@ -42,7 +42,7 @@ public class Scythe extends MeleeWeapon {
             }
         }
 
-        float bounsdmg = Math.min(1.6f, 1f+(extratarget*0.15f));
+        float bounsdmg = Math.min(1.5f, 1f+(extratarget*0.1f));
 
         damage = Math.round(damage * bounsdmg);
 

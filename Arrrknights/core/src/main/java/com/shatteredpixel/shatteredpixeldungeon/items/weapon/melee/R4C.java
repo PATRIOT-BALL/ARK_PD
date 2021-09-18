@@ -18,6 +18,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -201,12 +203,18 @@ public class R4C extends MeleeWeapon {
 
     protected void onZap( Ballistica bolt ) {
         Char ch = Actor.findChar( bolt.collisionPos );
+        boolean pala;
+        pala = false;
         if (ch != null) {
             int dmg = Random.Int(shotmin(), shotmax());
 
             // 사격 스롯 판정
             if (Dungeon.hero.subClass == HeroSubClass.SNIPER) dmg -= (ch.drRoll() / 2);
             else dmg -= ch.drRoll();
+            if (Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
+                if (Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero)) {
+                    if (ch.buff(Paralysis.class) != null) {pala = true;}
+                }}
 
             ACC = 1.5f;
             if (ch.hit(Dungeon.hero, ch, false)) {
@@ -265,7 +273,8 @@ public class R4C extends MeleeWeapon {
         updateQuickslot();
         ACC = 1;
 
-        curUser.spendAndNext(0.8f);
+        if (pala) { curUser.spendAndNext(0.2f); }
+        else curUser.spendAndNext(0.8f);
     }
 
     private final WndBag.Listener itemSelector = new WndBag.Listener() {
@@ -284,7 +293,13 @@ public class R4C extends MeleeWeapon {
 
     @Override
     public String desc() {
-        return Messages.get(this, "desc", bullettier);
+       String info = Messages.get(this, "desc", bullettier);
+            if (Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
+                if (Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero))
+                    info += "\n\n" + Messages.get( R4C.class, "setbouns");}
+
+
+        return info;
     }
 
     @Override

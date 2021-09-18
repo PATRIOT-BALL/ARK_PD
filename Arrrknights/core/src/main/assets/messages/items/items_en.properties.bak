@@ -824,6 +824,12 @@ items.artifacts.alchemykit.cursed=Your cursed kit prevents you from using proces
 items.artifacts.alchemykit.chargeless=Your Alchemy Kit hasn't recharged enough to be usable yet.
 items.artifacts.alchemykit.getitem=Alchemy Success!
 
+items.artifacts.isekaiitem.name=isekai itemset
+items.artifacts.isekaiitem.ac_bomb=BOMB
+items.artifacts.isekaiitem.desc=It looks like we can make explosives with the tools of another world. Also, explosive`s increased damage, paralyze targets. and explode instantly when thrown!
+items.artifacts.isekaiitem.no_charge=Insufficient charge.
+items.artifacts.isekaiitem.desc_cursed=Cursed equipment reduces your explosive performance.
+
 
 ###bags
 items.bags.bag.name=backpack
@@ -2003,6 +2009,7 @@ items.weapon.melee.dirk.desc=No need to go looking for me. I’ve always been he
 items.weapon.melee.flail.name=Kudarikiri
 items.weapon.melee.flail.stats_desc=Accuracy -15%, No surprise attack
 items.weapon.melee.flail.desc=Wield spear as blade to slice through armor! \n\n Hwando of the Far East, which is bigger than a human's height. It cannot make surprise attacks, but it is very powerful.\n\nThe lower the health, the higher the damage, and if it is below 50%, the Life Drain is activated.
+items.weapon.melee.flail.setbouns=_Friend's Sword_\nVampiric rate is increased by 50%.
 
 items.weapon.melee.gauntlet.name=mountain breaker
 items.weapon.melee.gauntlet.stats_desc=Attack Speed 300 ~ 500%
@@ -2222,7 +2229,7 @@ items.weapon.melee.flag.ac_zap=Healing Wings
 
 items.weapon.melee.scythe.name=blind obedience
 items.weapon.melee.scythe.stats_desc=Surprise attack bonus +25%\nRecovers HP every 8 hit dealt
-items.weapon.melee.scythe.desc=Deals additional damage to the main target in proportion to the number of targets hit. (Maximum x1.6)
+items.weapon.melee.scythe.desc=Deals additional damage to the main target in proportion to the number of targets hit. (Maximum x1.4)
 
 items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies
@@ -2261,6 +2268,7 @@ items.weapon.melee.r4c.self_target=You can't shoot yourself.
 items.weapon.melee.r4c.fizzles=You need to reload.
 items.weapon.melee.r4c.ac_zap=FIRE
 items.weapon.melee.r4c.ac_reload=RELOAD
+items.weapon.melee.r4c.setbouns=_Assault Tactics_\nReduces the delay when shooting at paralyzed enemies.
 
 items.weapon.melee.golddogsword.name=golden beach
 items.weapon.melee.golddogsword.desc=You can _accumulate_ by consuming 3 turns. When attacking in the accumulated state, the accumulated stack is consumed and the attack power increases. (max 100%)

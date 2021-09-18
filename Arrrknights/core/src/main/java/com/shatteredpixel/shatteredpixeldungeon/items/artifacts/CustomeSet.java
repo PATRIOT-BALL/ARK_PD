@@ -116,5 +116,12 @@ public class CustomeSet extends Artifact {
             spend(TICK);
             return true;
         }
+
+        @Override
+        public void charge(Hero target, float amount) {
+            charge += Math.round(1*amount);
+            charge = Math.min(charge, chargeCap);
+            updateQuickslot();
+        }
     }
 }

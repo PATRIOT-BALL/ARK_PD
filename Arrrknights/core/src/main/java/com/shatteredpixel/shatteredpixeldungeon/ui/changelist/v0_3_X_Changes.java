@@ -39,7 +39,7 @@ public class v0_3_X_Changes {
                 "_연속 타격 10 : 영거리 사격_은 대상에게 연속 타격*40%의 _사격 피해_를 입힙니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 7종 추가",
-                "_최후의 웬디고\n_용문총경\n_광기의 노래\n_용암거영\n_라인랩 프렌즈!\n_친우의 검_\n_이세계 전술_"));
+                "_최후의 웬디고\n용문총경\n광기의 노래\n용암거영\n라인랩 프렌즈!\n친우의 검\n이세계 전술_"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
                 "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다." + "\n\n" +
@@ -70,7 +70,7 @@ public class v0_3_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
-                "_맹목적인 순종_ 공격력이 4-14에서 _4-15_로 상승했으며, 강화 효율이 3에서 _4_로 증가했습니다. 대신 주 대상 피해 보너스가 최대 90%에서 _60%_로 감소했습니다." + "\n\n"+
+                "_맹목적인 순종_의 강화 효율이 3에서 _4_로 증가했습니다. 대신 주 대상 피해 보너스가 최대 90%에서 _40%_로 감소했습니다." + "\n\n"+
         "_끓어오르는 투지_ 공격력이 5-16에서 _5-18_로 상승했으며, 강화 효율이 3에서 _4_로 증가했습니다. 또한, 명중률 보정치가 -25%에서 _-15%_로 상승했습니다." + "\n\n" +
                         "_HM-200_의 공격력이 3-32에서 _8-32_로 상승했습니다." +"\n\n" +
                         "_나의 소원_으로 소환한 Mon3tr의 이동속도가 상승했으며, Mon3tr가 공격할 때마다 무기의 SP를 충전시킵니다." + "\n\n" +
@@ -101,7 +101,7 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 하향",
                 "_레드_의 _은밀한 이동_ +1 효과의 범위가 3칸에서 _2칸_으로 감소했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 하향",
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "리유니온 하향",
                 "_살카즈 스나이퍼_\n체력이 110에서 _105_, 공격력이 32-44에서 _30-40_, 명중률이 42에서 _36_, 회피율이 24에서 _22_로 감소했습니다."));
 
     }

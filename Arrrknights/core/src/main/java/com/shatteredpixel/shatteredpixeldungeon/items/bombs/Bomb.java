@@ -26,6 +26,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
@@ -33,6 +35,8 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SmokeParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Recipe;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfFrost;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibility;
@@ -110,7 +114,14 @@ public class Bomb extends Item {
 	@Override
 	protected void onThrow( int cell ) {
 		if (!Dungeon.level.pit[ cell ] && lightingFuse) {
-			Actor.addDelayed(fuse = new Fuse().ignite(this), 2);
+			if (Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
+				if (Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero)) {
+					if (Dungeon.hero.belongings.getItem(IsekaiItem.class).cursed) Actor.addDelayed(fuse = new Fuse().ignite(this), 8);
+					else Actor.addDelayed(fuse = new Fuse().ignite(this), 0);
+				}
+				else Actor.addDelayed(fuse = new Fuse().ignite(this), 2);
+			}
+			else Actor.addDelayed(fuse = new Fuse().ignite(this), 2);
 		}
 		if (Actor.findChar( cell ) != null && !(Actor.findChar( cell ) instanceof Hero) ){
 			ArrayList<Integer> candidates = new ArrayList<>();
@@ -181,6 +192,11 @@ public class Bomb extends Item {
 
 				int dmg = Random.NormalIntRange(8 + Dungeon.depth, 16 + Dungeon.depth*2);
 
+				IsekaiItem.IsekaiBuff BombBuff = Dungeon.hero.buff( IsekaiItem.IsekaiBuff.class);
+				if (BombBuff != null) {
+					dmg += BombBuff.itemLevel() * 4;
+				}
+
 				//those not at the center of the blast take less damage
 				if (ch.pos != cell){
 					dmg = Math.round(dmg*0.67f);
@@ -194,6 +210,10 @@ public class Bomb extends Item {
 				
 				if (ch == Dungeon.hero && !ch.isAlive()) {
 					Dungeon.fail(Bomb.class);
+				}
+
+				if (BombBuff != null && ch.isAlive() && ch != Dungeon.hero) {
+					Buff.affect(ch, Paralysis.class, 3f);
 				}
 			}
 			
