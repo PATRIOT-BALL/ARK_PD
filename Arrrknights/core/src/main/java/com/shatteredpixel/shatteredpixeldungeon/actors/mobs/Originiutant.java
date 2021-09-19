@@ -83,7 +83,7 @@ public class Originiutant extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 50, 75 );
+        return Random.NormalIntRange( 70, 90 );
     }
 
     @Override

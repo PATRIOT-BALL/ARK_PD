@@ -216,8 +216,9 @@ public class Pompeii extends Mob {
 
                 if (phase==3) summoncooldown = 9;
                 else if (phase == 2) {
-                    HP -= 50;
-                    sprite.showStatus( CharSprite.WARNING,"50" );
+                    int dmg = 50 - Statistics.coreAlive*3;
+                    HP -= dmg;
+                    sprite.showStatus( CharSprite.WARNING,""+dmg );
                     summoncooldown = 1;
                     if (HP < 1000) {
                         HP = 1000;
@@ -243,7 +244,7 @@ public class Pompeii extends Mob {
 
             CellEmitter.center(pos).burst(FlameParticle.FACTORY, 4);
             Sample.INSTANCE.play(Assets.Sounds.BURNING, 2f);
-            barriercooldown = 25;
+            barriercooldown = 25 - Statistics.coreAlive;
             return true;
         }
 
@@ -292,8 +293,9 @@ public class Pompeii extends Mob {
                 Camera.main.shake(2, 0.5f);
                 Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f, 0.5f);
                 Buff.affect(this, Stamina.class, 2f);
+
                 volcanotime=0;
-                volcanocooldown=12;
+                volcanocooldown= 12 - (Statistics.coreAlive/2);
                 spend(TICK);
                 return true;
             }

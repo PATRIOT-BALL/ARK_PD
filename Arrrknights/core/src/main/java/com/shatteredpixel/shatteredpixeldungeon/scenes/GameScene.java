@@ -35,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DemonSpawner;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.FireCore;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BannerSprites;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BlobEmitter;
@@ -533,6 +534,7 @@ public class GameScene extends PixelScene {
 				}
 
 				int spawnersAbove = Statistics.spawnersAlive;
+				int coreAbove = Statistics.coreAlive;
 				if (spawnersAbove > 0 && Dungeon.depth <= 25) {
 					for (Mob m : Dungeon.level.mobs) {
 						if (m instanceof DemonSpawner && ((DemonSpawner) m).spawnRecorded) {
@@ -545,6 +547,22 @@ public class GameScene extends PixelScene {
 							GLog.n(Messages.get(this, "spawner_warn_final"));
 						} else {
 							GLog.n(Messages.get(this, "spawner_warn"));
+						}
+					}
+				}
+
+				if (coreAbove > 0 && Dungeon.depth <= 40) {
+					for (Mob m : Dungeon.level.mobs) {
+						if (m instanceof FireCore && ((FireCore) m).spawnRecorded) {
+							coreAbove--;
+						}
+					}
+
+					if (coreAbove > 0) {
+						if (Dungeon.bossLevel()) {
+							GLog.n(Messages.get(this, "core_final"));
+						} else {
+							GLog.n(Messages.get(this, "core"));
 						}
 					}
 				}

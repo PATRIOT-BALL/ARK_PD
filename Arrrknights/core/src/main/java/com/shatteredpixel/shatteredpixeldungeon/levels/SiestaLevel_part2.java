@@ -8,6 +8,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.Obsidian;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.CityPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.CoreRoom;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.DemonSpawnerRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.BurningTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.CursingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.ExplosiveTrap;
@@ -30,6 +33,8 @@ import com.watabou.noosa.particles.PixelParticle;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+
 public class SiestaLevel_part2 extends RegularLevel {
     {
         color1 = 0x4b6636;
@@ -40,7 +45,7 @@ public class SiestaLevel_part2 extends RegularLevel {
     protected int standardRooms(boolean forceMax) {
         if (forceMax) return 10;
         //8 to 10, average 8.67
-        return 9+ Random.chances(new float[]{3, 2, 1});
+        return 9 + Random.chances(new float[]{3, 2, 1});
     }
 
     @Override
@@ -53,17 +58,15 @@ public class SiestaLevel_part2 extends RegularLevel {
     protected void createItems() {
 
         if (Dungeon.depth == 32 || Dungeon.depth == 34) {
-            addItemToSpawn(new ScrollOfUpgrade());}
-        else addItemToSpawn(new PotionOfStrength());
-
-        addItemToSpawn(new Obsidian());
+            addItemToSpawn(new ScrollOfUpgrade());
+        } else addItemToSpawn(new PotionOfStrength());
         super.createItems();
     }
 
     @Override
     public int nMobs() {
         // 다른 계층보다 몬스터가 2마리 많이 등장합니다.
-        return super.nMobs()+2;
+        return super.nMobs() + 2;
     }
 
     @Override
@@ -73,7 +76,7 @@ public class SiestaLevel_part2 extends RegularLevel {
 
     @Override
     public String waterTex() {
-        return Assets.Environment.TILES_HALLS;
+        return Assets.Environment.WATER_HALLS;
     }
 
     @Override
@@ -96,10 +99,20 @@ public class SiestaLevel_part2 extends RegularLevel {
     @Override
     protected float[] trapChances() {
         return new float[]{
-                4,4,4,4,
-                2,2,2,2,
-                1,1
+                4, 4, 4, 4,
+                2, 2, 2, 2,
+                1, 1
         };
+    }
+
+    @Override
+    protected ArrayList<Room> initRooms() {
+        ArrayList<Room> rooms = super.initRooms();
+
+        rooms.add(new CoreRoom());
+        rooms.add(new CoreRoom());
+
+        return rooms;
     }
 
     @Override
@@ -108,39 +121,6 @@ public class SiestaLevel_part2 extends RegularLevel {
         super.createMobs();
     }
 
-    @Override
-    public String tileName( int tile ) {
-        switch (tile) {
-            case Terrain.WATER:
-                return Messages.get(CityLevel.class, "water_name");
-            case Terrain.HIGH_GRASS:
-                return Messages.get(CityLevel.class, "high_grass_name");
-            default:
-                return super.tileName( tile );
-        }
-    }
-
-    @Override
-    public String tileDesc(int tile) {
-        switch (tile) {
-            case Terrain.ENTRANCE:
-                return Messages.get(CityLevel.class, "entrance_desc");
-            case Terrain.EXIT:
-                return Messages.get(CityLevel.class, "exit_desc");
-            case Terrain.WALL_DECO:
-            case Terrain.EMPTY_DECO:
-                return Messages.get(CityLevel.class, "deco_desc");
-            case Terrain.EMPTY_SP:
-                return Messages.get(CityLevel.class, "sp_desc");
-            case Terrain.STATUE:
-            case Terrain.STATUE_SP:
-                return Messages.get(CityLevel.class, "statue_desc");
-            case Terrain.BOOKSHELF:
-                return Messages.get(CityLevel.class, "bookshelf_desc");
-            default:
-                return super.tileDesc( tile );
-        }
-    }
 
     @Override
     public Group addVisuals() {
@@ -148,62 +128,4 @@ public class SiestaLevel_part2 extends RegularLevel {
         return visuals;
     }
 
-    private static class Smoke extends Emitter {
-
-        private int pos;
-
-        private static final Emitter.Factory factory = new Factory() {
-
-            @Override
-            public void emit( Emitter emitter, int index, float x, float y ) {
-                CityLevel.SmokeParticle p = (CityLevel.SmokeParticle)emitter.recycle( CityLevel.SmokeParticle.class );
-                p.reset( x, y );
-            }
-        };
-
-        public Smoke( int pos ) {
-            super();
-
-            this.pos = pos;
-
-            PointF p = DungeonTilemap.tileCenterToWorld( pos );
-            pos( p.x - 6, p.y - 4, 12, 12 );
-
-            pour( factory, 0.2f );
-        }
-
-        @Override
-        public void update() {
-            if (visible = (pos < Dungeon.level.heroFOV.length && Dungeon.level.heroFOV[pos])) {
-                super.update();
-            }
-        }
-    }
-
-    public static final class SmokeParticle extends PixelParticle {
-
-        public SmokeParticle() {
-            super();
-
-            color( 0x000000 );
-            speed.set( Random.Float( -2, 4 ), -Random.Float( 3, 6 ) );
-        }
-
-        public void reset( float x, float y ) {
-            revive();
-
-            this.x = x;
-            this.y = y;
-
-            left = lifespan = 2f;
-        }
-
-        @Override
-        public void update() {
-            super.update();
-            float p = left / lifespan;
-            am = p > 0.8f ? 1 - p : p * 0.25f;
-            size( 6 - p * 3 );
-        }
-    }
 }
