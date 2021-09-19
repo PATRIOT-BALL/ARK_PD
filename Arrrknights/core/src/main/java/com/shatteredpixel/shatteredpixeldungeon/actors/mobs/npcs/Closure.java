@@ -111,7 +111,20 @@ public class Closure extends NPC {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin5", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
-                            case 5: // 꼬지리 스킨
+                            case 5: // 제껄룩 스킨
+                                if (Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI)) {Badges.validatejessiskin();}
+                                    Dungeon.hero.CharSkin = Hero.JESSI;
+                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
+                                } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
+                                    Game.runOnRenderThread(new Callback() {
+                                        @Override
+                                        public void call() {
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin5", Dungeon.hero.heroClass.title())));
+                                        }});}
+                                break;
+                            case 6: // 꼬지리 스킨
                                 if (Badges.isUnlocked(Badges.Badge.HAPPY_END)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY)) {Badges.validatelappyskin();}
                                     Dungeon.hero.CharSkin = Hero.LAPPY;

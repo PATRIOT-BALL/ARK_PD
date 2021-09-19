@@ -56,7 +56,7 @@ public class WndCombo extends Window {
 		pos = title.bottom() + 3*MARGIN;
 
 		Image icon;
-		icon = Icons.get(Icons.WARRIOR);
+		icon = Icons.get(Icons.COMBO);
 
 		for (Combo.ComboMove move : Combo.ComboMove.values()) {
 			Image ic = new Image(icon);

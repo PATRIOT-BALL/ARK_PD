@@ -88,35 +88,29 @@ public enum HeroSubClass {
 	public Image icon(){
 		switch (this){
 			case GLADIATOR: default:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 16, 16, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 0, 80, 16, 16);
 			case BERSERKER:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 32, 16, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 16, 80, 16, 16);
 
 			case WARLOCK:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 64, 32, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 32, 80, 16, 16);
 			case BATTLEMAGE:
-				Image im = new Image(Assets.Interfaces.BUFFS_LARGE, 208, 32, 16, 16);
-				im.hardlight(1f, 1f, 0f);
-				return im;
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 48, 80, 16, 16);
 
 			case ASSASSIN:
-				im = new Image(Assets.Interfaces.BUFFS_LARGE, 160, 32, 16, 16);
-				im.hardlight(1f, 0f, 0f);
-				return im;
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 64, 80, 16, 16);
 			case FREERUNNER:
-				im = new Image(Assets.Interfaces.BUFFS_LARGE, 48, 48, 16, 16);
-				im.hardlight(1f, 1f, 0f);
-				return im;
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 80, 80, 16, 16);
 
 			case SNIPER:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 16, 48, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 96, 80, 16, 16);
 			case WARDEN:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 208, 0, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 112, 80, 16, 16);
 
 			case DESTROYER:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 0, 16, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 128, 80, 16, 16);
 			case GUARDIAN:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 224, 32, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 144, 80, 16, 16);
 		}
 	}
 	

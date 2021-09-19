@@ -206,7 +206,8 @@ public class Badges {
 		SKIN_NOVA(162),
 		SKIN_SUSUU(163),
 		SKIN_GRN(164),
-		SKIN_LAPPY(165);
+		SKIN_LAPPY(165),
+		SKIN_JESSI(166);
 
 		public boolean meta;
 
@@ -916,6 +917,11 @@ public class Badges {
 
 	public static void validategrnskin() {
 		Badge badge = Badge.SKIN_GRN;
+		displayBadge( badge );
+	}
+
+	public static void validatejessiskin() {
+		Badge badge = Badge.SKIN_JESSI;
 		displayBadge( badge );
 	}
 

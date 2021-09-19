@@ -393,7 +393,8 @@ public enum HeroClass {
 				case 3: return Assets.Sprites.SKD;
 				case 4: return Assets.Sprites.SSR;
 				case 5: return Assets.Sprites.GRN;
-				case 6: return Assets.Sprites.LAPPY;
+				case 6: return Assets.Sprites.JESSI;
+				case 7: return Assets.Sprites.LAPPY;
 			}
 		}
 		switch (this) {
