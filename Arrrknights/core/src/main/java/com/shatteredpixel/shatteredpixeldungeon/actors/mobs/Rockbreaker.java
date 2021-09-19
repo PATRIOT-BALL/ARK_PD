@@ -23,7 +23,7 @@ public class Rockbreaker extends Mob {
         resistances.addAll(AntiMagic.RESISTS);
 
         loot = Generator.Category.SKL_RND;
-        lootChance = 0.15f;
+        lootChance = 0.2f;
     }
 
     @Override

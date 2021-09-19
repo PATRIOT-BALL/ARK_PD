@@ -207,6 +207,37 @@ public class Bestiary {
 						Sniper.class, Sniper.class,
 						Piersailor.class, Piersailor.class, Piersailor.class,
 						Agent.class, Agent.class, Agent.class));
+			case 36:
+				return new ArrayList<>(Arrays.asList(
+						LavaSlug.class, LavaSlug.class,
+						MetalCrab.class, MetalCrab.class,
+						Rockbreaker.class,
+						ExplodeSlug.class
+				));
+			case 37:
+				return new ArrayList<>(Arrays.asList(
+						LavaSlug.class, LavaSlug.class,
+						MetalCrab.class, MetalCrab.class,
+						Rockbreaker.class, Rockbreaker.class,
+						ExplodeSlug.class
+				));
+			case 38:
+				return new ArrayList<>(Arrays.asList(
+						LavaSlug.class, LavaSlug.class,
+						MetalCrab.class,
+						Rockbreaker.class, Rockbreaker.class,
+						ExplodeSlug.class, ExplodeSlug.class,
+						AcidSlug_A.class
+				));
+			case 39:
+				return new ArrayList<>(Arrays.asList(
+						LavaSlug.class,
+						MetalCrab.class, MetalCrab.class,
+						Rockbreaker.class, Rockbreaker.class,
+						ExplodeSlug.class, ExplodeSlug.class,
+						AcidSlug_A.class, AcidSlug_A.class
+				));
+
 		}
 		
 	}
@@ -273,6 +304,12 @@ public class Bestiary {
 				}
 				else if (cl == Sniper.class) {
 					cl = WaveCaster.class;
+				}
+				else if (cl == Sniper.class) {
+					cl = WaveCaster.class;
+				}
+				else if (cl == AcidSlug_A.class) {
+					cl = Originiutant.class;
 				}
 				rotation.set(i, cl);
 			}
