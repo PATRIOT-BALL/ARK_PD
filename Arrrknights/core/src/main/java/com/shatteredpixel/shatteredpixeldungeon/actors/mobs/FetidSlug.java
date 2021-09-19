@@ -31,7 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpitterSprite;
 import com.watabou.utils.Random;
 
-public class FetidRat extends Slug {
+public class FetidSlug extends Slug {
 
 	{
 		spriteClass = SpitterSprite.class;

@@ -25,7 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.FetidRat;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.FetidSlug;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.GnollTrickster;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.GreatCrab;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -161,7 +161,7 @@ public class Ghost extends NPC {
 
 			switch (Quest.type){
 				case 1: default:
-					questBoss = new FetidRat();
+					questBoss = new FetidSlug();
 					txt_quest = Messages.get(this, "rat_1",Dungeon.hero.heroClass.title()); break;
 				case 2:
 					questBoss = new GnollTrickster();
