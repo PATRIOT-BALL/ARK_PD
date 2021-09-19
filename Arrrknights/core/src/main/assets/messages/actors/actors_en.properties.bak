@@ -1311,9 +1311,22 @@ actors.mobs.metalcrab.desc=An infected wild creature, completely covered in meta
 actors.mobs.rockbreaker.name=rockbreaker
 actors.mobs.rockbreaker.desc=A melee soldier. They use standard-issue tactical axes to inflict heavy damage to their targets. their armor provides improved Arts resistance.
 
-actors.mobs.explodeslug.name=고에너지 원석충α
-actors.mobs.explodeslug.desc=복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다.\n\n_침묵 가능_
+actors.mobs.explodeslug.name=explode slug
+actors.mobs.explodeslug.desc=An infected wild creature that has become unstable due to assimilating a large amount of Originium into its abdomen, exploding upon death.
 actors.mobs.explodeslug.explo_kill=Your body is torn to pieces...
+
+actors.mobs.acidslug_a.name=acid slug α
+actors.mobs.acidslug_a.desc=An infected wild creature that is more dangerous than an Acid Originium Slug. Use ranged arts attacks.
+actors.mobs.acidslug_a.bolt_kill=Your body melted...
+actors.mobs.acidslug_a.rankings_desc=melt away
+
+actors.mobs.originiutant.name=originiutant
+actors.mobs.originiutant.desc=An Originiutant mutant that was weaponized for some purpose. Possesses an incredibly tough outer shell.\n\nThese are very powerful. The _fire_ seems to be effective.
+actors.mobs.originiutant.rankings_desc=terrible death
+
+actors.mobs.mutantspider.name=mutant spider
+actors.mobs.mutantspider.desc=A giant rock spider infected and severely mutated by an Originiutant.
+actors.mobs.mutantspider.rankings_desc=infected
 
 actors.mobs.pompeii.name=Pompeii
 actors.mobs.pompeii.desc=A massive infected beast. These aberrations were born in a special high-temperature environment. Nobody wants to approach these creatures due to their grotesque appearance and the extreme heat they give off.

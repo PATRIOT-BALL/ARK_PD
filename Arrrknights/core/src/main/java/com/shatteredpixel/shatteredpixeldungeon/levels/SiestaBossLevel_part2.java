@@ -25,12 +25,12 @@ public class SiestaBossLevel_part2 extends Level {
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILES_CITY;
+        return Assets.Environment.TILES_HALLS;
     }
 
     @Override
     public String waterTex() {
-        return Assets.Environment.WATER_CITY;
+        return Assets.Environment.WATER_HALLS;
     }
 
     @Override

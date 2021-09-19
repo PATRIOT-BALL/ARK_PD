@@ -18,6 +18,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
@@ -117,8 +118,7 @@ public class Pompeii extends Mob {
         if (this.buff(Barrier.class) != null) {
             dmg /= 4;
         }
-        else if (volcanotime == 1) dmg /= 8;
-        else if (phase == 3) dmg *= 0.8f;
+        else if (volcanotime > 0) dmg /= 8;
 
         super.damage(dmg, src);
 
@@ -250,16 +250,18 @@ public class Pompeii extends Mob {
 
         //화산폭발
         if (volcanocooldown <= 0) {
-            if (volcanotime < 2) {
+            if (volcanotime < 3) {
                 sprite.parent.addToBack(new TargetedCell(pos, 0xFF0000));
 
+                if (volcanotime == 0)
                 for (int i : PathFinder.NEIGHBOURS9) {
                     for (int j : PathFinder.NEIGHBOURS9) {
-                    int vol = Fire.volumeAt(pos+i+j, Fire.class);
+                        for (int t : PathFinder.NEIGHBOURS9) {
+                    int vol = Fire.volumeAt(pos+i+j+t, Fire.class);
                     if (vol < 4){
-                        sprite.parent.addToBack(new TargetedCell(pos + i+j, 0xFF0000));
+                        sprite.parent.addToBack(new TargetedCell(pos + i+j+t, 0xFF0000));
                     }
-                }}
+                }}}
                 volcanotime+=1;
                 spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 2*TICK));
                 return true;
@@ -267,10 +269,11 @@ public class Pompeii extends Mob {
             else {
                 for (int i : PathFinder.NEIGHBOURS9) {
                     for (int j : PathFinder.NEIGHBOURS9) {
-                        Char ch = Actor.findChar(pos+i+j);
-                        int vol = Fire.volumeAt(pos+i+j, Fire.class);
+                        for (int t : PathFinder.NEIGHBOURS9) {
+                        Char ch = Actor.findChar(pos+i+j+t);
+                        int vol = Fire.volumeAt(pos+i+j+t, Fire.class);
                         if (vol < 4){
-                            CellEmitter.center(pos+i+j).burst(BlastParticle.FACTORY, 3);
+                            CellEmitter.center(pos+i+j+t).burst(BlastParticle.FACTORY, 1);
                         }
                         if (ch != null) {
                         if ((ch.alignment != alignment || ch instanceof Bee)) {
@@ -284,10 +287,11 @@ public class Pompeii extends Mob {
                                 GLog.n(Messages.get(Char.class, "kill", name()));
                             }
                         }}
-                    }}
+                    }}}
 
                 Camera.main.shake(2, 0.5f);
                 Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f, 0.5f);
+                Buff.affect(this, Stamina.class, 2f);
                 volcanotime=0;
                 volcanocooldown=12;
                 spend(TICK);

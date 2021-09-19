@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Acid_AlphaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.AcidicSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThrowerSprite;
@@ -23,7 +24,7 @@ public class AcidSlug_A extends Mob implements Callback {
     private static final float TIME_TO_ZAP	= 1f;
 
     {
-        spriteClass = AcidicSprite.class;
+        spriteClass = Acid_AlphaSprite.class;
 
         HP = HT = 150;
         defenseSkill = 30;
