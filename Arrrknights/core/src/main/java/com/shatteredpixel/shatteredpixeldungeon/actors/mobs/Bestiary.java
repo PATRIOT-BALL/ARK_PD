@@ -44,16 +44,16 @@ public class Bestiary {
 			case 1: default:
 				//3x rat, 1x snake
 				return new ArrayList<>(Arrays.asList(
-						Rat.class, Rat.class, Rat.class,
+						Slug.class, Slug.class, Slug.class,
 						Snake.class));
 			case 2:
 				//2x rat, 1x snake, 2x gnoll
-				return new ArrayList<>(Arrays.asList(Rat.class, Rat.class,
+				return new ArrayList<>(Arrays.asList(Slug.class, Slug.class,
 						Snake.class,
 						Gnoll.class, Gnoll.class));
 			case 3:
 				//1x rat, 1x snake, 3x gnoll, 1x swarm, 1x crab
-				return new ArrayList<>(Arrays.asList(Rat.class,
+				return new ArrayList<>(Arrays.asList(Slug.class,
 						Snake.class,
 						Gnoll.class, Gnoll.class, Gnoll.class,
 						Swarm.class,
@@ -245,7 +245,7 @@ public class Bestiary {
 		for (int i = 0; i < rotation.size(); i++){
 			if (Random.Int( 33 ) == 0) {
 				Class<? extends Mob> cl = rotation.get(i);
-				if (cl == Rat.class) {
+				if (cl == Slug.class) {
 					cl = Albino.class;
 				} else if (cl == Slime.class) {
 					cl = CausticSlime.class;

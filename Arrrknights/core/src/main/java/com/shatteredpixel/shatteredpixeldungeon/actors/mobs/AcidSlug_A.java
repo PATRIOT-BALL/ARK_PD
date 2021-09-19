@@ -16,9 +16,10 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.AcidicSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThrowerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
-public class AcidSlug_A extends Mob {
+public class AcidSlug_A extends Mob implements Callback {
     private static final float TIME_TO_ZAP	= 1f;
 
     {
@@ -31,7 +32,7 @@ public class AcidSlug_A extends Mob {
         maxLvl = 37;
 
         loot = Generator.Category.POTION;
-        lootChance = 0.4f;
+        lootChance = 0.25f;
 
     }
 
@@ -99,6 +100,11 @@ public class AcidSlug_A extends Mob {
 
     public void onZapComplete() {
         zap();
+        next();
+    }
+
+    @Override
+    public void call() {
         next();
     }
 }

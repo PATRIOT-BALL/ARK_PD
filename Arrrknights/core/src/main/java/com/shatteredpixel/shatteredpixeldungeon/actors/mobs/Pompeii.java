@@ -275,7 +275,7 @@ public class Pompeii extends Mob {
                         if (ch != null) {
                         if ((ch.alignment != alignment || ch instanceof Bee)) {
                             if (phase == 3) ch.damage(Random.NormalIntRange(120, 180), new Pompeii.Volcano());
-                            else ch.damage(Random.NormalIntRange(60, 90), new Pompeii.Volcano());
+                            else ch.damage(Random.NormalIntRange(80, 120), new Pompeii.Volcano());
                             if (ch.isAlive()) {
                                 Buff.affect(ch, Blindness.class, 10f);
                             }

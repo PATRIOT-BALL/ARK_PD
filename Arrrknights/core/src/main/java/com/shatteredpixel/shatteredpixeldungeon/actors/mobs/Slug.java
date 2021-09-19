@@ -26,7 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
 import com.watabou.utils.Random;
 
-public class Rat extends Mob {
+public class Slug extends Mob {
 
 	{
 		spriteClass = BugSprite.class;

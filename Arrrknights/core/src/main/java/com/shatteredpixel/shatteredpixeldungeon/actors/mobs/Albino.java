@@ -28,7 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
 import com.watabou.utils.Random;
 
-public class Albino extends Rat {
+public class Albino extends Slug {
 
 	{
 		spriteClass = Bug_ASprite.class;
