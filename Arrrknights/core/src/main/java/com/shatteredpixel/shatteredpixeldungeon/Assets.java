@@ -373,9 +373,15 @@ public class Assets {
 
 		//변종
 		public static final String STRIKER	= "sprites/striker.png";
+		public static final String IMPERIAL_ARTILLERY	= "sprites/imperial_artillery.png";
+		public static final String RAIDER	= "sprites/urusus_raider.png";
+		public static final String RAPTOR	= "sprites/raptor.png";
+		public static final String RAPTOR_FIRE	= "sprites/raptor_fire.png";
 
 		//시에스타
 		public static final String SIESTA_INFANTRY	= "sprites/siesta_infantry.png";
+		public static final String SIESTA_SNIPER	= "sprites/siesta_sniper.png";
+		public static final String SIESTA_AGENT	= "sprites/siesta_agent.png";
 		public static final String ERGATE	= "sprites/ergate.png";
 		public static final String TANK	= "sprites/tank.png";
 		public static final String TANK_MAN	= "sprites/tank_man.png";
@@ -409,9 +415,7 @@ public class Assets {
 		public static final String SARKAZ_SNIPER_E	= "sprites/Sarkaz_Sniper_E.png";
 		public static final String LANCER	= "sprites/Lancer.png";
 		public static final String GHOST1	= "sprites/ghost_1.png";
-		public static final String IMPERIAL_ARTILLERY	= "sprites/imperial_artillery.png";
-		public static final String RAPTOR	= "sprites/raptor.png";
-		public static final String RAPTOR_FIRE	= "sprites/raptor_fire.png";
+
 
 
 		// 방벽

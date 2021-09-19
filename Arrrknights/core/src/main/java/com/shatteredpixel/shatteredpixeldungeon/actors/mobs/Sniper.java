@@ -15,13 +15,14 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CrossbowmanSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.FaustSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Siesta_SniperSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Sniper extends Mob {
     {
-        spriteClass = CrossbowmanSprite.class;
+        spriteClass = Siesta_SniperSprite.class;
 
         HP = HT = 120;
         defenseSkill = 22;

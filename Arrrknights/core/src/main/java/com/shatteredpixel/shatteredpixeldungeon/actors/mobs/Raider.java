@@ -11,12 +11,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LancerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Urusus_RaiderSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Raider extends Succubus {
     {
-        spriteClass = BreakerSprite.class;
+        spriteClass = Urusus_RaiderSprite.class;
 
         HP = HT = 110;
         defenseSkill = 25;

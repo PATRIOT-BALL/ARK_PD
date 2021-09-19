@@ -15,13 +15,14 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.InfantrySprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Siesta_AgentSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Agent extends Mob {
     {
-        spriteClass = BreakerSprite.class;
+        spriteClass = Siesta_AgentSprite.class;
 
         HP = HT = 140;
         defenseSkill = 26;

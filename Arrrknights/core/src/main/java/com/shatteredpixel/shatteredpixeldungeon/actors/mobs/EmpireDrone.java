@@ -14,6 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.A_master1Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DroneSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Imperial_artillerySprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThiefSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
@@ -24,7 +25,7 @@ import com.watabou.utils.Random;
 
 public class EmpireDrone extends Mob {
     {
-        spriteClass = A_master1Sprite.class;
+        spriteClass = Imperial_artillerySprite.class;
 
         HP = HT = 130;
         defenseSkill = 18;
