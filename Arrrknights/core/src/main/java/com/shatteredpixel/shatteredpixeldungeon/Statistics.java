@@ -39,6 +39,7 @@ public class Statistics {
 	public static int thrownAssists;
 
 	public static int spawnersAlive;
+	public static int coreAlive;
 	
 	public static float duration;
 	
@@ -62,6 +63,7 @@ public class Statistics {
 		thrownAssists   = 0;
 
 		spawnersAlive   = 0;
+		coreAlive   = 0;
 		
 		duration	= 0;
 		
@@ -84,6 +86,7 @@ public class Statistics {
 	private static final String THROWN		= "thrownAssists";
 
 	private static final String SPAWNERS	= "spawnersAlive";
+	private static final String CORE	= "coreAlive";
 	
 	private static final String DURATION	= "duration";
 
@@ -105,6 +108,7 @@ public class Statistics {
 		bundle.put( THROWN,		thrownAssists );
 
 		bundle.put( SPAWNERS,	spawnersAlive );
+		bundle.put( CORE,	coreAlive );
 		
 		bundle.put( DURATION,	duration );
 
@@ -127,6 +131,7 @@ public class Statistics {
 		thrownAssists   = bundle.getInt( THROWN );
 
 		spawnersAlive   = bundle.getInt( SPAWNERS );
+		coreAlive   = bundle.getInt( CORE );
 		
 		duration		= bundle.getFloat( DURATION );
 

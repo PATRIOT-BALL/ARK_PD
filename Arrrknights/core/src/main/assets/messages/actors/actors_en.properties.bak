@@ -1325,8 +1325,12 @@ actors.mobs.originiutant.desc=An Originiutant mutant that was weaponized for som
 actors.mobs.originiutant.rankings_desc=terrible death
 
 actors.mobs.mutantspider.name=mutant spider
-actors.mobs.mutantspider.desc=A giant rock spider infected and severely mutated by an Originiutant.
+actors.mobs.mutantspider.desc=A giant rock spider infected and severely mutated by an Originiutant. Its damage is low, but it has a very threatening ability.
 actors.mobs.mutantspider.rankings_desc=infected
+
+actors.mobs.firecore.name=fire core
+actors.mobs.firecore.desc=Powerful energy empowers the creatures of the under floer...
+actors.mobs.firecore.on_death=you felt volcanic energy diminish.
 
 actors.mobs.pompeii.name=Pompeii
 actors.mobs.pompeii.desc=A massive infected beast. These aberrations were born in a special high-temperature environment. Nobody wants to approach these creatures due to their grotesque appearance and the extreme heat they give off.

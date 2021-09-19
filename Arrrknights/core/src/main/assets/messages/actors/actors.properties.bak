@@ -1314,13 +1314,22 @@ actors.mobs.explodeslug.name=고에너지 원석충α
 actors.mobs.explodeslug.desc=복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다.\n\n_침묵 가능_
 actors.mobs.explodeslug.explo_kill=고에너지 원석충의 에너지에 휩쓸려 폭사했다.
 
-actors.mobs.explodeslug.name=고에너지 원석충α
-actors.mobs.explodeslug.desc=복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다.\n\n_침묵 가능_
-actors.mobs.explodeslug.bolt_kill=고에너지 원석충의 에너지에 휩쓸려 폭사했다.
+actors.mobs.acidslug_a.name=산성 원석충α
+actors.mobs.acidslug_a.desc=강력한 산성을 띠는 감염생물. 원거리에서 산성을 부여하는 액체를 발사한다.\n\n_침묵 가능_
+actors.mobs.acidslug_a.bolt_kill=당신은 온 몸이 녹아내려 죽었다...
+actors.mobs.acidslug_a.rankings_desc=녹아내림
 
 actors.mobs.originiutant.name=오리지뉴턴트
 actors.mobs.originiutant.desc=어떤 목적 때문에 무기로 개조된 오리지늄 오리지뉴턴트 생물, 껍질이 매우 단단하다.\n\n정면으로 싸우기엔 매우 위험한 적으로, _불_에 약해보입니다.
 actors.mobs.originiutant.rankings_desc=형체조차 남지않음
+
+actors.mobs.mutantspider.name=변이 바위거미
+actors.mobs.mutantspider.desc=오리지뉴턴트에 감염되어 심각하게 변이된 거대 바위 거미. 직접적인 공격력은 낮지만, 매우 위험한 특수능력을 가졌습니다.
+actors.mobs.mutantspider.rankings_desc=감염당함
+
+actors.mobs.firecore.name=화산 심장부
+actors.mobs.firecore.desc=이 에너지체에서 심층에 있는 무언가에게 힘을 주는 것 같습니다...
+actors.mobs.firecore.on_death=화산의 힘이 줄어들었다.
 
 actors.mobs.pompeii.name=폼페이
 actors.mobs.pompeii.desc=거대한 야생의 감염 생물. 특수한 고온 환경에서 탄생한 변이생물체다. 공포스런 외관을 갖고 있으며, 자신의 체온을 높여 사람이 가까이 접근하지 못하도록 한다.

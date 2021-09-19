@@ -305,10 +305,10 @@ public class Bestiary {
 				else if (cl == Sniper.class) {
 					cl = WaveCaster.class;
 				}
-				else if (cl == Sniper.class) {
-					cl = WaveCaster.class;
+				else if (cl == MetalCrab.class) {
+					cl = MutantSpider.class;
 				}
-				else if (cl == AcidSlug_A.class) {
+				else if (cl == ExplodeSlug.class) {
 					cl = Originiutant.class;
 				}
 				rotation.set(i, cl);
