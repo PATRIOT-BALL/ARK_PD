@@ -25,7 +25,7 @@ public class ExplodeSlug extends Mob {
     {
         spriteClass = SpinnerSprite.class;
 
-        HP = HT = 155;
+        HP = HT = 165;
         defenseSkill = 28;
 
         EXP = 21;
@@ -54,7 +54,7 @@ public class ExplodeSlug extends Mob {
         for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
             Char ch = findChar( pos + PathFinder.NEIGHBOURS8[i] );
             if (ch != null && ch.isAlive()) {
-                int damage = Random.NormalIntRange(40,70);
+                int damage = Random.NormalIntRange(45,70);
                 damage = Math.max( 0,  damage - (ch.drRoll() +  ch.drRoll()) );
                 ch.damage( damage, this );
                 if (ch == Dungeon.hero && !ch.isAlive()) {

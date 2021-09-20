@@ -22,7 +22,7 @@ public class Originiutant extends Mob {
     {
         spriteClass = BreakerSprite.class;
 
-        HP = HT = 600;
+        HP = HT = 800;
         defenseSkill = 12;
 
         EXP = 27;

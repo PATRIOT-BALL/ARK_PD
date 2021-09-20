@@ -12,7 +12,7 @@ public class LavaSlug extends Mob {
     {
         spriteClass = BugSprite.class;
 
-        HP = HT = 150;
+        HP = HT = 155;
         defenseSkill = 27;
 
         maxLvl = 34;
@@ -24,7 +24,7 @@ public class LavaSlug extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 32, 46 );
+        return Random.NormalIntRange( 32, 50 );
     }
 
     @Override

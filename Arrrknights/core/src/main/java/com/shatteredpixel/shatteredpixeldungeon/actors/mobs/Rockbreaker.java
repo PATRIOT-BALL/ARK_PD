@@ -28,7 +28,7 @@ public class Rockbreaker extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 36, 55 );
+        return Random.NormalIntRange( 45, 60 );
     }
 
     @Override
