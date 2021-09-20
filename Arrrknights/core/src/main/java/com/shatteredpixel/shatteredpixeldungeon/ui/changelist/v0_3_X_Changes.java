@@ -23,7 +23,7 @@ public class v0_3_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "새로운 챕터",
-                "_시에스타_가 추가되었습니다. _로도스 아일랜드(27~30층)_ 에서 진입할 수 있습니다."));
+                "_시에스타_가 추가되었습니다. _로도스 아일랜드(27~30층)_ 에서 진입할 수 있습니다. 최대 레벨이 40으로 증가했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "챕터 5 새로운 적",
                 "_정예 선봉_\n사거리 2의 물리 공격을 가하며, 방어력이 높은 편입니다. 체력이 50%이하가 되면 공격력이 상승합니다." + "\n\n" +
