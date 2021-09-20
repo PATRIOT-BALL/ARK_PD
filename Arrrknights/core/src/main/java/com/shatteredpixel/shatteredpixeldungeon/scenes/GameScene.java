@@ -550,22 +550,6 @@ public class GameScene extends PixelScene {
 						}
 					}
 				}
-
-				if (coreAbove > 0 && Dungeon.depth <= 40) {
-					for (Mob m : Dungeon.level.mobs) {
-						if (m instanceof FireCore && ((FireCore) m).spawnRecorded) {
-							coreAbove--;
-						}
-					}
-
-					if (coreAbove > 0) {
-						if (Dungeon.bossLevel()) {
-							GLog.n(Messages.get(this, "core_final"));
-						} else {
-							GLog.n(Messages.get(this, "core"));
-						}
-					}
-				}
 				
 			} else if (InterlevelScene.mode == InterlevelScene.Mode.RESET) {
 				GLog.h(Messages.get(this, "warp"));

@@ -57,7 +57,7 @@ public class SiestaLevel_part2 extends RegularLevel {
     @Override
     protected void createItems() {
 
-        if (Dungeon.depth == 32 || Dungeon.depth == 34) {
+        if (Dungeon.depth == 37 || Dungeon.depth == 39) {
             addItemToSpawn(new ScrollOfUpgrade());
         } else addItemToSpawn(new PotionOfStrength());
         super.createItems();
