@@ -77,7 +77,8 @@ public class Notes {
 		WANDMAKER,
 		TROLL,
 		IMP,
-		GREENCAT;
+		GREENCAT,
+		CEYLON;
 		
 		public String desc() {
 			return Messages.get(this, name());

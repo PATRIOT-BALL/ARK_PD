@@ -346,6 +346,7 @@ public class NewDM300 extends Mob {
         }
 
 
+        if (supercharged || Finalcharged) ((NewCavesBossLevel) Dungeon.level).SetEffect();
         return super.act();
     }
 
@@ -495,6 +496,7 @@ public class NewDM300 extends Mob {
             }
         }
         Buff.append(this, FallingRockBuff.class, Math.min(target.cooldown(), 3 * TICK)).setRockPositions(rockCells);
+
 
     }
 
@@ -737,7 +739,8 @@ public class NewDM300 extends Mob {
                     if (Random.IntRange(0,3) < 2) {
                         if (Dungeon.level.map[i] == Terrain.EMPTY || Dungeon.level.map[i] == Terrain.EMPTY_DECO || Dungeon.level.map[i] == Terrain.EMPTY_SP) {
                         Level.set(i, Terrain.WATER);
-                        GameScene.updateMap(i);}
+                        GameScene.updateMap(i);
+                        }
                     }
                 }
 
@@ -772,6 +775,7 @@ public class NewDM300 extends Mob {
         }
 
         private static final String POSITIONS = "positions";
+        private static final String BOSS = "boss";
 
         @Override
         public void storeInBundle(Bundle bundle) {

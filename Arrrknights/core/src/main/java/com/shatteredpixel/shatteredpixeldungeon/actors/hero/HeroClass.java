@@ -215,6 +215,8 @@ public enum HeroClass {
 
 		new AquaBlast().collect();
 		new Heamyo().collect();
+
+		new ScrollOfMagicMapping().collect();
 	}
 
 	public Badges.Badge masteryBadge() {

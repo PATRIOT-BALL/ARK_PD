@@ -63,6 +63,15 @@ public class Piranha extends Mob {
 		HP = HT = 10 + Dungeon.depth * 5;
 		defenseSkill = 10 + Dungeon.depth * 2;
 	}
+
+	public Piranha(boolean week) {
+		super();
+
+		if (week) {
+			HP = HT = 10 + Dungeon.depth * 3;
+			defenseSkill = Dungeon.depth;
+		}
+	}
 	
 	@Override
 	protected boolean act() {

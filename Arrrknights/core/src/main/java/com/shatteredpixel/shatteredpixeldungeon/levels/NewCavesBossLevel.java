@@ -82,6 +82,7 @@ public class NewCavesBossLevel extends Level {
 	private static int WIDTH = 33;
 	private static int HEIGHT = 42;
 
+	public static Rect allArena = new Rect(0, 0, 33, 42);
 	public static Rect mainArena = new Rect(5, 14, 28, 37);
 	public static Rect gate = new Rect(14, 13, 19, 14);
 	public static int[] pylonPositions = new int[]{ 4 + 13*WIDTH, 28 + 13*WIDTH, 4 + 37*WIDTH, 28 + 37*WIDTH };
@@ -326,12 +327,20 @@ public class NewCavesBossLevel extends Level {
 			Random.element(pylons).activate();
 		}
 
-		for( int i = (mainArena.top-1)*width; i <length; i++){
+		for( int i = (allArena.top)*width; i <length; i++){
 			if (map[i] == Terrain.INACTIVE_TRAP || map[i] == Terrain.WATER || map[i] == Terrain.SIGN){
 				GameScene.add(Blob.seed(i, 1, PylonEnergy.class));
 			}
 		}
 
+	}
+
+	public void SetEffect() {
+		for( int i = (allArena.top)*width; i <length; i++){
+			if (map[i] == Terrain.INACTIVE_TRAP || map[i] == Terrain.WATER || map[i] == Terrain.SIGN){
+				GameScene.add(Blob.seed(i, 1, PylonEnergy.class));
+			}
+		}
 	}
 
 	public void eliminatePylon(){
