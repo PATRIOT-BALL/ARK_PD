@@ -53,16 +53,5 @@ public class FloodingRoom2 extends StandardRoom {
 
         }
 
-        int minDim = Math.min(width(), height());
-        int numFish = (minDim - 4)/3; //0-0-1 fish, depending on room size
-
-        for (int i=0; i < numFish-2; i++) {
-            Piranha piranha = new Piranha();
-            do {
-                piranha.pos = level.pointToCell(random(3));
-            } while (level.map[piranha.pos] != Terrain.WATER|| level.findMob( piranha.pos ) != null);
-            level.mobs.add( piranha );
-        }
-
     }
 }
