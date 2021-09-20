@@ -15,20 +15,19 @@ public class Acid_AlphaSprite extends MobSprite{
 
         TextureFilm frames = new TextureFilm( texture, 32, 32 );
 
-        idle = new Animation( 12, true );
-        idle.frames( frames, 14, 14, 14, 14, 14, 14, 14, 14, 15, 16, 15, 16, 15, 16 );
+        idle = new Animation( 8, true );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5 );
 
-        run = new Animation( 4, true );
-        run.frames( frames, 19, 20 );
+        run = new Animation( 10, true );
+        run.frames( frames, 0, 1, 2, 3, 4, 5 );
 
         attack = new Animation( 15, false );
-        attack.frames( frames, 14, 17, 18 );
+        attack.frames( frames, 0, 6, 7, 8, 9, 10, 11, 7 );
 
         zap = attack.clone();
 
-        die = new Animation( 12, false );
-        die.frames( frames, 14, 21, 22, 23, 24 );
-
+        die = new Animation( 10, false );
+        die.frames( frames, 0 );
         play( idle );
     }
 
