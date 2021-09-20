@@ -175,6 +175,7 @@ public class Dungeon {
 	public static int cautusquset;
 
 	public static int eazymode;
+	public static int skin_ch;
 
 	public static int mboss4;
 	public static int mboss9;
@@ -231,6 +232,7 @@ public class Dungeon {
 		acequest = -1;
 
 		eazymode = -1;
+		skin_ch = 0;
 
 		mboss4 = 1;
 		mboss9 = 1;
@@ -550,6 +552,7 @@ public class Dungeon {
 	private static final String MBOSS14		= "mboss14";
 	private static final String MBOSS19		= "mboss19";
 	private static final String EAZYMODE    = "eazymode";
+	private static final String SKIN    = "skin_ch";
 	private static final String PRAY    = "isPray";
 	private static final String END_CAT    = "killcat";
 	private static final String TALU    = "talucount";
@@ -575,6 +578,7 @@ public class Dungeon {
 			bundle.put (MBOSS14, mboss14);
 			bundle.put (MBOSS19, mboss19);
 			bundle.put (EAZYMODE, eazymode);
+			bundle.put (SKIN, skin_ch);
 			bundle.put (PRAY, isPray);
 			bundle.put (END_CAT, killcat);
 			bundle.put (TALU, talucount);
@@ -739,6 +743,7 @@ public class Dungeon {
 		mboss19 = bundle.getInt(MBOSS19);
 
 		eazymode = bundle.getInt(EAZYMODE);
+		skin_ch = bundle.getInt(SKIN);
 
 		isPray = bundle.getBoolean(PRAY);
 		killcat = bundle.getBoolean(END_CAT);

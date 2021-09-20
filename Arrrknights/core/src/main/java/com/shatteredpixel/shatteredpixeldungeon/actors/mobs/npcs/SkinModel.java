@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.FnovaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.LensSprite;
+import com.watabou.utils.Bundle;
 
 import javax.swing.DefaultBoundedRangeModel;
 
@@ -27,7 +28,7 @@ public class SkinModel extends NPC {
     public SkinModel()
     {
         super();
-       switch (skin_ch) {
+       switch (Dungeon.skin_ch) {
            default:
            case 0:
            spriteClass = talrufightSprite.class;
@@ -49,9 +50,6 @@ public class SkinModel extends NPC {
     }
 
 
-
-    public int Skin = 0;
-    public static int skin_ch = 0;
 
     @Override
     public int defenseSkill( Char enemy ) {
@@ -79,8 +77,8 @@ public class SkinModel extends NPC {
 
     public void SkinChange()
     {
-        skin_ch++;
-        if (skin_ch > 6) skin_ch = 0;
+        Dungeon.skin_ch++;
+        if (Dungeon.skin_ch > 6) Dungeon.skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();
@@ -89,7 +87,6 @@ public class SkinModel extends NPC {
 
         SkinModel Model = new SkinModel();
         Model.pos = ppos;
-        Model.Skin = skin_ch;
         GameScene.add(Model, 0f);
     }
 }

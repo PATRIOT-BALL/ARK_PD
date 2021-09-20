@@ -23,7 +23,7 @@ public class v0_3_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "새로운 챕터",
-                "_시에스타 Part 1_이 추가되었습니다. _31~35층_ 지역이며, _로도스 아일랜드(27~30층)_ 에서 진입할 수 있습니다."));
+                "_시에스타_가 추가되었습니다. _로도스 아일랜드(27~30층)_ 에서 진입할 수 있습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "챕터 5 새로운 적",
                 "_정예 선봉_\n사거리 2의 물리 공격을 가하며, 방어력이 높은 편입니다. 체력이 50%이하가 되면 공격력이 상승합니다." + "\n\n" +
@@ -49,6 +49,11 @@ public class v0_3_X_Changes {
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "버그 수정",
+                "체르노보그 섬멸 강화 머드락의 물타일 관련 버그가 어느정도 수정되었습니다." + "\n\n" +
+                        "스킨 모델 관련 버그가 수정되었습니다. (해당 버그 픽스로 27층 세이브 데이터가 작동하지 않을 수도 있습니다.)" + "\n\n" +
+                        "랭킹 기록에서 아이템 1개가 보이지않는 버그가 수정되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 개편",
                 "_아미야_의 _에너지 넘치는 강화_ 특성이 _아츠 흡수_로 대체되었습니다. 이 특성은 아츠 기록장치로 스킬 발동시 흑요석 반지를 충전시킵니다." + "\n\n" +

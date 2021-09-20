@@ -24,19 +24,17 @@ import com.watabou.utils.Callback;
 public class Closure extends NPC {
     {
         spriteClass = ClosureSprite.class;
-        HP=HT=60;
+        HP=HT=1;
         properties.add(Property.IMMOVABLE);
         properties.add(Property.NPC);
     }
     private static final String AC_ADD = "ADD";
 
-    @Override
-    public int defenseSkill(Char enemy) {
-        return INFINITE_EVASION;
-    }
 
     @Override
-    public void damage(int dmg, Object src) {
+    public void die(Object cause) {
+        sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "die"));
+        super.die(cause);
     }
 
     @Override
@@ -45,7 +43,7 @@ public class Closure extends NPC {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
                     if (mob instanceof SkinModel) {
-                        int a = ((SkinModel) mob).Skin;
+                        int a = Dungeon.skin_ch;
                         switch (a) {
                             case 0:
                                 if (Badges.isUnlocked(Badges.Badge.EVILTIME_END)) {
@@ -112,6 +110,8 @@ public class Closure extends NPC {
                                         }});}
                                 break;
                             case 5: // 제껄룩 스킨
+                                sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
+                                /*
                                 if (Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI)) {Badges.validatejessiskin();}
                                     Dungeon.hero.CharSkin = Hero.JESSI;
@@ -122,7 +122,7 @@ public class Closure extends NPC {
                                         @Override
                                         public void call() {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin6", Dungeon.hero.heroClass.title())));
-                                        }});}
+                                        }});}*/
                                 break;
                             case 6: // 꼬지리 스킨
                                 if (Badges.isUnlocked(Badges.Badge.HAPPY_END)) {
@@ -145,7 +145,7 @@ public class Closure extends NPC {
         else {  sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hihi"));
             Dungeon.hero.CharSkin = 0;
         }
-       // sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
+      //  sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
 
         ((HeroSprite) Dungeon.hero.sprite).updateArmor();
         GameScene.updateplayeravater();
