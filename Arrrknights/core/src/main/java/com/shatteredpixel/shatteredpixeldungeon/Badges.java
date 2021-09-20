@@ -315,6 +315,9 @@ public class Badges {
 			global.add(Badge.BUG);
 			saveNeeded = true;
 		}
+		if(global.contains(Badge.CHAMPION_3)) {
+			global.remove(Badge.CHAMPION_3);
+		}
 		if(global.contains(Badge.CHAMPION_4)) {
 			global.remove(Badge.CHAMPION_4);
 		}
