@@ -387,6 +387,7 @@ public class Assets {
 		public static final String TANK_MAN	= "sprites/tank_man.png";
 		public static final String CRONIN	= "sprites/cronin.png";
 		public static final String SCHWARZ	= "sprites/schwarz.png";
+		public static final String CEYLON	= "sprites/ceylon.png";
 
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";

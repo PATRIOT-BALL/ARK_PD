@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Obsidian extends Item {
     public static String AC_ADD = "ADD";
     {
-        image = ItemSpriteSheet.MOULD;
+        image = ItemSpriteSheet.OBSIDIAN;
 
         stackable = true;
         unique = true;

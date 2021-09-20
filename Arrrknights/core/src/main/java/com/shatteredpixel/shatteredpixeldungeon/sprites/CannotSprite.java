@@ -27,9 +27,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.watabou.noosa.TextureFilm;
 
-public class ImpSprite extends MobSprite {
+public class CannotSprite extends MobSprite {
 	
-	public ImpSprite() {
+	public CannotSprite() {
 		super();
 		
 		texture( Assets.Sprites.IMP );

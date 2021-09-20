@@ -5,23 +5,18 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Agent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ergate;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Golem;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Infantry;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Monk;
-import com.shatteredpixel.shatteredpixeldungeon.items.RingKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Bottle;
-import com.shatteredpixel.shatteredpixeldungeon.items.quest.CeremonialCandle;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.TeaRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
-import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SiestaLevel_part1;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ImpSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CannotSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CeylonSprite;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndCeylon;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndImp;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndQuest;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
@@ -31,7 +26,7 @@ import com.watabou.utils.Random;
 
 public class Ceylon extends NPC {
     {
-        spriteClass = ImpSprite.class;
+        spriteClass = CeylonSprite.class;
 
         properties.add(Property.IMMOVABLE);
     }

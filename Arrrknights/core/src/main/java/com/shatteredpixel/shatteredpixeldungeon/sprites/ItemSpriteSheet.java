@@ -768,6 +768,8 @@ public class ItemSpriteSheet {
 	public static final int MYOSOTIS   = QUEST+13;
 	public static final int W0520   = QUEST+14;
 	public static final int BOSS_TOKEN   = QUEST+15;
+	public static final int OBSIDIAN   = QUEST+16;
+	public static final int TEA   = QUEST+17;
 	static{
 		assignItemRect(SKULL,   16, 16);
 		assignItemRect(DUST,    16, 16);
@@ -785,6 +787,8 @@ public class ItemSpriteSheet {
 		assignItemRect(MYOSOTIS,    16, 16);
 		assignItemRect(W0520,    16, 16);
 		assignItemRect(BOSS_TOKEN,    16, 16);
+		assignItemRect(OBSIDIAN,    16, 16);
+		assignItemRect(TEA,    16, 16);
 	}
 
 	private static final int BAGS       =                                   xy(1, 31);  //16 slots
