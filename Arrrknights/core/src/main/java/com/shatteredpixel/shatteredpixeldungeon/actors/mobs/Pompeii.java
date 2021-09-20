@@ -65,7 +65,7 @@ public class Pompeii extends Mob {
     {
         spriteClass = Bug_ASprite.class;
 
-        HP = HT = 2400;
+        HP = HT = 3000;
         defenseSkill = 25;
 
         EXP = 100;
@@ -122,8 +122,8 @@ public class Pompeii extends Mob {
 
         super.damage(dmg, src);
 
-        if (phase==1 && HP < 1600) {
-            HP = 1100;
+        if (phase==1 && HP < 2000) {
+            HP = 2000;
             phase = 2;
             Buff.detach(this, Barrier.class);
             summoncooldown = 1;
@@ -216,19 +216,19 @@ public class Pompeii extends Mob {
                 summon.beckon(Dungeon.hero.pos);
 
 
-                if (phase==3) summoncooldown = 9;
+                if (phase==3) summoncooldown = 7;
                 else if (phase == 2) {
                     int dmg = 50 - Statistics.coreAlive*3;
                     HP -= dmg;
                     sprite.showStatus( CharSprite.WARNING,""+dmg );
                     summoncooldown = 1;
-                    if (HP < 1000) {
-                        HP = 1000;
+                    if (HP < 1500) {
+                        HP = 1500;
                         phase = 3;
                         GameScene.flash(0x80FF0000);
                     }
                 }
-                else summoncooldown = 12;
+                else summoncooldown = 10;
 
                 spend(TICK);
                 return true;
@@ -293,11 +293,12 @@ public class Pompeii extends Mob {
                     }}}
 
                 Camera.main.shake(2, 0.5f);
-                Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f, 0.5f);
+                Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f);
+                Sample.INSTANCE.play(Assets.Sounds.BURNING, 2f);
                 Buff.affect(this, Stamina.class, 2f);
 
                 volcanotime=0;
-                volcanocooldown= 12 - (Statistics.coreAlive/2);
+                volcanocooldown= 10 - (Statistics.coreAlive/2);
                 spend(TICK);
                 return true;
             }
@@ -394,8 +395,8 @@ public class Pompeii extends Mob {
             //don't want to overly punish players with slow move or attack speed
             Dungeon.hero.interrupt();
 
-            if (phase == 3) blastcooldown = 5;
-            else blastcooldown = 8;
+            if (phase == 3) blastcooldown = 4;
+            else blastcooldown = 6;
 
             spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 2*TICK));
             return true;
