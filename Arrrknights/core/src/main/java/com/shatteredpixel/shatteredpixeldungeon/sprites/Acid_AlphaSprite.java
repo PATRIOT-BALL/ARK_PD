@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.AcidSlug_A;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Warlock;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.watabou.noosa.TextureFilm;
@@ -43,7 +44,7 @@ public class Acid_AlphaSprite extends MobSprite{
                 new Callback() {
                     @Override
                     public void call() {
-                        ((Warlock)ch).onZapComplete();
+                        ((AcidSlug_A)ch).onZapComplete();
                     }
                 } );
         Sample.INSTANCE.play( Assets.Sounds.ZAP );
