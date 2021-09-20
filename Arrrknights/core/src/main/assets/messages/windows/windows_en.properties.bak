@@ -48,8 +48,8 @@ windows.wndhero$statstab.health=HP
 windows.wndhero$statstab.gold=Obtained Orundum
 windows.wndhero$statstab.depth=Max Level
 
-windows.wndimp.message=Oh good! I owe you a lot!\nI don't have money to give right now, but there's something better than that. This is the ring I took from Rupert's dead finger on the street when I left Syracuse. It looks a little dirty, so clean it up and use it on your own.
-windows.wndimp.reward=Take the ring
+windows.wndimp.message=Oh good! I owe you a lot!\nI don't have money to give right now, but there's something better than that. This is the kit I took from dead Rupert's backpack on the street when I left Syracuse.
+windows.wndimp.reward=Take the Kit
 
 windows.wndinfocell.nothing=Nothing interesting
 
@@ -146,6 +146,9 @@ windows.wndsadghost.give_item=Please take one of these items, you'll probably ne
 windows.wndsadghost.confirm=Confirm
 windows.wndsadghost.cancel=Cancel
 windows.wndsadghost.farewell=See you later. Please be careful!
+
+windows.wndceylon.message=thank you. What I can give you is... Oh, how about this one?
+windows.wndceylon.reward=get a return
 
 windows.wndsettings$displaytab.title=Display Settings
 windows.wndsettings$displaytab.scale=Display Scale

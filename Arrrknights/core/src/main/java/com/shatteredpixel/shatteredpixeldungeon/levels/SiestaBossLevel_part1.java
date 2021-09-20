@@ -146,8 +146,7 @@ public class SiestaBossLevel_part1 extends Level {
 
         entrance = 331;
 
-        exit = 1; // 36층 이후 아래로 변경
-        //exit = 25;
+        exit = 25;
 
         map[entrance] = Terrain.ENTRANCE;
 
@@ -163,8 +162,7 @@ public class SiestaBossLevel_part1 extends Level {
 
         super.occupyCell( ch );
 
-        // 36층 이후 개방시 WALL_DECO를 EXIT로 변경
-        if (ch.pos == 212 && ch == Dungeon.hero && map[entrance] == Terrain.ENTRANCE && map[exit] != Terrain.WALL_DECO) {
+        if (ch.pos == 212 && ch == Dungeon.hero && map[entrance] == Terrain.ENTRANCE && map[exit] != Terrain.EXIT) {
 
             seal();
 
@@ -175,9 +173,9 @@ public class SiestaBossLevel_part1 extends Level {
     public void seal() {
         super.seal();
         set( entrance, Terrain.EMPTY );
-        //set( exit, Terrain.EMPTY ); // 36층 이후 처리
+        set( exit, Terrain.EMPTY ); // 36층 이후 처리
         GameScene.updateMap( entrance );
-        // GameScene.updateMap( exit ); // 36층 이후 처리
+        GameScene.updateMap( exit ); // 36층 이후 처리
         Dungeon.observe();
 
         SiestaBoss boss = new SiestaBoss();
@@ -190,9 +188,7 @@ public class SiestaBossLevel_part1 extends Level {
         super.unseal();
         set( entrance, Terrain.ENTRANCE );
         GameScene.updateMap( entrance );
-
-        map[exit] = Terrain.WALL_DECO; // 36층 이후 개방시 아래거를 활성화하고 이건 삭제
-       // set( exit, Terrain.EXIT );
+        set( exit, Terrain.EXIT );
         GameScene.updateMap( exit );
 
         Dungeon.observe();

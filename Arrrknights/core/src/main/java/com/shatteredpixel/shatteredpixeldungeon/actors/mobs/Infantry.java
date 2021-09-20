@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ceylon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.InfantrySprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Siesta_InfantrySprite;
@@ -47,5 +48,12 @@ public class Infantry extends Mob {
         }
 
         super.damage(dmg, src);
+    }
+
+    @Override
+    public void rollToDropLoot() {
+        Ceylon.Quest.process( this );
+
+        super.rollToDropLoot();
     }
 }

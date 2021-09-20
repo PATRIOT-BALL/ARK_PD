@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 public class TeaRose extends Item {
     {
         image = ItemSpriteSheet.MYOSOTIS;
+        stackable = true;
         unique = true;
         cursed = false;
     }

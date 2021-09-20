@@ -123,7 +123,7 @@ public class Pompeii extends Mob {
         super.damage(dmg, src);
 
         if (phase==1 && HP < 1600) {
-            HP = 1600;
+            HP = 1100;
             phase = 2;
             Buff.detach(this, Barrier.class);
             summoncooldown = 1;
@@ -149,7 +149,9 @@ public class Pompeii extends Mob {
             Badges.validateChampion(Challenges.activeChallenges());
             Badges.validateChampion_char(Challenges.activeChallenges());
             Badges.saveGlobal();
-            Badges.validatewill();
+
+            Badges.silentValidateHappyEnd();
+            Badges.validatesiesta();
             Dungeon.win(Amulet.class);
             Dungeon.deleteGame(GamesInProgress.curSlot, true);
             Game.switchScene(SurfaceScene.class);

@@ -49,7 +49,7 @@ windows.wndhero$statstab.gold=획득한 합성옥
 windows.wndhero$statstab.depth=최고 레벨
 
 windows.wndimp.message=오 좋아! 큰 신세를 졌군그래!\n당장 줄 돈은 없지만, 그것보다 더 좋은게 있지. 내가 시라쿠사를 떠날때 길바닥에 죽어있는 루퍼트에게서 발견한 물건이야. 유용하게 쓰라고.
-windows.wndimp.reward=반지 강화 키트를 받는다.
+windows.wndimp.reward=키트를 받는다.
 
 windows.wndeazymode.act=이지 모드가 활성화되었다!
 windows.wndeazymode.bt=이지 모드 활성화
@@ -144,6 +144,9 @@ windows.wndsadghost.give_item=이 장비들 중 하나를 가져가세요, 아�
 windows.wndsadghost.confirm=확인
 windows.wndsadghost.cancel=취소
 windows.wndsadghost.farewell=나중에 뵙겠습니다. 아무쪼록 조심하세요!
+
+windows.wndceylon.message=감사합니다. 제가 드릴만한 건... 아, 이것이 당신의 전투에 도움이 될 수 있을까요?
+windows.wndceylon.reward=강화의 일기장을 받는다,
 
 windows.wndsettings$displaytab.title=화면 설정
 windows.wndsettings$displaytab.scale=화면 스케일

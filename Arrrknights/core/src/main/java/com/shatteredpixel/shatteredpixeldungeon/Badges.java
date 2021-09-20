@@ -153,7 +153,7 @@ public class Badges {
 
 		GOLD_COLLECTED_5              ( 89, true ),
 
-		SIESTA_PART1              ( 90, true ),
+		SIESTA_PART1              ( 90 ),
 
 		//RED , 버그 유저
 		BUG (176),
@@ -178,7 +178,7 @@ public class Badges {
 		GREY_CHAMPION2              ( 107, true ),
 		ROSE_CHAMPION2              ( 108, true ),
 
-		//SIESTA_PART2              ( 111, true ),
+		SIESTA_PART2              ( 111),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
@@ -1130,6 +1130,14 @@ public class Badges {
 			displayBadge( Badge.SIESTA_PART1 );}
 	}
 
+	public static void validatesiesta() {
+		if (!local.contains( Badge.SIESTA_PART2 )){
+			global.add(Badge.SIESTA_PART2);
+			saveNeeded = true;
+			local.add(Badge.SIESTA_PART2);
+			displayBadge( Badge.SIESTA_PART2 );}
+	}
+
 	public static void validatewill() {
 		if (!local.contains( Badge.WILL )){
 			global.add(Badge.WILL);
@@ -1260,7 +1268,8 @@ public class Badges {
 			{ Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3},
 			{Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3},
 			{Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3},
-			{ Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3}
+			{ Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3},
+			{ Badge.SIESTA_PART1, Badge.SIESTA_PART2}
 	};
 
 	private static final Badge[][] metaBadgeReplacements = new Badge[][]{
@@ -1297,6 +1306,7 @@ public class Badges {
 		leaveBest( badges, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3 );
 		leaveBest( badges, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3 );
 		leaveBest( badges, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3 );
+		leaveBest( badges, Badge.SIESTA_PART1, Badge.SIESTA_PART2);
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
 			leaveBest( badges, tierReplace );

@@ -1248,6 +1248,12 @@ items.quest.obsidian.desc=Siesta`s Specialties. When used, it becomes possible t
 items.quest.obsidian.ac_add=ADD
 items.quest.obsidian.suc=Resistance to tools used by the mayor has increased.
 
+items.quest.tearose.name=tea leaves
+items.quest.tearose.desc=Ceylon's favorite tea leaves
+
+items.quest.bottle.name=실론의 물병
+items.quest.bottle.desc=실론이 홍차를 담아두는 물병.
+
 
 
 
@@ -2229,7 +2235,7 @@ items.weapon.melee.flag.ac_zap=Healing Wings
 
 items.weapon.melee.scythe.name=blind obedience
 items.weapon.melee.scythe.stats_desc=Surprise attack bonus +25%\nRecovers HP every 8 hit dealt
-items.weapon.melee.scythe.desc=Deals additional damage to the main target in proportion to the number of targets hit. (Maximum x1.4)
+items.weapon.melee.scythe.desc=Deals additional damage to the main target in proportion to the number of targets hit. (Maximum x1.5)
 
 items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies

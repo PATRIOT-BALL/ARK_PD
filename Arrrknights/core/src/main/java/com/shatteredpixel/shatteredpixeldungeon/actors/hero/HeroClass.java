@@ -209,14 +209,6 @@ public enum HeroClass {
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-		RingOfElements s = new RingOfElements();
-		s.level(10);
-		s.identify().collect();
-
-		new AquaBlast().collect();
-		new Heamyo().collect();
-
-		new ScrollOfMagicMapping().collect();
 	}
 
 	public Badges.Badge masteryBadge() {

@@ -2240,7 +2240,7 @@ items.weapon.melee.flag.ac_zap=치유의 날개
 
 items.weapon.melee.scythe.name=맹목적인 순종
 items.weapon.melee.scythe.stats_desc=기습시 최소 데미지 보정 +25%\n적에게 8번 피해를 줄 때마다 체력 회복
-items.weapon.melee.scythe.desc=누구도 판단할 수 없다. 오직 시간만이 답이다.\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 공격 대상이 많을수록 주 대상이 받는 피해량이 상승합니다. (최대 40%)
+items.weapon.melee.scythe.desc=누구도 판단할 수 없다. 오직 시간만이 답이다.\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 공격 대상이 많을수록 주 대상이 받는 피해량이 상승합니다. (최대 50%)
 
 items.weapon.melee.divineavatar.name=선현의 화신
 items.weapon.melee.divineavatar.stats_desc=실명한 적에게 공격시 축복 획득

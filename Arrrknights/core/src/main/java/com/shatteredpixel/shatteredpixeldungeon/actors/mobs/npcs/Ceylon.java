@@ -11,11 +11,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Monk;
 import com.shatteredpixel.shatteredpixeldungeon.items.RingKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Bottle;
-import com.shatteredpixel.shatteredpixeldungeon.items.quest.DwarfToken;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.CeremonialCandle;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.TeaRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.SiestaLevel_part1;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ImpSprite;
@@ -175,10 +176,10 @@ public class Ceylon extends NPC {
             }
         }
 
-        public static void spawn( CityLevel level ) {
+        public static void spawn( SiestaLevel_part1 level ) {
             if (!spawned && Dungeon.depth > 31 && Random.Int( 35 - Dungeon.depth ) == 0) {
 
-                Imp npc = new Imp();
+                Ceylon npc = new Ceylon();
                 do {
                     npc.pos = level.randomRespawnCell( npc );
                 } while (
@@ -192,16 +193,17 @@ public class Ceylon extends NPC {
                 level.mobs.add( npc );
 
                 spawned = true;
+                level.addItemToSpawn(new Bottle());
 
                 switch (Dungeon.depth){
-                    case 31: default:
+                    case 32: default:
                         alternative = true;
                         break;
-                    case 32:
-                        alternative = Random.Int(2) == 0;
-                        break;
                     case 33:
-                        alternative = false;
+                        alternative = true;
+                        break;
+                    case 34:
+                        alternative = true;
                         break;
                 }
 
@@ -214,7 +216,7 @@ public class Ceylon extends NPC {
         public static void process( Mob mob ) {
             if (spawned && given && !completed) {
                 if ((alternative && mob instanceof Infantry) ||
-                        (!alternative && mob instanceof Ergate) ||
+                        (alternative && mob instanceof Ergate) ||
                         (alternative && mob instanceof Agent)){
 
                     Dungeon.level.drop( new TeaRose(), mob.pos ).sprite.drop();
