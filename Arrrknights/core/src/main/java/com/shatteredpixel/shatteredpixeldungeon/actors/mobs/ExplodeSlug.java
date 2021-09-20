@@ -61,7 +61,7 @@ public class ExplodeSlug extends Mob {
                     heroKilled = true;
                 }
             }
-            if (Dungeon.level.map[pos+i] == Terrain.WATER) {
+            if (Dungeon.level.map[pos + PathFinder.NEIGHBOURS8[i]] == Terrain.WATER) {
                 Level.set(pos+i, Terrain.EMPTY);
                 GameScene.updateMap(pos+i);
                 CellEmitter.get(pos+i).burst(Speck.factory(Speck.STEAM), 10);

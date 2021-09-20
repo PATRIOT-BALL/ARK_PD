@@ -60,7 +60,7 @@ public class AquariumRoom extends StandardRoom {
 			do {
 				piranha.pos = level.pointToCell(random(3));
 			} while (level.map[piranha.pos] != Terrain.WATER|| level.findMob( piranha.pos ) != null);
-			Buff.affect(piranha, Hex.class, 9999999f);
+			level.mobs.add( piranha );
 		}
 		
 		for (Door door : connected.values()) {
