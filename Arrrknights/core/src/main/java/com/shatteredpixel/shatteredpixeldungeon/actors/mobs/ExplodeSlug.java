@@ -3,6 +3,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
@@ -57,14 +58,10 @@ public class ExplodeSlug extends Mob {
                 int damage = Random.NormalIntRange(45,70);
                 damage = Math.max( 0,  damage - (ch.drRoll() +  ch.drRoll()) );
                 ch.damage( damage, this );
+                if (ch.isAlive()) Buff.affect(ch,Burning.class).reignite(ch);
                 if (ch == Dungeon.hero && !ch.isAlive()) {
                     heroKilled = true;
                 }
-            }
-            if (Dungeon.level.map[pos + PathFinder.NEIGHBOURS8[i]] == Terrain.WATER) {
-                Level.set(pos+i, Terrain.EMPTY);
-                GameScene.updateMap(pos+i);
-                CellEmitter.get(pos+i).burst(Speck.factory(Speck.STEAM), 10);
             }
         }
 
