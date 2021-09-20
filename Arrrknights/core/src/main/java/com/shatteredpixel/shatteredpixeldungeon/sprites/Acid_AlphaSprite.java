@@ -11,9 +11,9 @@ public class Acid_AlphaSprite extends MobSprite{
     public Acid_AlphaSprite() {
         super();
 
-        texture( Assets.Sprites.BUG_A );
+        texture( Assets.Sprites.SPITTER );
 
-        TextureFilm frames = new TextureFilm( texture, 18, 17 );
+        TextureFilm frames = new TextureFilm( texture, 32, 32 );
 
         idle = new Animation( 12, true );
         idle.frames( frames, 14, 14, 14, 14, 14, 14, 14, 14, 15, 16, 15, 16, 15, 16 );
