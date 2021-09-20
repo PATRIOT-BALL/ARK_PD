@@ -62,7 +62,7 @@ public class WndRanking extends WndTabbed {
 	
 	private Image busy;
 
-	public static int BugItemLevel = 29;
+	public static int BugItemLevel = 30;
 	
 	public WndRanking( final Rankings.Record rec ) {
 		
