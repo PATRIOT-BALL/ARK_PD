@@ -1,15 +1,21 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Pompeii;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SiestaBoss;
+import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Pombbay;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.SurfaceScene;
+import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -237,6 +243,17 @@ public class SiestaBossLevel_part2 extends Level {
         GameScene.updateMap( exit );
 
         Dungeon.observe();
+
+        Badges.validateVictory();
+        Badges.validateChampion(Challenges.activeChallenges());
+        Badges.validateChampion_char(Challenges.activeChallenges());
+        Badges.saveGlobal();
+
+        Badges.silentValidateHappyEnd();
+        Badges.validatesiesta2();
+        Dungeon.win(Amulet.class);
+        Dungeon.deleteGame(GamesInProgress.curSlot, true);
+        Game.switchScene(SurfaceScene.class);
     }
 
     @Override

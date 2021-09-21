@@ -1133,7 +1133,7 @@ public class Badges {
 			displayBadge( Badge.SIESTA_PART1 );}
 	}
 
-	public static void validatesiesta() {
+	public static void validatesiesta2() {
 		if (!local.contains( Badge.SIESTA_PART2 )){
 			global.add(Badge.SIESTA_PART2);
 			saveNeeded = true;

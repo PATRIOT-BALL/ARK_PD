@@ -132,6 +132,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSnowsant;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSussurro;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSuzuran;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfTime;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfVigna;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfWeedy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
@@ -367,6 +369,8 @@ public enum Catalog {
 		WANDS.seen.put( StaffOfSnowsant.class,             false);
 		WANDS.seen.put( WandOfHealing.class,             false);
 		WANDS.seen.put( StaffOfSussurro.class,             false);
+		WANDS.seen.put( StaffOfTime.class,             false);
+		WANDS.seen.put( StaffOfSuzuran.class,             false);
 
 		RINGS.seen.put( RingOfAccuracy.class,               false);
 		RINGS.seen.put( RingOfEnergy.class,                 false);
