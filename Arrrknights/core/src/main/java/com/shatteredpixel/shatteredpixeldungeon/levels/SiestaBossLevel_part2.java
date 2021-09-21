@@ -243,17 +243,6 @@ public class SiestaBossLevel_part2 extends Level {
         GameScene.updateMap( exit );
 
         Dungeon.observe();
-
-        Badges.validateVictory();
-        Badges.validateChampion(Challenges.activeChallenges());
-        Badges.validateChampion_char(Challenges.activeChallenges());
-        Badges.saveGlobal();
-
-        Badges.silentValidateHappyEnd();
-        Badges.validatesiesta2();
-        Dungeon.win(Amulet.class);
-        Dungeon.deleteGame(GamesInProgress.curSlot, true);
-        Game.switchScene(SurfaceScene.class);
     }
 
     @Override

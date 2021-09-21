@@ -139,6 +139,21 @@ public class Pompeii extends Mob {
             }
         }
 
+        if (phase == 3 && HP < 1) {
+            Badges.validateVictory();
+            Badges.validateChampion(Challenges.activeChallenges());
+            Badges.validateChampion_char(Challenges.activeChallenges());
+            Badges.saveGlobal();
+
+            Badges.silentValidateHappyEnd();
+            Badges.validatesiesta2();
+            Dungeon.win(Amulet.class);
+            Dungeon.deleteGame(GamesInProgress.curSlot, true);
+            Game.switchScene(SurfaceScene.class);
+
+            return true;
+        }
+
         if (phase == 0) {
             spend(TICK);
             return true;
