@@ -26,7 +26,7 @@ import com.watabou.utils.Random;
 
 public class StaffOfSuzuran extends DamageWand {
     {
-        image = ItemSpriteSheet.WAND_MAGIC_MISSILE;
+        image = ItemSpriteSheet.WAND_SUZRAN;
     }
 
     public int min(int lvl){ return 3+lvl; }

@@ -5,7 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Bottle extends Item {
     {
-        image = ItemSpriteSheet.VIAL;
+        image = ItemSpriteSheet.KETTLE;
 
         cursed = false;
         unique = true;

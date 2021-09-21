@@ -33,7 +33,7 @@ import java.util.ArrayList;
 
 public class StaffOfTime extends DamageWand {
     {
-        image = ItemSpriteSheet.WAND_FIREBOLT;
+        image = ItemSpriteSheet.WAND_MOSTIMA;
 
         collisionProperties = Ballistica.STOP_SOLID | Ballistica.IGNORE_SOFT_SOLID;
     }
@@ -118,8 +118,8 @@ public class StaffOfTime extends DamageWand {
                 curUser.sprite,
                 bolt.path.get(dist/2),
                 callback );
-        Sample.INSTANCE.play( Assets.Sounds.ZAP );
-        Sample.INSTANCE.play( Assets.Sounds.BURNING );
+        Sample.INSTANCE.play( Assets.Sounds.HIT_RINGOUT );
+        Sample.INSTANCE.play( Assets.Sounds.TIMESTOP );
     }
 
 }

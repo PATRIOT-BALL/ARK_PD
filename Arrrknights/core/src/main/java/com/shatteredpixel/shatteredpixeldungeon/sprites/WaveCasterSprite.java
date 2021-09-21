@@ -14,7 +14,7 @@ public class WaveCasterSprite extends MobSprite {
         super();
 
 
-        texture( Assets.Sprites.CASTER );
+        texture( Assets.Sprites.WAVE_CASTER );
 
         TextureFilm frames = new TextureFilm( texture, 32, 32 );
 

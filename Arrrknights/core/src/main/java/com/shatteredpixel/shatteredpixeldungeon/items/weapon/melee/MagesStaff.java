@@ -70,7 +70,7 @@ public class MagesStaff extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.MAGES_STAFF;
-		hitSound = Assets.Sounds.HIT;
+		hitSound = Assets.Sounds.HIT_MAGIC;
 		hitSoundPitch = 1.1f;
 
 		tier = 1;

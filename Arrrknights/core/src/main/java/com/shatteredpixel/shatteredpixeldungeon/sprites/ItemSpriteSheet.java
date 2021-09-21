@@ -453,6 +453,8 @@ public class ItemSpriteSheet {
 	public static final int WAND_TRANSFUSION    = WANDS+12;
 	public static final int WAND_SNOWSANT    = WANDS+13;
 	public static final int WAND_SUSSURRO    = WANDS+14;
+	public static final int WAND_SUZRAN    = WANDS+15;
+	public static final int WAND_MOSTIMA    = WANDS+16;
 	static {
 		for (int i = WANDS; i < WANDS+31; i++)
 			assignItemRect(i, 16, 16);
@@ -505,6 +507,7 @@ public class ItemSpriteSheet {
 	public static final int ARTIFACT_ROSE2      = ARTIFACTS+37;
 	public static final int ARTIFACT_ROSE3      = ARTIFACTS+38;
 	public static final int ARTIFACT_THORNS      = ARTIFACTS+39;
+	public static final int ARTIFACT_ASH      = ARTIFACTS+40;
 	static{
 		assignItemRect(ARTIFACT_CLOAK,      16, 16);
 		assignItemRect(ARTIFACT_ARMBAND,    16, 16);
@@ -530,6 +533,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ARTIFACT_ROSE2,      16, 16);
 		assignItemRect(ARTIFACT_ROSE3,      16, 16);
 		assignItemRect(ARTIFACT_THORNS,      16, 16);
+		assignItemRect(ARTIFACT_ASH,      16, 16);
 	}
 
 	                                                                                    //16 free slots
@@ -770,6 +774,8 @@ public class ItemSpriteSheet {
 	public static final int BOSS_TOKEN   = QUEST+15;
 	public static final int OBSIDIAN   = QUEST+16;
 	public static final int TEA   = QUEST+17;
+	public static final int KETTLE   = QUEST+18;
+	public static final int WALKIE   = QUEST+19;
 	static{
 		assignItemRect(SKULL,   16, 16);
 		assignItemRect(DUST,    16, 16);
@@ -789,6 +795,8 @@ public class ItemSpriteSheet {
 		assignItemRect(BOSS_TOKEN,    16, 16);
 		assignItemRect(OBSIDIAN,    16, 16);
 		assignItemRect(TEA,    16, 16);
+		assignItemRect(KETTLE,    16, 16);
+		assignItemRect(WALKIE,    16, 16);
 	}
 
 	private static final int BAGS       =                                   xy(1, 31);  //16 slots

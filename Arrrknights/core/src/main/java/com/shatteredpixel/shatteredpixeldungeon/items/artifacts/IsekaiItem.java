@@ -42,7 +42,7 @@ import java.util.Arrays;
 
 public class IsekaiItem extends Artifact {
     {
-        image = ItemSpriteSheet.ARTIFACT_THORNS;
+        image = ItemSpriteSheet.ARTIFACT_ASH;
         levelCap = 10;
 
         charge = 0;

@@ -35,7 +35,7 @@ public class WalkieTalkie extends Item {
     public static final String AC_USE = "USE";
 
     {
-        image = ItemSpriteSheet.TORCH;
+        image = ItemSpriteSheet.WALKIE;
 
         stackable = true;
 
