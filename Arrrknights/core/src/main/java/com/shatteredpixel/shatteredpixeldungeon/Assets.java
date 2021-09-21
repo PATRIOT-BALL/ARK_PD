@@ -375,7 +375,7 @@ public class Assets {
 		//변종
 		public static final String STRIKER	= "sprites/striker.png";
 		public static final String IMPERIAL_ARTILLERY	= "sprites/imperial_artillery.png";
-		public static final String RAIDER	= "sprites/urusus_raider.png";
+		public static final String RAIDER	= "sprites/ursus_raider.png";
 		public static final String RAPTOR	= "sprites/raptor.png";
 		public static final String RAPTOR_FIRE	= "sprites/raptor_fire.png";
 
