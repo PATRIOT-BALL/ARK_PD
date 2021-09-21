@@ -28,9 +28,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Raider;
+import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
@@ -437,9 +438,17 @@ public class Combo extends Buff implements ActionIndicator.Action {
 								ch.sprite.flash();
 
 								if (!ch.isAlive()) {
-									if (hero.hasTalent(Talent.LETHAL_DEFENSE) && hero.buff(BrokenSeal.WarriorShield.class) != null) {
+									if (hero.hasTalent(Talent.FINALBLOW)) {
+										if (hero.buff(BrokenSeal.WarriorShield.class) != null) {
 										BrokenSeal.WarriorShield shield = hero.buff(BrokenSeal.WarriorShield.class);
-										shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.LETHAL_DEFENSE) / 3f));
+										shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.FINALBLOW) / 3f));}
+
+										if (hero.belongings.getItem(SkillBook.class) != null) {
+											SkillBook book = Dungeon.hero.belongings.getItem(SkillBook.class);
+											book.SetCharge(hero.pointsInTalent(Talent.FINALBLOW) * 2);
+											SpellSprite.show(hero, SpellSprite.CHARGE);
+											Item.updateQuickslot();
+										}
 									}
 								}
 							}
@@ -549,9 +558,17 @@ public class Combo extends Buff implements ActionIndicator.Action {
 		}
 
 		if (!enemy.isAlive() || (!wasAlly && enemy.alignment == target.alignment)) {
-			if (hero.hasTalent(Talent.LETHAL_DEFENSE) && hero.buff(BrokenSeal.WarriorShield.class) != null){
-				BrokenSeal.WarriorShield shield = hero.buff(BrokenSeal.WarriorShield.class);
-				shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.LETHAL_DEFENSE)/3f));
+			if (hero.hasTalent(Talent.FINALBLOW)) {
+				if (hero.buff(BrokenSeal.WarriorShield.class) != null) {
+					BrokenSeal.WarriorShield shield = hero.buff(BrokenSeal.WarriorShield.class);
+					shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.FINALBLOW) / 3f));}
+
+				if (hero.belongings.getItem(SkillBook.class) != null) {
+					SkillBook book = Dungeon.hero.belongings.getItem(SkillBook.class);
+					book.SetCharge(hero.pointsInTalent(Talent.FINALBLOW) * 2);
+					SpellSprite.show(hero, SpellSprite.CHARGE);
+					Item.updateQuickslot();
+				}
 			}
 		}
 

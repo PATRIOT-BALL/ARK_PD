@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.effects;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlueBlastParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.CorrosionParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
@@ -81,6 +82,7 @@ public class MagicMissile extends Emitter {
 	public static final int GUN_SHOT_FIRE    = 103;
 
 	public static final int FIRE_SHOT    = 104;
+	public static final int TIME_CONE       = 105;
 	
 	public void reset( int type, int from, int to, Callback callback ) {
 		reset( type,
@@ -205,6 +207,11 @@ public class MagicMissile extends Emitter {
 			case FIRE_SHOT:
 				size( 15 );
 				pour( FlameParticle.FACTORY, 0.0005f );
+				break;
+
+			case TIME_CONE:
+				size( 7 );
+				pour( BlueBlastParticle.FACTORY, 0.06f );
 				break;
 		}
 

@@ -106,9 +106,10 @@ public class BattleAxe extends MeleeWeapon {
 
 			Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1.76f, 1.76f);
 			attacker.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "attack"));
-			starpower = 0;
-			updateQuickslot();
 		}
+
+		starpower = 0;
+		updateQuickslot();
 		return super.proc(attacker, defender, damage);
 	}
 

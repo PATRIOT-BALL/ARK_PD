@@ -1251,8 +1251,8 @@ items.quest.obsidian.suc=Resistance to tools used by the mayor has increased.
 items.quest.tearose.name=tea leaves
 items.quest.tearose.desc=Ceylon's favorite tea leaves
 
-items.quest.bottle.name=실론의 물병
-items.quest.bottle.desc=실론이 홍차를 담아두는 물병.
+items.quest.bottle.name=Ceylon water bottle
+items.quest.bottle.desc=A water bottle in which Ceylon holds tea.
 
 
 
@@ -1748,7 +1748,20 @@ items.wands.sp.staffofsussurro.name=staff of sussurro
 items.wands.sp.staffofsussurro.staff_name=ring of sussurro
 items.wands.sp.staffofsussurro.desc=_"Look over here for a doctor!"_\n\nThis Retrofitted wand is Has the power of operator Sussurro.
 items.wands.sp.staffofsussurro.stats_desc=This wand`s arts deals _%1$d-%2$d damage,_ Hit it 2 times Recover _%3$d_ health. Also, When the recovery effect is activated _%4$d_ times, the effect is reduced.
-items.wands.sp.staffofsussurro.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of sussurro, Weakens the enemy to reduce attack damage.
+items.wands.sp.staffofsussurro.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of sussurro, Weakens the enemy to reduce attack damage.
+
+// 특별한 스태프
+items.wands.sp.staffofsuzuran.name=staff of suzuran
+items.wands.sp.staffofsuzuran.staff_name=ring of foxfire
+items.wands.sp.staffofsuzuran.desc=_"Do you need any help, Doctor? Then, I’ll do my homework later..."_\n\nThis __special wand is Has the power of operator Suzuran.
+items.wands.sp.staffofsuzuran.stats_desc=This wand`s arts deals _%1$d-%2$d damage._ Also, hitting a sleeping enemy will cause them to fall into a very deep sleep.
+items.wands.sp.staffofsuzuran.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of foxfire, Charges the Arts Recorder.
+
+items.wands.sp.staffoftime.name=staff of mostima
+items.wands.sp.staffoftime.staff_name=ring of time
+items.wands.sp.staffoftime.desc=_"Beneath the gaze of justice, evil tumbles into the abyss."_\n\nThis __special wand is Has the power of operator Mostima.
+items.wands.sp.staffoftime.stats_desc=This wand`s extensive arts deals _%1$d-%2$d damage._ Enemies hit are knocked back.
+items.wands.sp.staffoftime.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of time, Charges the Arts Recorder.
 
 
 ###wands

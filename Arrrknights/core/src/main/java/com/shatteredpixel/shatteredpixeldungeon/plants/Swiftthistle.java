@@ -86,7 +86,9 @@ public class Swiftthistle extends Plant {
 		public void reset(){
 			left = 7f;
 		}
-		
+
+		public void bufftime(float time) { left = time;}
+
 		@Override
 		public String toString() {
 			return Messages.get(this, "name");

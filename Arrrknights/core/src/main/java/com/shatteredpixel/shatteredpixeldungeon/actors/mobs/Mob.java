@@ -31,10 +31,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Preparation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SoulMark;
@@ -708,6 +712,7 @@ public abstract class Mob extends Char {
 			if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
 				SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
 				Item.SetCharge(1 + Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
+				if (Dungeon.hero.pointsInTalent(Talent.SWEEP) > 1)  Buff.affect(Dungeon.hero, MagicalSight.class, 3f);
 			}}
 
 		if (Dungeon.hero.subClass== HeroSubClass.DESTROYER) {

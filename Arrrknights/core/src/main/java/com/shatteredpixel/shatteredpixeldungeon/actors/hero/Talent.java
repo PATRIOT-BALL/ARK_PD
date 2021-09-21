@@ -83,7 +83,7 @@ public enum Talent {
 	//Berserker T3
 	ENDLESS_RAGE(11, 3), BERSERKING_STAMINA(12, 3), ENRAGED_CATALYST(13, 3),
 	//Gladiator T3
-	CLEAVE(14, 3), LETHAL_DEFENSE(15, 3), ENHANCED_COMBO(16, 3),
+	CLEAVE(14, 3), FINALBLOW(15, 3), ENHANCED_COMBO(16, 3),
 	//Warrior T4
 	TACTICAL_SHIELD(17, 3), CHAINSAW_EXTEND(18, 3),
 	//Berserker T4
@@ -595,7 +595,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, ENDLESS_RAGE, BERSERKING_STAMINA, ENRAGED_CATALYST);
 				break;
 			case GLADIATOR:
-				Collections.addAll(tierTalents, CLEAVE, LETHAL_DEFENSE, ENHANCED_COMBO);
+				Collections.addAll(tierTalents, CLEAVE, FINALBLOW, ENHANCED_COMBO);
 				break;
 			case BATTLEMAGE:
 				Collections.addAll(tierTalents, EMPOWERED_STRIKE, MYSTICAL_CHARGE, EXCESS_CHARGE);

@@ -7,6 +7,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.W0502;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSuzuran;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
@@ -169,6 +171,32 @@ public class Nullshield extends Item {
                         detach(curUser.belongings.backpack);
                     }
                     else GLog.h(Messages.get(Nullshield.class, "fail_weapon"));
+                }
+                else if (item instanceof Wand)
+                {
+                    if (Random.Int(4) > 1) {
+                        GLog.h(Messages.get(Nullshield.class, "suc"));
+                        StaffOfSuzuran nya = new StaffOfSuzuran();
+                        nya.identify();
+
+                        int level = item.level();
+                        if (((Wand) item).curseInfusionBonus) level--;
+                        if (level > 0) {
+                            nya.upgrade(level);
+                        } else if (level < 0) {
+                            nya.degrade(-level);
+                        }
+
+                        nya.levelKnown = ((Wand) item).levelKnown;
+                        nya.cursedKnown = ((Wand) item).cursedKnown;
+                        nya.cursed = ((Wand) item).cursed;
+
+                        Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                        item.detach(curUser.belongings.backpack);
+                        detach(curUser.belongings.backpack);
+                    }
+                    else  { curUser.sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Hero.class,"wtf") );
+                        detach(curUser.belongings.backpack);}
                 }
                 else {
 

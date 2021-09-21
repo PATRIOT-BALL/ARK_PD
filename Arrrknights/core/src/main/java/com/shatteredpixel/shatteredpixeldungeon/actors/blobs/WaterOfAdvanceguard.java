@@ -22,6 +22,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nmould;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.DamageWand;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfTime;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
@@ -50,7 +53,13 @@ public class WaterOfAdvanceguard extends WellWater {
         } else if (item instanceof SwordofArtorius || item instanceof WintersScar) {
             item = new PatriotSpear();
             item.identify();
-        } else if (item instanceof Shortsword) {
+        }
+        else if (item instanceof Wand) {
+            if (Random.Int(2) == 0) {
+                item = new StaffOfTime();
+                item.identify();
+            }
+        }else if (item instanceof Shortsword) {
             if (Random.Int(4) < 3){ item = new Firmament();
             item.identify();}
             else {Price = item.value() * 3;
