@@ -31,7 +31,7 @@ public class Urusus_RaiderSprite extends MobSprite {
 
         texture( Assets.Sprites.RAIDER );
 
-        TextureFilm frames = new TextureFilm( texture, 32, 42 );
+        TextureFilm frames = new TextureFilm( texture, 42, 32 );
 
         idle = new Animation( 2, true );
         idle.frames( frames, 0 );
