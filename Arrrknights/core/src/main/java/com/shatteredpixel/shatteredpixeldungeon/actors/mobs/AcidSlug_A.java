@@ -84,10 +84,10 @@ public class AcidSlug_A extends Mob implements Callback {
 
         if (hit( this, enemy, true )) {
 
-            int dmg = Random.NormalIntRange( 30, 42 );
+            int dmg = Random.NormalIntRange( 30, 36 );
             enemy.damage( dmg, new AcidSlug_A.AcidBolt() );
             if (enemy.isAlive()) {
-                Buff.affect(enemy, Ooze.class);
+                Buff.affect(enemy, Ooze.class).set(Ooze.DURATION);
             }
 
             if (enemy == Dungeon.hero && !enemy.isAlive()) {

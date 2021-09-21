@@ -9,15 +9,18 @@ import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Fire;
+import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Freezing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ParalyticGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Frost;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -70,6 +73,7 @@ public class Pompeii extends Mob {
         immunities.add(Terror.class);
         immunities.add(Silence.class);
         immunities.add(Blindness.class);
+        immunities.add(Freezing.class);
         immunities.add(ScrollOfPsionicBlast.class);
     }
 
@@ -129,6 +133,14 @@ public class Pompeii extends Mob {
                 GameScene.updateMap(this.pos);
                 CellEmitter.get(this.pos).burst(Speck.factory(Speck.STEAM), 10);
             }
+        else if (Dungeon.level.map[this.pos] == Terrain.WATER && phase == 3) {
+            this.damage(6, this);
+        }
+
+        if (this.buffs(Frost.class) != null) {
+            Buff.append(this, Vulnerable.class, 15f);
+            Buff.detach(this, Frost.class);
+        }
 
         if (phase == 0) {
             if (Dungeon.hero.viewDistance >= Dungeon.level.distance(pos, Dungeon.hero.pos)) {

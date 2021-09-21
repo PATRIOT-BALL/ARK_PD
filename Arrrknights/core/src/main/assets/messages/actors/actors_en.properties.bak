@@ -816,7 +816,7 @@ actors.mobs.npcs.prts.hint9=Hint(9/13)\n\nIf you put a _crossbow that summons cr
 actors.mobs.npcs.prts.hint10=Hint(10/13)\n\nYou can change the quickslot by long-clicking the backpack button.
 actors.mobs.npcs.prts.hint11=Hint(11/13)\n\n_Fire wand_ can be combined with something to make a A fire tool that destroys traps
 actors.mobs.npcs.prts.hint12=Hint(12/13)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
-actors.mobs.npcs.prts.hint13=Hint(13/13)\n\n  _Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
+actors.mobs.npcs.prts.hint13=Hint(13/13)\n\n_Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
 
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her...
