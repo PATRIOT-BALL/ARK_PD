@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Frost;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -73,6 +74,7 @@ public class Pompeii extends Mob {
         immunities.add(Terror.class);
         immunities.add(Silence.class);
         immunities.add(Blindness.class);
+        immunities.add(Frost.class);
         immunities.add(Freezing.class);
         immunities.add(ScrollOfPsionicBlast.class);
     }
@@ -137,11 +139,6 @@ public class Pompeii extends Mob {
             this.damage(6, this);
         }
 
-        if (this.buffs(Frost.class) != null) {
-            Buff.append(this, Vulnerable.class, 15f);
-            Buff.detach(this, Frost.class);
-        }
-
         if (phase == 0) {
             if (Dungeon.hero.viewDistance >= Dungeon.level.distance(pos, Dungeon.hero.pos)) {
                 Dungeon.observe();
@@ -162,8 +159,6 @@ public class Pompeii extends Mob {
             Dungeon.win(Amulet.class);
             Dungeon.deleteGame(GamesInProgress.curSlot, true);
             Game.switchScene(SurfaceScene.class);
-
-            return true;
         }
 
         if (phase == 0) {
@@ -406,17 +401,7 @@ public class Pompeii extends Mob {
     }
 
     @Override
-    public void die(Object cause) {
-        super.die(cause);
-
-        Dungeon.level.unseal();
-    }
-
-    @Override
-    public boolean isAlive() {
-        if (phase == 3 && HP < 1) return false;
-        return true;
-    }
+    public boolean isAlive() { return true; }
 
 
     @Override
