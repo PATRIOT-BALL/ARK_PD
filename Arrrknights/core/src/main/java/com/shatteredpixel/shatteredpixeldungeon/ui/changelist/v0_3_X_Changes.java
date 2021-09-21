@@ -84,11 +84,12 @@ public class v0_3_X_Changes {
                 "_R4C_의 사격 공격의 최소 피해량이 소폭 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 상향",
-                "_스태프 오브 브리즈_의 안개 지속시간이 상승했습니다.." + "\n\n" +
+                "_스태프 오브 브리즈_의 안개 지속시간이 상승했습니다." + "\n\n" +
                 "_스태프 오브 레나_의 기본 피해량이 2-6에서 _4-6_으로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
         "_연계 전문화_의 _치명적인 방어_ 특성의 이름이 _최후의 일격_으로 변경되었으며, 효과 발동시 아츠 기록장치를 충전하는 효과가 추가되었습니다." + "\n\n" +
+                "_암살 전문화_의 _SWEEP_ 특성에 +2 효과로, 효과 발동시 아츠 시야 획득이 추가되었습니다." + "\n\n" +
         "_그레이스롯_의 _폭발 화살_ 특성의 피해 배율이 80~120%에서 _100~150%_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 상향",
