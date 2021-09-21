@@ -44,7 +44,7 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
                 "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다." + "\n\n" +
                 "_이세계 전술장비_ : 100%충전 후 발동시 미보를 1개 생성하는 유물입니다. 미보 및 파생 인형들의 피해량이 상승하며, 투척시 즉시 폭발하고 마비를 부여합니다." + "\n\n" +
-                "_스태프 오브 스즈란_, _스태프 오브 모스티마_... 가 실장 계획입니다만 Test버전에선 제외되었습니다."));
+                "_특별한 스태프_ 2종이 추가되었습니다."));
 
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
