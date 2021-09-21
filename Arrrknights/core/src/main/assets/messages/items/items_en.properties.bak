@@ -1339,7 +1339,7 @@ items.rings.ringofsunlight.stats=When worn, this ring will increase arts recorde
 items.rings.ringofsunlight.typical_stats=When worn, this ring will typically increase arts recorder`s efficiency by _%s%%_.
 items.rings.ringofsunlight.desc=This ring affects the user's mental strength, allowing him to use the Arts Recorder more efficiently. cursed rings reduce effectiveness.
 
-items.rings.ringofamplified.name=ring of sunlight
+items.rings.ringofamplified.name=ring of amplified
 items.rings.ringofamplified.stats=When worn, this ring will increase arts recorder`s wand`s damage.
 items.rings.ringofamplified.desc=This ring raises the wearer's arts aptitude increases the damage of the wand.cursed rings reduce wand damage.
 
@@ -1758,10 +1758,10 @@ items.wands.sp.staffofsuzuran.stats_desc=This wand`s arts deals _%1$d-%2$d damag
 items.wands.sp.staffofsuzuran.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of foxfire, Charges the Arts Recorder.
 
 items.wands.sp.staffoftime.name=staff of mostima
-items.wands.sp.staffoftime.staff_name=ring of time
+items.wands.sp.staffoftime.staff_name=ring of justice
 items.wands.sp.staffoftime.desc=_"Beneath the gaze of justice, evil tumbles into the abyss."_\n\nThis __special wand is Has the power of operator Mostima.
 items.wands.sp.staffoftime.stats_desc=This wand`s extensive arts deals _%1$d-%2$d damage._ Enemies hit are knocked back.
-items.wands.sp.staffoftime.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of time, Charges the Arts Recorder.
+items.wands.sp.staffoftime.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of justice, Charges the Arts Recorder.
 
 
 ###wands
