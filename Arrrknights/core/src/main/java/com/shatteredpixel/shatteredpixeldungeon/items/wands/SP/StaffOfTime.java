@@ -118,8 +118,8 @@ public class StaffOfTime extends DamageWand {
                 curUser.sprite,
                 bolt.path.get(dist/2),
                 callback );
-        Sample.INSTANCE.play( Assets.Sounds.HIT_RINGOUT );
-        Sample.INSTANCE.play( Assets.Sounds.TIMESTOP );
+        Sample.INSTANCE.play( Assets.Sounds.HIT_SPLASH );
+        Sample.INSTANCE.play( Assets.Sounds.HIT_SPLASH );
     }
 
 }
