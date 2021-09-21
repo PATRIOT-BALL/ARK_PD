@@ -95,7 +95,7 @@ public class Scimitar extends MeleeWeapon {
 				} else {
 					Buff.affect(Dungeon.hero, Paralysis.class, 2f);
 					cursedKnown = true;
-					charge -= 45;
+					charge -= 40;
 				}
 			}
 		}
