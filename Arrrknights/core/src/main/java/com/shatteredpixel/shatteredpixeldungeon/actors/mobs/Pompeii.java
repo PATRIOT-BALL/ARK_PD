@@ -130,7 +130,7 @@ public class Pompeii extends Mob {
     @Override
     protected boolean act() {
         if (this.buff(Barrier.class) != null && Dungeon.level.map[this.pos] == Terrain.WATER) {
-            this.damage(100, this);
+            this.damage(200, this);
                 Level.set(this.pos, Terrain.EMPTY);
                 GameScene.updateMap(this.pos);
                 CellEmitter.get(this.pos).burst(Speck.factory(Speck.STEAM), 10);
