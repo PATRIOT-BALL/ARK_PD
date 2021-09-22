@@ -92,6 +92,8 @@ public class Assets {
 		public static final String LOADING_CAVES	= "interfaces/loading_caves.png";
 		public static final String LOADING_CITY	    = "interfaces/loading_city.png";
 		public static final String LOADING_HALLS	= "interfaces/loading_halls.png";
+		public static final String LOADING_RHODOS	= "interfaces/loading_rhodos.png";
+		public static final String LOADING_SIESTA	= "interfaces/loading_siesta.png";
 
 		public static final String BUFFS_SMALL	= "interfaces/buffs.png";
 		public static final String BUFFS_LARGE	= "interfaces/large_buffs.png";

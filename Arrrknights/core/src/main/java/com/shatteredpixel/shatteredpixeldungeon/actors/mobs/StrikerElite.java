@@ -4,12 +4,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpinnerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Striker_EliteSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ThrowerSprite;
 import com.watabou.utils.Random;
 
 public class StrikerElite extends Striker {
     {
-        spriteClass = ThrowerSprite.class;
+        spriteClass = Striker_EliteSprite.class;
 
         HP = HT = 130;
         defenseSkill = 20;
