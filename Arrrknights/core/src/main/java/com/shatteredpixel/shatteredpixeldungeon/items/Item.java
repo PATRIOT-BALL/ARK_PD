@@ -621,7 +621,8 @@ public class Item implements Bundlable {
 
 								berserk = curUser.buff(Berserk.class);
 								Buff.affect(enemy, Amok.class, 5f);
-								berserk.damage(curUser.HT);
+								int berserkbounsdmg = curUser.HT * Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5;
+								berserk.damage(curUser.HT + berserkbounsdmg);
 								Buff.affect(curUser, RageThrowCooldown.class, RageThrowCooldown.DURATION);
 								Buff.affect(curUser, MagicImmune.class, 3f);
 							}

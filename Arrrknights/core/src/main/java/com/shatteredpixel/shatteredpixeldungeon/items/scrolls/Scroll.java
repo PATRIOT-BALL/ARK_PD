@@ -202,11 +202,6 @@ public abstract class Scroll extends Item {
 		curUser.busy();
 		((HeroSprite)curUser.sprite).read();
 
-		if (curUser.hasTalent(Talent.EMPOWERING_SCROLLS)){
-			Buff.affect(curUser, ScrollEmpower.class, 45f);
-			updateQuickslot();
-		}
-
 		if (curUser.hasTalent(Talent.RECALL_MEMORY)) {
 			SkillBook Book = curUser.belongings.getItem(SkillBook.class);
 			if (Book != null) {

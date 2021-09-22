@@ -200,9 +200,10 @@ public class Scimitar extends MeleeWeapon {
 	protected void onZap( Ballistica bolt ) {
 		Char ch = Actor.findChar( bolt.collisionPos );
 		if (ch != null) {
-			ch.damage(Random.Int(3, 4+buffedLvl() * 2), this);
-			ch.damage(Random.Int(3, 4+buffedLvl() * 2), this);
-			ch.damage(Random.Int(3, 4+buffedLvl() * 2), this);
+			int dmg = Random.Int(3, 4+buffedLvl() * 2);
+			ch.damage(dmg, this);
+			ch.damage(dmg, this);
+			ch.damage(dmg, this);
 
 			ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
 

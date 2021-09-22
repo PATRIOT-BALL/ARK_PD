@@ -96,13 +96,13 @@ public enum Talent {
 	//Mage T2
 	ENERGIZING_MEAL(36), ENERGIZING_UPGRADE(37), WAND_PRESERVATION(38), ARCANE_VISION(39), SHIELD_BATTERY(40),
 	//Mage T3
-	EMPOWERING_SCROLLS(41, 3), ALLY_WARP(42, 3),
+	PSYCHOANALYSIS(41, 3), ALLY_WARP(42, 3),
 	//Battlemage T3
 	EMPOWERED_STRIKE(43, 3), MYSTICAL_CHARGE(44, 3), EXCESS_CHARGE(45, 3),
 	//Warlock T3
 	SOUL_EATER(46, 3), SOUL_SIPHON(47, 3), NECROMANCERS_MINIONS(48, 3),
 	//Mage T4
-	PSYCHOANALYSIS(49,3), RHODES(50,3),
+	LIBERATION(49,3), RHODES(50,3),
 	//Battlemage T4
 	AZURE_FURY(51,3),
 	//Warlokc T4
@@ -225,6 +225,11 @@ public enum Talent {
 		if (talent == THIEFS_INTUITION && hero.pointsInTalent(THIEFS_INTUITION) == 1){
 			if (hero.belongings.ring instanceof Ring) hero.belongings.ring.setKnown();
 			if (hero.belongings.misc instanceof Ring) ((Ring) hero.belongings.misc).setKnown();
+		}
+
+		if (talent == LIBERATION && Dungeon.hero.belongings.getItem(MagesStaff.class) != null) {
+			MagesStaff Item = Dungeon.hero.belongings.getItem(MagesStaff.class);
+			Item.updateWand(false);
 		}
 
 		if (talent == FARSIGHT){
@@ -535,7 +540,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, HOLD_FAST, STRONGMAN);
 				break;
 			case MAGE:
-				Collections.addAll(tierTalents, EMPOWERING_SCROLLS, ALLY_WARP);
+				Collections.addAll(tierTalents, PSYCHOANALYSIS, ALLY_WARP);
 				break;
 			case ROGUE:
 				Collections.addAll(tierTalents, ENHANCED_RINGS, LIGHT_CLOAK);
@@ -558,7 +563,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, TACTICAL_SHIELD, CHAINSAW_EXTEND);
 				break;
 			case MAGE:
-				Collections.addAll(tierTalents, PSYCHOANALYSIS, RHODES);
+				Collections.addAll(tierTalents, LIBERATION, RHODES);
 				break;
 			case ROGUE:
 				Collections.addAll(tierTalents, ASSASSINSCREED, CLOCK_UPGRADE);

@@ -339,10 +339,14 @@ public class MagesStaff extends MeleeWeapon {
 	
 	public void updateWand(boolean levelled){
 		if (wand != null) {
+			int Bounscharge = 0;
+			if (Dungeon.hero.hasTalent(Talent.LIBERATION)) {
+				Bounscharge = Dungeon.hero.pointsInTalent(Talent.LIBERATION);
+			}
 			int curCharges = wand.curCharges;
 			wand.level(level());
 			//gives the wand one additional max charge
-			wand.maxCharges = Math.min(wand.maxCharges + 1, 10);
+			wand.maxCharges = Math.min(wand.maxCharges + 1 + Bounscharge, 10 + Bounscharge);
 			wand.curCharges = Math.min(curCharges + (levelled ? 1 : 0), wand.maxCharges);
 			updateQuickslot();
 		}
