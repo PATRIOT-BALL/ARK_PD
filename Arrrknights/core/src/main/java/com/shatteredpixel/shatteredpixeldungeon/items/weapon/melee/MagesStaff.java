@@ -395,11 +395,13 @@ public class MagesStaff extends MeleeWeapon {
 	}
 
 	private static final String WAND = "wand";
+	private static final String MAXCHARGE = "charge";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		bundle.put(WAND, wand);
+		bundle.put(MAXCHARGE, wand.maxCharges);
 	}
 
 	@Override
@@ -407,7 +409,7 @@ public class MagesStaff extends MeleeWeapon {
 		super.restoreFromBundle(bundle);
 		wand = (Wand) bundle.get(WAND);
 		if (wand != null) {
-			wand.maxCharges = Math.min(wand.maxCharges + 1, 10);
+			wand.maxCharges = bundle.getInt(MAXCHARGE);
 		}
 	}
 
