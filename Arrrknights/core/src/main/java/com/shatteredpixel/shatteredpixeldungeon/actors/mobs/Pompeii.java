@@ -129,6 +129,19 @@ public class Pompeii extends Mob {
 
     @Override
     protected boolean act() {
+        if (phase == 3 && HP < 1) {
+            Badges.validateVictory();
+            Badges.validateChampion(Challenges.activeChallenges());
+            Badges.validateChampion_char(Challenges.activeChallenges());
+            Badges.saveGlobal();
+
+            Badges.silentValidateHappyEnd();
+            Badges.validatesiesta2();
+            Dungeon.win(Amulet.class);
+            Dungeon.deleteGame(GamesInProgress.curSlot, true);
+            Game.switchScene(SurfaceScene.class);
+        }
+
         if (this.buff(Barrier.class) != null && Dungeon.level.map[this.pos] == Terrain.WATER) {
             this.damage(200, this);
                 Level.set(this.pos, Terrain.EMPTY);
@@ -146,19 +159,6 @@ public class Pompeii extends Mob {
             if (Dungeon.level.heroFOV[pos]) {
                 notice();
             }
-        }
-
-        if (phase == 3 && HP < 1) {
-            Badges.validateVictory();
-            Badges.validateChampion(Challenges.activeChallenges());
-            Badges.validateChampion_char(Challenges.activeChallenges());
-            Badges.saveGlobal();
-
-            Badges.silentValidateHappyEnd();
-            Badges.validatesiesta2();
-            Dungeon.win(Amulet.class);
-            Dungeon.deleteGame(GamesInProgress.curSlot, true);
-            Game.switchScene(SurfaceScene.class);
         }
 
         if (phase == 0) {
