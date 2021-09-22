@@ -27,10 +27,10 @@ public class EmpireDrone extends Mob {
     {
         spriteClass = Imperial_artillerySprite.class;
 
-        HP = HT = 130;
+        HP = HT = 180;
         defenseSkill = 18;
 
-        EXP = 20;
+        EXP = 35;
         maxLvl = 28;
 
         loot = new Stylus();
