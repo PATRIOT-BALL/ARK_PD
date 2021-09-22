@@ -109,7 +109,7 @@ public class HeroSprite extends CharSprite {
 		die = new Animation( 10, false );
 		die.frames( film, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 );
 		
-		attack = new Animation( 18, false );
+		attack = new Animation( 19, false );
 		attack.frames( film, 9, 10, 11, 12, 13, 14, 15, 16, 17 );
 
 		Sattack = new Animation(15, false);

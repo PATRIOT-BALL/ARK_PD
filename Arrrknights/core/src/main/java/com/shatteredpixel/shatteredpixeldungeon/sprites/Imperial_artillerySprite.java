@@ -31,7 +31,7 @@ public class Imperial_artillerySprite extends MobSprite {
 
         texture( Assets.Sprites.IMPERIAL_ARTILLERY );
 
-        TextureFilm frames = new TextureFilm( texture, 36, 46 );
+        TextureFilm frames = new TextureFilm( texture, 50, 50 );
 
         idle = new Animation( 2, true );
         idle.frames( frames, 0, 0, 0 );
@@ -43,7 +43,7 @@ public class Imperial_artillerySprite extends MobSprite {
         attack.frames( frames, 0 );
 
         die = new Animation( 10, false );
-        die.frames( frames, 0 );
+        die.frames( frames, 1 );
 
         play( idle );
     }
