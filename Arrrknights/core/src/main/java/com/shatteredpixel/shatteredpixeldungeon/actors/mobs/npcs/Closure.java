@@ -110,8 +110,6 @@ public class Closure extends NPC {
                                         }});}
                                 break;
                             case 5: // 제껄룩 스킨
-                                sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
-                                /*
                                 if (Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI)) {Badges.validatejessiskin();}
                                     Dungeon.hero.CharSkin = Hero.JESSI;
@@ -122,7 +120,7 @@ public class Closure extends NPC {
                                         @Override
                                         public void call() {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin6", Dungeon.hero.heroClass.title())));
-                                        }});}*/
+                                        }});}
                                 break;
                             case 6: // 꼬지리 스킨
                                 sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
