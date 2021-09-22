@@ -151,7 +151,7 @@ public class Badges {
 		GREY_CHAMPION1              ( 85, true ),
 		ROSE_CHAMPION1              ( 86, true ),
 
-		GOLD_COLLECTED_5              ( 89, true ),
+		GOLD_COLLECTED_5              ( 89 ),
 
 		SIESTA_PART1              ( 90 ),
 
