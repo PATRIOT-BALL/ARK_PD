@@ -54,6 +54,8 @@ public class RingKit extends Item {
                 if (item != null) {
                     if (item instanceof Ring && item != Dungeon.hero.belongings.ring && item != Dungeon.hero.belongings.misc){
 
+                        RingKit.this.upgrade((Ring) item);
+
                         final Ring rings[] = new Ring[2];
 
                         do { rings[0] = (Ring)Generator.random( Generator.Category.RING );}
@@ -101,13 +103,8 @@ public class RingKit extends Item {
                                         }
 
                                         n.identify();
-                                        RingKit.this.upgrade((Ring) n);
-
                                         Sample.INSTANCE.play(Assets.Sounds.EVOKE);
                                     }
-                                }
-                                else {
-                                    RingKit.this.upgrade((Ring) item);
                                 }
                             }
 
@@ -118,7 +115,7 @@ public class RingKit extends Item {
 
                 }
                   else new RingKit().collect();
-            }  else new RingKit().collect();}
+            } else new RingKit().collect();}
         };
 
 
