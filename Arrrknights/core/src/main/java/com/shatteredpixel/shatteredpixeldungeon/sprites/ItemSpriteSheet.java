@@ -230,7 +230,7 @@ public class ItemSpriteSheet {
 	public static final int SHORTSWORD      = WEP_TIER2+0;
 	public static final int HAND_AXE        = WEP_TIER2+1;
 	public static final int SPEAR           = WEP_TIER2+2;
-	public static final int QUARTERSTAFF    = WEP_TIER2+3;
+	public static final int NEARL_AXE = WEP_TIER2+3;
 	public static final int DIRK            = WEP_TIER2+4;
 	public static final int ENFILD           = WEP_TIER2+5;
 	public static final int MIDSWORD           = WEP_TIER2+6;
@@ -239,7 +239,7 @@ public class ItemSpriteSheet {
 		assignItemRect(SHORTSWORD,      16, 16);
 		assignItemRect(HAND_AXE,        16, 16);
 		assignItemRect(SPEAR,           16, 16);
-		assignItemRect(QUARTERSTAFF,    16, 16);
+		assignItemRect(NEARL_AXE,    16, 16);
 		assignItemRect(DIRK,            16, 16);
 		assignItemRect(ENFILD,            16, 16);
 		assignItemRect(MIDSWORD,            16, 16);

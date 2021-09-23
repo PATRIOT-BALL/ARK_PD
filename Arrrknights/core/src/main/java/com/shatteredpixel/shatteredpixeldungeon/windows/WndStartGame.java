@@ -336,6 +336,11 @@ public class WndStartGame extends Window {
 							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.TRIDENT, null));
 							heroMisc.icon(new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16 ));
 							break;
+						case NEARL:
+							heroItem.icon(new ItemSprite(ItemSpriteSheet.ARTIFACT_HOLDER, null));
+							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.WEAPON_HOLDER, null));
+							heroMisc.icon(new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16 ));
+							break;
 					}
 
 					layout();

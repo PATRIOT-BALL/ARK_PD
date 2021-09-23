@@ -182,6 +182,9 @@ public class StartScene extends PixelScene {
 						case ROSECAT:
 							hero = new Image(Icons.ROSEMARI.get());
 							break;
+						case NEARL:
+							hero = new Image(Icons.NEARL.get());
+							break;
 					}
 					add(hero);
 					
@@ -210,6 +213,9 @@ public class StartScene extends PixelScene {
 							break;
 						case ROSECAT:
 							hero = new Image(Icons.ROSEMARI.get());
+							break;
+						case NEARL:
+							hero = new Image(Icons.NEARL.get());
 							break;
 					}
 

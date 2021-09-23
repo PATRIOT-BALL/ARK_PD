@@ -48,6 +48,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Foresight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Fury;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.HoldFast;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
@@ -56,6 +57,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LanceCharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RadiantKnight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Regeneration;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SeethingBurst;
@@ -137,6 +139,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SealOfLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.CrystalKey;
@@ -257,7 +260,7 @@ public class Hero extends Char {
 
     public float awareness;
 
-    public int lvl = 1;
+    public int lvl = 31;
     public int exp = 0;
 
     public int HTBoost = 0;
@@ -1274,12 +1277,24 @@ public class Hero extends Char {
 
         damage = Talent.onAttackProc(this, enemy, damage);
 
-        if (this.hasTalent(Talent.RHODES_CAT)) {
+        if (hasTalent(Talent.RHODES_CAT)) {
             AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
             if (Gear != null)
                 if (Gear.charge > 0) {
                     damage *= 1f + (float) this.pointsInTalent(Talent.RHODES_CAT) * 0.15f;
                 }
+        }
+
+        if (buff(RadiantKnight.class) != null) {
+            damage *= 1.4f;
+
+            // 난입 특성
+            if (hasTalent(Talent.PHASERUSH)) {
+                SealOfLight Seal = this.belongings.getItem(SealOfLight.class);
+                if (Seal != null)
+                    Seal.charge(this, pointsInTalent(Talent.PHASERUSH));
+                Seal.updateQuickslot();
+            }
         }
 
         switch (subClass) {
@@ -1303,12 +1318,22 @@ public class Hero extends Char {
                     });
                 }
                 break;
+            case KNIGHT:
+                if (buff(Haste.class) != null)
+                    damage *= 1.25f;
+                break;
             default:
         }
 
         float BounsDamage = 0;
         if (hasTalent(Talent.SAVIOR_BELIEF) && enemy.buff(Roots.class) != null || enemy.buff(Paralysis.class) != null) {
             BounsDamage = damage * (pointsInTalent(Talent.SAVIOR_BELIEF) * 0.2f);
+        }
+
+        if (hasTalent(Talent.EXORCISM)) {
+            if (enemy.properties().contains(Property.SARKAZ)) {
+                BounsDamage += pointsInTalent(Talent.EXORCISM)*2;
+            }
         }
 
         if (Dungeon.hero.hasTalent(Talent.SAVIOR_BELIEF)) {
@@ -1489,6 +1514,11 @@ public class Hero extends Char {
                 dmg = 0;
             }
             if (buff(Bonk.BonkBuff.class) != null) dmg = 0;
+        }
+
+        if (buff(RadiantKnight.class) != null) {
+            float redu = 0.8f;
+            dmg *= redu;
         }
 
 
@@ -1892,12 +1922,21 @@ public class Hero extends Char {
         }
 
         if (ankh != null && ankh.isBlessed()) {
-            this.HP = HT / 10;
+            int AnkhHP = HT/10;
+            int barrior = this.HT/2;
+            if (hasTalent(Talent.RESURGENCE)) {
+                AnkhHP *= 1 + pointsInTalent(Talent.RESURGENCE) * 3;
+                barrior *= 1f + (pointsInTalent(Talent.RESURGENCE) * 0.5f);
+                Buff.affect(this, RadiantKnight.class, RadiantKnight.DURATION);
+                GameScene.flash( 0x80FFFFFF );
+            }
+
+            HP = AnkhHP;
 
             //ensures that you'll get to act first in almost any case, to prevent reviving and then instantly dieing again.
             PotionOfHealing.cure(this);
             Buff.detach(this, Paralysis.class);
-            Buff.affect(this, Barrier.class).incShield(this.HT / 2);
+            Buff.affect(this, Barrier.class).incShield(barrior);
             Buff.prolong(this, BlobImmunity.class, BlobImmunity.DURATION / 4);
             spend(-cooldown());
 

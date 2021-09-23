@@ -178,7 +178,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
@@ -395,19 +395,19 @@ public class Generator {
                     Gloves.class,
                     Dagger.class,
                     MagesStaff.class,
-                    EX42.class
+                    EX42.class,
+                    NEARL_AXE.class
             };
-            WEP_T1.probs = new float[]{1, 1, 1, 0, 1};
+            WEP_T1.probs = new float[]{1, 1, 1, 0, 1, 0};
 
             WEP_T2.classes = new Class<?>[]{
                     Shortsword.class,
                     HandAxe.class,
                     Spear.class,
-                    Quarterstaff.class,
                     Dirk.class,
                     MidnightSword.class,
             };
-            WEP_T2.probs = new float[]{4, 5, 5, 4, 4, 4};
+            WEP_T2.probs = new float[]{4, 5, 4, 4, 4};
 
             WEP_T3.classes = new Class<?>[]{
                     Sword.class,

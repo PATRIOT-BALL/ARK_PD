@@ -21,7 +21,6 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.windows;
 
-import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
@@ -69,6 +68,9 @@ public class WndHeroInfo extends WndTabbed {
 				break;
 			case ROSECAT:
 				tabIcon = new ItemSprite(ItemSpriteSheet.ARTIFACT_ROSEMARY, null);
+				break;
+			case NEARL:
+				tabIcon = new ItemSprite(ItemSpriteSheet.NEARL_AXE, null);
 				break;
 		}
 
@@ -169,6 +171,11 @@ public class WndHeroInfo extends WndTabbed {
 				case ROSECAT:
 					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.ARTIFACT_ROSEMARY),
 							new ItemSprite(ItemSpriteSheet.CUTLET),
+							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
+					break;
+				case NEARL:
+					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.NEARL_AXE),
+							new ItemSprite(ItemSpriteSheet.ARTIFACT_HOLDER),
 							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
 					break;
 			}

@@ -278,6 +278,7 @@ public class Assets {
 		public static final String ROGUE	= "splashes/rogue.jpg";
 		public static final String HUNTRESS	= "splashes/huntress.jpg";
 		public static final String ROSECAT	= "splashes/rosemary.png";
+		public static final String NEARL	= "splashes/nearl.png";
 	}
 
 	public static class Sprites {

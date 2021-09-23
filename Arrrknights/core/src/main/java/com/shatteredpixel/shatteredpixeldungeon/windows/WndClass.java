@@ -156,6 +156,9 @@ public class WndClass extends WndTabbed {
 				case ROSECAT:
 					message = HeroSubClass.DESTROYER.desc() + "\n\n" + HeroSubClass.GUARDIAN.desc();
 					break;
+				case NEARL:
+					message = HeroSubClass.KNIGHT.desc() + "\n\n" + HeroSubClass.SAVIOR.desc();
+					break;
 			}
 
 			RenderedTextBlock text = PixelScene.renderTextBlock( 6 );

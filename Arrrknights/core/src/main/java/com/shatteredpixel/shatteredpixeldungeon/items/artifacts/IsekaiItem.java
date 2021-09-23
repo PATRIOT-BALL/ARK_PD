@@ -105,9 +105,9 @@ public class IsekaiItem extends Artifact {
         String desc = super.desc();
 
         if (isEquipped(Dungeon.hero)) {
-            if (cursed)
+            if (cursed) {
                 desc += "\n\n";
-            desc += Messages.get(this, "desc_cursed");
+            desc += Messages.get(this, "desc_cursed");}
         }
         return desc;
     }

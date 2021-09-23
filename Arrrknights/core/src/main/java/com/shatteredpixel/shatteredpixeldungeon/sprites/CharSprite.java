@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.ShieldHalo;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TorchHalo;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SnowParticle;
@@ -80,7 +81,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	protected float shadowOffset    = 0.25f;
 
 	public enum State {
-		BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED, CHILLED, DARKENED, MARKED, HEALING, SHIELDED, TALU_BOSS
+		BURNING, LEVITATING, INVISIBLE, PARALYSED, FROZEN, ILLUMINATED, CHILLED, DARKENED, MARKED, HEALING, SHIELDED, TALU_BOSS, HIKARI
 	}
 	private int stunStates = 0;
 	
@@ -103,6 +104,7 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 	protected Emitter healing;
 	protected Emitter taluboss;
 	protected Emitter taluboss2;
+	protected Emitter hikari;
 	
 	protected IceBlock iceBlock;
 	protected DarkBlock darkBlock;
@@ -412,6 +414,10 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 				taluboss2 = emitter();
 				taluboss2.pour(ShadowParticle.UP, 0.018f);
 				break;
+			case HIKARI:
+				hikari = emitter();
+				hikari.pour(ElmoParticle.FACTORY, 0.03f);
+				break;
 		}
 	}
 	
@@ -477,6 +483,19 @@ public class CharSprite extends MovieClip implements Tweener.Listener, MovieClip
 			case SHIELDED:
 				if (shield != null){
 					shield.putOut();
+				}
+				break;
+			case TALU_BOSS:
+				if (taluboss != null){
+					taluboss.on = false;
+				}
+				if (taluboss2 != null){
+					taluboss2.on = false;
+				}
+				break;
+			case HIKARI:
+				if (hikari != null){
+					hikari.on = false;
 				}
 				break;
 		}

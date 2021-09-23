@@ -383,6 +383,9 @@ actors.buffs.spikesbuff.desc=When attacked, it deals damage proportional to DEF 
 actors.buffs.ragethrowcooldown.name=rage throw cooldown
 actors.buffs.ragethrowcooldown.desc=Rage Throw Cooldown : %s Trun.
 
+actors.buffs.radiantknight.name=radiant knight
+actors.buffs.radiantknight.desc=The power of light surrounds you. Increases damage dealt and damage resistance.\n\nTruns Radiant: %s.
+
 ###hero
 actors.hero.talent.hearty_meal.title=hearty meal
 actors.hero.talent.hearty_meal.desc=_+1:_ Eating heals the Blaze for _2 HP_ when she is below 50% health, and _3 HP_ when he is below 25% health.\n\n_+2:_ Eating heals the Blaze for _3 HP_ when she is below 50% health, and _5 HP_ when he is below 25% health.
@@ -462,8 +465,8 @@ actors.hero.talent.soul_eater.title=Sarkaz Load
 actors.hero.talent.soul_eater.desc=_+1:_ Soul mark grants _0.33 turns_ of satiety for each damage dealt. Soul marked enemies have a _6% chance_ to trigger on-eat effects when they die.\n\n_+2:_ Soul mark grants _0.67 turns_ of satiety for each damage dealt. Soul marked enemies have a _13% chance_ to trigger on-eat effects when they die.\n\n_+3:_ Soul mark grants _1 turn_ of satiety for each damage dealt. Soul marked enemies have a _20% chance_ to trigger on-eat effects when they die.
 actors.hero.talent.necromancers_minions.title=summon illusion
 actors.hero.talent.necromancers_minions.desc=_+1:_ When a soul marked enemy dies, the Amiya has a _14% chance_ to raise them as a soul illusion.\n\n_+2:_ When a soul marked enemy dies, the Amiya has a _28% chance_ to raise them as a soul illusion.\n\n_+3:_ When a soul marked enemy dies, the Amiya has a _42% chance_ to raise them as a soul illusion.
-actors.hero.talent.liberation.title=empowering scrolls
-actors.hero.talent.liberation.desc=_+1:_ When the Amiya reads a scroll, her next wand zap within 45 turns will get _+1 level_.\n\n_+2:_ When the Amiya reads a scroll, her next wand zap within 45 turns will get _+2 levels_.\n\n_+3:_ When the Amiya reads a scroll, her next wand zap within 45 turns will get _+3 levels_.
+actors.hero.talent.liberation.title=liberation
+actors.hero.talent.liberation.desc=_+1:_ Increases the maximum charge of Amiya's Ring by _1._\n\n_+2:_ Increases the maximum charge of Amiya's Ring by _2._\n\n_+3:_ Increases the maximum charge of Amiya's Ring by _3._
 actors.hero.talent.rhodes.title=hospitaller
 actors.hero.talent.rhodes.desc=_+1:_ Using scroll gives you _5_ Arcane Armor. This armor decreases every 15 turns.\n\n_+2:_ Using scroll gives you _10_ Arcane Armor. This armor decreases every 15 turns.\n\n_+3:_ Using scroll gives you _15_ Arcane Armor. This armor decreases every 15 turns.
 actors.hero.talent.azure_fury.title=azure fury
@@ -651,6 +654,10 @@ actors.hero.heroclass.rosecat=Rosmontis
 actors.hero.heroclass.rosecat_unlock=The Rosmontis is a strong arts user, and has a _unique gear_ with ranged attack.\n\nTo unlock her _you eat 25 food in one run._
 actors.hero.heroclass.rosecat_desc=The Rosmontis is strong arts user, and has a _unique gear_ which fire an can attack all locations.gear is Cannot be recharged in the usual way, and you level up by gaining experience, everything is recharged.\n\nRosemontis`s gear is can attack all locations.\n\nThe Rosmontis automatically identifies:\n- Scrolls of Identify\n- Potion Of Levitation
 
+actors.hero.heroclass.nearl=니어
+actors.hero.heroclass.nearl_unlock=부디 그때가 오면, 나와 리즈가 그녀의 등 뒤를 밝혀줄 수 있기를…… 그녀의 그림자가 다시는 고독하지 않도록.
+actors.hero.heroclass.nearl_desc=니어는 카시미어의 기사로, _강력한 빛의 힘_을 사용해 자신을 강화시킵니다.\n\n그녀는 빛의 인장을 사용해 빛의 기사 상태가 되어 자신의 전투력을 일시적으로 상승시킵니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 경험의 물약\n- 저주 해제의 일기장
+
 actors.hero.herosubclass.gladiator=Master
 actors.hero.herosubclass.gladiator_short_desc=_Master_ start a combo. Building combo allows him to use unique combo moves.
 actors.hero.herosubclass.gladiator_desc=A successful attack with a melee weapon allows the _Master Elite_ to start a combo. Building combo allows him to use unique combo moves. Also, there is a chance to get bullets when attacking melee with a Gun.
@@ -681,7 +688,12 @@ actors.hero.herosubclass.destroyer_desc=The _Destroy Elite_ is Maximizes the gea
 actors.hero.herosubclass.guardian=Guardian
 actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
 actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
-
+actors.hero.herosubclass.knight=기사 니어
+actors.hero.herosubclass.knight_short_desc=_기사_\n빠른 기동력과 필살기를 이용해 적들을 연속해서 처치합니다.
+actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속을 얻습니다. 또한, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
+actors.hero.herosubclass.savior=구제자 니어
+actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 방어적인 능력으로 싸웁니다.
+actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 전사 상태일 때 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장 사용시 아츠 면역을 얻습니다.
 
 
 ###npcs
@@ -759,6 +771,7 @@ actors.mobs.npcs.wandmaker.intro_rogue=Did you come here on orders from Kal'tsit
 actors.mobs.npcs.wandmaker.intro_mage=Amiya, Were you also involved in this operation? The situation seems serious. Can I ask you one favor before you leave?
 actors.mobs.npcs.wandmaker.intro_huntress=GreyThroat? did you come here? In place with a lot of infected people... you? I'm glad you've changed your mind. Can you do my favor to save the infected?
 actors.mobs.npcs.wandmaker.intro_rosecat=hello, little cat.
+actors.mobs.npcs.wandmaker.intro_nearl=니어인가? 마침 잘 되었군. 내게 곤란한 일이 생겼는데 잠깐 괜찮나?
 actors.mobs.npcs.wandmaker.intro_1=\n\nI was fighting alone here and I ran into a problem.
 actors.mobs.npcs.wandmaker.intro_dust=I need is _Warhammer._ It's my weapon, but I dropped it during an airborne fall. I'm sure it's over the wooden door somewhere here. But surely there will be an ambush of the enemy. If you get the war hammer,_ return to me quickly._ As long as I have a weapon, these guys are no match for me.
 actors.mobs.npcs.wandmaker.intro_ember=I need is a _device_ from drone. Place 4 guidance lights on the helipad near here and he'll come here. drone is strong, but very vulnerable to cold, so it would be useful to _have a tool to induce cold._

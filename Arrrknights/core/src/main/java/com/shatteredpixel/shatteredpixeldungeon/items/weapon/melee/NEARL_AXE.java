@@ -25,14 +25,14 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Quarterstaff extends MeleeWeapon {
+public class NEARL_AXE extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.QUARTERSTAFF;
+		image = ItemSpriteSheet.NEARL_AXE;
 		hitSound = Assets.Sounds.HIT_CRUSH;
 		hitSoundPitch = 1f;
 
-		tier = 2;
+		tier = 1;
 	}
 
 	@Override
@@ -43,6 +43,6 @@ public class Quarterstaff extends MeleeWeapon {
 
 	@Override
 	public int defenseFactor( Char owner ) {
-		return 2;	//2 extra defence
+		return 1;	//1 extra defence
 	}
 }

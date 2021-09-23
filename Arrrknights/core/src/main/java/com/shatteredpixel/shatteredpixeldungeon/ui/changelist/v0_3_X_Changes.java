@@ -77,6 +77,9 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "더욱 많은 변종",
                 "변종 몬스터의 등장 확률이 2%에서 _3%_ 로 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 삭제",
+        "_카시미어 전쟁도끼_가 게임에서 제외되었습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);

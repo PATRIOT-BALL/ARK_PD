@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.EnhancedRings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
@@ -46,20 +47,24 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.LeafParticle;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SealOfLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.watabou.noosa.audio.Sample;
@@ -157,7 +162,13 @@ public enum Talent {
 	//RoseCat De_T4
 	ESTHESIA(148, 3),
 	//RoseCat Gu_T4
-	SPEED_COMABT(147,3);
+	SPEED_COMABT(147,3),
+
+	//Nearl T1
+	SHINING_MEAL(128),  EXPERIENCE(129), PROTECTIONOFLIGHT(130), KNIGTS_OATH(131),
+	//Nearl T2
+	COMBAT_MEAL(132), PUERLIGHT(133), RESURGENCE(134), PHASERUSH(135), EXORCISM(136);
+	//Nearl T3
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};
@@ -171,6 +182,7 @@ public enum Talent {
 	public static class SilShotCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};
 	public static class BlazeBurstBuff extends CounterBuff{};
+	public static class NearlRemoveCurseCounter extends CounterBuff{};
 
 	int icon;
 	int maxPoints;
@@ -286,6 +298,22 @@ public enum Talent {
 			Buff.affect( hero, Barrier.class).incShield(hero.HT * hero.pointsInTalent(FASTMEAL) / 33);
 		}
 
+		if (hero.hasTalent(SHINING_MEAL)){
+			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
+					Buff.affect(mob, Blindness.class, 1+hero.pointsInTalent(SHINING_MEAL));
+				}
+			}
+		}
+
+		if (hero.hasTalent(COMBAT_MEAL)){
+			SealOfLight Seal = hero.belongings.getItem(SealOfLight.class);
+			if (hero.belongings.getItem(SealOfLight.class) != null)
+			{
+				Seal.charge(hero, hero.pointsInTalent(COMBAT_MEAL) * 3);
+			}
+		}
+
 		if (hero.subClass == HeroSubClass.DESTROYER)
 			Buff.affect(hero, Rose_Force.class, 10f);
 	}
@@ -309,6 +337,11 @@ public enum Talent {
 		// 2x/instant for rogue (see onItemEqupped), also id's type on equip/on pickup
 		if (item instanceof Ring){
 			factor *= 1f + hero.pointsInTalent(THIEFS_INTUITION);
+		}
+
+		//니어전용 감정특
+		if (item instanceof Armor){
+			factor *= 1f + hero.pointsInTalent(EXPERIENCE) * 2;
 		}
 		return factor;
 	}
@@ -400,6 +433,17 @@ public enum Talent {
 			Buff.detach(hero, Blindness.class);
 			Buff.detach(hero, Roots.class);
 		}
+
+		if (hero.hasTalent(PUERLIGHT)){
+			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
+					Ballistica trajectory = new Ballistica(hero.pos, mob.pos, Ballistica.STOP_TARGET);
+					trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
+					WandOfBlastWave.throwChar(mob, trajectory, hero.pointsInTalent(PUERLIGHT)); // 넉백 효과
+				}
+			}
+			Buff.affect(hero, Light.class, 1+hero.pointsInTalent(PUERLIGHT));
+		}
 	}
 
 	public static void onItemEquipped( Hero hero, Item item ){
@@ -413,6 +457,17 @@ public enum Talent {
 				((Ring) item).setKnown();
 			}
 		}
+
+		if (hero.hasTalent(PROTECTIONOFLIGHT) && item instanceof Armor && item.cursed){
+			NearlRemoveCurseCounter counter = Buff.affect(Dungeon.hero, NearlRemoveCurseCounter.class);
+			if (counter.count() < hero.pointsInTalent(PROTECTIONOFLIGHT)) {
+				item.cursed=true;
+				item.cursedKnown = true;
+				counter.countUp(1);
+				hero.sprite.emitter().start( ShadowParticle.UP, 0.05f, 10 );
+			}
+		}
+
 	}
 
 	public static void onItemCollected( Hero hero, Item item ){
@@ -439,7 +494,15 @@ public enum Talent {
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
 		if (Gear != null) {
 			Gear.charge = Math.min(hero.pointsInTalent(NYANGING) + Gear.charge, Gear.chargeCap +4);
-		} }
+		}}
+
+		if (hero.hasTalent(KNIGTS_OATH)){
+			SealOfLight Seal = hero.belongings.getItem(SealOfLight.class);
+			if (hero.belongings.getItem(SealOfLight.class) != null)
+			{
+				Seal.charge(hero, 4 + hero.pointsInTalent(KNIGTS_OATH) * 4);
+			}
+		}
 	}
 
 	public static int onAttackProc( Hero hero, Char enemy, int dmg ){
@@ -505,6 +568,9 @@ public enum Talent {
 			case ROSECAT:
 				Collections.addAll(tierTalents, LIGHTNESSMEAL, SMARTMEALS, GOODMEAT, NYANGING);
 				break;
+			case NEARL:
+				Collections.addAll(tierTalents, SHINING_MEAL, EXPERIENCE, PROTECTIONOFLIGHT, KNIGTS_OATH);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(0).put(talent, 0);
@@ -527,6 +593,9 @@ public enum Talent {
 				break;
 			case ROSECAT:
 				Collections.addAll(tierTalents, FASTMEAL, RECOVERY_UPGRADE, DELICIOUS_FOOD, LOVEMEAT, POWERGEAR);
+				break;
+			case NEARL:
+				Collections.addAll(tierTalents, COMBAT_MEAL, PUERLIGHT, RESURGENCE, PHASERUSH, EXORCISM);
 				break;
 		}
 		for (Talent talent : tierTalents){

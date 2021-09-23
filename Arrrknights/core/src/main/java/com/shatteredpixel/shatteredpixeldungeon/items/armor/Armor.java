@@ -438,7 +438,17 @@ public class Armor extends EquipableItem {
 			availableUsesToID = Math.min(USES_TO_ID/2f, availableUsesToID + levelPercent * USES_TO_ID);
 		}
 	}
-	
+
+	@Override
+	public boolean doPickUp(Hero hero) {
+		if (hero.hasTalent(Talent.EXPERIENCE)) {
+			if (hero.pointsInTalent(Talent.EXPERIENCE) == 2) {
+				this.cursedKnown=true;
+			}
+		}
+		return super.doPickUp(hero);
+	}
+
 	@Override
 	public String name() {
 		return glyph != null && (cursedKnown || !glyph.curse()) ? glyph.name( super.name() ) : super.name();

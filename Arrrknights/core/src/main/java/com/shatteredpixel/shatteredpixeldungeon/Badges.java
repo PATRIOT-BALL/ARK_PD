@@ -58,6 +58,7 @@ public class Badges {
 		MASTERY_ROGUE,
 		MASTERY_HUNTRESS,
 		MASTERY_ROSECAT,
+		MASTERY_NEARL,
 
 		//bronze
 		UNLOCK_MAGE                 ( 1 ),

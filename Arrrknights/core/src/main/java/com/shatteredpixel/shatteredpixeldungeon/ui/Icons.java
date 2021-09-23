@@ -381,6 +381,8 @@ public enum Icons {
 			return get( HUNTRESS );
 		case ROSECAT:
 			return get( ROSEMON );
+		case NEARL:
+			return get( NEARL );
 		default:
 			return null;
 		}
