@@ -46,6 +46,9 @@ public class v0_3_X_Changes {
                 "_이세계 전술장비_ : 100%충전 후 발동시 미보를 1개 생성하는 유물입니다. 미보 및 파생 인형들의 피해량이 상승하며, 투척시 즉시 폭발하고 마비를 부여합니다." + "\n\n" +
                 "_특별한 스태프_ 2종이 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARKPD), "식재료",
+                "_식재료_ 아이템이 추가되었습니다. 이 아이템들은 직접 섭취할 순 없지만, 가공소에서 조합 요리를 만드는데 활용할 수 있습니다!"));
+
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);

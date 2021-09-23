@@ -968,6 +968,26 @@ items.food.sandvich.name=샌드비치
 items.food.sandvich.desc=샌드비치는 날 강하게 해주지!\n미하일이 좋아하는 이 음식은 포만감이 적지만 섭취시 체력을 회복할 수 있습니다.\n\n이 샌드비치는 앞으로 _%d_ 번 먹을 수 있을 것 같습니다.
 
 
+## 재료
+
+items.food.ingredients.blackpepper.name=후추
+items.food.ingredients.blackpepper.desc=Valeu a pena? Tudo vale a pena\n\n어느 세계에선 이 향신료가 역사를 바꿧다고도 합니다.
+
+items.food.ingredients.solt.name=소금
+items.food.ingredients.solt.desc=조미료의 기초이자 기초.
+
+items.food.ingredients.sugarflower.name=달콤달콤 꽃
+items.food.ingredients.sugarflower.desc=설탕 대신 쓸 수 있을 것 같습니다.
+
+
+## 가공 요리 (식재료 사용 요리)
+
+items.food.cooking.honeybread.name=허니버터빵
+items.food.cooking.honeybread.desc=매우 달콤한 빵입니다. 포만감은 일반적인 빵과 같지만, 섭취시 축복 상태를 얻습니다.
+
+items.food.cooking.notbarfood.name=술안주 절대 아님
+items.food.cooking.notbarfood.desc=같이 마실만한 뭔가가 있다면...이런, 디오나가 째려봐!\n\n섭취시 체력을 소량 회복하고 아츠 면역을 얻습니다.\n\n이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다.
+
 
 ##journal items
 items.journal.documentpage.name=찢긴 쪽지
@@ -1754,6 +1774,12 @@ items.wands.sp.staffofsuzuran.staff_name=여우불의 흑요석 반지
 items.wands.sp.staffofsuzuran.desc=_"박사님, 제 도움이 필요하신가요? 공부라면 나중에 해도 괜찮으니까..."_\n\n이 _특별한_ 스태프는 스즈란 대원의 능력이 반영되었습니다.
 items.wands.sp.staffofsuzuran.stats_desc=이 에너지에 닿은 적은 _%1$d-%2$d_의 피해를 받습니다. 만약 적중당한 적이 잠든 상태라면, 더욱 깊은 잠에 빠져들게 만듭니다.
 items.wands.sp.staffofsuzuran.bmage_desc=_아미야_ 가 여우불의 흑요석 반지로 적을 공격하면 아츠 기록장치의 SP를 충전합니다.
+
+items.wands.sp.staffoftime.name=스태프 오브 모스티마
+items.wands.sp.staffoftime.staff_name=질서의 흑요석 반지
+items.wands.sp.staffoftime.desc=_"정의 아래 악은 심연으로 추락할지니."_\n\n이 _특별한_ 스태프는 모스티마 대원의 능력이 반영되었습니다.
+items.wands.sp.staffoftime.stats_desc=이 스태프는 방사형 에너지를 발사하며, 닿은 적들에게 _%1$d-%2$d_의 피해를 입히고 밀쳐냅니다.
+items.wands.sp.staffoftime.bmage_desc=_아미야_ 가 질서의 흑요석 반지로 적을 공격하면 아츠 기록장치의 SP를 충전합니다.
 
 
 

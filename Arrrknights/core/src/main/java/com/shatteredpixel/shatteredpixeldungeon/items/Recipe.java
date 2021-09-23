@@ -29,6 +29,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.Blandfruit;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatPie;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.brews.BlizzardBrew;
@@ -207,7 +209,8 @@ public abstract class Recipe {
             new StaffKit.Recipe(),
             new ScrollOfWarp.Recipe(),
             new NormalMagazine.Recipe(),
-            new UpMagazine.Recipe()
+            new UpMagazine.Recipe(),
+            new HoneyBread.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{
@@ -216,7 +219,8 @@ public abstract class Recipe {
             new ExoticScroll.ScrollToExotic(),
             new StewedMeat.threeMeat(),
             new MeatPie.Recipe(),
-            new Sandvich.Recipe()
+            new Sandvich.Recipe(),
+            new NotBarFood.Recipe()
     };
 
     public static Recipe findRecipe(ArrayList<Item> ingredients) {
