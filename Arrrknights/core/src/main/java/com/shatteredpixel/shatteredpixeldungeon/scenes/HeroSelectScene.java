@@ -316,6 +316,9 @@ public class HeroSelectScene extends PixelScene {
 				case ROSECAT:
 					icon(new Image(Icons.ROSEMARI.get()));
 					break;
+				case NEARL:
+					icon(new Image(Icons.NEARL.get()));
+					break;
 			}
 
 		}

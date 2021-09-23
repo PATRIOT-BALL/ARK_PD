@@ -100,6 +100,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
@@ -170,7 +171,8 @@ public enum HeroClass {
 	MAGE( "mage", HeroSubClass.BATTLEMAGE, HeroSubClass.WARLOCK ),
 	ROGUE( "rogue", HeroSubClass.ASSASSIN, HeroSubClass.FREERUNNER ),
 	HUNTRESS( "huntress", HeroSubClass.SNIPER, HeroSubClass.WARDEN ),
-	ROSECAT("rosecat", HeroSubClass.DESTROYER, HeroSubClass.GUARDIAN);
+	ROSECAT("rosecat", HeroSubClass.DESTROYER, HeroSubClass.GUARDIAN),
+	NEARL("nearl", HeroSubClass.KNIGHT, HeroSubClass.SAVIOR);
 
 	private String title;
 	private HeroSubClass[] subClasses;
@@ -207,6 +209,10 @@ public enum HeroClass {
 			case ROSECAT:
 				initRosecat(hero);
 				break;
+
+			case NEARL:
+				initNearl(hero);
+				break;
 		}
 
 	}
@@ -219,13 +225,6 @@ public enum HeroClass {
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-		new Solt().collect();
-		new BlackPepper().collect();
-		new HoneyBread().collect();
-		new NotBarFood().collect();
-		new SugarFlower().collect();
-		new ChargrilledMeat().collect();
-		new Heamyo().collect();
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -383,6 +382,28 @@ public enum HeroClass {
 		new MeatCutlet().quantity(2).collect();
 	}
 
+	private void initNearl(Hero hero)
+	{
+		(hero.belongings.weapon = new EX42()).identify();
+
+		new VelvetPouch().collect();
+		Dungeon.LimitedDrops.VELVET_POUCH.drop();
+
+		new MagicalHolster().collect();
+		Dungeon.LimitedDrops.MAGICAL_HOLSTER.drop();
+
+		new PotionOfExperience().identify();
+		new ScrollOfRemoveCurse().identify();
+		new ScrollOfWarp().identify();
+
+		SkillBook skillB;
+		skillB = new SkillBook();
+		skillB.quantity(1).collect();
+		Dungeon.quickslot.setSlot(1,skillB);
+
+		new DewVial().collect();
+	}
+
 	public String title() {
 		return Messages.get(HeroClass.class, title);
 	}
@@ -419,6 +440,8 @@ public enum HeroClass {
 				return Assets.Sprites.GREY;
 			case ROSECAT:
 				return Assets.Sprites.ROSEMARY;
+			case NEARL:
+				return Assets.Sprites.ROSEMARY;
 		}
 	}
 
@@ -434,6 +457,8 @@ public enum HeroClass {
 				return Assets.Sprites.GREY;
 			case ROSECAT:
 				return Assets.Sprites.ROSEMARY;
+			case NEARL:
+				return Assets.Sprites.ROSEMARY;
 		}
 	}
 
@@ -448,6 +473,8 @@ public enum HeroClass {
 			case HUNTRESS:
 				return Assets.Splashes.HUNTRESS;
 			case ROSECAT:
+				return Assets.Splashes.ROSECAT;
+			case NEARL:
 				return Assets.Splashes.ROSECAT;
 		}
 	}
@@ -504,6 +531,8 @@ public enum HeroClass {
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_HUNTRESS);
 			case ROSECAT:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROSECAT);
+			case NEARL:
+				return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
 		}
 	}
 	
@@ -519,6 +548,8 @@ public enum HeroClass {
 				return Messages.get(HeroClass.class, "huntress_unlock");
 			case ROSECAT:
 				return Messages.get(HeroClass.class, "rosecat_unlock");
+			case NEARL:
+				return Messages.get(HeroClass.class, "nearl_unlock");
 		}
 	}
 

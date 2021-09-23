@@ -100,6 +100,11 @@ public class HighGrass {
 			}
 			
 			if (naturalismLevel >= 0) {
+				// 식재료 획득
+				if (Random.Int(33) == 0) {
+					level.drop(Generator.random(Generator.Category.N_INGREDINETS), pos).sprite.drop();
+				}
+
 				// Seed, scales from 1/25 to 1/5
 				if (Random.Int(25 - (naturalismLevel * 5)) == 0) {
 					level.drop(Generator.random(Generator.Category.SEED), pos).sprite.drop();

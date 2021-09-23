@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mimic;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.BlackPepper;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.IronKey;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -32,6 +33,10 @@ public class MeatRoom extends SpecialRoom {
                 level.drop( new MysteryMeat(), pos ).type = heapType;
             }
         }
+
+        int ppos;
+        ppos = level.pointToCell(random());
+        level.drop( new BlackPepper(), ppos ).type = heapType;
 
         if (heapType == Heap.Type.HEAP) {
             for (int i=0; i < 1; i++) {

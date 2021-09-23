@@ -47,7 +47,10 @@ public enum HeroSubClass {
 	WARDEN,
 
 	DESTROYER,
-	GUARDIAN;
+	GUARDIAN,
+
+	KNIGHT,
+	SAVIOR;
 
 	public String title() {
 		return Messages.get(this, name());
@@ -110,6 +113,11 @@ public enum HeroSubClass {
 			case DESTROYER:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 128, 80, 16, 16);
 			case GUARDIAN:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 144, 80, 16, 16);
+
+			case KNIGHT:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 128, 80, 16, 16);
+			case SAVIOR:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 144, 80, 16, 16);
 		}
 	}
