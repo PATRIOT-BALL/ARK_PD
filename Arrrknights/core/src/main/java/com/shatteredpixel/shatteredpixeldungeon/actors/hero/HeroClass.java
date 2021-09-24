@@ -306,7 +306,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		Dungeon.quickslot.setSlot(0, SEAL);
 
 		new ScrollHolder().collect();
-		Dungeon.LimitedDrops.VELVET_POUCH.drop();
+		Dungeon.LimitedDrops.SCROLL_HOLDER.drop();
 
 		new MagicalHolster().collect();
 		Dungeon.LimitedDrops.MAGICAL_HOLSTER.drop();
