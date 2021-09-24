@@ -272,13 +272,13 @@ public class ShopRoom extends SpecialRoom {
 			//this way players who get the hourglass late can still max it, usually.
 			switch (Dungeon.depth) {
 				case 6:
-					bags = (int)Math.ceil(( 5-hourglass.sandBags) * 0.20f ); break;
+					bags = (int)Math.ceil(( 6-hourglass.sandBags) * 0.20f ); break;
 				case 11:
-					bags = (int)Math.ceil(( 5-hourglass.sandBags) * 0.25f ); break;
+					bags = (int)Math.ceil(( 6-hourglass.sandBags) * 0.25f ); break;
 				case 16:
-					bags = (int)Math.ceil(( 5-hourglass.sandBags) * 0.50f ); break;
+					bags = (int)Math.ceil(( 6-hourglass.sandBags) * 0.50f ); break;
 				case 20: case 21:
-					bags = (int)Math.ceil(( 5-hourglass.sandBags) * 0.80f ); break;
+					bags = (int)Math.ceil(( 6-hourglass.sandBags) * 0.80f ); break;
 			}
 
 			for(int i = 1; i <= bags; i++){

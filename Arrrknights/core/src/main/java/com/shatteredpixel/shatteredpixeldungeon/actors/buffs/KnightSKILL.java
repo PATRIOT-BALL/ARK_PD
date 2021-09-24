@@ -315,6 +315,9 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
 
             if (!enemy.isAlive()) {
                 GLog.i(Messages.capitalize(Messages.get(Char.class, "defeat", enemy.name())));
+                if(hero.hasTalent(Talent.INTO_FRAY)) {
+                    Buff.affect(hero, Haste.class, 0.5f+(hero.pointsInTalent(Talent.INTO_FRAY) * 0.5f));
+                }
             }
 
         }

@@ -172,6 +172,7 @@ public class Badges {
 		VICTORY_ROGUE,
 		VICTORY_HUNTRESS,
 		VICTORY_ROSECAT,
+		VICTORY_NEARL,
 		VICTORY_ALL_CLASSES         ( 98, true ),
 		GAMES_PLAYED_3              ( 99, true ),
 		CHAMPION_1                  ( 100 ),
@@ -706,6 +707,9 @@ public class Badges {
 				case ROSECAT:
 					badge = Badge.BOSS_SLAIN_1_ROSECAT;
 					break;
+				case NEARL:
+						badge = Badge.BOSS_SLAIN_1_NEARL;
+						break;
 				}
 				local.add( badge );
 				if (!global.contains( badge )) {
@@ -759,6 +763,12 @@ public class Badges {
 				case GUARDIAN:
 					badge = Badge.BOSS_SLAIN_3_GUARDIAN;
 					break;
+					case KNIGHT:
+						badge = Badge.BOSS_SLAIN_3_KNIGHT;
+						break;
+					case SAVIOR:
+						badge = Badge.BOSS_SLAIN_3_SAVIOR;
+						break;
 				default:
 					return;
 				}
@@ -808,6 +818,9 @@ public class Badges {
 			break;
 		case ROSECAT:
 			badge = Badge.MASTERY_ROSECAT;
+			break;
+		case NEARL:
+			badge = Badge.MASTERY_NEARL;
 			break;
 		}
 		
@@ -868,6 +881,9 @@ public class Badges {
 			break;
 		case ROSECAT:
 			badge = Badge.VICTORY_ROSECAT;
+			break;
+			case NEARL:
+			badge = Badge.VICTORY_NEARL;
 			break;
 		}
 		local.add( badge );
