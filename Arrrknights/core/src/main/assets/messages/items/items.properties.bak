@@ -832,7 +832,7 @@ items.artifacts.isekaiitem.desc_cursed=저주받은 탐험 세트는 미보 및 
 
 items.artifacts.sealoflight.name=빛의 인장
 items.artifacts.sealoflight.ac_hikari=각성
-items.artifacts.sealoflight.desc="그 이름에 맹세하노니."\n\n빛의 힘이 담긴 이 도구를 사용해 일시적으로 니어의 힘을 각성시킬 수 있습니다. 빛의 기사로 각성한 니어는 공격력과 방어력이 상승합니다.
+items.artifacts.sealoflight.desc="그 이름에 맹세하노니."\n\n빛의 힘이 담긴 이 도구를 사용해 일시적으로 니어의 힘을 각성시킬 수 있습니다.\n빛의 기사로 각성한 니어는 공격력과 방어력이 상승합니다.
 items.artifacts.sealoflight.no_charge=당신의 빛의 인장은 충전되지 않았다.
 items.artifacts.sealoflight.desc_cursed=저주받은 빛의 인장은 사용할 수 없다.
 

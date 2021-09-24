@@ -123,7 +123,8 @@ public class Dungeon {
 		VELVET_POUCH,
 		SCROLL_HOLDER,
 		POTION_BANDOLIER,
-		MAGICAL_HOLSTER;
+		MAGICAL_HOLSTER,
+		FOOD_BAG;
 
 		public int count = 0;
 
@@ -225,7 +226,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 0; //@
+		depth = 3; //@
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;

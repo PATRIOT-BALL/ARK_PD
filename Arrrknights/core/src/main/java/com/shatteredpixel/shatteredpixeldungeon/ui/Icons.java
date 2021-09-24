@@ -65,6 +65,7 @@ public enum Icons {
 	RED,
 	HUNTRESS,
 	ROSEMON,
+	NEARLS_S,
 	COMBO,
 	
 	//main menu icons
@@ -221,6 +222,9 @@ public enum Icons {
 			break;
 			case ROSEMON:
 				icon.frame( icon.texture.uvRect( 96, 48, 112, 61 ) );
+				break;
+			case NEARLS_S:
+				icon.frame( icon.texture.uvRect( 80, 48, 96, 61 ) );
 				break;
 			case COMBO:
 				icon.frame( icon.texture.uvRect( 112, 48, 128, 64 ) );
@@ -382,7 +386,7 @@ public enum Icons {
 		case ROSECAT:
 			return get( ROSEMON );
 		case NEARL:
-			return get( NEARL );
+			return get(NEARLS_S);
 		default:
 			return null;
 		}

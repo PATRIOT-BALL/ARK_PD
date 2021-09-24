@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SealOfLight;
+import com.shatteredpixel.shatteredpixeldungeon.items.bags.FoodBag;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.MagicalHolster;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
@@ -133,6 +134,9 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
+
+		new FoodBag().collect();
+		Dungeon.LimitedDrops.FOOD_BAG.drop();
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -148,7 +152,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Badges.Badge.MASTERY_ROSECAT;
 			case NEARL:
-				return Badges.Badge.MASTERY_NEARL;
+			//	return Badges.Badge.MASTERY_NEARL;
 		}
 		return null;
 	}
@@ -301,16 +305,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		hero.belongings.artifact.activate( hero );
 		Dungeon.quickslot.setSlot(0, SEAL);
 
-		Ankh a1 = new Ankh();
-		a1.bless();
-		a1.collect();
-
-		Ankh a2 = new Ankh();
-		a2.bless();
-		a2.collect();
-
-		new TomeOfMastery().collect();
-
 		new ScrollHolder().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
 
@@ -457,7 +451,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROSECAT);
 			case NEARL:
-				return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
+				return true;
+				//return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
 		}
 	}
 	

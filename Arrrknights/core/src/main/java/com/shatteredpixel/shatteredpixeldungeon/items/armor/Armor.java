@@ -329,6 +329,10 @@ public class Armor extends EquipableItem {
 			if (momentum != null){
 				evasion += momentum.evasionBonus(((Hero) owner).lvl, Math.max(0, -aEnc));
 			}
+
+			if (((Hero) owner).hasTalent(Talent.BLITZKRIEG)) {
+				evasion += ((Hero) owner).pointsInTalent(Talent.BLITZKRIEG) * 2;
+			}
 		}
 		
 		return evasion + augment.evasionFactor(buffedLvl());

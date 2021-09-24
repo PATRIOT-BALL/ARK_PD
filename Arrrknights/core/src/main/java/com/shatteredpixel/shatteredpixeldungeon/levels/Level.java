@@ -39,6 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RadiantKnight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Shadows;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
@@ -50,6 +51,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.YogFist;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Lens;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Sheep;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.WindParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
@@ -76,6 +78,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
@@ -480,6 +483,20 @@ public abstract class Level implements Bundlable {
 		if (!locked) {
 			locked = true;
 			Buff.affect(Dungeon.hero, LockedFloor.class);
+
+			if (Dungeon.hero.hasTalent(Talent.GRAND_ORDER)) {
+				int HealHP = Dungeon.hero.HT;
+				HealHP *= Dungeon.hero.pointsInTalent(Talent.GRAND_ORDER) * 0.3f;
+
+				Dungeon.hero.HP = Math.min(Dungeon.hero.HT, Dungeon.hero.HP + HealHP);
+				Dungeon.hero.sprite.emitter().burst(Speck.factory(Speck.HEALING), 8);
+				Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, "+%dHP", HealHP);
+
+				Buff.detach(Dungeon.hero, RadiantKnight.class);
+				Buff.affect(Dungeon.hero, RadiantKnight.class, RadiantKnight.DURATION);
+				GameScene.flash( 0x80FFFFFF );
+				Sample.INSTANCE.play(Assets.Sounds.SKILL_BABYNIGHT);
+			}
 		}
 	}
 

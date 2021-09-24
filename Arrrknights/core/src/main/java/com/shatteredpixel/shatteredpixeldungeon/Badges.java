@@ -65,7 +65,7 @@ public class Badges {
 		UNLOCK_ROGUE                ( 2 ),
 		UNLOCK_HUNTRESS             ( 3 ),
 		UNLOCK_ROSECAT             ( 19 ),
-		UNLOCK_NEARL             ( 19 ),
+		UNLOCK_NEARL             ( 19, true ),
 		MONSTERS_SLAIN_1            ( 4 ),
 		MONSTERS_SLAIN_2            ( 5 ),
 		GOLD_COLLECTED_1            ( 6 ),

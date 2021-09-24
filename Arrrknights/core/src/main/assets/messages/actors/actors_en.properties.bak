@@ -422,7 +422,7 @@ actors.hero.talent.finalblow.desc=_+1:_ When the Blaze kills an enemy with a com
 actors.hero.talent.enhanced_combo.title=enhanced combo
 actors.hero.talent.enhanced_combo.desc=_+1:_ When the Blaze`s combo is 6 or higher, Clobber's knockback range increases to 3, it inflicts vertigo, and it can knock enemies into pits.\n\n_+2:_ In addition to the benefits of +1, when the Blaze`s combo is 9 or higher Parry works on multiple attacks.\n\n_+3:_ In addition to the benefits of +1 and +2, the Blaze can leap up to combo/3 tiles when using Slam, Crush, or Fury.
 actors.hero.talent.tactical_shield.title=tactical shield
-actors.hero.talent.tactical_shield.desc=_+1:_ Blaze`s defense increases by 1 for each armor level. It goes up to _4_.\n\n_+2:_ Blaze`s defense increases by 1 for each armor level. It goes up to _6_.\n\n_+3:_ Blaze`s defense increases by 1 for each armor level. It goes up to _8_.
+actors.hero.talent.tactical_shield.desc=_+1:_ Blaze`s defense increases by 2 for each armor level. It goes up to _6_.\n\n_+2:_ Blaze`s defense increases by 2 for each armor level. It goes up to _9_.\n\n_+3:_ Blaze`s defense increases by 2 for each armor level. It goes up to _12_.
 actors.hero.talent.chainsaw_extend.title=chainsaw extend
 actors.hero.talent.chainsaw_extend.desc=_+1:_ Melee attack range is 1 increased, but accuracy is _high_ reduced\n\n_+2:_ Melee attack range is 1 increased, but accuracy is _middle_ reduced\n\n_+3:_ Melee attack range is 1 increased, but accuracy is _low_ reduced
 actors.hero.talent.infinite_rage.title=infinite rage
@@ -692,7 +692,7 @@ actors.hero.herosubclass.knight=기사 니어
 actors.hero.herosubclass.knight_short_desc=_기사_\n빠른 기동력과 필살기를 이용해 적들을 연속해서 처치합니다.
 actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속을 얻습니다. 또한, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
 actors.hero.herosubclass.savior=구제자 니어
-actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 방어적인 능력으로 싸웁니다.
+actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
 actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 전사 상태일 때 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장 사용시 아츠 면역을 얻습니다.
 
 

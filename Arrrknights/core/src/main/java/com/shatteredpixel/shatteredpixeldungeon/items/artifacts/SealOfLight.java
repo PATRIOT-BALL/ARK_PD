@@ -3,6 +3,8 @@ package com.shatteredpixel.shatteredpixeldungeon.items.artifacts;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
@@ -62,11 +64,21 @@ public class SealOfLight extends Artifact {
                     Buff.affect(hero, RadiantKnight.class, RadiantKnight.DURATION);
 
                     if (hero.subClass == HeroSubClass.KNIGHT) {
-                        Buff.affect(hero, Haste.class, 5f);
+                        Buff.affect(hero, Haste.class, 5f +  hero.pointsInTalent(Talent.QUICK_TACTICS));
                     }
 
+                    if (hero.hasTalent(Talent.BLESSED_CHAMPION)) {
+                        Buff.affect(hero, Bless.class, 10f *  hero.pointsInTalent(Talent.BLESSED_CHAMPION));
+                    }
 
-                    hero.spendAndNext(1f);
+                    if (hero.hasTalent(Talent.PEGASUS_AURA)) {
+                        int Barrior = hero.HT/20;
+                        Barrior *= hero.pointsInTalent(Talent.PEGASUS_AURA);
+                        Buff.affect(hero, Barrier.class).setShield(Barrior);
+                    }
+
+                    if (hero.hasTalent(Talent.QUICK_TACTICS)) hero.spendAndNext(0f);
+                    else hero.spendAndNext(1f);
                     GameScene.flash( 0x80FFFFFF );
                     Sample.INSTANCE.play(Assets.Sounds.SKILL_BABYNIGHT);
                     charge = 0;

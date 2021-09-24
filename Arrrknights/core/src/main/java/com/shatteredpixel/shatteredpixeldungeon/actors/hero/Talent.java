@@ -67,6 +67,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Bundle;
@@ -167,8 +168,19 @@ public enum Talent {
 	//Nearl T1
 	SHINING_MEAL(128),  EXPERIENCE(129), PROTECTIONOFLIGHT(130), KNIGTS_OATH(131),
 	//Nearl T2
-	COMBAT_MEAL(132), PUERLIGHT(133), RESURGENCE(134), PHASERUSH(135), EXORCISM(136);
+	COMBAT_MEAL(132), PUERLIGHT(133), RESURGENCE(134), PHASERUSH(135), EXORCISM(136),
 	//Nearl T3
+	PEGASUS_AURA(137, 3), RADIANTHERO(138, 3),
+	//Nearl T3 - KNIGHT
+	INTO_FRAY(139,3), BLITZKRIEG(140,3), SKILL_MASTERY(141,3),
+	//Nearl T3 - SAVIER
+	SHIELD_OF_LIGHT(142, 3), PEGASUS_WING(143,3), HOPELIGHT(144,3),
+	//Nearl T4
+	GRAND_ORDER(145, 3), KNIGHT_OF_KAZIMIERZ(146,3),
+	//Nearl T4 - KNIGHT
+	QUICK_TACTICS(147,3),
+	//Nearl T4 - SAVIER
+	BLESSED_CHAMPION(148,3);
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};
@@ -183,6 +195,23 @@ public enum Talent {
 	public static class foodIdentify extends CounterBuff{};
 	public static class BlazeBurstBuff extends CounterBuff{};
 	public static class NearlRemoveCurseCounter extends CounterBuff{};
+
+	public static class RadiantHeroCooldown extends FlavourBuff{
+		@Override
+		public int icon() {
+			return BuffIndicator.COMBO;
+		}
+
+		@Override
+		public String toString() {
+			return Messages.get(this, "name");
+		}
+
+		@Override
+		public String desc() {
+			return Messages.get(this, "desc", dispTurns());
+		}
+	};
 
 	int icon;
 	int maxPoints;
@@ -620,6 +649,9 @@ public enum Talent {
 			case ROSECAT:
 				Collections.addAll(tierTalents, AIMTRAINING, CUTLET);
 				break;
+			case NEARL:
+				Collections.addAll(tierTalents, PEGASUS_AURA, RADIANTHERO);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(2).put(talent, 0);
@@ -642,6 +674,9 @@ public enum Talent {
 				break;
 			case ROSECAT:
 				Collections.addAll(tierTalents, RHODES_WEAPON, RECALL_MEMORY);
+				break;
+			case NEARL:
+				Collections.addAll(tierTalents, GRAND_ORDER, KNIGHT_OF_KAZIMIERZ);
 				break;
 		}
 		for (Talent talent : tierTalents){
@@ -695,6 +730,12 @@ public enum Talent {
 			case GUARDIAN:
 				Collections.addAll(tierTalents, BARRIER_OPERATION, BARRIER_REPAIR, RHODES_CAT);
 				break;
+			case KNIGHT:
+				Collections.addAll(tierTalents, INTO_FRAY, BLITZKRIEG, SKILL_MASTERY);
+				break;
+			case SAVIOR:
+				Collections.addAll(tierTalents, SHIELD_OF_LIGHT, PEGASUS_WING, HOPELIGHT);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(2).put(talent, 0);
@@ -732,6 +773,12 @@ public enum Talent {
 				break;
 			case GUARDIAN:
 				Collections.addAll(tierTalents, SPEED_COMABT);
+				break;
+			case KNIGHT:
+				Collections.addAll(tierTalents, QUICK_TACTICS);
+				break;
+			case SAVIOR:
+				Collections.addAll(tierTalents, BLESSED_CHAMPION);
 				break;
 		}
 		for (Talent talent : tierTalents){

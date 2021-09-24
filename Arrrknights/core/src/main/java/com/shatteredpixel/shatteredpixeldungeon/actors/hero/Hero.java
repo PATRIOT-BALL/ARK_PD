@@ -53,6 +53,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.HoldFast;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.KnightSKILL;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LanceCharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
@@ -73,7 +74,6 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CheckedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
-import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
@@ -127,6 +127,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.YourWish;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.Skill;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Brimstone;
@@ -135,7 +136,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolki
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemyKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CapeOfThorns;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.EtherealChains;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
@@ -151,7 +151,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMight;
-import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
@@ -163,12 +162,10 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
-import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocking;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
@@ -180,7 +177,6 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.Trap;
-import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.ShadowCaster;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Earthroot;
@@ -260,7 +256,7 @@ public class Hero extends Char {
 
     public float awareness;
 
-    public int lvl = 31;
+    public int lvl = 1;
     public int exp = 0;
 
     public int HTBoost = 0;
@@ -541,6 +537,13 @@ public class Hero extends Char {
             }
         }
 
+        if (hasTalent(Talent.PEGASUS_AURA) && buff(RadiantKnight.class) != null) {
+            float bouns = 1f;
+            bouns += pointsInTalent(Talent.PEGASUS_AURA) / 10;
+
+            attackSkill *= bouns;
+        }
+
         if (wep != null) {
             return (int) (attackSkill * accuracy * wep.accuracyFactor(this));
         } else {
@@ -617,10 +620,17 @@ public class Hero extends Char {
             dr += Random.NormalIntRange(0, 2 * pointsInTalent(Talent.HOLD_FAST));
         }
 
-        if (Dungeon.hero.hasTalent(Talent.TACTICAL_SHIELD)) {
-            int drplus = Dungeon.hero.belongings.armor.buffedLvl();
-            drplus = Math.min(drplus, 2 + Dungeon.hero.pointsInTalent(Talent.TACTICAL_SHIELD) * 2);
-            dr += drplus;
+        if (hasTalent(Talent.TACTICAL_SHIELD)) {
+            int drplus = belongings.armor.buffedLvl() * 2;
+            drplus = Math.min(drplus, 1 + pointsInTalent(Talent.TACTICAL_SHIELD) * 3);
+            dr += Random.NormalIntRange(0,drplus);
+        }
+
+        if (hasTalent(Talent.SHIELD_OF_LIGHT)) {
+            int drplus_n = pointsInTalent(Talent.SHIELD_OF_LIGHT);
+            if (HP <= HT/2) drplus_n*=2;
+            if (buff(RadiantKnight.class) != null) drplus_n*=2;
+            dr += Random.NormalIntRange(0,drplus_n);
         }
 
         return dr;
@@ -1295,6 +1305,14 @@ public class Hero extends Char {
                     Seal.charge(this, pointsInTalent(Talent.PHASERUSH));
                 Seal.updateQuickslot();
             }
+            // 카시미어의 기사
+            if (hasTalent(Talent.KNIGHT_OF_KAZIMIERZ)) {
+                if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
+                    SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
+                    Item.SetCharge(pointsInTalent(Talent.KNIGHT_OF_KAZIMIERZ));
+                    Item.updateQuickslot();
+                }
+            }
         }
 
         switch (subClass) {
@@ -1442,6 +1460,29 @@ public class Hero extends Char {
             }
         }
 
+        // 니어 특성 관련
+
+        if (HP <= HT/2) {
+        if(hasTalent(Talent.RADIANTHERO)) {
+            if (buff(RadiantKnight.class) == null && buff(Talent.RadiantHeroCooldown.class) == null && hasTalent(Talent.RADIANTHERO)) {
+                Buff.affect(this, RadiantKnight.class, RadiantKnight.DURATION);
+
+                float CoolDown = 750 - (pointsInTalent(Talent.RADIANTHERO) * 150);
+                Buff.affect(this, Talent.RadiantHeroCooldown.class, CoolDown);
+
+                GameScene.flash( 0x80FFFFFF );
+                Sample.INSTANCE.play(Assets.Sounds.SKILL_BABYNIGHT);
+            }
+        }}
+
+        // 천마의 날개
+        if (hasTalent(Talent.PEGASUS_WING)) {
+            SealOfLight Seal = this.belongings.getItem(SealOfLight.class);
+            if (Seal != null && Random.Int(3) < pointsInTalent(Talent.PEGASUS_WING)) {
+                Seal.charge(this, 2);
+            Seal.updateQuickslot();}
+        }
+
         return damage;
     }
 
@@ -1518,6 +1559,13 @@ public class Hero extends Char {
 
         if (buff(RadiantKnight.class) != null) {
             float redu = 0.8f;
+            if (subClass == HeroSubClass.SAVIOR) {
+                redu = 0.6f;
+                if (hasTalent(Talent.HOPELIGHT)) {
+                    float hope = pointsInTalent(Talent.HOPELIGHT) * 0.05f;
+                    redu -= hope;
+                }
+            }
             dmg *= redu;
         }
 
@@ -2104,6 +2152,10 @@ public class Hero extends Char {
 
         if (hit && subClass == HeroSubClass.GLADIATOR) {
             Buff.affect(this, Combo.class).hit(enemy);
+        }
+
+        if (hit && subClass == HeroSubClass.KNIGHT) {
+            Buff.affect(this, KnightSKILL.class).hit(enemy);
         }
 
         if (this.buff(ActiveOriginium.class) != null) {
