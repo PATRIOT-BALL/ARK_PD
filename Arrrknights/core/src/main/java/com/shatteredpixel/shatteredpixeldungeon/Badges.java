@@ -109,6 +109,7 @@ public class Badges {
 		BOSS_SLAIN_1_ROGUE,
 		BOSS_SLAIN_1_HUNTRESS,
 		BOSS_SLAIN_1_ROSECAT,
+		BOSS_SLAIN_1_NEARL,
 		BOSS_SLAIN_1_ALL_CLASSES    ( 52, true ),
 		GAMES_PLAYED_1              ( 53, true ),
 
@@ -144,6 +145,8 @@ public class Badges {
 		BOSS_SLAIN_3_WARDEN,
 		BOSS_SLAIN_3_DESTROY,
 		BOSS_SLAIN_3_GUARDIAN,
+		BOSS_SLAIN_3_KNIGHT,
+		BOSS_SLAIN_3_SAVIOR,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
 		GAMES_PLAYED_2              ( 81, true ),
 
@@ -152,6 +155,7 @@ public class Badges {
 		RED_CHAMPION1              ( 84, true ),
 		GREY_CHAMPION1              ( 85, true ),
 		ROSE_CHAMPION1              ( 86, true ),
+		NEARL_CHAMPION1              ( 86, true ),
 
 		GOLD_COLLECTED_5              ( 89 ),
 
@@ -179,6 +183,7 @@ public class Badges {
 		RED_CHAMPION2              ( 106, true ),
 		GREY_CHAMPION2              ( 107, true ),
 		ROSE_CHAMPION2              ( 108, true ),
+		NEARL_CHAMPION2              ( 86, true ),
 
 		SIESTA_PART2              ( 111),
 
@@ -196,6 +201,7 @@ public class Badges {
 		RED_CHAMPION3             ( 122, true ),
 		GREY_CHAMPION3              ( 123, true ),
 		ROSE_CHAMPION3              ( 124, true ),
+		NEARL_CHAMPION3              ( 86, true ),
 
 		//Puple
 		Get_25_STONES                (136),
