@@ -3,6 +3,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.bags;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Ingredients;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -19,6 +20,7 @@ public class FoodBag extends Bag {
     @Override
     public boolean canHold( Item item ) {
         if (item instanceof Food || item instanceof Ingredients){
+            if (item instanceof MysteryMeat) return false;
             return super.canHold(item);
         } else {
             return false;

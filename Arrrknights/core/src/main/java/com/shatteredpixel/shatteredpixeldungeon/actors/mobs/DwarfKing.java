@@ -49,6 +49,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
+import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
@@ -496,6 +497,9 @@ public class DwarfKing extends Mob {
 					case ROSECAT:
 						Dungeon.level.drop(new BookYourWish(), pos + ofs).sprite.drop(pos);
 						break;
+					case NEARL:
+						Dungeon.level.drop(Generator.random(Generator.Category.SKL_T3), pos+ofs ).sprite.drop( pos );
+						break;
 				}
 			} else {
 				switch (Dungeon.hero.heroClass) {
@@ -513,6 +517,9 @@ public class DwarfKing extends Mob {
 						break;
 					case ROSECAT:
 						Dungeon.level.drop(new BookYourWish(), pos + ofs).sprite.drop(pos);
+						break;
+					case NEARL:
+						Dungeon.level.drop(Generator.random(Generator.Category.SKL_T3), pos+ofs ).sprite.drop( pos );
 						break;
 				}
 			}
