@@ -19,8 +19,8 @@ public class FoodBag extends Bag {
 
     @Override
     public boolean canHold( Item item ) {
+        if (item instanceof MysteryMeat) return false;
         if (item instanceof Food || item instanceof Ingredients){
-            if (item instanceof MysteryMeat) return false;
             return super.canHold(item);
         } else {
             return false;
