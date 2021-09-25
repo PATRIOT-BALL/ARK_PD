@@ -1,4 +1,4 @@
-apackage com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients;
+package com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients;
 
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
