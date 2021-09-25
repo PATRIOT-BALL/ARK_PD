@@ -527,6 +527,7 @@ public enum Talent {
 			AnnihilationGear Gear = hero.belongings.getItem(AnnihilationGear.class);
 		if (Gear != null) {
 			Gear.charge = Math.min(hero.pointsInTalent(NYANGING) + Gear.charge, Gear.chargeCap +4);
+			Gear.updateQuickslot();
 		}}
 
 		if (hero.hasTalent(KNIGTS_OATH)){
@@ -534,6 +535,7 @@ public enum Talent {
 			if (hero.belongings.getItem(SealOfLight.class) != null)
 			{
 				Seal.charge(hero, 4 + hero.pointsInTalent(KNIGTS_OATH) * 4);
+				Seal.updateQuickslot();
 			}
 		}
 	}
