@@ -278,7 +278,11 @@ public enum Talent {
 		}
 
 		if (talent == EXPERIENCE && hero.pointsInTalent(EXPERIENCE) == 2){
-			if (hero.belongings.armor != null)  hero.belongings.armor.cursedKnown=true;
+			for (Item item : Dungeon.hero.belongings){
+				if (item instanceof Armor){
+					((Armor) item).cursedKnown = true;
+				}
+			}
 		}
 	}
 
