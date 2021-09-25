@@ -370,7 +370,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Assets.Sprites.ROSEMARY;
 			case NEARL:
-				return Assets.Sprites.ROSEMARY;
+				return Assets.Sprites.NEARL;
 		}
 	}
 
@@ -387,7 +387,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Assets.Sprites.ROSEMARY;
 			case NEARL:
-				return Assets.Sprites.ROSEMARY;
+				return Assets.Sprites.NEARL;
 		}
 	}
 
