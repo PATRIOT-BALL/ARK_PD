@@ -2,7 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients;
 
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Solt extends Ingredients {
+public class Salt extends Ingredients {
     {
         image = ItemSpriteSheet.SALT;
     }

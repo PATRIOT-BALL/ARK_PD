@@ -78,7 +78,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Ingredients;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Solt;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Salt;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.SugarFlower;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
@@ -603,7 +603,7 @@ public class Generator {
 
             N_INGREDINETS.classes = new Class<?>[]{
                     SugarFlower.class,
-                    Solt.class
+                    Salt.class
             };
             N_INGREDINETS.probs = new float[]{1, 1};
         }

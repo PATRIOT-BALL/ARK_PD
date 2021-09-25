@@ -1,10 +1,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.food.cooking;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barkskin;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Chargrilled;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Frozen;
@@ -17,19 +15,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ChargrilledMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.FrozenCarpaccio;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.BlackPepper;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Solt;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.SugarFlower;
-import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
-import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
-import com.shatteredpixel.shatteredpixeldungeon.plants.Sungrass;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Salt;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
-import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
-import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
@@ -89,7 +77,7 @@ public class NotBarFood extends Food {
                 if (ingredient.quantity() > 0) {
                     if (ingredient instanceof ChargrilledMeat) {
                         meat = true;
-                    } else if (ingredient instanceof Solt) {
+                    } else if (ingredient instanceof Salt) {
                         solt = true;
                     } else if (ingredient instanceof BlackPepper) {
                         peeper = true;
