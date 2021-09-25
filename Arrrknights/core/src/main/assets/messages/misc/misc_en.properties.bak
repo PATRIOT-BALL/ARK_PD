@@ -81,6 +81,7 @@ badges$badge.pray=wait for you
 badges$badge.will=Will
 
 badges$badge.siesta_part1=Siesta Part I
+badges$badge.siesta_part2=Siesta Part II
 
 badges$badge.blaze_champion1=Expert Blaze
 badges$badge.blaze_champion2=Elite Blaze
@@ -101,6 +102,10 @@ badges$badge.grey_champion3=Legend GreyThroat
 badges$badge.rose_champion1=Expert RoseCat
 badges$badge.rose_champion2=Elite RoseCat
 badges$badge.rose_champion3=Legend RoseCat
+
+badges$badge.nearl_champion1=Expert Nearl
+badges$badge.nearl_champion2=Elite Nearl
+badges$badge.nearl_champion3=Legend Nearl
 
 badges$badge.skin_baboskadi=Skadi Skin
 badges$badge.skin_talu=Talu Skin

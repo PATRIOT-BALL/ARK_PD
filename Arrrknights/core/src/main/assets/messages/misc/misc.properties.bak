@@ -71,6 +71,7 @@ badges$badge.unlock_mage=아미야 해금
 badges$badge.unlock_rogue=레드 해금
 badges$badge.unlock_huntress=그레이스롯 해금
 badges$badge.unlock_rosecat=로즈몬티스 해금
+badges$badge.unlock_nearl=???
 
 badges$badge.roaringflare=울부짖는 광명
 badges$badge.eviltime_end=암흑 시대의 끝
@@ -79,6 +80,7 @@ badges$badge.pray=널 기다릴게
 badges$badge.will=엔딩-의지
 
 badges$badge.siesta_part1=옵시디언 페스티벌
+badges$badge.siesta_part2=엔딩-화람지심
 
 badges$badge.get_25_stones=원암 25개 채취
 badges$badge.get_40_stones=원암 40개 채취
