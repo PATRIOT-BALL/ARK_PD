@@ -241,7 +241,7 @@ public class Pompeii extends Mob {
 
             CellEmitter.center(pos).burst(FlameParticle.FACTORY, 4);
             Sample.INSTANCE.play(Assets.Sounds.BURNING, 2f);
-            barriercooldown = 20 - Statistics.coreAlive;
+            barriercooldown = 25 - Statistics.coreAlive;
             return true;
         }
 

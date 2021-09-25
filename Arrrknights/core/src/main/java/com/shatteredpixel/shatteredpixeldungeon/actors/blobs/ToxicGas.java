@@ -51,7 +51,7 @@ public class ToxicGas extends Blob implements Hero.Doom {
 				if (cur[cell] > 0 && (ch = Actor.findChar( cell )) != null) {
 					if (!ch.isImmune(this.getClass())) {
 						if (ch instanceof Pompeii) {
-							ch.damage(damage * 2, this);
+							ch.damage(damage * 3, this);
 							if (ch.isAlive()) Buff.affect(ch, Vulnerable.class, 3f);
 						}
 						else ch.damage(damage, this);

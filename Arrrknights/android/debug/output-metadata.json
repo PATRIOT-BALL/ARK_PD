@@ -10,9 +10,9 @@
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 555,
-      "versionName": "0.2.3-INDEV",
-      "outputFile": "Arrrknights-v0.2.3-INDEV.apk"
+      "versionCode": 562,
+      "versionName": "0.3.0(test)-INDEV",
+      "outputFile": "Arrrknights-v0.3.0(test)-INDEV.apk"
     }
   ]
 }

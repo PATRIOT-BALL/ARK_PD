@@ -60,6 +60,8 @@ public class ActiveOriginium extends Buff {
             if (dmg < 1) dmg = 1;
             if (target == Dungeon.hero) dmg += 1 + (Dungeon.hero.lvl / 5);
 
+            dmg = Math.min(30, dmg);
+
             if (level > 0) {
 
                 target.damage( dmg, this );

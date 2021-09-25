@@ -18,7 +18,7 @@ public class MetalCrab extends Mob{
     {
         spriteClass = Rock_CrabSprite.class;
 
-        HP = HT = 150;
+        HP = HT = 140;
         defenseSkill = 0;
 
         maxLvl = 35;
@@ -31,7 +31,7 @@ public class MetalCrab extends Mob{
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 42, 54 );
+        return Random.NormalIntRange( 40, 52 );
     }
 
     @Override
@@ -39,7 +39,7 @@ public class MetalCrab extends Mob{
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(16, 32);
+        return Random.NormalIntRange(0, 32);
     }
 
 
