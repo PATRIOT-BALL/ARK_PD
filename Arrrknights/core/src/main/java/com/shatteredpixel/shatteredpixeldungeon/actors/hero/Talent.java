@@ -276,6 +276,10 @@ public enum Talent {
 		if (talent == FARSIGHT){
 			Dungeon.observe();
 		}
+
+		if (talent == EXPERIENCE && hero.pointsInTalent(EXPERIENCE) == 2){
+			if (hero.belongings.armor != null)  hero.belongings.armor.cursedKnown=true;
+		}
 	}
 
 	public static class CachedRationsDropped extends CounterBuff{};
