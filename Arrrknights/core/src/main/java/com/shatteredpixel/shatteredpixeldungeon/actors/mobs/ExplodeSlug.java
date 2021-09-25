@@ -45,34 +45,35 @@ public class ExplodeSlug extends Mob {
 
     @Override
     public void die( Object cause ) {
-
+        boolean Silenced = false;
+        if (this.buff(Silence.class) != null) Silenced = true;
         super.die( cause );
 
-        if (buff(Silence.class) != null) return;
+        if (Silenced) return;
         if (cause == Chasm.class) return;
 
-        boolean heroKilled = false;
-        for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
-            Char ch = findChar( pos + PathFinder.NEIGHBOURS8[i] );
-            if (ch != null && ch.isAlive()) {
-                int damage = Random.NormalIntRange(70,100);
-                damage = Math.max( 0,  damage - (ch.drRoll() +  ch.drRoll()) );
-                ch.damage( damage, this );
-                if (ch.isAlive()) Buff.affect(ch,Burning.class).reignite(ch);
-                if (ch == Dungeon.hero && !ch.isAlive()) {
-                    heroKilled = true;
+            boolean heroKilled = false;
+            for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
+                Char ch = findChar(pos + PathFinder.NEIGHBOURS8[i]);
+                if (ch != null && ch.isAlive()) {
+                    int damage = Random.NormalIntRange(70, 100);
+                    damage = Math.max(0, damage - (ch.drRoll() + ch.drRoll()));
+                    ch.damage(damage, this);
+                    if (ch.isAlive()) Buff.affect(ch, Burning.class).reignite(ch);
+                    if (ch == Dungeon.hero && !ch.isAlive()) {
+                        heroKilled = true;
+                    }
                 }
             }
-        }
 
-        if (Dungeon.level.heroFOV[pos]) {
-            Sample.INSTANCE.play( Assets.Sounds.BLAST );
-        }
+            if (Dungeon.level.heroFOV[pos]) {
+                Sample.INSTANCE.play(Assets.Sounds.BLAST);
+            }
 
-        if (heroKilled) {
-            Dungeon.fail( getClass() );
-            GLog.n( Messages.get(this, "explo_kill") );
-        }
+            if (heroKilled) {
+                Dungeon.fail(getClass());
+                GLog.n(Messages.get(this, "explo_kill"));
+            }
     }
 
     @Override
