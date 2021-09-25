@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class BlackPepper extends Ingredients {
     {
-        image = ItemSpriteSheet.BONES;
+        image = ItemSpriteSheet.PEPPER;
     }
 
     @Override

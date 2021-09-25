@@ -280,10 +280,13 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 	private void initRosecat(Hero hero)
 	{
 		(hero.belongings.weapon = new EX42()).identify();
+		EX42 ex42 = new EX42();
+
 		AnnihilationGear Gear = new AnnihilationGear();
 		Gear.identify().collect();
 
 		Dungeon.quickslot.setSlot(0, Gear);
+		Dungeon.quickslot.setSlot(3,ex42);
 
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();

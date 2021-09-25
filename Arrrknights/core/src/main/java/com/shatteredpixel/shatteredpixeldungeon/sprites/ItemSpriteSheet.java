@@ -508,6 +508,7 @@ public class ItemSpriteSheet {
 	public static final int ARTIFACT_ROSE3      = ARTIFACTS+38;
 	public static final int ARTIFACT_THORNS      = ARTIFACTS+39;
 	public static final int ARTIFACT_ASH      = ARTIFACTS+40;
+	public static final int ARTIFACT_NEARL      = ARTIFACTS+41;
 	static{
 		assignItemRect(ARTIFACT_CLOAK,      16, 16);
 		assignItemRect(ARTIFACT_ARMBAND,    16, 16);
@@ -735,6 +736,9 @@ public class ItemSpriteSheet {
 	public static final int SANDBITCH =       FOOD+14;
 	public static final int BONK =       FOOD+15;
 	public static final int POMBBAY =       FOOD+16;
+	public static final int PEPPER =       FOOD+17;
+	public static final int SALT =       FOOD+18;
+	public static final int HONEY_FLOWER =       FOOD+19;
 	static{
 		assignItemRect(MEAT,        16, 16);
 		assignItemRect(STEAK,       16, 16);
@@ -753,6 +757,9 @@ public class ItemSpriteSheet {
 		assignItemRect(SANDBITCH,       16, 16);
 		assignItemRect(BONK,       16, 16);
 		assignItemRect(POMBBAY,       16, 16);
+		assignItemRect(PEPPER,       16, 16);
+		assignItemRect(SALT,       16, 16);
+		assignItemRect(HONEY_FLOWER,       16, 16);
 	}
 
 	private static final int QUEST  =                                       xy(1, 29);  //32 slots

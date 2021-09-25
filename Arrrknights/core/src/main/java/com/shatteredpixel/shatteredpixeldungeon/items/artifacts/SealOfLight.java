@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class SealOfLight extends Artifact {
     {
-        image = ItemSpriteSheet.ARMOR_CLOTH;
+        image = ItemSpriteSheet.ARTIFACT_NEARL;
         defaultAction = AC_HIKARI;
 
         levelCap = 0;

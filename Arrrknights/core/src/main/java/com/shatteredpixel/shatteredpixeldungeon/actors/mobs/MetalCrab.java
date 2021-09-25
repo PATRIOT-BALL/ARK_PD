@@ -11,12 +11,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Metal_CrabSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Rock_CrabSprite;
 import com.watabou.utils.Random;
 
 public class MetalCrab extends Mob{
     {
-        spriteClass = Rock_CrabSprite.class;
+        spriteClass = Metal_CrabSprite.class;
 
         HP = HT = 140;
         defenseSkill = 0;

@@ -40,7 +40,7 @@ public class RaptorSprite extends MobSprite {
 
         texture( Assets.Sprites.RAPTOR );
 
-        TextureFilm frames = new TextureFilm( texture, 44, 46 );
+        TextureFilm frames = new TextureFilm( texture, 46, 46 );
 
         idle = new Animation( 8, true );
         idle.frames( frames, 0, 1, 2, 3, 2, 1, 0 );
@@ -53,6 +53,9 @@ public class RaptorSprite extends MobSprite {
 
         die = new Animation( 10, false );
         die.frames( frames, 0, 7, 8, 9, 10 );
+
+
+        play( idle );
     }
 
     @Override

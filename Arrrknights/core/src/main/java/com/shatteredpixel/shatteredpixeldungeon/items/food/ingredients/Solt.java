@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Solt extends Ingredients {
     {
-        image = ItemSpriteSheet.GOLD;
+        image = ItemSpriteSheet.SALT;
     }
 
     @Override

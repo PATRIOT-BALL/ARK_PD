@@ -1,10 +1,10 @@
-package com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients;
+apackage com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients;
 
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class SugarFlower extends Ingredients {
     {
-        image = ItemSpriteSheet.DEWDROP;
+        image = ItemSpriteSheet.HONEY_FLOWER;
     }
 
     @Override

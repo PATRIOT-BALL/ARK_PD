@@ -290,6 +290,7 @@ public class Assets {
 		public static final String RED	= "sprites/red.png";
 		public static final String GREY	= "sprites/greythroat.png";
 		public static final String ROSEMARY	= "sprites/rosemary.png";
+		public static final String NEARL	= "sprites/nearl.png";
 		public static final String AVATARS	= "sprites/avatars.png";
 		public static final String PET		= "sprites/pet.png";
 		public static final String DONUT		= "sprites/Wraith_donut.png";
@@ -393,6 +394,10 @@ public class Assets {
 		public static final String CRONIN	= "sprites/cronin.png";
 		public static final String SCHWARZ	= "sprites/schwarz.png";
 		public static final String CEYLON	= "sprites/ceylon.png";
+
+		public static final String POMPEII	= "sprites/pompeii.png";
+		public static final String RED_SPITTER	= "sprites/red_spitter.png";
+		public static final String METAL_CRAB	= "sprites/metal_crab.png";
 
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";

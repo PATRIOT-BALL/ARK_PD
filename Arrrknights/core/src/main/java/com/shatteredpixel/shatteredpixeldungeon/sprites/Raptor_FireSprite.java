@@ -41,7 +41,7 @@ public class Raptor_FireSprite extends MobSprite {
 
         texture( Assets.Sprites.RAPTOR_FIRE );
 
-        TextureFilm frames = new TextureFilm( texture, 44, 46 );
+        TextureFilm frames = new TextureFilm( texture, 46, 46 );
 
         idle = new Animation( 8, true );
         idle.frames( frames, 0, 1, 2, 3, 2, 1, 0 );

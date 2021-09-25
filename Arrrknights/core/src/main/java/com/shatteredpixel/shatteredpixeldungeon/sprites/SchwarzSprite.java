@@ -16,7 +16,7 @@ public class SchwarzSprite extends MobSprite {
         idle.frames( frames, 9 );
 
         run = new Animation( 10, true );
-        run.frames( frames, 0 );
+        run.frames( frames, 10, 11, 12, 13, 14, 15, 16, 17 );
 
         attack = new Animation( 15, false );
         attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9 );

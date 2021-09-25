@@ -1397,7 +1397,7 @@ actors.mobs.rockbreaker.name=록브레이커
 actors.mobs.rockbreaker.desc=근거리 전투원. 군용 전술 도끼로 목표에게 강력한 일격을 날려 큰 대미지를 줄 수 있다. 그들의 갑옷은 아츠 공격에 대한 효과적인 방어책이다.
 
 actors.mobs.explodeslug.name=고에너지 원석충α
-actors.mobs.explodeslug.desc=복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다.\n\n_침묵 가능_
+actors.mobs.explodeslug.desc=복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다.\n\n_침묵 가능_. 물폭발 주문에 매우 취약해보입니다.
 actors.mobs.explodeslug.explo_kill=고에너지 원석충의 에너지에 휩쓸려 폭사했다.
 
 actors.mobs.acidslug_a.name=산성 원석충α
