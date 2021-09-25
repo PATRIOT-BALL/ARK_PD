@@ -27,12 +27,14 @@ import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
+import com.shatteredpixel.shatteredpixeldungeon.items.ArmorUpKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
@@ -138,6 +140,10 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
+
+		new PlateArmor().collect();
+		new PotionOfExperience().quantity(2).collect();
+		new ArmorUpKit().quantity(6).collect();
 	}
 
 	public Badges.Badge masteryBadge() {

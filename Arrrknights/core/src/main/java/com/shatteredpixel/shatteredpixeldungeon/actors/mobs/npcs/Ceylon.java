@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Agent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ergate;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Infantry;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.items.ArmorUpKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Bottle;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.TeaRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
@@ -126,7 +127,7 @@ public class Ceylon extends NPC {
         private static boolean given;
         private static boolean completed;
 
-        public static ScrollOfUpgrade reward;
+        public static ArmorUpKit reward;
 
         public static void reset() {
             spawned = false;
@@ -167,7 +168,7 @@ public class Ceylon extends NPC {
 
                 given = node.getBoolean( GIVEN );
                 completed = node.getBoolean( COMPLETED );
-                reward = new ScrollOfUpgrade();
+                reward = new ArmorUpKit();
             }
         }
 
@@ -204,7 +205,7 @@ public class Ceylon extends NPC {
 
                 given = false;
 
-                reward = new ScrollOfUpgrade();
+                reward = new ArmorUpKit();
             }
         }
 
