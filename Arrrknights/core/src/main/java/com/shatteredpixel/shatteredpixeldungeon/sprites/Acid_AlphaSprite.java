@@ -12,7 +12,7 @@ public class Acid_AlphaSprite extends MobSprite{
     public Acid_AlphaSprite() {
         super();
 
-        texture( Assets.Sprites.SPITTER );
+        texture( Assets.Sprites.RED_SPITTER );
 
         TextureFilm frames = new TextureFilm( texture, 32, 32 );
 
