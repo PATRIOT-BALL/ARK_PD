@@ -88,7 +88,7 @@ public class ACE_BATTLE extends Mob {
             return super.attackProc(enemy, damage);
         }
 
-        // 기본 특수 패턴. 3회 공격시 피해량 상승 or 보호막 획득
+        // 기본 특수 패턴. 3회 공격시 피해량 상승
         if (attackcount > 2) {
             damage *= 1.5f;
             CellEmitter.center(enemy.pos).burst(BlastParticle.FACTORY, 3);
