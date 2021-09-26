@@ -135,7 +135,7 @@ public class Ceylon extends NPC {
             reward = null;
         }
 
-        private static final String NODE		= "demon";
+        private static final String NODE		= "CEYLON";
 
         private static final String ALTERNATIVE	= "alternative";
         private static final String SPAWNED		= "spawned";
