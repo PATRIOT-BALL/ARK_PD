@@ -24,6 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Pompeii;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SiestaBoss;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -49,6 +50,10 @@ public class Heamyo extends MeleeWeapon {
     public int proc(Char attacker, Char defender, int damage) {
       //  defender.sprite.killAndErase();
      //   defender.destroy();
+
+        if (defender instanceof Pompeii) {
+            defender.HP = 1;
+        }
         return super.proc(attacker, defender, damage);
     }
 

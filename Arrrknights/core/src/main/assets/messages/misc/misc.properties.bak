@@ -71,7 +71,7 @@ badges$badge.unlock_mage=아미야 해금
 badges$badge.unlock_rogue=레드 해금
 badges$badge.unlock_huntress=그레이스롯 해금
 badges$badge.unlock_rosecat=로즈몬티스 해금
-badges$badge.unlock_nearl=???
+badges$badge.unlock_nearl=니얼
 
 badges$badge.roaringflare=울부짖는 광명
 badges$badge.eviltime_end=암흑 시대의 끝
@@ -105,6 +105,10 @@ badges$badge.grey_champion3=전설 스롯이
 badges$badge.rose_champion1=숙련 쪽냥이
 badges$badge.rose_champion2=정예 쪽냥이
 badges$badge.rose_champion3=전설 쪽냥이
+
+badges$badge.nearl_champion1=숙련 니얼
+badges$badge.nearl_champion2=정예 니얼
+badges$badge.nearl_champion3=전설 니얼
 
 badges$badge.skin_baboskadi=스카디 스킨 해금
 badges$badge.skin_grn=그라니 스킨 해금

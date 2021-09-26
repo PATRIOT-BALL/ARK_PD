@@ -1128,9 +1128,9 @@ public class Badges {
 				break;
 		}
 
-
+		if (badge != null) {
 		local.add(badge);
-		displayBadge( badge );
+		displayBadge( badge ); }
 	}
 
 	public static void validateroaringflare() {

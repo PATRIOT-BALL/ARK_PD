@@ -142,45 +142,45 @@ public class Pompeii extends Mob {
             Dungeon.deleteGame(GamesInProgress.curSlot, true);
             Game.switchScene(SurfaceScene.class);
         }
-
-        if (this.buff(Barrier.class) != null && Dungeon.level.map[this.pos] == Terrain.WATER) {
-            this.damage(200, this);
+        else {
+            if (this.buff(Barrier.class) != null && Dungeon.level.map[this.pos] == Terrain.WATER) {
+                this.damage(200, this);
                 Level.set(this.pos, Terrain.EMPTY);
                 GameScene.updateMap(this.pos);
                 CellEmitter.get(this.pos).burst(Speck.factory(Speck.STEAM), 10);
+            } else if (Dungeon.level.map[this.pos] == Terrain.WATER && phase == 3) {
+                this.damage(6, this);
             }
-        else if (Dungeon.level.map[this.pos] == Terrain.WATER && phase == 3) {
-            this.damage(6, this);
-        }
 
-        if (phase == 0) {
-            if (Dungeon.hero.viewDistance >= Dungeon.level.distance(pos, Dungeon.hero.pos)) {
-                Dungeon.observe();
+            if (phase == 0) {
+                if (Dungeon.hero.viewDistance >= Dungeon.level.distance(pos, Dungeon.hero.pos)) {
+                    Dungeon.observe();
+                }
+                if (Dungeon.level.heroFOV[pos]) {
+                    notice();
+                }
             }
-            if (Dungeon.level.heroFOV[pos]) {
-                notice();
+
+            if (phase == 0) {
+                spend(TICK);
+                return true;
+            } else {
+                if (UseAbility()) return true;
             }
-        }
 
-        if (phase == 0) {
-            spend(TICK);
-            return true;
-        }
-        else {
-            if (UseAbility()) return true;
-        }
-
-        if(phase==2) {
-            spend(TICK);
-            if (summoncooldown > 0) summoncooldown--;
-        return true;}
+            if (phase == 2) {
+                spend(TICK);
+                if (summoncooldown > 0) summoncooldown--;
+                return true;
+            }
 
 
-        if (phase == 1 || phase == 3) {
-            if (blastcooldown > 0) blastcooldown--;
-            if (barriercooldown > 0) barriercooldown--;
-            if (volcanocooldown > 0) volcanocooldown--;
-            if (summoncooldown > 0) summoncooldown--;
+            if (phase == 1 || phase == 3) {
+                if (blastcooldown > 0) blastcooldown--;
+                if (barriercooldown > 0) barriercooldown--;
+                if (volcanocooldown > 0) volcanocooldown--;
+                if (summoncooldown > 0) summoncooldown--;
+            }
         }
         return super.act();
     }
@@ -235,6 +235,7 @@ public class Pompeii extends Mob {
         }
 
 
+
         //용암장갑
         if (barriercooldown <= 0) {
             if (phase == 3) Buff.affect(this, Barrier.class).setShield(150);
@@ -285,18 +286,18 @@ public class Pompeii extends Mob {
                                 Dungeon.fail(getClass());
                                 GLog.n(Messages.get(Char.class, "kill", name()));
                             }
+
+                            Camera.main.shake(2, 0.5f);
+                            Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f);
+                            Sample.INSTANCE.play(Assets.Sounds.BURNING, 2f);
+                            Buff.affect(this, Stamina.class, 2f);
+
+                            volcanotime=0;
+                            volcanocooldown= 10 - (Statistics.coreAlive/2);
+                            spend(TICK);
+                            return true;
                         }}
                     }}}
-
-                Camera.main.shake(2, 0.5f);
-                Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f);
-                Sample.INSTANCE.play(Assets.Sounds.BURNING, 2f);
-                Buff.affect(this, Stamina.class, 2f);
-
-                volcanotime=0;
-                volcanocooldown= 10 - (Statistics.coreAlive/2);
-                spend(TICK);
-                return true;
             }
         }
 

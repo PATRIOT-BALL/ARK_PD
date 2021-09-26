@@ -979,8 +979,8 @@ items.food.sandvich.desc=샌드비치는 날 강하게 해주지!\n미하일이 
 items.food.ingredients.blackpepper.name=후추
 items.food.ingredients.blackpepper.desc=Valeu a pena? Tudo vale a pena\n\n어느 세계에선 이 향신료가 역사를 바꿧다고도 합니다.
 
-items.food.ingredients.solt.name=소금
-items.food.ingredients.solt.desc=조미료의 기초이자 기초.
+items.food.ingredients.salt.name=소금
+items.food.ingredients.salt.desc=조미료의 기초이자 기초.
 
 items.food.ingredients.sugarflower.name=달콤달콤 꽃
 items.food.ingredients.sugarflower.desc=설탕 대신 쓸 수 있을 것 같습니다.
