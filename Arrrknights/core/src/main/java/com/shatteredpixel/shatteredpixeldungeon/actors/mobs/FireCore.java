@@ -29,6 +29,8 @@ public class FireCore extends Mob{
 
         properties.add(Property.IMMOVABLE);
         properties.add(Property.MINIBOSS);
+
+        immunities.add(Burning.class);
     }
 
     public boolean spawnRecorded = false;
