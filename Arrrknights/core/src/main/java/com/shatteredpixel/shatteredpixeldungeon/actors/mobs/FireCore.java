@@ -19,7 +19,7 @@ public class FireCore extends Mob{
         HP = HT = 160;
         defenseSkill = 0;
 
-        EXP = 40;
+        EXP = 20;
         maxLvl = 38;
 
         state = PASSIVE;
