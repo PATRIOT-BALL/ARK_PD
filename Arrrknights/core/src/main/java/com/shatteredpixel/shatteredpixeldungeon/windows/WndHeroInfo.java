@@ -175,7 +175,7 @@ public class WndHeroInfo extends WndTabbed {
 					break;
 				case NEARL:
 					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.NEARL_AXE),
-							new ItemSprite(ItemSpriteSheet.ARTIFACT_HOLDER),
+							new ItemSprite(ItemSpriteSheet.ARTIFACT_NEARL),
 							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
 					break;
 			}
