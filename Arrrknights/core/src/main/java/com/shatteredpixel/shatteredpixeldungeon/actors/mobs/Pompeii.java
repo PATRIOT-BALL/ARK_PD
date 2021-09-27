@@ -253,7 +253,7 @@ public class Pompeii extends Mob {
             if (volcanotime < 3) {
                 sprite.parent.addToBack(new TargetedCell(pos, 0xFF0000));
 
-                if (volcanotime == 0)
+                if (volcanotime == 0 || volcanotime == 2)
                 for (int i : PathFinder.NEIGHBOURS9) {
                     for (int j : PathFinder.NEIGHBOURS9) {
                         for (int t : PathFinder.NEIGHBOURS9) {
@@ -267,6 +267,7 @@ public class Pompeii extends Mob {
                 return true;
             }
             else {
+                boolean isHit = false;
                 for (int i : PathFinder.NEIGHBOURS9) {
                     for (int j : PathFinder.NEIGHBOURS9) {
                         for (int t : PathFinder.NEIGHBOURS9) {
@@ -275,7 +276,7 @@ public class Pompeii extends Mob {
                         if (vol < 4){
                             CellEmitter.center(pos+i+j+t).burst(BlastParticle.FACTORY, 1);
                         }
-                        if (ch != null) {
+                        if (ch != null && !isHit) {
                         if ((ch.alignment != alignment || ch instanceof Bee)) {
                             if (phase == 3) ch.damage(Random.NormalIntRange(120, 180), new Pompeii.Volcano());
                             else ch.damage(Random.NormalIntRange(80, 120), new Pompeii.Volcano());
@@ -286,18 +287,19 @@ public class Pompeii extends Mob {
                                 Dungeon.fail(getClass());
                                 GLog.n(Messages.get(Char.class, "kill", name()));
                             }
-
-                            Camera.main.shake(2, 0.5f);
-                            Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f);
-                            Sample.INSTANCE.play(Assets.Sounds.BURNING, 2f);
-                            Buff.affect(this, Stamina.class, 2f);
-
-                            volcanotime=0;
-                            volcanocooldown= 10 - (Statistics.coreAlive/2);
-                            spend(TICK);
-                            return true;
+                            isHit = true;
                         }}
                     }}}
+
+                Camera.main.shake(2, 0.5f);
+                Sample.INSTANCE.play(Assets.Sounds.BLAST, 2f);
+                Sample.INSTANCE.play(Assets.Sounds.BURNING, 3f);
+                Buff.affect(this, Stamina.class, 2f);
+
+                volcanotime=0;
+                volcanocooldown= 10 - (Statistics.coreAlive/2);
+                spend(TICK);
+                return true;
             }
         }
 
