@@ -27,7 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.FetidSlug;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.GnollTrickster;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.GreatCrab;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.ReunionDefender;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -167,7 +167,7 @@ public class Ghost extends NPC {
 					questBoss = new GnollTrickster();
 					txt_quest = Messages.get(this, "gnoll_1", Dungeon.hero.heroClass.title()); break;
 				case 3:
-					questBoss = new GreatCrab();
+					questBoss = new ReunionDefender();
 					txt_quest = Messages.get(this, "crab_1", Dungeon.hero.heroClass.title()); break;
 			}
 

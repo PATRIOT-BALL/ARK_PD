@@ -963,8 +963,8 @@ actors.mobs.brute$bruterage.desc=He is dying, but the voices of his compatriots 
 actors.mobs.causticslime.name=Leader Soldier
 actors.mobs.causticslime.desc=One of Reunion's melee soldiers, more dangerous than a normal Armored Soldier. Equipped with illegally obtained weapons and armor, they are better equipped and trained, and cannot be taken down with conventional strategies.\n\nhe was wearing hard armor. it is difficult to deal more than _6 damage_ to from any one attack. Also, the weapon is given Ooze arts.
 
-actors.mobs.crab.name= Rabid Hound
-actors.mobs.crab.desc=A creature controlled by a Reunion recon squad that is more dangerous than a Hound Pro. Monitoring equipment is strapped to its body. Due to their speed and evasiveness, they can easily slip through enemy defenses and cause heavy damage.
+actors.mobs.hound.name=Rabid Hound
+actors.mobs.hound.desc=A creature controlled by a Reunion recon squad that is more dangerous than a Hound Pro. Monitoring equipment is strapped to its body. Due to their speed and evasiveness, they can easily slip through enemy defenses and cause heavy damage.
 
 actors.mobs.crystalmimic.name=special ambush
 actors.mobs.crystalmimic.ate=A special ambush stole your stuff %s!
