@@ -603,12 +603,12 @@ actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _5%_ bonus damage to bo
 actors.hero.talent.speed_comabt.title=speed comabt
 actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _30%_
 
-actors.hero.talent.shining_meal.title=빛이나는 식사
+actors.hero.talent.shining_meal.title=shining meal
 actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._
-actors.hero.talent.experience.title=기사의 경험
-actors.hero.talent.experience.desc=_+1:_ 갑옷을 _3배 빠르게_ 감정합니다.\n\n_+2:_ 갑옷을 _5배 빠르게_ 감정합니다. 획득시 저주 여부를 알 수 있습니다.
-actors.hero.talent.protectionoflight.title=빛의 보호
-actors.hero.talent.protectionoflight.desc=_+1:_ 저주받은 갑옷 장착시 해당 갑옷의 저주를 약화합니다. 최대 _1회_ 발동합니다.\n\n_+2:_ 저주받은 갑옷 장착시 해당 갑옷의 저주를 약화합니다. 최대 _2회_ 발동합니다.
+actors.hero.talent.experience.title=knigts experience
+actors.hero.talent.experience.desc=_+1:_ Armor identification is _3x Speed_\n\n_+2:_ Armor identification is _5x Speed_, Also identifies curses when acquiring armor.
+actors.hero.talent.protectionoflight.title=protection of light
+actors.hero.talent.protectionoflight.desc=_+1:_ Weakens the curse of Cursed Armor. Activates up to _1 time._\n\n_+2:_ Weakens the curse of Cursed Armor. Activates up to _2 time._
 actors.hero.talent.knigts_oath.title=기사의 맹세
 actors.hero.talent.knigts_oath.desc=_+1:_ 아이템 감정시 빛의 인장을 _8%_ 충전합니다.\n\n_+2:_ 아이템 감정시 빛의 인장을 _12%_ 충전합니다.
 actors.hero.talent.combat_meal.title=전투 식사
@@ -647,7 +647,7 @@ actors.hero.talent.blessed_champion.title=blessed champion
 actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._
 
 actors.hero.talent$radiantherocooldown.name=RadiantHero cooldown
-actors.hero.talent$radiantherocooldown.desc=radianthero cooldown %s Trun.
+actors.hero.talent$radiantherocooldown.desc=cooldown %s Trun.
 
 
 actors.hero.hero.name=%s.

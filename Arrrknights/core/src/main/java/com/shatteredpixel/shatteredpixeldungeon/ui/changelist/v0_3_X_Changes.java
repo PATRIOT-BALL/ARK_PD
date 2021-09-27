@@ -22,7 +22,8 @@ public class v0_3_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "새로운 챕터",
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "추가 요소",
+                "새로운 적 타입 : _감염 생물_이 추가되었습니다." + "\n\n" +
                 "_시에스타_가 추가되었습니다. _로도스 아일랜드(27~30층)_ 에서 진입할 수 있습니다. 최대 레벨이 40으로 증가했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "챕터 5 새로운 적",
@@ -42,6 +43,7 @@ public class v0_3_X_Changes {
                 "_최후의 웬디고\n용문총경\n광기의 노래\n용암거영\n라인랩 프렌즈!\n친우의 검\n이세계 전술_"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
+                "핼버드_ : 2티어 무기로, 감염 생물에게 추가 피해를 입힙니다." + "\n\n" +
                 "_타향의 노래_ : 4티어 무기로, 자신이나 적이 물 타일 위에 있다면 피해량이 상승합니다. 이 효과는 중첩됩니다." + "\n\n" +
                 "_이세계 전술장비_ : 100%충전 후 발동시 미보를 1개 생성하는 유물입니다. 미보 및 파생 인형들의 피해량이 상승하며, 투척시 즉시 폭발하고 마비를 부여합니다." + "\n\n" +
                 "_특별한 스태프_ 2종이 추가되었습니다."));

@@ -27,6 +27,7 @@ public class LavaSlug extends Mob {
         immunities.add(Silence.class);
         immunities.add(Burning.class);
         immunities.add(WandOfFireblast.class);
+        properties.add(Property.INFECTED);
     }
 
     @Override

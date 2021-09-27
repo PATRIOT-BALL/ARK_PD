@@ -29,6 +29,8 @@ public class AcidSlug_A extends Mob implements Callback {
         loot = Generator.Category.POTION;
         lootChance = 0.25f;
 
+        properties.add(Property.INFECTED);
+
     }
 
     @Override

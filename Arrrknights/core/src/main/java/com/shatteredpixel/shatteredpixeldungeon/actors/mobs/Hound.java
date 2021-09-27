@@ -27,7 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
 import com.watabou.utils.Random;
 
-public class Crab extends Mob {
+public class Hound extends Mob {
 
 	{
 		spriteClass = HaundSprite.class;
@@ -43,6 +43,7 @@ public class Crab extends Mob {
 		lootChance = 0.167f;
 
 		immunities.add(Silence.class);
+		properties.add(Property.INFECTED);
 	}
 	
 	@Override

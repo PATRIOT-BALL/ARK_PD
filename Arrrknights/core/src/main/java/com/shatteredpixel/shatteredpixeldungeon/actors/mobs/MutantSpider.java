@@ -28,6 +28,7 @@ public class MutantSpider extends Mob {
         immunities.add(Corruption.class);
         immunities.add(Silence.class);
         immunities.add(Ooze.class);
+        properties.add(Property.INFECTED);
     }
 
     @Override

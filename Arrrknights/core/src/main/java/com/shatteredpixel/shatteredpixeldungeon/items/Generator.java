@@ -170,6 +170,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Halberd;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.M1887;
@@ -398,7 +399,7 @@ public class Generator {
                     EX42.class,
                     NEARL_AXE.class
             };
-            WEP_T1.probs = new float[]{1, 1, 1, 0, 1, 0};
+            WEP_T1.probs = new float[]{1, 1, 1, 0, 1, 1};
 
             WEP_T2.classes = new Class<?>[]{
                     Shortsword.class,
@@ -406,8 +407,9 @@ public class Generator {
                     Spear.class,
                     Dirk.class,
                     MidnightSword.class,
+                    Halberd.class
             };
-            WEP_T2.probs = new float[]{4, 5, 4, 4, 4};
+            WEP_T2.probs = new float[]{4, 5, 4, 4, 4, 5};
 
             WEP_T3.classes = new Class<?>[]{
                     Sword.class,

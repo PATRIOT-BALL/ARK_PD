@@ -907,7 +907,8 @@ public abstract class Char extends Actor {
 		SARKAZ( new HashSet<Class>( Arrays.asList(Grim.class, WandOfDisintegration.class)),
 				new HashSet<Class>()),
 		NPC ( new HashSet<Class>(),
-				new HashSet<Class>(Arrays.asList(Corruption.class, Amok.class, Terror.class, MagicalSleep.class)));
+				new HashSet<Class>(Arrays.asList(Corruption.class, Amok.class, Terror.class, MagicalSleep.class))),
+		INFECTED;
 
 		private HashSet<Class> resistances;
 		private HashSet<Class> immunities;

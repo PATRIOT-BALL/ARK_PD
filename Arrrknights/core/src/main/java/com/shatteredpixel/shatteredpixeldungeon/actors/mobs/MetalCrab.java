@@ -28,6 +28,7 @@ public class MetalCrab extends Mob{
         immunities.add(Poison.class);
         immunities.add(Bleeding.class);
         immunities.add(Roots.class);
+        properties.add(Property.INFECTED);
     }
 
     @Override

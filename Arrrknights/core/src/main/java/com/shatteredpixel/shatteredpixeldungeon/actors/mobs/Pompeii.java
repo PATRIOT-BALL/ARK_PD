@@ -70,6 +70,8 @@ public class Pompeii extends Mob {
 
         properties.add(Property.BOSS);
         properties.add(Property.FIERY);
+        properties.add(Property.INFECTED);
+
         immunities.add(Amok.class);
         immunities.add(ParalyticGas.class);
         immunities.add(Terror.class);

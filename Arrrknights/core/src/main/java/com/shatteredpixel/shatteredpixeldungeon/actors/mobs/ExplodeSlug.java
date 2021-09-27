@@ -36,6 +36,7 @@ public class ExplodeSlug extends Mob {
         lootChance = 0.2f;
 
        immunities.add(Burning.class);
+        properties.add(Property.INFECTED);
     }
 
     @Override

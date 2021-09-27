@@ -38,6 +38,8 @@ public class Albino extends Slug {
 		
 		loot = new MysteryMeat();
 		lootChance = 1f;
+
+		properties.add(Property.INFECTED);
 	}
 	
 	@Override

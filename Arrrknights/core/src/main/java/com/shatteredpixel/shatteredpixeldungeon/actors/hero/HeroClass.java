@@ -66,11 +66,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Halberd;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.LightKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -313,6 +315,10 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		hero.belongings.artifact.activate( hero );
 		Dungeon.quickslot.setSlot(0, SEAL);
 
+		LightKnife knives = new LightKnife();
+		knives.quantity(2).collect();
+		Dungeon.quickslot.setSlot(1, knives);
+
 		new ScrollHolder().collect();
 		Dungeon.LimitedDrops.SCROLL_HOLDER.drop();
 
@@ -326,7 +332,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		SkillBook skillB;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
-		Dungeon.quickslot.setSlot(1,skillB);
+		Dungeon.quickslot.setSlot(2,skillB);
 
 		new DewVial().collect();
 	}

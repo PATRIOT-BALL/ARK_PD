@@ -35,6 +35,7 @@ public class Originiutant extends Mob {
 
         immunities.add(Silence.class);
         immunities.add(Corruption.class);
+        properties.add(Property.INFECTED);
     }
 
     @Override

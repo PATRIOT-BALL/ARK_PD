@@ -57,12 +57,12 @@ public class Bestiary {
 						Snake.class,
 						Gnoll.class, Gnoll.class, Gnoll.class,
 						Swarm.class,
-						Crab.class));
+						Hound.class));
 			case 4: case 5:
 				//1x gnoll, 1x swarm, 2x crab, 2x slime
 				return new ArrayList<>(Arrays.asList(Gnoll.class,
 						Swarm.class,
-						Crab.class, Crab.class,
+						Hound.class, Hound.class,
 						Slime.class, Slime.class));
 				
 			// Prison

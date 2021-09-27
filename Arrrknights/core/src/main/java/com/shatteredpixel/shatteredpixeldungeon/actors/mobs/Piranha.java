@@ -54,6 +54,7 @@ public class Piranha extends Mob {
 		
 		state = SLEEPING;
 		immunities.add(Silence.class);
+		properties.add(Property.INFECTED);
 
 	}
 	

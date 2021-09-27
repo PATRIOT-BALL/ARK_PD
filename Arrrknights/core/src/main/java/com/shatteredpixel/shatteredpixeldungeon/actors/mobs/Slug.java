@@ -36,6 +36,7 @@ public class Slug extends Mob {
 		
 		maxLvl = 5;
 		immunities.add(Silence.class);
+		properties.add(Property.INFECTED);
 	}
 	
 	@Override

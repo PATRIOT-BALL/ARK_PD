@@ -44,6 +44,7 @@ public class FetidSlug extends Slug {
 		state = WANDERING;
 
 		properties.add(Property.MINIBOSS);
+		properties.add(Property.INFECTED);
 	}
 
 	@Override
