@@ -2174,7 +2174,7 @@ items.weapon.melee.sai.name=글래스고 깡패
 items.weapon.melee.sai.stats_desc=공격속도 500%
 items.weapon.melee.sai.desc=양 손에 끼워 사용하는 반월 너클. 무겁진 않지만 그렇다고 가볍지도 않다. 너클의 날붙이는 적에게 치명적일 것이다, 아마도.
 
-items.weapon.melee.heamyo.name=海猫
+items.weapon.melee.heamyo.name=해묘
 items.weapon.melee.heamyo.stats_desc=_개발자 테스트 무기. 이게 필드에 드랍됐다면 치명적 버그니 바로 설문조사등으로 제보할것._
 items.weapon.melee.heamyo.desc=돈미짱
 
@@ -2336,6 +2336,11 @@ items.weapon.melee.golddogsword.charge_fail=축적 불가능!
 items.weapon.melee.folksong.name=타향의 노래
 items.weapon.melee.folksong.desc=그녀가 비탄할 때 그녀의 광기에 고통이 퍼져나아가네\n\n자신이나 공격 대상이 물 위에 있다면 피해량이 15% 상승합니다. (최대 30%)
 items.weapon.melee.folksong.setbouns=_아이템 시너지 : 광기의 노래_\n적의 방어력을 50%무시합니다.
+
+items.weapon.melee.gluttony.name=식서의 인장
+items.weapon.melee.gluttony.desc=우리 여동생이 세계에서 제일 귀엽다\n\n턴에 비례해 무기의 SP가 충전되며, 25%를 소모해 주위 적들에게 160%의 방어 무시 피해를 입힙니다.
+items.weapon.melee.gluttony.stats_desc=공격속도 133%
+items.weapon.melee.gluttony.ac_zap=모래바람
 
 
 
