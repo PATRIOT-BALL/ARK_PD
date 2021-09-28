@@ -534,7 +534,7 @@ actors.hero.talent.rejuvenating_steps.desc=_+1:_ When the GreyThroat steps on sh
 actors.hero.talent.bomb_arrow.title=explo shot
 actors.hero.talent.bomb_arrow.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s _100% damage_ in a 3x3 area. Ther has a _30 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s _150% damage_ in a 3x3 area. Ther has a _20 turn_ cooldown.
 actors.hero.talent.durable_projectiles.title=killstreak
-actors.hero.talent.durable_projectiles.desc=_+1:_ enemy killed gain +50% move speed for _1 trun_.\n\n_+2:_ enemy killed gain +50% move speed for _2 trun_.
+actors.hero.talent.durable_projectiles.desc=_+1:_ enemy killed gain +50% move speed for _2 trun_.\n\n_+2:_ enemy killed gain +50% move speed for _3 trun_.
 actors.hero.talent.arts_focus.title=silence shot
 actors.hero.talent.arts_focus.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s Silence 3 turn in a 3x3 area. Ther has a _60 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s Silence 3 turn in a 3x3 area. Ther has a _40 turn_ cooldown.\n\n_+3:_ When the GreyThroat fires an arrow at the ground, it targt`s Silence 3 turn in a 3x3 area. Ther has a _20 turn_ cooldown.
 actors.hero.talent.seer_shot.title=roots shot
@@ -609,8 +609,8 @@ actors.hero.talent.experience.title=knigts experience
 actors.hero.talent.experience.desc=_+1:_ Armor identification is _3x Speed_\n\n_+2:_ Armor identification is _5x Speed_, Also identifies curses when acquiring armor.
 actors.hero.talent.protectionoflight.title=protection of light
 actors.hero.talent.protectionoflight.desc=_+1:_ Weakens the curse of Cursed Armor. Activates up to _1 time._\n\n_+2:_ Weakens the curse of Cursed Armor. Activates up to _2 time._
-actors.hero.talent.knigts_oath.title=기사의 맹세
-actors.hero.talent.knigts_oath.desc=_+1:_ 아이템 감정시 빛의 인장을 _8%_ 충전합니다.\n\n_+2:_ 아이템 감정시 빛의 인장을 _12%_ 충전합니다.
+actors.hero.talent.knigts_oath.title=knigts oath
+actors.hero.talent.knigts_oath.desc=_+1:_ Recharges seal of light by _8%_ when identifying an item.\n\n_+2:_ Recharges seal of light by _12%_ when identifying an item.
 actors.hero.talent.combat_meal.title=전투 식사
 actors.hero.talent.combat_meal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 시 빛의 인장을 _3%_ 충전합니다.\n\n_+2:_ 식사에 1턴만 소모되며, 식사 시 빛의 인장을 _6%_ 충전합니다.
 actors.hero.talent.puerlight.title=순수한 빛
@@ -1414,5 +1414,6 @@ actors.mobs.firecore.on_death=You felt volcanic energy diminish.
 actors.mobs.pompeii.name=Pompeii
 actors.mobs.pompeii.desc=A massive infected beast. These aberrations were born in a special high-temperature environment.\n\n_This creature seems to be weak against water and poison_
 
+// 추가
 actors.mobs.sandpillar.name=Obelisk
 actors.mobs.sandpillar.desc=my little sister is the cutest

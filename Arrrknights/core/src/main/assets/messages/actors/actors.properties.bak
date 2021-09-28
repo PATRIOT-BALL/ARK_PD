@@ -1421,6 +1421,12 @@ actors.mobs.pompeii.name=폼페이
 actors.mobs.pompeii.desc=거대한 야생의 감염 생물. 특수한 고온 환경에서 탄생한 변이생물체다. 공포스런 외관을 갖고 있으며, 자신의 체온을 높여 사람이 가까이 접근하지 못하도록 한다.\n\n_이 생물체는 물과 독에 약해보입니다._
 
 
+// 추가 몹
+
+actors.mobs.sandpillar.name=오벨리스크
+actors.mobs.sandpillar.desc=우리 여동생이 제일 귀엽다고 써져있다.
+
+
 
 // 스페셜 몹
 

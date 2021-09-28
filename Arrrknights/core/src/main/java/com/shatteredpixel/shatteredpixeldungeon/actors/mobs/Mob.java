@@ -696,7 +696,7 @@ public abstract class Mob extends Char {
 
 			if (cause == Dungeon.hero
 			&& Dungeon.hero.hasTalent(Talent.DURABLE_PROJECTILES)) {
-				Buff.affect(Dungeon.hero, Stamina.class, Dungeon.hero.pointsInTalent(Talent.DURABLE_PROJECTILES));
+				Buff.affect(Dungeon.hero, Stamina.class, 1+Dungeon.hero.pointsInTalent(Talent.DURABLE_PROJECTILES));
 			}
 		}
 

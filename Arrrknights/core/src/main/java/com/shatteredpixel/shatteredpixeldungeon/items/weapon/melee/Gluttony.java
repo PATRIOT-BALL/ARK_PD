@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -35,7 +36,7 @@ public class Gluttony extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) + 2 +  //18 + 4
+        return  4*(tier) + 2 +  //18durable_projectiles + 4
                 lvl*(tier); }
 
     @Override
@@ -57,17 +58,13 @@ public class Gluttony extends MeleeWeapon {
                         if (Dungeon.level.adjacent(mob.pos, hero.pos) && mob.alignment != Char.Alignment.ALLY) {
                             int dmg = hero.damageRoll();
                             dmg *= 1.6f;
+                            CellEmitter.get( mob.pos ).burst( Speck.factory( Speck.WOOL ), 3 );
                             mob.damage(dmg, this);
                         }
                     }
-                    CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.PARALYSIS ), 10 );
-                    charge -= 25;
-                    updateQuickslot();
-                    hero.spendAndNext(1f);
-                }
-                else {
                     CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
-                    charge = 100;
+                    charge -= 25;
+                    Sample.INSTANCE.play(Assets.Sounds.BLAST);
                     updateQuickslot();
                     hero.spendAndNext(1f);
                 }
