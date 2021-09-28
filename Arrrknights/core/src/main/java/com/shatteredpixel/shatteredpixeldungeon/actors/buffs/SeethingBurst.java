@@ -49,6 +49,6 @@ public class SeethingBurst extends FlavourBuff {
 
     public void GetDamage(int damage)
     {
-        Power += damage * 4;
+        Power += damage * 2.5f;
     }
 }
