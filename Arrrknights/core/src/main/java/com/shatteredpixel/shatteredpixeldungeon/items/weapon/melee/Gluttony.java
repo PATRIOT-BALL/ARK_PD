@@ -8,6 +8,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Bundle;
@@ -33,7 +35,7 @@ public class Gluttony extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) +   //16 + 4
+        return  4*(tier) + 1 +  //17 + 4
                 lvl*(tier); }
 
     @Override
@@ -58,11 +60,19 @@ public class Gluttony extends MeleeWeapon {
                             mob.damage(dmg, this);
                         }
                     }
+                    CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.PARALYSIS ), 10 );
                     charge -= 25;
                     updateQuickslot();
                     hero.spendAndNext(1f);
                 }
-            } else {
+                else {
+                    CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
+                    charge = 100;
+                    updateQuickslot();
+                    hero.spendAndNext(1f);
+                }
+            }
+            else {
                 Buff.affect(hero, Roots.class, 5f);
                 cursedKnown = true;
                 charge -= 25;

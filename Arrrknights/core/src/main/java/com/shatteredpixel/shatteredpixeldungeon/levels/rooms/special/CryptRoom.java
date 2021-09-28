@@ -23,6 +23,8 @@ package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special;
 
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SandPillar;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Statue;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
@@ -33,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.watabou.utils.Point;
+import com.watabou.utils.Random;
 
 public class CryptRoom extends SpecialRoom {
 
@@ -67,7 +70,15 @@ public class CryptRoom extends SpecialRoom {
 			Painter.set( level, new Point( right-1, top+1 ), Terrain.STATUE );
 			cy = top + 2;
 		}
-		
+
+		/*
+	if (Random.Int(20) == 0) {
+			SandPillar Sand = new SandPillar();
+			Sand.pos = cx + cy * level.width();
+			level.mobs.add( Sand );
+		}
+		else level.drop( prize( level ), cx + cy * level.width() ).type = Heap.Type.TOMB;*/
+
 		level.drop( prize( level ), cx + cy * level.width() ).type = Heap.Type.TOMB;
 	}
 	
