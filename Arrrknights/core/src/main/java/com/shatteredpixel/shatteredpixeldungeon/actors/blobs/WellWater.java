@@ -70,11 +70,11 @@ public abstract class WellWater extends Blob {
 			
 			Item oldItem = heap.peek();
 			Item newItem = affectItem( oldItem, pos );
+
 			
 			if (newItem != null) {
 				
 				if (newItem == oldItem) {
-
 				} else if (oldItem.quantity() > 1) {
 
 					oldItem.quantity( oldItem.quantity() - 1 );

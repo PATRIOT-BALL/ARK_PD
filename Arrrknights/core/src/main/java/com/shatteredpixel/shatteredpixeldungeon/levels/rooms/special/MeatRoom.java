@@ -34,10 +34,6 @@ public class MeatRoom extends SpecialRoom {
             }
         }
 
-        int ppos;
-        ppos = level.pointToCell(random());
-        level.drop( new BlackPepper(), ppos ).type = heapType;
-
         if (heapType == Heap.Type.HEAP) {
             for (int i=0; i < 1; i++) {
                 int pos;
@@ -47,6 +43,12 @@ public class MeatRoom extends SpecialRoom {
                 level.drop( new MysteryMeat() , pos );
             }
         }
+
+        int pos;
+        do {
+            pos = level.pointToCell(random());
+        } while (level.map[pos] != Terrain.EMPTY);
+        level.drop( new BlackPepper() , pos );
 
         entrance().set( Door.Type.LOCKED );
         level.addItemToSpawn( new IronKey( Dungeon.depth ) );

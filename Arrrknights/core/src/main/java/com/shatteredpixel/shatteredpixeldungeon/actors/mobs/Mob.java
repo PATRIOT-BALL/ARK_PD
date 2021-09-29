@@ -68,6 +68,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfDeepenedSleep;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Lucky;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.Dart;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
@@ -727,9 +728,16 @@ public abstract class Mob extends Char {
 			}
 		}
 
+		if (soulMarked) {
+			MagesStaff Ring = Dungeon.hero.belongings.getItem(MagesStaff.class);
+			if (Ring != null) {
+				Ring.gainCharge(1f);
+			}
+		}
+
 		if (!(this instanceof Wraith_donut)
 				&& soulMarked
-				&& Random.Int(7) < Dungeon.hero.pointsInTalent(Talent.NECROMANCERS_MINIONS)){
+				&& Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.NECROMANCERS_MINIONS)){
 			Wraith_donut w = Wraith_donut.spawnAt(pos);
 			if (w != null) {
 				Buff.affect(w, Corruption.class);

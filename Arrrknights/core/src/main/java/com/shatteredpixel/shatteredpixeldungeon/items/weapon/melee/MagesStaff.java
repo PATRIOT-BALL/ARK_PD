@@ -88,6 +88,10 @@ public class MagesStaff extends MeleeWeapon {
 
 	@Override
 	public int max(int lvl) {
+		if (Dungeon.hero.subClass == HeroSubClass.WARLOCK)
+			return  3*(tier+1) +    // 6 + 1
+					lvl*(tier);   //scaling unaffected
+		else
 		return  4*(tier+1) +    //8 base damage, down from 10
 				lvl*(tier+1);   //scaling unaffected
 	}

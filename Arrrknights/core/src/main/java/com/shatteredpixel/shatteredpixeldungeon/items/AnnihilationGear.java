@@ -5,8 +5,6 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
@@ -14,12 +12,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Chargrill
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Frozen;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Mystery;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MeatPower_Stewed;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RageThrowCooldown;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
@@ -31,8 +28,6 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Mon3tr;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
@@ -41,11 +36,8 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MissileSprite;
-import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
@@ -124,7 +116,38 @@ public class AnnihilationGear extends Item {
 
         if (action.equals(AC_ACTIVE)) {
             if (charge > 0) GameScene.selectCell(Shot);
-            else GLog.w(Messages.get(this, "nocharge"));
+            else {
+                if (Dungeon.hero.hasTalent(Talent.MYWISH) && hero.buff(Talent.MyWishCooldown.class) == null) {
+                    float oldtime = 0;
+                    if (hero.buff(MindVision.class) != null)
+                    {
+                        oldtime = Dungeon.hero.buff(MindVision.class).visualcooldown();
+                        hero.buff(MindVision.class).detach();
+                    }
+
+                    float CoolDown = 5000 - (hero.pointsInTalent(Talent.MYWISH) * 1000);
+                    Buff.affect(hero, Talent.MyWishCooldown.class, CoolDown);
+
+                    for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+                        if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos] && !mob.properties().contains(Char.Property.BOSS) && !mob.properties().contains(Char.Property.MINIBOSS)) {
+                            mob.damage(Random.NormalIntRange(5675, 8784), hero);
+                        }
+                    }
+
+                    GameScene.flash( 0x80FFFFFF );
+                    Camera.main.shake(2, 0.5f);
+                    Sample.INSTANCE.play(Assets.Sounds.SKILL_YOUWISH);
+
+                    charge = chargeCap;
+                    updateQuickslot();
+
+                    hero.HP /= 4;
+                    if (oldtime != 0) Buff.affect(hero, MindVision.class, oldtime);
+
+                    hero.spendAndNext(1f);
+                }
+                else GLog.w(Messages.get(this, "nocharge"));
+            }
         }
     }
 
@@ -288,15 +311,6 @@ public class Spriteex extends MissileWeapon {
                 dmg *= 1.5f + (float) Dungeon.hero.pointsInTalent(Talent.FOCUSED_ATTACK) * 0.15f;
             } else dmg *= 1.5f;
 
-        }
-
-        if (Dungeon.hero.hasTalent(Talent.AIMTRAINING)) {
-            if (enemy instanceof Mob) {
-                if (enemy.properties().contains(Char.Property.DRONE) == true) {
-                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.AIMTRAINING) * 0.2f;
-                    if (Random.IntRange(0, 1) == 1) charge += 1;
-                }
-            }
         }
 
         if (Dungeon.hero.hasTalent(Talent.ESTHESIA)) {

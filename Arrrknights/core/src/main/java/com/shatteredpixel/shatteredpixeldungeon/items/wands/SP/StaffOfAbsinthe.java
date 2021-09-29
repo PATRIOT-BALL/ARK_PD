@@ -32,7 +32,7 @@ public class StaffOfAbsinthe extends DamageWand {
     public int min(int lvl){ return 6+lvl*3; }
 
     public int max(int lvl){
-        return 18+7*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 7;
+        return 25+7*lvl+ RingOfAmplified.DamageBonus(Dungeon.hero) * 7;
     }
 
     @Override

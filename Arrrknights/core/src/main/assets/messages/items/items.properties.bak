@@ -1602,6 +1602,10 @@ items.stones.stoneofadvanceguard.desc=이 돌에 맞은 대상은 아방가르�
 items.stones.stoneofadvanceguard.hit=점검 보상 200합성옥이 지급됩니다.
 items.stones.stoneofadvanceguard.fail=이렇게나 강한 적을 200합성옥으로 대체하는 건 아방가르드하지 않네요.
 
+items.stones.stoneofadvanceguard.name=아방가르드한 아방가르드
+items.stones.stoneofadvanceguard.desc=빈 우물에 던지면 아방가르드한 일이 일어날 것 같습니다.
+items.stones.stoneofadvanceguard.advanceguard=아방가르드!
+
 items.stones.stoneofaggression.name=공격성의 돌
 items.stones.stoneofaggression.desc=이 돌을 아군이나 적군에게 던지면 짧은 시간동안 주변의 모든 적들이 대상 캐릭터만을 공격하게 할 수 있습니다.\n\n적에게 사용한 경우 이 아츠는 잠깐 동안만 지속되나, 당신이나 아군에게 사용한 경우 훨씬 긴 시간동안 지속됩니다. 강력한 적들은 또한 이 효과에 저항할 것입니다.
 items.stones.stoneofaggression$aggression.name=목표로 지정됨
@@ -2341,6 +2345,9 @@ items.weapon.melee.gluttony.name=식서의 인장
 items.weapon.melee.gluttony.desc=우리 여동생이 세계에서 제일 귀엽다\n\n턴에 비례해 무기의 SP가 충전되며, 25%를 소모해 주위 적들에게 160%의 방어 무시 피해를 입힐 수 있습니다.
 items.weapon.melee.gluttony.stats_desc=공격속도 133%
 items.weapon.melee.gluttony.ac_zap=모래바람
+
+items.weapon.melee.halberd.name=핼버드
+items.weapon.melee.halberd.desc="원석이 오리지늄이란 뜻이라고 설마...... 아, 안 됩니다! 저, 절대 먹으면 안 돼요! 동글이도 뾰쪽이도 까망이도 튼튼이도 먹으면 안 됩니다!"\n\n이 무기는 _감염 생물_에게 _4_의 추가 피해를 입힙니다.
 
 
 

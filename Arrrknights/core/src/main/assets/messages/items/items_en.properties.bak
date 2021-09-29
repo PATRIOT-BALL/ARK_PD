@@ -1602,6 +1602,10 @@ items.stones.stoneofadvanceguard.desc=Targets hit by this stone are replaced wit
 items.stones.stoneofadvanceguard.hit=You get 200 Orundums
 items.stones.stoneofadvanceguard.fail=It's not avant-guard to replace such a strong enemy with 200 Orundums
 
+items.stones.superadvanceguard.name=Advance---guard
+items.stones.superadvanceguard.desc=빈 우물에 던지면 아방가르드한 일이 일어날 것 같습니다.
+items.stones.superadvanceguard.advanceguard=아방가르드!
+
 items.stones.stoneofaggression.name=stone of aggression
 items.stones.stoneofaggression.desc=When this stone is thrown at an ally or enemy, all nearby enemies will be forced to attack that character for a short time.\n\nWhen used on enemies, the magic will only last for a few moments, but when used on yourself or allies it will last significantly longer. Powerful enemies will resist the effect as well.
 items.stones.stoneofaggression$aggression.name=Targeted
@@ -2333,6 +2337,9 @@ items.weapon.melee.gluttony.name=gluttony
 items.weapon.melee.gluttony.desc=SP recharges slowly. Consumes 25% SP to deal 160% damage to nearby enemies.
 items.weapon.melee.gluttony.stats_desc=Attack Speed 133%
 items.weapon.melee.gluttony.ac_zap=Sand
+
+items.weapon.melee.halberd.name=halberd
+items.weapon.melee.halberd.desc=This weapon deals _4_ additional  damage to _infected creatures_.
 
 
 ###missile weapons

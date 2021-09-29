@@ -153,7 +153,7 @@ public enum Talent {
 	//RoseCat T2
 	FASTMEAL(132), RECOVERY_UPGRADE(133), DELICIOUS_FOOD(134), LOVEMEAT(135), POWERGEAR(136),
 	//RoseCat T3
-	AIMTRAINING(137,3), CUTLET(138,3),
+	MYWISH(137,3), CUTLET(138,3),
 	//RoseCat De_T3
 	FOCUSED_ATTACK(139,3), PHYSICAL_ATTACK(140,3), BATTLEFLOW(141,3),
 	//RoseCat Gu_T3
@@ -197,6 +197,23 @@ public enum Talent {
 	public static class NearlRemoveCurseCounter extends CounterBuff{};
 
 	public static class RadiantHeroCooldown extends FlavourBuff{
+		@Override
+		public int icon() {
+			return BuffIndicator.COMBO;
+		}
+
+		@Override
+		public String toString() {
+			return Messages.get(this, "name");
+		}
+
+		@Override
+		public String desc() {
+			return Messages.get(this, "desc", dispTurns());
+		}
+	};
+
+	public static class MyWishCooldown extends FlavourBuff{
 		@Override
 		public int icon() {
 			return BuffIndicator.COMBO;
@@ -657,7 +674,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, ARTS_FOCUS, SEER_SHOT);
 				break;
 			case ROSECAT:
-				Collections.addAll(tierTalents, AIMTRAINING, CUTLET);
+				Collections.addAll(tierTalents, MYWISH, CUTLET);
 				break;
 			case NEARL:
 				Collections.addAll(tierTalents, PEGASUS_AURA, RADIANTHERO);

@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mimic;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.IronKey;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.SuperAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -63,6 +64,14 @@ public class TreasuryRoom extends SpecialRoom {
 				} while (level.map[pos] != Terrain.EMPTY);
 				level.drop( new Gold( Random.IntRange( 5, 12 ) ), pos );
 			}
+		}
+
+		if (Dungeon.depth < 10 && Random.Int(20) == 0) {
+			int pos;
+			do {
+				pos = level.pointToCell(random());
+			} while (level.map[pos] != Terrain.EMPTY);
+			level.drop( new SuperAdvanceguard(), pos );
 		}
 		
 		entrance().set( Door.Type.LOCKED );

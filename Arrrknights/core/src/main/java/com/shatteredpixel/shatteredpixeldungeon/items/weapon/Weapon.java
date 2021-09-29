@@ -252,10 +252,6 @@ abstract public class Weapon extends KindOfWeapon {
 			encumbrance = Math.max(2, encumbrance+2);
 
 		float ACC = this.ACC;
-		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND) && owner instanceof Hero)
-		{
-			encumbrance += 4 - Dungeon.hero.pointsInTalent(Talent.CHAINSAW_EXTEND);
-		}
 
 		return encumbrance > 0 ? (float)(ACC / Math.pow( 1.5, encumbrance )) : ACC;
 	}
@@ -304,6 +300,10 @@ abstract public class Weapon extends KindOfWeapon {
 
 		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 2) req--;
 		if (Dungeon.hero.pointsInTalent(Talent.STRONGMAN) + 1 >= 4) req--;
+
+		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND)) {
+			req += 5 - Dungeon.hero.pointsInTalent(Talent.CHAINSAW_EXTEND);
+		}
 
 		return req;
 	}
