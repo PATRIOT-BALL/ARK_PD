@@ -66,7 +66,7 @@ public class TreasuryRoom extends SpecialRoom {
 			}
 		}
 
-		if (Dungeon.depth < 10 && Random.Int(20) == 0) {
+		if (Dungeon.depth < 10 && Random.Int(5) == 0) {
 			int pos;
 			do {
 				pos = level.pointToCell(random());
