@@ -114,6 +114,9 @@ public class v0_3_X_Changes {
                 "_격노의 눈_과 _스콜피온 테일_의 피해량이 상승했습니다." + "\n\n" +
                 "_낙지참_ 사용시 저주 장비 수와 관계없이 기본적으로 150턴의 축복을 얻습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유뮬 상향",
+                "_가드 오퍼레이터 근로 계약서_의 강화에 +4 / +7 / +10에 도달했을 때, 장착 아이템 최소 강화 보정이 추가되었습니다. 최대 +3까지 보정됩니다,"));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);

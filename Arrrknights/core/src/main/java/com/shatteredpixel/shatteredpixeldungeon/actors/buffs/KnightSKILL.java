@@ -272,7 +272,7 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
                         WandOfBlastWave.throwChar(enemy, trajectory, dist, true, true);
 
                         if (hero.pointsInTalent(Talent.SKILL_MASTERY) >= 3) {
-                            Buff.affect(enemy, Silence.class, 1f);
+                            Buff.affect(enemy, Silence.class, 2f);
                         }
                     }
                     if (counter.count() < 5) {

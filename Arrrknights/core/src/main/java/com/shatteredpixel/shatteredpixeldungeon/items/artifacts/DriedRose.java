@@ -28,8 +28,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.CorrosiveGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Guardoper_ItermUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
@@ -53,6 +55,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operHeroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -156,6 +159,7 @@ public class DriedRose extends Artifact {
 
 					hero.spend(1f);
 					hero.busy();
+					Buff.affect(hero, Guardoper_ItermUpgrade.class);
 					hero.sprite.operate(hero.pos);
 
 					if (!firstSummon) {
@@ -192,7 +196,7 @@ public class DriedRose extends Artifact {
 			if (ghost != null) GameScene.selectCell(ghostDirector);
 			
 		} else if (action.equals(AC_OUTFIT)){
-			GameScene.show( new WndGhostHero(this) );
+			GameScene.show( new WndGhostHero(this, ghost) );
 		}
 	}
 	
@@ -513,7 +517,7 @@ public class DriedRose extends Artifact {
 	public static class GhostHero extends NPC {
 
 		{
-			spriteClass = Guard_operSprite.class;
+			spriteClass = Guard_operHeroSprite.class;
 
 			flying = true;
 
@@ -916,7 +920,7 @@ public class DriedRose extends Artifact {
 		private WndBlacksmith.ItemButton btnWeapon;
 		private WndBlacksmith.ItemButton btnArmor;
 		
-		WndGhostHero(final DriedRose rose){
+		WndGhostHero(final DriedRose rose, GhostHero Ghost){
 			
 			IconTitle titlebar = new IconTitle();
 			titlebar.icon( new ItemSprite(rose) );
