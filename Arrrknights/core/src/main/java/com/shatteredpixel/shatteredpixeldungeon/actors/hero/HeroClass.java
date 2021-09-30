@@ -301,6 +301,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(1,skillB);
 
+		Dungeon.quickslot.setSlot(3, hero.belongings.weapon);
+
 		new DewVial().collect();
 		new MeatCutlet().quantity(2).collect();
 	}
