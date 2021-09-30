@@ -287,7 +287,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		Gear.identify().collect();
 
 		Dungeon.quickslot.setSlot(0, Gear);
-		Dungeon.quickslot.setSlot(3,ex42);
 
 		new VelvetPouch().collect();
 		Dungeon.LimitedDrops.VELVET_POUCH.drop();
