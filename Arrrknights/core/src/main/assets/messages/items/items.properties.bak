@@ -610,7 +610,7 @@ items.artifacts.driedrose$ghosthero.introduce=만나서 반갑습니다. 아, �
 
 items.artifacts.driedrose$ghosthero.dialogue_sewers_1=우르수스는 원래 사람이 살기 척박한 땅이지만, 그래도 이 정도면 양호한 편입니다. 적어도 물이 흐르고 식물들이 자라고있으니까요.
 items.artifacts.driedrose$ghosthero.dialogue_sewers_2=체르노보그에서 어떻게 도망쳐왔냐고요? 흐음. 그 대답을 알게되면 안 물어보는게 좋았을텐데 하고 생각하실 거예요.
-items.artifacts.driedrose$ghosthero.dialogue_sewers_3=%s, 이 원석충들을 식용으로 쓸 수 있다는거 아시나요? 의외로 맛있다구요.
+items.artifacts.driedrose$ghosthero.dialogue_sewers_3=이 원석충들을 식용으로 쓸 수 있다는거 아시나요? 의외로 맛있다구요.
 items.artifacts.driedrose$ghosthero.dialogue_sewers_4=물론, 혼자면 어렵겠죠. 하지만 당신은 혼자가 아닙니다.
 items.artifacts.driedrose$ghosthero.dialogue_sewers_5=이런 짐승조차 이정도로 강하다면 과연 이것들을 사육하는 리유니온은 얼마나 강한 걸까?
 items.artifacts.driedrose$ghosthero.dialogue_sewers_6=전장에 몸을 두는건 원치 않아요. 그렇지만 감염자들을 위해 싸우고 싶다는 마음은 그 누구에게도 지지 않아요. 그것만 이해해주신다면 충분해요.
@@ -932,7 +932,7 @@ items.food.food.eat_msg=이 음식은 매우 맛있었다!
 items.food.food.smart=똑똑해진 느낌이 난다!
 items.food.food.desc=우르수스에서 온 음식. 강력한 발효향이 느껴지는 것 같다. 그러니까, 시큼하단 소리다.
 
-items.food.meatcutlet.name=돈까스
+items.food.meatcutlet.name=돈까스~
 items.food.meatcutlet.desc=맛있는 돈까스다. 허기는 별로 채워주지 않지만 먹으면 섬멸전 장비를 충전할 수 있다.
 
 items.food.frozencarpaccio.name=얼린 생고기
@@ -942,9 +942,9 @@ items.food.frozencarpaccio.refresh=상태 회복!
 items.food.frozencarpaccio.better=당신의 기분이 나아졌다!
 items.food.frozencarpaccio.desc=얼린 생고기 조각입니다. 얇게 썰어서 바로 먹을 수 있고 또 맛도 의외로 좋습니다.
 
-items.food.meatpie.name=고기 파이
+items.food.meatpie.name=염국 훈제고기
 items.food.meatpie.eat_msg=이 음식은 엄청난 맛이 났다!
-items.food.meatpie.desc=짭짤하게 간이 밴 고기를 얹은 맛있는 파이입니다. 이 음식은 다른 어떤 것보다도 당신의 배를 많이 채워줄 것입니다.
+items.food.meatpie.desc=손님 접대용으로도 손색이 없는 채소를 곁들여 먹는 훈제 고기. 용문에선 누구나 만들 줄 아는 요리다.\n\n이 음식은 다른 어떤 것보다도 당신의 배를 많이 채워줄 것이며, 섭취 시 _배부름_ 버프를 얻게 됩니다.
 
 items.food.mysterymeat.name=수상한 고기
 items.food.mysterymeat.eat_msg=이 음식은...수상한 맛이 났다.
@@ -988,11 +988,11 @@ items.food.ingredients.sugarflower.desc=설탕 대신 쓸 수 있을 것 같습�
 
 ## 가공 요리 (식재료 사용 요리)
 
-items.food.cooking.honeybread.name=허니버터빵
-items.food.cooking.honeybread.desc=매우 달콤한 빵입니다. 포만감은 일반적인 빵과 같지만, 섭취시 축복 상태를 얻습니다.
+items.food.cooking.honeybread.name=장원 팬케익
+items.food.cooking.honeybread.desc=동그란 팬케익. 구름 위를 걷는 듯 폭신한 식감의 향기로운 팬케익이다. \n\n포만감은 일반적인 빵과 같지만, 섭취시 _축복_ 상태를 얻습니다.
 
 items.food.cooking.notbarfood.name=술안주 절대 아님
-items.food.cooking.notbarfood.desc=같이 마실만한 뭔가가 있다면...이런, 디오나가 째려봐!\n\n섭취시 체력을 소량 회복하고 아츠 면역을 얻습니다.\n_이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다._
+items.food.cooking.notbarfood.desc=같이 마실만한 뭔가가 있다면...이런, 디오나가 째려봐!\n\n섭취시 체력을 소량 회복하고 _아츠 면역_을 얻습니다.\n_이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다._
 
 
 

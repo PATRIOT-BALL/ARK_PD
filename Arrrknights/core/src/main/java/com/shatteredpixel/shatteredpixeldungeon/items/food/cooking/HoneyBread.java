@@ -14,7 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class HoneyBread extends Food {
     {
-        image = ItemSpriteSheet.RATION;
+        image = ItemSpriteSheet.PAN_CAKE;
         energy = Hunger.HUNGRY;
 
         stackable = true;

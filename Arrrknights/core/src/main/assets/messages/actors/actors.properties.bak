@@ -618,6 +618,9 @@ actors.hero.talent.esthesia.desc=_+1:_ 방벽 투척이 _보스_ 에게 _5%_ 의
 actors.hero.talent.speed_comabt.title=고속전투
 actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _10%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _30%_ 상승합니다.
 
+actors.hero.talent$mywishcooldown.name=내가 원하는 세상 쿨타임
+actors.hero.talent$mywishcooldown.desc=내가 원하는 세상 재발동까지 %s 턴 남았습니다.
+
 actors.hero.talent.shining_meal.title=빛이나는 식사
 actors.hero.talent.shining_meal.desc=_+1:_ 식사 시 시야 내 적들에게 _2 턴의 실명_ 을 부여합니다.\n\n_+2:_ 식사 시 시야 내 적들에게 _3 턴의 실명_ 을 부여합니다.
 actors.hero.talent.experience.title=기사의 경험

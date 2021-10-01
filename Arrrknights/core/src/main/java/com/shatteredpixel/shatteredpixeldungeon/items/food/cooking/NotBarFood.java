@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class NotBarFood extends Food {
     {
-        image = ItemSpriteSheet.CARPACCIO;
+        image = ItemSpriteSheet.MEAT_SRICK;
         energy = Hunger.HUNGRY/2f;
 
         stackable = true;

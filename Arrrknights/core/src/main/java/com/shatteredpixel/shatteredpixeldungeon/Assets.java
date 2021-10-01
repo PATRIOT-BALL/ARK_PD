@@ -396,6 +396,7 @@ public class Assets {
 		public static final String CEYLON	= "sprites/ceylon.png";
 
 		public static final String POMPEII	= "sprites/pompeii.png";
+		public static final String BIG_BUG	= "sprites/big_bug.png";
 		public static final String RED_SPITTER	= "sprites/red_spitter.png";
 		public static final String METAL_CRAB	= "sprites/metal_crab.png";
 

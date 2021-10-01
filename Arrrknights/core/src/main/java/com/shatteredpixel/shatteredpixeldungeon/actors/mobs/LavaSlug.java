@@ -13,11 +13,12 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BugSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.LavaSlugSprite;
 import com.watabou.utils.Random;
 
 public class LavaSlug extends Mob {
     {
-        spriteClass = BugSprite.class;
+        spriteClass = LavaSlugSprite.class;
 
         HP = HT = 155;
         defenseSkill = 27;

@@ -11,7 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class FoodBag extends Bag {
     {
-        image = ItemSpriteSheet.HOLSTER;
+        image = ItemSpriteSheet.ICE_BOX;
     }
 
     public static final float HOLSTER_SCALE_FACTOR = 0.85f;

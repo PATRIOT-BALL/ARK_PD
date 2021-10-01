@@ -341,7 +341,7 @@ public class WndBag extends WndTabbed {
 		} else if (bag instanceof PotionBandolier) {
 			return Icons.get( Icons.POTION_BANDOLIER );
 		}else if (bag instanceof FoodBag) {
-			return Icons.get( Icons.WAND_HOLSTER );
+			return Icons.get( Icons.ICE_BOX );
 		}
 		else {
 			return Icons.get( Icons.BACKPACK );

@@ -57,6 +57,7 @@ public enum Icons {
 	SCROLL_HOLDER,
 	POTION_BANDOLIER,
 	WAND_HOLSTER,
+	ICE_BOX,
 	
 	//hero & rankings icons
 	DEPTH,
@@ -204,6 +205,9 @@ public enum Icons {
 		case POTION_BANDOLIER:
 			icon.frame( icon.texture.uvRect( 88, 32, 98, 42 ) );
 			break;
+			case ICE_BOX:
+				icon.frame( icon.texture.uvRect( 115, 68, 127, 78 ) );
+				break;
 			
 		case DEPTH:
 			icon.frame( icon.texture.uvRect( 0, 48, 14, 64 ) );
@@ -245,10 +249,10 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 68, 64, 83, 79 ) );
 			break;
 		case SHPX:
-			icon.frame( icon.texture.uvRect( 85, 64, 101, 80 ) );
+			icon.frame( icon.texture.uvRect( 83, 64, 99, 80 ) );
 			break;
 		case GOLD:
-			icon.frame( icon.texture.uvRect( 102, 64, 118, 81 ) );
+			icon.frame( icon.texture.uvRect( 99, 64, 115, 81 ) );
 			break;
 		
 		case LIBGDX:

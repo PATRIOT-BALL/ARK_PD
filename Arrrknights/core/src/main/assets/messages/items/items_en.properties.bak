@@ -610,7 +610,7 @@ items.artifacts.driedrose$ghosthero.introduce=Nice to meet you. Please call me G
 
 items.artifacts.driedrose$ghosthero.dialogue_sewers_1=Ursus is a tough place to live, but this place is pretty good. At least the water flows and the plants grow.
 items.artifacts.driedrose$ghosthero.dialogue_sewers_2=It was quite difficult to escape from Chernobog.
-items.artifacts.driedrose$ghosthero.dialogue_sewers_3=%s, Did you know you can eat these Slugs? Pretty tasty.
+items.artifacts.driedrose$ghosthero.dialogue_sewers_3=Did you know you can eat these Slugs? Pretty tasty.
 items.artifacts.driedrose$ghosthero.dialogue_sewers_4=Alone is difficult, but we are not alone.
 items.artifacts.driedrose$ghosthero.dialogue_sewers_5=Even the beast is this strong, how strong is Reunion?
 items.artifacts.driedrose$ghosthero.dialogue_sewers_6=I hate the battlefield, but I am sincere as much as I want to fight for the infected.
@@ -943,7 +943,7 @@ items.food.frozencarpaccio.refresh=Refreshing!
 items.food.frozencarpaccio.better=You feel better!
 items.food.frozencarpaccio.desc=It's a piece of frozen raw meat. The only way to eat it is by cutting thin slices of it. And this way it's suprisingly good.
 
-items.food.meatpie.name=meat pie
+items.food.meatpie.name=smoked meat
 items.food.meatpie.eat_msg=That food was incredible!
 items.food.meatpie.desc=A delicious pie filled with savoury meat. This will satiate you far more than any other meal.
 
@@ -988,7 +988,7 @@ items.food.ingredients.sugarflower.desc=it would be a sugar substitute.
 
 ## 가공 요리 (식재료 사용 요리)
 
-items.food.cooking.honeybread.name=honeybread
+items.food.cooking.honeybread.name=PanCake
 items.food.cooking.honeybread.desc=Very sweet bread. eat a blessing effect is obtained.
 
 items.food.cooking.notbarfood.name=Definitely Not Bar Food!
