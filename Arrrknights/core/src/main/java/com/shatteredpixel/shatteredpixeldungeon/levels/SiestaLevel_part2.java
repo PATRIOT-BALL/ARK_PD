@@ -8,6 +8,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.Obsidian;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.CityPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
+import com.shatteredpixel.shatteredpixeldungeon.levels.painters.SewerPainter;
+import com.shatteredpixel.shatteredpixeldungeon.levels.painters.SiestaPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.CoreRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.DemonSpawnerRoom;
@@ -81,7 +83,7 @@ public class SiestaLevel_part2 extends RegularLevel {
 
     @Override
     protected Painter painter() {
-        return new CityPainter()
+        return new SiestaPainter()
                 .setWater(feeling == Feeling.WATER ? 0.98f : 0.38f, 4)
                 .setGrass(feeling == Feeling.GRASS ? 0.80f : 0.20f, 3)
                 .setTraps(nTraps(), trapClasses(), trapChances());
