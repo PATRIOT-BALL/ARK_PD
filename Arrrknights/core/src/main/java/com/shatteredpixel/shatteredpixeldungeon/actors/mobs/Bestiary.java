@@ -268,6 +268,11 @@ public class Bestiary {
 			case 19:
 				if (Random.Float() < 0.025f) rotation.add(Succubus.class);
 				return;
+
+			case 34:
+				// Siest 1
+				if (Random.Float() < 0.025f) rotation.add(Rockbreaker.class);
+				return;
 		}
 	}
 	
