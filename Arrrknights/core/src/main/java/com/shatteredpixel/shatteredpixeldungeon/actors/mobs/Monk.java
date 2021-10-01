@@ -43,8 +43,8 @@ public class Monk extends Mob {
 	{
 		spriteClass = EnragedSprite.class;
 		
-		HP = HT = 90;
-		defenseSkill = 30;
+		HP = HT = 105;
+		defenseSkill = 18;
 		
 		EXP = 11;
 		maxLvl = 21;
@@ -56,8 +56,13 @@ public class Monk extends Mob {
 	}
 	
 	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 16, 28 );
+	public int damageRoll()
+	{
+		Focus f = buff(Focus.class);
+		if (f != null) {
+			return Random.NormalIntRange( 20, 32 );
+		}
+		return Random.NormalIntRange( 10, 32 );
 	}
 	
 	@Override
@@ -75,7 +80,16 @@ public class Monk extends Mob {
 			return super.attackDelay() * 0.5f;
 		}
 	}
-	
+
+	@Override
+	public float speed() {
+		Focus f = buff(Focus.class);
+		if (f != null) {
+			return super.speed()*2;
+		}
+		return super.speed();
+	}
+
 	@Override
 	public int drRoll() {
 		return Random.NormalIntRange(0, 2);
@@ -129,7 +143,7 @@ public class Monk extends Mob {
 		} else {
 			f.detach();
 			Sample.INSTANCE.play( Assets.Sounds.HIT_PARRY, 1, Random.Float(0.96f, 1.05f));
-			focusCooldown = Random.NormalFloat( 7,8 );
+			focusCooldown = Random.NormalFloat( 9,11 );
 			return Messages.get(this, "parried");
 		}
 	}

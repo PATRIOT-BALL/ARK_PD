@@ -56,10 +56,10 @@ public class v0_3_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "버그 수정",
-                "체르노보그 섬멸 강화 머드락의 물타일 관련 버그가 어느정도 수정되었습니다." + "\n\n" +
-                        "스킨 모델 관련 버그가 수정되었습니다. (해당 버그 픽스로 27층 세이브 데이터가 작동하지 않을 수도 있습니다.)" + "\n\n" +
-                        "랭킹 기록에서 아이템 1개가 보이지않는 버그가 수정되었습니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "리유니온 변경",
+                "_숙주 병사(폭주)_\n" +
+                "체력이 90에서 _105_로 증가했으며, 공격력이 16-28에서 _10-32_로 조정되었습니다. 대신 회피율이 30에서 _18_로 감소했습니다." + "\n\n" +
+                "_집중_ 스킬의 쿨타임이 7-8턴에서 _9-11 턴_으로 증가했습니다. 대신 집중 상태일 때 최소 공격력과 이동속도가 2배가 됩니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 개편1",
                 "_분노 전문화_의 _타오르는 투쟁_ 특성의 격노시 보호막 증가 효과가 제거되고, 대신 분노 투척의 분노 획득량 증가가 추가되었습니다." + "\n\n" +

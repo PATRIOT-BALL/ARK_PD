@@ -82,7 +82,7 @@ public class ShadowAssault extends Skill {
         }
 
         private void doAttack(final Char enemy){
-            curUser.attack(enemy);
+            if (enemy.isAlive()) curUser.attack(enemy);
         }
 
         @Override
