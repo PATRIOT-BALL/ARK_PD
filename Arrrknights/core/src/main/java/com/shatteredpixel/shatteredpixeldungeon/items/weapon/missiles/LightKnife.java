@@ -8,7 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class LightKnife extends MissileWeapon {
     {
-        image = ItemSpriteSheet.THROWING_KNIFE;
+        image = ItemSpriteSheet.HOLY_KNIFE;
         hitSound = Assets.Sounds.HIT_KNIFE;
         hitSoundPitch = 1.2f;
 
