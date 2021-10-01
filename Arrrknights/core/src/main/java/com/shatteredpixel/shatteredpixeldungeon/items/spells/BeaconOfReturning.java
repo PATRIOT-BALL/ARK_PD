@@ -106,7 +106,7 @@ public class BeaconOfReturning extends Spell {
 	}
 	
 	private void returnBeacon( Hero hero ){
-		if (Dungeon.bossLevel()) {
+		if (Dungeon.bossLevel() || Dungeon.depth >= 30) {
 			GLog.w( Messages.get(this, "preventing") );
 			return;
 		}
