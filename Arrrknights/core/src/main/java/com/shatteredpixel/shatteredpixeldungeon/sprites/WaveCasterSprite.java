@@ -25,7 +25,7 @@ public class WaveCasterSprite extends MobSprite {
         run.frames( frames, 0 );
 
         attack = new Animation( 25, false );
-        attack.frames( frames, 1, 2, 3, 4, 3, 4, 3, 4, 5, 6, 1 );
+        attack.frames( frames, 0 );
 
         zap = attack.clone();
 

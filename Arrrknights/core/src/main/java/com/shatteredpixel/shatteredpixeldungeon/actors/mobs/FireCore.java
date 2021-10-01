@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfBlink;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpawnerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.utils.Bundle;
 
 public class FireCore extends Mob{
     {
@@ -57,5 +58,19 @@ public class FireCore extends Mob{
         }
         GLog.h(Messages.get(this, "on_death"));
         super.die(cause);
+    }
+
+    public static final String SPAWN_RECORDED = "spawn_recorded";
+
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(SPAWN_RECORDED, spawnRecorded);
+    }
+
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        spawnRecorded = bundle.getBoolean(SPAWN_RECORDED);
     }
 }
