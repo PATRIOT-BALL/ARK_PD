@@ -191,17 +191,7 @@ public class Ceylon extends NPC {
                 spawned = true;
                 level.addItemToSpawn(new Bottle());
 
-                switch (Dungeon.depth){
-                    case 32: default:
-                        alternative = true;
-                        break;
-                    case 33:
-                        alternative = true;
-                        break;
-                    case 34:
-                        alternative = true;
-                        break;
-                }
+                alternative = true;
 
                 given = false;
 
@@ -230,5 +220,7 @@ public class Ceylon extends NPC {
         public static boolean isCompleted() {
             return completed;
         }
+
+        public static boolean isSpawnd() { return spawned; }
     }
 }
