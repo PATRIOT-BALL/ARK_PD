@@ -1296,7 +1296,8 @@ public class Hero extends Char {
         }
 
         if (buff(RadiantKnight.class) != null) {
-            damage *= 1.4f;
+            if (subClass == HeroSubClass.SAVIOR) damage *= 1.6f;
+            else damage *= 1.4f;
 
             // 난입 특성
             if (hasTalent(Talent.PHASERUSH)) {

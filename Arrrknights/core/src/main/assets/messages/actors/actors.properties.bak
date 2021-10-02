@@ -590,7 +590,7 @@ actors.hero.talent.recovery_upgrade.desc=_+1:_ 강화의 일기장을 사용하�
 actors.hero.talent.delicious_food.title=엄청 맛있는 식사
 actors.hero.talent.delicious_food.desc=_+1:_ 벌꿀 쿠키 섭취시 허기 감소량이 _50%_ 상승합니다.\n\n_+2:_ 벌꿀 쿠키 섭취시 허기 감소량이 _100%_ 상승합니다.\n\n또한 벌꿀 쿠키 섭취시 섬멸전 장비를 2 만큼 충전합니다.
 actors.hero.talent.lovemeat.title=고기가 좋아
-actors.hero.talent.lovemeat.desc=_+1:_ 고기류 음식 섭취시 _20턴_동안 배부름 상태를 얻고 체력을 _3_ 회복합니다.\n\n_+2:_ 고기류 음식 섭취시 _40턴_동안 배부름 상태를 얻고 체력을 _6_ 회복합니다.\n\n고기 파이는 해당하지 않습니다.
+actors.hero.talent.lovemeat.desc=_+1:_ 고기류 음식 섭취시 _20턴_동안 배부름 상태를 얻고 체력을 _3_ 회복합니다.\n\n_+2:_ 고기류 음식 섭취시 _40턴_동안 배부름 상태를 얻고 체력을 _6_ 회복합니다.\n\n염국 훈제고기는 해당하지 않습니다.
 actors.hero.talent.powergear.title=강력한 방벽
 actors.hero.talent.powergear.desc=_+1:_ 방벽 투척이 적을 _약하게_ 밀쳐냅니다.\n\n_+2:_ 방벽 투척이 적을 _조금 강하게_ 밀쳐냅니다.
 actors.hero.talent.mywish.title=내가 원하는 세상
@@ -758,7 +758,7 @@ actors.hero.herosubclass.knight_short_desc=_기사_\n빠른 기동력과 필살�
 actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속 상태가 되며, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
 actors.hero.herosubclass.savior=구제자 니어
 actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
-actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 전사 상태일 때 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장 사용시 아츠 면역을 얻습니다.
+actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 60%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가하고 사용시 아츠 면역을 얻습니다.
 
 
 

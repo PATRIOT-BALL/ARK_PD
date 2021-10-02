@@ -125,6 +125,7 @@ public class SealOfLight extends Artifact {
                 if (charge < chargeCap && !cursed) {
                     // 약 300 턴마다 100%충전 (기본)
                     float chargeGain = 0.34f;
+                    if (Dungeon.hero.subClass == HeroSubClass.SAVIOR) chargeGain += 0.11f;
                     chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
                     partialCharge += chargeGain;
 
