@@ -2477,7 +2477,7 @@ items.weapon.missiles.upmagazine.name=custom magazine
 items.weapon.missiles.upmagazine.desc=It is designed with the ammunition of the gun. It's not good to throw and use. You can get special effects when you load your gun with this ammo.
 
 items.weapon.missiles.lightknife.name=light knife
-items.weapon.missiles.lightknife.desc=This glowing knife inflicts blindness on hit.
+items.weapon.missiles.lightknife.desc=Speak with DEAD, Sector 13th Iscariot\n\nThis glowing knife inflicts blindness on hit.
 
 
 items.weapon.spiritbow.name=reverse crossbow

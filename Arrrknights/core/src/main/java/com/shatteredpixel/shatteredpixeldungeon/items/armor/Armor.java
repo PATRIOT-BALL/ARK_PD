@@ -219,16 +219,6 @@ public class Armor extends EquipableItem {
 			Talent.onItemEquipped(hero, this);
 			hero.spendAndNext( time2equip( hero ) );
 
-			if (hero.hasTalent(Talent.PROTECTIONOFLIGHT)) {
-			Talent.NearlRemoveCurseCounter counter = Buff.affect(Dungeon.hero, Talent.NearlRemoveCurseCounter.class);
-
-			if (counter.count() <= Dungeon.hero.pointsInTalent(Talent.PROTECTIONOFLIGHT)) {
-				cursed=false;
-				counter.countUp(1);
-			}
-
-			}
-
 			return true;
 			
 		} else {

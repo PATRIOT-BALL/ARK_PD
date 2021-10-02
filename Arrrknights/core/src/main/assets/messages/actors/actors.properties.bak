@@ -395,7 +395,7 @@ actors.buffs.knightskill.desc=니어는 공격한 다음 특수한 필살기를 
 actors.buffs.knightskill$combomove.knockback_desc=_밀쳐내기_ 대상을 1칸 밀쳐냅니다.
 actors.buffs.knightskill$combomove.smash_desc=_강타_ 140%의 피해를 입힙니다.
 actors.buffs.knightskill$combomove.killblow_desc=_마무리 일격_ 100%의 피해를 입힙니다. 이 공격으로 적을 처치하면 턴을 소모하지않고 바로 다음 필살기를 사용할 수 있습니다,
-actors.buffs.knightskill$combomove.lightsword_desc=_빛의 검_ 신념 중첩에 비례한 피해를 입힙니다. 신념이 5중첩일 때 시전시 대상을 마비시킵니다.\n피해 배율 : %1$d%% / %2$d%%
+actors.buffs.knightskill$combomove.lightsword_desc=_빛의 검_ 신념 중첩에 비례한 피해를 입힙니다. 신념이 5중첩일 때 시전시 대상을 마비시킵니다.\n피해 배율 : %1d%% / %2d%%
 
 ###hero
 actors.hero.talent.hearty_meal.title=푸짐한 식사

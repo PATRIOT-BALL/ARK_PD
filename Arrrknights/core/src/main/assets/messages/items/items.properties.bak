@@ -2484,8 +2484,8 @@ items.weapon.missiles.normalmagazine.desc=이것은 사격 무기의 탄약 용�
 items.weapon.missiles.upmagazine.name=특수 탄약통
 items.weapon.missiles.upmagazine.desc=이것은 사격 무기의 탄약 용도로 설계되었습니다. 던질 순 있지만 좋은 선택은 아닐 것입니다...\n이 탄약으로 사격 무기를 장전하면 특수 효과를 얻습니다.
 
-items.weapon.missiles.lightknife.name=빛나는 단검
-items.weapon.missiles.lightknife.desc=이 빛의 힘으로 만들어진 단검은 적중시 실명을 부여합니다.
+items.weapon.missiles.lightknife.name=총검
+items.weapon.missiles.lightknife.desc=네놈들은 떨면서가 아니라, 지푸라기처럼 죽는 거다.\n\n이 축복받은 총검은 적중시 실명을 부여합니다.
 
 
 items.weapon.spiritbow.name=리버스 크로스보우

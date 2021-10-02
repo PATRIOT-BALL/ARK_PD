@@ -194,7 +194,6 @@ public enum Talent {
 	public static class SilShotCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};
 	public static class BlazeBurstBuff extends CounterBuff{};
-	public static class NearlRemoveCurseCounter extends CounterBuff{};
 
 	public static class RadiantHeroCooldown extends FlavourBuff{
 		@Override
@@ -298,6 +297,23 @@ public enum Talent {
 			for (Item item : Dungeon.hero.belongings){
 				if (item instanceof Armor){
 					((Armor) item).cursedKnown = true;
+				}
+			}
+		}
+
+		if (talent == PROTECTIONOFLIGHT) {
+			Armor heroArmor = hero.belongings.armor;
+			if (heroArmor != null) {
+				if (hero.pointsInTalent(PROTECTIONOFLIGHT) == 1) {
+					heroArmor.cursed = false;
+					hero.belongings.armor = heroArmor;
+				}
+				else if (hero.pointsInTalent(PROTECTIONOFLIGHT) == 2) {
+					if (heroArmor.glyph.curse()) {
+						heroArmor.cursed = false;
+						heroArmor.glyph = null;
+						hero.belongings.armor = heroArmor;
+					}
 				}
 			}
 		}
@@ -509,16 +525,6 @@ public enum Talent {
 				item.identify();
 			} else {
 				((Ring) item).setKnown();
-			}
-		}
-
-		if (hero.hasTalent(PROTECTIONOFLIGHT) && item instanceof Armor && item.cursed){
-			NearlRemoveCurseCounter counter = Buff.affect(Dungeon.hero, NearlRemoveCurseCounter.class);
-			if (counter.count() < hero.pointsInTalent(PROTECTIONOFLIGHT)) {
-				item.cursed=true;
-				item.cursedKnown = true;
-				counter.countUp(1);
-				hero.sprite.emitter().start( ShadowParticle.UP, 0.05f, 10 );
 			}
 		}
 
