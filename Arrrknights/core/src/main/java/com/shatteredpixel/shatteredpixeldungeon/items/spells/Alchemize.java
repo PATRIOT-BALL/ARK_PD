@@ -49,7 +49,7 @@ public class Alchemize extends Spell implements AlchemyScene.AlchemyProvider {
 	
 	@Override
 	public int getEnergy() {
-		return 0;
+		return 4;
 	}
 	
 	@Override
@@ -69,7 +69,7 @@ public class Alchemize extends Spell implements AlchemyScene.AlchemyProvider {
 			inputs =  new Class[]{ArcaneCatalyst.class, AlchemicalCatalyst.class};
 			inQuantity = new int[]{1, 1};
 			
-			cost = 6;
+			cost = 16;
 			
 			output = Alchemize.class;
 			outQuantity = 4;

@@ -100,9 +100,10 @@ public class v0_3_X_Changes {
                 "_사격 무기_ 들의 최대 탄창수가 소폭 상승했으며, 사격 공격의 기본 공격력이 상승하고 명중률이 50%상승했습니다." + "\n\n" +
                 "_R4C_의 사격 공격의 최소 피해량이 소폭 상승했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 상향",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 및 주문 상향",
                 "_스태프 오브 브리즈_의 안개 지속시간이 상승했습니다." + "\n\n" +
-                "_스태프 오브 레나_의 기본 피해량이 2-6에서 _4-6_으로 상승했습니다."));
+                "_스태프 오브 레나_의 기본 피해량이 2-6에서 _4-6_으로 상승했습니다." + "\n\n" +
+                "_즉석 가공_ 의 제작에 필요한 에너지가 16으로 증가했지만, 이제 즉석 가공이 공급하는 에너지가 0이 아닌 4입니다!"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
         "_블레이즈_의 _전기톱 연장_ 특성의 명중률 패널티가 제거되었으며, 대신 무기의 힘 요구치를 증가시킵니다.." + "\n\n" +

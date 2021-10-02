@@ -852,6 +852,8 @@ items.bags.velvetpouch.desc=This small velvet pouch can store many small items i
 items.bags.magicalholster.name=arts holster
 items.bags.magicalholster.desc=This slim holster is made from some exotic animal hide, and possesses powerful arts which lets it store a massive amount of ranged weapons.\n\nYou can simply reach into the bag and will always grab the item you were looking for.\n\nDue to the holster's arts, wands will charge slightly faster and thrown weapons will last slightly longer inside of it.
 
+items.bags.foodbag.name=Ice Box
+items.bags.foodbag.desc=fresh!
 
 
 ###bombs
