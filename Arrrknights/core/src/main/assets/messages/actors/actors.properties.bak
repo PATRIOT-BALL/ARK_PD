@@ -395,11 +395,7 @@ actors.buffs.knightskill.desc=니어는 공격한 다음 특수한 필살기를 
 actors.buffs.knightskill$combomove.knockback_desc=_밀쳐내기_ 대상을 1칸 밀쳐냅니다.
 actors.buffs.knightskill$combomove.smash_desc=_강타_ 140%의 피해를 입힙니다.
 actors.buffs.knightskill$combomove.killblow_desc=_마무리 일격_ 100%의 피해를 입힙니다. 이 공격으로 적을 처치하면 턴을 소모하지않고 바로 다음 필살기를 사용할 수 있습니다,
-actors.buffs.knightskill$combomove.lightsword_desc=_빛의 검_ 신념*50%의 피해를 입힙니다. 신념이 5중첩일 때 시전시 대상을 마비시킵니다.
-
-actors.buffs.knightskillcombo.name=신념
-actors.buffs.knightskillcombo.desc=빛의 힘이 %s 만큼 모여있습니다.
-
+actors.buffs.knightskill$combomove.lightsword_desc=_빛의 검_ 신념 중첩에 비례한 피해를 입힙니다. 신념이 5중첩일 때 시전시 대상을 마비시킵니다.\n피해 배율 : %1$d%% / %2$d%%
 
 ###hero
 actors.hero.talent.hearty_meal.title=푸짐한 식사
@@ -758,7 +754,7 @@ actors.hero.herosubclass.knight_short_desc=_기사_\n빠른 기동력과 필살�
 actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속 상태가 되며, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
 actors.hero.herosubclass.savior=구제자 니어
 actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
-actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 60%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가하고 사용시 아츠 면역을 얻습니다.
+actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 60%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가합니다.
 
 
 

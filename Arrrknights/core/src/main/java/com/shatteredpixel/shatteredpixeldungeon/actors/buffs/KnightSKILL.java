@@ -167,7 +167,20 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
         }
 
         public String desc(){
+            if (name() == "LIGHTSWORD") {
+                int dmgper = 0;
+                int bouns = 50;
+                if (Dungeon.hero.hasTalent(Talent.SKILL_MASTERY)) bouns = 60;
+
+                KnightSkillCombo counter = Dungeon.hero.buff(KnightSkillCombo.class);
+                if (counter != null) {
+                    dmgper += counter.count() * bouns;
+                }
+
+                return Messages.get(this, "lightsword_desc", dmgper, bouns * 5);
+            }
             return Messages.get(this, name()+"_desc");
+
         }
 
     }
