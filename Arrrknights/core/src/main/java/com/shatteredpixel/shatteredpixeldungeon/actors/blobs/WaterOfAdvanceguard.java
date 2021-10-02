@@ -16,6 +16,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nmould;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAdvanceguard;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.SuperAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfTime;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
@@ -39,7 +40,8 @@ public class WaterOfAdvanceguard extends WellWater {
         int Price = 0;
 
         if (item instanceof Runestone) { // 아이템이 돌일 경우
-            item = new StoneOfAdvanceguard();
+            if (Random.Int(2) == 0) item = new SuperAdvanceguard();
+            else item = new StoneOfAdvanceguard();
         } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode || item instanceof BookThoughts) {
             if (Random.IntRange(0,21) < 12) item = new BookWhispers();
             else item = new BookGenesis();
