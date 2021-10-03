@@ -616,7 +616,7 @@ actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
 
 actors.hero.talent.shining_meal.title=shining meal
-actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._
+actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _3_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal 4 damage.
 actors.hero.talent.experience.title=knigts experience
 actors.hero.talent.experience.desc=_+1:_ Armor identification is _3x Speed_\n\n_+2:_ Armor identification is _5x Speed_, Also identifies curses when acquiring armor.
 actors.hero.talent.protectionoflight.title=protection of light
@@ -711,9 +711,9 @@ actors.hero.heroclass.rosecat=Rosmontis
 actors.hero.heroclass.rosecat_unlock=The Rosmontis is a strong arts user, and has a _unique gear_ with ranged attack.\n\nTo unlock her _you eat 25 food in one run._
 actors.hero.heroclass.rosecat_desc=The Rosmontis is strong arts user, and has a _unique gear_ which fire an can attack all locations.gear is Cannot be recharged in the usual way, and you level up by gaining experience, everything is recharged.\n\nRosemontis`s gear is can attack all locations.\n\nThe Rosmontis automatically identifies:\n- Scrolls of Identify\n- Potion Of Levitation
 
-actors.hero.heroclass.nearl=니어
-actors.hero.heroclass.nearl_unlock=부디 그때가 오면, 나와 리즈가 그녀의 등 뒤를 밝혀줄 수 있기를…… 그녀의 그림자가 다시는 고독하지 않도록.
-actors.hero.heroclass.nearl_desc=니어는 카시미어의 기사로, _강력한 빛의 힘_을 사용해 자신을 강화시킵니다.\n\n그녀는 빛의 인장을 사용해 빛의 기사 상태가 되어 자신의 전투력을 일시적으로 상승시킵니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 경험의 물약\n- 저주 해제의 일기장
+actors.hero.heroclass.nearl=Nearl
+actors.hero.heroclass.nearl_unlock=I only hope that Liz and I could be there when it does to make sure she isn't alone.
+actors.hero.heroclass.nearl_desc=The Nearl is A knight of light with powerful power, With her _special shield_, you can awaken the power of light.\n\nawakening the power of light, Nearl's combat ability increases.\n\nThe Nearl automatically identifies:\n- Scrolls of Identify\n- Potion of Experience\n- Scrolls of RemoveCurse
 
 actors.hero.herosubclass.gladiator=Master
 actors.hero.herosubclass.gladiator_short_desc=_Master_ start a combo. Building combo allows him to use unique combo moves.
@@ -745,11 +745,11 @@ actors.hero.herosubclass.destroyer_desc=The _Destroy Elite_ is Maximizes the gea
 actors.hero.herosubclass.guardian=Guardian
 actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
 actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
-actors.hero.herosubclass.knight=기사 니어
-actors.hero.herosubclass.knight_short_desc=_기사_\n빠른 기동력과 필살기를 이용해 적들을 연속해서 처치합니다.
+actors.hero.herosubclass.knight=Knight
+actors.hero.herosubclass.knight_short_desc=_Knight Elite_\n빠른 기동력과 필살기를 이용해 적들을 연속해서 처치합니다.
 actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속을 얻습니다. 또한, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
-actors.hero.herosubclass.savior=구제자 니어
-actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
+actors.hero.herosubclass.savior=Savior
+actors.hero.herosubclass.savior_short_desc=_Savior_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
 actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 60%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가합니다.
 
 
