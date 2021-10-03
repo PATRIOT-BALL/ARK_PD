@@ -1534,7 +1534,7 @@ items.scrolls.exotic.scrollofdominate.desc=Using this scroll activates the arts 
 ###spells
 items.spells.alchemize.name=alchemize
 items.spells.alchemize.enemy_near=You cannot do that with enemies nearby.
-items.spells.alchemize.desc=This spell channels alchemical energy, allowing you to perform alchemy as if you were at a pot with no energy for a short time.
+items.spells.alchemize.desc=This spell channels alchemical energy, allowing you to perform alchemy as if you were at a pot with 4 energy for a short time.
 
 items.spells.aquablast.name=aqua blast
 items.spells.aquablast.desc=This spell will create a burst of water at the target location. It isn't forceful enough to do damage (even to fiery enemies), but it will spread water to nearby terrain and very briefly stun anything caught in the center of the burst.
