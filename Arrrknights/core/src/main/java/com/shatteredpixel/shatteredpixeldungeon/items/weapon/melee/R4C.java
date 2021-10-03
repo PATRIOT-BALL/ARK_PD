@@ -82,7 +82,7 @@ public class R4C extends MeleeWeapon {
     public int proc(Char attacker, Char defender, int damage) {
         if (attacker instanceof Hero) {
             if (Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
-                if (Random.Int(10) < 1) {
+                if (Random.Int(4) < 1) {
                     bullet = Math.min(bullet +1, bulletCap);
                     updateQuickslot();
                 }
