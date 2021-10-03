@@ -133,12 +133,12 @@ actors.buffs.combo.prompt=공격할 대상을 선택
 actors.buffs.combo.desc=블레이즈는 공격에 성공할 때마다 전투에 추진력을 얻습니다. 각 공격은 연속 타격 수치를 하나 늘립니다. 그러나 일정 시간동안 공격하지 않으면 연속 타격 수치는 0으로 초기화됩니다.\n\n연속 타격을 많이 성공시키면 절대 빗나가지 않는 필살기를 사용할 수 있습니다! 연속 타격 수치가 2, 4, 6, 8, 10일때 각각 고유한 필살기를 사용할 수 있습니다. 연속 타격을 초기화시키지 않는 필살기도 있지만, 한 번의 연속 타격 중첩 동안 각 종류의 필살기를 한 번만 사용할 수 있습니다.
 actors.buffs.combo$combomove.clobber_desc=_2 연속 타격: 밀쳐내기_ 는 적을 2타일 뒤로 밀어내지만, 아무런 피해도 입히지 않으며 낭떠러지로 떨어뜨릴 수 없습니다. 콤보를 1 증가시킵니다.
 actors.buffs.combo$combomove.slam_desc=_4 연속 타격: 메치기_ 는 연속 타격 수치*20%의 피해량에 방어력을 더한 값의 피해를 입힙니다. 발동 후 연속 타격 수치가 초기화됩니다.
-actors.buffs.combo$combomove.slam_desc2=_4 연속 타격: 속사_ 는 연속 타격 수치*15%의 사격 피해를 대상에게 입힙니다. 콤보를 1 증가시킵니다.
+actors.buffs.combo$combomove.slam_desc2=_4 연속 타격: 속사_ 는 연속 타격 수치*20%의 사격 피해를 대상에게 입힙니다. 콤보를 1 증가시킵니다.
 actors.buffs.combo$combomove.parry_desc=_6 연속 타격: 받아치기_ 는 발동 시 다음 1턴 동안의 물리 공격을 막아 낸 후 즉시 반격합니다. 아무것도 막아 내지 못한 경우 연속 타격이 초기화됩니다.
 actors.buffs.combo$combomove.crush_desc=_8 연속 타격: 으깨기_ 는 연속 타격*25%의 근접 피해를 첫 번째 대상에게 입히고, 이후 주변 7x7 구역에 있는 다른 모든 적들에게 절반만큼의 피해를 입힙니다.
 actors.buffs.combo$combomove.crush_desc2=_8 연속 타격: 근접 섬광탄_ 은 125%의 피해를 입히고 1턴의 마비와 연속 타격*0.3턴의 실명을 부여합니다.  콤보를 1 증가시킵니다.
 actors.buffs.combo$combomove.fury_desc=_10 연속 타격: 분노 폭발_ 은 적 하나에 대해 60%의 피해량으로 연속 타격을 쌓은 수만큼 공격하며, 각 공격마다 무기에 부여된 아츠가 발동할 수 있습니다.
-actors.buffs.combo$combomove.fury_desc2=_10 연속 타격: 영거리 사격_ 은 연속 타격*40%의 사격 피해를 대상에게 입힙니다.
+actors.buffs.combo$combomove.fury_desc2=_10 연속 타격: 영거리 사격_ 은 연속 타격*50%의 사격 피해를 대상에게 입힙니다.
 
 actors.buffs.activeoriginium.name=오리지늄 자극
 actors.buffs.activeoriginium.ondeath=당신은 오리지늄의 영향으로 죽었다...

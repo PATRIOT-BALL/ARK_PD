@@ -361,13 +361,13 @@ public class Combo extends Buff implements ActionIndicator.Action {
 				case FURY:
 					if (Dungeon.hero.belongings.weapon instanceof DP27) {
 						dmg = Random.IntRange(((DP27) Dungeon.hero.belongings.weapon).shotmin(), ((DP27) Dungeon.hero.belongings.weapon).shotmax());
-						dmg = Math.round(dmg * 0.5f * count);
+						dmg = Math.round(dmg * 0.4f * count);
 					} else if (Dungeon.hero.belongings.weapon instanceof C1_9mm) {
 						dmg = Random.IntRange(((C1_9mm) Dungeon.hero.belongings.weapon).shotmin(), ((C1_9mm) Dungeon.hero.belongings.weapon).shotmax());
-						dmg = Math.round(dmg * 0.5f * count);
+						dmg = Math.round(dmg * 0.4f * count);
 					} else if (Dungeon.hero.belongings.weapon instanceof R4C) {
 						dmg = Random.IntRange(((R4C) Dungeon.hero.belongings.weapon).shotmin(), ((R4C) Dungeon.hero.belongings.weapon).shotmax());
-						dmg = Math.round(dmg * 0.5f * count);
+						dmg = Math.round(dmg * 0.4f * count);
 					} else dmg = Math.round(dmg * 0.6f);
 					break;
 			}
