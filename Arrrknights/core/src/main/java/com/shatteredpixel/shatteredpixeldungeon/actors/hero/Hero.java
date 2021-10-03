@@ -90,6 +90,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.LiveStart;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PhantomMirror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
@@ -119,6 +120,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.RockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Spikes;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.WolfPack;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.EveryoneTogether;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ExtremeSharpness;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.NigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
@@ -203,6 +205,7 @@ import com.watabou.utils.GameMath;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
+import java.awt.Shape;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -542,6 +545,10 @@ public class Hero extends Char {
             bouns += pointsInTalent(Talent.PEGASUS_AURA) / 10;
 
             attackSkill *= bouns;
+        }
+
+        if (buff(ExtremeSharpness.SharpnessBuff.class) != null) {
+            attackSkill *= 2f;
         }
 
         if (wep != null) {
@@ -2455,47 +2462,72 @@ public class Hero extends Char {
             case 17:
                 SK1 = new PhantomMirror();
                 break;
+            case 18:
+                SK1 = new LiveStart();
+                break;
         }
     }
 
     private void loadSkill2(int SkillNumber) {
-        if (SkillNumber == 1) {
-            SK2 = new WolfPack();
-        } else if (SkillNumber == 2) {
-            SK2 = new MentalBurst();
-        } else if (SkillNumber == 3) {
-            SK2 = new Reflow();
-        } else if (SkillNumber == 4) {
-            SK2 = new EmergencyDefibrillator();
-        } else if (SkillNumber == 5) {
-            SK2 = new Jackinthebox();
-        } else if (SkillNumber == 6) {
-            SK2 = new RockfailHammer();
-        } else if (SkillNumber == 7) {
-            SK2 = new ChargingPS();
-        } else if (SkillNumber == 8) {
-            SK2 = new NeverBackDown();
-        } else if (SkillNumber == 9) {
-            SK2 = new CoverSmoke();
-        } else if (SkillNumber == 10) {
-            SK2 = new BenasProtracto();
-        } else if (SkillNumber == 11) {
-            SK2 = new AncientKin();
-        } else if (SkillNumber == 12) {
-            SK2 = new LandingStrike();
-        } else if (SkillNumber == 13) {
-            SK2 = new Dreamland();
-        } else if (SkillNumber == 14) {
-            SK2 = new FlashShield();
-        } else if (SkillNumber == 15) {
-            SK2 = new Nervous();
-        } else if (SkillNumber == 16) {
-            SK2 = new DeepHealing();
-        } else if (SkillNumber == 17) {
-            SK2 = new Spikes();
-        } else if (SkillNumber == 18) {
-            SK2 = new Genesis();
-        } else SK2 = null;
+        switch (SkillNumber) {
+            default:
+                SK2 = null;
+                break;
+            case 1:
+                SK2 = new WolfPack();
+                break;
+            case 2:
+                SK2 = new MentalBurst();
+                break;
+            case 3:
+                SK2 = new Reflow();
+                break;
+            case 4:
+                SK2 = new EmergencyDefibrillator();
+                break;
+            case 5:
+                SK2 = new Jackinthebox();
+                break;
+            case 6:
+                SK2 = new RockfailHammer();
+                break;
+            case 7:
+                SK2 = new ChargingPS();
+                break;
+            case 8:
+                SK2 = new NeverBackDown();
+                break;
+            case 9:
+                SK2 = new CoverSmoke();
+                break;
+            case 10:
+                SK2 = new BenasProtracto();
+                break;
+            case 11:
+                SK2 = new AncientKin();
+                break;
+            case 12:
+                SK2 = new LandingStrike();
+                break;
+            case 13:
+                SK2 = new Dreamland();
+                break;
+            case 14:
+                SK2 = new FlashShield();
+                break;
+            case 15:
+                SK2 = new Nervous();
+                break;
+            case 16:
+                SK2 = new DeepHealing();
+                break;
+            case 17:
+                SK2 = new Spikes();
+                break;
+            case 18:
+                SK2 = new Genesis();
+                break;
+        }
     }
 
     private void loadSkill3(int SkillNumber) {
@@ -2526,6 +2558,9 @@ public class Hero extends Char {
                 break;
             case 8:
                 SK3 = new EveryoneTogether();
+                break;
+            case 9:
+                SK3 = new ExtremeSharpness();
                 break;
         }
 

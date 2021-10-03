@@ -20,7 +20,7 @@ public class Genesis extends Skill {
             Camera.main.shake(2, 0.5f);
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
-                    mob.damage(curUser.lvl * 12, curUser);
+                    mob.damage(curUser.lvl * 18, curUser);
                 }
             }
         }

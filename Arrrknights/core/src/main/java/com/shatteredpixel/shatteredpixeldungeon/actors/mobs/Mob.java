@@ -57,6 +57,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.LiveStart;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
@@ -810,6 +811,10 @@ public abstract class Mob extends Char {
 				Dungeon.level.drop(new Gold(24 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
 
 			}
+		}
+
+		if(buff(LiveStart.LiveBuff.class) != null) {
+			Dungeon.level.drop(new Gold(10+Dungeon.depth*6), pos).sprite.drop();
 		}
 
 		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {

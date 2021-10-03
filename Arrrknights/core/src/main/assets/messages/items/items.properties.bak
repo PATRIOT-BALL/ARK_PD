@@ -78,6 +78,10 @@ items.skill.sk1.bookphantommirror.name=환영의 스킬개론
 items.skill.sk1.bookphantommirror.desc=_거울 속의 환영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 점멸\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookphantommirror.ac_use=읽는다
 
+items.skill.sk1.booklive.name=음악의 스킬개론
+items.skill.sk1.booklive.desc=_라이브 스타트_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 모든 적을 도발함. 적 처치시 추가 합성옥\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.booklive.ac_use=읽는다
+
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookwolfpack.ac_use=읽는다
@@ -182,6 +186,10 @@ items.skill.sk3.bookeveryone.name=함께하는 스킬개론
 items.skill.sk3.bookeveryone.desc=_"다 함께 가자!"_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 주위에 바위게 최대 4마리 소환\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!
 items.skill.sk3.bookeveryone.ac_use=읽는다
 
+items.skill.sk3.booksharpness.name=관통의 스킬개론
+items.skill.sk3.booksharpness.desc=_예리함의 극치_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 명중률 증가 및 방어 무시\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!_
+items.skill.sk3.booksharpness.ac_use=읽는다
+
 
 
 ###Skill
@@ -261,6 +269,10 @@ items.skill.sk1.spreadspores.desc_wnd=목표 지점의 적을 속박, 침묵시�
 items.skill.sk1.phantommirror.name=_거울 속의 환영(1스킬)_
 items.skill.sk1.phantommirror.desc=목표 지점으로 점멸합니다. (점멸의 돌 사용과 같은 효과)
 items.skill.sk1.phantommirror.desc_wnd=목표 지점으로 점멸
+
+items.skill.sk1.livestart.name=_라이브 스타트!(1스킬)_
+items.skill.sk1.livestart.desc=모든 적들을 도발합니다. 도발된 적 처치시 추가 합성옥을 얻습니다.
+items.skill.sk1.livestart.desc_wnd=모든 적 도발, 도발된 적 처치시 추가 합성옥
 
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 도약_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
@@ -378,6 +390,10 @@ items.skill.sk3.yourwish$ex43.desc=이 강력한 장치는 매우 튼튼하며, 
 items.skill.sk3.everyonetogether.name=_"다 같이 가자!"(3스킬)_
 items.skill.sk3.everyonetogether.desc=발동시 주위에 바위게를 최대 4마리 소환합니다. 바위게의 레벨은 무기 강화 수치의 영향을 어느정도 받습니다.
 items.skill.sk3.everyonetogether.desc_wnd=발동시 주위에 바위게 최대 4마리 소환
+
+items.skill.sk3.extremesharpness.name=_예리함의 극치(3스킬)_
+items.skill.sk3.extremesharpness.desc=발동시 명중률이 상승하고 공격이 적의 방어를 무시합니다.
+items.skill.sk3.extremesharpness.desc_wnd=발동시 명중률 상승 및 방어 무시
 
 
 
@@ -852,7 +868,7 @@ items.bags.magicalholster.name=아츠 보관집
 items.bags.magicalholster.desc=이 얇은 보관집은 어떤 이국적인 동물의 가죽으로 만들어져 있으며, 거기에 깃든 아츠의 힘으로 많은 투척 무기와 아츠 스태프를 담아둘 수 있습니다.\n\n여기에 단순히 손을 뻗기만 해도 항상 당신이 쓰려는 물건을 집을 수 있습니다.\n\n보관집에 걸린 아츠으로 인해, 아츠 스태프의 충전이 약간 빨라지며 투척무기들을 조금 더 오래 사용할 수 있습니다.
 
 items.bags.foodbag.name=아이스 박스
-items.bags.foodbag.desc=내용물을 시원하게 보관해주는 대용량 보냉 상자. 으로 많은 음식을 보관할 수 있다.
+items.bags.foodbag.desc=내용물을 시원하게 보관해주는 보냉 상자. 대용량으로 많은 음식을 보관할 수 있다.
 
 
 ###bombs

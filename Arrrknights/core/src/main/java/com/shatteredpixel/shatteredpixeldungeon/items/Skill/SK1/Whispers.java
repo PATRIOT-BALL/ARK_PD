@@ -23,7 +23,7 @@ public class Whispers extends Skill {
             if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
                 Char ch = Actor.findChar(cell);
                 if (ch != null&& !(ch instanceof Hero)) {
-                    Buff.affect(ch,Vertigo.class,3f);
+                    Buff.affect(ch,Vertigo.class,6f);
                     CellEmitter.get( ch.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
                 }}}
         CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.WOOL ), 10 );

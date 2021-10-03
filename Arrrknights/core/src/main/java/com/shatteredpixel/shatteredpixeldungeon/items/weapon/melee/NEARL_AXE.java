@@ -35,7 +35,7 @@ public class NEARL_AXE extends MeleeWeapon {
 		tier = 1;
 	}
 	@Override
-	public int min(int lvl) { return  2; }
+	public int min(int lvl) { return  2 + lvl; }
 
 	@Override
 	public int max(int lvl) {

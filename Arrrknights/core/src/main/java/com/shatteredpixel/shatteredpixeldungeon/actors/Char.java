@@ -77,6 +77,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ghoul;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.NeverBackDown;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ExtremeSharpness;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
@@ -336,6 +337,10 @@ public abstract class Char extends Actor {
 					if (h.belongings.getItem(RingOfTenacity.class).isEquipped(Dungeon.hero) && h.belongings.weapon instanceof FolkSong) {
 						dr /= 2;
 					}
+				}
+
+				if(h.buff(ExtremeSharpness.SharpnessBuff.class) != null) {
+					dr = 0;
 				}
 			}
 			

@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookLive;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPhantomMirror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
@@ -62,6 +63,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookEveryone;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSharpness;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
@@ -311,6 +313,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookHotBlade.class,              false);
 		SKILLBOOK.seen.put( BookSpreadSpores.class,              false);
 		SKILLBOOK.seen.put( BookPhantomMirror.class,              false);
+		SKILLBOOK.seen.put( BookLive.class,              false);
 
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
@@ -339,6 +342,7 @@ public enum Catalog {
         SKILLBOOK.seen.put( BookTerminationT.class,          false);
         SKILLBOOK.seen.put( BookTrueSilverSlash.class,          false);
 		SKILLBOOK.seen.put( BookEveryone.class,          false);
+		SKILLBOOK.seen.put( BookSharpness.class,              false);
 
 		WANDS.seen.put( WandOfMagicMissile.class,           false);
 		WANDS.seen.put( StaffOfAbsinthe.class,               false);

@@ -69,6 +69,7 @@ public class EmpireDrone extends Mob {
 
                 LastPos = Dungeon.hero.pos;
                 sprite.parent.addToBack(new TargetedCell(LastPos, 0xFF0000));
+                sprite.zap( enemy.pos );
 
                 // 패턴 딜레이 추가
                 spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 3*TICK));

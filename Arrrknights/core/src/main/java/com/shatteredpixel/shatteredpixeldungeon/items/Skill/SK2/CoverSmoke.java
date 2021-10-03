@@ -19,7 +19,7 @@ public class CoverSmoke extends Skill {
 
         Buff.affect(curUser, Invisibility.class, Invisibility.DURATION/3f);
         Buff.affect(curUser, Stamina.class, 5f);
-        GameScene.add(Blob.seed(Dungeon.hero.pos, 450, SmokeScreen.class));
+        GameScene.add(Blob.seed(Dungeon.hero.pos, 600, SmokeScreen.class));
 
         curUser.spendAndNext(1f);
     }

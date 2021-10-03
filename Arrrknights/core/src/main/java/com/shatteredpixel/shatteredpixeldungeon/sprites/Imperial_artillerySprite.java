@@ -42,6 +42,8 @@ public class Imperial_artillerySprite extends MobSprite {
         attack = new Animation( 18, false );
         attack.frames( frames, 0, 0, 4, 4, 0, 4, 0, 4, 0, 4, 0 );
 
+        zap = attack.clone();
+
         die = new Animation( 10, false );
         die.frames( frames, 5 );
 
