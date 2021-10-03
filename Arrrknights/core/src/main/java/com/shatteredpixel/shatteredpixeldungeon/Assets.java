@@ -124,12 +124,14 @@ public class Assets {
 		public static final String GAME4		= "music/game4.ogg";
 		public static final String GAME5		= "music/game5.ogg";
 		public static final String GAME6_SIESTA		= "music/game_siesta1.ogg";
+		public static final String GAME6_SIESTA2		= "music/game_siesta2.ogg";
 		public static final String BOSS		= "music/boss.ogg";
 		public static final String BOSS2		= "music/boss2.ogg";
 		public static final String BOSS3		= "music/boss3.ogg";
 		public static final String BOSS4		= "music/boss4.ogg";
 		public static final String BOSS5		= "music/boss5.ogg";
 		public static final String BOSS6_SIESTA		= "music/boss_siesta1.ogg";
+		public static final String BOSS6_SIESTA2		= "music/boss_siesta2.ogg";
 		public static final String SURFACE	= "music/surface.ogg";
 		public static final String THEME	= "music/theme.ogg";
 		public static final String RHODOS	= "music/rhodos.ogg";
@@ -250,6 +252,7 @@ public class Assets {
 		public static final String SKILL_CROSSBOW       = "sounds/skill_crossbow.mp3";
 		public static final String SKILL_YOUWISH   = "sounds/skill_youwish.mp3";
 		public static final String SKILL_SILVERSLASH   = "sounds/skill_silverslash.mp3";
+		public static final String SKILL_SORA   = "sounds/skill_sora.mp3";
 
 
 		public static final String[] all = new String[]{
@@ -270,7 +273,7 @@ public class Assets {
 				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2, HIT_BIRD, HIT_WALL1, HIT_WALL2, HIT_SHOTGUN, HIT_GUNLANCE,
 				HIT_SNIPER, HIT_GUN, HIT_AR, FROST, SHINNING, AJIMU,
 				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW, SKILL_SILVERSLASH, SKILL_YOUWISH,
-				SKILL_MON1, SKILL_MON2, SKILL_TEXAS , SKILL_SURTR, SKILL_BABYNIGHT
+				SKILL_MON1, SKILL_MON2, SKILL_TEXAS , SKILL_SURTR, SKILL_BABYNIGHT, SKILL_SORA
 		};
 	}
 

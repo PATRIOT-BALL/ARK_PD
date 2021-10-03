@@ -205,6 +205,10 @@ public class GameScene extends PixelScene {
 		{
 			Music.INSTANCE.play(Assets.Music.BOSS6_SIESTA, true);
 		}
+		else if (Dungeon.depth == 40)
+		{
+			Music.INSTANCE.play(Assets.Music.BOSS6_SIESTA2, true);
+		}
 		else if (Dungeon.depth >= 1 && Dungeon.depth < 5)
 		{
 			Music.INSTANCE.play(Assets.Music.GAME, true);
@@ -231,7 +235,9 @@ public class GameScene extends PixelScene {
 		else if (Dungeon.depth >= 31 && Dungeon.depth < 35) {
 			Music.INSTANCE.play(Assets.Music.GAME6_SIESTA, true);
 		}
-
+		else if (Dungeon.depth >= 31 && Dungeon.depth < 40) {
+			Music.INSTANCE.play(Assets.Music.GAME6_SIESTA2, true);
+		}
 
 		SPDSettings.lastClass(Dungeon.hero.heroClass.ordinal());
 		
