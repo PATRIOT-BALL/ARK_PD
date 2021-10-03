@@ -235,7 +235,7 @@ public class GameScene extends PixelScene {
 		else if (Dungeon.depth >= 31 && Dungeon.depth < 35) {
 			Music.INSTANCE.play(Assets.Music.GAME6_SIESTA, true);
 		}
-		else if (Dungeon.depth >= 31 && Dungeon.depth < 40) {
+		else if (Dungeon.depth >= 36 && Dungeon.depth < 40) {
 			Music.INSTANCE.play(Assets.Music.GAME6_SIESTA2, true);
 		}
 

@@ -108,14 +108,14 @@ public class Bestiary {
 						Bat.class, Bat.class,
 						Brute.class, Brute.class,
 						Shaman.random(),
-						Spinner.class));
+						ExplodSlug_N.class));
 			case 13:
 				//1x bat, 2x brute, 2x shaman, 2x spinner, 1x DM-200
 				return new ArrayList<>(Arrays.asList(
 						Bat.class,
 						Brute.class, Brute.class,
 						Shaman.random(), Shaman.random(),
-						Spinner.class, Spinner.class,
+						ExplodSlug_N.class, ExplodSlug_N.class,
 						DM200.class));
 			case 14: case 15:
 				//1x bat, 1x brute, 2x shaman, 2x spinner, 2x DM-300
@@ -123,7 +123,7 @@ public class Bestiary {
 						Bat.class,
 						Brute.class,
 						Shaman.random(), Shaman.random(),
-						Spinner.class, Spinner.class,
+						ExplodSlug_N.class, ExplodSlug_N.class,
 						DM200.class, DM200.class));
 				
 			// City

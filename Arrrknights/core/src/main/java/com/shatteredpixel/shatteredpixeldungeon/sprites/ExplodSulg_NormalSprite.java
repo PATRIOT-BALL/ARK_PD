@@ -23,16 +23,16 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Spinner;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.ExplodSlug_N;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.watabou.noosa.TextureFilm;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Callback;
 
 //TODO improvements here
-public class SpinnerSprite extends MobSprite {
+public class ExplodSulg_NormalSprite extends MobSprite {
 	
-	public SpinnerSprite() {
+	public ExplodSulg_NormalSprite() {
 		super();
 
 		perspectiveRaise = 0f;
@@ -82,7 +82,7 @@ public class SpinnerSprite extends MobSprite {
 				new Callback() {
 					@Override
 					public void call() {
-						((Spinner)ch).shootWeb();
+						((ExplodSlug_N)ch).shootWeb();
 					}
 				} );
 		Sample.INSTANCE.play( Assets.Sounds.MISS );

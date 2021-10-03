@@ -24,6 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.StenchGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Web;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
@@ -33,18 +34,18 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.SpinnerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ExplodSulg_NormalSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class Spinner extends Mob {
+public class ExplodSlug_N extends Mob {
 
 	{
-		spriteClass = SpinnerSprite.class;
+		spriteClass = ExplodSulg_NormalSprite.class;
 
-		HP = HT = 50;
-		defenseSkill = 17;
+		HP = HT = 45;
+		defenseSkill = 14;
 
 		EXP = 9;
 		maxLvl = 17;
@@ -59,7 +60,7 @@ public class Spinner extends Mob {
 
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange(10, 20);
+		return Random.NormalIntRange(8, 24);
 	}
 
 	@Override
@@ -121,8 +122,7 @@ public class Spinner extends Mob {
 	@Override
 	public int attackProc(Char enemy, int damage) {
 		damage = super.attackProc( enemy, damage );
-		if (Random.Int(2) == 0) {
-			Buff.affect(enemy, Poison.class).set(Random.Int(7, 9) );
+		if (Random.Int(5) == 0) {
 			webCoolDown = 0;
 			state = FLEEING;
 		}
@@ -148,8 +148,17 @@ public class Spinner extends Mob {
 	}
 
 	@Override
+	public void damage(int dmg, Object src) {
+		super.damage(dmg, src);
+	}
+
+	@Override
 	public void die( Object cause ) {
+		boolean Silnce = buff(Silence.class) != null;
+
 		super.die(cause);
+		if (!Silnce) GameScene.add(Blob.seed(pos, 30, StenchGas.class));
+
 		if (Random.Int(0,300) <= 1)
 		{
 			Dungeon.level.drop(Generator.random(Generator.Category.SKL_T2), pos ).sprite.drop( pos );
