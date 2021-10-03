@@ -6,8 +6,8 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Halberd extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.NEARL_AXE;
-        hitSound = Assets.Sounds.HIT;
+        image = ItemSpriteSheet.VANILLA_AXE;
+        hitSound = Assets.Sounds.HIT_STAB;
         hitSoundPitch = 1f;
 
         tier = 2;

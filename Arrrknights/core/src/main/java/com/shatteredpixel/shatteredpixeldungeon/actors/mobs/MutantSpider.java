@@ -9,12 +9,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Slow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Mutant_SpiderSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.StrikerSprite;
 import com.watabou.utils.Random;
 
 public class MutantSpider extends Mob {
     {
-        spriteClass = StrikerSprite.class;
+        spriteClass = Mutant_SpiderSprite.class;
 
         HP = HT = 250;
         defenseSkill = 18;

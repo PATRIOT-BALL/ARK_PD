@@ -10,12 +10,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfBlink;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpawnerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.VolcanoSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.Bundle;
 
 public class FireCore extends Mob{
     {
-        spriteClass = SpawnerSprite.class;
+        spriteClass = VolcanoSprite.class;
 
         HP = HT = 160;
         defenseSkill = 0;

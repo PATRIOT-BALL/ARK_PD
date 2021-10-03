@@ -43,6 +43,7 @@ public class Assets {
 		public static final String TILES_HALLS	= "environment/tiles_halls.png";
 		public static final String TILSE_RHODES	= "environment/tiles_rhodos.png";
 		public static final String TILSE_SIESTA	= "environment/tiles_siesta.png";
+		public static final String TILSE_SIESTA2	= "environment/tiles_siesta2.png";
 
 		public static final String WATER_SEWERS	= "environment/water0.png";
 		public static final String WATER_PRISON	= "environment/water1.png";
@@ -50,6 +51,7 @@ public class Assets {
 		public static final String WATER_CITY	= "environment/water3.png";
 		public static final String WATER_HALLS	= "environment/water4.png";
 		public static final String WATER_SIESTA	= "environment/water5.png";
+		public static final String WATER_SIESTA2	= "environment/water6.png";
 
 		public static final String WEAK_FLOOR       = "environment/custom_tiles/weak_floor.png";
 		public static final String SEWER_BOSS       = "environment/custom_tiles/sewer_boss.png";
@@ -396,9 +398,13 @@ public class Assets {
 		public static final String CEYLON	= "sprites/ceylon.png";
 
 		public static final String POMPEII	= "sprites/pompeii.png";
+		public static final String ROCKBREAKER	= "sprites/rockbreaker.png";
 		public static final String BIG_BUG	= "sprites/big_bug.png";
 		public static final String RED_SPITTER	= "sprites/red_spitter.png";
 		public static final String METAL_CRAB	= "sprites/metal_crab.png";
+		public static final String VOLCANO	= "sprites/volcano.png";
+		public static final String ORIGINIUTANT	= "sprites/originiutant.png";
+		public static final String MUTANT_SPIDER	= "sprites/mutant_spider.png";
 
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";

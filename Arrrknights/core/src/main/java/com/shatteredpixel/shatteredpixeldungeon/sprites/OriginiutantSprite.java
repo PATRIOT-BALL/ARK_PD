@@ -19,32 +19,32 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
+package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.TextureFilm;
 
-public class NEARL_AXE extends MeleeWeapon {
+public class OriginiutantSprite extends MobSprite {
 
-	{
-		image = ItemSpriteSheet.NEARL_AXE;
-		hitSound = Assets.Sounds.HIT_CRUSH;
-		hitSoundPitch = 1f;
+    public OriginiutantSprite() {
+        super();
 
-		tier = 1;
-	}
-	@Override
-	public int min(int lvl) { return  2; }
+        texture( Assets.Sprites.ORIGINIUTANT );
 
-	@Override
-	public int max(int lvl) {
-		return  4*(tier+1) +    //12 base, down from 15
-				lvl*(tier+1);   //scaling unchanged
-	}
+        TextureFilm frames = new TextureFilm( texture, 50, 40 );
 
-	@Override
-	public int defenseFactor( Char owner ) {
-		return 1;	//1 extra defence
-	}
+        idle = new Animation( 2, true );
+        idle.frames( frames, 0 );
+
+        run = new Animation( 12, true );
+        run.frames( frames, 0 );
+
+        attack = new Animation( 12, false );
+        attack.frames( frames, 0 );
+
+        die = new Animation( 10, false );
+        die.frames( frames, 0 );
+
+        play( idle );
+    }
 }

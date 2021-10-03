@@ -14,13 +14,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTransmutat
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.OriginiutantSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Originiutant extends Mob {
     {
-        spriteClass = BreakerSprite.class;
+        spriteClass = OriginiutantSprite.class;
 
         HP = HT = 800;
         defenseSkill = 12;

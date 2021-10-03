@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.CityPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.SewerPainter;
+import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Siesta2Painter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.SiestaPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.CoreRoom;
@@ -73,12 +74,12 @@ public class SiestaLevel_part2 extends RegularLevel {
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILES_HALLS;
+        return Assets.Environment.TILSE_SIESTA2;
     }
 
     @Override
     public String waterTex() {
-        return Assets.Environment.WATER_HALLS;
+        return Assets.Environment.WATER_SIESTA2;
     }
 
     @Override

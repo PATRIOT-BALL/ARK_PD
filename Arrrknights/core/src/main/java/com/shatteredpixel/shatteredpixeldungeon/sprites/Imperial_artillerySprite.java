@@ -31,19 +31,19 @@ public class Imperial_artillerySprite extends MobSprite {
 
         texture( Assets.Sprites.IMPERIAL_ARTILLERY );
 
-        TextureFilm frames = new TextureFilm( texture, 50, 50 );
+        TextureFilm frames = new TextureFilm( texture, 50, 40 );
 
         idle = new Animation( 2, true );
-        idle.frames( frames, 0, 0, 0 );
+        idle.frames( frames, 0, 1, 2, 3, 2, 1 );
 
-        run = new Animation( 18, true );
+        run = new Animation( 5, true );
         run.frames( frames, 0 );
 
-        attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack = new Animation( 18, false );
+        attack.frames( frames, 0, 0, 4, 4, 0, 4, 0, 4, 0, 4, 0 );
 
         die = new Animation( 10, false );
-        die.frames( frames, 1 );
+        die.frames( frames, 5 );
 
         play( idle );
     }

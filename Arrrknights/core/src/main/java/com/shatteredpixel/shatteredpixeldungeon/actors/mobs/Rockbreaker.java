@@ -9,11 +9,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.AntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DefenderSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Rock_CrabSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.RockbreakerSprite;
 import com.watabou.utils.Random;
 
 public class Rockbreaker extends Mob {
     {
-        spriteClass = DefenderSprite.class;
+        spriteClass = RockbreakerSprite.class;
 
         HP = HT = 200;
         defenseSkill = 0;

@@ -215,6 +215,7 @@ public class ItemSpriteSheet {
 	public static final int MAGES_STAFF     = WEP_TIER1+5;
 	public static final int HEAMYO     = WEP_TIER1+6;
 	public static final int YATO     = WEP_TIER1+7;
+	public static final int NEARL_AXE     = WEP_TIER1+8;
 	static{
 		assignItemRect(WORN_SHORTSWORD, 16, 16);
 		assignItemRect(EX41, 			16, 16);
@@ -224,13 +225,14 @@ public class ItemSpriteSheet {
 		assignItemRect(MAGES_STAFF,     16, 16);
 		assignItemRect(HEAMYO,     16, 16);
 		assignItemRect(YATO,     16, 16);
+		assignItemRect(NEARL_AXE,     16, 16);
 	}
 
 	private static final int WEP_TIER2      =                               xy(17, 7);   //8 slots
 	public static final int SHORTSWORD      = WEP_TIER2+0;
 	public static final int HAND_AXE        = WEP_TIER2+1;
 	public static final int SPEAR           = WEP_TIER2+2;
-	public static final int NEARL_AXE = WEP_TIER2+3;
+	public static final int VANILLA_AXE = WEP_TIER2+3;
 	public static final int DIRK            = WEP_TIER2+4;
 	public static final int ENFILD           = WEP_TIER2+5;
 	public static final int MIDSWORD           = WEP_TIER2+6;
@@ -239,7 +241,7 @@ public class ItemSpriteSheet {
 		assignItemRect(SHORTSWORD,      16, 16);
 		assignItemRect(HAND_AXE,        16, 16);
 		assignItemRect(SPEAR,           16, 16);
-		assignItemRect(NEARL_AXE,    16, 16);
+		assignItemRect(VANILLA_AXE,    16, 16);
 		assignItemRect(DIRK,            16, 16);
 		assignItemRect(ENFILD,            16, 16);
 		assignItemRect(MIDSWORD,            16, 16);
