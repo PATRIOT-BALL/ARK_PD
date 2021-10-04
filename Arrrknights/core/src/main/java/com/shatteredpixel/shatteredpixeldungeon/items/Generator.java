@@ -420,13 +420,12 @@ public class Generator {
                     RoundShield.class,
                     Sai.class,
                     Whip.class,
-                    CrabGun.class,
                     SHISHIOH.class,
                     Flag.class,
                     DP27.class,
                     C1_9mm.class
             };
-            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3};
+            WEP_T3.probs = new float[]{5, 5, 5, 4, 4, 4, 4, 4, 3, 3};
 
             WEP_T4.classes = new Class<?>[]{
                     Longsword.class,
@@ -437,9 +436,10 @@ public class Generator {
                     M1887.class,
                     Naginata.class,
                     Scythe.class,
-                    FolkSong.class
+                    FolkSong.class,
+                    CrabGun.class
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 4};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 4, 3};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,

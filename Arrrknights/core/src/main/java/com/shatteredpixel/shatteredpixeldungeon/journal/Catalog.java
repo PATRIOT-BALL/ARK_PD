@@ -259,7 +259,6 @@ public enum Catalog {
 		WEAPONS.seen.put( RoundShield.class,                false);
 		WEAPONS.seen.put( Sai.class,                        false);
 		WEAPONS.seen.put( Whip.class,                       false);
-		WEAPONS.seen.put( CrabGun.class,                       false);
 		WEAPONS.seen.put( SHISHIOH.class,                      false);
 		WEAPONS.seen.put( Flag.class,                false);
 		WEAPONS.seen.put( DP27.class,                false);
@@ -269,6 +268,7 @@ public enum Catalog {
 		WEAPONS.seen.put( BattleAxe.class,                  false);
 		WEAPONS.seen.put( RunicBlade.class,                 false);
 		WEAPONS.seen.put( AssassinsBlade.class,             false);
+		WEAPONS.seen.put( CrabGun.class,                       false);
 		WEAPONS.seen.put( Crossbow.class,                   false);
 		WEAPONS.seen.put( M1887.class,                       false);
 		WEAPONS.seen.put( Naginata.class,                       false);

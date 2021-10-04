@@ -32,7 +32,7 @@ public class CrabGun extends MeleeWeapon {
         hitSound = Assets.Sounds.ATK_SPIRITBOW;
         hitSoundPitch = 1f;
 
-        tier = 3;
+        tier = 4;
         RCH = 2;
     }
 
@@ -121,7 +121,7 @@ public class CrabGun extends MeleeWeapon {
     public class MetalCrab extends Mob {
         {
             spriteClass = Rock_CrabSprite.class;
-            baseSpeed = 2f;
+            baseSpeed = 3f;
 
             immunities.add(Silence.class);
             alignment = Alignment.ALLY;
@@ -138,7 +138,7 @@ public class CrabGun extends MeleeWeapon {
 
         @Override
         public int attackSkill( Char target ) {
-            return 10 + Dungeon.depth / 3 + crabLevel;
+            return 10 + Dungeon.depth / 2 + crabLevel;
         }
 
         @Override
@@ -151,7 +151,7 @@ public class CrabGun extends MeleeWeapon {
             CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
             int itembuff = 0;
             if (setBuff != null) itembuff = setBuff.itemLevel();
-            HP=HT=30 + setlvl * 4 + itembuff * 9;
+            HP=HT=30 + setlvl * 6 + itembuff * 5;
             defenseSkill = 1 + setlvl + itembuff;
             crabLevel = setlvl + itembuff / 2;
         }
