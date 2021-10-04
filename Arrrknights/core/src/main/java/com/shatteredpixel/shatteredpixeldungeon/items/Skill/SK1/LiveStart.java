@@ -17,8 +17,8 @@ import com.watabou.noosa.audio.Sample;
 
 public class LiveStart extends Skill {
     public void doSkill() {
-        for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
-            if (mob.alignment != Char.Alignment.ALLY) {
+        for (Mob mob : Dungeon.level.mobs) {
+            if (mob.alignment != Char.Alignment.ALLY && mob.state != mob.PASSIVE) {
                 mob.beckon(Dungeon.hero.pos);
                 Buff.affect(mob, LiveBuff.class, 300f);
             }

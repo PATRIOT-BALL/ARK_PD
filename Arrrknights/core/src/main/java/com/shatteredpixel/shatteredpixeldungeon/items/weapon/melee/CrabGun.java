@@ -151,7 +151,7 @@ public class CrabGun extends MeleeWeapon {
             CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
             int itembuff = 0;
             if (setBuff != null) itembuff = setBuff.itemLevel();
-            HP=HT=30 + setlvl * 6 + itembuff * 5;
+            HP=HT=30 + setlvl * 4 + itembuff * 5;
             defenseSkill = 1 + setlvl + itembuff;
             crabLevel = setlvl + itembuff / 2;
         }
