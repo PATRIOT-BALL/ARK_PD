@@ -584,7 +584,7 @@ actors.hero.talent.fastmeal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 �
 actors.hero.talent.recovery_upgrade.title=정신 회복의 강화
 actors.hero.talent.recovery_upgrade.desc=_+1:_ 강화의 일기장을 사용하면 섬멸전 장비를 _2_ 만큼 충전합니다.\n\n_+2:_ 강화의 일기장을 사용하면 섬멸전 장비를 _4_ 만큼 충전합니다\n\n이 특성은 강화의 일기장을 기반으로 한 주문서 또는 주문을 사용할 때에도 발동합니다.
 actors.hero.talent.delicious_food.title=엄청 맛있는 식사
-actors.hero.talent.delicious_food.desc=_+1:_ 벌꿀 쿠키 섭취시 허기 감소량이 _50%_ 상승합니다.\n\n_+2:_ 벌꿀 쿠키 섭취시 허기 감소량이 _100%_ 상승합니다.\n\n또한 벌꿀 쿠키 섭취시 섬멸전 장비를 2 만큼 충전합니다.
+actors.hero.talent.delicious_food.desc=_+1:_ 벌꿀 쿠키 섭취시 허기 감소량이 _50%_ 상승합니다.\n\n_+2:_ 벌꿀 쿠키 섭취시 허기 감소량이 _100%_ 상승합니다.\n\n또한 벌꿀 쿠키 섭취시 섬멸전 장비를 1 만큼 충전합니다.
 actors.hero.talent.lovemeat.title=고기가 좋아
 actors.hero.talent.lovemeat.desc=_+1:_ 고기류 음식 섭취시 _20턴_동안 배부름 상태를 얻고 체력을 _3_ 회복합니다.\n\n_+2:_ 고기류 음식 섭취시 _40턴_동안 배부름 상태를 얻고 체력을 _6_ 회복합니다.\n\n염국 훈제고기는 해당하지 않습니다.
 actors.hero.talent.powergear.title=강력한 방벽
@@ -612,7 +612,7 @@ actors.hero.talent.recall_memory.desc=_+1:_ 일기장을 읽으면 아츠 기록
 actors.hero.talent.esthesia.title=본질 의식
 actors.hero.talent.esthesia.desc=_+1:_ 방벽 투척이 _보스_ 에게 _5%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _보스_ 에게 _10%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _보스_ 에게 _15%_ 의 추가 피해를 줍니다.
 actors.hero.talent.speed_comabt.title=고속전투
-actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _10%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _15%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.
+actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _10%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _30%_ 상승합니다.
 
 actors.hero.talent$mywishcooldown.name=내가 원하는 세상 쿨타임
 actors.hero.talent$mywishcooldown.desc=내가 원하는 세상 재발동까지 %s 턴 남았습니다.

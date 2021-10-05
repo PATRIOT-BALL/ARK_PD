@@ -610,7 +610,7 @@ actors.hero.talent.recall_memory.desc=_+1:_ Using scroll, recorder is recharged 
 actors.hero.talent.esthesia.title=esthesia
 actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _5%_ bonus damage to boss enemies.\n\n_+2_ Gear attacks deal _10%_ bonus damage to boss enemies.\n\n_+3:_ Gear attacks deal _15%_ bonus damage to boss enemies.
 actors.hero.talent.speed_comabt.title=speed comabt
-actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _15%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_
+actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _30%_
 
 actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
