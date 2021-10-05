@@ -136,7 +136,7 @@ actors.buffs.combo$combomove.parry_desc=_6 Combo: Parry_ blocks the next attack 
 actors.buffs.combo$combomove.crush_desc=_8 Combo: Crush_ deals combo*25% of your melee damage to the primary target, and half that damage to all other enemies in a 7x7 AOE. Resets combo when used
 actors.buffs.combo$combomove.crush_desc2=_8 Combo: Melee Flare_ deals 125% of your melee damage to the target, and 1 trun Paralysis and combo*0.3 truns Blindness. Increments combo by 1.
 actors.buffs.combo$combomove.fury_desc=_10 Combo: Fury_ hits an enemy once for each combo you have, each hit deals 60% damage and can trigger enchantments. Resets combo when used.
-actors.buffs.combo$combomove.fury_desc2=_10 Combo: zero-range_ deals combo*50% of your gunfire damage to the target. Resets combo when used.
+actors.buffs.combo$combomove.fury_desc2=_10 Combo: zero-range_ deals combo*40% of your gunfire damage to the target. Resets combo when used.
 
 actors.buffs.activeoriginium.name=Originium Active
 actors.buffs.activeoriginium.ondeath=You originium to death...
@@ -598,7 +598,7 @@ actors.hero.talent.physical_attack.desc=_+1:_ focusing gear attack _33%_ chance 
 actors.hero.talent.battleflow.title=battle flow
 actors.hero.talent.battleflow.desc=_+1:_ Increases the chance of a gear to recharge when someone dies from 8% to _12%_.\n\n_+2:_ Increases the chance of a gear to recharge when someone dies from 8% to _16%_.\n\n_+3:_ Increases the chance of a gear to recharge when someone dies from 8% to _20%_.
 actors.hero.talent.barrier_operation.title=barrier operation
-actors.hero.talent.barrier_operation.desc=_+1_ : Gear`s Defense damage reduction increased from 50% to _65%_. Inflicts damage equal to _30%_ of ATK to the attacker when the defensive effect is activated.\n\n_+2:_ Gear`s Defense damage reduction increased from 50% to _80%_. Inflicts damage equal to _60%_ of ATK to the attacker when the defensive effect is activated.\n\n_+3_ : Gear`s Defense damage reduction increased from 50% to _95%_.Inflicts damage equal to _90%_ of ATK to the attacker when the defensive effect is activated.
+actors.hero.talent.barrier_operation.desc=_+1_ : Gear`s Defense damage reduction increased from 50% to _60%_. Inflicts damage equal to _30%_ of ATK to the attacker when the defensive effect is activated.\n\n_+2:_ Gear`s Defense damage reduction increased from 50% to _70%_. Inflicts damage equal to _60%_ of ATK to the attacker when the defensive effect is activated.\n\n_+3_ : Gear`s Defense damage reduction increased from 50% to _80%_.Inflicts damage equal to _90%_ of ATK to the attacker when the defensive effect is activated.
 actors.hero.talent.barrier_repair.title=barrier repair
 actors.hero.talent.barrier_repair.desc=_+1_ : chance to recharge gear when attacked increased from 10% to _15%_.\n\n_+2_ : chance to recharge gear when attacked increased from 10% to _20%_.\n\n_+3_ : chance to recharge gear when attacked increased from 10% to _25%_.
 actors.hero.talent.rhodes_cat.title=rhodes cat
@@ -610,7 +610,7 @@ actors.hero.talent.recall_memory.desc=_+1:_ Using scroll, recorder is recharged 
 actors.hero.talent.esthesia.title=esthesia
 actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _5%_ bonus damage to boss enemies.\n\n_+2_ Gear attacks deal _10%_ bonus damage to boss enemies.\n\n_+3:_ Gear attacks deal _15%_ bonus damage to boss enemies.
 actors.hero.talent.speed_comabt.title=speed comabt
-actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _30%_
+actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _15%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_
 
 actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun

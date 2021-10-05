@@ -1436,9 +1436,9 @@ public class Hero extends Char {
             if (Dungeon.hero.subClass == HeroSubClass.GUARDIAN) {
                 if (Gear.charge > 0) {
                     if (buff(Barrier.class) == null) {
-                        Buff.affect(this, Barrier.class).setShield(HT / 6);
+                        Buff.affect(this, Barrier.class).setShield(HT / 8);
 
-                        damage *= 0.5f - (float) this.pointsInTalent(Talent.BARRIER_OPERATION) * 0.15f;
+                        damage *= 0.5f - (float) this.pointsInTalent(Talent.BARRIER_OPERATION) * 0.1f;
                         int redamage = 0;
                         redamage += damageRoll() * (float) pointsInTalent(Talent.BARRIER_OPERATION) * 0.3f;
                         if (Dungeon.hero.hasTalent(Talent.BARRIER_OPERATION)) {

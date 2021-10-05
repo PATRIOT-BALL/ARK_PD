@@ -138,7 +138,7 @@ actors.buffs.combo$combomove.parry_desc=_6 연속 타격: 받아치기_ 는 발�
 actors.buffs.combo$combomove.crush_desc=_8 연속 타격: 으깨기_ 는 연속 타격*25%의 근접 피해를 첫 번째 대상에게 입히고, 이후 주변 7x7 구역에 있는 다른 모든 적들에게 절반만큼의 피해를 입힙니다.
 actors.buffs.combo$combomove.crush_desc2=_8 연속 타격: 근접 섬광탄_ 은 125%의 피해를 입히고 1턴의 마비와 연속 타격*0.3턴의 실명을 부여합니다.  콤보를 1 증가시킵니다.
 actors.buffs.combo$combomove.fury_desc=_10 연속 타격: 분노 폭발_ 은 적 하나에 대해 60%의 피해량으로 연속 타격을 쌓은 수만큼 공격하며, 각 공격마다 무기에 부여된 아츠가 발동할 수 있습니다.
-actors.buffs.combo$combomove.fury_desc2=_10 연속 타격: 영거리 사격_ 은 연속 타격*50%의 사격 피해를 대상에게 입힙니다.
+actors.buffs.combo$combomove.fury_desc2=_10 연속 타격: 영거리 사격_ 은 연속 타격*40%의 사격 피해를 대상에게 입힙니다.
 
 actors.buffs.activeoriginium.name=오리지늄 자극
 actors.buffs.activeoriginium.ondeath=당신은 오리지늄의 영향으로 죽었다...
@@ -600,7 +600,7 @@ actors.hero.talent.physical_attack.desc=_+1:_ 강화된 방벽 투척이 대상�
 actors.hero.talent.battleflow.title=전투의 흐름
 actors.hero.talent.battleflow.desc=_+1:_ 누군가가 사망할 때 섬멸전 장비를 충전할 확률이 8%에서 _12%_ 로 상승합니다.\n\n_+2:_ 누군가가 사망할 때 섬멸전 장비를 충전할 확률이 8%에서 _16%_ 로 상승합니다.\n\n_+3:_ 누군가가 사망할 때 섬멸전 장비를 충전할 확률이 8%에서 _20%_ 로 상승합니다.
 actors.hero.talent.barrier_operation.title=수호 방벽 전개
-actors.hero.talent.barrier_operation.desc=_+1:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _65%_ 로 상승하며, 공격자에게 공격력의 _30%_만큼 피해를 입힙니다.\n\n_+2:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _80%_ 로 상승하며, 공격자에게 공격력의 _60%_만큼 피해를 입힙니다.\n\n_+3:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _95%_ 로 상승하며, 공격자에게 공격력의 _90%_만큼 피해를 입힙니다.
+actors.hero.talent.barrier_operation.desc=_+1:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _60%_ 로 상승하며, 공격자에게 공격력의 _30%_만큼 피해를 입힙니다.\n\n_+2:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _70%_ 로 상승하며, 공격자에게 공격력의 _60%_만큼 피해를 입힙니다.\n\n_+3:_ 방벽으로 방어할 때 피해 감소률이 50%에서 _80%_ 로 상승하며, 공격자에게 공격력의 _90%_만큼 피해를 입힙니다.
 actors.hero.talent.barrier_repair.title=방벽 재생
 actors.hero.talent.barrier_repair.desc=_+1:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _15%_ 로 상승합니다.\n\n_+2:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _20%_ 로 상승합니다.\n\n_+3:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _25%_ 로 상승합니다.
 actors.hero.talent.rhodes_cat.title=로도스의 필라인
@@ -612,7 +612,7 @@ actors.hero.talent.recall_memory.desc=_+1:_ 일기장을 읽으면 아츠 기록
 actors.hero.talent.esthesia.title=본질 의식
 actors.hero.talent.esthesia.desc=_+1:_ 방벽 투척이 _보스_ 에게 _5%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _보스_ 에게 _10%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _보스_ 에게 _15%_ 의 추가 피해를 줍니다.
 actors.hero.talent.speed_comabt.title=고속전투
-actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _10%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _30%_ 상승합니다.
+actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _10%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _15%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.
 
 actors.hero.talent$mywishcooldown.name=내가 원하는 세상 쿨타임
 actors.hero.talent$mywishcooldown.desc=내가 원하는 세상 재발동까지 %s 턴 남았습니다.
