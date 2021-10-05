@@ -42,8 +42,8 @@ public class Rock_CrabSprite extends MobSprite {
         attack = new Animation( 15, false );
         attack.frames( frames, 0 );
 
-        die = new Animation( 10, false );
-        die.frames( frames, 0 );
+        die = new Animation( 20, false );
+        die.frames( frames, 0,1,2,3 );
 
         play( idle );
     }
