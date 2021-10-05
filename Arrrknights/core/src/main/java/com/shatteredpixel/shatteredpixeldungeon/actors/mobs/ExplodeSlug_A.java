@@ -9,15 +9,15 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ExplodSulg_NormalSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ExplodSulgSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class ExplodeSlug extends Mob {
+public class ExplodeSlug_A extends Mob {
     {
-        spriteClass = ExplodSulg_NormalSprite.class;
+        spriteClass = ExplodSulgSprite.Elite.class;
 
         HP = HT = 165;
         defenseSkill = 28;
@@ -58,10 +58,6 @@ public class ExplodeSlug extends Mob {
                         heroKilled = true;
                     }
                 }
-            }
-
-            if (Dungeon.level.heroFOV[pos]) {
-                Sample.INSTANCE.play(Assets.Sounds.BLAST);
             }
 
             if (heroKilled) {

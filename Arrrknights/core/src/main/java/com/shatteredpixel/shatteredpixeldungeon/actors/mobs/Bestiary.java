@@ -212,21 +212,21 @@ public class Bestiary {
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
 						Rockbreaker.class,
-						ExplodeSlug.class
+						ExplodeSlug_A.class
 				));
 			case 37:
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
 						Rockbreaker.class, Rockbreaker.class,
-						ExplodeSlug.class
+						ExplodeSlug_A.class
 				));
 			case 38:
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class,
 						Rockbreaker.class, Rockbreaker.class,
-						ExplodeSlug.class, ExplodeSlug.class,
+						ExplodeSlug_A.class, ExplodeSlug_A.class,
 						AcidSlug_A.class
 				));
 			case 39:
@@ -234,7 +234,7 @@ public class Bestiary {
 						LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
 						Rockbreaker.class, Rockbreaker.class,
-						ExplodeSlug.class, ExplodeSlug.class,
+						ExplodeSlug_A.class, ExplodeSlug_A.class,
 						AcidSlug_A.class, AcidSlug_A.class
 				));
 
@@ -313,7 +313,7 @@ public class Bestiary {
 				else if (cl == MetalCrab.class) {
 					cl = MutantSpider.class;
 				}
-				else if (cl == ExplodeSlug.class) {
+				else if (cl == ExplodeSlug_A.class) {
 					cl = Originiutant.class;
 				}
 				rotation.set(i, cl);

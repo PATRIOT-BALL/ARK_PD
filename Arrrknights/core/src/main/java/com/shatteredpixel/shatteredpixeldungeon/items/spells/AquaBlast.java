@@ -28,7 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.ExplodeSlug;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.ExplodeSlug_A;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfStormClouds;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -58,7 +58,7 @@ public class AquaBlast extends TargetedSpell {
 		
 		if (target != null && target != hero){
 			//just enough to skip their current turn
-			if (target instanceof ExplodeSlug) Buff.affect(target, Silence.class, 15f);
+			if (target instanceof ExplodeSlug_A) Buff.affect(target, Silence.class, 15f);
 			Buff.affect(target, Paralysis.class, target.cooldown());
 		}
 	}
