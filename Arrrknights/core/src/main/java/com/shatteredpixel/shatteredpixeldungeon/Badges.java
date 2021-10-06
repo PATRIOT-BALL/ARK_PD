@@ -215,7 +215,7 @@ public class Badges {
 		SKIN_NOVA(162),
 		SKIN_SUSUU(163),
 		SKIN_GRN(164),
-		SKIN_LAPPY(165),
+		SKIN_LAPPY, // Image : 165
 		SKIN_JESSI(166);
 
 		public boolean meta;
