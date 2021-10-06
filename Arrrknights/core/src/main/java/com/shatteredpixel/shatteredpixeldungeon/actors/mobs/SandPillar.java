@@ -29,7 +29,7 @@ public class SandPillar extends Mob {
 
     @Override
     public int defenseProc(Char enemy, int damage) {
-        GameScene.add(Blob.seed(pos, 20, CorrosiveGas.class));
+        GameScene.add(Blob.seed(pos, 30, CorrosiveGas.class));
 
         return super.defenseProc(enemy, damage);
     }

@@ -33,7 +33,7 @@ public class LavaSlug extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 32, 50 );
+        return Random.NormalIntRange( 33, 45 );
     }
 
     @Override
@@ -49,7 +49,7 @@ public class LavaSlug extends Mob {
     public int attackProc(Char enemy, int damage) {
 
         if (Random.Int(3) == 0) {
-            enemy.damage(8, this);
+            enemy.damage(damageRoll() / 3, this);
             Buff.affect(enemy, Burning.class).reignite(enemy, 3f);
         }
 

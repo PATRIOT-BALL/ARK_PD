@@ -64,6 +64,11 @@ public class Schwarz extends Mob {
     }
 
     @Override
+    public int defenseProc(Char enemy, int damage) {
+        return INFINITE_EVASION;
+    }
+
+    @Override
     protected boolean act() {
         if (CoolDown == 0) {
             if (LastPos == -1) {
