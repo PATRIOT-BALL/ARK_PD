@@ -340,8 +340,8 @@ public class Pompeii extends Mob {
                 Dungeon.observe();
             }
             for (Char ch : affected) {
-                if (phase==3)  ch.damage(Random.NormalIntRange(40, 60), new Pompeii.Blast());
-                else ch.damage(Random.NormalIntRange(30, 50), new Pompeii.Blast());
+                if (phase==3)  ch.damage(Random.NormalIntRange(60, 70), new Pompeii.Blast());
+                else ch.damage(Random.NormalIntRange(45, 55), new Pompeii.Blast());
                 if (ch.isAlive()) Buff.affect(ch, Paralysis.class, 1f);
 
                 if (Dungeon.level.heroFOV[pos]) {
