@@ -467,7 +467,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROSECAT);
 			case NEARL:
-				return true;
+				return false;
 				//return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
 		}
 	}
