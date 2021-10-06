@@ -57,7 +57,7 @@ public class FireCore extends Mob{
         if (spawnRecorded){
             Statistics.coreAlive--;
         }
-        GLog.h(Messages.get(this, "on_death"));
+        GLog.h(Messages.get(this, "on_death", Statistics.coreAlive));
         super.die(cause);
     }
 

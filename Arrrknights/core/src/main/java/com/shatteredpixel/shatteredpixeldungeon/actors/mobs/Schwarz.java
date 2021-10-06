@@ -61,12 +61,10 @@ public class Schwarz extends Mob {
 
     @Override
     public void damage(int dmg, Object src) {
+        Sample.INSTANCE.play( Assets.Sounds.HIT_PARRY, 1, Random.Float(0.96f, 1.05f));
+        sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "parried"));
     }
 
-    @Override
-    public int defenseProc(Char enemy, int damage) {
-        return INFINITE_EVASION;
-    }
 
     @Override
     protected boolean act() {
