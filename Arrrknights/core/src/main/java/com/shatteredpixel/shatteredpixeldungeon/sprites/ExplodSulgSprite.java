@@ -52,7 +52,7 @@ public class ExplodSulgSprite extends MobSprite {
 		super.onComplete( anim );
 
 		if (anim == die) {
-			Sample.INSTANCE.play(Assets.Sounds.BLAST);
+			Sample.INSTANCE.play(Assets.Sounds.HIT_BREAK);
 			emitter().burst( BlastParticle.FACTORY, 10 );
 		}
 	}
@@ -81,12 +81,12 @@ public class ExplodSulgSprite extends MobSprite {
 			run = new Animation( 15, true );
 			run.frames( frames, c+0, c+1, c+2, c+3, c+4, c+5 );
 
-			attack = new Animation( 12, false );
+			attack = new Animation( 14, false );
 			attack.frames( frames, c+6, c+7, c+8, c+9, c+10 );
 
 			zap = attack.clone();
 
-			die = new Animation( 22, false );
+			die = new Animation( 18, false );
 			die.frames( frames, c+10, c+11, c+12, c+13, c+14, c+15, c+16, c+17, c+18, c+19 );
 
 			play( idle );
