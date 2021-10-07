@@ -1339,7 +1339,7 @@ actors.mobs.piersailor.name=부두 선원장
 actors.mobs.piersailor.desc=강력한 근거리 전투원. 하지만 물 안에서는 지속해서 피해를 받는다.
 
 actors.mobs.heavyboat.name=혜비보트
-actors.mobs.heavyboat.desc=이 강력한 배는 물 위에서 강력한 전투력을 발휘하지만, 반대로 물 위에서는 매우 약해지며 계속해서 체력을 잃습니다. 사망시 선원이 탈출하여 즉시 전투에 참여합니다.
+actors.mobs.heavyboat.desc=이 강력한 배는 물 위에서 강력한 전투력을 발휘하지만, 반대로 물 밖에서는 매우 약해지며 계속해서 체력을 잃습니다. 사망시 선원이 탈출하여 즉시 전투에 참여합니다.
 actors.mobs.heavyboat.bang=당신은 교통사고 당했다...
 actors.mobs.heavyboat.rankings_desc=교통사고
 
