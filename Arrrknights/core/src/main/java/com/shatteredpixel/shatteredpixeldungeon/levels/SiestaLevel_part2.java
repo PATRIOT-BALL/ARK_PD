@@ -67,8 +67,8 @@ public class SiestaLevel_part2 extends RegularLevel {
 
     @Override
     public int nMobs() {
-        // 다른 계층보다 몬스터가 2마리 많이 등장합니다.
-        return super.nMobs() + 2;
+        // 다른 계층보다 몬스터가 4마리 많이 등장합니다.
+        return super.nMobs() + 4;
     }
 
     @Override
