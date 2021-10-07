@@ -71,15 +71,13 @@ public class CryptRoom extends SpecialRoom {
 			cy = top + 2;
 		}
 
-		/*
+
 	if (Random.Int(20) == 0) {
 			SandPillar Sand = new SandPillar();
 			Sand.pos = cx + cy * level.width();
 			level.mobs.add( Sand );
 		}
-		else level.drop( prize( level ), cx + cy * level.width() ).type = Heap.Type.TOMB;*/
-
-		level.drop( prize( level ), cx + cy * level.width() ).type = Heap.Type.TOMB;
+		else level.drop( prize( level ), cx + cy * level.width() ).type = Heap.Type.TOMB;
 	}
 	
 	private static Item prize( Level level ) {
