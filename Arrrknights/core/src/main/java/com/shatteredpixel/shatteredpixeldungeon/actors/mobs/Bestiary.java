@@ -205,7 +205,7 @@ public class Bestiary {
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class,
 						Ergate.class,
-						Sniper.class,
+						Sniper.class, Sniper.class,
 						Piersailor.class, Piersailor.class, Piersailor.class,
 						Agent.class, Agent.class, Agent.class));
 			case 36:
