@@ -34,7 +34,7 @@ public class Fate extends Skill {
         int total = potions.size() + rings.size();
 
         if (total == 0) {
-            GLog.n(Messages.get(this, "nothing_left"));
+            GLog.n(Messages.get(ScrollOfDivination.class, "nothing_left"));
             return;
         }
 
