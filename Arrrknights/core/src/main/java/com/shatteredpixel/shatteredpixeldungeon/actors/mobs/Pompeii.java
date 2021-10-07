@@ -321,7 +321,7 @@ public class Pompeii extends Mob {
                 Ballistica b = new Ballistica(pos, i, Ballistica.WONT_STOP);
                 //shoot beams
                 for (int p : b.path) {
-                    CellEmitter.center(p).burst(BlastParticle.FACTORY, 26);
+                    CellEmitter.center(p).burst(BlastParticle.FACTORY, 7);
                     Char ch = Actor.findChar(p);
                     if (ch != null && (ch.alignment != alignment || ch instanceof Bee)) {
                         affected.add(ch);
@@ -388,7 +388,7 @@ public class Pompeii extends Mob {
             for (int i : targetedCells){
                 Ballistica b = new Ballistica(pos, i, Ballistica.WONT_STOP);
                 for (int p : b.path){
-                    CellEmitter.center(p).burst(FlameParticle.FACTORY, 1);
+                    CellEmitter.center(p).burst(FlameParticle.FACTORY, 5);
                     affectedCells.add(p);
                 }
             }
