@@ -395,6 +395,9 @@ items.skill.sk3.extremesharpness.name=_예리함의 극치(3스킬)_
 items.skill.sk3.extremesharpness.desc=발동시 명중률이 상승하고 공격이 적의 방어를 무시합니다.
 items.skill.sk3.extremesharpness.desc_wnd=발동시 명중률 상승 및 방어 무시
 
+items.skill.sk3.extremesharpness$sharpnessbuff.name=예리함
+items.skill.sk3.extremesharpness$sharpnessbuff.desc=명중률이 상승하고 적의 방어를 무시합니다.\n\n예리함이 떨어질 때까지 %s 턴 남았습니다.
+
 
 
 
