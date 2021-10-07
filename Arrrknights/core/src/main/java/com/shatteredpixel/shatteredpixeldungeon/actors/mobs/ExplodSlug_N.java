@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.StenchGas;
+import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Web;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -123,7 +124,6 @@ public class ExplodSlug_N extends Mob {
 		damage = super.attackProc( enemy, damage );
 		if (Random.Int(5) == 0) {
 			webCoolDown = 0;
-			state = FLEEING;
 		}
 
 		return damage;
@@ -156,7 +156,10 @@ public class ExplodSlug_N extends Mob {
 		boolean Silnce = buff(Silence.class) != null;
 
 		super.die(cause);
-		if (!Silnce) GameScene.add(Blob.seed(pos, 30, StenchGas.class));
+		if (!Silnce) {
+			GameScene.add(Blob.seed(pos, 30, StenchGas.class));
+			GameScene.add(Blob.seed(pos, 30, ToxicGas.class));
+		}
 
 		if (Random.Int(0,300) <= 1)
 		{
