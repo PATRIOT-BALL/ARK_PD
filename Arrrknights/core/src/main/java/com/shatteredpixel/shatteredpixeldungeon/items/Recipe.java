@@ -51,14 +51,18 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ExoticScrol
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Alchemize;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.AquaBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ArcaneCatalyst;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.Avantgardeform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.BeaconOfReturning;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.FeatherFall;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.ForceCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.MagicalInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.MagicalPorter;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.OathofFire;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.PhaseShift;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ReclaimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Recycle;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.WeaponTransform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WildEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
@@ -210,7 +214,11 @@ public abstract class Recipe {
             new ScrollOfWarp.Recipe(),
             new NormalMagazine.Recipe(),
             new UpMagazine.Recipe(),
-            new HoneyBread.Recipe()
+            new HoneyBread.Recipe(),
+            new WeaponTransform.Recipe(),
+            new Avantgardeform.Recipe(),
+            new OathofFire.Recipe(),
+            new ForceCatalyst.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{
@@ -220,7 +228,7 @@ public abstract class Recipe {
             new StewedMeat.threeMeat(),
             new MeatPie.Recipe(),
             new Sandvich.Recipe(),
-            new NotBarFood.Recipe()
+            new NotBarFood.Recipe(),
     };
 
     public static Recipe findRecipe(ArrayList<Item> ingredients) {
@@ -252,8 +260,7 @@ public abstract class Recipe {
 
     public static boolean usableInRecipe(Item item) {
         if ((item instanceof  NormalMagazine)) return true;
-        return !item.cursed
-                && (!(item instanceof EquipableItem));
+        return !item.cursed;
     }
 }
 

@@ -43,6 +43,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.KindOfWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ExoticScroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Annoying;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Displacing;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.contamination;
@@ -70,6 +72,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
@@ -353,6 +356,38 @@ abstract public class Weapon extends KindOfWeapon {
 		cursed = false;
 		
 		return super.upgrade();
+	}
+
+	public static class PlaceHolder extends Weapon {
+
+		{
+			image = ItemSpriteSheet.WEAPON_HOLDER;
+		}
+
+		@Override
+		public boolean isSimilar(Item item) {
+			return !item.isEquipped(Dungeon.hero);
+		}
+
+		@Override
+		public int STRReq(int lvl) {
+			return 0;
+		}
+
+		@Override
+		public int max(int lvl) {
+			return 0;
+		}
+
+		@Override
+		public int min(int lvl) {
+			return 0;
+		}
+
+		@Override
+		public String info() {
+			return "";
+		}
 	}
 	
 	@Override
