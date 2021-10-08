@@ -33,6 +33,10 @@ public class v0_3_X_Changes {
                 "_정밀 장전_"));
 
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
+                "_히라의 사냥꾼_ : 4티어 모드 무기로, 매우 변칙적인 활용성을 지닌 무기입니다. 모드에 따라 적의 등 뒤로 이동하거나 대상을 짧게 끌어당깁니다."));
+
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);

@@ -72,6 +72,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Heamyo;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.LightKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
@@ -146,6 +147,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 		//new Heamyo().collect();
+		new SnowHunter().identify().collect();
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -467,7 +469,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROSECAT);
 			case NEARL:
-				return false;
+				return true;
 				//return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
 		}
 	}

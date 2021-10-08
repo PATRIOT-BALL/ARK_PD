@@ -190,6 +190,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sai;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Castlebreaker;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Spear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
@@ -437,9 +438,10 @@ public class Generator {
                     Naginata.class,
                     Scythe.class,
                     FolkSong.class,
-                    CrabGun.class
+                    CrabGun.class,
+                    SnowHunter.class
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 4, 3};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 4, 3, 2};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,

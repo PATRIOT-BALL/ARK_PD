@@ -146,13 +146,15 @@ public class Pompeii extends Mob {
             Game.switchScene(SurfaceScene.class);
         }
         else {
-            if (this.buff(Barrier.class) != null && Dungeon.level.map[this.pos] == Terrain.WATER) {
-                this.damage(200, this);
-                Level.set(this.pos, Terrain.EMPTY);
-                GameScene.updateMap(this.pos);
-                CellEmitter.get(this.pos).burst(Speck.factory(Speck.STEAM), 10);
-            } else if (Dungeon.level.map[this.pos] == Terrain.WATER && phase == 3) {
-                this.damage(6, this);
+            if (Dungeon.level.map[this.pos] == Terrain.WATER) {
+                if (this.buff(Barrier.class) != null) {
+                    this.damage(200, this);
+                    Level.set(this.pos, Terrain.EMPTY);
+                    GameScene.updateMap(this.pos);
+                    CellEmitter.get(this.pos).burst(Speck.factory(Speck.STEAM), 10);
+                } else {
+                    this.damage(6, this);
+                }
             }
 
             if (phase == 0) {
