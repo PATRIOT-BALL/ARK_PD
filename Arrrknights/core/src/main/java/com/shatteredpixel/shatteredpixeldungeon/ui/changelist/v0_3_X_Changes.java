@@ -44,6 +44,9 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 드롭 변경",
                 "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "주문 변경",
+                "_재활용_ : 1회 제작에 15개가 생성됩니다. 또한, 이제 일기장/포션, 씨앗/룬석 두 분류로 나뉘어 변환 시도시 같은 분류의 다른 계열 아이템으로 변환됩니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
