@@ -44,7 +44,7 @@ public class v0_3_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 변경",
-                "_새싹 원석충_의 체력이 4에서 _1_로, 공격력이 1-4에서 _1-1_로 감소했습니다. 대신 회피율이 25에서 _99_로 상승했으며, 더 이상 _거대해진 엘리트_ 몬스터가 될 수 없습니다." + "\n\n" +
+                "_새싹 원석충_의 체력이 4에서 _1_로, 공격력이 1-4에서 _1-1_로 감소했습니다. 대신 회피율이 25에서 _35_로 상승했으며, 더 이상 _거대해진 엘리트_ 몬스터가 될 수 없습니다." + "\n\n" +
                 "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "주문 변경",
@@ -72,7 +72,7 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
                 "_살카즈 저주술사_의 회피율이 8에서 _6_으로 감소했습니다." + "\n\n" +
-                "_특공대원\n체력이 140에서 _125_로, 공격력이 25-35에서 _21-31_로 감소했습니다. 대신 침묵 상태일 때 공격력이 12-24에서 _14-26_으로 상승했습니다."));
+                "_특공대원_\n체력이 140에서 _125_로, 공격력이 25-35에서 _21-31_로 감소했습니다. 대신 침묵 상태일 때 공격력이 12-24에서 _14-26_으로 상승했습니다."));
     }
 
     public static void add_v0_3_0_Changes(ArrayList<ChangeInfo> changeInfos) {
