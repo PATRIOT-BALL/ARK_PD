@@ -23,6 +23,9 @@ public class v0_3_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
+                "_히라의 사냥꾼_ : 4티어 모드 무기로, 매우 변칙적인 활용성을 지닌 무기입니다. 모드에 따라 적의 등 뒤로 이동하거나 대상을 짧게 끌어당깁니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "새로운 주문",
                 "_힘의 정수_ : 무기를 분해하여 만드는 촉매제입니다." + "\n\n" +
                         "_불꽃의 서약_ : 사용시 100턴 동안 연소 면역을 부여하는 주문입니다."+ "\n\n" +
@@ -32,9 +35,8 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 1종 추가",
                 "_정밀 장전_"));
 
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
-                "_히라의 사냥꾼_ : 4티어 모드 무기로, 매우 변칙적인 활용성을 지닌 무기입니다. 모드에 따라 적의 등 뒤로 이동하거나 대상을 짧게 끌어당깁니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
+                "_심해의 포식자(2스킬)_ : 대상에게 큰 피해를 입히고 등 뒤로 이동합니다. 만약 적을 처치하면 아드레날린을 얻습니다."));
 
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);

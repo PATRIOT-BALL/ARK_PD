@@ -59,9 +59,9 @@ public class ShadowAssault extends Skill {
                                 curUser.sprite.attack(mob.pos, new Callback() {
                                     @Override
                                     public void call() {
+                                        Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH);
+                                        mob.sprite.burst(CharSprite.NEGATIVE, 10);
                                         for (int a = 0; a<10; a+=1) {
-                                            Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH);
-                                            mob.sprite.burst(CharSprite.NEGATIVE, 10);
                                             doAttack(mob);
                                         }
                                     }

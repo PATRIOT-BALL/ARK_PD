@@ -44,6 +44,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookPredators;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookSpikes;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Bookancientkin;
@@ -578,9 +579,10 @@ public class Generator {
                     BookLandingStrike.class,
                     BookDreamland.class,
                     BookDeepHealing.class,
-                    BookSpikes.class
+                    BookSpikes.class,
+                    BookPredators.class
             };
-            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+            SKL_T2.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
             SKL_T3.classes = new Class<?>[]{
                     BookTrueSilverSlash.class,
@@ -600,12 +602,13 @@ public class Generator {
                     BookJackinthebox.class, BookRockfailHammer.class, BookChargingPS.class,
                     BookNeverBackDown.class, BookCoverSmoke.class, BookBenasProtracto.class, Bookancientkin.class,
                     BookLandingStrike.class, BookFlashShield.class, BookDreamland.class, BookDeepHealing.class, BookSpikes.class,
+                    BookPredators.class,
 
                     BookTrueSilverSlash.class, BookTerminationT.class, BookEveryone.class, BookSharpness.class
             };
             SKL_RND.probs = new float[]{
                     4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                    3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                     3, 3, 3, 3
             };
 

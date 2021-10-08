@@ -54,6 +54,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookLandingStrik
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNervous;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookNeverBackDown;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookPredators;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookReflow;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookSpikes;
@@ -336,6 +337,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookSpikes.class,              false);
 		SKILLBOOK.seen.put( BookFlashShield.class,              false);
 		SKILLBOOK.seen.put( BookGenesis.class,              false);
+		SKILLBOOK.seen.put( BookPredators.class,              false);
 
         SKILLBOOK.seen.put( BookShadowAssault.class,          false);
         SKILLBOOK.seen.put( BookSoaringFeather.class,          false);

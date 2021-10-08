@@ -105,6 +105,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.CoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.DeepHealing;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.DeepSeaPredators;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Dreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.EmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.FlashShield;
@@ -2533,6 +2534,9 @@ public class Hero extends Char {
                 break;
             case 18:
                 SK2 = new Genesis();
+                break;
+            case 19:
+                SK2 = new DeepSeaPredators();
                 break;
         }
     }
