@@ -25,14 +25,13 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
 
-public class Flail extends MeleeWeapon {
+public class Decapitator extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.FLAIL;
@@ -40,7 +39,7 @@ public class Flail extends MeleeWeapon {
 		hitSoundPitch = 0.8f;
 
 		tier = 5;
-		ACC = 1.2f; //0.9x accuracy
+		ACC = 1.3f; //0.9x accuracy
 		//also cannot surprise attack, see Hero.canSurpriseAttack
 	}
 
@@ -98,7 +97,7 @@ public class Flail extends MeleeWeapon {
 		String info = Messages.get(this, "desc");
 		if (Dungeon.hero.belongings.getItem(RingOfEvasion.class) != null) {
 			if (Dungeon.hero.belongings.getItem(RingOfEvasion.class).isEquipped(Dungeon.hero))
-				info += "\n\n" + Messages.get( Flail.class, "setbouns");}
+				info += "\n\n" + Messages.get( Decapitator.class, "setbouns");}
 
 		return info;
 	}

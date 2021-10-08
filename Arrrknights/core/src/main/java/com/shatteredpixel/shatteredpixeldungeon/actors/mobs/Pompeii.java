@@ -41,6 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.PompeiiSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
+import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
@@ -252,31 +253,30 @@ public class Pompeii extends Mob {
 
         //화산폭발
         if (volcanocooldown <= 0) {
+            PathFinder.buildDistanceMap(pos, BArray.not(Dungeon.level.solid, null), 3);
             if (volcanotime < 3) {
                 sprite.parent.addToBack(new TargetedCell(pos, 0xFF0000));
 
                 if (volcanotime == 0 || volcanotime == 2)
-                for (int i : PathFinder.NEIGHBOURS9) {
-                    for (int j : PathFinder.NEIGHBOURS9) {
-                        for (int t : PathFinder.NEIGHBOURS9) {
-                    int vol = Fire.volumeAt(pos+i+j+t, Fire.class);
+                for (int i = 0; i < PathFinder.distance.length; i++) {
+                    if (PathFinder.distance[i] < Integer.MAX_VALUE) {
+                    int vol = Fire.volumeAt(i, Fire.class);
                     if (vol < 4){
-                        sprite.parent.addToBack(new TargetedCell(pos + i+j+t, 0xFF0000));
+                        sprite.parent.addToBack(new TargetedCell( i, 0xFF0000));
                     }
-                }}}
+                }}
                 volcanotime+=1;
                 spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 2*TICK));
                 return true;
             }
             else {
                 boolean isHit = false;
-                for (int i : PathFinder.NEIGHBOURS9) {
-                    for (int j : PathFinder.NEIGHBOURS9) {
-                        for (int t : PathFinder.NEIGHBOURS9) {
-                        Char ch = Actor.findChar(pos+i+j+t);
-                        int vol = Fire.volumeAt(pos+i+j+t, Fire.class);
+                for (int i = 0; i < PathFinder.distance.length; i++) {
+                    if (PathFinder.distance[i] < Integer.MAX_VALUE) {
+                        Char ch = Actor.findChar(i);
+                        int vol = Fire.volumeAt(i, Fire.class);
                         if (vol < 4){
-                            CellEmitter.center(pos+i+j+t).burst(BlastParticle.FACTORY, 1);
+                            CellEmitter.center(i).burst(BlastParticle.FACTORY, 1);
                         }
                         if (ch != null && !isHit) {
                         if ((ch.alignment != alignment || ch instanceof Bee)) {
@@ -303,7 +303,7 @@ public class Pompeii extends Mob {
                 spend(TICK);
                 return true;
             }
-        }
+
 
         return false;
     }
@@ -388,7 +388,7 @@ public class Pompeii extends Mob {
             for (int i : targetedCells){
                 Ballistica b = new Ballistica(pos, i, Ballistica.WONT_STOP);
                 for (int p : b.path){
-                    CellEmitter.center(p).burst(FlameParticle.FACTORY, 5);
+                    CellEmitter.center(p).burst(FlameParticle.FACTORY, 14);
                     affectedCells.add(p);
                 }
             }

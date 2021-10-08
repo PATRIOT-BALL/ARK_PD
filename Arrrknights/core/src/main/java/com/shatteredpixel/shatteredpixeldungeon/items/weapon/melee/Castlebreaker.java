@@ -26,11 +26,11 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -45,7 +45,7 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class Scimitar extends MeleeWeapon {
+public class Castlebreaker extends MeleeWeapon {
 	public static final String AC_ZAP = "ZAP";
 
 	{
@@ -71,7 +71,12 @@ public class Scimitar extends MeleeWeapon {
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
-		SPCharge(4);
+		int charged = 4;
+		if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class) != null) {
+			if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class).isEquipped(Dungeon.hero)) {
+				charged*=2;
+			}}
+		SPCharge(charged);
 		return super.proc(attacker, defender, damage);
 	}
 
@@ -103,7 +108,17 @@ public class Scimitar extends MeleeWeapon {
 
 	@Override
 	public String statsInfo() {
-		return Messages.get(this, "stats_desc", 4+buffedLvl() * 2);
+		return Messages.get(this, "stats_desc", 4+buffedLvl() * 3);
+	}
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class) != null) {
+			if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class).isEquipped(Dungeon.hero))
+				info += "\n\n" + Messages.get( Castlebreaker.class, "setbouns");}
+
+		return info;
 	}
 
 	public void SPCharge(int n) {
@@ -144,16 +159,16 @@ public class Scimitar extends MeleeWeapon {
 
 			if (target != null) {
 
-				final Scimitar ss;
-				if (curItem instanceof Scimitar) {
+				final Castlebreaker ss;
+				if (curItem instanceof Castlebreaker) {
 					Sample.INSTANCE.play( Assets.Sounds.HIT_GUNLANCE, 1f);
-					ss = (Scimitar) Scimitar.curItem;
+					ss = (Castlebreaker) Castlebreaker.curItem;
 
 					Ballistica shot = new Ballistica(curUser.pos, target, Ballistica.PROJECTILE);
 					int cell = shot.collisionPos;
 
 					if (target == curUser.pos || cell == curUser.pos) {
-						GLog.i(Messages.get(Scimitar.class, "self_target"));
+						GLog.i(Messages.get(Castlebreaker.class, "self_target"));
 						return;
 					}
 
@@ -180,7 +195,7 @@ public class Scimitar extends MeleeWeapon {
 
 		@Override
 		public String prompt() {
-			return Messages.get(Scimitar.class, "prompt");
+			return Messages.get(Castlebreaker.class, "prompt");
 		}
 	};
 
@@ -200,7 +215,7 @@ public class Scimitar extends MeleeWeapon {
 	protected void onZap( Ballistica bolt ) {
 		Char ch = Actor.findChar( bolt.collisionPos );
 		if (ch != null) {
-			int dmg = Random.Int(3, 4+buffedLvl() * 2);
+			int dmg = Random.Int(3, 4+buffedLvl() * 3);
 			ch.damage(dmg, this);
 			ch.damage(dmg, this);
 			ch.damage(dmg, this);

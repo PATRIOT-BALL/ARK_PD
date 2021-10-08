@@ -10,7 +10,47 @@ import java.util.ArrayList;
 
 public class v0_3_X_Changes {
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_3_1_Changes(changeInfos);
         add_v0_3_0_Changes(changeInfos);
+    }
+
+    public static void add_v0_3_1_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.3.1", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "새로운 주문",
+                "_힘의 정수_ : 무기를 분해하여 만드는 촉매제입니다." + "\n\n" +
+                        "_불꽃의 서약_ : 사용시 100턴 동안 연소 면역을 부여하는 주문입니다."+ "\n\n" +
+                "_무기 변환_ : 변환의 주문서 효과를 발동시키지만, 무기에만 사용할 수 있는 주문입니다." + "\n\n" +
+                "_아방가르드한 변환_ : 해당 아이템에 아방가르드 우물 효과를 적용시키며, 강화를 유지합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 1종 추가",
+                "_정밀 장전_"));
+
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 드롭 변경",
+                "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_캐슬 브레이커_ : _클로즈드 볼트 연발_ 능력의 강화 효율이 0-2에서 _0-3_으로 상승했습니다." +" \n\n" +
+                "_쿠다리키리_ : 명중률 보정치가 +20%에서 _+30%_로 상승했습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
     }
 
     public static void add_v0_3_0_Changes(ArrayList<ChangeInfo> changeInfos) {
