@@ -147,7 +147,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 		//new Heamyo().collect();
-		new SnowHunter().identify().collect();
 	}
 
 	public Badges.Badge masteryBadge() {
