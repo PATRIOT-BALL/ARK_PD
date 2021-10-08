@@ -516,7 +516,7 @@ public enum Talent {
 					WandOfBlastWave.throwChar(mob, trajectory, hero.pointsInTalent(PUERLIGHT)); // 넉백 효과
 				}
 			}
-			Buff.affect(hero, Light.class, 1+hero.pointsInTalent(PUERLIGHT));
+			Buff.affect(hero, Light.class, hero.pointsInTalent(PUERLIGHT) * 50);
 		}
 	}
 

@@ -201,6 +201,7 @@ public class CatGun extends MeleeWeapon {
                     damage(HT / n, this);
                 } else damage(HT / 50, this);
             }
+            else this.die(this);
             return super.act();
         }
 

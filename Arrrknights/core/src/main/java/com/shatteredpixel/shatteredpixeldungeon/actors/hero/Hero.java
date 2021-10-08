@@ -168,8 +168,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocking;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
@@ -713,7 +713,7 @@ public class Hero extends Char {
     public boolean canSurpriseAttack() {
         if (belongings.weapon == null || !(belongings.weapon instanceof Weapon)) return true;
         if (STR() < ((Weapon) belongings.weapon).STRReq()) return false;
-        if (belongings.weapon instanceof Flail) return false;
+        if (belongings.weapon instanceof Decapitator) return false;
         if (belongings.weapon instanceof SHISHIOH) return false;
         if (belongings.weapon instanceof Enfild2) return false;
 
@@ -1469,6 +1469,13 @@ public class Hero extends Char {
         }
 
         // 니어 특성 관련
+
+        // 퇴마
+        if (hasTalent(Talent.EXORCISM)) {
+            if (enemy.properties().contains(Property.SARKAZ)) {
+                damage -= pointsInTalent(Talent.EXORCISM);
+            }
+        }
 
         if (HP <= HT/2) {
         if(hasTalent(Talent.RADIANTHERO)) {

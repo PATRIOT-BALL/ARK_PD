@@ -1422,7 +1422,7 @@ actors.mobs.mutantspider.rankings_desc=infected
 
 actors.mobs.firecore.name=fire core
 actors.mobs.firecore.desc=Powerful energy empowers the creatures of the under floer...
-actors.mobs.firecore.on_death=You felt volcanic energy diminish.
+actors.mobs.firecore.on_death=You felt volcanic energy diminish. Remaining cores: %d
 
 actors.mobs.pompeii.name=Pompeii
 actors.mobs.pompeii.desc=A massive infected beast. These aberrations were born in a special high-temperature environment.\n\n_This creature seems to be weak against water and poison_
