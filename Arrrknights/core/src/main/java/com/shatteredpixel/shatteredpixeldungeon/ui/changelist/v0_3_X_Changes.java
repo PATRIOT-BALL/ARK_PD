@@ -43,23 +43,36 @@ public class v0_3_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 드롭 변경",
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 변경",
+                "_새싹 원석충_의 체력이 4에서 _1_로, 공격력이 1-4에서 _1-1_로 감소했습니다. 대신 회피율이 25에서 _99_로 상승했으며, 더 이상 _거대해진 엘리트_ 몬스터가 될 수 없습니다." + "\n\n" +
                 "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "주문 변경",
-                "_재활용_ : 1회 제작에 15개가 생성됩니다. 또한, 이제 일기장/포션, 씨앗/룬석 두 분류로 나뉘어 변환 시도시 같은 분류의 다른 계열 아이템으로 변환됩니다."));
+                "_재활용_ : 1회 제작에 15개가 생성됩니다. 또한, 이제 일기장/포션, 씨앗/룬석 두 분류로 나뉘어 변환 시도시 다른 계열의 아이템으로 변환됩니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_단검_ : 공격력이 1-8에서 _1-9_로 상승했습니다." + "\n\n" +
                 "_캐슬 브레이커_ : _클로즈드 볼트 연발_ 능력의 강화 효율이 0-2에서 _0-3_으로 상승했습니다." +" \n\n" +
                 "_쿠다리키리_ : 명중률 보정치가 +20%에서 _+30%_로 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
+                "_블레이즈_의 _급조한 투척물_ 특성의 실명 부여량이 상승했습니다." + "\n\n" +
+                "_레드_의 _불시의 타격_ 특성의 추가 피해가 상승했습니다." + "\n\n" +
+                "_레드_의 _경량화 망토_ 특성에 망토 발동에 소모하는 턴 감소 효과가 추가되었습니다." + "\n\n" +
+                        "_그레이스롯_의 _접근 금지!_ 특성의 발동 확률이 상승했습니다."
+                        ));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
+                "_살카즈 저주술사_의 회피율이 8에서 _6_으로 감소했습니다." + "\n\n" +
+                "_특공대원\n체력이 140에서 _125_로, 공격력이 25-35에서 _21-31_로 감소했습니다. 대신 침묵 상태일 때 공격력이 12-24에서 _14-26_으로 상승했습니다."));
     }
 
     public static void add_v0_3_0_Changes(ArrayList<ChangeInfo> changeInfos) {

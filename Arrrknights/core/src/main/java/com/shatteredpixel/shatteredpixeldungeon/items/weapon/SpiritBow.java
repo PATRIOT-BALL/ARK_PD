@@ -295,7 +295,7 @@ public class SpiritBow extends Weapon {
 		
 		@Override
 		public int proc(Char attacker, Char defender, int damage) {
-			if (Random.Int(12) < Dungeon.hero.pointsInTalent(Talent.POINT_BLANK)) {
+			if (Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.POINT_BLANK)) {
 				Buff.affect(defender, Vertigo.class, 2f);
 			}
 			if (EatSeed >= 30) SeedHit++;

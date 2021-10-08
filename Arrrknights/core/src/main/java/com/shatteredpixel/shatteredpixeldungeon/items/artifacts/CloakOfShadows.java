@@ -28,10 +28,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Preparation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.items.EquipableItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
@@ -77,6 +79,13 @@ public class CloakOfShadows extends Artifact {
 		return actions;
 	}
 
+
+
+	@Override
+	protected float time2equip(Hero hero) {
+		return super.time2equip(hero);
+	}
+
 	@Override
 	public void execute( Hero hero, String action ) {
 
@@ -89,7 +98,8 @@ public class CloakOfShadows extends Artifact {
 				else if (cursed)       GLog.i( Messages.get(this, "cursed") );
 				else if (charge <= 0)  GLog.i( Messages.get(this, "no_charge") );
 				else {
-					hero.spend( 1f );
+					if (hero.hasTalent(Talent.LIGHT_CLOAK)) hero.spend(1f / (1+hero.pointsInTalent(Talent.LIGHT_CLOAK)));
+					else hero.spend( 1f );
 					hero.busy();
 					Sample.INSTANCE.play(Assets.Sounds.MELD);
 					activeBuff = activeBuff();
@@ -105,7 +115,8 @@ public class CloakOfShadows extends Artifact {
 			} else {
 				activeBuff.detach();
 				activeBuff = null;
-				hero.spend( 1f );
+				if (hero.hasTalent(Talent.LIGHT_CLOAK)) hero.spend(1f / (1+hero.pointsInTalent(Talent.LIGHT_CLOAK)));
+				else hero.spend( 1f );
 				hero.sprite.operate( hero.pos );
 			}
 
@@ -304,7 +315,7 @@ public class CloakOfShadows extends Artifact {
 					if (Book != null) {
 						Book.SetCharge(1);
 					}
-					if (curUser.HT/4 > curUser.HP) {
+					if (curUser.HT/2 > curUser.HP) {
 						curUser.HP+=1;
 					}
 				}

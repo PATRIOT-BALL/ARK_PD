@@ -26,7 +26,7 @@ public class Agent extends Mob {
     {
         spriteClass = Siesta_AgentSprite.class;
 
-        HP = HT = 140;
+        HP = HT = 125;
         defenseSkill = 26;
 
         EXP = 16;
@@ -96,8 +96,8 @@ public class Agent extends Mob {
 
     @Override
     public int damageRoll() {
-        if (buff(Silence.class) != null) return Random.NormalIntRange( 12, 24 );
-        else return Random.NormalIntRange( 25, 35 );
+        if (buff(Silence.class) != null) return Random.NormalIntRange( 14, 26 );
+        else return Random.NormalIntRange( 22, 31 );
     }
 
     @Override

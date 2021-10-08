@@ -69,7 +69,7 @@ public class Goo extends Mob {
 	{
 		HP = HT = 100;
 		EXP = 10;
-		defenseSkill = 8;
+		defenseSkill = 6;
 		spriteClass = HandclapSprite.class;
 
 		properties.add(Property.BOSS);

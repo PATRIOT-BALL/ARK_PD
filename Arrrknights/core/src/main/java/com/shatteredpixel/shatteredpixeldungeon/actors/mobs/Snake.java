@@ -23,6 +23,8 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -35,8 +37,8 @@ public class Snake extends Mob {
 	{
 		spriteClass = BabyBugSprite.class;
 		
-		HP = HT = 4;
-		defenseSkill = 25;
+		HP = HT = 1;
+		defenseSkill = 35;
 		
 		EXP = 2;
 		maxLvl = 7;
@@ -45,12 +47,13 @@ public class Snake extends Mob {
 		lootChance = 0.25f;
 
 		immunities.add(Silence.class);
+		immunities.add(ChampionEnemy.Giant.class);
 		properties.add(Property.INFECTED);
 	}
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( 1, 4 );
+		return Random.NormalIntRange( 1, 2 );
 	}
 	
 	@Override
