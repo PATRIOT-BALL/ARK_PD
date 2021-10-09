@@ -65,6 +65,7 @@ public class Gluttony extends MeleeWeapon {
                     CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
                     charge -= 50;
                     Sample.INSTANCE.play(Assets.Sounds.BLAST);
+                    hero.sprite.zap(hero.pos);
                     updateQuickslot();
                     hero.spendAndNext(1f);
                 }
