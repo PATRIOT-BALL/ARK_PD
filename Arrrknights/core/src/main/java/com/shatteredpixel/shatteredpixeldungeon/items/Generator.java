@@ -442,7 +442,7 @@ public class Generator {
                     CrabGun.class,
                     SnowHunter.class
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 2, 3, 2};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 3, 3, 2};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,
