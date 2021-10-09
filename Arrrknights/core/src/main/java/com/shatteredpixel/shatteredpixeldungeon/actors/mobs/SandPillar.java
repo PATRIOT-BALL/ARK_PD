@@ -7,10 +7,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gluttony;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.RotHeartSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.SandPillarSprite;
 
 public class SandPillar extends Mob {
     {
-        spriteClass = RotHeartSprite.class;
+        spriteClass = SandPillarSprite.class;
 
         HP = HT = 80;
         defenseSkill = 0;
