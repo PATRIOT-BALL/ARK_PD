@@ -57,7 +57,7 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_단검_ : 공격력이 1-8에서 _1-9_로 상승했습니다." + "\n\n" +
                 "_캐슬 브레이커_ : _클로즈드 볼트 연발_ 능력의 강화 효율이 0-2에서 _0-3_으로 상승했습니다." +" \n\n" +
-                "_쿠다리키리_ : 명중률 보정치가 +20%에서 _+30%_로 상승했습니다."));
+                "_쿠다리키리_ : 흡혈률이 20%증가했으며, 명중률 보정치가 +20%에서 _+30%_로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
                 "_블레이즈_의 _급조한 투척물_ 특성의 실명 부여량이 상승했습니다." + "\n\n" +
@@ -69,6 +69,9 @@ public class v0_3_X_Changes {
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
+                "_타향의 노래_ : 강화 효율이 5에서 _4_로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
                 "_살카즈 저주술사_의 회피율이 8에서 _6_으로 감소했습니다." + "\n\n" +

@@ -45,13 +45,13 @@ public class Decapitator extends MeleeWeapon {
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
-		float healPer = 0.1f;
+		float healPer = 0.12f;
 		int thisHP = attacker.HP;
 		int thisHT = attacker.HT;
 
 		if (Dungeon.hero.belongings.getItem(RingOfEvasion.class) != null) {
 			if (Dungeon.hero.belongings.getItem(RingOfEvasion.class).isEquipped(Dungeon.hero)) {
-				healPer = 0.15f;
+				healPer = 0.18f;
 			}}
 
 		if (thisHP <= thisHT/4) {

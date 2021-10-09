@@ -20,8 +20,8 @@ public class FolkSong extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  5*(tier) + 2 +  // 22 + 5
-                lvl*(tier+1);
+        return  5*(tier) + 2 +  // 22 + 4
+                lvl*(tier);
     }
 
 
