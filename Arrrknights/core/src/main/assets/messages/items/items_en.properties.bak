@@ -2099,7 +2099,7 @@ items.weapon.melee.dirk.stats_desc=Surprise attack bonus +67%
 items.weapon.melee.dirk.desc=No need to go looking for me. I’ve always been here.\n\n stabbing dagger. You can dig deeper.
 
 items.weapon.melee.decapitator.name=Decapitator
-items.weapon.melee.decapitator.stats_desc=Accuracy +30%, No surprise attack
+items.weapon.melee.decapitator.stats_desc=Accuracy +40%, No surprise attack
 items.weapon.melee.decapitator.desc=Wield spear as blade to slice through armor! \n\n Hwando of the Far East, which is bigger than a human's height. It cannot make surprise attacks, but it is very powerful.\n\nThe lower the health, the higher the damage, and if it is below 50%, the Life Drain is activated.
 items.weapon.melee.decapitator.setbouns=_Friend's Sword_\nVampiric rate is increased by 50%.
 
