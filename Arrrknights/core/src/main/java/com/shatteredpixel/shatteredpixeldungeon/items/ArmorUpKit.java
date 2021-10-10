@@ -46,7 +46,7 @@ public class ArmorUpKit extends Item {
                 int level = HeroArmor.level();
                 if (HeroArmor.curseInfusionBonus) level--;
                 if (level > 0) {
-                    armor.upgrade( level );
+                    armor.upgrade( level+1 );
                 } else if (level < 0) {
                     armor.degrade( -level );
                 }
@@ -59,14 +59,13 @@ public class ArmorUpKit extends Item {
                 armor.augment = HeroArmor.augment;
 
                 Dungeon.hero.belongings.armor = armor;
-                Dungeon.hero.belongings.armor.upgrade();
             }
             else if (HeroArmor.tier < 5) {
                 PlateArmor armor = new PlateArmor();
                 int level = HeroArmor.level();
                 if (HeroArmor.curseInfusionBonus) level--;
                 if (level > 0) {
-                    armor.upgrade( level );
+                    armor.upgrade( level+1 );
                 } else if (level < 0) {
                     armor.degrade( -level );
                 }
@@ -79,7 +78,6 @@ public class ArmorUpKit extends Item {
                 armor.augment = HeroArmor.augment;
 
                 Dungeon.hero.belongings.armor = armor;
-                Dungeon.hero.belongings.armor.upgrade();
             }
             else Dungeon.hero.belongings.armor.upgrade();
             curUser.sprite.operate( curUser.pos );
