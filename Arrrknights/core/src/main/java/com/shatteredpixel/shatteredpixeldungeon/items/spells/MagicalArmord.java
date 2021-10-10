@@ -62,7 +62,7 @@ public class MagicalArmord extends Spell {
 			cost = 8;
 			
 			output = MagicalArmord.class;
-			outQuantity = 5;
+			outQuantity = 6;
 		}
 		
 	}
