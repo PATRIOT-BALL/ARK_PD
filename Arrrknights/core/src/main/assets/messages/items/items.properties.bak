@@ -373,7 +373,7 @@ items.skill.sk3.soaringfeather.desc=발동시 주위 적들을 밀쳐냅니다. 
 items.skill.sk3.soaringfeather.desc_wnd=발동시 주위 적들을 밀쳐내고 아드레날린 상태가 됩니다.
 
 items.skill.sk3.sburst.name=_끓어오르는 투지(3스킬)_
-items.skill.sk3.sburst.desc=발동시 _근접 무기의 사거리가 상승하고 방어력이 2배_가 됩니다. 지속시간이 끝나면 _지속시간동안 받은 피해에 비례해 다음 공격의 피해량이 상승_합니다.
+items.skill.sk3.sburst.desc=발동시 _근접 무기의 사거리가 상승하고 방어력이 3배_가 됩니다. 지속시간이 끝나면 _지속시간동안 받은 피해에 비례해 다음 공격의 피해량이 상승_합니다.
 items.skill.sk3.sburst.desc_wnd=발동시 이래저래 쌔집니다. 너무 길어서 못적겠습니다.
 
 items.skill.sk3.nigetraid.name=_밤의 장막의 기습(3스킬)_
