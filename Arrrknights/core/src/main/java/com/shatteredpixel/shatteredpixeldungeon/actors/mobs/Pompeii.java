@@ -458,6 +458,8 @@ public class Pompeii extends Mob {
         volcanocooldown = bundle.getInt(VOCAL_CD);
         volcanotime = bundle.getInt(VOCAL_TIME);
 
+        if (phase != 0) BossHealthBar.assignBoss(this);
+
         for (int i : bundle.getIntArray(TARGETED_CELLS)){
             targetedCells.add(i);
         }

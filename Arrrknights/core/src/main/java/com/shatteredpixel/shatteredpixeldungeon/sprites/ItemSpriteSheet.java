@@ -695,7 +695,7 @@ public class ItemSpriteSheet {
 	                                                                                    //16 free slots
 	
 	private static final int SPELLS         =                               xy(1, 27);  //16 slots
-	public static final int MAGIC_PORTER    = SPELLS+0;
+	public static final int MAGIC_ARMOR = SPELLS+0;
 	public static final int PHASE_SHIFT     = SPELLS+1;
 	public static final int WILD_ENERGY = SPELLS+2;
 	public static final int RETURN_BEACON   = SPELLS+3;
@@ -712,7 +712,7 @@ public class ItemSpriteSheet {
 	public static final int WEAPON_TRANS         = SPELLS+13;
 	public static final int AVANT_TRANS         = SPELLS+14;
 	static{
-		assignItemRect(MAGIC_PORTER,    12, 11);
+		assignItemRect(MAGIC_ARMOR,    12, 11);
 		assignItemRect(PHASE_SHIFT,     12, 11);
 		assignItemRect(WILD_ENERGY,      8, 16);
 		assignItemRect(RETURN_BEACON,    8, 16);

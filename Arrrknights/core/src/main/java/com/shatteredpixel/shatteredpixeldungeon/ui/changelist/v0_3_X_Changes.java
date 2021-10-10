@@ -48,6 +48,7 @@ public class v0_3_X_Changes {
                 "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "주문 변경",
+                "_아츠 전송기_ : _아츠 갑옷_으로 대체되었으며, 조합법도 변경되었습니다. 아츠 갑옷 주문은 짧은 지속시간의 아츠 방어력을 제공합니다." + "\n\n" +
                 "_재활용_ : 1회 제작에 15개가 생성됩니다. 또한, 이제 일기장/포션, 씨앗/룬석 두 분류로 나뉘어 변환 시도시 다른 계열의 아이템으로 변환됩니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
@@ -73,9 +74,13 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
                 "_타향의 노래_ : 강화 효율이 5에서 _4_로 감소했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 하향",
+                "_긴급 제세동기_의 아츠 방어력 부여량이 감소했으며, 대신 지속시간이 소폭 연장되었습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
                 "_살카즈 저주술사_의 회피율이 8에서 _6_으로 감소했습니다." + "\n\n" +
-                "_특공대원_\n체력이 140에서 _125_로, 공격력이 25-35에서 _21-31_로 감소했습니다. 대신 침묵 상태일 때 공격력이 12-24에서 _14-26_으로 상승했습니다."));
+                "_특공대원_\n체력이 140에서 _125_로, 공격력이 25-35에서 _21-31_로 감소했습니다. 대신 침묵 상태일 때 공격력이 12-24에서 _14-26_으로 상승했습니다." + "\n\n" +
+                "_시장 크로닌_이 소환하는 특공대원의 공격력이 감소했습니다."));
     }
 
     public static void add_v0_3_0_Changes(ArrayList<ChangeInfo> changeInfos) {

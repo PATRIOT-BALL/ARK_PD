@@ -154,9 +154,9 @@ items.skill.sk2.bookgenesis.name=창세의 스킬개론
 items.skill.sk2.bookgenesis.desc=_창세기_ 스킬의 정보가 기록되어있는 _특별한_ 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내의 적에게 강력한 피해, 혹은 자신에게 매우 긴 마비\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookgenesis.ac_use=읽는다
 
-items.skill.sk2.bookgenesis.name=포식의 스킬개론
-items.skill.sk2.bookgenesis.desc=_창세기_ 스킬의 정보가 기록되어있는 _특별한_ 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내의 적에게 강력한 피해, 혹은 자신에게 매우 긴 마비\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
-items.skill.sk2.bookgenesis.ac_use=읽는다
+items.skill.sk2.bookpredators.name=포식의 스킬개론
+items.skill.sk2.bookpredators.desc=_심해의 포식자_ 스킬의 정보가 기록되어있는 _특별한_ 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 대상에게 큰 피해를 입히고 뒤로 이동\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
+items.skill.sk2.bookpredators.ac_use=읽는다
 
 items.skill.sk3.bookshadowassault.name=영소 절영의 스킬개론
 items.skill.sk3.bookshadowassault.desc=_영소 절영_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 3스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 도약 후 가까운 적에게 10회 공격을 가하고 충전 상태 획득\n_주의 : 사용시 기존의 3스킬을 잊어버리게됩니다!

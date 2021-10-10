@@ -21,45 +21,31 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.spells;
 
-import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArcaneArmor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
-import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.MerchantsBeacon;
-import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfAntiMagic;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
-import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndBag;
+import com.watabou.noosa.audio.Sample;
 
-import java.util.ArrayList;
-
-public class MagicalPorter extends InventorySpell {
+public class MagicalArmord extends Spell {
 	
 	{
-		image = ItemSpriteSheet.MAGIC_PORTER;
-		mode = WndBag.Mode.NOT_EQUIPPED;
+		image = ItemSpriteSheet.MAGIC_ARMOR;
 	}
 	
 	@Override
 	protected void onCast(Hero hero) {
-		if (Dungeon.depth >= 25){
-			GLog.w(Messages.get(this, "nowhere"));
-		} else {
-			super.onCast(hero);
-		}
+		Sample.INSTANCE.play(Assets.Sounds.TELEPORT, 1.33f, 1.65f);
+	   Buff.affect(hero, ArcaneArmor.class).set(2 + hero.lvl/2, 10);
+	   hero.spendAndNext(1f);
+
+	   this.detach(hero.belongings.backpack);
 	}
 	
-	@Override
-	protected void onItemSelected(Item item) {
-		
-		Item result = item.detachAll(curUser.belongings.backpack);
-		int portDepth = 5 * (1 + Dungeon.depth/5);
-		ArrayList<Item> ported = Dungeon.portedItems.get(portDepth);
-		if (ported == null) {
-			Dungeon.portedItems.put(portDepth, ported = new ArrayList<>());
-		}
-		ported.add(result);
-		
-	}
+
 	
 	@Override
 	public int value() {
@@ -70,13 +56,13 @@ public class MagicalPorter extends InventorySpell {
 	public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe.SimpleRecipe {
 		
 		{
-			inputs =  new Class[]{MerchantsBeacon.class, ArcaneCatalyst.class};
+			inputs =  new Class[]{ScrollOfAntiMagic.class, ForceCatalyst.class};
 			inQuantity = new int[]{1, 1};
 			
-			cost = 4;
+			cost = 8;
 			
-			output = MagicalPorter.class;
-			outQuantity = 8;
+			output = MagicalArmord.class;
+			outQuantity = 5;
 		}
 		
 	}

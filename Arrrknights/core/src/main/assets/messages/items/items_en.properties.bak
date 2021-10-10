@@ -359,7 +359,7 @@ items.skill.sk2.genesis.name=Genesis (Skill 2)_
 items.skill.sk2.genesis.desc=ACTIVE: fatal damage to enemies within sight or paralyzes oneself
 items.skill.sk2.genesis.desc_wnd=ACTIVE: fatal damage to enemies within sight or paralyzes oneself
 
-items.skill.sk2.deepseapredators.name=_심해의 포식자(2스킬)_
+items.skill.sk2.deepseapredators.name=_Deep Sea Predators (Skill 2)_
 items.skill.sk2.deepseapredators.desc=ACTIVE: Deals heavy damage to the target and moves behind its back. also If you kill an enemy, you get adrenaline.
 items.skill.sk2.deepseapredators.desc_wnd=ACTIVE: Deals heavy damage to the target and moves behind its back
 items.skill.sk2.deepseapredators.prompt=Target
@@ -1596,10 +1596,8 @@ items.spells.magicalinfusion.inv_title=Infuse an item
 items.spells.magicalinfusion.infuse=Your %s is infused with arcane energy!
 items.spells.magicalinfusion.desc=This spell possesses the same magical power as a scroll of upgrade, but in a more stable form.\n\nIn addition to upgrading an item as normal, it will never erase an enchantment on a weapon or a glyph on armor.
 
-items.spells.magicalporter.name=arts porter
-items.spells.magicalporter.inv_title=Port an item
-items.spells.magicalporter.nowhere=There is nowhere for you to port an item to.
-items.spells.magicalporter.desc=This spell will arts transport any item it is cast on. Unlike a merchant's beacon however, the items will be transported to the entrance of the next boss floor.
+items.spells.magicalarmord.name=arts armor
+items.spells.magicalarmord.desc=This spell is weakened arts armor`s energy. this spell gain lower arts defense.
 
 items.spells.phaseshift.name=phase shift
 items.spells.phaseshift.tele_fail=The teleportation magic fails.

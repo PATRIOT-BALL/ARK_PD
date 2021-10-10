@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
@@ -58,6 +59,10 @@ public class SiestaBoss extends Mob {
     private SiestaBoss.BossAgent Agent2;
     private Schwarz mySchwarz;
 
+    private int Agent1Id;
+    private int Agent2Id;
+    private int SchwarzId;
+
     @Override
     protected Char chooseEnemy() {
         return null;
@@ -75,11 +80,18 @@ public class SiestaBoss extends Mob {
                 Dungeon.observe();
             }
             if (Dungeon.level.heroFOV[pos]) {
+                Agent1Id = -1;
+                Agent2Id = -1;
+                SchwarzId = -1;
                 notice();
             }
         }
 
         if (phase == 0){
+            mySchwarz = new Schwarz();
+            SchwarzId = mySchwarz.id();
+            GameScene.add( mySchwarz );
+
             damage(1,this);
             spend(TICK);
             phase++;
@@ -122,7 +134,6 @@ public class SiestaBoss extends Mob {
     @Override
     public boolean isAlive() { return HP > 0 || Life > 0; }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void notice() {
         if (phase == 0) yell(Messages.get(this, "notice"));
@@ -193,26 +204,39 @@ public class SiestaBoss extends Mob {
                         || !Dungeon.level.mobs.contains(Agent1)
                         || Agent1.alignment != alignment)){
             Agent1 = null;
+            Agent1Id = -1;
         }
+
         if (Agent2 != null &&
                 (!Agent2.isAlive()
                         || !Dungeon.level.mobs.contains(Agent2)
                         || Agent2.alignment != alignment)){
             Agent2 = null;
-        }
-        if (mySchwarz != null &&
-                (!mySchwarz.isAlive()
-                        || !Dungeon.level.mobs.contains(mySchwarz)
-                        || mySchwarz.alignment != alignment)){
-            mySchwarz = null;
+            Agent2Id = -1;
         }
 
 
         // 텔레포트 발동
         if (Agent1 == null) {
-            Agent1 = new SiestaBoss.BossAgent();
-            Agent1.pos = A1pos;
-            GameScene.add( Agent1 );
+            if (Agent1Id != -1) {
+            Actor ch = Actor.findById(Agent1Id);
+            if (ch instanceof BossAgent) Agent1 = (BossAgent) ch;
+
+            if (ch != null) {
+                Agent1.pos = A1pos;
+                Agent1.sprite.move(pos,A1pos);}
+            else {
+                Agent1 = new SiestaBoss.BossAgent();
+                Agent1.pos = A1pos;
+                Agent1Id = Agent1.id();
+                GameScene.add(Agent1);
+            }}
+            else {
+                Agent1 = new SiestaBoss.BossAgent();
+                Agent1.pos = A1pos;
+                Agent1Id = Agent1.id();
+                GameScene.add(Agent1);
+            }
         }
         else {
             Agent1.pos = A1pos;
@@ -220,24 +244,39 @@ public class SiestaBoss extends Mob {
         }
 
         if (Agent2 == null) {
-            Agent2 = new SiestaBoss.BossAgent();
-            Agent2.pos = A2pos;
-            GameScene.add( Agent2 );
+            if (Agent2Id != -1) {
+                Actor ch2 = Actor.findById(Agent2Id);
+                if (ch2 instanceof BossAgent) Agent2 = (BossAgent) ch2;
+
+                if (ch2 != null) {
+                    Agent2.pos = A2pos;
+                    Agent2.sprite.move(pos,A2pos);}
+                else {
+                    Agent2 = new SiestaBoss.BossAgent();
+                    Agent2.pos = A2pos;
+                    Agent2Id = Agent2.id();
+                    GameScene.add(Agent2);
+                }}
+            else {
+                Agent2 = new SiestaBoss.BossAgent();
+                Agent2.pos = A2pos;
+                Agent2Id = Agent2.id();
+                GameScene.add(Agent2);
+            }
         }
         else {
             Agent2.pos = A2pos;
             Agent2.sprite.move(pos,A2pos);
         }
 
-        if (mySchwarz == null) {
-            mySchwarz = new Schwarz();
-            mySchwarz.pos = SwPos;
-            GameScene.add( mySchwarz );
-        }
-        else {
+
+        Actor Sch = Actor.findById(SchwarzId);
+        if (Sch instanceof Schwarz){
+            mySchwarz = (Schwarz) Sch;}
+
             mySchwarz.pos = SwPos;
             mySchwarz.sprite.move(pos,SwPos);
-        }
+
 
 
         // Phase2의 강화 판정
@@ -280,6 +319,9 @@ public class SiestaBoss extends Mob {
     private static final String PHASE   = "phase";
     private static final String LIFE   = "Life";
     private static final String TTYPE   = "TelType";
+    private static final String AGENT1 = "Agent1";
+    private static final String AGENT2 = "Agent2";
+    private static final String SCHWARZ = "mySchwarz";
 
     @Override
     public void storeInBundle( Bundle bundle ) {
@@ -287,6 +329,14 @@ public class SiestaBoss extends Mob {
         bundle.put( PHASE, phase );
         bundle.put( LIFE, Life );
         bundle.put( TTYPE, TelType );
+
+            if (Agent1Id != -1)  bundle.put( AGENT1, Agent1Id );
+            else bundle.put( AGENT1, -1);
+
+            if (Agent2Id != -1) bundle.put( AGENT2, Agent2Id );
+            else bundle.put( AGENT2, -1);
+
+            bundle.put( SCHWARZ, SchwarzId );
     }
 
     @Override
@@ -296,6 +346,17 @@ public class SiestaBoss extends Mob {
         Life = bundle.getInt(LIFE);
         TelType = bundle.getInt(TTYPE);
 
+        if (phase != 0) BossHealthBar.assignBoss(this);
+
+        if (bundle.contains( AGENT1 )){
+            Agent1Id = bundle.getInt( AGENT1 );
+        }
+        if (bundle.contains( AGENT2 )){
+            Agent2Id = bundle.getInt( AGENT2 );
+        }
+        if (bundle.contains( SCHWARZ )){
+            SchwarzId = bundle.getInt( SCHWARZ );
+        }
     }
 
     public static class BossAgent extends Agent {
@@ -310,6 +371,12 @@ public class SiestaBoss extends Mob {
 
             //no loot or exp
             maxLvl = -5;
+        }
+
+        @Override
+        public int damageRoll() {
+            if (buff(Silence.class) != null) return Random.NormalIntRange( 11, 21 );
+            else return Random.NormalIntRange( 18, 26 );
         }
     }
 }
