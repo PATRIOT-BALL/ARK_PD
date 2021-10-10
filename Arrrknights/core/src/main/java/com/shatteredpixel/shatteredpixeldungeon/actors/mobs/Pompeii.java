@@ -507,8 +507,8 @@ public class Pompeii extends Mob {
     public static class RestorBuff extends FlavourBuff {
         @Override
         public void fx(boolean on) {
-            if (on) target.sprite.add(CharSprite.State.DARKENED);
-            else target.sprite.remove(CharSprite.State.DARKENED);
+            if (on) target.sprite.add(CharSprite.State.HIKARI);
+            else target.sprite.remove(CharSprite.State.HIKARI);
         }
     }
 }
