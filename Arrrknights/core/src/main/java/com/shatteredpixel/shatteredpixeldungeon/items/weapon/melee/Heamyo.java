@@ -51,9 +51,6 @@ public class Heamyo extends MeleeWeapon {
       //  defender.sprite.killAndErase();
      //   defender.destroy();
 
-        if (defender instanceof Pompeii) {
-            defender.HP = 1;
-        }
         return super.proc(attacker, defender, damage);
     }
 

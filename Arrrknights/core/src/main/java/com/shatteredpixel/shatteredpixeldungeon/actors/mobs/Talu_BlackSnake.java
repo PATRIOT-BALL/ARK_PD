@@ -106,9 +106,9 @@ public class Talu_BlackSnake extends Mob {
     @Override
     public void damage(int dmg, Object src) {
         if (InvincibilityTime > 0) {
-            dmg = 0;
             sprite.showStatus( CharSprite.NEUTRAL, Messages.get(this, "invincibility") );
             Sample.INSTANCE.play( Assets.Sounds.HIT_PARRY, 1, Random.Float(0.96f, 1.05f));
+            return;
         }
         if (drup > 0) {
             dmg /= 2;

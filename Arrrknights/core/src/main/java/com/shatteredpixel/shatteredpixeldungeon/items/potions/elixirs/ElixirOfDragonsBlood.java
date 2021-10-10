@@ -22,14 +22,22 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FireImbue;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.PotionOfDragonsBreath;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.utils.Random;
 
 public class ElixirOfDragonsBlood extends Elixir {
 	
@@ -39,7 +47,7 @@ public class ElixirOfDragonsBlood extends Elixir {
 	
 	@Override
 	public void apply(Hero hero) {
-		Buff.affect(hero, FireImbue.class).set(FireImbue.DURATION);
+		Buff.affect(hero, Dragonsblood.class, Dragonsblood.DURATION);
 		Sample.INSTANCE.play( Assets.Sounds.BURNING );
 		hero.sprite.emitter().burst(FlameParticle.FACTORY, 10);
 	}
@@ -53,6 +61,45 @@ public class ElixirOfDragonsBlood extends Elixir {
 	public int value() {
 		//prices of ingredients
 		return quantity * (50 + 40);
+	}
+
+
+	public static class Dragonsblood extends FlavourBuff {
+		{
+			type = buffType.POSITIVE;
+			announced = true;
+		}
+
+		public static final float DURATION = 75f;
+
+		public void proc(Char target, Char enemy){
+			if (Random.Int(2) == 0) {
+				Buff.affect(target, Burning.class).reignite(target);
+				Buff.affect(enemy, Burning.class).reignite(enemy);
+			}
+			enemy.sprite.emitter().burst( FlameParticle.FACTORY, 2 );
+		}
+
+		@Override
+		public int icon() {
+			return BuffIndicator.FIRE;
+		}
+
+		@Override
+		public float iconFadePercent() {
+			return Math.max(0, (DURATION - visualcooldown()) / DURATION);
+		}
+
+		@Override
+		public String toString() {
+			return Messages.get(this, "name");
+		}
+
+		@Override
+		public String desc() {
+			return Messages.get(this, "desc", dispTurns());
+		}
+
 	}
 	
 	public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe.SimpleRecipe {

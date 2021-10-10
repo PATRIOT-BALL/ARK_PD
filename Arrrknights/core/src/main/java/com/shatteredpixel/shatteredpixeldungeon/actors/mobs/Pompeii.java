@@ -11,11 +11,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Fire;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Freezing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ParalyticGas;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Frost;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -58,7 +60,7 @@ public class Pompeii extends Mob {
     {
         spriteClass = PompeiiSprite.class;
 
-        HP = HT = 3000;
+        HP = HT = 2300;
         defenseSkill = 25;
 
         EXP = 100;
@@ -89,6 +91,7 @@ public class Pompeii extends Mob {
     private int barriercooldown = 4;
     private int volcanocooldown = 9;
     private int volcanotime = 0;
+    private int restorecooldown = 30;
 
     @Override
     public int damageRoll() {
@@ -110,7 +113,18 @@ public class Pompeii extends Mob {
     @Override
     public void damage(int dmg, Object src) {
 
-        if (phase == 2) dmg = 0;
+        if (phase == 2) {
+            sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Talu_BlackSnake.class, "invincibility") );
+            return;
+        }
+        if (buff(RestorBuff.class) != null) {
+            HP = Math.min(HP + dmg/2, HT);
+            int bufftime = Math.min(3, dmg/50);
+            Buff.affect(this, Adrenaline.class, bufftime);
+            this.sprite.emitter().burst(Speck.factory(Speck.HEALING), 3);
+            this.sprite.showStatus(CharSprite.POSITIVE, "+%dHP", dmg/2);
+            return;
+        }
 
         if (this.buff(Barrier.class) != null) {
             dmg /= 4;
@@ -119,8 +133,8 @@ public class Pompeii extends Mob {
 
         super.damage(dmg, src);
 
-        if (phase==1 && HP < 2000) {
-            HP = 2000;
+        if (phase==1 && HP < 1700) {
+            HP = 1700;
             phase = 2;
             Buff.detach(this, Barrier.class);
             summoncooldown = 1;
@@ -147,6 +161,7 @@ public class Pompeii extends Mob {
         }
         else {
             if (Dungeon.level.map[this.pos] == Terrain.WATER) {
+                if (buff(RestorBuff.class) == null) {
                 if (this.buff(Barrier.class) != null) {
                     this.damage(200, this);
                     Level.set(this.pos, Terrain.EMPTY);
@@ -154,7 +169,7 @@ public class Pompeii extends Mob {
                     CellEmitter.get(this.pos).burst(Speck.factory(Speck.STEAM), 10);
                 } else {
                     this.damage(6, this);
-                }
+                }}
             }
 
             if (phase == 0) {
@@ -185,6 +200,7 @@ public class Pompeii extends Mob {
                 if (barriercooldown > 0) barriercooldown--;
                 if (volcanocooldown > 0) volcanocooldown--;
                 if (summoncooldown > 0) summoncooldown--;
+                if (restorecooldown >0) restorecooldown--;
             }
         }
         return super.act();
@@ -223,10 +239,11 @@ public class Pompeii extends Mob {
                     HP -= dmg;
                     sprite.showStatus( CharSprite.WARNING,""+dmg );
                     summoncooldown = 1;
-                    if (HP < 1500) {
-                        HP = 1500;
+                    if (HP < 1200) {
+                        HP = 1200;
                         phase = 3;
                         GameScene.flash(0x80FF0000);
+                        restorecooldown = 10;
                     }
                 }
                 else summoncooldown = 10;
@@ -237,6 +254,15 @@ public class Pompeii extends Mob {
                 spend(TICK);
                 return true;
             }
+        }
+
+
+        // 흡수. 3페이즈 전용
+        if (restorecooldown <= 0) {
+            Buff.affect(this, RestorBuff.class, 5f);
+            GLog.w(Messages.get(this, "skill"));
+
+            restorecooldown = 35;
         }
 
 
@@ -429,6 +455,7 @@ public class Pompeii extends Mob {
     private static final String VOCAL_CD   = "volcanocooldown";
     private static final String VOCAL_TIME   = "volcanotime";
     private static final String SUMMON_CD   = "summoncooldown";
+    private static final String RESTORE_CD   = "restorecooldown";
     private static final String TARGETED_CELLS = "targeted_cells";
 
     @Override
@@ -440,6 +467,7 @@ public class Pompeii extends Mob {
         bundle.put( VOCAL_CD, volcanocooldown );
         bundle.put( VOCAL_TIME, volcanotime );
         bundle.put( SUMMON_CD, summoncooldown);
+        bundle.put( RESTORE_CD, restorecooldown);
 
         int[] bundleArr = new int[targetedCells.size()];
         for (int i = 0; i < targetedCells.size(); i++){
@@ -457,6 +485,7 @@ public class Pompeii extends Mob {
         summoncooldown = bundle.getInt(SUMMON_CD);
         volcanocooldown = bundle.getInt(VOCAL_CD);
         volcanotime = bundle.getInt(VOCAL_TIME);
+        restorecooldown = bundle.getInt(RESTORE_CD);
 
         if (phase != 0) BossHealthBar.assignBoss(this);
 
@@ -471,6 +500,15 @@ public class Pompeii extends Mob {
         {
             HP = HT = 65;
             maxLvl = -5;
+        }
+    }
+
+
+    public static class RestorBuff extends FlavourBuff {
+        @Override
+        public void fx(boolean on) {
+            if (on) target.sprite.add(CharSprite.State.DARKENED);
+            else target.sprite.remove(CharSprite.State.DARKENED);
         }
     }
 }

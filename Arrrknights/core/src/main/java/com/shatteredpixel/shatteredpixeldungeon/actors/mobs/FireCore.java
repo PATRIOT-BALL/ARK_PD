@@ -2,8 +2,13 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHaste;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
@@ -74,5 +79,13 @@ public class FireCore extends Mob{
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
         spawnRecorded = bundle.getBoolean(SPAWN_RECORDED);
+    }
+
+    {
+        immunities.add( Paralysis.class );
+        immunities.add( Amok.class );
+        immunities.add( Sleep.class );
+        immunities.add( Terror.class );
+        immunities.add( Vertigo.class );
     }
 }

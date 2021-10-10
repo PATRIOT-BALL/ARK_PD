@@ -45,11 +45,15 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 변경",
                 "_새싹 원석충_의 체력이 4에서 _1_로, 공격력이 1-4에서 _1-1_로 감소했습니다. 대신 회피율이 25에서 _35_로 상승했으며, 더 이상 _거대해진 엘리트_ 몬스터가 될 수 없습니다." + "\n\n" +
-                "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다."));
+                "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다." + "\n\n" +
+                "_폼페이_의 체력이 3,000에서 _2,300_으로 감소했습니다. 대신 새로운 패턴이 추가되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "주문 변경",
                 "_아츠 전송기_ : _아츠 갑옷_으로 대체되었으며, 조합법도 변경되었습니다. 아츠 갑옷 주문은 짧은 지속시간의 아츠 방어력을 제공합니다." + "\n\n" +
                 "_재활용_ : 1회 제작에 15개가 생성됩니다. 또한, 이제 일기장/포션, 씨앗/룬석 두 분류로 나뉘어 변환 시도시 다른 계열의 아이템으로 변환됩니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "물약 변경",
+                "_용의 피 영약_ : 이제 공격시 자신과 적을 불태우며, 불타는 중 체력을 회복하는 _타오르는 피_ 버프를 얻습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);

@@ -3,6 +3,11 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.CorrosiveGas;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gluttony;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -33,5 +38,13 @@ public class SandPillar extends Mob {
         GameScene.add(Blob.seed(pos, 30, CorrosiveGas.class));
 
         return super.defenseProc(enemy, damage);
+    }
+
+    {
+        immunities.add( Paralysis.class );
+        immunities.add( Amok.class );
+        immunities.add( Sleep.class );
+        immunities.add( Terror.class );
+        immunities.add( Vertigo.class );
     }
 }

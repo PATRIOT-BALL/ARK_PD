@@ -563,7 +563,7 @@ actors.hero.talent.barkskin.desc=_+1:_ 투척 무기를 적중시키면 _낮은_
 actors.hero.talent.savior_pray.title=구제자의 기도
 actors.hero.talent.savior_pray.desc=_+1:_ 시야 내에서 식물이 발동할 때 시야 내의 모든 적들에게 _3 턴동안_ 주술을 걸어 명중과 회피를 감소시킵니다.\n\n_+2:_ 시야 내에서 식물이 발동할 때 시야 내의 모든 적들에게 _4 턴동안_ 주술을 걸어 명중과 회피를 감소시킵니다.\n\n_+3:_ 시야 내에서 식물이 발동할 때 시야 내의 모든 적들에게 _5 턴동안_ 주술을 걸어 명중과 회피를 감소시킵니다.
 actors.hero.talent.point_blank.title=접근 금지!
-actors.hero.talent.point_blank.desc=_+1:_ 그레이스롯의 쇠뇌에 적중당한 적은 _6%_ 확률로 현기증에 걸립니다.\n\n_+2:_ 그레이스롯의 쇠뇌에 적중당한 적은 _13%_ 확률로 현기증에 걸립니다.\n\n_+3:_ 그레이스롯의 쇠뇌에 적중당한 적은 _20%_ 확률로 현기증에 걸립니다.
+actors.hero.talent.point_blank.desc=_+1:_ 그레이스롯의 쇠뇌에 적중당한 적은 _10%_ 확률로 현기증에 걸립니다.\n\n_+2:_ 그레이스롯의 쇠뇌에 적중당한 적은 _20%_ 확률로 현기증에 걸립니다.\n\n_+3:_ 그레이스롯의 쇠뇌에 적중당한 적은 _20%_ 확률로 현기증에 걸립니다.
 actors.hero.talent.improved_crossbow.title=개량 쇠뇌
 actors.hero.talent.improved_crossbow.desc=_+1:_ 그레이스롯의 쇠뇌의 공격력이 _2_ 상승합니다.\n\n_+2:_ 그레이스롯의 쇠뇌의 공격력이 _4_ 상승합니다.\n\n_+3:_ 그레이스롯의 쇠뇌의 공격력이 _6_ 상승합니다.
 actors.hero.talent.sniping.title=저격
@@ -1419,6 +1419,7 @@ actors.mobs.firecore.on_death=화산의 힘이 줄어드는게 느껴졌다. 남
 
 actors.mobs.pompeii.name=폼페이
 actors.mobs.pompeii.desc=거대한 야생의 감염 생물. 특수한 고온 환경에서 탄생한 변이생물체다. 공포스런 외관을 갖고 있으며, 자신의 체온을 높여 사람이 가까이 접근하지 못하도록 한다.\n\n_이 생물체는 물과 독에 약해보입니다._
+actors.mobs.pompeii.skill=폼페이가 공격을 흡수해 체력을 회복하려합니다!
 
 
 // 추가 몹
