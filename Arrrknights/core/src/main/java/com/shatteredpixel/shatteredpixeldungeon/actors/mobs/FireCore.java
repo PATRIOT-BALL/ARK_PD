@@ -33,7 +33,7 @@ public class FireCore extends Mob{
         state = PASSIVE;
 
         loot = new OathofFire();
-        lootChance = 1f;
+        lootChance = 0.5f;
 
         properties.add(Property.IMMOVABLE);
         properties.add(Property.MINIBOSS);

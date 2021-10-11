@@ -95,7 +95,7 @@ public class HeavyBoat extends Mob {
         int mypos = this.pos;
         super.die(cause);
 
-        if (mypos == Terrain.SOLID) {
+        if (mypos != Terrain.CHASM) {
         Piersailor.spawnAt(mypos);}
     }
 }

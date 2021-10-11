@@ -93,7 +93,7 @@ public class Pompeii extends Mob {
     private int barriercooldown = 4;
     private int volcanocooldown = 9;
     private int volcanotime = 0;
-    private int restorecooldown = 30;
+    private int restorecooldown = 10;
 
     @Override
     public int damageRoll() {
@@ -260,7 +260,7 @@ public class Pompeii extends Mob {
 
 
         // 흡수. 3페이즈 전용
-        if (restorecooldown <= 0) {
+        if (restorecooldown <= 0 && phase == 3) {
             Buff.affect(this, RestorBuff.class, 5f);
             GLog.w(Messages.get(this, "skill"));
 
