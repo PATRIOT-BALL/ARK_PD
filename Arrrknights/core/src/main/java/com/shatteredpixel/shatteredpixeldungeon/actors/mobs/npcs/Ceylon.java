@@ -174,7 +174,29 @@ public class Ceylon extends NPC {
 
         public static void spawn( SiestaLevel_part1 level ) {
             if (!spawned && Dungeon.depth > 31 && Random.Int( 35 - Dungeon.depth ) == 0) {
+                Ceylon npc = new Ceylon();
+                do {
+                    npc.pos = level.randomRespawnCell( npc );
+                } while (
+                        npc.pos == -1 ||
+                                level.heaps.get( npc.pos ) != null ||
+                                level.traps.get( npc.pos) != null ||
+                                level.findMob( npc.pos ) != null ||
+                                //The imp doesn't move, so he cannot obstruct a passageway
+                                !(level.passable[npc.pos + PathFinder.CIRCLE4[0]] && level.passable[npc.pos + PathFinder.CIRCLE4[2]]) ||
+                                !(level.passable[npc.pos + PathFinder.CIRCLE4[1]] && level.passable[npc.pos + PathFinder.CIRCLE4[3]]));
+                level.mobs.add( npc );
 
+                spawned = true;
+                level.addItemToSpawn(new Bottle());
+
+                alternative = true;
+
+                given = false;
+
+                reward = new ArmorUpKit();
+            }
+            else if (!spawned && Dungeon.depth == 34) {
                 Ceylon npc = new Ceylon();
                 do {
                     npc.pos = level.randomRespawnCell( npc );
