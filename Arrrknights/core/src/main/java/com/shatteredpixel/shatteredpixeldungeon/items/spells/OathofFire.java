@@ -34,7 +34,7 @@ public class OathofFire extends Spell {
     @Override
     public int value() {
         //prices of ingredients, divided by output quantity
-        return Math.round(quantity * ((30 + 40) / 2f));
+        return quantity * 15;
     }
 
 

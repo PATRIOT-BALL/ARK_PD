@@ -143,6 +143,7 @@ public class Pompeii extends Mob {
             blastcooldown = 1;
             barriercooldown = 4;
             volcanocooldown = 7;
+            restorecooldown = 10;
             GameScene.flash(0x80FF0000);
         }
     }
@@ -245,7 +246,6 @@ public class Pompeii extends Mob {
                         HP = 1200;
                         phase = 3;
                         GameScene.flash(0x80FF0000);
-                        restorecooldown = 10;
                     }
                 }
                 else summoncooldown = 10;

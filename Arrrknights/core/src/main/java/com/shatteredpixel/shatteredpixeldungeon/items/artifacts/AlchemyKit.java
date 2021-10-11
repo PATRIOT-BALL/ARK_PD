@@ -15,7 +15,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.Alchemize;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.AquaBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.BeaconOfReturning;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.FeatherFall;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.ForceCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.MagicalArmord;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.OathofFire;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.PhaseShift;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ReclaimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Recycle;
@@ -112,7 +114,7 @@ public class AlchemyKit extends Artifact {
 
     // rare등급 보상은 2개가 지급됩니다.
     private static final Class<?>[] rare = new Class<?>[]{
-            FeatherFall.class, WildEnergy.class, Honeypot.class, BeaconOfReturning.class, StoneOfEnchantment.class, MagicalArmord.class};
+            FeatherFall.class, WildEnergy.class, Honeypot.class, BeaconOfReturning.class, StoneOfEnchantment.class, MagicalArmord.class, OathofFire.class, ForceCatalyst.class};
 
     // veryrare등급 보상은 1개가 지급됩니다.
     private static final Class<?>[] veryrare = new Class<?>[]{
