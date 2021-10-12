@@ -793,22 +793,22 @@ public abstract class Mob extends Char {
 			int rand = Random.IntRange(0+chance, 15+chance);
 
 			if (rand < 4) {
-				Dungeon.level.drop(new Gold(4 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+				Dungeon.level.drop(new Gold(3 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
 			}
 			else if (rand < 7) {
-				Dungeon.level.drop(new Gold(8 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+				Dungeon.level.drop(new Gold(7 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
 			}
 			else if (rand < 8) {
 				Dungeon.level.drop(new Bomb(), pos).sprite.drop();
 			}
 			else if (rand < 12) {
-				Dungeon.level.drop(new Gold(12 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+				Dungeon.level.drop(new Gold(10 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
 			}
 			else if (rand < 14) {
 				Dungeon.level.drop(new StoneOfDeepenedSleep(), pos).sprite.drop();
 			}
 			else {
-				Dungeon.level.drop(new Gold(24 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
+				Dungeon.level.drop(new Gold(20 * Dungeon.hero.pointsInTalent(Talent.BOUNTY_HUNTER)), pos).sprite.drop();
 
 			}
 		}

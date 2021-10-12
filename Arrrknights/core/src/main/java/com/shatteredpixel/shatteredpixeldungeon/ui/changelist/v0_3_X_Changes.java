@@ -39,7 +39,8 @@ public class v0_3_X_Changes {
                 "_심해의 포식자(2스킬)_ : 대상에게 큰 피해를 입히고 등 뒤로 이동합니다. 만약 적을 처치하면 아드레날린을 얻습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 새로운 고유 능력",
-                "발리스틱 나이프를 투척한 후 _사냥_ 능력을 사용해 강력한 체력 비례 피해를 입히고 대상의 뒤로 이동할 수 있습니다. 450 턴의 쿨타임이 있으며, 보스에겐 피해가 감소합니다."));
+                "발리스틱 나이프를 투척한 후 _사냥_ 능력을 사용해 강력한 체력 비례 피해를 입히고 대상의 뒤로 이동할 수 있습니다. 450 턴의 쿨타임이 있으며, 보스에겐 피해가 감소합니다." + "\n\n" +
+                "_암살 전문화_ 레드의 뼈찌르기 기본 점멸 거리가 상승했습니다."));
 
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
@@ -50,6 +51,9 @@ public class v0_3_X_Changes {
                 "_새싹 원석충_의 체력이 4에서 _1_로, 공격력이 1-4에서 _1-1_로 감소했습니다. 대신 회피율이 25에서 _35_로 상승했으며, 더 이상 _거대해진 엘리트_ 몬스터가 될 수 없습니다." + "\n\n" +
                 "_화산 심장부_가 이제 무작위 물약 대신 _불꽃의 서약_을 드롭합니다." + "\n\n" +
                 "_폼페이_의 체력이 약 23% 감소했습니다. 대신 새로운 패턴이 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 변경",
+                "_암살 전문화_의 _처형 시작_ 특성의 블링크 거리 증가 효과가 감소했으며, 대신 _사냥_ 능력의 쿨타임을 감소시키고 확률적으로 일반 적을 즉사시킬 수 있게됩니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "주문 변경",
                 "_아츠 전송기_ : _아츠 갑옷_으로 대체되었으며, 조합법도 변경되었습니다. 아츠 갑옷 주문은 짧은 지속시간의 아츠 방어력을 제공합니다." + "\n\n" +
@@ -70,6 +74,7 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
                 "_블레이즈_의 _급조한 투척물_ 특성의 실명 부여량이 상승했습니다." + "\n\n" +
                 "_레드_의 _불시의 타격_ 특성의 추가 피해가 상승했습니다." + "\n\n" +
+                        "_레드_의 _추적자_ 특성이 _사냥_ 능력으로도 발동합니다." + "\n\n" +
                 "_레드_의 _경량화 망토_ 특성에 망토 발동에 소모하는 턴 감소 효과가 추가되었습니다." + "\n\n" +
                         "_그레이스롯_의 _접근 금지!_ 특성의 발동 확률이 상승했습니다."
                         ));
@@ -83,6 +88,9 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 하향",
                 "_긴급 제세동기_의 아츠 방어력 부여량이 감소했으며, 대신 지속시간이 소폭 연장되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 하향",
+                "_암살 전문화_의 _추가 수당_으로 얻는 합성옥이 소폭 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "분노 전문화 하향",
                 "분노 상태일 때 피해를 받으면 반동이 누적됩니다. 분노가 사라지면 반동에 비례해 약화를 얻습니다."));
