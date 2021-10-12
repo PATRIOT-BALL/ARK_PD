@@ -46,16 +46,19 @@ public class Berserk extends Buff {
 	private float levelRecovery;
 	
 	private float power = 0;
+	private float rebound = 0;
 
 	private static final String STATE = "state";
 	private static final String LEVEL_RECOVERY = "levelrecovery";
 	private static final String POWER = "power";
+	private static final String REBOUND = "rebound";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
 		bundle.put(STATE, state);
 		bundle.put(POWER, power);
+		bundle.put(REBOUND, rebound);
 		if (state == State.RECOVERING) bundle.put(LEVEL_RECOVERY, levelRecovery);
 	}
 
@@ -65,6 +68,7 @@ public class Berserk extends Buff {
 
 		state = bundle.getEnum(STATE, State.class);
 		power = bundle.getFloat(POWER);
+		rebound = bundle.getFloat(REBOUND);
 		if (state == State.RECOVERING) levelRecovery = bundle.getFloat(LEVEL_RECOVERY);
 	}
 
@@ -97,6 +101,7 @@ public class Berserk extends Buff {
 			power -= GameMath.gate(0.1f, power, 1f) * 0.06f * Math.pow((target.HP/(float)target.HT), 2);
 			
 			if (power <= 0){
+				Buff.affect(target, Weakness.class, rebound * 40);
 				detach();
 			}
 		}
@@ -137,6 +142,7 @@ public class Berserk extends Buff {
 		if (state == State.RECOVERING) return;
 		float maxPower = 1f + 0.2f*((Hero)target).pointsInTalent(Talent.ENDLESS_RAGE);
 		power = Math.min(maxPower, power + (damage/(float)target.HT)/2.2f );
+		rebound = Math.min(1, rebound + (damage/(float)target.HT)/8f );
 		BuffIndicator.refreshHero(); //show new power immediately
 	}
 

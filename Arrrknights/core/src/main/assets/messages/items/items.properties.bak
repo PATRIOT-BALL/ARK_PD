@@ -1155,7 +1155,9 @@ items.potions.elixirs.elixirofaquaticrejuvenation$aquahealing.name=수상 회복
 items.potions.elixirs.elixirofaquaticrejuvenation$aquahealing.desc=당신은 일시적으로 재생 능력을 얻었습니다.\n\n물 위에 서 있는 동안, 당신은 매 턴마다 약간의 체력을 회복합니다. 이 효과는 당신의 체력이 꽉 차 있거나 물 위에 있지 않다면 일시적으로 멈춥니다.\n\n남은 치유량: %d.
 
 items.potions.elixirs.elixirofdragonsblood.name=용의 피 영약
-items.potions.elixirs.elixirofdragonsblood.desc=이 영약을 마시는 순간 음용자의 정맥에 맹렬한 힘을 흘려보낼 것입니다. 이 효과는 음용자가 화염에 면역을 갖도록 하며, 물리적 공격에 적을 불태워버릴 수 있는 힘을 실어보낼 것입니다.
+items.potions.elixirs.elixirofdragonsblood.desc=이 영약을 마시는 순간 음용자의 정맥에 맹렬한 힘을 흘려보낼 것입니다. 이 효과는 공격시 자신과 적을 불태우며, 불타는 중 체력을 회복하게 해줍니다.
+items.potions.elixirs.elixirofdragonsblood$dragonsblood.name=타오르는 피
+items.potions.elixirs.elixirofdragonsblood$dragonsblood.desc=용의 힘이 당신의 피를 불태웁니다. 공격시 자신과 적을 불태우며, 불타는 중에는 체력을 회복합니다.\n남은 지속 턴 : %s.
 
 items.potions.elixirs.elixirofhoneyedhealing.name=달달한 치유 영약
 items.potions.elixirs.elixirofhoneyedhealing.desc=이 영약은 치유 물약과 달콤한 꿀을 섞어 만들었으며, 약간의 허기를 채워줄 수 있고, 동료를 치유하는 데에도 사용될 수 있습니다.\n\n만약 꿀과 친밀감이 있는 생물체에게 사용될 경우 그것을 진정시킬 것입니다.
@@ -2506,7 +2508,7 @@ items.weapon.missiles.throwinghammer.name=투척용 망치
 items.weapon.missiles.throwinghammer.desc=이 묵직한 망치는 적에게 던지기 위해 만들어졌습니다. 주는 피해는 비교적 부족하지만, 튼튼하고 매끈한 무쇠로 만들어져 내구성이 높고 적에게 달라붙지 않습니다.
 
 items.weapon.missiles.throwingknife.name=발리스틱 나이프
-items.weapon.missiles.throwingknife.desc=이 가벼운 칼들은 바람을 가르며 목표의 목을 가르기에도 적합합니다. 무방비 상태의 적들에게 가장 효과적입니다.
+items.weapon.missiles.throwingknife.desc=이 가벼운 칼들은 바람을 가르며 목표의 목을 가르기에도 적합합니다. 이 단검으로 레드의 _사냥_ 능력을 발동시킬 수 있습니다.
 
 items.weapon.missiles.throwingspear.name=텐진
 items.weapon.missiles.throwingspear.desc=실버애쉬가 사육하는 수렵용 매. 그냥 명령을 내려 사냥감을 공격할 수도 있지만 주인 외의 말은 듣지 않는다. 그냥 집어 던져도 언젠간 돌아올테니까, 있는 힘껏 던져버리자.

@@ -38,6 +38,9 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
                 "_심해의 포식자(2스킬)_ : 대상에게 큰 피해를 입히고 등 뒤로 이동합니다. 만약 적을 처치하면 아드레날린을 얻습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 새로운 고유 능력",
+                "발리스틱 나이프를 투척한 후 _사냥_ 능력을 사용해 강력한 체력 비례 피해를 입히고 대상의 뒤로 이동할 수 있습니다. 450 턴의 쿨타임이 있으며, 보스에겐 피해가 감소합니다."));
+
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -80,6 +83,9 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 하향",
                 "_긴급 제세동기_의 아츠 방어력 부여량이 감소했으며, 대신 지속시간이 소폭 연장되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "분노 전문화 하향",
+                "분노 상태일 때 피해를 받으면 반동이 누적됩니다. 분노가 사라지면 반동에 비례해 약화를 얻습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
                 "_살카즈 저주술사_의 회피율이 8에서 _6_으로 감소했습니다." + "\n\n" +

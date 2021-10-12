@@ -232,7 +232,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		hero.belongings.artifact.activate( hero );
 
 		ThrowingKnife knives = new ThrowingKnife();
-		knives.quantity(3).collect();
+		knives.quantity(1).collect();
 		Dungeon.quickslot.setSlot(0, cloak);
 		Dungeon.quickslot.setSlot(1, knives);
 
