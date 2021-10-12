@@ -82,8 +82,10 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
         if (ch == null) return;
 
         int dmg = ch.HT / 2;
-        if (Random.Int(4-hero.pointsInTalent(Talent.ASSASSINS_REACH)) == 0) {
-            dmg *= 2;
+        if (hero.hasTalent(Talent.ASSASSINS_REACH)) {
+            if (Random.Int(4 - hero.pointsInTalent(Talent.ASSASSINS_REACH)) == 0) {
+                dmg *= 2;
+            }
         }
         if (ch.properties().contains(Char.Property.BOSS)) {
             dmg = ch.HT / 10;
