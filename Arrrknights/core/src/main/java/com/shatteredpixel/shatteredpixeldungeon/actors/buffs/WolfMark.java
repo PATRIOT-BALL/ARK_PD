@@ -8,8 +8,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Hunt;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Wound;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
@@ -109,6 +111,11 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
         moveChar(hero, trajectory, movepower, ch.pos, false, false); // 자신이 이동효과
 
         Buff.affect(hero, ThrowingKnife.huntcooldown.class, 450f - hero.pointsInTalent(Talent.ASSASSINS_REACH) * 75);
+
+        if (!ch.isAlive()) {
+            Wound.hit(ch);
+            Hunt.hit(ch);
+        }
 
         if (hero.hasTalent(Talent.TRACKER)){
             Buff.affect(hero, Haste.class, hero.pointsInTalent(Talent.TRACKER));
