@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
@@ -57,6 +58,7 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.ResourceBundle;
 
 public class Pompeii extends Mob {
     {
@@ -146,6 +148,15 @@ public class Pompeii extends Mob {
             restorecooldown = 10;
             GameScene.flash(0x80FF0000);
         }
+    }
+
+    @Override
+    public int defenseProc(Char enemy, int damage) {
+        if (buff(RestorBuff.class) != null && !(enemy instanceof Hero)) {
+            damage = 0;
+        }
+
+        return super.defenseProc(enemy, damage);
     }
 
     @Override
