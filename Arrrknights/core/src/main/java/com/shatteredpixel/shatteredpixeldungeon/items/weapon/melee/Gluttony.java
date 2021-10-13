@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -66,6 +67,7 @@ public class Gluttony extends MeleeWeapon {
                     charge -= 50;
                     Sample.INSTANCE.play(Assets.Sounds.BLAST);
                     hero.sprite.zap(hero.pos);
+                    Invisibility.dispel();
                     updateQuickslot();
                     hero.spendAndNext(1f);
                 }
@@ -74,6 +76,7 @@ public class Gluttony extends MeleeWeapon {
                 Buff.affect(hero, Roots.class, 5f);
                 cursedKnown = true;
                 charge -= 50;
+                Invisibility.dispel();
                 updateQuickslot();
                 hero.spendAndNext(1f);
             }

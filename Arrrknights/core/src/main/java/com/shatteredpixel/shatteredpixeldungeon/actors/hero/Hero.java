@@ -171,6 +171,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocking;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gluttony;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
@@ -789,6 +791,10 @@ public class Hero extends Char {
                         }
                         this.sprite.emitter().burst( ShadowParticle.UP, 2);
                     }}}}
+
+        if (belongings.weapon instanceof Gluttony) {
+            if (Random.Int(3) == 0) ((Gluttony) belongings.weapon).charged(1f);
+        }
 
 
         super.spend(time);
