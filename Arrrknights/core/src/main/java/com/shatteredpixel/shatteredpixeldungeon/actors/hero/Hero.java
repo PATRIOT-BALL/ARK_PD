@@ -796,7 +796,7 @@ public class Hero extends Char {
                     }}}}
 
         if (belongings.weapon instanceof Gluttony) {
-            if (Random.Int(3) == 0) ((Gluttony) belongings.weapon).charged(1f);
+            if (Random.Int(6) == 0) ((Gluttony) belongings.weapon).charged(1f);
         }
 
 
