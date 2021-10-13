@@ -109,6 +109,8 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
             movepower--;
         }
         moveChar(hero, trajectory, movepower, ch.pos, false, false); // 자신이 이동효과
+        Dungeon.level.occupyCell(hero );
+        Dungeon.observe();
 
         Buff.affect(hero, ThrowingKnife.huntcooldown.class, 450f - hero.pointsInTalent(Talent.ASSASSINS_REACH) * 75);
 
