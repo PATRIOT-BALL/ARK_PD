@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemistsToolkit;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
@@ -264,7 +265,7 @@ public abstract class Recipe {
 
     public static boolean usableInRecipe(Item item) {
         if ((item instanceof  NormalMagazine)) return true;
-        return !item.cursed;
+        return !item.cursed && !item.isEquipped(Dungeon.hero);
     }
 }
 
