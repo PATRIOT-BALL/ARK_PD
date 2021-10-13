@@ -265,7 +265,7 @@ public abstract class Recipe {
 
     public static boolean usableInRecipe(Item item) {
         if ((item instanceof  NormalMagazine)) return true;
-        return !item.cursed && !item.isEquipped(Dungeon.hero);
+        return !item.isEquipped(Dungeon.hero);
     }
 }
 
