@@ -72,7 +72,7 @@ public class CryptRoom extends SpecialRoom {
 		}
 
 
-	if (Random.Int(20) == 0) {
+	if (Random.Int(20) == 0 && Dungeon.depth < 15) {
 			SandPillar Sand = new SandPillar();
 			Sand.pos = cx + cy * level.width();
 			level.mobs.add( Sand );
