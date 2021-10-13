@@ -69,6 +69,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ghoul;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Monk;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.ImpShopkeeper;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CheckedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Flare;
@@ -780,7 +782,8 @@ public class Hero extends Char {
                 if (belongings.getItem(RingOfMight.class) != null && belongings.getItem(RingOfTenacity.class) != null) {
                     if (belongings.getItem(RingOfTenacity.class).isEquipped(this) && belongings.getItem(RingOfMight.class).isEquipped(this)){
                         for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
-                            if (Dungeon.level.adjacent(mob.pos, pos) && mob.alignment != Char.Alignment.ALLY && !mob.properties().contains(Property.NPC)) {
+                            if (Dungeon.level.adjacent(mob.pos, pos) && mob.alignment != Char.Alignment.ALLY && !mob.properties().contains(Property.NPC)
+                                    && !(mob instanceof Shopkeeper) && !(mob instanceof ImpShopkeeper)) {
                                 mob.sprite.emitter().burst( ShadowParticle.CURSE, 15);
                                 Buff.affect(mob, Hex.class, 3f);
                                 int dmg = mob.HP / 8;

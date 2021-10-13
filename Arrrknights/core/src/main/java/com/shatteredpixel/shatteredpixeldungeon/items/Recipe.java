@@ -28,8 +28,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.Blandfruit;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatPie;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledEgg;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledGamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Yukjeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.brews.BlizzardBrew;
@@ -216,7 +219,9 @@ public abstract class Recipe {
             new WeaponTransform.Recipe(),
             new Avantgardeform.Recipe(),
             new OathofFire.Recipe(),
-            new ForceCatalyst.Recipe()
+            new ForceCatalyst.Recipe(),
+            new ChargrilledEgg.Recipe(),
+            new ChargrilledGamza.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{
@@ -227,6 +232,7 @@ public abstract class Recipe {
             new MeatPie.Recipe(),
             new Sandvich.Recipe(),
             new NotBarFood.Recipe(),
+            new Yukjeon.Recipe(),
     };
 
     public static Recipe findRecipe(ArrayList<Item> ingredients) {

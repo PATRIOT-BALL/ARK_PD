@@ -2,7 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients;
 
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Gamza extends Ingredients {
+public class Potato extends Ingredients {
     {
         image = ItemSpriteSheet.GAMZA;
     }

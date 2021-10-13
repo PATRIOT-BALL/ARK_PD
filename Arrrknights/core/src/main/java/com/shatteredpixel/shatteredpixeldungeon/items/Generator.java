@@ -80,6 +80,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Potato;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Ingredients;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Salt;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.SugarFlower;
@@ -272,7 +273,7 @@ public class Generator {
         SKL_T3(0, SkillBook.class),
         SKL_RND(0, SkillBook.class),
 
-        N_INGREDINETS(2,Ingredients.class);
+        N_INGREDINETS(0,Ingredients.class);
 
         public Class<?>[] classes;
 
@@ -614,9 +615,10 @@ public class Generator {
 
             N_INGREDINETS.classes = new Class<?>[]{
                     SugarFlower.class,
-                    Salt.class
+                    Salt.class,
+                    Potato.class
             };
-            N_INGREDINETS.probs = new float[]{1, 1};
+            N_INGREDINETS.probs = new float[]{1, 1,1};
         }
     }
 

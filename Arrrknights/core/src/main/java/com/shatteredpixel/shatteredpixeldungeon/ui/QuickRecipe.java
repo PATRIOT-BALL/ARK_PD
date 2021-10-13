@@ -36,9 +36,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledEgg;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledGamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Yukjeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.BlackPepper;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Egg;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Potato;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Salt;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.SugarFlower;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
@@ -294,6 +299,17 @@ public class QuickRecipe extends Component {
 				result.add(new QuickRecipe( new StewedMeat.threeMeat() ));
 				result.add(null);
 				result.add(null);
+				result.add(new QuickRecipe( new HoneyBread.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new Food(), new SugarFlower())),
+						new HoneyBread()));
+				result.add(new QuickRecipe( new ChargrilledGamza.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new Potato(), new SugarFlower())),
+						new ChargrilledGamza()));
+				result.add(new QuickRecipe( new ChargrilledEgg.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new Egg(), new Salt())),
+						new ChargrilledEgg()));
+				result.add(null);
+				result.add(null);
 				result.add(new QuickRecipe( new MeatPie.Recipe(),
 						new ArrayList<Item>(Arrays.asList(new Pasty(), new Food(), new MysteryMeat.PlaceHolder())),
 						new MeatPie()));
@@ -320,12 +336,12 @@ public class QuickRecipe extends Component {
 						));
 				result.add(null);
 				result.add(null);
-				result.add(new QuickRecipe( new HoneyBread.Recipe(),
-						new ArrayList<Item>(Arrays.asList(new Food(), new SugarFlower())),
-						new HoneyBread()));
 				result.add(new QuickRecipe( new NotBarFood.Recipe(),
 						new ArrayList<Item>(Arrays.asList(new ChargrilledMeat(), new BlackPepper(), new Salt())),
 						new NotBarFood()));
+				result.add(new QuickRecipe( new Yukjeon.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new MysteryMeat.PlaceHolder(), new BlackPepper(), new Egg())),
+						new Yukjeon()));
 				return result;
 			case 3:
 				r = new Bomb.EnhanceBomb();

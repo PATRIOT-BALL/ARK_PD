@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Alchemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Egg;
 import com.shatteredpixel.shatteredpixeldungeon.items.journal.AlchemyPage;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.IronKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
@@ -74,6 +75,14 @@ public class LaboratoryRoom extends SpecialRoom {
 				level.heaps.get( pos ) != null);
 			level.drop( prize( level ), pos );
 		}
+
+		int eggpos;
+		do {
+			eggpos = level.pointToCell(random());
+		} while (
+				level.map[eggpos] != Terrain.EMPTY_SP ||
+						level.heaps.get( eggpos ) != null);
+		level.drop( new Egg().quantity(2), eggpos );
 		
 		//guide pages
 		Collection<String> allPages = Document.ALCHEMY_GUIDE.pages();

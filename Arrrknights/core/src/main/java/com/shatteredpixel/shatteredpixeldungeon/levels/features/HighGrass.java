@@ -101,7 +101,7 @@ public class HighGrass {
 			
 			if (naturalismLevel >= 0) {
 				// 식재료 획득
-				if (Random.Int(33) == 0) {
+				if (Random.Int(25) == 0) {
 					level.drop(Generator.random(Generator.Category.N_INGREDINETS), pos).sprite.drop();
 				}
 

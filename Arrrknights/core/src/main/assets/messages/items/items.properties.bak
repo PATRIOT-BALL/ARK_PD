@@ -1015,6 +1015,12 @@ items.food.ingredients.salt.desc=조미료의 기초이자 기초.
 items.food.ingredients.sugarflower.name=달콤달콤 꽃
 items.food.ingredients.sugarflower.desc=설탕 대신 쓸 수 있을 것 같습니다.
 
+items.food.ingredients.gamza.name=감자
+items.food.ingredients.gamza.desc=리스캄 아님
+
+items.food.ingredients.egg.name=새알
+items.food.ingredients.egg.desc=어떤 새의 알인지 아무도 모릅니다.
+
 
 ## 가공 요리 (식재료 사용 요리)
 
@@ -1023,6 +1029,15 @@ items.food.cooking.honeybread.desc=동그란 팬케익. 구름 위를 걷는 듯
 
 items.food.cooking.notbarfood.name=술안주 절대 아님
 items.food.cooking.notbarfood.desc=같이 마실만한 뭔가가 있다면...이런, 디오나가 째려봐!\n\n섭취시 체력을 소량 회복하고 _아츠 면역_을 얻습니다.\n_이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다._
+
+items.food.cooking.chargrilledgamza.name=구운 감자
+items.food.cooking.chargrilledgamza.desc=맛있게 구워진 리스캄입니다. 적당히 배가 부를 것 같습니다.
+
+items.food.cooking.chargrilledegg.name=구운 계란
+items.food.cooking.chargrilledegg.desc=포만감은 없지만, 몸에 붙은 불을 끌 수 있을 것 같습니다. 원리는 몰룹니다.
+
+items.food.cooking.yukjeon.name=육전
+items.food.cooking.yukjeon.desc=단국의 전통 음식. 밀가루를 묻혀 기름에 지진 고기다.\n\n섭취시 주위의 지형을 알아냅니다.\n_이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다._
 
 
 
@@ -2509,6 +2524,8 @@ items.weapon.missiles.throwinghammer.desc=이 묵직한 망치는 적에게 던�
 
 items.weapon.missiles.throwingknife.name=발리스틱 나이프
 items.weapon.missiles.throwingknife.desc=이 가벼운 칼들은 바람을 가르며 목표의 목을 가르기에도 적합합니다. 이 단검으로 레드의 _사냥_ 능력을 발동시킬 수 있습니다.
+items.weapon.missiles.throwingknife$huntcooldown.name=사냥 쿨타임
+items.weapon.missiles.throwingknife$huntcooldown.desc=사냥 능력 재발동까지 %s턴 남았습니다.
 
 items.weapon.missiles.throwingspear.name=텐진
 items.weapon.missiles.throwingspear.desc=실버애쉬가 사육하는 수렵용 매. 그냥 명령을 내려 사냥감을 공격할 수도 있지만 주인 외의 말은 듣지 않는다. 그냥 집어 던져도 언젠간 돌아올테니까, 있는 힘껏 던져버리자.

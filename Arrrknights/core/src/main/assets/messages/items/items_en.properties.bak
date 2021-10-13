@@ -1015,6 +1015,12 @@ items.food.ingredients.salt.desc=the basics of the basics
 items.food.ingredients.sugarflower.name=Sweet Flower
 items.food.ingredients.sugarflower.desc=it would be a sugar substitute.
 
+items.food.ingredients.gamza.name=potato
+items.food.ingredients.gamza.desc=delicious!
+
+items.food.ingredients.egg.name=egg
+items.food.ingredients.egg.desc=don't know what kind of bird's egg.
+
 
 ## 가공 요리 (식재료 사용 요리)
 
@@ -1023,6 +1029,15 @@ items.food.cooking.honeybread.desc=Very sweet bread. eat a blessing effect is ob
 
 items.food.cooking.notbarfood.name=Definitely Not Bar Food!
 items.food.cooking.notbarfood.desc=when eaten gains immunity to arts for 1 turn and recovers a small amount of HP.\n\n_Rosemontis' meat trait can be activated_
+
+items.food.cooking.chargrilledgamza.name=chargrilled potato
+items.food.cooking.chargrilledgamza.desc=delicious potatoes
+
+items.food.cooking.chargrilledegg.name=chargrilled egg
+items.food.cooking.chargrilledegg.desc=There is no feeling of satiety, but it extinguishes the fire on the body.
+
+items.food.cooking.yukjeon.name=yukjeon
+items.food.cooking.yukjeon.desc=Meat pan-fried in egg batter.\n\nwhen eate seems to light up the surroundings.\n\nRosemontis' meat trait can be activated_
 
 
 
@@ -2498,7 +2513,7 @@ items.weapon.missiles.throwinghammer.name=throwing hammer
 items.weapon.missiles.throwinghammer.desc=These hefty hammers are designed to be thrown at an enemy. While they are a bit lacking in damage, their smooth all-metal construction means they are quite durable, and won't stick to enemies.
 
 items.weapon.missiles.throwingknife.name=ballistic knife
-items.weapon.missiles.throwingknife.desc=These lightweight knives are balanced to arc through the air right into their target. You can activate your hunting ability with this weapon.
+items.weapon.missiles.throwingknife.desc=These lightweight knives are balanced to arc through the air right into their target. You can activate your _hunt_ ability with this weapon.
 items.weapon.missiles.throwingknife$huntcooldown.name=hunt cooldown
 items.weapon.missiles.throwingknife$huntcooldown.desc=cooldown : %s
 
