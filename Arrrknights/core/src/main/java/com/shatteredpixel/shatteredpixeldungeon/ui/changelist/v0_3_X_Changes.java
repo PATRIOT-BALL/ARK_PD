@@ -33,7 +33,7 @@ public class v0_3_X_Changes {
                 "_아방가르드한 변환_ : 해당 아이템에 아방가르드 우물 효과를 적용시키며, 강화를 유지합니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 1종 추가",
-                "_정밀 장전_"));
+                "_정밀 장전\n응애기사 모험담_"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
                 "_심해의 포식자(2스킬)_ : 대상에게 큰 피해를 입히고 등 뒤로 이동합니다. 만약 적을 처치하면 아드레날린을 얻습니다."));
