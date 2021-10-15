@@ -1015,8 +1015,8 @@ items.food.ingredients.salt.desc=the basics of the basics
 items.food.ingredients.sugarflower.name=Sweet Flower
 items.food.ingredients.sugarflower.desc=it would be a sugar substitute.
 
-items.food.ingredients.gamza.name=potato
-items.food.ingredients.gamza.desc=delicious!
+items.food.ingredients.potato.name=potato
+items.food.ingredients.potato.desc=delicious!
 
 items.food.ingredients.egg.name=egg
 items.food.ingredients.egg.desc=don't know what kind of bird's egg.
@@ -2345,6 +2345,7 @@ items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies
 items.weapon.melee.divineavatar.desc="Does this kid want to date an anvil or something?!"\n\nHas a chance to blind enemies when attacking. Recharges SP when blinding an enemy. Consumes 100% of SP to put enemies in sight to sleep and recover HP.
 items.weapon.melee.divineavatar.ac_zap=Hikkari are!
+items.weapon.melee.divineavatar.setbouns=_Adventure of the Babe Knight_\nSP 충전률이 1.6배가 됩니다.
 
 items.weapon.melee.dp27.name=DP27
 items.weapon.melee.dp27.gamza_name=DP27 Custom

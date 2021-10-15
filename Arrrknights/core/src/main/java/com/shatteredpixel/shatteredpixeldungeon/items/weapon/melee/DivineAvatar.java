@@ -10,6 +10,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -82,6 +84,10 @@ public class DivineAvatar extends MeleeWeapon {
         }
 
         if (Random.Int(25) < 3 + level()) {
+            if (Dungeon.hero.belongings.getItem(RingOfSunLight.class) != null) {
+                if (Dungeon.hero.belongings.getItem(RingOfSunLight.class).isEquipped(Dungeon.hero)) {
+                    charge +=3;
+                }}
             charge+=5;
             charge = Math.min(charge, chargeCap);
 
@@ -105,6 +111,16 @@ public class DivineAvatar extends MeleeWeapon {
 
         //otherwise, if there's no charge, return null.
         return null;
+    }
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+        if (Dungeon.hero.belongings.getItem(RingOfSunLight.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfSunLight.class).isEquipped(Dungeon.hero))
+                info += "\n\n" + Messages.get( DivineAvatar.class, "setbouns");}
+
+        return info;
     }
 
     private static final String CHARGE = "charge";

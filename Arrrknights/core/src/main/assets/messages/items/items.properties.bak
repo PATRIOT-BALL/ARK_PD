@@ -1015,8 +1015,8 @@ items.food.ingredients.salt.desc=조미료의 기초이자 기초.
 items.food.ingredients.sugarflower.name=달콤달콤 꽃
 items.food.ingredients.sugarflower.desc=설탕 대신 쓸 수 있을 것 같습니다.
 
-items.food.ingredients.gamza.name=감자
-items.food.ingredients.gamza.desc=리스캄 아님
+items.food.ingredients.potato.name=감자
+items.food.ingredients.potato.desc=리스캄 아님
 
 items.food.ingredients.egg.name=새알
 items.food.ingredients.egg.desc=어떤 새의 알인지 아무도 모릅니다.
