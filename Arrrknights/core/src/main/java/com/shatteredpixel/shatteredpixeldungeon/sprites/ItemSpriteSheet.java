@@ -753,8 +753,8 @@ public class ItemSpriteSheet {
 	public static final int PEPPER =       FOOD+15;
 	public static final int SALT =       FOOD+16;
 	public static final int HONEY_FLOWER =       FOOD+17;
-	public static final int POTATO =       FOOD+17;
-	public static final int EGG =       FOOD+17;
+	public static final int POTATO =       FOOD+18;
+	public static final int EGG =       FOOD+19;
 	static{
 		assignItemRect(MEAT,        16, 16);
 		assignItemRect(STEAK,       16, 16);
