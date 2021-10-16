@@ -292,6 +292,8 @@ public class ItemSpriteSheet {
 	public static final int SICKEL       = WEP_TIER4+8;
 	public static final int GOLDDOG       = WEP_TIER4+9;
 	public static final int SPECTER       = WEP_TIER4+10;
+	public static final int CARNEL       = WEP_TIER4+11;
+	public static final int CLIFF       = WEP_TIER4+12;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -304,6 +306,8 @@ public class ItemSpriteSheet {
 		assignItemRect(SICKEL,        16, 16);
 		assignItemRect(GOLDDOG,        16, 16);
 		assignItemRect(SPECTER,        16, 16);
+		assignItemRect(CARNEL,        16, 16);
+		assignItemRect(CLIFF,        16, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 9);   //8 slots
@@ -740,19 +744,17 @@ public class ItemSpriteSheet {
 	public static final int PASTY       = FOOD+6;
 	public static final int PUMPKIN_PIE = FOOD+7;
 	public static final int CANDY_CANE  = FOOD+8;
-	public static final int MEAT_PIE    = FOOD+9;
-	public static final int BLANDFRUIT  = FOOD+10;
-	public static final int BLAND_CHUNKS= FOOD+11;
-	public static final int BERRY =       FOOD+12;
-	public static final int CUTLET =       FOOD+13;
-	public static final int SANDBITCH =       FOOD+14;
-	public static final int BONK =       FOOD+15;
-	public static final int POMBBAY =       FOOD+16;
-	public static final int PEPPER =       FOOD+17;
-	public static final int SALT =       FOOD+18;
-	public static final int HONEY_FLOWER =       FOOD+19;
-	public static final int PAN_CAKE =       FOOD+20;
-	public static final int MEAT_SRICK =       FOOD+21;
+	public static final int BLANDFRUIT  = FOOD+9;
+	public static final int BLAND_CHUNKS= FOOD+10;
+	public static final int BERRY =       FOOD+11;
+	public static final int CUTLET =       FOOD+12;
+	public static final int BONK =       FOOD+13;
+	public static final int POMBBAY =       FOOD+14;
+	public static final int PEPPER =       FOOD+15;
+	public static final int SALT =       FOOD+16;
+	public static final int HONEY_FLOWER =       FOOD+17;
+	public static final int POTATO =       FOOD+17;
+	public static final int EGG =       FOOD+17;
 	static{
 		assignItemRect(MEAT,        16, 16);
 		assignItemRect(STEAK,       16, 16);
@@ -763,22 +765,38 @@ public class ItemSpriteSheet {
 		assignItemRect(PASTY,       16, 16);
 		assignItemRect(PUMPKIN_PIE, 16, 16);
 		assignItemRect(CANDY_CANE,  16, 16);
-		assignItemRect(MEAT_PIE,    16, 16);
 		assignItemRect(BLANDFRUIT,  16, 16);
 		assignItemRect(BLAND_CHUNKS,16, 16);
 		assignItemRect(BERRY,       16, 16);
 		assignItemRect(CUTLET,       16, 16);
-		assignItemRect(SANDBITCH,       16, 16);
 		assignItemRect(BONK,       16, 16);
 		assignItemRect(POMBBAY,       16, 16);
 		assignItemRect(PEPPER,       16, 16);
 		assignItemRect(SALT,       16, 16);
 		assignItemRect(HONEY_FLOWER,       16, 16);
-		assignItemRect(PAN_CAKE,       16, 16);
-		assignItemRect(MEAT_SRICK,       16, 16);
+		assignItemRect(POTATO,       16, 16);
+		assignItemRect(EGG,       16, 16);
 	}
 
-	private static final int QUEST  =                                       xy(1, 29);  //32 slots
+	private static final int FOOD2  =                                       xy(1, 29);  //32 slots
+	public static final int MEAT_PIE    = FOOD2+0;
+	public static final int SANDBITCH =       FOOD2+1;
+	public static final int PAN_CAKE =       FOOD2+2;
+	public static final int MEAT_SRICK =       FOOD2+3;
+	public static final int POTATO_FRY =       FOOD2+4;
+	public static final int EGG_FRY =       FOOD2+5;
+	public static final int YUKJEON =       FOOD2+6;
+	static{
+		assignItemRect(MEAT_PIE,    16, 16);
+		assignItemRect(SANDBITCH,       16, 16);
+		assignItemRect(PAN_CAKE,       16, 16);
+		assignItemRect(MEAT_SRICK,       16, 16);
+		assignItemRect(POTATO_FRY,       16, 16);
+		assignItemRect(EGG_FRY,       16, 16);
+		assignItemRect(YUKJEON,       16, 16);
+	}
+
+	private static final int QUEST  =                                       xy(1, 30);  //32 slots
 	public static final int SKULL   = QUEST+0;
 	public static final int DUST    = QUEST+1;
 	public static final int CANDLE  = QUEST+2;
@@ -896,6 +914,7 @@ public class ItemSpriteSheet {
 		public static final int RING_SUNLIGHT     = RINGS+11;
 		public static final int RING_AMPLIFIED     = RINGS+12;
 		public static final int RING_DOMINATE     = RINGS+13;
+		public static final int RING_SURPRISE     = RINGS+14;
 
 		static {
 			assignIconRect( RING_ACCURACY,      7, 7 );
@@ -912,6 +931,7 @@ public class ItemSpriteSheet {
 			assignIconRect( RING_SUNLIGHT,        7, 7 );
 			assignIconRect( RING_AMPLIFIED,        7, 7 );
 			assignIconRect( RING_DOMINATE,        7, 7 );
+			assignIconRect( RING_SURPRISE,        8, 8 );
 		}
 
 		                                                                                //16 free slots

@@ -8,7 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class ChargrilledGamza extends Food {
     {
-        image = ItemSpriteSheet.GAMZA_SHIELD;
+        image = ItemSpriteSheet.POTATO_FRY;
         energy = Hunger.HUNGRY / 2;
 
         stackable = true;

@@ -29,8 +29,8 @@ import java.util.ArrayList;
 public class SnowHunter extends MeleeWeapon{
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.SPEAR;
-        hitSound = Assets.Sounds.HIT;
+        image = ItemSpriteSheet.CLIFF;
+        hitSound = Assets.Sounds.CHAINS2;
         hitSoundPitch = 0.87f;
 
         defaultAction = AC_ZAP;

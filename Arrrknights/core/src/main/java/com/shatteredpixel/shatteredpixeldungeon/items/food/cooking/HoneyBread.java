@@ -23,7 +23,7 @@ public class HoneyBread extends Food {
     @Override
     protected void satisfy(Hero hero) {
         super.satisfy( hero );
-        Buff.affect(hero, Bless.class, 20f);
+        Buff.affect(hero, Bless.class, 25f);
     }
 
     @Override

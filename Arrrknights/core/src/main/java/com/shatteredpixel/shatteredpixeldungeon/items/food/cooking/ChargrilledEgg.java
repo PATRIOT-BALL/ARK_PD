@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.food.cooking;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Egg;
@@ -10,8 +11,8 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class ChargrilledEgg extends Food {
     {
-        image = ItemSpriteSheet.POMBBAY;
-        energy = 0;
+        image = ItemSpriteSheet.EGG_FRY;
+        energy = Hunger.HUNGRY/5f;
 
         stackable = true;
     }

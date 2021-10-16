@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Potato extends Ingredients {
     {
-        image = ItemSpriteSheet.GAMZA;
+        image = ItemSpriteSheet.POTATO;
     }
 
     @Override

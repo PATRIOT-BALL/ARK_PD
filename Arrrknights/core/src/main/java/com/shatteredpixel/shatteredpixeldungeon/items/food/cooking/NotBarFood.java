@@ -40,7 +40,7 @@ public class NotBarFood extends Food {
     }
 
     public static void effect(Hero hero){
-        Buff.affect(Dungeon.hero, MagicImmune.class, 1f);
+        Buff.affect(Dungeon.hero, MagicImmune.class, 3f);
 
         if (hero.HP < hero.HT) {
             hero.HP = Math.min( hero.HP + hero.HT / 10, hero.HT );

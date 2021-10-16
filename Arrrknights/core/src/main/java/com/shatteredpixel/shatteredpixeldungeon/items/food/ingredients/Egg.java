@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Egg extends Ingredients {
     {
-        image = ItemSpriteSheet.POMBBAY;
+        image = ItemSpriteSheet.EGG;
     }
 
     @Override

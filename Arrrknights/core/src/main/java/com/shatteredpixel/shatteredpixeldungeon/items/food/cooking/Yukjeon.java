@@ -35,7 +35,7 @@ import java.util.ArrayList;
 
 public class Yukjeon extends Food {
     {
-        image = ItemSpriteSheet.MEAT_SRICK;
+        image = ItemSpriteSheet.YUKJEON;
         energy = Hunger.HUNGRY/2f;
 
         stackable = true;

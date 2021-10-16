@@ -22,8 +22,8 @@ import java.util.ArrayList;
 public class Gluttony extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.SPEAR;
-        hitSound = Assets.Sounds.HIT_SPEAR;
+        image = ItemSpriteSheet.CARNEL;
+        hitSound = Assets.Sounds.HIT_GLUTONY;
         hitSoundPitch = 1f;
 
         tier = 4;
