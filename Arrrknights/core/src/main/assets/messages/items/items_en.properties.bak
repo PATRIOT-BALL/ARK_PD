@@ -1584,6 +1584,9 @@ items.spells.alchemize.desc=This spell channels alchemical energy, allowing you 
 items.spells.aquablast.name=aqua blast
 items.spells.aquablast.desc=This spell will create a burst of water at the target location. It isn't forceful enough to do damage (even to fiery enemies), but it will spread water to nearby terrain and very briefly stun anything caught in the center of the burst.
 
+items.spells.saltblast.name=salt blast
+items.spells.saltblast.desc=This spell is a variant spell of aqua blast. This spell will weaken the target instead of paralyzing it
+
 items.spells.arcanecatalyst.name=arcane catalyst
 items.spells.arcanecatalyst.desc=This ball of golden dust is made from the deconstructed essence of a scroll. It glimmers in the darkness of the dungeon.\n\nThis catalyst is primarily useful as an alchemy ingredient, but you can also channel the magic directly to get the effect of a random scroll.
 
@@ -2345,7 +2348,7 @@ items.weapon.melee.divineavatar.name=Divine Avatar
 items.weapon.melee.divineavatar.stats_desc=gain blessing when attacking blind enemies
 items.weapon.melee.divineavatar.desc="Does this kid want to date an anvil or something?!"\n\nHas a chance to blind enemies when attacking. Recharges SP when blinding an enemy. Consumes 100% of SP to put enemies in sight to sleep and recover HP.
 items.weapon.melee.divineavatar.ac_zap=Hikkari are!
-items.weapon.melee.divineavatar.setbouns=_Adventure of the Babe Knight_\nSP 충전률이 1.6배가 됩니다.
+items.weapon.melee.divineavatar.setbouns=_Adventure of the Babe Knight_\nSP Charge speed x1.6
 
 items.weapon.melee.dp27.name=DP27
 items.weapon.melee.dp27.gamza_name=DP27 Custom

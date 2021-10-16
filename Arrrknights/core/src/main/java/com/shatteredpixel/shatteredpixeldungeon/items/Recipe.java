@@ -65,6 +65,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.OathofFire;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.PhaseShift;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ReclaimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Recycle;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.SaltBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WeaponTransform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WildEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
@@ -222,7 +223,8 @@ public abstract class Recipe {
             new OathofFire.Recipe(),
             new ForceCatalyst.Recipe(),
             new ChargrilledEgg.Recipe(),
-            new ChargrilledGamza.Recipe()
+            new ChargrilledGamza.Recipe(),
+            new SaltBlast.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{

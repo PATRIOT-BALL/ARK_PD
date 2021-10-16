@@ -78,6 +78,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.OathofFire;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.PhaseShift;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ReclaimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Recycle;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.SaltBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WeaponTransform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WildEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
@@ -416,6 +417,7 @@ public class QuickRecipe extends Component {
 				result.add(null);
 				result.add(null);
 				result.add(new QuickRecipe(new AquaBlast.Recipe()));
+				result.add(new QuickRecipe(new SaltBlast.Recipe()));
 				result.add(new QuickRecipe(new FeatherFall.Recipe()));
 				result.add(new QuickRecipe(new ReclaimTrap.Recipe()));
 				result.add(null);

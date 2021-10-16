@@ -28,11 +28,12 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WAND_HOLSTER), "새로운 주문",
                 "_힘의 정수_ : 무기를 분해하여 만드는 촉매제입니다." + "\n\n" +
+                        "_소금 폭발_ : 맞으면 따갑습니다." + "\n\n" +
                         "_불꽃의 서약_ : 사용시 100턴 동안 연소 면역을 부여하는 주문입니다."+ "\n\n" +
                 "_무기 변환_ : 변환의 주문서 효과를 발동시키지만, 무기에만 사용할 수 있는 주문입니다." + "\n\n" +
                 "_아방가르드한 변환_ : 해당 아이템에 아방가르드 우물 효과를 적용시키며, 강화를 유지합니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 1종 추가",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 2종 추가",
                 "_정밀 장전\n응애기사 모험담_"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
