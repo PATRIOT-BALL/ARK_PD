@@ -23,7 +23,7 @@ public class FRY_GAMZA extends Food {
     public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe.SimpleRecipe {
 
         {
-            inputs =  new Class[]{SugarFlower.class, Salt.class};
+            inputs =  new Class[]{Potato.class, Salt.class};
             inQuantity = new int[]{1, 1};
             cost = 1;
 
