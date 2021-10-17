@@ -1425,7 +1425,7 @@ items.rings.ringofdominate.soulless=저주받은 반지가 당신의 육신을 �
 
 items.rings.ringofassassin.name=암살의 반지
 items.rings.ringofassassin.stats=이 반지를 장착했을 때, 기습시 _%s%%_ 의 추가 피해를 입힙니다.
-items.rings.ringofassassin.typical_stats=이 반지를 장착했을 때, 일반적으로 기습시 _%s%%_ 의 확률로 1.5배의 피해를 입힙니다.
+items.rings.ringofassassin.typical_stats=이 반지를 장착했을 때, 일반적으로 기습시 _%s%%_ 의 추가 피해를 입힙니다.
 items.rings.ringofassassin.desc=이 반지는 착용자의 기습 능력을 높혀줍니다. 저주받은 반지는 닌자 리얼리티 쇼크를 일으켜 기습을 불가능하게 만듭니다.
 
 ###scrolls
