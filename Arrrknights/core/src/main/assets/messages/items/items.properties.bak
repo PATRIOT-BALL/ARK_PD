@@ -2422,7 +2422,7 @@ items.weapon.melee.halberd.desc="원석이 오리지늄이란 뜻이라고 설�
 
 items.weapon.melee.snowhunter.name=히라의 사냥꾼
 items.weapon.melee.snowhunter.ac_zap=변형
-items.weapon.melee.snowhunter.stats_desc=사거리 4
+items.weapon.melee.snowhunter.stats_desc=사거리 +3
 items.weapon.melee.snowhunter.desc=어느 등산을 좋아하는 막내 여동생의 채찍.\n\n_변형 미사용_\n적중시 자신이 대상의 뒤로 이동합니다.
 items.weapon.melee.snowhunter.desc_mode=어느 등산을 좋아하는 막내 여동생의 채찍.\n\n_변형_\n적중시 적을 자신의 방향으로 약간 끌고옵니다.
 

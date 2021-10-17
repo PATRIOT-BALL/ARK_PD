@@ -1426,8 +1426,8 @@ items.rings.ringofdominate.desc=This ring controls the mind of the opponent with
 items.rings.ringofdominate.soulless=The cursed ring has stolen your soul.
 
 items.rings.ringofassassin.name=ring of assassin
-items.rings.ringofassassin.stats=When worn, suprise attack damage bouns _%s%%_.
-items.rings.ringofassassin.typical_stats=When worn, typically suprise attack damage bouns _%s%%_.
+items.rings.ringofassassin.stats=When worn, surprise attack damage bouns _%s%%_.
+items.rings.ringofassassin.typical_stats=When worn, typically surprise attack damage bouns _%s%%_.
 items.rings.ringofassassin.desc=This ring increases the wearer's surprise ability. cursed rings Raises an Ninja Reality Shock, making a surprise attack impossible.
 
 
