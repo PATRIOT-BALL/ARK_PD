@@ -9,7 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Egg;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Salt;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class ChargrilledEgg extends Food {
+public class FRY_EGG extends Food {
     {
         image = ItemSpriteSheet.EGG_FRY;
         energy = Hunger.HUNGRY/5f;
@@ -35,7 +35,7 @@ public class ChargrilledEgg extends Food {
             inQuantity = new int[]{1, 1};
             cost = 1;
 
-            output = ChargrilledEgg.class;
+            output = FRY_EGG.class;
             outQuantity = 1;
         }
 

@@ -36,8 +36,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledEgg;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledGamza;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_EGG;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_GAMZA;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Yukjeon;
@@ -303,12 +303,12 @@ public class QuickRecipe extends Component {
 				result.add(new QuickRecipe( new HoneyBread.Recipe(),
 						new ArrayList<Item>(Arrays.asList(new Food(), new SugarFlower())),
 						new HoneyBread()));
-				result.add(new QuickRecipe( new ChargrilledGamza.Recipe(),
-						new ArrayList<Item>(Arrays.asList(new Potato(), new SugarFlower())),
-						new ChargrilledGamza()));
-				result.add(new QuickRecipe( new ChargrilledEgg.Recipe(),
+				result.add(new QuickRecipe( new FRY_GAMZA.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new Potato(), new Salt())),
+						new FRY_GAMZA()));
+				result.add(new QuickRecipe( new FRY_EGG.Recipe(),
 						new ArrayList<Item>(Arrays.asList(new Egg(), new Salt())),
-						new ChargrilledEgg()));
+						new FRY_EGG()));
 				result.add(null);
 				result.add(null);
 				result.add(new QuickRecipe( new MeatPie.Recipe(),

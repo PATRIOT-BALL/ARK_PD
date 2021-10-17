@@ -4,8 +4,6 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-import java.text.DecimalFormat;
-
 public class RingOfDominate extends Ring {
     {
         icon = ItemSpriteSheet.Icons.RING_DOMINATE;
@@ -30,7 +28,7 @@ public class RingOfDominate extends Ring {
     }
 
     public static boolean Dominate_curse( Char target ){
-        return getCursed_domi(target,RingOfDominate.Dominatepower.class);
+        return getCursed(target,RingOfDominate.Dominatepower.class);
     }
 
 

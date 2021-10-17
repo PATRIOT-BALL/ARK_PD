@@ -1030,11 +1030,11 @@ items.food.cooking.honeybread.desc=Very sweet bread. eat a blessing effect is ob
 items.food.cooking.notbarfood.name=Definitely Not Bar Food!
 items.food.cooking.notbarfood.desc=when eaten gains immunity to arts for 1 turn and recovers a small amount of HP.\n\n_Rosemontis' meat trait can be activated_
 
-items.food.cooking.chargrilledgamza.name=chargrilled potato
-items.food.cooking.chargrilledgamza.desc=delicious potatoes
+items.food.cooking.fry_gamza.name=French fries
+items.food.cooking.fry_gamza.desc=delicious potatoes
 
-items.food.cooking.chargrilledegg.name=chargrilled egg
-items.food.cooking.chargrilledegg.desc=There is no feeling of satiety, but it extinguishes the fire on the body.
+items.food.cooking.fry_egg.name=Sunny side up
+items.food.cooking.fry_egg.desc=This extinguishes the body fire... why?
 
 items.food.cooking.yukjeon.name=yukjeon
 items.food.cooking.yukjeon.desc=Meat pan-fried in egg batter.\n\nwhen eate seems to light up the surroundings.\n\nRosemontis' meat trait can be activated_
@@ -1344,6 +1344,9 @@ items.rings.ring.sapphire=sapphire ring
 items.rings.ring.quartz=quartz ring
 items.rings.ring.agate=agate ring
 items.rings.ring.dingdong=ding ring
+items.rings.ring.jojo=jo ring
+items.rings.ring.gray=plan ring
+items.rings.ring.banzi=why ring
 items.rings.ring.equip_cursed=The ring tightens around your finger painfully!
 items.rings.ring.unknown_desc=This metal band is adorned with a large gem that glitters in the darkness. Who knows what effect it has when worn?
 items.rings.ring.known=This is a %s
@@ -1421,6 +1424,11 @@ items.rings.ringofdominate.stats=When worn, attacking an enemy has a _%d%%_ chan
 items.rings.ringofdominate.typical_stats=When worn, attacking an enemy has a _%d%%_ chance to dominate the enemy's mind. A healthy enemy resists domination.
 items.rings.ringofdominate.desc=This ring controls the mind of the opponent with powerful arts.cursed rings attempts to take control of a player's mind when they are hit. (Occurs when HP is less than 33%)
 items.rings.ringofdominate.soulless=The cursed ring has stolen your soul.
+
+items.rings.ringofassassin.name=ring of assassin
+items.rings.ringofassassin.stats=When worn, suprise attack damage bouns _%s%%_.
+items.rings.ringofassassin.typical_stats=When worn, typically suprise attack damage bouns _%s%%_.
+items.rings.ringofassassin.desc=This ring increases the wearer's surprise ability. cursed rings Raises an Ninja Reality Shock, making a surprise attack impossible.
 
 
 
@@ -1585,7 +1593,7 @@ items.spells.aquablast.name=aqua blast
 items.spells.aquablast.desc=This spell will create a burst of water at the target location. It isn't forceful enough to do damage (even to fiery enemies), but it will spread water to nearby terrain and very briefly stun anything caught in the center of the burst.
 
 items.spells.saltblast.name=salt blast
-items.spells.saltblast.desc=This spell is a variant spell of aqua blast. This spell will weaken the target instead of paralyzing it
+items.spells.saltblast.desc=This spell is a variant spell of aqua blast. This spell will weaken the target instead of paralyzing it.
 
 items.spells.arcanecatalyst.name=arcane catalyst
 items.spells.arcanecatalyst.desc=This ball of golden dust is made from the deconstructed essence of a scroll. It glimmers in the darkness of the dungeon.\n\nThis catalyst is primarily useful as an alchemy ingredient, but you can also channel the magic directly to get the effect of a random scroll.

@@ -29,8 +29,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.Blandfruit;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatPie;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledEgg;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.ChargrilledGamza;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_EGG;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_GAMZA;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Yukjeon;
@@ -222,8 +222,8 @@ public abstract class Recipe {
             new Avantgardeform.Recipe(),
             new OathofFire.Recipe(),
             new ForceCatalyst.Recipe(),
-            new ChargrilledEgg.Recipe(),
-            new ChargrilledGamza.Recipe(),
+            new FRY_EGG.Recipe(),
+            new FRY_GAMZA.Recipe(),
             new SaltBlast.Recipe()
     };
 

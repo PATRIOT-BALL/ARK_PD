@@ -3,10 +3,11 @@ package com.shatteredpixel.shatteredpixeldungeon.items.food.cooking;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Potato;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Salt;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.SugarFlower;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class ChargrilledGamza extends Food {
+public class FRY_GAMZA extends Food {
     {
         image = ItemSpriteSheet.POTATO_FRY;
         energy = Hunger.HUNGRY / 2;
@@ -22,11 +23,11 @@ public class ChargrilledGamza extends Food {
     public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe.SimpleRecipe {
 
         {
-            inputs =  new Class[]{SugarFlower.class, Potato.class};
+            inputs =  new Class[]{SugarFlower.class, Salt.class};
             inQuantity = new int[]{1, 1};
             cost = 1;
 
-            output = ChargrilledGamza.class;
+            output = FRY_GAMZA.class;
             outQuantity = 1;
         }
 

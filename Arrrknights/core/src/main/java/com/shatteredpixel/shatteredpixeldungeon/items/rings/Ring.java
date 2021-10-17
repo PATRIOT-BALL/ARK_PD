@@ -64,6 +64,7 @@ public class Ring extends KindofMisc {
 			put("dingdong",ItemSpriteSheet.RING_HYDROGEN);
 			put("jojo",ItemSpriteSheet.RING_HELIUM);
 			put("gray",ItemSpriteSheet.RING_LITHIUM);
+			put("banzi",ItemSpriteSheet.RING_MINT);
 		}
 	};
 	
@@ -315,7 +316,7 @@ public class Ring extends KindofMisc {
 		return bonus;
 	}
 
-	public static boolean getCursed_domi(Char target, Class<?extends RingBuff> type){
+	public static boolean getCursed(Char target, Class<?extends RingBuff> type){
 		for (RingBuff buff : target.buffs(type)) {
 			if (buff.cursd() == true) {
 				return true;

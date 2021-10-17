@@ -1003,7 +1003,6 @@ items.food.stewedmeat.desc=고기를 삶으면서 병균과 기생충 등이 사
 items.food.sandvich.name=샌드비치
 items.food.sandvich.desc=샌드비치는 날 강하게 해주지!\n미하일이 좋아하는 이 음식은 포만감이 적지만 섭취시 체력을 회복할 수 있습니다.\n\n이 샌드비치는 앞으로 _%d_ 번 먹을 수 있을 것 같습니다.
 
-
 ## 재료
 
 items.food.ingredients.blackpepper.name=후추
@@ -1016,10 +1015,10 @@ items.food.ingredients.sugarflower.name=달콤달콤 꽃
 items.food.ingredients.sugarflower.desc=설탕 대신 쓸 수 있을 것 같습니다.
 
 items.food.ingredients.potato.name=감자
-items.food.ingredients.potato.desc=리스캄 아님
+items.food.ingredients.potato.desc=리스캄 아닌데요
 
 items.food.ingredients.egg.name=새알
-items.food.ingredients.egg.desc=어떤 새의 알인지 아무도 모릅니다.
+items.food.ingredients.egg.desc=어느 리볼리의 알. 누가 낳은 알일까?
 
 
 ## 가공 요리 (식재료 사용 요리)
@@ -1030,11 +1029,11 @@ items.food.cooking.honeybread.desc=동그란 팬케익. 구름 위를 걷는 듯
 items.food.cooking.notbarfood.name=술안주 절대 아님
 items.food.cooking.notbarfood.desc=같이 마실만한 뭔가가 있다면...이런, 디오나가 째려봐!\n\n섭취시 체력을 소량 회복하고 _아츠 면역_을 얻습니다.\n_이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다._
 
-items.food.cooking.chargrilledgamza.name=구운 감자
-items.food.cooking.chargrilledgamza.desc=맛있게 구워진 리스캄입니다. 적당히 배가 부를 것 같습니다.
+items.food.cooking.fry_gamza.name=감자 튀김
+items.food.cooking.fry_gamza.desc=W 컴퍼니 프렌차이즈 감자 튀김. 적당히 배가 부를 것 같습니다.
 
-items.food.cooking.chargrilledegg.name=구운 계란
-items.food.cooking.chargrilledegg.desc=포만감은 없지만, 몸에 붙은 불을 끌 수 있을 것 같습니다. 원리는 몰룹니다.
+items.food.cooking.fry_egg.name=에그 프라이
+items.food.cooking.fry_egg.desc=테두리를 살짝 태운 써니 사이드 업 에그 프라이. 중독과 화상 상태를 치유하며, 약간의 허기도 같이 채워 줍니다.
 
 items.food.cooking.yukjeon.name=육전
 items.food.cooking.yukjeon.desc=단국의 전통 음식. 밀가루를 묻혀 기름에 지진 고기다.\n\n섭취시 주위의 지형을 알아냅니다.\n_이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다._
@@ -1345,6 +1344,7 @@ items.rings.ring.agate=아게이트 반지
 items.rings.ring.dingdong=링딩동 반지
 items.rings.ring.jojo=독타의 기묘한 반지
 items.rings.ring.gray=플라스틱 반지
+items.rings.ring.banzi=아무튼 반지
 items.rings.ring.equip_cursed=반지가 당신의 손가락을 고통스럽게 옥죄였다!
 items.rings.ring.unknown_desc=어둠 속에서 반짝이는 커다란 보석이 박힌 금속 고리입니다. 이걸 꼈을 때 어떤 일이 일어날까요?
 items.rings.ring.known=이것은 %s 입니다.
@@ -1422,6 +1422,11 @@ items.rings.ringofdominate.stats=이 반지를 장착했을 때, 적을 공격�
 items.rings.ringofdominate.typical_stats=이 반지를 장착했을 때, 일반적으로 적을 공격하면 _%d%%_의 확률로 적의 정신을 지배합니다. 건강한 적은 지배에 저항합니다.
 items.rings.ringofdominate.desc=이 반지는 강력한 살카즈 군주의 아츠가 담겨있어, 공격한 적의 영혼을 지배할 수 있습니다. 저주받은 반지는 당신이 피격당할 때마다 육신을 빼앗는 시도를 할 것입니다.
 items.rings.ringofdominate.soulless=저주받은 반지가 당신의 육신을 강탈했다.
+
+items.rings.ringofassassin.name=암살의 반지
+items.rings.ringofassassin.stats=이 반지를 장착했을 때, 기습시 _%s%%_ 의 추가 피해를 입힙니다.
+items.rings.ringofassassin.typical_stats=이 반지를 장착했을 때, 일반적으로 기습시 _%s%%_ 의 확률로 1.5배의 피해를 입힙니다.
+items.rings.ringofassassin.desc=이 반지는 착용자의 기습 능력을 높혀줍니다. 저주받은 반지는 닌자 리얼리티 쇼크를 일으켜 기습을 불가능하게 만듭니다.
 
 ###scrolls
 items.scrolls.scroll.ac_read=읽는다

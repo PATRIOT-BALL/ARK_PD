@@ -484,6 +484,7 @@ public class ItemSpriteSheet {
 	public static final int RING_HYDROGEN    = RINGS+12;
 	public static final int RING_HELIUM    = RINGS+13;
 	public static final int RING_LITHIUM    = RINGS+14;
+	public static final int RING_MINT   = RINGS+15;
 
 	static {
 		for (int i = RINGS; i < RINGS+31; i++)

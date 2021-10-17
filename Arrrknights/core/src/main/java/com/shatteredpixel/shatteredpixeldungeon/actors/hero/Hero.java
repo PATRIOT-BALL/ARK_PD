@@ -157,6 +157,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAssassin;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfForce;
@@ -721,6 +722,7 @@ public class Hero extends Char {
         if (belongings.weapon instanceof Decapitator) return false;
         if (belongings.weapon instanceof SHISHIOH) return false;
         if (belongings.weapon instanceof Enfild2) return false;
+        if (RingOfAssassin.Assassin_Curse(this) == true) return false;
 
         return true;
     }
@@ -1295,6 +1297,7 @@ public class Hero extends Char {
     @Override
     public int attackProc(final Char enemy, int damage) {
         damage = super.attackProc(enemy, damage);
+        float BounsDamage = 0;
 
         KindOfWeapon wep = belongings.weapon;
 
@@ -1303,6 +1306,11 @@ public class Hero extends Char {
         if (buff(Bonk.BonkBuff.class) != null) Buff.detach(this, Bonk.BonkBuff.class);
 
         damage = Talent.onAttackProc(this, enemy, damage);
+
+        if (enemy instanceof Mob) {
+            if (((Mob) enemy).surprisedBy(this)) {
+                BounsDamage += damage * (RingOfAssassin.supriseattackbouns(this) - 1f);}
+        }
 
         if (hasTalent(Talent.RHODES_CAT)) {
             AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
@@ -1361,7 +1369,6 @@ public class Hero extends Char {
             default:
         }
 
-        float BounsDamage = 0;
         if (hasTalent(Talent.SAVIOR_BELIEF) && enemy.buff(Roots.class) != null || enemy.buff(Paralysis.class) != null) {
             BounsDamage = damage * (pointsInTalent(Talent.SAVIOR_BELIEF) * 0.2f);
         }
