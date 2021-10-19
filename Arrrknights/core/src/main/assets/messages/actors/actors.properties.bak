@@ -1432,7 +1432,7 @@ actors.mobs.sandpillar.desc=우리 여동생이 제일 귀엽다고 써져있다
 // 스페셜 몹
 
 actors.mobs.miniboss.kaltsit.name=켈시
-actors.mobs.miniboss.kaltsit.desc=Mon3tr, 나를 따라라.
+actors.mobs.miniboss.kaltsit.desc=\n\n \n\n그런건가... 그렇군.. 그렇게 된건가...그래. 그런 일이 있었지. 네가 알 필요는 없다. 그것도 모르나? 네가 원하는 답은 해주지 않겠다. 지금은 때가 아니다. 이 이야기는 그만 하도록 하지. 
 actors.mobs.miniboss.kaltsit.burst=그런 잔재주는 통하지않아.
 actors.mobs.miniboss.kaltsit.summon=죽여라, Mon3tr.
 actors.mobs.miniboss.kaltsit.skill1=구조 보강 명령. Mon3tr, 역할을 다해라.
