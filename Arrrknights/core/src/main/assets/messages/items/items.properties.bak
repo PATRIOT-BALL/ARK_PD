@@ -1062,8 +1062,8 @@ items.keys.crystalkey.desc=이 정교한 열쇠가 오리지늄으로 만들어�
 items.keys.ironkey.name=일반 열쇠
 items.keys.ironkey.desc=평범하게 잠겨져있는 방을 개방할 수 있는 열쇠. 잠겨진 문은 디지털 차폐막인데 왜 열쇠는 아날로그인걸까?
 
-items.keys.skeletonkey.name=출입 권한증
-items.keys.skeletonkey.desc=리유니온이 지키고 있는 다음 구역으로 넘어갈수 있는 권한을 가진 증표. 더욱 위험한 것들이 당신을 기다리고 있지만 당신은 준비가 됐다고 생각했다.
+items.keys.skeletonkey.name=마왕의 열쇠
+items.keys.skeletonkey.desc=음..어디서 본거같은데...\n\n리유니온이 지키고 있는 다음 구역으로 넘어갈수 있는 권한을 가진 증표. 더욱 위험한 것들이 당신을 기다리고 있지만 당신은 준비가 됐다고 생각했다.
 
 
 

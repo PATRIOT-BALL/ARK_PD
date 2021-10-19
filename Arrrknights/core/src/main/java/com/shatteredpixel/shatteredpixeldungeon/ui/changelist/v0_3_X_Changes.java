@@ -33,8 +33,8 @@ public class v0_3_X_Changes {
                 "_무기 변환_ : 변환의 주문서 효과를 발동시키지만, 무기에만 사용할 수 있는 주문입니다." + "\n\n" +
                 "_아방가르드한 변환_ : 해당 아이템에 아방가르드 우물 효과를 적용시키며, 강화를 유지합니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 2종 추가",
-                "_정밀 장전\n응애기사 모험담_"));
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 3종 추가",
+                "_정밀 장전\n응애기사 모험담\n핏빛 악장_"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
                 "_심해의 포식자(2스킬)_ : 대상에게 큰 피해를 입히고 등 뒤로 이동합니다. 만약 적을 처치하면 아드레날린을 얻습니다."));

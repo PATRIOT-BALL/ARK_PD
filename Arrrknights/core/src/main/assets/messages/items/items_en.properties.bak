@@ -1658,7 +1658,7 @@ items.spells.weapontransform.desc=This Spell will  transformation the weapon.
 
 items.spells.avantgardeform.name=avantgrade-form
 items.spells.avantgardeform.inv_title=Choose a Weapon
-items.spells.avantgardeform.desc=This spell imparts a mysterious energy to the item, triggering the same effect as the avant-garde well.\n\nThis spell keep item`s upgrade.
+items.spells.avantgardeform.desc=This spell imparts a mysterious energy to the item, triggering the same effect as the avant-garde well.\n\nThis spell keep item`s upgrade. Equipment items must be unequipped.
 
 items.spells.forcecatalyst.name=force catalyst
 items.spells.forcecatalyst.desc=This ball of blue dust is made from the deconstructed essence of a weapon. I don't think it can be used directly.
