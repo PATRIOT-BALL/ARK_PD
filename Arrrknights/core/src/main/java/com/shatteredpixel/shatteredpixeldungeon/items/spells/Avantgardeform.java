@@ -135,7 +135,7 @@ public class Avantgardeform extends InventorySpell {
 
         {
             inputs =  new Class[]{WeaponTransform.class, ScrollOfTransmutation.class};
-            inQuantity = new int[]{1, 1};
+            inQuantity = new int[]{1, 2};
 
             cost = 30;
 

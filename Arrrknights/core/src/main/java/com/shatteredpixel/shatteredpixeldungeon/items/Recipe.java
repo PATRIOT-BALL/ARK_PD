@@ -219,7 +219,6 @@ public abstract class Recipe {
             new UpMagazine.Recipe(),
             new HoneyBread.Recipe(),
             new WeaponTransform.Recipe(),
-            new Avantgardeform.Recipe(),
             new OathofFire.Recipe(),
             new ForceCatalyst.Recipe(),
             new FRY_EGG.Recipe(),
@@ -235,6 +234,7 @@ public abstract class Recipe {
             new MeatPie.Recipe(),
             new Sandvich.Recipe(),
             new NotBarFood.Recipe(),
+            new Avantgardeform.Recipe(),
             new Yukjeon.Recipe(),
     };
 
