@@ -89,6 +89,9 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
                 dmg *= 2;
             }
         }
+        if (ch.properties().contains(Char.Property.MINIBOSS)) {
+            dmg /= 2;
+        }
         if (ch.properties().contains(Char.Property.BOSS)) {
             dmg = 0;
         }
