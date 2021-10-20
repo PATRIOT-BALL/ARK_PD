@@ -319,7 +319,7 @@ public class Bestiary {
 				rotation.set(i, cl);
 			}
 			else if (Random.Int( 1000 ) == 0) {
-				cl = Crownslayer.class;
+				cl = Crownslayer_shadow.class;
 				rotation.set(i, cl);
 			}
 		}

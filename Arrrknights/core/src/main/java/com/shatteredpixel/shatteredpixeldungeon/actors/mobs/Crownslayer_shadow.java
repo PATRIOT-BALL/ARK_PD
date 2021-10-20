@@ -21,7 +21,7 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 
 // 이후 크붕이 스프라이트는 검은색 처리되도록(타락과 같이) 처리할 것.
-public class Crownslayer extends Mob {
+public class Crownslayer_shadow extends Mob {
     private int blinkCooldown = 0;
     {
         spriteClass = AirborneSprite.class;
@@ -36,7 +36,7 @@ public class Crownslayer extends Mob {
         immunities.add(Corruption.class);
     }
 
-    public Crownslayer() {
+    public Crownslayer_shadow() {
         super();
 
         HP = HT = 5 + Dungeon.depth * 5;
