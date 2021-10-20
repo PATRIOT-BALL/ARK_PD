@@ -715,8 +715,8 @@ actors.hero.heroclass.rosecat_unlock=로즈몬티스는 강력한 아츠 사용�
 actors.hero.heroclass.rosecat_desc=로즈몬티스는 _강력한 아츠 장비_를 사용해 방벽을 조종하여 적들을 제압할 수 있습니다. 이 장비는 일반적으로 충전할 수 없지만, 레벨업시 충전량이 최대치로 갱신됩니다.\n\n섬멸전 장비를 사용하면 적에게 장치를 투척하여 피해를 입힐 수 있습니다.\n\n로즈몬티스는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 부유의 물약
 
 actors.hero.heroclass.nearl=니어
-actors.hero.heroclass.nearl_unlock=부디 그때가 오면, 나와 리즈가 그녀의 등 뒤를 밝혀줄 수 있기를…… 그녀의 그림자가 다시는 고독하지 않도록.
-actors.hero.heroclass.nearl_desc=니어는 카시미어의 기사로, _강력한 빛의 힘_을 사용해 자신을 강화시킵니다.\n\n그녀는 빛의 인장을 사용해 빛의 기사 상태가 되어 자신의 전투력을 일시적으로 상승시킵니다.\n\n니어는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 경험의 물약\n- 저주 해제의 일기장
+actors.hero.heroclass.nearl_unlock=니어는 전 카시미어의 빛의 기사로, _특별한 인장_을 가지고 시작합니다.\n\n니어를 해금하려면 _적을 200명 처치하십시오._
+actors.hero.heroclass.nearl_desc=니어는 전 카시미어의 기사로, _강력한 빛의 힘_을 사용해 자신을 강화시킵니다.\n\n그녀는 빛의 인장을 사용해 빛의 기사 상태가 되어 자신의 전투력을 일시적으로 상승시킵니다.\n\n니어는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 주문서\n- 경험의 물약\n- 저주 해제의 일기장
 
 
 actors.hero.herosubclass.gladiator=연계 블레이즈
