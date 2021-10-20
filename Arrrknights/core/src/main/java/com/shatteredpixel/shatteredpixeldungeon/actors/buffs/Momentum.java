@@ -202,7 +202,7 @@ public class Momentum extends Buff implements ActionIndicator.Action {
 		//cooldown is functionally 10+2*stacks when active effect ends
 		int downcooldown = 0;
 		if (Dungeon.hero.hasTalent(Talent.SPECIAL_OPERATIONS)) {
-			downcooldown = 1 + Dungeon.hero.pointsInTalent(Talent.SPECIAL_OPERATIONS);
+			downcooldown = Dungeon.hero.pointsInTalent(Talent.SPECIAL_OPERATIONS);
 		}
 		freerunCooldown = 10 + 2*momentumStacks - downcooldown;
 		Sample.INSTANCE.play(Assets.Sounds.MISS, 1f, 0.8f);

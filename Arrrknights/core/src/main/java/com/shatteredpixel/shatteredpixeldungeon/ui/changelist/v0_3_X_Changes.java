@@ -39,9 +39,9 @@ public class v0_3_X_Changes {
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 고유 능력 하향",
-                "그림자 망토의 레벨업 속도가 감소했습니다."
-                ));
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 하향",
+                "그림자 망토의 레벨업 속도가 감소했습니다." + "\n\n" +
+                "_신속 전문화_의 _특수 작전_ 특성의 가속 획득량이 3-9에서 _2-6_으로, 쿨타임 감소량이 2-4에서 _1-3_으로 감소했습니다."));
     }
 
     public static void add_v0_3_1_Changes(ArrayList<ChangeInfo> changeInfos) {

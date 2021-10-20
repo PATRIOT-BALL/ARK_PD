@@ -712,7 +712,7 @@ actors.hero.heroclass.rosecat_unlock=The Rosmontis is a strong arts user, and ha
 actors.hero.heroclass.rosecat_desc=The Rosmontis is strong arts user, and has a _unique gear_ which fire an can attack all locations.gear is Cannot be recharged in the usual way, and you level up by gaining experience, everything is recharged.\n\nRosemontis`s gear is can attack all locations.\n\nThe Rosmontis automatically identifies:\n- Scrolls of Identify\n- Potion Of Levitation
 
 actors.hero.heroclass.nearl=Nearl
-actors.hero.heroclass.nearl_unlock=The Nearl is A Knight of light, and has a _uniqu shield_ with awaken the power of light.\n\nTo unlock her _enemy 200 kill._
+actors.hero.heroclass.nearl_unlock=The Nearl is A Knight of light, and has a _uniqu shield_ with awaken the power of light.\n\nTo unlock her _you Slaine 200 enemy._
 actors.hero.heroclass.nearl_desc=The Nearl is A knight of light with powerful power, With her _special shield_, you can awaken the power of light.\n\nawakening the power of light, Nearl's combat ability increases.\n\nThe Nearl automatically identifies:\n- Scrolls of Identify\n- Potion of Experience\n- Scrolls of RemoveCurse
 
 actors.hero.herosubclass.gladiator=Master
