@@ -2125,6 +2125,7 @@ items.weapon.melee.dagger.desc=쇠를 통째로 가공하여 만든 단검입니
 items.weapon.melee.dirk.name=밤의 유령
 items.weapon.melee.dirk.stats_desc=기습 시 최소 데미지 보정 +67%
 items.weapon.melee.dirk.desc=찾아다니지 마라. 나는 언제나 여기에 있다.\n\n더 기다란 찌르기용 단검이다. 칼날을 적에게 더 깊숙히 박아넣을 수 있게 되어 있다.
+items.weapon.melee.dirk.setbouns=_아이템 시너지 : 핏빛 악장_\n기습 피해 보정이 33% 상승합니다.
 
 items.weapon.melee.decapitator.name=쿠다리키리
 items.weapon.melee.decapitator.stats_desc=명중률 +40%, 기습공격 불가
@@ -2336,7 +2337,6 @@ items.weapon.melee.patriotspear.desc=오랜 세월동안 운명과 싸워왔던 
 items.weapon.melee.patriotspear.typical_stats_desc=공격속도 50%%, 일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 강화를 하면서 더 확장됩니다.
 items.weapon.melee.patriotspear.stats_desc=공격속도 50%%, 이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 강화를 하면 더 확장됩니다.
 items.weapon.melee.patriotspear.setbouns=_아이템 시너지 : 최후의 웬디고_\n공격력이 상승합니다. 주위의 적들 압도합니다.
-
 
 items.weapon.melee.shishioh.name=시시오
 items.weapon.melee.shishioh.stats_desc=명중률 +20%, 기습공격 불가
