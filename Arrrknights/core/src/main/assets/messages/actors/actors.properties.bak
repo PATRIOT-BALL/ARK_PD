@@ -1427,8 +1427,8 @@ actors.mobs.pompeii.skill=폼페이가 공격을 흡수해 생명력을 회복�
 actors.mobs.sandpillar.name=오벨리스크
 actors.mobs.sandpillar.desc=우리 여동생이 제일 귀엽다고 써져있다.
 
-actors.mobs.crownslayer.name=류드밀라
-actors.mobs.crownslayer.desc=크라운 슬레이어, 리유니온의 간부다. 뛰어난 기동력으로 기습한 뒤 도망쳐서 매우 상대하기 어렵지만, 능력을 연속으로 사용할 수는 없는 듯 하다.\n\n처치시 합성옥을 뜯을 수 있을 것 같다. 
+actors.mobs.crownslayer_shadow.name=류드밀라의 그림자
+actors.mobs.crownslayer_shadow.desc=크라운 슬레이어, 리유니온의 간부다. 뛰어난 기동력으로 기습한 뒤 도망쳐서 매우 상대하기 어렵지만, 능력을 연속으로 사용할 수는 없는 듯 하다.\n\n처치시 합성옥을 뜯을 수 있을 것 같다. 
 
 
 

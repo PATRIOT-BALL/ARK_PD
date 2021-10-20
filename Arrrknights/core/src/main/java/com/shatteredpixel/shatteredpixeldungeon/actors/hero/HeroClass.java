@@ -162,7 +162,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Badges.Badge.MASTERY_ROSECAT;
 			case NEARL:
-			//	return Badges.Badge.MASTERY_NEARL;
+				return Badges.Badge.MASTERY_NEARL;
 		}
 		return null;
 	}
@@ -468,8 +468,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROSECAT);
 			case NEARL:
-				return false;
-				//return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
+				return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
 		}
 	}
 	

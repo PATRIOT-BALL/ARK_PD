@@ -667,6 +667,7 @@ public abstract class Mob extends Char {
 			if (alignment == Alignment.ENEMY) {
 				Statistics.enemiesSlain++;
 				Badges.validateMonstersSlain();
+				Badges.validateNearlUnlock();
 				Statistics.qualifiedForNoKilling = false;
 				
 				int exp = Dungeon.hero.lvl <= maxLvl ? EXP : 0;

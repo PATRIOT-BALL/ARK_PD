@@ -65,7 +65,7 @@ public class Badges {
 		UNLOCK_ROGUE                ( 2 ),
 		UNLOCK_HUNTRESS             ( 3 ),
 		UNLOCK_ROSECAT             ( 19 ),
-		UNLOCK_NEARL             ,
+		UNLOCK_NEARL               (19),
 		MONSTERS_SLAIN_1            ( 4 ),
 		MONSTERS_SLAIN_2            ( 5 ),
 		GOLD_COLLECTED_1            ( 6 ),
@@ -155,7 +155,7 @@ public class Badges {
 		RED_CHAMPION1              ( 84, true ),
 		GREY_CHAMPION1              ( 85, true ),
 		ROSE_CHAMPION1              ( 86, true ),
-	//	NEARL_CHAMPION1              ( 86, true ),
+		NEARL_CHAMPION1              ( 86, true ),
 
 		GOLD_COLLECTED_5              ( 89 ),
 
@@ -184,7 +184,7 @@ public class Badges {
 		RED_CHAMPION2              ( 106, true ),
 		GREY_CHAMPION2              ( 107, true ),
 		ROSE_CHAMPION2              ( 108, true ),
-	//	NEARL_CHAMPION2              ( 86, true ),
+		NEARL_CHAMPION2              ( 86, true ),
 
 		SIESTA_PART2              ( 111),
 
@@ -202,12 +202,13 @@ public class Badges {
 		RED_CHAMPION3             ( 122, true ),
 		GREY_CHAMPION3              ( 123, true ),
 		ROSE_CHAMPION3              ( 124, true ),
-//		NEARL_CHAMPION3              ( 86, true ),
+		NEARL_CHAMPION3              ( 86, true ),
 
 		//Puple
 		Get_25_STONES                (136),
 		Get_40_STONES                (137),
 		DOLL_COLLECTOR                (138),
+		SLAIN_PURSUER              ( 111),
 
 		//GREEN
 		SKIN_BABOSKADI(160),
@@ -721,7 +722,8 @@ public class Badges {
 					global.contains( Badge.BOSS_SLAIN_1_MAGE ) &&
 					global.contains( Badge.BOSS_SLAIN_1_ROGUE ) &&
 					global.contains( Badge.BOSS_SLAIN_1_HUNTRESS) &&
-						global.contains( Badge.BOSS_SLAIN_1_ROSECAT)) {
+						global.contains( Badge.BOSS_SLAIN_1_ROSECAT) &&
+						global.contains( Badge.BOSS_SLAIN_1_NEARL)) {
 					
 					badge = Badge.BOSS_SLAIN_1_ALL_CLASSES;
 					if (!global.contains( badge )) {
@@ -787,7 +789,9 @@ public class Badges {
 					global.contains( Badge.BOSS_SLAIN_3_SNIPER ) &&
 					global.contains( Badge.BOSS_SLAIN_3_WARDEN ) &&
 					global.contains( Badge.BOSS_SLAIN_3_DESTROY ) &&
-					global.contains( Badge.BOSS_SLAIN_3_GUARDIAN )) {
+					global.contains( Badge.BOSS_SLAIN_3_GUARDIAN ) &&
+						global.contains( Badge.BOSS_SLAIN_3_KNIGHT ) &&
+						global.contains( Badge.BOSS_SLAIN_3_SAVIOR )) {
 					
 					badge = Badge.BOSS_SLAIN_3_ALL_SUBCLASSES;
 					if (!global.contains( badge )) {
@@ -852,6 +856,11 @@ public class Badges {
 		if (Statistics.foodEaten >= 25 && !global.contains(Badge.UNLOCK_ROSECAT)){
 			displayBadge( Badge.UNLOCK_ROSECAT );}
 	}
+
+	public static void validateNearlUnlock(){
+		if (Statistics.enemiesSlain >= 200 && !global.contains(Badge.UNLOCK_NEARL)){
+			displayBadge( Badge.UNLOCK_NEARL );}
+	}
 	
 	public static void validateMasteryCombo( int n ) {
 		if (!local.contains( Badge.MASTERY_COMBO ) && n == 10) {
@@ -896,7 +905,8 @@ public class Badges {
 			global.contains( Badge.VICTORY_MAGE ) &&
 			global.contains( Badge.VICTORY_ROGUE ) &&
 			global.contains( Badge.VICTORY_HUNTRESS ) &&
-			global.contains( Badge.VICTORY_ROSECAT )) {
+			global.contains( Badge.VICTORY_ROSECAT ) &&
+		   global.contains( Badge.VICTORY_NEARL )){
 			
 			badge = Badge.VICTORY_ALL_CLASSES;
 			displayBadge( badge );
@@ -1124,6 +1134,25 @@ public class Badges {
 					badge = Badge.ROSE_CHAMPION3;
 				}
 				break;
+			case NEARL:
+				if (challenges >= 1) {
+					badge = Badge.NEARL_CHAMPION1;
+				}
+				if (challenges >= 3) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.NEARL_CHAMPION2;
+				}
+				if (challenges >= 6) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.NEARL_CHAMPION3;
+				}
+				break;
 			default:
 				break;
 		}
@@ -1296,6 +1325,7 @@ public class Badges {
 			{Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3},
 			{Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3},
 			{ Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3},
+			{ Badge.NEARL_CHAMPION1, Badge.NEARL_CHAMPION2, Badge.NEARL_CHAMPION3},
 			{ Badge.SIESTA_PART1, Badge.SIESTA_PART2}
 	};
 
@@ -1333,6 +1363,7 @@ public class Badges {
 		leaveBest( badges, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3 );
 		leaveBest( badges, Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3 );
 		leaveBest( badges, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3 );
+		leaveBest( badges, Badge.NEARL_CHAMPION1, Badge.NEARL_CHAMPION2, Badge.NEARL_CHAMPION3 );
 		leaveBest( badges, Badge.SIESTA_PART1, Badge.SIESTA_PART2);
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
