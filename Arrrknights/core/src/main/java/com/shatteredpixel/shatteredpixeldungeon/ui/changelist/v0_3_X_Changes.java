@@ -10,8 +10,38 @@ import java.util.ArrayList;
 
 public class v0_3_X_Changes {
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_3_2_Changes(changeInfos);
         add_v0_3_1_Changes(changeInfos);
         add_v0_3_0_Changes(changeInfos);
+    }
+
+    public static void add_v0_3_2_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.3.1", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "새로운 적들",
+                "_류드밀라의 그림자_ : 모든 층에서 등장할 수 있는 보스입니다. 매우 귀찮은 능력을 지녔지만 처치하면 대량의 합성옥을 얻을 수 있습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 고유 능력 하향",
+                "그림자 망토의 레벨업 속도가 감소했습니다."
+                ));
     }
 
     public static void add_v0_3_1_Changes(ArrayList<ChangeInfo> changeInfos) {

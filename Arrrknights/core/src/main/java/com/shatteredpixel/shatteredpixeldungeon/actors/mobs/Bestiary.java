@@ -279,8 +279,8 @@ public class Bestiary {
 	//switches out regular mobs for their alt versions when appropriate
 	private static void swapMobAlts(ArrayList<Class<?extends Mob>> rotation){
 		for (int i = 0; i < rotation.size(); i++){
+			Class<? extends Mob> cl = rotation.get(i);
 			if (Random.Int( 33 ) == 0) {
-				Class<? extends Mob> cl = rotation.get(i);
 				if (cl == Slug.class) {
 					cl = Albino.class;
 				} else if (cl == Slime.class) {
@@ -316,6 +316,10 @@ public class Bestiary {
 				else if (cl == ExplodeSlug_A.class) {
 					cl = Originiutant.class;
 				}
+				rotation.set(i, cl);
+			}
+			else if (Random.Int( 1000 ) == 0) {
+				cl = Crownslayer.class;
 				rotation.set(i, cl);
 			}
 		}
