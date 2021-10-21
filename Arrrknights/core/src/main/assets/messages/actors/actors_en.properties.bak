@@ -672,9 +672,9 @@ actors.hero.talent.knight_of_kazimierz.desc=_+1:_ 빛의 기사 상태일 때 �
 actors.hero.talent.knight_body.title=기사의 육신
 actors.hero.talent.knight_body.desc=_+1:_ 최대 체력이 _10_ 증가합니다.\n\n_+2:_ 최대 체력이 _20_ 증가합니다.\n\n_+3:_ 최대 체력이 _30_ 증가합니다.\n\n_+4:_ 최대 체력이 _40_ 증가합니다.
 actors.hero.talent.quick_tactics.title=속공전술
-actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _6 턴_으로 증가합니다.\n\n_+2:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _7 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _8 턴_으로 증가합니다.\n\n또한, 빛의 인장 사용에 턴을 소모하지 않게됩니다.
+actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _6 턴_으로 증가합니다.\n\n_+2:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _7 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _8 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _9 턴_으로 증가합니다.\n\n또한, 빛의 인장 사용에 턴을 소모하지 않게됩니다.
 actors.hero.talent.blessed_champion.title=blessed champion
-actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._
+actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._\n\n_+4:_ seal of light activated, you gain a blessing for _40 turns._
 
 actors.hero.talent$radiantherocooldown.name=RadiantHero cooldown
 actors.hero.talent$radiantherocooldown.desc=cooldown %s Trun.

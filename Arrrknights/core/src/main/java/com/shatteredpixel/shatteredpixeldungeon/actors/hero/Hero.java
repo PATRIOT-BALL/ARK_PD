@@ -720,7 +720,7 @@ public class Hero extends Char {
         if (Gear != null) {
             if (Gear.charge > 0) {
                 if (this.hasTalent(Talent.SPEED_COMABT)) {
-                    speed *= 1.05f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 20;
+                    speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 20;
                 }
             }
         }
