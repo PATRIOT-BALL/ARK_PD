@@ -628,7 +628,7 @@ actors.hero.talent.guilt.desc=_+1:_ 처치한 적 _80 명_ 당 방어력이 1 �
 actors.hero.talent.esthesia.title=본질 의식
 actors.hero.talent.esthesia.desc=_+1:_ 방벽 투척이 _보스_ 에게 _6%_ 의 추가 피해를 줍니다.\n\n_+2:_ 방벽 투척이 _보스_ 에게 _9%_ 의 추가 피해를 줍니다.\n\n_+3:_ 방벽 투척이 _보스_ 에게 _12%_ 의 추가 피해를 줍니다.\n\n_+4:_ 방벽 투척이 _보스_ 에게 _15%_ 의 추가 피해를 줍니다.
 actors.hero.talent.speed_comabt.title=고속전투
-actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _10%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _15%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.\n\n_+4:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _25%_ 상승합니다.
+actors.hero.talent.speed_comabt.desc=_+1:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _5%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _15%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _15%_ 상승합니다.\n\n_+4:_ 섬멸전 장비의 충전량이 1 이상이면 이동속도가 _20%_ 상승합니다.
 
 actors.hero.talent$mywishcooldown.name=내가 원하는 세상 쿨타임
 actors.hero.talent$mywishcooldown.desc=내가 원하는 세상 재발동까지 %s 턴 남았습니다.
@@ -674,9 +674,9 @@ actors.hero.talent.knight_of_kazimierz.desc=_+1:_ 빛의 기사 상태일 때 �
 actors.hero.talent.knight_body.title=기사의 육신
 actors.hero.talent.knight_body.desc=_+1:_ 최대 체력이 _10_ 증가합니다.\n\n_+2:_ 최대 체력이 _20_ 증가합니다.\n\n_+3:_ 최대 체력이 _30_ 증가합니다.\n\n_+4:_ 최대 체력이 _40_ 증가합니다.
 actors.hero.talent.quick_tactics.title=속공전술
-actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _6 턴_으로 증가합니다.\n\n_+2:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _7 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _8 턴_으로 증가합니다.\n\n또한, 빛의 인장 사용에 턴을 소모하지 않게됩니다.
+actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _6 턴_으로 증가합니다.\n\n_+2:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _7 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _8 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _9 턴_으로 증가합니다.\n\n또한, 빛의 인장 사용에 턴을 소모하지 않게됩니다.
 actors.hero.talent.blessed_champion.title=축복받은 용사
-actors.hero.talent.blessed_champion.desc=_+1:_ 빛의 인장 발동시 _10 턴_의 축복을 얻습니다.\n\n_+2:_ 빛의 인장 발동시 _20 턴_의 축복을 얻습니다.\n\n_+3:_ 빛의 인장 발동시 _30 턴_의 축복을 얻습니다.
+actors.hero.talent.blessed_champion.desc=_+1:_ 빛의 인장 발동시 _10 턴_의 축복을 얻습니다.\n\n_+2:_ 빛의 인장 발동시 _20 턴_의 축복을 얻습니다.\n\n_+3:_ 빛의 인장 발동시 _30 턴_의 축복을 얻습니다.\n\n_+4:_ 빛의 인장 발동시 _40 턴_의 축복을 얻습니다.
 
 actors.hero.talent$radiantherocooldown.name=빛의 용사 쿨타임
 actors.hero.talent$radiantherocooldown.desc=빛의 용사 특성의 재발동까지 %s 턴 남았습니다.
