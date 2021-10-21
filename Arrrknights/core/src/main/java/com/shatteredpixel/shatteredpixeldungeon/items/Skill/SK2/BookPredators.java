@@ -33,7 +33,7 @@ public class BookPredators extends Item {
             hero.sprite.operate(hero.pos);
             detach(hero.belongings.backpack);
 
-            hero.SK2 = new NeverBackDown();
+            hero.SK2 = new DeepSeaPredators();
             hero.SetSkill2Num(19);
         }
 
