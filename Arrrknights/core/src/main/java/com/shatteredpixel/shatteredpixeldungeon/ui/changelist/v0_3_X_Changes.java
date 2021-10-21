@@ -27,6 +27,11 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "새로운 적들",
                 "_류드밀라의 그림자_ : 모든 층에서 등장할 수 있는 보스입니다. 매우 귀찮은 능력을 지녔지만 처치하면 대량의 합성옥을 얻을 수 있습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "새로운 4티어 특성",
+                "새로운 4티어 특성이 추가되었으며, 최대 포인트가 5에서 8로 증가했습니다." + "\n\n" +
+                "또한, 전문화 별 고유 4티어 특성의 최대 포인트 투자수가 4로 증가하였으며, 그에 따라 성능이 조정되었습니다."));
+
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
@@ -42,7 +47,8 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 하향",
                 "그림자 망토의 레벨업 속도가 감소했습니다." + "\n\n" +
                         "_사냥_ 능력이 미니 보스에게 절반의 피해를 입히도록 변경되었습니다." + "\n\n" +
-                "_신속 전문화_의 _특수 작전_ 특성의 가속 획득량이 3-9에서 _2-6_으로, 쿨타임 감소량이 2-4에서 _1-3_으로 감소했습니다."));
+                "_신속 전문화_의 _투사체 가속_ 특성의 사격 무기 피해 보너스가 _15-45%_에서 _10-30%_로 감소했습니다." + "\n\n" +
+                "_신속 전문화_의 _특수작전_ 특성의 가속 획득 효과가 제거되었습니다."));
     }
 
     public static void add_v0_3_1_Changes(ArrayList<ChangeInfo> changeInfos) {

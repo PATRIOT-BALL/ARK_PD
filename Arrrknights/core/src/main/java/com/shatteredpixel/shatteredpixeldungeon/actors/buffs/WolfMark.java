@@ -89,11 +89,13 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
                 dmg *= 2;
             }
         }
+        if (hero.hasTalent(Talent.BLOODBATH_OPERATIONS)) dmg /= 2;
         if (ch.properties().contains(Char.Property.MINIBOSS)) {
             dmg /= 2;
         }
         if (ch.properties().contains(Char.Property.BOSS)) {
             dmg = 0;
+            dmg += hero.pointsInTalent(Talent.HOWLING) * 50;
         }
         Dungeon.hero.sprite.zap(ch.pos);
 
@@ -113,11 +115,14 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
         }
         moveChar(hero, trajectory, movepower, ch.pos, false, false); // 자신이 이동효과
 
-        Buff.affect(hero, ThrowingKnife.huntcooldown.class, 450f - hero.pointsInTalent(Talent.ASSASSINS_REACH) * 75);
+        Buff.affect(hero, ThrowingKnife.huntcooldown.class, 450f - (hero.pointsInTalent(Talent.ASSASSINS_REACH) * 75) - (hero.pointsInTalent(Talent.BLOODBATH_OPERATIONS) * 100));
 
         if (!ch.isAlive()) {
             Wound.hit(ch);
             Hunt.hit(ch);
+        }
+        else {
+            if (Dungeon.hero.hasTalent(Talent.BLOODBATH_OPERATIONS)) Buff.affect(ch, Paralysis.class, 1f);
         }
 
         if (hero.hasTalent(Talent.TRACKER)){

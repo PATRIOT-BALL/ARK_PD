@@ -168,6 +168,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfLivingEarth;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
@@ -185,6 +186,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.Trap;
+import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.ShadowCaster;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Earthroot;
@@ -315,8 +317,11 @@ public class Hero extends Char {
         if (boostHP) {
             HP += Math.max(HT - curHT, 0);
         }
-        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 25 && Dungeon.bossLevel() && Dungeon.talucount < 4)
-            HT /= 2;
+        if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss14 == 1 && Dungeon.depth == 25 && Dungeon.bossLevel() && Dungeon.talucount < 4) HT /= 2;
+
+        if (hasTalent(Talent.KNIGHT_BODY)) {
+            HT += pointsInTalent(Talent.KNIGHT_BODY) * 10;
+        }
         HP = Math.min(HP, HT);
     }
 
@@ -646,6 +651,13 @@ public class Hero extends Char {
             dr += Random.NormalIntRange(0,drplus_n);
         }
 
+        if (hasTalent(Talent.GUILT)) {
+            int kill = (90 - pointsInTalent(Talent.GUILT) * 10);
+            int bounsDR;
+            bounsDR = Math.min(Statistics.enemiesSlain / kill, 15);
+            dr += Random.NormalIntRange(0,bounsDR);
+        }
+
         return dr;
     }
 
@@ -708,7 +720,7 @@ public class Hero extends Char {
         if (Gear != null) {
             if (Gear.charge > 0) {
                 if (this.hasTalent(Talent.SPEED_COMABT)) {
-                    speed *= 1f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 10;
+                    speed *= 1.05f + (float) this.pointsInTalent(Talent.SPEED_COMABT) / 20;
                 }
             }
         }
@@ -1341,6 +1353,13 @@ public class Hero extends Char {
             }
         }
 
+        if (hasTalent(Talent.PUSH_ATTACK) && buff(Talent.PushAttackCooldown.class) == null) {
+            Ballistica trajectory = new Ballistica(pos, enemy.pos, Ballistica.STOP_TARGET);
+            trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
+            WandOfBlastWave.throwChar(enemy, trajectory, pointsInTalent(Talent.PUSH_ATTACK)); // 넉백 효과
+            Buff.affect(this, Talent.PushAttackCooldown.class, 80);
+        }
+
         switch (subClass) {
             case SNIPER:
                 if (wep instanceof MissileWeapon && !(wep instanceof SpiritBow.SpiritArrow) && enemy != this) {
@@ -1370,7 +1389,7 @@ public class Hero extends Char {
         }
 
         if (hasTalent(Talent.SAVIOR_BELIEF) && enemy.buff(Roots.class) != null || enemy.buff(Paralysis.class) != null) {
-            BounsDamage = damage * (pointsInTalent(Talent.SAVIOR_BELIEF) * 0.2f);
+            BounsDamage = damage * (pointsInTalent(Talent.SAVIOR_BELIEF) * 0.15f);
         }
 
         if (hasTalent(Talent.EXORCISM)) {
@@ -1555,7 +1574,7 @@ public class Hero extends Char {
             Berserk berserk = buff(Berserk.class);
             float ber;
             if (berserk != null) {
-                ber = 1.25f - (Dungeon.hero.pointsInTalent(Talent.INFINITE_RAGE) * 0.25f);
+                ber = 1.2f - (Dungeon.hero.pointsInTalent(Talent.INFINITE_RAGE) * 0.2f);
                 if (berserk.getPower() >= ber) {
                     dmg = Math.round(dmg * 0.8f);
                 }
@@ -2177,7 +2196,7 @@ public class Hero extends Char {
         }
 
         if (Dungeon.hero.hasTalent(Talent.SPARKOFLIFE)) {
-            if (Dungeon.hero.pointsInTalent(Talent.SPARKOFLIFE) > Random.IntRange(0, 19)) {
+            if (1 + Dungeon.hero.pointsInTalent(Talent.SPARKOFLIFE) > Random.Int(33)) {
                 HP = Math.min(HP + HT / 20, HT);
             }
         }

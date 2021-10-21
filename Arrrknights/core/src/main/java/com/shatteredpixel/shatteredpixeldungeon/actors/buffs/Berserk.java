@@ -101,7 +101,11 @@ public class Berserk extends Buff {
 			power -= GameMath.gate(0.1f, power, 1f) * 0.06f * Math.pow((target.HP/(float)target.HT), 2);
 			
 			if (power <= 0){
-				Buff.affect(target, Weakness.class, rebound * 40);
+				int reboundtime = 40;
+				if (Dungeon.hero.hasTalent(Talent.INFINITE_BATTLE)) {
+					reboundtime -= 4 + (Dungeon.hero.pointsInTalent(Talent.INFINITE_BATTLE) * 8);
+				}
+				Buff.affect(target, Weakness.class, rebound * reboundtime);
 				detach();
 			}
 		}

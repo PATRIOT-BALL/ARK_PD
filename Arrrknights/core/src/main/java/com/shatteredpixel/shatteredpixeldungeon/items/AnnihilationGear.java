@@ -316,7 +316,9 @@ public class Spriteex extends MissileWeapon {
         if (Dungeon.hero.hasTalent(Talent.ESTHESIA)) {
             if (enemy instanceof Mob) {
                 if (enemy.properties().contains(Char.Property.BOSS) == true || enemy.properties().contains(Char.Property.MINIBOSS) == true) {
-                    dmg *= 1f + (float) Dungeon.hero.pointsInTalent(Talent.ESTHESIA) * 0.05f;
+                    if (Dungeon.hero.hasTalent(Talent.ESTHESIA)) {
+                        dmg *= 1.03f + (float) Dungeon.hero.pointsInTalent(Talent.ESTHESIA) * 0.03f;
+                    }
                 }
             }
         }

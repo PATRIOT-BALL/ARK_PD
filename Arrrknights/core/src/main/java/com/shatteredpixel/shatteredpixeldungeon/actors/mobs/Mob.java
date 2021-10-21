@@ -715,7 +715,7 @@ public abstract class Mob extends Char {
 		if (Dungeon.hero.buff(Talent.SWEEPTraker.class) != null) {
 			if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
 				SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
-				Item.SetCharge(1 + Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
+				Item.SetCharge(Dungeon.hero.pointsInTalent(Talent.SWEEP) * 2);
 				if (Dungeon.hero.pointsInTalent(Talent.SWEEP) > 1)  Buff.affect(Dungeon.hero, MagicalSight.class, 3f);
 			}}
 

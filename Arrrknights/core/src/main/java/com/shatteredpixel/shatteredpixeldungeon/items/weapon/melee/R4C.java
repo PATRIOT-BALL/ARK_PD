@@ -219,7 +219,7 @@ public class R4C extends MeleeWeapon {
             ACC = 1.5f;
             if (ch.hit(Dungeon.hero, ch, false)) {
                 if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
-                    dmg *= 1f + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.15f); }
+                    dmg *= 1f + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.1f); }
 
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_AR, 1, Random.Float(0.87f, 1.15f));

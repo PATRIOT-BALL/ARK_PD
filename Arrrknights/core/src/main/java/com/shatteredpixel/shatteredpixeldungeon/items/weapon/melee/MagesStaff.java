@@ -161,7 +161,7 @@ public class MagesStaff extends MeleeWeapon {
 
 		if (Dungeon.hero.hasTalent(Talent.AZURE_FURY))
 		{
-			if (Random.Int(15) > Dungeon.hero.pointsInTalent(Talent.AZURE_FURY))
+			if (Random.Int(20) > Dungeon.hero.pointsInTalent(Talent.AZURE_FURY))
 			{
 				if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
 					SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
@@ -183,7 +183,13 @@ public class MagesStaff extends MeleeWeapon {
 
 		if (wand != null &&
 				attacker instanceof Hero && ((Hero)attacker).subClass == HeroSubClass.BATTLEMAGE) {
-			if (wand.curCharges < wand.maxCharges) wand.partialCharge += 0.4f;
+			if (wand.curCharges < wand.maxCharges) {
+				float charged = 0.4f;
+				if (((Hero) attacker).hasTalent(Talent.SWORDOFLORD)) {
+					charged += 0.04f+(((Hero) attacker).pointsInTalent(Talent.SWORDOFLORD) * 0.08f);
+				}
+				wand.partialCharge += charged;
+			}
 			ScrollOfRecharging.charge((Hero)attacker);
 			wand.onHit(this, attacker, defender, damage);
 		}

@@ -67,6 +67,7 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
+import com.sun.org.apache.bcel.internal.generic.PUSH;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Bundle;
@@ -92,9 +93,9 @@ public enum Talent {
 	//Warrior T4
 	TACTICAL_SHIELD(17, 3), CHAINSAW_EXTEND(18, 3),
 	//Berserker T4
-	INFINITE_RAGE(11, 3),
+	INFINITE_RAGE(11, 4), INFINITE_BATTLE(12,4),
 	//Gladiator T4
-	SPARKOFLIFE(13,3),
+	SPARKOFLIFE(13,4), DEADLY_REACH(15,4),
 
 	//Mage T1
 	EMPOWERING_MEAL(32), SCHOLARS_INTUITION(33), TESTED_HYPOTHESIS(34), BACKUP_BARRIER(35),
@@ -109,9 +110,9 @@ public enum Talent {
 	//Mage T4
 	LIBERATION(49,3), RHODES(50,3),
 	//Battlemage T4
-	AZURE_FURY(51,3),
+	AZURE_FURY(51,4), SWORDOFLORD(43,4),
 	//Warlokc T4
-	EMOTION(46,3),
+	EMOTION(46,4), LORD(47,4),
 
 	//Rogue T1
 	CACHED_RATIONS(64), THIEFS_INTUITION(65), SUCKER_PUNCH(66), PROTECTIVE_SHADOWS(67),
@@ -126,9 +127,9 @@ public enum Talent {
 	//Rogue T4
 	ASSASSINSCREED(81,3),CLOCK_UPGRADE(74,3),
 	//Assassin T4
-	SWEEP(76,3),
+	SWEEP(76,4), HOWLING(75,4),
 	//Freerunner T4
-	SPECIAL_OPERATIONS(83,3),
+	SPECIAL_OPERATIONS(83,4), BLOODBATH_OPERATIONS(78,4),
 
 	//Huntress T1
 	NATURES_BOUNTY(96), SURVIVALISTS_INTUITION(97), FOLLOWUP_STRIKE(98), NATURES_AID(99),
@@ -141,11 +142,11 @@ public enum Talent {
 	//Warden T3
 	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SAVIOR_PRAY(112, 3),
 	//Huntress T4
-	POINT_BLANK(106, 3), IMPROVED_CROSSBOW(113,3),
+	POINT_BLANK(106, 3), IMPROVED_CROSSBOW(113,3), PUSH_ATTACK(98,4),
 	//Sniper T4
-	SNIPING(115,3),
+	SNIPING(115,4),
 	//Warden T4
-	SAVIOR_BELIEF(116,3),
+	SAVIOR_BELIEF(116,4),
 
 	//RoseCat T1
 	LIGHTNESSMEAL(128), SMARTMEALS(129), GOODMEAT(130), NYANGING(131),
@@ -158,11 +159,11 @@ public enum Talent {
 	//RoseCat Gu_T3
 	BARRIER_OPERATION(142,3), BARRIER_REPAIR(143,3), RHODES_CAT(144,3),
 	//RossCat T4
-	RHODES_WEAPON(145, 3), RECALL_MEMORY(146,3),
+	RHODES_WEAPON(145, 3), RECALL_MEMORY(146,3), GUILT(137,4),
 	//RoseCat De_T4
-	ESTHESIA(148, 3),
+	ESTHESIA(148, 4),
 	//RoseCat Gu_T4
-	SPEED_COMABT(147,3),
+	SPEED_COMABT(147,4),
 
 	//Nearl T1
 	SHINING_MEAL(160),  EXPERIENCE(161), PROTECTIONOFLIGHT(162), KNIGTS_OATH(163),
@@ -175,11 +176,11 @@ public enum Talent {
 	//Nearl T3 - SAVIER
 	SHIELD_OF_LIGHT(142, 3), PEGASUS_WING(143,3), HOPELIGHT(144,3),
 	//Nearl T4
-	GRAND_ORDER(145, 3), KNIGHT_OF_KAZIMIERZ(146,3),
+	GRAND_ORDER(145, 3), KNIGHT_OF_KAZIMIERZ(146,3), KNIGHT_BODY(168,4),
 	//Nearl T4 - KNIGHT
-	QUICK_TACTICS(147,3),
+	QUICK_TACTICS(147,4),
 	//Nearl T4 - SAVIER
-	BLESSED_CHAMPION(148,3);
+	BLESSED_CHAMPION(148,4);
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};
@@ -191,6 +192,7 @@ public enum Talent {
 	public static class bombshotooldown extends FlavourBuff{};
 	public static class SeerShotCooldown extends FlavourBuff{};
 	public static class SilShotCooldown extends FlavourBuff{};
+	public static class PushAttackCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};
 	public static class BlazeBurstBuff extends CounterBuff{};
 
@@ -232,7 +234,7 @@ public enum Talent {
 	int maxPoints;
 
 	// tiers 1/2/3/4 start at levels 2/7/13/21
-	public static int[] tierLevelThresholds = new int[]{0, 2, 7, 13, 21, 26};
+	public static int[] tierLevelThresholds = new int[]{0, 2, 7, 13, 21, 29};
 
 	Talent( int icon ){
 		this(icon, 2);
@@ -315,6 +317,10 @@ public enum Talent {
 					}
 				}
 			}
+		}
+
+		if (talent == KNIGHT_BODY){
+			hero.updateHT(false);
 		}
 	}
 
@@ -478,13 +484,6 @@ public enum Talent {
 	public static void onArtifactUsed( Hero hero ){
 		if (hero.hasTalent(ENHANCED_RINGS)){
 			Buff.prolong(hero, EnhancedRings.class, 2.5f*hero.pointsInTalent(ENHANCED_RINGS));
-		}
-		if (hero.hasTalent(SPECIAL_OPERATIONS)){
-			Momentum p = Dungeon.hero.buff(Momentum.class);
-			if (p != null)
-			{
-				p.BounsStack(Dungeon.hero.pointsInTalent(SPECIAL_OPERATIONS) * 2);
-			}
 		}
 	}
 
@@ -705,13 +704,13 @@ public enum Talent {
 				Collections.addAll(tierTalents, ASSASSINSCREED, CLOCK_UPGRADE);
 				break;
 			case HUNTRESS:
-				Collections.addAll(tierTalents, POINT_BLANK, IMPROVED_CROSSBOW);
+				Collections.addAll(tierTalents, POINT_BLANK, IMPROVED_CROSSBOW, PUSH_ATTACK);
 				break;
 			case ROSECAT:
-				Collections.addAll(tierTalents, RHODES_WEAPON, RECALL_MEMORY);
+				Collections.addAll(tierTalents, RHODES_WEAPON, RECALL_MEMORY, GUILT);
 				break;
 			case NEARL:
-				Collections.addAll(tierTalents, GRAND_ORDER, KNIGHT_OF_KAZIMIERZ);
+				Collections.addAll(tierTalents, GRAND_ORDER, KNIGHT_OF_KAZIMIERZ, KNIGHT_BODY);
 				break;
 		}
 		for (Talent talent : tierTalents){
@@ -780,22 +779,22 @@ public enum Talent {
 		//tier4
 		switch (cls){
 			case BERSERKER: default:
-				Collections.addAll(tierTalents, INFINITE_RAGE);
+				Collections.addAll(tierTalents, INFINITE_RAGE, INFINITE_BATTLE);
 				break;
 			case GLADIATOR:
-				Collections.addAll(tierTalents, SPARKOFLIFE);
+				Collections.addAll(tierTalents, SPARKOFLIFE, DEADLY_REACH);
 				break;
 			case BATTLEMAGE:
-				Collections.addAll(tierTalents, AZURE_FURY);
+				Collections.addAll(tierTalents, AZURE_FURY, SWORDOFLORD);
 				break;
 			case WARLOCK:
-				Collections.addAll(tierTalents, EMOTION);
+				Collections.addAll(tierTalents, EMOTION, LORD);
 				break;
 			case ASSASSIN:
-				Collections.addAll(tierTalents, SWEEP);
+				Collections.addAll(tierTalents, SWEEP, HOWLING);
 				break;
 			case FREERUNNER:
-				Collections.addAll(tierTalents, SPECIAL_OPERATIONS);
+				Collections.addAll(tierTalents, SPECIAL_OPERATIONS, BLOODBATH_OPERATIONS);
 				break;
 			case SNIPER:
 				Collections.addAll(tierTalents, SNIPING);
