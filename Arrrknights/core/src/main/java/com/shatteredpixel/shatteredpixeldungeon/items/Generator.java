@@ -168,6 +168,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlameKatana;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
@@ -413,9 +414,10 @@ public class Generator {
                     Spear.class,
                     Dirk.class,
                     MidnightSword.class,
-                    Halberd.class
+                    Halberd.class,
+                    FlameKatana.class
             };
-            WEP_T2.probs = new float[]{4, 5, 4, 4, 4, 5};
+            WEP_T2.probs = new float[]{4, 5, 4, 4, 4, 5, 3};
 
             WEP_T3.classes = new Class<?>[]{
                     Sword.class,
