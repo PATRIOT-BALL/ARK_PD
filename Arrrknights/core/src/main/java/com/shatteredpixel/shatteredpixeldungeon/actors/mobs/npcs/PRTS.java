@@ -13,7 +13,12 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class PRTS extends NPC {
-    private int hint = 0;
+    private String hint;
+
+    private static final String[] LINE_KEYS = {
+            "hint1", "hint2", "hint3", "hint4", "hint5", "hint6", "hint7",
+            "hint8", "hint9", "hint10", "hint11", "hint12", "hint13", "hint14",
+    };
 
     {
         spriteClass = PRTS_Sprite.class;
@@ -21,8 +26,7 @@ public class PRTS extends NPC {
         properties.add(Property.NPC);
     }
 
-    public PRTS() {
-        hint = Random.IntRange(0,13);
+    public PRTS() { hint = Random.element(LINE_KEYS);
     }
 
     @Override
@@ -38,112 +42,12 @@ public class PRTS extends NPC {
     public boolean interact(Char c) {
         sprite.turnTo(pos, c.pos);
 
-        switch (hint) {
-            case 0: default:
-                Game.runOnRenderThread(new Callback() {
-                @Override
-                public void call() {
-                    GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint1")));
-                }
-            });
-                break;
-            case 1:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint2")));
-                    }
-                });
-                break;
-            case 2:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint3")));
-                    }
-                });
-                break;
-            case 3:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint4")));
-                    }
-                });
-                break;
-            case 4:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint5")));
-                    }
-                });
-                break;
-            case 5:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint6")));
-                    }
-                });
-                break;
-            case 6:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint7")));
-                    }
-                });
-                break;
-            case 7:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint8")));
-                    }
-                });
-                break;
-            case 8:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint9")));
-                    }
-                });
-                break;
-            case 9:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint10")));
-                    }
-                });
-                break;
-            case 10:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint11")));
-                    }
-                });
-                break;
-            case 11:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint12")));
-                    }
-                });
-                break;
-            case 12:
-                Game.runOnRenderThread(new Callback() {
-                    @Override
-                    public void call() {
-                        GameScene.show(new WndMessage(Messages.get(PRTS.class, "hint13")));
-                    }
-                });
-                break;
-        }
+        Game.runOnRenderThread(new Callback() {
+            @Override
+            public void call() {
+                GameScene.show(new WndMessage(Messages.get(PRTS.class, hint)));
+            }
+        });
 
         return true;
     }
@@ -159,7 +63,7 @@ public class PRTS extends NPC {
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        hint = bundle.getInt(HINT);
+        hint = bundle.getString(HINT);
 
     }
 }
