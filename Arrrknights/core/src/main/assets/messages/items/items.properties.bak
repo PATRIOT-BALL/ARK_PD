@@ -2452,6 +2452,8 @@ items.weapon.melee.imageoverform.name=사의 승화
 items.weapon.melee.imageoverform.desc=대원의 레벨이 21 이상이 되면 이 _특별한_ 무기의 능력이 해방됩니다.
 items.weapon.melee.imageoverform.desc_up1=_"나쁘지 않네."_\n\n이 _특별한_ 무기는 이번 게임에서 처치한 적의 수에 비례해 무기의 공격력이 상승합니다.\n레벨이 28이 되면 능력이 추가로 해방됩니다.
 items.weapon.melee.imageoverform.desc_up2=_"말로는 전하기 어려워. 그려줄게."\n\n_이 _특별한_ 무기는 이번 게임에서 처치한 적의 수에 비례해 무기의 공격력이 상승합니다.\n적 처치시 10%확률로 작은 즈자이를 소환합니다.
+items.weapon.melee.imageoverform$littleinstinct.name=작은 즈자이
+items.weapon.melee.imageoverform$littleinstinct.desc=시의 능력으로 소환된 작은 즈자이들. 발음에 주의하자. 글자 순서도!
 
 
 
