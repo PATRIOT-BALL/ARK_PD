@@ -118,7 +118,7 @@ public class CrabGun extends MeleeWeapon {
         return null;
     }
 
-    public class MetalCrab extends Mob {
+    public static class MetalCrab extends Mob {
         {
             spriteClass = Rock_CrabSprite.class;
             baseSpeed = 3f;
@@ -129,21 +129,20 @@ public class CrabGun extends MeleeWeapon {
             state = WANDERING;
         }
 
-        private int crabLevel = 0;
 
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange( 2 + Dungeon.depth / 2, 6 + (Dungeon.depth / 2) + crabLevel * 2 );
+            return Random.NormalIntRange( 2 + Dungeon.depth / 2, 6 + (Dungeon.depth / 2) + maxLvl * 2 );
         }
 
         @Override
         public int attackSkill( Char target ) {
-            return 10 + Dungeon.depth / 2 + crabLevel;
+            return 10 + Dungeon.depth / 2 + maxLvl;
         }
 
         @Override
         public int drRoll() {
-            return Random.NormalIntRange(0, 3 + crabLevel / 2);
+            return Random.NormalIntRange(0, 3 + maxLvl / 2);
         }
 
         public void setting(int setlvl)
@@ -153,7 +152,13 @@ public class CrabGun extends MeleeWeapon {
             if (setBuff != null) itembuff = setBuff.itemLevel();
             HP=HT=30 + setlvl * 6 + itembuff * 5;
             defenseSkill = 1 + setlvl + itembuff;
-            crabLevel = setlvl + itembuff / 2;
+            maxLvl = setlvl + itembuff / 2;
+        }
+
+        @Override
+        public void restoreFromBundle(Bundle bundle) {
+            super.restoreFromBundle(bundle);
+            enemySeen = true;
         }
     }
 }

@@ -129,7 +129,7 @@ public class CatGun extends MeleeWeapon {
     }
 
 
-    public class Mon3tr extends Mob {
+    public static class Mon3tr extends Mob {
         {
             spriteClass = Mon3terSprite.class;
             baseSpeed = 3f;
@@ -139,7 +139,6 @@ public class CatGun extends MeleeWeapon {
             alignment = Alignment.ALLY;
         }
 
-        private int level = 0;
         private int blinkCooldown = 0;
 
         @Override
@@ -225,17 +224,17 @@ public class CatGun extends MeleeWeapon {
 
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange( 18 + level * 4, 24 + level * 6 );
+            return Random.NormalIntRange( 18 + maxLvl * 4, 24 + maxLvl * 6 );
         }
 
         @Override
         public int attackSkill( Char target ) {
-            return 25 + level * 3;
+            return 25 + maxLvl * 3;
         }
 
         @Override
         public int drRoll() {
-            return Random.NormalIntRange(level / 2, 2 + level);
+            return Random.NormalIntRange(maxLvl / 2, 2 + maxLvl);
         }
 
         public void setting(int setlvl)
@@ -245,7 +244,7 @@ public class CatGun extends MeleeWeapon {
             if (setBuff != null) itembuff = setBuff.itemLevel();
             HP=HT=120 + setlvl * 20;
             defenseSkill = 10 + setlvl * 2;
-            level = setlvl + itembuff / 2;
+            maxLvl = setlvl + itembuff / 2;
         }
 
         private static final String BLINK = "blinkcooldown";
@@ -260,6 +259,7 @@ public class CatGun extends MeleeWeapon {
         public void restoreFromBundle(Bundle bundle) {
             super.restoreFromBundle(bundle);
             blinkCooldown = bundle.getInt(BLINK);
+            enemySeen = true;
         }
     }
 

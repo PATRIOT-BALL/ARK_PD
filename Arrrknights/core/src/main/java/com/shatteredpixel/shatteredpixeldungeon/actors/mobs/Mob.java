@@ -66,10 +66,15 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatCutlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAssassin;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfDeepenedSleep;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Lucky;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BladeDemon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlameKatana;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ImageoverForm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.Dart;
@@ -77,8 +82,10 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -748,6 +755,30 @@ public abstract class Mob extends Char {
 					CellEmitter.get(pos).burst(ShadowParticle.CURSE, 6);
 					Sample.INSTANCE.play(Assets.Sounds.CURSED);
 				}
+			}
+		}
+
+		if (!(this instanceof ImageoverForm.LittleInstinct)
+				&& Random.Int(10) == 0
+		        && cause == Dungeon.hero
+				&& Dungeon.hero.lvl >= 28
+	         	&& Dungeon.hero.belongings.weapon instanceof ImageoverForm){
+				ImageoverForm.LittleInstinct a = new ImageoverForm.LittleInstinct(Dungeon.hero.belongings.weapon.level());
+				GameScene.add(a);
+				ScrollOfTeleportation.appear(a, pos);
+
+		}
+
+		if (cause == Dungeon.hero && Dungeon.hero.belongings.weapon instanceof FlameKatana) {
+			((FlameKatana) Dungeon.hero.belongings.weapon).GetKillPoint();
+		}
+
+		if (cause == Dungeon.hero && Dungeon.hero.belongings.weapon instanceof BladeDemon) {
+			if (((BladeDemon) Dungeon.hero.belongings.weapon).isSwiching()) {
+				int Heal = Random.IntRange(1,4);
+				Dungeon.hero.HP = Math.min(Dungeon.hero.HP + Heal, Dungeon.hero.HT);
+				Dungeon.hero.sprite.emitter().burst(Speck.factory(Speck.HEALING),  2);
+				Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, "+%dHP", Heal);
 			}
 		}
 	}

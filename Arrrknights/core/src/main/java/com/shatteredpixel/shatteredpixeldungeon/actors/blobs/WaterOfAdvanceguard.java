@@ -22,10 +22,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ImageoverForm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.PurgatoryKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -57,6 +59,9 @@ public class WaterOfAdvanceguard extends WellWater {
         }else if (item instanceof Shortsword) {
             if (Random.Int(4) < 3){ item = new Firmament();
             item.identify();}
+        }else if (item instanceof PurgatoryKnife) {
+          item = new ImageoverForm();
+          item.identify();
         } else if (item instanceof Gamza) {
             if (Random.IntRange(0,100) < 31) { item = new Nmould();}
             else if (Random.IntRange(0,11) < 3) {
