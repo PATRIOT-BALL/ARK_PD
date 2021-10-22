@@ -23,6 +23,8 @@ package com.shatteredpixel.shatteredpixeldungeon.ui;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BadgeBanner;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndBadge;
@@ -72,6 +74,39 @@ public class BadgesGrid extends Component {
 
 		}
 
+	}
+
+	public BadgesGrid(boolean global, boolean Skin){
+		super();
+		badgeButtons = new ArrayList<>();
+		for (Badges.Badge badge : Badges.filterSkinBadges( global )) {
+
+			if (badge.image == -1) {
+				continue;
+			}
+
+			BadgeButton button = new BadgeButton( badge, true );
+			add( button );
+			badgeButtons.add(button);
+		}
+
+		if (global) {
+
+			ArrayList<Badges.Badge> lockedBadges = new ArrayList<>();
+			for (Badges.Badge badge : Badges.Badge.values()) {
+				if (badge.image != -1 && !Badges.isUnlocked(badge) && badge.skin) {
+					lockedBadges.add(badge);
+				}
+			}
+			Badges.filterHigherIncrementalBadges(lockedBadges);
+
+			for (Badges.Badge badge : lockedBadges) {
+				BadgeButton button = new BadgeButton( badge, false );
+				add(button);
+				badgeButtons.add(button);
+			}
+
+		}
 	}
 
 	@Override

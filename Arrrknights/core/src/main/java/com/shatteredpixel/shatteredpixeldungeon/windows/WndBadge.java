@@ -22,6 +22,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.BadgeBanner;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
@@ -34,30 +36,114 @@ public class WndBadge extends Window {
 	private static final int MARGIN = 4;
 	
 	public WndBadge( Badges.Badge badge, boolean unlocked ) {
-		
+
 		super();
-		
-		Image icon = BadgeBanner.image( badge.image );
-		icon.scale.set( 2 );
+
+		Image icon = BadgeBanner.image(badge.image);
+		icon.scale.set(2);
 		if (!unlocked) icon.brightness(0.4f);
-		add( icon );
+		add(icon);
 
-		RenderedTextBlock info = PixelScene.renderTextBlock( badge.desc(), 8 );
-		info.maxWidth(WIDTH - MARGIN * 2);
-		info.align(RenderedTextBlock.CENTER_ALIGN);
-		PixelScene.align(info);
-		if (!unlocked) info.hardlight( 0x888888 );
-		add(info);
-		
-		float w = Math.max( icon.width(), info.width() ) + MARGIN * 2;
-		
-		icon.x = (w - icon.width()) / 2f;
-		icon.y = MARGIN;
-		PixelScene.align(icon);
+		if (!badge.skin) {
+			RenderedTextBlock info = PixelScene.renderTextBlock(badge.desc(), 8);
+			info.maxWidth(WIDTH - MARGIN * 2);
+			info.align(RenderedTextBlock.CENTER_ALIGN);
+			PixelScene.align(info);
+			if (!unlocked) info.hardlight(0x888888);
+			add(info);
 
-		info.setPos((w - info.width()) / 2, icon.y + icon.height() + MARGIN);
-		resize( (int)w, (int)(info.bottom() + MARGIN) );
-		
-		if (unlocked) BadgeBanner.highlight( icon, badge.image );
+			float w = Math.max(icon.width(), info.width()) + MARGIN * 2;
+
+			icon.x = (w - icon.width()) / 2f;
+			icon.y = MARGIN;
+			PixelScene.align(icon);
+
+			info.setPos((w - info.width()) / 2, icon.y + icon.height() + MARGIN);
+			resize((int) w, (int) (info.bottom() + MARGIN));
+		} else {
+			if (Dungeon.hero.CharSkin == 0) {
+				if (unlocked) {
+					RenderedTextBlock info = PixelScene.renderTextBlock(badge.Skindesc_change(), 8);
+					info.maxWidth(WIDTH - MARGIN * 2);
+					info.align(RenderedTextBlock.CENTER_ALIGN);
+					PixelScene.align(info);
+					add(info);
+
+					float w = Math.max(icon.width(), info.width()) + MARGIN * 2;
+
+					icon.x = (w - icon.width()) / 2f;
+					icon.y = MARGIN;
+					PixelScene.align(icon);
+
+					info.setPos((w - info.width()) / 2, icon.y + icon.height() + MARGIN);
+					resize((int) w, (int) (info.bottom() + MARGIN));
+
+					ChangeSkin(badge);
+				} else {
+					RenderedTextBlock info = PixelScene.renderTextBlock(badge.Skindesc_lock(), 8);
+					info.maxWidth(WIDTH - MARGIN * 2);
+					info.align(RenderedTextBlock.CENTER_ALIGN);
+					PixelScene.align(info);
+					add(info);
+
+					float w = Math.max(icon.width(), info.width()) + MARGIN * 2;
+
+					icon.x = (w - icon.width()) / 2f;
+					icon.y = MARGIN;
+					PixelScene.align(icon);
+
+					info.setPos((w - info.width()) / 2, icon.y + icon.height() + MARGIN);
+					resize((int) w, (int) (info.bottom() + MARGIN));
+				}
+			} else {
+					RenderedTextBlock info = PixelScene.renderTextBlock(badge.Skindesc_Default(), 8);
+					info.maxWidth(WIDTH - MARGIN * 2);
+					info.align(RenderedTextBlock.CENTER_ALIGN);
+					PixelScene.align(info);
+					add(info);
+
+					float w = Math.max(icon.width(), info.width()) + MARGIN * 2;
+
+					icon.x = (w - icon.width()) / 2f;
+					icon.y = MARGIN;
+					PixelScene.align(icon);
+
+					info.setPos((w - info.width()) / 2, icon.y + icon.height() + MARGIN);
+					resize((int) w, (int) (info.bottom() + MARGIN));
+
+					ChangeSkin();
+
+			}
+
+			if (unlocked) BadgeBanner.highlight(icon, badge.image);
+		}
+	}
+
+	public void ChangeSkin() { Dungeon.hero.CharSkin = 0; }
+
+	public void ChangeSkin( Badges.Badge badge) {
+		switch (badge) {
+			case SKIN_TALU:
+				Dungeon.hero.CharSkin = Hero.TALULAH;
+				break;
+			case SKIN_NOVA:
+				Dungeon.hero.CharSkin = Hero.F_NOVA;
+				break;
+			case SKIN_BABOSKADI:
+				Dungeon.hero.CharSkin = Hero.SKADI;
+				break;
+			case SKIN_SUSUU:
+				Dungeon.hero.CharSkin = Hero.SSR;
+				break;
+			case SKIN_GRN:
+				Dungeon.hero.CharSkin = Hero.GRANI;
+				break;
+			case SKIN_JESSI:
+				Dungeon.hero.CharSkin = Hero.JESSI;
+				break;
+			case SKIN_LAPPY:
+				Dungeon.hero.CharSkin = Hero.LAPPY;
+				break;
+		}
 	}
 }

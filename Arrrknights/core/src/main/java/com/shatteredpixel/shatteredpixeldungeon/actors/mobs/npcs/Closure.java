@@ -48,7 +48,6 @@ public class Closure extends NPC {
                             case 0:
                                 if (Badges.isUnlocked(Badges.Badge.EVILTIME_END)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_TALU)) {Badges.validatetaluskin();}
-                                    Dungeon.hero.CharSkin = Hero.TALULAH;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
@@ -61,7 +60,6 @@ public class Closure extends NPC {
                             case 1:
                                 if (Badges.isUnlocked(Badges.Badge.FRAGGING)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_NOVA)) { Badges.validatenovaskin();}
-                                    Dungeon.hero.CharSkin = Hero.F_NOVA;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
                                     Game.runOnRenderThread(new Callback() {
@@ -73,7 +71,6 @@ public class Closure extends NPC {
                             case 2: // 바병슼 스킨
                                 if (Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_2)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_BABOSKADI)) {Badges.validateskadiskin();}
-                                    Dungeon.hero.CharSkin = Hero.SKADI;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
@@ -86,7 +83,6 @@ public class Closure extends NPC {
                             case 3: // 쑤수로 스킨
                                 if (Badges.isUnlocked(Badges.Badge.ALL_POTIONS_IDENTIFIED)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_SUSUU)) {Badges.validatesusuuskin();}
-                                    Dungeon.hero.CharSkin = Hero.SSR;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
@@ -99,7 +95,6 @@ public class Closure extends NPC {
                             case 4: // 그라니 스킨
                                 if (Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_1)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_GRN)) {Badges.validategrnskin();}
-                                    Dungeon.hero.CharSkin = Hero.GRANI;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
@@ -112,7 +107,6 @@ public class Closure extends NPC {
                             case 5: // 제껄룩 스킨
                                 if (Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI)) {Badges.validatejessiskin();}
-                                    Dungeon.hero.CharSkin = Hero.JESSI;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
@@ -124,10 +118,9 @@ public class Closure extends NPC {
                                 break;
                             case 6: // 꼬지리 스킨
                                 sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
-                                /*
+
                                 if (Badges.isUnlocked(Badges.Badge.HAPPY_END)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY)) {Badges.validatelappyskin();}
-                                    Dungeon.hero.CharSkin = Hero.LAPPY;
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
@@ -137,15 +130,13 @@ public class Closure extends NPC {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin7", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
-                                */
+
                         }
                     }
                 }
             }
         }
-        else {  sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hihi"));
-            Dungeon.hero.CharSkin = 0;
-        }
+        else {  sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hihi")); }
       //  sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
 
         ((HeroSprite) Dungeon.hero.sprite).updateArmor();

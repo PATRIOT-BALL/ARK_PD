@@ -29,6 +29,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.HeroSelectScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.InterlevelScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.RankingsScene;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.SkinScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.TitleScene;
 import com.shatteredpixel.shatteredpixeldungeon.services.updates.Updates;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Icons;
@@ -59,6 +60,16 @@ public class WndGame extends Window {
 			}
 		});
 		curBtn.icon(Icons.get(Icons.PREFS));
+
+		if (Dungeon.hero.isAlive()) {
+			addButton(new RedButton(Messages.get(this, "skin")) {
+				@Override
+				protected void onClick() {
+					hide();
+					TomorrowRogueNight.switchScene(SkinScene.class);
+				}
+			});
+		}
 
 		//install prompt
 		if (Updates.isInstallable()){

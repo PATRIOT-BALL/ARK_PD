@@ -85,7 +85,7 @@ badges$badge.siesta_part2=엔딩-화람지심
 badges$badge.get_25_stones=원암 25개 채취
 badges$badge.get_40_stones=원암 40개 채취
 badges$badge.doll_collector=인형 수집가
-badges$badge.slain_pursuer=여기 우르수스 맞아요
+badges$badge.slain_pursuer=사냥꾼 처치
 
 badges$badge.blaze_champion1=숙련 메무라
 badges$badge.blaze_champion2=정예 메무라
@@ -122,6 +122,9 @@ badges$badge.skin_lappy=꼬지리 스킨 해금
 
 
 badges$badge.bug=낙인
+
+badges$badge.change=스킨을 변경했습니다.
+badges$badge.default=기본 스킨으로 변경했습니다.
 
 
 challenges.no_food=환경: 식량배급 중단

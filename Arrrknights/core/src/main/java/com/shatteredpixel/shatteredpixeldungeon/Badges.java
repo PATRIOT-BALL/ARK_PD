@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon;
 
+import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.Artifact;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
@@ -41,6 +42,7 @@ import com.watabou.utils.FileUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -211,29 +213,47 @@ public class Badges {
 		SLAIN_PURSUER              ( 111),
 
 		//GREEN
-		SKIN_BABOSKADI(160),
-		SKIN_TALU(161),
-		SKIN_NOVA(162),
-		SKIN_SUSUU(163),
-		SKIN_GRN(164),
-		SKIN_LAPPY, // Image : 165
-		SKIN_JESSI(166);
+		SKIN_BABOSKADI(160, false, true),
+		SKIN_TALU(161, false, true),
+		SKIN_NOVA(162, false, true),
+		SKIN_SUSUU(163, false, true),
+		SKIN_GRN(164, false, true),
+		SKIN_LAPPY(165,false,true),
+		SKIN_JESSI(166, false, true);
 
 		public boolean meta;
+		public boolean skin;
 
 		public int image;
 		
 		Badge( int image ) {
-			this( image, false );
+			this( image, false, false );
 		}
 		
 		Badge( int image, boolean meta ) {
+			this(image, true, false);
+		}
+
+		Badge( int image, boolean meta, boolean isSkin ) {
 			this.image = image;
 			this.meta = meta;
+			this.skin = isSkin;
 		}
 
 		public String desc(){
 			return Messages.get(this, name());
+		}
+
+		public String Skindesc_change(){
+			return Messages.get(this, "change");
+		}
+
+		public String Skindesc_lock(){
+			return Messages.get(this, "skinlock");
+		}
+
+		public String Skindesc_Default(){
+			return Messages.get(this, "default");
 		}
 		
 		Badge() {
@@ -982,6 +1002,32 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	// 0.3.2버전의 스킨 관련 처리로 인해 추가된 구문입니다. 추후 필요없어질 수 있습니다.
+	public static void allskindestroy() {
+		saveNeeded = true;
+		if(global.contains(Badge.SKIN_TALU)) {
+			global.remove(Badge.SKIN_TALU);
+		}
+		if(global.contains(Badge.SKIN_NOVA)) {
+			global.remove(Badge.SKIN_NOVA);
+		}
+		if(global.contains(Badge.SKIN_BABOSKADI)) {
+			global.remove(Badge.SKIN_BABOSKADI);
+		}
+		if(global.contains(Badge.SKIN_GRN)) {
+			global.remove(Badge.SKIN_GRN);
+		}
+		if(global.contains(Badge.SKIN_JESSI)) {
+			global.remove(Badge.SKIN_JESSI);
+		}
+		if(global.contains(Badge.SKIN_SUSUU)) {
+			global.remove(Badge.SKIN_SUSUU);
+		}
+		if(global.contains(Badge.SKIN_LAPPY)) {
+			global.remove(Badge.SKIN_LAPPY);
+		}
+	}
+
 	//necessary in order to display the happy end badge in the surface scene
 	public static void silentValidateHappyEnd() {
 		if (!local.contains( Badge.HAPPY_END )){
@@ -1297,7 +1343,7 @@ public class Badges {
 		Iterator<Badge> iterator = badges.iterator();
 		while (iterator.hasNext()) {
 			Badge badge = iterator.next();
-			if ((!global && badge.meta) || badge.image == -1) {
+			if ((!global && badge.meta) || badge.skin || badge.image == -1) {
 				iterator.remove();
 			}
 		}
@@ -1305,6 +1351,24 @@ public class Badges {
 		Collections.sort(badges);
 
 		return filterReplacedBadges(badges);
+
+	}
+
+	public static List<Badge> filterSkinBadges(boolean global ) {
+
+		ArrayList<Badge> badges = new ArrayList<>(global ? Badges.global : Badges.local);
+
+		Iterator<Badge> iterator = badges.iterator();
+		while (iterator.hasNext()) {
+			Badge badge = iterator.next();
+			if ((!global && badge.meta) || !badge.skin || badge.image == -1) {
+				iterator.remove();
+			}
+		}
+
+		Collections.sort(badges);
+
+		return filterSkindBadges(badges);
 
 	}
 
@@ -1345,6 +1409,10 @@ public class Badges {
 			{Badge.ALL_POTIONS_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED},
 			{Badge.ALL_SCROLLS_IDENTIFIED, Badge.ALL_ITEMS_IDENTIFIED}
 	};
+
+	private static final Badge[][] skinBadgeReplacements = new Badge[][]{
+			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}
+	};
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {
 		leaveBest( badges, Badge.MONSTERS_SLAIN_1, Badge.MONSTERS_SLAIN_2, Badge.MONSTERS_SLAIN_3, Badge.MONSTERS_SLAIN_4 );
@@ -1374,6 +1442,22 @@ public class Badges {
 			leaveBest( badges, metaReplace );
 		}
 		
+		return badges;
+	}
+
+	public static List<Badge> filterSkindBadges( List<Badge> badges ) {
+		for (Badge[] tierReplace : tierBadgeReplacements){
+			leaveBest( badges, tierReplace );
+		}
+
+		for (Badge[] metaReplace : metaBadgeReplacements){
+			leaveBest( badges, metaReplace );
+		}
+
+		for (Badge[] skinReplace : skinBadgeReplacements){
+			leaveBest( badges, skinReplace );
+		}
+
 		return badges;
 	}
 	
@@ -1418,6 +1502,10 @@ public class Badges {
 
 		for (Badge[] metaReplace : metaBadgeReplacements){
 			addLower( badges, metaReplace );
+		}
+
+		for (Badge[] skinReplace : skinBadgeReplacements){
+			addLower( badges, skinReplace );
 		}
 
 		return badges;

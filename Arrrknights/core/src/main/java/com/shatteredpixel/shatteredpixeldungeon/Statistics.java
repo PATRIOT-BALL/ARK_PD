@@ -45,6 +45,7 @@ public class Statistics {
 	
 	public static boolean qualifiedForNoKilling = false;
 	public static boolean completedWithNoKilling = false;
+	public static boolean ver0_3_2firstrun = false;
 	
 	public static boolean amuletObtained = false;
 	
@@ -93,6 +94,8 @@ public class Statistics {
 	private static final String NO_KILLING_QUALIFIED	= "qualifiedForNoKilling";
 	
 	private static final String AMULET		= "amuletObtained";
+
+	private static final String FIRSTRUN		= "ver0_3_2firstrun";
 	
 	public static void storeInBundle( Bundle bundle ) {
 		bundle.put( GOLD,		goldCollected );
@@ -115,6 +118,8 @@ public class Statistics {
 		bundle.put(NO_KILLING_QUALIFIED, qualifiedForNoKilling);
 		
 		bundle.put( AMULET,		amuletObtained );
+
+		bundle.put( FIRSTRUN,		ver0_3_2firstrun );
 	}
 	
 	public static void restoreFromBundle( Bundle bundle ) {
@@ -138,6 +143,7 @@ public class Statistics {
 		qualifiedForNoKilling = bundle.getBoolean( NO_KILLING_QUALIFIED );
 		
 		amuletObtained	= bundle.getBoolean( AMULET );
+		ver0_3_2firstrun	= bundle.getBoolean( FIRSTRUN );
 	}
 	
 	public static void preview( GamesInProgress.Info info, Bundle bundle ){
