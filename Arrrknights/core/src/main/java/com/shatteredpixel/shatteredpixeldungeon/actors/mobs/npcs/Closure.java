@@ -117,8 +117,6 @@ public class Closure extends NPC {
                                         }});}
                                 break;
                             case 6: // 꼬지리 스킨
-                                sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
-
                                 if (Badges.isUnlocked(Badges.Badge.HAPPY_END)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY)) {Badges.validatelappyskin();}
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
