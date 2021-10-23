@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blackperro;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Gavial;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.GreenCat;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
@@ -95,6 +96,7 @@ public class RhodesLevel4 extends Level {
 
     @Override
     protected void createItems() {
+        Gavial.spawn(this,27);
     }
 
     @Override

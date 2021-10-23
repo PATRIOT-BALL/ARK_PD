@@ -48,6 +48,7 @@ import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CavesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.DeadEndLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.GavialLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.HallsLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.LastLevel;
@@ -74,7 +75,6 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
 import com.shatteredpixel.shatteredpixeldungeon.utils.DungeonSeed;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndMessage;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
@@ -186,6 +186,8 @@ public class Dungeon {
 	public static int talucount;
 	public static int siesta1_bosspower;
 
+	public static boolean extrastage_Gavial; // true라면 가비알 스테이지 실행
+
 	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
 	public static boolean killcat; // 엔딩 씬에서 켈시 하극상 출현용.
 	
@@ -245,6 +247,7 @@ public class Dungeon {
 
 		isPray = false;
 		killcat = false;
+		extrastage_Gavial = false;
 
 		droppedItems = new SparseArray<>();
 		portedItems = new SparseArray<>();
@@ -368,6 +371,7 @@ public class Dungeon {
 			case 32:
 			case 33:
 			case 34:
+				if (extrastage_Gavial) {level = new GavialLevel(); break;}
 				level = new SiestaLevel_part1();
 				break;
 			case 35:
@@ -558,6 +562,7 @@ public class Dungeon {
 	private static final String END_CAT    = "killcat";
 	private static final String TALU    = "talucount";
 	private static final String SIEBOSS1    = "siesta1_bosspower";
+	private static final String GAVIAL    = "extrastage_Gavial";
 
 
 	public static void saveGame(int save ) {
@@ -584,6 +589,8 @@ public class Dungeon {
 			bundle.put (END_CAT, killcat);
 			bundle.put (TALU, talucount);
 			bundle.put (SIEBOSS1, siesta1_bosspower);
+
+			bundle.put (GAVIAL, extrastage_Gavial);
 
 
 			for (int d : droppedItems.keyArray()) {
@@ -750,6 +757,8 @@ public class Dungeon {
 		killcat = bundle.getBoolean(END_CAT);
 		talucount = bundle.getInt(TALU);
 		siesta1_bosspower = bundle.getInt(SIEBOSS1);
+
+		extrastage_Gavial = bundle.getBoolean(GAVIAL);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );

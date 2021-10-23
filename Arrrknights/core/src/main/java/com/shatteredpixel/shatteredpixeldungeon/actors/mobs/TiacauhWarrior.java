@@ -1,0 +1,56 @@
+package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
+
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
+import com.watabou.utils.PathFinder;
+import com.watabou.utils.Random;
+
+public class TiacauhWarrior extends Mob {
+    {
+        spriteClass = HaundSprite.class;
+
+        HP = HT = 110;
+        defenseSkill = 18;
+
+        EXP = 13;
+        maxLvl = 28;
+
+        loot = new MysteryMeat();
+        lootChance = 0.137f;
+
+        immunities.add(Silence.class);
+    }
+
+    @Override
+    public int damageRoll() {
+        return Random.NormalIntRange( 28, 38 );
+    }
+
+    @Override
+    public int attackSkill( Char target ) {
+        return 38;
+    }
+
+    @Override
+    public int drRoll() {
+        return Random.NormalIntRange(0, 16);
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        int grassCells = 0;
+        for (int i : PathFinder.NEIGHBOURS9) {
+            if (Dungeon.level.map[pos+i] == Terrain.FURROWED_GRASS
+                    || Dungeon.level.map[pos+i] == Terrain.HIGH_GRASS){
+                grassCells++;
+            }
+        }
+        if (grassCells > 0) dmg = Math.round(dmg * (1f - (grassCells * 0.04f)));
+
+        super.damage(dmg, src);
+    }
+}

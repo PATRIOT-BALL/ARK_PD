@@ -109,7 +109,8 @@ public class StatusPane extends Component {
 
 		talentBlink = 0;
 
-		compass = new Compass( Statistics.amuletObtained ? Dungeon.level.entrance : Dungeon.level.exit );
+		if (Dungeon.depth > 30) compass = new Compass( Dungeon.level.exit );
+		else compass = new Compass( Statistics.amuletObtained ? Dungeon.level.entrance : Dungeon.level.exit );
 		add( compass );
 
 		rawShielding = new Image( Assets.Interfaces.SHLD_BAR );

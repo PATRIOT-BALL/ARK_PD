@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -183,18 +184,36 @@ public class Bestiary {
 						Eye.class, Eye.class,
 						Scorpio.class, Scorpio.class, Scorpio.class));
 
-			//Siesta part1
 			case 31:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhWarrior.class, TiacauhWarrior.class, TiacauhWarrior.class,
+							TiacauhFanatic.class, TiacauhFanatic.class));
+				}
+				//Siesta part1
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class, Infantry.class,
 						Ergate.class));
 			case 32:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhWarrior.class, TiacauhWarrior.class,
+							TiacauhFanatic.class, TiacauhFanatic.class,
+							TiacauhLancer.class));
+				}
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class,
 						Ergate.class, Ergate.class,
 						Piersailor.class, Piersailor.class,
 						Sniper.class));
 			case 33:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhWarrior.class, TiacauhWarrior.class,
+							TiacauhFanatic.class, TiacauhFanatic.class,
+							TiacauhLancer.class, TiacauhLancer.class,
+							TiacauhAddict.class));
+				}
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class,
 						Ergate.class, Ergate.class,
@@ -202,6 +221,13 @@ public class Bestiary {
 						Piersailor.class, Piersailor.class,
 						Agent.class));
 			case 34:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhWarrior.class,
+							TiacauhFanatic.class, TiacauhFanatic.class,
+							TiacauhLancer.class, TiacauhLancer.class,
+							TiacauhAddict.class, TiacauhAddict.class, TiacauhAddict.class));
+				}
 				return new ArrayList<>(Arrays.asList(
 						Ergate.class,
 						Sniper.class, Sniper.class,
@@ -315,6 +341,9 @@ public class Bestiary {
 				}
 				else if (cl == ExplodeSlug_A.class) {
 					cl = Originiutant.class;
+				}
+				else if (cl == TiacauhLancer.class) {
+					cl = TiacauhSniper.class;
 				}
 				rotation.set(i, cl);
 			}
