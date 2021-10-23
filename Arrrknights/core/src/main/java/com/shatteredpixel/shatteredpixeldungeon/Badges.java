@@ -67,7 +67,7 @@ public class Badges {
 		UNLOCK_ROGUE                ( 2 ),
 		UNLOCK_HUNTRESS             ( 3 ),
 		UNLOCK_ROSECAT             ( 19 ),
-		UNLOCK_NEARL               (19),
+		UNLOCK_NEARL               (20),
 		MONSTERS_SLAIN_1            ( 4 ),
 		MONSTERS_SLAIN_2            ( 5 ),
 		GOLD_COLLECTED_1            ( 6 ),
@@ -157,7 +157,7 @@ public class Badges {
 		RED_CHAMPION1              ( 84, true ),
 		GREY_CHAMPION1              ( 85, true ),
 		ROSE_CHAMPION1              ( 86, true ),
-		NEARL_CHAMPION1              ( 86, true ),
+		NEARL_CHAMPION1              ( 87, true ),
 
 		GOLD_COLLECTED_5              ( 89 ),
 
@@ -186,7 +186,7 @@ public class Badges {
 		RED_CHAMPION2              ( 106, true ),
 		GREY_CHAMPION2              ( 107, true ),
 		ROSE_CHAMPION2              ( 108, true ),
-		NEARL_CHAMPION2              ( 86, true ),
+		NEARL_CHAMPION2              ( 109, true ),
 
 		SIESTA_PART2              ( 111),
 
@@ -204,7 +204,7 @@ public class Badges {
 		RED_CHAMPION3             ( 122, true ),
 		GREY_CHAMPION3              ( 123, true ),
 		ROSE_CHAMPION3              ( 124, true ),
-		NEARL_CHAMPION3              ( 86, true ),
+		NEARL_CHAMPION3              ( 125, true ),
 
 		//Puple
 		Get_25_STONES                (136),

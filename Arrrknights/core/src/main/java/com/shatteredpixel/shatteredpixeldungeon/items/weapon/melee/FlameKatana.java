@@ -10,8 +10,8 @@ import com.watabou.utils.Bundle;
 
 public class FlameKatana extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.VANILLA_AXE;
-        hitSound = Assets.Sounds.HIT_SLASH;
+        image = ItemSpriteSheet.FIRE_KATANA;
+        hitSound = Assets.Sounds.HIT_KNIFE;
         hitSoundPitch = 1f;
 
         tier = 2;

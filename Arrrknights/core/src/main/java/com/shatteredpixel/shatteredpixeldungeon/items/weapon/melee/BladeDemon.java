@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class BladeDemon extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.VANILLA_AXE;
+        image = ItemSpriteSheet.BLADE_DEMON;
         hitSound = Assets.Sounds.HIT_STAB;
         hitSoundPitch = 1.16f;
 
