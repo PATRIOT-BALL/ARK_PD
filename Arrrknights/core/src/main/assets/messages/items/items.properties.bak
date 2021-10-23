@@ -2434,16 +2434,8 @@ items.weapon.melee.bladedemon.desc="칼과 불로 베어나간다!"\n\n모드 : 
 items.weapon.melee.bladedemon.desc_mode="피와 뼈, 먼지가 되어라!"\n\n모드 : _대검_\n적 처치시 소량의 체력을 회복합니다.
 items.weapon.melee.bladedemon.ac_zap=변형
 
-// 영문명 : Minos`s Fury
 items.weapon.melee.minosfury.name=미노스의 분노
 items.weapon.melee.minosfury.desc="내 곡괭이는 어디있... *미노스 욕설*"\n\n이 _특별한_ 방패는 무기를 분해하여 방어력을 상승시킬 수 있습니다.
-items.weapon.melee.minosfury.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 아이템 분해로 증가하며, 최대 20까지 상승합니다.
-items.weapon.melee.minosfury.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 아이템 분해로 증가하며, 최대 20까지 상승합니다.
-items.weapon.melee.minosfury.ac_eat=분해
-
-// 영문명 : Minos`s Fury
-items.weapon.melee.minosfury.name=미노스의 분노
-items.weapon.melee.minosfury.desc=_"내 곡괭이는 어디있... *미노스 욕설*"_\n\n이 _특별한_ 방패는 무기를 분해하여 방어력을 상승시킬 수 있습니다.
 items.weapon.melee.minosfury.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 아이템 분해로 증가하며, 최대 20까지 상승합니다.
 items.weapon.melee.minosfury.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 아이템 분해로 증가하며, 최대 20까지 상승합니다.
 items.weapon.melee.minosfury.ac_eat=분해
