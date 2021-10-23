@@ -20,6 +20,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GoldDogSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MinosFury;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
@@ -197,6 +198,18 @@ public class Nullshield extends Item {
                     }
                     else  { curUser.sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Hero.class,"wtf") );
                         detach(curUser.belongings.backpack);}
+                }
+                else if (item instanceof Pickaxe)
+                {
+                    if (((Pickaxe) item).sppower) {
+                        GLog.h(Messages.get(Nullshield.class, "suc"));
+                        MinosFury gma = new MinosFury();
+                        gma.enchant(Weapon.Enchantment.randomUncommon());
+                        Dungeon.level.drop(gma, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                        gma.identify();
+                        item.detach(curUser.belongings.backpack);
+                        detach(curUser.belongings.backpack);
+                    }
                 }
                 else {
 

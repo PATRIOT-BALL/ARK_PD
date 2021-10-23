@@ -30,7 +30,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Bat;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -42,6 +44,7 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
+import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
@@ -66,6 +69,7 @@ public class Pickaxe extends Weapon {
 	}
 	
 	public boolean bloodStained = false;
+	public boolean sppower = false;
 	private int stone = 0;
 
 	@Override
@@ -130,6 +134,12 @@ public class Pickaxe extends Weapon {
 							stone++;
 							if (stone == 25) { Badges.validatestone25();}
 							if (stone == 40) { Badges.validatestone40();}
+
+							if (Random.Int(100) == 0) {
+								CellEmitter.center( pos ).burst( Speck.factory( Speck.STAR ), 77 );
+								GLog.w( Messages.get(Pickaxe.class, "powerup") );
+								sppower = true;
+							}
 							
 							hero.onOperateComplete();
 						}
@@ -142,6 +152,15 @@ public class Pickaxe extends Weapon {
 			GLog.w( Messages.get(this, "no_vein") );
 			
 		}
+	}
+
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (sppower) {
+				info += "\n\n" + Messages.get( this, "power");}
+
+		return info;
 	}
 	
 	@Override
@@ -179,6 +198,7 @@ public class Pickaxe extends Weapon {
 	}
 	
 	private static final String BLOODSTAINED = "bloodStained";
+	private static final String SPPOWER = "sppower";
 	private static final String STONES = "stone";
 	
 	@Override
@@ -187,6 +207,7 @@ public class Pickaxe extends Weapon {
 		
 		bundle.put( BLOODSTAINED, bloodStained );
 		bundle.put(STONES,stone);
+		bundle.put(SPPOWER,sppower);
 	}
 	
 	@Override
@@ -194,6 +215,7 @@ public class Pickaxe extends Weapon {
 		super.restoreFromBundle( bundle );
 		
 		bloodStained = bundle.getBoolean( BLOODSTAINED );
+		sppower = bundle.getBoolean( SPPOWER );
 		stone = bundle.getInt(STONES);
 	}
 	

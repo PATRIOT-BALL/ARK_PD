@@ -2438,9 +2438,9 @@ items.weapon.melee.minosfury.ac_eat=DISASSEMBLE
 items.weapon.melee.imageoverform.name=image over form
 items.weapon.melee.imageoverform.desc=At level 21, the power of the weapon is unlocked.
 items.weapon.melee.imageoverform.desc_up1=damage increases in proportion to the number of enemies killed.\nAt level 28, the power of the weapon is unlocked.
-items.weapon.melee.imageoverform.desc_up2=damage increases in proportion to the number of enemies killed.\nWhen an enemy is killed, there is a 10% chance to summon a little instinct.
-items.weapon.melee.imageoverform$littleinstinct.name=작은 즈자이
-items.weapon.melee.imageoverform$littleinstinct.desc=시의 능력으로 소환된 작은 즈자이들. 발음에 주의하자. 글자 순서도!
+items.weapon.melee.imageoverform.desc_up2=damage increases in proportion to the number of enemies killed.\nWhen an enemy is killed, there is a 10% chance to summon a _little instinct_.
+items.weapon.melee.imageoverform$littleinstinct.name=little instinct
+items.weapon.melee.imageoverform$littleinstinct.desc=cute
 
 
 ###missile weapons
