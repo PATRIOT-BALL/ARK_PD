@@ -205,7 +205,7 @@ public class Nullshield extends Item {
                         GLog.h(Messages.get(Nullshield.class, "suc"));
                         MinosFury gma = new MinosFury();
                         gma.enchant(Weapon.Enchantment.randomUncommon());
-                        Dungeon.level.drop(gma, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                        gma.doPickUp(Dungeon.hero);
                         gma.identify();
                         item.detach(curUser.belongings.backpack);
                         detach(curUser.belongings.backpack);
