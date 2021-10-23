@@ -46,9 +46,9 @@ public class GavialLevel extends RegularLevel {
     @Override
     protected void createItems() {
 
-        if (Dungeon.depth == 32 || Dungeon.depth == 34) {
+        if (Dungeon.depth == 32 || Dungeon.depth == 34 || Dungeon.depth == 37 || Dungeon.depth == 39) {
             addItemToSpawn(new PotionOfStrength());}
-        else addItemToSpawn(new ScrollOfUpgrade());
+        else  if (Dungeon.depth == 31 || Dungeon.depth == 33 || Dungeon.depth == 36 || Dungeon.depth == 38) addItemToSpawn(new ScrollOfUpgrade());
 
         super.createItems();
     }
