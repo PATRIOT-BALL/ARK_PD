@@ -2462,8 +2462,8 @@ items.weapon.melee.minosfury.stats_desc=this weapon blocks 0-%d damage. This blo
 items.weapon.melee.minosfury.ac_eat=DISASSEMBLE
 
 items.weapon.melee.imageoverform.name=image over form
-items.weapon.melee.imageoverform.desc=At level 21, the power of the weapon is unlocked.
-items.weapon.melee.imageoverform.desc_up1=damage increases in proportion to the number of enemies killed.\nAt level 28, the power of the weapon is unlocked.
+items.weapon.melee.imageoverform.desc=At level 17, the power of the weapon is unlocked.
+items.weapon.melee.imageoverform.desc_up1=damage increases in proportion to the number of enemies killed.\nAt level 25, the power of the weapon is unlocked.
 items.weapon.melee.imageoverform.desc_up2=damage increases in proportion to the number of enemies killed.\nWhen an enemy is killed, there is a 10% chance to summon a _little instinct_.
 items.weapon.melee.imageoverform$littleinstinct.name=little instinct
 items.weapon.melee.imageoverform$littleinstinct.desc=cute
