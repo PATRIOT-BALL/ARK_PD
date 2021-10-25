@@ -35,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHikari;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
@@ -311,7 +312,7 @@ public class Goo extends Mob {
 				Dungeon.level.drop(new BookThoughts(), pos).sprite.drop(pos);
 				break;
 			case NEARL:
-				Dungeon.level.drop(Generator.random(Generator.Category.SKL_T1), pos ).sprite.drop( pos );
+				Dungeon.level.drop(new BookHikari(), pos).sprite.drop(pos);
 				break;
 
 		}

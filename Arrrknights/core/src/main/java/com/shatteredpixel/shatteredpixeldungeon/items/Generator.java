@@ -187,6 +187,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RadiantSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
@@ -459,9 +460,10 @@ public class Generator {
                     WintersScar.class,
                     SwordofArtorius.class,
                     DivineAvatar.class,
-                    R4C.class
+                    R4C.class,
+                    RadiantSpear.class
             };
-            WEP_T5.probs = new float[]{5, 5, 3, 4, 4, 4, 4, 3, 3, 4, 4};
+            WEP_T5.probs = new float[]{5, 5, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{

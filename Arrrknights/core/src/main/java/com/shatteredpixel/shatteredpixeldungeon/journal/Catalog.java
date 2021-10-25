@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMod
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHikari;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHotBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookLive;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPhantomMirror;
@@ -44,6 +45,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Bookpanorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookBenasProtracto;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookCoverSmoke;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDawn;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDeepHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDreamland;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookEmergencyDefibrillator;
@@ -66,6 +68,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookShadowAssault;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSharpness;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSoaringFeather;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSun;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookTrueSilverSlash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookYourWish;
@@ -195,6 +198,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RadiantSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
@@ -295,6 +299,7 @@ public enum Catalog {
 		WEAPONS.seen.put( SwordofArtorius.class,                   false);
 		WEAPONS.seen.put( DivineAvatar.class,                false);
 		WEAPONS.seen.put( R4C.class,                false);
+		WEAPONS.seen.put( RadiantSpear.class,                false);
 
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Firmament.class,                       false);
@@ -308,9 +313,11 @@ public enum Catalog {
 		WEAPONS.seen.put( MinosFury.class,                   false);
 		WEAPONS.seen.put( ImageoverForm.class,                   false);
 
-		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);
 		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);
+		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);
 		SKILLBOOK.seen.put( BookExecutionMode.class,       false);
+		SKILLBOOK.seen.put( BookThoughts.class,              false);
+		SKILLBOOK.seen.put( BookHikari.class,              false);
 		SKILLBOOK.seen.put( BookFate.class,                false);
 		SKILLBOOK.seen.put( Bookpanorama.class,            false);
 		SKILLBOOK.seen.put( BookFoodPrep.class,            false);
@@ -321,7 +328,6 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookFierceGlare.class,             false);
 		SKILLBOOK.seen.put( BookCamouflage.class,              false);
 		SKILLBOOK.seen.put( BookWolfSpirit.class,              false);
-		SKILLBOOK.seen.put( BookThoughts.class,              false);
 		SKILLBOOK.seen.put( BookHotBlade.class,              false);
 		SKILLBOOK.seen.put( BookSpreadSpores.class,              false);
 		SKILLBOOK.seen.put( BookPhantomMirror.class,              false);
@@ -330,6 +336,8 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);
 		SKILLBOOK.seen.put( BookReflow.class,                false);
+		SKILLBOOK.seen.put( BookNervous.class,              false);
+		SKILLBOOK.seen.put( BookDawn.class,              false);
 		SKILLBOOK.seen.put( BookEmergencyDefibrillator.class,  false);
 		SKILLBOOK.seen.put( BookJackinthebox.class,            false);
 		SKILLBOOK.seen.put( BookRockfailHammer.class,          false);
@@ -340,18 +348,18 @@ public enum Catalog {
         SKILLBOOK.seen.put( Bookancientkin.class,          false);
         SKILLBOOK.seen.put( BookLandingStrike.class,          false);
 		SKILLBOOK.seen.put( BookDreamland.class,              false);
-		SKILLBOOK.seen.put( BookNervous.class,              false);
 		SKILLBOOK.seen.put( BookDeepHealing.class,              false);
 		SKILLBOOK.seen.put( BookSpikes.class,              false);
 		SKILLBOOK.seen.put( BookFlashShield.class,              false);
 		SKILLBOOK.seen.put( BookGenesis.class,              false);
 		SKILLBOOK.seen.put( BookPredators.class,              false);
 
-        SKILLBOOK.seen.put( BookShadowAssault.class,          false);
-        SKILLBOOK.seen.put( BookSoaringFeather.class,          false);
         SKILLBOOK.seen.put( BookSBurst.class,          false);
+		SKILLBOOK.seen.put( BookShadowAssault.class,          false);
         SKILLBOOK.seen.put( BookNigetRaid.class,          false);
+		SKILLBOOK.seen.put( BookSoaringFeather.class,          false);
 		SKILLBOOK.seen.put( BookYourWish.class,              false);
+		SKILLBOOK.seen.put( BookSun.class,          false);
         SKILLBOOK.seen.put( BookTerminationT.class,          false);
         SKILLBOOK.seen.put( BookTrueSilverSlash.class,          false);
 		SKILLBOOK.seen.put( BookEveryone.class,          false);

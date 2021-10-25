@@ -57,6 +57,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMod
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookDawn;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookEmergencyDefibrillator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookJackinthebox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookMentalBurst;
@@ -629,7 +630,7 @@ public class NewDM300 extends Mob {
                 Dungeon.level.drop(new BookNervous(), pos).sprite.drop(pos);
                 break;
             case NEARL:
-                Dungeon.level.drop(Generator.random(Generator.Category.SKL_T2), pos ).sprite.drop( pos );
+                Dungeon.level.drop(new BookDawn(), pos).sprite.drop(pos);
                 break;
         }
 

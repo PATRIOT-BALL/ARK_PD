@@ -92,6 +92,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.ExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Fate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FierceGlare;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.FoodPrep;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Hikari;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.LiveStart;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PhantomMirror;
@@ -104,6 +105,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Whispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.WolfSpirit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BenasProtracto;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BreaktheDawn;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.ChargingPS;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.CoverSmoke;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.DeepHealing;
@@ -127,6 +129,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ExtremeSharpness
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.NigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SBurst;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShadowAssault;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.ShiningSun;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.SoaringFeather;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TerminationT;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.TrueSilverSlash;
@@ -1353,6 +1356,11 @@ public class Hero extends Char {
             }
         }
 
+        if (buff(BreaktheDawn.BreakBuff.class) != null) {
+            damage *= 2f;
+            Buff.detach(this, BreaktheDawn.BreakBuff.class);
+        }
+
         if (hasTalent(Talent.PUSH_ATTACK) && buff(Talent.PushAttackCooldown.class) == null) {
             Ballistica trajectory = new Ballistica(pos, enemy.pos, Ballistica.STOP_TARGET);
             trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
@@ -2508,6 +2516,9 @@ public class Hero extends Char {
             case 18:
                 SK1 = new LiveStart();
                 break;
+            case 19:
+                SK1 = new Hikari();
+                break;
         }
     }
 
@@ -2573,6 +2584,9 @@ public class Hero extends Char {
             case 19:
                 SK2 = new DeepSeaPredators();
                 break;
+            case 20:
+                SK2 = new BreaktheDawn();
+                break;
         }
     }
 
@@ -2607,6 +2621,9 @@ public class Hero extends Char {
                 break;
             case 9:
                 SK3 = new ExtremeSharpness();
+                break;
+            case 10:
+                SK3 = new ShiningSun();
                 break;
         }
 
