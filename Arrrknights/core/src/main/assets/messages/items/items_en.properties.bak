@@ -428,8 +428,8 @@ items.skill.sk3.extremesharpness$sharpnessbuff.name=sharpness
 items.skill.sk3.extremesharpness$sharpnessbuff.desc=Increases accuracy and ignores defense\n\nTrun: %s.
 
 items.skill.sk3.shiningsun.name=_Shining Sun (Skill 3)_
-items.skill.sk3.shiningsun.desc=ACTIVE: Awakens as a knight of light. And grants Vulnerability to enemies in sight.
-items.skill.sk3.shiningsun.desc_wnd=ACTIVE: Awakens as a knight of light. And grants Vulnerability to enemies in sight.
+items.skill.sk3.shiningsun.desc=ACTIVE: Awakens as a Radiant Knight. And grants Vulnerability to enemies in sight.
+items.skill.sk3.shiningsun.desc_wnd=ACTIVE: Awakens as a Radiant Knight. And grants Vulnerability to enemies in sight.
 
 
 

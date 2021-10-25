@@ -29,7 +29,7 @@ public class ImageoverForm extends MeleeWeapon {
 
     @Override
     public int min(int lvl) {
-        if (Dungeon.hero.lvl >= 21) {
+        if (Dungeon.hero.lvl >= 17) {
             return tier + lvl + damagebouns();
         }
         return tier + lvl;
@@ -37,8 +37,8 @@ public class ImageoverForm extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        if (Dungeon.hero.lvl >= 21)
-            return  5*(tier-1) +    //20 + 5
+        if (Dungeon.hero.lvl >= 17)
+            return  5*(tier-1) + damagebouns() +    //20 + bouns + 5
                     lvl*(tier);   //scaling unchanged
         else return  4*(tier-1) +    //16 + 4
                     lvl*(tier-1);   //scaling unchanged
@@ -46,8 +46,8 @@ public class ImageoverForm extends MeleeWeapon {
 
     @Override
     public String desc() {
-        if (Dungeon.hero.lvl >= 28) return Messages.get(this, "desc_up2");
-        else if (Dungeon.hero.lvl >= 21) return Messages.get(this, "desc_up1");
+        if (Dungeon.hero.lvl >= 25) return Messages.get(this, "desc_up2");
+        else if (Dungeon.hero.lvl >= 17) return Messages.get(this, "desc_up1");
         else return Messages.get(this, "desc");
     }
 

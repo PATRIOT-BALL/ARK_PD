@@ -428,7 +428,7 @@ items.skill.sk3.extremesharpness$sharpnessbuff.name=예리함
 items.skill.sk3.extremesharpness$sharpnessbuff.desc=명중률이 상승하고 적의 방어를 무시합니다.\n\n예리함이 떨어질 때까지 %s 턴 남았습니다.
 
 items.skill.sk3.shiningsun.name=_빛나는 태양(3스킬)_
-items.skill.sk3.shiningsun.desc=발동시 빛의 기사로 각성하며, 시야 내 모든 적들에게 취약을 부여합니다.
+items.skill.sk3.shiningsun.desc=발동시 빛의 기사로 각성하며, 시야 내 적들에게 취약을 부여합니다.
 items.skill.sk3.shiningsun.desc_wnd=발동시 빛의 기사로 각성하고 시야 내 적들에게 취약
 
 
