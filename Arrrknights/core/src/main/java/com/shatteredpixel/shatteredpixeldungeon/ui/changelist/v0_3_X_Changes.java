@@ -40,6 +40,9 @@ public class v0_3_X_Changes {
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_해시계_ : 침묵 최대 충전량이 2에서 _4_ 로 증가했습니다. 대신 장착해야만 사용할 수 있도록 변경되었습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
@@ -49,6 +52,9 @@ public class v0_3_X_Changes {
                         "_사냥_ 능력이 미니 보스에게 절반의 피해를 입히도록 변경되었습니다." + "\n\n" +
                 "_신속 전문화_의 _투사체 가속_ 특성의 사격 무기 피해 보너스가 _15-45%_에서 _10-30%_로 감소했습니다." + "\n\n" +
                 "_신속 전문화_의 _특수작전_ 특성의 가속 획득 효과가 제거되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
+                "_바위게 사육사_ : 공격력이 4-17에서 _4-15_로, 강화 효율이 4에서 _3_ 으로 감소했습니다."));
     }
 
     public static void add_v0_3_1_Changes(ArrayList<ChangeInfo> changeInfos) {

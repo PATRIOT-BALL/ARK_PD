@@ -66,7 +66,7 @@ public class Longsword extends MeleeWeapon {
 	protected int collisionProperties = Ballistica.MAGIC_BOLT;
 
 	private int charge = 2;
-	private int chargeCap = 2;
+	private int chargeCap = 4;
 
 	@Override
 	public int max(int lvl) {
@@ -92,7 +92,7 @@ public class Longsword extends MeleeWeapon {
 
 		super.execute(hero, action);
 
-		if (action.equals(AC_ZAP) && charge > 0) {
+		if (action.equals(AC_ZAP) && charge > 0 && isEquipped(hero)) {
 			if (this.cursed != true) {
 				cursedKnown = true;
 				GameScene.selectCell(zapper);
