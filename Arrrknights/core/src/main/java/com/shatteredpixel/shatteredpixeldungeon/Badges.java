@@ -1026,6 +1026,15 @@ public class Badges {
 		if(global.contains(Badge.SKIN_LAPPY)) {
 			global.remove(Badge.SKIN_LAPPY);
 		}
+
+		// 배지 파괴 후, 조건에 맞는 배지는 다시 획득합니다.
+		if(!Badges.isUnlocked(Badges.Badge.SKIN_TALU) && Badges.isUnlocked(Badges.Badge.EVILTIME_END)) {Badges.validatetaluskin();}
+		if(!Badges.isUnlocked(Badges.Badge.SKIN_NOVA) && Badges.isUnlocked(Badges.Badge.FRAGGING)) { Badges.validatenovaskin();}
+		if(!Badges.isUnlocked(Badges.Badge.SKIN_BABOSKADI) && Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_2)) { Badges.validateskadiskin();}
+		if(!Badges.isUnlocked(Badges.Badge.SKIN_SUSUU) && Badges.isUnlocked(Badges.Badge.ALL_POTIONS_IDENTIFIED)) { Badges.validatesusuuskin();}
+		if(!Badges.isUnlocked(Badges.Badge.SKIN_GRN) && Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_1)) { Badges.validategrnskin();}
+		if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI) && Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) { Badges.validatejessiskin();}
+		if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY) && Badges.isUnlocked(Badges.Badge.HAPPY_END)) { Badges.validatelappyskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene

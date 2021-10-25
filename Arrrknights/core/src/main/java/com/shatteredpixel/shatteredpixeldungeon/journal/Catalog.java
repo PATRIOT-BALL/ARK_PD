@@ -288,7 +288,6 @@ public enum Catalog {
 		WEAPONS.seen.put( Scythe.class,                false);
 		WEAPONS.seen.put( FolkSong.class,                false);
 		WEAPONS.seen.put( SnowHunter.class,                false);
-		WEAPONS.seen.put( BladeDemon.class,                false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( WarHammer.class,                  false);
