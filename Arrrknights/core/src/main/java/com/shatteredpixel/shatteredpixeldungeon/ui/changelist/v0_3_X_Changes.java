@@ -24,6 +24,10 @@ public class v0_3_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
+                "_불꽃의 카타나_ : 2티어 무기로, 이 무기로 150명의 적을 처치하면 4티어 무기로 변화합니다." + "\n\n" +
+                "_광휘의 창_ : 5티어 무기로, 취약 상태인 적에게 공격 적중시 추가 피해를 입힙니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "새로운 적들",
                 "_류드밀라의 그림자_ : 모든 층에서 등장할 수 있는 보스입니다. 매우 귀찮은 능력을 지녔지만 처치하면 대량의 합성옥을 얻을 수 있습니다."));
 
