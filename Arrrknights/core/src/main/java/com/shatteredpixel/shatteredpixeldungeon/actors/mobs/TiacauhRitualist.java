@@ -28,7 +28,7 @@ public class TiacauhRitualist extends Mob{
         maxLvl = 35;
 
         loot = Generator.Category.WAND;
-        lootChance = 0.125f;
+        lootChance = 0.08f;
 
     }
 
