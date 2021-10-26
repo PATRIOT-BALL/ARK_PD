@@ -2170,7 +2170,7 @@ items.weapon.melee.glaive.desc=아미야의 아츠로 빚어낸 적소. 그녀�
 items.weapon.melee.glaive.setbouns=_아이템 시너지 : 계승자_\n5%확률로 50%의 추가 피해를 입힙니다.
 
 items.weapon.melee.gloves.name=슈팅 글러브
-items.weapon.melee.gloves.stats_desc=공격속도 300%
+items.weapon.melee.gloves.stats_desc=공격속도 250%
 items.weapon.melee.gloves.desc=이 징 박힌 장갑은 실질적인 보호를 제공하지는 않지만, 손을 자유롭게 유지하면서 튼튼한 무기로 활용할 수 있습니다.
 
 items.weapon.melee.greataxe.name=딥 어비스
@@ -2348,6 +2348,7 @@ items.weapon.melee.naginata.name=나기나타
 items.weapon.melee.naginata.stats_desc=사거리 +1, 공격속도 80%
 items.weapon.melee.naginata.desc=정답은 없다. 그저 선택만이 있을 뿐.\n\n평범한 적은 이 무기로 피해를 받은 후 체력이 15%이하면 즉시 처형당합니다.
 items.weapon.melee.naginata.skill=아부리아게~
+items.weapon.melee.naginata.setbouns=_아이템 시너지 : 번뇌퇴산_\n공격력이 증가합니다.
 
 items.weapon.melee.swordofartorius.name=아트리아스의 검
 items.weapon.melee.swordofartorius.stats_desc=이 무기로 공격할 때마다 아츠 광선을 발사하여 적들에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
@@ -2453,7 +2454,7 @@ items.weapon.melee.snowhunter.desc=어느 등산을 좋아하는 막내 여동�
 items.weapon.melee.snowhunter.desc_mode=어느 등산을 좋아하는 막내 여동생의 채찍.\n\n_변형_\n적중시 적을 자신의 방향으로 약간 끌고옵니다.
 
 items.weapon.melee.flamekatana.name=불꽃의 카타나
-items.weapon.melee.flamekatana.desc=이 무기로 150명의 적을 처치하면 무기의 힘이 해방되어 4티어 무기로 변경됩니다.
+items.weapon.melee.flamekatana.desc=이 무기로 125명의 적을 처치하면 무기의 힘이 해방되어 4티어 무기로 변경됩니다.
 
 items.weapon.melee.bladedemon.name=인귀
 items.weapon.melee.bladedemon.desc="칼과 불로 베어나간다!"\n\n모드 : _카타나_\n공격속도가 125%로 증가합니다.
@@ -2476,6 +2477,7 @@ items.weapon.melee.imageoverform$littleinstinct.desc=시의 능력으로 소환�
 items.weapon.melee.radiantspear.name=광휘의 창
 items.weapon.melee.radiantspear.desc=_"빛이 있으라"_\n\n이 빛의 창은 공격한 대상이 취약 상태라면 공격력의 20%만큼 추가 피해를 입힙니다.
 items.weapon.melee.radiantspear.stats_desc=명중률 +25%
+items.weapon.melee.radiantspear.setbouns=_아이템 시너지 : 빛나는 의지_\n취약 대상 추가 피해량이 33%로 증가합니다.
 
 
 

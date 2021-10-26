@@ -28,6 +28,11 @@ public class SandPillar extends Mob {
         properties.add(Property.IMMOVABLE);
         properties.add(Property.MINIBOSS);
         immunities.add(CorrosiveGas.class);
+        immunities.add( Paralysis.class );
+        immunities.add( Amok.class );
+        immunities.add( Sleep.class );
+        immunities.add( Terror.class );
+        immunities.add( Vertigo.class );
 
         loot = new Gluttony();
         lootChance = 1f;
@@ -38,13 +43,5 @@ public class SandPillar extends Mob {
         GameScene.add(Blob.seed(pos, 30, CorrosiveGas.class));
 
         return super.defenseProc(enemy, damage);
-    }
-
-    {
-        immunities.add( Paralysis.class );
-        immunities.add( Amok.class );
-        immunities.add( Sleep.class );
-        immunities.add( Terror.class );
-        immunities.add( Vertigo.class );
     }
 }

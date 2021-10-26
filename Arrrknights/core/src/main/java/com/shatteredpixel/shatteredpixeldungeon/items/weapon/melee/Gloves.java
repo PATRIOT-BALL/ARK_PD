@@ -53,4 +53,9 @@ public class Gloves extends MeleeWeapon {
 
 		return super.proc(attacker, defender, damage);
 	}
+
+	@Override
+	public boolean isUpgradable() {
+		return false;
+	}
 }

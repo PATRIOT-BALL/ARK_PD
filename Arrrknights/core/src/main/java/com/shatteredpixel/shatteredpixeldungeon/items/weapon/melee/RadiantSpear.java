@@ -1,8 +1,15 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RadiantKnight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfHaste;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class RadiantSpear extends MeleeWeapon {
@@ -24,9 +31,24 @@ public class RadiantSpear extends MeleeWeapon {
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         if (defender.buff(Vulnerable.class) != null) {
-            damage += attacker.damageRoll() / 5;
+            if (Dungeon.hero.belongings.getItem(RingOfSunLight.class) != null && Dungeon.hero.belongings.getItem(RingOfHaste.class) != null) {
+                if (Dungeon.hero.belongings.getItem(RingOfSunLight.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfHaste.class).isEquipped(Dungeon.hero)) {
+                    damage += attacker.damageRoll() / 3;
+                    return super.proc(attacker, defender, damage);
+                }}
+          damage += attacker.damageRoll() / 5;
         }
 
         return super.proc(attacker, defender, damage);
+    }
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+        if (Dungeon.hero.belongings.getItem(RingOfSunLight.class) != null && Dungeon.hero.belongings.getItem(RingOfHaste.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfSunLight.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfHaste.class).isEquipped(Dungeon.hero))
+                info += "\n\n" + Messages.get( RadiantSpear.class, "setbouns");}
+
+        return info;
     }
 }

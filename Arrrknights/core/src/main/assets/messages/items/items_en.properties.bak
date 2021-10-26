@@ -2169,7 +2169,7 @@ items.weapon.melee.glaive.desc=Crimson Firmament made with Amiya's arts.\n\nAtta
 items.weapon.melee.glaive.setbouns=_Succession Monarch_\n5% chance to increase the damage of the by 50% 
 
 items.weapon.melee.gloves.name=shooting glove
-items.weapon.melee.gloves.stats_desc=Attack Speed 300%
+items.weapon.melee.gloves.stats_desc=Attack Speed 250%
 items.weapon.melee.gloves.desc=These gloves protect your hands. Let's hit it with our fists.
 
 items.weapon.melee.greataxe.name=deep abyss
@@ -2448,7 +2448,7 @@ items.weapon.melee.snowhunter.desc=_normal mode_\nMove behind the target.
 items.weapon.melee.snowhunter.desc_mode=_EX mode_\nPull the target slightly.
 
 items.weapon.melee.flamekatana.name=flame katana
-items.weapon.melee.flamekatana.desc=After you kill 150 enemies, your weapon will evolve to Tier 4.
+items.weapon.melee.flamekatana.desc=After you kill 125 enemies, your weapon will evolve to Tier 4.
 
 items.weapon.melee.bladedemon.name=bladedemon
 items.weapon.melee.bladedemon.desc모드 : _Katana_\nAttack Speed 125%
@@ -2469,8 +2469,9 @@ items.weapon.melee.imageoverform$littleinstinct.name=little instinct
 items.weapon.melee.imageoverform$littleinstinct.desc=cute
 
 items.weapon.melee.radiantspear.name=radiant spear
-items.weapon.melee.radiantspear.desc=이 빛의 창은 공격한 대상이 취약 상태라면 공격력의 20%만큼 추가 피해를 입힙니다.
+items.weapon.melee.radiantspear.desc=This spear of light deals an additional 20% damage to vulnerable enemies.
 items.weapon.melee.radiantspear.stats_desc=Accuracy +25%
+items.weapon.melee.radiantspear.setbouns=_Radiant Will_\nVulnerable target bonus damage increased to 33%.
 
 
 ###missile weapons

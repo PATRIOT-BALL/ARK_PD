@@ -37,6 +37,11 @@ public class FireCore extends Mob{
 
         properties.add(Property.IMMOVABLE);
         properties.add(Property.MINIBOSS);
+        immunities.add( Paralysis.class );
+        immunities.add( Amok.class );
+        immunities.add( Sleep.class );
+        immunities.add( Terror.class );
+        immunities.add( Vertigo.class );
 
         immunities.add(Burning.class);
     }
@@ -79,13 +84,5 @@ public class FireCore extends Mob{
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
         spawnRecorded = bundle.getBoolean(SPAWN_RECORDED);
-    }
-
-    {
-        immunities.add( Paralysis.class );
-        immunities.add( Amok.class );
-        immunities.add( Sleep.class );
-        immunities.add( Terror.class );
-        immunities.add( Vertigo.class );
     }
 }
