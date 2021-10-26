@@ -54,13 +54,13 @@ public class TiacauhShaman extends TiacauhRitualist {
 
             return super.doAttack( enemy );
 
-        } else if (buff(Silence.class) != null) {
+        } else if (buff(Silence.class) == null) {
 
             spend( TIME_TO_ZAP );
 
             if (hit( this, enemy, true )) {
                 int dmg = Random.NormalIntRange(12, 18);
-                enemy.damage( dmg, new TiacauhRitualist.TiacauhBolat() );
+                enemy.damage( dmg, new TiacauhShaman.TiacauhBolat() );
 
                 if (enemy.sprite.visible) {
                     enemy.sprite.flash();
@@ -72,7 +72,7 @@ public class TiacauhShaman extends TiacauhRitualist {
 
                     if (!enemy.isAlive()) {
                         Dungeon.fail( getClass() );
-                        GLog.n( Messages.get(TiacauhRitualist.class, "zap_kill") );
+                        GLog.n( Messages.get(TiacauhShaman.class, "zap_kill") );
                     }
                 }
             } else {

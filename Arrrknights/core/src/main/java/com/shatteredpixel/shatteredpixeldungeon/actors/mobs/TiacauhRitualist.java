@@ -62,7 +62,7 @@ public class TiacauhRitualist extends Mob{
 
             return super.doAttack( enemy );
 
-        } else if (buff(Silence.class) != null) {
+        } else if (buff(Silence.class) == null) {
 
             spend( TIME_TO_ZAP );
 
