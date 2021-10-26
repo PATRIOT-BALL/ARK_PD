@@ -205,7 +205,7 @@ public abstract class StandardRoom extends Room {
 		if (Dungeon.extrastage_Gavial) {
 			chances[36] = new float[]{15, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 10,
 					1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1};
-			chances[40] = chances[34] = chances[33] = chances[32] = chances[31];
+			chances[40] = chances[39] = chances[38] = chances[37] = chances[36];
 		}
 		else {
 			chances[36] = new float[]{15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 5, 15, 0,
