@@ -17,7 +17,7 @@ public class TiacauhWarrior extends Mob {
         defenseSkill = 18;
 
         EXP = 13;
-        maxLvl = 28;
+        maxLvl = 29;
 
         loot = new MysteryMeat();
         lootChance = 0.137f;

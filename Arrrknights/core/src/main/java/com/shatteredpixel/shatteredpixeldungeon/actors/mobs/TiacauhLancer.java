@@ -15,7 +15,7 @@ public class TiacauhLancer extends Mob {
         defenseSkill = 15;
 
         EXP = 14;
-        maxLvl = 29;
+        maxLvl = 30;
 
         immunities.add(Silence.class);
     }

@@ -16,7 +16,7 @@ public class TiacauhSniper extends TiacauhLancer {
         defenseSkill = 16;
 
         EXP = 17;
-        maxLvl = 29;
+        maxLvl = 30;
 
         immunities.add(Silence.class);
 

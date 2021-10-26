@@ -21,7 +21,7 @@ public class TiacauhBrave extends Mob {
         defenseSkill = 21;
 
         EXP = 16;
-        maxLvl = 36;
+        maxLvl = 37;
 
         loot = Generator.Category.POTION;
         lootChance = 0.4f;
