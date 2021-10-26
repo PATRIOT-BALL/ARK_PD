@@ -29,12 +29,12 @@ public class Eunectes extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 42, 58 );
+        return Random.NormalIntRange( 48, 60 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 42;
+        return 45;
     }
 
     @Override
@@ -44,9 +44,13 @@ public class Eunectes extends Mob {
 
     @Override
     public void damage(int dmg, Object src) {
+        if (dmg > HT / 2) {
+            dmg = HT / 2;
+        }
+
         super.damage(dmg, src);
 
-        if (HT / 2 > HP && !isBarrier) {
+        if (HT / 2 >= HP && !isBarrier) {
             Buff.affect(this, Barrier.class).setShield(400);
             isBarrier = true;
         }

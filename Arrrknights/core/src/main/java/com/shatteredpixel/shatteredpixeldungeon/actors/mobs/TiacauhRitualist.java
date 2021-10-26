@@ -94,7 +94,10 @@ public class TiacauhRitualist extends Mob{
                 return true;
             }
         }
-        else return true;
+        else {
+            spend(1f);
+            return true;
+        }
     }
 
     public void onZapComplete() {

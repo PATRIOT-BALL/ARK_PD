@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
@@ -15,7 +16,7 @@ public class TiacauhShredder extends Mob {
     {
         spriteClass = Siesta_AgentSprite.class;
 
-        HP = HT = 135;
+        HP = HT = 180;
         defenseSkill = 24;
 
         EXP = 15;
@@ -25,6 +26,14 @@ public class TiacauhShredder extends Mob {
         lootChance = 0.5f;
 
         immunities.add(Silence.class);
+    }
+
+    @Override
+    protected boolean act() {
+        if (buff(Burning.class) != null) {
+            damage(Random.IntRange(36, 48), Burning.class);
+        }
+        return super.act();
     }
 
     @Override

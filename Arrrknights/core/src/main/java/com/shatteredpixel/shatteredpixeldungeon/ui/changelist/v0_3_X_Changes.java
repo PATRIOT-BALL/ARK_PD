@@ -43,6 +43,9 @@ public class v0_3_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "보스 몬스터 조정",
+                "40층 보스들은 일정 수치 이상의 피해를 받을 때 추가 피해 감소를 얻습니다. (일반적인 평타로는 추가 피해 감소가 발생할 일이 없습니다.)"));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);

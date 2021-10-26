@@ -2,8 +2,10 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -45,13 +47,15 @@ public class TiacauhBrave extends Mob {
     @Override
     public int drRoll()
     {
-        if (!isAttack) return Random.NormalIntRange(24, 48);
+        if (!isAttack) return Random.NormalIntRange(30, 50);
         return Random.NormalIntRange(0, 24);
     }
 
     @Override
     public int attackProc(Char enemy, int damage) {
+        if (!isAttack) {
         isAttack = true;
+        Buff.affect(enemy, Vulnerable.class, 3f);}
         return super.attackProc(enemy, damage);
     }
 

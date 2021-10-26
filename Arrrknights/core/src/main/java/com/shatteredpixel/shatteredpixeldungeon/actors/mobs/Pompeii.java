@@ -135,6 +135,11 @@ public class Pompeii extends Mob {
         }
         else if (volcanotime > 0) dmg /= 8;
 
+        if (dmg > 300) {
+            int thedamage = 300 + dmg/10;
+            dmg = thedamage;
+        }
+
         super.damage(dmg, src);
 
         if (phase==1 && HP < 1700) {

@@ -86,7 +86,10 @@ public class TiacauhShaman extends TiacauhRitualist {
                 return true;
             }
         }
-        else return true;
+        else {
+            spend(1f);
+            return true;
+        }
     }
 
     public void onZapComplete() {

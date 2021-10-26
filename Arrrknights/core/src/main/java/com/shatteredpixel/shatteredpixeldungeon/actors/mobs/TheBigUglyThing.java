@@ -49,7 +49,7 @@ public class TheBigUglyThing extends Mob {
     {
         spriteClass = FanaticSprite.class;
 
-        HT = HP = 1800;
+        HT = HP = 2400;
         defenseSkill = 25;
         EXP = 100;
 
@@ -57,24 +57,26 @@ public class TheBigUglyThing extends Mob {
 
         properties.add(Property.BOSS);
         immunities.add(Poison.class);
+        immunities.add(Paralysis.class);
         immunities.add(Silence.class);
     }
 
     private int phase = 1; // 1~3까지
     private int beamcooldown = 0;
-    private int summoncooldown = 6; // 소환 쿨타임
-    private int ragecooldown = 7; // 격노 쿨타임
-    private int firecooldown = 3; // 사격 쿨타임
+    private int summoncooldown = 4; // 소환 쿨타임
+    private int ragecooldown = 5; // 격노 쿨타임
+    private int firecooldown = 1; // 사격 쿨타임
     private int firetime = 0; // 1이면 사격능력 발동
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 44, 55 );
+        if (buff(rageBuff.class) != null) Random.NormalIntRange( 100, 130 );
+        return Random.NormalIntRange( 50, 65 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 46;
+        return 50;
     }
 
     @Override
@@ -84,14 +86,23 @@ public class TheBigUglyThing extends Mob {
 
     @Override
     public void damage(int dmg, Object src) {
+        if (buff(rageBuff.class) != null || firetime != 0) {
+            dmg /= 4;
+        }
+
+        if (dmg > 300) {
+            int thedamage = 300 + dmg/10;
+            dmg = thedamage;
+        }
+
         super.damage(dmg, src);
 
-        if (phase==1 && HP <= 900) {
-            HP = 900;
+        if (phase==1 && HP <= 1200) {
+            HP = 1200;
             phase = 2;
             Buff.detach(this, rageBuff.class);
             GameScene.flash(0x80FF0000);
-            Buff.affect(this, Barrier.class).setShield(900);
+            Buff.affect(this, Barrier.class).setShield(1200);
         }
     }
 
@@ -112,10 +123,10 @@ public class TheBigUglyThing extends Mob {
         }
 
         if (buff(Barrier.class) != null) {
-            HP = Math.min(HP + 18, HT);
+            HP = Math.min(HP + 25, HT);
         }
         else if (buff(Barrier.class) == null && phase == 2) {
-            HP = Math.max(HP, 900);
+            HP = Math.max(HP, 1200);
             phase = 3;
             GameScene.flash(0x80FF0000);
         }
