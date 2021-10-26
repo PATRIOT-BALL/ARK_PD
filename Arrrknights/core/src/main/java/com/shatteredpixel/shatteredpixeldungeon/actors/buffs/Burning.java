@@ -100,7 +100,10 @@ public class Burning extends Buff implements Hero.Doom {
 			Buff.detach( target, Chill.class);
 
 			if (target instanceof Originiutant) damage = (target.HP/10) + 10;
-			if (target instanceof TheBigUglyThing && target.buff(Barrier.class) != null) damage = 60;
+			if (target instanceof TheBigUglyThing) {
+				if (target.buff(Barrier.class) != null) damage+=15;
+				else damage += 7;
+			}
 
 			if (target instanceof Hero) {
 				
