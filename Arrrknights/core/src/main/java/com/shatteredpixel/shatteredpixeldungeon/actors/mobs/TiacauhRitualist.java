@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.TiacauhRitualistSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.WaveCasterSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.Camera;
@@ -18,7 +19,7 @@ public class TiacauhRitualist extends Mob{
     private static final float TIME_TO_ZAP	= 1f;
 
     {
-        spriteClass = WaveCasterSprite.class;
+        spriteClass = TiacauhRitualistSprite.class;
 
         HP = HT = 115;
         defenseSkill = 23;
