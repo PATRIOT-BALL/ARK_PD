@@ -27,7 +27,7 @@ public class TiacauhWarrior extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 30, 42 );
+        return Random.NormalIntRange( 28, 40 );
     }
 
     @Override
