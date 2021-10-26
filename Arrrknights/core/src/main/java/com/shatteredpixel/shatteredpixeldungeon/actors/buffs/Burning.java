@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Fire;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Originiutant;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.TheBigUglyThing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Thief;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
@@ -99,6 +100,7 @@ public class Burning extends Buff implements Hero.Doom {
 			Buff.detach( target, Chill.class);
 
 			if (target instanceof Originiutant) damage = (target.HP/10) + 10;
+			if (target instanceof TheBigUglyThing && target.buff(Barrier.class) != null) damage = 60;
 
 			if (target instanceof Hero) {
 				

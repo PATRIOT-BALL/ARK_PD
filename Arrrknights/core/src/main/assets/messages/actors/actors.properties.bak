@@ -1484,7 +1484,7 @@ actors.mobs.tiacauhshaman.name=티아카우 대주술사
 actors.mobs.tiacauhshaman.desc=아카후알라에서는 굉장히 보기 드문, 오리지늄 아츠에 대해 어느 정도 조예가 있는 캐스터.\n\n_침묵 가능_, 허나 근접 공격은 막을 수 없습니다.
 
 actors.mobs.tiacauhshredder.name=티아카우 디스트로이어
-actors.mobs.tiacauhshredder.desc=주마마의 정예 부하. 뛰어난 장비를 갖추고 있다. 주위에 풀이 많을 수록 공격력이 상승한다.
+actors.mobs.tiacauhshredder.desc=주마마의 정예 부하. 뛰어난 장비를 갖추고 있다. 주위에 풀이 많을 수록 공격력이 상승한다.\n\n불에 약해보입니다.
 
 actors.mobs.tiacauhbrave.name=티아카우 워리어
 actors.mobs.tiacauhbrave.desc=매우 강한 티아카우 전사. 전투를 위해 태어났다 해도 과언이 아니다.\n\n방어력이 매우 높지만, 공격한 뒤에는 방어력이 감소합니다.
