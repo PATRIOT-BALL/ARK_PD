@@ -2339,6 +2339,7 @@ items.weapon.melee.ex42.ac_zap=TRANSFORMED
 items.weapon.melee.naginata.name=naginata
 items.weapon.melee.naginata.stats_desc=Range +1, Attack Speed 80%
 items.weapon.melee.naginata.desc=there is no answer. There may be only choices.\n\nattacking an ordinary enemy, if the target's HP is 12.5% ​​or less, it is immediately enemy killed.
+items.weapon.melee.naginata.setbouns=_Natto gohan!_\nDamage increases
 
 items.weapon.melee.swordofartorius.name=sword of artorius
 items.weapon.melee.swordofartorius.stats_desc=attacking with this weapon, it fires an arts beam, dealing _%1$d-%2$d damage_.
@@ -2814,3 +2815,7 @@ items.pombbay.ssibal=I will yield to the earth
 items.armorupkit.name=armor up kit
 items.armorupkit.ac_upgrade=UPGRADE
 items.armorupkit.desc=Use this item to strengthen the armor you have equipped. At the same time, if the corresponding armor is not tier 5, the tier of the armor will increase.
+
+items.portablecover.name=portable cover
+items.portablecover.ac_use=USE
+items.portablecover.desc=When used at special times, damage can be mitigated.

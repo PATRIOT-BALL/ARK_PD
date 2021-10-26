@@ -21,7 +21,7 @@ public class TiacauhAddict extends Mob {
         spriteClass = BreakerSprite.class;
         baseSpeed = 2f;
 
-        HP = HT = 135;
+        HP = HT = 115;
         defenseSkill = 24;
 
         EXP = 14;

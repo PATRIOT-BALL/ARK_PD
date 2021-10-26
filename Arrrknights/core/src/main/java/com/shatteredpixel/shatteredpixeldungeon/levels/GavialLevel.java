@@ -10,6 +10,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.GavialPainter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.SiestaPainter;
+import com.shatteredpixel.shatteredpixeldungeon.levels.traps.BurningTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.CursingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FlashingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FrostTrap;
@@ -80,7 +81,7 @@ public class GavialLevel extends RegularLevel {
     @Override
     protected Class<?>[] trapClasses() {
         return new Class[]{
-                FrostTrap.class, ToxicTrap.class, OozeTrap.class, PoisonDartTrap.class,
+                FrostTrap.class, ToxicTrap.class, OozeTrap.class, PoisonDartTrap.class, BurningTrap.class,
                 OriginiumTrap.class, FlashingTrap.class, StormTrap.class,
                 GrimTrap.class, WarpingTrap.class
         };
@@ -89,7 +90,7 @@ public class GavialLevel extends RegularLevel {
     @Override
     protected float[] trapChances() {
         return new float[]{
-                4,4,4,4,
+                4,4,4,4,4,
                 2,2,2,
                 1,1
         };

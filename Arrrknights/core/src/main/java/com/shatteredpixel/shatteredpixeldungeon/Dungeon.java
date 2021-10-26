@@ -48,6 +48,8 @@ import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CavesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.CityLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.DeadEndLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.GavialBossLevel1;
+import com.shatteredpixel.shatteredpixeldungeon.levels.GavialBossLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.GavialLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.HallsLevel;
@@ -375,15 +377,18 @@ public class Dungeon {
 				level = new SiestaLevel_part1();
 				break;
 			case 35:
-				level = new SiestaBossLevel_part1();
+				if (extrastage_Gavial) level = new GavialBossLevel1();
+				else level = new SiestaBossLevel_part1();
 				break;
 			case 36:
 			case 37:
 			case 38:
 			case 39:
+				if (extrastage_Gavial) {level = new GavialLevel(); break;}
 				level = new SiestaLevel_part2();
 				break;
 			case 40:
+				if (extrastage_Gavial) {level = new GavialBossLevel2(); break;}
 				level = new SiestaBossLevel_part2();
 				break;
 		default:

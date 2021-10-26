@@ -413,7 +413,7 @@ actors.hero.talent.runic_transference.desc=_+1:_ The Blaze's feather can transfe
 actors.hero.talent.lethal_momentum.title=chainsaw festival
 actors.hero.talent.lethal_momentum.desc=_+1:_ When the Blaze lands a killing blow with a physical weapon, it has a _55% chance_ to take 0 turns.\n\n_+2:_ When the Blaze lands a killing blow with a physical weapon, it has a _80% chance_ to take 0 turns.
 actors.hero.talent.improvised_projectiles.title=improvised projectiles
-actors.hero.talent.improvised_projectiles.desc=_+1:_ The Blaze can blind an enemy for _2 turns_ by throwing any item that isn’t a thrown weapon at them. This has a 25 turn cooldown.\n\n_+2:_ The Blaze can blind an enemy for _3 turns_ by throwing any item that isn’t a thrown weapon at them. This has a 25 turn cooldown.
+actors.hero.talent.improvised_projectiles.desc=_+1:_ The Blaze can blind an enemy for _3 turns_ by throwing any item that isn’t a thrown weapon at them. This has a 25 turn cooldown.\n\n_+2:_ The Blaze can blind an enemy for _5 turns_ by throwing any item that isn’t a thrown weapon at them. This has a 25 turn cooldown.
 actors.hero.talent.hold_fast.title=hold fast
 actors.hero.talent.hold_fast.desc=_+1:_ When the Blaze waits she gains _+2 armor_ until he moves.\n\n_+2:_ When the Blaze waits she gains _+4 armor_ until he moves.\n\n_+3:_ When the Blaze waits she gains _+6 armor_ until he moves.
 actors.hero.talent.strongman.title=strongman
@@ -435,10 +435,13 @@ actors.hero.talent.tactical_shield.desc=_+1:_ Blaze`s defense increases by 2 for
 actors.hero.talent.chainsaw_extend.title=chainsaw extend
 actors.hero.talent.chainsaw_extend.desc=_+1:_ Melee attack range is 1 increased, required STR of the weapon _+4_\n\n_+2:_ Melee attack range is 1 increased, required STR of the weapon _+3_\n\n_+3:_ Melee attack range is 1 increased, required STR of the weapon _+2_
 actors.hero.talent.infinite_rage.title=infinite rage
-actors.hero.talent.infinite_rage.desc=_+1:_ Blaze`s Rage is above _100%_, you gain 20% damage resistance.\n\n_+2:_ Blaze`s Rage is above _75%_, you gain 20% damage resistance.\n\n_+3_ Blaze`s Rage is above _50%_, you gain 20% damage resistance.
+actors.hero.talent.infinite_rage.desc=_+1:_ Blaze`s Rage is above _100%_, you gain 20% damage resistance.\n\n_+2:_ Blaze`s Rage is above _80%_, you gain 20% damage resistance.\n\n_+3_ Blaze`s Rage is above _60%_, you gain 20% damage resistance.\n\n_+4_ Blaze`s Rage is above _40%_, you gain 20% damage resistance.
+actors.hero.talent.infinite_battle.title=infinite battle
+actors.hero.talent.infinite_battle.desc=_+1:_ Reduces rage penalty by _30%_.\n\n_+2:_ Reduces rage penalty by _50%_.\n\n_+3:_ Reduces rage penalty by _70%_.\n\n_+4:_ Reduces rage penalty by _90%_.
 actors.hero.talent.sparkoflife.title=spark of life
-actors.hero.talent.sparkoflife.desc=_+1:_ Blaze`s melee attack is _5%_ chance to recover 5% of Blaze`s HP.\n\n_+2:_ Blaze`s melee attack is _10%_ chance to recover 5% of Blaze`s HP\n\n_+3_ Blaze`s melee attack is _15%_ chance to recover 5% of Blaze`s HP
-
+actors.hero.talent.sparkoflife.desc=_+1:_ Blaze`s melee attack is _6%_ chance to recover 5% of Blaze`s HP.\n\n_+2:_ Blaze`s melee attack is _9%_ chance to recover 5% of Blaze`s HP\n\n_+3_ Blaze`s melee attack is _12%_ chance to recover 5% of Blaze`s HP\n\n_+4_ Blaze`s melee attack is _15%_ chance to recover 5% of Blaze`s HP
+actors.hero.talent.deadly_reach.title=deadly reach
+actors.hero.talent.deadly_reach.desc=_+1:_ combo cooldown increased by _1 trun_.\n\n_+2:_ combo cooldown increased by _2 trun_.\n\n_+3:_ combo cooldown increased by _3 trun_.\n\n_+4:_ combo cooldown increased by _4 trun_.
 
 actors.hero.talent.empowering_meal.title=empowering meal
 actors.hero.talent.empowering_meal.desc=_+1:_ Eating food grants the Amiya _3 bonus damage_ on his next 3 wand zaps.\n\n_+2:_ Eating food grants the Amiya _4 bonus damage_ on his next 3 wand zaps.
@@ -479,22 +482,26 @@ actors.hero.talent.liberation.desc=_+1:_ Increases the maximum charge of Amiya's
 actors.hero.talent.rhodes.title=hospitaller
 actors.hero.talent.rhodes.desc=_+1:_ Using scroll gives you _5_ Arcane Armor. This armor decreases every 15 turns.\n\n_+2:_ Using scroll gives you _10_ Arcane Armor. This armor decreases every 15 turns.\n\n_+3:_ Using scroll gives you _15_ Arcane Armor. This armor decreases every 15 turns.
 actors.hero.talent.azure_fury.title=azure fury
-actors.hero.talent.azure_fury.desc=_+1:_ Striking with her ring grants the Amiya 6% chance to restore 2% of the Skill recorder's recharge.\n\n_+2:_ Striking with her ring grants the Amiya 13% chance to restore 2% of the Skill recorder's recharge.\n\n_+3:_ Striking with her ring grants the Amiya 20% chance to restore 2% of the Skill recorder's recharge.
+actors.hero.talent.azure_fury.desc=_+1:_ Striking with her ring grants the Amiya _5%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+2:_ Striking with her ring grants the Amiya _10%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+3:_ Striking with her ring grants the Amiya _15%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+4:_ Striking with her ring grants the Amiya _20%_ chance to restore 2% of the Skill recorder's recharge.
+actors.hero.talent.swordoflord.title=sword of lord
+actors.hero.talent.swordoflord.desc=_+1:_ Striking with her ring of Increases the arts charge of the by _10%_.\n\n_+2:_ Striking with her ring of Increases the arts charge of the by _15%_.\n\n_+3:_ Striking with her ring of Increases the arts charge of the by _20%_.\n\n_+4:_ Striking with her ring of Increases the arts charge of the by _25%_.
 actors.hero.talent.emotion.title=emotion absorption
-actors.hero.talent.emotion.desc=_+1:_ chance of engraving soul marked is _low_ increased.\n\n_+2:_ chance of engraving soul marked is _middle_ increased.\n\n_+3:_ chance of engraving soul marked is _high_ increased.
+actors.hero.talent.emotion.desc=in proportion to the points chance of engraving soul marked increased.
+actors.hero.talent.lord.title=the lord
+actors.hero.talent.lord.desc=_+1_: soul marked Duration _2 turns_ increased.\n\n_+2_: soul marked Duration _4 turns_ increased.\n\n_+3_: soul marked Duration _6 turns_ increased.\n\n_+4_: soul marked Duration _8 turns_ increased.
 
 actors.hero.talent.cached_rations.title=cached cookie
 actors.hero.talent.cached_rations.desc=_+1:_ The Red can find _4 honey cookie_ placed in chests while she explores the earlier stages of the dungeon.\n\n_+2:_ The Red can find _6 honey cookie_ placed in chests while she explores the earlier stages of the the dungeon.
 actors.hero.talent.thiefs_intuition.title=wolf's intuition
 actors.hero.talent.thiefs_intuition.desc=_+1:_ The Red identifies rings _2x faster_, and identifies the type of a ring _when he equips it_.\n\n_+2:_ The Red identifies rings _when he equips them_, and identifies the type of a ring _when he picks it up_.
 actors.hero.talent.sucker_punch.title=sucker punch
-actors.hero.talent.sucker_punch.desc=_+1:_ The Red deals _1-2 bonus damage_ the first time he surprise attacks an enemy.\n\n_+2:_ The Red deals _2 bonus damage_ the first time he surprise attacks an enemy.
+actors.hero.talent.sucker_punch.desc=_+1:_ The Red deals _1-3 bonus damage_ the first time he surprise attacks an enemy.\n\n_+2:_ The Red deals _2-3 bonus damage_ the first time he surprise attacks an enemy.
 actors.hero.talent.protective_shadows.title=arts shadows
 actors.hero.talent.protective_shadows.desc=_+1:_ The Recharge gains one recorder _4 turn_ her cloak is activated.\n\n_+2:_ The Recharge gains one recorder _2 turn_ her cloak is activated.\n\nRecovers _1_ if your health is low when you activate the talent.
 actors.hero.talent.mystical_meal.title=mystical meal
 actors.hero.talent.mystical_meal.desc=_+1:_ Eating food takes the Red 1 turn and grants him _1.5 turns of artifact recharging_.\n\n_+2:_ Eating food takes the Red 1 turn and grants him _3 turns of artifact recharging_.\n\nTher talent cannot be used to let the gum of plenty recharge itself.
-actors.hero.talent.mystical_upgrade.title=tracker
-actors.hero.talent.mystical_upgrade.desc=_+1:_ When you use a skill, gain _1 turn of haste_.\n\n_+2:_ When you use a skill, gain _2 turn of haste_.\n\nRemoves state the Roots, Blindness, Cripple states.
+actors.hero.talent.tracker.title=tracker
+actors.hero.talent.tracker.desc=_+1:_ When you use a skill or hunt, gain _1 turn of haste_.\n\n_+2:_ When you use a skill or hunt, gain _2 turn of haste_.\n\nRemoves state the Roots, Blindness, Cripple states.
 actors.hero.talent.wide_search.title=wide search
 actors.hero.talent.wide_search.desc=_+1:_ The Red’s search radius is increased from a 5x5 square to a _7x7 circle_.\n\n_+2:_ The Red’s search radius is increased from a 5x5 square to a _7x7 square_.
 actors.hero.talent.silent_steps.title=silent steps
@@ -502,19 +509,19 @@ actors.hero.talent.silent_steps.desc=_+1:_ The Red will not wake sleeping enemie
 actors.hero.talent.rogues_foresight.title=wild sense
 actors.hero.talent.rogues_foresight.desc=_+1:_ When the Red is on a level with a secret room, she has a _60% chance to notice_ that the level contains a secret.\n\n_+2:_ When the Red is on a level with a secret room, she has a _80% chance to notice_ that the level contains a secret.
 actors.hero.talent.light_cloak.title=light cloak
-actors.hero.talent.light_cloak.desc=+1:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _0% speed_.\n\n_+2:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _10% speed_.\n\n_+3:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _20% speed_.
+actors.hero.talent.light_cloak.desc=_+1:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _0% speed_.\n\n_+2:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _10% speed_.\n\n_+3:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _20% speed_.
 actors.hero.talent.enhanced_rings.title=enhanced rings
 actors.hero.talent.enhanced_rings.desc=_+1:_ When the Red uses an artifact, her rings gain +1 upgrade for _2.5 turns_.\n\n_+2:_ When the Red uses an artifact, her rings gain +1 upgrade for _5 turns_.\n\n_+3:_When the Red uses an artifact, her rings gain +1 upgrade for _7.5 turns_.
 actors.hero.talent.enhanced_lethality.title=enhanced lethality
 actors.hero.talent.enhanced_lethality.desc=_+1:_ The Red can assassinate enemies below _4/13/30/60% health_ per level of Bonebreaker, up from 3/10/20/40%.\n\n_+2:_ The Red can assassinate enemies below _6/16/40/80% health_ per level of Bonebreaker, up from 3/10/20/40%.\n\n_+3:_ The Red can assassinate enemies below _8/19/50/100% health_ per level of Bonebreaker, up from 3/10/20/40%.
 actors.hero.talent.assassins_reach.title=Execution begins
-actors.hero.talent.assassins_reach.desc=_+1:_ The Red's blink range per level of Bonebreaker is increased to _2/3/4/6 tiles_, from 1/2/3/4.\n\n_+2:_ The Red`s blink range per level of Bonebreaker is increased to _3/5/6/8 tiles_, from 1/2/3/4.\n\n_+3:_ The Red's blink range per level of Bonebreaker is increased to _4/6/8/10 tiles_, from 1/2/3/4.
+actors.hero.talent.assassins_reach.desc=_+1:_ Blink distance is increased by _1_ when Bonebreaker level is 2 or higher. and Reduces hunt's cooldown by _75 turns_ and has a _33% chance_ to deal x2 damage to normal enemies.\n\n_+2:_ Blink distance is increased by _2_ when Bonebreaker level is 2 or higher. and Reduces hunt's cooldown by _150 turns_ and has a _67% chance_ to deal x2 damage to normal enemies.\n\n_+3:_ Blink distance is increased by _3_ when Bonebreaker level is 2 or higher. and Reduces hunt's cooldown by _225 turns_ and has a _100% chance_ to deal x2 damage to normal enemies.
 actors.hero.talent.bounty_hunter.title=bounty hunter
 actors.hero.talent.bounty_hunter.desc=When the Red kills an enemy with a prepared strike they get additional rewards. The higher the talent level, the higher the chance of getting a better reward.
 actors.hero.talent.evasive_armor.title=evasive armor
 actors.hero.talent.evasive_armor.desc=_+1:_ While freerunning, the Red gains an additional _+1 evasion_ per excess point of strength on her armor.\n\n_+2:_ While freerunning, the Red gains an additional _+2 evasion_ per excess point of strength on her armor.\n\n_+3:_ While freerunning, the Red gains an additional _+3 evasion_ per excess point of strength on her armor.
 actors.hero.talent.projectile_momentum.title=projectile momentum
-actors.hero.talent.projectile_momentum.desc=_+1:_ While freerunning, the Red gains _+20% accuracy and +10% damage_ with thrown weapons.\nAnd gun`s fire _damage +15%_\n\n_+2:_ While freerunning, the Red gains _+40% accuracy and +20% damage_ with thrown weapons.\nAnd gun`s fire _damage +30%_\n\n_+3:_ While freerunning, the Red gains _+60% accuracy and +30% damage_ with thrown weapons.\nAnd gun`s fire _damage +45%_
+actors.hero.talent.projectile_momentum.desc=_+1:_ While freerunning, the Red gains _+20% accuracy and +10% damage_ with thrown weapons.\nAnd gun`s fire _damage +10%_\n\n_+2:_ While freerunning, the Red gains _+40% accuracy and +20% damage_ with thrown weapons.\nAnd gun`s fire _damage +20%_\n\n_+3:_ While freerunning, the Red gains _+60% accuracy and +30% damage_ with thrown weapons.\nAnd gun`s fire _damage +30%_
 actors.hero.talent.speedy_stealth.title=speedy stealth
 actors.hero.talent.speedy_stealth.desc=_+1:_ The Red gains 2 stacks of momentum per turn while she is invisible.\n\n_+2:_ In addition to the benefits of +1, freerunning no longer counts down while the Red is invisible.\n\n_+3:_ In addition to the benefits of +1 and +2, the Red moves at 2x speed while invisible, regardless of whether she is freerunning or not.
 actors.hero.talent.assassinscreed.title=assassin's creed
@@ -523,8 +530,13 @@ actors.hero.talent.clock_upgrade.title=cloak upgrade
 actors.hero.talent.clock_upgrade.desc=_+1:_ Red`s cloak recharges at _105%_ speed\n\n_+2:_ Red`s cloak recharges at _110%_ speed\n\n_+3:_ Red`s cloak recharges at _115%_ speed
 actors.hero.talent.sweep.title=SWEEP
 actors.hero.talent.sweep.desc=_+1:_ When the Red kills an enemy with a prepared strike they 3% SP charge of recorder\n\n_+2:_ When the Red kills an enemy with a prepared strike they 5% SP charge of recorder\n\n_+3:_ When the Red kills an enemy with a prepared strike they 7% SP charge of recorder\n\nWhen the talent level is +2 or higher, gain art vision for 3 turns.
+actors.hero.talent.howling.title=howling
+actors.hero.talent.howling.desc=_+1:_ can now deal _50 damage_ to bosses by hunt.\n\n_+2:_ can now deal _100 damage_ to bosses by hunt\n\n_+3:_ can now deal _150 damage_ to bosses by hunt\n\n_+4:_ can now deal _200 damage_ to bosses by hunt
 actors.hero.talent.special_operations.title=special operations
-actors.hero.talent.special_operations.desc=_+1:_ When the Red uses an artifact,  gains _3_ stacks of momentum. and Freerunning cooldown reduced _2_ turns\n\n_+2:_ When the Red uses an artifact, gains _6_ stacks of momentum. and Freerunning cooldown reduced _3_ turns\n\n_+3:_ When the Red uses an artifact, gains _9_ stacks of momentum. and Freerunning cooldown reduced _4_ turns
+actors.hero.talent.special_operations.desc=_+1:_Freerunning cooldown reduced _1 turns_\n\n_+2:_Freerunning cooldown reduced _2 turns_\n\n_+3:_Freerunning cooldown reduced _3 turns_\n\n_+4:_Freerunning cooldown reduced _4 turns_
+actors.hero.talent.bloodbath_operations.titlebloodbath operations
+actors.hero.talent.bloodbath_operations.desc=hunt's damage x0.5, Also Inflicts Paralysis on the target.\n\n_+1:_ Reduces hunt's cooldown by _100 turns_\n\n_+2:_ Reduces hunt's cooldown by _200 turns_\n\n_+3:_ Reduces hunt's cooldown by _300 turns_\n\n_+4:_ Reduces hunt's cooldown by _400 turns_
+
 
 actors.hero.talent.natures_bounty.title=nature's bounty
 actors.hero.talent.natures_bounty.desc=_+1:_ The GreyThroat can find _4 berries_ hidden in tall grass as she explores the earlier stages of the dungeon.\n\n_+2:_ The GreyThroat can find _6 berries_ hidden in tall grass as she explores the earlier stages of the dungeon.
@@ -561,13 +573,15 @@ actors.hero.talent.barkskin.desc=_+1:_ Thrown weapons have a _low_ chance to gen
 actors.hero.talent.savior_pray.title=savior`s pray
 actors.hero.talent.savior_pray.desc=_+1:_ Enemies within sight are reducing their hit evasion _3 turns_ when a plant's effect is activated in her vision\n\n_+2:_ Enemies within sight are reducing their hit evasion _4 turns_ when a plant's effect is activated in her vision\n\n_+3:_ Enemies within sight are reducing their hit evasion _5 turns_ when a plant's effect is activated in her vision
 actors.hero.talent.point_blank.title=don't come!
-actors.hero.talent.point_blank.desc=_+1:_ Enemies hit by GreyThroat`s crossbow have a 6% chance to become Vertigo.\n\n_+2:_ Enemies hit by GreyThroat`s crossbow have a 13% chance to become Vertigo.\n\n_+3:_ Enemies hit by GreyThroat`s crossbow have a 20% chance to become Vertigo.\n\nNote that thrown weapons always have +50% accuracy when used at a distance.
+actors.hero.talent.point_blank.desc=_+1:_ Enemies hit by GreyThroat`s crossbow have a 10% chance to become Vertigo.\n\n_+2:_ Enemies hit by GreyThroat`s crossbow have a 20% chance to become Vertigo.\n\n_+3:_ Enemies hit by GreyThroat`s crossbow have a 30% chance to become Vertigo.\n\nNote that thrown weapons always have +50% accuracy when used at a distance.
 actors.hero.talent.improved_crossbow.title=improved crossbow
 actors.hero.talent.improved_crossbow.desc=_+1:_  GrayThroat`s crossbow damage increased by _2_\n\n_+2:_ GrayThroat`s crossbow damage increased by _4_\n\n_+3:_ GrayThroat`s crossbow damage increased by _6_
+actors.hero.talent.push_attack.title=push attack
+actors.hero.talent.push_attack.desc=Melee Attack knocks back the target. There is a cooldown of 80 turns.\n\n_+1:_ push 1 space\n\n_+2:_ push 2 space\n\n_+3:_ push 3 space\n\n_+4:_ push 4 space
 actors.hero.talent.sniping.title=sniping
-actors.hero.talent.sniping.desc=_+1:_ increases the and the damage of her special attack by _20%_.\n\n_+2:_ increases the and the damage of her special attack by _40%_.\n\n_+3:_ increases the and the damage of her special attack by _60%_.
+actors.hero.talent.sniping.desc=_+1:_ increases the and the damage of her special attack by _15%_.\n\n_+2:_ increases the and the damage of her special attack by _30%_.\n\n_+3:_ increases the and the damage of her special attack by _45%_.\n\n_+4:_ increases the and the damage of her special attack by _60%_.
 actors.hero.talent.savior_belief.title=savior`s belief
-actors.hero.talent.savior_belief.desc=_+1:_ Deals _20%_ additional damage to roots or paralyzed enemies.\n\n_+2:_ Deals _40%_ additional damage to roots or paralyzed enemies.\n\n_+3:_ Deals _60%_ additional damage to roots or paralyzed enemies.\n\nWhen you activate this talent, you gain up to _25% damage bouns_ based on the nearby high grass.
+actors.hero.talent.savior_belief.desc=_+1:_ Deals _15%_ additional damage to roots or paralyzed enemies.\n\n_+2:_ Deals _30%_ additional damage to roots or paralyzed enemies.\n\n_+3:_ Deals _45%_ additional damage to roots or paralyzed enemies.\n\n_+4:_ Deals _60%_ additional damage to roots or paralyzed enemies.\n\nWhen you activate this talent, you gain up to _25% damage bouns_ based on the nearby high grass.
 
 actors.hero.talent.lightnessmeal.title=lightness meal
 actors.hero.talent.lightnessmeal.desc=_+1:_ Eating food grants the Rosmontis gain _5 Turns_ levitation.\n\n_+2:_ Eating food grants the Rosmontis gain _10 Turns_ levitation.\n\nIf you have this talent, using gear while levitation does not consume any charge. When this effect is triggered, the levitation effect is immediately removed.\n\nGum doll cannot active talent
@@ -607,10 +621,12 @@ actors.hero.talent.rhodes_weapon.title=rhodes weapon
 actors.hero.talent.rhodes_weapon.desc=_+1:_ Rosmontis's Gear damage increased by _2_.\n\n_+2:_ Rosmontis's Gear damage increased by _4_.\n\n_+3:_ Rosmontis's Gear damage increased by _6_.
 actors.hero.talent.recall_memory.title=recall memory
 actors.hero.talent.recall_memory.desc=_+1:_ Using scroll, recorder is recharged by _3%_.\n\n_+2:_ Using scroll, recorder is recharged by _6%_.\n\n_+3:_ Using scroll, recorder is recharged by _9%_.
+actors.hero.talent.guilt.title=guilt
+actors.hero.talent.guilt.desc=_+1:_ Defense increases by 1 for every _80 enemies_ killed.\n\n_+2:_ Defense increases by 1 for every _70 enemies_ killed.\n\n_+3:_ Defense increases by 1 for every _60 enemies_ killed.\n\n_+4:_ Defense increases by 1 for every _50 enemies_ killed.\n\nmax : 15
 actors.hero.talent.esthesia.title=esthesia
-actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _5%_ bonus damage to boss enemies.\n\n_+2_ Gear attacks deal _10%_ bonus damage to boss enemies.\n\n_+3:_ Gear attacks deal _15%_ bonus damage to boss enemies.
+actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _6%_ bonus damage to boss enemies.\n\n_+2_ Gear attacks deal _9%_ bonus damage to boss enemies.\n\n_+3:_ Gear attacks deal _12%_ bonus damage to boss enemies.\n\n_+4:_ Gear attacks deal _15%_ bonus damage to boss enemies.
 actors.hero.talent.speed_comabt.title=speed comabt
-actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _30%_
+actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _5%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _15%_\n\n_+4:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_
 
 actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
@@ -629,14 +645,14 @@ actors.hero.talent.puerlight.title=puer light
 actors.hero.talent.puerlight.desc=_+1:_ When you use a skill, Knocks back visible enemies by _1 space_ and glows for _50 turns._\n\n+2:_ When you use a skill, Knocks back visible enemies by _2 space_ and glows for _100 turns._
 actors.hero.talent.resurgence.title=resurgence
 actors.hero.talent.resurgence.desc=_+1:_ Blessed Ankh activated, Increases health recovery by _30%_ and shield by _50%_.\n\n+2:_ Blessed Ankh activated, Increases health recovery by _60%_ and shield by _100%_.
-actors.hero.talent.phaserush.title=난입
-actors.hero.talent.phaserush.desc=_+1:_ 빛의 기사 상태일 때 물리 공격시 빛의 인장을 _1%_ 충전합니다.\n\n_+2:_ 빛의 기사 상태일 때 물리 공격시 빛의 인장을 _2%_ 충전합니다.
-actors.hero.talent.exorcism.title=퇴마
-actors.hero.talent.exorcism.desc=_+1:_ 살카즈에게 _2의 추가 피해_ 를 입힙니다.\n\n_+2:_ 살카즈에게 _4의 추가 피해_ 를 입힙니다.
-actors.hero.talent.pegasus_aura.title=페가수스의 가호
-actors.hero.talent.pegasus_aura.desc=_+1:_ 빛의 인장 사용시 최대 체력의 _5%_ 만큼 보호막을 얻습니다. 빛의 기사 상태일 때 명중률이 _10%_ 상승합니다.\n\n_+2:_ 빛의 인장 사용시 최대 체력의 _10%_ 만큼 보호막을 얻습니다. 빛의 기사 상태일 때 명중률이 _20%_ 상승합니다.\n\n_+3:_ 빛의 인장 사용시 최대 체력의 _15%_ 만큼 보호막을 얻습니다. 빛의 기사 상태일 때 명중률이 _30%_ 상승합니다.
-actors.hero.talent.radianthero.title=빛의 용사
-actors.hero.talent.radianthero.desc=체력이 50%이하일 때 공격받으면 즉시 빛의 기사 상태에 돌입합니다.\n\n_+1: 600 턴_의 쿨타임을 가집니다.\n\n_+2: 450 턴_의 쿨타임을 가집니다.\n\n_+3: 300 턴_의 쿨타임을 가집니다.
+actors.hero.talent.phaserush.title=phase rush
+actors.hero.talent.phaserush.desc=_+1:_ When you are a RadiantKnight, you seal of light gain charge by _1%_ on hit.\n\n_+2:_ When you are a RadiantKnight, you seal of light gain charge by _2%_ on hit.
+actors.hero.talent.exorcism.title=exorcism
+actors.hero.talent.exorcism.desc=_+1:_ Deals _2_ additional damage and takes _1_ less damage. to Sarkaz.\n\n_+2:_ Deals _4_ additional damage and takes _2_ less damage. to Sarkaz.
+actors.hero.talent.pegasus_aura.title=pegasus aura
+actors.hero.talent.pegasus_aura.desc=_+1:_ When your seal of light activated, your recover HP _5%._. and When in RadiantKnight state, accuracy increases by _10%._\n\n_+2:_ When your seal of light activated, your recover HP _10%._. and When in RadiantKnight state, accuracy increases by _20%._\n\n_+3:_ When your seal of light activated, your recover HP _15%._. and When in RadiantKnight state, accuracy increases by _30%._
+actors.hero.talent.radianthero.title=radiant hero
+actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a radiant knight.\n\n_+1: _600 turn_ cool down\n\n_+2: _450 turn_ cool down\n\n_300 turn_ cool down
 actors.hero.talent.into_fray.title=참전
 actors.hero.talent.into_fray.desc=_+1:_ 필살기로 적 처치시 _1 턴의 신속_ 을 얻습니다.\n\n_+2:_ 필살기로 적 처치시 _2 턴의 신속_ 을 얻습니다.\n\n_+3:_ 필살기로 적 처치시 _3 턴의 신속_ 을 얻습니다.
 actors.hero.talent.blitzkrieg.title=전격전
@@ -653,10 +669,12 @@ actors.hero.talent.grand_order.title=그랜드 오더
 actors.hero.talent.grand_order.desc=_+1:_ 보스 전투 돌입시 체력을 _30%_ 회복하며, 즉시 빛의 기사로 각성합니다.\n\n_+2:_ 보스 전투 돌입시 체력을 _60%_ 회복하며, 즉시 빛의 기사로 각성합니다.\n\n_+3:_ 보스 전투 돌입시 체력을 _90%_ 회복하며, 즉시 빛의 기사로 각성합니다.
 actors.hero.talent.knight_of_kazimierz.title=카시미어의 기사
 actors.hero.talent.knight_of_kazimierz.desc=_+1:_ 빛의 기사 상태일 때 공격시 아츠 기록장치를 _1%_ 충전합니다.\n\n_+2:_ 빛의 기사 상태일 때 공격시 아츠 기록장치를 _2%_ 충전합니다.\n\n_+3:_ 빛의 기사 상태일 때 공격시 아츠 기록장치를 _3%_ 충전합니다.
+actors.hero.talent.knight_body.title=기사의 육신
+actors.hero.talent.knight_body.desc=_+1:_ 최대 체력이 _10_ 증가합니다.\n\n_+2:_ 최대 체력이 _20_ 증가합니다.\n\n_+3:_ 최대 체력이 _30_ 증가합니다.\n\n_+4:_ 최대 체력이 _40_ 증가합니다.
 actors.hero.talent.quick_tactics.title=속공전술
-actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _6 턴_으로 증가합니다.\n\n_+2:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _7 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _8 턴_으로 증가합니다.\n\n또한, 빛의 인장 사용에 턴을 소모하지 않게됩니다.
+actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _6 턴_으로 증가합니다.\n\n_+2:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _7 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _8 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _9 턴_으로 증가합니다.\n\n또한, 빛의 인장 사용에 턴을 소모하지 않게됩니다.
 actors.hero.talent.blessed_champion.title=blessed champion
-actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._
+actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._\n\n_+4:_ seal of light activated, you gain a blessing for _40 turns._
 
 actors.hero.talent$radiantherocooldown.name=RadiantHero cooldown
 actors.hero.talent$radiantherocooldown.desc=cooldown %s Trun.
@@ -712,7 +730,7 @@ actors.hero.heroclass.rosecat_unlock=The Rosmontis is a strong arts user, and ha
 actors.hero.heroclass.rosecat_desc=The Rosmontis is strong arts user, and has a _unique gear_ which fire an can attack all locations.gear is Cannot be recharged in the usual way, and you level up by gaining experience, everything is recharged.\n\nRosemontis`s gear is can attack all locations.\n\nThe Rosmontis automatically identifies:\n- Scrolls of Identify\n- Potion Of Levitation
 
 actors.hero.heroclass.nearl=Nearl
-actors.hero.heroclass.nearl_unlock=I only hope that Liz and I could be there when it does to make sure she isn't alone.
+actors.hero.heroclass.nearl_unlock=The Nearl is A Knight of light, and has a _uniqu shield_ with awaken the power of light.\n\nTo unlock her _you Slaine 200 enemy._
 actors.hero.heroclass.nearl_desc=The Nearl is A knight of light with powerful power, With her _special shield_, you can awaken the power of light.\n\nawakening the power of light, Nearl's combat ability increases.\n\nThe Nearl automatically identifies:\n- Scrolls of Identify\n- Potion of Experience\n- Scrolls of RemoveCurse
 
 actors.hero.herosubclass.gladiator=Master
@@ -877,19 +895,20 @@ actors.mobs.npcs.blackperro.active=Training started.
 
 actors.mobs.npcs.prts.name=???
 actors.mobs.npcs.prts.desc=I will wait until that day comes. I promise you I will. Wait for me. You must wait for me too.\n\n... Don't ever forget about me.
-actors.mobs.npcs.prts.hint1=Hint(1/13)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
-actors.mobs.npcs.prts.hint2=Hint(2/13)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
-actors.mobs.npcs.prts.hint3=Hint(3/13)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
-actors.mobs.npcs.prts.hint4=Hint(4/13)\n\n_Potato_ can be combined with something to make a shield.
-actors.mobs.npcs.prts.hint5=Hint(5/13)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
-actors.mobs.npcs.prts.hint6=Hint(6/13)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
-actors.mobs.npcs.prts.hint7=Hint(7/13)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
-actors.mobs.npcs.prts.hint8=Hint(8/13)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
-actors.mobs.npcs.prts.hint9=Hint(9/13)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
-actors.mobs.npcs.prts.hint10=Hint(10/13)\n\nYou can change the quickslot by long-clicking the backpack button.
-actors.mobs.npcs.prts.hint11=Hint(11/13)\n\n_Fire wand_ can be combined with something to make a A fire tool that destroys traps
-actors.mobs.npcs.prts.hint12=Hint(12/13)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
-actors.mobs.npcs.prts.hint13=Hint(13/13)\n\n_Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
+actors.mobs.npcs.prts.hint1=Hint(1/14)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
+actors.mobs.npcs.prts.hint2=Hint(2/14)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
+actors.mobs.npcs.prts.hint3=Hint(3/14)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
+actors.mobs.npcs.prts.hint4=Hint(4/14)\n\n_Potato_ can be combined with something to make a shield.
+actors.mobs.npcs.prts.hint5=Hint(5/14)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
+actors.mobs.npcs.prts.hint6=Hint(6/14)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
+actors.mobs.npcs.prts.hint7=Hint(7/14)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
+actors.mobs.npcs.prts.hint8=Hint(8/14)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
+actors.mobs.npcs.prts.hint9=Hint(9/14)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
+actors.mobs.npcs.prts.hint10=Hint(10/14)\n\nYou can change the quickslot by long-clicking the backpack button.
+actors.mobs.npcs.prts.hint11=Hint(11/14)\n\n_Fire wand_ can be combined with something to make a A fire tool that destroys traps
+actors.mobs.npcs.prts.hint12=Hint(12/14)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
+actors.mobs.npcs.prts.hint13=Hint(13/14)\n\n_Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
+actors.mobs.npcs.prts.hint14=Hint(14/14)\n\n_someone's dagger_ into the _avant-garde well_, Transforms into a painter's greatsword.
 
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her...
@@ -909,7 +928,9 @@ actors.mobs.npcs.ceylon.desc=I don't like this water!
 actors.mobs.npcs.ceylon.water=The day is not complete without tea. Those who took my tea leaves are called _Infantry_, _Ergate_, _Agent_.
 actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria National University with a major in Originium research. Are you... Rhodes? I'm sorry, but can you do me a favor? I'm going to practice in Rhodes soon, but I've lost my red tea leaves and water bottle. Can you get me my water bottle and red tea leaves? i want are about 8 red tea leaves.
 
-
+actors.mobs.npcs.gavial.name=gavial
+actors.mobs.npcs.gavial.desc=Talking to her will take you through the Gavial extra chapter.
+actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
 
 
 
@@ -1190,7 +1211,7 @@ actors.mobs.snake.hint=Try using the examine button on a slug to learn how to co
 actors.mobs.snake.desc=An infected wild creature. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions. Various seeds and fruits are blooming.\n\nYou can perform a surprise attack by attacking while out of the slug`s vision. One way is to let a slug chase you through a doorway and then _strike just as it moves into the door._
 
 actors.mobs.explodslug_n.name=Originium Slug
-actors.mobs.explodslug_n.desc=they are easily controlled by enemy casters for use as cannon fodder during invasions. prefer to wait in the distance while their victim struggles in their excreted cobweb, slowly dying from their venomous bite. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.\n\n_silence possible_
+actors.mobs.explodslug_n.desc=they are easily controlled by enemy casters for use as cannon fodder during invasions. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.\n\n_silence possible_
 
 actors.mobs.statue.name=Guerrilla Shieldguard
 actors.mobs.statue.def_verb=blocked
@@ -1426,7 +1447,28 @@ actors.mobs.firecore.on_death=You felt volcanic energy diminish. Remaining cores
 
 actors.mobs.pompeii.name=Pompeii
 actors.mobs.pompeii.desc=A massive infected beast. These aberrations were born in a special high-temperature environment.\n\n_This creature seems to be weak against water and poison_
+actors.mobs.pompeii.skill=Pompeii absorbs the attack and recovers Life energy!
 
 // 추가
 actors.mobs.sandpillar.name=Obelisk
 actors.mobs.sandpillar.desc=my little sister is the cutest
+
+actors.mobs.crownslayer_shadow.name=shadow crownslayer
+actors.mobs.crownslayer_shadow.desc=She is an officer of Reunion, and will a surprise attack with her unique ability. However, this ability seems to have a long cooldown.
+
+// 가비알 1챕터 몹
+
+actors.mobs.tiacauhwarrior.name=tiacauh warrior
+actors.mobs.tiacauhwarrior.desc=One of Acahualla's most commonly-seen warriors who uses a crude spear to attack. May pose unexpected difficulties if fighting at close range.\n\nIf there is a lot of grass around, you take less damage.
+
+actors.mobs.tiacauhfanatic.name=tiacauh fanatic
+actors.mobs.tiacauhfanatic.desc=A fervent Tiacauh warrior with very fast attack speed. Though each strike is not particularly powerful, those caught off guard will be quickly subdued by a rain of blows.
+
+actors.mobs.tiacauhlancer.name=tiacauh lancer
+actors.mobs.tiacauhlancer.desc=Not much different from a regular warrior, except they've learned to throw their spears. Though their range is limited, they get the job done.
+
+actors.mobs.tiacauhsniper.name=tiacauh sniper
+actors.mobs.tiacauhsniper.desc=Warriors who have gained greater proficiency in using thrown weapons due to training, and boast greater lethality. However, due to the weight of their weapons, their range hasn't really improved.
+
+actors.mobs.tiacauhaddict.name=tiacauh addict
+actors.mobs.tiacauhaddict.desc=A warrior poisoned by mushrooms. It has a fast movement speed and can reduce the target's combat ability when hit.

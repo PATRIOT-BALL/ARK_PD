@@ -34,6 +34,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DM100;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Eye;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Pompeii;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Shaman;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.TheBigUglyThing;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.TiacauhRitualist;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Warlock;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.WaveCaster;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Yog;
@@ -128,6 +130,7 @@ public class AntiMagic extends Armor.Glyph {
 		RESISTS.add( AcidSlug_A.AcidBolt.class );
 		RESISTS.add( Pompeii.Blast.class );
 		RESISTS.add( Pompeii.Volcano.class );
+		RESISTS.add( TiacauhRitualist.TiacauhBolat.class );
 	}
 	
 	@Override

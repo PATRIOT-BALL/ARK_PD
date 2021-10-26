@@ -1,35 +1,30 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
-import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
-import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
-import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EnragedSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
-import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class TiacauhFanatic extends Mob {
+public class TiacauhRipper extends Mob {
     {
         spriteClass = EnragedSprite.class;
 
-        HP = HT = 75;
-        defenseSkill = 40;
+        HP = HT = 85;
+        defenseSkill = 45;
 
-        EXP = 13;
-        maxLvl = 29;
+        EXP = 15;
+        maxLvl = 34;
 
         loot = new Gold();
-        lootChance = 0.35f;
+        lootChance = 0.25f;
 
         immunities.add(Silence.class);
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 16, 28 );
+        return Random.NormalIntRange( 20, 36 );
     }
 
     @Override
@@ -39,18 +34,18 @@ public class TiacauhFanatic extends Mob {
 
     @Override
     public int attackSkill( Char target ) {
-        return 36;
+        return 38;
     }
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 14);
+        return Random.NormalIntRange(0, 16);
     }
 
     @Override
     public int attackProc(Char enemy, int damage) {
         int dmgbouns = enemy.drRoll() / 4;
-        dmgbouns = Math.min(dmgbouns, 8);
+        dmgbouns = Math.min(dmgbouns, 9);
         damage += dmgbouns;
         return super.attackProc(enemy, damage);
     }

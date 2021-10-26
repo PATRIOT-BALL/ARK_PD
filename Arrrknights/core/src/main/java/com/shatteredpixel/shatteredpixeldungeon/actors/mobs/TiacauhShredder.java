@@ -3,55 +3,55 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
-import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
+import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.EnragedSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Siesta_AgentSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class TiacauhFanatic extends Mob {
+public class TiacauhShredder extends Mob {
     {
-        spriteClass = EnragedSprite.class;
+        spriteClass = Siesta_AgentSprite.class;
 
-        HP = HT = 75;
-        defenseSkill = 40;
+        HP = HT = 135;
+        defenseSkill = 24;
 
-        EXP = 13;
-        maxLvl = 29;
+        EXP = 15;
+        maxLvl = 35;
 
-        loot = new Gold();
-        lootChance = 0.35f;
+        loot = Generator.Category.STONE;
+        lootChance = 0.5f;
 
         immunities.add(Silence.class);
     }
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 16, 28 );
-    }
-
-    @Override
-    protected float attackDelay() {
-        return super.attackDelay() * 0.4f;
+        return Random.NormalIntRange( 35, 48 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 36;
+        return 40;
     }
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 14);
+        return Random.NormalIntRange(0, 20);
     }
 
     @Override
     public int attackProc(Char enemy, int damage) {
-        int dmgbouns = enemy.drRoll() / 4;
-        dmgbouns = Math.min(dmgbouns, 8);
-        damage += dmgbouns;
+        int grassCells = 0;
+        for (int i : PathFinder.NEIGHBOURS9) {
+            if (Dungeon.level.map[pos+i] == Terrain.FURROWED_GRASS
+                    || Dungeon.level.map[pos+i] == Terrain.HIGH_GRASS){
+                grassCells++;
+            }
+        }
+        if (grassCells > 0) damage = Math.round(damage * (1f + (grassCells * 0.04f)));
         return super.attackProc(enemy, damage);
     }
 }

@@ -21,7 +21,6 @@ public class FRY_EGG extends Food {
     @Override
     protected void satisfy(Hero hero) {
         Buff.detach(hero, Burning.class);
-        Buff.detach(hero, Poison.class);
         super.satisfy(hero);
     }
 

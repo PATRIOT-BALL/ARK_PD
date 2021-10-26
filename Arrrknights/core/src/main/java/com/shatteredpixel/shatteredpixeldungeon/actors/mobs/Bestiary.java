@@ -234,6 +234,11 @@ public class Bestiary {
 						Piersailor.class, Piersailor.class, Piersailor.class,
 						Agent.class, Agent.class, Agent.class));
 			case 36:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhRipper.class, TiacauhRipper.class, TiacauhRipper.class,
+							TiacauhShredder.class, TiacauhShredder.class));
+				}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
@@ -241,6 +246,12 @@ public class Bestiary {
 						ExplodeSlug_A.class
 				));
 			case 37:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhRipper.class, TiacauhRipper.class,
+							TiacauhShredder.class, TiacauhShredder.class,
+							TiacauhRitualist.class));
+				}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
@@ -248,6 +259,13 @@ public class Bestiary {
 						ExplodeSlug_A.class
 				));
 			case 38:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhRipper.class,
+							TiacauhShredder.class, TiacauhShredder.class,
+							TiacauhRitualist.class, TiacauhRitualist.class,
+							TiacauhBrave.class));
+				}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class,
@@ -256,6 +274,12 @@ public class Bestiary {
 						AcidSlug_A.class
 				));
 			case 39:
+				if (Dungeon.extrastage_Gavial) {
+					return new ArrayList<>(Arrays.asList(
+							TiacauhShredder.class,
+							TiacauhRitualist.class, TiacauhRitualist.class, TiacauhRitualist.class,
+							TiacauhBrave.class, TiacauhBrave.class));
+				}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
@@ -344,6 +368,9 @@ public class Bestiary {
 				}
 				else if (cl == TiacauhLancer.class) {
 					cl = TiacauhSniper.class;
+				}
+				else if (cl == TiacauhRitualist.class) {
+					cl = TiacauhShaman.class;
 				}
 				rotation.set(i, cl);
 			}

@@ -162,6 +162,7 @@ public class Pompeii extends Mob {
     @Override
     protected boolean act() {
         if (phase == 3 && HP < 1) {
+            Dungeon.hero.HP = Dungeon.hero.HT;
             Badges.validateVictory();
             Badges.validateChampion(Challenges.activeChallenges());
             Badges.validateChampion_char(Challenges.activeChallenges());
