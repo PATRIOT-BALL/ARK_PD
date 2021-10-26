@@ -11,6 +11,7 @@ public class PortableCover extends Item {
     private static String AC_USE = "USE";
     {
         image = ItemSpriteSheet.BONK;
+        stackable = true;
     }
 
     @Override
@@ -43,7 +44,7 @@ public class PortableCover extends Item {
 
     @Override
     public int value() {
-        return 40;
+        return 30 * quantity;
     }
 
     public static class CoverBuff extends FlavourBuff {

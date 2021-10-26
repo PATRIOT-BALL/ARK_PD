@@ -26,6 +26,7 @@ public class RingKit extends Item {
 
     {
         image = ItemSpriteSheet.RINGKIT;
+        bones = false;
     }
 
     @Override

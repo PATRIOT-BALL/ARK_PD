@@ -3,6 +3,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ceylon;
+import com.shatteredpixel.shatteredpixeldungeon.items.PortableCover;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Obsidian;
@@ -50,6 +51,10 @@ public class GavialLevel extends RegularLevel {
         if (Dungeon.depth == 32 || Dungeon.depth == 34 || Dungeon.depth == 37 || Dungeon.depth == 39) {
             addItemToSpawn(new PotionOfStrength());}
         else  if (Dungeon.depth == 31 || Dungeon.depth == 33 || Dungeon.depth == 36 || Dungeon.depth == 38) addItemToSpawn(new ScrollOfUpgrade());
+
+        if (Dungeon.depth >= 36 && !Dungeon.bossLevel()) {
+            addItemToSpawn(new PortableCover());
+        }
 
         super.createItems();
     }

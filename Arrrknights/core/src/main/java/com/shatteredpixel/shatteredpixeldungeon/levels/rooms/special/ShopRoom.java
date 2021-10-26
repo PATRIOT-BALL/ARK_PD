@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Honeypot;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.MerchantsBeacon;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
+import com.shatteredpixel.shatteredpixeldungeon.items.PortableCover;
 import com.shatteredpixel.shatteredpixeldungeon.items.RandomBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Stylus;
 import com.shatteredpixel.shatteredpixeldungeon.items.Torch;
@@ -212,6 +213,14 @@ public class ShopRoom extends SpecialRoom {
 			}
 
 			case 36:
+				if (Dungeon.extrastage_Gavial) {
+					w = (MeleeWeapon) Generator.random(Generator.wepTiers[4]);
+					itemsToSpawn.add(Generator.random(Generator.misTiers[4]).quantity(2).identify());
+					itemsToSpawn.add(new PlateArmor().identify());
+					itemsToSpawn.add(new PortableCover());
+					itemsToSpawn.add(new PortableCover());
+					break;
+				}
 				w = (MeleeWeapon) Generator.random(Generator.wepTiers[4]);
 				itemsToSpawn.add( new Ankh() );
 				itemsToSpawn.add( new OathofFire().quantity(4));

@@ -48,7 +48,8 @@ public class ArmorKit extends Item {
 	
 	{
 		image = ItemSpriteSheet.KIT;
-		
+
+		bones = false;
 		unique = true;
 	}
 	
