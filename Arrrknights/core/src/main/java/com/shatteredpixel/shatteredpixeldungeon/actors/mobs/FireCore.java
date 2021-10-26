@@ -49,6 +49,11 @@ public class FireCore extends Mob{
     public boolean spawnRecorded = false;
 
     @Override
+    public void beckon(int cell) {
+        //do nothing
+    }
+
+    @Override
     public int defenseProc(Char enemy, int damage) {
         Buff.affect(enemy, Burning.class).reignite(enemy);
         return super.defenseProc(enemy, damage);

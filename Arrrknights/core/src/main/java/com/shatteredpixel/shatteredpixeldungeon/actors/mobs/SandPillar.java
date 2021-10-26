@@ -39,6 +39,11 @@ public class SandPillar extends Mob {
     }
 
     @Override
+    public void beckon(int cell) {
+        //do nothing
+    }
+
+    @Override
     public int defenseProc(Char enemy, int damage) {
         GameScene.add(Blob.seed(pos, 30, CorrosiveGas.class));
 
