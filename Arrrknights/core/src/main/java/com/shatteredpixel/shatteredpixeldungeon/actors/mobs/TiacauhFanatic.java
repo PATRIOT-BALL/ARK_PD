@@ -21,7 +21,7 @@ public class TiacauhFanatic extends Mob {
         EXP = 13;
         maxLvl = 29;
 
-        loot = new Gold();
+        loot = Gold.class;
         lootChance = 0.35f;
 
         immunities.add(Silence.class);
