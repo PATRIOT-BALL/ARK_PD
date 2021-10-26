@@ -98,7 +98,7 @@ public class TheBigUglyThing extends Mob {
         super.damage(dmg, src);
 
         if (phase==1 && HP <= 500) {
-            HP = 1000;
+            HP = 600;
             phase = 2;
             Buff.detach(this, rageBuff.class);
             GameScene.flash(0x80FF0000);
@@ -123,10 +123,10 @@ public class TheBigUglyThing extends Mob {
         }
 
         if (buff(Barrier.class) != null) {
-            HP = Math.min(HP + 25, HT);
+            HP = Math.min(HP + 30, HT);
         }
         else if (buff(Barrier.class) == null && phase == 2) {
-            HP = Math.max(HP, 1000);
+            HP = Math.max(HP, 800);
             phase = 3;
             GameScene.flash(0x80FF0000);
         }
