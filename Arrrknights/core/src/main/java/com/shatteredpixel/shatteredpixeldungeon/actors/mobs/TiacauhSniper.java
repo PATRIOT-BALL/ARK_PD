@@ -32,6 +32,6 @@ public class TiacauhSniper extends TiacauhLancer {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(28,40);
+        return Random.NormalIntRange(30,42);
     }
 }

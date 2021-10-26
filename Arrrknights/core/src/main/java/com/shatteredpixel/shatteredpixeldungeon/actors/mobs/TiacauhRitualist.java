@@ -33,7 +33,7 @@ public class TiacauhRitualist extends Mob{
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 36, 48 );
+        return Random.NormalIntRange( 38, 48 );
     }
 
     @Override

@@ -24,7 +24,7 @@ public class TiacauhRipper extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 20, 36 );
+        return Random.NormalIntRange( 24, 38 );
     }
 
     @Override

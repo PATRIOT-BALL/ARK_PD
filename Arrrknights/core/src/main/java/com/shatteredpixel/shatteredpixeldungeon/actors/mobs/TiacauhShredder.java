@@ -29,7 +29,7 @@ public class TiacauhShredder extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 35, 48 );
+        return Random.NormalIntRange( 38, 48 );
     }
 
     @Override
