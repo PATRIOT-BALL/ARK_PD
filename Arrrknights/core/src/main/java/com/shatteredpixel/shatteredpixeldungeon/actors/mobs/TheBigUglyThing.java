@@ -49,7 +49,7 @@ public class TheBigUglyThing extends Mob {
     {
         spriteClass = FanaticSprite.class;
 
-        HT = HP = 2400;
+        HT = HP = 2000;
         defenseSkill = 25;
         EXP = 100;
 
@@ -97,12 +97,12 @@ public class TheBigUglyThing extends Mob {
 
         super.damage(dmg, src);
 
-        if (phase==1 && HP <= 1200) {
-            HP = 1200;
+        if (phase==1 && HP <= 500) {
+            HP = 1000;
             phase = 2;
             Buff.detach(this, rageBuff.class);
             GameScene.flash(0x80FF0000);
-            Buff.affect(this, Barrier.class).setShield(1200);
+            Buff.affect(this, Barrier.class).setShield(1000);
         }
     }
 
@@ -126,7 +126,7 @@ public class TheBigUglyThing extends Mob {
             HP = Math.min(HP + 25, HT);
         }
         else if (buff(Barrier.class) == null && phase == 2) {
-            HP = Math.max(HP, 1200);
+            HP = Math.max(HP, 1000);
             phase = 3;
             GameScene.flash(0x80FF0000);
         }
