@@ -1497,7 +1497,7 @@ actors.mobs.eunectes.die=너희들은 가비알에게 미치지 못한다!
 actors.mobs.thebiguglything.name=거대하고 못생긴 것
 actors.mobs.thebiguglything.desc=주마마의 야심작. 쓸데없이 큰 기계 괴수, 대제사장이 조종하고 있다.
 actors.mobs.thebiguglything.rage=기계가 폭주한다!
-actors.mobs.thebiguglything.fire_ready=기계가 원거리 공격을 준비한다!
+actors.mobs.thebiguglything.fire_ready=대제사장이 원거리 공격을 준비한다!
 
 
 

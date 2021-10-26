@@ -1507,5 +1507,5 @@ actors.mobs.eunectes.die=You people are no match for Gavial!
 
 actors.mobs.thebiguglything.name=the B.U.T
 actors.mobs.thebiguglything.desc=Zumama's magnum opus, a massive mechanical monster piloted by the High Priest.
-actors.mobs.thebiguglything.rage=기계가 폭주한다!
-actors.mobs.thebiguglything.fire_ready=대제사장이 원거리 공격을 준비한다!
+actors.mobs.thebiguglything.rage=The machine is enraged!
+actors.mobs.thebiguglything.fire_ready=The high priest prepares for a ranged attack!

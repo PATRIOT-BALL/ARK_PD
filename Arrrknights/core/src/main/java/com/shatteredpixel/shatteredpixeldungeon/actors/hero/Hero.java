@@ -1347,7 +1347,7 @@ public class Hero extends Char {
                 Seal.updateQuickslot();
             }
             // 카시미어의 기사
-            if (hasTalent(Talent.KNIGHT_OF_KAZIMIERZ)) {
+            if (hasTalent(Talent.KNIGHT_OF_KAZIMIERZ) && Random.Int(3) == 0) {
                 if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
                     SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
                     Item.SetCharge(pointsInTalent(Talent.KNIGHT_OF_KAZIMIERZ));
