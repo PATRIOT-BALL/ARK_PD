@@ -397,7 +397,10 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
                     || target.isCharmedBy( enemy )) {
                 GLog.w(Messages.get(Combo.class, "bad_target"));
 
-            } else {
+            } else if (!((Hero)target).canAttack(enemy)){
+                GLog.w(Messages.get(Combo.class, "bad_target"));
+            }
+            else {
                 Dungeon.hero.busy();
                 target.sprite.attack(cell, new Callback() {
                     @Override
