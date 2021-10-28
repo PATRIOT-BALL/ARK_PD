@@ -91,7 +91,7 @@ public class StaffOfWeedy extends DamageWand {
         if (ch != null){
             processSoulMark(ch, chargesPerCast());
             int dmg = damageRoll() * curCharges;
-            if (curCharges == 2 || curCharges == 3) dmg = dmg + (dmg/4) / 2;
+            if (curCharges == 2 || curCharges == 3) dmg = (dmg + (dmg/4)) / 2;
             ch.damage(dmg, this);
 
             if (ch.isAlive() && bolt.path.size() > bolt.dist+1 && ch.pos == bolt.collisionPos && ch != curUser) {

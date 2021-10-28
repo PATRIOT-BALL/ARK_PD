@@ -90,8 +90,8 @@ public class TheBigUglyThing extends Mob {
             dmg /= 4;
         }
 
-        if (dmg > 300) {
-            int thedamage = 300 + dmg/10;
+        if (dmg > 500) {
+            int thedamage = 500 + dmg/10;
             dmg = thedamage;
         }
 
