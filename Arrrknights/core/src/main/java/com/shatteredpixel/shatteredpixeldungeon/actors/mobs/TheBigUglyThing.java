@@ -155,7 +155,7 @@ public class TheBigUglyThing extends Mob {
 
         if (buff(rageBuff.class) != null) return true;
 
-        if (ragecooldown <= 0) {
+        if (ragecooldown <= 0 && firetime == 0) {
             Buff.affect(this, rageBuff.class, 4f);
             GameScene.flash(0x80FF0000);
             GLog.w(Messages.get(this, "rage"));
