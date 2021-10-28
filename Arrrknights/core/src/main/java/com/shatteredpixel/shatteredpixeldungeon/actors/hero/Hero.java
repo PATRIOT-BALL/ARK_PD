@@ -562,7 +562,7 @@ public class Hero extends Char {
         }
 
         if (buff(ExtremeSharpness.SharpnessBuff.class) != null) {
-            attackSkill *= 2f;
+            accuracy *= 2f;
         }
 
         if (wep != null) {
