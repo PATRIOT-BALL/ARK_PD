@@ -73,7 +73,8 @@ public class StaffOfWeedy extends DamageWand {
                 if (ch.alignment != Char.Alignment.ALLY) {
                     if (ch == curUser) {
                         int dmg = damageRoll() * (1 + curCharges / 2);
-                        ch.damage(dmg, this);
+                        if (curCharges == 1) ch.damage(damageRoll(), this);
+                        else ch.damage(dmg, this);
                     }
                     else ch.damage(damageRoll(), this);
                 }
