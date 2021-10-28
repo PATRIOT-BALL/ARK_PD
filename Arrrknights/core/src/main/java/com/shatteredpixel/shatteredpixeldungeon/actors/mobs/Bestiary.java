@@ -236,6 +236,7 @@ public class Bestiary {
 			case 36:
 				if (Dungeon.extrastage_Gavial) {
 					return new ArrayList<>(Arrays.asList(
+							TiacauhAddict.class,
 							TiacauhRipper.class, TiacauhRipper.class, TiacauhRipper.class,
 							TiacauhShredder.class, TiacauhShredder.class));
 				}
@@ -248,6 +249,7 @@ public class Bestiary {
 			case 37:
 				if (Dungeon.extrastage_Gavial) {
 					return new ArrayList<>(Arrays.asList(
+							TiacauhAddict.class,
 							TiacauhRipper.class, TiacauhRipper.class,
 							TiacauhShredder.class, TiacauhShredder.class,
 							TiacauhRitualist.class));
@@ -261,6 +263,7 @@ public class Bestiary {
 			case 38:
 				if (Dungeon.extrastage_Gavial) {
 					return new ArrayList<>(Arrays.asList(
+							TiacauhAddict.class, TiacauhAddict.class,
 							TiacauhRipper.class,
 							TiacauhShredder.class, TiacauhShredder.class,
 							TiacauhRitualist.class, TiacauhRitualist.class,
@@ -276,6 +279,7 @@ public class Bestiary {
 			case 39:
 				if (Dungeon.extrastage_Gavial) {
 					return new ArrayList<>(Arrays.asList(
+							TiacauhAddict.class,
 							TiacauhShredder.class,
 							TiacauhRitualist.class, TiacauhRitualist.class, TiacauhRitualist.class,
 							TiacauhBrave.class, TiacauhBrave.class));
