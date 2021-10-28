@@ -72,9 +72,8 @@ public class StaffOfWeedy extends DamageWand {
                 processSoulMark(ch, chargesPerCast());
                 if (ch.alignment != Char.Alignment.ALLY) {
                     if (ch == curUser) {
-                        int dmg = damageRoll() * (1 + curCharges / 2);
-                        if (curCharges == 1) ch.damage(damageRoll(), this);
-                        else ch.damage(dmg, this);
+                        int dmg = damageRoll() / 2;
+                        ch.damage(dmg, this);
                     }
                     else ch.damage(damageRoll(), this);
                 }
@@ -91,7 +90,7 @@ public class StaffOfWeedy extends DamageWand {
         Char ch = Actor.findChar(bolt.collisionPos);
         if (ch != null){
             processSoulMark(ch, chargesPerCast());
-            int dmg = damageRoll() * (1 + curCharges);
+            int dmg = damageRoll() * (curCharges);
             ch.damage(dmg, this);
 
             if (ch.isAlive() && bolt.path.size() > bolt.dist+1 && ch.pos == bolt.collisionPos && ch != curUser) {
