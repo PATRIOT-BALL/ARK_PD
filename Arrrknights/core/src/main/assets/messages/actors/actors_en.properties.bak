@@ -1506,6 +1506,6 @@ actors.mobs.eunectes.notice=I'll give it my all no matter the prey!
 actors.mobs.eunectes.die=You people are no match for Gavial!
 
 actors.mobs.thebiguglything.name=the B.U.T
-actors.mobs.thebiguglything.desc=Zumama's magnum opus, a massive mechanical monster piloted by the High Priest.
+actors.mobs.thebiguglything.desc=Zumama's magnum opus, a massive mechanical monster piloted by the High Priest.\n\nhe _fire_ seems to be effective.
 actors.mobs.thebiguglything.rage=The machine is enraged!
 actors.mobs.thebiguglything.fire_ready=The high priest prepares for a ranged attack!
