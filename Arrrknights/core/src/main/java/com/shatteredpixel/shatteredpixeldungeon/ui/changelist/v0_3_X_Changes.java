@@ -68,6 +68,9 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
                 "_슈팅 글러브_ : 더 이상 강화할 수 없도록 변경되었습니다." + "\n\n" +
                 "_바위게 사육사_ : 공격력이 4-17에서 _4-15_로, 강화 효율이 4에서 _3_ 으로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 하향",
+                "_스태프 오브 위디_ 는 이제 2충전 / 3충전 상태일 때 사용시 피해량이 감소합니다."));
     }
 
     public static void add_v0_3_1_Changes(ArrayList<ChangeInfo> changeInfos) {
