@@ -169,15 +169,15 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
         public String desc(){
             if (name() == "LIGHTSWORD") {
                 int dmgper = 0;
-                int bouns = 50;
-                if (Dungeon.hero.hasTalent(Talent.SKILL_MASTERY)) bouns = 60;
+                int bouns = 25;
+                if (Dungeon.hero.hasTalent(Talent.SKILL_MASTERY)) bouns = 30;
 
                 KnightSkillCombo counter = Dungeon.hero.buff(KnightSkillCombo.class);
                 if (counter != null) {
                     dmgper += counter.count() * bouns;
                 }
 
-                return Messages.get(this, "lightsword_desc", dmgper, bouns * 5);
+                return Messages.get(this, "lightsword_desc", dmgper, bouns * 10);
             }
             return Messages.get(this, name()+"_desc");
 
@@ -255,8 +255,8 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
                     dmg = Math.round(dmg * 1f);
                     break;
                 case LIGHTSWORD:
-                    float countdamage = 0.5f;
-                    if (hero.pointsInTalent(Talent.SKILL_MASTERY) >= 1) countdamage = 0.6f;
+                    float countdamage = 0.25f;
+                    if (hero.pointsInTalent(Talent.SKILL_MASTERY) >= 1) countdamage = 0.3f;
                     dmg = Math.round(dmg * (counter.count() *countdamage));
                     break;
             }
@@ -288,19 +288,19 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
                             Buff.affect(enemy, Silence.class, 2f);
                         }
                     }
-                    if (counter.count() < 5) {
+                    if (counter.count() < 10) {
                         counter.countUp(1);
                     }
                     break;
                 case SMASH:
                     hit(enemy);
-                    if (counter.count() < 5) {
+                    if (counter.count() < 10) {
                         counter.countUp(1);
                     }
                     break;
                 case KILLBLOW:
                     hit(enemy);
-                    if (counter.count() < 5) {
+                    if (counter.count() < 10) {
                         counter.countUp(1);
                     }
                     break;
@@ -310,7 +310,7 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
                             GameScene.flash( 0x80FFFFFF );
                             Sample.INSTANCE.play(Assets.Sounds.HIT_SWORD, 1.1f, 1.26f);
 
-                            if (counter.count() == 5) Buff.affect(enemy, Paralysis.class, 2f);
+                            if (counter.count() == 10) Buff.affect(enemy, Paralysis.class, 2f);
                         }
                         Buff.detach(hero, KnightSkillCombo.class);
                     break;
