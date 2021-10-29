@@ -61,6 +61,13 @@ public class Assets {
 		public static final String CAVES_BOSS       = "environment/custom_tiles/caves_boss.png";
 		public static final String CITY_BOSS        = "environment/custom_tiles/city_boss.png";
 		public static final String HALLS_SP         = "environment/custom_tiles/halls_special.png";
+
+		//명픽던 커스텀타일
+
+		public static final String RHODES_27F         = "environment/custom_tiles/rhodes_27f.png";
+		public static final String RHODES_28F         = "environment/custom_tiles/rhodes_28f.png";
+		public static final String RHODES_29F         = "environment/custom_tiles/rhodes_29f.png";
+		public static final String RHODES_30F         = "environment/custom_tiles/rhodes_30f.png";
 	}
 	
 	//TODO include other font assets here? Some are platform specific though...
@@ -125,6 +132,8 @@ public class Assets {
 		public static final String GAME5		= "music/game5.ogg";
 		public static final String GAME6_SIESTA		= "music/game_siesta1.ogg";
 		public static final String GAME6_SIESTA2		= "music/game_siesta2.ogg";
+		public static final String GAME7_SARGON1		= "music/game_sargon1.ogg";
+		public static final String GAME7_SARGON2		= "music/game_sargon.ogg";
 		public static final String BOSS		= "music/boss.ogg";
 		public static final String BOSS2		= "music/boss2.ogg";
 		public static final String BOSS3		= "music/boss3.ogg";
