@@ -34,7 +34,6 @@ import com.watabou.utils.Rect;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-// 다른 맵 베이스는 이거로!!
 public class RhodesLevel extends Level
 {
 

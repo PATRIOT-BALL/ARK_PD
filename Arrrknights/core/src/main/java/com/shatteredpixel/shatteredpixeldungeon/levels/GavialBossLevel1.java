@@ -41,17 +41,6 @@ public class GavialBossLevel1 extends Level {
                 solid[i] = true;
             }
         }
-        for (int i = (height-ROOM_TOP+2)*width; i < length; i++){
-            passable[i] = avoid[i] = false;
-            solid[i] = true;
-        }
-        for (int i = (height-ROOM_TOP+1)*width; i < length; i++){
-            if (i % width < 4 || i % width > 12 || i >= (length-width)){
-                discoverable[i] = false;
-            } else {
-                visited[i] = true;
-            }
-        }
     }
 
     private static final int ROOM_TOP = 12;
@@ -59,7 +48,7 @@ public class GavialBossLevel1 extends Level {
     @Override
     protected boolean build() {
 
-        setSize(21, 33);
+        setSize(21, 21);
         Arrays.fill( map, Terrain.EMPTY );
 
         final int MID = width/2;
@@ -69,9 +58,10 @@ public class GavialBossLevel1 extends Level {
         //401, 417 : 몹 스폰 포인트 1
 
         Painter.fill( this, 0, 0, 21, 1, Terrain.WALL);
-        Painter.fill( this, 0, 20, 21, 12, Terrain.WALL);
-        Painter.fill( this, 0, 0, 2, 32, Terrain.WALL);
-        Painter.fill( this, 19, 0, 2, 32, Terrain.WALL);
+        Painter.fill( this, 0, 20, 21, 1, Terrain.WALL);
+
+        Painter.fill( this, 0, 0, 1, 21, Terrain.WALL);
+        Painter.fill( this, 20, 0, 1, 21, Terrain.WALL);
 
         Painter.fill( this, 7, 0, 2, 8, Terrain.WALL);
         Painter.fill( this, 12, 0, 2, 8, Terrain.WALL);
@@ -86,6 +76,19 @@ public class GavialBossLevel1 extends Level {
 
         map[360] = Terrain.WALL;
         map[374] = Terrain.WALL;
+
+        map[287] = Terrain.STATUE;
+        map[307] = Terrain.STATUE;
+        map[308] = Terrain.STATUE;
+
+        map[218] = Terrain.STATUE;
+        map[238] = Terrain.STATUE;
+        map[239] = Terrain.STATUE;
+        map[240] = Terrain.STATUE;
+        map[260] = Terrain.STATUE;
+        map[261] = Terrain.STATUE;
+
+        map[319] = Terrain.STATUE;
 
         entrance = 388;
 
