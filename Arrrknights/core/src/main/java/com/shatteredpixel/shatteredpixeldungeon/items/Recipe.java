@@ -223,7 +223,8 @@ public abstract class Recipe {
             new ForceCatalyst.Recipe(),
             new FRY_EGG.Recipe(),
             new FRY_GAMZA.Recipe(),
-            new SaltBlast.Recipe()
+            new SaltBlast.Recipe(),
+            new Avantgardeform.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{
@@ -234,7 +235,6 @@ public abstract class Recipe {
             new MeatPie.Recipe(),
             new Sandvich.Recipe(),
             new NotBarFood.Recipe(),
-            new Avantgardeform.Recipe(),
             new Yukjeon.Recipe(),
     };
 
