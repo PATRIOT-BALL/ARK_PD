@@ -252,7 +252,7 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
                     dmg = Math.round(dmg * 1.4f);
                     break;
                 case KILLBLOW:
-                    dmg = Math.round(dmg * 1f);
+                    dmg = Math.round(dmg * 0.7f);
                     break;
                 case LIGHTSWORD:
                     float countdamage = 0.25f;
