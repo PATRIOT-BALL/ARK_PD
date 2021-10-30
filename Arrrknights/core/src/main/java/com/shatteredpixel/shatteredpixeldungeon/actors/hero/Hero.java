@@ -558,7 +558,7 @@ public class Hero extends Char {
             float bouns = 1f;
             bouns += pointsInTalent(Talent.PEGASUS_AURA) / 10;
 
-            attackSkill *= bouns;
+            accuracy *= bouns;
         }
 
         if (buff(ExtremeSharpness.SharpnessBuff.class) != null) {
