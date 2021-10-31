@@ -23,6 +23,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.PortableCover;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -214,8 +215,9 @@ public class TheBigUglyThing extends Mob {
 
             summonEnemy.pos = summonpos;
             GameScene.add(summonEnemy, 1f);
+            if (summonpos == Dungeon.hero.pos)  ScrollOfTeleportation.teleportChar_unobstructed(summonEnemy);
 
-            summoncooldown = 10;
+                    summoncooldown = 10;
 
             return true;
         }

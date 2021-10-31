@@ -79,7 +79,7 @@ public class GavialLevel extends RegularLevel {
     protected Painter painter() {
         return new GavialPainter()
                 .setWater(feeling == Feeling.WATER ? 0.38f : 0.18f, 4)
-                .setGrass(feeling == Feeling.GRASS ? 0.99f : 0.50f, 3)
+                .setGrass(feeling == Feeling.GRASS ? 0.99f : 0.30f, 3)
                 .setTraps(nTraps(), trapClasses(), trapChances());
     }
 
@@ -104,18 +104,6 @@ public class GavialLevel extends RegularLevel {
     @Override
     protected void createMobs() {
         super.createMobs();
-    }
-
-    @Override
-    public String tileName( int tile ) {
-        switch (tile) {
-            case Terrain.WATER:
-                return Messages.get(CityLevel.class, "water_name");
-            case Terrain.HIGH_GRASS:
-                return Messages.get(CityLevel.class, "high_grass_name");
-            default:
-                return super.tileName( tile );
-        }
     }
 
 
