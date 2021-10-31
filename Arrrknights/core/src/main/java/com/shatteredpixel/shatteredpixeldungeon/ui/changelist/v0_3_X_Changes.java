@@ -16,7 +16,7 @@ public class v0_3_X_Changes {
     }
 
     public static void add_v0_3_2_Changes(ArrayList<ChangeInfo> changeInfos) {
-        ChangeInfo changes = new ChangeInfo("v0.3.1", true, "");
+        ChangeInfo changes = new ChangeInfo("v0.3.2", true, "");
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
@@ -26,7 +26,8 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
                 "_불꽃의 카타나_ : 2티어 무기로, 이 무기로 125명의 적을 처치하면 4티어 무기로 변화합니다." + "\n\n" +
-                "_광휘의 창_ : 5티어 무기로, 취약 상태인 적에게 공격 적중시 추가 피해를 입힙니다."));
+                "_광휘의 창_ : 5티어 무기로, 취약 상태인 적에게 공격 적중시 추가 피해를 입힙니다." + "\n\n" +
+                "_혼돈의 정수_ : 사용시 해당 아이템의 강화 수치를 +1로 만듭니다. 고강화 아이템에 사용하면 당신은 케쨩입니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 2종 추가",
                 "_빛나는 의지\n낫토밥_"));
@@ -45,6 +46,9 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "보스 몬스터 조정",
                 "40층 보스들은 일정 수치 이상의 피해를 받을 때 추가 피해 감소를 얻습니다. (일반적인 평타로는 추가 피해 감소가 발생할 일이 없습니다.)"));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.SCROLL_HOLDER), "일기장 개편",
+                "_희생의 일기장_ : 혼란의 일기장을 대체합니다. 시전시 시야 내의 '모든 존재' 중 3명을 희생시킵니다. 보스나 미니 보스는 대상에서 제외됩니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);

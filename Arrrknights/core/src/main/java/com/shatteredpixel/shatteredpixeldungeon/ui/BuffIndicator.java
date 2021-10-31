@@ -98,8 +98,8 @@ public class BuffIndicator extends Component {
 	public static final int UPGRADE     = 50;
 	public static final int MOMENTUM    = 51;
 	public static final int ACORG    = 52;
-	public static final int SILENCE    = 52;
-	public static final int COOL_TIME    = 52;
+	public static final int SILENCE    = 53;
+	public static final int COOL_TIME    = 54;
 
 	public static final int SIZE	= 7;
 	

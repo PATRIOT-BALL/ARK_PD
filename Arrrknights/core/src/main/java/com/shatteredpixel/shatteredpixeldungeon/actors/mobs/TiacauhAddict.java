@@ -25,7 +25,7 @@ public class TiacauhAddict extends Mob {
         defenseSkill = 24;
 
         EXP = 14;
-        maxLvl = 31;
+        maxLvl = 32;
 
         loot = Generator.Category.SKL_RND;
         lootChance = 0.1f;

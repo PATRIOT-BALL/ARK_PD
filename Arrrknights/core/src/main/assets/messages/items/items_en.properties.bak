@@ -1567,8 +1567,9 @@ items.scrolls.exotic.scrollofaffection.desc=Reading this scroll will emit an all
 items.scrolls.exotic.scrollofantimagic.name=scroll of anti-magic
 items.scrolls.exotic.scrollofantimagic.desc=The incantation on this scroll will surround you with a magical aura that temporarily blocks all magical effects, harmful or helpful.
 
-items.scrolls.exotic.scrollofconfusion.name=scroll of confusion
-items.scrolls.exotic.scrollofconfusion.desc=When read aloud, this scroll will unleash confusing magic on all targets in sight, blinding and disorienting them.
+items.scrolls.exotic.scrollofsacrifice.name=scroll of sacrifice
+items.scrolls.exotic.scrollofsacrifice.desc=When read aloud, this scroll will It sacrifices 3 lives in sight. Bosses and mini-bosses are excluded from this target.\n\nIf alive after sacrificing, the caster will recover some health.
+items.scrolls.exotic.scrollofsacrifice.sacrifice=The Sacrifice...
 
 items.scrolls.exotic.scrollofdivination.name=scroll of divination
 items.scrolls.exotic.scrollofdivination.nothing_left=There is nothing left to identify!
@@ -1691,6 +1692,7 @@ items.spells.forcecatalyst.desc=This ball of blue dust is made from the deconstr
 
 items.spells.chaoscatalyst.name=chaos catalyst
 items.spells.chaoscatalyst.desc=Using this chaotic power on an item will make the upgrade value +1.
+items.spells.chaoscatalyst.inv_title=CHAOS!
 
 ###runestones
 items.stones.inventorystone.ac_use=USE

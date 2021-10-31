@@ -24,11 +24,11 @@ public class TiacauhRitualist extends Mob{
         HP = HT = 115;
         defenseSkill = 23;
 
-        EXP = 16;
-        maxLvl = 35;
+        EXP = 17;
+        maxLvl = 36;
 
-        loot = Generator.Category.WAND;
-        lootChance = 0.06f;
+        loot = Generator.Category.STONE;
+        lootChance = 0.5f;
 
     }
 

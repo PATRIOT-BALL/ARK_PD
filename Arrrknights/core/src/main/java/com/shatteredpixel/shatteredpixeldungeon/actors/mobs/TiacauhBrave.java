@@ -22,10 +22,10 @@ public class TiacauhBrave extends Mob {
         HP = HT = 150;
         defenseSkill = 21;
 
-        EXP = 16;
+        EXP = 18;
         maxLvl = 37;
 
-        loot = Generator.Category.POTION;
+        loot = Generator.Category.SCROLL;
         lootChance = 0.4f;
 
         immunities.add(Silence.class);

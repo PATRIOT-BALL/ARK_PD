@@ -35,7 +35,6 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.RectF;
 
 public class HeroSprite extends CharSprite {
-	a
 	private static final int FRAME_WIDTH	= 36;
 	private static final int FRAME_HEIGHT	= 36;
 	

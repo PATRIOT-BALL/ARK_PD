@@ -22,8 +22,8 @@ public class TiacauhShredder extends Mob {
         EXP = 15;
         maxLvl = 35;
 
-        loot = Generator.Category.STONE;
-        lootChance = 0.5f;
+        loot = Generator.Category.SKL_T2;
+        lootChance = 0.24f;
 
         immunities.add(Silence.class);
     }

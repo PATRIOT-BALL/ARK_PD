@@ -13,11 +13,8 @@ public class TiacauhRipper extends Mob {
         HP = HT = 85;
         defenseSkill = 45;
 
-        EXP = 15;
+        EXP = 16;
         maxLvl = 34;
-
-        loot = Gold.class;
-        lootChance = 0.25f;
 
         immunities.add(Silence.class);
     }

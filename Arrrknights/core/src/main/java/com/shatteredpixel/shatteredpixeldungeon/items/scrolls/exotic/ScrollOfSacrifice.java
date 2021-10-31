@@ -29,10 +29,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 
-public class ScrollOfConfusion extends ExoticScroll {
+public class ScrollOfSacrifice extends ExoticScroll {
 	
 	{
 		icon = ItemSpriteSheet.Icons.SCROLL_CONFUSION;
@@ -40,11 +42,21 @@ public class ScrollOfConfusion extends ExoticScroll {
 	
 	@Override
 	public void doRead() {
+		int Sacrifice = 0;
+
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
-			if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
-				Buff.prolong(mob, Vertigo.class, Vertigo.DURATION);
-				Buff.prolong(mob, Blindness.class, Blindness.DURATION);
+			if (!mob.properties().contains(Char.Property.BOSS) && !mob.properties().contains(Char.Property.MINIBOSS)
+			&& Dungeon.level.heroFOV[mob.pos] && Sacrifice < 3) {
+				mob.damage(9999, this);
+				mob.sprite.bloodBurstA(mob.sprite.center(), 6);
+				Sacrifice++;
 			}
+		}
+
+		if (Sacrifice != 3) {
+			Dungeon.hero.sprite.bloodBurstA(Dungeon.hero.sprite.center(), 6);
+			Dungeon.hero.damage(Dungeon.hero.HT / 2,this);
+			if (!Dungeon.hero.isAlive()) GLog.n(Messages.get(this, "sacrifice"));
 		}
 
 		identify();
