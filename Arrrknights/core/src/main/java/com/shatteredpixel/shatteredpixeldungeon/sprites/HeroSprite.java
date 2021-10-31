@@ -35,7 +35,7 @@ import com.watabou.utils.PointF;
 import com.watabou.utils.RectF;
 
 public class HeroSprite extends CharSprite {
-	
+	a
 	private static final int FRAME_WIDTH	= 36;
 	private static final int FRAME_HEIGHT	= 36;
 	
@@ -100,8 +100,8 @@ public class HeroSprite extends CharSprite {
 		}
 		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 36, 34);
 
-		idle = new Animation( 1, true );
-		idle.frames( film, 0 );
+		idle = new Animation( 8, true );
+		idle.frames( film, 41, 42, 43, 44, 45, 46 );
 		
 		run = new Animation( RUN_FRAMERATE, true );
 		run.frames( film, 1, 2, 3, 4, 5, 6, 7, 8 );
@@ -109,7 +109,7 @@ public class HeroSprite extends CharSprite {
 		die = new Animation( 10, false );
 		die.frames( film, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36 );
 		
-		attack = new Animation( 20, false );
+		attack = new Animation( 19, false );
 		attack.frames( film, 9, 10, 11, 12, 13, 14, 15, 16, 17 );
 
 		Sattack = new Animation(15, false);

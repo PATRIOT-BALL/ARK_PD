@@ -132,8 +132,8 @@ public class Assets {
 		public static final String GAME5		= "music/game5.ogg";
 		public static final String GAME6_SIESTA		= "music/game_siesta1.ogg";
 		public static final String GAME6_SIESTA2		= "music/game_siesta2.ogg";
-		public static final String GAME7_SARGON1		= "music/game_sargon1.ogg";
-		public static final String GAME7_SARGON2		= "music/game_sargon.ogg";
+		public static final String GAME6_SARGON1		= "music/game_sargon1.ogg";
+		public static final String GAME6_SARGON2		= "music/game_sargon.ogg";
 		public static final String BOSS		= "music/boss.ogg";
 		public static final String BOSS2		= "music/boss2.ogg";
 		public static final String BOSS3		= "music/boss3.ogg";
@@ -141,6 +141,8 @@ public class Assets {
 		public static final String BOSS5		= "music/boss5.ogg";
 		public static final String BOSS6_SIESTA		= "music/boss_siesta1.ogg";
 		public static final String BOSS6_SIESTA2		= "music/boss_siesta2.ogg";
+		public static final String BOSS6_SARGON		= "music/boss_sargon1.ogg";
+		public static final String BOSS6_SARGON2		= "music/boss_sargon2.ogg";
 		public static final String SURFACE	= "music/surface.ogg";
 		public static final String THEME	= "music/theme.ogg";
 		public static final String RHODOS	= "music/rhodos.ogg";

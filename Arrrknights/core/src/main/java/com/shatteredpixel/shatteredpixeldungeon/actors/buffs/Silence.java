@@ -12,7 +12,7 @@ public class Silence extends FlavourBuff {
 
     @Override
     public int icon() {
-        return BuffIndicator.COMBO;
+        return BuffIndicator.SILENCE;
     }
 
     @Override

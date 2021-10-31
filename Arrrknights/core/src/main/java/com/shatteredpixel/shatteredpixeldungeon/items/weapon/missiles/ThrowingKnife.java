@@ -66,7 +66,7 @@ public class ThrowingKnife extends MissileWeapon {
 	public static class huntcooldown extends FlavourBuff {
 		@Override
 		public int icon() {
-			return BuffIndicator.COMBO;
+			return BuffIndicator.COOL_TIME;
 		}
 
 		@Override

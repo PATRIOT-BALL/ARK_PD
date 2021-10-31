@@ -198,7 +198,7 @@ public enum Talent {
 	public static class RadiantHeroCooldown extends FlavourBuff{
 		@Override
 		public int icon() {
-			return BuffIndicator.COMBO;
+			return BuffIndicator.COOL_TIME;
 		}
 
 		@Override
@@ -215,7 +215,7 @@ public enum Talent {
 	public static class MyWishCooldown extends FlavourBuff{
 		@Override
 		public int icon() {
-			return BuffIndicator.COMBO;
+			return BuffIndicator.COOL_TIME;
 		}
 
 		@Override
