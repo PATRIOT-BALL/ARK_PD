@@ -85,6 +85,9 @@ public class Tomimi extends Mob {
     public void damage(int dmg, Object src) {
         if (phase == 2) {
             sprite.showStatus( CharSprite.NEUTRAL, Messages.get(Talu_BlackSnake.class, "invincibility") );
+            if (src == Dungeon.hero) {
+                ScrollOfTeleportation.appear(Dungeon.hero, Dungeon.level.entrance);
+            }
             return;
         }
 
