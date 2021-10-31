@@ -1057,7 +1057,7 @@ items.food.cooking.fry_gamza.name=감자 튀김
 items.food.cooking.fry_gamza.desc=W 컴퍼니 프렌차이즈 감자 튀김. 적당히 배가 부를 것 같습니다.
 
 items.food.cooking.fry_egg.name=에그 프라이
-items.food.cooking.fry_egg.desc=테두리를 살짝 태운 써니 사이드 업 에그 프라이. 중독과 화상 상태를 치유하며, 약간의 허기도 같이 채워 줍니다.
+items.food.cooking.fry_egg.desc=테두리를 살짝 태운 써니 사이드 업 에그 프라이. 화상 상태를 치유하며, 약간의 허기도 같이 채워 줍니다.
 
 items.food.cooking.yukjeon.name=육전
 items.food.cooking.yukjeon.desc=단국의 전통 음식. 밀가루를 묻혀 기름에 지진 고기다.\n\n섭취시 주위의 지형을 알아냅니다.\n_이 음식으로 로즈몬티스의 고기 관련 특성을 발동시킬 수 있습니다._
@@ -1685,6 +1685,9 @@ items.spells.avantgardeform.desc=이 아츠는 아방가르드한 에너지가 �
 
 items.spells.forcecatalyst.name=힘의 정수
 items.spells.forcecatalyst.desc=이 푸른 가루 뭉치는 붕괴된 무기의 정수로 만들어졌습니다. 직접 사용할 순 없지만, 유용한 주문을 만들 수 있을 것입니다.
+
+items.spells.chaoscatalyst.name=혼돈의 정수
+items.spells.chaoscatalyst.desc=이 혼돈스러운 뭉치는 아이템의 강화 수치를 +1로 만들어버립니다.
 
 
 ###runestones

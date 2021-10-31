@@ -69,6 +69,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.AquaBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ArcaneCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Avantgardeform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.BeaconOfReturning;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.ChaosCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.FeatherFall;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ForceCatalyst;
@@ -389,6 +390,7 @@ public class QuickRecipe extends Component {
 				result.add(null);
 				result.add(null);
 				result.add(new QuickRecipe(new ForceCatalyst.Recipe(), new ArrayList<>(Arrays.asList(new Weapon.PlaceHolder(), new ArcaneCatalyst())), new ForceCatalyst()));
+				result.add(new QuickRecipe(new ChaosCatalyst.Recipe()));
 				result.add(null);
 				result.add(null);
 				result.add(new QuickRecipe(new StaffKit.Recipe(), new ArrayList<>(Arrays.asList(new Wand.PlaceHolder(), new ArcaneCatalyst())), new StaffKit()));

@@ -56,6 +56,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.AquaBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ArcaneCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Avantgardeform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.BeaconOfReturning;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.ChaosCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.FeatherFall;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ForceCatalyst;
@@ -221,6 +222,7 @@ public abstract class Recipe {
             new WeaponTransform.Recipe(),
             new OathofFire.Recipe(),
             new ForceCatalyst.Recipe(),
+            new ChaosCatalyst.Recipe(),
             new FRY_EGG.Recipe(),
             new FRY_GAMZA.Recipe(),
             new SaltBlast.Recipe(),
