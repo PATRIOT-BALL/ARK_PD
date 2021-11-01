@@ -28,7 +28,7 @@ public class HandAxe extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.HAND_AXE;
-		hitSound = Assets.Sounds.HIT_BONK            ;
+		hitSound = Assets.Sounds.HIT_STRIKE;
 		hitSoundPitch = 1f;
 
 		tier = 2;

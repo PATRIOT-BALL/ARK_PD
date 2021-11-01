@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -29,7 +30,7 @@ public class Greatshield extends MeleeWeapon {
 
 	{
 		image = ItemSpriteSheet.GREATSHIELD;
-
+		hitSound = Assets.Sounds.HIT_STRIKE;
 		tier = 5;
 	}
 
