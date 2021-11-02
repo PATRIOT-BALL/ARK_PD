@@ -133,7 +133,7 @@ public class Assets {
 		public static final String GAME6_SIESTA		= "music/game_siesta1.ogg";
 		public static final String GAME6_SIESTA2		= "music/game_siesta2.ogg";
 		public static final String GAME6_SARGON1		= "music/game_sargon1.ogg";
-		public static final String GAME6_SARGON2		= "music/game_sargon.ogg";
+		public static final String GAME6_SARGON2		= "music/game_sargon2.ogg";
 		public static final String BOSS		= "music/boss.ogg";
 		public static final String BOSS2		= "music/boss2.ogg";
 		public static final String BOSS3		= "music/boss3.ogg";
