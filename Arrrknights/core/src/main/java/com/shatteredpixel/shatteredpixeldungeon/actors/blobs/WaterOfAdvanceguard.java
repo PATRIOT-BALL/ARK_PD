@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookHikari;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
@@ -44,7 +45,8 @@ public class WaterOfAdvanceguard extends WellWater {
         if (item instanceof Runestone) { // 아이템이 돌일 경우
             if (Random.Int(2) == 0) item = new SuperAdvanceguard();
             else item = new StoneOfAdvanceguard();
-        } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode || item instanceof BookThoughts) {
+        } else if (item instanceof BookPowerfulStrike || item instanceof BookTacticalChanting || item instanceof BookExecutionMode || item instanceof BookThoughts
+    || item instanceof BookHikari) {
             if (Random.IntRange(0,21) < 12) item = new BookWhispers();
             else item = new BookGenesis();
         } else if (item instanceof SwordofArtorius || item instanceof WintersScar) {
