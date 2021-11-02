@@ -8,6 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Torch;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -143,7 +144,7 @@ public class Closure extends NPC {
         return true;
     }
 
-    public static void spawn(RhodesLevel level, int poss) {
+    public static void spawn(Level level, int poss) {
         Closure WhatYourName = new Closure();
         do {
             WhatYourName.pos = poss;

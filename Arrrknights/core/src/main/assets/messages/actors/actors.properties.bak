@@ -412,7 +412,7 @@ actors.hero.talent.restored_willpower.title=정신력 회복
 actors.hero.talent.restored_willpower.desc=_+1:_ 치유의 물약을 마시면 블레이즈의 깃털 부적으로부터 _67% 의 방어막_ 을 즉시 얻습니다.\n\n_+2:_ 치유의 물약을 마시면 블레이즈의 깃털 부적으로부터 _100% 의 방어막_ 을 즉시 얻습니다.\n\n이 특성이 발동하면 자신에게 붙은 불을 즉시 끕니다.\n\n이 특성은 치유의 물약을 기반으로 한 물약 또는 영약을 마실 때에도 발동합니다.
 actors.hero.talent.runic_transference.title=아츠 전이
 actors.hero.talent.runic_transference.desc=_+1:_ 블레이즈의 깃털 부적이 강화수치를 옮길 때와 같은 방식으로 _평범한 상형문자_ 를 옮길 수 있습니다.\n\n_+2:_ 블레이즈의 깃털 부적이 강화수치를 옮길 때와 같은 방식으로 _평범한, 강력한, 저주 상형문자_ 를 옮길 수 있습니다.
-actors.hero.talent.lethal_momentum.title=전기톱 축제
+actors.hero.talent.lethal_momentum.title=강타
 actors.hero.talent.lethal_momentum.desc=_+1:_ 적을 처치하는 마지막 공격이 _55% 확률_ 로 턴을 소모하지 않습니다.\n\n_+2:_ 적을 처치하는 마지막 공격이 _80% 확률_ 로 턴을 소모하지 않습니다.
 actors.hero.talent.improvised_projectiles.title=급조한 투척물
 actors.hero.talent.improvised_projectiles.desc=_+1:_ 투척 무기가 아닌 아이템을 적에게 던질 경우 맞은 적을 _3 턴_ 간 실명시킵니다. 25 턴의 재사용 대기 시간이 있습니다.\n\n_+2:_ 투척 무기가 아닌 아이템을 적에게 던질 경우 맞은 적을 _5 턴_ 간 실명시킵니다. 25 턴의 재사용 대기 시간이 있습니다.
@@ -579,7 +579,7 @@ actors.hero.talent.point_blank.desc=_+1:_ 그레이스롯의 쇠뇌에 적중당
 actors.hero.talent.improved_crossbow.title=개량 쇠뇌
 actors.hero.talent.improved_crossbow.desc=_+1:_ 그레이스롯의 쇠뇌의 공격력이 _2_ 상승합니다.\n\n_+2:_ 그레이스롯의 쇠뇌의 공격력이 _4_ 상승합니다.\n\n_+3:_ 그레이스롯의 쇠뇌의 공격력이 _6_ 상승합니다.
 actors.hero.talent.push_attack.title=밀치기
-actors.hero.talent.push_attack.desc=근접 공격시 대상을 밀쳐냅니다. 80 턴의 쿨타임이 있습니다.\n\n_+1:_ 1칸 밀쳐냅니다.\n\n_+2:_ 2칸 밀쳐냅니다.\n\n_+3:_ 3칸 밀쳐냅니다.\n\n_+4:_ 4칸 밀쳐냅니다.
+actors.hero.talent.push_attack.desc=물리 공격시 대상을 밀쳐냅니다. 80 턴의 쿨타임이 있습니다.\n\n_+1:_ 1칸 밀쳐냅니다.\n\n_+2:_ 2칸 밀쳐냅니다.\n\n_+3:_ 3칸 밀쳐냅니다.\n\n_+4:_ 4칸 밀쳐냅니다.
 actors.hero.talent.sniping.title=저격
 actors.hero.talent.sniping.desc=_+1:_ 특수 쇠뇌 공격의 피해량이 _15%_ 상승합니다.\n\n_+2:_ 특수 쇠뇌 공격의 피해량이 _30%_ 상승합니다.\n\n_+3:_ 특수 쇠뇌 공격의 피해량이 _45%_ 상승합니다.\n\n_+3:_ 특수 쇠뇌 공격의 피해량이 _60%_ 상승합니다.
 actors.hero.talent.savior_belief.title=구제자의 신념
@@ -878,7 +878,7 @@ actors.mobs.npcs.greencat.wellcom=그렇군, 작전 성공인가... 수고했다
 actors.mobs.npcs.greencat.fury=그것이 너의 선택인가.
 
 actors.mobs.npcs.closure.name=클로저
-actors.mobs.npcs.closure.desc=로도스 아일랜드의 고참. _클로저가 있을 때 물건을 버리고 체르노보그르 돌아간다면, 버렸던 물건은 다른 대원한테 판매될 것이다._ \n\n클릭하면 스킨을 활성화 / 비활성화 할 수 있습니다.
+actors.mobs.npcs.closure.desc=로도스 아일랜드의 고참. _클로저가 있을 때 물건을 버리고 체르노보그르 돌아간다면, 버렸던 물건은 다른 대원한테 판매될 것이다._ \n\n클릭하면 스킨을 해금할 수 있습니다.
 actors.mobs.npcs.closure.hi=이건 어때?
 actors.mobs.npcs.closure.hihi=원래 옷이야!
 actors.mobs.npcs.closure.no=이 옷은 못 입어!
@@ -903,7 +903,7 @@ actors.mobs.npcs.blackperro.active=이미 훈련은 시작했다.
 actors.mobs.npcs.prts.name=???
 actors.mobs.npcs.prts.desc=그날이 올 때까지 나는 너를 기다릴 거야. 무슨 일이 있더라도 기다릴게. 그러니 너도, 너도 꼭 나를 기다려줘.\n\n...나를 잊지 말아줘.
 actors.mobs.npcs.prts.hint1=힌트(1/14)\n\n가공소에서 _스태프 개조 키트_를 만들어 스태프(완드)를 개조할 수 있다.
-actors.mobs.npcs.prts.hint2=힌트(2/14)\n\n1층에서 위로 올라가면 27층이 나온다.\n27층에선 스킨을 바꿀 수 있고, 박사를 구출했다면 더 올라갈 수 있다.
+actors.mobs.npcs.prts.hint2=힌트(2/14)\n\n1층에서 위로 올라가면 27층이 나온다.\n28층에선 클로저를 통해 스킨을 바꿀 수 있고, 박사를 구출했다면 더 올라갈 수 있다.
 actors.mobs.npcs.prts.hint3=힌트(3/14)\n\n_아방가르드 우물_에 넣으면 특별한 아이템이 되는 것들이 있다. 대표적으론 _감자_다.
 actors.mobs.npcs.prts.hint4=힌트(4/14)\n\n_감자_는 무언가와 조합하여 방패로 만들 수 있다.
 actors.mobs.npcs.prts.hint5=힌트(5/14)\n\n_주물_은 무언가와 조합하여 강력한 무기를 만들 수 잇다.
@@ -931,6 +931,9 @@ actors.mobs.npcs.ace_battle.battlecry=네 생각대로 되진 않을 거다!
 actors.mobs.npcs.gavial.name=가비알
 actors.mobs.npcs.gavial.desc=로도스 아일랜드의 메딕 오퍼레이터.\n\n그녀에게 말을 걸면 추가 챕터가 _대족장의 귀환_ 로 변경됩니다.
 actors.mobs.npcs.gavial.ok=좋아, 나랑 같이 가겠다는거지?
+
+actors.mobs.npcs.dummy.name=인체모양 샌드백
+actors.mobs.npcs.dummy.desc=그래서 얘 출시는 언제함?
 
 //summon, fail은 1-8대사
 //배틀크라이 0-10
