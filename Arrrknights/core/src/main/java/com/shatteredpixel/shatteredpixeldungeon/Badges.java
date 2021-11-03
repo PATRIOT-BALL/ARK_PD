@@ -219,7 +219,10 @@ public class Badges {
 		SKIN_SUSUU(163, false, true),
 		SKIN_GRN(164, false, true),
 		SKIN_LAPPY(165,false,true),
-		SKIN_JESSI(166, false, true);
+		SKIN_JESSI(166, false, true),
+
+		//기타
+		SUPPORT;
 
 		public boolean meta;
 		public boolean skin;
@@ -1035,6 +1038,19 @@ public class Badges {
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_GRN) && Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_1)) { Badges.validategrnskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI) && Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) { Badges.validatejessiskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY) && Badges.isUnlocked(Badges.Badge.HAPPY_END)) { Badges.validatelappyskin();}
+
+		// 후원자 버전 전용. 서포트 배지를 활성화하여 모든 스킨이 해금되게 해줍니다.
+     	//	global.add( Badge.SUPPORT );
+
+		if (Badges.isUnlocked(Badge.SUPPORT)) {
+			Badges.validatetaluskin();
+			Badges.validatenovaskin();
+			Badges.validateskadiskin();
+			Badges.validatesusuuskin();
+			Badges.validategrnskin();
+			Badges.validatejessiskin();
+			Badges.validatelappyskin();
+		}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene
