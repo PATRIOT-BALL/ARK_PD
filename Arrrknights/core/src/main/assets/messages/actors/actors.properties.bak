@@ -932,7 +932,7 @@ actors.mobs.npcs.gavial.name=가비알
 actors.mobs.npcs.gavial.desc=로도스 아일랜드의 메딕 오퍼레이터.\n\n그녀에게 말을 걸면 추가 챕터가 _대족장의 귀환_ 로 변경됩니다.
 actors.mobs.npcs.gavial.ok=좋아, 나랑 같이 가겠다는거지?
 
-actors.mobs.npcs.dummy.name=인체모양 샌드백
+actors.mobs.npcs.dummy.name=인체형 샌드백
 actors.mobs.npcs.dummy.desc=그래서 얘 출시는 언제함?
 
 //summon, fail은 1-8대사

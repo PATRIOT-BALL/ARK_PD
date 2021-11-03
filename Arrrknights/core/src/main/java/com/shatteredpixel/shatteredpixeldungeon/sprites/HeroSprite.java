@@ -100,7 +100,7 @@ public class HeroSprite extends CharSprite {
 		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 36, 34);
 
 		idle = new Animation( 8, true );
-		idle.frames( film, 41, 42, 43, 44, 45, 46 );
+		idle.frames( film, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52 );
 		
 		run = new Animation( RUN_FRAMERATE, true );
 		run.frames( film, 1, 2, 3, 4, 5, 6, 7, 8 );
