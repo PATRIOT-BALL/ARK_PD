@@ -1568,7 +1568,7 @@ items.scrolls.exotic.scrollofantimagic.name=scroll of anti-magic
 items.scrolls.exotic.scrollofantimagic.desc=The incantation on this scroll will surround you with a magical aura that temporarily blocks all magical effects, harmful or helpful.
 
 items.scrolls.exotic.scrollofsacrifice.name=scroll of sacrifice
-items.scrolls.exotic.scrollofsacrifice.desc=When read aloud, this scroll will It sacrifices 3 lives in sight. Bosses and mini-bosses are excluded from this target.\n\nIf alive after sacrificing, the caster will recover some health.
+items.scrolls.exotic.scrollofsacrifice.desc=When read aloud, this scroll will It sacrifices 3 lives in sight. Bosses and mini-bosses are excluded from this target.
 items.scrolls.exotic.scrollofsacrifice.sacrifice=The Sacrifice...
 
 items.scrolls.exotic.scrollofdivination.name=scroll of divination

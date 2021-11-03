@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 
 import java.util.ArrayList;
 
@@ -114,6 +115,7 @@ public class IsekaiItem extends Artifact {
         public void charge(Hero target, float amount) {
             charge += Math.round(1*amount);
             charge = Math.min(charge, chargeCap);
+            if (charge == chargeCap) GLog.p( Messages.get(Artifact.class, "full_charge") );
             updateQuickslot();
         }
     }

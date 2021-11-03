@@ -1565,7 +1565,7 @@ items.scrolls.exotic.scrollofantimagic.name=항마의 일기장
 items.scrolls.exotic.scrollofantimagic.desc=이 일기장의 아츠는 당신을 아츠 오라로 둘러싸 잠시 동안 이롭거나 해로운 아츠 효과 모두를 차단합니다.
 
 items.scrolls.exotic.scrollofsacrifice.name=희생의 일기장
-items.scrolls.exotic.scrollofsacrifice.desc=이 일기장를 사용하면 시뻘건 빛을 발하여 시야 내의 모든 캐릭터 중 3명을 희생시킵니다. 보스나 미니 보스는 이 대상에서 제외됩니다.\n\n충분한 생명이 희생된 후 시전자가 살아있다면 약간의 체력을 회복할 것입니다.
+items.scrolls.exotic.scrollofsacrifice.desc=이 일기장를 사용하면 시뻘건 빛을 발하여 시야 내의 모든 캐릭터 중 3명을 희생시킵니다. 보스나 미니 보스는 이 대상에서 제외됩니다.
 items.scrolls.exotic.scrollofsacrifice.sacrifice=당신은 희생되었다...
 
 items.scrolls.exotic.scrollofdivination.name=점성술의 일기장
