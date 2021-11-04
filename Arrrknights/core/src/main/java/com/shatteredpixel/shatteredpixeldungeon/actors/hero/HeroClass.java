@@ -280,7 +280,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		Dungeon.quickslot.setSlot(1,skillB);
 
 		new DewVial().collect();
-		new Egg().collect();
 	}
 
 	private void initRosecat(Hero hero)
