@@ -16,13 +16,14 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Rock_CrabSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ZuzaiSprite;
 import com.watabou.noosa.tweeners.AlphaTweener;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class ImageoverForm extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.VANILLA_AXE;
+        image = ItemSpriteSheet.DUSK;
         hitSound = Assets.Sounds.HIT_SLASH;
         hitSoundPitch = 1f;
 
@@ -63,7 +64,7 @@ public class ImageoverForm extends MeleeWeapon {
 
     public static class LittleInstinct extends Mob {
         {
-            spriteClass = Rock_CrabSprite.class;
+            spriteClass = ZuzaiSprite.class;
 
             defenseSkill = 0;
 

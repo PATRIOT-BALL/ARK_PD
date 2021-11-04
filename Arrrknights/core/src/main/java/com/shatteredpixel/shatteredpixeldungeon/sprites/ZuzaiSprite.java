@@ -19,26 +19,32 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
+package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.TextureFilm;
 
-public class HandAxe extends MeleeWeapon {
+public class ZuzaiSprite extends MobSprite {
 
-	{
-		image = ItemSpriteSheet.HAND_AXE;
-		hitSound = Assets.Sounds.HIT_BONK;
-		hitSoundPitch = 1f;
+    public ZuzaiSprite() {
+        super();
 
-		tier = 2;
-		ACC = 1.2f; //32% boost to accuracy
-	}
+        texture( Assets.Sprites.ZUZAI );
 
-	@Override
-	public int max(int lvl) {
-		return  4*(tier+1) +    //12 base, down from 15
-				lvl*(tier+1);   //scaling unchanged
-	}
+        TextureFilm frames = new TextureFilm( texture, 40, 36 );
 
+        idle = new Animation( 8, true );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5 );
+
+        run = new Animation( 10, true );
+        run.frames( frames, 0, 1, 2, 3, 4, 5 );
+
+        attack = new Animation( 15, false );
+        attack.frames( frames, 3, 4, 5, 0 );
+
+        die = new Animation( 20, false );
+        die.frames( frames, 0 );
+
+        play( idle );
+    }
 }
