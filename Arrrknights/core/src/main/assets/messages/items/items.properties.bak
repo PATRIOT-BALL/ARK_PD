@@ -572,6 +572,8 @@ items.armor.warriorarmor.desc=가벼운 옷과 단련된 신체가 조화를 이
 
 
 ###유물
+items.artifacts.full_charge=당신의 유물이 최대 충전 되었다!
+
 items.artifacts.alchemiststoolkit.name=공구 상자
 items.artifacts.alchemiststoolkit.ac_brew=가공
 items.artifacts.alchemiststoolkit.not_ready=당신의 공구 상자는 아직 준비되지 않았다.

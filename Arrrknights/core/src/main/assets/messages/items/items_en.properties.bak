@@ -572,6 +572,8 @@ items.armor.warriorarmor.desc=not use
 
 
 ###유물
+items.artifacts.talismanofforesight.full_charge=Your Artifacts is fully charged!
+
 items.artifacts.alchemiststoolkit.name=tool box
 items.artifacts.alchemiststoolkit.ac_brew=PROCESSING
 items.artifacts.alchemiststoolkit.not_ready=Your tool box has not finished warming up.
