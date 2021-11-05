@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Wraith_donut;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -70,14 +71,12 @@ public class ImageoverForm extends MeleeWeapon {
 
             immunities.add(Silence.class);
             alignment = Alignment.ALLY;
-
-            state = WANDERING;
+            WANDERING = new Wandering();
         }
 
         int level = 0;
 
-        public LittleInstinct (int setlvl)
-        {
+        public void setState(int setlvl) {
             HP=HT=50 + setlvl * 10;
             level = setlvl;
         }
@@ -87,7 +86,47 @@ public class ImageoverForm extends MeleeWeapon {
             if (this.buff(StoneOfAggression.Aggression.class) == null) {
                 Buff.prolong(this, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);}
 
+            HP -= 1;
+            if (HP < 1) this.die(this);
+
             return super.act();
+        }
+
+        private class Wandering extends Mob.Wandering {
+
+            @Override
+            public boolean act( boolean enemyInFOV, boolean justAlerted ) {
+                if ( enemyInFOV ) {
+
+                    enemySeen = true;
+
+                    notice();
+                    alerted = true;
+                    state = HUNTING;
+                    target = enemy.pos;
+
+                } else {
+
+                    enemySeen = false;
+
+                    int oldPos = pos;
+                    target = Dungeon.hero.pos;
+                    //always move towards the hero when wandering
+                    if (getCloser( target )) {
+                        //moves 2 tiles at a time when returning to the hero
+                        if (!Dungeon.level.adjacent(target, pos)){
+                            getCloser( target );
+                        }
+                        spend( 1 / speed() );
+                        return moveSprite( oldPos, pos );
+                    } else {
+                        spend( TICK );
+                    }
+
+                }
+                return true;
+            }
+
         }
 
         @Override
@@ -102,7 +141,7 @@ public class ImageoverForm extends MeleeWeapon {
 
         @Override
         public int drRoll() {
-            return Random.NormalIntRange(0, 7 + level);
+            return Random.NormalIntRange(0, 8 + level);
         }
 
         private static final String LVL = "level";
@@ -117,6 +156,8 @@ public class ImageoverForm extends MeleeWeapon {
         public void restoreFromBundle(Bundle bundle) {
             super.restoreFromBundle(bundle);
             level = bundle.getInt(LVL);
+            setState(level);
+            enemySeen = true;
         }
 
     }

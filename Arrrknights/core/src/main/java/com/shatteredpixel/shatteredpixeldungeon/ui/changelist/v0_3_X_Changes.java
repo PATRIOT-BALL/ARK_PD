@@ -57,7 +57,7 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_해시계_ : 침묵 최대 충전량이 2에서 _4_ 로 증가했습니다. 대신 장착해야만 사용할 수 있도록 변경되었습니다." + "\n\n" +
                         "_동의 인장_ : 체력이 50%이하일 때 방어력이 추가로 증가합니다." + "\n\n" +
-                "_나의 소원_ : 공격력이 5-16에서 _5-19_로 상승했습니다."));
+                "_나의 소원_ : 소환된 Mon3tr가 플레이어를 따라다닙니다. 플레이어를 따라다니는 동안은 체력 감소 속도가 줄어듭니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);

@@ -763,7 +763,8 @@ public abstract class Mob extends Char {
 		        && cause == Dungeon.hero
 				&& Dungeon.hero.lvl >= 25
 	         	&& Dungeon.hero.belongings.weapon instanceof ImageoverForm){
-				ImageoverForm.LittleInstinct a = new ImageoverForm.LittleInstinct(Dungeon.hero.belongings.weapon.level());
+				ImageoverForm.LittleInstinct a = new ImageoverForm.LittleInstinct();
+				a.setState(Dungeon.hero.belongings.weapon.level());
 				a.pos = this.pos;
 				GameScene.add(a);
 

@@ -41,7 +41,7 @@ public class CatGun extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier-1) + 3 +   //19 + 4
+        return  3*(tier) +   //15 + 4
                 lvl*(tier-1); }
 
     @Override
@@ -137,13 +137,15 @@ public class CatGun extends MeleeWeapon {
             state = HUNTING;
             immunities.add(Silence.class);
             alignment = Alignment.ALLY;
+
+            WANDERING = new Wandering();
         }
 
         private int blinkCooldown = 0;
 
         @Override
         protected boolean getCloser( int target ) {
-            if (fieldOfView[target] && Dungeon.level.distance( pos, target ) > 2 && blinkCooldown <= 0) {
+            if (fieldOfView[target] && Dungeon.level.distance( pos, target ) > 2 && blinkCooldown <= 0 && target != Dungeon.hero.pos) {
 
                 blink( target );
                 spend( -1 / speed() );
@@ -155,6 +157,43 @@ public class CatGun extends MeleeWeapon {
                 return super.getCloser( target );
 
             }
+        }
+
+        private class Wandering extends Mob.Wandering {
+
+            @Override
+            public boolean act( boolean enemyInFOV, boolean justAlerted ) {
+                if ( enemyInFOV ) {
+
+                    enemySeen = true;
+
+                    notice();
+                    alerted = true;
+                    state = HUNTING;
+                    target = enemy.pos;
+
+                } else {
+
+                    enemySeen = false;
+
+                    int oldPos = pos;
+                    target = Dungeon.hero.pos;
+                    //always move towards the hero when wandering
+                    if (getCloser( target )) {
+                        //moves 2 tiles at a time when returning to the hero
+                        if (!Dungeon.level.adjacent(target, pos)){
+                            getCloser( target );
+                        }
+                        spend( 1 / speed() );
+                        return moveSprite( oldPos, pos );
+                    } else {
+                        spend( TICK );
+                    }
+
+                }
+                return true;
+            }
+
         }
 
         private void blink( int target ) {
@@ -194,13 +233,22 @@ public class CatGun extends MeleeWeapon {
                 Buff.prolong(this, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);}
 
             CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
-            if (isAlive()) {
+            if (isAlive() || HP <= 1) {
+
                 if (setBuff != null) {
-                    int n = 50 + setBuff.itemLevel() * 3;
-                    damage(HT / n, this);
-                } else damage(HT / 50, this);
+                    int adddamage = HT / (50 + setBuff.itemLevel() * 3);
+                    if (adddamage < 1) adddamage = 1;
+                    if (state == WANDERING && adddamage > 1) HP -= adddamage / 2;
+                    else HP -= adddamage;
+                } else {
+                    int adddamage = HT /50;
+                    if (adddamage < 1) adddamage = 1;
+                    if (state == WANDERING && adddamage > 1) HP -= adddamage / 2;
+                    else  HP -= adddamage;
+                }
             }
-            else this.die(this);
+
+            if (HP < 1) this.die(this);
             return super.act();
         }
 
