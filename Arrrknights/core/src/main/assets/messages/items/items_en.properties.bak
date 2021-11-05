@@ -2477,9 +2477,13 @@ items.weapon.melee.imageoverform$littleinstinct.name=little instinct
 items.weapon.melee.imageoverform$littleinstinct.desc=cute
 
 items.weapon.melee.radiantspear.name=radiant spear
-items.weapon.melee.radiantspear.desc=This spear of light deals an additional 20% damage to vulnerable enemies.
-items.weapon.melee.radiantspear.stats_desc=Accuracy +25%
+items.weapon.melee.radiantspear.desc=This spear of light, Attacking blind enemies grants Vulnerability. deals an additional 20% damage to vulnerable enemies.
+items.weapon.melee.radiantspear.stats_desc=Accuracy +15%
 items.weapon.melee.radiantspear.setbouns=_Radiant Will_\nVulnerable target bonus damage increased to 33%.
+
+items.weapon.melee.flametailsword.name=레드파인
+items.weapon.melee.flametailsword.desc=이 검은 사용자의 기량을 상승시켜줍니다. 적의 공격을 회피한 후 다음 공격이 2회의 피해를 입힙니다.
+items.weapon.melee.flametailsword.setbouns=_아이템 시너지 : 불꽃 꼬리의 기사_\n무기 능력 발동시 피해량이 50% 증가합니다.
 
 
 ###missile weapons
