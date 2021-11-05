@@ -12,8 +12,8 @@ public class Kikitchenknife extends MissileWeapon {
         hitSound = Assets.Sounds.LIGHTNING;
         hitSoundPitch = 0.8f;
 
-        tier = 3;
-        baseUses = 8;
+        tier = 4;
+        baseUses = 6;
         sticky = false;
     }
 
