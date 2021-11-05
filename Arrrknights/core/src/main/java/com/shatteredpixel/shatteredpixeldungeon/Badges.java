@@ -210,7 +210,7 @@ public class Badges {
 		Get_25_STONES                (136),
 		Get_40_STONES                (137),
 		DOLL_COLLECTOR                (138),
-		SLAIN_PURSUER              ( 111),
+		SLAIN_PURSUER,
 
 		//GREEN
 		SKIN_BABOSKADI(160, false, true),
