@@ -22,7 +22,6 @@ public class RadiantSpear extends MeleeWeapon {
         hitSoundPitch = 1.18f;
 
         tier = 5;
-        ACC = 1.15f;
     }
 
     @Override
