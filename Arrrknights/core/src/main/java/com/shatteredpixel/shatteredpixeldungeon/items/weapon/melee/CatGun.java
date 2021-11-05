@@ -41,7 +41,7 @@ public class CatGun extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  3*(tier) +   //15 + 4
+        return  3*(tier+1) +   //18 + 4
                 lvl*(tier-1); }
 
     @Override
