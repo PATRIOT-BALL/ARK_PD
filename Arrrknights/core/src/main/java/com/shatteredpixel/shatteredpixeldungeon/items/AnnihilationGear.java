@@ -397,7 +397,7 @@ public class Spriteex extends MissileWeapon {
         // 마비
         if (enemy.isAlive()) {
             if (curUser.hasTalent(Talent.PHYSICAL_ATTACK)) {
-                if (curUser.pointsInTalent(Talent.PHYSICAL_ATTACK) > Random.Int(3)) {
+                if (curUser.pointsInTalent(Talent.PHYSICAL_ATTACK) > Random.Int(5)) {
                     Buff.affect(enemy,Paralysis.class, 1f);
                 }}} }
 }
