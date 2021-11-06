@@ -25,6 +25,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Dream;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -44,8 +46,9 @@ public class ScrollOfAffection extends ExoticScroll {
 		
 		for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
 			if (Dungeon.level.heroFOV[mob.pos]) {
-				Buff.affect( mob, Charm.class, Charm.DURATION*2f ).object = curUser.id();
-				mob.sprite.centerEmitter().start( Speck.factory( Speck.HEART ), 0.2f, 5 );
+				Buff.affect(mob, MagicalSleep.class);
+				Buff.affect(mob, Dream.class);
+				mob.sprite.centerEmitter().start( Speck.factory( Speck.NOTE ), 0.2f, 5 );
 			}
 		}
 		

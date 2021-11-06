@@ -48,6 +48,7 @@ public class v0_3_X_Changes {
                 "40층 보스들은 일정 수치 이상의 피해를 받을 때 추가 피해 감소를 얻습니다. (일반적인 평타로는 추가 피해 감소가 발생할 일이 없습니다.)"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SCROLL_HOLDER), "일기장 개편",
+                "_매력의 일기장_ : 효과가 변경되었습니다. 사용 즉시 시야 내의 모든 적들을 잠재우며, 이 효과로 잠에 빠져든 적은 깨어날 때 추가 피해를 받습니다." + "\n\n" +
                 "_희생의 일기장_ : 혼란의 일기장을 대체합니다. 시전시 시야 내의 '모든 존재' 중 3명을 희생시킵니다. 보스나 미니 보스는 대상에서 제외됩니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);

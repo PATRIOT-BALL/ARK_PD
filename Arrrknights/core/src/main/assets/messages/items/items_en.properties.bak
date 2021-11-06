@@ -2478,7 +2478,6 @@ items.weapon.melee.imageoverform$littleinstinct.desc=cute
 
 items.weapon.melee.radiantspear.name=radiant spear
 items.weapon.melee.radiantspear.desc=This spear of light, Attacking blind enemies grants Vulnerability. deals an additional 20% damage to vulnerable enemies.
-items.weapon.melee.radiantspear.stats_desc=Accuracy +15%
 items.weapon.melee.radiantspear.setbouns=_Radiant Will_\nVulnerable target bonus damage increased to 33%.
 
 items.weapon.melee.flametailsword.name=Pinus Sylvestris
