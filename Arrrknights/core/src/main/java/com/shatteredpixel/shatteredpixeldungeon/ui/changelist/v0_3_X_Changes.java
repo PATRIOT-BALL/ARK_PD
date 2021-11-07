@@ -60,6 +60,10 @@ public class v0_3_X_Changes {
                         "_동의 인장_ : 체력이 50%이하일 때 방어력이 추가로 증가합니다." + "\n\n" +
                 "_나의 소원_ : 공격력이 5-15에서 _5-18_로 증가했으며, 소환된 Mon3tr가 플레이어를 따라다닙니다. 플레이어를 따라다니는 동안은 체력 감소 속도가 줄어듭니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 변경",
+                "_제국 포화 선조자_ : 체력이 180에서 _140_으로 감소했으며, 공격력이 45-60에서 _55-65_로 상승했습니다. 포격 예고의 최대 딜레이가 3턴에서 _2턴_으로 감소했으며, 포격 예고 발동시 포화 선조자 " +
+                        "주위의 적들에게 경고를 줘 플레이어를 추격하게 만듭니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);

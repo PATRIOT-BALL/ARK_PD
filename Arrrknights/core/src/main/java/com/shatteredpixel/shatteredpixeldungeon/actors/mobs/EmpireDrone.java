@@ -3,6 +3,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
@@ -27,7 +28,7 @@ public class EmpireDrone extends Mob {
     {
         spriteClass = Imperial_artillerySprite.class;
 
-        HP = HT = 180;
+        HP = HT = 140;
         defenseSkill = 18;
 
         EXP = 35;
@@ -40,6 +41,7 @@ public class EmpireDrone extends Mob {
 
         baseSpeed = 0.5f;
         immunities.add(Silence.class);
+        immunities.add(Corruption.class);
     }
 
     private int CoolDown = 0;
@@ -47,7 +49,7 @@ public class EmpireDrone extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 45, 60 );
+        return Random.NormalIntRange( 55, 65 );
     }
 
     @Override
@@ -71,8 +73,17 @@ public class EmpireDrone extends Mob {
                 sprite.parent.addToBack(new TargetedCell(LastPos, 0xFF0000));
                 sprite.zap( enemy.pos );
 
+                // 몬스터 어그로
+                for (Mob mob : Dungeon.level.mobs) {
+                    if (mob.paralysed <= 0
+                            && Dungeon.level.distance(pos, mob.pos) <= 7
+                            && mob.state != mob.HUNTING) {
+                        mob.beckon( Dungeon.hero.pos );
+                    }
+                }
+
                 // 패턴 딜레이 추가
-                spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 3*TICK));
+                spend(GameMath.gate(TICK, Dungeon.hero.cooldown(), 2*TICK));
                 Dungeon.hero.interrupt();
                 return true;
             }
