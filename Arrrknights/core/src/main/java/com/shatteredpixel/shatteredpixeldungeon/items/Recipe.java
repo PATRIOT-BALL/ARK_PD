@@ -225,8 +225,7 @@ public abstract class Recipe {
             new ChaosCatalyst.Recipe(),
             new FRY_EGG.Recipe(),
             new FRY_GAMZA.Recipe(),
-            new SaltBlast.Recipe(),
-            new Avantgardeform.Recipe()
+            new SaltBlast.Recipe()
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{
@@ -238,6 +237,7 @@ public abstract class Recipe {
             new Sandvich.Recipe(),
             new NotBarFood.Recipe(),
             new Yukjeon.Recipe(),
+            new Avantgardeform.Recipe()
     };
 
     public static Recipe findRecipe(ArrayList<Item> ingredients) {

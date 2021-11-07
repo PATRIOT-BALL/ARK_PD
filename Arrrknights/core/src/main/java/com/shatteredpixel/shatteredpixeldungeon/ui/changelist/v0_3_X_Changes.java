@@ -51,6 +51,10 @@ public class v0_3_X_Changes {
                 "_매력의 일기장_ : 효과가 변경되었습니다. 사용 즉시 시야 내의 모든 적들을 잠재우며, 이 효과로 잠에 빠져든 적은 깨어날 때 추가 피해를 받습니다." + "\n\n" +
                 "_희생의 일기장_ : 혼란의 일기장을 대체합니다. 시전시 시야 내의 '모든 존재' 중 3명을 희생시킵니다. 보스나 미니 보스는 대상에서 제외됩니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "조합법 변경",
+                "_아방가르드한 변환_의 재료가 변경되었습니다."
+                        ));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
