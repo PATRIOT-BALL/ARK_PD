@@ -1564,7 +1564,7 @@ items.scrolls.exotic.exoticscroll.tiwaz=exotic scroll of L
 items.scrolls.exotic.exoticscroll.unknown_desc=A glowing indecipherable magical rune is written on this black parchment. It seems to be foreign to this land, who knows what it will do when read aloud?
 
 items.scrolls.exotic.scrollofaffection.name=scroll of affection
-items.scrolls.exotic.scrollofaffection.desc=Reading this scroll will emit an alluring laugh which charms all who hear it.
+items.scrolls.exotic.scrollofaffection.desc=Reading this scroll will emit an puts it to sleep all enemy. Enemies who fall asleep with this power take additional damage when awakened.
 
 items.scrolls.exotic.scrollofantimagic.name=scroll of anti-magic
 items.scrolls.exotic.scrollofantimagic.desc=The incantation on this scroll will surround you with a magical aura that temporarily blocks all magical effects, harmful or helpful.
