@@ -28,7 +28,6 @@ public class Niansword extends MeleeWeapon {
 
     @Override
     public int defenseFactor( Char owner ) {
-        if (owner.HP <= owner.HT / 2) return 3+buffedLvl(); // 3+1
         return 2+buffedLvl() / 2;    // 0 + 0.
     }
 
