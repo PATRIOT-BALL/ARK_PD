@@ -69,6 +69,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.AquaBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ArcaneCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.Avantgardeform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.BeaconOfReturning;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.BlastSpell;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ChaosCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.FeatherFall;
@@ -428,6 +429,7 @@ public class QuickRecipe extends Component {
 				result.add(new QuickRecipe(new MagicalInfusion.Recipe()));
 				result.add(new QuickRecipe(new Alchemize.Recipe()));
 				result.add(new QuickRecipe(new Recycle.Recipe()));
+				result.add(new QuickRecipe(new BlastSpell.Recipe()));
 				result.add(new QuickRecipe(new OathofFire.Recipe()));
 				result.add(new QuickRecipe(new WeaponTransform.Recipe()));
 				result.add(new QuickRecipe(new Avantgardeform.Recipe()));
