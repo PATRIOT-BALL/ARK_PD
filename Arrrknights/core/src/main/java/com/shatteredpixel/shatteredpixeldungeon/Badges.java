@@ -222,7 +222,7 @@ public class Badges {
 		SKIN_JESSI(166, false, true),
 
 		//기타
-		SUPPORT			(159);
+		SUPPORT;
 
 		public boolean meta;
 		public boolean skin;
