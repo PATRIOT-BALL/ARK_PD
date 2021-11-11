@@ -27,7 +27,7 @@ public class MinosFury extends MeleeWeapon {
     public static final String AC_EAT = "EAT";
 
     {
-        image = ItemSpriteSheet.GREATSHIELD;
+        image = ItemSpriteSheet.VULCAN;
         tier = 5;
     }
 

@@ -179,13 +179,13 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 0, 40, 7, 45 ) );
 			break;
 		case SLEEP:
-			icon.frame( icon.texture.uvRect( 16, 32, 25, 40 ) );
+			icon.frame( icon.texture.uvRect( 0, 224, 10, 234 ) );
 			break;
 		case ALERT:
-			icon.frame( icon.texture.uvRect( 16, 40, 24, 48 ) );
+			icon.frame( icon.texture.uvRect( 10, 224, 20, 235 ) );
 			break;
 		case LOST:
-			icon.frame( icon.texture.uvRect( 24, 40, 32, 48 ) );
+			icon.frame( icon.texture.uvRect( 20, 224, 30, 234 ) );
 			break;
 		case TARGET:
 			icon.frame( icon.texture.uvRect( 32, 32, 48, 48 ) );

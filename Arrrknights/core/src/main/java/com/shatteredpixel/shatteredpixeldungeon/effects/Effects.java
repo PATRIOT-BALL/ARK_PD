@@ -44,13 +44,13 @@ public class Effects {
 				icon.frame(icon.texture.uvRect(0, 0, 16, 16));
 				break;
 			case LIGHTNING:
-				icon.frame(icon.texture.uvRect(16, 0, 32, 6));
+				icon.frame(icon.texture.uvRect(0, 48, 16, 64));
 				break;
 			case WOUND:
 				icon.frame(icon.texture.uvRect(16, 6, 32, 17));
 				break;
 			case EXCLAMATION:
-				icon.frame(icon.texture.uvRect(0, 16, 6, 25));
+				icon.frame(icon.texture.uvRect(0, 32, 16, 48));
 				break;
 			case CHAIN:
 				icon.frame(icon.texture.uvRect(6, 16, 12, 23));

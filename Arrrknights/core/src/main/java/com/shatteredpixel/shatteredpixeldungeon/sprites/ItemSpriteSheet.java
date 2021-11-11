@@ -329,6 +329,9 @@ public class ItemSpriteSheet {
 	public static final int BABY_KNIGHT       = WEP_TIER5+11;
 	public static final int R4C       = WEP_TIER5+12;
 	public static final int DUSK       = WEP_TIER5+13;
+	public static final int VULCAN       = WEP_TIER5+14;
+	public static final int NEARL_SPEAR       = WEP_TIER5+15;
+
 
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
@@ -345,6 +348,9 @@ public class ItemSpriteSheet {
 		assignItemRect(BABY_KNIGHT,   16, 16);
 		assignItemRect(R4C,   16, 16);
 		assignItemRect(DUSK,   16, 16);
+		assignItemRect(VULCAN,   16, 16);
+		assignItemRect(NEARL_SPEAR,   16, 16);
+
 
 	}
 

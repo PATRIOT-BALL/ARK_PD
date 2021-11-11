@@ -1693,7 +1693,7 @@ items.spells.chaoscatalyst.name=혼돈의 정수
 items.spells.chaoscatalyst.desc=이 혼돈스러운 뭉치는 아이템의 강화 수치를 +1로 만들어버립니다.
 items.spells.chaoscatalyst.inv_title=혼돈 파괴!
 
-items.spells.blastspell.name=충격의 정수
+items.spells.blastspell.name=충격
 items.spells.blastspell.desc=이 주문을 적중시키면 대상을 밀쳐낼 수 있을 것 같습니다.
 
 

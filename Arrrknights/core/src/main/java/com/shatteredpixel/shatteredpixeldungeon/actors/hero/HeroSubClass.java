@@ -118,7 +118,7 @@ public enum HeroSubClass {
 			case KNIGHT:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 160, 80, 16, 16);
 			case SAVIOR:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 174, 80, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 176, 80, 16, 16);
 		}
 	}
 	

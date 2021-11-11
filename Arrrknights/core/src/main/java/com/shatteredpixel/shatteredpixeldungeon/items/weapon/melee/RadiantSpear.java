@@ -17,7 +17,7 @@ import com.watabou.utils.Random;
 
 public class RadiantSpear extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.REQUIEM;
+        image = ItemSpriteSheet.NEARL_SPEAR;
         hitSound = Assets.Sounds.HIT_SPEAR;
         hitSoundPitch = 1.18f;
 

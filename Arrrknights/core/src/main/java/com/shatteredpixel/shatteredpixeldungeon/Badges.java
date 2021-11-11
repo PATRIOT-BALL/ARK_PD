@@ -210,7 +210,7 @@ public class Badges {
 		Get_25_STONES                (136),
 		Get_40_STONES                (137),
 		DOLL_COLLECTOR                (138),
-		SLAIN_PURSUER,
+		SLAIN_PURSUER				(139),
 
 		//GREEN
 		SKIN_BABOSKADI(160, false, true),
@@ -222,7 +222,7 @@ public class Badges {
 		SKIN_JESSI(166, false, true),
 
 		//기타
-		SUPPORT;
+		SUPPORT			(159);
 
 		public boolean meta;
 		public boolean skin;
