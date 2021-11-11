@@ -41,6 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Warlock;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.WaveCaster;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Yog;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.YogFist;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.EmperorPursuer;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAbsinthe;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfAngelina;
@@ -133,6 +134,7 @@ public class AntiMagic extends Armor.Glyph {
 		RESISTS.add( Pompeii.Volcano.class );
 		RESISTS.add( TiacauhRitualist.TiacauhBolat.class );
 		RESISTS.add( TiacauhShaman.TiacauhBolat.class );
+		RESISTS.add( EmperorPursuer.DarkBolt.class );
 	}
 	
 	@Override

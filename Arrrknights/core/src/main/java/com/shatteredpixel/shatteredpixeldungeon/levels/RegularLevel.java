@@ -46,6 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.SecretRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.PitRoom;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.PursuerRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.RoseRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.ShopRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.SpecialRoom;
@@ -120,6 +121,9 @@ public abstract class RegularLevel extends Level {
 
 		if (Dungeon.depth == 13)
 			initRooms.add(new RoseRoom());
+
+		if (Dungeon.depth == 24)
+			initRooms.add(new PursuerRoom());
 
 		//force max special rooms and add one more for large levels
 		int specials = specialRooms(feeling == Feeling.LARGE);

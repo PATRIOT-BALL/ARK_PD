@@ -47,6 +47,7 @@ actors.blobs.wateroftransmutation.desc=Power of change radiates from the water o
 
 actors.blobs.web.desc=A thick web is covering everything here. Anything that touches or is thrown through the web will break it, but will also be stuck in place.
 
+actors.blobs.dominion.desc=In this space, those who do not follow the will of Ursus will be weakened...
 
 
 ###buffs
@@ -661,7 +662,7 @@ actors.hero.talent.skill_mastery.titleskill mastery
 actors.hero.talent.skill_mastery.desc=_+1:_ Increases Light Sword's damage multiplier up to 300%.\n\n_+2:_ Killing an enemy with a kill blow recharges the seal of light by 3%.\n\n_+3:_ Push silences the enemy for 1 turn.
 actors.hero.talent.shield_of_light.title=shield of light
 actors.hero.talent.shield_of_light.desc=_+1:_ Defense is increased by _1_.\n\n_+2:_ Defense is increased by _2_.\n\n_+3:_ Defense is increased by _3_.\n\nWhen HP is below 50% & while in Radiant Knight status, each increases by 2x. (up to 4x)
-actors.hero.talent.pegasus_wing.title=천마의 날개
+actors.hero.talent.pegasus_wing.title=pegasus wing
 actors.hero.talent.pegasus_wing.desc=_+1:_ 피격시 _33%_ 확률로 빛의 인장을 2% 충전합니다.\n\n_+2:_ 피격시 _67%_ 확률로 빛의 인장을 2% 충전합니다.\n\n_+3:_ 피격시 _100%_ 확률로 빛의 인장을 2% 충전합니다.
 actors.hero.talent.hopelight.title=희망의 빛
 actors.hero.talent.hopelight.desc=_+1:_ 빛의 기사 상태일 때 피해 저항이 40%에서 _45%_로 증가합니다.\n\n_+2:_ 빛의 기사 상태일 때 피해 저항이 40%에서 _50%_로 증가합니다.\n\n_+3:_ 빛의 기사 상태일 때 피해 저항이 40%에서 _55%_로 증가합니다.
