@@ -653,7 +653,7 @@ actors.hero.talent.exorcism.desc=_+1:_ Deals _2_ additional damage and takes _1_
 actors.hero.talent.pegasus_aura.title=pegasus aura
 actors.hero.talent.pegasus_aura.desc=_+1:_ When your seal of light activated, your recover HP _5%._. and When in RadiantKnight state, accuracy increases by _10%._\n\n_+2:_ When your seal of light activated, your recover HP _10%._. and When in RadiantKnight state, accuracy increases by _20%._\n\n_+3:_ When your seal of light activated, your recover HP _15%._. and When in RadiantKnight state, accuracy increases by _30%._
 actors.hero.talent.radianthero.title=radiant hero
-actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a Radiant Knight.\n\n_+1: _600 turn_ cool down\n\n_+2: _450 turn_ cool down\n\n_300 turn_ cool down
+actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a Radiant Knight.\n\n_+1: 600 turn_ cool down\n\n_+2: 450 turn_ cool down\n\n_+3: 300 turn_ cool down
 actors.hero.talent.into_fray.title=into fray
 actors.hero.talent.into_fray.desc=_+1:_ kill an enemy with a combo, you gain haste for _1 turn_.\n\n_+2:_ kill an enemy with a combo, you gain haste for _2 turn_.\n\n_+3:_ kill an enemy with a combo, you gain haste for _3 turn_.
 actors.hero.talent.blitzkrieg.title=blitzkrieg
@@ -663,7 +663,7 @@ actors.hero.talent.skill_mastery.desc=_+1:_ Increases Light Sword's damage multi
 actors.hero.talent.shield_of_light.title=shield of light
 actors.hero.talent.shield_of_light.desc=_+1:_ Defense is increased by _1_.\n\n_+2:_ Defense is increased by _2_.\n\n_+3:_ Defense is increased by _3_.\n\nWhen HP is below 50% & while in Radiant Knight status, each increases by 2x. (up to 4x)
 actors.hero.talent.pegasus_wing.title=pegasus wing
-actors.hero.talent.pegasus_wing.desc=_+1:_ 피격시 _33%_ 확률로 빛의 인장을 2% 충전합니다.\n\n_+2:_ 피격시 _67%_ 확률로 빛의 인장을 2% 충전합니다.\n\n_+3:_ 피격시 _100%_ 확률로 빛의 인장을 2% 충전합니다.
+actors.hero.talent.pegasus_wing.desc=_+1:_ When attacked by an enemy, there is a _33%_ chance to recharge the Seal of Light by 2%.\n\n_+1:_ When attacked by an enemy, there is a _67%_ chance to recharge the Seal of Light by 2%.\n\n_+1:_ When attacked by an enemy, there is a _100%_ chance to recharge the Seal of Light by 2%.
 actors.hero.talent.hopelight.title=hope light
 actors.hero.talent.hopelight.desc=_+1:_ Radiant Knight status, Damage mitigation increased from 40% to _45%_\n\n_+2:_ Radiant Knight status, Damage mitigation increased from 40% to _50%_\n\n_+3:_ Radiant Knight status, Damage mitigation increased from 40% to _55%_
 actors.hero.talent.grand_order.title=grand order
@@ -673,7 +673,7 @@ actors.hero.talent.knight_of_kazimierz.desc=_+1:_ Radiant Knight status, Charges
 actors.hero.talent.knight_body.title=knight body
 actors.hero.talent.knight_body.desc=_+1:_ Max HP +10\n\n_+2:_ Max HP +20\n\n_+3:_ Max HP +30\n\n_+4:_ Max HP +40
 actors.hero.talent.quick_tactics.title=quick tactics
-actors.hero.talent.quick_tactics.desc=_+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\n+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\n+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\n+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\nAlso, it will no longer cost a turn to use Seal of Light.
+actors.hero.talent.quick_tactics.desc=_+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\n_+2:_ Haste gained from using Seal of Light increased from 5 to _7 turn_.\n\n_+3:_ Haste gained from using Seal of Light increased from 5 to _8 turn_.\n\n_+4:_ Haste gained from using Seal of Light increased from 5 to _9 turn_.\n\nAlso, it will no longer cost a turn to use Seal of Light.
 actors.hero.talent.blessed_champion.title=blessed champion
 actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._\n\n_+4:_ seal of light activated, you gain a blessing for _40 turns._
 
@@ -765,11 +765,11 @@ actors.hero.herosubclass.guardian=Guardian
 actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
 actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
 actors.hero.herosubclass.knight=Knight
-actors.hero.herosubclass.knight_short_desc=_Knight_\n빠른 기동력과 필살기를 이용해 적들을 연속해서 처치합니다.
-actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속을 얻습니다. 또한, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
+actors.hero.herosubclass.knight_short_desc=_Knight_\nDefeat enemies with quick mobility and combo moves.
+actors.hero.herosubclass.knight_desc=The _Knight Elite_ is Possessing quick mobility, gains haste when using Seal of Light. A combo move can be used after a normal attack, and attack power increases when in haste state.
 actors.hero.herosubclass.savior=Savior
-actors.hero.herosubclass.savior_short_desc=_Savior_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
-actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 60%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가합니다.
+actors.hero.herosubclass.savior_short_desc=_Savior_\na fast Seal Of Light charge and increased power of light.
+actors.hero.herosubclass.savior_desc=_Savior Elite_ is Using the empowered power of light, Seal Of Light's charge rate is increased, Radiant Knight's damage bonus increased from 40% to 60%, and Damage reduction increased from 20% to 40%
 
 
 ###npcs

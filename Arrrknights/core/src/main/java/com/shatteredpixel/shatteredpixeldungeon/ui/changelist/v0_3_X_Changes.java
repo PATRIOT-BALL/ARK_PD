@@ -77,7 +77,7 @@ public class v0_3_X_Changes {
                 "그림자 망토의 레벨업 속도가 감소했습니다." + "\n\n" +
                         "_사냥_ 능력이 미니 보스에게 절반의 피해를 입히도록 변경되었습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "특성 하향",
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 하향",
                         "_신속 레드_의 _투사체 가속_ 특성의 사격 무기 피해 보너스가 _15-45%_에서 _10-30%_로 감소했습니다." + "\n\n" +
                         "_신속 레드_의 _특수작전_ 특성의 가속 획득 효과가 제거되었습니다." + "\n\n" +
                 "_파괴 로즈몬티스_의 _질랑 포격_ 특성의 발동 확률이 33-100%에서 _20-60%_로 감소했습니다."));
