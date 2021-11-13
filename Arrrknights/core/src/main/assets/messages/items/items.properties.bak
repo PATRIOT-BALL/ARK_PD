@@ -2474,7 +2474,7 @@ items.weapon.melee.bladedemon.ac_zap=변형
 items.weapon.melee.minosfury.name=미노스의 분노
 items.weapon.melee.minosfury.desc="내 곡괭이는 어디있... *미노스 욕설*"\n\n이 _특별한_ 방패는 무기를 분해하여 방어력을 상승시킬 수 있습니다.
 items.weapon.melee.minosfury.typical_stats_desc=일반적으로 이 무기는 0-%d의 데미지를 감소시킵니다. 이 감소율은 아이템 분해로 증가하며, 최대 20까지 상승합니다.
-items.weapon.melee.minosfury.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 아이템 분해로 증가하며, 최대 20까지 상승합니다.
+items.weapon.melee.minosfury.stats_desc=이 무기는 0-%d의 피해를 감소시킵니다. 이 감소율은 무기 분해로 증가하며, 최대 20까지 상승합니다.
 items.weapon.melee.minosfury.ac_eat=분해
 
 items.weapon.melee.imageoverform.name=사의 승화
@@ -2490,7 +2490,7 @@ items.weapon.melee.radiantspear.setbouns=_아이템 시너지 : 빛나는 의지
 
 items.weapon.melee.flametailsword.name=레드파인
 items.weapon.melee.flametailsword.desc=이 검은 사용자의 기량을 상승시켜줍니다. 적의 공격을 회피한 후 다음 공격이 2회의 피해를 입힙니다.
-items.weapon.melee.flametailsword.setbouns=_아이템 시너지 : 불꽃 꼬리의 기사_\n무기 능력 발동시 피해량이 50% 증가합니다.
+items.weapon.melee.flametailsword.setbouns=_아이템 시너지 : 불꽃 꼬리의 기사_\n무기 능력 발동시 피해량이 100% 증가합니다.
 
 
 

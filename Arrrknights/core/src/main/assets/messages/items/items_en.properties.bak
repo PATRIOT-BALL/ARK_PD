@@ -1696,6 +1696,9 @@ items.spells.chaoscatalyst.name=chaos catalyst
 items.spells.chaoscatalyst.desc=Using this chaotic power on an item will make the upgrade value +1.
 items.spells.chaoscatalyst.inv_title=CHAOS!
 
+items.spells.blastspell.name=blest
+items.spells.blastspell.desc=Enemies hit by this spell will be push away.
+
 ###runestones
 items.stones.inventorystone.ac_use=USE
 
