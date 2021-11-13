@@ -17,12 +17,11 @@ public class FlametailSword extends MeleeWeapon {
         hitSoundPitch = 0.9f;
 
         tier = 4;
-        DLY = 0.9f;
     }
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) + 2 +   //20 base, down from 25
+        return  4*(tier) + 2 +   //18 + 5, 조건부 2티ㅏ
                 lvl*(tier+1);   //scaling unchanged
     }
 
