@@ -7,7 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ClosureSprite;
 public class Dummy extends Mob {
     {
         spriteClass = ClosureSprite.class;
-        HP=HT=999;
+        HP=HT=1000;
         properties.add(Property.IMMOVABLE);
 
         state = PASSIVE;
@@ -16,6 +16,12 @@ public class Dummy extends Mob {
     @Override
     public void beckon(int cell) {
         //do nothing
+    }
+
+    @Override
+    protected boolean act() {
+        HP = Math.min(HP+50, HT);
+        return super.act();
     }
 
     public static void spawn(Level level, int poss) {
