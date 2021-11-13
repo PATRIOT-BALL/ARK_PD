@@ -21,20 +21,25 @@ public class FlametailSword extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) + 2 +   //18 + 5, 조건부 2티ㅏ
-                lvl*(tier+1);   //scaling unchanged
+        return  4*(tier) +   //16 + 4, 조건부 2타
+                lvl*(tier);   //scaling unchanged
     }
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
+        boolean da = false;
         if (attacker.buff(FlametaillBuff.class) != null) {
+            Buff.detach(attacker, FlametaillBuff.class);
+            da = true;
+        }
+        if (da) {
                 attacker.attack(defender);
                 defender.sprite.bloodBurstA( defender.sprite.center(), 4 );
                 defender.sprite.flash();
                 if (attacker instanceof Hero && Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
                     Buff.affect(attacker, Combo.class).bounshit(defender);
             }
-                Buff.detach(attacker, FlametaillBuff.class);
+                damage *= 1.5f;
         }
         return super.proc(attacker, defender, damage);
     }

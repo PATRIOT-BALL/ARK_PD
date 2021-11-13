@@ -2489,8 +2489,7 @@ items.weapon.melee.radiantspear.desc=_"빛이 있으라"_\n\n이 빛의 창은 �
 items.weapon.melee.radiantspear.setbouns=_아이템 시너지 : 빛나는 의지_\n취약 대상 추가 피해량이 33%로 증가합니다.
 
 items.weapon.melee.flametailsword.name=레드파인
-items.weapon.melee.flametailsword.desc=이 검은 사용자의 기량을 상승시켜줍니다. 적의 공격을 회피한 후 다음 공격이 2회의 피해를 입힙니다.
-items.weapon.melee.flametailsword.setbouns=_아이템 시너지 : 불꽃 꼬리의 기사_\n무기 능력 발동시 피해량이 100% 증가합니다.
+items.weapon.melee.flametailsword.desc=이 검은 사용자의 기량을 상승시켜줍니다. 적의 공격을 회피한 후 다음 공격이 2회의 피해를 입히며, 1타의 피해량이 증가합니다.
 
 
 

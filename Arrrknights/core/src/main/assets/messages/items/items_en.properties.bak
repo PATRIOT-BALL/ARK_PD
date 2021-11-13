@@ -2484,8 +2484,9 @@ items.weapon.melee.radiantspear.desc=This spear of light, Attacking blind enemie
 items.weapon.melee.radiantspear.setbouns=_Radiant Will_\nVulnerable target bonus damage increased to 33%.
 
 items.weapon.melee.flametailsword.name=Pinus Sylvestris
-items.weapon.melee.flametailsword.desc=This weapon increases the user's skill, dodging the enemy's attack then the next attack deals 2 damage.
-items.weapon.melee.flametailsword.setbouns=_Flame Tail_\n50% additional damage when a weapon effect is activated
+items.weapon.melee.flametailsword.desc=This weapon increases the user's skill. When dodging the enemy's attack, the next attack use double attack.
+Double Attack first attack deals x1.5 damage.
+items.weapon.melee.flametailsword.setbouns=_Flame Tail_\nDouble Attack`s first attack x2.0 damage.
 
 
 ###missile weapons
