@@ -37,7 +37,7 @@ public class Siesta_AgentSprite extends MobSprite {
         idle.frames( frames, 0 );
 
         run = new Animation( 12, true );
-        run.frames( frames, 0 );
+        run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
         attack = new Animation( 12, false );
         attack.frames( frames, 0 );
