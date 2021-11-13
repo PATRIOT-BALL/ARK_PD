@@ -43,6 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WandEmpower;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
@@ -374,7 +375,7 @@ public enum Talent {
 
 		if (hero.hasTalent(SHINING_MEAL)){
 			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
-				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos] && !mob.properties().contains(Char.Property.NPC)) {
+				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos] && !mob.properties().contains(Char.Property.NPC) && !(mob instanceof Shopkeeper)) {
 					Buff.affect(mob, Blindness.class, 1+hero.pointsInTalent(SHINING_MEAL));
 					if (mob.properties().contains(Char.Property.INFECTED) || mob.properties().contains(Char.Property.SARKAZ)) {
 						mob.damage(2+hero.pointsInTalent(SHINING_MEAL),hero);
