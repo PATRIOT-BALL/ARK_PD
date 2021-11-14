@@ -33,7 +33,7 @@ public class WeedySprite extends MobSprite {
 
         TextureFilm frames = new TextureFilm( texture, 46, 36 );
 
-        idle = new Animation( 2, true );
+        idle = new Animation( 8, true );
         idle.frames( frames, 0, 1, 2, 3, 4, 0, 0, 1, 2, 3, 4, 0, 0, 1, 2, 3, 4, 0, 0, 1, 2, 3, 4, 0, 0, 5, 6, 6, 7, 7, 6, 8, 9, 10, 11, 11, 11, 11, 11, 10, 12, 13, 0);
 
         die = new Animation( 10, false );

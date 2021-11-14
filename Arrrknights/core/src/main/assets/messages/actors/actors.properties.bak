@@ -875,17 +875,17 @@ actors.mobs.npcs.lens.t3=파노라마~!
 actors.mobs.npcs.lens.t4=타임 랩스~!
 
 actors.mobs.npcs.greencat.name=닥터 켈시
-actors.mobs.npcs.greencat.desc=로도스 아일랜드의 수석 관리자 중 한 명이자, 로도스 아일랜드 의료 프로젝트의 리더. 그리고 당신의 상사다.
+actors.mobs.npcs.greencat.desc=\n\n로도스 아일랜드의 고위 관리 인원 중 한 명이자, 로도스 아일랜드 의료 프로젝트의 리더이기도 한 켈시는 금속 공업과 사회학, 오리지늄 아츠, 고고학, 역사 계보학, 경제학, 식물학, 지질학 등 다양한 영역에 걸쳐 해박한 지식을 갖고 있다. 로도스 아일랜드의 일부 작전에서는 의료 인원 자격으로 의학 이론 협조 및 응급 의료 기기를 제공하기도 하는 등 켈시는 여러 분야에서 로도스 아일랜드의 전략 지휘 시스템의 중요 멤버로서 활약하고 있다.
 actors.mobs.npcs.greencat.wellcom=그렇군, 작전 성공인가... 수고했다, %s.
 actors.mobs.npcs.greencat.fury=그것이 너의 선택인가.
 
 actors.mobs.npcs.weedy.name=위디, 엔지니어
 actors.mobs.npcs.weedy.desc=\n\n안녕하세요, 로도스 아일랜드 엔지니어링 팀의 위디인데요, 아직 이 주변은 공사중이라 갈 수 없어요. 아, 악수는 이쪽 장갑 낀 오른손으로 해주세요. 근처에 손소독제라도 배치해야겠어..
-actors.mobs.npcs.weedy.###=공사중이에요. 위험하니 물러나세요!
+actors.mobs.npcs.weedy.t1=공사중이에요. 위험하니 물러나세요!
 
 actors.mobs.npcs.keeper.name=방화벽
 actors.mobs.npcs.keeper.desc=\n\n핵심 인원들만 지나갈 수 있는 문이다. 박사가 필요하다.
-actors.mobs.npcs.weedy.###=진입이 거부됨.
+actors.mobs.npcs.keeper.t1=진입이 거부됨.
 
 actors.mobs.npcs.closure.name=클로저
 actors.mobs.npcs.closure.desc=로도스 아일랜드의 고참. _클로저가 있을 때 물건을 버리고 체르노보그로 돌아간다면, 버렸던 물건은 다른 대원한테 판매될 것이다._ \n\n클릭하면 스킨을 해금할 수 있습니다.
