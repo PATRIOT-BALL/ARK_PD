@@ -23,7 +23,7 @@ public class NewRhodesLevel3 extends Level {
         color1 = 0x801500;
         color2 = 0xa68521;
 
-        viewDistance = 14;
+        viewDistance = 34;
     }
 
     @Override
