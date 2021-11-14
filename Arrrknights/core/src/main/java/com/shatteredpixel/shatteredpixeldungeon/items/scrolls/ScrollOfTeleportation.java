@@ -53,7 +53,6 @@ public class ScrollOfTeleportation extends Scroll {
 
 	@Override
 	public void doRead() {
-
 		Sample.INSTANCE.play( Assets.Sounds.READ );
 		
 		teleportPreferringUnseen( curUser );
@@ -86,7 +85,7 @@ public class ScrollOfTeleportation extends Scroll {
 	
 	public static void teleportChar( Char ch ) {
 
-		if (Dungeon.bossLevel()){
+		if (Dungeon.bossLevel() || Dungeon.depth >= 27 || Dungeon.depth <= 30){
 			GLog.w( Messages.get(ScrollOfTeleportation.class, "no_tele") );
 			return;
 		}

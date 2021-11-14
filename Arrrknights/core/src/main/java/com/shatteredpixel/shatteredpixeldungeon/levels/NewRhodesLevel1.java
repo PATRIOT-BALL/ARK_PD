@@ -82,7 +82,7 @@ public class NewRhodesLevel1 extends Level {
 
         // 계단 관련
         Painter.fill(this, 7, 21, 4, 4, Terrain.ENTRANCE); // 1층 가는거
-        if (Dungeon.hero.belongings.getItem(Amulet.class) != null) Painter.fill(this, 6, 9, 6, 2, Terrain.EXIT); // 28층 가는거.
+        Painter.fill(this, 6, 9, 6, 2, Terrain.EXIT); // 28층 가는거.
 
         // 벽 관련
         // 1. 처음 입구부분 벽
@@ -150,24 +150,6 @@ public class NewRhodesLevel1 extends Level {
         @Override
         public void restoreFromBundle (Bundle bundle){
         super.restoreFromBundle(bundle);
-        for (int i = 0; i < length(); i++) {
-            int flags = Terrain.flags[map[i]];
-            if ((flags & Terrain.PIT) != 0) {
-                passable[i] = avoid[i] = false;
-                solid[i] = true;
-            }
-        }
-        for (int i = (height - ROOM_TOP + 2) * width; i < length; i++) {
-            passable[i] = avoid[i] = false;
-            solid[i] = true;
-        }
-        for (int i = (height - ROOM_TOP + 1) * width; i < length; i++) {
-            if (i % width < 4 || i % width > 12 || i >= (length - width)) {
-                discoverable[i] = false;
-            } else {
-                visited[i] = true;
-            }
-        }
     }
 
     public static class CustomeMap extends CustomTilemap {

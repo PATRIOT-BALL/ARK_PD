@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -24,7 +25,7 @@ import com.watabou.utils.Callback;
 public class GreenCat extends NPC {
     {
         HP=HT=1000;
-        spriteClass = GreenCatSprite.class;
+        spriteClass = GreenCatSprite.NPC.class;
         properties.add(Property.IMMOVABLE);
         properties.add(Property.NPC);
     }
@@ -89,15 +90,7 @@ public class GreenCat extends NPC {
         return true;
     }
 
-    public static void spawn(RhodesLevel level, int ppos) {
-        GreenCat Cat = new GreenCat();
-        do {
-            Cat.pos = ppos;
-        } while (Cat.pos == -1);
-        level.mobs.add(Cat);
-    }
-
-    public static void spawn(RhodesLevel3 level, int ppos) {
+    public static void spawn(Level level, int ppos) {
         GreenCat Cat = new GreenCat();
         do {
             Cat.pos = ppos;

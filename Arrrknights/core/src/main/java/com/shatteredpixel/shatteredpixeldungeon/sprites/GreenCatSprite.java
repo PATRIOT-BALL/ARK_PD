@@ -59,4 +59,30 @@ public class GreenCatSprite extends MobSprite {
         emitter().start( ShaftParticle.FACTORY, 0.3f, 4 );
         //emitter().start( Speck.factory( Speck.LIGHT ), 0.2f, 3 );
     }
+
+    public static class NPC extends GreenCatSprite {
+        public NPC() {
+            super();
+
+            texture(Assets.Sprites.KALTSIT_NPC);
+            shadowHeight=-1.1f;
+
+            TextureFilm frames = new TextureFilm(texture, 34, 34);
+
+            idle = new Animation(6, true);
+            idle.frames(frames, 0, 1, 2, 3, 4, 5);
+
+            run = new Animation(10, true);
+            run.frames(frames, 0);
+
+            attack = new Animation(17, false);
+            attack.frames(frames, 0);
+
+            die = new Animation(10, false);
+            die.frames(frames, 8);
+
+            play(idle);
+
+        }
+    }
 }

@@ -108,11 +108,11 @@ public class Kaltsit extends Mob {
                     Camera.main.shake(3, 0.5f);
                 }
                 Mon3tr ter = new Mon3tr();
-                ter.pos = 259;
+                ter.pos = 537;
                 GameScene.add(ter);
 
                 GameScene.flash(0x80FF0000);
-                ScrollOfTeleportation.appear(Dungeon.hero, Dungeon.level.entrance);
+                ScrollOfTeleportation.appear(Dungeon.hero, 587);
                 Sample.INSTANCE.play(Assets.Sounds.SKILL_MON1);
 
                 ter.beckon( Dungeon.hero.pos );
