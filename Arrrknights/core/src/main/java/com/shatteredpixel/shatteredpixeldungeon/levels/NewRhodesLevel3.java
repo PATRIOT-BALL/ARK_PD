@@ -63,8 +63,8 @@ public class NewRhodesLevel3 extends Level {
         Painter.fill(this, 0, 0, 25, 27, Terrain.EMPTY);
         Painter.fill(this, 0, 0, 25, 6, Terrain.AVOID);
         Painter.fill(this, 0, 25, 25, 2, Terrain.AVOID);
-        Painter.fill(this, 0, 0, 1, 27, Terrain.WALL);
-        Painter.fill(this, 24, 0, 1, 27, Terrain.WALL);
+        Painter.fill(this, 0, 0, 1, 27, Terrain.AVOID);
+        Painter.fill(this, 24, 0, 1, 27, Terrain.AVOID);
 
         // 왼쪽 외곽 위
         Painter.fill(this, 1, 11, 1, 15, Terrain.AVOID);
@@ -82,6 +82,9 @@ public class NewRhodesLevel3 extends Level {
         // 계단 관련
         Painter.fill(this, 2, 17, 2, 1, Terrain.ENTRANCE); // 1층
         Painter.fill(this, 22, 22, 1, 3, Terrain.EXIT);
+
+        // 계단 옆에 잡오브젝트
+        Painter.fill(this, 5, 17, 4, 1, Terrain.AVOID); // 1층
 
         // 중앙 통로 문처리
         Painter.fill(this, 0, 11, 10, 1, Terrain.WALL);
