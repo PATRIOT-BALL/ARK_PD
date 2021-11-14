@@ -12,8 +12,8 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class FlametailSword extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.BATTLE_AXE;
-        hitSound = Assets.Sounds.HIT_SLASH;
+        image = ItemSpriteSheet.FLAMETAIL;
+        hitSound = Assets.Sounds.HIT_SPEAR;
         hitSoundPitch = 0.9f;
 
         tier = 4;

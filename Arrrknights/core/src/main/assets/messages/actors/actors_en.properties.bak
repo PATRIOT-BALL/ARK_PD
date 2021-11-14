@@ -535,7 +535,7 @@ actors.hero.talent.howling.title=howling
 actors.hero.talent.howling.desc=_+1:_ can now deal _50 damage_ to bosses by hunt.\n\n_+2:_ can now deal _100 damage_ to bosses by hunt\n\n_+3:_ can now deal _150 damage_ to bosses by hunt\n\n_+4:_ can now deal _200 damage_ to bosses by hunt
 actors.hero.talent.special_operations.title=special operations
 actors.hero.talent.special_operations.desc=_+1:_Freerunning cooldown reduced _1 turns_\n\n_+2:_Freerunning cooldown reduced _2 turns_\n\n_+3:_Freerunning cooldown reduced _3 turns_\n\n_+4:_Freerunning cooldown reduced _4 turns_
-actors.hero.talent.bloodbath_operations.titlebloodbath operations
+actors.hero.talent.bloodbath_operations.title=bloodbath operations
 actors.hero.talent.bloodbath_operations.desc=hunt's damage x0.5, Also Inflicts Paralysis on the target.\n\n_+1:_ Reduces hunt's cooldown by _100 turns_\n\n_+2:_ Reduces hunt's cooldown by _200 turns_\n\n_+3:_ Reduces hunt's cooldown by _300 turns_\n\n_+4:_ Reduces hunt's cooldown by _400 turns_
 
 

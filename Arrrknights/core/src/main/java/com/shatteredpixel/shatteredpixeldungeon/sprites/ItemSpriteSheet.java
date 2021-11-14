@@ -297,6 +297,7 @@ public class ItemSpriteSheet {
 	public static final int CARNEL       = WEP_TIER4+11;
 	public static final int CLIFF       = WEP_TIER4+12;
 	public static final int BLADE_DEMON       = WEP_TIER4+13;
+	public static final int FLAMETAIL       = WEP_TIER4+14;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -312,6 +313,7 @@ public class ItemSpriteSheet {
 		assignItemRect(CARNEL,        16, 16);
 		assignItemRect(CLIFF,        16, 16);
 		assignItemRect(BLADE_DEMON,        16, 16);
+		assignItemRect(FLAMETAIL,        16, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 9);   //8 slots
