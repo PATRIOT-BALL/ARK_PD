@@ -33,7 +33,7 @@ public class Green_cat_npcSprite extends MobSprite {
 
         TextureFilm frames = new TextureFilm( texture, 46, 36 );
 
-        idle = new Animation( 5, true );
+        idle = new Animation( 4, true );
         idle.frames( frames, 0, 1, 2, 3, 4, 5, 0);
 
         die = new Animation( 10, false );
