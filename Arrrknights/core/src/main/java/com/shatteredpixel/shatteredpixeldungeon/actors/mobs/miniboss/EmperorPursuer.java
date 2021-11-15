@@ -103,7 +103,6 @@ public class EmperorPursuer extends Mob {
 
     @Override
     protected boolean doAttack( Char enemy ) {
-
         if (Dungeon.level.adjacent( pos, enemy.pos )) {
 
             return super.doAttack( enemy );
@@ -123,6 +122,7 @@ public class EmperorPursuer extends Mob {
     public static class DarkBolt{}
 
     protected void zap() {
+        if (enemy == null) return;
             spend( 1f );
             if (hit(this, enemy, true)) {
 
@@ -145,8 +145,8 @@ public class EmperorPursuer extends Mob {
     protected boolean act() {
         if (state == PASSIVE) return super.act();
         if (!UseAbility()) {
-            return true;
-        }
+            return true; }
+
         if (BurstCoolDown > 0) BurstCoolDown--;
         if (GasCoolDown > 0) GasCoolDown--;
         return super.act();
@@ -154,6 +154,8 @@ public class EmperorPursuer extends Mob {
 
     private boolean UseAbility() {
         // 폭발 > 국가 순
+
+        if (enemy == null) return true;
 
         //폭발
         if (BurstCoolDown <= 0) {
@@ -204,7 +206,6 @@ public class EmperorPursuer extends Mob {
 
         if (GasCoolDown <= 0) {
             ThorwGas(enemy);
-            GasCoolDown = 10;
             return true;
         }
 
@@ -213,8 +214,8 @@ public class EmperorPursuer extends Mob {
 
     public void ThorwGas(Char target) {
         Dungeon.hero.interrupt();
-
         GameScene.add(Blob.seed(target.pos, 250, Dominion.class));
+        GasCoolDown = 10;
 
     }
     public void onZapComplete(){
