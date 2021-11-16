@@ -937,9 +937,9 @@ public class Badges {
 	}
 
 	public static void validateNoKilling() {
-		if (!local.contains( Badge.NO_MONSTERS_SLAIN ) && Statistics.completedWithNoKilling) {
+		if (!global.contains( Badge.NO_MONSTERS_SLAIN ) && Statistics.completedWithNoKilling) {
 			Badge badge = Badge.NO_MONSTERS_SLAIN;
-			local.add( badge );
+			global.add( badge );
 			displayBadge( badge );
 		}
 	}
