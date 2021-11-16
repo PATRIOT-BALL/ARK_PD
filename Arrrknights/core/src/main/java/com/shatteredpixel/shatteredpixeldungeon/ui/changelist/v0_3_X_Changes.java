@@ -33,6 +33,10 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 2종 추가",
                 "_빛나는 의지\n낫토밥_"));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 무기 아츠 부여",
+                "_폭식의 아츠_ : 공격시 허기를 소모하는 대신 위력을 증가시킵니다. 굶주린 상태라면 허기 대신 체력을 소모합니다." + "\n\n" +
+                "추가로, 관통의 아츠의 등장 확률이 감소했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "새로운 적들",
                 "_류드밀라의 그림자_ : 모든 층에서 등장할 수 있는 변종입니다. 매우 귀찮은 능력을 지녔지만 처치하면 대량의 합성옥을 얻을 수 있습니다." + "\n\n" +
                 "_황제의 칼날_ : 24층의 특수 방에서 등장하는 보스입니다. 일반적인 적보다 매우 강하지만 처치시 다양한 전리품을 얻을 수 있습니다."));
