@@ -499,7 +499,7 @@ public class DwarfKing extends Mob {
 						Dungeon.level.drop(new BookYourWish(), pos + ofs).sprite.drop(pos);
 						break;
 					case NEARL:
-						Dungeon.level.drop(Generator.random(Generator.Category.SKL_T3), pos+ofs ).sprite.drop( pos );
+						Dungeon.level.drop(new BookSun(), pos+ofs ).sprite.drop( pos );
 						break;
 				}
 			} else {
