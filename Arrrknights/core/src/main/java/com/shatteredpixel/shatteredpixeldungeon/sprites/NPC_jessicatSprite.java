@@ -3,17 +3,17 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class ClosureSprite extends MobSprite {
+public class NPC_jessicatSprite extends MobSprite {
 
-    public ClosureSprite() {
+    public NPC_jessicatSprite() {
         super();
 
-        texture( Assets.Sprites.CLOSURE );
+        texture( Assets.Sprites.NPC_JESSI );
 
         TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
-        idle = new Animation( 7, true );
-        idle.frames( frames, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 );
+        idle = new Animation( 20, true );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8, 5, 6, 7, 8, 5, 6, 7, 8, 5, 6, 7, 8, 2, 2, 2, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  );
 
         run = new Animation( 10, true );
         run.frames( frames, 0 );
