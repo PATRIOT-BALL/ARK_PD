@@ -88,6 +88,7 @@ public class NewRhodesLevel2 extends Level {
 
         // 복도 A3
         Painter.fill(this, 2, 58, 33, 3, Terrain.EMPTY);
+        Painter.fill(this, 2, 58, 1, 3, Terrain.ENTRANCE);
         Painter.fill(this, 25, 58, 1, 3, Terrain.AVOID);
         map[4164] = Terrain.EMPTY;
 
