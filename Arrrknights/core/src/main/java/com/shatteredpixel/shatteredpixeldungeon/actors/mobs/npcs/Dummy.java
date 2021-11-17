@@ -3,10 +3,11 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ClosureSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_dummySprite;
 
 public class Dummy extends Mob {
     {
-        spriteClass = ClosureSprite.class;
+        spriteClass = NPC_dummySprite.class;
         HP=HT=1000;
         properties.add(Property.IMMOVABLE);
 

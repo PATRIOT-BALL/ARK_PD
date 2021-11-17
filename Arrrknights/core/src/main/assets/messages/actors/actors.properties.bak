@@ -81,7 +81,7 @@ actors.buffs.berserk.exhausted=탈진
 actors.buffs.berserk.recovering=회복 중
 actors.buffs.berserk.angered_desc=블레이즈의 부상이 심할수록 그 타격도 강화됩니다. 블레이즈가 육체적인 피해를 받으면, 더욱 분노하여 추가 피해를 줍니다. 갑옷에 의해 감소된 피해 역시 그녀의 분노를 더합니다.\n\n분노는 시간이 지나면서 사라지며, 블레이즈의 체력이 낮을수록 더 오래 지속됩니다.\n\n만약 완전히 분노한 상태에서 깃털 부적이 박힌 갑옷을 입은 블레이즈의 체력이 0이 되면, 그녀는 격노하여 짧은 시간 동안 _죽음을 유예_ 할 수 있습니다.\n\n현재 분노: _%.0f%%_\n_+%.0f%%_ 피해량
 actors.buffs.berserk.berserk_desc=죽음이 임박한 시점에서, 두려움과 번뇌가 사라지고 분노만 남습니다. 이런 죽음에 가까운 상태에서 블레이즈는 극도로 강력합니다 _100%의 추가 피해를 입히고, 추가 방어막을 얻고, 죽음을 유예합니다._\n\n추가 방어막은 그녀의 갑옷이 좋을수록 더 강력하며, 시간이 지나면서 줄어들 것입니다. 이 보호막이 0까지 줄어들면 블레이즈는 삶을 포기하고 죽을 것입니다.\n\n어떤 방법으로든 체력을 회복하면 안정을 되찾을 수 있지만, 탈진 상태에 접어들게 됩니다. 탈진 상태에선 다시 격노 상태에 접어들기 위해선 경험치를 얻어야만 합니다.
-actors.buffs.berserk.recovering_desc=내면의 힘에는 한계가 있는 법입니다. 블레이즈가 다시 격노할 수 있께 되려면 우선 조금 쉬어야만 합니다.\n\n체력을 회복하는 동안 블레이즈는 피해를 입을 때 분노를 얻지 못합니다.\n\n복구될 때까지의 레벨: _%.2f_
+actors.buffs.berserk.recovering_desc=내면의 힘에는 한계가 있는 법입니다. 블레이즈가 다시 격노할 수 있게 되려면 우선 조금 쉬어야만 합니다.\n\n체력을 회복하는 동안 블레이즈는 피해를 입을 때 분노를 얻지 못합니다.\n\n복구될 때까지의 레벨: _%.2f_
 actors.buffs.berserk.no_rages=격노 효과는 블레이즈의 기력을 영구적으로 소모시켜 격노할 때 마다 최대 체력이 감소합니다.
 actors.buffs.berserk.past_rages=격노 횟수: _%d_\n현재 최대 체력: _%d%%_
 actors.buffs.berserk.rankings_desc=격노하며 버텼으나 사망
@@ -905,8 +905,8 @@ actors.mobs.npcs.closure.die=끄악~
 actors.mobs.npcs.skinmodel.name=신형 모델 생성기
 actors.mobs.npcs.skinmodel.desc=실물과 거의 유사한 모습에, 움직임 기능도 탑제된 홀로그램을 생성하는 기계다. \n\n클릭하면 다음 스킨을 볼 수 있습니다.
 
-actors.mobs.npcs.blackperro.name=훈련교관 도베르만
-actors.mobs.npcs.blackperro.desc=로도스 아일랜드의 전술 훈련 교관. 엄격하고 깐깐하며 빈틈없는 성격이다.\n\n_이지 모드를 활성화할 수 있습니다._
+actors.mobs.npcs.blackperro.name=도베르만 홀로그램
+actors.mobs.npcs.blackperro.desc=이지 모드를 활성화할 수 있습니다.
 actors.mobs.npcs.blackperro.no=훈련은 필요없을 것 같은데?
 actors.mobs.npcs.blackperro.active=이미 훈련은 시작했다.
 
@@ -942,8 +942,22 @@ actors.mobs.npcs.gavial.name=가비알
 actors.mobs.npcs.gavial.desc=로도스 아일랜드의 메딕 오퍼레이터.\n\n그녀에게 말을 걸면 추가 챕터가 _대족장의 귀환_ 로 변경됩니다.
 actors.mobs.npcs.gavial.ok=좋아, 나랑 같이 가겠다는거지?
 
-actors.mobs.npcs.dummy.name=인체형 샌드백
-actors.mobs.npcs.dummy.desc=그래서 얘 출시는 언제함?
+actors.mobs.npcs.dummy.name=훈련인형
+actors.mobs.npcs.dummy.desc=KOKODAYO
+
+actors.mobs.npcs.dobermann.name=훈련교관 도베르만
+actors.mobs.npcs.dobermann.desc=로도스 아일랜드의 전술 훈련 교관. 엄격하고 깐깐하며 빈틈없는 성격이다.
+actors.mobs.npcs.dobermann.say=미안하군. 지금은 바빠.
+
+actors.mobs.npcs.jessica.name=제시카
+actors.mobs.npcs.jessica.desc=블랙스틸의 정식 오퍼레이터. 상호 교류 프로젝트의 일환으로 로도스 아일랜드에 주재하며 수련 중이다.\n\n_퀘스트가 있는 NPC입니다._
+actors.mobs.npcs.jessica.say=아, 안녕하세요!
+actors.mobs.npcs.jessica.quest=제시카 :\n\n아, 안녕하세요! 저기 혹시... _표준 탄약통_이 있으신가요? 훈련을 해야되는데 탄약이 슬슬 부족해서... 가져다주시면 대금은 치뤄드릴게요.
+actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받아주세요. _합성옥 1,200개_ 에요. 
+
+actors.mobs.npcs.weedy.name=위디
+actors.mobs.npcs.weedy.desc=이베리아 출신의 생체 공학자이자 로도스 아일랜드 생명 공학 연구소의 소장이며 클로저의 유능한 부하. 상당한 결벽증을 갖고있다.
+actors.mobs.npcs.weedy.say=죄송합니다. 여기 앞은 공사중이에요.
 
 //summon, fail은 1-8대사
 //배틀크라이 0-10

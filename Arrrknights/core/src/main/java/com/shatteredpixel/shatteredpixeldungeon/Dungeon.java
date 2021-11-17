@@ -52,6 +52,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.GavialBossLevel1;
 import com.shatteredpixel.shatteredpixeldungeon.levels.GavialBossLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.GavialLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewRhodesLevel1;
+import com.shatteredpixel.shatteredpixeldungeon.levels.NewRhodesLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.NewRhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.HallsLevel;
@@ -363,7 +364,7 @@ public class Dungeon {
 			level = new NewRhodesLevel1();
 			break;
 		case 28:
-			level = new RhodesLevel2();
+			level = new NewRhodesLevel2();
 			break;
 		case 29:
 			level = new NewRhodesLevel3();

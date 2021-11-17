@@ -871,6 +871,14 @@ actors.mobs.npcs.greencat.name=Dr.Kal'tsit
 actors.mobs.npcs.greencat.desc=Rhodes Island`s Senior Manager and Medical Project Leader. and your boss
 actors.mobs.npcs.greencat.wellcom=Ah, Is the operation over... Good work %s
 
+actors.mobs.npcs.weedy.name=Weedy
+actors.mobs.npcs.weedy.desc=\n\nHello, I'm Weedy from Rhodes Island Engineering, but I can't go around here because it's still under construction. Oh, please shake hands with your right hand with this glove. I need to put hand sanitizer nearby...
+actors.mobs.npcs.weedy.t1=It's under construction. It's dangerous, so step back!
+
+actors.mobs.npcs.keeper.name=Firewalls
+actors.mobs.npcs.keeper.desc=\n\nIt cannot be passed unless it is a high-ranking executive. You have to bring a doctor.
+actors.mobs.npcs.keeper.t1=Entry denied.
+
 actors.mobs.npcs.closure.name=Closure
 actors.mobs.npcs.closure.desc=Rhodes Island`s Chief Engineer. _The items you left behind in this Rhodes Island will be by the Closure`s pocket money._\n\nTouch to change skin
 actors.mobs.npcs.closure.hi=How about this?
@@ -890,7 +898,7 @@ actors.mobs.npcs.skinmodel.name=New Model
 actors.mobs.npcs.skinmodel.desc=A machine that creates realistic holograms.\n\nTouch to check the next skin
 
 actors.mobs.npcs.blackperro.name=Dobermann
-actors.mobs.npcs.blackperro.desc=Rhodes Island`s Drill instructor. has a strict personality.\n\n_Touch to activate Easy Mode_
+actors.mobs.npcs.blackperro.desc=Touch to activate Easy Mode
 actors.mobs.npcs.blackperro.no=You don't need.
 actors.mobs.npcs.blackperro.active=Training started.
 
@@ -932,6 +940,24 @@ actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria Nation
 actors.mobs.npcs.gavial.name=gavial
 actors.mobs.npcs.gavial.desc=Talking to her will take you through the Gavial extra chapter.
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
+
+actors.mobs.npcs.dummy.name=DUMMY
+actors.mobs.npcs.dummy.desc=KOKODAYO
+
+actors.mobs.npcs.dobermann.name=dobermann
+actors.mobs.npcs.dobermann.desc=Rhodes Island`s Drill instructor. has a strict personality.
+actors.mobs.npcs.dobermann.say=Sorry, I'm busy.
+
+actors.mobs.npcs.jessica.name=jessica
+actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, stationed at Rhodes Island as part of an exchange training program.\n\n_NPCs with Quests_
+actors.mobs.npcs.jessica.say=H, Hello!
+actors.mobs.npcs.jessica.quest=Jessica\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
+actors.mobs.npcs.jessica.result=Jessica\n\th.. Thank you! Here's the 1,200 Orundum.
+
+actors.mobs.npcs.weedy.name=weedy
+actors.mobs.npcs.weedy.desc=Weedy, a bioengineering expert who was born into a family of Iberian scientists, is a researcher who has been with Rhodes Island since its establishment.
+actors.mobs.npcs.weedy.say=Sorry. It's under construction.
+
 
 
 

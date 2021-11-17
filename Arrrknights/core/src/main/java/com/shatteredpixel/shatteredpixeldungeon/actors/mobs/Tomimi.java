@@ -325,6 +325,7 @@ public class Tomimi extends Mob {
         BurstTime = bundle.getInt(SKILL2TIME);
         enemyspawncooldown = bundle.getInt(SUMMON);
         tomimitower = bundle.getInt(TOWER);
+        BossHealthBar.assignBoss(this);
 
     }
 

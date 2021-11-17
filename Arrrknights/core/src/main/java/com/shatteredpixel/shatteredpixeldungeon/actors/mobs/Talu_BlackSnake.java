@@ -425,6 +425,7 @@ public class Talu_BlackSnake extends Mob {
         InvincibilityCooldown = bundle.getInt(SKILL4CD);
         InvincibilityTime = bundle.getInt(SKILL4TIME);
         drup = bundle.getInt(DRUPTIME);
+        BossHealthBar.assignBoss(this);
 
     }
 }

@@ -62,7 +62,7 @@ public class TheBigUglyThing extends Mob {
         immunities.add(Silence.class);
     }
 
-    private int phase = 1; // 1~3까지
+    private int phase = 0; // 1~3까지
     private int beamcooldown = 0;
     private int summoncooldown = 4; // 소환 쿨타임
     private int ragecooldown = 5; // 격노 쿨타임
@@ -109,6 +109,10 @@ public class TheBigUglyThing extends Mob {
 
     @Override
     protected boolean act() {
+        if (phase == 0) {
+            phase = 1;
+            BossHealthBar.assignBoss(this);
+        }
         if (phase == 3 && HP < 1) {
             Dungeon.hero.HP = Dungeon.hero.HT;
             Badges.validateVictory();
@@ -353,6 +357,7 @@ public class TheBigUglyThing extends Mob {
         ragecooldown = bundle.getInt(RAGECD);
         firecooldown = bundle.getInt(FIRECD);
         firetime = bundle.getInt(FIRETIME);
+        BossHealthBar.assignBoss(this);
     }
 
 

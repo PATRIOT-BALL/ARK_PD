@@ -1,15 +1,15 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
-import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel4;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.Dobermann_shadowSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.DobermannSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.WeedySprite;
 
-public class Gavial extends NPC {
+public class Weedy extends NPC {
     {
-        spriteClass = Dobermann_shadowSprite.class;
+        spriteClass = WeedySprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
     }
@@ -26,16 +26,16 @@ public class Gavial extends NPC {
     @Override
     public boolean interact(Char c) {
         sprite.turnTo(pos, c.pos);
-        Dungeon.extrastage_Gavial = true;
-        sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "ok"));
+        sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "say"));
+
         return true;
     }
 
-    public static void spawn(RhodesLevel4 level, int ppos) {
-        Gavial perro = new Gavial();
+    public static void spawn(Level level, int ppos) {
+        Weedy weedy = new Weedy();
         do {
-            perro.pos = ppos;
-        } while (perro.pos == -1);
-        level.mobs.add(perro);
+            weedy.pos = ppos;
+        } while (weedy.pos == -1);
+        level.mobs.add(weedy);
     }
 }

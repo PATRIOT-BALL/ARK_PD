@@ -27,6 +27,8 @@ public class talrufightSprite extends MobSprite {
         die = new MovieClip.Animation( 8, false );
         die.frames( frames, 50 );
 
+        alpha(0.5f);
+
         play( idle.clone() );
     }
 

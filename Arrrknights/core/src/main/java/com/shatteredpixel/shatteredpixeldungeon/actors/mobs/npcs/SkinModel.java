@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -45,7 +46,6 @@ public class SkinModel extends NPC {
                break;
            case 6: spriteClass= LappySprite.class;
            break;
-
        }
     }
 
@@ -66,12 +66,11 @@ public class SkinModel extends NPC {
         return true;
     }
 
-    public static void spawn(RhodesLevel level, int poss) {
+    public static void spawn(Level level, int poss) {
         SkinModel Modle = new SkinModel();
         do {
             Modle.pos = poss;
         } while (Modle.pos == -1);
-
         level.mobs.add(Modle);
     }
 
