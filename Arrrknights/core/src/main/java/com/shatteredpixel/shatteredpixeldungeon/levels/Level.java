@@ -189,7 +189,7 @@ public abstract class Level implements Bundlable {
 
 		Random.pushGenerator( Dungeon.seedCurDepth() );
 
-		if (Dungeon.depth != 27) {
+		if (Dungeon.depth != 27 || Dungeon.depth != 28 ) {
 			if (!(Dungeon.bossLevel())) {
 
 				addItemToSpawn(Generator.random(Generator.Category.FOOD));

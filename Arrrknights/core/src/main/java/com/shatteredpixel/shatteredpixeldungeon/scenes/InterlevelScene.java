@@ -139,7 +139,7 @@ public class InterlevelScene extends PixelScene {
 				break;
 			case ASCEND_27:
 				fadeTime = FAST_FADE;
-				loadingDepth = Dungeon.depth-26;
+				loadingDepth = 1;
 				scrollSpeed = -5;
 				break;
 			case RETURN:
