@@ -1276,6 +1276,14 @@ public class Badges {
 			displayBadge( Badge.SIESTA_PART2 );}
 	}
 
+	public static void validatepursuerkill() {
+		if (!local.contains( Badge.SLAIN_PURSUER )){
+			global.add(Badge.SLAIN_PURSUER);
+			saveNeeded = true;
+			local.add(Badge.SLAIN_PURSUER);
+			displayBadge( Badge.SLAIN_PURSUER );}
+	}
+
 	public static void validatewill() {
 		if (!local.contains( Badge.WILL )){
 			global.add(Badge.WILL);

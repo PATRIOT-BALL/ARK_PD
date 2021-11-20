@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -253,6 +254,7 @@ public class EmperorPursuer extends Mob {
         } while (!Dungeon.level.passable[pos + ofs3]);
         Dungeon.level.drop(Generator.random(Generator.Category.POTION), pos+ofs4 ).sprite.drop( pos );
 
+        Badges.validatepursuerkill();
     }
 
     private static final String SKILL2TIME   = "BurstTime";
