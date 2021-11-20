@@ -900,6 +900,7 @@ actors.mobs.npcs.closure.fail_skin4=모든 물약을 감정해야합니다.
 actors.mobs.npcs.closure.fail_skin5=게임을 10회 플레이해야합니다.
 actors.mobs.npcs.closure.fail_skin6=아미야를 해금해야합니다.
 actors.mobs.npcs.closure.fail_skin7=행복한 결말을 봐야합니다.
+actors.mobs.npcs.closure.fail_skin8=위기 협약을 1개이상 적용하고 게임을 클리어해야합니다.
 actors.mobs.npcs.closure.die=끄악~
 
 actors.mobs.npcs.skinmodel.name=신형 모델 생성기
@@ -953,7 +954,7 @@ actors.mobs.npcs.jessica.name=제시카
 actors.mobs.npcs.jessica.desc=블랙스틸의 정식 오퍼레이터. 상호 교류 프로젝트의 일환으로 로도스 아일랜드에 주재하며 수련 중이다.\n\n_퀘스트가 있는 NPC입니다._
 actors.mobs.npcs.jessica.say=아, 안녕하세요!
 actors.mobs.npcs.jessica.quest=제시카 :\n\n아, 안녕하세요! 저기 혹시... _표준 탄약통_이 있으신가요? 훈련을 해야되는데 탄약이 슬슬 부족해서... 가져다주시면 대금은 치뤄드릴게요.
-actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받아주세요. _합성옥 1,200개_ 에요. 
+actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받아주세요.\n_합성옥 1,200개_ 에요. 
 
 actors.mobs.npcs.weedy.name=위디
 actors.mobs.npcs.weedy.desc=이베리아 출신의 생체 공학자이자 로도스 아일랜드 생명 공학 연구소의 소장이며 클로저의 유능한 부하. 상당한 결벽증을 갖고있다.

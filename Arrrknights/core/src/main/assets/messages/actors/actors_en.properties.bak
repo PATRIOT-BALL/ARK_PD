@@ -892,6 +892,7 @@ actors.mobs.npcs.closure.fail_skin4=Need a All potions identified badge
 actors.mobs.npcs.closure.fail_skin5=Need a 10 games played badge
 actors.mobs.npcs.closure.fail_skin6=Need a Amiya Unlock
 actors.mobs.npcs.closure.fail_skin7=Need a Happy End
+actors.mobs.npcs.closure.fail_skin8=Need a Won with a Contingency
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model
@@ -951,8 +952,8 @@ actors.mobs.npcs.dobermann.say=Sorry, I'm busy.
 actors.mobs.npcs.jessica.name=jessica
 actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, stationed at Rhodes Island as part of an exchange training program.\n\n_NPCs with Quests_
 actors.mobs.npcs.jessica.say=H, Hello!
-actors.mobs.npcs.jessica.quest=Jessica\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
-actors.mobs.npcs.jessica.result=Jessica\n\th.. Thank you! Here's the 1,200 Orundum.
+actors.mobs.npcs.jessica.quest=Jessica :\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
+actors.mobs.npcs.jessica.result=Jessica :\n\th.. Thank you! Here's the 1,200 Orundum.
 
 actors.mobs.npcs.weedy.name=weedy
 actors.mobs.npcs.weedy.desc=Weedy, a bioengineering expert who was born into a family of Iberian scientists, is a researcher who has been with Rhodes Island since its establishment.
