@@ -129,6 +129,18 @@ public class Closure extends NPC {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin7", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
+                            case 7: // 리프 스킨
+                                if (Badges.isUnlocked(Badges.Badge.CHAMPION_1)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_LEAF)) {Badges.validateleafskin();}
+                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
+                                } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
+                                    Game.runOnRenderThread(new Callback() {
+                                        @Override
+                                        public void call() {
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin8", Dungeon.hero.heroClass.title())));
+                                        }});}
+                                break;
 
                         }
                     }

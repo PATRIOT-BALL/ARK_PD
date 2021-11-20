@@ -66,6 +66,8 @@ public class HeroSprite extends CharSprite {
 				break;
 			case 7: texture(Assets.Sprites.LAPPY); // 꼬지리
 				break;
+			case 8: texture(Assets.Sprites.LAPPY); // 상엽. 임시
+				break;
 		}
 		updateArmor();
 
@@ -94,7 +96,9 @@ public class HeroSprite extends CharSprite {
 				break;
 			case 6: texture(Assets.Sprites.JESSI); // 제껄룩
 				break;
-			case 7: texture(Assets.Sprites.LAPPY); // 그라니
+			case 7: texture(Assets.Sprites.LAPPY); // 라피
+				break;
+			case 8: texture(Assets.Sprites.LAPPY); // 상엽. 임시
 				break;
 		}
 		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 36, 34);

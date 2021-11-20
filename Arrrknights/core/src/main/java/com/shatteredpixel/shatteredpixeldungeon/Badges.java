@@ -220,6 +220,7 @@ public class Badges {
 		SKIN_GRN(164, false, true),
 		SKIN_LAPPY(165,false,true),
 		SKIN_JESSI(166, false, true),
+		SKIN_LEAF(166, false, true),
 
 		//기타
 		SUPPORT;
@@ -1005,6 +1006,11 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validateleafskin() {
+		Badge badge = Badge.SKIN_LEAF;
+		displayBadge( badge );
+	}
+
 	// 0.3.2버전의 스킨 관련 처리로 인해 추가된 구문입니다. 추후 필요없어질 수 있습니다.
 	public static void allskindestroy() {
 		saveNeeded = true;
@@ -1029,6 +1035,9 @@ public class Badges {
 		if(global.contains(Badge.SKIN_LAPPY)) {
 			global.remove(Badge.SKIN_LAPPY);
 		}
+		if(global.contains(Badge.SKIN_LEAF)) {
+			global.remove(Badge.SKIN_LEAF);
+		}
 
 		// 후원자 버전 전용. 서포트 배지를 활성화하여 모든 스킨이 해금되게 해줍니다.
 			global.add( Badge.SUPPORT );
@@ -1041,6 +1050,7 @@ public class Badges {
 			Badges.validategrnskin();
 			Badges.validatejessiskin();
 			Badges.validatelappyskin();
+			Badges.validateleafskin();
 		}
 
 		// 배지 파괴 후, 조건에 맞는 배지는 다시 획득합니다.
@@ -1051,6 +1061,7 @@ public class Badges {
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_GRN) && Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_1)) { Badges.validategrnskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI) && Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) { Badges.validatejessiskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY) && Badges.isUnlocked(Badges.Badge.HAPPY_END)) { Badges.validatelappyskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_LEAF) && Badges.isUnlocked(Badge.CHAMPION_1)) { Badges.validateleafskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene
@@ -1436,7 +1447,7 @@ public class Badges {
 	};
 
 	private static final Badge[][] skinBadgeReplacements = new Badge[][]{
-			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}
+			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}, {Badge.SKIN_LEAF}
 	};
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {
