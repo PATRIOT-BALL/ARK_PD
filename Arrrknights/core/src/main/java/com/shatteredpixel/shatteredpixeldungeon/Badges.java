@@ -220,7 +220,7 @@ public class Badges {
 		SKIN_GRN(164, false, true),
 		SKIN_LAPPY(165,false,true),
 		SKIN_JESSI(166, false, true),
-		SKIN_LEAF(166, false, true),
+		SKIN_LEAF(167, false, true),
 
 		//기타
 		SUPPORT;
