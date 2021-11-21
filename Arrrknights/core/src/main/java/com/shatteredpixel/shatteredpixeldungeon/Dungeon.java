@@ -500,7 +500,7 @@ public class Dungeon {
 
 	public static boolean posNeeded() {
 		//2 POS each floor set
-		if (Dungeon.depth < 30) {
+		if (Dungeon.depth < 26) {
 			int posLeftThisSet = 2 - (LimitedDrops.STRENGTH_POTIONS.count - (depth / 5) * 2);
 			if (posLeftThisSet <= 0) return false;
 
@@ -520,7 +520,7 @@ public class Dungeon {
 	public static boolean souNeeded() {
 		int souLeftThisSet;
 		//3 SOU each floor set, 1.5 (rounded) on forbidden runes challenge
-		if (Dungeon.depth < 30) {
+		if (Dungeon.depth < 26) {
 			if (isChallenged(Challenges.NO_SCROLLS)) {
 				souLeftThisSet = Math.round(1.5f - (LimitedDrops.UPGRADE_SCROLLS.count - (depth / 5) * 1.5f));
 			} else {
