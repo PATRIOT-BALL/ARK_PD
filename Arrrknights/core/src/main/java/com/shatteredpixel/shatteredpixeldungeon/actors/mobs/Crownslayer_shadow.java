@@ -14,6 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.AirborneSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CrownslayerSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 public class Crownslayer_shadow extends Mob {
     private int blinkCooldown = 0;
     {
-        spriteClass = AirborneSprite.class;
+        spriteClass = CrownslayerSprite.class;
 
         EXP = 0;
         maxLvl = 40;

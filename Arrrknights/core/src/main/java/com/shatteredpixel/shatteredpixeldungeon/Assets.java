@@ -402,6 +402,7 @@ public class Assets {
 		public static final String RAIDER	= "sprites/ursus_raider.png";
 		public static final String RAPTOR	= "sprites/raptor.png";
 		public static final String RAPTOR_FIRE	= "sprites/raptor_fire.png";
+		public static final String CS	= "sprites/crownslayer.png";
 
 		//시에스타
 		public static final String SIESTA_INFANTRY	= "sprites/siesta_infantry.png";
