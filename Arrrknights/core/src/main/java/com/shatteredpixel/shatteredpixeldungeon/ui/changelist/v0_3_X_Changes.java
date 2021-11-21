@@ -98,6 +98,15 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 하향",
                 "_스태프 오브 위디_ 는 이제 2충전 / 3충전 상태일 때 사용시 피해량이 감소합니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "0.3.2a"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "버그 수정",
+                "갑옷에 아츠 부여가 없는 상태에서 니어 1-3 특성을 2회 투자시 게임이 튕기는 문제 수정" + "\n" +
+                        "니어 1-3 특성으로 저주 제거시 저주 융합의 강화 보너스가 제거되지않는 버그 수정" + "\n" +
+                "힘의 물약 / 강화의 일기장 드롭 관련 문제 어느정도 수정"));
     }
 
     public static void add_v0_3_1_Changes(ArrayList<ChangeInfo> changeInfos) {

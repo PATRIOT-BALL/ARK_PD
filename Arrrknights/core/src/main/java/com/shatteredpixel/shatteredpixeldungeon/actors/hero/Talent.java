@@ -307,12 +307,14 @@ public enum Talent {
 			if (heroArmor != null) {
 				if (hero.pointsInTalent(PROTECTIONOFLIGHT) == 1) {
 					heroArmor.cursed = false;
+					heroArmor.curseInfusionBonus = false;
 					hero.belongings.armor = heroArmor;
 				}
-				else if (hero.pointsInTalent(PROTECTIONOFLIGHT) == 2) {
+				else if (hero.pointsInTalent(PROTECTIONOFLIGHT) == 2 && heroArmor.glyph != null) {
 					if (heroArmor.glyph.curse()) {
 						heroArmor.cursed = false;
 						heroArmor.glyph = null;
+						heroArmor.curseInfusionBonus = false;
 						hero.belongings.armor = heroArmor;
 					}
 				}
