@@ -9,6 +9,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.GooBlob;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
@@ -68,6 +70,7 @@ public class Crownslayer_shadow extends Mob {
                     || Dungeon.level.solid[i]
                     || Actor.findChar(i) != null
                     || PathFinder.getStep(i, Dungeon.level.exit, Dungeon.level.passable) == -1);
+            CellEmitter.get(pos).burst(Speck.factory(Speck.WOOL), 10);
             ScrollOfTeleportation.appear(this, i);
 
             damage *= 1.5f;

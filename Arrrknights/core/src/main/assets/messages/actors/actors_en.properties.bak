@@ -882,7 +882,7 @@ actors.mobs.npcs.keeper.t1=Entry denied.
 actors.mobs.npcs.closure.name=Closure
 actors.mobs.npcs.closure.desc=Rhodes Island`s Chief Engineer. _The items you left behind in this Rhodes Island will be by the Closure`s pocket money._\n\nTouch to change skin
 actors.mobs.npcs.closure.hi=How about this?
-actors.mobs.npcs.closure.hihi=Original clothes!
+actors.mobs.npcs.closure.hihi=you already unlocked it!
 actors.mobs.npcs.closure.no=Can't wear this!
 actors.mobs.npcs.closure.incomplete=Less made!
 actors.mobs.npcs.closure.fail_skin1=Need a End of EVIL TIME badge\nEnvironment: Reunion in challenge Defeat Tallulah without killing a single mini-boss.
@@ -953,11 +953,14 @@ actors.mobs.npcs.jessica.name=jessica
 actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, stationed at Rhodes Island as part of an exchange training program.\n\n_NPCs with Quests_
 actors.mobs.npcs.jessica.say=H, Hello!
 actors.mobs.npcs.jessica.quest=Jessica :\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
-actors.mobs.npcs.jessica.result=Jessica :\n\th.. Thank you! Here's the 1,200 Orundum.
+actors.mobs.npcs.jessica.result=Jessica :\n\th.. Thank you! Here's the 800 Orundum.
 
 actors.mobs.npcs.weedy.name=weedy
 actors.mobs.npcs.weedy.desc=Weedy, a bioengineering expert who was born into a family of Iberian scientists, is a researcher who has been with Rhodes Island since its establishment.
 actors.mobs.npcs.weedy.say=Sorry. It's under construction.
+
+actors.mobs.npcs.firewall.name=fire wall
+actors.mobs.npcs.firewall.desc=It looks like you need higher privileges. Let's rescue Dr.
 
 
 

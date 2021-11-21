@@ -890,7 +890,7 @@ actors.mobs.npcs.keeper.t1=진입이 거부됨.
 actors.mobs.npcs.closure.name=클로저
 actors.mobs.npcs.closure.desc=로도스 아일랜드의 고참. _클로저가 있을 때 물건을 버리고 체르노보그로 돌아간다면, 버렸던 물건은 다른 대원한테 판매될 것이다._ \n\n클릭하면 스킨을 해금할 수 있습니다.
 actors.mobs.npcs.closure.hi=이건 어때?
-actors.mobs.npcs.closure.hihi=원래 옷이야!
+actors.mobs.npcs.closure.hihi=이 스킨은 해금했어!
 actors.mobs.npcs.closure.no=이 옷은 못 입어!
 actors.mobs.npcs.closure.incomplete=이 옷은 아직 덜 만들었어!
 actors.mobs.npcs.closure.fail_skin1=암흑시대의 끝 배지가 필요합니다.\n위기협약 : 통합운동 을 적용하고 미니보스를 1마리도 잡지 않은 채 클리어
@@ -959,6 +959,9 @@ actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받�
 actors.mobs.npcs.weedy.name=위디
 actors.mobs.npcs.weedy.desc=이베리아 출신의 생체 공학자이자 로도스 아일랜드 생명 공학 연구소의 소장이며 클로저의 유능한 부하. 상당한 결벽증을 갖고있다.
 actors.mobs.npcs.weedy.say=죄송합니다. 여기 앞은 공사중이에요.
+
+actors.mobs.npcs.firewall.name=방화벽
+actors.mobs.npcs.firewall.desc=출입하려면 상급 권한이 필요할 것 같다. 독타를 구출해오자.
 
 //summon, fail은 1-8대사
 //배틀크라이 0-10

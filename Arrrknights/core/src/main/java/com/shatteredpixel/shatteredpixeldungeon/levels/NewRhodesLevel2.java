@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blackperro;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Dobermann;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Dummy;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Firewall;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Jessica;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Weedy;
@@ -66,10 +67,14 @@ public class NewRhodesLevel2 extends Level {
         Painter.fill(this, 0, 0, 68, 85, Terrain.WALL);
 
         // 개발팀 구역 A1
-        Painter.fill(this, 2, 54, 15, 4, Terrain.EMPTY);
-        Painter.fill(this, 8, 53, 1, 4, Terrain.AVOID);
-        Painter.fill(this, 0, 57, 31, 1, Terrain.WALL);
+        Painter.fill(this, 2, 54, 16, 4, Terrain.EMPTY);
 
+        Painter.fill(this, 2, 53, 16, 1, Terrain.AVOID);
+        Painter.fill(this, 8, 53, 1, 4, Terrain.AVOID);
+        Painter.fill(this, 0, 57, 31, 1, Terrain.AVOID);
+
+        map[3608] = Terrain.EMPTY;
+        map[3617] = Terrain.EMPTY;
         map[3882] = Terrain.EMPTY;
         map[3889] = Terrain.EMPTY;
         map[3750] = Terrain.AVOID;
@@ -117,9 +122,9 @@ public class NewRhodesLevel2 extends Level {
 
     @Override
     protected void createItems () {
-        // 3882 : 차단벽 위치.
         Closure.spawn(this, 3682);
         SkinModel.spawn(this, 3751);
+        Firewall.spawn(this, 3882);
         Weedy.spawn(this, 3968);
         Dummy.spawn(this, 4286);
         Dummy.spawn(this, 4354);

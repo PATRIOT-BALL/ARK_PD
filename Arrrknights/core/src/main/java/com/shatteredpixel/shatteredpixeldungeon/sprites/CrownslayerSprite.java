@@ -24,6 +24,8 @@ public class CrownslayerSprite extends MobSprite {
         die = new Animation( 10, false );
         die.frames( frames, 21 );
 
+        alpha(0.75f);
+
         play( idle );
     }
 }
