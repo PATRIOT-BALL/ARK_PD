@@ -24,11 +24,17 @@ public class v0_3_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEARL), "신규 캐릭터 : 니어",
+                "빛의 기사 니어가 참전합니다. 니어는 빛의 인장을 통해 강력한 빛의 기사 상태가 될 수 있습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
                 "_불꽃의 카타나_ : 2티어 무기로, 이 무기로 125명의 적을 처치하면 4티어 무기로 변화합니다." + "\n\n" +
                 "_광휘의 창_ : 5티어 무기로, 취약 상태인 적에게 공격 적중시 추가 피해를 입힙니다." + "\n\n" +
                 "_혼돈의 정수_ : 사용시 해당 아이템의 강화 수치를 +1로 만듭니다. 고강화 아이템에 사용하면 당신은 케쨩입니다." + "\n\n" +
                 "_충격_ : 적중시 대상을 밀쳐내는 주문입니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEWS), "신규 캐릭터 스킨",
+                "꼬질이와 상엽이의 스킨 추가"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 2종 추가",
                 "_빛나는 의지\n낫토밥_"));

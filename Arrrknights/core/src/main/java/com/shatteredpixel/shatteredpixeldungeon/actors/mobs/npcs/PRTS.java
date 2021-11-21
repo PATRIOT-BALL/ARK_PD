@@ -11,7 +11,6 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class PRTS extends NPC {
-    private String hint;
 
     private static final String[] LINE_KEYS = {
             "hint1", "hint2", "hint3", "hint4", "hint5", "hint6", "hint7",
@@ -22,9 +21,6 @@ public class PRTS extends NPC {
         spriteClass = PRTS_Sprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
-    }
-
-    public PRTS() { hint = Random.element(LINE_KEYS);
     }
 
     @Override
@@ -43,25 +39,10 @@ public class PRTS extends NPC {
         Game.runOnRenderThread(new Callback() {
             @Override
             public void call() {
-                GameScene.show(new WndMessage(Messages.get(PRTS.class, hint)));
+                GameScene.show(new WndMessage(Messages.get(PRTS.class, Random.element(LINE_KEYS))));
             }
         });
 
         return true;
-    }
-
-    private static final String HINT = "hint";
-
-    @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-        bundle.put( HINT, hint );
-    }
-
-    @Override
-    public void restoreFromBundle(Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        hint = bundle.getString(HINT);
-
     }
 }

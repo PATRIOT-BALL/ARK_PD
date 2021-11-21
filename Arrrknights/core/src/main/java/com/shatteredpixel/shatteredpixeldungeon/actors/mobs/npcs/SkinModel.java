@@ -3,22 +3,15 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
-import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
-import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GraniSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FrostLeafSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.GraniSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.JessiSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.LappySprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.SkadiSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.SussurroSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.talrufightSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.FnovaSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.Guard_operSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.LensSprite;
-import com.watabou.utils.Bundle;
-
-import javax.swing.DefaultBoundedRangeModel;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.LappySprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SkadiSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SussurroSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.talrufightSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FnovaSprite;
 
 public class SkinModel extends NPC {
     {
@@ -45,6 +38,8 @@ public class SkinModel extends NPC {
            case 5: spriteClass= JessiSprite.class;
                break;
            case 6: spriteClass= LappySprite.class;
+           break;
+           case 7: spriteClass= FrostLeafSprite.class;
            break;
        }
     }
@@ -77,7 +72,7 @@ public class SkinModel extends NPC {
     public void SkinChange()
     {
         Dungeon.skin_ch++;
-        if (Dungeon.skin_ch > 6) Dungeon.skin_ch = 0;
+        if (Dungeon.skin_ch > 7) Dungeon.skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();

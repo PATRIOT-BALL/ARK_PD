@@ -1,14 +1,15 @@
-package com.shatteredpixel.shatteredpixeldungeon.sprites;
+package com.shatteredpixel.shatteredpixeldungeon.sprites.skins;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.MobSprite;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 
-public class SussurroSprite extends MobSprite{
-    public SussurroSprite() {
+public class FrostLeafSprite extends MobSprite {
+    public FrostLeafSprite() {
         super();
 
-        texture( Assets.Sprites.SSR );
+        texture( Assets.Sprites.FROST );
 
         TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
@@ -36,5 +37,4 @@ public class SussurroSprite extends MobSprite{
         isMoving = false;
         super.idle();
     }
-
 }

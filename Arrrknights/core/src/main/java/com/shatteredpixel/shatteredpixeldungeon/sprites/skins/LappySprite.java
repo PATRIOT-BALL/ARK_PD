@@ -1,15 +1,15 @@
-package com.shatteredpixel.shatteredpixeldungeon.sprites;
+package com.shatteredpixel.shatteredpixeldungeon.sprites.skins;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.MobSprite;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 
-public class talrufightSprite extends MobSprite {
-
-    public talrufightSprite() {
+public class LappySprite extends MobSprite {
+    public LappySprite() {
         super();
 
-        texture( Assets.Sprites.TALRU_FIGHT );
+        texture( Assets.Sprites.LAPPY );
 
         TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
@@ -37,4 +37,5 @@ public class talrufightSprite extends MobSprite {
         isMoving = false;
         super.idle();
     }
+
 }

@@ -1,14 +1,15 @@
-package com.shatteredpixel.shatteredpixeldungeon.sprites;
+package com.shatteredpixel.shatteredpixeldungeon.sprites.skins;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.MobSprite;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 
-public class LappySprite extends MobSprite{
-    public LappySprite() {
+public class SkadiSprite extends MobSprite {
+    public SkadiSprite() {
         super();
 
-        texture( Assets.Sprites.LAPPY );
+        texture( Assets.Sprites.SKD );
 
         TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
