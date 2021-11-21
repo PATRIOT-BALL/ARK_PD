@@ -99,8 +99,8 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP_WOND), "스태프 하향",
                 "_스태프 오브 위디_ 는 이제 2충전 / 3충전 상태일 때 사용시 피해량이 감소합니다."));
 
-        changes = new ChangeInfo(Messages.get(ChangesScene.class, "0.3.2a"), false, null);
-        changes.hardlight(Window.TITLE_COLOR);
+        changes = new ChangeInfo("0.3.2a", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.CHANGES), "버그 수정",
