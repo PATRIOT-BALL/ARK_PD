@@ -24,7 +24,7 @@ public class Jessica extends NPC {
         properties.add(Property.NPC);
    }
 
-   private static boolean QuestClear = false;
+   public static boolean QuestClear = false;
     private boolean firstrun = false;
 
     @Override
@@ -48,6 +48,8 @@ public class Jessica extends NPC {
                     }
                 });
                 new Gold(800).doPickUp(Dungeon.hero);
+                NormalMagazine m = Dungeon.hero.belongings.getItem(NormalMagazine.class);
+                m.detachAll(Dungeon.hero.belongings.backpack);
                 QuestClear = true;
         }
             else {
@@ -92,7 +94,6 @@ public class Jessica extends NPC {
     @Override
     public void restoreFromBundle( Bundle bundle ) {
         super.restoreFromBundle( bundle );
-        if (bundle.contains(QUEST)) QuestClear = bundle.getBoolean( QUEST );
-        else QuestClear = false;
+        QuestClear = bundle.getBoolean( QUEST );
     }
 }
