@@ -19,7 +19,7 @@ public class Overeating extends Weapon.Enchantment {
     @Override
     public int proc(Weapon weapon, Char attacker, Char defender, int damage ) {
 
-        int level = Math.min( 4, weapon.buffedLvl() );
+        int level = Math.min( 6, weapon.buffedLvl() * 3 );
         if (attacker instanceof Hero) {
 
                 Hunger hunger = Buff.affect(attacker, Hunger.class);
@@ -28,7 +28,7 @@ public class Overeating extends Weapon.Enchantment {
                     hunger.affectHunger(  -4 );
                 }
                 else {
-                    attacker.damage(level + attacker.drRoll(), this);
+                    attacker.damage(level, this);
                 }
             damage *= 1.25f;
         }
