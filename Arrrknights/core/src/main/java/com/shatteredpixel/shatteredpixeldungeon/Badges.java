@@ -1039,9 +1039,6 @@ public class Badges {
 			global.remove(Badge.SKIN_LEAF);
 		}
 
-		// 후원자 버전 전용. 서포트 배지를 활성화하여 모든 스킨이 해금되게 해줍니다.
-		//	global.add( Badge.SUPPORT );
-
 		if (Badges.isUnlocked(Badge.SUPPORT)) {
 			Badges.validatetaluskin();
 			Badges.validatenovaskin();
