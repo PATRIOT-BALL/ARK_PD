@@ -44,7 +44,7 @@ public class ArmorUpKit extends Item {
             Armor HeroArmor = hero.belongings.armor;
 
             if (HeroArmor.checkSeal() != null) {
-                Sample.INSTANCE.play(Assets.Sounds.HIT_PARRY, 1.3f);
+                Sample.INSTANCE.play(Assets.Sounds.HIT_PARRY, 1.22f);
                 ArmorUpKit Kit = new ArmorUpKit();
                 if (Kit.doPickUp(Dungeon.hero)) {
                     GLog.i(Messages.get(Dungeon.hero, "you_now_have", Kit.name()));
