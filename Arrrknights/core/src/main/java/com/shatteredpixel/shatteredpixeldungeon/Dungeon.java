@@ -288,8 +288,7 @@ public class Dungeon {
 		
 		depth++;
 		if (depth > Statistics.deepestFloor) {
-			if (Statistics.deepestFloor == 1 && (depth == 27 || depth == 28)) Statistics.deepestFloor = 1;
-			else 		                                                	Statistics.deepestFloor = depth;
+			if (depth != 27 && depth != 28) Statistics.deepestFloor = depth;
 			if (Statistics.deepestFloor <= 1) Statistics.deepestFloor = 1;
 			
 			if (Statistics.qualifiedForNoKilling) {
