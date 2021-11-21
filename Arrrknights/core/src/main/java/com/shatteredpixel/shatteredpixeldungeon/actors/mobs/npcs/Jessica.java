@@ -39,7 +39,7 @@ public class Jessica extends NPC {
     @Override
     public boolean interact(Char c) {
         sprite.turnTo(pos, c.pos);
-        if (Dungeon.hero.belongings.getItem(Amulet.class) != null) {
+        if (Dungeon.hero.belongings.getItem(Amulet.class) == null) {
             sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "say"));
             return true;
         }
