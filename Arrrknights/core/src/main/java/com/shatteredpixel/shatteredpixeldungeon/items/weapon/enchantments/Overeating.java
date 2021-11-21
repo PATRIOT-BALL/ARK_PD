@@ -28,7 +28,7 @@ public class Overeating extends Weapon.Enchantment {
                     hunger.affectHunger(  -4 );
                 }
                 else {
-                    attacker.damage(level, this);
+                    attacker.damage(level + attacker.drRoll(), this);
                 }
             damage *= 1.25f;
         }
