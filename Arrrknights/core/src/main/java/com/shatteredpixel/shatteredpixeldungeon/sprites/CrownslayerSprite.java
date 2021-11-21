@@ -15,7 +15,7 @@ public class CrownslayerSprite extends MobSprite {
         idle = new Animation( 7, true );
         idle.frames( frames, 1, 2, 3, 4, 5, 6);
 
-        run = new Animation( 18, true );
+        run = new Animation( 16, true );
         run.frames( frames, 7, 8, 9, 10, 11, 12, 13, 14 );
 
         attack = new Animation( 18, false );
