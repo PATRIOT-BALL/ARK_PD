@@ -633,7 +633,7 @@ actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
 
 actors.hero.talent.shining_meal.title=shining meal
-actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _3_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal 4 damage.
+actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _6_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal _9_ damage.
 actors.hero.talent.experience.title=knigts experience
 actors.hero.talent.experience.desc=_+1:_ Armor identification is _3x Speed_\n\n_+2:_ Armor identification is _5x Speed_, Also identifies curses when acquiring armor.
 actors.hero.talent.protectionoflight.title=protection of light
@@ -649,7 +649,7 @@ actors.hero.talent.resurgence.desc=_+1:_ Blessed Ankh activated, Increases healt
 actors.hero.talent.phaserush.title=phase rush
 actors.hero.talent.phaserush.desc=_+1:_ When you are a RadiantKnight, you seal of light gain charge by _1%_ on hit.\n\n_+2:_ When you are a RadiantKnight, you seal of light gain charge by _2%_ on hit.
 actors.hero.talent.exorcism.title=exorcism
-actors.hero.talent.exorcism.desc=_+1:_ Deals _2_ additional damage and takes _1_ less damage. to Sarkaz.\n\n_+2:_ Deals _4_ additional damage and takes _2_ less damage. to Sarkaz.
+actors.hero.talent.exorcism.desc=_+1:_ Deals _3_ additional damage and takes _1_ less damage. to Sarkaz.\n\n_+2:_ Deals _5_ additional damage and takes _2_ less damage. to Sarkaz.
 actors.hero.talent.pegasus_aura.title=pegasus aura
 actors.hero.talent.pegasus_aura.desc=_+1:_ When your seal of light activated, your recover HP _5%._. and When in RadiantKnight state, accuracy increases by _10%._\n\n_+2:_ When your seal of light activated, your recover HP _10%._. and When in RadiantKnight state, accuracy increases by _20%._\n\n_+3:_ When your seal of light activated, your recover HP _15%._. and When in RadiantKnight state, accuracy increases by _30%._
 actors.hero.talent.radianthero.title=radiant hero
@@ -892,7 +892,7 @@ actors.mobs.npcs.closure.fail_skin4=Need a All potions identified badge
 actors.mobs.npcs.closure.fail_skin5=Need a 10 games played badge
 actors.mobs.npcs.closure.fail_skin6=Need a Amiya Unlock
 actors.mobs.npcs.closure.fail_skin7=Need a Happy End
-actors.mobs.npcs.closure.fail_skin8=Need a Won with a Contingency
+actors.mobs.npcs.closure.fail_skin8=Need a Won with a Contingency badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model

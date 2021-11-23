@@ -68,8 +68,8 @@ public class DP27 extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  1*(tier) +    // 6 + 1
-                lvl*(tier-2);
+        return  3*(tier) +    // 6 + 1
+                lvl*(tier-1);
     }
 
     public int shotmin() {

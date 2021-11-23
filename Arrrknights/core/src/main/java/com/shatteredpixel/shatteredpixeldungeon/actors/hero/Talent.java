@@ -380,7 +380,7 @@ public enum Talent {
 				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos] && !mob.properties().contains(Char.Property.NPC) && !(mob instanceof Shopkeeper)) {
 					Buff.affect(mob, Blindness.class, 1+hero.pointsInTalent(SHINING_MEAL));
 					if (mob.properties().contains(Char.Property.INFECTED) || mob.properties().contains(Char.Property.SARKAZ)) {
-						mob.damage(2+hero.pointsInTalent(SHINING_MEAL),hero);
+						mob.damage(3+(hero.pointsInTalent(SHINING_MEAL) * 3),hero);
 					}
 				}
 			}

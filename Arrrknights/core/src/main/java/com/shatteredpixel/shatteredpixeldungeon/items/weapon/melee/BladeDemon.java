@@ -23,7 +23,7 @@ public class BladeDemon extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier+1) +    //20 + 5
+        return  4*(tier+1) + 3 +    //23 + 5
                 lvl*(tier+1);   //scaling unchanged
     }
 

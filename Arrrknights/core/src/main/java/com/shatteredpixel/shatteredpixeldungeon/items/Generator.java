@@ -464,7 +464,7 @@ public class Generator {
                     R4C.class,
                     RadiantSpear.class
             };
-            WEP_T5.probs = new float[]{5, 5, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4};
+            WEP_T5.probs = new float[]{5, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{

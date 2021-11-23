@@ -1403,7 +1403,7 @@ public class Hero extends Char {
 
         if (hasTalent(Talent.EXORCISM)) {
             if (enemy.properties().contains(Property.SARKAZ)) {
-                BounsDamage += pointsInTalent(Talent.EXORCISM)*2;
+                BounsDamage += 1 + pointsInTalent(Talent.EXORCISM)*2;
             }
         }
 
@@ -1627,6 +1627,7 @@ public class Hero extends Char {
                 }
             }
             dmg *= redu;
+            dmg -= 2;
         }
 
 

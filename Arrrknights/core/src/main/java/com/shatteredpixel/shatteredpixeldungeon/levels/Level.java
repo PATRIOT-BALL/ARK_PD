@@ -489,7 +489,7 @@ public abstract class Level implements Bundlable {
 
 			if (Dungeon.hero.hasTalent(Talent.GRAND_ORDER)) {
 				int HealHP = Dungeon.hero.HT;
-				HealHP *= Dungeon.hero.pointsInTalent(Talent.GRAND_ORDER) * 0.3f;
+				HealHP *= Dungeon.hero.pointsInTalent(Talent.GRAND_ORDER) * 0.2f;
 
 				Dungeon.hero.HP = Math.min(Dungeon.hero.HT, Dungeon.hero.HP + HealHP);
 				Dungeon.hero.sprite.emitter().burst(Speck.factory(Speck.HEALING), 8);
