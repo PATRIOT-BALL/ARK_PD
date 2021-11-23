@@ -1527,7 +1527,7 @@ public class Hero extends Char {
             if (buff(RadiantKnight.class) == null && buff(Talent.RadiantHeroCooldown.class) == null && hasTalent(Talent.RADIANTHERO)) {
                 Buff.affect(this, RadiantKnight.class, RadiantKnight.DURATION);
 
-                float CoolDown = 750 - (pointsInTalent(Talent.RADIANTHERO) * 150);
+                float CoolDown = 900 - (pointsInTalent(Talent.RADIANTHERO) * 150);
                 Buff.affect(this, Talent.RadiantHeroCooldown.class, CoolDown);
 
                 GameScene.flash( 0x80FFFFFF );

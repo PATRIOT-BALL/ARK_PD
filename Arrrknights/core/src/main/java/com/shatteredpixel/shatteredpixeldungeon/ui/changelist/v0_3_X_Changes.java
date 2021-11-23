@@ -31,16 +31,17 @@ public class v0_3_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEARLS_S), "니어 조정",
+                "기본 무기의 공격력이 2-8에서 _2-9_로 상승했습니다." + "\n\n" +
+                        "_빛의 기사_ 버프 적용 중 소량의 고정 피해 감소 효과가 추가되었습니다." + "\n\n" +
+                        "_빛이 나는 식사_ 특성의 살카즈, 감염 생물 대상 피해량이 3-4에서 _6-9_로 상승했습니다." + "\n\n" +
+                        "_퇴마_ 특성의 살카즈 대상 추가 피해량이 2-4에서 _3-5_로 상승했습니다." + "\n\n" +
+                        "_빛의 용사_ 특성의 쿨타임이 600-300턴에서 _750-450_턴으로 상승했습니다." + "\n\n" +
+                        "_그랜드 오더_ 특성의 체력 회복량이 30-90%에서 _20-60%_로 감소했습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.NEARLS_S), "니어 조정",
-                "기본 무기의 공격력이 2-8에서 _2-9_로 상승했습니다." + "\n\n" +
-                "_빛의 기사_ 버프 적용 중 소량의 고정 피해 감소 효과가 추가되었습니다." + "\n\n" +
-                "_빛이 나는 식사_ 특성의 살카즈, 감염 생물 대상 피해량이 3-4에서 _6-9_로 상승했습니다." + "\n\n" +
-                "_퇴마_ 특성의 살카즈 대상 추가 피해량이 2-4에서 _3-5_로 상승했습니다." + "\n\n" +
-                "_그랜드 오더_ 특성의 체력 회복량이 30-90%에서 _20-60%_로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_살라스의 칼날_ : 공격력이 4-16에서 _4-18_로 상승했습니다." + "\n\n" +
