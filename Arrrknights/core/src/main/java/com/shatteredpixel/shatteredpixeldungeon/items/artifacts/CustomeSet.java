@@ -98,7 +98,7 @@ public class CustomeSet extends Artifact {
         @Override
         public boolean act() {
             LockedFloor lock = target.buff(LockedFloor.class);
-            if (activeBuff == null && (lock == null || lock.regenOn())) {
+            if (activeBuff == null && (lock == null || lock.regenOn()) && !(Dungeon.depth >= 26 && Dungeon.depth <= 30)) {
                 if (charge < chargeCap && !cursed) {
                     // 667 턴마다 100%충전 (기본)
                     float chargeGain = 0.15f;
