@@ -15,6 +15,46 @@ public class v0_3_X_Changes {
         add_v0_3_0_Changes(changeInfos);
     }
 
+    public static void add_v0_3_3_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.3.3", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
+                ""));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEARLS_S), "니어 조정",
+                "기본 무기의 공격력이 2-8에서 _2-9_로 상승했습니다." + "\n\n" +
+                "_빛의 기사_ 버프 적용 중 소량의 고정 피해 감소 효과가 추가되었습니다." + "\n\n" +
+                "_빛이 나는 식사_ 특성의 살카즈, 감염 생물 대상 피해량이 3-4에서 _6-9_로 상승했습니다." + "\n\n" +
+                "_퇴마_ 특성의 살카즈 대상 추가 피해량이 2-4에서 _3-5_로 상승했습니다." + "\n\n" +
+                "_그랜드 오더_ 특성의 체력 회복량이 30-90%에서 _20-60%_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_살라스의 칼날_ : 공격력이 4-16에서 _4-18_로 상승했습니다." + "\n\n" +
+                        "_불꽃의 카타나_ : 해방 후 공격력이 4-20에서 4-23으로 상승했습니다." + "\n\n" +
+                        "_3티어 사격 무기_ : 근접 공격력이 3-3에서 3-9로 상승했습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
+                "_레바테인_ : 공격력이 5-30에서 _5-27_로 감소했으며, 드롭률이 하향 조정 되었습니다."));
+    }
+
     public static void add_v0_3_2_Changes(ArrayList<ChangeInfo> changeInfos) {
         ChangeInfo changes = new ChangeInfo("v0.3.2", true, "");
         changes.hardlight(Window.TITLE_COLOR);
