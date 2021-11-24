@@ -653,7 +653,7 @@ actors.hero.talent.exorcism.desc=_+1:_ Deals _3_ additional damage and takes _1_
 actors.hero.talent.pegasus_aura.title=pegasus aura
 actors.hero.talent.pegasus_aura.desc=_+1:_ When your seal of light activated, your recover HP _5%._. and When in RadiantKnight state, accuracy increases by _10%._\n\n_+2:_ When your seal of light activated, your recover HP _10%._. and When in RadiantKnight state, accuracy increases by _20%._\n\n_+3:_ When your seal of light activated, your recover HP _15%._. and When in RadiantKnight state, accuracy increases by _30%._
 actors.hero.talent.radianthero.title=radiant hero
-actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a Radiant Knight.\n\n_+1: 600 turn_ cool down\n\n_+2: 450 turn_ cool down\n\n_+3: 300 turn_ cool down
+actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a Radiant Knight.\n\n_+1: 750 turn_ cool down\n\n_+2: 600 turn_ cool down\n\n_+3: 450 turn_ cool down
 actors.hero.talent.into_fray.title=into fray
 actors.hero.talent.into_fray.desc=_+1:_ kill an enemy with a combo, you gain haste for _1 turn_.\n\n_+2:_ kill an enemy with a combo, you gain haste for _2 turn_.\n\n_+3:_ kill an enemy with a combo, you gain haste for _3 turn_.
 actors.hero.talent.blitzkrieg.title=blitzkrieg
@@ -954,6 +954,12 @@ actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, station
 actors.mobs.npcs.jessica.say=H, Hello!
 actors.mobs.npcs.jessica.quest=Jessica :\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
 actors.mobs.npcs.jessica.result=Jessica :\n\nth.. Thank you! Here's the 800 Orundum.
+
+actors.mobs.npcs.frostleaf.name=frostleaf
+actors.mobs.npcs.frostleaf.desc=Not Frostnova\n\n_NPCs with Quests_
+actors.mobs.npcs.frostleaf.say=hum?
+actors.mobs.npcs.frostleaf.quest=frostleaf :\n\nuh, hello. Do you have _Elixir Of IcyTouch_ by any chance? It's something I'm personally interested in.
+actors.mobs.npcs.frostleaf.result=frostleaf :\n\nI really didn't know you would bring it... I'll give you a staff that contains my arts.
 
 actors.mobs.npcs.weedy.name=weedy
 actors.mobs.npcs.weedy.desc=Weedy, a bioengineering expert who was born into a family of Iberian scientists, is a researcher who has been with Rhodes Island since its establishment.

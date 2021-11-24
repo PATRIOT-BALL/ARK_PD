@@ -198,6 +198,13 @@ public enum Rankings {
 			Badges.DestroyGlobal();
 		}
 	}
+
+	public static void DestroydChack_Bomb(int ch, float time) {
+		if (ch > 7)
+			if (time > 50000) {
+				Badges.DestroyGlobal();
+			}
+	}
 	
 	private static final String RECORDS	= "records";
 	private static final String LATEST	= "latest";

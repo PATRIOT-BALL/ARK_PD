@@ -2,29 +2,32 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
-import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfIcyTouch;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_FrostLeafSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_jessicatSprite;
-import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndMessage;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
+import com.watabou.utils.Random;
 
-public class Jessica extends NPC {
+public class FrostLeaf extends NPC {
     {
-       spriteClass = NPC_jessicatSprite.class;
+        spriteClass = NPC_FrostLeafSprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
-   }
+    }
 
-   public static boolean QuestClear = false;
+    public static boolean QuestClear = false;
     private boolean firstrun = false;
 
     @Override
@@ -38,24 +41,36 @@ public class Jessica extends NPC {
 
     @Override
     public boolean interact(Char c) {
+        sprite.turnTo(pos, c.pos);
         if (!QuestClear) {
-            if (firstrun && Dungeon.hero.belongings.getItem(NormalMagazine.class) != null) {
+            if (firstrun &&  Dungeon.hero.belongings.getItem(ElixirOfIcyTouch.class) != null) {
                 Game.runOnRenderThread(new Callback() {
                     @Override
                     public void call() {
-                        GameScene.show(new WndMessage(Messages.get(Jessica.class, "result")));
+                        GameScene.show(new WndMessage(Messages.get(FrostLeaf.class, "result")));
                     }
                 });
-                new Gold(800).doPickUp(Dungeon.hero);
-                NormalMagazine m = Dungeon.hero.belongings.getItem(NormalMagazine.class);
+                // 요구 : 차가운 숨결 용액
+                // 보상 : 서리막대 스태프 (+1~+3 강화)
+                StaffOfLeaf le = new StaffOfLeaf();
+                le.level(Random.IntRange(1,3));
+                le.identify();
+
+                if (le.doPickUp( Dungeon.hero )) {
+                    GLog.i( Messages.get(Dungeon.hero, "you_now_have", le.name()) );
+                } else {
+                    Dungeon.level.drop( le, Dungeon.hero.pos ).sprite.drop();
+                }
+
+                ElixirOfIcyTouch m = Dungeon.hero.belongings.getItem(ElixirOfIcyTouch.class);
                 m.detachAll(Dungeon.hero.belongings.backpack);
                 QuestClear = true;
-        }
+            }
             else {
                 Game.runOnRenderThread(new Callback() {
                     @Override
                     public void call() {
-                        GameScene.show(new WndMessage(Messages.get(Jessica.class, "quest")));
+                        GameScene.show(new WndMessage(Messages.get(FrostLeaf.class, "quest")));
                     }
                 });
                 firstrun = true;
@@ -70,16 +85,15 @@ public class Jessica extends NPC {
 
     @Override
     protected boolean act() {
-        sprite.turnTo(pos, 0);
         return super.act();
     }
 
     public static void spawn(Level level, int ppos) {
-        Jessica cat = new Jessica();
+        FrostLeaf usa = new FrostLeaf();
         do {
-            cat.pos = ppos;
-        } while (cat.pos == -1);
-        level.mobs.add(cat);
+            usa.pos = ppos;
+        } while (usa.pos == -1);
+        level.mobs.add(usa);
     }
 
     private static final String QUEST = "QuestClear";

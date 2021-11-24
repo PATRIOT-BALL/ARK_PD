@@ -656,7 +656,7 @@ actors.hero.talent.exorcism.desc=_+1:_ 살카즈 대상으로 _3의 추가 피�
 actors.hero.talent.pegasus_aura.title=페가수스의 가호
 actors.hero.talent.pegasus_aura.desc=_+1:_ 빛의 인장 사용시 최대 체력의 _5%_ 만큼 보호막을 얻습니다. 빛의 기사 상태일 때 명중률이 _10%_ 상승합니다.\n\n_+2:_ 빛의 인장 사용시 최대 체력의 _10%_ 만큼 보호막을 얻습니다. 빛의 기사 상태일 때 명중률이 _20%_ 상승합니다.\n\n_+3:_ 빛의 인장 사용시 최대 체력의 _15%_ 만큼 보호막을 얻습니다. 빛의 기사 상태일 때 명중률이 _30%_ 상승합니다.
 actors.hero.talent.radianthero.title=빛의 용사
-actors.hero.talent.radianthero.desc=체력이 50%이하일 때 공격받으면 즉시 빛의 기사 상태에 돌입합니다.\n\n_+1: 600 턴_의 쿨타임을 가집니다.\n\n_+2: 450 턴_의 쿨타임을 가집니다.\n\n_+3: 300 턴_의 쿨타임을 가집니다.
+actors.hero.talent.radianthero.desc=체력이 50%이하일 때 공격받으면 즉시 빛의 기사 상태에 돌입합니다.\n\n_+1: 750 턴_의 쿨타임을 가집니다.\n\n_+2: 600 턴_의 쿨타임을 가집니다.\n\n_+3: 450 턴_의 쿨타임을 가집니다.
 actors.hero.talent.into_fray.title=참전
 actors.hero.talent.into_fray.desc=_+1:_ 필살기로 적 처치시 _1 턴의 신속_ 을 얻습니다.\n\n_+2:_ 필살기로 적 처치시 _2 턴의 신속_ 을 얻습니다.\n\n_+3:_ 필살기로 적 처치시 _3 턴의 신속_ 을 얻습니다.
 actors.hero.talent.blitzkrieg.title=전격전
@@ -954,7 +954,13 @@ actors.mobs.npcs.jessica.name=제시카
 actors.mobs.npcs.jessica.desc=블랙스틸의 정식 오퍼레이터. 상호 교류 프로젝트의 일환으로 로도스 아일랜드에 주재하며 수련 중이다.\n\n_퀘스트가 있는 NPC입니다._
 actors.mobs.npcs.jessica.say=아, 안녕하세요!
 actors.mobs.npcs.jessica.quest=제시카 :\n\n아, 안녕하세요! 저기 혹시... _표준 탄약통_이 있으신가요? 훈련을 해야되는데 탄약이 슬슬 부족해서... 가져다주시면 대금은 치뤄드릴게요.
-actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받아주세요.\n_합성옥 800개_ 에요. 
+actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받아주세요.\n_합성옥 800개_ 에요.
+
+actors.mobs.npcs.frostleaf.name=제시카
+actors.mobs.npcs.frostleaf.desc=배신자가 아니다.\n\n_퀘스트가 있는 NPC입니다._
+actors.mobs.npcs.frostleaf.say=응?
+actors.mobs.npcs.frostleaf.quest=프로스트리프 :\n\n아, 마침 잘됐네. _차가순 숨결 용액_ 이란 물건 알아? 어떤 물건인지 궁금해서 말이야... 혹시 가져다 줄 수 있어?
+actors.mobs.npcs.frostleaf.result=프로스트리프 :\n\n정말 가져다줄 줄은 몰랐는데. 사례는... 그렇지, _내 힘이 담겨있는 스태프_ 정도면 될까?
 
 actors.mobs.npcs.weedy.name=위디
 actors.mobs.npcs.weedy.desc=이베리아 출신의 생체 공학자이자 로도스 아일랜드 생명 공학 연구소의 소장이며 클로저의 유능한 부하. 상당한 결벽증을 갖고있다.

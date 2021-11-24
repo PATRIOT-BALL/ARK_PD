@@ -349,18 +349,6 @@ public class Badges {
 			global.add(Badge.BUG);
 			saveNeeded = true;
 		}
-		if(global.contains(Badge.CHAMPION_3)) {
-			global.remove(Badge.CHAMPION_3);
-		}
-		if(global.contains(Badge.CHAMPION_4)) {
-			global.remove(Badge.CHAMPION_4);
-		}
-		if(global.contains(Badge.EVILTIME_END)) {
-			global.remove(Badge.EVILTIME_END);
-		}
-		if(global.contains(Badge.SKIN_TALU)) {
-			global.remove(Badge.SKIN_TALU);
-		}
 
 		local.clear();
 		loadGlobal();

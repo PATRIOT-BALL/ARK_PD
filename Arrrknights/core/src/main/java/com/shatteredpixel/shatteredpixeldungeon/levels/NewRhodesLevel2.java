@@ -8,6 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Dobermann;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Dummy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Firewall;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.FrostLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Jessica;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Weedy;
@@ -130,6 +131,7 @@ public class NewRhodesLevel2 extends Level {
         Dummy.spawn(this, 4354);
         Jessica.spawn(this, 4295);
         Dobermann.spawn(this, 4298);
+        FrostLeaf.spawn(this, 4305);
     }
 
     @Override
