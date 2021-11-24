@@ -37,7 +37,7 @@ import java.util.ArrayList;
 
 public class StaffOfPurgatory extends Wand {
     {
-        image = ItemSpriteSheet.WAND_CORROSION;
+        image = ItemSpriteSheet.WAND_LAVA;
 
         collisionProperties = Ballistica.STOP_TARGET | Ballistica.STOP_SOLID;
     }

@@ -437,6 +437,7 @@ public class Assets {
 		public static final String WEEDY	= "sprites/weedy.png";
 		public static final String KEEPER2	= "sprites/keeper.png";
 		public static final String NPC_JESSI	= "sprites/npc_jessi.png";
+		public static final String NPC_FROST	= "sprites/npc_frost.png";
 		public static final String NPC_DUMMY	= "sprites/dummy.png";
 
 		public static final String SARKAZ_SENTINEL	= "sprites/Sarkaz_Sentinel.png";

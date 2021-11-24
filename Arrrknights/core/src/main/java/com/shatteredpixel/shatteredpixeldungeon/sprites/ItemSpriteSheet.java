@@ -333,6 +333,8 @@ public class ItemSpriteSheet {
 	public static final int DUSK       = WEP_TIER5+13;
 	public static final int VULCAN       = WEP_TIER5+14;
 	public static final int NEARL_SPEAR       = WEP_TIER5+15;
+	public static final int SAKURA_FUBUKI       = WEP_TIER5+16;
+	public static final int KRISS_V       = WEP_TIER5+17;
 
 
 	static{
@@ -352,6 +354,9 @@ public class ItemSpriteSheet {
 		assignItemRect(DUSK,   16, 16);
 		assignItemRect(VULCAN,   16, 16);
 		assignItemRect(NEARL_SPEAR,   16, 16);
+		assignItemRect(SAKURA_FUBUKI,   16, 16);
+		assignItemRect(KRISS_V,   16, 16);
+
 
 
 	}
@@ -477,6 +482,7 @@ public class ItemSpriteSheet {
 	public static final int WAND_SUSSURRO    = WANDS+14;
 	public static final int WAND_SUZRAN    = WANDS+15;
 	public static final int WAND_MOSTIMA    = WANDS+16;
+	public static final int WAND_LAVA    = WANDS+17;
 	static {
 		for (int i = WANDS; i < WANDS+31; i++)
 			assignItemRect(i, 16, 16);

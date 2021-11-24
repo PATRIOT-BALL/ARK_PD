@@ -35,7 +35,7 @@ import java.util.ArrayList;
 public class SakuraSword extends MeleeWeapon {
     public static final String AC_SAKURA = "SAKURA";
     {
-        image = ItemSpriteSheet.SWORD;
+        image = ItemSpriteSheet.SAKURA_FUBUKI;
         hitSound = Assets.Sounds.HIT_SLASH;
         hitSoundPitch = 1.3f;
 

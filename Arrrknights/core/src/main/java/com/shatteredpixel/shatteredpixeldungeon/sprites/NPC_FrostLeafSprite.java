@@ -8,12 +8,12 @@ public class NPC_FrostLeafSprite extends MobSprite {
     public NPC_FrostLeafSprite() {
         super();
 
-        texture( Assets.Sprites.FROST );
+        texture( Assets.Sprites.NPC_FROST );
 
-        TextureFilm frames = new TextureFilm( texture, 36, 36 );
+        TextureFilm frames = new TextureFilm( texture, 36, 34 );
 
         idle = new MovieClip.Animation( 2, true );
-        idle.frames( frames, 22, 23  );
+        idle.frames( frames, 1, 2  );
 
         run = new MovieClip.Animation( 10, true );
         run.frames( frames, 0 );
