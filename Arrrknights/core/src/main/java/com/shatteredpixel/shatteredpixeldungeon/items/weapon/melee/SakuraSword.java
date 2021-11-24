@@ -37,7 +37,7 @@ public class SakuraSword extends MeleeWeapon {
     {
         image = ItemSpriteSheet.SAKURA_FUBUKI;
         hitSound = Assets.Sounds.HIT_SLASH;
-        hitSoundPitch = 1.3f;
+        hitSoundPitch = 1.12f;
 
         defaultAction = AC_SAKURA;
 
@@ -217,7 +217,7 @@ public class SakuraSword extends MeleeWeapon {
     private static final String CHARGE = "charge";
     private static final String RCHSAVE = "RCH";
     private static final String ACCSAVE = "ACC";
-    private static final String SAKURA = "DLY";
+    private static final String SAKURA = "attackcount";
 
     @Override
     public void storeInBundle(Bundle bundle) {
