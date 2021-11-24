@@ -281,7 +281,7 @@ public class UnstableSpellbook extends Artifact {
 		@Override
 		public boolean act() {
 			LockedFloor lock = target.buff(LockedFloor.class);
-			if (charge < chargeCap && !cursed && (lock == null || lock.regenOn())) {
+			if (charge < chargeCap && !cursed && (lock == null || lock.regenOn() && !(Dungeon.depth >= 26 && Dungeon.depth <= 30))) {
 				//120 turns to charge at full, 80 turns to charge at 0/8
 				float chargeGain = 1 / (120f - (chargeCap - charge)*5f);
 				chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
