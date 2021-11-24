@@ -355,7 +355,7 @@ public class WndRanking extends WndTabbed {
 				}
 			}
 			if (Dungeon.hero.belongings.getItem(Bomb.class) != null && Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
-				if (Dungeon.hero.belongings.getItem(Bomb.class).quantity() >= 50 && Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero) )
+				if (Dungeon.hero.belongings.getItem(Bomb.class).quantity() >= 33 && Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero) )
 					Rankings.DestroydChack_Bomb(Dungeon.challenges, Statistics.duration); }
 			
 			camera = WndRanking.this.camera;

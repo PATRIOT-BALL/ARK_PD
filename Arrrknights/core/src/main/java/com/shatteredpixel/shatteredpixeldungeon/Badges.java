@@ -350,6 +350,10 @@ public class Badges {
 			saveNeeded = true;
 		}
 
+		if(global.contains(Badge.CHAMPION_4)) {
+			global.remove(Badge.CHAMPION_4);
+		}
+
 		local.clear();
 		loadGlobal();
 	}
