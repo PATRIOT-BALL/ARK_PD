@@ -122,9 +122,6 @@ public class RankingsScene extends PixelScene {
 					if (Dungeon.hero.belongings.misc != null) {
 						Rankings.DestroydChack(Dungeon.challenges,Dungeon.hero.belongings.misc.level(), 0);
 					}
-					if (Dungeon.hero.belongings.getItem(Bomb.class) != null && Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
-						if (Dungeon.hero.belongings.getItem(Bomb.class).quantity() >= 33 && Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero) )
-							Rankings.DestroydChack_Bomb(Dungeon.challenges, Statistics.duration); }
 				}
 			}
 			

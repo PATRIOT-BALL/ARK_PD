@@ -198,14 +198,6 @@ public enum Rankings {
 			Badges.DestroyGlobal();
 		}
 	}
-
-	// 해당 처리는 0.3.3 버전에서만 적용하며, 그 이후로는 무효화합니다.
-	public static void DestroydChack_Bomb(int ch, float time) {
-		if (ch > 7)
-			if (time > 50000) {
-				Badges.DestroyGlobal();
-			}
-	}
 	
 	private static final String RECORDS	= "records";
 	private static final String LATEST	= "latest";
