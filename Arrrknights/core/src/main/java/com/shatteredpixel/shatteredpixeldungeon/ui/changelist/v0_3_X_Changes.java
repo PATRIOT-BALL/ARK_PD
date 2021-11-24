@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class v0_3_X_Changes {
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_3_3_Changes(changeInfos);
         add_v0_3_2_Changes(changeInfos);
         add_v0_3_1_Changes(changeInfos);
         add_v0_3_0_Changes(changeInfos);
