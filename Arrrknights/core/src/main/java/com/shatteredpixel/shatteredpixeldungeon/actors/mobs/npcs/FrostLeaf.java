@@ -51,9 +51,9 @@ public class FrostLeaf extends NPC {
                     }
                 });
                 // 요구 : 차가운 숨결 용액
-                // 보상 : 서리막대 스태프 (+1~+3 강화)
+                // 보상 : 서리막대 스태프 (+1 강화)
                 StaffOfLeaf le = new StaffOfLeaf();
-                le.level(Random.IntRange(1,3));
+                le.level(1);
                 le.identify();
 
                 if (le.doPickUp( Dungeon.hero )) {
