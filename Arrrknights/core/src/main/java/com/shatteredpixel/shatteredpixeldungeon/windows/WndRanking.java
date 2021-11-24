@@ -354,6 +354,9 @@ public class WndRanking extends WndTabbed {
 					Rankings.DestroydChack(Dungeon.challenges, 0, Dungeon.hero.belongings.ring.level());
 				}
 			}
+			if (Dungeon.hero.belongings.getItem(Bomb.class) != null && Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
+				if (Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero) )
+					Rankings.DestroydChack_Bomb(Dungeon.challenges, Statistics.duration, Dungeon.hero.belongings.getItem(Bomb.class).quantity()); }
 			
 			camera = WndRanking.this.camera;
 

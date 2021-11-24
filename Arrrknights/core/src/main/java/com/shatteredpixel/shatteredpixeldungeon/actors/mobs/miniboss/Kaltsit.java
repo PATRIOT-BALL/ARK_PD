@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss;
 
+import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
@@ -12,9 +13,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
@@ -30,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.GreenCatSprite;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.Game;
 import com.watabou.noosa.audio.Sample;
+import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -133,6 +137,24 @@ public class Kaltsit extends Mob {
         }
         else Burstcooldown = 0;
         return super.act();
+    }
+
+    @Override
+    public int attackProc(Char enemy, int damage) {
+        if (enemy instanceof Hero) {
+            int bounsdmg = 23 - Dungeon.hero.lvl;
+            bounsdmg = Math.max(bounsdmg, 0);
+
+            if (bounsdmg > 0) {
+                CellEmitter.get(enemy.pos).burst(PurpleParticle.BURST, bounsdmg);
+                enemy.sprite.showStatus(CharSprite.NEGATIVE, Integer.toString(bounsdmg));
+                enemy.HP -= bounsdmg;
+            }
+            if (enemy.HP <= 0) {
+                enemy.die(this);
+            }
+        }
+        return super.attackProc(enemy, damage);
     }
 
     private static final String FIRST_SUMMON = "first_summon";

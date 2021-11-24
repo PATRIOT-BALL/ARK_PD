@@ -49,6 +49,9 @@ public class v0_3_X_Changes {
                         "_불꽃의 카타나_ : 해방 후 공격력이 4-20에서 4-23으로 상승했습니다." + "\n\n" +
                         "_3티어 사격 무기_ : 근접 공격력이 3-3에서 3-9로 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
+                "_켈시_ : 레벨이 낮은 플레이어에게 추가 _고정 피해_를 입힙니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
