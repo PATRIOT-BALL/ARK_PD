@@ -2493,7 +2493,17 @@ items.weapon.melee.radiantspear.setbouns=_아이템 시너지 : 빛나는 의지
 
 items.weapon.melee.flametailsword.name=레드파인
 items.weapon.melee.flametailsword.desc=이 검은 사용자의 기량을 상승시켜줍니다. 적의 공격을 회피한 후 다음 공격이 2회의 피해를 입히며, 1타의 피해량이 50% 증가합니다.
-items.weapon.melee.flametailsword.setbouns=_아이템 시너지 : 불꽃 꼬리의 기사_\n특수 효과 발동시 1타 피해 증가량이 100%가 됩니다.
+
+items.weapon.melee.krissvector.name=kriss vector
+items.weapon.melee.krissvector.desc=Barrage!\n\n_어썰트 모드_ : 명중률 +40%
+items.weapon.melee.krissvector.desc_mode1=애플파이!\n\n_슈팅 모드_ : 공격속도 133%
+items.weapon.melee.krissvector.desc_mode2=Deo volente!\n\n_과부하 모드_ : 명중률 -60%, 공격속도 200%, 공격시 2회 피해
+items.weapon.melee.krissvector.stats_desc=사거리 +1
+items.weapon.melee.krissvector.ac_zap=모드 변환
+
+items.weapon.melee.sakurasword.name=영도 사쿠라 후부키
+items.weapon.melee.sakurasword.desc=그녀의 영혼이 정화한 후, 다시 영도로 돌아왔다.\n\n공격시 SP가 충전되며, 100%가 되면 _인페르노_를 사용할 수 있습니다. 발동 중에는 공격시 SP를 소모하고 무기 사거리와 명중률이 대폭 증가하며, 공격시 대상에게 표식을 찍고 후방으로 이동합니다. 3번째 공격마다 표식이 있는 적들에게 피해를 입힙니다.
+items.weapon.melee.sakurasword.ac_sakura=인페르노
 
 
 

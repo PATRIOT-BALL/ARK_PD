@@ -1,9 +1,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
@@ -12,14 +14,14 @@ public class KRISSVector extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
         image = ItemSpriteSheet.KRISS_V;
-        hitSound = Assets.Sounds.HIT_GUN;
-        hitSoundPitch = 0.9f;
+        hitSound = Assets.Sounds.ZAP_GUN;
+        hitSoundPitch = 1.76f;
 
         defaultAction = AC_ZAP;
 
         tier = 5;
-        ACC = 1f;
-        DLY = 1f; //0.67x speed
+        ACC = 1.4f;
+        DLY = 1f;
         RCH = 2;    //extra reach
     }
 
@@ -28,8 +30,8 @@ public class KRISSVector extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier+1) +                	//12 + 3
-                lvl*(tier+1);
+        return  4*(tier) +                	//20 + 4
+                lvl*(tier-1);
     }
 
 
@@ -45,11 +47,37 @@ public class KRISSVector extends MeleeWeapon {
 
         super.execute(hero, action);
 
-        if (action.equals(AC_ZAP)) {
+        if (action.equals(AC_ZAP) && isEquipped(hero)) {
+            mode++;
+            if (mode > 2) mode = 0;
+
+            switch (mode) {
+                default:
+                case 0:
+                    ACC = 1.4f;
+                    DLY = 1f;
+                    break;
+                case 1:
+                    ACC = 1f;
+                    DLY = 0.75f;
+                    break;
+                case 2:
+                    ACC = 0.4f;
+                    DLY = 0.5f;
+                    break;
+            }
 
             updateQuickslot();
-            curUser.spendAndNext(0.5f);
+            curUser.spendAndNext(1f);
         }
+    }
+
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        if (mode == 2) {
+            defender.damage(attacker.damageRoll(), attacker);
+        }
+        return super.proc(attacker, defender, damage);
     }
 
     @Override
@@ -69,14 +97,14 @@ public class KRISSVector extends MeleeWeapon {
         else return null;}
 
     private static final String SWICH = "mode";
-    private static final String RCHSAVE = "RCH";
     private static final String DLYSAVE = "DLY";
+    private static final String ACCSAVE = "ACC";
 
     @Override
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
         bundle.put(SWICH, mode);
-        bundle.put(RCHSAVE, RCH);
+        bundle.put(ACCSAVE, ACC);
         bundle.put(DLYSAVE, DLY);
     }
 
@@ -84,7 +112,7 @@ public class KRISSVector extends MeleeWeapon {
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
         mode = bundle.getInt(SWICH);
-        RCH = bundle.getInt(RCHSAVE);
+        ACC = bundle.getFloat(ACCSAVE);
         DLY = bundle.getFloat(DLYSAVE);
     }
 }

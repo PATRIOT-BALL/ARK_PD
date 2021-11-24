@@ -179,6 +179,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocki
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gluttony;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
@@ -739,6 +740,7 @@ public class Hero extends Char {
         if (belongings.weapon instanceof SHISHIOH) return false;
         if (belongings.weapon instanceof Enfild2) return false;
         if (RingOfAssassin.Assassin_Curse(this) == true) return false;
+        if (belongings.weapon instanceof KRISSVector) return false;
 
         return true;
     }

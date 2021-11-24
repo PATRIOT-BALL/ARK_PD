@@ -70,7 +70,7 @@ public class SakuraSword extends MeleeWeapon {
 
         super.execute(hero, action);
 
-        if (action.equals(AC_SAKURA) && charge >= chargeCap) {
+        if (action.equals(AC_SAKURA) && charge >= chargeCap && isEquipped(hero) && !ExMode) {
             ExMode = true;
             RCH = 8;
             ACC = 3f;
