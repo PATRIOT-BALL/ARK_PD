@@ -350,8 +350,8 @@ public class Badges {
 			saveNeeded = true;
 		}
 
-		if(global.contains(Badge.CHAMPION_4)) {
-			global.remove(Badge.CHAMPION_4);
+		if(global.contains(Badge.HAPPY_END)) {
+			global.remove(Badge.HAPPY_END);
 		}
 
 		local.clear();
