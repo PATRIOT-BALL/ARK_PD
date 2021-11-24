@@ -175,6 +175,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlameKatana;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
@@ -188,6 +189,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Halberd;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ImageoverForm;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.M1887;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MinosFury;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
@@ -206,6 +208,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sai;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Castlebreaker;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SakuraSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
@@ -288,6 +291,7 @@ public enum Catalog {
 		WEAPONS.seen.put( Scythe.class,                false);
 		WEAPONS.seen.put( FolkSong.class,                false);
 		WEAPONS.seen.put( SnowHunter.class,                false);
+		WEAPONS.seen.put( FlametailSword.class,                false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( WarHammer.class,                  false);
@@ -301,6 +305,8 @@ public enum Catalog {
 		WEAPONS.seen.put( DivineAvatar.class,                false);
 		WEAPONS.seen.put( R4C.class,                false);
 		WEAPONS.seen.put( RadiantSpear.class,                false);
+		WEAPONS.seen.put( KRISSVector.class,                false);
+		WEAPONS.seen.put( SakuraSword.class,                false);
 
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Firmament.class,                       false);

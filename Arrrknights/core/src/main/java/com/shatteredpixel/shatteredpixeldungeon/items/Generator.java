@@ -169,6 +169,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flag;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlameKatana;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
@@ -178,6 +179,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Halberd;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.M1887;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
@@ -193,6 +195,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sai;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Castlebreaker;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SakuraSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
@@ -446,9 +449,10 @@ public class Generator {
                     Scythe.class,
                     FolkSong.class,
                     CrabGun.class,
-                    SnowHunter.class
+                    SnowHunter.class,
+                    FlametailSword.class
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 3, 3, 2};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 3, 3, 2, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,
@@ -462,9 +466,10 @@ public class Generator {
                     SwordofArtorius.class,
                     DivineAvatar.class,
                     R4C.class,
-                    RadiantSpear.class
+                    RadiantSpear.class,
+                    KRISSVector.class
             };
-            WEP_T5.probs = new float[]{5, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4};
+            WEP_T5.probs = new float[]{5, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 3};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{

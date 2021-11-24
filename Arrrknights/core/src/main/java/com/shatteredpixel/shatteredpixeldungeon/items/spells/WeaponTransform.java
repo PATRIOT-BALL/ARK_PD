@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SakuraSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -93,6 +94,11 @@ public class WeaponTransform extends InventorySpell {
         do {
             n = (Weapon) Reflection.newInstance(c.classes[Random.chances(c.probs)]);
         } while (Challenges.isItemBlocked(n) || n.getClass() == w.getClass());
+
+        // 무기 변환시 6.25%확률로 5티어 무기라면 사쿠라 후부키가 됩니다.
+        if (Random.Int(16) == 0 && ((MeleeWeapon)w).tier == 5) {
+            n = new SakuraSword();
+        }
 
         int level = w.level();
         if (w.curseInfusionBonus) level--;
