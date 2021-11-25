@@ -74,6 +74,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.ChaosCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.FeatherFall;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ForceCatalyst;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.InstantRecharge;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.MagicalInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.MagicalArmord;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.OathofFire;
@@ -433,6 +434,9 @@ public class QuickRecipe extends Component {
 				result.add(new QuickRecipe(new OathofFire.Recipe()));
 				result.add(new QuickRecipe(new WeaponTransform.Recipe()));
 				result.add(new QuickRecipe(new Avantgardeform.Recipe()));
+				result.add(null);
+				result.add(null);
+				result.add(new QuickRecipe(new InstantRecharge.Recipe(), new ArrayList<>(Arrays.asList(new Wand.PlaceHolder(), new AlchemicalCatalyst())), new InstantRecharge().quantity(2)));
 				return result;
 		}
 	}

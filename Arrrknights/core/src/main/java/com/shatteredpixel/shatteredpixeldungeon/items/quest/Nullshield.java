@@ -7,6 +7,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.W0502;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfPurgatory;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSuzuran;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfFireblast;
@@ -26,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.PurgatoryKnife;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -213,6 +215,15 @@ public class Nullshield extends Item {
                         item.detach(curUser.belongings.backpack);
                         detach(curUser.belongings.backpack);
                     }
+                }
+                else if (item instanceof PurgatoryKnife)
+                {
+                    GLog.h(Messages.get(Nullshield.class, "suc"));
+                    StaffOfPurgatory nya = new StaffOfPurgatory();
+                    nya.identify();
+                    Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                    item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
                 }
                 else {
 

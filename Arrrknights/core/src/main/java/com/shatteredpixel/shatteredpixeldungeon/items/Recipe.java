@@ -61,6 +61,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.ChaosCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.FeatherFall;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.ForceCatalyst;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.InstantRecharge;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.MagicalInfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.MagicalArmord;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.OathofFire;
@@ -227,7 +228,8 @@ public abstract class Recipe {
             new FRY_EGG.Recipe(),
             new FRY_GAMZA.Recipe(),
             new SaltBlast.Recipe(),
-            new BlastSpell.Recipe()
+            new BlastSpell.Recipe(),
+            new InstantRecharge.Recipe(),
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{

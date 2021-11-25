@@ -1699,6 +1699,9 @@ items.spells.chaoscatalyst.inv_title=CHAOS!
 items.spells.blastspell.name=blest
 items.spells.blastspell.desc=Enemies hit by this spell will be push away.
 
+items.spells.instantrecharge.name=instant recharge
+items.spells.instantrecharge.desc=This spell contains recharging all wand`s charge.
+
 ###runestones
 items.stones.inventorystone.ac_use=USE
 
@@ -1899,6 +1902,12 @@ items.wands.sp.staffoftime.staff_name=ring of justice
 items.wands.sp.staffoftime.desc=_"Beneath the gaze of justice, evil tumbles into the abyss."_\n\nThis __special wand is Has the power of operator Mostima.
 items.wands.sp.staffoftime.stats_desc=This wand`s extensive arts deals _%1$d-%2$d damage._ Enemies hit are knocked back.
 items.wands.sp.staffoftime.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of justice, Charges the Arts Recorder.
+
+items.wands.sp.staffofpurgatory.name=staff of purgatory
+items.wands.sp.staffofpurgatory.staff_name=ring of space
+items.wands.sp.staffofpurgatory.desc=_result of her choice._\n\nThis _ special wand is Has the power of mature operator Lava.
+items.wands.sp.staffofpurgatory.stats_desc=이 스태프는 공간의 힘을 다뤄 적중시킨 대상과 자신의 위치를 교환합니다. 만약 교환 경로에 다른 존재가 있다면, 그 존재들은 공간 변동에 휘말려 이 층의 어딘가로 튕겨져나갈 것입니다.
+items.wands.sp.staffofpurgatory.bmage_desc=_아미야_ 가 공간의 흑요석 반지로 적을 공격하면 아츠 기록장치의 SP를 충전합니다.
 
 
 ###wands
@@ -2498,7 +2507,7 @@ items.weapon.melee.krissvector.ac_zap=CHANGE
 
 items.weapon.melee.sakurasword.name=Sakura Hubuki
 items.weapon.melee.sakurasword.desc=A sword of a Valkyrie from another world.\n\nRecharges SP when attacking, but consumes SP when using abilities. Increases attack range and accuracy while activating the ability, and each attack marked enemy the target and dashes behind the target. Every 3rd attack deals damage to marked enemies.
-items.weapon.melee.sakurasword.ac_sakura=iNFERNO
+items.weapon.melee.sakurasword.ac_sakura=INFERNO
 
 ###missile weapons
 items.weapon.missiles.darts.adrenalinedart.name=adrenaline arrow

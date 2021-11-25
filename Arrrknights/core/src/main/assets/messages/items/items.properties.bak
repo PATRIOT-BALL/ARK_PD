@@ -1696,6 +1696,9 @@ items.spells.chaoscatalyst.inv_title=혼돈 파괴!
 items.spells.blastspell.name=충격
 items.spells.blastspell.desc=이 주문을 적중시키면 대상을 밀쳐낼 수 있을 것 같습니다.
 
+items.spells.instantrecharge.name=즉석 충전
+items.spells.instantrecharge.desc=이 아츠에는 가지고있는 모든 스태프를 재충전하는 아츠가 담겨있습니다.
+
 
 ###runestones
 items.stones.inventorystone.ac_use=사용한다
@@ -1897,6 +1900,12 @@ items.wands.sp.staffoftime.staff_name=질서의 흑요석 반지
 items.wands.sp.staffoftime.desc=_"정의 아래 악은 심연으로 추락할지니."_\n\n이 _특별한_ 스태프는 모스티마 대원의 능력이 반영되었습니다.
 items.wands.sp.staffoftime.stats_desc=이 스태프는 방사형 에너지를 발사하며, 닿은 적들에게 _%1$d-%2$d_의 피해를 입히고 밀쳐냅니다.
 items.wands.sp.staffoftime.bmage_desc=_아미야_ 가 질서의 흑요석 반지로 적을 공격하면 아츠 기록장치의 SP를 충전합니다.
+
+items.wands.sp.staffofpurgatory.name=스태프 오브 퍼거토리
+items.wands.sp.staffofpurgatory.staff_name=공간의 흑요석 반지
+items.wands.sp.staffofpurgatory.desc=_이것은 그녀의 선택이다._\n\n이 _특별한_ 스태프는 성장한 라바 대원의 능력이 반영되었습니다.
+items.wands.sp.staffofpurgatory.stats_desc=이 스태프는 공간의 힘을 다뤄 적중시킨 대상과 자신의 위치를 교환합니다. 만약 교환 경로에 다른 존재가 있다면, 그 존재들은 공간 변동에 휘말려 이 층의 어딘가로 튕겨져나갈 것입니다.
+items.wands.sp.staffofpurgatory.bmage_desc=_아미야_ 가 질서의 흑요석 반지로 적을 공격하면 아츠 기록장치의 SP를 충전합니다.
 
 
 
@@ -2494,11 +2503,11 @@ items.weapon.melee.radiantspear.setbouns=_아이템 시너지 : 빛나는 의지
 items.weapon.melee.flametailsword.name=레드파인
 items.weapon.melee.flametailsword.desc=이 검은 사용자의 기량을 상승시켜줍니다. 적의 공격을 회피한 후 다음 공격이 2회의 피해를 입히며, 1타의 피해량이 50% 증가합니다.
 
-items.weapon.melee.krissvector.name=kriss vector
+items.weapon.melee.krissvector.name=KRISS vector
 items.weapon.melee.krissvector.desc=Barrage!\n\n_어썰트 모드_ : 명중률 +40%
 items.weapon.melee.krissvector.desc_mode1=애플파이!\n\n_슈팅 모드_ : 공격속도 133%
 items.weapon.melee.krissvector.desc_mode2=Deo volente!\n\n_과부하 모드_ : 명중률 -60%, 공격속도 200%, 공격시 2회 피해
-items.weapon.melee.krissvector.stats_desc=사거리 +1
+items.weapon.melee.krissvector.stats_desc=사거리 +1, 기습 공격 불가
 items.weapon.melee.krissvector.ac_zap=모드 변환
 
 items.weapon.melee.sakurasword.name=영도 사쿠라 후부키

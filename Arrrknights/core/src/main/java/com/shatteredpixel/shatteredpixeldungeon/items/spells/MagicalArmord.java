@@ -40,6 +40,7 @@ public class MagicalArmord extends Spell {
 	protected void onCast(Hero hero) {
 		Sample.INSTANCE.play(Assets.Sounds.TELEPORT, 1.33f, 1.65f);
 	   Buff.affect(hero, ArcaneArmor.class).set(2 + hero.lvl/2, 10);
+		hero.sprite.operate(hero.pos);
 	   hero.spendAndNext(1f);
 
 	   this.detach(hero.belongings.backpack);
