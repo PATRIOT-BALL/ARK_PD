@@ -134,6 +134,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfLena;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMayer;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfMudrock;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfPurgatory;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfShining;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSkyfire;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSnowsant;
@@ -404,6 +405,7 @@ public enum Catalog {
 		WANDS.seen.put( StaffOfSussurro.class,             false);
 		WANDS.seen.put( StaffOfTime.class,             false);
 		WANDS.seen.put( StaffOfSuzuran.class,             false);
+		WANDS.seen.put( StaffOfPurgatory.class,             false);
 
 		RINGS.seen.put( RingOfAccuracy.class,               false);
 		RINGS.seen.put( RingOfEnergy.class,                 false);
