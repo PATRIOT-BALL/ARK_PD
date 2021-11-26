@@ -231,7 +231,7 @@ public class CloakOfShadows extends Artifact {
 		public boolean act() {
 			if (charge < chargeCap) {
 				LockedFloor lock = target.buff(LockedFloor.class);
-				if (activeBuff == null && (lock == null || lock.regenOn())) {
+				if (activeBuff == null && (lock == null || lock.regenOn())  && !(Dungeon.depth >= 26 && Dungeon.depth <= 30)) {
 					float missing = (chargeCap - charge);
 					if (level() > 7) missing += 5*(level() - 7)/3f;
 					float turnsToCharge = (45 - missing);
