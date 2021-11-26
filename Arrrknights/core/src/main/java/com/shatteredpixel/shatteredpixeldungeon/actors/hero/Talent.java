@@ -390,7 +390,7 @@ public enum Talent {
 			SealOfLight Seal = hero.belongings.getItem(SealOfLight.class);
 			if (hero.belongings.getItem(SealOfLight.class) != null)
 			{
-				Seal.charge(hero, hero.pointsInTalent(COMBAT_MEAL) * 3);
+				Seal.charge(hero, 1 + hero.pointsInTalent(COMBAT_MEAL) * 3);
 			}
 		}
 

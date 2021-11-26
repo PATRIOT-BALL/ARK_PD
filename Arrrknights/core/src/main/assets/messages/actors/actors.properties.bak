@@ -774,7 +774,7 @@ actors.hero.herosubclass.knight_short_desc=_기사_\n빠른 기동력과 필살�
 actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속 상태가 되며, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
 actors.hero.herosubclass.savior=구제자 니어
 actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
-actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 60%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가합니다.
+actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 55%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가합니다.
 
 
 
@@ -956,7 +956,7 @@ actors.mobs.npcs.jessica.say=아, 안녕하세요!
 actors.mobs.npcs.jessica.quest=제시카 :\n\n아, 안녕하세요! 저기 혹시... _표준 탄약통_이 있으신가요? 훈련을 해야되는데 탄약이 슬슬 부족해서... 가져다주시면 대금은 치뤄드릴게요.
 actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받아주세요.\n_합성옥 800개_ 에요.
 
-actors.mobs.npcs.frostleaf.name=제시카
+actors.mobs.npcs.frostleaf.name=프로스트리프
 actors.mobs.npcs.frostleaf.desc=배신자가 아니다.\n\n_퀘스트가 있는 NPC입니다._
 actors.mobs.npcs.frostleaf.say=응?
 actors.mobs.npcs.frostleaf.quest=프로스트리프 :\n\n아, 마침 잘됐네. _차가순 숨결 용액_ 이란 물건 알아? 어떤 물건인지 궁금해서 말이야... 혹시 가져다 줄 수 있어?

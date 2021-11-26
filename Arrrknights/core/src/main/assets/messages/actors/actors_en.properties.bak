@@ -769,7 +769,7 @@ actors.hero.herosubclass.knight_short_desc=_Knight_\nDefeat enemies with quick m
 actors.hero.herosubclass.knight_desc=The _Knight Elite_ is Possessing quick mobility, gains haste when using Seal of Light. A combo move can be used after a normal attack, and attack power increases when in haste state.
 actors.hero.herosubclass.savior=Savior
 actors.hero.herosubclass.savior_short_desc=_Savior_\na fast Seal Of Light charge and increased power of light.
-actors.hero.herosubclass.savior_desc=_Savior Elite_ is Using the empowered power of light, Seal Of Light's charge rate is increased, Radiant Knight's damage bonus increased from 40% to 60%, and Damage reduction increased from 20% to 40%
+actors.hero.herosubclass.savior_desc=_Savior Elite_ is Using the empowered power of light, Seal Of Light's charge rate is increased, Radiant Knight's damage bonus increased from 40% to 55%, and Damage reduction increased from 20% to 40%
 
 
 ###npcs
@@ -959,7 +959,7 @@ actors.mobs.npcs.frostleaf.name=frostleaf
 actors.mobs.npcs.frostleaf.desc=Not Frostnova\n\n_NPCs with Quests_
 actors.mobs.npcs.frostleaf.say=hum?
 actors.mobs.npcs.frostleaf.quest=frostleaf :\n\nuh, hello. Do you have _Elixir Of IcyTouch_ by any chance? It's something I'm personally interested in.
-actors.mobs.npcs.frostleaf.result=frostleaf :\n\nI really didn't know you would bring it... I'll give you a staff that contains my arts.
+actors.mobs.npcs.frostleaf.result=frostleaf :\n\nI really didn't know you would bring it... I'll give you a _staff that contains my arts._
 
 actors.mobs.npcs.weedy.name=weedy
 actors.mobs.npcs.weedy.desc=Weedy, a bioengineering expert who was born into a family of Iberian scientists, is a researcher who has been with Rhodes Island since its establishment.
