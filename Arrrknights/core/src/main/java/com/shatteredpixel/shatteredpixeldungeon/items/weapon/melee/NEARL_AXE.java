@@ -33,13 +33,15 @@ public class NEARL_AXE extends MeleeWeapon {
 		hitSoundPitch = 1f;
 
 		tier = 1;
+
+		bones = false;
 	}
 	@Override
 	public int min(int lvl) { return  2 + lvl; }
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier+1) + 1 +    //9 + 2
+		return  4*(tier+1) +    //8 + 2
 				lvl*(tier+1);   //scaling unchanged
 	}
 

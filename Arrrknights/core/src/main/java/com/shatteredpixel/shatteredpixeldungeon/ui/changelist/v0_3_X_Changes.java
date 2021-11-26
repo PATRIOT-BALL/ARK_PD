@@ -36,7 +36,6 @@ public class v0_3_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.NEARLS_S), "니어 조정",
-                "기본 무기의 공격력이 2-8에서 _2-9_로 상승했습니다." + "\n\n" +
                         "_빛의 기사_ 버프 적용 중 소량의 고정 피해 감소 효과가 추가되었습니다." + "\n\n" +
                         "_빛이 나는 식사_ 특성의 살카즈, 감염 생물 대상 피해량이 3-4에서 _6-9_로 상승했습니다." + "\n\n" +
                         "_퇴마_ 특성의 살카즈 대상 추가 피해량이 2-4에서 _3-5_로 상승했습니다." + "\n\n" +
