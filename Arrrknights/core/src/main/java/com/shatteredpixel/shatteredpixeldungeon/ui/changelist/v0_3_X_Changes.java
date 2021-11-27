@@ -67,7 +67,8 @@ public class v0_3_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
-                "_레바테인_ : 공격력이 5-30에서 _5-27_로 감소했으며, 드롭률이 하향 조정 되었습니다."));
+                "_레바테인_ : 공격력이 5-30에서 _5-27_로 감소했으며, 드롭률이 하향 조정 되었습니다." + "\n\n" +
+                "_미노스의 분노_ : 공격력이 5-25에서 _5-20_으로 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "유물 하향",
                 "_이세계 전술장비_ : 충전 속도가 감소했습니다."));
