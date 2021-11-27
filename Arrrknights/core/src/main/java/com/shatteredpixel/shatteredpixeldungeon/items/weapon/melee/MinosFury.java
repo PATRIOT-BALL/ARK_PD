@@ -29,13 +29,15 @@ public class MinosFury extends MeleeWeapon {
     {
         image = ItemSpriteSheet.VULCAN;
         tier = 5;
+
+        bones = false;
     }
 
     private int drbouns = 0;
 
     @Override
     public int max(int lvl) {
-        return  5*(tier) +     //25 + 5
+        return  4*(tier) +     //20 + 5
                 lvl*(tier);                   //+3 per level, down from +6
     }
 

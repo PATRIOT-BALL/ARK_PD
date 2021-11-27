@@ -72,12 +72,6 @@ public class Enfild extends MeleeWeapon {
         return super.proc(attacker, defender, damage);
     }
 
-    public void SPCharge(int n) {
-        charge += n;
-        if (chargeCap < charge) charge = chargeCap;
-        updateQuickslot();
-    }
-
     @Override
     public String status() {
 
@@ -92,21 +86,5 @@ public class Enfild extends MeleeWeapon {
 
         //otherwise, if there's no charge, return null.
         return null;
-    }
-
-
-    private static final String CHARGE = "charge";
-
-    @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-        bundle.put(CHARGE, charge);
-    }
-
-    @Override
-    public void restoreFromBundle(Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
     }
 }

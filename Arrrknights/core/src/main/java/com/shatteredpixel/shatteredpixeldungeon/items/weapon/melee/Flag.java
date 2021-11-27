@@ -84,8 +84,7 @@ public class Flag extends MeleeWeapon  {
         }
         else backchane++;
 
-        charge+=4;
-        charge = Math.min(charge, chargeCap);
+        SPCharge(4);
         updateQuickslot();
 
         return super.proc(attacker, defender, damage);
@@ -108,17 +107,4 @@ public class Flag extends MeleeWeapon  {
     }
 
     private static final String CHARGE = "charge";
-
-    @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-        bundle.put(CHARGE, charge);
-    }
-
-    @Override
-    public void restoreFromBundle(Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
-    }
 }

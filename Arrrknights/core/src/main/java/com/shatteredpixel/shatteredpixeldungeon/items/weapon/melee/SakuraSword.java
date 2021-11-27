@@ -49,8 +49,6 @@ public class SakuraSword extends MeleeWeapon {
 
     private boolean ExMode = false;
     private int attackcount = 0;
-    private int charge = 100;
-    private int chargeCap = 100;
 
     @Override
     public int max(int lvl) {
@@ -127,12 +125,6 @@ public class SakuraSword extends MeleeWeapon {
         for (int c : beam.subPath(1, maxDistance)) {
             CellEmitter.center(c).burst(PurpleParticle.BURST, Random.IntRange(3, 5));
         }
-    }
-
-    private void SPCharge(int n) {
-        charge += n;
-        if (chargeCap < charge) charge = chargeCap;
-        updateQuickslot();
     }
 
     @Override
@@ -214,7 +206,6 @@ public class SakuraSword extends MeleeWeapon {
 
 
     private static final String MODE = "ExMode";
-    private static final String CHARGE = "charge";
     private static final String RCHSAVE = "RCH";
     private static final String ACCSAVE = "ACC";
     private static final String SAKURA = "attackcount";
@@ -226,7 +217,6 @@ public class SakuraSword extends MeleeWeapon {
         bundle.put(RCHSAVE, RCH);
         bundle.put(ACCSAVE, ACC);
         bundle.put(SAKURA, attackcount);
-        bundle.put(CHARGE, charge);
     }
 
     @Override
@@ -236,8 +226,6 @@ public class SakuraSword extends MeleeWeapon {
         RCH = bundle.getInt(RCHSAVE);
         ACC = bundle.getFloat(ACCSAVE);
         attackcount = bundle.getInt(SAKURA);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
     }
 
     public static class SakuraMark extends Buff {

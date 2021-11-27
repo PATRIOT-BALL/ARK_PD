@@ -4,38 +4,21 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
-import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
-import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
-import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
-import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
-import com.shatteredpixel.shatteredpixeldungeon.effects.particles.RainbowParticle;
-import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
-import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.bags.Bag;
-import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
-import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
-import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
-import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
-import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndUseItem;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
-import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -55,8 +38,8 @@ public class MidnightSword extends MeleeWeapon {
 
     protected int collisionProperties = Ballistica.MAGIC_BOLT;
 
-    private int charge = 3;
-    private int chargeCap = 3;
+    private int arts = 3;
+    private int artschargeCap = 3;
 
     @Override
     public int max(int lvl) {
@@ -82,7 +65,7 @@ public class MidnightSword extends MeleeWeapon {
 
         super.execute(hero, action);
 
-        if (action.equals(AC_ZAP) && charge > 0) {
+        if (action.equals(AC_ZAP) && arts > 0) {
             if (this.cursed != true) {
                 cursedKnown = true;
                 GameScene.selectCell(zapper);
@@ -90,7 +73,7 @@ public class MidnightSword extends MeleeWeapon {
             else {
                 Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero,4f);
                 cursedKnown = true;
-                charge -= 1;
+                arts -= 1;
             }
         }
     }
@@ -101,30 +84,30 @@ public class MidnightSword extends MeleeWeapon {
 
     public void SPCharge(int n) {
         if (Random.Int(17) < 2) {
-            charge += n;
-            if (chargeCap < charge) charge = chargeCap;
+            arts += n;
+            if (artschargeCap < arts) arts = artschargeCap;
             updateQuickslot();
         }
     }
 
     @Override
     public String status() {
-        return charge + "/" + chargeCap;
+        return arts + "/" + artschargeCap;
     }
 
-    private static final String CHARGE = "charge";
+    private static final String CHARGE = "arts";
 
     @Override
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
-        bundle.put(CHARGE, charge);
+        bundle.put(CHARGE, arts);
     }
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
+        if (artschargeCap > 0) arts = Math.min(artschargeCap, bundle.getInt(CHARGE));
+        else arts = bundle.getInt(CHARGE);
     }
 
     protected static CellSelector.Listener zapper = new CellSelector.Listener() {
@@ -187,7 +170,7 @@ public class MidnightSword extends MeleeWeapon {
             return false;
         }
 
-        if (charge >= 1) {
+        if (arts >= 1) {
             return true;
         } else {
             GLog.w(Messages.get(this, "fizzles"));
@@ -209,7 +192,7 @@ public class MidnightSword extends MeleeWeapon {
             Dungeon.level.pressCell(bolt.collisionPos);
         }
 
-        charge -=1;
+        arts -=1;
         updateQuickslot();
 
        curUser.spendAndNext(1f);

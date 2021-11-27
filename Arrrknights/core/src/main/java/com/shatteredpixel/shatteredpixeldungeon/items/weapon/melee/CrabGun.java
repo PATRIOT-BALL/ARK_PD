@@ -36,9 +36,6 @@ public class CrabGun extends MeleeWeapon {
         RCH = 2;
     }
 
-    private int charge = 0;
-    private int chargeCap = 100;
-
     @Override
     public int max(int lvl) {
         return  3*(tier+1) +   //15 + 3
@@ -69,15 +66,10 @@ public class CrabGun extends MeleeWeapon {
                     spawnd++;
                 }
                 charge = 0;
-            } else SPCharge(Random.IntRange(7 + buffedLvl() / 4, 11 + buffedLvl() / 2));
+            } else SPCharge((Random.IntRange(7 + buffedLvl() / 4, 11 + buffedLvl() / 2)));
         }
-        return super.proc(attacker, defender, damage);
-    }
-
-    public void SPCharge(int n) {
-        charge += n;
-        if (chargeCap < charge) charge = chargeCap;
         updateQuickslot();
+        return super.proc(attacker, defender, damage);
     }
 
     public void SpawnCrab(int lvl, int pos) {
@@ -85,21 +77,6 @@ public class CrabGun extends MeleeWeapon {
         crab.setting(lvl);
         GameScene.add(crab);
         ScrollOfTeleportation.appear(crab, pos);
-    }
-
-    private static final String CHARGE = "charge";
-
-    @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-        bundle.put(CHARGE, charge);
-    }
-
-    @Override
-    public void restoreFromBundle(Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
     }
 
     @Override

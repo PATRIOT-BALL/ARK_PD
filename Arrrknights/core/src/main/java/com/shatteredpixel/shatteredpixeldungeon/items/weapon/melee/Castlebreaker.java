@@ -60,9 +60,6 @@ public class Castlebreaker extends MeleeWeapon {
 		usesTargeting = true;
 	}
 
-	private int charge = 100;
-	private int chargeCap = 100;
-
 	@Override
 	public int max(int lvl) {
 		return  4*(tier+1) +    //15 base, down from 20
@@ -71,12 +68,12 @@ public class Castlebreaker extends MeleeWeapon {
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
-		int charged = 4;
 		if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class) != null) {
 			if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class).isEquipped(Dungeon.hero)) {
-				charged*=2;
+				SPCharge(4);
 			}}
-		SPCharge(charged);
+		SPCharge(4);
+		updateQuickslot();
 		return super.proc(attacker, defender, damage);
 	}
 
@@ -121,12 +118,6 @@ public class Castlebreaker extends MeleeWeapon {
 		return info;
 	}
 
-	public void SPCharge(int n) {
-			charge += n;
-			if (chargeCap < charge) charge = chargeCap;
-			updateQuickslot();
-	}
-
 	@Override
 	public String status() {
 		if (chargeCap == 100)
@@ -135,21 +126,6 @@ public class Castlebreaker extends MeleeWeapon {
 
 		//otherwise, if there's no charge, return null.
 		return null;
-	}
-
-	private static final String CHARGE = "charge";
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		bundle.put(CHARGE, charge);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-		else charge = bundle.getInt(CHARGE);
 	}
 
 	protected static CellSelector.Listener zapper = new CellSelector.Listener() {

@@ -59,9 +59,6 @@ public class Gamzashield extends MeleeWeapon {
 
     protected int collisionProperties = Ballistica.MAGIC_BOLT;
 
-    private int charge = 100;
-    private int chargeCap = 100;
-
     @Override
     public int max(int lvl) {
         return Math.round(2.5f * (tier + 1)) +     //10 base, down from 20
@@ -71,6 +68,7 @@ public class Gamzashield extends MeleeWeapon {
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         SPCharge(Random.IntRange(5,5+buffedLvl()));
+        updateQuickslot();
         return super.proc(attacker, defender, damage);
     }
 
@@ -105,12 +103,6 @@ public class Gamzashield extends MeleeWeapon {
         } else {
             return Messages.get(this, "typical_stats_desc", 4);
         }
-    }
-
-    public void SPCharge(int n) {
-        charge += n;
-        if (chargeCap < charge) charge = chargeCap;
-        updateQuickslot();
     }
 
     @Override
@@ -256,21 +248,6 @@ public class Gamzashield extends MeleeWeapon {
             Sample.INSTANCE.play(Assets.Sounds.SECRET);
 
         GameScene.updateFog();
-    }
-
-    private static final String CHARGE = "charge";
-
-    @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-        bundle.put(CHARGE, charge);
-    }
-
-    @Override
-    public void restoreFromBundle(Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
     }
 }
 

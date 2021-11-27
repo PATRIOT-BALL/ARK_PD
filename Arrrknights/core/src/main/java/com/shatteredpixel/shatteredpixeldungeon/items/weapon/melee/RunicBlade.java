@@ -61,9 +61,6 @@ public class RunicBlade extends MeleeWeapon {
 	//Essentially it's a tier 4 weapon, with tier 3 base max damage, and tier 5 scaling.
 	//equal to tier 4 in damage at +5
 
-	private int charge = 0;
-	private int chargeCap = 100;
-
 	@Override
 	public int max(int lvl) {
 		return  5*(tier) +                	//20 base, down from 25
@@ -76,8 +73,7 @@ public class RunicBlade extends MeleeWeapon {
 		recharge = Math.min(12, recharge);
 		recharge = Math.max(2, recharge);
 
-		charge += recharge;
-		charge = Math.min(charge, chargeCap);
+		SPCharge(recharge);
 
 		updateQuickslot();
 		return super.proc(attacker, defender, damage);
@@ -133,20 +129,5 @@ public class RunicBlade extends MeleeWeapon {
 
 		//otherwise, if there's no charge, return null.
 		return null;
-	}
-
-	private static final String CHARGE = "charge";
-
-	@Override
-	public void storeInBundle(Bundle bundle) {
-		super.storeInBundle(bundle);
-		bundle.put(CHARGE, charge);
-	}
-
-	@Override
-	public void restoreFromBundle(Bundle bundle) {
-		super.restoreFromBundle(bundle);
-		if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-		else charge = bundle.getInt(CHARGE);
 	}
 }

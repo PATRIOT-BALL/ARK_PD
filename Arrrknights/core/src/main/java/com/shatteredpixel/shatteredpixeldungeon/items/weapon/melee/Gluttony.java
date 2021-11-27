@@ -32,9 +32,6 @@ public class Gluttony extends MeleeWeapon {
         defaultAction = AC_ZAP;
     }
 
-    private int charge = 100;
-    private int chargeCap = 100;
-
     @Override
     public int max(int lvl) {
         return  4*(tier) + 2 +  //18durable_projectiles + 4
@@ -83,31 +80,10 @@ public class Gluttony extends MeleeWeapon {
         }
     }
 
-    public void charged (float recharge) {
-        charge+=recharge;
-        charge=Math.min(chargeCap, charge);
-        updateQuickslot();
-    }
-
     @Override
     public String status() {
         if (chargeCap == 100)
             return Messages.format("%d%%", charge);
         return null;
-    }
-
-    private static final String CHARGE = "charge";
-
-    @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-        bundle.put(CHARGE, charge);
-    }
-
-    @Override
-    public void restoreFromBundle(Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
     }
 }

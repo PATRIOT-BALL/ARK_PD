@@ -86,13 +86,14 @@ public class DivineAvatar extends MeleeWeapon {
         if (Random.Int(25) < 3 + level()) {
             if (Dungeon.hero.belongings.getItem(RingOfSunLight.class) != null) {
                 if (Dungeon.hero.belongings.getItem(RingOfSunLight.class).isEquipped(Dungeon.hero)) {
-                    charge +=3;
+                    SPCharge(3);
                 }}
-            charge+=5;
-            charge = Math.min(charge, chargeCap);
+            SPCharge(5);
 
             Buff.affect(defender, Blindness.class, 5f);
         }
+
+        updateQuickslot();
 
         return super.proc(attacker, defender, damage);
     }
@@ -121,20 +122,5 @@ public class DivineAvatar extends MeleeWeapon {
                 info += "\n\n" + Messages.get( DivineAvatar.class, "setbouns");}
 
         return info;
-    }
-
-    private static final String CHARGE = "charge";
-
-    @Override
-    public void storeInBundle(Bundle bundle) {
-        super.storeInBundle(bundle);
-        bundle.put(CHARGE, charge);
-    }
-
-    @Override
-    public void restoreFromBundle(Bundle bundle) {
-        super.restoreFromBundle(bundle);
-        if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-        else charge = bundle.getInt(CHARGE);
     }
 }

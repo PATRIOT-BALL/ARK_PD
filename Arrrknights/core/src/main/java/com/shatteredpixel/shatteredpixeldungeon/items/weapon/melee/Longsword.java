@@ -26,13 +26,10 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
-import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
-import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -46,8 +43,6 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
-
-import javax.swing.SingleSelectionModel;
 
 public class Longsword extends MeleeWeapon {
 
@@ -65,8 +60,8 @@ public class Longsword extends MeleeWeapon {
 
 	protected int collisionProperties = Ballistica.MAGIC_BOLT;
 
-	private int charge = 2;
-	private int chargeCap = 4;
+	private int arts = 2;
+	private int artscap = 4;
 
 	@Override
 	public int max(int lvl) {
@@ -92,7 +87,7 @@ public class Longsword extends MeleeWeapon {
 
 		super.execute(hero, action);
 
-		if (action.equals(AC_ZAP) && charge > 0 && isEquipped(hero)) {
+		if (action.equals(AC_ZAP) && arts > 0 && isEquipped(hero)) {
 			if (this.cursed != true) {
 				cursedKnown = true;
 				GameScene.selectCell(zapper);
@@ -100,7 +95,7 @@ public class Longsword extends MeleeWeapon {
 			else {
 				Buff.affect(Dungeon.hero, Silence.class, 45f);
 				cursedKnown = true;
-				charge -= 1;
+				arts -= 1;
 			}
 		}
 	}
@@ -111,30 +106,30 @@ public class Longsword extends MeleeWeapon {
 
 	public void SPCharge(int n) {
 		if (Random.Int(11) < 2) {
-			charge += n;
-			if (chargeCap < charge) charge = chargeCap;
+			arts += n;
+			if (artscap < arts) arts = artscap;
 			updateQuickslot();
 		}
 	}
 
 	@Override
 	public String status() {
-		return charge + "/" + chargeCap;
+		return arts + "/" + artscap;
 	}
 
-	private static final String CHARGE = "charge";
+	private static final String CHARGE = "arts";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
 		super.storeInBundle(bundle);
-		bundle.put(CHARGE, charge);
+		bundle.put(CHARGE, arts);
 	}
 
 	@Override
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
-		if (chargeCap > 0) charge = Math.min(chargeCap, bundle.getInt(CHARGE));
-		else charge = bundle.getInt(CHARGE);
+		if (artscap > 0) arts = Math.min(artscap, bundle.getInt(CHARGE));
+		else arts = bundle.getInt(CHARGE);
 	}
 
 	protected static CellSelector.Listener zapper = new CellSelector.Listener() {
@@ -197,7 +192,7 @@ public class Longsword extends MeleeWeapon {
 			return false;
 		}
 
-		if (charge >= 1) {
+		if (arts >= 1) {
 			return true;
 		} else {
 			GLog.w(Messages.get(this, "fizzles"));
@@ -220,9 +215,9 @@ public class Longsword extends MeleeWeapon {
 			Dungeon.level.pressCell(bolt.collisionPos);
 		}
 
-		charge -=1;
+		arts -=1;
 		updateQuickslot();
 
-		if (charge <= 0) curUser.spendAndNext(1f);
+		if (arts <= 0) curUser.spendAndNext(1f);
 	}
 }
