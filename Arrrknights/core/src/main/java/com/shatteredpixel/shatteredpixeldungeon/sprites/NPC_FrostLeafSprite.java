@@ -13,7 +13,7 @@ public class NPC_FrostLeafSprite extends MobSprite {
         TextureFilm frames = new TextureFilm( texture, 36, 34 );
 
         idle = new MovieClip.Animation( 2, true );
-        idle.frames( frames, 1, 2  );
+        idle.frames( frames, 0, 1  );
 
         run = new MovieClip.Animation( 10, true );
         run.frames( frames, 0 );
