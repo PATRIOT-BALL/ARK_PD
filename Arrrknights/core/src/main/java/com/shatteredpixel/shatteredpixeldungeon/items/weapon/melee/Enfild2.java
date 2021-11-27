@@ -19,9 +19,6 @@ public class Enfild2 extends MeleeWeapon {
         //also cannot surprise attack, see Hero.canSurpriseAttack
     }
 
-    private int charge = 100;
-    private int chargeCap = 100;
-
     @Override
     public int min(int lvl) {
        return 8+lvl;

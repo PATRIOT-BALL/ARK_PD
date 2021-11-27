@@ -47,9 +47,6 @@ public class Enfild extends MeleeWeapon {
         RCH = 50;    //extra reach
     }
 
-    private int charge = 100;
-    private int chargeCap = 100;
-
     @Override
     public int min(int lvl) { return  9 + buffedLvl() * 2; }
 
