@@ -34,9 +34,6 @@ public class DivineAvatar extends MeleeWeapon {
         tier = 5;
     }
 
-    private int charge = 100;
-    private int chargeCap = 100;
-
     @Override
     public int max(int lvl) {
         return  5*(tier) +   //25 + 5
