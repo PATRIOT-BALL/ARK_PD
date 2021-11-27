@@ -1905,7 +1905,7 @@ items.wands.sp.staffofpurgatory.name=스태프 오브 퍼거토리
 items.wands.sp.staffofpurgatory.staff_name=공간의 흑요석 반지
 items.wands.sp.staffofpurgatory.desc=_이것은 그녀의 선택이다._\n\n이 _특별한_ 스태프는 성장한 라바 대원의 능력이 반영되었습니다.
 items.wands.sp.staffofpurgatory.stats_desc=이 스태프는 공간의 힘을 다뤄 적중시킨 대상과 자신의 위치를 교환합니다. 만약 교환 경로에 다른 존재가 있다면, 그 존재들은 공간 변동에 휘말려 이 층의 어딘가로 튕겨져나갈 것입니다.
-items.wands.sp.staffofpurgatory.bmage_desc=_아미야_ 가 질서의 흑요석 반지로 적을 공격하면 아츠 기록장치의 SP를 충전합니다.
+items.wands.sp.staffofpurgatory.bmage_desc=_아미야_ 가 공간의 흑요석 반지로 적을 공격하면 아츠 기록장치의 SP를 충전합니다.
 
 
 

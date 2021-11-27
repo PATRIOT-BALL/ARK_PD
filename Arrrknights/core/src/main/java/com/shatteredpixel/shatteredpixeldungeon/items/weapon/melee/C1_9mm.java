@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
@@ -16,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
@@ -208,7 +210,6 @@ public class C1_9mm extends MeleeWeapon {
             if (Dungeon.hero.subClass == HeroSubClass.SNIPER) dmg -= (ch.drRoll() / 2);
             else dmg -= ch.drRoll();
 
-            ACC = 1.5f;
             if (ch.hit(Dungeon.hero, ch, false)) {
                 if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
                     dmg *= 1f + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.1f); }
@@ -217,6 +218,15 @@ public class C1_9mm extends MeleeWeapon {
                 Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) Buff.affect(ch, Silence.class, 1.5f);
+                if (Random.Int(5) == 0) {
+                    float durationToAdd = 2f;
+                    Chill existing = ch.buff(Chill.class);
+                    if (existing != null){
+                        durationToAdd = Math.min(durationToAdd, 6f-existing.cooldown());
+                        Buff.affect( ch, Chill.class, durationToAdd );
+                        Splash.at( ch.sprite.center(), 0xFFB2D6FF, 5);
+                    }
+                }
 
                 ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
 
@@ -259,7 +269,6 @@ public class C1_9mm extends MeleeWeapon {
 
         bullet -=1;
         updateQuickslot();
-        ACC = 1;
 
         curUser.spendAndNext(1f);
     }

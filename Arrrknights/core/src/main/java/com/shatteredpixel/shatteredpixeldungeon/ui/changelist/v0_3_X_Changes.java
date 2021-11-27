@@ -47,6 +47,9 @@ public class v0_3_X_Changes {
                 "_기사 전문화_의 신속 중 피해 증가량이 25%에서 _20%_로 감소했습니다." + "\n\n" +
                 "_구제자 전문화_ 의 빛의 기사 중 피해 증가량이 60%에서 _55%_로 감소했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 개편",
+                "_스털링 기관단총_ : 다른 사격 무기들보다 사격의 정확성이 낮아지지만, 적중시 확률적으로 한기를 부여할 수 있게됩니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
