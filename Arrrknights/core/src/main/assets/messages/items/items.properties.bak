@@ -2519,7 +2519,10 @@ items.gunaccessories.ironsight.name=기계식 조준기
 items.gunaccessories.ironsight.desc=기계식 조준기가 부착된 총기의 명중률 +15%
 
 items.gunaccessories.recoilbuffer.name=반동완충기
-items.gunaccessories.recoilbuffer.desc=반동완충기가 부착된 총기의 공격속도 +25%, 피해량 -10%
+items.gunaccessories.recoilbuffer.desc=반동완충기가 부착된 총기의 사격속도 +25%, 피해량 -10%
+
+items.gunaccessories.scope.name=망원조준경
+items.gunaccessories.scope.desc=망원조준경이 부착된 총기의 피해량 +20%, 명중률 +30%, 사격속도 -33%
 
 
 
