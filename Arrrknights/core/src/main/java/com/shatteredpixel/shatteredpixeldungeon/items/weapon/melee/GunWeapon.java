@@ -56,7 +56,7 @@ public class GunWeapon extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  3*(tier) +    // 3티어 기준 9+2, 5티어는 15+4
+        return  2*(tier) +    // 3티어 기준 6+2, 5티어는 10+4
                 lvl*(tier-1);
     }
 
