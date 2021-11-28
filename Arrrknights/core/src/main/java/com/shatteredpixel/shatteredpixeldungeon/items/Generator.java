@@ -22,6 +22,10 @@
 package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Accessories;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.DotSight;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Ironsight;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Recoilbuffer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCamouflage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookChainHook;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCrimsonCutter;
@@ -279,6 +283,8 @@ public class Generator {
         SKL_T2(0, SkillBook.class),
         SKL_T3(0, SkillBook.class),
         SKL_RND(0, SkillBook.class),
+
+        ACCESSORIES(0, Accessories.class),
 
         N_INGREDINETS(0,Ingredients.class);
 
@@ -625,6 +631,14 @@ public class Generator {
                     3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
                     3, 3, 3, 3
             };
+
+            ACCESSORIES.classes = new Class<?>[]{
+                    Ironsight.class,
+                    DotSight.class,
+                    Recoilbuffer.class
+            };
+            ACCESSORIES.probs = new float[]{1, 1, 1};
+
 
             N_INGREDINETS.classes = new Class<?>[]{
                     SugarFlower.class,

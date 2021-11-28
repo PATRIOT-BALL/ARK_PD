@@ -92,16 +92,20 @@ abstract public class Weapon extends KindOfWeapon {
 	public int      RCH = 1;    // Reach modifier (only applies to melee hits)
 
 	public enum Augment {
-		SPEED   (0.7f, 0.6667f),
-		DAMAGE  (1.5f, 1.6667f),
-		NONE	(1.0f, 1.0000f);
+		SPEED   (0.7f, 0.6667f, 1f),
+		DAMAGE  (1.5f, 1.6667f, 1f),
+		OVERLOAD (1.25f, 0.9f, 0.8f),
+		NONE	(1.0f, 1.0000f, 1f);
 
 		private float damageFactor;
 		private float delayFactor;
+		private float accFactor;
 
-		Augment(float dmg, float dly){
+
+		Augment(float dmg, float dly, float acc){
 			damageFactor = dmg;
 			delayFactor = dly;
+			accFactor = acc;
 		}
 
 		public int damageFactor(int dmg){
@@ -110,6 +114,10 @@ abstract public class Weapon extends KindOfWeapon {
 
 		public float delayFactor(float dly){
 			return dly * delayFactor;
+		}
+
+		public float accFactor(float acc){
+			return acc * accFactor;
 		}
 	}
 
@@ -257,8 +265,7 @@ abstract public class Weapon extends KindOfWeapon {
 		if (hasEnchant(Wayward.class, owner))
 			encumbrance = Math.max(2, encumbrance+2);
 
-		float ACC = this.ACC;
-
+		float ACC = augment.accFactor(this.ACC);
 		return encumbrance > 0 ? (float)(ACC / Math.pow( 1.5, encumbrance )) : ACC;
 	}
 
@@ -273,7 +280,6 @@ abstract public class Weapon extends KindOfWeapon {
 		float DLY = augment.delayFactor(this.DLY);
 
 		DLY *= RingOfFuror.attackDelayMultiplier(owner);
-
 		return (encumbrance > 0 ? (float)(DLY * Math.pow( 1.2, encumbrance )) : DLY);
 	}
 

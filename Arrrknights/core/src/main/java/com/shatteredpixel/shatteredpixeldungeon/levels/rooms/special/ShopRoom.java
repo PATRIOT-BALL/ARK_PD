@@ -259,6 +259,8 @@ public class ShopRoom extends SpecialRoom {
 		itemsToSpawn.add( new SmallRation() );
 		itemsToSpawn.add( new SmallRation() );
 		itemsToSpawn.add( new SmallRation() );
+
+		itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.ACCESSORIES ) );
 		
 		switch (Random.Int(7)){
 			case 0:

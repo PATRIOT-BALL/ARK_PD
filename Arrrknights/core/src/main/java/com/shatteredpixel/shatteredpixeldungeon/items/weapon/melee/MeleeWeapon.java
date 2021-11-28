@@ -101,6 +101,9 @@ public class MeleeWeapon extends Weapon {
 			case DAMAGE:
 				info += " " + Messages.get(Weapon.class, "stronger");
 				break;
+			case OVERLOAD:
+				info += " " + Messages.get(Weapon.class, "overload");
+				break;
 			case NONE:
 		}
 

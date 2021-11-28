@@ -47,6 +47,7 @@ actors.blobs.wateroftransmutation.desc=Power of change radiates from the water o
 
 actors.blobs.web.desc=A thick web is covering everything here. Anything that touches or is thrown through the web will break it, but will also be stuck in place.
 
+actors.blobs.dominion.desc=In this space, those who do not follow the will of Ursus will be weakened...
 
 
 ###buffs
@@ -392,7 +393,7 @@ actors.buffs.knightskill.prompt=target
 actors.buffs.knightskill.desc=Nearl can use a special attack after attacking.
 actors.buffs.knightskill$combomove.knockback_desc=_Push_ Pushes the target 1 space away.
 actors.buffs.knightskill$combomove.smash_desc=_Smash_ 140% Damage
-actors.buffs.knightskill$combomove.killblow_desc=_Kill Blow_ 100% Damage, Killing with this attack consumes no turn and immediately allows the next special attack to be used.
+actors.buffs.knightskill$combomove.killblow_desc=_Kill Blow_ 70% Damage, Killing with this attack consumes no turn and immediately allows the next special attack to be used.
 actors.buffs.knightskill$combomove.lightsword_desc=_Light Sword_ Damage increases in proportion to the number of special attack used before, and paralyzes the target at maximum stacks.\nDamage : %1$d%% / %2$d%%
 
 ###hero
@@ -529,12 +530,12 @@ actors.hero.talent.assassinscreed.desc=_+1:_ The Red deals _5% bonus damage_ the
 actors.hero.talent.clock_upgrade.title=cloak upgrade
 actors.hero.talent.clock_upgrade.desc=_+1:_ Red`s cloak recharges at _105%_ speed\n\n_+2:_ Red`s cloak recharges at _110%_ speed\n\n_+3:_ Red`s cloak recharges at _115%_ speed
 actors.hero.talent.sweep.title=SWEEP
-actors.hero.talent.sweep.desc=_+1:_ When the Red kills an enemy with a prepared strike they 3% SP charge of recorder\n\n_+2:_ When the Red kills an enemy with a prepared strike they 5% SP charge of recorder\n\n_+3:_ When the Red kills an enemy with a prepared strike they 7% SP charge of recorder\n\nWhen the talent level is +2 or higher, gain art vision for 3 turns.
+actors.hero.talent.sweep.desc=_+1:_ When the Red kills an enemy with a prepared strike they 2% SP charge of recorder\n\n_+2:_ When the Red kills an enemy with a prepared strike they 4% SP charge of recorder\n\n_+3:_ When the Red kills an enemy with a prepared strike they 6% SP charge of recorder\n\n_+4:_ When the Red kills an enemy with a prepared strike they 8% SP charge of recorder\n\nWhen the talent level is +2 or higher, gain art vision for 3 turns.
 actors.hero.talent.howling.title=howling
 actors.hero.talent.howling.desc=_+1:_ can now deal _50 damage_ to bosses by hunt.\n\n_+2:_ can now deal _100 damage_ to bosses by hunt\n\n_+3:_ can now deal _150 damage_ to bosses by hunt\n\n_+4:_ can now deal _200 damage_ to bosses by hunt
 actors.hero.talent.special_operations.title=special operations
 actors.hero.talent.special_operations.desc=_+1:_Freerunning cooldown reduced _1 turns_\n\n_+2:_Freerunning cooldown reduced _2 turns_\n\n_+3:_Freerunning cooldown reduced _3 turns_\n\n_+4:_Freerunning cooldown reduced _4 turns_
-actors.hero.talent.bloodbath_operations.titlebloodbath operations
+actors.hero.talent.bloodbath_operations.title=bloodbath operations
 actors.hero.talent.bloodbath_operations.desc=hunt's damage x0.5, Also Inflicts Paralysis on the target.\n\n_+1:_ Reduces hunt's cooldown by _100 turns_\n\n_+2:_ Reduces hunt's cooldown by _200 turns_\n\n_+3:_ Reduces hunt's cooldown by _300 turns_\n\n_+4:_ Reduces hunt's cooldown by _400 turns_
 
 
@@ -562,8 +563,8 @@ actors.hero.talent.seer_shot.title=roots shot
 actors.hero.talent.seer_shot.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _60 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _40 turn_ cooldown.\n\n_+3:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _20 turn_ cooldown.
 actors.hero.talent.farsight.title=farsight
 actors.hero.talent.farsight.desc=_+1:_ The GreyThroat's vision range is _increased by 30%_.\n\n_+2:_ The GreyThroat's vision range is _increased by 60%_.\n\n_+3:_ The GreyThroat's vision range is _increased by 90%_.
-actors.hero.talent.shared_enchantment.title=shared enchantment
-actors.hero.talent.shared_enchantment.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow.\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
+actors.hero.talent.sharpshooter.title=sharpshooter
+actors.hero.talent.sharpshooter.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow.\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
 actors.hero.talent.shared_upgrades.title=shared upgrades
 actors.hero.talent.shared_upgrades.desc=_+1:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _6%_\n\n_+2:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _12%_.\n\n_+3:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _18%_.\n\nIf you have a gun equipped, this talent is applied in proportion to the gun's upgrade value.(50% efficiency)
 actors.hero.talent.durable_tips.title=durable tips
@@ -577,7 +578,7 @@ actors.hero.talent.point_blank.desc=_+1:_ Enemies hit by GreyThroat`s crossbow h
 actors.hero.talent.improved_crossbow.title=improved crossbow
 actors.hero.talent.improved_crossbow.desc=_+1:_  GrayThroat`s crossbow damage increased by _2_\n\n_+2:_ GrayThroat`s crossbow damage increased by _4_\n\n_+3:_ GrayThroat`s crossbow damage increased by _6_
 actors.hero.talent.push_attack.title=push attack
-actors.hero.talent.push_attack.desc=Melee Attack knocks back the target. There is a cooldown of 80 turns.\n\n_+1:_ push 1 space\n\n_+2:_ push 2 space\n\n_+3:_ push 3 space\n\n_+4:_ push 4 space
+actors.hero.talent.push_attack.desc=Attack knocks back the target. There is a cooldown of 80 turns.\n\n_+1:_ push 1 space\n\n_+2:_ push 2 space\n\n_+3:_ push 3 space\n\n_+4:_ push 4 space
 actors.hero.talent.sniping.title=sniping
 actors.hero.talent.sniping.desc=_+1:_ increases the and the damage of her special attack by _15%_.\n\n_+2:_ increases the and the damage of her special attack by _30%_.\n\n_+3:_ increases the and the damage of her special attack by _45%_.\n\n_+4:_ increases the and the damage of her special attack by _60%_.
 actors.hero.talent.savior_belief.title=savior`s belief
@@ -608,7 +609,7 @@ actors.hero.talent.cutlet.desc=_+1:_ who in the dungeon die, there is a _3%_ cha
 actors.hero.talent.focused_attack.title=focused attack
 actors.hero.talent.focused_attack.desc=_+1:_ focusing gear attack damage bonus increased from 50% to _65%_.\n\n_+2:_ focusing gear attack damage bonus increased from 50% to _80%_.\n\n_+3:_ focusing gear attack damage bonus increased from 50% to _95%_.
 actors.hero.talent.physical_attack.title=weight attack
-actors.hero.talent.physical_attack.desc=_+1:_ focusing gear attack _33%_ chance to paralyze target for 1 turn.\n\n_+2:_ focusing gear attack _66%_ chance to paralyze target for 1 turn.\n\n_+3:_ focusing gear attack _100%_ chance to paralyze target for 1 turn.
+actors.hero.talent.physical_attack.desc=_+1:_ focusing gear attack _20%_ chance to paralyze target for 1 turn.\n\n_+2:_ focusing gear attack _40%_ chance to paralyze target for 1 turn.\n\n_+3:_ focusing gear attack _60%_ chance to paralyze target for 1 turn.
 actors.hero.talent.battleflow.title=battle flow
 actors.hero.talent.battleflow.desc=_+1:_ Increases the chance of a gear to recharge when someone dies from 8% to _12%_.\n\n_+2:_ Increases the chance of a gear to recharge when someone dies from 8% to _16%_.\n\n_+3:_ Increases the chance of a gear to recharge when someone dies from 8% to _20%_.
 actors.hero.talent.barrier_operation.title=barrier operation
@@ -632,7 +633,7 @@ actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
 
 actors.hero.talent.shining_meal.title=shining meal
-actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _3_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal 4 damage.
+actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _6_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal _9_ damage.
 actors.hero.talent.experience.title=knigts experience
 actors.hero.talent.experience.desc=_+1:_ Armor identification is _3x Speed_\n\n_+2:_ Armor identification is _5x Speed_, Also identifies curses when acquiring armor.
 actors.hero.talent.protectionoflight.title=protection of light
@@ -648,31 +649,31 @@ actors.hero.talent.resurgence.desc=_+1:_ Blessed Ankh activated, Increases healt
 actors.hero.talent.phaserush.title=phase rush
 actors.hero.talent.phaserush.desc=_+1:_ When you are a RadiantKnight, you seal of light gain charge by _1%_ on hit.\n\n_+2:_ When you are a RadiantKnight, you seal of light gain charge by _2%_ on hit.
 actors.hero.talent.exorcism.title=exorcism
-actors.hero.talent.exorcism.desc=_+1:_ Deals _2_ additional damage and takes _1_ less damage. to Sarkaz.\n\n_+2:_ Deals _4_ additional damage and takes _2_ less damage. to Sarkaz.
+actors.hero.talent.exorcism.desc=_+1:_ Deals _3_ additional damage and takes _1_ less damage. to Sarkaz.\n\n_+2:_ Deals _5_ additional damage and takes _2_ less damage. to Sarkaz.
 actors.hero.talent.pegasus_aura.title=pegasus aura
 actors.hero.talent.pegasus_aura.desc=_+1:_ When your seal of light activated, your recover HP _5%._. and When in RadiantKnight state, accuracy increases by _10%._\n\n_+2:_ When your seal of light activated, your recover HP _10%._. and When in RadiantKnight state, accuracy increases by _20%._\n\n_+3:_ When your seal of light activated, your recover HP _15%._. and When in RadiantKnight state, accuracy increases by _30%._
 actors.hero.talent.radianthero.title=radiant hero
-actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a radiant knight.\n\n_+1: _600 turn_ cool down\n\n_+2: _450 turn_ cool down\n\n_300 turn_ cool down
-actors.hero.talent.into_fray.title=참전
-actors.hero.talent.into_fray.desc=_+1:_ 필살기로 적 처치시 _1 턴의 신속_ 을 얻습니다.\n\n_+2:_ 필살기로 적 처치시 _2 턴의 신속_ 을 얻습니다.\n\n_+3:_ 필살기로 적 처치시 _3 턴의 신속_ 을 얻습니다.
-actors.hero.talent.blitzkrieg.title=전격전
-actors.hero.talent.blitzkrieg.desc=_+1:_ 신속 상태일 때 회피율이 _2_ 상승합니다.\n\n_+2:_ 신속 상태일 때 회피율이 _4_ 상승합니다.\n\n_+3:_ 신속 상태일 때 회피율이 _6_ 상승합니다.
-actors.hero.talent.skill_mastery.title=스킬 마스터리
-actors.hero.talent.skill_mastery.desc=_+1:_ 빛의 검의 피해 배율이 _신념*60%_로 증가합니다.\n\n_+2:_ 마무리 일격으로 적 처치시 빛의 인장을 3% 충전합니다.\n\n_+3:_ 밀쳐내기가 대상을 1턴동안 침묵시킵니다.
-actors.hero.talent.shield_of_light.title=빛의 방패
-actors.hero.talent.shield_of_light.desc=_+1:_ 방어력이 _1_ 증가합니다.\n\n_+2:_ 방어력이 _2_ 증가합니다.\n\n_+3:_ 방어력이 _3_ 증가합니다.\n\n체력이 50%이하거나 빛의 기사 상태일 땐 방어 상승량이 2배가 됩니다. (최대 4배)
-actors.hero.talent.pegasus_wing.title=천마의 날개
-actors.hero.talent.pegasus_wing.desc=_+1:_ 피격시 _33%_ 확률로 빛의 인장을 2% 충전합니다.\n\n_+2:_ 피격시 _67%_ 확률로 빛의 인장을 2% 충전합니다.\n\n_+3:_ 피격시 _100%_ 확률로 빛의 인장을 2% 충전합니다.
-actors.hero.talent.hopelight.title=희망의 빛
-actors.hero.talent.hopelight.desc=_+1:_ 빛의 기사 상태일 때 피해 저항이 40%에서 _45%_로 증가합니다.\n\n_+2:_ 빛의 기사 상태일 때 피해 저항이 40%에서 _50%_로 증가합니다.\n\n_+3:_ 빛의 기사 상태일 때 피해 저항이 40%에서 _55%_로 증가합니다.
-actors.hero.talent.grand_order.title=그랜드 오더
-actors.hero.talent.grand_order.desc=_+1:_ 보스 전투 돌입시 체력을 _30%_ 회복하며, 즉시 빛의 기사로 각성합니다.\n\n_+2:_ 보스 전투 돌입시 체력을 _60%_ 회복하며, 즉시 빛의 기사로 각성합니다.\n\n_+3:_ 보스 전투 돌입시 체력을 _90%_ 회복하며, 즉시 빛의 기사로 각성합니다.
-actors.hero.talent.knight_of_kazimierz.title=카시미어의 기사
-actors.hero.talent.knight_of_kazimierz.desc=_+1:_ 빛의 기사 상태일 때 공격시 아츠 기록장치를 _1%_ 충전합니다.\n\n_+2:_ 빛의 기사 상태일 때 공격시 아츠 기록장치를 _2%_ 충전합니다.\n\n_+3:_ 빛의 기사 상태일 때 공격시 아츠 기록장치를 _3%_ 충전합니다.
-actors.hero.talent.knight_body.title=기사의 육신
-actors.hero.talent.knight_body.desc=_+1:_ 최대 체력이 _10_ 증가합니다.\n\n_+2:_ 최대 체력이 _20_ 증가합니다.\n\n_+3:_ 최대 체력이 _30_ 증가합니다.\n\n_+4:_ 최대 체력이 _40_ 증가합니다.
-actors.hero.talent.quick_tactics.title=속공전술
-actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _6 턴_으로 증가합니다.\n\n_+2:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _7 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _8 턴_으로 증가합니다.\n\n_+3:_ 빛의 인장 사용시 획득하는 신속이 5 턴에서 _9 턴_으로 증가합니다.\n\n또한, 빛의 인장 사용에 턴을 소모하지 않게됩니다.
+actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a Radiant Knight.\n\n_+1: 750 turn_ cool down\n\n_+2: 600 turn_ cool down\n\n_+3: 450 turn_ cool down
+actors.hero.talent.into_fray.title=into fray
+actors.hero.talent.into_fray.desc=_+1:_ kill an enemy with a combo, you gain haste for _1 turn_.\n\n_+2:_ kill an enemy with a combo, you gain haste for _2 turn_.\n\n_+3:_ kill an enemy with a combo, you gain haste for _3 turn_.
+actors.hero.talent.blitzkrieg.title=blitzkrieg
+actors.hero.talent.blitzkrieg.desc=_+1:_ Evasion is increased by _2_ while in haste buff.\n\n_+2:_ Evasion is increased by _4_ while in haste buff.\n\n_+3:_ Evasion is increased by _6_ while in haste buff.
+actors.hero.talent.skill_mastery.titleskill mastery
+actors.hero.talent.skill_mastery.desc=_+1:_ Increases Light Sword's damage multiplier up to 300%.\n\n_+2:_ Killing an enemy with a kill blow recharges the seal of light by 3%.\n\n_+3:_ Push silences the enemy for 1 turn.
+actors.hero.talent.shield_of_light.title=shield of light
+actors.hero.talent.shield_of_light.desc=_+1:_ Defense is increased by _1_.\n\n_+2:_ Defense is increased by _2_.\n\n_+3:_ Defense is increased by _3_.\n\nWhen HP is below 50% & while in Radiant Knight status, each increases by 2x. (up to 4x)
+actors.hero.talent.pegasus_wing.title=pegasus wing
+actors.hero.talent.pegasus_wing.desc=_+1:_ When attacked by an enemy, there is a _33%_ chance to recharge the Seal of Light by 2%.\n\n_+1:_ When attacked by an enemy, there is a _67%_ chance to recharge the Seal of Light by 2%.\n\n_+1:_ When attacked by an enemy, there is a _100%_ chance to recharge the Seal of Light by 2%.
+actors.hero.talent.hopelight.title=hope light
+actors.hero.talent.hopelight.desc=_+1:_ Radiant Knight status, Damage mitigation increased from 40% to _45%_\n\n_+2:_ Radiant Knight status, Damage mitigation increased from 40% to _50%_\n\n_+3:_ Radiant Knight status, Damage mitigation increased from 40% to _55%_
+actors.hero.talent.grand_order.title=grand order
+actors.hero.talent.grand_order.desc=_+1:_ When entering a boss battle, recover _20% of HP_ and immediately awaken as a Radiant Knight.\n\n_+2:_ When entering a boss battle, recover _40% of HP_ and immediately awaken as a Radiant Knight.\n\n_+3:_ When entering a boss battle, recover _60% of HP_ and immediately awaken as a Radiant Knight.
+actors.hero.talent.knight_of_kazimierz.title=knight of kazimierz
+actors.hero.talent.knight_of_kazimierz.desc=_+1:_ Radiant Knight status, Charges recorder by _1%_ on hit.\n\n_+2:_ Radiant Knight status, Charges recorder by _2%_ on hit.\n\n_+3:_ Radiant Knight status, Charges recorder by _3%_ on hit.\n\nThis talent has a 33% chance to activate.
+actors.hero.talent.knight_body.title=knight body
+actors.hero.talent.knight_body.desc=_+1:_ Max HP +10\n\n_+2:_ Max HP +20\n\n_+3:_ Max HP +30\n\n_+4:_ Max HP +40
+actors.hero.talent.quick_tactics.title=quick tactics
+actors.hero.talent.quick_tactics.desc=_+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\n_+2:_ Haste gained from using Seal of Light increased from 5 to _7 turn_.\n\n_+3:_ Haste gained from using Seal of Light increased from 5 to _8 turn_.\n\n_+4:_ Haste gained from using Seal of Light increased from 5 to _9 turn_.\n\nAlso, it will no longer cost a turn to use Seal of Light.
 actors.hero.talent.blessed_champion.title=blessed champion
 actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._\n\n_+4:_ seal of light activated, you gain a blessing for _40 turns._
 
@@ -764,11 +765,11 @@ actors.hero.herosubclass.guardian=Guardian
 actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
 actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
 actors.hero.herosubclass.knight=Knight
-actors.hero.herosubclass.knight_short_desc=_Knight_\n빠른 기동력과 필살기를 이용해 적들을 연속해서 처치합니다.
-actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으로, 빛의 인장을 사용할 때 신속을 얻습니다. 또한, 일반 공격 후 필살기를 사용할 수 있습니다. 또한 신속 상태일 때 피해량이 증가합니다.
+actors.hero.herosubclass.knight_short_desc=_Knight_\nDefeat enemies with quick mobility and combo moves.
+actors.hero.herosubclass.knight_desc=The _Knight Elite_ is Possessing quick mobility, gains haste when using Seal of Light. A combo move can be used after a normal attack, and attack power increases when in haste state.
 actors.hero.herosubclass.savior=Savior
-actors.hero.herosubclass.savior_short_desc=_Savior_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
-actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 60%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가합니다.
+actors.hero.herosubclass.savior_short_desc=_Savior_\na fast Seal Of Light charge and increased power of light.
+actors.hero.herosubclass.savior_desc=_Savior Elite_ is Using the empowered power of light, Seal Of Light's charge rate is increased, Radiant Knight's damage bonus increased from 40% to 55%, and Damage reduction increased from 20% to 40%
 
 
 ###npcs
@@ -870,10 +871,18 @@ actors.mobs.npcs.greencat.name=Dr.Kal'tsit
 actors.mobs.npcs.greencat.desc=Rhodes Island`s Senior Manager and Medical Project Leader. and your boss
 actors.mobs.npcs.greencat.wellcom=Ah, Is the operation over... Good work %s
 
+actors.mobs.npcs.weedy.name=Weedy
+actors.mobs.npcs.weedy.desc=\n\nHello, I'm Weedy from Rhodes Island Engineering, but I can't go around here because it's still under construction. Oh, please shake hands with your right hand with this glove. I need to put hand sanitizer nearby...
+actors.mobs.npcs.weedy.t1=It's under construction. It's dangerous, so step back!
+
+actors.mobs.npcs.keeper.name=Firewalls
+actors.mobs.npcs.keeper.desc=\n\nIt cannot be passed unless it is a high-ranking executive. You have to bring a doctor.
+actors.mobs.npcs.keeper.t1=Entry denied.
+
 actors.mobs.npcs.closure.name=Closure
 actors.mobs.npcs.closure.desc=Rhodes Island`s Chief Engineer. _The items you left behind in this Rhodes Island will be by the Closure`s pocket money._\n\nTouch to change skin
 actors.mobs.npcs.closure.hi=How about this?
-actors.mobs.npcs.closure.hihi=Original clothes!
+actors.mobs.npcs.closure.hihi=you already unlocked it!
 actors.mobs.npcs.closure.no=Can't wear this!
 actors.mobs.npcs.closure.incomplete=Less made!
 actors.mobs.npcs.closure.fail_skin1=Need a End of EVIL TIME badge\nEnvironment: Reunion in challenge Defeat Tallulah without killing a single mini-boss.
@@ -883,13 +892,14 @@ actors.mobs.npcs.closure.fail_skin4=Need a All potions identified badge
 actors.mobs.npcs.closure.fail_skin5=Need a 10 games played badge
 actors.mobs.npcs.closure.fail_skin6=Need a Amiya Unlock
 actors.mobs.npcs.closure.fail_skin7=Need a Happy End
+actors.mobs.npcs.closure.fail_skin8=Need a Won with a Contingency badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model
 actors.mobs.npcs.skinmodel.desc=A machine that creates realistic holograms.\n\nTouch to check the next skin
 
 actors.mobs.npcs.blackperro.name=Dobermann
-actors.mobs.npcs.blackperro.desc=Rhodes Island`s Drill instructor. has a strict personality.\n\n_Touch to activate Easy Mode_
+actors.mobs.npcs.blackperro.desc=Touch to activate Easy Mode
 actors.mobs.npcs.blackperro.no=You don't need.
 actors.mobs.npcs.blackperro.active=Training started.
 
@@ -931,6 +941,33 @@ actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria Nation
 actors.mobs.npcs.gavial.name=gavial
 actors.mobs.npcs.gavial.desc=Talking to her will take you through the Gavial extra chapter.
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
+
+actors.mobs.npcs.dummy.name=DUMMY
+actors.mobs.npcs.dummy.desc=KOKODAYO
+
+actors.mobs.npcs.dobermann.name=dobermann
+actors.mobs.npcs.dobermann.desc=Rhodes Island`s Drill instructor. has a strict personality.
+actors.mobs.npcs.dobermann.say=Sorry, I'm busy.
+
+actors.mobs.npcs.jessica.name=jessica
+actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, stationed at Rhodes Island as part of an exchange training program.\n\n_NPCs with Quests_
+actors.mobs.npcs.jessica.say=H, Hello!
+actors.mobs.npcs.jessica.quest=Jessica :\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
+actors.mobs.npcs.jessica.result=Jessica :\n\nth.. Thank you! Here's the 800 Orundum.
+
+actors.mobs.npcs.frostleaf.name=frostleaf
+actors.mobs.npcs.frostleaf.desc=Not Frostnova\n\n_NPCs with Quests_
+actors.mobs.npcs.frostleaf.say=hum?
+actors.mobs.npcs.frostleaf.quest=frostleaf :\n\nuh, hello. Do you have _Elixir Of IcyTouch_ by any chance? It's something I'm personally interested in.
+actors.mobs.npcs.frostleaf.result=frostleaf :\n\nI really didn't know you would bring it... I'll give you a _staff that contains my arts._
+
+actors.mobs.npcs.weedy.name=weedy
+actors.mobs.npcs.weedy.desc=Weedy, a bioengineering expert who was born into a family of Iberian scientists, is a researcher who has been with Rhodes Island since its establishment.
+actors.mobs.npcs.weedy.say=Sorry. It's under construction.
+
+actors.mobs.npcs.firewall.name=fire wall
+actors.mobs.npcs.firewall.desc=It looks like you need higher privileges. Let's rescue Dr.
+
 
 
 
@@ -1347,9 +1384,12 @@ actors.mobs.miniboss.kaltsit.summon=kill her, Mon3tr.
 actors.mobs.miniboss.kaltsit.skill1=Mon3tr, protect yourself.
 actors.mobs.miniboss.kaltsit.skill2=blow the her, Mon3tr.
 actors.mobs.miniboss.kaltsit.skill3=crush the her, Mon3tr.
-W
+
 actors.mobs.miniboss.mon3tr.name=mon3tr
 actors.mobs.miniboss.mon3tr.desc=krrrr....
+
+actors.mobs.miniboss.emperorpursuer.name=emperor pursuer
+actors.mobs.miniboss.emperorpursuer.desc=Every Royal Guard is as a dominion; the land beneath their feet is all the territory of Ursus.\n\nPowerful, but docile if you don't attack first...
 
 actors.char.kill=%s killed you...
 actors.char.defeat=You defeated %s.
@@ -1456,7 +1496,7 @@ actors.mobs.sandpillar.desc=my little sister is the cutest
 actors.mobs.crownslayer_shadow.name=shadow crownslayer
 actors.mobs.crownslayer_shadow.desc=She is an officer of Reunion, and will a surprise attack with her unique ability. However, this ability seems to have a long cooldown.
 
-// 가비알 1챕터 몹
+// 가비알 몹
 
 actors.mobs.tiacauhwarrior.name=tiacauh warrior
 actors.mobs.tiacauhwarrior.desc=One of Acahualla's most commonly-seen warriors who uses a crude spear to attack. May pose unexpected difficulties if fighting at close range.\n\nIf there is a lot of grass around, you take less damage.
@@ -1472,3 +1512,40 @@ actors.mobs.tiacauhsniper.desc=Warriors who have gained greater proficiency in u
 
 actors.mobs.tiacauhaddict.name=tiacauh addict
 actors.mobs.tiacauhaddict.desc=A warrior poisoned by mushrooms. It has a fast movement speed and can reduce the target's combat ability when hit.
+
+actors.mobs.tomimi.name=tomimi
+actors.mobs.tomimi.desc=Tomimi, an Archosauria from the Acahualla region of Sargon. And the culprit who detonated the helicopter.
+actors.mobs.tomimi.notice=I, I think it'd be better to directly practice on the battlefield, right?
+actors.mobs.tomimi.phase2=Anyone who needs a good beating, step forward!
+actors.mobs.tomimi.phase3=Wait, I'm not ready yet!
+actors.mobs.tomimi.die=I... I'm sorry...
+actors.mobs.tomimi.destroy=you blast!
+actors.mobs.tomimi.rankings_desc=Beaten by Tommy
+actors.mobs.tomimi$tomimitower.name=building pillars
+actors.mobs.tomimi$tomimitower.desc=If you destroy them all, you can drop tomimi.
+
+actors.mobs.tiacauhripper.name=tiacauh ripper
+actors.mobs.tiacauhripper.desc=A Very fervent Tiacauh warrior with very fast attack speed. Though each strike is not particularly powerful, those caught off guard will be quickly subdued by a rain of blows.
+
+actors.mobs.tiacauhritualist.name=tiacauh ritualist
+actors.mobs.tiacauhritualist.desc=The very few Originium Arts users in Acahualla will often serve as doctors for their tribe.
+actors.mobs.tiacauhritualistzap_kill=You have been (physical)healed...
+
+actors.mobs.tiacauhshaman.name=tiacauh shaman
+actors.mobs.tiacauhshaman.desc=These extremely rare Arts users from Acahualla have a deeper understanding of Originium Arts.
+
+actors.mobs.tiacauhshredder.name=tiacauh shredder
+actors.mobs.tiacauhshredder.desc=One of Zumama's chosen elites, bestowed with excellent equipment. If there is a lot of grass around, attack damage Increase.\n\nhe _fire_ seems to be effective.
+
+actors.mobs.tiacauhbrave.name=tiacauh brave
+actors.mobs.tiacauhbrave.desc=A very formidable Tiacauh warrior, naturally born to do battle.\n\nDefense is very high, but defense decreases after attacking.
+
+actors.mobs.eunectes.name=eunectes
+actors.mobs.eunectes.desc=The leader of a certain tribe that resides in Acahualla—Gavial's hometown.
+actors.mobs.eunectes.notice=I'll give it my all no matter the prey!
+actors.mobs.eunectes.die=You people are no match for Gavial!
+
+actors.mobs.thebiguglything.name=the B.U.T
+actors.mobs.thebiguglything.desc=Zumama's magnum opus, a massive mechanical monster piloted by the High Priest.\n\nhe _fire_ seems to be effective.
+actors.mobs.thebiguglything.rage=The machine is enraged!
+actors.mobs.thebiguglything.fire_ready=The high priest prepares for a ranged attack!

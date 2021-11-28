@@ -84,8 +84,16 @@ public class StoneOfAugmentation extends InventoryStone {
 			add( titlebar );
 			
 			RenderedTextBlock tfMesage = PixelScene.renderTextBlock( Messages.get(this, "choice"), 8 );
-			tfMesage.maxWidth(WIDTH - MARGIN * 2);
-			tfMesage.setPos(MARGIN, titlebar.bottom() + MARGIN);
+			if (toAugment instanceof Weapon) {
+				tfMesage.maxWidth(WIDTH - (1+MARGIN) * 2);
+				tfMesage.maxWidth(WIDTH - (1+MARGIN) * 2);
+				tfMesage.setPos((1+MARGIN), titlebar.bottom() + (1+MARGIN));
+			}
+			else {
+				tfMesage.maxWidth(WIDTH - MARGIN * 2);
+				tfMesage.maxWidth(WIDTH - MARGIN * 2);
+				tfMesage.setPos(MARGIN, titlebar.bottom() + MARGIN);
+			}
 			add( tfMesage );
 			
 			float pos = tfMesage.top() + tfMesage.height();

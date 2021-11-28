@@ -51,7 +51,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfIntuition;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GunWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
@@ -102,7 +106,8 @@ public class WndBag extends WndTabbed {
 		ALCHEMY,
 		RECYCLABLE,
 		NOT_EQUIPPED,
-		ALCHEMYKIT_ONLY
+		ALCHEMYKIT_ONLY,
+		GUN
 	}
 
 	protected static final int COLS_P   = 5;
@@ -468,6 +473,7 @@ public class WndBag extends WndTabbed {
 						mode == Mode.RECYCLABLE && Recycle.isRecyclable(item) ||
 						mode == Mode.ALCHEMYKIT_ONLY && (item instanceof MeleeWeapon || item instanceof MissileWeapon || item instanceof Armor || item instanceof Plant.Seed
 								|| item instanceof Runestone || item instanceof Wand || item instanceof Ring) ||
+						mode == Mode.GUN && (item instanceof GunWeapon) ||
 						mode == Mode.ALL
 					);
 				}
