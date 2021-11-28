@@ -29,10 +29,11 @@ public class v0_3_X_Changes {
                 "_레드파인_ : 4티어 무기로, 회피 후 다음 공격이 추가 피해를 입힙니다." + "\n\n" +
                 "_KRISS Vector_ : 5티어 무기로, 3가지 모드 변환이 가능합니다." + "\n\n" +
                 "_영도 사쿠라 후부키_ : 5티어 무기로, SP를 소모해 긴 사거리와 기동력을 부여해주는 인페르노를 사용할 수 있습니다." + "\n\n" +
-                "_즉석 충전_ : 보유하고있는 모든 스태프를 최대치까지 충전시켜주는 주문입니다."));
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "총기 부착물",
+                "_즉석 충전_ : 보유하고있는 모든 스태프를 최대치까지 충전시켜주는 주문입니다." + "\n\n" +
                 "사격 무기에 장착가능한 _총기 부착물_이 추가되었습니다. 부착물은 상점에서 판매합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 증강",
+                "무기 증강 효과에 _과부하_ 증강이 추가되었씁니다. 공격속도와 공격력이 증가하지만 명중률이 감소합니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
