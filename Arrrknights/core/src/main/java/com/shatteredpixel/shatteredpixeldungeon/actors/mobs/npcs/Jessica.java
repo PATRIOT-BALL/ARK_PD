@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -12,16 +13,27 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_jessicatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndMessage;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
+
+import java.util.Calendar;
+import java.util.Locale;
 
 public class Jessica extends NPC {
     {
        spriteClass = NPC_jessicatSprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
+   }
+
+   public static boolean AnotherQuest_Jees = false;
+
+   static {
+       final Calendar calendar = Calendar.getInstance(Locale.KOREA);
+       if (calendar.get(Calendar.HOUR_OF_DAY) >= 12) AnotherQuest_Jees = true;
    }
 
    public static boolean QuestClear = false;
@@ -38,6 +50,13 @@ public class Jessica extends NPC {
 
     @Override
     public boolean interact(Char c) {
+        if (AnotherQuest_Jees) GLog.w("ss");
+        else JessQuest1(c);
+
+        return true;
+    }
+
+    public void JessQuest1(Char c) {
         if (!QuestClear) {
             if (firstrun && Dungeon.hero.belongings.getItem(NormalMagazine.class) != null) {
                 Game.runOnRenderThread(new Callback() {
@@ -50,7 +69,7 @@ public class Jessica extends NPC {
                 NormalMagazine m = Dungeon.hero.belongings.getItem(NormalMagazine.class);
                 m.detachAll(Dungeon.hero.belongings.backpack);
                 QuestClear = true;
-        }
+            }
             else {
                 Game.runOnRenderThread(new Callback() {
                     @Override
@@ -64,8 +83,6 @@ public class Jessica extends NPC {
         else {
             sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "say"));
         }
-
-        return true;
     }
 
     @Override
