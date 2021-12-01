@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class GunScope extends Accessories {
     {
-        image = ItemSpriteSheet.ARMOR_CLOTH;
+        image = ItemSpriteSheet.TELESCOPE;
 
         ACCcorrectionvalue = 1.3f;
         DLYcorrectionvalue = 1.5f;

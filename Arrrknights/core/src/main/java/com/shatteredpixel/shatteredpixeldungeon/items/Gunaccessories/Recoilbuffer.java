@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Recoilbuffer extends Accessories {
     {
-        image = ItemSpriteSheet.ARMOR_CLOTH;
+        image = ItemSpriteSheet.MUZZLE_BRAKE;
 
         ACCcorrectionvalue = 1f;
         DLYcorrectionvalue = 0.8f;

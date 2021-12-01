@@ -710,18 +710,15 @@ public class ItemSpriteSheet {
 	}
 
 
-	//private static final int JOURNAL        =                               xy(9, 25);  //8 slots
-	//public static final int JOURNAL_1    = ELIXIRS+0;
-	//public static final int JOURNAL_2      = ELIXIRS+1;
-	//public static final int JOURNAL_3     = ELIXIRS+2;
-	//public static final int JOURNAL_4    = ELIXIRS+3;
-	//public static final int JOURNAL_5     = ELIXIRS+4;
-	//public static final int JOURNAL_6       = ELIXIRS+5;
-	//public static final int JOURNAL_7    = ELIXIRS+6;
-	//static{
-		//for (int i = BREWS; i < BREWS+16; i++)
-			//assignItemRect(i, 16, 14);//
-	//}
+	private static final int TACTICAL        =                               xy(9, 26);  //8 slots
+	public static final int IRON_SIGHT    = TACTICAL+0;
+	public static final int HOLO_SIGHT      = TACTICAL+1;
+	public static final int TELESCOPE     = TACTICAL+2;
+	public static final int MUZZLE_BRAKE    = TACTICAL+3;
+	static{
+		for (int i = BREWS; i < BREWS+16; i++)
+			assignItemRect(i, 16, 16);
+	}
 	                                                                                    //16 free slots
 	
 	private static final int SPELLS         =                               xy(1, 27);  //16 slots

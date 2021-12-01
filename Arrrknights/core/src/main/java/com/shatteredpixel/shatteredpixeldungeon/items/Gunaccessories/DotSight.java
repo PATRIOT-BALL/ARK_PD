@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class DotSight extends Accessories {
     {
-        image = ItemSpriteSheet.WOOLY_BOMB;
+        image = ItemSpriteSheet.HOLO_SIGHT;
 
         ACCcorrectionvalue = 1.5f;
         DLYcorrectionvalue = 1f;

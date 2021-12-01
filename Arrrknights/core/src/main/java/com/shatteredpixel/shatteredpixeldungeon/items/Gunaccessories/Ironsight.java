@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Ironsight extends Accessories {
     {
-        image = ItemSpriteSheet.ARCANE_BOMB;
+        image = ItemSpriteSheet.IRON_SIGHT;
 
         ACCcorrectionvalue = 1.15f;
         DLYcorrectionvalue = 1f;
