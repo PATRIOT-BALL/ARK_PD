@@ -78,7 +78,7 @@ public class EmperorPursuer extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 38, 50 );
+        return Random.NormalIntRange( 38, 45 );
     }
 
     @Override
@@ -91,8 +91,8 @@ public class EmperorPursuer extends Mob {
 
     @Override
     public void damage(int dmg, Object src) {
-        // 70을 초과하는 피해는 25%로 감소시킵니다.
-        if (dmg > 70) { dmg = 70 + ((dmg-70) / 4); }
+        // 90을 초과하는 피해는 25%로 감소시킵니다.
+        if (dmg > 90) { dmg = 90 + ((dmg-90) / 4); }
         if (state == PASSIVE) state = HUNTING;
         super.damage(dmg, src);
     }
@@ -130,7 +130,7 @@ public class EmperorPursuer extends Mob {
                 if (enemy.buff(Weakness.class) != null && enemy.buff(Vulnerable.class) != null && enemy.buff(Hex.class) != null) {
                     enemy.damage(Random.NormalIntRange(16, 32), new EmperorPursuer.DarkBolt());
                 }
-                else enemy.damage(Random.NormalIntRange(8, 12), new EmperorPursuer.DarkBolt());
+                else enemy.damage(Random.NormalIntRange(4, 10), new EmperorPursuer.DarkBolt());
                 if (!enemy.isAlive() && enemy == Dungeon.hero) {
                     Dungeon.fail(getClass());
                     GLog.n(Messages.get(Char.class, "kill", name()));
