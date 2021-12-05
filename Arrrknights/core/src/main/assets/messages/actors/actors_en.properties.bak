@@ -954,6 +954,8 @@ actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, station
 actors.mobs.npcs.jessica.say=H, Hello!
 actors.mobs.npcs.jessica.quest=Jessica :\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
 actors.mobs.npcs.jessica.result=Jessica :\n\nth.. Thank you! Here's the 800 Orundum.
+actors.mobs.npcs.jessica.quest2=Jessica :\n\nE, Excuse me! Do you... have an _Smoked Meat_? I need right now... I'll pay for it, can you bring it to me?
+actors.mobs.npcs.jessica.result2=Jessica :\n\nThank you! Here's the gun accessory and 900 Orundum. 
 
 actors.mobs.npcs.frostleaf.name=frostleaf
 actors.mobs.npcs.frostleaf.desc=Not Frostnova\n\n_NPCs with Quests_

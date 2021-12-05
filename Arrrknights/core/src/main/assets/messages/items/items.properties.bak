@@ -294,6 +294,10 @@ items.skill.sk1.hikari.name=_빛이 있으라(1스킬)_
 items.skill.sk1.hikari.desc=발동시 시야 내 적들에게 실명과 1턴의 마비를 부여합니다.
 items.skill.sk1.hikari.desc_wnd=시야 내 적에게 실명 및 1턴의 마비 부여
 
+items.skill.sk1.soulabsorption.name=_영혼 착취(1스킬)_
+items.skill.sk1.soulabsorption.desc=발동 후 다음 공격으로 입힌 피해에 비례해 보호막을 얻습니다.
+items.skill.sk1.soulabsorption.desc_wnd=다음 공격으로 입힌 피해에 비례해 보호막 획득
+
 items.skill.sk2.wolfpack.name=_이리 떼(2스킬)_
 items.skill.sk2.wolfpack.desc=발동시 _지정한 위치로 도약_합니다. 순간이동한 뒤 _주위 적들에게 힘에 비례한 피해_를 입히고 _마비_시키며, 자신은 짧은 시간동안 은신합니다.
 items.skill.sk2.wolfpack.desc_wnd=발동시 지정한 위치로 도약해 피해를 주고 마비시킵니다.
@@ -2512,17 +2516,17 @@ items.weapon.melee.gunweapon.fizzles=탄약이 부족합니다.
 items.gunaccessories.accessories.ac_affix=부착
 items.gunaccessories.accessories.prompt=부착물을 붙힐 총기 선택
 
-items.gunaccessories.dotsight.name=도트사이트
-items.gunaccessories.dotsight.desc=도트사이트가 부착된 총기의 명중률 +50%, 피해량 -10%
+items.gunaccessories.dotsight.name=홀로 사이트
+items.gunaccessories.dotsight.desc=홀로 사이트가 부착된 총기의 명중률 +50%, 피해량 -10%
 
 items.gunaccessories.ironsight.name=기계식 조준기
 items.gunaccessories.ironsight.desc=기계식 조준기가 부착된 총기의 명중률 +15%
 
-items.gunaccessories.recoilbuffer.name=반동완충기
-items.gunaccessories.recoilbuffer.desc=반동완충기가 부착된 총기의 사격속도 +25%, 피해량 -10%
+items.gunaccessories.recoilbuffer.name=보정기
+items.gunaccessories.recoilbuffer.desc=보정기가 부착된 총기의 사격속도 +25%, 피해량 -10%
 
-items.gunaccessories.gunscope.name=망원조준경
-items.gunaccessories.gunscope.desc=망원조준경이 부착된 총기의 피해량 +20%, 명중률 +30%, 사격속도 -33%
+items.gunaccessories.gunscope.name=망원 조준경
+items.gunaccessories.gunscope.desc=망원 조준경이 부착된 총기의 피해량 +20%, 명중률 +30%, 사격속도 -33%
 
 
 

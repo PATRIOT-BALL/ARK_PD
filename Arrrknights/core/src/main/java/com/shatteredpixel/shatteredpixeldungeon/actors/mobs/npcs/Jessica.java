@@ -4,8 +4,13 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
+import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Accessories;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatPie;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Pasty;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -33,7 +38,7 @@ public class Jessica extends NPC {
 
    static {
        final Calendar calendar = Calendar.getInstance(Locale.KOREA);
-       if (calendar.get(Calendar.HOUR_OF_DAY) >= 12) AnotherQuest_Jees = true;
+       if (calendar.get(Calendar.HOUR_OF_DAY) <= 12) AnotherQuest_Jees = true;
    }
 
    public static boolean QuestClear = false;
@@ -50,7 +55,7 @@ public class Jessica extends NPC {
 
     @Override
     public boolean interact(Char c) {
-        if (AnotherQuest_Jees) GLog.w("ss");
+        if (AnotherQuest_Jees) JessQuest2(c);
         else JessQuest1(c);
 
         return true;
@@ -75,6 +80,44 @@ public class Jessica extends NPC {
                     @Override
                     public void call() {
                         GameScene.show(new WndMessage(Messages.get(Jessica.class, "quest")));
+                    }
+                });
+                firstrun = true;
+            }
+        }
+        else {
+            sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "say"));
+        }
+    }
+
+    public void JessQuest2(Char c) {
+        if (!QuestClear) {
+            if (firstrun && Dungeon.hero.belongings.getItem(MeatPie.class) != null) {
+                Game.runOnRenderThread(new Callback() {
+                    @Override
+                    public void call() {
+                        GameScene.show(new WndMessage(Messages.get(Jessica.class, "result2")));
+                    }
+                });
+                Accessories result;
+                result = (Accessories) Generator.random(Generator.Category.ACCESSORIES);
+
+                if (result.doPickUp( Dungeon.hero )) {
+                    GLog.i( Messages.get(Dungeon.hero, "you_now_have", result.name()) );
+                } else {
+                    Dungeon.level.drop( result, this.pos ).sprite.drop();
+                }
+                new Gold(900).doPickUp(Dungeon.hero);
+
+                MeatPie m = Dungeon.hero.belongings.getItem(MeatPie.class);
+                m.detachAll(Dungeon.hero.belongings.backpack);
+                QuestClear = true;
+            }
+            else {
+                Game.runOnRenderThread(new Callback() {
+                    @Override
+                    public void call() {
+                        GameScene.show(new WndMessage(Messages.get(Jessica.class, "quest2")));
                     }
                 });
                 firstrun = true;

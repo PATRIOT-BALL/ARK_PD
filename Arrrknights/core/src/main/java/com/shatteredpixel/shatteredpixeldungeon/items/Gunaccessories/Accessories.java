@@ -88,6 +88,6 @@ public class Accessories extends Item {
 
     @Override
     public int value() {
-        return 100;
+        return 40;
     }
 }

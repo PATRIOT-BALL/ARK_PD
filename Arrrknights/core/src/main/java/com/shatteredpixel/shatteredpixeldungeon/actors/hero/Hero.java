@@ -98,6 +98,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Panorama;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PhantomMirror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.PowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Shinkageryu;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.SoulAbsorption;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.SpreadSpores;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.TacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.Thoughts;
@@ -1424,6 +1425,15 @@ public class Hero extends Char {
 
         damage += BounsDamage;
 
+
+        // 영혼 착취 보호막 처리
+        if (buff(SoulAbsorption.SoulBuff.class) != null) {
+            Buff.detach(this, SoulAbsorption.SoulBuff.class);
+
+            int barr = Math.min(5 + HT /6, 2 + (damage/3));
+            Buff.affect(this, Barrier.class).incShield(barr);
+        }
+
         return damage;
     }
 
@@ -2522,6 +2532,9 @@ public class Hero extends Char {
                 break;
             case 19:
                 SK1 = new Hikari();
+                break;
+            case 20:
+                SK1 = new SoulAbsorption();
                 break;
         }
     }

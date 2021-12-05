@@ -35,6 +35,9 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 증강",
                 "무기 증강 효과에 _과부하_ 증강이 추가되었씁니다. 공격속도와 공격력이 증가하지만 명중률이 감소합니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
+                "_영혼 착취 (1스킬)_ : 다음 공격으로 입힌 피해에 비례해 보호막을 얻습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
@@ -68,6 +71,9 @@ public class v0_3_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 상향",
                 "_켈시_ : 레벨이 낮은 플레이어에게 추가 _고정 피해_를 입힙니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 상향",
+                "_엄청 뜨거운 칼! (1스킬)_ : 피해량이 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);

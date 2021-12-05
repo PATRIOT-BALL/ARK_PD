@@ -75,8 +75,8 @@ public class HotBlade extends Skill {
     }
 
     public void dohit(final Char enemy) {
-        int min =  Math.max(0, 3 + Dungeon.hero.lvl / 4 + RingOfSharpshooting.levelDamageBonus(Dungeon.hero) / 2 );
-        int max =  Math.max(0, 6 + Dungeon.hero.lvl / 2 + RingOfSharpshooting.levelDamageBonus(Dungeon.hero) / 2 );
+        int min =  Math.max(1, 5 + (Dungeon.hero.lvl / 4) + (RingOfSharpshooting.levelDamageBonus(Dungeon.hero) / 2 ) );
+        int max =  Math.max(1, 8 + (Dungeon.hero.lvl / 2) + (RingOfSharpshooting.levelDamageBonus(Dungeon.hero)) );
         int dmg = Random.NormalIntRange(min, max);
         dmg -= enemy.drRoll();
         enemy.damage(dmg, enemy);

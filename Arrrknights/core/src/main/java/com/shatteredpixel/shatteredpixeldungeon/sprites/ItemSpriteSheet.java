@@ -710,7 +710,7 @@ public class ItemSpriteSheet {
 	}
 
 
-	private static final int TACTICAL        =                               xy(9, 26);  //8 slots
+	private static final int TACTICAL        =                               xy(1, 26);  //8 slots
 	public static final int IRON_SIGHT    = TACTICAL+0;
 	public static final int HOLO_SIGHT      = TACTICAL+1;
 	public static final int TELESCOPE     = TACTICAL+2;

@@ -36,6 +36,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookLive;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPhantomMirror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookShinkageryu;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookSoul;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookSpreadSpores;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChanting;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
@@ -340,6 +341,7 @@ public enum Catalog {
 		SKILLBOOK.seen.put( BookSpreadSpores.class,              false);
 		SKILLBOOK.seen.put( BookPhantomMirror.class,              false);
 		SKILLBOOK.seen.put( BookLive.class,              false);
+		SKILLBOOK.seen.put( BookSoul.class,              false);
 
 		SKILLBOOK.seen.put( BookWolfPack.class,               false);
 		SKILLBOOK.seen.put( BookMentalBurst.class,              false);

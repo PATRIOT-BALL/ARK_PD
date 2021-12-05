@@ -564,7 +564,7 @@ actors.hero.talent.seer_shot.desc=_+1:_ When the GreyThroat fires an arrow at th
 actors.hero.talent.farsight.title=farsight
 actors.hero.talent.farsight.desc=_+1:_ The GreyThroat's vision range is _increased by 30%_.\n\n_+2:_ The GreyThroat's vision range is _increased by 60%_.\n\n_+3:_ The GreyThroat's vision range is _increased by 90%_.
 actors.hero.talent.sharpshooter.title=sharpshooter
-actors.hero.talent.sharpshooter.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow.\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
+actors.hero.talent.sharpshooter.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow. When an accessory is attached to the gun, its accuracy is increased by _20%_.\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow. When an accessory is attached to the gun, its accuracy is increased by _40%_.\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow. When an accessory is attached to the gun, its accuracy is increased by _60%_.\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
 actors.hero.talent.shared_upgrades.title=shared upgrades
 actors.hero.talent.shared_upgrades.desc=_+1:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _6%_\n\n_+2:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _12%_.\n\n_+3:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _18%_.\n\nIf you have a gun equipped, this talent is applied in proportion to the gun's upgrade value.(50% efficiency)
 actors.hero.talent.durable_tips.title=durable tips
@@ -954,6 +954,8 @@ actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, station
 actors.mobs.npcs.jessica.say=H, Hello!
 actors.mobs.npcs.jessica.quest=Jessica :\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
 actors.mobs.npcs.jessica.result=Jessica :\n\nth.. Thank you! Here's the 800 Orundum.
+actors.mobs.npcs.jessica.quest2=제시카 :\n\nE, Excuse me! Do you... have an _Smoked Meat_? I need right now... I'll pay for it, can you bring it to me?
+actors.mobs.npcs.jessica.result2=제시카 :\n\nThank you! Here's the gun accessory and 900 Orundum. 
 
 actors.mobs.npcs.frostleaf.name=frostleaf
 actors.mobs.npcs.frostleaf.desc=Not Frostnova\n\n_NPCs with Quests_
