@@ -33,11 +33,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GunWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -233,7 +231,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 		}
 
 		public String desc(){
-			if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+			if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
 				if (name() == "FURY" || name() == "CRUSH" || name() == "SLAM") return Messages.get(this, name()+"_desc2");
 			}
 			return Messages.get(this, name()+"_desc");
@@ -345,33 +343,21 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					dmg = 0;
 					break;
 				case SLAM:
-					if (Dungeon.hero.belongings.weapon instanceof DP27) {
-						dmg = Random.IntRange(((DP27) Dungeon.hero.belongings.weapon).shotmin(), ((DP27) Dungeon.hero.belongings.weapon).shotmax());
-						dmg = Math.round(dmg * 0.2f * count);
-					} else if (Dungeon.hero.belongings.weapon instanceof C1_9mm) {
-						dmg = Random.IntRange(((C1_9mm) Dungeon.hero.belongings.weapon).shotmin(), ((C1_9mm) Dungeon.hero.belongings.weapon).shotmax());
-						dmg = Math.round(dmg * 0.2f * count);
-					} else if (Dungeon.hero.belongings.weapon instanceof R4C) {
-						dmg = Random.IntRange(((R4C) Dungeon.hero.belongings.weapon).shotmin(), ((R4C) Dungeon.hero.belongings.weapon).shotmax());
+					if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
+						dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).shotmin(), ((GunWeapon) Dungeon.hero.belongings.weapon).shotmax());
 						dmg = Math.round(dmg * 0.2f * count);
 					}
 					else dmg += Math.round(target.drRoll() * count / 5f);
 					break;
 				case CRUSH:
-					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+					if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
 					dmg *= 1.25f;
 					}
 					else dmg = Math.round(dmg * 0.25f * count);
 					break;
 				case FURY:
-					if (Dungeon.hero.belongings.weapon instanceof DP27) {
-						dmg = Random.IntRange(((DP27) Dungeon.hero.belongings.weapon).shotmin(), ((DP27) Dungeon.hero.belongings.weapon).shotmax());
-						dmg = Math.round(dmg * 0.4f * count);
-					} else if (Dungeon.hero.belongings.weapon instanceof C1_9mm) {
-						dmg = Random.IntRange(((C1_9mm) Dungeon.hero.belongings.weapon).shotmin(), ((C1_9mm) Dungeon.hero.belongings.weapon).shotmax());
-						dmg = Math.round(dmg * 0.4f * count);
-					} else if (Dungeon.hero.belongings.weapon instanceof R4C) {
-						dmg = Random.IntRange(((R4C) Dungeon.hero.belongings.weapon).shotmin(), ((R4C) Dungeon.hero.belongings.weapon).shotmax());
+					if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
+						dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).shotmin(), ((GunWeapon) Dungeon.hero.belongings.weapon).shotmax());
 						dmg = Math.round(dmg * 0.4f * count);
 					} else dmg = Math.round(dmg * 0.6f);
 					break;
@@ -411,7 +397,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					}
 					break;
 				case SLAM:
-					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+					if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
 						hit(enemy);
 					}
 					break;
@@ -419,7 +405,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					hit(enemy);
 					break;
 				case CRUSH:
-					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+					if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
 						if (enemy.isAlive()) {
 							GameScene.flash( 0x80FFFFFF );
 							Sample.INSTANCE.play(Assets.Sounds.BLAST, 1.1f, 1.26f);
@@ -461,7 +447,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					}
 					break;
 				case FURY:
-					if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C){
+					if (Dungeon.hero.belongings.weapon instanceof GunWeapon){
 						Camera.main.shake(2, 0.5f);
 						Sample.INSTANCE.play(Assets.Sounds.HIT_SHOTGUN, 1.87f, 1.26f);
 					}
@@ -496,7 +482,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 				break;
 
 			case SLAM:
-				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+				if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
 					quickUsed = true;
 					if (getHighestMove() == null) ActionIndicator.clearAction(Combo.this);
 					hero.spendAndNext(hero.attackDelay());
@@ -513,7 +499,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 				break;
 
 			case CRUSH:
-				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C) {
+				if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
 					flareUsed = true;
 					ActionIndicator.clearAction(Combo.this);
 					hero.spendAndNext(hero.attackDelay());
@@ -526,7 +512,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 				break;
 
 			case FURY:
-				if (Dungeon.hero.belongings.weapon instanceof DP27 || Dungeon.hero.belongings.weapon instanceof C1_9mm || Dungeon.hero.belongings.weapon instanceof R4C)
+				if (Dungeon.hero.belongings.weapon instanceof GunWeapon)
 				{
 					detach();
 					ActionIndicator.clearAction(Combo.this);
