@@ -159,7 +159,11 @@ public class GunWeapon extends MeleeWeapon {
         if (action.equals(AC_REMOVE)) {
             curUser = hero;
             Accessories ac = GunAccessories;
-            ac.collect();
+            if (ac.doPickUp( Dungeon.hero )) {
+                GLog.i( Messages.get(Dungeon.hero, "you_now_have", ac.name()) );
+            } else {
+                Dungeon.level.drop( ac, curUser.pos ).sprite.drop();
+            }
             GunAccessories = null;
             curUser.spendAndNext(1f);
         }
