@@ -251,7 +251,7 @@ public class EmperorPursuer extends Mob {
         int ofs4;
         do {
             ofs4 = PathFinder.NEIGHBOURS8[Random.Int(8)];
-        } while (!Dungeon.level.passable[pos + ofs3]);
+        } while (!Dungeon.level.passable[pos + ofs4]);
         Dungeon.level.drop(Generator.random(Generator.Category.POTION), pos+ofs4 ).sprite.drop( pos );
 
         Badges.validatepursuerkill();
