@@ -25,7 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Accessories;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.DotSight;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Ironsight;
-import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Recoilbuffer;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Muzzlebrake;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCamouflage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookChainHook;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCrimsonCutter;
@@ -200,7 +200,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sai;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Castlebreaker;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SakuraSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
@@ -222,7 +221,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWea
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Shuriken;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingClub;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingHammer;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Tomahawk;
@@ -637,7 +635,7 @@ public class Generator {
             ACCESSORIES.classes = new Class<?>[]{
                     Ironsight.class,
                     DotSight.class,
-                    Recoilbuffer.class
+                    Muzzlebrake.class
             };
             ACCESSORIES.probs = new float[]{1, 1, 1};
 

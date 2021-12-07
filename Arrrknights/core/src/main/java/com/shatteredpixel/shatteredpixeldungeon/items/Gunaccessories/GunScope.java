@@ -6,8 +6,8 @@ public class GunScope extends Accessories {
     {
         image = ItemSpriteSheet.TELESCOPE;
 
-        ACCcorrectionvalue = 1.3f;
+        ACCcorrectionvalue = 1.0f;
         DLYcorrectionvalue = 1.5f;
-        DMGcorrectionvalue = 1.2f;
+        DMGcorrectionvalue = 1.4f;
     }
 }

@@ -298,6 +298,10 @@ items.skill.sk1.hikari.name=_Hikari (SKill 1)_
 items.skill.sk1.hikari.desc=ACTIVE: Inflicts blindness and paralysis 1 turn to enemies in sight
 items.skill.sk1.hikari.desc_wnd=ACTIVE: Inflicts blindness and paralysis 1 turn to enemies in sight
 
+items.skill.sk1.soulabsorption.name=_Soul Absorption (Skill 1)_
+items.skill.sk1.soulabsorption.desc=ACTIVE: Gain a shield proportional to the damage dealt by the next attack
+items.skill.sk1.soulabsorption.desc_wnd=ACTIVE: Gain a shield proportional to the damage dealt by the next attack
+
 items.skill.sk2.wolfpack.name=_Wolf Pack (Skill 2)_
 items.skill.sk2.wolfpack.desc=ACTIVE: Inflicts damage and paralysis to nearby enemies after _ jumping to the target point_. Stealth after cast
 items.skill.sk2.wolfpack.desc_wnd=ACTIVE: Inflict damage and paralysis after jumping to the target point
@@ -2511,14 +2515,14 @@ items.weapon.melee.gunweapon.ac_remove=DETACH
 items.gunaccessories.accessories.ac_affix=AFFIX
 items.gunaccessories.accessories.prompt=Choose Gun
 
-items.gunaccessories.dotsight.name=dotsight
-items.gunaccessories.dotsight.desc=Gun with dotsight are accuracy +50%, damage -10%
+items.gunaccessories.dotsight.name=Holographic Dotsight
+items.gunaccessories.dotsight.desc=Gun with Holographic Dotsight are accuracy +50%, damage -10%
 
 items.gunaccessories.ironsight.name=iron sight
 items.gunaccessories.ironsight.desc=Gun with iron sight are accuracy +15%
 
-items.gunaccessories.recoilbuffer.name=recoil buffer
-items.gunaccessories.recoilbuffer.desc=Gun with recoil buffer are shot speed +25%, damage -10%
+items.gunaccessories.muzzlebrake.name=muzzle brake
+items.gunaccessories.muzzlebrake.desc=Gun with muzzle brake are shot speed +25%, damage -10%
 
 items.gunaccessories.gunscope.name=scope
 items.gunaccessories.gunscope.desc=Gun with scope are damage +20%, accuracy +30%, shot speed -33%

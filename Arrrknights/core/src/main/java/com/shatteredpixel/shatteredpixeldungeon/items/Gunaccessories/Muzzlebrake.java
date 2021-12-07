@@ -2,7 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories;
 
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Recoilbuffer extends Accessories {
+public class Muzzlebrake extends Accessories {
     {
         image = ItemSpriteSheet.MUZZLE_BRAKE;
 

@@ -86,6 +86,10 @@ items.skill.sk1.bookhikari.name=빛의 스킬개론
 items.skill.sk1.bookhikari.desc=_빛이 있으라_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 시야 내 적에게 실명 및 1턴의 마비 부여\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
 items.skill.sk1.bookhikari.ac_use=읽는다
 
+items.skill.sk1.booksoul.name=착취의 스킬개론
+items.skill.sk1.booksoul.desc=_영혼 착취_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 1스킬을 배울 수 있을 것 같다.\n\n효과 : 다음 공격으로 입힌 피해에 비례해 보호막 획득\n_주의 : 사용시 기존의 1스킬을 잊어버리게됩니다!
+items.skill.sk1.booksoul.ac_use=읽는다
+
 items.skill.sk2.bookwolfpack.name=이리 떼의 스킬개론
 items.skill.sk2.bookwolfpack.desc=_이리 떼_ 스킬의 정보가 기록되어있는 스킬개론이다. 읽으면 2스킬을 배울 수 있을 것 같다.\n\n효과 : 목표 지점으로 순간이동하고, 해당 지점 주위에 있던 적들에게 피해+마비. 시전 후 은신 상태\n_주의 : 사용시 기존의 2스킬을 잊어버리게됩니다!
 items.skill.sk2.bookwolfpack.ac_use=읽는다
