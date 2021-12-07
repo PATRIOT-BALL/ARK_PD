@@ -106,7 +106,17 @@ public class GunWeapon extends MeleeWeapon {
     }
 
     protected int Fire_dmgFactor(int dmg) {
-        if (GunAccessories != null) dmg *= GunAccessories.GetDMGcorrectionvalue();
+        float accessoriesbouns = 1f;
+        if (GunAccessories != null) accessoriesbouns = GunAccessories.GetDMGcorrectionvalue();
+
+        float talentbouns = 1f;
+        if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
+            talentbouns += (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.1f); }
+
+        GLog.w(""+dmg);
+        dmg *= accessoriesbouns * talentbouns;
+        GLog.h(""+dmg);
+
         return dmg;
     }
 
@@ -241,8 +251,7 @@ public class GunWeapon extends MeleeWeapon {
         boolean pala = false;
 
         if (ch != null) {
-            int dmg = ShotDamageRoll();
-            dmg = Fire_dmgFactor(dmg);
+            int dmg = Fire_dmgFactor(ShotDamageRoll());
 
             // 사격 스롯 판정
             if (Dungeon.hero.subClass == HeroSubClass.SNIPER) dmg -= (ch.drRoll() / 2);
@@ -255,8 +264,6 @@ public class GunWeapon extends MeleeWeapon {
 
             ACC = Fire_accFactor(FIREACC);
             if (ch.hit(Dungeon.hero, ch, false)) {
-                if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
-                    dmg *= 1f + (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.1f); }
 
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
