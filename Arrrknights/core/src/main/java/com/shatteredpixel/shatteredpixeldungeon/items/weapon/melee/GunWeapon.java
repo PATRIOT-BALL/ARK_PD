@@ -113,10 +113,7 @@ public class GunWeapon extends MeleeWeapon {
         if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
             talentbouns += (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.1f); }
 
-        GLog.w(""+dmg);
         dmg *= accessoriesbouns * talentbouns;
-        GLog.h(""+dmg);
-
         return dmg;
     }
 
