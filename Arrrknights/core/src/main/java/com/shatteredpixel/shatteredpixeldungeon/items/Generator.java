@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Accessories;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.DotSight;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.GunScope;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.GunScope_II;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Ironsight;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Muzzlebrake;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookCamouflage;
@@ -637,9 +638,10 @@ public class Generator {
                     Ironsight.class,
                     DotSight.class,
                     Muzzlebrake.class,
-                    GunScope.class
+                    GunScope.class,
+                    GunScope_II.class
             };
-            ACCESSORIES.probs = new float[]{2, 3, 2, 2};
+            ACCESSORIES.probs = new float[]{2, 3, 2, 2, 1};
 
 
             N_INGREDINETS.classes = new Class<?>[]{
