@@ -2530,7 +2530,7 @@ items.gunaccessories.muzzlebrake.name=보정기
 items.gunaccessories.muzzlebrake.desc=보정기가 부착된 총기의 사격속도 +25%, 피해량 -10%
 
 items.gunaccessories.gunscope.name=망원 조준경
-items.gunaccessories.gunscope.desc=망원 조준경이 부착된 총기의 피해량 +20%, 명중률 +30%, 사격속도 -33%
+items.gunaccessories.gunscope.desc=망원 조준경이 부착된 총기의 피해량 +50%, 사격속도 -33%
 
 
 
