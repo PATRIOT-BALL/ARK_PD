@@ -53,7 +53,7 @@ public class Fadeleaf extends Plant {
 			
 			if (((Hero) ch).subClass == HeroSubClass.WARDEN){
 				
-				if (Dungeon.bossLevel()) {
+				if (Dungeon.bossLevel() || Dungeon.depth == 31) {
 					GLog.w( Messages.get(ScrollOfTeleportation.class, "no_tele") );
 					return;
 					
