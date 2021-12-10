@@ -24,7 +24,7 @@ public class SmokeEgg extends Food {
 
     @Override
     public int value() {
-        return 20 * quantity;
+        return 10 * quantity;
     }
 
     public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe.SimpleRecipe {
@@ -32,9 +32,9 @@ public class SmokeEgg extends Food {
         {
             inputs =  new Class[]{Egg.class};
             inQuantity = new int[]{1};
-            cost = 2;
+            cost = 3;
 
-            output = FRY_EGG.class;
+            output = SmokeEgg.class;
             outQuantity = 1;
         }
 

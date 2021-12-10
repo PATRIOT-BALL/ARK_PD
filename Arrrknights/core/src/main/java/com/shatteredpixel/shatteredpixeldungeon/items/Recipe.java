@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_EGG;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_GAMZA;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.SmokeEgg;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Yukjeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.AlchemicalCatalyst;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
@@ -184,7 +185,8 @@ public abstract class Recipe {
     private static Recipe[] oneIngredientRecipes = new Recipe[]{
             new AlchemistsToolkit.upgradeKit(),
             new Scroll.ScrollToStone(),
-            new StewedMeat.oneMeat()
+            new StewedMeat.oneMeat(),
+            new SmokeEgg.Recipe()
     };
 
     private static Recipe[] twoIngredientRecipes = new Recipe[]{

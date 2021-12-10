@@ -40,6 +40,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_EGG;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_GAMZA;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.SmokeEgg;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Yukjeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.BlackPepper;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Egg;
@@ -306,6 +307,9 @@ public class QuickRecipe extends Component {
 				result.add(new QuickRecipe( new HoneyBread.Recipe(),
 						new ArrayList<Item>(Arrays.asList(new Food(), new SugarFlower())),
 						new HoneyBread()));
+				result.add(new QuickRecipe( new SmokeEgg.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new Egg())),
+						new SmokeEgg()));
 				result.add(new QuickRecipe( new FRY_GAMZA.Recipe(),
 						new ArrayList<Item>(Arrays.asList(new Potato(), new Salt())),
 						new FRY_GAMZA()));
