@@ -6,6 +6,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Bundle;
@@ -43,6 +46,11 @@ public class Scythe extends MeleeWeapon {
         }
 
         float bounsdmg = Math.min(1.5f, 1f+(extratarget*0.1f));
+
+        if (Dungeon.hero.belongings.getItem(RingOfFuror.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfFuror.class).isEquipped(Dungeon.hero) && defender.properties().contains(Char.Property.BOSS))
+                bounsdmg += 0.35f;
+        }
 
         damage = Math.round(damage * bounsdmg);
 
@@ -102,6 +110,16 @@ public class Scythe extends MeleeWeapon {
     public String status() {
         if (this.isIdentified()) return HealCount + "/" + 8;
     else return null;}
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+        if (Dungeon.hero.belongings.getItem(RingOfFuror.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfFuror.class).isEquipped(Dungeon.hero))
+                info += "\n\n" + Messages.get( Scythe.class, "setbouns");}
+
+        return info;
+    }
 
 
     private static final String HEALPOINT = "HealCount";

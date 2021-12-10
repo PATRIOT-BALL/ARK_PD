@@ -35,6 +35,9 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 증강",
                 "무기 증강 효과에 _과부하_ 증강이 추가되었씁니다. 공격속도와 공격력이 증가하지만 명중률이 감소합니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 2종 추가",
+                "_고속절단 / 프란7ㅏ와 과학적 아츠_"));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
                 "_영혼 착취 (1스킬)_ : 다음 공격으로 입힌 피해에 비례해 보호막을 얻습니다."));
 

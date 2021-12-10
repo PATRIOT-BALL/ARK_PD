@@ -22,6 +22,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Mace extends MeleeWeapon {
@@ -43,6 +48,15 @@ public class Mace extends MeleeWeapon {
 	public int max(int lvl) {
 		return  4*(tier) +    //12 + 3
 				lvl*(tier);
+	}
+	@Override
+	public String desc() {
+		String info = Messages.get(this, "desc");
+		if (Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
+			if (Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero))
+				info += "\n\n" + Messages.get( Mace.class, "setbouns");}
+
+		return info;
 	}
 
 }

@@ -2243,6 +2243,7 @@ items.weapon.melee.longsword.fizzles=SP가 부족합니다.
 items.weapon.melee.mace.name=테르밋 블레이드
 items.weapon.melee.mace.stats_desc=명중률 +28%\n_고정 피해(방어 무시)_
 items.weapon.melee.mace.desc=2500도까지 달아오르는 고열로 대상을 관통하는 레이피어. 이글거리는 테르밋 블레이드가 뚫을 수 없는 방어는 존재하지 않는다.
+items.weapon.melee.mace.setbouns=_아이템 시너지 : 프란7ㅏ와 과학적 아츠_\n무기에 부여된 아츠 부여가 발동할 확률이 4배가 됩니다.
 
 items.weapon.melee.magesstaff.name=흑요석 반지
 items.weapon.melee.magesstaff.ac_imbue=융합한다
@@ -2419,6 +2420,7 @@ items.weapon.melee.flag.ac_zap=치유의 날개
 items.weapon.melee.scythe.name=맹목적인 순종
 items.weapon.melee.scythe.stats_desc=기습시 최소 데미지 보정 +25%\n적에게 8번 피해를 줄 때마다 체력 회복
 items.weapon.melee.scythe.desc=누구도 판단할 수 없다. 오직 시간만이 답이다.\n\n이 낫은 대상 주위 적에게도 피해를 입히며, 공격 대상이 많을수록 주 대상이 받는 피해량이 상승합니다. (최대 50%)
+items.weapon.melee.scythe.setbouns=_아이템 시너지 : 고속절단_\n보스 대상 피해량이 35% 증가합니다.
 
 items.weapon.melee.divineavatar.name=선현의 화신
 items.weapon.melee.divineavatar.stats_desc=실명한 적에게 공격시 축복 획득
@@ -2531,6 +2533,9 @@ items.gunaccessories.muzzlebrake.desc=보정기가 부착된 총기의 사격속
 
 items.gunaccessories.gunscope.name=망원 조준경
 items.gunaccessories.gunscope.desc=망원 조준경이 부착된 총기의 피해량 +40%, 사격속도 -33%
+
+items.gunaccessories.gunscope_ii.name=망원 조준경(특수)
+items.gunaccessories.gunscope_ii.desc=망원 조준경(특수)가 부착된 총기의 피해량 +70%, 명중률 +10%, 사격속도 -50%
 
 
 
