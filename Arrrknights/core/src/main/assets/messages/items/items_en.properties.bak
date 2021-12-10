@@ -2242,7 +2242,7 @@ items.weapon.melee.longsword.fizzles=it must not have enough charge.
 items.weapon.melee.mace.name=thermite blade
 items.weapon.melee.mace.stats_desc=Accuracy +28%\n_True Damage(ignore defense)_
 items.weapon.melee.mace.desc=The high heat of 2,500 degrees pierces the enemy. There is no defense that this sword cannot penetrate.
-items.weapon.melee.mace.setbouns=_Fran4a and Scientific Arts_\n100% chance that the weapon's enchantment effect activated.
+items.weapon.melee.mace.setbouns=_Fran4a and Scientific Arts_\nx3 chance that the weapon's enchantment effect activated.
 
 items.weapon.melee.magesstaff.name=Obsidian ring
 items.weapon.melee.magesstaff.ac_imbue=IMBUE
