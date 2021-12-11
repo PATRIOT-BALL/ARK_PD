@@ -234,6 +234,9 @@ public class Hero extends Char {
     public static final int JESSI = 6;
     public static final int LAPPY = 7;
     public static final int LEAF = 8;
+    public static final int MUDROCK = 9;
+    public static final int AST = 10;
+    public static final int SPT = 11;
 
     {
         actPriority = HERO_PRIO;
