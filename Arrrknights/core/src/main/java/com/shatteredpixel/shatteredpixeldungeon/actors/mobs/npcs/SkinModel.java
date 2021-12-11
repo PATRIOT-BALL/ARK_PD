@@ -4,11 +4,14 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.AstesiaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FrostLeafSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.GraniSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.JessiSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.LappySprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.MudrockSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SkadiSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SpecterSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SussurroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.talrufightSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FnovaSprite;
@@ -41,6 +44,12 @@ public class SkinModel extends NPC {
            break;
            case 7: spriteClass= FrostLeafSprite.class;
            break;
+           case 8: spriteClass= MudrockSprite.class;
+               break;
+           case 9: spriteClass= AstesiaSprite.class;
+               break;
+           case 10: spriteClass= SpecterSprite.class;
+               break;
        }
     }
 
@@ -72,7 +81,7 @@ public class SkinModel extends NPC {
     public void SkinChange()
     {
         Dungeon.skin_ch++;
-        if (Dungeon.skin_ch > 7) Dungeon.skin_ch = 0;
+        if (Dungeon.skin_ch > 10) Dungeon.skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();

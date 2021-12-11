@@ -221,7 +221,7 @@ public class Badges {
 		SKIN_LAPPY(165,false,true),
 		SKIN_JESSI(166, false, true),
 		SKIN_LEAF(167, false, true),
-		SKIN_MUDROCK(168, false, true),
+		//SKIN_MUDROCK(168, false, true),
 		SKIN_SPECTER(169, false, true),
 		SKIN_ASTESIA(170, false, true),
 
@@ -1006,6 +1006,21 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validateRockskin() {
+		//Badge badge = Badge.SKIN_MUDROCK;
+		//displayBadge( badge );
+	}
+
+	public static void validateAstesiaskin() {
+		Badge badge = Badge.SKIN_ASTESIA;
+		displayBadge( badge );
+	}
+
+	public static void validatesameskin() {
+		Badge badge = Badge.SKIN_SPECTER;
+		displayBadge( badge );
+	}
+
 	// 0.3.2버전의 스킨 관련 처리로 인해 추가된 구문입니다. 추후 필요없어질 수 있습니다.
 	public static void allskindestroy() {
 		saveNeeded = true;
@@ -1043,6 +1058,8 @@ public class Badges {
 			Badges.validatejessiskin();
 			Badges.validatelappyskin();
 			Badges.validateleafskin();
+			Badges.validatesameskin();
+			Badges.validateAstesiaskin();
 		}
 
 		// 배지 파괴 후, 조건에 맞는 배지는 다시 획득합니다.
@@ -1054,6 +1071,8 @@ public class Badges {
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI) && Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) { Badges.validatejessiskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY) && Badges.isUnlocked(Badges.Badge.HAPPY_END)) { Badges.validatelappyskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_LEAF) && Badges.isUnlocked(Badge.CHAMPION_1)) { Badges.validateleafskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_SPECTER) && Badges.isUnlocked(Badge.GAMES_PLAYED_1)) { Badges.validatesameskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_ASTESIA) && Badges.isUnlocked(Badge.SLAIN_PURSUER)) { Badges.validateAstesiaskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene
@@ -1447,7 +1466,8 @@ public class Badges {
 	};
 
 	private static final Badge[][] skinBadgeReplacements = new Badge[][]{
-			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}, {Badge.SKIN_LEAF}
+			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}, {Badge.SKIN_LEAF},
+			{Badge.SKIN_ASTESIA}, {Badge.SKIN_SPECTER}, //{Badge.SKIN_MUDROCK}
 	};
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {
