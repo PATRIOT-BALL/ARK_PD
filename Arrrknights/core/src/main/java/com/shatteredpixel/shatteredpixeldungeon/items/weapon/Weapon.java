@@ -96,7 +96,7 @@ abstract public class Weapon extends KindOfWeapon {
 	public enum Augment {
 		SPEED   (0.7f, 0.6667f, 1f),
 		DAMAGE  (1.5f, 1.6667f, 1f),
-		OVERLOAD (1.25f, 0.9f, 0.7f),
+		OVERLOAD (1.25f, 0.9f, 0.65f),
 		NONE	(1.0f, 1.0000f, 1f);
 
 		private float damageFactor;

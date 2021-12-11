@@ -137,6 +137,9 @@ public class SpiritBow extends Weapon {
 			case DAMAGE:
 				info += "\n\n" + Messages.get(Weapon.class, "stronger");
 				break;
+			case OVERLOAD:
+				info += "\n\n" + Messages.get(Weapon.class, "overload");
+				break;
 			case NONE:
 		}
 		
