@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DP27;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GunWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.R4C;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -319,6 +320,7 @@ public class KnightSKILL extends Buff implements ActionIndicator.Action {
                     break;
             }
 
+            if (((Hero) target).belongings.weapon instanceof GunWeapon && ((Hero) target).hasTalent(Talent.BLITZKRIEG)) Buff.affect(target, Haste.class, 2f);
             if (target.buff(FireImbue.class) != null)   target.buff(FireImbue.class).proc(enemy);
             if (target.buff(FrostImbue.class) != null)  target.buff(FrostImbue.class).proc(enemy);
 
