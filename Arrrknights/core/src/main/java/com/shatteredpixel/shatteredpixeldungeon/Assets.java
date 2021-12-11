@@ -475,6 +475,9 @@ public class Assets {
 		public static final String JESSI	= "sprites/jessica.png";
 		public static final String LAPPY	= "sprites/lappy.png";
 		public static final String FROST	= "sprites/frost.png";
+		public static final String SPT	= "sprites/specter.png";
+		public static final String AST	= "sprites/astesia.png";
+		public static final String MDR	= "sprites/mudrock_skin.png";
 
 	}
 }
