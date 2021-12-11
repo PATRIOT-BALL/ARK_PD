@@ -93,8 +93,13 @@ public class GunWeapon extends MeleeWeapon {
     protected float Fire_accFactor(float acc) {
         if (GunAccessories != null) {
             acc *= GunAccessories.GetACCcorrectionvalue();
+
             if (Dungeon.hero.hasTalent(Talent.SHARPSHOOTER)) {
                 acc += Dungeon.hero.pointsInTalent(Talent.SHARPSHOOTER) * 0.2f;
+            }
+
+            if (Dungeon.hero.hasTalent(Talent.BLITZKRIEG)) {
+                acc += (Dungeon.hero.pointsInTalent(Talent.BLITZKRIEG) * 0.1f);
             }
         }
         return acc;
@@ -112,6 +117,10 @@ public class GunWeapon extends MeleeWeapon {
         float talentbouns = 1f;
         if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
             talentbouns += (Dungeon.hero.pointsInTalent(Talent.PROJECTILE_MOMENTUM) * 0.1f); }
+
+        if (Dungeon.hero.hasTalent(Talent.BLITZKRIEG)) {
+            talentbouns += (Dungeon.hero.pointsInTalent(Talent.BLITZKRIEG) * 0.1f);
+        }
 
         dmg *= accessoriesbouns * talentbouns;
         return dmg;

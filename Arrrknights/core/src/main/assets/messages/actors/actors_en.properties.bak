@@ -657,7 +657,7 @@ actors.hero.talent.radianthero.desc=If you take damage when your health is below
 actors.hero.talent.into_fray.title=into fray
 actors.hero.talent.into_fray.desc=_+1:_ kill an enemy with a combo, you gain haste for _1 turn_.\n\n_+2:_ kill an enemy with a combo, you gain haste for _2 turn_.\n\n_+3:_ kill an enemy with a combo, you gain haste for _3 turn_.
 actors.hero.talent.blitzkrieg.title=blitzkrieg
-actors.hero.talent.blitzkrieg.desc=_+1:_ Evasion is increased by _2_ while in haste buff.\n\n_+2:_ Evasion is increased by _4_ while in haste buff.\n\n_+3:_ Evasion is increased by _6_ while in haste buff.
+actors.hero.talent.blitzkrieg.desc=_+1:_ Gunshot damage is increased by _5%_. and Evasion is increased by _2_ while in haste buff.\n\n_+2:_ Gunshot damage is increased by _10%_. and Evasion is increased by _4_ while in haste buff.\n\n_+3:_ Gunshot damage is increased by _15%_. and Evasion is increased by _6_ while in haste buff.\n\nAlso, when using a combo move with a gun equipped, you gain 2 turns of haste.
 actors.hero.talent.skill_mastery.titleskill mastery
 actors.hero.talent.skill_mastery.desc=_+1:_ Increases Light Sword's damage multiplier up to 300%.\n\n_+2:_ Killing an enemy with a kill blow recharges the seal of light by 3%.\n\n_+3:_ Push silences the enemy for 1 turn.
 actors.hero.talent.shield_of_light.title=shield of light
@@ -894,8 +894,8 @@ actors.mobs.npcs.closure.fail_skin6=Need a Amiya Unlock
 actors.mobs.npcs.closure.fail_skin7=Need a Happy End
 actors.mobs.npcs.closure.fail_skin8=Need a Won with a Contingency badge
 actors.mobs.npcs.closure.fail_skin9=Need a 3rd boss slain by all Subclasses badge
-actors.mobs.npcs.closure.fail_skin10=황제의 칼날(24층 특수 보스)를 처치해야합니다.
-actors.mobs.npcs.closure.fail_skin11=게임을 10회 플레이해야합니다.
+actors.mobs.npcs.closure.fail_skin10=Need a Slain Pursuer badge
+actors.mobs.npcs.closure.fail_skin11=Need a 10 games played badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model
