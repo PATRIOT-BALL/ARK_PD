@@ -319,7 +319,7 @@ actors.buffs.slow.name=Slowed
 actors.buffs.slow.desc=Slowing magic affects the target's rate of time, to them everything is moving super-fast.\n\nA slowed character performs all actions in twice the amount of time they would normally take.\n\nTurns of slow remaining: %s.
 
 actors.buffs.snipersmark.name=Sniper's mark
-actors.buffs.snipersmark.desc=The GreyThroat is honed in on the target she most recently attacked. She is able to perform a special attack with her bow which will vary based on how the bow is augmented.\n\nAn unaugmented bow will fire a _snapshot,_ which deals reduced damage but does not take any time to fire.\n\nA bow augmented for speed will fire a _arts shot._ This shot is Even if the enemy blocks an attack, it unconditionally cripple it, and takes 1 turns to fire.\n\nA bow augmented for damage will fire a _sniper shot._ This shot is guaranteed to hit, deals bonus damage based on distance from the target, and takes 2 turns to fire.
+actors.buffs.snipersmark.desc=The GreyThroat is honed in on the target she most recently attacked. She is able to perform a special attack with her bow which will vary based on how the bow is augmented.\n\nAn overload or unaugmented bow will fire a _snapshot,_ which deals reduced damage but does not take any time to fire.\n\nA bow augmented for speed will fire a _arts shot._ This shot is Even if the enemy blocks an attack, it unconditionally cripple it, and takes 1 turns to fire.\n\nA bow augmented for damage will fire a _sniper shot._ This shot is guaranteed to hit, deals bonus damage based on distance from the target, and takes 2 turns to fire.
 
 actors.buffs.soulmark.name=Soul Marked
 actors.buffs.soulmark.desc=Amiya has tapped into the soul of this creature. She will heal and satisfy his hunger as it takes physical damage.\n\nTurns of soul mark remaining: %s.
@@ -562,7 +562,7 @@ actors.hero.talent.arts_focus.desc=_+1:_ When the GreyThroat fires an arrow at t
 actors.hero.talent.seer_shot.title=roots shot
 actors.hero.talent.seer_shot.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _60 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _40 turn_ cooldown.\n\n_+3:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _20 turn_ cooldown.
 actors.hero.talent.farsight.title=farsight
-actors.hero.talent.farsight.desc=_+1:_ The GreyThroat's vision range is _increased by 30%_.\n\n_+2:_ The GreyThroat's vision range is _increased by 60%_.\n\n_+3:_ The GreyThroat's vision range is _increased by 90%_.
+actors.hero.talent.farsight.desc=_+1:_ The GreyThroat's vision range is _increased by 30%_. Also thrown weapon at has _+85% accuarcy_ instead of +75% \n\n_+2:_ The GreyThroat's vision range is _increased by 60%_.\n\n_+3:_ The GreyThroat's vision range is _increased by 90%_.
 actors.hero.talent.shared_enchantment.title=shared enchantment
 actors.hero.talent.shared_enchantment.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow.\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
 actors.hero.talent.shared_upgrades.title=shared upgrades

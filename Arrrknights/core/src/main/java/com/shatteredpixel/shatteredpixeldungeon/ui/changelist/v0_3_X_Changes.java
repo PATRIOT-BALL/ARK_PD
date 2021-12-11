@@ -92,6 +92,9 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 하향",
                 "_이세계 전술장비_ : 충전 속도가 감소했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 하향",
+                "_사격 전문화_ 의 _천리안_ 특성의 명중률 보너스가 100-150%에서 _85-105%_로 감소했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
                 "_황제의 칼날_ : 공격력이 38-50에서 _38-45_로, 아츠 공격 피해량이 8-12에서 _4-10_으로 감소했습니다. 또한, 피해 경감 효과가 약화되었습니다."));
     }

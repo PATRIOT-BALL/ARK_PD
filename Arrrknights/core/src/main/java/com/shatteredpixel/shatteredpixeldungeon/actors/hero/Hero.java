@@ -555,7 +555,7 @@ public class Hero extends Char {
                 accuracy *= (0.5f + 0.15f * pointsInTalent(Talent.DURABLE_TIPS));
             } else {
                 if (this.subClass == HeroSubClass.SNIPER)
-                    accuracy *= 1.75f + (pointsInTalent(Talent.FARSIGHT) * 0.25f);
+                    accuracy *= 1.75f + (pointsInTalent(Talent.FARSIGHT) * 0.1f);
                 else accuracy *= 1.5f;
             }
         }
