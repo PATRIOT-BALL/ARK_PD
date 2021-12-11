@@ -33,12 +33,7 @@ public class AjimuSprite extends MobSprite {
 	public AjimuSprite() {
 		super();
 
-		final Calendar calendar = Calendar.getInstance();
-		//once a year the rat king feels a bit festive!
-		festive = (calendar.get(Calendar.MONTH) == Calendar.DECEMBER
-				&& calendar.get(Calendar.WEEK_OF_MONTH) > 2);
-
-		final int c = festive ? 8 : 0;
+		final int c = 0;
 		
 		texture( Assets.Sprites.AJIMU );
 		
