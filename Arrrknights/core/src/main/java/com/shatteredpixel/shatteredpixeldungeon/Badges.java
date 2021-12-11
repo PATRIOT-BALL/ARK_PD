@@ -222,8 +222,8 @@ public class Badges {
 		SKIN_JESSI(166, false, true),
 		SKIN_LEAF(167, false, true),
 		//SKIN_MUDROCK(168, false, true),
-		SKIN_SPECTER(169, false, true),
 		SKIN_ASTESIA(170, false, true),
+		SKIN_SPECTER(169, false, true),
 
 		//기타
 		SUPPORT;
