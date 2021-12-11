@@ -247,7 +247,8 @@ public class SpiritBow extends Weapon {
 	public float speedFactor(Char owner) {
 		if (sniperSpecial){
 			switch (augment){
-				case NONE: default:
+				case NONE:
+				case OVERLOAD: default:
 					return 0f;
 				case SPEED:
 					return 1f * RingOfFuror.attackDelayMultiplier(owner);
@@ -258,7 +259,7 @@ public class SpiritBow extends Weapon {
 			return super.speedFactor(owner);
 		}
 	}
-	
+
 	@Override
 	public int level() {
 		return (Dungeon.hero == null ? 0 : Dungeon.hero.lvl/5) + (curseInfusionBonus ? 1 : 0);
@@ -269,34 +270,34 @@ public class SpiritBow extends Weapon {
 		//level isn't affected by buffs/debuffs
 		return level();
 	}
-	
+
 	@Override
 	public boolean isUpgradable() {
 		return false;
 	}
-	
+
 	public SpiritArrow knockArrow(){
 		return new SpiritArrow();
 	}
-	
+
 	public class SpiritArrow extends MissileWeapon {
-		
+
 		{
 			image = ItemSpriteSheet.SPIRIT_ARROW;
 
 			hitSound = Assets.Sounds.HIT_ARROW;
 		}
-		
+
 		@Override
 		public int damageRoll(Char owner) {
 			return SpiritBow.this.damageRoll(owner);
 		}
-		
+
 		@Override
 		public boolean hasEnchant(Class<? extends Enchantment> type, Char owner) {
 			return SpiritBow.this.hasEnchant(type, owner);
 		}
-		
+
 		@Override
 		public int proc(Char attacker, Char defender, int damage) {
 			if (Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.POINT_BLANK)) {
@@ -332,18 +333,20 @@ public class SpiritBow extends Weapon {
 			}
 			return SpiritBow.this.proc(attacker, defender, damage);
 		}
-		
+
 		@Override
 		public float speedFactor(Char user) {
 			return SpiritBow.this.speedFactor(user);
 		}
-		
+
 		@Override
 		public float accuracyFactor(Char owner) {
+			float accFactor = super.accuracyFactor(owner);
 			if (sniperSpecial && SpiritBow.this.augment == Augment.DAMAGE){
 				return Float.POSITIVE_INFINITY;
 			} else {
-				return super.accuracyFactor(owner);
+				if (SpiritBow.this.augment == Augment.OVERLOAD) accFactor = 0.65f;
+				return accFactor;
 			}
 		}
 		
