@@ -565,7 +565,7 @@ actors.hero.talent.arts_focus.desc=_+1:_ 그레이스롯이 쇠뇌를 바닥에 
 actors.hero.talent.seer_shot.title=속박 화살
 actors.hero.talent.seer_shot.desc=_+1:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역의 대상들을 3 턴간 속박합니다. _60턴_ 의 재사용 대기시간을 가집니다.\n\n_+2:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역의 대상들을 3 턴간 속박합니다. _40턴_ 의 재사용 대기시간을 가집니다.\n\n_+3:_ 그레이스롯이 쇠뇌를 바닥에 쏘면 착탄 지점을 중심으로 3x3 지역의 대상들을 3 턴간 속박합니다. _20턴_ 의 재사용 대기시간을 가집니다.
 actors.hero.talent.farsight.title=천리안
-actors.hero.talent.farsight.desc=_+1:_ 그레이스롯의 시야 범위가 _30%_ 만큼 증가합니다. 투척 무기의 원거리 명중률이 +75%에서 _+100%_ 로 상승합니다.\n\n_+2:_ 그레이스롯의 시야 범위가 _60%_ 만큼 증가합니다. 투척 무기의 원거리 명중률이 +75%에서 _+125%_ 로 상승합니다.\n\n_+3:_ 그레이스롯의 시야 범위가 _90%_ 만큼 증가합니다. 투척 무기의 원거리 명중률이 +75%에서 _+150%_ 로 상승합니다.
+actors.hero.talent.farsight.desc=_+1:_ 그레이스롯의 시야 범위가 _30%_ 만큼 증가합니다. 투척 무기의 원거리 명중률이 +75%에서 _+85%_ 로 상승합니다.\n\n_+2:_ 그레이스롯의 시야 범위가 _60%_ 만큼 증가합니다. 투척 무기의 원거리 명중률이 +75%에서 _+95%_ 로 상승합니다.\n\n_+3:_ 그레이스롯의 시야 범위가 _90%_ 만큼 증가합니다. 투척 무기의 원거리 명중률이 +75%에서 _+105%_ 로 상승합니다.
 actors.hero.talent.sharpshooter.title=명사수
 actors.hero.talent.sharpshooter.desc=_+1:_  _33% 확률_ 로 그레이스롯의 투척 무기에 쇠뇌에 부여된 아츠가 적용됩니다. 사격 무기에 부착물이 있다면 사격 명중률이 _20%_ 증가합니다.\n\n_+2:_ _67% 확률_ 로 그레이스롯의 투척 무기에 쇠뇌에 부여된 아츠가 적용됩니다. 사격 무기에 부착물이 있다면 사격 명중률이 _40%_ 증가합니다.\n\n_+3:_ _100% 확률_ 로 그레이스롯의 투척 무기에 쇠뇌에 부여된 아츠가 적용됩니다. 사격 무기에 부착물이 있다면 사격 명중률이 _60%_ 증가합니다.\n\n아츠가 부여된 발리스타로 발사한 다트에는 이미 쇠뇌의 아츠가 적용되므로 이 특성이 적용되지 않습니다.
 actors.hero.talent.shared_upgrades.title=강화 공유
@@ -973,6 +973,12 @@ actors.mobs.npcs.weedy.say=죄송합니다. 여기 앞은 공사중이에요.
 
 actors.mobs.npcs.firewall.name=방화벽
 actors.mobs.npcs.firewall.desc=출입하려면 상급 권한이 필요할 것 같다. 독타를 구출해오자.
+
+actors.mobs.npcs.npc_pilot.name=조종사
+actors.mobs.npcs.npc_pilot.desc=당신을 어디론가 데려다줄 것이다.\n31층 이후의 추가 챕터를 진행할 수 있습니다. 이동하면 되돌아올 수 없습니다.
+actors.mobs.npcs.npc_pilot$wndpilot.siesta=목적지는 _시에스타_ 입니다. 큰 일을 해냈으니 휴가를 떠나야죠! 출발하시겠습니까?
+actors.mobs.npcs.npc_pilot$wndpilot.gavial=목적지는 _사르곤_ 입니다. 가비알 씨의 고향이 있는 곳입니다. 출발하시겠습니까?
+actors.mobs.npcs.npc_pilot$wndpilot.move=출발
 
 //summon, fail은 1-8대사
 //배틀크라이 0-10

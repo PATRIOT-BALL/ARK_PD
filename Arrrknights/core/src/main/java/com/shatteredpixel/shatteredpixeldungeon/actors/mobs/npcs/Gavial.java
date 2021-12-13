@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel4;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -31,7 +32,7 @@ public class Gavial extends NPC {
         return true;
     }
 
-    public static void spawn(RhodesLevel4 level, int ppos) {
+    public static void spawn(Level level, int ppos) {
         Gavial perro = new Gavial();
         do {
             perro.pos = ppos;

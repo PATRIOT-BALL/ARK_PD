@@ -17,6 +17,7 @@ windows.wnddocument.missing=page missing
 windows.wnderror.title=Error
 
 windows.wndgame.settings=Setting
+windows.wndgame.skin=Hero Skin
 windows.wndgame.install=Install the game
 windows.wndgame.challenges=Challenge
 windows.wndgame.rankings=Ranking
@@ -150,6 +151,12 @@ windows.wndsadghost.farewell=See you later. Please be careful!
 
 windows.wndceylon.message=thank you. What I can give you is... Oh, how about this one?
 windows.wndceylon.reward=Get Item
+
+windows.wndpilot.siesta_name=Surging Flame
+windows.wndpilot.gavial_name=Gavial Returns
+windows.wndpilot.siesta=he Obsidian Festival is in full swing in the town of Siesta! The Operators of Rhodes Island have come for a vacation as well. Not before long, they learned that the eruption of a nearby volcano is imminent! But it seems the town's government is trying to cover it up?! In the midst of summer, heat, music and battle, Rhodes Island will set out with the mayor's daughter, Ceylon.\n\nWill they manage to save the day?
+windows.wndpilot.gavial=Set in the remote, tropical district of Acahualla, Sargon, Gavial the Great Chief Returns focuses on the titular Operator's return to her homeland where she reunited with her old friends Zumama and Tomimi. But things would begin to get worse, or even funnier, as she was taking part in a tribal ceremony where she was appointed to become a candidate for the next Great Chief. Welcome to the jungle, Doctor!
+windows.wndpilot.move=Let`s Go!
 
 windows.wndsettings$displaytab.title=Display Settings
 windows.wndsettings$displaytab.scale=Display Scale
