@@ -33,11 +33,11 @@ public class SeabornSprite extends MobSprite {
 
         TextureFilm frames = new TextureFilm( texture, 48, 32 );
 
-        idle = new Animation( 2, true );
-        idle.frames( frames, 0, 0, 0 );
+        idle = new Animation( 10, true );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5 );
 
-        run = new Animation( 10, true );
-        run.frames( frames, 0 );
+        run = new Animation( 12, true );
+        run.frames( frames, 0, 1, 2, 3, 4, 5 );
 
         attack = new Animation( 15, false );
         attack.frames( frames, 0 );
