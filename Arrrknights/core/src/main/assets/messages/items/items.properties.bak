@@ -1332,6 +1332,9 @@ items.quest.nullshield.fail_weapon=장비를 해제해주세요.
 items.quest.rose.name=꽃 한송이
 items.quest.rose.desc=누군가를 위한 꽃 한송이.
 
+items.quest.rose.name=꽃 한송이
+items.quest.rose.desc=누군가를 위한 꽃 한송이.
+
 // 딸루 히든보스용
 items.quest.token1.name="증오"
 items.quest.token1.desc="발도의 기술, 부숴야 할 땐 부숴야 하느니."
@@ -2246,7 +2249,7 @@ items.weapon.melee.longsword.fizzles=SP가 부족합니다.
 items.weapon.melee.mace.name=테르밋 블레이드
 items.weapon.melee.mace.stats_desc=명중률 +28%\n_고정 피해(방어 무시)_
 items.weapon.melee.mace.desc=2500도까지 달아오르는 고열로 대상을 관통하는 레이피어. 이글거리는 테르밋 블레이드가 뚫을 수 없는 방어는 존재하지 않는다.
-items.weapon.melee.mace.setbouns=_아이템 시너지 : 프란7ㅏ와 과학적 아츠_\n무기에 부여된 아츠 부여가 발동할 확률이 3배가 됩니다.
+items.weapon.melee.mace.setbouns=_아이템 시너지 : 프란7ㅏ와 과학적 아츠부여_\n무기에 부여된 아츠 부여가 발동할 확률이 3배가 됩니다.
 
 items.weapon.melee.magesstaff.name=흑요석 반지
 items.weapon.melee.magesstaff.ac_imbue=융합한다

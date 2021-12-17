@@ -1,11 +1,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blackperro;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Gavial;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_PhantomShadow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Pilot;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.watabou.noosa.Group;
@@ -71,13 +73,25 @@ public class NewRhodesLevel4 extends Level {
 
         Painter.fill(this, 23, 10, 7, 3, Terrain.AVOID);
 
-        Painter.fill(this, 1, 10, 3, 8, Terrain.ENTRANCE);
+        Painter.fill(this, 41, 8, 11, 3, Terrain.ENTRANCE);
+
 
         map[802] = Terrain.AVOID;
         map[679] = Terrain.AVOID;
         map[744] = Terrain.EMPTY;
 
-        entrance = 916;
+        map[687] = Terrain.AVOID;
+        map[752] = Terrain.AVOID;
+
+        map[863] = Terrain.AVOID;
+        map[864] = Terrain.AVOID;
+        map[865] = Terrain.AVOID;
+        map[927] = Terrain.AVOID;
+        map[928] = Terrain.AVOID;
+        map[929] = Terrain.AVOID;
+        map[930] = Terrain.AVOID;
+
+        entrance = 695;
         exit = 870;
 
         feeling = Feeling.NONE;
@@ -101,6 +115,10 @@ public class NewRhodesLevel4 extends Level {
     protected void createItems () {
         Gavial.spawn(this,748);
         NPC_Pilot.spawn(this, 870);
+
+        if (Dungeon.QuestCatPoint == 2 && !NPC_PhantomShadow.Clear) {
+            NPC_PhantomShadow.spawn(this, 2);
+        }
     }
 
     @Override

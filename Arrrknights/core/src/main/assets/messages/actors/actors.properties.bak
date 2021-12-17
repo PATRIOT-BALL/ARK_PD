@@ -976,9 +976,10 @@ actors.mobs.npcs.firewall.desc=출입하려면 상급 권한이 필요할 것 �
 
 actors.mobs.npcs.npc_pilot.name=조종사
 actors.mobs.npcs.npc_pilot.desc=당신을 어디론가 데려다줄 것이다.\n31층 이후의 추가 챕터를 진행할 수 있습니다. 이동하면 되돌아올 수 없습니다.
-actors.mobs.npcs.npc_pilot$wndpilot.siesta=목적지는 _시에스타_ 입니다. 큰 일을 해냈으니 휴가를 떠나야죠! 출발하시겠습니까?
-actors.mobs.npcs.npc_pilot$wndpilot.gavial=목적지는 _사르곤_ 입니다. 가비알 씨의 고향이 있는 곳입니다. 출발하시겠습니까?
-actors.mobs.npcs.npc_pilot$wndpilot.move=출발
+
+actors.mobs.npcs.npc_phantom.name=팬텀
+actors.mobs.npcs.npc_phantom.desc=와! 로그라이크 주인공!\n\n_퀘스트가 있는 NPC입니다._
+actors.mobs.npcs.npc_phantom.result=아아, 미스 크리스틴. 그녀는 네가 마음에 들었나보군. 그녀를 보호해준 것에 감사한다. 이걸 사례로 주도록하지.
 
 //summon, fail은 1-8대사
 //배틀크라이 0-10

@@ -1,17 +1,21 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blackperro;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Dobermann;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Dummy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Firewall;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.FrostLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Jessica;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Phantom;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_PhantomShadow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Weedy;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.watabou.noosa.Group;
@@ -95,7 +99,39 @@ public class NewRhodesLevel2 extends Level {
         // 복도 A3
         Painter.fill(this, 2, 58, 33, 3, Terrain.EMPTY);
         Painter.fill(this, 2, 58, 1, 3, Terrain.ENTRANCE);
-        Painter.fill(this, 25, 58, 1, 3, Terrain.AVOID);
+
+        // 숙소 구역 B1-왼쪽 부분 (복도 포함)
+        Painter.fill(this, 2, 43, 26, 6, Terrain.EMPTY);
+        Painter.fill(this, 2, 46, 26, 1, Terrain.AVOID);
+        Painter.fill(this, 20, 42, 6, 4, Terrain.WALL);
+
+        // 숙소 B1구역-세부
+        Painter.fill(this, 2, 42, 3, 4, Terrain.AVOID);
+        map[2861] = Terrain.EMPTY;
+        map[3063] = Terrain.EMPTY;
+        map[3064] = Terrain.EMPTY;
+        map[3066] = Terrain.AVOID;
+        map[3131] = Terrain.EMPTY;
+
+        Painter.fill(this, 8, 42, 3, 4, Terrain.AVOID);
+        map[2867] = Terrain.EMPTY;
+        map[3069] = Terrain.EMPTY;
+        map[3070] = Terrain.EMPTY;
+        map[3072] = Terrain.AVOID;
+        map[3137] = Terrain.EMPTY;
+
+        Painter.fill(this, 14, 42, 3, 4, Terrain.AVOID);
+        map[2873] = Terrain.EMPTY;
+        map[3075] = Terrain.EMPTY;
+        map[3076] = Terrain.EMPTY;
+        map[3078] = Terrain.AVOID;
+        map[3143] = Terrain.EMPTY;
+
+        // A->B 계단 구역
+        Painter.fill(this, 26, 48, 2, 11, Terrain.EMPTY);
+
+        // 맵 경계선. 못나가도록 막음
+        Painter.fill(this, 28, 42, 1, 19, Terrain.WALL);
         map[4164] = Terrain.EMPTY;
 
         entrance = 4015;
@@ -132,6 +168,11 @@ public class NewRhodesLevel2 extends Level {
         Jessica.spawn(this, 4295);
         Dobermann.spawn(this, 4298);
         FrostLeaf.spawn(this, 4305);
+        NPC_Phantom.spawn(this, 3010);
+
+        if (Dungeon.QuestCatPoint == 0 && !NPC_PhantomShadow.Clear) {
+            NPC_PhantomShadow.spawn(this, 0);
+        }
     }
 
     @Override

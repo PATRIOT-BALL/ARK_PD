@@ -971,6 +971,13 @@ actors.mobs.npcs.weedy.say=Sorry. It's under construction.
 actors.mobs.npcs.firewall.name=fire wall
 actors.mobs.npcs.firewall.desc=It looks like you need higher privileges. Let's rescue Dr.
 
+actors.mobs.npcs.npc_pilot.name=pilot
+actors.mobs.npcs.npc_pilot.desc=You can advance through additional chapters by talking to he. Be careful as you can't go back once you go.
+
+actors.mobs.npcs.npc_phantom.name=phantom
+actors.mobs.npcs.npc_phantom.desc=it is there and it is here\n\n_NPCs with Quests_
+actors.mobs.npcs.npc_phantom.result=Ahhh. Ms. Christine. your for bringing her, I give this as.
+
 
 
 

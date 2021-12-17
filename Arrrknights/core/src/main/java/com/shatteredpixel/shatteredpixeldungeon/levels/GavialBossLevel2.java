@@ -34,24 +34,6 @@ public class GavialBossLevel2 extends Level {
     @Override
     public void create() {
         super.create();
-        for (int i=0; i < length(); i++) {
-            int flags = Terrain.flags[map[i]];
-            if ((flags & Terrain.PIT) != 0){
-                passable[i] = avoid[i] = false;
-                solid[i] = true;
-            }
-        }
-        for (int i = (height-ROOM_TOP+2)*width; i < length; i++){
-            passable[i] = avoid[i] = false;
-            solid[i] = true;
-        }
-        for (int i = (height-ROOM_TOP+1)*width; i < length; i++){
-            if (i % width < 4 || i % width > 12 || i >= (length-width)){
-                discoverable[i] = false;
-            } else {
-                visited[i] = true;
-            }
-        }
     }
 
     private static final int ROOM_TOP = 12;
@@ -59,15 +41,15 @@ public class GavialBossLevel2 extends Level {
     @Override
     protected boolean build() {
 
-        setSize(15, 21);
+        setSize(15, 11);
         Arrays.fill( map, Terrain.EMPTY );
 
         final int MID = width/2;
 
         Painter.fill( this, 0, 0, 15, 1, Terrain.WALL);
-        Painter.fill( this, 0, 9, 15, 12, Terrain.WALL);
-        Painter.fill( this, 0, 0, 1, 21, Terrain.WALL);
-        Painter.fill( this, 14, 0, 1, 21, Terrain.WALL);
+        Painter.fill( this, 0, 10, 15, 1, Terrain.WALL);
+        Painter.fill( this, 0, 0, 1, 11, Terrain.WALL);
+        Painter.fill( this, 14, 0, 1, 11, Terrain.WALL);
 
         Painter.fill( this, 1, 2, 1, 6, Terrain.STATUE);
         Painter.fill( this, 2, 3, 1, 4, Terrain.STATUE);
@@ -157,23 +139,5 @@ public class GavialBossLevel2 extends Level {
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        for (int i=0; i < length(); i++) {
-            int flags = Terrain.flags[map[i]];
-            if ((flags & Terrain.PIT) != 0){
-                passable[i] = avoid[i] = false;
-                solid[i] = true;
-            }
-        }
-        for (int i = (height-ROOM_TOP+2)*width; i < length; i++){
-            passable[i] = avoid[i] = false;
-            solid[i] = true;
-        }
-        for (int i = (height-ROOM_TOP+1)*width; i < length; i++){
-            if (i % width < 4 || i % width > 12 || i >= (length-width)){
-                discoverable[i] = false;
-            } else {
-                visited[i] = true;
-            }
-        }
     }
 }

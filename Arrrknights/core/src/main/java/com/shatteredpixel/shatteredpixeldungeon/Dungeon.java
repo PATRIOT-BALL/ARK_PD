@@ -43,6 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
@@ -197,6 +198,8 @@ public class Dungeon {
 
 	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
 	public static boolean killcat; // 엔딩 씬에서 켈시 하극상 출현용.
+
+	public static int QuestCatPoint; // 0~8의 값. 0~2는 28층, 3~5는 29층, 6~8은 30층스폰입니다.
 	
 	public static HashSet<Integer> chapters;
 
@@ -256,6 +259,8 @@ public class Dungeon {
 		killcat = false;
 		extrastage_Gavial = false;
 		Jessica.QuestClear = false;
+
+		QuestCatPoint = Random.Int(2);
 
 		droppedItems = new SparseArray<>();
 		portedItems = new SparseArray<>();
@@ -574,6 +579,7 @@ public class Dungeon {
 	private static final String TALU    = "talucount";
 	private static final String SIEBOSS1    = "siesta1_bosspower";
 	private static final String GAVIAL    = "extrastage_Gavial";
+	private static final String CATQUEST    = "QuestCatPoint";
 
 
 	public static void saveGame(int save ) {
@@ -600,8 +606,9 @@ public class Dungeon {
 			bundle.put (END_CAT, killcat);
 			bundle.put (TALU, talucount);
 			bundle.put (SIEBOSS1, siesta1_bosspower);
-
 			bundle.put (GAVIAL, extrastage_Gavial);
+
+			bundle.put (CATQUEST, QuestCatPoint);
 
 
 			for (int d : droppedItems.keyArray()) {
@@ -768,8 +775,9 @@ public class Dungeon {
 		killcat = bundle.getBoolean(END_CAT);
 		talucount = bundle.getInt(TALU);
 		siesta1_bosspower = bundle.getInt(SIEBOSS1);
-
 		extrastage_Gavial = bundle.getBoolean(GAVIAL);
+
+		QuestCatPoint = bundle.getInt(CATQUEST);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );

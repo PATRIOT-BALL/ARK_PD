@@ -4,9 +4,9 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blackperro;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.GreenCat;
-import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_PhantomShadow;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.watabou.noosa.Group;
@@ -116,6 +116,10 @@ public class NewRhodesLevel3 extends Level {
         //   if (Dungeon.hero.belongings.getItem(Amulet.class) == null) GreenCat.spawn(this, exit);
         //   SkinModel.spawn(this, 255);
         GreenCat.spawn(this, 162);
+
+        if (Dungeon.QuestCatPoint == 1 && !NPC_PhantomShadow.Clear) {
+            NPC_PhantomShadow.spawn(this, 1);
+        }
     }
 
     @Override
