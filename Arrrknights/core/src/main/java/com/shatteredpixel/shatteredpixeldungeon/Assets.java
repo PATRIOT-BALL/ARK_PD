@@ -252,6 +252,7 @@ public class Assets {
 		public static final String HIT_SPLASH       = "sounds/hit_splash.mp3";
 		public static final String HIT_GLUTONY       = "sounds/hit_glutony.mp3";
 		public static final String HIT_STRIKE       = "sounds/hit_strike.mp3";
+		public static final String HIT_DUSK       = "sounds/hit_dusk.mp3";
 		public static final String CHAINS2   = "sounds/chains2.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
@@ -275,7 +276,7 @@ public class Assets {
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
 				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY, HIT_SWORD, HIT_DUALSTRIKE,
-				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK, HIT_SPLASH,
+				HIT_ARROW, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK, HIT_SPLASH, HIT_DUSK,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, ZAP_GUN, LIGHTNING, LEVELUP, DEATH,
 				CHALLENGE, CURSED, TRAP, EVOKE, TOMB, ALERT, MELD, BOSS, BLAST, PLANT, RAY, BEACON,
@@ -439,6 +440,9 @@ public class Assets {
 		public static final String NPC_JESSI	= "sprites/npc_jessi.png";
 		public static final String NPC_FROST	= "sprites/npc_frost.png";
 		public static final String NPC_DUMMY	= "sprites/dummy.png";
+		public static final String NPC_PILOT	= "sprites/pilot.png";
+		public static final String NPC_PHANTOM	= "sprites/phantom.png";
+		public static final String NPC_GAVIAL	= "sprites/gavial.png";
 
 		public static final String SARKAZ_SENTINEL	= "sprites/Sarkaz_Sentinel.png";
 		public static final String SARKAZ_CENTURION	= "sprites/Sarkaz_Centurion.png";

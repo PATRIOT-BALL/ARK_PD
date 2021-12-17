@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DobermannSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Dobermann_shadowSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_PilotSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
@@ -26,7 +27,7 @@ import com.watabou.utils.Callback;
 
 public class NPC_Pilot extends NPC {
     {
-        spriteClass = DobermannSprite.class;
+        spriteClass = NPC_PilotSprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
     }

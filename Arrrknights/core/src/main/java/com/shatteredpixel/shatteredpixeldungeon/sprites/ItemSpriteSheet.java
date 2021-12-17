@@ -841,7 +841,8 @@ public class ItemSpriteSheet {
 	public static final int OBSIDIAN   = QUEST+16;
 	public static final int TEA   = QUEST+17;
 	public static final int KETTLE   = QUEST+18;
-	public static final int WALKIE   = QUEST+19;
+	public static final int CAT   = QUEST+19;
+	public static final int WALKIE   = QUEST+20;
 	static{
 		assignItemRect(SKULL,   16, 16);
 		assignItemRect(DUST,    16, 16);
@@ -862,6 +863,7 @@ public class ItemSpriteSheet {
 		assignItemRect(OBSIDIAN,    16, 16);
 		assignItemRect(TEA,    16, 16);
 		assignItemRect(KETTLE,    16, 16);
+		assignItemRect(CAT,    16, 16);
 		assignItemRect(WALKIE,    16, 16);
 	}
 

@@ -25,7 +25,7 @@ import com.watabou.utils.Random;
 public class ImageoverForm extends MeleeWeapon {
     {
         image = ItemSpriteSheet.DUSK;
-        hitSound = Assets.Sounds.HIT_SLASH;
+        hitSound = Assets.Sounds.HIT_DUSK;
         hitSoundPitch = 1f;
 
         tier = 5;
