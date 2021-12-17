@@ -33,14 +33,14 @@ public class MephistoSprite extends MobSprite {
 		
 		TextureFilm frames = new TextureFilm( texture, 32, 32 );
 		
-		idle = new Animation( 12, true );
-		idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
+		idle = new Animation( 8, true );
+		idle.frames( frames, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 5, 6, 4 );
 		
 		run = new Animation( 15, true );
 		run.frames( frames, 0 );
 		
-		attack = new Animation( 15, false );
-		attack.frames( frames, 0 );
+		attack = new Animation( 17, false );
+		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8 );
 		
 		die = new Animation( 8, false );
 		die.frames( frames, 0 );
