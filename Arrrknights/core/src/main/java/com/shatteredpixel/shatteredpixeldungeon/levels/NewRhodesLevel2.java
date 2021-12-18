@@ -162,7 +162,7 @@ public class NewRhodesLevel2 extends Level {
         Closure.spawn(this, 3682);
         SkinModel.spawn(this, 3751);
         Firewall.spawn(this, 3882);
-        Weedy.spawn(this, 3968);
+        Weedy.spawn(this, 3971);
         Dummy.spawn(this, 4286);
         Dummy.spawn(this, 4354);
         Jessica.spawn(this, 4295);
