@@ -69,8 +69,8 @@ public class NPC_Phantom extends NPC {
         else result1 = new ForceCatalyst();
 
         Item result2;
-        if (Dungeon.QuestCatPoint == 0) result2 = new Recycle();
-        else result2 = new PhaseShift().quantity(2);
+        if (Dungeon.QuestCatPoint == 0) result2 = new Recycle().quantity(2);
+        else result2 = new PhaseShift().quantity(3);
 
         if (result1.doPickUp( Dungeon.hero )) {
             GLog.i( Messages.get(Dungeon.hero, "you_now_have", result1.name()) );
