@@ -944,6 +944,7 @@ actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria Nation
 actors.mobs.npcs.gavial.name=gavial
 actors.mobs.npcs.gavial.desc=Talking to her will take you through the Gavial extra chapter.
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
+actors.mobs.npcs.gavial.dummy=I got a letter from my hometown.
 
 actors.mobs.npcs.dummy.name=DUMMY
 actors.mobs.npcs.dummy.desc=KOKODAYO
@@ -977,6 +978,9 @@ actors.mobs.npcs.npc_pilot.desc=You can advance through additional chapters by t
 actors.mobs.npcs.npc_phantom.name=phantom
 actors.mobs.npcs.npc_phantom.desc=it is there and it is here\n\n_NPCs with Quests_
 actors.mobs.npcs.npc_phantom.result=Ahhh. Ms. Christine. your for bringing her, I give this as.
+
+actors.mobs.npcs.npc_phantomshadow.name=phantom?
+actors.mobs.npcs.npc_phantomshadow.desc=Meow
 
 
 

@@ -945,6 +945,7 @@ actors.mobs.npcs.ace_battle.battlecry=네 생각대로 되진 않을 거다!
 actors.mobs.npcs.gavial.name=가비알
 actors.mobs.npcs.gavial.desc=로도스 아일랜드의 메딕 오퍼레이터.\n\n그녀에게 말을 걸면 추가 챕터가 _대족장의 귀환_ 로 변경됩니다.
 actors.mobs.npcs.gavial.ok=좋아, 나랑 같이 가겠다는거지?
+actors.mobs.npcs.gavial.dummy=고향에서 편지가 왔어. 어떤 일인지는 모르겠네.
 
 actors.mobs.npcs.dummy.name=훈련인형
 actors.mobs.npcs.dummy.desc=KOKODAYO
@@ -980,6 +981,9 @@ actors.mobs.npcs.npc_pilot.desc=당신을 어디론가 데려다줄 것이다.\n
 actors.mobs.npcs.npc_phantom.name=팬텀
 actors.mobs.npcs.npc_phantom.desc=와! 로그라이크 주인공!\n\n_퀘스트가 있는 NPC입니다._
 actors.mobs.npcs.npc_phantom.result=아아, 미스 크리스틴. 그녀는 네가 마음에 들었나보군. 그녀를 보호해준 것에 감사한다. 이걸 사례로 주도록하지.
+
+actors.mobs.npcs.npc_phantomshadow.name=팬텀?
+actors.mobs.npcs.npc_phantomshadow.desc=야옹
 
 //summon, fail은 1-8대사
 //배틀크라이 0-10
