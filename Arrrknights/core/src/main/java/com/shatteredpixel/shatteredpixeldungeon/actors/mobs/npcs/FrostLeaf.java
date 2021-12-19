@@ -27,7 +27,7 @@ public class FrostLeaf extends NPC {
         properties.add(Property.NPC);
     }
 
-    public static boolean QuestClear = false;
+    public static boolean QuestClear;
     private boolean firstrun = false;
 
     @Override
@@ -94,19 +94,5 @@ public class FrostLeaf extends NPC {
             usa.pos = ppos;
         } while (usa.pos == -1);
         level.mobs.add(usa);
-    }
-
-    private static final String QUEST = "QuestClear";
-
-    @Override
-    public void storeInBundle( Bundle bundle ) {
-        super.storeInBundle( bundle );
-        bundle.put( QUEST, QuestClear );
-    }
-
-    @Override
-    public void restoreFromBundle( Bundle bundle ) {
-        super.restoreFromBundle( bundle );
-        QuestClear = bundle.getBoolean( QUEST );
     }
 }

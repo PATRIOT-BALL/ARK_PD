@@ -18,7 +18,7 @@ public class DP27 extends GunWeapon {
 
         FIREACC = 1.5f;
         FIRETICK = 1f;
-        bulletCap = 25;
+        bulletCap = 30;
 
         usesTargeting = true;
 

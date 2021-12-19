@@ -50,7 +50,7 @@ public class R4C extends GunWeapon {
 
         FIREACC = 1.5f;
         FIRETICK = 0.8f;
-        bulletCap = 22;
+        bulletCap = 30;
 
         usesTargeting = true;
 

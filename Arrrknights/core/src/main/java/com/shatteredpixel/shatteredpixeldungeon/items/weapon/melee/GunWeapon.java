@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
@@ -279,6 +280,9 @@ public class GunWeapon extends MeleeWeapon {
                 Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
 
                 if (spshot) SPShot(ch);
+                if (this instanceof C1_9mm) {
+                    if (Random.Int(8) == 0) Buff.affect(ch, Chill.class, 2f);
+                }
 
                 ch.sprite.burst(0xFFFFFFFF, buffedLvl() / 2 + 2);
 

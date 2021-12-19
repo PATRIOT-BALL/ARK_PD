@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Awareness;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Frost;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RevealedArea;
@@ -33,9 +34,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Blacksmith;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ceylon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.FrostLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ghost;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Jessica;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Phantom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Wandmaker;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
@@ -258,7 +261,10 @@ public class Dungeon {
 		isPray = false;
 		killcat = false;
 		extrastage_Gavial = false;
+
 		Jessica.QuestClear = false;
+		NPC_Phantom.QuestClear = false;
+		FrostLeaf.QuestClear = false;
 
 		QuestCatPoint = Random.Int(2);
 
@@ -580,6 +586,9 @@ public class Dungeon {
 	private static final String SIEBOSS1    = "siesta1_bosspower";
 	private static final String GAVIAL    = "extrastage_Gavial";
 	private static final String CATQUEST    = "QuestCatPoint";
+	private static final String PHANTOM_QUESTCLEAR    = "NPC_Phantom.QuestClear";
+	private static final String JESI_QUESTCLEAR    = "Jessica.QuestClear";
+	private static final String LEAF_QUESTCLEAR    = "FrostLeaf.QuestClear";
 
 
 	public static void saveGame(int save ) {
@@ -607,6 +616,10 @@ public class Dungeon {
 			bundle.put (TALU, talucount);
 			bundle.put (SIEBOSS1, siesta1_bosspower);
 			bundle.put (GAVIAL, extrastage_Gavial);
+
+			bundle.put (PHANTOM_QUESTCLEAR, NPC_Phantom.QuestClear);
+			bundle.put (JESI_QUESTCLEAR, Jessica.QuestClear);
+			bundle.put (LEAF_QUESTCLEAR, FrostLeaf.QuestClear);
 
 			bundle.put (CATQUEST, QuestCatPoint);
 
@@ -778,6 +791,10 @@ public class Dungeon {
 		extrastage_Gavial = bundle.getBoolean(GAVIAL);
 
 		QuestCatPoint = bundle.getInt(CATQUEST);
+
+		NPC_Phantom.QuestClear = bundle.getBoolean(PHANTOM_QUESTCLEAR);
+		Jessica.QuestClear = bundle.getBoolean(JESI_QUESTCLEAR);
+		FrostLeaf.QuestClear = bundle.getBoolean(LEAF_QUESTCLEAR);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );
