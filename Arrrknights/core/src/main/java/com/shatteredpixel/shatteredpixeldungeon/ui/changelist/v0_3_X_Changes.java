@@ -33,14 +33,16 @@ public class v0_3_X_Changes {
                         "_훈제 계란_ : 훈제 계란 맛있지 나도 좋아해" + "\n\n" +
                 "사격 무기에 장착가능한 _총기 부착물_이 추가되었습니다. 부착물은 상점에서 판매합니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 증강",
-                "무기 증강 효과에 _과부하_ 증강이 추가되었씁니다. 공격속도와 공격력이 증가하지만 명중률이 감소합니다."));
-
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 시너지 2종 추가",
-                "_고속절단 / 프란7ㅏ와 과학적 아츠부여_"));
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "새로운 증강 및 아이템 시너지",
+                "무기 증강 효과에 _과부하_ 증강이 추가되었습니다. 공격속도와 공격력이 증가하지만 명중률이 감소합니다." + "\n\n" +
+                "새로운 시너지 : _고속절단 / 프란7ㅏ와 과학적 아츠부여_"));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "새로운 스킬",
                 "_영혼 착취 (1스킬)_ : 다음 공격으로 입힌 피해에 비례해 보호막을 얻습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEWS), "로도스 아일랜드 업데이트",
+                "새로운 퀘스트 NPC _팬텀_ 이 추가되었습니다." + "\n\n" +
+                "30층 NPC _가비알_이 추가되었으며, 30층에 커스텀 타일이 적용되었습니다. 가비알은 현재는 아무런 역할도 하지않습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -70,7 +72,7 @@ public class v0_3_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_살라스의 칼날_ : 공격력이 4-16에서 _4-18_로 상승했습니다." + "\n\n" +
                         "_불꽃의 카타나_ : 해방 후 공격력이 4-20에서 _4-23_으로 상승했습니다." + "\n\n" +
-                        "_사격 무기_ : 근접 공격력이 전체적으로 상승했습니다."));
+                        "_사격 무기_ : 근접 공격력과 장탄수가 전체적으로 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "특성 상향",
                 "_사격 전문화_ 의 아츠부여 공유 특성이 _명사수_ 로 바뀌었으며, 부착물이 붙어있는 사격 무기의 명중률이 20~60% 증가하는 효과가 추가되었습니다."));

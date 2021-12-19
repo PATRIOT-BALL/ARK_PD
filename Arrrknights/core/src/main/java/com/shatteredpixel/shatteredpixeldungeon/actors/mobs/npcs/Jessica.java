@@ -34,7 +34,7 @@ public class Jessica extends NPC {
         properties.add(Property.NPC);
    }
 
-   public static boolean AnotherQuest_Jees = false;
+   public static boolean AnotherQuest_Jees;
 
    static {
        final Calendar calendar = Calendar.getInstance(Locale.KOREA);
@@ -140,19 +140,5 @@ public class Jessica extends NPC {
             cat.pos = ppos;
         } while (cat.pos == -1);
         level.mobs.add(cat);
-    }
-
-    private static final String QUEST = "QuestClear";
-
-    @Override
-    public void storeInBundle( Bundle bundle ) {
-        super.storeInBundle( bundle );
-        bundle.put( QUEST, QuestClear );
-    }
-
-    @Override
-    public void restoreFromBundle( Bundle bundle ) {
-        super.restoreFromBundle( bundle );
-        QuestClear = bundle.getBoolean( QUEST );
     }
 }

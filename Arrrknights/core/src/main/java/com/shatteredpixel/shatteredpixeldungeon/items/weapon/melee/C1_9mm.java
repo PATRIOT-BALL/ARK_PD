@@ -47,9 +47,9 @@ public class C1_9mm extends GunWeapon {
         hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 1f;
+        FIREACC = 1.2f;
         FIRETICK = 1f;
-        bulletCap = 22;
+        bulletCap = 30;
 
         usesTargeting = true;
 

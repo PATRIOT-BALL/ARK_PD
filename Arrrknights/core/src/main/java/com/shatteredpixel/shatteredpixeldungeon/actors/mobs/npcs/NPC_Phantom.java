@@ -35,7 +35,7 @@ public class NPC_Phantom extends NPC {
         properties.add(Property.NPC);
     }
 
-    public static boolean QuestClear = false;
+    public static boolean QuestClear;
 
     @Override
     public int defenseSkill(Char enemy) {
@@ -95,19 +95,5 @@ public class NPC_Phantom extends NPC {
             cat.pos = ppos;
         } while (cat.pos == -1);
         level.mobs.add(cat);
-    }
-
-    private static final String QUEST = "QuestClear";
-
-    @Override
-    public void storeInBundle( Bundle bundle ) {
-        super.storeInBundle( bundle );
-        bundle.put( QUEST, QuestClear );
-    }
-
-    @Override
-    public void restoreFromBundle( Bundle bundle ) {
-        super.restoreFromBundle( bundle );
-        QuestClear = bundle.getBoolean( QUEST );
     }
 }
