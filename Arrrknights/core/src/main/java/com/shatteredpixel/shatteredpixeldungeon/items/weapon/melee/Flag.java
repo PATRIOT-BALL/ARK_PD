@@ -34,8 +34,6 @@ public class Flag extends MeleeWeapon  {
         tier = 3;
     }
 
-    private int charge = 0;
-    private int chargeCap = 100;
     private int backchane = 0;
 
     @Override
@@ -105,6 +103,4 @@ public class Flag extends MeleeWeapon  {
         //otherwise, if there's no charge, return null.
         return null;
     }
-
-    private static final String CHARGE = "charge";
 }
