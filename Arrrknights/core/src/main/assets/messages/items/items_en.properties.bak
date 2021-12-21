@@ -1332,6 +1332,10 @@ items.quest.nullshield.fail_weapon=Please unequipment.
 items.quest.rose.name=flower
 items.quest.rose.desc=A flower for someone.
 
+items.quest.questcat.name=Ms.Christine
+items.quest.questcat.desc=1. Never touch Ms.Christine. Wait for her to approach, and accept when she leaves.\n\nGive it to "Phantom".
+
+
 // 딸루 히든보스용
 
 items.quest.token1.name="Hatred"
@@ -2507,6 +2511,14 @@ items.weapon.melee.krissvector.ac_zap=CHANGE
 items.weapon.melee.sakurasword.name=Sakura Hubuki
 items.weapon.melee.sakurasword.desc=A sword of a Valkyrie from another world.\n\nRecharges SP when attacking, but consumes SP when using abilities. Increases attack range and accuracy while activating the ability, and each attack marked enemy the target and dashes behind the target. Every 3rd attack deals damage to marked enemies.
 items.weapon.melee.sakurasword.ac_sakura=INFERNO
+
+items.weapon.melee.metallicunion.name=metallic union
+items.weapon.melee.metallicunion.desc_mode1=_"This is a classic scene in one of my movies!"_\n\nThis weapon changes mode every 10 attacks.\n\n_Normal Mode_
+items.weapon.melee.metallicunion.desc_mode2=_"This is a classic scene in one of my movies!"_\n\nThis weapon changes mode every 10 attacks. You can use CHNAGE to force the weapon's mode to change.\n\n_Extra Mode_\nknock back enemies.
+items.weapon.melee.metallicunion.stats_desc=Accuracy -10%
+items.weapon.melee.metallicunion.ac_change=CHANGE
+items.weapon.melee.metallicunion.modechange_nm=Your weapon mode has been changed to Normal!
+items.weapon.melee.metallicunion.modechange_ex=Your weapon mode has been changed to Extar!
 
 ## 총기 관련
 
