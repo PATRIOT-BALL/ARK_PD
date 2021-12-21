@@ -2477,7 +2477,7 @@ items.weapon.melee.flamekatana.name=flame katana
 items.weapon.melee.flamekatana.desc=After you kill 125 enemies, your weapon will evolve to Tier 4.
 
 items.weapon.melee.bladedemon.name=bladedemon
-items.weapon.melee.bladedemon.desc모드 : _Katana_\nAttack Speed 125%
+items.weapon.melee.bladedemon.desc=mode : _Katana_\nAttack Speed 125%
 items.weapon.melee.bladedemon.desc_mode=_Battle Sword_\nRecover HP when killing an enemy
 items.weapon.melee.bladedemon.ac_zap=CHANGE
 
@@ -2503,8 +2503,8 @@ items.weapon.melee.flametailsword.desc=This weapon increases the user's skill. W
 
 items.weapon.melee.krissvector.name=kriss vector
 items.weapon.melee.krissvector.desc=Barrage!\n\n_Assault Mode_ : Accuracy +40%
-items.weapon.melee.krissvector.desc_mode1=Apple pie!\n\n_슈팅 모드_ : Attack Speed 133%
-items.weapon.melee.krissvector.desc_mode2=Deo volente!\n\n_과부하 모드_ : Accuracy -60%, Attack Speed 200%, Double Attack
+items.weapon.melee.krissvector.desc_mode1=Apple pie!\n\n_Strafing Mode_ : Attack Speed 133%
+items.weapon.melee.krissvector.desc_mode2=Deo volente!\n\n_Overload Mode_ : Accuracy -60%, Attack Speed 200%, Double Attack
 items.weapon.melee.krissvector.stats_desc=Range +1, No surprise attack
 items.weapon.melee.krissvector.ac_zap=CHANGE
 
@@ -2518,7 +2518,7 @@ items.weapon.melee.metallicunion.desc_mode2=_"This is a classic scene in one of 
 items.weapon.melee.metallicunion.stats_desc=Accuracy -10%
 items.weapon.melee.metallicunion.ac_change=CHANGE
 items.weapon.melee.metallicunion.modechange_nm=Your weapon mode has been changed to Normal!
-items.weapon.melee.metallicunion.modechange_ex=Your weapon mode has been changed to Extar!
+items.weapon.melee.metallicunion.modechange_ex=Your weapon mode has been changed to Extra!
 
 ## 총기 관련
 
