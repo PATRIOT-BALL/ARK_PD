@@ -79,12 +79,12 @@ public class ShopRoom extends SpecialRoom {
 	
 	@Override
 	public int minWidth() {
-		return Math.max(7, (int)(Math.sqrt(itemCount())+3));
+		return Math.max(8, (int)(Math.sqrt(itemCount())+4));
 	}
 	
 	@Override
 	public int minHeight() {
-		return Math.max(7, (int)(Math.sqrt(itemCount())+3));
+		return Math.max(8, (int)(Math.sqrt(itemCount())+4));
 	}
 
 	public int itemCount(){
