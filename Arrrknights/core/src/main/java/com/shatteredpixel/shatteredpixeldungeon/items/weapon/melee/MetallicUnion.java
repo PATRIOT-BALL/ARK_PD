@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public class MetallicUnion extends MeleeWeapon {
     public static final String AC_CHANGE = "CHANGE";
     {
-        image = ItemSpriteSheet.GLOVES;
-        hitSound = Assets.Sounds.HIT;
+        image = ItemSpriteSheet.PANDA;
+        hitSound = Assets.Sounds.HIT_PUNCH;
         hitSoundPitch = 0.9f;
 
         defaultAction = AC_CHANGE;

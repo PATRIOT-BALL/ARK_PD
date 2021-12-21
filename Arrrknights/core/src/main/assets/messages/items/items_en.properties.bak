@@ -2477,7 +2477,7 @@ items.weapon.melee.flamekatana.name=flame katana
 items.weapon.melee.flamekatana.desc=After you kill 125 enemies, your weapon will evolve to Tier 4.
 
 items.weapon.melee.bladedemon.name=bladedemon
-items.weapon.melee.bladedemon.desc=mode : _Katana_\nAttack Speed 125%
+items.weapon.melee.bladedemon.desc=_Katana_\nAttack Speed 125%
 items.weapon.melee.bladedemon.desc_mode=_Battle Sword_\nRecover HP when killing an enemy
 items.weapon.melee.bladedemon.ac_zap=CHANGE
 
@@ -2546,6 +2546,9 @@ items.gunaccessories.gunscope.desc=Gun with Scope are damage +40%, shot speed -3
 
 items.gunaccessories.gunscope_ii.name=scope-II
 items.gunaccessories.gunscope_ii.desc=Gun with Scope-II are damage +70%, accuracy +10%, shot speed -50%
+
+items.gunaccessories.c_mag.name=C-MAG 
+items.gunaccessories.c_mag.desc=Gun with C-MAG are
 
 ###missile weapons
 items.weapon.missiles.darts.adrenalinedart.name=adrenaline arrow

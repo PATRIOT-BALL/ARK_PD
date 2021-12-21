@@ -1387,6 +1387,9 @@ items.rings.ring.dingdong=링딩동 반지
 items.rings.ring.jojo=독타의 기묘한 반지
 items.rings.ring.gray=플라스틱 반지
 items.rings.ring.banzi=아무튼 반지
+
+
+
 items.rings.ring.equip_cursed=반지가 당신의 손가락을 고통스럽게 옥죄였다!
 items.rings.ring.unknown_desc=어둠 속에서 반짝이는 커다란 보석이 박힌 금속 고리입니다. 이걸 꼈을 때 어떤 일이 일어날까요?
 items.rings.ring.known=이것은 %s 입니다.
@@ -2519,6 +2522,7 @@ items.weapon.melee.sakurasword.ac_sakura=인페르노
 items.weapon.melee.metallicunion.name=철의육합
 items.weapon.melee.metallicunion.desc_mode1=_"진짜 쿵푸 실력이 있기에 영화 스타인거야!"_\n\n이 영화 배우의 무기는 10번 공격할 때마다 무기의 모드가 변경됩니다.\n\n_일반 모드_\n기본적인 상태입니다.
 items.weapon.melee.metallicunion.desc_mode2=_"진짜 쿵푸 실력이 있기에 영화 스타인거야!"_\n\n이 영화 배우의 무기는 10번 공격할 때마다 무기의 모드가 변경됩니다. 강제 변환을 사용하면 턴을 소모해 모드를 변경할 수 있습니다.\n\n_변형 모드_\n매 공격이 적을 밀쳐냅니다.
+items.weapon.melee.metallicunion.stats_desc=명중률 -10%
 items.weapon.melee.metallicunion.ac_change=강제 변환
 items.weapon.melee.metallicunion.modechange_nm=당신의 무기 모드가 일반 모드가 되었다!
 items.weapon.melee.metallicunion.modechange_ex=당신의 무기 모드가 변형 모드가 되었다!
@@ -2550,6 +2554,9 @@ items.gunaccessories.gunscope.desc=망원 조준경이 부착된 총기의 피�
 
 items.gunaccessories.gunscope_ii.name=망원 조준경(특수)
 items.gunaccessories.gunscope_ii.desc=망원 조준경(특수)가 부착된 총기의 피해량 +70%, 명중률 +10%, 사격속도 -50%
+
+items.gunaccessories.c_mag.name=확장탄창 C형
+items.gunaccessories.c_mag.desc=확장탄창 C형이 부착된 총기의 
 
 
 

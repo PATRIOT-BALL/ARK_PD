@@ -298,6 +298,7 @@ public class ItemSpriteSheet {
 	public static final int CLIFF       = WEP_TIER4+12;
 	public static final int BLADE_DEMON       = WEP_TIER4+13;
 	public static final int FLAMETAIL       = WEP_TIER4+14;
+	public static final int PANDA       = WEP_TIER4+15;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -314,6 +315,7 @@ public class ItemSpriteSheet {
 		assignItemRect(CLIFF,        16, 16);
 		assignItemRect(BLADE_DEMON,        16, 16);
 		assignItemRect(FLAMETAIL,        16, 16);
+		assignItemRect(PANDA,        16, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 9);   //8 slots
@@ -715,6 +717,7 @@ public class ItemSpriteSheet {
 	public static final int HOLO_SIGHT      = TACTICAL+1;
 	public static final int TELESCOPE     = TACTICAL+2;
 	public static final int MUZZLE_BRAKE    = TACTICAL+3;
+	public static final int C_MAG    = TACTICAL+4;
 	static{
 		for (int i = BREWS; i < BREWS+16; i++)
 			assignItemRect(i, 16, 16);
