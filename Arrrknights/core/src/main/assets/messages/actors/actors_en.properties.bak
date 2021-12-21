@@ -922,6 +922,7 @@ actors.mobs.npcs.prts.hint11=Hint(11/14)\n\n_Fire wand_ can be combined with som
 actors.mobs.npcs.prts.hint12=Hint(12/14)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
 actors.mobs.npcs.prts.hint13=Hint(13/14)\n\n_Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
 actors.mobs.npcs.prts.hint14=Hint(14/14)\n\n_someone's dagger_ into the _avant-garde well_, Transforms into a painter's greatsword.
+actors.mobs.npcs.prts.hint14=Hint(15/15)\n\n_If you combine a _someone's dagger_ with something, maked her wand.
 
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her...
@@ -942,7 +943,8 @@ actors.mobs.npcs.ceylon.water=The day is not complete without tea. Those who too
 actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria National University with a major in Originium research. Are you... Rhodes? I'm sorry, but can you do me a favor? I'm going to practice in Rhodes soon, but I've lost my red tea leaves and water bottle. Can you get me my water bottle and red tea leaves? i want are about 8 red tea leaves.
 
 actors.mobs.npcs.gavial.name=gavial
-actors.mobs.npcs.gavial.desc=Talking to her will take you through the Gavial extra chapter.
+actors.mobs.npcs.gavial.desc=baby alligator~
+actors.mobs.npcs.gavial.desc*Talking to her will take you through the Gavial extra chapter.
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
 actors.mobs.npcs.gavial.dummy=I got a letter from my hometown.
 

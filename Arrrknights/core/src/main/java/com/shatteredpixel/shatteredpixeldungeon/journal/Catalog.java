@@ -193,6 +193,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ImageoverForm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.M1887;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MetallicUnion;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MinosFury;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
@@ -294,6 +295,7 @@ public enum Catalog {
 		WEAPONS.seen.put( FolkSong.class,                false);
 		WEAPONS.seen.put( SnowHunter.class,                false);
 		WEAPONS.seen.put( FlametailSword.class,                false);
+		WEAPONS.seen.put( MetallicUnion.class,                false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( WarHammer.class,                  false);

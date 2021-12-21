@@ -1332,8 +1332,8 @@ items.quest.nullshield.fail_weapon=장비를 해제해주세요.
 items.quest.rose.name=꽃 한송이
 items.quest.rose.desc=누군가를 위한 꽃 한송이.
 
-items.quest.rose.name=꽃 한송이
-items.quest.rose.desc=누군가를 위한 꽃 한송이.
+items.quest.questcat.name=미스 크리스틴
+items.quest.questcat.desc=팬텀을 따르는 고양이. 그에게 데려다주자.
 
 // 딸루 히든보스용
 items.quest.token1.name="증오"
@@ -2515,6 +2515,14 @@ items.weapon.melee.krissvector.ac_zap=모드 변환
 items.weapon.melee.sakurasword.name=영도 사쿠라 후부키
 items.weapon.melee.sakurasword.desc=그녀의 영혼이 정화한 후, 다시 영도로 돌아왔다.\n\n공격시 SP가 충전되며, 100%가 되면 _인페르노_를 사용할 수 있습니다. 발동 중에는 공격시 SP를 소모하고 무기 사거리와 명중률이 대폭 증가하며, 공격시 대상에게 표식을 찍고 후방으로 이동합니다. 3번째 공격마다 표식이 있는 적들에게 피해를 입힙니다.
 items.weapon.melee.sakurasword.ac_sakura=인페르노
+
+items.weapon.melee.metallicunion.name=철의육합
+items.weapon.melee.metallicunion.desc_mode1=_"진짜 쿵푸 실력이 있기에 영화 스타인거야!"_\n\n이 영화 배우의 무기는 10번 공격할 때마다 무기의 모드가 변경됩니다.\n\n_일반 모드_\n기본적인 상태입니다.
+items.weapon.melee.metallicunion.desc_mode2=_"진짜 쿵푸 실력이 있기에 영화 스타인거야!"_\n\n이 영화 배우의 무기는 10번 공격할 때마다 무기의 모드가 변경됩니다. 강제 변환을 사용하면 턴을 소모해 모드를 변경할 수 있습니다.\n\n_변형 모드_\n매 공격이 적을 밀쳐냅니다.
+items.weapon.melee.metallicunion.ac_change=강제 변환
+items.weapon.melee.metallicunion.modechange_nm=당신의 무기 모드가 일반 모드가 되었다!
+items.weapon.melee.metallicunion.modechange_ex=당신의 무기 모드가 변형 모드가 되었다!
+
 
 
 ## 총기 관련

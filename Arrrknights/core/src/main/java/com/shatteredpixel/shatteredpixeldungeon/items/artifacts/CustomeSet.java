@@ -71,7 +71,6 @@ public class CustomeSet extends Artifact {
             if (charge >= chargeCap) {
                 charge = chargeCap;
                 updateQuickslot();
-                GLog.p( Messages.get(Artifact.class, "full_charge") );
                 }
             }
         }

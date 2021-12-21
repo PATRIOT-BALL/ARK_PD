@@ -115,7 +115,6 @@ public class IsekaiItem extends Artifact {
         public void charge(Hero target, float amount) {
             charge += Math.round(1*amount);
             charge = Math.min(charge, chargeCap);
-            if (charge == chargeCap) GLog.p( Messages.get(Artifact.class, "full_charge") );
             updateQuickslot();
         }
     }
