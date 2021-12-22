@@ -9,5 +9,6 @@ public class GunScope_II extends Accessories {
         ACCcorrectionvalue = 1.1f;
         DLYcorrectionvalue = 2f;
         DMGcorrectionvalue = 1.7f;
+        SavingChancevalue = 0;
     }
 }

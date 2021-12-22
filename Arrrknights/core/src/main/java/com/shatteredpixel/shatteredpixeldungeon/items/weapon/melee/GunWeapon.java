@@ -323,7 +323,12 @@ public class GunWeapon extends MeleeWeapon {
 
         Invisibility.dispel();
 
-        bullet -=1;
+        if (GunAccessories != null) {
+            if (GunAccessories.GetSavingChance() <= Random.Int(100)) {
+                bullet -=1;
+            }
+        }
+        else bullet -=1;
         updateQuickslot();
 
         ACC = oldacc;

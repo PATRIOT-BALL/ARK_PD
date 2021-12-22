@@ -32,13 +32,13 @@ public class Sai extends MeleeWeapon {
 		hitSoundPitch = 1.3f;
 
 		tier = 3;
-		DLY = 0.2f; //2x speed
+		DLY = 0.4f; //2x speed
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  Math.round(1f*(tier+1)) +     //10 base, down from 20
-				lvl*Math.round(0.3f*(tier+2));  //+2 per level, down from +4
+		return  2*(tier+1) +   //8+3
+				lvl*(tier);
 	}
 
 }

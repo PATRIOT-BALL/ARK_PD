@@ -9,5 +9,6 @@ public class DotSight extends Accessories {
         ACCcorrectionvalue = 1.5f;
         DLYcorrectionvalue = 1f;
         DMGcorrectionvalue = 0.9f;
+        SavingChancevalue = 0;
     }
 }

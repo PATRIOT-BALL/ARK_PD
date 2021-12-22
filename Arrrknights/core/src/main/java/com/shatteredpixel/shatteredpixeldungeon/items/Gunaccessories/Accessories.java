@@ -23,6 +23,7 @@ public class Accessories extends Item {
     protected float ACCcorrectionvalue = 1f;
     protected float DLYcorrectionvalue = 1f;
     protected float DMGcorrectionvalue = 1f;
+    protected int SavingChancevalue = 0;
 
     @Override
     public ArrayList<String> actions(Hero hero) {
@@ -74,6 +75,10 @@ public class Accessories extends Item {
 
     public float GetDMGcorrectionvalue() {
         return DMGcorrectionvalue;
+    }
+
+    public int GetSavingChance() {
+        return SavingChancevalue;
     }
 
     @Override

@@ -1388,7 +1388,9 @@ items.rings.ring.jojo=독타의 기묘한 반지
 items.rings.ring.gray=플라스틱 반지
 items.rings.ring.banzi=아무튼 반지
 
-
+items.rings.ring.palladium=팔라듐 반지
+items.rings.ring.gold=골ㅡ든 반지
+items.rings.ring.lithium=리튬 반지
 
 items.rings.ring.equip_cursed=반지가 당신의 손가락을 고통스럽게 옥죄였다!
 items.rings.ring.unknown_desc=어둠 속에서 반짝이는 커다란 보석이 박힌 금속 고리입니다. 이걸 꼈을 때 어떤 일이 일어날까요?
@@ -2556,7 +2558,7 @@ items.gunaccessories.gunscope_ii.name=망원 조준경(특수)
 items.gunaccessories.gunscope_ii.desc=망원 조준경(특수)가 부착된 총기의 피해량 +70%, 명중률 +10%, 사격속도 -50%
 
 items.gunaccessories.c_mag.name=확장탄창 C형
-items.gunaccessories.c_mag.desc=확장탄창 C형이 부착된 총기의 
+items.gunaccessories.c_mag.desc=확장탄창 C형이 부착된 총기로 사격시 30%확률로 탄약 소모 없음, 피해량 -15%
 
 
 
