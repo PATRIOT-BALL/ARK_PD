@@ -33,7 +33,7 @@ public class LavaSlug extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 33, 45 );
+        return Random.NormalIntRange( 31, 45 );
     }
 
     @Override

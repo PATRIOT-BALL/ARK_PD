@@ -51,7 +51,11 @@ public class Firmament extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  2+(tier+4) +    //8 + 2. 공식상 2회 타격
+        if (Dungeon.hero.lvl >= 21)
+            return  4*(tier+1) +    //12 + 3. 공식상 2회 타격
+                    lvl*(tier+1);   //scaling unchanged
+        else
+        return  2+(tier+4) +    //7 + 2. 공식상 2회 타격
                 lvl*(tier);   //scaling unchanged
     }
 

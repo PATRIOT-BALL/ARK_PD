@@ -23,7 +23,7 @@ public class StrikerElite extends Striker {
 
     @Override
     public int attackSkill( Char target ) {
-        return 30;
+        return 33;
     }
 
     @Override

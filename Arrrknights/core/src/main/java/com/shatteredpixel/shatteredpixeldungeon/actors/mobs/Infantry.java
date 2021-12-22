@@ -13,7 +13,7 @@ public class Infantry extends Mob {
     {
         spriteClass = Siesta_InfantrySprite.class;
 
-        HP = HT = 135;
+        HP = HT = 125;
         defenseSkill = 25;
 
         EXP = 15;
@@ -27,7 +27,7 @@ public class Infantry extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 32, 44 );
+        return Random.NormalIntRange( 33, 45 );
     }
 
     @Override
@@ -37,7 +37,7 @@ public class Infantry extends Mob {
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 18);
+        return Random.NormalIntRange(0, 20);
     }
 
     @Override

@@ -35,7 +35,7 @@ public class Raider extends Succubus {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(24, 30);
+        return Random.NormalIntRange(24, 40);
     }
 
     @Override

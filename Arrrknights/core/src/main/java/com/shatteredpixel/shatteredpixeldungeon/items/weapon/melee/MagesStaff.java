@@ -92,7 +92,7 @@ public class MagesStaff extends MeleeWeapon {
 			return  3*(tier+1) +    // 6 + 1
 					lvl*(tier);   //scaling unaffected
 		else
-		return  4*(tier+1) +    //8 base damage, down from 10
+		return  4*(tier+1) +    //8 + 2
 				lvl*(tier+1);   //scaling unaffected
 	}
 

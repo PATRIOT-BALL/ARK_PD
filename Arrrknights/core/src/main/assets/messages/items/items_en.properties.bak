@@ -2308,7 +2308,7 @@ items.weapon.melee.runicblade.stats_desc=Upgrade Efficiency +
 items.weapon.melee.runicblade.desc=A sword made by processing originium. Texas often uses this to create illusions and drop them.
 
 items.weapon.melee.sai.name=glasgow thug
-items.weapon.melee.sai.stats_desc=Attack Speed 500%
+items.weapon.melee.sai.stats_desc=Attack Speed 250%
 items.weapon.melee.sai.desc=It's not heavy, but it's not light either. kill with a fist!
 
 items.weapon.melee.heamyo.name=Test Weapon
@@ -2457,7 +2457,7 @@ items.weapon.melee.golddogsword.charge=accumulate
 items.weapon.melee.golddogsword.charge_fail=impossible
 
 items.weapon.melee.firmament.name=Crimson Firmament
-items.weapon.melee.firmament.desc=Such evil must be stopped, and by any means necessary.\n\nAttack 2 times in a row
+items.weapon.melee.firmament.desc=Such evil must be stopped, and by any means necessary.\n\nAttack 2 times in a row. Also, damage increases when level 25 or higher.
 items.weapon.melee.firmament.setbouns=_Crimson Slash_\nincrease the damage of the by 15% 
 
 items.weapon.melee.folksong.name=folk song

@@ -62,7 +62,7 @@ public class Monk extends Mob {
 		if (f != null) {
 			return Random.NormalIntRange( 20, 32 );
 		}
-		return Random.NormalIntRange( 10, 32 );
+		return Random.NormalIntRange( 10, 27 );
 	}
 	
 	@Override

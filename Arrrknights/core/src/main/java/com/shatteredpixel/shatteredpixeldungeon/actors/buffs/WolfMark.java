@@ -120,6 +120,13 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
         if (!ch.isAlive()) {
             Wound.hit(ch);
             Hunt.hit(ch);
+
+            if (hero.hasTalent(Talent.TRACKER)) {
+                int heal = 1 + hero.pointsInTalent(Talent.TRACKER) * 3;
+                hero.HP = Math.min(hero.HP + heal, hero.HT);
+                hero.sprite.emitter().start(Speck.factory(Speck.HEALING), 0.4f, 1);
+                hero.sprite.showStatus(CharSprite.POSITIVE, Integer.toString(heal));
+            }
         }
         else {
             if (Dungeon.hero.hasTalent(Talent.BLOODBATH_OPERATIONS)) Buff.affect(ch, Paralysis.class, 1f);

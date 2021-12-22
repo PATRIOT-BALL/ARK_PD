@@ -2284,7 +2284,7 @@ items.weapon.melee.shortsword.name=박도
 items.weapon.melee.shortsword.desc=왠지 모를 수박 향기가 난다. \n\n용문 전경들의 제식 장검. 평범해보이지만 어딘가 모르게 _범상찮은_ 느낌이 난다.
 
 items.weapon.melee.firmament.name=적소
-items.weapon.melee.firmament.desc=악행은 결코 용서하지 않아. 무슨 수를 써서라도 저지하겠어.\n\n이 _특별한_ 무기는 2번의 공격을 동시에 가합니다.
+items.weapon.melee.firmament.desc=악행은 결코 용서하지 않아. 무슨 수를 써서라도 저지하겠어.\n\n이 _특별한_ 무기는 2번의 공격을 동시에 가합니다. 또한, 레벨이 21 이상일 때 공격력이 상승합니다.
 items.weapon.melee.firmament.setbouns=_아이템 시너지 : 용문총경_\n피해량이 15%상승합니다.
 
 items.weapon.melee.nearl_axe.name=카시미어 전쟁도끼
@@ -2314,7 +2314,7 @@ items.weapon.melee.runicblade.ac_zap=검의 비
 items.weapon.melee.runicblade.dont_equ=무기를 장착해주세요.
 
 items.weapon.melee.sai.name=글래스고 깡패
-items.weapon.melee.sai.stats_desc=공격속도 500%
+items.weapon.melee.sai.stats_desc=공격속도 250%
 items.weapon.melee.sai.desc=양 손에 끼워 사용하는 반월 너클. 무겁진 않지만 그렇다고 가볍지도 않다. 너클의 날붙이는 적에게 치명적일 것이다, 아마도.
 
 items.weapon.melee.heamyo.name=해묘
@@ -2558,7 +2558,7 @@ items.gunaccessories.gunscope_ii.name=망원 조준경(특수)
 items.gunaccessories.gunscope_ii.desc=망원 조준경(특수)가 부착된 총기의 피해량 +70%, 명중률 +10%, 사격속도 -50%
 
 items.gunaccessories.c_mag.name=확장탄창 C형
-items.gunaccessories.c_mag.desc=확장탄창 C형이 부착된 총기로 사격시 30%확률로 탄약 소모 없음, 피해량 -15%
+items.gunaccessories.c_mag.desc=확장탄창 C형이 부착된 총기로 사격시 30%확률로 탄약 소모 없음, 피해량 -20%
 
 
 

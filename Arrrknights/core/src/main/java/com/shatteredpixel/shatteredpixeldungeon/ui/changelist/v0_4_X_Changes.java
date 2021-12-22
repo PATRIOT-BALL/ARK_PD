@@ -15,7 +15,7 @@ public class v0_4_X_Changes {
     }
 
     public static void add_v0_4_0_Changes(ArrayList<ChangeInfo> changeInfos) {
-        ChangeInfo changes = new ChangeInfo("v0.3.3", true, "");
+        ChangeInfo changes = new ChangeInfo("v0.4.0", true, "");
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
@@ -24,19 +24,40 @@ public class v0_4_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
-                "_철의육합_ : 10회 공격마다 모드가 변경되는 "));
-
+                "_철의육합_ : 10회 공격마다 모드가 변경되는 무기입니다. 통상 상태에선 높은 공격력을, 변형 상태일 땐 매 공격이 넉백시키는 효과를 가집니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 개편",
+                "_글래스고 깡패_ : 공격속도가 500%에서 _250%_ 로 감소했으며, 감소한 수치에 비례해 공격력과 강화 효율이 상승했습니다." + "\n\n" +
+                "_적소_ : 플레이어 레벨이 25 이상일 때 공격력과 강화 효율이 상승하는 효과가 추가되었습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_R4-C 돌격소총_ : 사격 속도와 명중률이 상승했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "레드 상향",
+                "_추적자_ 특성에 사냥 능력으로 적 처치시 체력 회복 효과가 추가되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
+                "_제국 선봉_의 공격력이 22-30에서 _22-33_ 으로 상승했습니다. (체력 50%이하일 때 공격력은 기존과 같습니다.)" + "\n\n" +
+                        "_정예 제국 선봉_의 명중률이 30에서 _33_ 으로 상승했습니다." + "\n\n" +
+                        "_돌격자_의 공격력이 24-30에서 _24-40_ 으로 상승했습니다." + "\n\n" +
+                        "_보병_의 체력이 135에서 _125_ 로 감소했지만, 공격력이 32-44에서 _33-45_ 로, 방어력이 0-18에서 _0-20_ 으로 상승했습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "적 하향",
+                "_공수부대병_의 공격력이 3-9에서 _2-9_ 로 감소했습니다." + "\n\n" +
+                        "_진형파괴병_의 공격력이 5-18에서 _5-17_ 로, 명중률이 16에서 _15_ 로 감소했습니다." + "\n\n" +
+                "_숙주 병사(폭주)_의 공격력이 10-32에서 _10-27_ 로 감소했습니다. 집중 상태일 때 공격력은 기존과 같습니다." + "\n\n" +
+                "_용암 원석충_ : 체력이 155에서 _145_ 로, 공격력이 33-45에서 _31-45_ 로 감소했습니다."));
     }
 }

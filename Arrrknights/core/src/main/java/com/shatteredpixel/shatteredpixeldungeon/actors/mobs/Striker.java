@@ -30,7 +30,7 @@ public class Striker extends Mob{
     @Override
     public int damageRoll() {
         if (HP <= HT/2) return Random.NormalIntRange(33,45);
-        return Random.NormalIntRange(22,30);
+        return Random.NormalIntRange(22,33);
     }
 
     @Override
