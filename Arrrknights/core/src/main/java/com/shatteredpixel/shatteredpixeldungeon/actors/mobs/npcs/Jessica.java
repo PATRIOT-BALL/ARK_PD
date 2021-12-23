@@ -38,7 +38,7 @@ public class Jessica extends NPC {
 
    static {
        final Calendar calendar = Calendar.getInstance(Locale.KOREA);
-       if (calendar.get(Calendar.HOUR) >= 12) AnotherQuest_Jees = true;
+       if (calendar.get(Calendar.HOUR_OF_DAY) <= 8) AnotherQuest_Jees = true;
    }
 
    public static boolean QuestClear = false;
