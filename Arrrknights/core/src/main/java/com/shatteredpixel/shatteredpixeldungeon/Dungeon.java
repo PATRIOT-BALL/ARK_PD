@@ -202,7 +202,7 @@ public class Dungeon {
 	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
 	public static boolean killcat; // 엔딩 씬에서 켈시 하극상 출현용.
 
-	public static int QuestCatPoint; // 0~8의 값. 0~2는 28층, 3~5는 29층, 6~8은 30층스폰입니다.
+	public static int QuestCatPoint;
 	
 	public static HashSet<Integer> chapters;
 
