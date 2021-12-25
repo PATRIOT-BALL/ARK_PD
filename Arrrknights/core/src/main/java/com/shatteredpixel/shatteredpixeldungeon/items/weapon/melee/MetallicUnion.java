@@ -31,10 +31,10 @@ public class MetallicUnion extends MeleeWeapon {
     @Override
     public int max(int lvl) {
         if (!swiching)
-            return  5*(tier+1) +                	// 25 + 5
-                    lvl*(tier+1);
-        else return  3*(tier) +                	// 12 + 3
-                lvl*(tier-1);
+            return  5*(tier+1) +                	// 25 + 6
+                    lvl*(tier+2);
+        else return  2*(tier) +                	// 8 + 2
+                lvl*(tier-2);
     }
 
     @Override

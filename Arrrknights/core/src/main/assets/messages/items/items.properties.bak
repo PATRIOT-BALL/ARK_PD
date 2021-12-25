@@ -1475,6 +1475,11 @@ items.rings.ringofassassin.stats=이 반지를 장착했을 때, 기습시 _%s%%
 items.rings.ringofassassin.typical_stats=이 반지를 장착했을 때, 일반적으로 기습시 _%s%%_ 의 추가 피해를 입힙니다.
 items.rings.ringofassassin.desc=이 반지는 착용자의 기습 능력을 높혀줍니다. 저주받은 반지는 닌자 리얼리티 쇼크를 일으켜 기습을 불가능하게 만듭니다.
 
+items.rings.ringofmistress.name=여제의 반지
+items.rings.ringofmistress.stats=이 반지를 장착했을 때, 무기의 SP 충전률이 _%s%%_ 만큼 상승합니다.
+items.rings.ringofmistress.typical_stats=이 반지를 장착했을 때, 일반적으로 무기의 SP 충전률이 _%s%%_ 만큼 상승합니다.
+items.rings.ringofmistress.desc=이 반지는 착용자의 아츠 적합성을 올려 무기의 능력 효율을 상승시킵니다. 저주받은 반지는 무기의 SP 충전률을 감소시킵니다.
+
 ###scrolls
 items.scrolls.scroll.ac_read=읽는다
 items.scrolls.scroll.kaunan=찢어진 일기장 A
@@ -2453,7 +2458,7 @@ items.weapon.melee.c1_9mm.stats_desc_sp=이 무기로 사격을 가해 적에게
 
 items.weapon.melee.r4c.name=R4-C 돌격소총
 items.weapon.melee.r4c.gamza_name=BS R4-C 돌격소총
-items.weapon.melee.r4c.desc="You have my respect, Doc."\n\n이 무기는 _사격_ 무기입니다. 투척 무기로 탄약을 장전할 수 있습니다. 이 총은 다른 사격 무기보다 사격 속도가 빠릅니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
+items.weapon.melee.r4c.desc="You have my respect, Doc."\n\n이 무기는 _사격_ 무기입니다. 투척 무기로 탄약을 장전할 수 있습니다. 이 총은 다른 사격 무기보다 사격 성능이 높습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
 items.weapon.melee.r4c.stats_desc=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
 items.weapon.melee.r4c.stats_desc_sp=이 무기로 사격을 가해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.\n\n_특수 탄환 파쇄탄_\n - 적중시킨 대상을 밀쳐냅니다.
 items.weapon.melee.r4c.setbouns=_아이템 시너지 : 이세계 전술_\n마비된 적에게 사격시 딜레이가 감소합니다.

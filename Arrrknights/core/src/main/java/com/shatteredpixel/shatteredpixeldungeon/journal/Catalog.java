@@ -109,6 +109,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfForce;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfHaste;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
@@ -426,6 +427,7 @@ public enum Catalog {
 		RINGS.seen.put( RingOfAmplified.class,               false);
 		RINGS.seen.put( RingOfDominate.class,               false);
 		RINGS.seen.put( RingOfAssassin.class,               false);
+		RINGS.seen.put( RingOfMistress.class,               false);
 
 		//ARTIFACTS.seen.put( AlchemistsToolkit.class,        false);
 		//ARTIFACTS.seen.put( CapeOfThorns.class,             false);

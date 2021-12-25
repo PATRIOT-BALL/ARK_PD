@@ -945,6 +945,7 @@ public class ItemSpriteSheet {
 		public static final int RING_AMPLIFIED     = RINGS+12;
 		public static final int RING_DOMINATE     = RINGS+13;
 		public static final int RING_SURPRISE     = RINGS+14;
+		public static final int RING_MISTRESS     = RINGS+15;
 
 		static {
 			assignIconRect( RING_ACCURACY,      7, 7 );
@@ -962,6 +963,7 @@ public class ItemSpriteSheet {
 			assignIconRect( RING_AMPLIFIED,        7, 7 );
 			assignIconRect( RING_DOMINATE,        7, 7 );
 			assignIconRect( RING_SURPRISE,        8, 8 );
+			assignIconRect( RING_MISTRESS,        8, 8 );
 		}
 
 		                                                                                //16 free slots

@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -43,7 +44,7 @@ public class CatGun extends MeleeWeapon {
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        SPCharge(Random.IntRange(2,3));
+        SPCharge_cat(Random.IntRange(2,3));
         return super.proc(attacker, defender, damage);
     }
 
@@ -52,6 +53,11 @@ public class CatGun extends MeleeWeapon {
         ArrayList<String> actions = super.actions(hero);
         actions.add(AC_ZAP);
         return actions;
+    }
+
+    public void SPCharge_cat(int value) {
+        charge = Math.min(charge+value, chargeCap);
+        updateQuickslot();
     }
 
     @Override
@@ -223,7 +229,10 @@ public class CatGun extends MeleeWeapon {
                 }
             }
 
-            if (HP < 1) this.die(this);
+            if (HP < 1) {
+                this.die(this);
+                return true;
+            }
             return super.act();
         }
 
@@ -235,13 +244,7 @@ public class CatGun extends MeleeWeapon {
                 HP -= HT/n;
             }
             else HP -= HT/20;
-            if (isAlive()) {
-                Sample.INSTANCE.play(Assets.Sounds.HIT_BREAK);
 
-                if (Dungeon.hero.belongings.weapon instanceof CatGun) {
-                    ((CatGun) Dungeon.hero.belongings.weapon).SPCharge(1);
-                }
-            }
             return super.attackProc(enemy, damage);
         }
 

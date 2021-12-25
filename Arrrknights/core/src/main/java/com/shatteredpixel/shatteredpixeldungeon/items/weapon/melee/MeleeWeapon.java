@@ -24,6 +24,8 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEvasion;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Kinetic;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -54,7 +56,9 @@ public class MeleeWeapon extends Weapon {
 	}
 
 	public void SPCharge(int value) {
-		charge = Math.min(charge+value, chargeCap);
+		int chargevalue = value;
+		chargevalue *= RingOfMistress.SPMultiplier(curUser);
+		charge = Math.min(charge+chargevalue, chargeCap);
 		updateQuickslot();
 	}
 	
