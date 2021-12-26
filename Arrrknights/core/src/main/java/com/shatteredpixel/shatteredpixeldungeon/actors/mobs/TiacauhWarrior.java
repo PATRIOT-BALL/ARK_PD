@@ -6,12 +6,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tiacauh_warriorSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class TiacauhWarrior extends Mob {
     {
-        spriteClass = HaundSprite.class;
+        spriteClass = Tiacauh_warriorSprite.class;
 
         HP = HT = 110;
         defenseSkill = 18;

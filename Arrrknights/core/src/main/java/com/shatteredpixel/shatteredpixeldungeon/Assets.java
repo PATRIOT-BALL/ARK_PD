@@ -426,6 +426,11 @@ public class Assets {
 		public static final String ORIGINIUTANT	= "sprites/originiutant.png";
 		public static final String MUTANT_SPIDER	= "sprites/mutant_spider.png";
 
+		//가비알
+		public static final String TIACAUH_WARRIOR	= "sprites/tiacauhwarrior.png";
+		public static final String TIACAUH_LANCER	= "sprites/tiacauhlancer.png";
+		public static final String TIACAUH_FANATIC	= "sprites/tiacauhfanatic.png";
+
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";
 		public static final String KALTSIT_NPC	= "sprites/kaltsit_npc.png";

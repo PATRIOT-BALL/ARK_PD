@@ -39,8 +39,8 @@ public class MephistoSprite extends MobSprite {
 		run = new Animation( 15, true );
 		run.frames( frames, 0 );
 		
-		attack = new Animation( 17, false );
-		attack.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8 );
+		attack = new Animation( 15, false );
+		attack.frames( frames, 7, 8, 9, 10, 11, 12, 13, 14, 15 );
 		
 		die = new Animation( 8, false );
 		die.frames( frames, 0 );

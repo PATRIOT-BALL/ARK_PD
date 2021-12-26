@@ -8,12 +8,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EnragedSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tiacauh_fanaticSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class TiacauhFanatic extends Mob {
     {
-        spriteClass = EnragedSprite.class;
+        spriteClass = Tiacauh_fanaticSprite.class;
 
         HP = HT = 75;
         defenseSkill = 40;
