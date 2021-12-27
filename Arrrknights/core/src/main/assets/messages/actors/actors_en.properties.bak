@@ -502,7 +502,7 @@ actors.hero.talent.protective_shadows.desc=_+1:_ The Recharge gains one recorder
 actors.hero.talent.mystical_meal.title=mystical meal
 actors.hero.talent.mystical_meal.desc=_+1:_ Eating food takes the Red 1 turn and grants him _1.5 turns of artifact recharging_.\n\n_+2:_ Eating food takes the Red 1 turn and grants him _3 turns of artifact recharging_.\n\nTher talent cannot be used to let the gum of plenty recharge itself.
 actors.hero.talent.tracker.title=tracker
-actors.hero.talent.tracker.desc=_+1:_ When you use a skill or hunt, gain _1 turn of haste_.\n\n_+2:_ When you use a skill or hunt, gain _2 turn of haste_.\n\nRemoves state the Roots, Blindness, Cripple states.
+actors.hero.talent.tracker.desc=_+1:_ When you use a skill or hunt, gain _1 turn of haste_. Killing an enemy with hunt restores _4 HP_.\n\n_+2:_ When you use a skill or hunt, gain _2 turn of haste_. Killing an enemy with hunt restores _7 HP_.\n\nRemoves state the Roots, Blindness, Cripple states.
 actors.hero.talent.wide_search.title=wide search
 actors.hero.talent.wide_search.desc=_+1:_ The Red’s search radius is increased from a 5x5 square to a _7x7 circle_.\n\n_+2:_ The Red’s search radius is increased from a 5x5 square to a _7x7 square_.
 actors.hero.talent.silent_steps.title=silent steps
@@ -983,6 +983,15 @@ actors.mobs.npcs.npc_phantom.result=Ahhh. Ms. Christine. your for bringing her, 
 
 actors.mobs.npcs.npc_phantomshadow.name=phantom?
 actors.mobs.npcs.npc_phantomshadow.desc=Meow
+
+actors.mobs.npcs.npc_astesia.name=astesia
+actors.mobs.npcs.npc_astesia.desc=Would you like to see Horoscopes?
+actors.mobs.npcs.npc_astesia.no_weapon=Hello, %s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...Where are the your weapons? Aren't you on the Operation?
+actors.mobs.npcs.npc_astesia.no_setbouns=Hello, %s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I don't think your weapon has any special secrets yet.
+actors.mobs.npcs.npc_astesia.setbouns_1=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I have uncovered the secrets behind your weapon. If you use _%2$s_ with your weapon, something special will happen.
+actors.mobs.npcs.npc_astesia.setbouns_2=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...the secrets tied to your weapon are... quite a lot. If you use _%2$s_ and _%3$s_ together, something special will happen to your weapon. i will guarantee.
+actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...우와, 엄청 많이 엮여있네. _%2$s_ 와 _%3$s_, 그리고 _%4$s_를 같이 사용하면 네 무기의 특별한 비밀이 밝혀질 수 있을 것 같아.
+
 
 
 

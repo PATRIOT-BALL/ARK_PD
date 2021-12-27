@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.FrostLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Jessica;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Phantom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_PhantomShadow;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Npc_Astesia;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Weedy;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
@@ -169,6 +170,10 @@ public class NewRhodesLevel2 extends Level {
         Dobermann.spawn(this, 4298);
         FrostLeaf.spawn(this, 4305);
         NPC_Phantom.spawn(this, 3010);
+
+        if (Random.Int(2) == 0) Npc_Astesia.spawn(this, 3004);
+        else Npc_Astesia.spawn(this, 3218);
+
 
         if (Dungeon.QuestCatPoint == 0 && !NPC_PhantomShadow.Clear) {
             NPC_PhantomShadow.spawn(this, 0);

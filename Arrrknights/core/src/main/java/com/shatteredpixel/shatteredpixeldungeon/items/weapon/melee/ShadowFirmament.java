@@ -25,54 +25,66 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemyKit;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.utils.Random;
 
-public class Whip extends MeleeWeapon {
+public class ShadowFirmament extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.WHIP;
-		hitSound = Assets.Sounds.HIT;
-		hitSoundPitch = 1.1f;
+		image = ItemSpriteSheet.GLAIVE;
+		hitSound = Assets.Sounds.HIT_DUALSTRIKE;
+		hitSoundPitch = 0.8f;
 
-		tier = 3;
-		RCH = 4;    //lots of extra reach
+		tier = 5;
 	}
+
+	private boolean doubleattack = true;
+
 
 	@Override
 	public int max(int lvl) {
-		return  3*(tier+1) +    //12 base, down from 20
-				lvl*(tier);     //+3 per level, down from +4
+		return  3*(tier+1) - 1 +    //17 + 4. 공식상 2회 타격
+				lvl*(tier-1);   //scaling unchanged
 	}
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
+		if (doubleattack) {
+			doubleattack = false;
+			if (!attacker.attack(defender)) {
+				doubleattack = true; }
+			else {
+				defender.sprite.bloodBurstA( defender.sprite.center(), 4 );
+				defender.sprite.flash();
+				if (attacker instanceof Hero && Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
+					Buff.affect(attacker, Combo.class).bounshit(defender);
+				}
+			}
+			}
+		else doubleattack = true;
 
 		if (attacker instanceof Hero) {
-			if (Dungeon.hero.belongings.getItem(AlchemyKit.class) != null) {
-				if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero)) {
-					if (Random.Int(12 + buffedLvl()) > 10) {
-						if (defender.buff(Poison.class) == null)
-							Buff.affect(defender, Poison.class).set(5f);
-						else Buff.affect(defender, Poison.class).extend(5f);
-					}
+			if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null) {
+				if (((Hero) attacker).belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero)) {
+					if (Random.Int(20) < 1)
+						damage *= 1.5f;
 				}
 			}
 		}
-
 		return super.proc(attacker, defender, damage);
 	}
 
 	@Override
 	public String desc() {
 		String info = Messages.get(this, "desc");
-		if (Dungeon.hero.belongings.getItem(AlchemyKit.class) != null) {
-		if (Dungeon.hero.belongings.getItem(AlchemyKit.class).isEquipped(Dungeon.hero)) info += "\n\n" + Messages.get( Whip.class, "setbouns");}
+		if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null) {
+		if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero))
+			info += "\n\n" + Messages.get( ShadowFirmament.class, "setbouns");}
 
 		return info;
 	}

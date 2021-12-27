@@ -24,58 +24,34 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArcaneArmor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
-import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
-import com.watabou.utils.Callback;
-import com.watabou.utils.Random;
 
-public class Glaive extends MeleeWeapon {
+public class DeepAbyss extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.GLAIVE;
-		hitSound = Assets.Sounds.HIT_DUALSTRIKE;
-		hitSoundPitch = 0.8f;
+		image = ItemSpriteSheet.GREATAXE;
+		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSoundPitch = 1f;
 
 		tier = 5;
 	}
 
-	private boolean doubleattack = true;
-
-
 	@Override
 	public int max(int lvl) {
-		return  3*(tier+1) - 1 +    //17 + 4. 공식상 2회 타격
-				lvl*(tier-1);   //scaling unchanged
+		return  5*(tier+4) +    //45 base, up from 30
+				lvl*(tier+1);   //scaling unchanged
 	}
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
-		if (doubleattack) {
-			doubleattack = false;
-			if (!attacker.attack(defender)) {
-				doubleattack = true; }
-			else {
-				defender.sprite.bloodBurstA( defender.sprite.center(), 4 );
-				defender.sprite.flash();
-				if (attacker instanceof Hero && Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
-					Buff.affect(attacker, Combo.class).bounshit(defender);
-				}
-			}
-			}
-		else doubleattack = true;
-
-		if (attacker instanceof Hero) {
-			if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null) {
-				if (((Hero) attacker).belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero)) {
-					if (Random.Int(20) < 1)
-						damage *= 1.5f;
-				}
+		if (Dungeon.hero.belongings.getItem(SandalsOfNature.class) != null) {
+			if (attacker instanceof Hero && Dungeon.hero.belongings.getItem(SandalsOfNature.class).isEquipped(Dungeon.hero)) {
+				Buff.affect(attacker, ArcaneArmor.class).set(buffedLvl() + 3, 1);
 			}
 		}
 		return super.proc(attacker, defender, damage);
@@ -84,10 +60,16 @@ public class Glaive extends MeleeWeapon {
 	@Override
 	public String desc() {
 		String info = Messages.get(this, "desc");
-		if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null) {
-		if (Dungeon.hero.belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero))
-			info += "\n\n" + Messages.get( Glaive.class, "setbouns");}
+		if (Dungeon.hero.belongings.getItem(SandalsOfNature.class) != null) {
+		if (Dungeon.hero.belongings.getItem(SandalsOfNature.class).isEquipped(Dungeon.hero))
+			info += "\n\n" + Messages.get( DeepAbyss.class, "setbouns");}
 
 		return info;
 	}
+
+	@Override
+	public int STRReq(int lvl) {
+		return STRReq(tier+1, lvl); //20 base strength req, up from 18
+	}
+
 }

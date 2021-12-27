@@ -26,25 +26,20 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
-import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
-import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
-import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 
 import java.util.ArrayList;
 
-public class WarHammer extends MeleeWeapon {
+public class Laevateinn extends MeleeWeapon {
 	public static final String AC_ZAP = "ZAP";
 
 	{
@@ -115,7 +110,7 @@ public class WarHammer extends MeleeWeapon {
 		String info = Messages.get(this, "desc");
 		if (Dungeon.hero.belongings.getItem(RingOfElements.class) != null && Dungeon.hero.belongings.getItem(RingOfMight.class) != null) {
 			if (Dungeon.hero.belongings.getItem(RingOfElements.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfMight.class).isEquipped(Dungeon.hero))
-				info += "\n\n" + Messages.get( WarHammer.class, "setbouns");}
+				info += "\n\n" + Messages.get( Laevateinn.class, "setbouns");}
 
 		return info;
 	}

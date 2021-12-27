@@ -1481,7 +1481,7 @@ items.rings.ringofassassin.desc=This ring increases the wearer's surprise abilit
 items.rings.ringofmistress.name=ring of mistress
 items.rings.ringofmistress.stats=When worn, Weapons SP charging efficiency bonus by _%s%%_.
 items.rings.ringofmistress.typical_stats=When worn, typically Weapons SP charging efficiency bonus by _%s%%_.
-items.rings.ringofmistress.desc=This ring Increases the user's art adaptability, allowing him to better manipulate the weapon's special abilities. The cursed ring is lowered on the contrary.
+items.rings.ringofmistress.desc=This ring Increases the user's art adaptability, allowing him to better manipulate the weapon's special abilities. The cursed ring is lowered on the contrary.\n\n_My Wish_ cannot be affected by this ring.
 
 
 
@@ -2212,18 +2212,18 @@ items.weapon.melee.gauntlet.ac_zap=Sweeping Stance
 items.weapon.melee.gauntlet.desc=It can attack very quickly, but it is very heavy.\n\n_Basic_\nfast fast more fast
 items.weapon.melee.gauntlet.desc_mode=It can attack very quickly, but it is very heavy.\n\n_Sweeping Stance_\nattack power increases, but attack speed decreases.
 
-items.weapon.melee.glaive.name=shadow firmament
-items.weapon.melee.glaive.desc=Crimson Firmament made with Amiya's arts.\n\nAttack 2 times in a row
-items.weapon.melee.glaive.setbouns=_Succession Monarch_\n5% chance to increase the damage of the by 50% 
+items.weapon.melee.shadowfirmament.name=shadow firmament
+items.weapon.melee.shadowfirmament.desc=Crimson Firmament made with Amiya's arts.\n\nAttack 2 times in a row
+items.weapon.melee.shadowfirmament.setbouns=_Succession Monarch_\n5% chance to increase the damage of the by 50% 
 
 items.weapon.melee.gloves.name=shooting glove
 items.weapon.melee.gloves.stats_desc=Attack Speed 250%
 items.weapon.melee.gloves.desc=These gloves protect your hands. Let's hit it with our fists.
 
-items.weapon.melee.greataxe.name=deep abyss
-items.weapon.melee.greataxe.stats_desc=Upgrade Efficiency +
-items.weapon.melee.greataxe.desc=A huge sword made of deep sea minerals. It is too heavy to handle except for the reticent woman of Rhodes Island.
-items.weapon.melee.greataxe.setbouns=_Babodi_\nAcquire Arcane Armor when attacking
+items.weapon.melee.deepabyss.name=deep abyss
+items.weapon.melee.deepabyss.stats_desc=Upgrade Efficiency +
+items.weapon.melee.deepabyss.desc=A huge sword made of deep sea minerals. It is too heavy to handle except for the reticent woman of Rhodes Island.
+items.weapon.melee.deepabyss.setbouns=_Babodi_\nAcquire Arcane Armor when attacking
 
 items.weapon.melee.greatshield.name=patriotism
 items.weapon.melee.greatshield.typical_stats_desc=Typically this weapon blocks 0-%d damage. This blocking scales with upgrades.
@@ -2256,10 +2256,10 @@ items.weapon.melee.longsword.self_target=You can't target yourself!
 items.weapon.melee.longsword.no_magic=you cannot use wands while magic immune.
 items.weapon.melee.longsword.fizzles=it must not have enough charge.
 
-items.weapon.melee.mace.name=thermite blade
-items.weapon.melee.mace.stats_desc=Accuracy +28%\n_True Damage(ignore defense)_
-items.weapon.melee.mace.desc=The high heat of 2,500 degrees pierces the enemy. There is no defense that this sword cannot penetrate.
-items.weapon.melee.mace.setbouns=_Fran4a and Scientific Enchant_\nx3 chance that the weapon's enchantment effect activated.
+items.weapon.melee.thermiteblade.name=thermite blade
+items.weapon.melee.thermiteblade.stats_desc=Accuracy +28%\n_True Damage(ignore defense)_
+items.weapon.melee.thermiteblade.desc=The high heat of 2,500 degrees pierces the enemy. There is no defense that this sword cannot penetrate.
+items.weapon.melee.thermiteblade.setbouns=_Fran4a and Scientific Enchant_\nx3 chance that the weapon's enchantment effect activated.
 
 items.weapon.melee.magesstaff.name=Obsidian ring
 items.weapon.melee.magesstaff.ac_imbue=IMBUE

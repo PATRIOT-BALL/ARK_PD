@@ -34,7 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GunWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -520,7 +520,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					break;
 				}
 				else {
-					if (Dungeon.hero.belongings.weapon instanceof Firmament || Dungeon.hero.belongings.weapon instanceof Glaive)
+					if (Dungeon.hero.belongings.weapon instanceof Firmament || Dungeon.hero.belongings.weapon instanceof ShadowFirmament)
 						count--;
 					count--;
 					//fury attacks as many times as you have combo count
