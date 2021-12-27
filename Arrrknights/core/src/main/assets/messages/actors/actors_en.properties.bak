@@ -946,7 +946,7 @@ actors.mobs.npcs.gavial.name=gavial
 actors.mobs.npcs.gavial.desc=baby alligator~
 actors.mobs.npcs.gavial.desc*Talking to her will take you through the Gavial extra chapter.
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
-actors.mobs.npcs.gavial.dummy=I got a letter from my hometown.
+actors.mobs.npcs.gavial.no=Oh, have you changed your mind? what's ok Let's go next time.
 
 actors.mobs.npcs.dummy.name=DUMMY
 actors.mobs.npcs.dummy.desc=KOKODAYO
@@ -990,7 +990,7 @@ actors.mobs.npcs.npc_astesia.no_weapon=Hello, %s. are you free now? If it's okay
 actors.mobs.npcs.npc_astesia.no_setbouns=Hello, %s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I don't think your weapon has any special secrets yet.
 actors.mobs.npcs.npc_astesia.setbouns_1=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I have uncovered the secrets behind your weapon. If you use _%2$s_ with your weapon, something special will happen.
 actors.mobs.npcs.npc_astesia.setbouns_2=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...the secrets tied to your weapon are... quite a lot. If you use _%2$s_ and _%3$s_ together, something special will happen to your weapon. i will guarantee.
-actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...우와, 엄청 많이 엮여있네. _%2$s_ 와 _%3$s_, 그리고 _%4$s_를 같이 사용하면 네 무기의 특별한 비밀이 밝혀질 수 있을 것 같아.
+actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...wow, that's a lot of ties. If you use _%2$s_, _%3$s_, and _%4$s_ together, I think your weapon's special secret can be revealed.
 
 
 

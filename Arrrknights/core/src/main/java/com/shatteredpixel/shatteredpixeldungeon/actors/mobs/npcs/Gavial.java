@@ -28,8 +28,14 @@ public class Gavial extends NPC {
     @Override
     public boolean interact(Char c) {
         sprite.turnTo(pos, c.pos);
-        //Dungeon.extrastage_Gavial = true;
-        sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "dummy"));
+        if (Dungeon.extrastage_Gavial) {
+            Dungeon.extrastage_Gavial = false;
+            sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "no"));
+        }
+        else {
+            Dungeon.extrastage_Gavial = true;
+            sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "ok"));
+        }
         return true;
     }
 
