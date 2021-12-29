@@ -57,7 +57,7 @@ public class MeleeWeapon extends Weapon {
 
 	public void SPCharge(int value) {
 		int chargevalue = value;
-		chargevalue *= RingOfMistress.SPMultiplier(curUser);
+		chargevalue *= RingOfMistress.SPMultiplier(Dungeon.hero);
 		charge = Math.min(charge+chargevalue, chargeCap);
 		updateQuickslot();
 	}

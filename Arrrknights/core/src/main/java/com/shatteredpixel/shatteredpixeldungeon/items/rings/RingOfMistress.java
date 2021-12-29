@@ -21,13 +21,13 @@ public class RingOfMistress extends Ring{
 
     @Override
     protected RingBuff buff( ) {
-        return new RingOfMistress.ChargeUp();
+        return new WeaponChargeUp();
     }
 
     public static float SPMultiplier( Char t ){
-        return (float) Math.pow( 1.15f, getBuffedBonus(t, ChargeUp.class));
+        return (float) Math.pow( 1.15, getBuffedBonus(t, WeaponChargeUp.class));
     }
 
-    public class ChargeUp extends RingBuff {
+    public class WeaponChargeUp extends RingBuff {
     }
 }

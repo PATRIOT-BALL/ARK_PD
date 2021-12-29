@@ -20,7 +20,7 @@ public class RingOfDominate extends Ring {
 
     @Override
     protected RingBuff buff() {
-        return new RingOfDominate.Dominatepower();
+        return new Dominatepower();
     }
 
     public static float Dominate( Char target ){

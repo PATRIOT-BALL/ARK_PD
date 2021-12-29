@@ -23,7 +23,7 @@ public class RingOfAssassin extends Ring {
 
     @Override
     protected Ring.RingBuff buff( ) {
-        return new RingOfAssassin.Suprise();
+        return new Suprise();
     }
 
     public static float supriseattackbouns( Char target ){

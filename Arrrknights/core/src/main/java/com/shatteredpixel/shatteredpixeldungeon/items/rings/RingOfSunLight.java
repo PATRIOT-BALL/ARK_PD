@@ -22,7 +22,7 @@ public class RingOfSunLight extends Ring {
 
     @Override
     protected RingBuff buff() {
-        return new RingOfSunLight.Chargeup();
+        return new Chargeup();
     }
 
     public static float SPBonus( Char target ){

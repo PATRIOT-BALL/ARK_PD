@@ -17,7 +17,7 @@ public class RingOfAmplified extends Ring {
 
     @Override
     protected RingBuff buff() {
-        return new RingOfAmplified.WandPowerup();
+        return new WandPowerup();
     }
 
     public static int DamageBonus( Char target ){

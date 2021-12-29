@@ -180,6 +180,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlameKatana;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.LoneJourney;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DeepAbyss;
@@ -477,9 +478,10 @@ public class Generator {
                     DivineAvatar.class,
                     R4C.class,
                     RadiantSpear.class,
-                    KRISSVector.class
+                    KRISSVector.class,
+                    LoneJourney.class
             };
-            WEP_T5.probs = new float[]{5, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 3};
+            WEP_T5.probs = new float[]{5, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 3, 3};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{

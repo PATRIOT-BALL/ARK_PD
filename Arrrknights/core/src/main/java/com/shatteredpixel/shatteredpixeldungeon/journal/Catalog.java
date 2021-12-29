@@ -181,6 +181,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSwor
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.LoneJourney;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gluttony;
@@ -311,6 +312,7 @@ public enum Catalog {
 		WEAPONS.seen.put( RadiantSpear.class,                false);
 		WEAPONS.seen.put( KRISSVector.class,                false);
 		WEAPONS.seen.put( SakuraSword.class,                false);
+		WEAPONS.seen.put( LoneJourney.class,                   false);
 
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Firmament.class,                       false);

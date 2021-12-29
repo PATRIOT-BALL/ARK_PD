@@ -2345,18 +2345,18 @@ items.weapon.melee.sword.name=orca cushion
 items.weapon.melee.sword.desc=Cute Orca Cushion. This is definitely not the sound coming from the cushion. If it's right, it hurts.
 items.weapon.melee.sword.setbouns=_Bakadi_\nIt hurts a lot.
 
-items.weapon.melee.warhammer.name=Laevateinn
-items.weapon.melee.warhammer.stats_desc=Accuracy +30%
-items.weapon.melee.warhammer.desc=This is the twilight of the gods, but it's not the end.\n\nWhen you activate an ability, your _attack damage is doubled_ and weapon _range is increased_. Also, _you take all damage to 0._ However, the potion cannot be used while it lasts, and this power can only be used once.\n\nAlso, when used, your HP is 1.
-items.weapon.melee.warhammer.setbouns=_Molten Core_\nIncreases damage by 40% against burning enemies
-items.weapon.melee.warhammer.ac_zap=_TWILIGHT_
-items.weapon.melee.warhammer.skillfail=no longer available
-items.weapon.melee.warhammer.dont_equ=This power can only be used with a weapon equipped.
+items.weapon.melee.laevateinn.name=Laevateinn
+items.weapon.melee.laevateinn.stats_desc=Accuracy +30%
+items.weapon.melee.laevateinn.desc=This is the twilight of the gods, but it's not the end.\n\nWhen you activate an ability, your _attack damage is doubled_ and weapon _range is increased_. Also, _you take all damage to 0._ However, the potion cannot be used while it lasts, and this power can only be used once.\n\nAlso, when used, your HP is 1.
+items.weapon.melee.laevateinn.setbouns=_Molten Core_\nIncreases damage by 40% against burning enemies
+items.weapon.melee.laevateinn.ac_zap=_TWILIGHT_
+items.weapon.melee.laevateinn.skillfail=no longer available
+items.weapon.melee.laevateinn.dont_equ=This power can only be used with a weapon equipped.
 
-items.weapon.melee.whip.name=destreza
-items.weapon.melee.whip.stats_desc=Range +3
-items.weapon.melee.whip.desc="Watch carefully, this is the Destreza of Iberia!"
-items.weapon.melee.whip.setbouns=_Toxicity_\nCan poison the target when attacking
+items.weapon.melee.destreza.name=destreza
+items.weapon.melee.destreza.stats_desc=Range +3
+items.weapon.melee.destreza.desc="Watch carefully, this is the Destreza of Iberia!"
+items.weapon.melee.destreza.setbouns=_Toxicity_\nCan poison the target when attacking
 
 items.weapon.melee.wornshortsword.name=crimson chainsaw
 items.weapon.melee.wornshortsword.stats_desc=Attack Speed 200%, Accuracy -40%
@@ -2529,6 +2529,15 @@ items.weapon.melee.metallicunion.stats_desc=Accuracy -10%
 items.weapon.melee.metallicunion.ac_change=CHANGE
 items.weapon.melee.metallicunion.modechange_nm=Your weapon mode has been changed to Normal!
 items.weapon.melee.metallicunion.modechange_ex=Your weapon mode has been changed to Extra!
+
+items.weapon.melee.lonejourney.name=lone journey
+items.weapon.melee.lonejourney.desc="Has she dragged this body around all over the world? This ship is perhaps the last chance she has for a miracle, but her body... I hope there is still something we can do......"\n\nRecharges SP when attacking, and at 100%, you can use special abilities to choose 3 functions.
+items.weapon.melee.lonejourney.ac_sp=DADADAD!!
+items.weapon.melee.lonejourney.wnddesc=_Very Cold!_ the next attack binds the target\n_Very Hot!_ the next attack damage x1.3 and burning the target\n_Very Heavy!_ the next attack silence the target
+items.weapon.melee.lonejourney.special1=Very Cold!
+items.weapon.melee.lonejourney.special2=Very Hot!
+items.weapon.melee.lonejourney.special3=Very Heavy!
+items.weapon.melee.lonejourney.stats_desc=Range +1
 
 ## 총기 관련
 

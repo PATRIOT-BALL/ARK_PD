@@ -2352,18 +2352,18 @@ items.weapon.melee.sword.name=범고래 쿠션
 items.weapon.melee.sword.desc=귀여운 범고래모양 쿠션. 보기와 다르게 굉장히 무겁다. 이런 걸 휘두르면 분명 아프겠지?
 items.weapon.melee.sword.setbouns=_아이템 시너지 : 슼갈통_\n맞은 대상이 많이 아파합니다.
 
-items.weapon.melee.warhammer.name=레바테인
-items.weapon.melee.warhammer.stats_desc=명중률 +30%
-items.weapon.melee.warhammer.desc=대검이 휘둘릴 때, 맹렬한 화염은 천지를 불태우고 신의 정원을 몰락시킬 것이다. 이는 신들의 황혼이자 신사의 폐막이나 그것은 끝이 아니니, 옛 죄악을 태워버린 초토 위에서 희망의 싹이 새로 태어날 것이기 때문이다. \n\n능력을 사용하면 무기에 깃든 거인의 힘을 사용합니다. 사용시 체력이 _1_ 이 되지만, _공격력이 2배_ 가 되고 _모든 피해를 0_ 으로 받으며, 사거리가 증가합니다. 대신 지속 중 물약을 사용할 수 없으며, 이 능력은 한 번만 사용할 수 있습니다.
-items.weapon.melee.warhammer.setbouns=_아이템 시너지 : 용암거영_\n연소 상태인 적에게 40%의 추가 피해를 입힙니다.
-items.weapon.melee.warhammer.ac_zap=_황혼_
-items.weapon.melee.warhammer.skillfail=더 이상 거인의 힘을 쓸 수 없다.
-items.weapon.melee.warhammer.dont_equ=거인의 힘은 레바테인을 장착해야 사용할 수 있다.
+items.weapon.melee.laevateinn.name=레바테인
+items.weapon.melee.laevateinn.stats_desc=명중률 +30%
+items.weapon.melee.laevateinn.desc=대검이 휘둘릴 때, 맹렬한 화염은 천지를 불태우고 신의 정원을 몰락시킬 것이다. 이는 신들의 황혼이자 신사의 폐막이나 그것은 끝이 아니니, 옛 죄악을 태워버린 초토 위에서 희망의 싹이 새로 태어날 것이기 때문이다. \n\n능력을 사용하면 무기에 깃든 거인의 힘을 사용합니다. 사용시 체력이 _1_ 이 되지만, _공격력이 2배_ 가 되고 _모든 피해를 0_ 으로 받으며, 사거리가 증가합니다. 대신 지속 중 물약을 사용할 수 없으며, 이 능력은 한 번만 사용할 수 있습니다.
+items.weapon.melee.laevateinn.setbouns=_아이템 시너지 : 용암거영_\n연소 상태인 적에게 40%의 추가 피해를 입힙니다.
+items.weapon.melee.laevateinn.ac_zap=_황혼_
+items.weapon.melee.laevateinn.skillfail=더 이상 거인의 힘을 쓸 수 없다.
+items.weapon.melee.laevateinn.dont_equ=거인의 힘은 레바테인을 장착해야 사용할 수 있다.
 
-items.weapon.melee.whip.name=데스트레자
-items.weapon.melee.whip.stats_desc=사거리 +3
-items.weapon.melee.whip.desc=이베리아에서 만들어진 이 특이한 모양의 장검은 사실 날붙이가 아닌 일종의 아츠 스태프입니다. 쏜즈 본인은 이곳에 독을 발라 자신의 아츠로 멀리 날려보내곤 합니다.
-items.weapon.melee.whip.setbouns=_아이템 시너지 : 신경 부식_\n공격시 적에게 중독을 부여합니다.
+items.weapon.melee.destreza.name=데스트레자
+items.weapon.melee.destreza.stats_desc=사거리 +3
+items.weapon.melee.destreza.desc=이베리아에서 만들어진 이 특이한 모양의 장검은 사실 날붙이가 아닌 일종의 아츠 스태프입니다. 쏜즈 본인은 이곳에 독을 발라 자신의 아츠로 멀리 날려보내곤 합니다.
+items.weapon.melee.destreza.setbouns=_아이템 시너지 : 신경 부식_\n공격시 적에게 중독을 부여합니다.
 
 items.weapon.melee.wornshortsword.name=크림슨 체인소우
 items.weapon.melee.wornshortsword.stats_desc=공격속도 +100%, 명중률 -40%
@@ -2533,6 +2533,14 @@ items.weapon.melee.metallicunion.stats_desc=명중률 -10%
 items.weapon.melee.metallicunion.ac_change=강제 변환
 items.weapon.melee.metallicunion.modechange_nm=당신의 무기 모드가 일반 모드가 되었다!
 items.weapon.melee.metallicunion.modechange_ex=당신의 무기 모드가 변형 모드가 되었다!
+
+items.weapon.melee.lonejourney.name=홀로가는 먼 길
+items.weapon.melee.lonejourney.desc="이런 몸으로 전 세계를 돌아다녔다고? 이게 바로 기적이란 거겠지. 하지만 그녀의 몸은 이젠… 우리가 할 수 있는 일이 있다면 좋을텐데……"\n\n매 공격시 SP를 충전하며, SP가 100%일 때 무기 능력을 사용해 3가지 능력 중 하나를 사용할 수 있습니다.
+items.weapon.melee.lonejourney.ac_sp=다다다다다!!
+items.weapon.melee.lonejourney.wnddesc=_엄청 차가워!_ 다음 공격이 속박을 부여합니다.\n_엄청 뜨거워!_ 다음 공격의 피해량이 30% 상승하고 연소를 부여합니다.\n_엄청 무거워!_ 다음 공격이 침묵을 부여합니다.
+items.weapon.melee.lonejourney.special1=엄청 차가워!
+items.weapon.melee.lonejourney.special2=엄청 뜨거워!
+items.weapon.melee.lonejourney.special3=엄청 무거워!
 
 
 
