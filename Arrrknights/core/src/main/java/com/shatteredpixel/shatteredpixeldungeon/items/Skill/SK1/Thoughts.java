@@ -73,7 +73,7 @@ public class Thoughts extends Skill {
     public class SpiritArrow extends MissileWeapon {
 
         {
-            image = ItemSpriteSheet.TRIDENT;
+            image = ItemSpriteSheet.EX44;
 
             hitSound = Assets.Sounds.HIT_ARROW;
         }

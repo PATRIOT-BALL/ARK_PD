@@ -393,6 +393,7 @@ public class ItemSpriteSheet {
 	public static final int AMMO2 		= MISSILE_WEP+19;
 	public static final int LISKARM_DOLL 		= MISSILE_WEP+20;
 	public static final int HOLY_KNIFE 		= MISSILE_WEP+21;
+	public static final int EX44 		= MISSILE_WEP+30;
 	
 	static{
 		assignItemRect(SPIRIT_BOW,      16, 16);
@@ -422,6 +423,7 @@ public class ItemSpriteSheet {
 		assignItemRect(AMMO2,      16, 16);
 		assignItemRect(LISKARM_DOLL,      16, 16);
 		assignItemRect(HOLY_KNIFE,      16, 16);
+		assignItemRect(EX44,         24, 24);
 	}
 	
 	public static final int TIPPED_DARTS    =                               xy(1, 11);  //16 slots

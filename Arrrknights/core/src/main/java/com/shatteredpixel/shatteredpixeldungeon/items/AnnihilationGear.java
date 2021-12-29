@@ -243,7 +243,7 @@ public class AnnihilationGear extends Item {
 public class Spriteex extends MissileWeapon {
 
     {
-        image = ItemSpriteSheet.TRIDENT;
+        image = ItemSpriteSheet.EX44;
 
         hitSound = Assets.Sounds.HIT_SLASH;
     }
