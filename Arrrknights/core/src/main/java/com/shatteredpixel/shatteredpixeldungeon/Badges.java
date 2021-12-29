@@ -221,7 +221,7 @@ public class Badges {
 		SKIN_LAPPY(165,false,true),
 		SKIN_JESSI(166, false, true),
 		SKIN_LEAF(167, false, true),
-		//SKIN_MUDROCK(168, false, true),
+		SKIN_MUDROCK(168, false, true),
 		SKIN_ASTESIA(170, false, true),
 		SKIN_SPECTER(169, false, true),
 
@@ -1007,8 +1007,8 @@ public class Badges {
 	}
 
 	public static void validateRockskin() {
-		//Badge badge = Badge.SKIN_MUDROCK;
-		//displayBadge( badge );
+		Badge badge = Badge.SKIN_MUDROCK;
+		displayBadge( badge );
 	}
 
 	public static void validateAstesiaskin() {
@@ -1048,6 +1048,15 @@ public class Badges {
 		if(global.contains(Badge.SKIN_LEAF)) {
 			global.remove(Badge.SKIN_LEAF);
 		}
+		if(global.contains(Badge.SKIN_MUDROCK)) {
+			global.remove(Badge.SKIN_MUDROCK);
+		}
+		if(global.contains(Badge.SKIN_SPECTER)) {
+			global.remove(Badge.SKIN_SPECTER);
+		}
+		if(global.contains(Badge.SKIN_ASTESIA)) {
+			global.remove(Badge.SKIN_ASTESIA);
+		}
 
 		if (Badges.isUnlocked(Badge.SUPPORT)) {
 			Badges.validatetaluskin();
@@ -1058,6 +1067,7 @@ public class Badges {
 			Badges.validatejessiskin();
 			Badges.validatelappyskin();
 			Badges.validateleafskin();
+			Badges.validateRockskin();
 			Badges.validatesameskin();
 			Badges.validateAstesiaskin();
 		}
@@ -1071,6 +1081,7 @@ public class Badges {
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI) && Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) { Badges.validatejessiskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY) && Badges.isUnlocked(Badges.Badge.HAPPY_END)) { Badges.validatelappyskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_LEAF) && Badges.isUnlocked(Badge.CHAMPION_1)) { Badges.validateleafskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_MUDROCK) && Badges.isUnlocked(Badge.BOSS_SLAIN_3_ALL_SUBCLASSES)) { Badges.validateRockskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_SPECTER) && Badges.isUnlocked(Badge.GAMES_PLAYED_1)) { Badges.validatesameskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_ASTESIA) && Badges.isUnlocked(Badge.SLAIN_PURSUER)) { Badges.validateAstesiaskin();}
 	}

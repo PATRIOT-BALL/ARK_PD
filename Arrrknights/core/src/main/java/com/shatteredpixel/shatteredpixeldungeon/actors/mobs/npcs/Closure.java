@@ -142,7 +142,16 @@ public class Closure extends NPC {
                                         }});}
                                 break;
                             case 8: // 머드락 스킨
-                                sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "incomplete"));
+                                if (Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3_ALL_SUBCLASSES)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_MUDROCK)) {Badges.validateRockskin();}
+                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
+                                } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
+                                    Game.runOnRenderThread(new Callback() {
+                                        @Override
+                                        public void call() {
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin9", Dungeon.hero.heroClass.title())));
+                                        }});}
                                 break;
                             case 9: // 별누나 스킨
                                 if (Badges.isUnlocked(Badges.Badge.SLAIN_PURSUER)) {
