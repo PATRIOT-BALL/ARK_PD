@@ -4,11 +4,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EnragedSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tiacauh_fanaticSprite;
 import com.watabou.utils.Random;
 
 public class TiacauhRipper extends Mob {
     {
-        spriteClass = EnragedSprite.class;
+        spriteClass = Tiacauh_fanaticSprite.class;
 
         HP = HT = 85;
         defenseSkill = 45;

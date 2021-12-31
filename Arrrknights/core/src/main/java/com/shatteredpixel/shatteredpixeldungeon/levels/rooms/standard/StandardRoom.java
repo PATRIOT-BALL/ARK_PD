@@ -193,13 +193,10 @@ public abstract class StandardRoom extends Room {
 		chances[26] = chances[25] = chances[24] = chances[23] = chances[22] = chances[21];
 
 		if (Dungeon.extrastage_Gavial) {
-			chances[31] = new float[]{15, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 10,
+			chances[31] = new float[]{15, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 15,
 				1,1,1,1,1,1,1,1,1,1, 0,1,1};
-			chances[35] = chances[34] = chances[33] = chances[32] = chances[31];
+			chances[40] = chances[39] = chances[38] = chances[37] = chances[36] = chances[35] = chances[34] = chances[33] = chances[32] = chances[31];
 
-			chances[36] = new float[]{15, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 10,
-				1,1,1,1,1,1,1,1,1,1, 0,1,1};
-			chances[40] = chances[39] = chances[38] = chances[37] = chances[36];
 		}
 		else {
 			chances[31] = new float[]{15, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 15,5,5, 0,0,0, 0,

@@ -4,12 +4,21 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ArtifactRecharge;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.LiveStart;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -90,6 +99,20 @@ public class CatGun extends MeleeWeapon {
                 }
                 charge = 0;
             }
+            else if (charge < chargeCap && catsetbouns()) {
+                for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                    if (mob instanceof Mon3tr) {
+                        int gaincharge;
+                        if (mob.HT / 2 > mob.HP) gaincharge = 25;
+                        else if (mob.HT / 4 > mob.HP) gaincharge = 15;
+                        else gaincharge = 30;
+
+                        mob.die(this);
+                        charge = Math.min(charge + gaincharge, chargeCap);
+                        updateQuickslot();
+                    }
+                }
+            }
         }
     }
 
@@ -107,6 +130,30 @@ public class CatGun extends MeleeWeapon {
 
         //otherwise, if there's no charge, return null.
         return null;
+    }
+
+    @Override
+    public String desc() {
+        String info;
+        if (catsetbouns()) {
+                info = Messages.get(this, "desc_sp");
+                info += "\n\n" + Messages.get(CatGun.class, "setbouns");
+                return info;
+            }
+        info = Messages.get(this, "desc");
+        return info;
+    }
+
+    public static boolean catsetbouns() {
+        if (!(Dungeon.hero.belongings.weapon instanceof CatGun)) return false;
+
+        if (Dungeon.hero.belongings.getItem(RingOfMistress.class) != null && Dungeon.hero.belongings.getItem(ChaliceOfBlood.class) != null
+                && Dungeon.hero.belongings.getItem(UnstableSpellbook.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfMistress.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(ChaliceOfBlood.class).isEquipped(Dungeon.hero)
+                    && Dungeon.hero.belongings.getItem(UnstableSpellbook.class).isEquipped(Dungeon.hero))
+                return true;
+        }
+        return false;
     }
 
 
@@ -245,7 +292,27 @@ public class CatGun extends MeleeWeapon {
             }
             else HP -= HT/20;
 
+            if (catsetbouns()) {
+                damage *= 1.3f;
+                Buff.affect(Dungeon.hero, ArtifactRecharge.class).prolong(2).ignoreHornOfPlenty=false;
+                Buff.affect(Dungeon.hero, Bless.class, 2f);
+            }
+
             return super.attackProc(enemy, damage);
+        }
+
+        @Override
+        public void die(Object cause) {
+            if (catsetbouns()) {
+                for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                    if (Dungeon.level.adjacent(mob.pos, this.pos) && mob.alignment != Char.Alignment.ALLY) {
+                        int dmg = this.damageRoll();
+                        CellEmitter.get( mob.pos ).burst(BlastParticle.FACTORY, 6 );
+                        mob.damage(dmg, this);
+                    }
+                }
+            }
+            super.die(cause);
         }
 
         @Override

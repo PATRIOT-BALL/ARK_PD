@@ -86,9 +86,11 @@ public class ImageoverForm extends MeleeWeapon {
             if (this.buff(StoneOfAggression.Aggression.class) == null) {
                 Buff.prolong(this, StoneOfAggression.Aggression.class, StoneOfAggression.Aggression.DURATION);}
 
-            HP -= 1;
-            if (HP < 1) this.die(this);
-
+                HP -= 1;
+                if (HP < 1) {
+                    this.die(this);
+                    return true;
+                }
             return super.act();
         }
 

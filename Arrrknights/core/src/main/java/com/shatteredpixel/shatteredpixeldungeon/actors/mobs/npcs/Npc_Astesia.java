@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAssassin;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
@@ -20,11 +21,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfForce;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfFuror;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfHaste;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Castlebreaker;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DeepAbyss;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Destreza;
@@ -45,6 +48,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Blood_ShamanSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_AstesiaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndMessage;
 import com.watabou.noosa.Game;
@@ -118,6 +122,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof Scythe) {setItem1 = new RingOfFuror(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof Laevateinn) {setItem1 = new RingOfElements(); setItem2 = new RingOfMight(); setItem3 = null; SetValue = 2; return true;}
         else if (weapon instanceof Destreza) {setItem1 = new AlchemyKit(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
+        else if (weapon instanceof CatGun) {setItem1 = new ChaliceOfBlood(); setItem2 = new UnstableSpellbook(); setItem3 = new RingOfMistress(); SetValue = 3; return true;}
 
 
         return false;
