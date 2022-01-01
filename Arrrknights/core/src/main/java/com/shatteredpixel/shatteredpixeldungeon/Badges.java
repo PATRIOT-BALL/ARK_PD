@@ -1081,7 +1081,7 @@ public class Badges {
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI) && Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) { Badges.validatejessiskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY) && Badges.isUnlocked(Badges.Badge.HAPPY_END)) { Badges.validatelappyskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_LEAF) && Badges.isUnlocked(Badge.CHAMPION_1)) { Badges.validateleafskin();}
-		if(!Badges.isUnlocked(Badge.SKIN_MUDROCK) && Badges.isUnlocked(Badge.BOSS_SLAIN_3_ALL_SUBCLASSES)) { Badges.validateRockskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_MUDROCK) && Badges.isUnlocked(Badge.UNLOCK_ROGUE)) { Badges.validateRockskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_SPECTER) && Badges.isUnlocked(Badge.GAMES_PLAYED_1)) { Badges.validatesameskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_ASTESIA) && Badges.isUnlocked(Badge.SLAIN_PURSUER)) { Badges.validateAstesiaskin();}
 	}

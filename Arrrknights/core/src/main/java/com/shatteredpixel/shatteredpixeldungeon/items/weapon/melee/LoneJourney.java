@@ -19,8 +19,8 @@ public class LoneJourney extends MeleeWeapon {
     public static final String AC_SP = "SP";
 
     {
-        image = ItemSpriteSheet.SHURIKEN;
-        hitSound = Assets.Sounds.HIT_SPEAR;
+        image = ItemSpriteSheet.LONE;
+        hitSound = Assets.Sounds.HIT_WHIP;
         hitSoundPitch = 1f;
 
         defaultAction = AC_SP;

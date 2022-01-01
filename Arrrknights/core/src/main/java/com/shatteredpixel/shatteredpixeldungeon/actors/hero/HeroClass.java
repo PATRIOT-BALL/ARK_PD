@@ -377,7 +377,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				case 6: return Assets.Sprites.JESSI;
 				case 7: return Assets.Sprites.LAPPY;
 				case 8: return Assets.Sprites.FROST;
-				case 9: return Assets.Sprites.MUD;
+				case 9: return Assets.Sprites.MDR;
 				case 10: return Assets.Sprites.AST;
 				case 11: return Assets.Sprites.SPT;
 			}

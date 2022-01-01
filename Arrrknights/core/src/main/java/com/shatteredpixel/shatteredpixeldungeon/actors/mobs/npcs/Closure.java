@@ -142,7 +142,7 @@ public class Closure extends NPC {
                                         }});}
                                 break;
                             case 8: // 머드락 스킨
-                                if (Badges.isUnlocked(Badges.Badge.BOSS_SLAIN_3_ALL_SUBCLASSES)) {
+                                if (Badges.isUnlocked(Badges.Badge.UNLOCK_ROGUE)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_MUDROCK)) {Badges.validateRockskin();}
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;

@@ -68,7 +68,7 @@ public class HeroSprite extends CharSprite {
 				break;
 			case 8: texture(Assets.Sprites.FROST); // 상엽
 				break;
-			case 9: texture(Assets.Sprites.MUD); // 머드락. 임시
+			case 9: texture(Assets.Sprites.MDR); // 머드락. 임시
 				break;
 			case 10: texture(Assets.Sprites.AST); // 별눈나
 				break;
@@ -106,7 +106,7 @@ public class HeroSprite extends CharSprite {
 				break;
 			case 8: texture(Assets.Sprites.FROST); // 상엽
 				break;
-			case 9: texture(Assets.Sprites.MUD); // 머드락. 임시
+			case 9: texture(Assets.Sprites.MDR); // 머드락. 임시
 				break;
 			case 10: texture(Assets.Sprites.AST); // 별눈나
 				break;
