@@ -459,7 +459,7 @@ public class Assets {
 
 		public static final String LENS	= "sprites/lens.png";
 		public static final String ROCK_CRAB	= "sprites/rock_crab.png";
-		public static final String SEABORN	= "sprites/Seaborn.png";
+		public static final String SEABORN	= "sprites/seaborn.png";
 		public static final String MON3TER	= "sprites/mon3ter.png";
 		public static final String ZUZAI	= "sprites/zuzai.png";
 

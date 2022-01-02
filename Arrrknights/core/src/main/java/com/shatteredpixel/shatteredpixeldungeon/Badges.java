@@ -224,7 +224,7 @@ public class Badges {
 		SKIN_MUDROCK(168, false, true),
 		SKIN_ASTESIA(170, false, true),
 		SKIN_SPECTER(169, false, true),
-		SKIN_SCHWARZ(169, false, true),
+		SKIN_SCHWARZ(170, false, true),
 
 		//기타
 		SUPPORT;
