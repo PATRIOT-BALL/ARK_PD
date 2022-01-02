@@ -2394,6 +2394,7 @@ items.weapon.melee.swordofartorius.name=sword of artorius
 items.weapon.melee.swordofartorius.stats_desc=attacking with this weapon, it fires an arts beam, dealing _%1$d-%2$d damage_.
 items.weapon.melee.swordofartorius.typical_stats_desc=Typically attacking with this weapon, it fires an arts beam, dealing _%1$d-%2$d damage_.
 items.weapon.melee.swordofartorius.desc=_"The truth has been turned to ash, and only an evil god stands in the flames."_
+items.weapon.melee.swordofartorius.setbouns=_Tyrant_\nArts beam`s damage x1.3
 
 items.weapon.melee.wintersscar.name=winter`s scar
 items.weapon.melee.wintersscar.stats_desc=Surprise attack bonus +33%\ndamage bonus to enemies in Chilled
@@ -2532,7 +2533,7 @@ items.weapon.melee.metallicunion.modechange_ex=Your weapon mode has been changed
 
 items.weapon.melee.lonejourney.name=lone journey
 items.weapon.melee.lonejourney.desc="Has she dragged this body around all over the world? This ship is perhaps the last chance she has for a miracle, but her body... I hope there is still something we can do......"\n\nRecharges SP when attacking, and at 100%, you can use special abilities to choose 3 functions.
-items.weapon.melee.lonejourney.ac_sp=DADADAD!!
+items.weapon.melee.lonejourney.ac_sp=DADADADA!!
 items.weapon.melee.lonejourney.wnddesc=_Very Cold!_ the next attack binds the target\n_Very Hot!_ the next attack damage x1.3 and burning the target\n_Very Heavy!_ the next attack silence the target
 items.weapon.melee.lonejourney.special1=Very Cold!
 items.weapon.melee.lonejourney.special2=Very Hot!

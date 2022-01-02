@@ -58,6 +58,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibili
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLevitation;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -84,6 +85,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SakuraSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.LightKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
@@ -349,7 +351,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		skillB = new SkillBook();
 		skillB.quantity(1).collect();
 		Dungeon.quickslot.setSlot(2,skillB);
-
 		new DewVial().collect();
 	}
 
@@ -380,6 +381,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				case 9: return Assets.Sprites.MDR;
 				case 10: return Assets.Sprites.AST;
 				case 11: return Assets.Sprites.SPT;
+				case 12: return Assets.Sprites.SCH;
 			}
 		}
 		switch (this) {

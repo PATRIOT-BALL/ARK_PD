@@ -44,6 +44,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -123,6 +124,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof Laevateinn) {setItem1 = new RingOfElements(); setItem2 = new RingOfMight(); setItem3 = null; SetValue = 2; return true;}
         else if (weapon instanceof Destreza) {setItem1 = new AlchemyKit(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof CatGun) {setItem1 = new ChaliceOfBlood(); setItem2 = new UnstableSpellbook(); setItem3 = new RingOfMistress(); SetValue = 3; return true;}
+        else if (weapon instanceof SwordofArtorius) {setItem1 = new RingOfMistress(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
 
 
         return false;

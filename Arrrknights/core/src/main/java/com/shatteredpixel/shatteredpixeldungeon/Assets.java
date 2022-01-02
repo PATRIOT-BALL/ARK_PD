@@ -137,6 +137,7 @@ public class Assets {
 		public static final String BOSS		= "music/boss.ogg";
 		public static final String BOSS2		= "music/boss2.ogg";
 		public static final String BOSS3		= "music/boss3.ogg";
+		public static final String BOSS3_MUDROCKSP	= "music/mudrock.ogg";
 		public static final String BOSS4		= "music/boss4.ogg";
 		public static final String BOSS5		= "music/boss5.ogg";
 		public static final String BOSS6_SIESTA		= "music/boss_siesta1.ogg";

@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Chrome;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Archs;
 import com.shatteredpixel.shatteredpixeldungeon.ui.ExitButton;
@@ -62,7 +63,8 @@ public class ChangesScene extends PixelScene {
 		}
 		else if (Dungeon.depth == 15)
 		{
-			Music.INSTANCE.play(Assets.Music.BOSS3, true);
+			if (Dungeon.hero.CharSkin== Hero.MUDROCK) 	Music.INSTANCE.play(Assets.Music.BOSS3_MUDROCKSP, true);
+			else Music.INSTANCE.play(Assets.Music.BOSS3, true);
 		}
 		else if (Dungeon.depth == 20)
 		{

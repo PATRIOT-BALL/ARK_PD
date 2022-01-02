@@ -224,6 +224,7 @@ public class Badges {
 		SKIN_MUDROCK(168, false, true),
 		SKIN_ASTESIA(170, false, true),
 		SKIN_SPECTER(169, false, true),
+		SKIN_SCHWARZ(169, false, true),
 
 		//기타
 		SUPPORT;
@@ -1021,6 +1022,11 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validateschwazrskin() {
+		Badge badge = Badge.SKIN_SCHWARZ;
+		displayBadge( badge );
+	}
+
 	// 0.3.2버전의 스킨 관련 처리로 인해 추가된 구문입니다. 추후 필요없어질 수 있습니다.
 	public static void allskindestroy() {
 		saveNeeded = true;
@@ -1057,6 +1063,9 @@ public class Badges {
 		if(global.contains(Badge.SKIN_ASTESIA)) {
 			global.remove(Badge.SKIN_ASTESIA);
 		}
+		if(global.contains(Badge.SKIN_SCHWARZ)) {
+			global.remove(Badge.SKIN_SCHWARZ);
+		}
 
 		if (Badges.isUnlocked(Badge.SUPPORT)) {
 			Badges.validatetaluskin();
@@ -1070,6 +1079,7 @@ public class Badges {
 			Badges.validateRockskin();
 			Badges.validatesameskin();
 			Badges.validateAstesiaskin();
+			Badges.validateschwazrskin();
 		}
 
 		// 배지 파괴 후, 조건에 맞는 배지는 다시 획득합니다.
@@ -1081,9 +1091,10 @@ public class Badges {
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_JESSI) && Badges.isUnlocked(Badges.Badge.UNLOCK_MAGE)) { Badges.validatejessiskin();}
 		if(!Badges.isUnlocked(Badges.Badge.SKIN_LAPPY) && Badges.isUnlocked(Badges.Badge.HAPPY_END)) { Badges.validatelappyskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_LEAF) && Badges.isUnlocked(Badge.CHAMPION_1)) { Badges.validateleafskin();}
-		if(!Badges.isUnlocked(Badge.SKIN_MUDROCK) && Badges.isUnlocked(Badge.UNLOCK_ROGUE)) { Badges.validateRockskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_MUDROCK) && Badges.isUnlocked(Badge.BOSS_SLAIN_3_ALL_SUBCLASSES)) { Badges.validateRockskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_SPECTER) && Badges.isUnlocked(Badge.GAMES_PLAYED_1)) { Badges.validatesameskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_ASTESIA) && Badges.isUnlocked(Badge.SLAIN_PURSUER)) { Badges.validateAstesiaskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_SCHWARZ) && Badges.isUnlocked(Badge.SIESTA_PART2)) { Badges.validateschwazrskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene
@@ -1478,7 +1489,7 @@ public class Badges {
 
 	private static final Badge[][] skinBadgeReplacements = new Badge[][]{
 			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}, {Badge.SKIN_LEAF},
-			{Badge.SKIN_ASTESIA}, {Badge.SKIN_SPECTER}, //{Badge.SKIN_MUDROCK}
+			{Badge.SKIN_ASTESIA}, {Badge.SKIN_SPECTER}, {Badge.SKIN_MUDROCK}, {Badge.SKIN_SCHWARZ}
 	};
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {

@@ -9,6 +9,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Web;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -87,6 +89,7 @@ public class SwordofArtorius extends MeleeWeapon {
         }
 
         int dmg = Random.NormalIntRange(4+buffedLvl(), 12+buffedLvl()*4);
+        if(isSetbouns()) dmg *= 1.3f;
         for (Char ch : chars) {
             ch.damage(dmg, this );
             ch.sprite.centerEmitter().burst( PurpleParticle.BURST, Random.IntRange( 1, 2 ) );
@@ -94,5 +97,21 @@ public class SwordofArtorius extends MeleeWeapon {
         }
 
         return super.proc(attacker, defender, damage);
+    }
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+        if (isSetbouns()) info += "\n\n" + Messages.get( SwordofArtorius.class, "setbouns");
+
+        return info;
+    }
+
+    private boolean isSetbouns() {
+        if (Dungeon.hero.belongings.getItem(RingOfMistress.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfMistress.class).isEquipped(Dungeon.hero))
+                return true;
+        }
+        return false;
     }
 }

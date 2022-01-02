@@ -191,7 +191,8 @@ public class GameScene extends PixelScene {
 		}
 		else if (Dungeon.depth == 15)
 		{
-			Music.INSTANCE.play(Assets.Music.BOSS3, true);
+			if (Dungeon.hero.CharSkin== Hero.MUDROCK) 	Music.INSTANCE.play(Assets.Music.BOSS3_MUDROCKSP, true);
+			else Music.INSTANCE.play(Assets.Music.BOSS3, true);
 		}
 		else if (Dungeon.depth == 20)
 		{

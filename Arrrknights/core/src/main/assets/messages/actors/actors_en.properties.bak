@@ -946,7 +946,7 @@ actors.mobs.npcs.gavial.name=gavial
 actors.mobs.npcs.gavial.desc=baby alligator~
 actors.mobs.npcs.gavial.desc*Talking to her will take you through the Gavial extra chapter.
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
-actors.mobs.npcs.gavial.no=Oh, have you changed your mind? what's ok Let's go next time.
+actors.mobs.npcs.gavial.no=Oh, have you changed your mind? ok. Let's go next time.
 
 actors.mobs.npcs.dummy.name=DUMMY
 actors.mobs.npcs.dummy.desc=KOKODAYO

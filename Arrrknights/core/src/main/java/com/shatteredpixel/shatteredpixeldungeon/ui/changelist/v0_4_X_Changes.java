@@ -23,7 +23,8 @@ public class v0_4_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템",
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 및 시너지",
+                "_새로운 아이템 시너지_ : 폭군 / 바벨" + "\n\n" +
                 "_철의육합_ : 10회 공격마다 모드가 변경되는 무기입니다. 통상 상태에선 높은 공격력을, 변형 상태일 땐 매 공격이 넉백시키는 효과를 가집니다." + "\n\n" +
                         "_홀로가는 먼 길_ : SP를 충전한 후 3가지 특수 기능 중 1개를 사용 가능한 사거리 2의 무기입니다." + "\n\n" +
                 "_여제의 반지_ : 장착한 무기의 SP 충전률을 올려주는 반지입니다. 단, _나의 소원_은 효과를 받을 수 없습니다."));

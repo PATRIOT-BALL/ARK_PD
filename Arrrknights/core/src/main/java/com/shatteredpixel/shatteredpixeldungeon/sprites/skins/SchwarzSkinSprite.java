@@ -1,19 +1,20 @@
-package com.shatteredpixel.shatteredpixeldungeon.sprites;
+package com.shatteredpixel.shatteredpixeldungeon.sprites.skins;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.MobSprite;
 import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 
-public class NPC_AstesiaSprite extends MobSprite {
-    public NPC_AstesiaSprite() {
+public class SchwarzSkinSprite extends MobSprite {
+    public SchwarzSkinSprite() {
         super();
 
-        texture( Assets.Sprites.NPC_ASTESIA );
+        texture( Assets.Sprites.SCH );
 
-        TextureFilm frames = new TextureFilm( texture, 36, 34 );
+        TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
-        idle = new MovieClip.Animation( 8, true );
-        idle.frames( frames, 0, 1, 2, 3, 4, 5 );
+        idle = new MovieClip.Animation( 2, true );
+        idle.frames( frames, 50 );
 
         run = new MovieClip.Animation( 15, false );
         run.frames( frames, 50 );
@@ -26,6 +27,8 @@ public class NPC_AstesiaSprite extends MobSprite {
         die = new MovieClip.Animation( 8, false );
         die.frames( frames, 50 );
 
+        alpha(0.5f);
+
         play( idle.clone() );
     }
 
@@ -34,5 +37,4 @@ public class NPC_AstesiaSprite extends MobSprite {
         isMoving = false;
         super.idle();
     }
-
 }

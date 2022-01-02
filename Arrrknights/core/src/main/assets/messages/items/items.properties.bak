@@ -2423,7 +2423,7 @@ items.weapon.melee.rhodessword.desc="그녀는 마치 처음부터 있었던 사
 
 items.weapon.melee.catgun.name=나의 소원
 items.weapon.melee.catgun.stats_desc=사거리 +1
-items.weapon.melee.catgun.desc=_"나는 끝까지 여기에 서 있을 생각이다. 우리들은 과거를 망각할 수는 없지만, 너에게는 또 다른 미래가 기다릴테니까."_\n\n이 무기로 적을 공격하면 에너지를 충전합니다. 에너지가 전부 충전되면 강력한 괴생물체 _Mon3tr_를 일시적으로 전투에 참전시킬 수 있습니다.
+items.weapon.melee.catgun.desc=_"나는 끝까지 여기에 서 있을 생각이다. 우리들은 과거를 망각할 수는 없지만, 너에게는 또 다른 미래가 기다릴테니까."_\n\n이 무기로 적을 공격하면 SP를 충전합니다. SP가 전부 충전되면 강력한 괴생물체 _Mon3tr_를 일시적으로 전투에 참전시킬 수 있습니다.
 items.weapon.melee.catgun.desc_sp=……하지만 나는 줄곧 너의 동료였어. 그건 이후에도 마찬가지야.\n\n이 무기로 적을 공격하면 에너지를 충전합니다. 에너지가 전부 충전되면 강력한 괴생물체 _Mon3tr_를 일시적으로 전투에 참전시킬 수 있습니다.
 items.weapon.melee.catgun.setbouns=_아이템 시너지 : 바벨_\n무기가 최대 충전이 아니고, Mon3tr가 소환되어있다면 특수 능력으로 Mon3tr를 회수해 SP를 충전할 수 있습니다.\nMon3tr의 피해량이 30% 상승하며, 공격시 플레이어에게 축복과 유물 충전을 부여합니다. 또한, Mon3tr가 사망 혹은 회수될 때 자폭합니다.
 items.weapon.melee.catgun.ac_zap=깨어나라
