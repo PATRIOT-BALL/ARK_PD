@@ -1,28 +1,40 @@
 package com.shatteredpixel.shatteredpixeldungeon.sprites;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.watabou.noosa.MovieClip;
 import com.watabou.noosa.TextureFilm;
 
 public class NPC_AstesiaSprite extends MobSprite {
     public NPC_AstesiaSprite() {
         super();
 
-        texture( Assets.Sprites.AST );
+        texture( Assets.Sprites.NPC_ASTESIA );
 
-        TextureFilm frames = new TextureFilm( texture, 36, 36 );
+        TextureFilm frames = new TextureFilm( texture, 36, 34 );
 
-        idle = new Animation( 7, true );
-        idle.frames( frames, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 44, 45, 46, 41, 42, 43, 47, 48, 46  );
+        idle = new MovieClip.Animation( 8, true );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5 );
 
-        run = new Animation( 10, true );
-        run.frames( frames, 0 );
+        run = new MovieClip.Animation( 15, false );
+        run.frames( frames, 50 );
 
-        attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack = new MovieClip.Animation( 15, false );
+        attack.frames( frames, 50 );
 
-        die = new Animation( 10, false );
-        die.frames( frames, 0 );
+        zap = attack.clone();
 
-        play( idle );
+        die = new MovieClip.Animation( 8, false );
+        die.frames( frames, 50 );
+
+        alpha(0.5f);
+
+        play( idle.clone() );
     }
+
+    @Override
+    public void idle() {
+        isMoving = false;
+        super.idle();
+    }
+
 }
