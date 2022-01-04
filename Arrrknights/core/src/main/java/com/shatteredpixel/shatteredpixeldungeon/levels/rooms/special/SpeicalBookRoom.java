@@ -30,9 +30,7 @@ public class SpeicalBookRoom extends SpecialRoom {
         Door entrance = entrance();
 
         level.addItemToSpawn(new StoneOfBlast());
-        level.addItemToSpawn(new StoneOfBlast());
-        level.addItemToSpawn(new StoneOfBlast());
-        level.addItemToSpawn(new StoneOfBlast());
+        level.addItemToSpawn(new PotionOfLiquidFlame());
 
         int dropPos1;
         int dropPos2;
