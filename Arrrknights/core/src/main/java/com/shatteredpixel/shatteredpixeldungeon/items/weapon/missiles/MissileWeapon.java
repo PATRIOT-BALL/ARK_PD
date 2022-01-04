@@ -278,20 +278,19 @@ abstract public class MissileWeapon extends Weapon {
 	}
 	
 	protected void rangedHit( Char enemy, int cell ){
+		boolean redknife = false;
+		if (this instanceof ThrowingKnife && Dungeon.hero.buff(ThrowingKnife.huntcooldown.class) == null) redknife = true;
 		decrementDurability();
 		if (durability > 0){
 			//attempt to stick the missile weapon to the enemy, just drop it if we can't.
 			if (sticky && enemy != null && enemy.isAlive() && enemy.buff(Corruption.class) == null){
 				PinCushion p = Buff.affect(enemy, PinCushion.class);
 				if (p.target == enemy){
-					p.stick(this);
-					if (this instanceof ThrowingKnife && Dungeon.hero.buff(ThrowingKnife.huntcooldown.class) == null) {
-						enemy.buff(PinCushion.class).RedKnife();
-					}
+					if (!redknife) p.stick(this);
 					return;
 				}
 			}
-			Dungeon.level.drop( this, cell ).sprite.drop();
+		 if (!redknife) Dungeon.level.drop( this, cell ).sprite.drop();
 		}
 	}
 	

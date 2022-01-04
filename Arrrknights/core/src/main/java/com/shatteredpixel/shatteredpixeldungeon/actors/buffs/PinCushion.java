@@ -54,13 +54,6 @@ public class PinCushion extends Buff {
 		super.detach();
 	}
 
-	public void RedKnife() {
-		for (Item item : items) {
-			if (item instanceof ThrowingKnife) {
-				items.remove(item);
-			}
-		}
-	}
 
 	private static final String ITEMS = "items";
 	private static final String REDCHACK = "RedKnifechack";
