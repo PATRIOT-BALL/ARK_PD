@@ -30,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WolfMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Piranha;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
@@ -58,6 +59,8 @@ public class ThrowingKnife extends MissileWeapon {
 
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
+		if (defender instanceof Piranha) damage = 0;
+
 		if (attacker.buff(huntcooldown.class) == null) {
 		Buff.prolong(attacker, WolfMark.class, WolfMark.DURATION).set(defender.id(), this);}
 		return super.proc(attacker, defender, damage);
