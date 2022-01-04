@@ -12,8 +12,10 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Hunt;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Wound;
+import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Door;
@@ -31,10 +33,15 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
     public int object = 0;
+    private ArrayList<MissileWeapon> theknife = new ArrayList<>();
 
     private static final String OBJECT    = "object";
+    private static final String KNIFE    = "theknife";
 
     public static final float DURATION = 8f;
 
@@ -42,8 +49,15 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
         type = buffType.POSITIVE;
     }
 
-    public void set(int object){
+    public void set(int object, MissileWeapon weapon){
         this.object = object;
+        for (Item item : theknife){
+            if (item.isSimilar(weapon)){
+                item.merge(weapon);
+                return;
+            }
+        }
+        theknife.add(weapon);
     }
 
     @Override
@@ -62,12 +76,15 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
     public void storeInBundle( Bundle bundle ) {
         super.storeInBundle( bundle );
         bundle.put( OBJECT, object );
+        bundle.put( KNIFE, theknife );
     }
 
     @Override
     public void restoreFromBundle( Bundle bundle ) {
         super.restoreFromBundle( bundle );
         object = bundle.getInt( OBJECT );
+        theknife = new ArrayList<>((Collection<MissileWeapon>) ((Collection<?>) bundle.getCollection(KNIFE)));
+        bundle.put( OBJECT, object );
     }
     @Override
     public Image getIcon() {
@@ -82,6 +99,7 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
 
         Char ch = (Char) Actor.findById(object);
         if (ch == null) return;
+        if (ch.buff(PinCushion.class) != null) ch.buff(PinCushion.class).RedKnife();
 
         int dmg = ch.HT / 2;
         if (hero.hasTalent(Talent.ASSASSINS_REACH)) {
@@ -144,6 +162,7 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
         Dungeon.level.occupyCell(hero);
         Dungeon.observe();
 
+        for (Item item : theknife) item.doPickUp(hero);
         detach();
 
     }

@@ -58,7 +58,7 @@ public class ThrowingKnife extends MissileWeapon {
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
 		if (attacker.buff(huntcooldown.class) == null) {
-		Buff.prolong(attacker, WolfMark.class, WolfMark.DURATION).set(defender.id());}
+		Buff.prolong(attacker, WolfMark.class, WolfMark.DURATION).set(defender.id(), this);}
 		return super.proc(attacker, defender, damage);
 	}
 

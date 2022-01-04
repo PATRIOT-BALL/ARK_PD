@@ -24,6 +24,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.buffs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.watabou.utils.Bundle;
@@ -47,12 +48,22 @@ public class PinCushion extends Buff {
 
 	@Override
 	public void detach() {
-		for (Item item : items)
-			Dungeon.level.drop( item, target.pos).sprite.drop();
+			for (Item item : items) {
+				Dungeon.level.drop(item, target.pos).sprite.drop();
+			}
 		super.detach();
 	}
 
+	public void RedKnife() {
+		for (Item item : items) {
+			if (item instanceof ThrowingKnife) {
+				items.remove(item);
+			}
+		}
+	}
+
 	private static final String ITEMS = "items";
+	private static final String REDCHACK = "RedKnifechack";
 
 	@Override
 	public void storeInBundle(Bundle bundle) {
