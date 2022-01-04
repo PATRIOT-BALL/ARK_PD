@@ -68,7 +68,7 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
 
     @Override
     public void detach() {
-        for (Item item : theknife) item.doPickUp(Dungeon.hero);
+        for (Item item : theknife) item.collect();
 
         theknife = null;
         super.detach();

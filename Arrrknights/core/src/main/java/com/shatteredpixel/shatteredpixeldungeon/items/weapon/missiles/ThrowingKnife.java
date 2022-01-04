@@ -61,7 +61,7 @@ public class ThrowingKnife extends MissileWeapon {
 	public int proc(Char attacker, Char defender, int damage) {
 		if (defender instanceof Piranha) damage = 0;
 
-		if (attacker.buff(huntcooldown.class) == null) {
+		if (attacker.buff(huntcooldown.class) == null && defender.isAlive()) {
 		Buff.prolong(attacker, WolfMark.class, WolfMark.DURATION).set(defender.id(), this);}
 		return super.proc(attacker, defender, damage);
 	}
