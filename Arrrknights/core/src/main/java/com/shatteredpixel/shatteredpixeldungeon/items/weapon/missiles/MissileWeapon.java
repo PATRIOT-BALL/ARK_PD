@@ -285,6 +285,9 @@ abstract public class MissileWeapon extends Weapon {
 				PinCushion p = Buff.affect(enemy, PinCushion.class);
 				if (p.target == enemy){
 					p.stick(this);
+					if (this instanceof ThrowingKnife && Dungeon.hero.buff(ThrowingKnife.huntcooldown.class) == null) {
+						enemy.buff(PinCushion.class).RedKnife();
+					}
 					return;
 				}
 			}

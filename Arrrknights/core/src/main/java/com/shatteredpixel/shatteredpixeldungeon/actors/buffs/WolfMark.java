@@ -68,6 +68,9 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
 
     @Override
     public void detach() {
+        for (Item item : theknife) item.doPickUp(Dungeon.hero);
+
+        theknife = null;
         super.detach();
         ActionIndicator.clearAction(this);
     }
@@ -99,7 +102,6 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
 
         Char ch = (Char) Actor.findById(object);
         if (ch == null) return;
-        if (ch.buff(PinCushion.class) != null) ch.buff(PinCushion.class).RedKnife();
 
         int dmg = ch.HT / 2;
         if (hero.hasTalent(Talent.ASSASSINS_REACH)) {
@@ -162,7 +164,6 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
         Dungeon.level.occupyCell(hero);
         Dungeon.observe();
 
-        for (Item item : theknife) item.doPickUp(hero);
         detach();
 
     }

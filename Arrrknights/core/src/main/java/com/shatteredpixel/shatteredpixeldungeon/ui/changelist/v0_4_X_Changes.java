@@ -49,7 +49,7 @@ public class v0_4_X_Changes {
                 "_R4-C 돌격소총_ : 사격 속도와 명중률이 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "레드 상향",
-                "사냥 능력 발동시 발리스틱 나이프를 자동으로 회수합니다." + "\n\n" +
+                "레드가 발리스틱 나이프를 자동으로 회수합니다." + "\n\n" +
                 "_추적자_ 특성에 사냥 능력으로 적 처치시 체력 회복 효과가 추가되었습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
