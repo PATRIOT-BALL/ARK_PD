@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special;
 
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.keys.IronKey;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
@@ -31,7 +32,7 @@ public class SpeicalBookRoom extends SpecialRoom {
 
         level.addItemToSpawn(new StoneOfBlast());
         level.addItemToSpawn(new PotionOfLiquidFlame());
-        level.addItemToSpawn(new IronKey());
+        level.addItemToSpawn( new IronKey( Dungeon.depth ) );
 
         int dropPos1;
         int dropPos2;
