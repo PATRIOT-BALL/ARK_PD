@@ -31,6 +31,7 @@ public class SpeicalBookRoom extends SpecialRoom {
 
         level.addItemToSpawn(new StoneOfBlast());
         level.addItemToSpawn(new PotionOfLiquidFlame());
+        level.addItemToSpawn(new IronKey());
 
         int dropPos1;
         int dropPos2;
@@ -47,7 +48,7 @@ public class SpeicalBookRoom extends SpecialRoom {
         level.map[dropPos2] = Terrain.EMPTY;
         level.drop( Generator.random(Generator.Category.SKL_RND), dropPos2);
 
-        entrance.set(Door.Type.BARRICADE);
+        entrance.set(Door.Type.LOCKED);
     }
 
     @Override
