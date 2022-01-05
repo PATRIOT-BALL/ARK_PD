@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ScaleArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.AlchemyKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
@@ -117,7 +118,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof DeepAbyss || weapon instanceof Sword) {setItem1 = new SandalsOfNature(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof ThermiteBlade || weapon instanceof R4C) {setItem1 = new IsekaiItem(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof Naginata) {setItem1 = new HornOfPlenty(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
-        else if (weapon instanceof PatriotSpear) {setItem1 = new RingOfMight(); setItem2 = new RingOfTenacity(); setItem3 = null; SetValue = 2; return true;}
+        else if (weapon instanceof PatriotSpear) {setItem1 = new RingOfMight(); setItem2 = new RingOfTenacity(); setItem3 = new PlateArmor(); SetValue = 3; return true;}
         else if (weapon instanceof RadiantSpear) {setItem1 = new RingOfSunLight(); setItem2 = new RingOfHaste(); setItem3 = null; SetValue = 2; return true;}
         else if (weapon instanceof RoundShield) {setItem1 = new CustomeSet(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof Scythe) {setItem1 = new RingOfFuror(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
