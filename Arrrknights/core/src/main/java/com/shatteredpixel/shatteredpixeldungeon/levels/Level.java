@@ -46,6 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Bestiary;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.GiantMushroom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mimic;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Originiutant;
@@ -472,7 +473,7 @@ public abstract class Level implements Bundlable {
 		}
 
 		Mob m = Reflection.newInstance(mobsToSpawn.remove(0));
-		if (Dungeon.isChallenged(Challenges.CHAMPION_ENEMIES) && !(m instanceof Originiutant)){
+		if (Dungeon.isChallenged(Challenges.CHAMPION_ENEMIES) && !(m instanceof Originiutant) && !(m instanceof GiantMushroom)){
 			ChampionEnemy.rollForChampion(m);
 		}
 		return m;

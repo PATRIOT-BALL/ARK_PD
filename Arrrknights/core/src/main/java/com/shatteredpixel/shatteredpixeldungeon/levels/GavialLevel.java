@@ -52,10 +52,6 @@ public class GavialLevel extends RegularLevel {
             addItemToSpawn(new PotionOfStrength());}
         else  if (Dungeon.depth == 31 || Dungeon.depth == 33 || Dungeon.depth == 36 || Dungeon.depth == 38) addItemToSpawn(new ScrollOfUpgrade());
 
-        if (Dungeon.depth >= 36 && !Dungeon.bossLevel()) {
-            addItemToSpawn(new PortableCover());
-        }
-
         super.createItems();
     }
 

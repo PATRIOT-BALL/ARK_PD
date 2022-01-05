@@ -3,6 +3,9 @@ package com.shatteredpixel.shatteredpixeldungeon.items;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLevitation;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPetrification;
+import com.shatteredpixel.shatteredpixeldungeon.items.spells.BlastSpell;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 import java.util.ArrayList;
@@ -48,6 +51,19 @@ public class PortableCover extends Item {
     }
 
     public static class CoverBuff extends FlavourBuff {
+    }
+
+    public static class Recipe extends com.shatteredpixel.shatteredpixeldungeon.items.Recipe.SimpleRecipe {
+
+        {
+            inputs =  new Class[]{Mushroomslices.class};
+            inQuantity = new int[]{2};
+
+            cost = 0;
+
+            output = PortableCover.class;
+            outQuantity = 1;
+        }
 
     }
 }

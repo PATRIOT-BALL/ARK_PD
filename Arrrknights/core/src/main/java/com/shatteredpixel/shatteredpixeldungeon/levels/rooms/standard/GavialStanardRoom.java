@@ -1,10 +1,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard;
 
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DemonSpawner;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.GiantMushroom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
 import com.watabou.utils.Point;
+import com.watabou.utils.Random;
 
 public class GavialStanardRoom extends StandardRoom {
     @Override
@@ -26,8 +29,15 @@ public class GavialStanardRoom extends StandardRoom {
             door.set( Room.Door.Type.REGULAR );
         }
 
-        level.exit = level.pointToCell(random( 2 ));
-        Painter.set( level, level.exit, Terrain.CHASM );
+        Point c = center();
+        int cx = c.x;
+        int cy = c.y;
+
+        if (Random.Int(2) == 0) {
+            GiantMushroom Mushroom = new GiantMushroom();
+            Mushroom.pos = cx + cy * level.width();
+            level.mobs.add(Mushroom);
+        }
     }
 
     @Override

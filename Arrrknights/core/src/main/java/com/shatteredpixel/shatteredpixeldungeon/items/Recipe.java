@@ -232,6 +232,7 @@ public abstract class Recipe {
             new SaltBlast.Recipe(),
             new BlastSpell.Recipe(),
             new InstantRecharge.Recipe(),
+            new PortableCover.Recipe(),
     };
 
     private static Recipe[] threeIngredientRecipes = new Recipe[]{
