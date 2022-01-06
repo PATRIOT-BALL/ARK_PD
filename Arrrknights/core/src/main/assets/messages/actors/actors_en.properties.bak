@@ -396,6 +396,9 @@ actors.buffs.knightskill$combomove.smash_desc=_Smash_ 140% Damage
 actors.buffs.knightskill$combomove.killblow_desc=_Kill Blow_ 70% Damage, Killing with this attack consumes no turn and immediately allows the next special attack to be used.
 actors.buffs.knightskill$combomove.lightsword_desc=_Light Sword_ Damage increases in proportion to the number of special attack used before, and paralyzes the target at maximum stacks.\nDamage : %1$d%% / %2$d%%
 
+actors.buffs.hallucination.name=hallucination
+actors.buffs.hallucination.desc=This character is watching a hallucination. In this state, accuracy is reduced by 35%, and there is a chance to self-harm.
+
 ###hero
 actors.hero.talent.hearty_meal.title=hearty meal
 actors.hero.talent.hearty_meal.desc=_+1:_ Eating heals the Blaze for _2 HP_ when she is below 50% health, and _3 HP_ when he is below 25% health.\n\n_+2:_ Eating heals the Blaze for _3 HP_ when she is below 50% health, and _5 HP_ when he is below 25% health.
@@ -1565,6 +1568,9 @@ actors.mobs.tiacauhshredder.desc=One of Zumama's chosen elites, bestowed with ex
 
 actors.mobs.tiacauhbrave.name=tiacauh brave
 actors.mobs.tiacauhbrave.desc=A very formidable Tiacauh warrior, naturally born to do battle.\n\nDefense is very high, but defense decreases after attacking.
+
+actors.mobs.giantmushroom.name=giant mushroom
+actors.mobs.giantmushroom.desc=This gigantic mushroom continuously inflicts harmful effects around it. It is hard but seems to burn well.
 
 actors.mobs.eunectes.name=eunectes
 actors.mobs.eunectes.desc=The leader of a certain tribe that resides in Acahualla—Gavial's hometown.

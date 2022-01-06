@@ -19,6 +19,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.traps.ExplosiveTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FlashingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FrostTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.GrimTrap;
+import com.shatteredpixel.shatteredpixeldungeon.levels.traps.HallucinationTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OozeTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OriginiumTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.PoisonDartTrap;
@@ -94,7 +95,7 @@ public class SiestaLevel_part2 extends RegularLevel {
         return new Class[]{
                 ShockingTrap.class, RockfallTrap.class, BurningTrap.class, ExplosiveTrap.class,
                 OriginiumTrap.class, FlashingTrap.class, StormTrap.class, CursingTrap.class,
-                GrimTrap.class, WarpingTrap.class
+                GrimTrap.class, WarpingTrap.class, HallucinationTrap.class
         };
     }
 
@@ -103,7 +104,7 @@ public class SiestaLevel_part2 extends RegularLevel {
         return new float[]{
                 4, 4, 4, 4,
                 2, 2, 2, 2,
-                1, 1
+                1, 1,1
         };
     }
 

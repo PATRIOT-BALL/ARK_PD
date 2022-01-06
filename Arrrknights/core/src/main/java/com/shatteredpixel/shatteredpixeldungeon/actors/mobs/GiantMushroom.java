@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hallucination;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -53,11 +54,11 @@ public class GiantMushroom extends Mob {
             if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
                 Char ch = Actor.findChar(cell);
                 if (ch != null && ch != this) {
-                    if (Random.Int(3) == 0) {
+                    if (Random.Int(4) != 0) {
                         Buff.affect(ch, Weakness.class, 2f); }
-                    else if (Random.Int(3) == 0) {
+                    else if (Random.Int(3) != 0) {
                         Buff.affect(ch, Vulnerable.class, 2f); }
-                    else Buff.affect(ch, Hex.class, 2f);
+                    else Buff.affect(ch, Hallucination.class).set(Hallucination.DURATION);
                 }}}
         return super.act();
     }
