@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.items;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Accessories;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.C_Mag;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.DotSight;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.GunScope;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.GunScope_II;
@@ -647,9 +648,10 @@ public class Generator {
                     DotSight.class,
                     Muzzlebrake.class,
                     GunScope.class,
-                    GunScope_II.class
+                    GunScope_II.class,
+                    C_Mag.class
             };
-            ACCESSORIES.probs = new float[]{2, 3, 2, 2, 1};
+            ACCESSORIES.probs = new float[]{2, 3, 2, 2, 1, 2};
 
 
             N_INGREDINETS.classes = new Class<?>[]{
