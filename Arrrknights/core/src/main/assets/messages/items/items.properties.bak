@@ -1913,6 +1913,13 @@ items.wands.sp.staffofsussurro.desc=_"의사는 여기에 있어요, 여기에�
 items.wands.sp.staffofsussurro.stats_desc=이 에너지에 닿은 적은 _%1$d-%2$d_의 피해를 받습니다. 또한, 이 스태프로 적을 2번 적중시키면 _%3$d_의 체력을 회복합니다. 단, 이 회복 효과는 _%4$d_번 발동한 후에는 큰 폭으로 감소합니다.
 items.wands.sp.staffofsussurro.bmage_desc=_아미야_ 가 개조 생명의 흑요석 반지로 적을 공격하면 대상을 약화시켜 공격력을 감소시킵니다.
 
+items.wands.sp.staffofpodenco.name=스태프 오브 포덴코
+items.wands.sp.staffofpodenco.staff_name=개조 환각의 흑요석 반지
+items.wands.sp.staffofpodenco.desc=_언젠가는 그녀도 유명한 원예가가 될지 모른다. 그 이유는 바로 사랑, 열정적인 사랑 때문이다._\n\n이 개조된 환각의 스태프는 포덴코 대원의 능력이 반영되었습니다.
+items.wands.sp.staffofpodenco.stats_desc=이 에너지에 적중당한 적은 불구 상태가 됩니다. 이미 불구 상태인 적은 환각에 빠져 명중률이 감소하고 자해하게 되며, 현기증 상태가 됩니다.
+items.wands.sp.staffofpodenco.bmage_desc=_아미야_ 가 개조 환각의 흑요석 반지로 적을 공격했을 때, 대상이 환각 상태라면 추가 피해를 줍니다.
+
+
 // 특별한 스태프
 items.wands.sp.staffofsuzuran.name=스태프 오브 스즈란
 items.wands.sp.staffofsuzuran.staff_name=여우불의 흑요석 반지
@@ -2078,6 +2085,12 @@ items.wands.wandofhealing.staff_name=생명의 흑요석 반지
 items.wands.wandofhealing.desc=그리고 그때, 그녀는 비로소 의학도로서의 진정한 삶의 의미를 찾았다고 느꼈다.\n\n이 막대는 생명의 아츠 에너지가 담겨있습니다.
 items.wands.wandofhealing.stats_desc=이 에너지에 닿은 적은 _%1$d-%2$d_의 피해를 받습니다. 또한, 이 스태프로 적을 3번 적중시키면 _%3$d_의 체력을 회복합니다. 단, 이 회복 효과는 _%4$d_번 발동한 후에는 큰 폭으로 감소합니다.
 items.wands.wandofhealing.bmage_desc=_아미야_ 가 생명의 흑요석 반지로 적을 공격하면 대상을 약화시켜 공격력을 감소시킵니다.
+
+items.wands.wandofhallucination.name=환각의 아츠 스태프
+items.wands.wandofhallucination.staff_name=환각의 흑요석 반지
+items.wands.wandofhallucination.desc=이런 잡초 같은 건 많이 봤으니까요.\n\n이 막대는 환각의 아츠 에너지가 담겨있습니다.
+items.wands.wandofhallucination.stats_desc=이 에너지에 적중당한 적은 불구 상태가 됩니다. 이미 불구 상태인 적은 환각에 빠져 명중률이 감소하고 자해하게 됩니다.
+items.wands.wandofhallucination.bmage_desc=_아미야_ 가 환각의 흑요석 반지로 적을 공격했을 때, 대상이 환각 상태라면 추가 피해를 줍니다.
 
 
 ###weapon curses
@@ -2931,3 +2944,6 @@ items.armorupkit.desc=이 강력한 아이템은 현재 장착한 갑옷의 강�
 items.portablecover.name=휴대용 엄폐물
 items.portablecover.ac_use=엄폐
 items.portablecover.desc=정확한 타이밍에 사용하면 거대하고 못생긴 무언가의 원거리 공격을 효과적으로 방어할 수 있을 것 같다.
+
+items.mushroomslices.name=버섯 조각
+items.mushroomslices.desc=이 버섯 조각 2개를 가공소에서 합치면 휴대용 엄폐물을 만들 수 있을 것 같습니다.

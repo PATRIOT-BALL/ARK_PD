@@ -1916,6 +1916,12 @@ items.wands.sp.staffofsussurro.desc=_"Look over here for a doctor!"_\n\nThis Ret
 items.wands.sp.staffofsussurro.stats_desc=This wand`s arts deals _%1$d-%2$d damage,_ Hit it 2 times Recover _%3$d_ health. Also, When the recovery effect is activated _%4$d_ times, the effect is reduced.
 items.wands.sp.staffofsussurro.bmage_desc=When _Guard Amiya_ strikes a enemy with a ring of sussurro, Weakens the enemy to reduce attack damage.
 
+items.wands.sp.staffofpodenco.name=staff of podenco
+items.wands.sp.staffofpodenco.staff_name=ring of podenco
+items.wands.sp.staffofpodenco.desc=_And it all stems from her love for flowers. A lifelong love._\n\nnThis Hallucination wand is Has the power of operator Podenco.
+items.wands.sp.staffofpodenco.stats_desc=This wand can fire Hallucination power`s energy. Crippled on hit and Enemies already crippled are given hallucinations and vertigo.
+items.wands.sp.staffofpodenco.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of podenco, extra damage to Hallucination enemies.
+
 // 특별한 스태프
 items.wands.sp.staffofsuzuran.name=staff of suzuran
 items.wands.sp.staffofsuzuran.staff_name=ring of foxfire
@@ -2080,6 +2086,12 @@ items.wands.wandofhealing.staff_name=ring of healing
 items.wands.wandofhealing.desc=and she found genuine purpose.\n\nThis wand contains the life energy arts.
 items.wands.wandofhealing.stats_desc=This wand`s arts deals _%1$d-%2$d damage,_ Hit it 3 times Recover _%3$d_ health. Also, When the recovery effect is activated _%4$d_ times, the effect is reduced.
 items.wands.wandofhealing.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of healing, Weakens the enemy to reduce attack damage.
+
+items.wands.wandofhallucination.name=wand of hallucination
+items.wands.wandofhallucination.staff_name=ring of hallucination
+items.wands.wandofhallucination.desc=I've seen weeds like these before.
+items.wands.wandofhallucination.stats_desc=This wand can fire Hallucination power`s energy. Crippled on hit and Enemies already crippled are given hallucinations and vertigo.
+items.wands.wandofhallucination.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of podenco, extra damage to Hallucination enemies.
 
 ###weapon curses
 items.weapon.curses.annoying.name=annoying %s
@@ -2918,3 +2930,6 @@ items.armorupkit.desc=Use this item to strengthen the armor you have equipped. A
 items.portablecover.name=portable cover
 items.portablecover.ac_use=USE
 items.portablecover.desc=If used at the right time, it seems to be able to effectively defend against the ranged attacks of huge meachin.
+
+items.mushroomslices.name=mushroom slices
+items.mushroomslices.desc=If you process these 2 mushroom slices at a processing plant, you can make a _portable cover._
