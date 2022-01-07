@@ -18,12 +18,12 @@ import com.watabou.utils.Random;
 public class OrigiRoom extends StandardRoom {
     @Override
     public int minWidth() {
-        return Math.max(super.minWidth(), 4);
+        return Math.max(super.minWidth(), 5);
     }
 
     @Override
     public int minHeight() {
-        return Math.max(super.minHeight(), 3);
+        return Math.max(super.minHeight(), 5);
     }
 
     @Override
