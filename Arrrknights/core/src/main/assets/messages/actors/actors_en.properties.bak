@@ -780,8 +780,7 @@ actors.hero.herosubclass.guardian=Guardian
 actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
 actors.hero.herosubclass.war=War
 actors.hero.herosubclass.war_short_desc=_War_\nSummons EX-44
-actors.hero.herosubclass.war_desc=_War Elite_는 방벽을 소환하여 전투에 활용합니다. 적이 없는 빈 땅에 섬멸전 장비를 사용하면 _EX-44_를 소환합니다. EX-44의 체력은 _방어구_ 강화에 비례하며, 공격력은 _섬멸전 장비_의 강화에 비례합니다.\nEX-44는 30턴 후 자동으로 회수되며, 회수될 때 섬멸전 장비를 1 충전시킵니다.
-
+actors.hero.herosubclass.war_desc=The _War Elite_ is Summons EX-44. If you use gear on empty land with no characters, EX-44 will be summoned. EX-44's max HP increases in proportion to your armor upgrade, and attack power increases in proportion to your gear upgrade.\n\nAlso, the EX-44 is automatically retrieved after 30 turns. Recharges your gear when retrieved.
 actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
 actors.hero.herosubclass.knight=Knight
 actors.hero.herosubclass.knight_short_desc=_Knight_\nDefeat enemies with quick mobility and combo moves.
