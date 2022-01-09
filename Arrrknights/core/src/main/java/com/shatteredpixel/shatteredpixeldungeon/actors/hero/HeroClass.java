@@ -160,7 +160,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
-		new TomeOfMastery().collect();
 		//new Heamyo().collect();
 		//new Amulet().collect();
 	}

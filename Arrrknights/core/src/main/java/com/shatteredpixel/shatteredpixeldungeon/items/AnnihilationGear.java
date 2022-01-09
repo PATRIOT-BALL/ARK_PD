@@ -460,6 +460,14 @@ public class Spriteex extends MissileWeapon {
           public int damageRoll() { return Random.NormalIntRange( 4+maxLvl, 12+(maxLvl*3)); }
 
           @Override
+          public void damage(int dmg, Object src) {
+              if (Dungeon.hero.hasTalent(Talent.MENTALAMPLIFICATION)) {
+                  dmg *= 1f - (0.1f*Dungeon.hero.pointsInTalent(Talent.MENTALAMPLIFICATION));
+              }
+              super.damage(dmg, src);
+          }
+
+          @Override
           public int drRoll() { return Random.NormalIntRange( 0, 6 ); }
 
           @Override
@@ -501,12 +509,13 @@ public class Spriteex extends MissileWeapon {
 
           @Override
           public int attackProc(Char enemy, int damage) {
+              if (Dungeon.level.heroFOV[this.pos]) {
+              if (Dungeon.hero.hasTalent(Talent.CRYSTALLIZE)) {
+                  damage *= 1.05f + (Dungeon.hero.pointsInTalent(Talent.CRYSTALLIZE) * 0.05f);
+              }}
+
               return super.attackProc(enemy, damage);
           }
-
-          @Override
-          public int defenseProc(Char enemy, int damage) {
-              return super.defenseProc(enemy, damage); }
 
           {
               immunities.add( Paralysis.class );

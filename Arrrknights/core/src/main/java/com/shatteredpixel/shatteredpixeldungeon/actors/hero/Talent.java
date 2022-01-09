@@ -158,13 +158,15 @@ public enum Talent {
 	//RoseCat Gu_T3
 	BARRIER_OPERATION(142,3), BARRIER_REPAIR(143,3), RHODES_CAT(144,3),
 	//RoseCat WAR_T3
-	OBLIVION(139,3), WEAKNESS_COVER(140,3),
+	OBLIVION(139,3), WEAKNESS_COVER(140,3), MENTALAMPLIFICATION(141, 3),
 	//RossCat T4
 	RHODES_WEAPON(145, 3), RECALL_MEMORY(146,3), GUILT(137,4),
 	//RoseCat De_T4
 	ESTHESIA(148, 4),
 	//RoseCat Gu_T4
 	SPEED_COMABT(147,4),
+	//RoseCat WAR_TR
+	CRYSTALLIZE(147,4),
 
 	//Nearl T1
 	SHINING_MEAL(160),  EXPERIENCE(161), PROTECTIONOFLIGHT(162), KNIGTS_OATH(163),
@@ -768,7 +770,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, BARRIER_OPERATION, BARRIER_REPAIR, RHODES_CAT);
 				break;
 			case WAR:
-				Collections.addAll(tierTalents, OBLIVION, WEAKNESS_COVER, RHODES_CAT);
+				Collections.addAll(tierTalents, OBLIVION, WEAKNESS_COVER, MENTALAMPLIFICATION);
 				break;
 			case KNIGHT:
 				Collections.addAll(tierTalents, INTO_FRAY, BLITZKRIEG, SKILL_MASTERY);
@@ -813,6 +815,9 @@ public enum Talent {
 				break;
 			case GUARDIAN:
 				Collections.addAll(tierTalents, SPEED_COMABT);
+				break;
+			case WAR:
+				Collections.addAll(tierTalents, CRYSTALLIZE);
 				break;
 			case KNIGHT:
 				Collections.addAll(tierTalents, QUICK_TACTICS);
