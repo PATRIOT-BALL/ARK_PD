@@ -452,7 +452,7 @@ public class Spriteex extends MissileWeapon {
               int armorlevel = 0;
               if (hero.belongings.armor != null) armorlevel = hero.belongings.armor.level();
 
-              HP=HT=40 + (armorlevel*6) + (itembuff*3);
+              HP=HT=40 + (armorlevel*7) + (itembuff*3);
               maxLvl = GearLevel + (itembuff/3);
           }
 
@@ -468,7 +468,7 @@ public class Spriteex extends MissileWeapon {
           }
 
           @Override
-          public int drRoll() { return Random.NormalIntRange( 0, 6 ); }
+          public int drRoll() { return Random.NormalIntRange( 0, maxLvl ); }
 
           @Override
           public int attackSkill(Char target) {
