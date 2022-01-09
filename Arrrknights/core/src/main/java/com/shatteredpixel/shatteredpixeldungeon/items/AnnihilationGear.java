@@ -452,7 +452,7 @@ public class Spriteex extends MissileWeapon {
               int armorlevel = 0;
               if (hero.belongings.armor != null) armorlevel = hero.belongings.armor.level();
 
-              HP=HT=40 + (armorlevel*8) + (itembuff*4);
+              HP=HT=40 + (armorlevel*6) + (itembuff*3);
               maxLvl = GearLevel + (itembuff/3);
           }
 
