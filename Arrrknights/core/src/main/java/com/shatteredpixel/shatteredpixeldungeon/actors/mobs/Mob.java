@@ -851,7 +851,7 @@ public abstract class Mob extends Char {
 			Dungeon.level.drop(new Gold(10+Dungeon.depth*6), pos).sprite.drop();
 		}
 
-		if (Dungeon.hero.hasTalent(Talent.CUTLET)) {
+		if (Dungeon.hero.hasTalent(Talent.CUTLET) && !(this instanceof AnnihilationGear.EX44)) {
 			if (Dungeon.hero.pointsInTalent(Talent.CUTLET) > Random.Int(33)) {
 					Dungeon.level.drop(new MeatCutlet(), pos).sprite.drop();
 				}
