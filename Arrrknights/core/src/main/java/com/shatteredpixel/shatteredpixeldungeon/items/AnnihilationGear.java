@@ -472,7 +472,7 @@ public class Spriteex extends MissileWeapon {
 
           @Override
           public int attackSkill(Char target) {
-              return 10 + maxLvl * 2; }
+              return 15 + maxLvl; }
 
           @Override
           public int defenseSkill(Char enemy) { return 0; }
