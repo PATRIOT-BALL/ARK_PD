@@ -33,6 +33,10 @@ public class v0_4_X_Changes {
                 "새로운 챕터 _대족장의 귀환_이 추가되었습니다. 해당 챕터는 31층 이동 전 가비알에게 말을 걸면 진입할 수 있습니다." + "\n\n" +
                 "28층 NPC _아스테시아_ 가 추가되었습니다. 아스테시아는 현재 장착한 무기의 시너지 아이템을 안내해줍니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "로즈몬티스 3번째 전문화",
+                "로즈몬티스의 새로운 전문화 _전쟁_ 이 추가되었습니다. 전쟁 로즈몬티스는 EX-44를 소환하여 적을 섬멸합니다." + "\n\n" +
+                "다구리엔 장사없다고 전기톱 쓰는 필라인이 알려줬습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
