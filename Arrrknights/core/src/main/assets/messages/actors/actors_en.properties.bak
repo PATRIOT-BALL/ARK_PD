@@ -640,7 +640,7 @@ actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
 actors.hero.talent.oblivion.title=oblivion
 actors.hero.talent.oblivion.desc=_+1:_ When EX-44 is destroyed, there is a _20%_ chance to recharge the gear.\n\n_+2:_ When EX-44 is destroyed, there is a _35%_ chance to recharge the gear.\n\n_+3:_ When EX-44 is destroyed, there is a _50%_ chance to recharge the gear.
 actors.hero.talent.weakness_cover.title=weakness cover
-actors.hero.talent.weakness_cover.desc=_+1:_ Increases weapon damage by _0-2_ per for gear upgrade level.\n\n_+2:_ Increases weapon damage by _1-2_ per for gear upgrade level\n\n_+3:_ Increases weapon damage by _2-2_ per for gear upgrade level
+actors.hero.talent.weakness_cover.desc=_+1:_ Increases attack damage by _0-2_ per for gear upgrade level.\n\n_+2:_ Increases attack damage by _1-2_ per for gear upgrade level\n\n_+3:_ Increases attack damage by _2-2_ per for gear upgrade level
 
 actors.hero.talent.shining_meal.title=shining meal
 actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _6_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal _9_ damage.
