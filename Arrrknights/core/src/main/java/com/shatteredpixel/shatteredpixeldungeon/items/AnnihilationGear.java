@@ -525,5 +525,20 @@ public class Spriteex extends MissileWeapon {
           protected boolean getFurther(int target) {
               return true;
           }
+
+          private static final String LIFE = "lifecount";
+
+          @Override
+          public void storeInBundle(Bundle bundle) {
+              super.storeInBundle(bundle);
+              bundle.put(LIFE, lifecount);
+          }
+
+          @Override
+          public void restoreFromBundle(Bundle bundle) {
+              super.restoreFromBundle(bundle);
+              lifecount = bundle.getInt(LIFE);
+              enemySeen = true;
+          }
       }
 }
