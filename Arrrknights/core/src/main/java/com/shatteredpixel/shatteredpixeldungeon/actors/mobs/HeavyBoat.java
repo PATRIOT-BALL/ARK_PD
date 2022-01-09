@@ -95,7 +95,7 @@ public class HeavyBoat extends Mob {
         int mypos = this.pos;
         super.die(cause);
 
-        if (mypos == Terrain.SOLID) {
+        if (Actor.findChar(mypos) == null && Dungeon.level.passable[mypos]) {
         Piersailor.spawnAt(mypos);}
     }
 }

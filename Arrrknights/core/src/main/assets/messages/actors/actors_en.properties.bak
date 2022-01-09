@@ -398,6 +398,7 @@ actors.buffs.knightskill$combomove.lightsword_desc=_Light Sword_ Damage increase
 
 actors.buffs.hallucination.name=hallucination
 actors.buffs.hallucination.desc=This character is watching a hallucination. In this state, accuracy is reduced by 35%, and there is a chance to self-harm.
+actors.buffs.hallucination.ondeath=You committed suicide...
 
 ###hero
 actors.hero.talent.hearty_meal.title=hearty meal
@@ -635,6 +636,12 @@ actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or m
 actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
 
+//쪽냥이 3차 서브클래스
+actors.hero.talent.oblivion.title=oblivion
+actors.hero.talent.oblivion.desc=_+1:_ When EX-44 is destroyed, there is a _20%_ chance to recharge the gear.\n\n_+2:_ When EX-44 is destroyed, there is a _35%_ chance to recharge the gear.\n\n_+3:_ When EX-44 is destroyed, there is a _50%_ chance to recharge the gear.
+actors.hero.talent.weakness_cover.title=weakness cover
+actors.hero.talent.weakness_cover.desc=_+1:_ Increases weapon damage by _0-2_ per for gear upgrade level.\n\n_+2:_ Increases weapon damage by _1-2_ per for gear upgrade level\n\n_+3:_ Increases weapon damage by _2-2_ per for gear upgrade level
+
 actors.hero.talent.shining_meal.title=shining meal
 actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _6_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal _9_ damage.
 actors.hero.talent.experience.title=knigts experience
@@ -766,6 +773,10 @@ actors.hero.herosubclass.destroyer_short_desc=_Destroyer_ Maximizes the gear's a
 actors.hero.herosubclass.destroyer_desc=The _Destroy Elite_ is Maximizes the gear's attack power. After gear attack, it becomes focus state, and next gear attack is deals 50% more damage Also, if you eat meat, you get an effect depending on how the meat is cooked.
 actors.hero.herosubclass.guardian=Guardian
 actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
+actors.hero.herosubclass.war=War
+actors.hero.herosubclass.war_short_desc=_War_\nSummons EX-44
+actors.hero.herosubclass.war_desc=_War Elite_는 방벽을 소환하여 전투에 활용합니다. 적이 없는 빈 땅에 섬멸전 장비를 사용하면 _EX-44_를 소환합니다. EX-44의 체력은 _방어구_ 강화에 비례하며, 공격력은 _섬멸전 장비_의 강화에 비례합니다.\nEX-44는 30턴 후 자동으로 회수되며, 회수될 때 섬멸전 장비를 1 충전시킵니다.
+
 actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
 actors.hero.herosubclass.knight=Knight
 actors.hero.herosubclass.knight_short_desc=_Knight_\nDefeat enemies with quick mobility and combo moves.

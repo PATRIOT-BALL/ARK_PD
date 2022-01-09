@@ -105,7 +105,7 @@ public class CatGun extends MeleeWeapon {
                         int gaincharge;
                         if (mob.HT / 2 > mob.HP) gaincharge = 25;
                         else if (mob.HT / 4 > mob.HP) gaincharge = 15;
-                        else gaincharge = 30;
+                        else gaincharge = 40;
 
                         mob.die(this);
                         charge = Math.min(charge + gaincharge, chargeCap);

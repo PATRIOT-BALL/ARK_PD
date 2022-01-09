@@ -50,7 +50,10 @@ public enum HeroSubClass {
 	GUARDIAN,
 
 	KNIGHT,
-	SAVIOR;
+	SAVIOR,
+
+	//3차 서브클래스
+	WAR; // 쪽냥이
 
 	public String title() {
 		return Messages.get(this, name());
@@ -119,6 +122,9 @@ public enum HeroSubClass {
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 160, 80, 16, 16);
 			case SAVIOR:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 176, 80, 16, 16);
+
+			case WAR:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 144, 80, 16, 16);
 		}
 	}
 	

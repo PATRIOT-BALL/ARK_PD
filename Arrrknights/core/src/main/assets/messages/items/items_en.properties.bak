@@ -2090,8 +2090,8 @@ items.wands.wandofhealing.bmage_desc=When _Guard Amiya_ strikes a charmed enemy 
 items.wands.wandofhallucination.name=wand of hallucination
 items.wands.wandofhallucination.staff_name=ring of hallucination
 items.wands.wandofhallucination.desc=I've seen weeds like these before.
-items.wands.wandofhallucination.stats_desc=This wand can fire Hallucination power`s energy. Crippled on hit and Enemies already crippled are given hallucinations and vertigo.
-items.wands.wandofhallucination.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of podenco, extra damage to Hallucination enemies.
+items.wands.wandofhallucination.stats_desc=This wand can fire Hallucination power`s energy. Crippled on hit and Enemies already crippled are given hallucinations.
+items.wands.wandofhallucination.bmage_desc=When _Guard Amiya_ strikes a charmed enemy with a ring of hallucination, extra damage to Hallucination enemies.
 
 ###weapon curses
 items.weapon.curses.annoying.name=annoying %s
@@ -2902,6 +2902,8 @@ items.annihilationgear.desc_arts3_destroy=This gear amplifies the arts of Rosmon
 items.annihilationgear.desc_arts1_guardian=This gear amplifies the arts of Rosmontis. charges are consumed to use gear attacks, which deal _%1$d-%2$d_ damage.\n\nThis gear normally only charges when leveling up. _However, it cannot be recharged with Potion Of Experience_\n\nIt does not support auto-targeting, but _can attack any area._\n\nIt has a _Resist._ On hit, Rosemontis gains a Magic Immune. This effect only activates 2, and the number of activations is updated when leveling up.
 items.annihilationgear.desc_arts2_guardian=This gear amplifies the arts of Rosmontis. charges are consumed to use gear attacks, which deal _%1$d-%2$d_ damage.\n\nThis gear normally only charges when leveling up. _However, it cannot be recharged with Potion Of Experience_\n\nIt does not support auto-targeting, but _can attack any area._\n\nIt has a _Death._ Instantly kills a normal enemy with less than 50%% health. This effect only activates 2, and the number of activations is updated when leveling up.
 items.annihilationgear.desc_arts3_guardian=This gear amplifies the arts of Rosmontis. charges are consumed to use gear attacks, which deal _%1$d-%2$d_ damage.\n\nThis gear normally only charges when leveling up. _However, it cannot be recharged with Potion Of Experience_\n\nIt does not support auto-targeting, but _can attack any area._\n\nIt has a _Suppress._ Binds and silences the hit target. This effect only activates 4, and the number of activations is updated when leveling up.
+items.annihilationgear$EX44.name=EX-44
+items.annihilationgear$EX44.desc=로즈몬티스의 힘으로 조종되는 전술장비. 주위에 있는 적들을 공격한다.
 
 items.bonk.name='bonk' energy drink
 items.bonk.ac_drink=DRINK

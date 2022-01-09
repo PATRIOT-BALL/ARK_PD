@@ -157,6 +157,8 @@ public enum Talent {
 	FOCUSED_ATTACK(139,3), PHYSICAL_ATTACK(140,3), BATTLEFLOW(141,3),
 	//RoseCat Gu_T3
 	BARRIER_OPERATION(142,3), BARRIER_REPAIR(143,3), RHODES_CAT(144,3),
+	//RoseCat WAR_T3
+	OBLIVION(139,3), WEAKNESS_COVER(140,3),
 	//RossCat T4
 	RHODES_WEAPON(145, 3), RECALL_MEMORY(146,3), GUILT(137,4),
 	//RoseCat De_T4
@@ -764,6 +766,9 @@ public enum Talent {
 				break;
 			case GUARDIAN:
 				Collections.addAll(tierTalents, BARRIER_OPERATION, BARRIER_REPAIR, RHODES_CAT);
+				break;
+			case WAR:
+				Collections.addAll(tierTalents, OBLIVION, WEAKNESS_COVER, RHODES_CAT);
 				break;
 			case KNIGHT:
 				Collections.addAll(tierTalents, INTO_FRAY, BLITZKRIEG, SKILL_MASTERY);

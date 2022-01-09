@@ -103,7 +103,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 	MAGE( "mage", HeroSubClass.BATTLEMAGE, HeroSubClass.WARLOCK ),
 	ROGUE( "rogue", HeroSubClass.ASSASSIN, HeroSubClass.FREERUNNER ),
 	HUNTRESS( "huntress", HeroSubClass.SNIPER, HeroSubClass.WARDEN ),
-	ROSECAT("rosecat", HeroSubClass.DESTROYER, HeroSubClass.GUARDIAN),
+	ROSECAT("rosecat", HeroSubClass.DESTROYER, HeroSubClass.GUARDIAN, HeroSubClass.WAR),
 	NEARL("nearl", HeroSubClass.KNIGHT, HeroSubClass.SAVIOR);
 
 	private String title;
@@ -160,6 +160,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
+		new TomeOfMastery().collect();
 		//new Heamyo().collect();
 		//new Amulet().collect();
 	}

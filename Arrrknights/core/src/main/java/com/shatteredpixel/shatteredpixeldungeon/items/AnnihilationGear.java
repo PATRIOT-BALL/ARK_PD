@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
@@ -17,25 +18,36 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.NewDM300;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Piersailor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.RipperDemon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.YogDzewa;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Mon3tr;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAmplified;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.EX42_GroundSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MissileSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
@@ -266,6 +278,8 @@ public class Spriteex extends MissileWeapon {
             Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);
         }
         else {
+            if (Dungeon.hero.subClass == HeroSubClass.WAR) SpawnEX44(target);
+
             CellEmitter.center(target).burst(BlastParticle.FACTORY, 10);
             Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);
         }
@@ -400,4 +414,116 @@ public class Spriteex extends MissileWeapon {
                 if (curUser.pointsInTalent(Talent.PHYSICAL_ATTACK) > Random.Int(5)) {
                     Buff.affect(enemy,Paralysis.class, 1f);
                 }}} }
+
+
+     private void SpawnEX44(int point) {
+         if (Actor.findChar(point) == null && Dungeon.level.passable[point]) {
+             EX44 w = new EX44();
+             w.pos = point;
+             w.setting(Dungeon.hero, this.level());
+             GameScene.add( w );
+
+         }
+     }
+
+      public static class EX44 extends Mob {
+          {
+              spriteClass = EX42_GroundSprite.class;
+
+              state = HUNTING;
+
+              properties.add(Property.IMMOVABLE);
+              alignment = Alignment.ALLY;
+
+              immunities.add(WandOfCorruption.class);
+              immunities.add(StaffOfCorrupting.class);
+              immunities.add(Terror.class);
+              immunities.add(Amok.class);
+          }
+
+          private int lifecount = 30;
+
+          public void setting(Hero hero, int GearLevel)
+          {
+              CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
+              int itembuff = 0;
+              if (setBuff != null) itembuff = setBuff.itemLevel();
+
+              int armorlevel = 0;
+              if (hero.belongings.armor != null) armorlevel = hero.belongings.armor.level();
+
+              HP=HT=40 + (armorlevel*8) + (itembuff*4);
+              maxLvl = GearLevel + (itembuff/3);
+          }
+
+          @Override
+          public int damageRoll() { return Random.NormalIntRange( 4+maxLvl, 12+(maxLvl*3)); }
+
+          @Override
+          public int drRoll() { return Random.NormalIntRange( 0, 6 ); }
+
+          @Override
+          public int attackSkill(Char target) {
+              return 10 + maxLvl * 2; }
+
+          @Override
+          public int defenseSkill(Char enemy) { return 0; }
+
+          @Override
+          protected boolean act() {
+              lifecount--;
+              if (lifecount < 1) {
+                  this.die(this);
+                  return true;
+              }
+
+              return super.act();
+          }
+
+          @Override
+          public void die(Object cause) {
+              if (cause == this) {
+                  if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
+                      AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
+                      Gear.SPCharge(1);
+                  }
+              }
+              else if(Dungeon.hero.hasTalent(Talent.OBLIVION)) {
+                  if(Random.Int(100) < Random.IntRange(0, 5 + Dungeon.hero.pointsInTalent(Talent.OBLIVION) * 15)) {
+                      if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
+                          AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
+                          Gear.SPCharge(1);
+                      }
+                  }
+              }
+              super.die(cause);
+          }
+
+          @Override
+          public int attackProc(Char enemy, int damage) {
+              return super.attackProc(enemy, damage);
+          }
+
+          @Override
+          public int defenseProc(Char enemy, int damage) {
+              return super.defenseProc(enemy, damage); }
+
+          {
+              immunities.add( Paralysis.class );
+              immunities.add( Amok.class );
+              immunities.add( Sleep.class );
+              immunities.add( Terror.class );
+              immunities.add( Vertigo.class );
+          }
+
+          @Override
+          protected boolean getCloser(int target) {
+              return true;
+          }
+
+          @Override
+          protected boolean getFurther(int target) {
+              return true;
+          }
+      }
 }
