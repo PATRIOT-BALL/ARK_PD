@@ -457,7 +457,7 @@ public class Spriteex extends MissileWeapon {
           }
 
           @Override
-          public int damageRoll() { return Random.NormalIntRange( 4+maxLvl, 12+(maxLvl*3)); }
+          public int damageRoll() { return Random.NormalIntRange( 4+(maxLvl/2), 12+(maxLvl*3)); }
 
           @Override
           public void damage(int dmg, Object src) {
