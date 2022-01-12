@@ -2,6 +2,8 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel4;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -28,15 +30,26 @@ public class Gavial extends NPC {
     @Override
     public boolean interact(Char c) {
         sprite.turnTo(pos, c.pos);
-        if (Dungeon.extrastage_Gavial) {
-            Dungeon.extrastage_Gavial = false;
-            sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "no"));
+        if (Dungeon.depth > 30) {
+            sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "questhint"));
         }
         else {
-            Dungeon.extrastage_Gavial = true;
-            sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "ok"));
+
+            if (Dungeon.extrastage_Gavial) {
+                Dungeon.extrastage_Gavial = false;
+                sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "no"));
+            } else {
+                Dungeon.extrastage_Gavial = true;
+                sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "ok"));
+            }
         }
         return true;
+    }
+
+    @Override
+    public String description() {
+        if (Dungeon.depth > 30)    return Messages.get(this, "desc_31");
+        return Messages.get(this, "desc");
     }
 
     public static void spawn(Level level, int ppos) {

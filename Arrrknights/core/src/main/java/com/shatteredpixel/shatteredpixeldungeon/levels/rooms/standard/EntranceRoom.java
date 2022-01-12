@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Gavial;
 import com.shatteredpixel.shatteredpixeldungeon.items.journal.GuidePage;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Document;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
@@ -90,6 +91,28 @@ public class EntranceRoom extends StandardRoom {
 			p.page(Document.GUIDE_SEARCH_PAGE);
 			level.drop( p, pos );
 		}
+
+		if (Dungeon.depth == 31 && Dungeon.extrastage_Gavial) {
+			int pos;
+			boolean validPos;
+			//Do not spawn wandmaker on the entrance, a trap, or in front of a door.
+			do {
+				validPos = true;
+				pos = level.pointToCell(random());
+				if (pos == level.entrance){
+					validPos = false;
+				}
+				for (Point door : connected.values()){
+					if (level.trueDistance( pos, level.pointToCell( door ) ) <= 1){
+						validPos = false;
+					}
+				}
+				if (level.traps.get(pos) != null){
+					validPos = false;
+				}
+			} while (!validPos);
+
+		Gavial.spawn(level,pos);}
 
 		Random.popGenerator();
 

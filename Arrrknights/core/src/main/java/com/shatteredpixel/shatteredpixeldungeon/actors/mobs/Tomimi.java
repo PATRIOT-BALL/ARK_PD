@@ -291,8 +291,6 @@ public class Tomimi extends Mob {
         GameScene.bossSlain();
         Dungeon.level.unseal();
         super.die(cause);
-
-        Dungeon.level.drop(new ArmorUpKit(), pos).sprite.drop(pos);
     }
 
     @Override

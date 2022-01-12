@@ -21,6 +21,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
@@ -55,6 +56,7 @@ import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
+import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -108,6 +110,19 @@ public class AnnihilationGear extends Item {
                         return Messages.get(this, "desc_arts2_guardian", min(), max());
                     case 3:
                         return Messages.get(this, "desc_arts3_guardian", min(), max());
+                }
+            }
+            else if (Dungeon.hero.subClass == HeroSubClass.WAR) {
+                switch (arts) {
+                    case 0:
+                    default:
+                        break;
+                    case 1:
+                        return Messages.get(this, "desc_arts1_war", min(), max());
+                    case 2:
+                        return Messages.get(this, "desc_arts2_war", min(), max());
+                    case 3:
+                        return Messages.get(this, "desc_arts3_war", min(), max());
                 }
             }
         }
@@ -273,9 +288,14 @@ public class Spriteex extends MissileWeapon {
     {
         Char mob = Actor.findChar(target);
         if (mob != null) {
-            dohit(mob);
+            if (mob instanceof EX44 && arts == 3 && Dungeon.hero.subClass == HeroSubClass.WAR) {
+                CellEmitter.center(target).burst(BlastParticle.FACTORY, 10);
+                Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);
+                mob.die(new WarCatArts3());
+            }
+            else {dohit(mob);
             CellEmitter.center(target).burst(BlastParticle.FACTORY, 10);
-            Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);
+            Sample.INSTANCE.play(Assets.Sounds.HIT_WALL2);}
         }
         else {
             if (Dungeon.hero.subClass == HeroSubClass.WAR) SpawnEX44(target);
@@ -421,10 +441,17 @@ public class Spriteex extends MissileWeapon {
              EX44 w = new EX44();
              w.pos = point;
              w.setting(Dungeon.hero, this.level());
+             if (arts == 1) Buff.affect(w, WarCatBuff1.class);
+             else if (arts == 2) Buff.affect(w, WarCatBuff2.class);
+
              GameScene.add( w );
 
          }
      }
+
+     public static class WarCatBuff1 extends Buff {}
+     public static class WarCatBuff2 extends Buff {}
+    public static class WarCatArts3{};
 
       public static class EX44 extends Mob {
           {
@@ -464,6 +491,11 @@ public class Spriteex extends MissileWeapon {
               if (Dungeon.hero.hasTalent(Talent.MENTALAMPLIFICATION)) {
                   dmg *= 1f - (0.1f*Dungeon.hero.pointsInTalent(Talent.MENTALAMPLIFICATION));
               }
+
+              if (buff(WarCatBuff2.class) != null) {
+                  dmg /= 4;
+                  Buff.detach(this, WarCatBuff2.class);
+              }
               super.damage(dmg, src);
           }
 
@@ -480,6 +512,7 @@ public class Spriteex extends MissileWeapon {
           @Override
           protected boolean act() {
               lifecount--;
+              if (buff(WarCatBuff1.class) != null && lifecount > 15) lifecount--;
               if (lifecount < 1) {
                   this.die(this);
                   return true;
@@ -491,6 +524,20 @@ public class Spriteex extends MissileWeapon {
           @Override
           public void die(Object cause) {
               if (cause == this) {
+                  if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
+                      AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
+                      Gear.SPCharge(1);
+                  }
+              }
+              else if(cause instanceof WarCatArts3) {
+                  for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
+                      Char ch = findChar( pos + PathFinder.NEIGHBOURS8[i] );
+                      if (ch != null && ch.isAlive() && !(ch instanceof Hero) && !(ch instanceof EX44)) {
+                          int damage = damageRoll() * 2;
+                          ch.damage( damage, this );
+                          Buff.affect(ch, Weakness.class, 5f);
+                      }
+                  }
                   if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
                       AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
                       Gear.SPCharge(1);

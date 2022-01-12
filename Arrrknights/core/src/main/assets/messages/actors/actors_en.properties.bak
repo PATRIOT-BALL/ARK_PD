@@ -643,7 +643,7 @@ actors.hero.talent.weakness_cover.title=weakness cover
 actors.hero.talent.weakness_cover.desc=_+1:_ Increases attack damage by _0-2_ per for gear upgrade level.\n\n_+2:_ Increases attack damage by _1-2_ per for gear upgrade level\n\n_+3:_ Increases attack damage by _2-2_ per for gear upgrade level
 actors.hero.talent.mentalamplification.title=mental amplification
 actors.hero.talent.mentalamplification.desc=_+1:_ EX-44 gain Damage reduction _10%_.\n\n_+2:_ EX-44 gain Damage reduction _20%_.\n\n_+1:_ EX-44 gain Damage reduction _30%_.
-actors.hero.talent.crystallize.name=crystallize
+actors.hero.talent.crystallize.title=crystallize
 actors.hero.talent.crystallize.desc=_+1:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _10%_.\n\n_+2:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _15%_.\n\n_+3:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _20%_.\n\n_+4:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _25%_.
 
 
@@ -964,8 +964,10 @@ actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria Nation
 actors.mobs.npcs.gavial.name=gavial
 actors.mobs.npcs.gavial.desc=baby alligator~
 actors.mobs.npcs.gavial.desc*Talking to her will take you through the Gavial extra chapter.
+actors.mobs.npcs.gavial.desc_31=Where LANCET-2?
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
 actors.mobs.npcs.gavial.no=Oh, have you changed your mind? ok. Let's go next time.
+actors.mobs.npcs.gavial.questhint=I can't see LANCET-2... her caught?
 
 actors.mobs.npcs.dummy.name=DUMMY
 actors.mobs.npcs.dummy.desc=KOKODAYO
@@ -1011,7 +1013,8 @@ actors.mobs.npcs.npc_astesia.setbouns_1=Hello, %1$s. are you free now? If it's o
 actors.mobs.npcs.npc_astesia.setbouns_2=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...the secrets tied to your weapon are... quite a lot. If you use _%2$s_ and _%3$s_ together, something special will happen to your weapon. i will guarantee.
 actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...wow, that's a lot of ties. If you use _%2$s_, _%3$s_, and _%4$s_ together, I think your weapon's special secret can be revealed.
 
-
+actors.mobs.npcs.lancet2.name=LANCET-2
+actors.mobs.npcs.lancet2.desc=Captured LANCET-2. Rescue her.
 
 
 
