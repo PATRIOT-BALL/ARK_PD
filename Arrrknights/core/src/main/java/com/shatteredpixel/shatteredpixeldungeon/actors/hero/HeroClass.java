@@ -164,9 +164,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 		//new Heamyo().collect();
 		//new Amulet().collect();
-		new TomeOfMastery().collect();
-		new StoneOfEnchantment().quantity(999).collect();
-		new StoneOfAugmentation().quantity(3).collect();
 	}
 
 	public Badges.Badge masteryBadge() {
