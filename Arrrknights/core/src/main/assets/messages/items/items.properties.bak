@@ -2911,10 +2911,10 @@ items.annihilationgear.desc_arts3_guardian=이 강력한 장치는 로즈몬티�
 items.annihilationgear.desc_arts1_war=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._\n\n이 장치에는 _순환_의 아츠가 부여되었습니다. 설치된 EX-44가 더 빨리 회수됩니다. 
 items.annihilationgear.desc_arts2_war=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._\n\n이 장치에는 _방패_의 아츠가 부여되었습니다. 설치된 EX-44가 받는 첫 피해가 75%% 감소합니다. 
 items.annihilationgear.desc_arts3_war=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._\n\n이 장치에는 _연쇄_의 아츠가 부여되었습니다. 설치된 EX-44에 섬멸전 장비를 적중시키면 즉시 회수하며, 회수될 때 주위 적들에게 피해를 입힙니다.
-items.annihilationgear.desc_augmetn_none=현재 장비한 무기의 증강에 따라 특수한 효과를 얻을 수 있습니다.
-items.annihilationgear.desc_augmetn_damage=_증강:공격력_\nEX-44의 피해량이 50%증가하지만 회수가 느려집니다.
-items.annihilationgear.desc_augmetn_speed=_증강:속도_\nEX-44의 피해량이 40%감소하지만 사거리가 증가합니다.
-items.annihilationgear.desc_augmetn_overload=_증강:과부하_\nEX-44가 모든 피해를 1만 받지만, 최대 체력이 대폭 감소합니다.
+items.annihilationgear.desc_augment_none=현재 장비한 무기의 증강에 따라 특수한 효과를 얻을 수 있습니다.
+items.annihilationgear.desc_augment_damage=_증강:공격력_\nEX-44의 피해량이 50%증가하지만 회수가 느려집니다.
+items.annihilationgear.desc_augment_speed=_증강:속도_\nEX-44의 피해량이 40%감소하지만 사거리가 증가합니다.
+items.annihilationgear.desc_augment_overload=_증강:과부하_\nEX-44가 모든 피해를 1만 받지만, 최대 체력이 대폭 감소합니다.
 items.annihilationgear$ex44.name=EX-44
 items.annihilationgear$ex44.desc=로즈몬티스의 힘으로 조종되는 전술장비. 주위에 있는 적들을 공격한다.
 

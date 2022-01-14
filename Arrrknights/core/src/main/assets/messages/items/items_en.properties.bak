@@ -2907,8 +2907,8 @@ items.annihilationgear.desc_arts2_war=This gear amplifies the arts of Rosmontis.
 items.annihilationgear.desc_arts3_war=This gear amplifies the arts of Rosmontis. charges are consumed to use gear attacks, which deal _%1$d-%2$d_ damage.\n\nThis gear normally only charges when leveling up. _However, it cannot be recharged with Potion Of Experience_\n\nIt does not support auto-targeting, but _can attack any area._\n\nIt has a _Chain._ If gear hits the summoned EX-44, it immediately Retrieved and deals damage to nearby enemies.
 items.annihilationgear.desc_augment_none=Special effects are added according to the augmentation of the currently equipped weapon.
 items.annihilationgear.desc_augment_damage=_Damage_\nEX-44`s Damage +50%. Instead, Retrieved speed down.
-items.annihilationgear.desc_augment_speed=_증강:속도_\nEX-44`s Damage -40%. Attack Range +1
-items.annihilationgear.desc_augment_overload=_증강:과부하_\nDamage taken by EX-44 is fixed at 1, but its maximum HP is greatly reduced.
+items.annihilationgear.desc_augment_speed=_Speed_\nEX-44`s Damage -40%. Attack Range +1
+items.annihilationgear.desc_augment_overload=_Overload_\nDamage taken by EX-44 is fixed at 1, but its maximum HP is greatly reduced.
 items.annihilationgear$ex44.name=EX-44
 items.annihilationgear$ex44.desc=A tactical piece of equipment controlled by a Cat.
 
