@@ -42,6 +42,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAmplified;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -52,6 +55,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.EX42_GroundSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MissileSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.sun.org.apache.bcel.internal.generic.DUP;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
@@ -60,6 +64,8 @@ import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
+
+import sun.util.resources.cldr.dua.CalendarData_dua_CM;
 
 public class AnnihilationGear extends Item {
 
@@ -111,8 +117,7 @@ public class AnnihilationGear extends Item {
                     case 3:
                         return Messages.get(this, "desc_arts3_guardian", min(), max());
                 }
-            }
-            else if (Dungeon.hero.subClass == HeroSubClass.WAR) {
+            } else if (Dungeon.hero.subClass == HeroSubClass.WAR) {
                 switch (arts) {
                     case 0:
                     default:
@@ -127,6 +132,27 @@ public class AnnihilationGear extends Item {
             }
         }
         return Messages.get(this, "desc", min(), max());
+    }
+
+    @Override
+    public String info() {
+        if (Dungeon.hero.subClass != HeroSubClass.WAR) return  desc();
+        String aug;
+        switch (WeaponAug()) {
+            case NONE: default:
+                aug = Messages.get(this, "desc_augment_none");
+                break;
+            case DAMAGE:
+                aug = Messages.get(this, "desc_augment_damage");
+                break;
+            case SPEED:
+                aug = Messages.get(this, "desc_augment_speed");
+                break;
+            case OVERLOAD:
+                aug =Messages.get(this, "desc_augment_overload");
+                break;
+        }
+        return desc() + "\n\n" + aug;
     }
 
     @Override
@@ -421,7 +447,7 @@ public class Spriteex extends MissileWeapon {
         else if (enemy instanceof YogDzewa) { dmg *= 0.65f; } // 탈룰라? 를 상대로 피해 35%감소
         else if (enemy instanceof Mon3tr) { dmg *= 0.85f; } // Mon3tr를 상대로 피해 15%감소
 
-        enemy.damage(dmg, enemy);
+        enemy.damage(dmg, curUser);
 
 
         // 서브 직업이 파괴라면, 집중 버프 부여
@@ -438,15 +464,38 @@ public class Spriteex extends MissileWeapon {
 
      private void SpawnEX44(int point) {
          if (Actor.findChar(point) == null && Dungeon.level.passable[point]) {
+             int augtype;
+             switch (WeaponAug()) {
+                 case NONE: default:
+                     augtype = 0;
+                     break;
+                 case DAMAGE:
+                     augtype = 1;
+                     break;
+                 case SPEED:
+                     augtype = 2;
+                     break;
+                 case OVERLOAD:
+                     augtype = 3;
+                     break;
+             }
+
              EX44 w = new EX44();
              w.pos = point;
-             w.setting(Dungeon.hero, this.level());
+             w.setting(Dungeon.hero, this.level(), augtype);
+
              if (arts == 1) Buff.affect(w, WarCatBuff1.class);
              else if (arts == 2) Buff.affect(w, WarCatBuff2.class);
 
              GameScene.add( w );
 
          }
+     }
+
+     public Weapon.Augment WeaponAug() {
+      if (Dungeon.hero.belongings.weapon == null) return null;
+       Weapon.Augment wep = ((MeleeWeapon)curUser.belongings.weapon).augment;
+       return wep;
      }
 
      public static class WarCatBuff1 extends Buff {}
@@ -469,8 +518,9 @@ public class Spriteex extends MissileWeapon {
           }
 
           private int lifecount = 30;
+          private int weaponAug;
 
-          public void setting(Hero hero, int GearLevel)
+          public void setting(Hero hero, int GearLevel, int AugType)
           {
               CustomeSet.CustomSetBuff setBuff = Dungeon.hero.buff( CustomeSet.CustomSetBuff.class);
               int itembuff = 0;
@@ -479,12 +529,23 @@ public class Spriteex extends MissileWeapon {
               int armorlevel = 0;
               if (hero.belongings.armor != null) armorlevel = hero.belongings.armor.level();
 
-              HP=HT=30 + (armorlevel*6) + (itembuff*3);
+              if (AugType != 3) HP=HT=30 + (armorlevel*6) + (itembuff*3);
+              else HP=HT=3 + (armorlevel) + (itembuff/5);
+
               maxLvl = GearLevel + (itembuff/3);
+
+              if (AugType == 1) lifecount = 40;
+
+              weaponAug = AugType;
           }
 
           @Override
-          public int damageRoll() { return Random.NormalIntRange( 3, 5+(maxLvl*3)); }
+          public int damageRoll() {
+              int dmg = Random.NormalIntRange( 3, 5+(maxLvl*3));
+              if (weaponAug == 1) dmg *= 1.5f;
+              else if (weaponAug == 2) dmg *= 0.6f;
+
+              return dmg; }
 
           @Override
           public void damage(int dmg, Object src) {
@@ -496,6 +557,8 @@ public class Spriteex extends MissileWeapon {
                   dmg /= 4;
                   Buff.detach(this, WarCatBuff2.class);
               }
+
+              if (weaponAug == 3) dmg = 1;
               super.damage(dmg, src);
           }
 
@@ -505,6 +568,12 @@ public class Spriteex extends MissileWeapon {
           @Override
           public int attackSkill(Char target) {
               return 15 + maxLvl; }
+
+          @Override
+          protected boolean canAttack(Char enemy) {
+              if (weaponAug == 2) return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 2;
+              else return super.canAttack(enemy);
+          }
 
           @Override
           public int defenseSkill(Char enemy) { return 0; }
@@ -583,17 +652,20 @@ public class Spriteex extends MissileWeapon {
           }
 
           private static final String LIFE = "lifecount";
+          private static final String AUG = "weaponAug";
 
           @Override
           public void storeInBundle(Bundle bundle) {
               super.storeInBundle(bundle);
               bundle.put(LIFE, lifecount);
+              bundle.put(AUG, weaponAug);
           }
 
           @Override
           public void restoreFromBundle(Bundle bundle) {
               super.restoreFromBundle(bundle);
               lifecount = bundle.getInt(LIFE);
+              weaponAug = bundle.getInt(AUG);
               enemySeen = true;
           }
       }

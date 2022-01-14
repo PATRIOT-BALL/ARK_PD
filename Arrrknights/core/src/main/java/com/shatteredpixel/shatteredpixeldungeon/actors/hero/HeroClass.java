@@ -67,6 +67,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurs
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.CurseInfusion;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAugmentation;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.SuperAdvanceguard;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
@@ -162,6 +164,9 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 		//new Heamyo().collect();
 		//new Amulet().collect();
+		new TomeOfMastery().collect();
+		new StoneOfEnchantment().quantity(999).collect();
+		new StoneOfAugmentation().quantity(3).collect();
 	}
 
 	public Badges.Badge masteryBadge() {
