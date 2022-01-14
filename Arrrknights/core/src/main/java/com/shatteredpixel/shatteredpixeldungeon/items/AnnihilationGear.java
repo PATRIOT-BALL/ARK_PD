@@ -493,7 +493,7 @@ public class Spriteex extends MissileWeapon {
      }
 
      public Weapon.Augment WeaponAug() {
-      if (Dungeon.hero.belongings.weapon == null) return null;
+      if (Dungeon.hero.belongings.weapon == null) return Weapon.Augment.NONE;
        Weapon.Augment wep = ((MeleeWeapon)curUser.belongings.weapon).augment;
        return wep;
      }
