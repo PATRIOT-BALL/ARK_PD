@@ -53,6 +53,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.ShopRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.SpecialRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.EntranceRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.ExitRoom;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.GavialStanardRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.StandardRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.BlazingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.BurningTrap;
@@ -124,8 +125,10 @@ public abstract class RegularLevel extends Level {
 			initRooms.add(new RoseRoom());
 		else if (Dungeon.depth == 24)
 			initRooms.add(new PursuerRoom());
-		else if (Dungeon.depth == 33 && Dungeon.extrastage_Gavial) {
-			initRooms.add(new LACNET2Room());
+		else if (Dungeon.extrastage_Gavial) {
+			if (Dungeon.depth == 33) initRooms.add(new LACNET2Room());
+			initRooms.add(new GavialStanardRoom());
+			initRooms.add(new GavialStanardRoom());
 		}
 
 		//force max special rooms and add one more for large levels

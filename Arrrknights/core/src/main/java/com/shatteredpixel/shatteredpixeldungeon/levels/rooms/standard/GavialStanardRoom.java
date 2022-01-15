@@ -33,11 +33,10 @@ public class GavialStanardRoom extends StandardRoom {
         int cx = c.x;
         int cy = c.y;
 
-        if (Random.Int(2) == 0) {
-            GiantMushroom Mushroom = new GiantMushroom();
-            Mushroom.pos = cx + cy * level.width();
-            level.mobs.add(Mushroom);
-        }
+        GiantMushroom Mushroom = new GiantMushroom();
+        Mushroom.pos = cx + cy * level.width();
+        level.mobs.add(Mushroom);
+
     }
 
     @Override

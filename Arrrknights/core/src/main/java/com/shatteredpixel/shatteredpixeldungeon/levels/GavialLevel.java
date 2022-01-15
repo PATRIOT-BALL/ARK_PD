@@ -37,7 +37,7 @@ public class GavialLevel extends RegularLevel {
     protected int standardRooms(boolean forceMax) {
         if (forceMax) return 10;
         //8 to 10, average 8.67
-        return 12+ Random.chances(new float[]{3, 2, 1});
+        return 7+ Random.chances(new float[]{3, 2, 1});
     }
 
     @Override
