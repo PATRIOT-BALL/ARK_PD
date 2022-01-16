@@ -170,23 +170,5 @@ public class GavialBossLevel1 extends Level {
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        for (int i=0; i < length(); i++) {
-            int flags = Terrain.flags[map[i]];
-            if ((flags & Terrain.PIT) != 0){
-                passable[i] = avoid[i] = false;
-                solid[i] = true;
-            }
-        }
-        for (int i = (height-ROOM_TOP+2)*width; i < length; i++){
-            passable[i] = avoid[i] = false;
-            solid[i] = true;
-        }
-        for (int i = (height-ROOM_TOP+1)*width; i < length; i++){
-            if (i % width < 4 || i % width > 12 || i >= (length-width)){
-                discoverable[i] = false;
-            } else {
-                visited[i] = true;
-            }
-        }
     }
 }
