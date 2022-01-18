@@ -43,13 +43,14 @@ public class v0_4_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 개편",
                 "_글래스고 깡패_ : 공격속도가 500%에서 _250%_ 로 감소했으며, 감소한 수치에 비례해 공격력과 강화 효율이 상승했습니다." + "\n\n" +
-                "_적소_ : 플레이어 레벨이 25 이상일 때 공격력과 강화 효율이 상승하는 효과가 추가되었습니다."));
+                "_적소_ : 플레이어 레벨이 21 이상일 때 공격력과 강화 효율이 상승하는 효과가 추가되었습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_인귀_ : 대검 모드의 회복량이 강화에 비례해 상승하도록 변경되었습니다." + "\n\n" +
                 "_R4-C 돌격소총_ : 사격 속도와 명중률이 상승했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "레드 상향",
@@ -70,6 +71,7 @@ public class v0_4_X_Changes {
                 "_공수부대병_의 공격력이 3-9에서 _2-9_ 로 감소했습니다." + "\n\n" +
                         "_진형파괴병_의 공격력이 5-18에서 _5-17_ 로, 명중률이 16에서 _15_ 로 감소했습니다." + "\n\n" +
                 "_숙주 병사(폭주)_의 공격력이 10-32에서 _10-27_ 로 감소했습니다. 집중 상태일 때 공격력은 기존과 같습니다." + "\n\n" +
+                "숙주 리더(폭주)의 집중 버프 관련 사항이 적용되지않아 지나치게 강력했던 버그가 수정되었습니다." + "\n\n" +
                 "_용암 원석충_ : 체력이 155에서 _145_ 로, 공격력이 33-45에서 _31-45_ 로 감소했습니다."));
     }
 }

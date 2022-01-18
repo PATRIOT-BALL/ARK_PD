@@ -44,10 +44,15 @@ public class Senior extends Monk {
 		focusCooldown -= 1.66f;
 		super.move( step );
 	}
-	
+
 	@Override
-	public int damageRoll() {
-		return Random.NormalIntRange( 20, 30 );
+	public int damageRoll()
+	{
+		Focus f = buff(Focus.class);
+		if (f != null) {
+			return Random.NormalIntRange( 21, 33 );
+		}
+		return Random.NormalIntRange( 12, 28 );
 	}
 	
 }

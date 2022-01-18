@@ -147,6 +147,7 @@ public class Badges {
 		BOSS_SLAIN_3_WARDEN,
 		BOSS_SLAIN_3_DESTROY,
 		BOSS_SLAIN_3_GUARDIAN,
+		BOSS_SLAIN_3_WAR,
 		BOSS_SLAIN_3_KNIGHT,
 		BOSS_SLAIN_3_SAVIOR,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 80, true ),
@@ -162,6 +163,7 @@ public class Badges {
 		GOLD_COLLECTED_5              ( 89 ),
 
 		SIESTA_PART1              ( 90 ),
+		GAVIAL_PART1              ( 90 ),
 
 		//RED , 버그 유저
 		BUG (176),
@@ -189,6 +191,7 @@ public class Badges {
 		NEARL_CHAMPION2              ( 109, true ),
 
 		SIESTA_PART2              ( 111),
+		GAVIAL_PART2              ( 111 ),
 
 		//diamond
 		GAMES_PLAYED_4              ( 112, true ),
@@ -785,6 +788,9 @@ public class Badges {
 				case GUARDIAN:
 					badge = Badge.BOSS_SLAIN_3_GUARDIAN;
 					break;
+					case WAR:
+						badge = Badge.BOSS_SLAIN_3_WAR;
+						break;
 					case KNIGHT:
 						badge = Badge.BOSS_SLAIN_3_KNIGHT;
 						break;
@@ -810,6 +816,7 @@ public class Badges {
 					global.contains( Badge.BOSS_SLAIN_3_WARDEN ) &&
 					global.contains( Badge.BOSS_SLAIN_3_DESTROY ) &&
 					global.contains( Badge.BOSS_SLAIN_3_GUARDIAN ) &&
+						global.contains( Badge.BOSS_SLAIN_3_WAR ) &&
 						global.contains( Badge.BOSS_SLAIN_3_KNIGHT ) &&
 						global.contains( Badge.BOSS_SLAIN_3_SAVIOR )) {
 					
@@ -1309,6 +1316,22 @@ public class Badges {
 			displayBadge( Badge.SIESTA_PART2 );}
 	}
 
+	public static void validategavial1() {
+		if (!local.contains( Badge.GAVIAL_PART1 )){
+			global.add(Badge.GAVIAL_PART1);
+			saveNeeded = true;
+			local.add(Badge.GAVIAL_PART1);
+			displayBadge( Badge.GAVIAL_PART1 );}
+	}
+
+	public static void validategavial2() {
+		if (!local.contains( Badge.GAVIAL_PART2 )){
+			global.add(Badge.GAVIAL_PART2);
+			saveNeeded = true;
+			local.add(Badge.GAVIAL_PART2);
+			displayBadge( Badge.GAVIAL_PART2 );}
+	}
+
 	public static void validatepursuerkill() {
 		if (!local.contains( Badge.SLAIN_PURSUER )){
 			global.add(Badge.SLAIN_PURSUER);
@@ -1467,7 +1490,8 @@ public class Badges {
 			{Badge.GREY_CHAMPION1, Badge.GREY_CHAMPION2, Badge.GREY_CHAMPION3},
 			{ Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3},
 			{ Badge.NEARL_CHAMPION1, Badge.NEARL_CHAMPION2, Badge.NEARL_CHAMPION3},
-			{ Badge.SIESTA_PART1, Badge.SIESTA_PART2}
+			{ Badge.SIESTA_PART1, Badge.SIESTA_PART2},
+			{ Badge.GAVIAL_PART1, Badge.GAVIAL_PART2}
 	};
 
 	private static final Badge[][] metaBadgeReplacements = new Badge[][]{
@@ -1511,6 +1535,7 @@ public class Badges {
 		leaveBest( badges, Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3 );
 		leaveBest( badges, Badge.NEARL_CHAMPION1, Badge.NEARL_CHAMPION2, Badge.NEARL_CHAMPION3 );
 		leaveBest( badges, Badge.SIESTA_PART1, Badge.SIESTA_PART2);
+		leaveBest( badges, Badge.GAVIAL_PART1, Badge.GAVIAL_PART2);
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
 			leaveBest( badges, tierReplace );

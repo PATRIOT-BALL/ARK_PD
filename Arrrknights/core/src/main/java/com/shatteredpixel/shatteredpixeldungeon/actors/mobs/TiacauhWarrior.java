@@ -17,7 +17,7 @@ public class TiacauhWarrior extends Mob {
         HP = HT = 110;
         defenseSkill = 18;
 
-        EXP = 13;
+        EXP = 14;
         maxLvl = 29;
 
         loot = new MysteryMeat();

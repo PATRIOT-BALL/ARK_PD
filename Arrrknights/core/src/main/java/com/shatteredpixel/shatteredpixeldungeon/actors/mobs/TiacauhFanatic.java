@@ -19,7 +19,7 @@ public class TiacauhFanatic extends Mob {
         HP = HT = 75;
         defenseSkill = 40;
 
-        EXP = 13;
+        EXP = 14;
         maxLvl = 29;
 
         loot = Gold.class;

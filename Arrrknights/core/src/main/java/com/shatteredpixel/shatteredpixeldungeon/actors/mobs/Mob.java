@@ -776,7 +776,7 @@ public abstract class Mob extends Char {
 
 		if (cause == Dungeon.hero && Dungeon.hero.belongings.weapon instanceof BladeDemon) {
 			if (((BladeDemon) Dungeon.hero.belongings.weapon).isSwiching()) {
-				int Heal = Random.IntRange(1,4);
+				int Heal = Random.IntRange(1,3+Dungeon.hero.belongings.weapon.buffedLvl());
 				Dungeon.hero.HP = Math.min(Dungeon.hero.HP + Heal, Dungeon.hero.HT);
 				Dungeon.hero.sprite.emitter().burst(Speck.factory(Speck.HEALING),  2);
 				Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, "+%dHP", Heal);

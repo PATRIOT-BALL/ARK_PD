@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -290,6 +291,9 @@ public class Tomimi extends Mob {
 
         GameScene.bossSlain();
         Dungeon.level.unseal();
+
+        Badges.validategavial1();
+
         super.die(cause);
     }
 

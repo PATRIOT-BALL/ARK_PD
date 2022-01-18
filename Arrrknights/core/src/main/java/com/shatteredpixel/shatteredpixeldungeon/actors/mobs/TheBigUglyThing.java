@@ -121,7 +121,7 @@ public class TheBigUglyThing extends Mob {
             Badges.saveGlobal();
 
             Badges.silentValidateHappyEnd();
-         //   Badges.validatesiesta2();
+            Badges.validategavial2();
             Dungeon.win(Amulet.class);
             Dungeon.deleteGame(GamesInProgress.curSlot, true);
             Game.switchScene(SurfaceScene.class);
