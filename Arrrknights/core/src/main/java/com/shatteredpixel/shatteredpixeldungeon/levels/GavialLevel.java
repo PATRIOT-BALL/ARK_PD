@@ -84,8 +84,8 @@ public class GavialLevel extends RegularLevel {
     protected Class<?>[] trapClasses() {
         return new Class[]{
                 FrostTrap.class, ToxicTrap.class, OozeTrap.class, PoisonDartTrap.class, BurningTrap.class,
-                OriginiumTrap.class, FlashingTrap.class, StormTrap.class,
-                GrimTrap.class, WarpingTrap.class, HallucinationTrap.class
+                OriginiumTrap.class, FlashingTrap.class, StormTrap.class, HallucinationTrap.class,
+                GrimTrap.class, WarpingTrap.class
         };
     }
 
@@ -93,8 +93,8 @@ public class GavialLevel extends RegularLevel {
     protected float[] trapChances() {
         return new float[]{
                 4,4,4,4,4,
-                2,2,2,
-                1,1,1
+                2,2,2,2,
+                1,1
         };
     }
 

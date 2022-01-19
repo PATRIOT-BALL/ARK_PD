@@ -1015,6 +1015,7 @@ actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's o
 
 actors.mobs.npcs.lancet2.name=LANCET-2
 actors.mobs.npcs.lancet2.desc=Captured LANCET-2. Rescue her.
+actors.mobs.npcs.lancet2.thank=You Rescue LANCET-2.
 
 
 
