@@ -1541,7 +1541,7 @@ actors.mobs.tiacauhlancer.desc=무기를 투척하는 법을 배웠을 뿐, 일�
 actors.mobs.tiacauhsniper.name=투창병 리더
 actors.mobs.tiacauhsniper.desc=거듭된 훈련을 통해 더욱 강해진 전사. 투척하는 창은 더욱 강력해졌지만, 창의 무게로 인해 사정거리는 여전히 짧다.
 
-actors.mobs.tiacauhaddict.name=티아카우 중독자
+actors.mobs.tiacauhaddict.name=버섯중독자
 actors.mobs.tiacauhaddict.desc=버섯에 중독된 티아카우 전사. 이동속도가 매우 빠르며, 적중시 대상의 공격 능력과 방어 능력을 약화시킨다.
 
 actors.mobs.tomimi.name=토미미
