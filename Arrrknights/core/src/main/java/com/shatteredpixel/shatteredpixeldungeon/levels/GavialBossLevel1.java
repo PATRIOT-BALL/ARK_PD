@@ -23,7 +23,7 @@ public class GavialBossLevel1 extends Level {
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILSE_SIESTA2;
+        return Assets.Environment.TILSE_SARGON;
     }
 
     @Override

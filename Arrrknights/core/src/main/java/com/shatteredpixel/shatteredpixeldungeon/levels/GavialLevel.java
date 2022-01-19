@@ -64,7 +64,7 @@ public class GavialLevel extends RegularLevel {
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILES_SEWERS;
+        return Assets.Environment.TILSE_SARGON;
     }
 
     @Override
