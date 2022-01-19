@@ -124,7 +124,7 @@ public enum HeroSubClass {
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 176, 80, 16, 16);
 
 			case WAR:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 144, 80, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 192, 80, 16, 16);
 		}
 	}
 	

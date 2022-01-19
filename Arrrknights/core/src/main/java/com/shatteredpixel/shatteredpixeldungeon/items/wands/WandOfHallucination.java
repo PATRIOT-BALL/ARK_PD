@@ -16,7 +16,7 @@ import com.watabou.utils.Random;
 
 public class WandOfHallucination extends Wand {
     {
-        image = ItemSpriteSheet.WAND_SNOWSANT;
+        image = ItemSpriteSheet.WAND_PODENCO;
     }
 
     @Override

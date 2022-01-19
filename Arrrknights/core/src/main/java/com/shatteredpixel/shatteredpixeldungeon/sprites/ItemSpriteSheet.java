@@ -489,6 +489,7 @@ public class ItemSpriteSheet {
 	public static final int WAND_SUZRAN    = WANDS+15;
 	public static final int WAND_MOSTIMA    = WANDS+16;
 	public static final int WAND_LAVA    = WANDS+17;
+	public static final int WAND_PODENCO    = WANDS+18;
 	static {
 		for (int i = WANDS; i < WANDS+31; i++)
 			assignItemRect(i, 16, 16);

@@ -19,7 +19,7 @@ import com.watabou.utils.Random;
 public class StaffOfPodenco extends Wand {
     private static ItemSprite.Glowing COL = new ItemSprite.Glowing( 0x00FF00 );
     {
-        image = ItemSpriteSheet.WAND_SNOWSANT;
+        image = ItemSpriteSheet.WAND_PODENCO;
     }
 
     @Override
