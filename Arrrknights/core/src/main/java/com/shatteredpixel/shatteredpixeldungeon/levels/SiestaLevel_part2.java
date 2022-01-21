@@ -46,9 +46,9 @@ public class SiestaLevel_part2 extends RegularLevel {
 
     @Override
     protected int standardRooms(boolean forceMax) {
-        if (forceMax) return 10;
+        if (forceMax) return 7;
         //8 to 10, average 8.67
-        return 9 + Random.chances(new float[]{3, 2, 1});
+        return 7 + Random.chances(new float[]{3, 2, 1});
     }
 
     @Override

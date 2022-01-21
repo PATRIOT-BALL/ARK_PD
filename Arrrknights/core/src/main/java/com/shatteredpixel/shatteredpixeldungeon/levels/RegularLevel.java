@@ -51,10 +51,16 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.PursuerRoom
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.RoseRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.ShopRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.SpecialRoom;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.BeachRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.EntranceRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.ExitRoom;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.FloodingRoom;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.FloodingRoom2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.GavialStanardRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.StandardRoom;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.Vocan_1Room;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.Vocan_2Room;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.Vocan_3Room;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.BlazingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.BurningTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.ChillingTrap;
@@ -123,12 +129,28 @@ public abstract class RegularLevel extends Level {
 
 		if (Dungeon.depth == 13)
 			initRooms.add(new RoseRoom());
-		else if (Dungeon.depth == 24)
+
+		 if (Dungeon.depth == 24)
 			initRooms.add(new PursuerRoom());
-		else if (Dungeon.extrastage_Gavial) {
+
+		if (Dungeon.extrastage_Gavial) {
 			if (Dungeon.depth == 33) initRooms.add(new LACNET2Room());
 			initRooms.add(new GavialStanardRoom());
 			initRooms.add(new GavialStanardRoom());
+		}
+		else {
+			if (Dungeon.depth != 35 & Dungeon.depth != 40){
+				if (Dungeon.depth < 35) {
+					initRooms.add(new FloodingRoom());
+					initRooms.add(new FloodingRoom2());
+					initRooms.add(new BeachRoom());
+				}
+				else {
+					initRooms.add(new Vocan_1Room());
+					initRooms.add(new Vocan_2Room());
+					initRooms.add(new Vocan_3Room());
+				}
+			}
 		}
 
 		//force max special rooms and add one more for large levels
