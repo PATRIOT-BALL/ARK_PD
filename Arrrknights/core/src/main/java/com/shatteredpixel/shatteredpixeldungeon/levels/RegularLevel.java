@@ -138,7 +138,7 @@ public abstract class RegularLevel extends Level {
 			initRooms.add(new GavialStanardRoom());
 			initRooms.add(new GavialStanardRoom());
 		}
-		else {
+		else if (Dungeon.depth > 30){
 			if (Dungeon.depth != 35 & Dungeon.depth != 40){
 				if (Dungeon.depth < 35) {
 					initRooms.add(new FloodingRoom());
