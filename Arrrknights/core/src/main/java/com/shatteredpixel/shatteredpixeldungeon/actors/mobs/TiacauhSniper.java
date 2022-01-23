@@ -6,11 +6,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Striker_EliteSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tiacauh_ImpalerSprite;
 import com.watabou.utils.Random;
 
 public class TiacauhSniper extends TiacauhLancer {
     {
-        spriteClass = Striker_EliteSprite.class;
+        spriteClass = Tiacauh_ImpalerSprite.class;
 
         HP = HT = 125;
         defenseSkill = 16;

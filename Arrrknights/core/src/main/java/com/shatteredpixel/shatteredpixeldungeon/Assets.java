@@ -433,7 +433,12 @@ public class Assets {
 		public static final String TIACAUH_WARRIOR	= "sprites/tiacauhwarrior.png";
 		public static final String TIACAUH_LANCER	= "sprites/tiacauhlancer.png";
 		public static final String TIACAUH_FANATIC	= "sprites/tiacauhfanatic.png";
+		public static final String TIACAUH_RIPPER	= "sprites/tiacauhripper.png";
+		public static final String TIACAUH_IMPALER	= "sprites/tiacauhimpaler.png";
+		public static final String TIACAUH_SHREDDER	= "sprites/tiacauhshredder.png";
 		public static final String GIANT_MUSHROOM	= "sprites/giant_mushroom.png";
+		public static final String TOMIMI	= "sprites/tomimi.png";
+
 
 		//명픽던에서만 추가된 것들↓
 		public static final String KALTSIT	= "sprites/kaltsit.png";

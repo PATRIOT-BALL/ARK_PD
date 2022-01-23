@@ -9,12 +9,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Siesta_AgentSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tiacauh_ShredderSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class TiacauhShredder extends Mob {
     {
-        spriteClass = Siesta_AgentSprite.class;
+        spriteClass = Tiacauh_ShredderSprite.class;
 
         HP = HT = 180;
         defenseSkill = 24;

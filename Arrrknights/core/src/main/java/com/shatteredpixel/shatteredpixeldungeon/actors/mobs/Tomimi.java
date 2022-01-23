@@ -32,6 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpawnerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tomimi_BossSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.YomaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
@@ -46,7 +47,7 @@ import java.util.HashSet;
 
 public class Tomimi extends Mob {
     {
-        spriteClass = YomaSprite.class;
+        spriteClass = Tomimi_BossSprite.class;
 
         HP = HT = 1500;
         defenseSkill = 20;
