@@ -10,12 +10,15 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.Help_LancetSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_AstesiaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_jessicatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.utils.Random;
 
 public class LANCET2 extends NPC {
     {
         spriteClass = Help_LancetSprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
+
+        state = SLEEPING;
     }
 
     @Override
@@ -25,6 +28,15 @@ public class LANCET2 extends NPC {
 
     @Override
     public void damage(int dmg, Object src) {
+    }
+
+    @Override
+    protected boolean act() {
+        if (state == SLEEPING) {
+            yell(Messages.get(this, "help"));
+            state = PASSIVE;
+        }
+        return super.act();
     }
 
     @Override

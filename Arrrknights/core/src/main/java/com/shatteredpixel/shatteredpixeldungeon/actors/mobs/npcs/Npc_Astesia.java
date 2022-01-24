@@ -25,10 +25,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfTenacity;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Castlebreaker;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DeepAbyss;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Destreza;
@@ -126,6 +128,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof Destreza) {setItem1 = new AlchemyKit(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof CatGun) {setItem1 = new ChaliceOfBlood(); setItem2 = new UnstableSpellbook(); setItem3 = new RingOfMistress(); SetValue = 3; return true;}
         else if (weapon instanceof SwordofArtorius) {setItem1 = new RingOfMistress(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
+        else if (weapon instanceof CrabGun) {setItem1 = new RingOfWealth(); setItem2 = new CustomeSet(); setItem3 = null; SetValue = 2; return true;}
 
 
         return false;

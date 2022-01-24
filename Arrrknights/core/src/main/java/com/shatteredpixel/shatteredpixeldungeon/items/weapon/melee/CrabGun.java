@@ -4,6 +4,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hallucination;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Brute;
@@ -12,7 +14,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.AncientKin;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -62,6 +66,14 @@ public class CrabGun extends MeleeWeapon {
                     GameScene.add(crab);
                     ScrollOfTeleportation.appear(crab, respawnPoints.get(index));
 
+                    if (setbouns()) {
+                        for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+                            if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
+                                Buff.affect(mob, Hallucination.class).set(Hallucination.DURATION / 2);
+                            }
+                        }
+                    }
+
                     respawnPoints.remove(index);
                     spawnd++;
                 }
@@ -77,6 +89,22 @@ public class CrabGun extends MeleeWeapon {
         crab.setting(lvl);
         GameScene.add(crab);
         ScrollOfTeleportation.appear(crab, pos);
+    }
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+       if (setbouns()) info += "\n\n" + Messages.get( CrabGun.class, "setbouns");
+
+        return info;
+    }
+
+    private boolean setbouns() {
+        if (Dungeon.hero.belongings.getItem(RingOfWealth.class) != null && Dungeon.hero.belongings.getItem(CustomeSet.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfWealth.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(CustomeSet.class).isEquipped(Dungeon.hero))
+                return true;
+        }
+            return false;
     }
 
     @Override
