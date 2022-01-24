@@ -4,7 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Mushroomslices extends Item {
     {
-        image = ItemSpriteSheet.CAT;
+        image = ItemSpriteSheet.MUSH;
 
         stackable = true;
         bones = false;

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class PortableCover extends Item {
     private static String AC_USE = "USE";
     {
-        image = ItemSpriteSheet.BONK;
+        image = ItemSpriteSheet.BARRI;
         stackable = true;
     }
 
