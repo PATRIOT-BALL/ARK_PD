@@ -3,14 +3,14 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class Tomimi_BossSprite extends MobSprite {
+public class Big_UglySprite extends MobSprite {
 
-    public Tomimi_BossSprite() {
+    public Big_UglySprite() {
         super();
 
-        texture( Assets.Sprites.TOMIMI);
+        texture( Assets.Sprites.BIG_UGLY);
 
-        TextureFilm frames = new TextureFilm( texture, 36, 36 );
+        TextureFilm frames = new TextureFilm( texture, 72, 60 );
 
         idle = new Animation( 7, true );
         idle.frames( frames, 1, 2, 3, 4, 5, 6 );

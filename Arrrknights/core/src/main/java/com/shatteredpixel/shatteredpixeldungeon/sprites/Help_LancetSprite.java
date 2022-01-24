@@ -3,20 +3,20 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class Tomimi_BossSprite extends MobSprite {
+public class Help_LancetSprite extends MobSprite {
 
-    public Tomimi_BossSprite() {
+    public Help_LancetSprite() {
         super();
 
-        texture( Assets.Sprites.TOMIMI);
+        texture( Assets.Sprites.HELP_LANCET);
 
-        TextureFilm frames = new TextureFilm( texture, 36, 36 );
+        TextureFilm frames = new TextureFilm( texture, 32, 32 );
 
         idle = new Animation( 7, true );
-        idle.frames( frames, 1, 2, 3, 4, 5, 6 );
+        idle.frames( frames, 1, 3, 4, 5, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
 
         run = new Animation( 13, true );
-        run.frames( frames, 7, 8, 9, 10, 11, 12, 13, 14 );
+        run.frames( frames, 0 );
 
         attack = new Animation( 15, false );
         attack.frames( frames, 0 );

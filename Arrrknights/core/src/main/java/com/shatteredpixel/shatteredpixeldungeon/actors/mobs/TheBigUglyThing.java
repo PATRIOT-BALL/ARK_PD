@@ -29,6 +29,7 @@ import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.SurfaceScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Big_UglySprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.FanaticSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
@@ -48,7 +49,7 @@ import java.util.HashSet;
 
 public class TheBigUglyThing extends Mob {
     {
-        spriteClass = FanaticSprite.class;
+        spriteClass = Big_UglySprite.class;
 
         HT = HP = 2000;
         defenseSkill = 25;

@@ -6,13 +6,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.ArmorUpKit;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Help_LancetSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_AstesiaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_jessicatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 
 public class LANCET2 extends NPC {
     {
-        spriteClass = NPC_jessicatSprite.class;
+        spriteClass = Help_LancetSprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
     }

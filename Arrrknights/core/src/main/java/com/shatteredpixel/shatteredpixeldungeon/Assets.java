@@ -438,6 +438,9 @@ public class Assets {
 		public static final String TIACAUH_SHREDDER	= "sprites/tiacauhshredder.png";
 		public static final String GIANT_MUSHROOM	= "sprites/giant_mushroom.png";
 		public static final String TOMIMI	= "sprites/tomimi.png";
+		public static final String BIG_UGLY	= "sprites/big_ugly.png";
+
+		public static final String HELP_LANCET	= "sprites/lancet.png";
 
 
 		//명픽던에서만 추가된 것들↓
