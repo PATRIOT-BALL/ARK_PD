@@ -13,10 +13,10 @@ public class Big_UglySprite extends MobSprite {
         TextureFilm frames = new TextureFilm( texture, 72, 60 );
 
         idle = new Animation( 7, true );
-        idle.frames( frames, 1, 2, 3, 4, 5, 6 );
+        idle.frames( frames, 0 );
 
         run = new Animation( 13, true );
-        run.frames( frames, 7, 8, 9, 10, 11, 12, 13, 14 );
+        run.frames( frames, 0 );
 
         attack = new Animation( 15, false );
         attack.frames( frames, 0 );
