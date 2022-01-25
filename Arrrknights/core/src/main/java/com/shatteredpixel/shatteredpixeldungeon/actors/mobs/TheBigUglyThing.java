@@ -51,7 +51,7 @@ public class TheBigUglyThing extends Mob {
     {
         spriteClass = Big_UglySprite.class;
 
-        HT = HP = 2000;
+        HT = HP = 1700;
         defenseSkill = 25;
         EXP = 100;
 
@@ -72,7 +72,7 @@ public class TheBigUglyThing extends Mob {
 
     @Override
     public int damageRoll() {
-        if (buff(rageBuff.class) != null) Random.NormalIntRange( 100, 130 );
+        if (buff(rageBuff.class) != null) Random.NormalIntRange( 120, 150 );
         return Random.NormalIntRange( 50, 65 );
     }
 
@@ -83,13 +83,13 @@ public class TheBigUglyThing extends Mob {
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 24);
+        return Random.NormalIntRange(0, 20);
     }
 
     @Override
     public void damage(int dmg, Object src) {
         if (buff(rageBuff.class) != null || firetime != 0) {
-            dmg /= 4;
+            dmg /= 5;
         }
 
         if (dmg > 500) {
@@ -129,7 +129,7 @@ public class TheBigUglyThing extends Mob {
         }
 
         if (buff(Barrier.class) != null) {
-            HP = Math.min(HP + 30, HT);
+            HP = Math.min(HP + 20, HT);
         }
         else if (buff(Barrier.class) == null && phase == 2) {
             HP = Math.max(HP, 800);
@@ -182,8 +182,8 @@ public class TheBigUglyThing extends Mob {
                 int damage = Random.IntRange(60,90);
                 damage -= Target.drRoll();
                 if (Target.buff(PortableCover.CoverBuff.class) == null) {
-                    if (phase == 1) damage += Target.HT / 5;
-                    else damage += Target.HT / 3;
+                    if (phase == 1) damage += Target.HT / 4;
+                    else damage += Target.HT / 2;
 
                     Target.damage(damage, this);
 
