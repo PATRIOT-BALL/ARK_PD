@@ -8,13 +8,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.FanaticSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Jumama_BossSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Eunectes extends Mob {
     {
-        spriteClass = FanaticSprite.class;
+        spriteClass = Jumama_BossSprite.class;
 
         HT = HP = 800;
         defenseSkill = 25;

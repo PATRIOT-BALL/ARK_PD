@@ -439,6 +439,7 @@ public class Assets {
 		public static final String GIANT_MUSHROOM	= "sprites/giant_mushroom.png";
 		public static final String TOMIMI	= "sprites/tomimi.png";
 		public static final String BIG_UGLY	= "sprites/big_ugly.png";
+		public static final String JUMAMA	= "sprites/jumama.png";
 
 		public static final String HELP_LANCET	= "sprites/lancet.png";
 
