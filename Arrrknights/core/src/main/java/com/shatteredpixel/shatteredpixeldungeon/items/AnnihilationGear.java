@@ -55,7 +55,6 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.EX42_GroundSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MissileSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
-import com.sun.org.apache.bcel.internal.generic.DUP;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
