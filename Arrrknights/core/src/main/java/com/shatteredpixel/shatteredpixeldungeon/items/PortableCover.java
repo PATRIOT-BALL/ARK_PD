@@ -15,6 +15,7 @@ public class PortableCover extends Item {
     {
         image = ItemSpriteSheet.BARRI;
         stackable = true;
+        defaultAction = AC_USE;
     }
 
     @Override
