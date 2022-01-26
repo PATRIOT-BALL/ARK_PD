@@ -434,6 +434,8 @@ public class Assets {
 		public static final String TIACAUH_LANCER	= "sprites/tiacauhlancer.png";
 		public static final String TIACAUH_FANATIC	= "sprites/tiacauhfanatic.png";
 		public static final String TIACAUH_RIPPER	= "sprites/tiacauhripper.png";
+		public static final String TIACAUH_BRAVE	= "sprites/tiacauh_brave.png";
+		public static final String TIACAUH_RITUA	= "sprites/tiacauh_ritualist.png";
 		public static final String TIACAUH_IMPALER	= "sprites/tiacauhimpaler.png";
 		public static final String TIACAUH_SHREDDER	= "sprites/tiacauhshredder.png";
 		public static final String GIANT_MUSHROOM	= "sprites/giant_mushroom.png";

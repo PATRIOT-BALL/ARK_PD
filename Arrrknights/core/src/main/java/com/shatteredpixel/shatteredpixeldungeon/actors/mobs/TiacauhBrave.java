@@ -11,13 +11,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GolemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tiacauh_BraveSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class TiacauhBrave extends Mob {
     {
-        spriteClass = GolemSprite.class;
+        spriteClass = Tiacauh_BraveSprite.class;
 
         HP = HT = 150;
         defenseSkill = 21;

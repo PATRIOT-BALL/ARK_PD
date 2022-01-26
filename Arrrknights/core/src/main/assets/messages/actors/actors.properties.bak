@@ -1024,6 +1024,7 @@ actors.mobs.npcs.ceylon.quest=안녕하세요, 저는 실론. 빅토리아 국�
 
 actors.mobs.npcs.lancet2.name=LANCET-2
 actors.mobs.npcs.lancet2.desc=사로잡힌 LANCET-2. 그녀를 구출하자.
+actors.mobs.npcs.lancet2.help=로봇 살려-
 actors.mobs.npcs.lancet2.thank=당신은 LANCET-2를 구출했다.
 
 
@@ -1575,12 +1576,12 @@ actors.mobs.giantmushroom.name=거대 버섯
 actors.mobs.giantmushroom.desc=매우 크게 자란 거대 버섯. 주위에 지속적으로 해로운 상태이상을 부여하며, 파괴시 버섯 조각을 얻을 수 있습니다. 평범하게 파괴하긴 조금 어렵지만, 불에는 매우 약해보입니다.
 
 actors.mobs.eunectes.name=유넥티스
-actors.mobs.eunectes.desc=가비알의 고향인 아카후알라에 있는 어느 부족의 족장.
+actors.mobs.eunectes.desc=\n\n\n\n\n가비알의 고향인 아카후알라에 있는 어느 부족의 족장.
 actors.mobs.eunectes.notice=어떤 사냥감이라도 온 힘으로 간다!
 actors.mobs.eunectes.die=너희들은 가비알에게 미치지 못한다!
 
-actors.mobs.thebiguglything.name=거못무
-actors.mobs.thebiguglything.desc=주마마의 야심작. 쓸데없이 큰 기계 괴수, 대제사장이 조종하고 있다.\n\n불에 약해보입니다.
+actors.mobs.thebiguglything.name=거대하고 못생긴 무언가
+actors.mobs.thebiguglything.desc=\n\n\n\n\n주마마의 야심작. 쓸데없이 큰 기계 괴수, 대제사장이 조종하고 있다.\n\n불에 약해보입니다.
 actors.mobs.thebiguglything.rage=기계가 폭주한다!
 actors.mobs.thebiguglything.fire_ready=대제사장이 원거리 공격을 준비한다!
 

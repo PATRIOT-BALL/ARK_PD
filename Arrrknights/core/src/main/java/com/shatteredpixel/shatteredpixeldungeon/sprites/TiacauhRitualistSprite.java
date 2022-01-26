@@ -14,9 +14,9 @@ public class TiacauhRitualistSprite extends MobSprite {
         super();
 
 
-        texture( Assets.Sprites.WAVE_CASTER );
+        texture( Assets.Sprites.TIACAUH_RITUA );
 
-        TextureFilm frames = new TextureFilm( texture, 32, 32 );
+        TextureFilm frames = new TextureFilm( texture, 56, 46 );
 
         idle = new Animation( 2, true );
         idle.frames( frames, 0 );
