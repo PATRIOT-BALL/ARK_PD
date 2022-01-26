@@ -174,6 +174,7 @@ public class TheBigUglyThing extends Mob {
         else if (firecooldown <= 0) {
             if (firetime == 0) {
                 GLog.w(Messages.get(this, "fire_ready"));
+                sprite.parent.addToBack(new TargetedCell(Dungeon.hero.pos, 0xFF0000));
                 firetime++;
                 return true;
             }
