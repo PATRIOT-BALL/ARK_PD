@@ -390,7 +390,7 @@ public class Assets {
 		public static final String POSSESSED	= "sprites/possessed.png";
 		public static final String UNDEAD	= "sprites/possessed.png";
 
-		//통벤저스
+		//통벤저스H
 		public static final String BLACK_SNAKE	= "sprites/black_snake.png"; //72x44
 		public static final String BOSS_2	= "sprites/boss_2.png"; //44x40
 		public static final String BOSS_3	= "sprites/boss_3.png"; //46x44
@@ -436,10 +436,13 @@ public class Assets {
 		public static final String TIACAUH_RIPPER	= "sprites/tiacauhripper.png";
 		public static final String TIACAUH_BRAVE	= "sprites/tiacauh_brave.png";
 		public static final String TIACAUH_RITUA	= "sprites/tiacauh_ritualist.png";
+		public static final String TIACAUH_SHAMAN	= "sprites/tiacauh_shaman.png";
+		public static final String TIACAUH_DRUGS	= "sprites/tiacauh_drugs.png";
 		public static final String TIACAUH_IMPALER	= "sprites/tiacauhimpaler.png";
 		public static final String TIACAUH_SHREDDER	= "sprites/tiacauhshredder.png";
 		public static final String GIANT_MUSHROOM	= "sprites/giant_mushroom.png";
 		public static final String TOMIMI	= "sprites/tomimi.png";
+		public static final String PILLAR	= "sprites/pillar.png";
 		public static final String BIG_UGLY	= "sprites/big_ugly.png";
 		public static final String JUMAMA	= "sprites/jumama.png";
 

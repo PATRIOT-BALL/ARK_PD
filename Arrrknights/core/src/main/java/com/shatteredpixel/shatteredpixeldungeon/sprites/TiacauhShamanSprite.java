@@ -15,7 +15,7 @@ public class TiacauhShamanSprite extends MobSprite {
         super();
 
 
-        texture( Assets.Sprites.TIACAUH_RITUA );
+        texture( Assets.Sprites.TIACAUH_SHAMAN );
 
         TextureFilm frames = new TextureFilm( texture, 56, 46 );
 

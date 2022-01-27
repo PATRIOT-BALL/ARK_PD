@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.SpawnerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Tomimi_BossSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tomimi_towerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.YomaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
@@ -355,7 +356,7 @@ public class Tomimi extends Mob {
 
     public static class TomimiTower extends Mob {
         {
-            spriteClass = SpawnerSprite.class;
+            spriteClass = Tomimi_towerSprite.class;
 
             HT = HP = 150;
             state = PASSIVE;

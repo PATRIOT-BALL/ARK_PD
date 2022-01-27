@@ -13,12 +13,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HaundSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Tiacauh_DrugsSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class TiacauhAddict extends Mob {
     {
-        spriteClass = BreakerSprite.class;
+        spriteClass = Tiacauh_DrugsSprite.class;
         baseSpeed = 2f;
 
         HP = HT = 115;
