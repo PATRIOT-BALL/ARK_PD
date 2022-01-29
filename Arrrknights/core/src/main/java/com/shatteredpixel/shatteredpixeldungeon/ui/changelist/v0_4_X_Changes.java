@@ -73,5 +73,13 @@ public class v0_4_X_Changes {
                 "_숙주 병사(폭주)_의 공격력이 10-32에서 _10-27_ 로 감소했습니다. 집중 상태일 때 공격력은 기존과 같습니다." + "\n\n" +
                 "_숙주 리더(폭주)_의 집중 버프 관련 사항이 적용되지않아 지나치게 강력했던 버그가 수정되었습니다." + "\n\n" +
                 "_용암 원석충_ : 체력이 155에서 _145_ 로, 공격력이 33-45에서 _31-45_ 로 감소했습니다."));
+
+        changes = new ChangeInfo("0.4.0a", false, null);
+        changes.hardlight(CharSprite.NEUTRAL);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "버그 수정",
+                "플레이어 이외의 존재가 철의 육합 사용시 넉백이 이상하게 적용되는 버그가 수정되었습니다." + "\n\n" +
+                "유격대 홀로그램으로 인한 게임 크래시 버그가 수정되었습니다."));
     }
 }

@@ -25,7 +25,7 @@ public class MetallicUnion extends MeleeWeapon {
         ACC = 0.9f;
     }
 
-    private boolean swiching = false;
+    private boolean swiching = true;
     private int AttackCount = 0;
 
     @Override
@@ -64,24 +64,25 @@ public class MetallicUnion extends MeleeWeapon {
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         if (swiching) {
-            Ballistica trajectory = new Ballistica(curUser.pos, defender.pos, Ballistica.STOP_TARGET);
+            Ballistica trajectory = new Ballistica(attacker.pos, defender.pos, Ballistica.STOP_TARGET);
             trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
             WandOfBlastWave.throwChar(defender, trajectory, 1); // 넉백 효과
         }
 
         AttackCount++;
-        if (AttackCount >= 10) {
-            if(swiching) {
-                swiching = false;
-                GLog.w(Messages.get(this, "modechange_nm"));
-                AttackCount = 0;
-                updateQuickslot();
-            }
-            else {
-                swiching = true;
-                GLog.w(Messages.get(this, "modechange_ex"));
-                AttackCount = 0;
-                updateQuickslot();
+        if (attacker instanceof Hero) {
+            if (AttackCount >= 10) {
+                if (swiching) {
+                    swiching = false;
+                    GLog.w(Messages.get(this, "modechange_nm"));
+                    AttackCount = 0;
+                    updateQuickslot();
+                } else {
+                    swiching = true;
+                    GLog.w(Messages.get(this, "modechange_ex"));
+                    AttackCount = 0;
+                    updateQuickslot();
+                }
             }
         }
 
