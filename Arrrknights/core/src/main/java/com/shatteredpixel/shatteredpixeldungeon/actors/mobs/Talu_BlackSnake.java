@@ -279,7 +279,7 @@ public class Talu_BlackSnake extends Mob {
             }
         }
         // 우르수스의 의지
-        else if (InvincibilityCooldown <= 0 && phase >= 4) {
+            else if (InvincibilityCooldown <= 0 && phase >= 4) {
             if (phase == 5) InvincibilityTime = 8;
             else InvincibilityTime = 5;
             InvincibilityCooldown = 22;

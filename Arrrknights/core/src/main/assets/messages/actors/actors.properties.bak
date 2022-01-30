@@ -1580,7 +1580,7 @@ actors.mobs.eunectes.desc=\n\n\n\n\n가비알의 고향인 아카후알라에 �
 actors.mobs.eunectes.notice=어떤 사냥감이라도 온 힘으로 간다!
 actors.mobs.eunectes.die=너희들은 가비알에게 미치지 못한다!
 
-actors.mobs.thebiguglything.name=거대하고 못생긴 무언가
+actors.mobs.thebiguglything.name=거못무
 actors.mobs.thebiguglything.desc=\n\n\n\n\n주마마의 야심작. 쓸데없이 큰 기계 괴수, 대제사장이 조종하고 있다.\n\n불에 약해보입니다.
 actors.mobs.thebiguglything.rage=기계가 폭주한다!
 actors.mobs.thebiguglything.fire_ready=대제사장이 원거리 공격을 준비한다!

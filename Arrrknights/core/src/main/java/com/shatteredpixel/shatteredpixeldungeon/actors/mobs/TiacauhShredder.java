@@ -33,6 +33,7 @@ public class TiacauhShredder extends Mob {
     protected boolean act() {
         if (buff(Burning.class) != null) {
             damage(Random.IntRange(36, 48), Burning.class);
+            if (!isAlive()) return true;
         }
         return super.act();
     }
