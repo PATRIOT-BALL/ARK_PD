@@ -79,8 +79,6 @@ public class v0_4_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "버그 수정",
-                "플레이어 이외의 존재가 철의 육합 사용시 넉백이 이상하게 적용되는 버그가 수정되었습니다." + "\n" +
-                "유격대 홀로그램으로 인한 게임 크래시 버그가 수정되었습니다." + "\n" +
-                "디스트로이어 관련 프리징 버그가 어느정도 수정되었습니다."));
+                "끄앙! 버그입니다!"));
     }
 }
