@@ -78,8 +78,6 @@ public class GuardianTrap extends Trap {
 			super();
 
 			weapon.enchant(null);
-
-			weapon = new MetallicUnion();
 			weapon.degrade(weapon.level());
 		}
 
