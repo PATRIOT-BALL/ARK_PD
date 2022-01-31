@@ -281,6 +281,8 @@ public class RingOfWealth extends Ring {
 		} else {
 			latestDropTier = 3;
 		}
+
+		if (result.level() > 7) result.level(7);
 		return result;
 	}
 
