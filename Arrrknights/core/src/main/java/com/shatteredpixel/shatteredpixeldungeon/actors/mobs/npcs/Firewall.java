@@ -24,6 +24,7 @@ public class Firewall extends NPC {
         properties.add(Property.IMMOVABLE);
 
         state = PASSIVE;
+        properties.add(Property.NPC);
     }
 
     @Override

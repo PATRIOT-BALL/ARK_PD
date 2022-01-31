@@ -1718,7 +1718,7 @@ items.spells.forcecatalyst.name=force catalyst
 items.spells.forcecatalyst.desc=This ball of blue dust is made from the deconstructed essence of a weapon. I don't think it can be used directly.
 
 items.spells.chaoscatalyst.name=chaos catalyst
-items.spells.chaoscatalyst.desc=Using this chaotic power on an item will make the upgrade value +1.
+items.spells.chaoscatalyst.desc=Using this chaotic power on an item will make the upgrade value change for +1.
 items.spells.chaoscatalyst.inv_title=CHAOS!
 
 items.spells.blastspell.name=blest
@@ -2554,6 +2554,12 @@ items.weapon.melee.lonejourney.special1=Very Cold!
 items.weapon.melee.lonejourney.special2=Very Hot!
 items.weapon.melee.lonejourney.special3=Very Heavy!
 items.weapon.melee.lonejourney.stats_desc=Range +1
+
+items.weapon.melee.warjournalist.name=war journalist
+items.weapon.melee.warjournalist.desc="씬이 한 사람에게 싸인을 해주는데 30분은 걸리는데, 지금 12명이 대기 중이야. 뭐 어쩌겠어."\n\n매 공격시 SP를 충전하며, SP를 100% 소모해 무작위 적 하나를 _촬영_ 할 수 있습니다. 촬영당한 적은 즉시 실명하며, 20턴 동안 당신을 추적할 것입니다.\n촬영당한 적은 20턴 내로 당신에게 접근하지 못하면 _처형_ 당합니다.\n\n보스나 미니 보스는 촬영할 수 없습니다. 
+items.weapon.melee.warjournalist.stats_desc=사거리 +2
+items.weapon.melee.warjournalist.ac_zap=SNAP
+
 
 ## 총기 관련
 

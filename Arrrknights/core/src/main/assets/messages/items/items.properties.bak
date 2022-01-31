@@ -2397,6 +2397,7 @@ items.weapon.melee.m1887.desc=그래서 이렇게도 말할 수 있다. 공증�
 items.weapon.melee.crabgun.name=바위게 사육사
 items.weapon.melee.crabgun.stats_desc=사거리 +1
 items.weapon.melee.crabgun.desc=_"아, 얘 이름은 완두콩이야. 자, 콩콩아, 박사랑 인사하자."_\n\n이 석궁은 신비한 바위게들을 부릴 수 있습니다. 공격시 SP가 충전되며, SP가 100%일 때 공격시 바위게가 소환됩니다.
+items.weapon.melee.crabgun.setbouns=_아이템 시너지 : 천객만래_\n바위게 소환시 시야 내 모든 적에게 환각을 부여합니다.
 items.weapon.melee.crabgun$metalcrab.name=바위게
 items.weapon.melee.crabgun$metalcrab.desc=_"빈즈토크 소대, 출발!"_\n\n이 바위게들은 바위게 사육사로 소환되었습니다. 현재 층수와 무기 강화에 비례해 능력치가 결정됩니다.
 
@@ -2558,6 +2559,11 @@ items.weapon.melee.lonejourney.special1=엄청 차가워!
 items.weapon.melee.lonejourney.special2=엄청 뜨거워!
 items.weapon.melee.lonejourney.special3=엄청 무거워!
 items.weapon.melee.lonejourney.stats_desc=사거리 +1
+
+items.weapon.melee.warjournalist.name=전장촬영사
+items.weapon.melee.warjournalist.desc="씬이 한 사람에게 싸인을 해주는데 30분은 걸리는데, 지금 12명이 대기 중이야. 뭐 어쩌겠어."\n\n매 공격시 SP를 충전하며, SP를 100% 소모해 무작위 적 하나를 _촬영_ 할 수 있습니다. 촬영당한 적은 즉시 실명하며, 20턴 동안 당신을 추적할 것입니다.\n촬영당한 적은 당신을 20턴 내로 추적에 실패하면 _처형_ 당합니다.\n\n보스나 미니 보스는 촬영할 수 없습니다. 
+items.weapon.melee.warjournalist.stats_desc=사거리 +2
+items.weapon.melee.warjournalist.ac_zap=촬영
 
 
 
