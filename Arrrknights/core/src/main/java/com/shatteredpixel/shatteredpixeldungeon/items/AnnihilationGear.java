@@ -37,6 +37,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.Pickaxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAmplified;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfCorrupting;
@@ -493,6 +494,7 @@ public class Spriteex extends MissileWeapon {
 
      public Weapon.Augment WeaponAug() {
       if (Dungeon.hero.belongings.weapon == null) return Weapon.Augment.NONE;
+      if (Dungeon.hero.belongings.weapon instanceof Pickaxe) return Weapon.Augment.NONE;
        Weapon.Augment wep = ((MeleeWeapon)curUser.belongings.weapon).augment;
        return wep;
      }
