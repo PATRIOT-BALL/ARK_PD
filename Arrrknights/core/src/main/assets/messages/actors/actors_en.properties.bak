@@ -497,7 +497,7 @@ actors.hero.talent.lord.desc=_+1_: soul marked Duration _2 turns_ increased.\n\n
 
 //아미야 3차 서브클래스
 actors.hero.talent.chimera.title=chimera
-actors.hero.talent.chimera.desc=_+1_: Wand damage bonus and increased physical damage taken increased from 50% to _60%._\n\n_+2_: Wand damage bonus and increased physical damage taken increased from 50% to _70%._\n\n\n\n_+3_: Wand damage bonus and increased physical damage taken increased from 50% to _80%._
+actors.hero.talent.chimera.desc=_+1_: Wand damage bonus and increased physical damage taken increased from 50% to _60%._\n\n_+2_: Wand damage bonus and increased physical damage taken increased from 50% to _70%._\n\n_+3_: Wand damage bonus and increased physical damage taken increased from 50% to _80%._
 actors.hero.talent.restriction.title=restriction
 actors.hero.talent.restriction.desc=_+1_: All characters' physical attack damage is reduced by _10%_.\n\n_+2_: All characters' physical attack damage is reduced by _15%_.\n\n_+3_: All characters' physical attack damage is reduced by _20%_.
 actors.hero.talent.phantasm.title=phantasm
