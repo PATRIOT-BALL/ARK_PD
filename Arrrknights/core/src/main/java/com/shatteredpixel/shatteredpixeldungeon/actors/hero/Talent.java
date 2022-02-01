@@ -106,12 +106,16 @@ public enum Talent {
 	EMPOWERED_STRIKE(43, 3), MYSTICAL_CHARGE(44, 3), EXCESS_CHARGE(45, 3),
 	//Warlock T3
 	SOUL_EATER(46, 3), SOUL_SIPHON(47, 3), NECROMANCERS_MINIONS(48, 3),
+	//Chaos T3
+	CHIMERA(46, 3), RESTRICTION(47, 3), PHANTASM(48, 3),
 	//Mage T4
 	LIBERATION(49,3), RHODES(50,3),
 	//Battlemage T4
 	AZURE_FURY(51,4), SWORDOFLORD(43,4),
 	//Warlokc T4
 	EMOTION(46,4), LORD(47,4),
+	//Chaos T4
+	STABILIZE(46,4), MIND_CRASH(47,4),
 
 	//Rogue T1
 	CACHED_RATIONS(64), THIEFS_INTUITION(65), SUCKER_PUNCH(66), PROTECTIVE_SHADOWS(67),
@@ -198,6 +202,27 @@ public enum Talent {
 	public static class PushAttackCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};
 	public static class BlazeBurstBuff extends CounterBuff{};
+
+	public static class MindCrashMark extends FlavourBuff {
+		{
+			type = buffType.NEGATIVE;
+			announced = true;
+		}
+		@Override
+		public int icon() {
+			return BuffIndicator.MARK;
+		}
+
+		@Override
+		public String toString() {
+			return Messages.get(this, "name");
+		}
+
+		@Override
+		public String desc() {
+			return Messages.get(this, "desc", dispTurns());
+		}
+	};
 
 	public static class RadiantHeroCooldown extends FlavourBuff{
 		@Override
@@ -751,6 +776,9 @@ public enum Talent {
 			case WARLOCK:
 				Collections.addAll(tierTalents, SOUL_EATER, SOUL_SIPHON, NECROMANCERS_MINIONS);
 				break;
+			case CHAOS:
+				Collections.addAll(tierTalents, CHIMERA, RESTRICTION, PHANTASM);
+				break;
 			case ASSASSIN:
 				Collections.addAll(tierTalents, ENHANCED_LETHALITY, ASSASSINS_REACH, BOUNTY_HUNTER);
 				break;
@@ -797,6 +825,9 @@ public enum Talent {
 				break;
 			case WARLOCK:
 				Collections.addAll(tierTalents, EMOTION, LORD);
+				break;
+			case CHAOS:
+				Collections.addAll(tierTalents, STABILIZE, MIND_CRASH);
 				break;
 			case ASSASSIN:
 				Collections.addAll(tierTalents, SWEEP, HOWLING);

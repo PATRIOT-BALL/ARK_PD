@@ -102,7 +102,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
  public enum HeroClass {
 
 	WARRIOR( "warrior", HeroSubClass.BERSERKER, HeroSubClass.GLADIATOR ),
-	MAGE( "mage", HeroSubClass.BATTLEMAGE, HeroSubClass.WARLOCK ),
+	MAGE( "mage", HeroSubClass.BATTLEMAGE, HeroSubClass.WARLOCK, HeroSubClass.CHAOS ),
 	ROGUE( "rogue", HeroSubClass.ASSASSIN, HeroSubClass.FREERUNNER ),
 	HUNTRESS( "huntress", HeroSubClass.SNIPER, HeroSubClass.WARDEN ),
 	ROSECAT("rosecat", HeroSubClass.DESTROYER, HeroSubClass.GUARDIAN, HeroSubClass.WAR),

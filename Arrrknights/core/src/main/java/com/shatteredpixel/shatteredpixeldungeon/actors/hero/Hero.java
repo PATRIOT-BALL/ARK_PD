@@ -1564,6 +1564,22 @@ public class Hero extends Char {
             Seal.updateQuickslot();}
         }
 
+        // 혼돈 아미야 관련
+
+        if (subClass == HeroSubClass.CHAOS) {
+            float bounsdamage = 1.5f;
+                if (hasTalent(Talent.CHIMERA)) {
+                    bounsdamage += pointsInTalent(Talent.CHIMERA) * 0.1f;
+                }
+
+            if (hasTalent(Talent.STABILIZE)) {
+                if (HP / HT <= 0.1f + pointsInTalent(Talent.STABILIZE) * 0.1f) {
+                    bounsdamage = 1f;
+                }}
+
+                damage *= bounsdamage;
+            }
+
         return damage;
     }
 

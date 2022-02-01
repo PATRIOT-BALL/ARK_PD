@@ -39,6 +39,7 @@ public enum HeroSubClass {
 
 	WARLOCK,
 	BATTLEMAGE,
+	CHAOS,
 
 	ASSASSIN,
 	FREERUNNER,
@@ -101,6 +102,8 @@ public enum HeroSubClass {
 			case WARLOCK:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 32, 80, 16, 16);
 			case BATTLEMAGE:
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 48, 80, 16, 16);
+			case CHAOS:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 48, 80, 16, 16);
 
 			case ASSASSIN:

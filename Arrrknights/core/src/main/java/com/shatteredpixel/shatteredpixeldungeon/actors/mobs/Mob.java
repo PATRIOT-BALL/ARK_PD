@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfDeepenedSleep;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Lucky;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BladeDemon;
@@ -666,6 +667,20 @@ public abstract class Mob extends Char {
 		}
 		if (state != HUNTING && !(src instanceof Corruption)) {
 			alerted = true;
+		}
+
+		if (Dungeon.hero.subClass == HeroSubClass.CHAOS && src instanceof Wand) {
+			if (Dungeon.hero.hasTalent(Talent.CHIMERA)) {
+				dmg *= 1.5f + (Dungeon.hero.pointsInTalent(Talent.CHIMERA) * 0.1f);
+			}
+			else dmg *= 1.5f;
+		}
+
+		if (Dungeon.hero.hasTalent(Talent.MIND_CRASH)) {
+			if (buff(Talent.MindCrashMark.class) != null && Random.Int(20) < Dungeon.hero.pointsInTalent(Talent.MIND_CRASH)) {
+				dmg *= 2f;
+				sprite.showStatus( CharSprite.NEGATIVE, Messages.get(Talent.MindCrashMark.class, "doubledamage") );
+			}
 		}
 		
 		super.damage( dmg, src );

@@ -178,6 +178,7 @@ public abstract class Wand extends Item {
 
 	protected void processSoulMark(Char target, int chargesUsed){
 		processSoulMark(target, buffedLvl(), chargesUsed);
+		if (Dungeon.hero.hasTalent(Talent.MIND_CRASH)) { Buff.affect(target, Talent.MindCrashMark.class, 5f); }
 	}
 
 	//TODO some naming issues here. Consider renaming this method and externalizing char awareness buff
