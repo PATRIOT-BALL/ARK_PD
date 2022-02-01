@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Hunt;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Wound;
+import com.shatteredpixel.shatteredpixeldungeon.items.ArmorUpKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
@@ -68,7 +69,11 @@ public class WolfMark extends FlavourBuff implements ActionIndicator.Action  {
 
     @Override
     public void detach() {
-        for (Item item : theknife) item.collect();
+        for (Item item : theknife) {
+            if (!item.collect()) {
+                Dungeon.level.drop(item, target.pos).sprite.drop();
+            }
+        }
 
         theknife = null;
         super.detach();

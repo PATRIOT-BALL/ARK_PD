@@ -53,16 +53,20 @@ public class RingKit extends Item {
             @Override
             public void onSelect(Item item) {
                 if (item != null) {
-                    if (item instanceof Ring && item != Dungeon.hero.belongings.ring && item != Dungeon.hero.belongings.misc){
+                    if (item instanceof Ring && item != Dungeon.hero.belongings.ring && item != Dungeon.hero.belongings.misc) {
 
                         RingKit.this.upgrade((Ring) item);
 
                         final Ring rings[] = new Ring[2];
 
-                        do { rings[0] = (Ring)Generator.random( Generator.Category.RING );}
-                        while(rings[0].getClass() == item.getClass());
-                        do { rings[1] = (Ring)Generator.random( Generator.Category.RING );}
-                        while(rings[1].getClass() == item.getClass());
+                        do {
+                            rings[0] = (Ring) Generator.random(Generator.Category.RING);
+                        }
+                        while (rings[0].getClass() == item.getClass());
+                        do {
+                            rings[1] = (Ring) Generator.random(Generator.Category.RING);
+                        }
+                        while (rings[1].getClass() == item.getClass());
 
 
                         rings[0].identify();
@@ -74,7 +78,7 @@ public class RingKit extends Item {
                                         Messages.get(RingKit.class, "cancel_warn"),
                                 rings[0].name(),
                                 rings[1].name(),
-                                Messages.get(RingKit.class, "upgrade")){
+                                Messages.get(RingKit.class, "upgrade")) {
 
                             @Override
                             protected void onSelect(int index) {
@@ -114,9 +118,17 @@ public class RingKit extends Item {
                             }
                         });
 
+                    } else {
+                        if (!new RingKit().collect()){
+                            Dungeon.level.drop(new RingKit(), curUser.pos).sprite.drop();
+                        }
+                    }
+                } else {
+                    if (!new RingKit().collect()){
+                        Dungeon.level.drop(new RingKit(), curUser.pos).sprite.drop();
+                    }
                 }
-                  else new RingKit().collect();
-            } else new RingKit().collect();}
+            }
         };
 
 

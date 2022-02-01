@@ -95,7 +95,9 @@ public class ArmorUpKit extends Item {
             }
         }
         else{
-            new ArmorUpKit().collect();
+            if (!new ArmorUpKit().collect()){
+                Dungeon.level.drop(new ArmorUpKit(), curUser.pos).sprite.drop();
+            }
         }
     }
 
