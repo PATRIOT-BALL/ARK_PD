@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class WarJournalist extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.WHIP;
+        image = ItemSpriteSheet.SCENE;
         hitSound = Assets.Sounds.HIT;
         hitSoundPitch = 1.03f;
 
