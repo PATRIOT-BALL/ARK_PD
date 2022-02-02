@@ -18,11 +18,11 @@ public class Tomimi_BossSprite extends MobSprite {
         run = new Animation( 13, true );
         run.frames( frames, 7, 8, 9, 10, 11, 12, 13, 14 );
 
-        attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack = new Animation( 18, false );
+        attack.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 );
 
         die = new Animation( 10, false );
-        die.frames( frames, 0 );
+        die.frames( frames, 27, 28, 29 );
 
         play( idle );
     }
