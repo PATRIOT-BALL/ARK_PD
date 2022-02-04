@@ -48,33 +48,7 @@ public class HeroSprite extends CharSprite {
 	public HeroSprite() {
 		super();
 
-		switch (Dungeon.hero.CharSkin) {
-			case 0: default:
-			texture(Dungeon.hero.heroClass.spritesheet());
-			break;
-			case 1: texture(Assets.Sprites.TALRU_FIGHT);
-			break;
-			case 2: texture(Assets.Sprites.FNOVA);
-			break;
-			case 3: texture(Assets.Sprites.SKD); // 바병슼
-			break;
-			case 4: texture(Assets.Sprites.SSR); // 수수로
-			break;
-			case 5: texture(Assets.Sprites.GRN); // ㄱㄹㄴ!
-			break;
-			case 6: texture(Assets.Sprites.JESSI); // 제껄룩
-				break;
-			case 7: texture(Assets.Sprites.LAPPY); // 꼬지리
-				break;
-			case 8: texture(Assets.Sprites.FROST); // 상엽
-				break;
-			case 9: texture(Assets.Sprites.MDR); // 머드락. 임시
-				break;
-			case 10: texture(Assets.Sprites.AST); // 별눈나
-				break;
-			case 11: texture(Assets.Sprites.SPT); // 상어
-				break;
-		}
+		texture(Dungeon.hero.heroClass.spritesheet());
 		updateArmor();
 
 		link( Dungeon.hero );
@@ -86,33 +60,7 @@ public class HeroSprite extends CharSprite {
 	}
 	
 	public void updateArmor() {
-		switch (Dungeon.hero.CharSkin) {
-			case 0: default:
-				texture(Dungeon.hero.heroClass.spritesheet());
-				break;
-			case 1: texture(Assets.Sprites.TALRU_FIGHT);
-				break;
-			case 2: texture(Assets.Sprites.FNOVA);
-				break;
-			case 3: texture(Assets.Sprites.SKD); // 바병슼
-				break;
-			case 4: texture(Assets.Sprites.SSR); // 수수로
-				break;
-			case 5: texture(Assets.Sprites.GRN); // ㄱㄹㄴ!
-				break;
-			case 6: texture(Assets.Sprites.JESSI); // 제껄룩
-				break;
-			case 7: texture(Assets.Sprites.LAPPY); // 꼬지리
-				break;
-			case 8: texture(Assets.Sprites.FROST); // 상엽
-				break;
-			case 9: texture(Assets.Sprites.MDR); // 머드락. 임시
-				break;
-			case 10: texture(Assets.Sprites.AST); // 별눈나
-				break;
-			case 11: texture(Assets.Sprites.SPT); // 상어
-				break;
-		}
+		texture(Dungeon.hero.heroClass.spritesheet());
 		TextureFilm film = new TextureFilm(tiers(), Dungeon.hero.tier(), 36, 34);
 
 		idle = new Animation( 7, true );

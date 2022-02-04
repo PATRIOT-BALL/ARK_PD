@@ -228,6 +228,7 @@ public class Badges {
 		SKIN_ASTESIA(297, false, true),
 		SKIN_SPECTER(298, false, true),
 		SKIN_SCHWARZ(299, false, true),
+		SKIN_ARCH(301, false, true),
 
 		//기타
 		SUPPORT;
@@ -1034,6 +1035,11 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validatearchskin() {
+		Badge badge = Badge.SKIN_ARCH;
+		displayBadge( badge );
+	}
+
 	// 0.3.2버전의 스킨 관련 처리로 인해 추가된 구문입니다. 추후 필요없어질 수 있습니다.
 	public static void allskindestroy() {
 		saveNeeded = true;
@@ -1073,6 +1079,9 @@ public class Badges {
 		if(global.contains(Badge.SKIN_SCHWARZ)) {
 			global.remove(Badge.SKIN_SCHWARZ);
 		}
+		if(global.contains(Badge.SKIN_ARCH)) {
+			global.remove(Badge.SKIN_ARCH);
+		}
 
 		if (Badges.isUnlocked(Badge.SUPPORT)) {
 			Badges.validatetaluskin();
@@ -1087,6 +1096,7 @@ public class Badges {
 			Badges.validatesameskin();
 			Badges.validateAstesiaskin();
 			Badges.validateschwazrskin();
+			Badges.validatearchskin();
 		}
 
 		// 배지 파괴 후, 조건에 맞는 배지는 다시 획득합니다.
@@ -1102,6 +1112,7 @@ public class Badges {
 		if(!Badges.isUnlocked(Badge.SKIN_SPECTER) && Badges.isUnlocked(Badge.GAMES_PLAYED_1)) { Badges.validatesameskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_ASTESIA) && Badges.isUnlocked(Badge.SLAIN_PURSUER)) { Badges.validateAstesiaskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_SCHWARZ) && Badges.isUnlocked(Badge.SIESTA_PART2)) { Badges.validateschwazrskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_ARCH) && Badges.isUnlocked(Badge.GREY_CHAMPION1)) { Badges.validatearchskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene
@@ -1513,7 +1524,7 @@ public class Badges {
 
 	private static final Badge[][] skinBadgeReplacements = new Badge[][]{
 			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}, {Badge.SKIN_LEAF},
-			{Badge.SKIN_ASTESIA}, {Badge.SKIN_SPECTER}, {Badge.SKIN_MUDROCK}, {Badge.SKIN_SCHWARZ}
+			{Badge.SKIN_ASTESIA}, {Badge.SKIN_SPECTER}, {Badge.SKIN_MUDROCK}, {Badge.SKIN_SCHWARZ}, {Badge.SKIN_ARCH}
 	};
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {
