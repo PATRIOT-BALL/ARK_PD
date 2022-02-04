@@ -107,7 +107,7 @@ public enum Talent {
 	//Warlock T3
 	SOUL_EATER(46, 3), SOUL_SIPHON(47, 3), NECROMANCERS_MINIONS(48, 3),
 	//Chaos T3
-	CHIMERA(46, 3), RESTRICTION(47, 3), PHANTASM(48, 3),
+	CHIMERA(46, 3), RESTRICTION(47, 3), EMOTION_ABSORPTION(48, 3),
 	//Mage T4
 	LIBERATION(49,3), RHODES(50,3),
 	//Battlemage T4
@@ -777,7 +777,7 @@ public enum Talent {
 				Collections.addAll(tierTalents, SOUL_EATER, SOUL_SIPHON, NECROMANCERS_MINIONS);
 				break;
 			case CHAOS:
-				Collections.addAll(tierTalents, CHIMERA, RESTRICTION, PHANTASM);
+				Collections.addAll(tierTalents, CHIMERA, RESTRICTION, EMOTION_ABSORPTION);
 				break;
 			case ASSASSIN:
 				Collections.addAll(tierTalents, ENHANCED_LETHALITY, ASSASSINS_REACH, BOUNTY_HUNTER);

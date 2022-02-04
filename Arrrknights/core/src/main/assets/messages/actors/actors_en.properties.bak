@@ -499,7 +499,7 @@ actors.hero.talent.lord.desc=_+1_: soul marked Duration _2 turns_ increased.\n\n
 actors.hero.talent.chimera.title=chimera
 actors.hero.talent.chimera.desc=_+1_: Wand damage bonus and increased physical damage taken increased from 50% to _60%._\n\n_+2_: Wand damage bonus and increased physical damage taken increased from 50% to _70%._\n\n_+3_: Wand damage bonus and increased physical damage taken increased from 50% to _80%._
 actors.hero.talent.restriction.title=restriction
-actors.hero.talent.restriction.desc=_+1_: All characters' physical attack damage is reduced by _10%_.\n\n_+2_: All characters' physical attack damage is reduced by _15%_.\n\n_+3_: All characters' physical attack damage is reduced by _20%_.
+actors.hero.talent.restriction.desc=_+1_: All characters' physical attack damage & accuracy is reduced by _10%_.\n\n_+2_: All characters' physical attack damage & accuracy is reduced by _20%_.\n\n_+3_: All characters' physical attack damage & accuracy is reduced by _30%_.
 actors.hero.talent.phantasm.title=phantasm
 actors.hero.talent.phantasm.desc=_+1_: All characters' accuracy is reduced by _10%_.\n\n_+2_: All characters' accuracy is reduced by _15%_.\n\n_+3_: All characters' accuracy is reduced by _20%_.
 actors.hero.talent.stabilize.title=stabilize
@@ -934,6 +934,7 @@ actors.mobs.npcs.closure.fail_skin9=Need a 3rd boss slain by all Subclasses badg
 actors.mobs.npcs.closure.fail_skin10=Need a Slain Pursuer badge
 actors.mobs.npcs.closure.fail_skin11=Need a 10 games played badge
 actors.mobs.npcs.closure.fail_skin12=Need a Siesta Part II badge
+actors.mobs.npcs.closure.fail_skin13=Need a Expert GreyThroat badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model

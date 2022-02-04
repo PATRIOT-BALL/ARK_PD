@@ -479,8 +479,8 @@ public abstract class Char extends Actor {
 		float acuRoll = Random.Float( acuStat );
 		if (attacker.buff(Bless.class) != null) acuRoll *= 1.25f;
 		if (attacker.buff(  Hex.class) != null) acuRoll *= 0.8f;
-		if (Dungeon.hero.hasTalent(Talent.PHANTASM))  {
-			float phan = 0.95f - (Dungeon.hero.pointsInTalent(Talent.PHANTASM) * 0.05f);
+		if (Dungeon.hero.hasTalent(Talent.RESTRICTION))  {
+			float phan = 1f - (Dungeon.hero.pointsInTalent(Talent.RESTRICTION) * 0.1f);
 			acuRoll *= phan; }
 		if (attacker.buff(Hallucination.class) != null) acuRoll *= 0.65f;
 		for (ChampionEnemy buff : attacker.buffs(ChampionEnemy.class)){
@@ -532,7 +532,7 @@ public abstract class Char extends Actor {
 		}
 
 		if (Dungeon.hero.hasTalent(Talent.RESTRICTION)) {
-			float restr = 0.95f - (Dungeon.hero.pointsInTalent(Talent.RESTRICTION) * 0.05f);
+			float restr = 1f - (Dungeon.hero.pointsInTalent(Talent.RESTRICTION) * 0.1f);
 			damage *= restr;
 		}
 
