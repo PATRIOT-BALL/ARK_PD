@@ -669,7 +669,7 @@ public abstract class Mob extends Char {
 		}
 
 		if (Dungeon.hero.hasTalent(Talent.MIND_CRASH)) {
-			if (buff(Talent.MindCrashMark.class) != null && Random.Int(20) < Dungeon.hero.pointsInTalent(Talent.MIND_CRASH)) {
+			if (buff(Talent.MindCrashMark.class) != null && Random.Int(40) < Dungeon.hero.pointsInTalent(Talent.MIND_CRASH)) {
 				dmg *= 2f;
 				sprite.showStatus( CharSprite.NEGATIVE, Messages.get(Talent.MindCrashMark.class, "doubledamage") );
 			}
