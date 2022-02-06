@@ -10,8 +10,54 @@ import java.util.ArrayList;
 
 public class v0_4_X_Changes {
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_4_1_Changes(changeInfos);
         add_v0_4_0_Changes(changeInfos);
 
+    }
+
+    public static void add_v0_4_1_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.4.1", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 및 시너지",
+                "_새로운 아이템 시너지_ : 프로급 개량 렌즈 / 엔젤 불릿" + "\n\n" +
+                        "_전장촬영사_ : 사거리가 긴 4티어 무기로, 특수 능력을 사용해 조건을 만족하면 적 하나를 20턴 뒤 처형할 수 있습니다." + "\n\n" +
+                        "_전쟁의 상처_ : 사용시 적들에게 _망각_을 부여하는 유물입니다." + "\n\n" +
+                        "_렌즈 인형_ : 범위 내 적들에게 _망각_을 부여하는 폭발물입니다." + "\n\n" +
+                        "_인간 사료_ : 먹는데 시간이 오래 걸리는 요리입니다."
+                ));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEWS), "새로운 상태이상 : 망각",
+                "_망각_ 상태인 캐릭터는 시야와 행동속도가 감소합니다. 실질적으로 실명과 감속 상태가 동시에 부여되는 매우 치명적인 상태이상으로, 다른 행동속도 감소 디버프와 중첩됩니다." + "\n\n" +
+                        "또한, 이 상태이상과 관련된 함정이 추가되었습니다."));
+
+                changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "아미야 3번째 전문화",
+                        "아미야의 새로운 전문화 _혼돈_ 이 추가되었습니다. 혼돈 아미야는 리스크가 매우 크지만, 강력한 마법 피해를 가합니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "아미야 조정",
+                "_해답 찾기_ 특성의 충전 획득량이 3-4턴에서 _4-5턴_으로 증가했습니다." + "\n\n" +
+                        "_예비 보호막_ 특성의 보호막 획득량이 3-5에서 _3-6_으로 증가했습니다." + "\n\n" +
+                "_보호막 충전_ 특성의 보호막 획득량이 4-6%에서 _2.5-5%_로 감소했습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "전쟁 쪽냥이 하향",
+                "_공격력 증강_시 EX-44의 피해 증가량이 40%에서 _35%_로 감소했습니다."));
     }
 
     public static void add_v0_4_0_Changes(ArrayList<ChangeInfo> changeInfos) {

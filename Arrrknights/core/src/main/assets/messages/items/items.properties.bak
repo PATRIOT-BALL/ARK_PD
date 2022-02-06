@@ -898,6 +898,12 @@ items.artifacts.sealoflight.desc="그 이름에 맹세하노니."\n\n빛의 힘�
 items.artifacts.sealoflight.no_charge=당신의 빛의 인장은 충전되지 않았다.
 items.artifacts.sealoflight.desc_cursed=저주받은 빛의 인장은 사용할 수 없다.
 
+items.artifacts.woundsofwar.name=전쟁의 상처
+items.artifacts.woundsofwar.ac_snap=촬영
+items.artifacts.woundsofwar.desc="그 이름에 맹세하노니."\n\n빛의 힘이 담긴 이 도구를 사용해 일시적으로 빛의 힘을 각성시킬 수 있습니다.\n빛의 기사로 각성하면 공격력과 방어력이 상승합니다.
+items.artifacts.woundsofwar.no_charge=당신의 카메라는 충전되지 않았다.
+items.artifacts.woundsofwar.desc_cursed=저주받은 카메라는 파노라마~
+
 ###bags
 items.bags.bag.name=배낭
 
@@ -959,6 +965,9 @@ items.bombs.shrapnelbomb.desc=이 인형은 머드락의 갑옷에서 떨어져�
 
 items.bombs.woollybomb.name=군주 인형
 items.bombs.woollybomb.desc=이 살카즈 군주의 인형은 폭발에 휘말린 대상들의 정신을 지배합니다. 물론 던진 사람도 예외는 없죠.
+
+items.bombs.lensbomb.name=렌즈 인형
+items.bombs.lensbomb.desc=이 파노라마한 인형은 폭발에 휘말린 대상들을 망각 상태에 빠트립니다.
 
 ###food
 items.food.berry.name=체르노보그 열매
@@ -1074,6 +1083,9 @@ items.food.cooking.yukjeon.desc=단국의 전통 음식. 밀가루를 묻혀 기
 
 items.food.cooking.smokeegg.name=훈제 계란
 items.food.cooking.smokeegg.desc=간식으로 까먹기 좋게 훈제된 계란. 약간이지만 허기를 채워줍니다.
+
+items.food.cooking.glassate.name=인간사료
+items.food.cooking.glassate.desc=이 달달한 과자는 다른 음식보다 먹는데 오랜 시간이 걸립니다.
 
 
 
@@ -2538,6 +2550,7 @@ items.weapon.melee.krissvector.desc_mode1=애플파이!\n\n_슈팅 모드_ : 공
 items.weapon.melee.krissvector.desc_mode2=Deo volente!\n\n_과부하 모드_ : 명중률 -60%, 공격속도 200%, 공격시 2회 피해
 items.weapon.melee.krissvector.stats_desc=사거리 +1, 기습 공격 불가
 items.weapon.melee.krissvector.ac_zap=모드 변환
+items.weapon.melee.krissvector.setbouns=_아이템 시너지 : 엔젤 불릿_\n적의 방어력을 50%무시합니다.
 
 items.weapon.melee.sakurasword.name=영도 사쿠라 후부키
 items.weapon.melee.sakurasword.desc=그녀의 영혼이 정화한 후, 다시 영도로 돌아왔다.\n\n공격시 SP가 충전되며, 100%가 되면 _인페르노_를 사용할 수 있습니다. 발동 중에는 공격시 SP를 소모하고 무기 사거리와 명중률이 대폭 증가하며, 공격시 대상에게 표식을 찍고 후방으로 이동합니다. 3번째 공격마다 표식이 있는 적들에게 피해를 입힙니다.
@@ -2561,9 +2574,10 @@ items.weapon.melee.lonejourney.special3=엄청 무거워!
 items.weapon.melee.lonejourney.stats_desc=사거리 +1
 
 items.weapon.melee.warjournalist.name=전장촬영사
-items.weapon.melee.warjournalist.desc="씬이 한 사람에게 싸인을 해주는데 30분은 걸리는데, 지금 12명이 대기 중이야. 뭐 어쩌겠어."\n\n매 공격시 SP를 충전하며, SP를 100% 소모해 무작위 적 하나를 _촬영_ 할 수 있습니다. 촬영당한 적은 즉시 실명하며, 20턴 동안 당신을 추적할 것입니다.\n촬영당한 적은 당신을 20턴 내로 추적에 실패하면 _처형_ 당합니다.\n\n보스나 미니 보스는 촬영할 수 없습니다. 
+items.weapon.melee.warjournalist.desc="씬이 한 사람에게 싸인을 해주는데 30분은 걸리는데, 지금 12명이 대기 중이야. 뭐 어쩌겠어."\n\n매 공격시 SP를 충전하며, SP를 100% 소모해 무작위 적 하나를 _촬영_ 할 수 있습니다. 촬영당한 적은 즉시 실명하며, 20턴 동안 당신을 추적할 것입니다.\n촬영당한 적은 20턴 내로 당신에게 접근하지 못하면 _처형_ 당합니다.\n\n보스나 미니 보스는 촬영할 수 없습니다. 
 items.weapon.melee.warjournalist.stats_desc=사거리 +2
 items.weapon.melee.warjournalist.ac_zap=촬영
+items.weapon.melee.warjournalist.setbouns=_아이템 시너지 : 프로급 개량 렌즈_\nSP 충전률이 상승합니다.
 
 
 
@@ -2918,7 +2932,7 @@ items.annihilationgear.desc_arts1_war=이 강력한 장치는 로즈몬티스의
 items.annihilationgear.desc_arts2_war=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._\n\n이 장치에는 _방패_의 아츠가 부여되었습니다. 설치된 EX-44가 받는 첫 피해가 75%% 감소합니다. 
 items.annihilationgear.desc_arts3_war=이 강력한 장치는 로즈몬티스의 아츠를 증폭시킵니다. 충전량을 소모하여 방벽을 투척할 수 있으며, 방벽 투척은 _%1$d-%2$d의 피해_ 를 입힙니다.\n\n이 장치는 일반적으로 충전될 수 없지만, 레벨이 오르면 전부 충전됩니다. _단, 경험의 물약으로는 충전할 수 없습니다._\n\n자동 타겟팅을 지원하지않지만, 대신 _벽 너머를 포함한 모든 곳을 타격할 수 있으며 반드시 명중합니다._\n\n이 장치에는 _연쇄_의 아츠가 부여되었습니다. 설치된 EX-44에 섬멸전 장비를 적중시키면 즉시 회수하며, 회수될 때 주위 적들에게 피해를 입힙니다.
 items.annihilationgear.desc_augment_none=현재 장비한 무기의 증강에 따라 특수한 효과를 얻을 수 있습니다.
-items.annihilationgear.desc_augment_damage=_증강:공격력_\nEX-44의 피해량이 40%증가하지만 회수가 느려집니다.
+items.annihilationgear.desc_augment_damage=_증강:공격력_\nEX-44의 피해량이 35%증가하지만 회수가 느려집니다.
 items.annihilationgear.desc_augment_speed=_증강:속도_\nEX-44의 피해량이 30%감소하지만 사거리가 증가합니다.
 items.annihilationgear.desc_augment_overload=_증강:과부하_\nEX-44가 모든 피해를 1만 받지만, 최대 체력이 대폭 감소합니다.
 items.annihilationgear$ex44.name=EX-44

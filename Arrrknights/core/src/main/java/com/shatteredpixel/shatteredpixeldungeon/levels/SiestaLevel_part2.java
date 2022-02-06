@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Oblivion;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Obsidian;
@@ -20,6 +21,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FlashingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FrostTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.GrimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.HallucinationTrap;
+import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OblivionTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OozeTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OriginiumTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.PoisonDartTrap;
@@ -94,7 +96,7 @@ public class SiestaLevel_part2 extends RegularLevel {
     protected Class<?>[] trapClasses() {
         return new Class[]{
                 ShockingTrap.class, RockfallTrap.class, BurningTrap.class, ExplosiveTrap.class,
-                OriginiumTrap.class, FlashingTrap.class, StormTrap.class, CursingTrap.class,
+                OriginiumTrap.class, FlashingTrap.class, StormTrap.class, CursingTrap.class, OblivionTrap.class,
                 GrimTrap.class, WarpingTrap.class, HallucinationTrap.class
         };
     }
@@ -103,7 +105,7 @@ public class SiestaLevel_part2 extends RegularLevel {
     protected float[] trapChances() {
         return new float[]{
                 4, 4, 4, 4,
-                2, 2, 2, 2,
+                2, 2, 2, 2, 2,
                 1, 1,1
         };
     }

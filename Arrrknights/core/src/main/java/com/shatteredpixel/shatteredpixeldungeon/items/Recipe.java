@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_EGG;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_GAMZA;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Glassate;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.SmokeEgg;
@@ -244,7 +245,8 @@ public abstract class Recipe {
             new Sandvich.Recipe(),
             new NotBarFood.Recipe(),
             new Yukjeon.Recipe(),
-            new Avantgardeform.Recipe()
+            new Avantgardeform.Recipe(),
+            new Glassate.Recipe()
     };
 
     public static Recipe findRecipe(ArrayList<Item> ingredients) {

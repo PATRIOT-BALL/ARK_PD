@@ -53,6 +53,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LanceCharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LifeLink;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Oblivion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
@@ -103,6 +104,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Shocki
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
@@ -338,6 +340,7 @@ public abstract class Char extends Actor {
 						dr /= 2;
 					}
 				}
+				if (KRISSVector.VectorSetBouns()) dr/=2;
 
 				if(h.buff(ExtremeSharpness.SharpnessBuff.class) != null) {
 					dr = 0;
@@ -712,6 +715,9 @@ public abstract class Char extends Actor {
 		if (buff( Speed.class ) != null) {
 			timeScale *= 2.0f;
 		}
+		if (buff(Oblivion.class) != null) {
+			timeScale *= 0.5f;
+		}
 		
 		super.spend( time / timeScale );
 	}
@@ -908,7 +914,7 @@ public abstract class Char extends Actor {
 	}
 
 	public enum Property{
-		BOSS ( new HashSet<Class>( Arrays.asList(Grim.class, GrimTrap.class, ScrollOfRetribution.class, ScrollOfPsionicBlast.class)),
+		BOSS ( new HashSet<Class>( Arrays.asList(Grim.class, GrimTrap.class, ScrollOfRetribution.class, ScrollOfPsionicBlast.class, Oblivion.class)),
 				new HashSet<Class>( Arrays.asList(Corruption.class, StoneOfAggression.Aggression.class, Silence.class) )),
 		MINIBOSS ( new HashSet<Class>(),
 				new HashSet<Class>( Arrays.asList(Corruption.class, Silence.class) )),
@@ -929,7 +935,7 @@ public abstract class Char extends Actor {
 		// 명픽던 추가 요소
 		DRONE ( new HashSet<Class>(),
 				new HashSet<Class>(Arrays.asList(Bleeding.class, Roots.class))),
-		SARKAZ( new HashSet<Class>( Arrays.asList(Grim.class, WandOfDisintegration.class)),
+		SARKAZ( new HashSet<Class>( Arrays.asList(Grim.class, WandOfDisintegration.class, Oblivion.class)),
 				new HashSet<Class>()),
 		NPC ( new HashSet<Class>(),
 				new HashSet<Class>(Arrays.asList(Corruption.class, Amok.class, Terror.class, MagicalSleep.class))),

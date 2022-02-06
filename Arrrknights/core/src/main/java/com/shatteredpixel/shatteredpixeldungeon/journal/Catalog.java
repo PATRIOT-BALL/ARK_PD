@@ -86,6 +86,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.WoundsofWar;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfFrost;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHaste;
@@ -223,6 +224,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Laevateinn;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Destreza;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarJournalist;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.watabou.utils.Bundle;
@@ -299,6 +301,7 @@ public enum Catalog {
 		WEAPONS.seen.put( SnowHunter.class,                false);
 		WEAPONS.seen.put( FlametailSword.class,                false);
 		WEAPONS.seen.put( MetallicUnion.class,                false);
+		WEAPONS.seen.put( WarJournalist.class,                false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( Laevateinn.class,                  false);
@@ -450,6 +453,7 @@ public enum Catalog {
 		ARTIFACTS.seen.put( CustomeSet.class,        false);
 		ARTIFACTS.seen.put( IsekaiItem.class,        false);
 		ARTIFACTS.seen.put( AlchemyKit.class,        false);
+		ARTIFACTS.seen.put( WoundsofWar.class,        false);
 
 		POTIONS.seen.put( PotionOfHealing.class,            false);
 		POTIONS.seen.put( PotionOfStrength.class,           false);

@@ -898,6 +898,12 @@ items.artifacts.sealoflight.desc="In your name."\n\nIf you activate the power of
 items.artifacts.sealoflight.no_charge=Lack of light power.
 items.artifacts.sealoflight.desc_cursed=Corrupted Light cannot be used.
 
+items.artifacts.woundsofwar.name=wounds of war
+items.artifacts.woundsofwar.ac_snap=SNAP
+items.artifacts.woundsofwar.desc="I s  t h e r e  s c e n e r y  y o u  w a n t  t o  s e e ?"\n\n사용시 주위를 촬영합니다. 촬영당한 대상들은 _망각_ 상태가 되어 시야가 감소하고 행동 속도가 매우 느려집니다.
+items.artifacts.woundsofwar.no_charge=당신의 카메라는 충전되지 않았다.
+items.artifacts.woundsofwar.desc_cursed=저주받은 카메라는 파노라마~
+
 
 ###bags
 items.bags.bag.name=backpack
@@ -960,6 +966,9 @@ items.bombs.shrapnelbomb.desc=This doll has been modified with scraps of Mudrock
 
 items.bombs.woollybomb.name=lord doll
 items.bombs.woollybomb.desc=This doll will create a field of citizen mirror after exploding. These mirror will block movement and persist for some time.
+
+items.bombs.lensbomb.name=lens doll
+items.bombs.lensbomb.desc=This doll is panoramic. Subjects caught in the explosion will fall into oblivion.
 
 ###food
 items.food.berry.name=chernobog berry
@@ -1075,6 +1084,9 @@ items.food.cooking.yukjeon.desc=Meat pan-fried in egg batter.\n\nwhen eate seems
 
 items.food.cooking.smokeegg.name=smoked egg
 items.food.cooking.smokeegg.desc=easy-to-eat snack
+
+items.food.cooking.glassate.name=glassate
+items.food.cooking.glassate.desc=These sweet treats seem to take a long time to ingest.
 
 
 
@@ -2533,6 +2545,7 @@ items.weapon.melee.krissvector.desc_mode1=Apple pie!\n\n_Strafing Mode_ : Attack
 items.weapon.melee.krissvector.desc_mode2=Deo volente!\n\n_Overload Mode_ : Accuracy -60%, Attack Speed 200%, Double Attack
 items.weapon.melee.krissvector.stats_desc=Range +1, No surprise attack
 items.weapon.melee.krissvector.ac_zap=CHANGE
+items.weapon.melee.krissvector.setbouns=_Angel Bullet_\nPenetrates 50% of enemy's defense.
 
 items.weapon.melee.sakurasword.name=Sakura Hubuki
 items.weapon.melee.sakurasword.desc=A sword of a Valkyrie from another world.\n\nRecharges SP when attacking, but consumes SP when using abilities. Increases attack range and accuracy while activating the ability, and each attack marked enemy the target and dashes behind the target. Every 3rd attack deals damage to marked enemies.
@@ -2556,9 +2569,10 @@ items.weapon.melee.lonejourney.special3=Very Heavy!
 items.weapon.melee.lonejourney.stats_desc=Range +1
 
 items.weapon.melee.warjournalist.name=war journalist
-items.weapon.melee.warjournalist.desc="씬이 한 사람에게 싸인을 해주는데 30분은 걸리는데, 지금 12명이 대기 중이야. 뭐 어쩌겠어."\n\n매 공격시 SP를 충전하며, SP를 100% 소모해 무작위 적 하나를 _촬영_ 할 수 있습니다. 촬영당한 적은 즉시 실명하며, 20턴 동안 당신을 추적할 것입니다.\n촬영당한 적은 20턴 내로 당신에게 접근하지 못하면 _처형_ 당합니다.\n\n보스나 미니 보스는 촬영할 수 없습니다. 
+items.weapon.melee.warjournalist.desc=Recharges SP when attacking. You can use _Filming_ by consuming 100% of SP. Marks random enemies on the floor for 20 turns when Filming is used. If the marked enemy does not find you within 20 turns, that enemy is _executed_.\n\nBosses or mini-bosses are immune to this effect.
 items.weapon.melee.warjournalist.stats_desc=Range +2
-items.weapon.melee.warjournalist.ac_zap=SNAP
+items.weapon.melee.warjournalist.ac_zap=FILMING
+items.weapon.melee.warjournalist.setbouns=_Improved Lens.P_\nSP Charge speed x1.4
 
 
 ## 총기 관련
@@ -2912,7 +2926,7 @@ items.annihilationgear.desc_arts1_war=This gear amplifies the arts of Rosmontis.
 items.annihilationgear.desc_arts2_war=This gear amplifies the arts of Rosmontis. charges are consumed to use gear attacks, which deal _%1$d-%2$d_ damage.\n\nThis gear normally only charges when leveling up. _However, it cannot be recharged with Potion Of Experience_\n\nIt does not support auto-targeting, but _can attack any area._\n\nIt has a _Shield._ Summoned EX-44 Reduces first damage taken by 75%%.
 items.annihilationgear.desc_arts3_war=This gear amplifies the arts of Rosmontis. charges are consumed to use gear attacks, which deal _%1$d-%2$d_ damage.\n\nThis gear normally only charges when leveling up. _However, it cannot be recharged with Potion Of Experience_\n\nIt does not support auto-targeting, but _can attack any area._\n\nIt has a _Chain._ If gear hits the summoned EX-44, it immediately Retrieved and deals damage to nearby enemies.
 items.annihilationgear.desc_augment_none=Special effects are added according to the augmentation of the currently equipped weapon.
-items.annihilationgear.desc_augment_damage=_Damage_\nEX-44`s Damage +40%. Instead, Retrieved speed down.
+items.annihilationgear.desc_augment_damage=_Damage_\nEX-44`s Damage +35%. Instead, Retrieved speed down.
 items.annihilationgear.desc_augment_speed=_Speed_\nEX-44`s Damage -30%. Attack Range +1
 items.annihilationgear.desc_augment_overload=_Overload_\nDamage taken by EX-44 is fixed at 1, but its maximum HP is greatly reduced.
 items.annihilationgear$ex44.name=EX-44

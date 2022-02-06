@@ -10,6 +10,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.WoundsofWar;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -74,8 +76,17 @@ public class WarJournalist extends MeleeWeapon {
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        SPCharge(2);
+        if (isSetbouns()) SPCharge(3);
+        else SPCharge(2);
         return super.proc(attacker, defender, damage);
+    }
+
+    @Override
+    public String desc() {
+        String info = Messages.get(this, "desc");
+        if (isSetbouns()) info += "\n\n" + Messages.get( WarJournalist.class, "setbouns");
+
+        return info;
     }
 
     @Override
@@ -91,6 +102,14 @@ public class WarJournalist extends MeleeWeapon {
 
         //otherwise, if there's no charge, return null.
         return null;
+    }
+
+    private boolean isSetbouns() {
+        if (Dungeon.hero.belongings.getItem(WoundsofWar.class) != null) {
+            if (Dungeon.hero.belongings.getItem(WoundsofWar.class).isEquipped(Dungeon.hero))
+                return true;
+        }
+        return false;
     }
 
     public static class PanoramaBuff extends FlavourBuff {

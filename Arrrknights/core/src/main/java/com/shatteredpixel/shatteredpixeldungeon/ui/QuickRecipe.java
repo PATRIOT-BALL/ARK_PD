@@ -38,6 +38,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.food.Sandvich;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.StewedMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_EGG;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.FRY_GAMZA;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.Glassate;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.HoneyBread;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.NotBarFood;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.cooking.SmokeEgg;
@@ -350,6 +351,9 @@ public class QuickRecipe extends Component {
 				result.add(new QuickRecipe( new Yukjeon.Recipe(),
 						new ArrayList<Item>(Arrays.asList(new MysteryMeat.PlaceHolder(), new BlackPepper(), new Egg())),
 						new Yukjeon()));
+				result.add(new QuickRecipe( new Glassate.Recipe(),
+						new ArrayList<Item>(Arrays.asList(new Egg(), new SugarFlower(), new Salt())),
+						new Glassate()));
 				return result;
 			case 3:
 				r = new Bomb.EnhanceBomb();

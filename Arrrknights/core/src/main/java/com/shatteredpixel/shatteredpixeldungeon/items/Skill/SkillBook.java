@@ -1,6 +1,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.Skill;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Oblivion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -40,7 +42,6 @@ public class SkillBook extends Item {
     public void execute(Hero hero, String action) {
         super.execute(hero, action);
         if (action.equals(AC_ACT)) {
-
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),
                             Messages.get(this, "wnddesc") + infoWnd(),

@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CustomeSet;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
@@ -38,6 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Laevateinn;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
@@ -129,6 +131,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof CatGun) {setItem1 = new ChaliceOfBlood(); setItem2 = new UnstableSpellbook(); setItem3 = new RingOfMistress(); SetValue = 3; return true;}
         else if (weapon instanceof SwordofArtorius) {setItem1 = new RingOfMistress(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof CrabGun) {setItem1 = new RingOfWealth(); setItem2 = new CustomeSet(); setItem3 = null; SetValue = 2; return true;}
+        else if (weapon instanceof KRISSVector) {setItem1 = new RingOfAccuracy(); setItem2 = new MasterThievesArmband(); setItem3 = null; SetValue = 2; return true;}
 
 
         return false;

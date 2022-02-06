@@ -1,8 +1,14 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.ChaliceOfBlood;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.noosa.audio.Sample;
@@ -82,9 +88,14 @@ public class KRISSVector extends MeleeWeapon {
 
     @Override
     public String desc() {
-        if (mode == 2) return Messages.get(this, "desc_mode2");
-        else if (mode == 1) return Messages.get(this, "desc_mode1");
-        else return Messages.get(this, "desc");
+        String info;
+        if (mode == 2) info = Messages.get(this, "desc_mode2");
+        else if (mode == 1) info = Messages.get(this, "desc_mode1");
+        else info = Messages.get(this, "desc");
+
+        if (VectorSetBouns()) {
+            info += "\n\n" + Messages.get(KRISSVector.class, "setbouns"); }
+        return info;
     }
 
     @Override
@@ -95,6 +106,16 @@ public class KRISSVector extends MeleeWeapon {
             else return "AR";
         }
         else return null;}
+
+    public static boolean VectorSetBouns() {
+        if (!(Dungeon.hero.belongings.weapon instanceof KRISSVector)) return false;
+
+        if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class) != null && Dungeon.hero.belongings.getItem(MasterThievesArmband.class) != null) {
+            if (Dungeon.hero.belongings.getItem(RingOfAccuracy.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(MasterThievesArmband.class).isEquipped(Dungeon.hero))
+                return true;
+        }
+        return false;
+    }
 
     private static final String SWICH = "mode";
     private static final String DLYSAVE = "DLY";

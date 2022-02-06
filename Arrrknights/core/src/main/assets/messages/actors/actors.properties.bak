@@ -403,6 +403,11 @@ actors.buffs.hallucination.name=환각
 actors.buffs.hallucination.desc=이 캐릭터는 환각을 보고있습니다! 환각을 보는 동안 명중률이 35%감소하며, 공격시 낮은 확률로 자해합니다.
 actors.buffs.hallucination.ondeath=당신은 환각에 빠져 자살했다...
 
+actors.buffs.oblivion.name=망각
+actors.buffs.oblivion.desc=기억이란 망각하는 것이다. 모든 것을 잊어가고 있습니다. 시야가 감소하고 행동 속도가 대폭 감소합니다.\n\n망각 상태에서 빠져나올 때까지 %s 턴 남았습니다.
+
+
+
 ###hero
 actors.hero.talent.hearty_meal.title=푸짐한 식사
 actors.hero.talent.hearty_meal.desc=_+1:_ 음식을 섭취할 때 체력이 50% 이하라면 _2 HP_ , 25% 이하라면 _3 HP_ 를 회복합니다.\n\n_+2:_ 음식을 섭취할 때 체력이 50% 이하라면  _3 HP_ , 25% 이하라면 _5 HP_ 를 회복합니다.
@@ -457,9 +462,9 @@ actors.hero.talent.empowering_meal.desc=_+1:_ 식사 후 다음 3번의 아츠 �
 actors.hero.talent.scholars_intuition.title=사장의 권능
 actors.hero.talent.scholars_intuition.desc=_+1:_ 아츠 스태프를 _3배 빠르게_ 감정합니다.\n\n_+2:_ 아츠 스태프를 _사용하는 즉시_ 감정합니다.
 actors.hero.talent.tested_hypothesis.title=해답찾기
-actors.hero.talent.tested_hypothesis.desc=_+1:_ 아이템을 감정할 때마다 _3턴의 충전 효과_ 를 얻습니다.\n\n_+2:_ 아이템을 감정할 때마다 _4턴의 충전 효과_ 를 얻습니다.
+actors.hero.talent.tested_hypothesis.desc=_+1:_ 아이템을 감정할 때마다 _4턴의 충전 효과_ 를 얻습니다.\n\n_+2:_ 아이템을 감정할 때마다 _5턴의 충전 효과_ 를 얻습니다.
 actors.hero.talent.backup_barrier.title=예비 보호막
-actors.hero.talent.backup_barrier.desc=_+1:_ 아미야의 흑요석 반지 충전량을 모두 소모할 때마다 _3만큼의 보호막_을 얻습니다.\n_+2:_ 아미야의 흑요석 반지 충전량을 모두 소모할 때마다 _5만큼의 보호막_을 얻습니다.
+actors.hero.talent.backup_barrier.desc=_+1:_ 아미야의 흑요석 반지 충전량을 모두 소모할 때마다 _3만큼의 보호막_을 얻습니다.\n_+2:_ 아미야의 흑요석 반지 충전량을 모두 소모할 때마다 _6만큼의 보호막_을 얻습니다.
 actors.hero.talent.energizing_meal.title=에너지 넘치는 식사
 actors.hero.talent.energizing_meal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 시 _5턴의 충전 효과_ 를 얻습니다.\n\n_+2:_ 식사에 1턴만 소모되며, 식사 시 _8턴의 충전 효과_ 를 얻습니다.
 actors.hero.talent.energizing_upgrade.title=아츠 흡수
@@ -469,7 +474,7 @@ actors.hero.talent.wand_preservation.desc=_+1:_ 아미야의 흑요석 반지에
 actors.hero.talent.arcane_vision.title=아츠 시야
 actors.hero.talent.arcane_vision.desc=_+1:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _5 턴의 심안 효과_ 를 얻습니다.\n\n_+2:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _10 턴의 심안 효과_ 를 얻습니다.
 actors.hero.talent.shield_battery.title=보호막 충전
-actors.hero.talent.shield_battery.desc=_+1:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 4%_ 에 해당하는 방어막을 얻습니다.\n\n_+2:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 6%_ 에 해당하는 방어막을 얻습니다.
+actors.hero.talent.shield_battery.desc=_+1:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 2.5%_ 에 해당하는 방어막을 얻습니다.\n\n_+2:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 5%_ 에 해당하는 방어막을 얻습니다.
 actors.hero.talent.psychoanalysis.title=정신분석
 actors.hero.talent.psychoanalysis.desc=_+1:_ 일기장을 읽을 때 턴을 소모하지 않으며, _33%_ 확률로 음식 섭취 효과가 발동하고 흑요석 반지를 1만큼 충전합니다.\n\n_+2:_ 일기장을 읽을 때 턴을 소모하지 않으며, _66%_ 확률로 음식 섭취 효과가 발동하고 흑요석 반지를 1만큼 충전합니다.\n\n_+3:_ 일기장을 읽을 때 턴을 소모하지 않으며, _100%_ 확률로 음식 섭취 효과가 발동하고 흑요석 반지를 1만큼 충전합니다.
 actors.hero.talent.ally_warp.title=교대 명령
@@ -494,7 +499,7 @@ actors.hero.talent.azure_fury.title=푸른 분노
 actors.hero.talent.azure_fury.desc=_+1:_ 아미야는 흑요석 반지 근접 공격이 명중할 때마다 _5%_ 확률로 아츠 기록장치의 SP를 2% 회복합니다.\n\n_+2:_ 아미야는 흑요석 반지 근접 공격이 명중할 때마다 _10%_ 확률로 아츠 기록장치의 SP를 2% 회복합니다.\n\n_+3:_ 아미야는 흑요석 반지 근접 공격이 명중할 때마다 _15%_ 확률로 아츠 기록장치의 SP를 2% 회복합니다.\n\n_+4:_ 아미야는 흑요석 반지 근접 공격이 명중할 때마다 _20%_ 확률로 아츠 기록장치의 SP를 2% 회복합니다.
 actors.hero.talent.swordoflord.title=군주의 검
 actors.hero.talent.swordoflord.desc=_+1_: 흑요석 반지 근접 공격으로 얻는 아츠 스태프 충전량이 _10%_ 증가합니다.\n\n_+2_: 흑요석 반지 근접 공격으로 얻는 아츠 스태프 충전량이 _15%_ 증가합니다.\n\n_+3_: 흑요석 반지 근접 공격으로 얻는 아츠 스태프 충전량이 _20%_ 증가합니다.\n\n_+4_: 흑요석 반지 근접 공격으로 얻는 아츠 스태프 충전량이 _25%_ 증가합니다.
-actors.hero.talent.emotion.title=감정 흡수
+actors.hero.talent.emotion.title=감정 폭발
 actors.hero.talent.emotion.desc=특성에 투자한 횟수에 비례하여 _영혼의 낙인_을 부여할 확률이 증가합니다.
 actors.hero.talent.lord.title=마왕
 actors.hero.talent.lord.desc=_+1_: 영혼의 낙인의 지속 시간이 _2 턴_ 증가합니다.\n\n_+2_: 영혼의 낙인의 지속 시간이 _4 턴_ 증가합니다.\n\n_+3_: 영혼의 낙인의 지속 시간이 _6 턴_ 증가합니다.\n\n_+4_: 영혼의 낙인의 지속 시간이 _8 턴_ 증가합니다.

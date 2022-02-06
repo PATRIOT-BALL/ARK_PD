@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FlashingTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FrostTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.GrimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.HallucinationTrap;
+import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OblivionTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OozeTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OriginiumTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.PoisonDartTrap;
@@ -84,7 +85,7 @@ public class GavialLevel extends RegularLevel {
     protected Class<?>[] trapClasses() {
         return new Class[]{
                 FrostTrap.class, ToxicTrap.class, OozeTrap.class, PoisonDartTrap.class, BurningTrap.class,
-                OriginiumTrap.class, FlashingTrap.class, StormTrap.class, HallucinationTrap.class,
+                OriginiumTrap.class, FlashingTrap.class, StormTrap.class, HallucinationTrap.class, OblivionTrap.class,
                 GrimTrap.class, WarpingTrap.class
         };
     }
@@ -93,7 +94,7 @@ public class GavialLevel extends RegularLevel {
     protected float[] trapChances() {
         return new float[]{
                 4,4,4,4,4,
-                2,2,2,2,
+                2,2,2,2,2,
                 1,1
         };
     }

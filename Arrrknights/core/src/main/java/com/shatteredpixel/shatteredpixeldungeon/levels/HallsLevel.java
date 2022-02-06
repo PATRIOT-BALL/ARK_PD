@@ -39,6 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.traps.FrostTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.GrimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.GuardianTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.HallucinationTrap;
+import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OblivionTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.OriginiumTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.PitfallTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.RockfallTrap;
@@ -126,7 +127,8 @@ public class HallsLevel extends RegularLevel {
 		return new Class[]{
 				FrostTrap.class, StormTrap.class, CorrosionTrap.class, BlazingTrap.class, DisintegrationTrap.class,
 				RockfallTrap.class, FlashingTrap.class, GuardianTrap.class, WeakeningTrap.class, OriginiumTrap.class,
-				DisarmingTrap.class, SummoningTrap.class, WarpingTrap.class, CursingTrap.class, GrimTrap.class, PitfallTrap.class, DistortionTrap.class, HallucinationTrap.class};
+				DisarmingTrap.class, SummoningTrap.class, WarpingTrap.class, CursingTrap.class,
+				GrimTrap.class, PitfallTrap.class, DistortionTrap.class, HallucinationTrap.class, OblivionTrap.class};
 	}
 
 	@Override
@@ -134,7 +136,8 @@ public class HallsLevel extends RegularLevel {
 		return new float[]{
 				4, 4, 4, 4, 4,
 				2, 2, 2, 2,
-				1, 1, 1, 1, 1, 1, 1, 1 };
+				1, 1, 1, 1,
+				1, 1, 1, 1, 1 };
 	}
 	
 	@Override
