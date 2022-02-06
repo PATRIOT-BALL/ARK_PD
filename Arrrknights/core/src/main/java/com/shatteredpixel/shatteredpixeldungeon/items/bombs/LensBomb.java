@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class LensBomb extends Bomb {
     {
-        image = ItemSpriteSheet.BOMB;
+        image = ItemSpriteSheet.LENS_BOMB;
     }
 
     @Override
