@@ -1574,7 +1574,7 @@ public class Hero extends Char {
                 }
 
             if (hasTalent(Talent.STABILIZE)) {
-                if (HP / HT <= 0.1f + pointsInTalent(Talent.STABILIZE) * 0.1f) {
+                if (HP / HT <= 0.15f + pointsInTalent(Talent.STABILIZE) * 0.05f) {
                     bounsdamage = 1f;
                 }}
 

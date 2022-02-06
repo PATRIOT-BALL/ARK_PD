@@ -404,7 +404,7 @@ actors.buffs.hallucination.desc=이 캐릭터는 환각을 보고있습니다! �
 actors.buffs.hallucination.ondeath=당신은 환각에 빠져 자살했다...
 
 actors.buffs.oblivion.name=망각
-actors.buffs.oblivion.desc=기억이란 망각하는 것이다. 모든 것을 잊어가고 있습니다. 시야가 감소하고 행동 속도가 대폭 감소합니다.\n\n망각 상태에서 빠져나올 때까지 %s 턴 남았습니다.
+actors.buffs.oblivion.desc=모든 것을 잊어가고 있습니다. 시야가 감소하고 행동 속도가 대폭 감소합니다.\n\n망각 상태에서 빠져나올 때까지 %s 턴 남았습니다.
 
 
 
