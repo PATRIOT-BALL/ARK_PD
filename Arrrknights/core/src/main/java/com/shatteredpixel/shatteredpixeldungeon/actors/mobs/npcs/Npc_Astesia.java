@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArm
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.WoundsofWar;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAssassin;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
@@ -51,6 +52,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmame
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarJournalist;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -132,6 +134,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof SwordofArtorius) {setItem1 = new RingOfMistress(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof CrabGun) {setItem1 = new RingOfWealth(); setItem2 = new CustomeSet(); setItem3 = null; SetValue = 2; return true;}
         else if (weapon instanceof KRISSVector) {setItem1 = new RingOfAccuracy(); setItem2 = new MasterThievesArmband(); setItem3 = null; SetValue = 2; return true;}
+        else if (weapon instanceof WarJournalist) {setItem1 = new WoundsofWar(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
 
 
         return false;
