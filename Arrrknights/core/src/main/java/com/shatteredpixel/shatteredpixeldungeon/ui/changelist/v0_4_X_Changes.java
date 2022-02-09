@@ -52,12 +52,19 @@ public class v0_4_X_Changes {
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 상향",
+                "_버섯중독자_ : 체력이 115에서 _120_으로, 명중률이 38에서 _42_로, 디버프 부여 확률이 33%에서 _50%_로 상승했습니다. 공격력이 36-50에서 _36-46_으로 감소했습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "전쟁 쪽냥이 하향",
                 "_공격력 증강_시 EX-44의 피해 증가량이 40%에서 _35%_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
+                "_워리어_ : 체력이 150에서 _165_로, 경험치가 18에서 _20_으로 상승했습니다. 공격력이 38-54에서 _35-57_로 조정되었습니다.\n" +
+                        "회피율이 21에서 _18_로 감소했으며, 방어력이 30-50(0-24) 에서 _20-50(0-18)_로 감소했습니다."));
     }
 
     public static void add_v0_4_0_Changes(ArrayList<ChangeInfo> changeInfos) {

@@ -44,6 +44,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.builders.FigureEightBuild
 import com.shatteredpixel.shatteredpixeldungeon.levels.builders.LoopBuilder;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.MiniShopRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.SecretRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.LACNET2Room;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.PitRoom;
@@ -126,6 +127,9 @@ public abstract class RegularLevel extends Level {
 		
 		if (Dungeon.shopOnLevel())
 			initRooms.add(new ShopRoom());
+		else if (Random.Int(80) == 0) {
+			initRooms.add(new MiniShopRoom());
+		}
 
 		if (Dungeon.depth == 13)
 			initRooms.add(new RoseRoom());

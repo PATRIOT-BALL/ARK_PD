@@ -508,7 +508,7 @@ actors.hero.talent.emotion_absorption.desc=_+1_: Charges the amiya`s ring by _0.
 actors.hero.talent.stabilize.title=stabilize
 actors.hero.talent.stabilize.desc=_+1_: When your health is low _20%_, you do not increase physical damage taken.\n\n_+2_: When your health is low _25%_, you do not increase physical damage taken.\n\n_+3_: When your health is low _30%_, you do not increase physical damage taken.\n\n_+4_: When your health is low _35%_, you do not increase physical damage taken.
 actors.hero.talent.mind_crash.title=mind crash
-actors.hero.talent.mind_crash.desc=Marks for 5 turns when the wand hits.\n\n_+1_: Enemies with marks have a _5%_ chance to taken x2 damage.\n\n_+2_: Enemies with marks have a _10%_ chance to taken x2 damage.\n\n_+3_: Enemies with marks have a _15%_ chance to taken x2 damage.\n\n_+4_: Enemies with marks have a _20%_ chance to taken x2 damage.
+actors.hero.talent.mind_crash.desc=Marks for 5 turns when the wand hits.\n\n_+1_: Enemies with marks have a _2.5%_ chance to taken x2 damage.\n\n_+2_: Enemies with marks have a _5%_ chance to taken x2 damage.\n\n_+3_: Enemies with marks have a _7.5%_ chance to taken x2 damage.\n\n_+4_: Enemies with marks have a _10%_ chance to taken x2 damage.
 
 actors.hero.talent$mindcrashmark.name=Mark
 actors.hero.talent$mindcrashmark.desc=You will have a chance to take x2 damage from the power of this mark.\n\nTurn: %s.
@@ -1038,7 +1038,15 @@ actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's o
 
 actors.mobs.npcs.lancet2.name=LANCET-2
 actors.mobs.npcs.lancet2.desc=Captured LANCET-2. Rescue her.
+actors.mobs.npcs.lancet2.help=HELP~
 actors.mobs.npcs.lancet2.thank=You Rescue LANCET-2.
+
+actors.mobs.npcs.npc_gglow.name=Goldenglow
+actors.mobs.npcs.npc_gglow.desc=I am a cat! not a dog!
+
+actors.mobs.npcs.minishopkeeper.name=Texas
+actors.mobs.npcs.minishopkeeper.thief=don't sell.
+actors.mobs.npcs.minishopkeeper.desc=Personalized shop service for you. this is P-Eleven!
 
 
 

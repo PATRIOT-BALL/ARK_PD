@@ -20,10 +20,10 @@ public class TiacauhBrave extends Mob {
     {
         spriteClass = Tiacauh_BraveSprite.class;
 
-        HP = HT = 150;
-        defenseSkill = 21;
+        HP = HT = 165;
+        defenseSkill = 18;
 
-        EXP = 18;
+        EXP = 20;
         maxLvl = 37;
 
         loot = Generator.Category.SCROLL;
@@ -37,7 +37,7 @@ public class TiacauhBrave extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 38, 54 );
+        return Random.NormalIntRange( 35, 57 );
     }
 
     @Override
@@ -48,8 +48,8 @@ public class TiacauhBrave extends Mob {
     @Override
     public int drRoll()
     {
-        if (!isAttack) return Random.NormalIntRange(30, 50);
-        return Random.NormalIntRange(0, 24);
+        if (!isAttack) return Random.NormalIntRange(20, 50);
+        return Random.NormalIntRange(0, 18);
     }
 
     @Override

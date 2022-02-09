@@ -22,7 +22,7 @@ public class TiacauhAddict extends Mob {
         spriteClass = Tiacauh_DrugsSprite.class;
         baseSpeed = 2f;
 
-        HP = HT = 115;
+        HP = HT = 120;
         defenseSkill = 24;
 
         EXP = 14;
@@ -37,12 +37,12 @@ public class TiacauhAddict extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange( 36, 50 );
+        return Random.NormalIntRange( 36, 46 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 38;
+        return 42;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class TiacauhAddict extends Mob {
 
     @Override
     public int attackProc(Char enemy, int damage) {
-        if (Random.Int(3) == 0) {
+        if (Random.Int(2) == 0) {
             Buff.affect(enemy, Weakness.class, 4f);
             Buff.affect(enemy, Vulnerable.class, 4f);
         }

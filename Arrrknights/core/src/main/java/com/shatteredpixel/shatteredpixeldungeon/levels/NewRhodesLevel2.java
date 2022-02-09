@@ -10,6 +10,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Dummy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Firewall;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.FrostLeaf;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Jessica;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Gglow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Phantom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_PhantomShadow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Npc_Astesia;
@@ -170,6 +171,7 @@ public class NewRhodesLevel2 extends Level {
         Dobermann.spawn(this, 4298);
         FrostLeaf.spawn(this, 4305);
         NPC_Phantom.spawn(this, 3010);
+        NPC_Gglow.spawn(this, 3964);
 
         if (Random.Int(2) == 0) Npc_Astesia.spawn(this, 3004);
         else Npc_Astesia.spawn(this, 3218);
