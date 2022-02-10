@@ -46,10 +46,10 @@ public class GavialBossLevel2 extends Level {
 
         final int MID = width/2;
 
-        Painter.fill( this, 0, 0, 15, 1, Terrain.WALL);
-        Painter.fill( this, 0, 10, 15, 1, Terrain.WALL);
-        Painter.fill( this, 0, 0, 1, 11, Terrain.WALL);
-        Painter.fill( this, 14, 0, 1, 11, Terrain.WALL);
+        Painter.fill( this, 0, 0, 15, 1, Terrain.STATUE);
+        Painter.fill( this, 0, 10, 15, 1, Terrain.STATUE);
+        Painter.fill( this, 0, 0, 1, 11, Terrain.STATUE);
+        Painter.fill( this, 14, 0, 1, 11, Terrain.STATUE);
 
         Painter.fill( this, 1, 2, 1, 6, Terrain.STATUE);
         Painter.fill( this, 2, 3, 1, 4, Terrain.STATUE);
