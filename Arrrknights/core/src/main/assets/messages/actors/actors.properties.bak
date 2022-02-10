@@ -1053,10 +1053,10 @@ actors.mobs.npcs.lancet2.help=로봇 살려-
 actors.mobs.npcs.lancet2.thank=당신은 LANCET-2를 구출했다.
 
 actors.mobs.npcs.npc_gglow.name=골든글로우
-actors.mobs.npcs.npc_gglow.desc=핑댕이 아니야! 핑냥이야!
-actors.mobs.npcs.npc_gglow.free1=자유에요!
-actors.mobs.npcs.npc_gglow.free2=좋은 날이네요!
-actors.mobs.npcs.npc_gglow.free3=드디어 만났네요!
+actors.mobs.npcs.npc_gglow.desc=드디어 왔어... 안녕하세요, 박사님. 새로 오퍼레이터로 부임한 골든글로우입니다.
+actors.mobs.npcs.npc_gglow.free1=좋은 날이네.
+actors.mobs.npcs.npc_gglow.free2=안녕하세요.
+actors.mobs.npcs.npc_gglow.free3=드디어 왔어.
 
 actors.mobs.npcs.minishopkeeper.name=텍사스
 actors.mobs.npcs.minishopkeeper.thief=네 놈에겐 안 팔아.
