@@ -669,9 +669,9 @@ public abstract class Mob extends Char {
 		}
 
 		if (Dungeon.hero.hasTalent(Talent.MIND_CRASH)) {
-			if (buff(Talent.MindCrashMark.class) != null && Random.Int(40) < Dungeon.hero.pointsInTalent(Talent.MIND_CRASH)) {
-				dmg *= 2f;
-				sprite.showStatus( CharSprite.NEGATIVE, Messages.get(Talent.MindCrashMark.class, "doubledamage") );
+			if (buff(Talent.MindCrashMark.class) != null && Random.Int(20) < Dungeon.hero.pointsInTalent(Talent.MIND_CRASH)) {
+				dmg *= 1.5f;
+				sprite.showStatus( CharSprite.NEGATIVE, Messages.get(Talent.MindCrashMark.class, "cri") );
 			}
 		}
 		
@@ -765,7 +765,7 @@ public abstract class Mob extends Char {
 		if (!(this instanceof Wraith_donut) && Dungeon.hero.hasTalent(Talent.EMOTION_ABSORPTION)) {
 			MagesStaff Ring = Dungeon.hero.belongings.getItem(MagesStaff.class);
 			if (Ring != null) {
-				Ring.gainCharge(Dungeon.hero.pointsInTalent(Talent.EMOTION_ABSORPTION) * 0.15f);
+				Ring.gainCharge(Dungeon.hero.pointsInTalent(Talent.EMOTION_ABSORPTION) * 0.1f);
 			}
 		}
 

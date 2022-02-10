@@ -504,15 +504,15 @@ actors.hero.talent.chimera.desc=_+1_: Wand damage bonus and increased physical d
 actors.hero.talent.restriction.title=restriction
 actors.hero.talent.restriction.desc=_+1_: All characters' physical attack damage & accuracy is reduced by _5%_.\n\n_+2_: All characters' physical attack damage & accuracy is reduced by _10%_.\n\n_+3_: All characters' physical attack damage & accuracy is reduced by _15%_.
 actors.hero.talent.emotion_absorption.title=Emotion Absorption
-actors.hero.talent.emotion_absorption.desc=_+1_: Charges the amiya`s ring by _0.15_ per enemy kill.\n\n_+2_: Charges the amiya`s ring by _0.3_ per enemy kill.\n\n_+3_: Charges the amiya`s ring by _0.45_ per enemy kill.
+actors.hero.talent.emotion_absorption.desc=_+1_: Charges the amiya`s ring by _0.1_ per enemy kill.\n\n_+2_: Charges the amiya`s ring by _0.2_ per enemy kill.\n\n_+3_: Charges the amiya`s ring by _0.3_ per enemy kill.
 actors.hero.talent.stabilize.title=stabilize
 actors.hero.talent.stabilize.desc=_+1_: When your health is low _20%_, you do not increase physical damage taken.\n\n_+2_: When your health is low _25%_, you do not increase physical damage taken.\n\n_+3_: When your health is low _30%_, you do not increase physical damage taken.\n\n_+4_: When your health is low _35%_, you do not increase physical damage taken.
 actors.hero.talent.mind_crash.title=mind crash
-actors.hero.talent.mind_crash.desc=Marks for 5 turns when the wand hits.\n\n_+1_: Enemies with marks have a _2.5%_ chance to taken x2 damage.\n\n_+2_: Enemies with marks have a _5%_ chance to taken x2 damage.\n\n_+3_: Enemies with marks have a _7.5%_ chance to taken x2 damage.\n\n_+4_: Enemies with marks have a _10%_ chance to taken x2 damage.
+actors.hero.talent.mind_crash.desc=Marks for 3 turns when the wand hits.\n\n_+1_: Enemies with marks have a _5%_ chance to taken x1.5 damage.\n\n_+2_: Enemies with marks have a _10%_ chance to taken x1.5 damage.\n\n_+3_: Enemies with marks have a _15%_ chance to taken x1.5 damage.\n\n_+4_: Enemies with marks have a _20%_ chance to taken x1.5 damage.
 
 actors.hero.talent$mindcrashmark.name=Mark
-actors.hero.talent$mindcrashmark.desc=You will have a chance to take x2 damage from the power of this mark.\n\nTurn: %s.
-actors.hero.talent$mindcrashmark.doubledamage=x2 damage!
+actors.hero.talent$mindcrashmark.desc=You will have a chance to take x1.5 damage from the power of this mark.\n\nTurn: %s.
+actors.hero.talent$mindcrashmark.cri=Critical Hit!
 
 actors.hero.talent.cached_rations.title=cached cookie
 actors.hero.talent.cached_rations.desc=_+1:_ The Red can find _4 honey cookie_ placed in chests while she explores the earlier stages of the dungeon.\n\n_+2:_ The Red can find _6 honey cookie_ placed in chests while she explores the earlier stages of the the dungeon.
@@ -1043,10 +1043,13 @@ actors.mobs.npcs.lancet2.thank=You Rescue LANCET-2.
 
 actors.mobs.npcs.npc_gglow.name=Goldenglow
 actors.mobs.npcs.npc_gglow.desc=I am a cat! not a dog!
+actors.mobs.npcs.npc_gglow.free1=I`m free!
+actors.mobs.npcs.npc_gglow.free2=Finally see the light!
+actors.mobs.npcs.npc_gglow.free3=I`m Not perro!
 
 actors.mobs.npcs.minishopkeeper.name=Texas
 actors.mobs.npcs.minishopkeeper.thief=don't sell.
-actors.mobs.npcs.minishopkeeper.desc=Personalized shop service for you. this is P-Eleven!
+actors.mobs.npcs.minishopkeeper.desc=Personalized shop service for you. this is P-Eleven!\n...so her claiming that. don't know if it's true.
 
 
 
