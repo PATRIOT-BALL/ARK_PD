@@ -765,7 +765,7 @@ public abstract class Mob extends Char {
 		if (!(this instanceof Wraith_donut) && Dungeon.hero.hasTalent(Talent.EMOTION_ABSORPTION)) {
 			MagesStaff Ring = Dungeon.hero.belongings.getItem(MagesStaff.class);
 			if (Ring != null) {
-				Ring.gainCharge(Dungeon.hero.pointsInTalent(Talent.EMOTION_ABSORPTION) * 0.1f);
+				Ring.gainCharge(Dungeon.hero.pointsInTalent(Talent.EMOTION_ABSORPTION) * 0.06f);
 			}
 		}
 
