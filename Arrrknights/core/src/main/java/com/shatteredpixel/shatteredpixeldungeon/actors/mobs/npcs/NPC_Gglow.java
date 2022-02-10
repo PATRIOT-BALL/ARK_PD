@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.PRTS_Sprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Pink_doggiSprite;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndMessage;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Callback;
@@ -15,7 +16,7 @@ public class NPC_Gglow extends NPC {
     private static final String[] LINE_KEYS = {"free1", "free2", "free3"};
 
     {
-        spriteClass = PRTS_Sprite.class;
+        spriteClass = Pink_doggiSprite.class;
         properties.add(Char.Property.IMMOVABLE);
         properties.add(Property.NPC);
     }
