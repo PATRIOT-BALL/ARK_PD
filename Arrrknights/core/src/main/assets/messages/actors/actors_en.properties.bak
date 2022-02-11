@@ -869,7 +869,7 @@ actors.mobs.npcs.ratking.desc_festive=Real name Angelina Ajimu, she was a transp
 actors.mobs.npcs.ratking.desc=Real name Angelina Ajimu, she was a transporter responsible for delivering intelligence and special cargo around Siracusa.\nAs an apprentice caster Operator, she now provides logistical support, battlefield assistance, and tactical coordination for Rhodes Island.
 
 actors.mobs.npcs.sheep.name=Ursus Civilian
-actors.mobs.npcs.sheep.baa!=Ah!!!
+actors.mobs.npcs.sheep.baa!=AIEEEEEEEEEEE!!!
 actors.mobs.npcs.sheep.baa?=Nooo!!
 actors.mobs.npcs.sheep.baa.=Ahhhaa!!
 actors.mobs.npcs.sheep.baa...=Help...
@@ -1046,6 +1046,8 @@ actors.mobs.npcs.npc_gglow.desc=I am a cat! not a dog!
 actors.mobs.npcs.npc_gglow.free1=I`m free!
 actors.mobs.npcs.npc_gglow.free2=Finally see the light!
 actors.mobs.npcs.npc_gglow.free3=I`m Not perro!
+actors.mobs.npcs.npc_gglow.free4=...and no good thing ever dies.
+actors.mobs.npcs.npc_gglow.free5=FREEEEEEEEEDOM!
 
 actors.mobs.npcs.minishopkeeper.name=Texas
 actors.mobs.npcs.minishopkeeper.thief=don't sell.
