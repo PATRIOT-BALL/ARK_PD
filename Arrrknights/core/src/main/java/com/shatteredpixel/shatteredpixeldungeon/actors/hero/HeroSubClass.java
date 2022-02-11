@@ -104,7 +104,7 @@ public enum HeroSubClass {
 			case BATTLEMAGE:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 48, 80, 16, 16);
 			case CHAOS:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 48, 80, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 208, 80, 16, 16);
 
 			case ASSASSIN:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 64, 80, 16, 16);

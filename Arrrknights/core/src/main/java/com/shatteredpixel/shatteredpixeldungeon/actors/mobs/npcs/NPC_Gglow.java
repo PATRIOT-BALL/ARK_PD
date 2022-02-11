@@ -13,7 +13,7 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
 
 public class NPC_Gglow extends NPC {
-    private static final String[] LINE_KEYS = {"free1", "free2", "free3"};
+    private static final String[] LINE_KEYS = {"free1", "free2", "free3", "free4", "free5"};
 
     {
         spriteClass = Pink_doggiSprite.class;
