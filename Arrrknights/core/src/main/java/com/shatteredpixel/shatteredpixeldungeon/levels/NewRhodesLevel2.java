@@ -82,7 +82,7 @@ public class NewRhodesLevel2 extends Level {
         // 개발팀 구역 A1 + 상점쪽 처리
         Painter.fill(this, 2, 54, 23, 4, Terrain.EMPTY);
 
-        Painter.fill(this, 2, 53, 16, 1, Terrain.AVOID);
+        Painter.fill(this, 2, 53, 24, 1, Terrain.AVOID);
         Painter.fill(this, 8, 53, 1, 4, Terrain.AVOID);
         Painter.fill(this, 0, 57, 31, 1, Terrain.AVOID);
         
