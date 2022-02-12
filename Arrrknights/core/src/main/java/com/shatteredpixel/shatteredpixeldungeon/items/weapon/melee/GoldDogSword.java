@@ -32,7 +32,7 @@ public class GoldDogSword extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier) + 2 +  //18 + 4
+        return  5*(tier) +  //20 + 4
                 lvl*(tier);
     }
 

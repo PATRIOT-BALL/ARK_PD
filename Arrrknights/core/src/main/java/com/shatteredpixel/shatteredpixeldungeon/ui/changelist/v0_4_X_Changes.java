@@ -55,6 +55,9 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 상향",
                 "_버섯중독자_ : 체력이 115에서 _120_으로, 명중률이 38에서 _42_로, 디버프 부여 확률이 33%에서 _50%_로 상승했습니다. 공격력이 36-50에서 _36-46_으로 감소했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "무기 상향",
+                "_살라스의 칼날_의 공격력이 4-18에서 _4-20_으로 상승했습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
