@@ -1,12 +1,12 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.Skill;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Oblivion;
+import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSharpshooting;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
+import com.shatteredpixel.shatteredpixeldungeon.items.Pombbay;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -41,6 +41,7 @@ public class SkillBook extends Item {
     @Override
     public void execute(Hero hero, String action) {
         super.execute(hero, action);
+        GLog.w(Messages.get(Hero.class, "name", curUser.pos)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
         if (action.equals(AC_ACT)) {
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),

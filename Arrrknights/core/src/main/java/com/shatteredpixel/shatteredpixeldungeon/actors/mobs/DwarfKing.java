@@ -52,6 +52,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.ArmorKit;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookRockfailHammer;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookNigetRaid;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK3.BookSBurst;
@@ -455,6 +456,8 @@ public class DwarfKing extends Mob {
 			}
 			GLog.h(Messages.get(Hero.class, "eazymode"));
 		} else {
+
+			Dungeon.level.drop(new Certificate(8), pos).sprite.drop(pos);
 
 			int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
 			do {

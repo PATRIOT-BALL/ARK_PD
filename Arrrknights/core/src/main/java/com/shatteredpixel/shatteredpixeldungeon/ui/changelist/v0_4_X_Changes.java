@@ -36,6 +36,12 @@ public class v0_4_X_Changes {
                 "_망각_ 상태인 캐릭터는 시야와 행동속도가 감소합니다. 실질적으로 실명과 감속 상태가 동시에 부여되는 매우 치명적인 상태이상으로, 다른 행동속도 감소 디버프와 중첩됩니다." + "\n\n" +
                         "또한, 이 상태이상과 관련된 함정이 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.GOLD), "정보증명서 시스템 추가",
+                "게임 플레이로 획득할 수 있는 _영구 재화_인 _정보증명서_가 추가되었습니다. 28층의 특수 상점에서 유용한 아이템으로 바꿀 수 있습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "로도스 아일랜드 편의성 패치",
+                "28층 입장시 마법 지도와 심안 효과가 발동하여 로도스의 지형을 파악할 수 있게됩니다."));
+
                 changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "아미야 3번째 전문화",
                         "아미야의 새로운 전문화 _혼돈_ 이 추가되었습니다. 혼돈 아미야는 리스크가 매우 크지만, 강력한 마법 피해를 가합니다."));
 

@@ -23,7 +23,9 @@ package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
+import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
 import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Jessica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.HeroSelectScene;
@@ -52,6 +54,17 @@ public class WndGame extends Window {
 		super();
 
 		RedButton curBtn;
+
+		addButton( curBtn = new RedButton( Messages.get(this, "coin", SPDSettings.getSpecialcoin()) ) {
+					@Override
+					protected void onClick() {
+						hide();
+						GameScene.show(new WndMessage(Messages.get(WndGame.class, "coin_desc")));
+					}
+				}
+		);
+		curBtn.icon(Icons.get(Icons.GOLD));
+
 		addButton( curBtn = new RedButton( Messages.get(this, "settings") ) {
 			@Override
 			protected void onClick() {
@@ -59,6 +72,7 @@ public class WndGame extends Window {
 				GameScene.show(new WndSettings());
 			}
 		});
+
 		curBtn.icon(Icons.get(Icons.PREFS));
 
 		if (Dungeon.hero.isAlive()) {

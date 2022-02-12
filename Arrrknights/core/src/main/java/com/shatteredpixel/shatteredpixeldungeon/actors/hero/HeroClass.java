@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
@@ -34,6 +35,11 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_FoodBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_IdentifyBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_PotionBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_ScrollBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFoodPrep;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
@@ -165,6 +171,11 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		//new Heamyo().collect();
 		//new Amulet().collect();
 		//new ScrollOfMagicMapping().collect();
+
+		new Closure_FoodBox().collect();
+		new Closure_PotionBox().collect();
+		new Closure_ScrollBox().collect();
+		new Closure_IdentifyBox().collect();
 	}
 
 	public Badges.Badge masteryBadge() {

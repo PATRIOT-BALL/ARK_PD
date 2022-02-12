@@ -44,6 +44,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Ankh;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_FoodBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.Potion;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
@@ -203,6 +204,11 @@ public class Dungeon {
 	public static boolean killcat; // 엔딩 씬에서 켈시 하극상 출현용.
 
 	public static int QuestCatPoint;
+
+	public static boolean buyFoodbox;
+	public static boolean buyPotionbox;
+	public static boolean buyScrollbox;
+	public static boolean buyIdentifybox;
 	
 	public static HashSet<Integer> chapters;
 
@@ -210,7 +216,6 @@ public class Dungeon {
 	public static SparseArray<ArrayList<Item>> portedItems;
 
 	public static int version;
-
 	public static long seed;
 	
 	public static void init() {
@@ -265,6 +270,11 @@ public class Dungeon {
 		Jessica.QuestClear = false;
 		NPC_Phantom.QuestClear = false;
 		FrostLeaf.QuestClear = false;
+
+		buyFoodbox = false;
+		buyPotionbox = false;
+		buyScrollbox = false;
+		buyIdentifybox = false;
 
 		QuestCatPoint = Random.Int(2);
 
@@ -590,6 +600,11 @@ public class Dungeon {
 	private static final String JESI_QUESTCLEAR    = "Jessica.QuestClear";
 	private static final String LEAF_QUESTCLEAR    = "FrostLeaf.QuestClear";
 
+	private static final String BUY_FOOD = "buyFoodbox";
+	private static final String BUY_POTION = "buyPotionbox";
+	private static final String BUY_SCROLL = "buyScrollbox";
+	private static final String BUY_IDENTIFY = "buyIdentifybox";
+
 
 	public static void saveGame(int save ) {
 		try {
@@ -622,6 +637,11 @@ public class Dungeon {
 			bundle.put (LEAF_QUESTCLEAR, FrostLeaf.QuestClear);
 
 			bundle.put (CATQUEST, QuestCatPoint);
+
+			bundle.put (BUY_FOOD, buyFoodbox);
+			bundle.put (BUY_POTION, buyPotionbox);
+			bundle.put (BUY_SCROLL, buyScrollbox);
+			bundle.put (BUY_IDENTIFY, buyIdentifybox);
 
 
 			for (int d : droppedItems.keyArray()) {
@@ -795,6 +815,11 @@ public class Dungeon {
 		NPC_Phantom.QuestClear = bundle.getBoolean(PHANTOM_QUESTCLEAR);
 		Jessica.QuestClear = bundle.getBoolean(JESI_QUESTCLEAR);
 		FrostLeaf.QuestClear = bundle.getBoolean(LEAF_QUESTCLEAR);
+
+		buyFoodbox = bundle.getBoolean(BUY_FOOD);
+		buyPotionbox = bundle.getBoolean(BUY_POTION);
+		buyScrollbox = bundle.getBoolean(BUY_SCROLL);
+		buyIdentifybox = bundle.getBoolean(BUY_IDENTIFY);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );

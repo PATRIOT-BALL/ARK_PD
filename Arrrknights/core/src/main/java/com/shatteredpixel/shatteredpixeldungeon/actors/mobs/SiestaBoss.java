@@ -19,6 +19,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Slow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -153,6 +154,8 @@ public class SiestaBoss extends Mob {
         }
 
         yell(Messages.get(this, "defeated"));
+
+        Dungeon.level.drop(new Certificate(10), pos).sprite.drop(pos);
 
         GameScene.bossSlain();
         Dungeon.level.unseal();

@@ -64,6 +64,7 @@ public class Heap implements Bundlable {
 	public enum Type {
 		HEAP,
 		FOR_SALE,
+		FOR_SALE_28F,
 		CHEST,
 		LOCKED_CHEST,
 		CRYSTAL_CHEST,
@@ -169,7 +170,7 @@ public class Heap implements Bundlable {
 	
 	public void drop( Item item ) {
 		
-		if (item.stackable && type != Type.FOR_SALE) {
+		if (item.stackable && type != Type.FOR_SALE && type != Type.FOR_SALE_28F) {
 			
 			for (Item i : items) {
 				if (i.isSimilar( item )) {
@@ -181,7 +182,7 @@ public class Heap implements Bundlable {
 			
 		}
 		
-		if (item.dropsDownHeap && type != Type.FOR_SALE) {
+		if (item.dropsDownHeap && type != Type.FOR_SALE && type != Type.FOR_SALE_28F) {
 			items.add( item );
 		} else {
 			items.addFirst( item );
@@ -374,6 +375,13 @@ public class Heap implements Bundlable {
 	@Override
 	public String toString(){
 		switch(type){
+			case FOR_SALE_28F:
+				Item k = peek();
+				if (size() == 1) {
+					return Messages.get(this, "for_sale_sp", k.value(), k.toString());
+				} else {
+					return k.toString();
+				}
 			case FOR_SALE:
 				Item i = peek();
 				if (size() == 1) {

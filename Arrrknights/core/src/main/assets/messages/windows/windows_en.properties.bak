@@ -16,6 +16,8 @@ windows.wnddocument.missing=page missing
 
 windows.wnderror.title=Error
 
+windows.wndgame.coin=%s
+windows.wndgame.coin_desc=_Intelligence Certificate_ are permanent money that can be earned through gameplay. This currency can be used to purchase special items in the shop on the 28th floor.\n\nUsually obtained by _bosses slain_ or _completing special endings_. Also earn additional rewards proportional to the number of challenges you activate.
 windows.wndgame.settings=Setting
 windows.wndgame.skin=Hero Skin
 windows.wndgame.install=Install the game
@@ -155,7 +157,7 @@ windows.wndceylon.reward=Get Item
 windows.wndpilot.siesta_name=Surging Flame
 windows.wndpilot.gavial_name=Gavial Returns
 windows.wndpilot.siesta=he Obsidian Festival is in full swing in the town of Siesta! The Operators of Rhodes Island have come for a vacation as well. Not before long, they learned that the eruption of a nearby volcano is imminent! But it seems the town's government is trying to cover it up?! In the midst of summer, heat, music and battle, Rhodes Island will set out with the mayor's daughter, Ceylon.\n\nWill they manage to save the day?
-windows.wndpilot.gavial=Set in the remote, tropical district of Acahualla, Sargon, Gavial the Great Chief Returns focuses on the titular Operator's return to her homeland where she reunited with her old friends Zumama and Tomimi. But things would begin to get worse, or even funnier, as she was taking part in a tribal ceremony where she was appointed to become a candidate for the next Great Chief. Welcome to the jungle, Doctor!
+windows.wndpilot.gavial=Set in the remote, tropical district of Acahualla, Sargon, Gavial the Great Chief Returns focuses on the titular Operator's return to her homeland where she reunited with her old friends Zumama and Tomimi.\n\nBut things would begin to get worse, or even funnier, as she was taking part in a tribal ceremony where she was appointed to become a candidate for the next Great Chief. Welcome to the jungle, Doctor!
 windows.wndpilot.move=Let`s Go!
 
 windows.wndsettings$displaytab.title=Display Settings

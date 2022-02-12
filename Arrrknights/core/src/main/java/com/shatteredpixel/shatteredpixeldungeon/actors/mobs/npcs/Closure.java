@@ -3,13 +3,17 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Torch;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.InterlevelScene;
@@ -31,6 +35,47 @@ public class Closure extends NPC {
     }
     private static final String AC_ADD = "ADD";
 
+    boolean first = false;
+
+    @Override
+    protected boolean act() {
+        if (!first) {
+            int length = Dungeon.level.length();
+            int[] map = Dungeon.level.map;
+            boolean[] mapped = Dungeon.level.mapped;
+            boolean[] discoverable = Dungeon.level.discoverable;
+
+            boolean noticed = false;
+
+            for (int i=0; i < length; i++) {
+
+                int terr = map[i];
+
+                if (discoverable[i]) {
+
+                    mapped[i] = true;
+                    if ((Terrain.flags[terr] & Terrain.SECRET) != 0) {
+
+                        Dungeon.level.discover( i );
+
+                        if (Dungeon.level.heroFOV[i]) {
+                            GameScene.discoverTile( i, terr );
+                            ScrollOfMagicMapping.discover( i );
+
+                            noticed = true;
+                        }
+                    }
+                }
+            }
+            GameScene.updateFog();
+
+            Buff.affect(Dungeon.hero, MindVision.class, MindVision.DURATION);
+            Dungeon.observe();
+
+            first = true;
+        }
+        return super.act();
+    }
 
     @Override
     public void die(Object cause) {

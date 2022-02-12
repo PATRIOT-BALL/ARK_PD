@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.exotic.ScrollOfPassage;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfEnchantment;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Firesteel;
@@ -229,6 +230,7 @@ public class EmperorPursuer extends Mob {
         super.die(cause);
 
         Dungeon.level.drop(new Gold(1000), pos).sprite.drop();
+        Dungeon.level.drop(new Certificate(1), pos).sprite.drop(pos);
 
             int ofs1;
             do {

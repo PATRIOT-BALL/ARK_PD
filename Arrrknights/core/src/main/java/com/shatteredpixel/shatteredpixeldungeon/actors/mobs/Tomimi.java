@@ -20,6 +20,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.ArmorUpKit;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Token1;
@@ -290,6 +291,8 @@ public class Tomimi extends Mob {
         for (Mob m : getSubjects()) {
             m.die(null);
         }
+
+        Dungeon.level.drop(new Certificate(10), pos).sprite.drop(pos);
 
         GameScene.bossSlain();
         Dungeon.level.unseal();

@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ElmoParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
@@ -153,6 +154,8 @@ public class Talu_BlackSnake extends Mob {
             Badges.validateChampion(Challenges.activeChallenges());
             Badges.validateChampion_char(Challenges.activeChallenges());
             Badges.saveGlobal();
+
+            Certificate.specialEndingBouns();
 
             Badges.silentValidateHappyEnd();
             Badges.validatewill();

@@ -53,6 +53,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.EarthParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.SparkParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookExecutionMode;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookFate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookPowerfulStrike;
@@ -597,6 +598,8 @@ public class NewDM300 extends Mob {
 
         GameScene.bossSlain();
         Dungeon.level.unseal();
+
+        Dungeon.level.drop(new Certificate(5), pos).sprite.drop(pos);
 
         for (int i = 0; i < 2; i++) {
             int ofs;

@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -29,6 +30,10 @@ import com.shatteredpixel.shatteredpixeldungeon.items.EquipableItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_FoodBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_IdentifyBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_PotionBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_ScrollBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
@@ -181,6 +186,32 @@ public class WndTradeItem extends WndInfoItem {
 
 		resize(width, (int) pos);
 	}
+
+	public WndTradeItem( final Heap heap, boolean chack ) {
+
+		super(heap);
+
+		Item item = heap.peek();
+
+		float pos = height;
+
+		final int price = item.value();
+
+		RedButton btnBuy = new RedButton(Messages.get(this, "buy_sp", price)) {
+			@Override
+			protected void onClick() {
+				hide();
+				buy_sp(heap);
+			}
+		};
+		btnBuy.setRect(0, pos + GAP, width, BTN_HEIGHT);
+		btnBuy.enable(price <= SPDSettings.getSpecialcoin());
+		add(btnBuy);
+
+		pos = btnBuy.bottom();
+
+		resize(width, (int) pos);
+	}
 	
 	@Override
 	public void hide() {
@@ -236,5 +267,27 @@ public class WndTradeItem extends WndInfoItem {
 		if (!item.doPickUp( Dungeon.hero )) {
 			Dungeon.level.drop( item, heap.pos ).sprite.drop();
 		}
+	}
+
+	private void buy_sp( Heap heap ) {
+
+		Item item = heap.pickUp();
+		if (item == null) return;
+
+		int price = item.value();
+		SPDSettings.addSpecialcoin(price * -1);
+
+		if (!item.doPickUp( Dungeon.hero )) {
+			Dungeon.level.drop( item, heap.pos ).sprite.drop();
+		}
+
+		if (item instanceof Closure_FoodBox) {
+			Dungeon.buyFoodbox = true; }
+		else if (item instanceof Closure_PotionBox) {
+			Dungeon.buyPotionbox = true; }
+		else if (item instanceof Closure_ScrollBox) {
+			Dungeon.buyScrollbox = true; }
+		else if (item instanceof Closure_IdentifyBox) {
+			Dungeon.buyIdentifybox = true; }
 	}
 }

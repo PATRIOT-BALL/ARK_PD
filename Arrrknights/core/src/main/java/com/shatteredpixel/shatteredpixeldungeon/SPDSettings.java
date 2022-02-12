@@ -159,6 +159,7 @@ public class SPDSettings extends GameSettings {
 	public static final String KEY_LAST_CLASS	= "last_class";
 	public static final String KEY_CHALLENGES	= "challenges";
 	public static final String KEY_INTRO		= "intro";
+	public static final String KEY_COIN		= "coins";
 
 	public static final String KEY_SUPPORT_NAGGED= "support_nagged";
 	
@@ -193,6 +194,10 @@ public class SPDSettings extends GameSettings {
 	public static boolean supportNagged() {
 		return getBoolean(KEY_SUPPORT_NAGGED, false);
 	}
+
+	// 특수 재화 관련
+	public static void addSpecialcoin(int value) { put(KEY_COIN, getInt(KEY_COIN, 0) + value); }
+	public static int getSpecialcoin() { return getInt(KEY_COIN, 0); }
 	
 	//Audio
 	

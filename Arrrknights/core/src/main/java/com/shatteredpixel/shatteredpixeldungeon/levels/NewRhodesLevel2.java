@@ -2,6 +2,7 @@ package com.shatteredpixel.shatteredpixeldungeon.levels;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Closure;
@@ -16,6 +17,11 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_PhantomShad
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Npc_Astesia;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Weedy;
+import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_FoodBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_IdentifyBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_PotionBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_ScrollBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -73,18 +79,22 @@ public class NewRhodesLevel2 extends Level {
         // 베이스. 건드리지 말 것
         Painter.fill(this, 0, 0, 68, 85, Terrain.WALL);
 
-        // 개발팀 구역 A1
-        Painter.fill(this, 2, 54, 16, 4, Terrain.EMPTY);
+        // 개발팀 구역 A1 + 상점쪽 처리
+        Painter.fill(this, 2, 54, 23, 4, Terrain.EMPTY);
 
         Painter.fill(this, 2, 53, 16, 1, Terrain.AVOID);
         Painter.fill(this, 8, 53, 1, 4, Terrain.AVOID);
         Painter.fill(this, 0, 57, 31, 1, Terrain.AVOID);
+        
+        // + 상점 부분
+        Painter.fill(this, 18, 53, 1, 4, Terrain.AVOID);
 
         map[3608] = Terrain.EMPTY;
         map[3617] = Terrain.EMPTY;
         map[3882] = Terrain.EMPTY;
         map[3889] = Terrain.EMPTY;
         map[3750] = Terrain.AVOID;
+        map[3758] = Terrain.EMPTY;
 
         // 훈련실 구역 A2
         Painter.fill(this, 2, 62, 28, 4, Terrain.EMPTY);
@@ -180,6 +190,13 @@ public class NewRhodesLevel2 extends Level {
         if (Dungeon.QuestCatPoint == 0 && !NPC_PhantomShadow.Clear) {
             NPC_PhantomShadow.spawn(this, 0);
         }
+
+        // 특수 상점 관련
+
+        if (!Dungeon.buyFoodbox) drop( new Closure_FoodBox(), 3692 ).type = Heap.Type.FOR_SALE_28F;
+        if (!Dungeon.buyPotionbox) drop( new Closure_PotionBox(), 3693 ).type = Heap.Type.FOR_SALE_28F;
+        if (!Dungeon.buyScrollbox) drop( new Closure_ScrollBox(), 3694 ).type = Heap.Type.FOR_SALE_28F;
+        if (!Dungeon.buyIdentifybox) drop( new Closure_IdentifyBox(), 3695 ).type = Heap.Type.FOR_SALE_28F;
     }
 
     @Override

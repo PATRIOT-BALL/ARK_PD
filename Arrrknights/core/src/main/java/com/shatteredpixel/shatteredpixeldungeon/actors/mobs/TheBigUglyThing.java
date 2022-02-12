@@ -22,6 +22,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.PortableCover;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
@@ -120,6 +121,8 @@ public class TheBigUglyThing extends Mob {
             Badges.validateChampion(Challenges.activeChallenges());
             Badges.validateChampion_char(Challenges.activeChallenges());
             Badges.saveGlobal();
+
+            Certificate.specialEndingBouns();
 
             Badges.silentValidateHappyEnd();
             Badges.validategavial2();
