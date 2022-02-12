@@ -171,11 +171,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		//new Heamyo().collect();
 		//new Amulet().collect();
 		//new ScrollOfMagicMapping().collect();
-
-		new Closure_FoodBox().collect();
-		new Closure_PotionBox().collect();
-		new Closure_ScrollBox().collect();
-		new Closure_IdentifyBox().collect();
 	}
 
 	public Badges.Badge masteryBadge() {
