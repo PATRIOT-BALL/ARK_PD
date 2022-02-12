@@ -54,6 +54,10 @@ public class v0_4_X_Changes {
                         "_예비 보호막_ 특성의 보호막 획득량이 3-5에서 _3-6_으로 증가했습니다." + "\n\n" +
                 "_보호막 충전_ 특성의 보호막 획득량이 4-6%에서 _2.5-5%_로 감소했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 조정",
+                "_성좌의 수호자_ : 공격력이 4-20(+5)에서 _4-15(+3)_으로 감소했습니다." + "\n" +
+                "충전 요구 턴이 4턴에서 _2턴_으로 감소했으며, 추가 피해 배율이 20%에서 _70%_로 증가했습니다. (최대 충전 기준 100% -> _210%_)"));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
@@ -61,7 +65,7 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 상향",
                 "_버섯중독자_ : 체력이 115에서 _120_으로, 명중률이 38에서 _42_로, 디버프 부여 확률이 33%에서 _50%_로 상승했습니다. 공격력이 36-50에서 _36-46_으로 감소했습니다."));
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "무기 상향",
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_살라스의 칼날_의 공격력이 4-18에서 _4-20_으로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
@@ -74,6 +78,9 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "몬스터 하향",
                 "_워리어_ : 체력이 150에서 _165_로, 경험치가 18에서 _20_으로 상승했습니다. 공격력이 38-54에서 _35-57_로 조정되었습니다.\n" +
                         "회피율이 21에서 _18_로 감소했으며, 방어력이 30-50(0-24) 에서 _20-50(0-18)_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
+                "_레퀴엠_의 공격력이 5-12에서 _5-10_으로, 방어력이 0-4에서 _0-3_으로 감소했습니다."));
     }
 
     public static void add_v0_4_0_Changes(ArrayList<ChangeInfo> changeInfos) {

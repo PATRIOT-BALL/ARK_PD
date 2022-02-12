@@ -54,12 +54,12 @@ public class BattleAxe extends MeleeWeapon {
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier+1) +    //20 base, down from 25
-				lvl*(tier+1);   //scaling unchanged
+		return  3*(tier+1) +    //15+3
+				lvl*(tier-1);
 	}
 
 	private int starpower = 0 ;
-	private int starpowercap = 5;
+	private int starpowercap = 3;
 
 	@Override
 	public ArrayList<String> actions(Hero hero) {
@@ -80,12 +80,12 @@ public class BattleAxe extends MeleeWeapon {
 				hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "charge"));
 				if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class) != null) {
 				if (Dungeon.hero.belongings.getItem(TalismanOfForesight.class).isEquipped(Dungeon.hero)) {
-					curUser.spendAndNext(3f);
+					curUser.spendAndNext(0.75f);
 
 				}
-				else curUser.spendAndNext(4f);
+				else curUser.spendAndNext(2f);
 				}
-				else curUser.spendAndNext(4f);
+				else curUser.spendAndNext(2f);
 			} else
 				hero.sprite.showStatus(CharSprite.NEGATIVE, Messages.get(BattleAxe.class, "charge_fail"));
 		}
@@ -99,13 +99,13 @@ public class BattleAxe extends MeleeWeapon {
 			for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
 				if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
 					int dmg = attacker.damageRoll() - defender.drRoll();
-					dmg = Math.round(dmg * (starpower*0.2f));
+					dmg = Math.round(dmg * (starpower * 0.7f));
 
 					mob.damage(dmg, attacker);
 				}
 			}
-			if (starpower > 3) GameScene.flash( 0x80FFFFFF );
-			Camera.main.shake(2, starpower*0.3f);
+			if (starpower == 3) GameScene.flash( 0x80FFFFFF );
+			Camera.main.shake(2, starpower / 3);
 
 			Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1.76f, 1.76f);
 			attacker.sprite.showStatus(CharSprite.POSITIVE, Messages.get(BattleAxe.class, "attack"));

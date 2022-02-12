@@ -2205,8 +2205,8 @@ items.weapon.melee.assassinsblade.setbouns=_아이템 시너지 : 그림자_\n�
 
 items.weapon.melee.battleaxe.name=성좌의 수호자
 items.weapon.melee.battleaxe.stats_desc=명중률 +15%
-items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.\n\n4턴을 소모해 별의 힘을 충전할 수 있습니다. 공격시 충전한 별의 힘을 모두 소모해 시야 내 적들에게 피해를 입힐 수 있습니다.
-items.weapon.melee.battleaxe.setbouns=_아이템 시너지 : 폴페스트_\n충전에 필요한 턴이 3턴으로 감소합니다.
+items.weapon.melee.battleaxe.desc=별이 늘어선 모양을 보고 현재와 미래를 읽고 풀이한다. 그게 별점이야. 다른 점이랑은 좀 다르지만 나오는 결과는 같아.\n\n2턴을 소모해 별의 힘을 충전할 수 있습니다. 공격시 충전한 별의 힘을 모두 소모해 시야 내 적들에게 피해를 입힐 수 있습니다.
+items.weapon.melee.battleaxe.setbouns=_아이템 시너지 : 폴페스트_\n충전에 필요한 턴이 1턴으로 감소합니다.
 items.weapon.melee.battleaxe.ac_zap=집중
 items.weapon.melee.battleaxe.charge=별의...
 items.weapon.melee.battleaxe.charge_fail=최대 충전!
@@ -2998,4 +2998,4 @@ items.newgameitem.closure_scrollbox.name=클로저의 일기장 상자
 items.newgameitem.closure_scrollbox.desc=_사용 조건 : 없음_\n사용시 무작위 일기장 1개를 얻을 수 있습니다.
 
 items.newgameitem.closure_identifybox.name=클로저의 감정 상자
-items.newgameitem.closure_identifybox.desc=_사용 조건 : 6층_\n사용시 감정의 일기장 2개를 얻을 수 있습니다.
+items.newgameitem.closure_identifybox.desc=_요구 레벨 : 6_\n사용시 감정의 일기장 2개를 얻을 수 있습니다.

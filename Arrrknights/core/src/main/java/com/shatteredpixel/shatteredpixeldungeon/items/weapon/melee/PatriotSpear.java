@@ -31,7 +31,7 @@ public class PatriotSpear extends MeleeWeapon {
                             lvl * (tier - 2);   // +3
             }
         }
-        return  2*(tier+1) +    //12
+        return  2*(tier) +    //10
                 lvl*(tier-3);   // +2
     }
 
@@ -51,14 +51,14 @@ public class PatriotSpear extends MeleeWeapon {
 
     @Override
     public int defenseFactor( Char owner ) {
-        return 4+2*buffedLvl();     //4 extra defence, plus 2 per level;
+        return 3+2*buffedLvl();     //4 extra defence, plus 2 per level;
     }
 
     public String statsInfo(){
         if (isIdentified()){
-            return Messages.get(this, "stats_desc", 4+2*buffedLvl());
+            return Messages.get(this, "stats_desc", 3+2*buffedLvl());
         } else {
-            return Messages.get(this, "typical_stats_desc", 4);
+            return Messages.get(this, "typical_stats_desc", 3);
         }
     }
 
