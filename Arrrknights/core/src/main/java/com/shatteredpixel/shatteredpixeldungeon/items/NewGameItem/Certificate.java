@@ -40,11 +40,14 @@ public class Certificate extends Item {
     }
 
     public static void specialEndingBouns() {
-        int bouns = 0;
-        if (Challenges.activeChallenges() > 7) bouns += 50;
-        else if (Challenges.activeChallenges() > 5) bouns += 15;
-        else if (Challenges.activeChallenges() > 2) bouns += 10;
-        else if (Challenges.activeChallenges() > 0) bouns += 5;
-        SPDSettings.addSpecialcoin(10+bouns);
+        if (Dungeon.eazymode != 1) {
+
+            int bouns = 0;
+            if (Challenges.activeChallenges() > 7) bouns += 50;
+            else if (Challenges.activeChallenges() > 5) bouns += 15;
+            else if (Challenges.activeChallenges() > 2) bouns += 10;
+            else if (Challenges.activeChallenges() > 0) bouns += 5;
+            SPDSettings.addSpecialcoin(10 + bouns);
+        }
     }
 }

@@ -223,6 +223,7 @@ windows.wndtradeitem.steal=Steal with %d%% chance
 windows.wndtradeitem.sell=Sell for %d
 windows.wndtradeitem.sell_1=1=Sell 1 for %d
 windows.wndtradeitem.sell_all=Sell all for %d
+windows.wndtradeitem.buy_sp=Purchase Price : %dc
 
 windows.wndwandmaker.dust=I see you have the weapon! Don't worry about the lurker, I can deal with them. \This is the arts staff left behind by another operator. You can choose one.
 windows.wndwandmaker.ember=You got the parts as expected, too, the transmitter should be working properly.\n\This is the arts staff left behind by another operator. take one.

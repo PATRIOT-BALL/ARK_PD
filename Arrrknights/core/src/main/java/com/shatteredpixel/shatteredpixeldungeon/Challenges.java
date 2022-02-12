@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon;
 
 import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 
 public class Challenges {
 
@@ -68,6 +69,10 @@ public class Challenges {
 	public static boolean isItemBlocked( Item item ){
 
 		if (Dungeon.isChallenged(NO_HERBALISM) && item instanceof Dewdrop){
+			return true;
+		}
+
+		if (Dungeon.eazymode == 1 && item instanceof Certificate) {
 			return true;
 		}
 

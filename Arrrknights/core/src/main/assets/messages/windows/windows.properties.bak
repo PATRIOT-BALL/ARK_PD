@@ -216,6 +216,7 @@ windows.wndtradeitem.steal=%d%%의 확률로 훔치기
 windows.wndtradeitem.sell=판매 가격 %dg
 windows.wndtradeitem.sell_1=1개당 판매 가격 %dg
 windows.wndtradeitem.sell_all=모두 판매 가격 %dg
+windows.wndtradeitem.buy_sp=구매 가격 %dc
 
 windows.wndwandmaker.dust=내 무기를 가져왔군. 럴커들은 걱정하지 마라. 굳이 무기를 휘두를 가치도 없는 녀석들이니. \n\이건 다른 대원이 두고 간 아츠 스태프다. 하나 가져가도록 해.
 windows.wndwandmaker.ember=역시 기대했던 데로 부품을 가져왔군, 송신기가 제대로 작동해야 할 텐데. \n\이건 다른 대원이 두고 간 아츠 스태프다. 하나 가져가도록 해.
