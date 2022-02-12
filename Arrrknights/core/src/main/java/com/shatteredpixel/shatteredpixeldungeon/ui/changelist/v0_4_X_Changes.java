@@ -56,7 +56,7 @@ public class v0_4_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 조정",
                 "_성좌의 수호자_ : 공격력이 4-20(+5)에서 _4-15(+3)_으로 감소했습니다." + "\n" +
-                "충전 요구 턴이 4턴에서 _2턴_으로 감소했으며, 추가 피해 배율이 20%에서 _70%_로 증가했습니다. (최대 충전 기준 100% -> _210%_)"));
+                "충전 요구 턴이 4턴에서 _2턴_으로 감소했으며, 추가 피해 배율이 20%에서 _70%_로 증가했습니다.\n(최대 충전 기준 100% -> _210%_)"));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
