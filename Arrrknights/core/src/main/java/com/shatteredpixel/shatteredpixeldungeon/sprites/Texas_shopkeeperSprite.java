@@ -35,7 +35,7 @@ public class Texas_shopkeeperSprite extends MobSprite {
         TextureFilm frames = new TextureFilm( texture, 64, 42 );
 
         idle = new Animation( 8, true );
-        idle.frames( frames, 0 );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 16, 17 );
 
         run = idle.clone();
         attack = idle.clone();
