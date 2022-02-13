@@ -19,9 +19,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SkinModel;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Weedy;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_FoodBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_HealingBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_IdentifyBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_PotionBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_RingBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_ScrollBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_TransBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_WandBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -197,6 +201,10 @@ public class NewRhodesLevel2 extends Level {
         if (!Dungeon.buyPotionbox) drop( new Closure_PotionBox(), 3693 ).type = Heap.Type.FOR_SALE_28F;
         if (!Dungeon.buyScrollbox) drop( new Closure_ScrollBox(), 3694 ).type = Heap.Type.FOR_SALE_28F;
         if (!Dungeon.buyIdentifybox) drop( new Closure_IdentifyBox(), 3695 ).type = Heap.Type.FOR_SALE_28F;
+        if (!Dungeon.buyHealbox) drop( new Closure_HealingBox(), 3696 ).type = Heap.Type.FOR_SALE_28F;
+        if (!Dungeon.buyWandbox) drop( new Closure_WandBox(), 3828 ).type = Heap.Type.FOR_SALE_28F;
+        if (!Dungeon.buyTransbox) drop( new Closure_TransBox(), 3830 ).type = Heap.Type.FOR_SALE_28F;
+        if (!Dungeon.buyRingbox) drop( new Closure_RingBox(), 3832 ).type = Heap.Type.FOR_SALE_28F;
     }
 
     @Override

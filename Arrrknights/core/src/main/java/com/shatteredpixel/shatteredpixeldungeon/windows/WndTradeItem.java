@@ -23,6 +23,7 @@ package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
+import com.shatteredpixel.shatteredpixeldungeon.TomorrowRogueNight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
@@ -31,13 +32,19 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_FoodBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_HealingBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_IdentifyBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_PotionBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_RingBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_ScrollBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_TransBox;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Closure_WandBox;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
 import com.watabou.utils.Random;
+
+import java.io.IOException;
 
 public class WndTradeItem extends WndInfoItem {
 
@@ -289,5 +296,19 @@ public class WndTradeItem extends WndInfoItem {
 			Dungeon.buyScrollbox = true; }
 		else if (item instanceof Closure_IdentifyBox) {
 			Dungeon.buyIdentifybox = true; }
+		else if (item instanceof Closure_HealingBox) {
+			Dungeon.buyHealbox = true; }
+		else if (item instanceof Closure_WandBox) {
+			Dungeon.buyWandbox = true; }
+		else if (item instanceof Closure_TransBox) {
+			Dungeon.buyTransbox = true; }
+		else if (item instanceof Closure_RingBox) {
+			Dungeon.buyRingbox = true; }
+
+		try {
+			Dungeon.saveAll();
+		} catch (IOException e) {
+			TomorrowRogueNight.reportException(e);
+		}
 	}
 }

@@ -2206,7 +2206,7 @@ items.weapon.melee.assassinsblade.setbouns=_Slave Knight_\nSurprise attack bonus
 items.weapon.melee.battleaxe.name= constellation guardian
 items.weapon.melee.battleaxe.stats_desc=Accuracy +15%
 items.weapon.melee.battleaxe.desc=Astrology is divining the future from celestial alignments. It's not quite augury, but with same result.\n\nConsumes 2 turns to charge Star Power. consumes star power when attacking to damage enemies in sight.
-items.weapon.melee.battleaxe.setbouns=_Stellar Way_\nTurns used for charging is reduced to 1 turns.
+items.weapon.melee.battleaxe.setbouns=_Stellar Way_\nTurns used for charging is reduced to 0.75 turns.
 items.weapon.melee.battleaxe.ac_zap=charge
 items.weapon.melee.battleaxe.charge=star...
 items.weapon.melee.battleaxe.charge_fail=full charge!
@@ -2982,3 +2982,15 @@ items.newgameitem.closure_scrollbox.desc=_no condition_\nOpen: Get Random Scroll
 
 items.newgameitem.closure_identifybox.name=closure identifybox
 items.newgameitem.closure_identifybox.desc=_condition:Lvl 6_\nOpen: Get ScrollOfIdentify x2
+
+items.newgameitem.closure_healingbox.name=closure healingbox
+items.newgameitem.closure_healingbox.desc=_condition:Lvl 6_\nOpen: Get SunSeed
+
+items.newgameitem.closure_wandbox.name=closure wandbox
+items.newgameitem.closure_wandbox.desc=_condition:Lvl 6_\nOpen: Get Random Wand
+
+items.newgameitem.closure_transbox.name=closure transbox
+items.newgameitem.closure_transbox.desc=_condition:Lvl 11_\nOpen: Get WeaponTransform x2
+
+items.newgameitem.closure_ringbox.name=closure ringbox
+items.newgameitem.closure_ringbox.desc_condition:Lvl 11_\nOpen: Get Random Ring

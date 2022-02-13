@@ -209,6 +209,10 @@ public class Dungeon {
 	public static boolean buyPotionbox;
 	public static boolean buyScrollbox;
 	public static boolean buyIdentifybox;
+	public static boolean buyHealbox;
+	public static boolean buyWandbox;
+	public static boolean buyTransbox;
+	public static boolean buyRingbox;
 	
 	public static HashSet<Integer> chapters;
 
@@ -275,6 +279,10 @@ public class Dungeon {
 		buyPotionbox = false;
 		buyScrollbox = false;
 		buyIdentifybox = false;
+		buyHealbox = false;
+		buyWandbox = false;
+		buyTransbox = false;
+		buyRingbox = false;
 
 		QuestCatPoint = Random.Int(2);
 
@@ -604,7 +612,10 @@ public class Dungeon {
 	private static final String BUY_POTION = "buyPotionbox";
 	private static final String BUY_SCROLL = "buyScrollbox";
 	private static final String BUY_IDENTIFY = "buyIdentifybox";
-
+	private static final String BUY_HEAL = "buyHealbox";
+	private static final String BUY_WAND = "buyWandbox";
+	private static final String BUY_TRANS = "buyTransbox";
+	private static final String BUY_RING = "buyRingbox";
 
 	public static void saveGame(int save ) {
 		try {
@@ -642,6 +653,10 @@ public class Dungeon {
 			bundle.put (BUY_POTION, buyPotionbox);
 			bundle.put (BUY_SCROLL, buyScrollbox);
 			bundle.put (BUY_IDENTIFY, buyIdentifybox);
+			bundle.put (BUY_HEAL, buyHealbox);
+			bundle.put (BUY_WAND, buyWandbox);
+			bundle.put (BUY_TRANS, buyTransbox);
+			bundle.put (BUY_RING, buyRingbox);
 
 
 			for (int d : droppedItems.keyArray()) {
@@ -820,6 +835,10 @@ public class Dungeon {
 		buyPotionbox = bundle.getBoolean(BUY_POTION);
 		buyScrollbox = bundle.getBoolean(BUY_SCROLL);
 		buyIdentifybox = bundle.getBoolean(BUY_IDENTIFY);
+		buyHealbox = bundle.getBoolean(BUY_HEAL);
+		buyWandbox = bundle.getBoolean(BUY_WAND);
+		buyTransbox = bundle.getBoolean(BUY_TRANS);
+		buyRingbox = bundle.getBoolean(BUY_RING);
 		
 		Statistics.restoreFromBundle( bundle );
 		Generator.restoreFromBundle( bundle );
