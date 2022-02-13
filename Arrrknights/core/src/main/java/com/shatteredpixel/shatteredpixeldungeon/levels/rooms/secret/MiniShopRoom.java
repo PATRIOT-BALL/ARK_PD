@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Honeypot;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.MerchantsBeacon;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.PortableCover;
 import com.shatteredpixel.shatteredpixeldungeon.items.RandomBox;
@@ -59,12 +60,12 @@ public class MiniShopRoom extends SecretRoom {
 
         @Override
         public int minWidth() {
-            return Math.max(4, (int)(Math.sqrt(itemCount())+2));
+            return Math.max(5, (int)(Math.sqrt(itemCount())+2));
         }
 
         @Override
         public int minHeight() {
-            return Math.max(4, (int)(Math.sqrt(itemCount())+2));
+            return Math.max(5, (int)(Math.sqrt(itemCount())+2));
         }
 
         public int itemCount(){
@@ -146,6 +147,11 @@ public class MiniShopRoom extends SecretRoom {
             itemsToSpawn.add( new MerchantsBeacon() );
             itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.POTION ) );
             itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.SCROLL ) );
+            itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.RING ) );
+            itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.STONE ) );
+            itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.SEED ) );
+            itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.N_INGREDINETS ) );
+            itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.N_INGREDINETS ) );
             itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.N_INGREDINETS ) );
             itemsToSpawn.add( Generator.randomUsingDefaults( Generator.Category.N_INGREDINETS ) );
 

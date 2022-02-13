@@ -72,6 +72,7 @@ public class Notes {
 		GARDEN,
 		STATUE,
 		SHOP,
+		MINI_SHOP,
 		
 		GHOST,
 		WANDMAKER,

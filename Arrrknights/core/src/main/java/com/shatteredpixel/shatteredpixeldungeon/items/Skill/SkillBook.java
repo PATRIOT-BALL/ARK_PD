@@ -41,7 +41,6 @@ public class SkillBook extends Item {
     @Override
     public void execute(Hero hero, String action) {
         super.execute(hero, action);
-        GLog.w(Messages.get(Hero.class, "name", curUser.pos)); // 플레이어의 현재 위치를 가짐. 오브젝트 배치할 때 쓰려고.
         if (action.equals(AC_ACT)) {
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),
