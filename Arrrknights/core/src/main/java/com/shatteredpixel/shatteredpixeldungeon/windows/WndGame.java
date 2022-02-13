@@ -85,6 +85,8 @@ public class WndGame extends Window {
 			});
 		}
 
+		curBtn.icon(Icons.get(Icons.SKIN));
+
 		//install prompt
 		if (Updates.isInstallable()){
 			addButton( curBtn = new RedButton( Messages.get(this, "install") ) {
