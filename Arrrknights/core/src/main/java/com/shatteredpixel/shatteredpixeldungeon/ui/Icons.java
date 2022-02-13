@@ -43,7 +43,8 @@ public enum Icons {
 	DATA,
 	AUDIO,
 	TALENT,
-	
+	SKIN,
+
 	//ingame UI icons
 	SKULL,
 	BUSY,
@@ -58,6 +59,8 @@ public enum Icons {
 	POTION_BANDOLIER,
 	WAND_HOLSTER,
 	ICE_BOX,
+	HERO_CHANGES,
+	INFO_CERT,
 	
 	//hero & rankings icons
 	DEPTH,
@@ -151,6 +154,9 @@ public enum Icons {
 		case EXIT:
 			icon.frame( icon.texture.uvRect( 112, 0, 127, 12 ) );
 			break;
+			case SKIN:
+				icon.frame( icon.texture.uvRect( 129, 0, 142, 11 ) );
+				break;
 		case CLOSE:
 			icon.frame( icon.texture.uvRect( 0, 16, 11, 27 ) );
 			break;
@@ -207,6 +213,12 @@ public enum Icons {
 			break;
 			case ICE_BOX:
 				icon.frame( icon.texture.uvRect( 115, 68, 127, 78 ) );
+				break;
+			case INFO_CERT:
+				icon.frame( icon.texture.uvRect( 127, 64, 143, 82 ) );
+				break;
+			case HERO_CHANGES:
+				icon.frame( icon.texture.uvRect( 143, 64, 168, 81 ) );
 				break;
 			
 		case DEPTH:

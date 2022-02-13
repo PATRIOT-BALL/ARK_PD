@@ -92,6 +92,7 @@ public class ItemSpriteSheet {
 	public static final int TENGU_MINE      = UNCOLLECTIBLE+8;
 	public static final int TENGU_BOMB      = UNCOLLECTIBLE+9;
 	public static final int TENGU_SHOCKER   = UNCOLLECTIBLE+10;
+	public static final int INFO_CERTI   = UNCOLLECTIBLE+11;
 	static{
 		assignItemRect(GOLD,        16, 16);
 		assignItemRect(DEWDROP,     10, 10);
@@ -104,6 +105,7 @@ public class ItemSpriteSheet {
 		
 		assignItemRect(TENGU_BOMB,      16, 16);
 		assignItemRect(TENGU_SHOCKER,   16, 16);
+		assignItemRect(INFO_CERTI,   16, 16);
 	}
 
 	private static final int CONTAINERS     =                               xy(1, 3);   //16 slots
@@ -825,6 +827,7 @@ public class ItemSpriteSheet {
 	public static final int EGG_FRY =       FOOD2+5;
 	public static final int YUKJEON =       FOOD2+6;
 	public static final int SMOKEEGG =       FOOD2+7;
+	public static final int NUNEDDINE =       FOOD2+8;
 	static{
 		assignItemRect(MEAT_PIE,    16, 16);
 		assignItemRect(SANDBITCH,       16, 16);
@@ -834,6 +837,7 @@ public class ItemSpriteSheet {
 		assignItemRect(EGG_FRY,       16, 16);
 		assignItemRect(YUKJEON,       16, 16);
 		assignItemRect(SMOKEEGG,       16, 16);
+		assignItemRect(NUNEDDINE,       16, 16);
 	}
 
 	private static final int QUEST  =                                       xy(1, 30);  //32 slots

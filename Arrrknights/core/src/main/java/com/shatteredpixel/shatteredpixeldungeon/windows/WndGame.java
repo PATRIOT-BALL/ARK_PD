@@ -63,7 +63,7 @@ public class WndGame extends Window {
 					}
 				}
 		);
-		curBtn.icon(Icons.get(Icons.GOLD));
+		curBtn.icon(Icons.get(Icons.INFO_CERT));
 
 		addButton( curBtn = new RedButton( Messages.get(this, "settings") ) {
 			@Override

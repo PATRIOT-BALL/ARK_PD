@@ -210,7 +210,7 @@ public class HeroSelectScene extends PixelScene {
 		}
 
 		chnageButton = new IconButton(
-				Icons.get( Icons.CHANGES)){
+				Icons.get( Icons.HERO_CHANGES)){
 			@Override
 			protected void onClick() {
 				ChangeHero();

@@ -14,7 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Glassate extends Food {
     {
-        image = ItemSpriteSheet.PAN_CAKE;
+        image = ItemSpriteSheet.NUNEDDINE;
         energy = Hunger.HUNGRY;
 
         stackable = true;

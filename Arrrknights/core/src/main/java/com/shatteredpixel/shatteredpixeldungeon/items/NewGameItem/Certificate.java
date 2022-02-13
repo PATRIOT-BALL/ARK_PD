@@ -15,7 +15,7 @@ import com.watabou.utils.Random;
 public class Certificate extends Item {
     private static final String TXT_VALUE	= "%+d";
     {
-        image = ItemSpriteSheet.TOKEN;
+        image = ItemSpriteSheet.INFO_CERTI;
     }
 
     public Certificate( int value ) {
