@@ -83,9 +83,8 @@ public class WndGame extends Window {
 					TomorrowRogueNight.switchScene(SkinScene.class);
 				}
 			});
+			curBtn.icon(Icons.get(Icons.SKIN));
 		}
-
-		curBtn.icon(Icons.get(Icons.SKIN));
 
 		//install prompt
 		if (Updates.isInstallable()){
