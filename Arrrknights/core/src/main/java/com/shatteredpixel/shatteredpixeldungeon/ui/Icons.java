@@ -368,11 +368,6 @@ public enum Icons {
 			case BOMB:
 				icon.frame(icon.texture.uvRect(86, 168, 105, 189));
 				break;
-
-
-
-
-
 		}
 		return icon;
 	}
@@ -392,7 +387,7 @@ public enum Icons {
 		case NEARL:
 			return get(NEARLS_S);
 		default:
-			return null;
+			return get(WARRIOR);
 		}
 	}
 }

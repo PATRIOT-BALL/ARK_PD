@@ -69,7 +69,7 @@ public class Closure extends NPC {
             }
             GameScene.updateFog();
 
-            Buff.affect(Dungeon.hero, MindVision.class, MindVision.DURATION);
+            Buff.affect(Dungeon.hero, MindVision.class, 3f);
             Dungeon.observe();
 
             first = true;

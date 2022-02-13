@@ -71,7 +71,9 @@ public class HeroSelectScene extends PixelScene {
 	private StyledButton startBtn;
 	private IconButton infoButton;
 	private IconButton challengeButton;
+	private IconButton chnageButton;
 	private IconButton btnExit;
+	private int change;
 
 	@Override
 	public void create() {
@@ -159,19 +161,22 @@ public class HeroSelectScene extends PixelScene {
 		HeroClass[] classes = HeroClass.values();
 
 		int btnWidth = HeroBtn.MIN_WIDTH;
-		int curX = (Camera.main.width - btnWidth * classes.length)/2;
+		int curX = (Camera.main.width - btnWidth * 6)/2;
 		if (curX > 0){
-			btnWidth += Math.min(curX/(classes.length/2), 15);
-			curX = (Camera.main.width - btnWidth * classes.length)/2;
+			btnWidth += Math.min(curX/(6/2), 15);
+			curX = (Camera.main.width - btnWidth * 6)/2;
 		}
 
+		int i = 0;
 		int heroBtnleft = curX;
 		for (HeroClass cl : classes){
+			if (i==6) break;
 			HeroBtn button = new HeroBtn(cl);
 			button.setRect(curX, Camera.main.height-HeroBtn.HEIGHT+3, btnWidth, HeroBtn.HEIGHT);
 			curX += btnWidth;
 			add(button);
 			heroBtns.add(button);
+			i++;
 		}
 
 		challengeButton = new IconButton(
@@ -204,10 +209,28 @@ public class HeroSelectScene extends PixelScene {
 			SPDSettings.challenges(0);
 		}
 
+		chnageButton = new IconButton(
+				Icons.get( Icons.CHANGES)){
+			@Override
+			protected void onClick() {
+				ChangeHero();
+			}
+
+			@Override
+			public void update() {
+				super.update();
+			}
+		};
+
 		btnExit = new ExitButton();
 		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
 		add( btnExit );
 		btnExit.visible = !SPDSettings.intro() || Rankings.INSTANCE.totalNumber > 0;
+
+		chnageButton.setSize(21,21);
+		chnageButton.setPos( btnExit.width() - 21, 0 );
+		add(chnageButton);
+		chnageButton.visible = true;
 
 		PointerArea fadeResetter = new PointerArea(0, 0, Camera.main.width, Camera.main.height){
 			@Override
@@ -247,6 +270,43 @@ public class HeroSelectScene extends PixelScene {
 
 		challengeButton.visible = true;
 		challengeButton.setPos(startBtn.left()-challengeButton.width(), startBtn.top());
+	}
+
+	private void ChangeHero() {
+		GamesInProgress.selectedClass = null;
+
+		background.visible = false;
+		startBtn.visible = false;
+		infoButton.visible = false;
+		challengeButton.visible = false;
+
+		if (change == 0) change = 1;
+		else change = 0;
+
+		int i = change * 6;
+
+		for (int j = 0; j<heroBtns.size(); j++) {
+			heroBtns.get(j).destroy();
+		}
+
+		HeroClass[] classes = HeroClass.values();
+
+		int btnWidth = HeroBtn.MIN_WIDTH;
+		int curX = (Camera.main.width - btnWidth * 6)/2;
+		if (curX > 0){
+			btnWidth += Math.min(curX/(6/2), 15);
+			curX = (Camera.main.width - btnWidth * 6)/2;
+		}
+		for (int p = 0; p<6; p++){
+			if (classes.length <= p+i) break;
+			HeroBtn button = new HeroBtn(classes[p+i]);
+			button.setRect(curX, Camera.main.height-HeroBtn.HEIGHT+3, btnWidth, HeroBtn.HEIGHT);
+			curX += btnWidth;
+			add(button);
+			heroBtns.add(button);
+		}
+
+
 	}
 
 	private float uiAlpha;
@@ -301,7 +361,7 @@ public class HeroSelectScene extends PixelScene {
 			this.cl = cl;
 
 			switch (cl) {
-				case WARRIOR:
+				case WARRIOR: default:
 					icon(new Image(Icons.BLAZE.get()));
 					break;
 				case MAGE:
