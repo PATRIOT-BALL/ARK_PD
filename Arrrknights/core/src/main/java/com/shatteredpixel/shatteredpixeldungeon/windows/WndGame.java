@@ -76,7 +76,7 @@ public class WndGame extends Window {
 		curBtn.icon(Icons.get(Icons.PREFS));
 
 		if (Dungeon.hero.isAlive()) {
-			addButton(new RedButton(Messages.get(this, "skin")) {
+			addButton(curBtn = new RedButton(Messages.get(this, "skin")) {
 				@Override
 				protected void onClick() {
 					hide();
