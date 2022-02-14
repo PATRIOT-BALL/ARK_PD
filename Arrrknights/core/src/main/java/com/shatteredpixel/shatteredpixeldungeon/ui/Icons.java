@@ -140,22 +140,22 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 32, 0, 46, 14 ) );
 			break;
 		case CHALLENGE_ON:
-			icon.frame( icon.texture.uvRect( 48, 0, 64, 14 ) );
+			icon.frame( icon.texture.uvRect( 47, 0, 65, 16 ) );
 			break;
 		case CHALLENGE_OFF:
-			icon.frame( icon.texture.uvRect( 64, 0, 80, 14 ) );
+			icon.frame( icon.texture.uvRect( 65, 0, 83, 16 ) );
 			break;
 		case PREFS:
-			icon.frame( icon.texture.uvRect( 80, 0, 94, 12 ) );
+			icon.frame( icon.texture.uvRect( 83, 0, 95, 12 ) );
 			break;
 		case LANGS:
-			icon.frame( icon.texture.uvRect( 96, 0, 110, 12 ) );
+			icon.frame( icon.texture.uvRect( 113, 0, 127, 14 ) );
 			break;
 		case EXIT:
-			icon.frame( icon.texture.uvRect( 112, 0, 127, 12 ) );
+			icon.frame( icon.texture.uvRect( 113, 0, 127, 14 ) );
 			break;
 			case SKIN:
-				icon.frame( icon.texture.uvRect( 129, 0, 142, 11 ) );
+				icon.frame( icon.texture.uvRect( 128, 0, 143, 13 ) );
 				break;
 		case CLOSE:
 			icon.frame( icon.texture.uvRect( 0, 16, 11, 27 ) );
@@ -218,7 +218,7 @@ public enum Icons {
 				icon.frame( icon.texture.uvRect( 127, 64, 143, 82 ) );
 				break;
 			case HERO_CHANGES:
-				icon.frame( icon.texture.uvRect( 143, 64, 168, 81 ) );
+				icon.frame( icon.texture.uvRect( 143, 64, 166, 82 ) );
 				break;
 			
 		case DEPTH:
