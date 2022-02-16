@@ -3006,8 +3006,8 @@ items.newgameitem.closure_healingbox.desc=_요구 레벨 : 6_\n사용시 태양�
 items.newgameitem.closure_wandbox.name=클로저의 스태프 상자
 items.newgameitem.closure_wandbox.desc=_요구 레벨 : 6_\n사용시 저주받지않은 스태프를 얻을 수 있습니다.
 
-items.newgameitem.closure_identifybox.name=클로저의 감정 상자
-items.newgameitem.closure_identifybox.desc=_요구 레벨 : 6_\n사용시 감정의 일기장 2개를 얻을 수 있습니다.
+items.newgameitem.closure_transbox.name=클로저의 변환 상자
+items.newgameitem.closure_transbox.desc=_요구 레벨 : 11_\n사용시 무기 변환 2개를 얻을 수 있습니다.
 
-items.newgameitem.closure_identifybox.name=클로저의 감정 상자
-items.newgameitem.closure_identifybox.desc=_요구 레벨 : 6_\n사용시 감정의 일기장 2개를 얻을 수 있습니다.
+items.newgameitem.closure_ringbox.name=클로저의 반지 상자
+items.newgameitem.closure_ringbox.desc=_요구 레벨 : 11_\n사용시 저주받지않은 반지를 얻을 수 있습니다.

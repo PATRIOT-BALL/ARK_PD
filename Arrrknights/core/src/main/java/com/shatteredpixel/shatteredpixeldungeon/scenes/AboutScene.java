@@ -102,7 +102,7 @@ public class AboutScene extends PixelScene {
 		CreditsBlock rogu = new CreditsBlock(true, Window.ARKPD_COLOR,
 				"Tomorrow's RogueNights",
 				Icons.ARKPD.get(),
-				"Developed by: _Team Rosemari_\nBased on Shattered Pixel Dungeon's open source",
+				"Developed by: _Team Rosemary_\nBased on Shattered Pixel Dungeon's open source",
 				"",
 				null);
 		rogu.setRect((w - fullWidth)/2f, alex.bottom() + 8, 120, 0);
