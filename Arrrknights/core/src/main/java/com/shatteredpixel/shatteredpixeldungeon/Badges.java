@@ -140,6 +140,7 @@ public class Badges {
 		BOSS_SLAIN_3_GLADIATOR,
 		BOSS_SLAIN_3_BERSERKER,
 		BOSS_SLAIN_3_WARLOCK,
+		BOSS_SLAIN_3_CHAOS,
 		BOSS_SLAIN_3_BATTLEMAGE,
 		BOSS_SLAIN_3_FREERUNNER,
 		BOSS_SLAIN_3_ASSASSIN,
@@ -768,6 +769,9 @@ public class Badges {
 				case WARLOCK:
 					badge = Badge.BOSS_SLAIN_3_WARLOCK;
 					break;
+				case CHAOS:
+					badge = Badge.BOSS_SLAIN_3_CHAOS;
+					break;
 				case BATTLEMAGE:
 					badge = Badge.BOSS_SLAIN_3_BATTLEMAGE;
 					break;
@@ -810,6 +814,7 @@ public class Badges {
 				if (global.contains( Badge.BOSS_SLAIN_3_GLADIATOR ) &&
 					global.contains( Badge.BOSS_SLAIN_3_BERSERKER ) &&
 					global.contains( Badge.BOSS_SLAIN_3_WARLOCK ) &&
+					global.contains( Badge.BOSS_SLAIN_3_CHAOS ) &&
 					global.contains( Badge.BOSS_SLAIN_3_BATTLEMAGE ) &&
 					global.contains( Badge.BOSS_SLAIN_3_FREERUNNER ) &&
 					global.contains( Badge.BOSS_SLAIN_3_ASSASSIN ) &&
