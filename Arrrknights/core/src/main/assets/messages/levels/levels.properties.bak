@@ -128,6 +128,9 @@ levels.traps.weakeningtrap.desc=이 함정에 깃든 암흑 아츠가 함정을 
 levels.traps.worndarttrap.name=오래된 화살 함정
 levels.traps.worndarttrap.desc=작은 화살 발사기가 주변이 숨겨져 있다. 함정을 작동시키면 가장 가까운 대상에게 화살을 발사할 것이다.\n\n오래 방치되어 있어 위험해 보이지도 않고, 숨겨져 있지도 않다.
 
+levels.traps.hallucinationtrap.name=환각 함정
+levels.traps.hallucinationtrap.desc=수상한 아츠 기운이 느껴진다. 이 함정이 작동하면 대상을 환각 상태로 만들 것이다.
+
 
 
 ###levels
