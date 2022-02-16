@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Oblivion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -82,6 +83,13 @@ public class WoundsofWar extends Artifact {
     public void level(int value) {
         super.level(value);
         chargeCap = 1 + level()/5;
+    }
+
+    @Override
+    public Item upgrade() {
+        super.upgrade();
+        chargeCap = 1 + level()/5;
+        return this;
     }
 
     @Override
