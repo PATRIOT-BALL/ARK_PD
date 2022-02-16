@@ -120,7 +120,7 @@ public class WoundsofWar extends Artifact {
 
         @Override
         public void charge(Hero target, float amount) {
-            charge += Math.round(1 * amount);
+            charge += Math.round(0.001 * amount);
             charge = Math.min(charge, chargeCap);
             updateQuickslot();
         }
