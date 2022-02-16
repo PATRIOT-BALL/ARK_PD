@@ -131,6 +131,9 @@ levels.traps.worndarttrap.desc=A small dart-blower must be hidden nearby, activa
 levels.traps.hallucinationtrap.name=hallucination trap
 levels.traps.hallucinationtrap.desc=A feel suspicious arts energy. This energy will hallucinate the target that triggered this trap.
 
+levels.traps.obliviontrap.name=obliviontrap
+levels.traps.obliviontrap.desc=The power contained in these traps is very short-lived, but just as deadly.
+
 
 ###levels
 levels.newcavesbosslevel.wires_name=Exposed wiring
