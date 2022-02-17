@@ -71,6 +71,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.DisintegrationTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.GrimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
@@ -139,6 +140,8 @@ public class AntiMagic extends Armor.Glyph {
 		RESISTS.add( TiacauhRitualist.TiacauhBolat.class );
 		RESISTS.add( TiacauhShaman.TiacauhBolat.class );
 		RESISTS.add( EmperorPursuer.DarkBolt.class );
+
+		RESISTS.add( Echeveria.PinkdogDrone.class );
 	}
 	
 	@Override

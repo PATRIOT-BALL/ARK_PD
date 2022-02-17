@@ -178,6 +178,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.Weapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Blocking;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Decapitator;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gluttony;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
@@ -824,6 +825,8 @@ public class Hero extends Char {
         if (belongings.weapon instanceof Gluttony) {
             if (Random.Int(6) == 0) ((Gluttony) belongings.weapon).SPCharge(1);
         }
+
+        if (belongings.weapon instanceof Echeveria) ((Echeveria) belongings.weapon).SPCharge( (int)(4*time));
 
 
         super.spend(time);

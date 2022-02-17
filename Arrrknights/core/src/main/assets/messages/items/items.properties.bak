@@ -627,7 +627,7 @@ items.artifacts.cloakofshadows.ac_stealth=은신
 items.artifacts.cloakofshadows.cooldown=당신의 망토는 다시 충전될 때 까지 %d턴이 더 필요합니다.
 items.artifacts.cloakofshadows.cursed=당신은 저주받은 망토를 사용할 수 없다.
 items.artifacts.cloakofshadows.no_charge=당신의 망토는 아직 충전이 덜 되어 사용할 수 없다.
-items.artifacts.cloakofshadows.desc=몇년 전 도적이 왕국의 무기고에서 훔쳐 낸 진귀한 아츠 망토입니다. 이 망토를 입으면 일시적으로 완전히 투명해질 수 있습니다.\n\n망토를 사용하면 할 수록, 효과가 더욱 강해집니다. 그리하여 레드는 더 자주, 더 오래 투명화할 수 있습니다.
+items.artifacts.cloakofshadows.desc=모두, 레드를 피한다. 레드는 그냥, 모두의 꼬리, 만지고 싶었을 뿐... 프로방스랑, 텍사스... 그 여자들, 레드가 좋아하는 냄새... 난다.\n\n 레드가 이 망토를 입으면 일시적으로 완전히 투명해질 수 있습니다.\n\n망토를 사용하면 할 수록, 효과가 더욱 강해집니다. 그리하여 레드는 더 자주, 더 오래 투명화할 수 있습니다.
 items.artifacts.cloakofshadows$cloakstealth.no_charge=당신의 망토의 에너지가 떨어졌다.
 items.artifacts.cloakofshadows$cloakstealth.levelup=당신의 망토가 더욱 강해졌다!
 items.artifacts.cloakofshadows$cloakstealth.name=은신
@@ -2578,6 +2578,14 @@ items.weapon.melee.warjournalist.desc="씬이 한 사람에게 싸인을 해주�
 items.weapon.melee.warjournalist.stats_desc=사거리 +2
 items.weapon.melee.warjournalist.ac_zap=촬영
 items.weapon.melee.warjournalist.setbouns=_아이템 시너지 : 프로급 개량 렌즈_\nSP 충전률이 상승합니다.
+
+items.weapon.melee.echeveria.name=에케베리아
+items.weapon.melee.echeveria.desc="전 나침반은 못쓰겠어요. 아무리 만져봐도 결국 저를 가리키거든요. 에휴......"\n\n이 무기는 공격력이 약하지만, SP를 50% 소모해 화력을 보조하는 _부유 유닛_을 소환할 수 있습니다. _부유 유닛_은 타겟팅 된 대상을 집중 공격하며, 공격할 때마다 피해량이 증가합니다. 정해진 횟수의 공격을 가하거나 타겟팅 대상이 처치되면 부유 유닛은 자동으로 파괴됩니다. 
+items.weapon.melee.echeveria.stats_desc=사거리 +1
+items.weapon.melee.echeveria.ac_sumon=소환
+items.weapon.melee.echeveria.setbouns=_아이템 시너지 : 금빛의 나침반_\n부유 유닛 소환에 소모하는 턴이 감소합니다.
+items.weapon.melee.echeveria$pinkdogdrone.name=부유 유닛
+items.weapon.melee.echeveria$pinkdogdrone.desc=버그 좆망캐래요
 
 
 

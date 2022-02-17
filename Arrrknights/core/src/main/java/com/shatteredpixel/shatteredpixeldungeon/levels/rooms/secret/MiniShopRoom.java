@@ -60,12 +60,12 @@ public class MiniShopRoom extends SecretRoom {
 
         @Override
         public int minWidth() {
-            return Math.max(5, (int)(Math.sqrt(itemCount())+2));
+            return Math.max(6, (int)(Math.sqrt(itemCount())+2));
         }
 
         @Override
         public int minHeight() {
-            return Math.max(5, (int)(Math.sqrt(itemCount())+2));
+            return Math.max(6, (int)(Math.sqrt(itemCount())+2));
         }
 
         public int itemCount(){

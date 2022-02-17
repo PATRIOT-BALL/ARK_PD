@@ -2574,6 +2574,12 @@ items.weapon.melee.warjournalist.stats_desc=Range +2
 items.weapon.melee.warjournalist.ac_zap=FILMING
 items.weapon.melee.warjournalist.setbouns=_Improved Lens.P_\nSP Charge speed x1.4
 
+items.weapon.melee.echeveria.name=echeveria
+items.weapon.melee.echeveria.desc=Although this weapon's firepower is low. uses 50% SP to you can summon a _floating unit_ that support firepower.\nFloating units focus their attacks on the targeted enemy. It is automatically destroyed when the target dies or when a set number of attacks are completed.
+items.weapon.melee.echeveria.stats_desc=Range +1
+items.weapon.melee.echeveria.ac_sumon=SUMMON
+items.weapon.melee.echeveria.setbouns=_Goldenglow campers_\nReduced turns used for SUMMON
+
 
 ## 총기 관련
 
@@ -2993,4 +2999,4 @@ items.newgameitem.closure_transbox.name=closure transbox
 items.newgameitem.closure_transbox.desc=_condition:Lvl 11_\nOpen: Get WeaponTransform x2
 
 items.newgameitem.closure_ringbox.name=closure ringbox
-items.newgameitem.closure_ringbox.desc_condition:Lvl 11_\nOpen: Get Random Ring
+items.newgameitem.closure_ringbox.desc=_condition:Lvl 11_\nOpen: Get Random Ring
