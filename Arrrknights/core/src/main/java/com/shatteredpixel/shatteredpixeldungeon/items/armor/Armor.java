@@ -295,7 +295,7 @@ public class Armor extends EquipableItem {
 
 		int max = tier * (2 + lvl) + augment.defenseFactor(lvl);
 		if (Dungeon.hero.subClass == HeroSubClass.CHAOS) max /= 2;
-		
+
 		if (lvl > max){
 			return ((lvl - max)+1)/2;
 		} else {
