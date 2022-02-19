@@ -103,6 +103,7 @@ public class TheBigUglyThing extends Mob {
         if (phase==1 && HP <= 500) {
             HP = 600;
             phase = 2;
+            firetime = 0;
             Buff.detach(this, rageBuff.class);
             GameScene.flash(0x80FF0000);
             Buff.affect(this, Barrier.class).setShield(1000);
