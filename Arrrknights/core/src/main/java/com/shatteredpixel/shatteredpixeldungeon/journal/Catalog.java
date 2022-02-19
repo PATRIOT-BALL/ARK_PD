@@ -174,6 +174,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
@@ -318,6 +319,7 @@ public enum Catalog {
 		WEAPONS.seen.put( KRISSVector.class,                false);
 		WEAPONS.seen.put( SakuraSword.class,                false);
 		WEAPONS.seen.put( LoneJourney.class,                   false);
+		WEAPONS.seen.put( Echeveria.class,                   false);
 
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Firmament.class,                       false);
