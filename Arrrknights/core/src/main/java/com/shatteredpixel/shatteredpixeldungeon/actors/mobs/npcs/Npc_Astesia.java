@@ -38,6 +38,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DeepAbyss;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Destreza;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
@@ -135,6 +136,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof CrabGun) {setItem1 = new RingOfWealth(); setItem2 = new CustomeSet(); setItem3 = null; SetValue = 2; return true;}
         else if (weapon instanceof KRISSVector) {setItem1 = new RingOfAccuracy(); setItem2 = new MasterThievesArmband(); setItem3 = null; SetValue = 2; return true;}
         else if (weapon instanceof WarJournalist) {setItem1 = new WoundsofWar(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
+        else if (weapon instanceof Echeveria) {setItem1 = new RingOfWealth(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
 
 
         return false;

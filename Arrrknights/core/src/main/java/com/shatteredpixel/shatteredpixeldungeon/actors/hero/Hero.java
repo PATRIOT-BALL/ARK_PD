@@ -64,8 +64,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SeethingBurst;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SpikesBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.StomeCharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WindEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ghoul;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Monk;
@@ -603,6 +605,10 @@ public class Hero extends Char {
             evasion = belongings.armor.evasionFactor(this, evasion);
         }
 
+        if (buff(StomeCharge.class) != null && hasTalent(Talent.GALEFORCE)) {
+            evasion *= 1f + (0.1f * pointsInTalent(Talent.GALEFORCE));
+        }
+
         return Math.round(evasion);
     }
 
@@ -714,6 +720,11 @@ public class Hero extends Char {
             speed *= momentum.speedMultiplier();
         } else {
             ((HeroSprite) sprite).sprint(1f);
+        }
+
+        StomeCharge stome = buff(StomeCharge.class);
+        if (stome != null) {
+            speed *= stome.speedMultiplier();
         }
 
         float spup = 0f;
@@ -1445,6 +1456,13 @@ public class Hero extends Char {
 
         damage += BounsDamage;
 
+        // 폭풍 스롯 바람의 축복 충전 처리
+        if (buff(WindEnergy.class) != null && hasTalent(Talent.WIND_BLESSING)) {
+            int getcharge = damage;
+            getcharge *= (pointsInTalent(Talent.WIND_BLESSING) * 0.1f);
+
+            buff(WindEnergy.class).GetEnergy(getcharge);
+        }
 
         // 영혼 착취 보호막 처리
         if (buff(SoulAbsorption.SoulBuff.class) != null) {
@@ -1836,6 +1854,17 @@ public class Hero extends Char {
 
             if (subClass == HeroSubClass.FREERUNNER) {
                 Buff.affect(this, Momentum.class).gainStack();
+            }
+
+            if (subClass == HeroSubClass.STOME && buff(WindEnergy.class) != null) {
+                boolean chack = true;
+                if (hasTalent(Talent.ENERGY_STORAGE)) {
+                    if (buff(WindEnergy.class).Eneray() <= 25+(pointsInTalent(Talent.ENERGY_STORAGE) * 15)) {
+                       chack = false;
+                    }
+                }
+
+                if (chack) buff(WindEnergy.class).UseEnergy(2);
             }
 
             float speed = speed();

@@ -10,12 +10,50 @@ import java.util.ArrayList;
 
 public class v0_4_X_Changes {
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_4_2_Changes(changeInfos);
         add_v0_4_1_Changes(changeInfos);
         add_v0_4_0_Changes(changeInfos);
 
     }
 
-    public static void add_v0_4_1_Changes(ArrayList<ChangeInfo> changeInfos) {
+    public static void add_v0_4_2_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.4.2", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 및 시너지",
+                "_새로운 시너지_ : 금색의 나침반" + "\n\n" +
+                "_에케베리아_ : 5티어 무기로, 드론을 소환해 대상에게 마법 피해를 입힐 수 있습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.HERO_CHANGES), "블레이즈, 그레이스롯, 니어 3번째 전문화",
+                "그레이스롯 : _폭풍 전문화_가 추가되었습니다. 폭풍 전문화는 공격적인 기동전투에 특화되어있습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "혼돈 아미야 하향",
+                "갑옷으로 얻는 방어력이 감소합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.SKILL), "스킬 하향",
+                "_어두운 밤의 장막_과 _날개깃_의 성능이 감소했습니다."));
+
+
+    }
+
+        public static void add_v0_4_1_Changes(ArrayList<ChangeInfo> changeInfos) {
         ChangeInfo changes = new ChangeInfo("v0.4.1", true, "");
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
@@ -42,8 +80,8 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "로도스 아일랜드 편의성 패치",
                 "28층 입장시 마법 지도와 심안 효과가 발동하여 로도스의 지형을 파악할 수 있게됩니다."));
 
-                changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "아미야 3번째 전문화",
-                        "아미야의 새로운 전문화 _혼돈_ 이 추가되었습니다. 혼돈 아미야는 리스크가 매우 크지만, 강력한 마법 피해를 가합니다."));
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "아미야 3번째 전문화",
+                "아미야의 새로운 전문화 _혼돈_ 이 추가되었습니다. 혼돈 아미야는 리스크가 매우 크지만, 강력한 마법 피해를 가합니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);

@@ -144,12 +144,16 @@ public enum Talent {
 	FARSIGHT(107, 3), SHARPSHOOTER(108, 3), SHARED_UPGRADES(109, 3),
 	//Warden T3
 	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SAVIOR_PRAY(112, 3),
+	//Stome T3
+	SONG_OF_STOME(110,3), ENERGY_STORAGE(111,3), WIND_BLESSING(112, 3),
 	//Huntress T4
 	POINT_BLANK(106, 3), IMPROVED_CROSSBOW(113,3), PUSH_ATTACK(98,4),
 	//Sniper T4
 	SNIPING(115,4),
 	//Warden T4
 	SAVIOR_BELIEF(116,4),
+	// Stome T4
+	GALEFORCE(116,4),
 
 	//RoseCat T1
 	LIGHTNESSMEAL(128), SMARTMEALS(129), GOODMEAT(130), NYANGING(131),
@@ -791,6 +795,9 @@ public enum Talent {
 			case WARDEN:
 				Collections.addAll(tierTalents, DURABLE_TIPS, BARKSKIN, SAVIOR_PRAY);
 				break;
+			case STOME:
+				Collections.addAll(tierTalents, SONG_OF_STOME, ENERGY_STORAGE, WIND_BLESSING);
+				break;
 			case DESTROYER:
 				Collections.addAll(tierTalents, FOCUSED_ATTACK, PHYSICAL_ATTACK, BATTLEFLOW);
 				break;
@@ -840,6 +847,9 @@ public enum Talent {
 				break;
 			case WARDEN:
 				Collections.addAll(tierTalents, SAVIOR_BELIEF);
+				break;
+			case STOME:
+				Collections.addAll(tierTalents, GALEFORCE);
 				break;
 			case DESTROYER:
 				Collections.addAll(tierTalents, ESTHESIA);

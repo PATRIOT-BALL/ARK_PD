@@ -31,7 +31,7 @@ public class NigetRaid extends Skill {
             }
         }
         Buff.affect(curUser, Invisibility.class, Invisibility.DURATION/2f);
-        Buff.affect(curUser, ArtifactRecharge.class).set(50).ignoreHornOfPlenty=false;
+        Buff.affect(curUser, ArtifactRecharge.class).set(35).ignoreHornOfPlenty=false;
         Buff.affect(curUser, Stamina.class,35);
     }
 }

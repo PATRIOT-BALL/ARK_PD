@@ -42,7 +42,7 @@ public class SoaringFeather extends Skill {
             }
         }
 
-        Buff.affect(curUser, Adrenaline.class, 65);
+        Buff.affect(curUser, Adrenaline.class, 45);
         Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );
         curUser.spendAndNext( 1 );
     }

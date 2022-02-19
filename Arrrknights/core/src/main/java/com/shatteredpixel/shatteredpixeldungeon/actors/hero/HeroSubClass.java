@@ -46,6 +46,7 @@ public enum HeroSubClass {
 
 	SNIPER,
 	WARDEN,
+	STOME,
 
 	DESTROYER,
 	GUARDIAN,
