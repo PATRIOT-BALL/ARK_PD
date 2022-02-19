@@ -204,6 +204,7 @@ public class Nullshield extends Item {
                 else if (item instanceof Pickaxe)
                 {
                     if (((Pickaxe) item).sppower) {
+                        if (Dungeon.hero.belongings.weapon != item) {
                         GLog.h(Messages.get(Nullshield.class, "suc"));
                         MinosFury gma = new MinosFury();
                         gma.enchant(Weapon.Enchantment.randomUncommon());
@@ -213,7 +214,7 @@ public class Nullshield extends Item {
                         }
                         gma.identify();
                         item.detach(curUser.belongings.backpack);
-                        detach(curUser.belongings.backpack);
+                        detach(curUser.belongings.backpack); }
                     }
                 }
                 else if (item instanceof PurgatoryKnife)
