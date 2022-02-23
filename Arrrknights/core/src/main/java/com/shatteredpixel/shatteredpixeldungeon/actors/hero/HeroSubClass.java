@@ -36,6 +36,7 @@ public enum HeroSubClass {
 
 	GLADIATOR,
 	BERSERKER,
+	HEAT,
 
 	WARLOCK,
 	BATTLEMAGE,
