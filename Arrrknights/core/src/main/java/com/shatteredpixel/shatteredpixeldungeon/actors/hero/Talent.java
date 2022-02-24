@@ -190,12 +190,16 @@ public enum Talent {
 	INTO_FRAY(171,3), BLITZKRIEG(172,3), SKILL_MASTERY(173,3),
 	//Nearl T3 - SAVIER
 	SHIELD_OF_LIGHT(174, 3), PEGASUS_WING(175,3), HOPELIGHT(176,3),
+	// Flash T3
+	FLASH_SPEAR(174,3), KNIGHT_GLORY(175,3), LIGHT_OF_GLORY(176,3),
 	//Nearl T4
 	GRAND_ORDER(177, 3), KNIGHT_OF_KAZIMIERZ(178,3), KNIGHT_BODY(179,4),
 	//Nearl T4 - KNIGHT
 	QUICK_TACTICS(180,4),
 	//Nearl T4 - SAVIER
-	BLESSED_CHAMPION(181,4);
+	BLESSED_CHAMPION(181,4),
+	//Flast T4
+	ETERNAL_GLORY(181,4);
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};

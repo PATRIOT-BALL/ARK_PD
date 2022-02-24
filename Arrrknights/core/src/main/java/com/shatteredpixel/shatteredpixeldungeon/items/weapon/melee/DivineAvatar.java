@@ -55,7 +55,8 @@ public class DivineAvatar extends MeleeWeapon {
             if (charge >= chargeCap && Dungeon.hero.belongings.weapon == this) {
                 for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
                     if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]
-                    && !mob.properties().contains(Char.Property.BOSS) && !mob.properties().contains(Char.Property.MINIBOSS)) {
+                    && !mob.properties().contains(Char.Property.BOSS) && !mob.properties().contains(Char.Property.MINIBOSS)
+                    && mob.state != mob.PASSIVE) {
                        mob.state = mob.SLEEPING;
                     }
                 }

@@ -476,8 +476,8 @@ actors.hero.talent.heat_of_recovery.title=재생의 불꽃
 actors.hero.talent.heat_of_recovery.desc=_+1:_ 과열 상태가 끝날 때 체력 회복량이 _20%_ 증가합니다.\n\n_+2:_ 과열 상태가 끝날 때 체력 회복량이 _40%_ 증가합니다.\n\n_+3:_ 과열 상태가 끝날 때 체력 회복량이 _60%_ 증가합니다.
 actors.hero.talent.heat_of_absorption.title=흡수의 불꽃
 actors.hero.talent.heat_of_absorption.desc=_+1:_ 과열 상태일 때 입힌 물리 피해의 _2%_ 만큼 체력을 회복합니다.\n\n_+2:_ 과열 상태일 때 입힌 물리 피해의 _3%_ 만큼 체력을 회복합니다.\n\n_+3:_ 과열 상태일 때 입힌 물리 피해의 _4%_ 만큼 체력을 회복합니다.\n\n_+4:_ 과열 상태일 때 입힌 물리 피해의 _5%_ 만큼 체력을 회복합니다.\n\n1회 공격 회복 최대치 : 30
-actors.hero.talent.deadly_reach.title=연속격파
-actors.hero.talent.deadly_reach.desc=_+1:_
+actors.hero.talent.redcomet.title=붉은 혜성
+actors.hero.talent.redcomet.desc=_+1:_ 열기가 70%이상일 때 이동속도가 _5%_ 증가합니다.\n\n_+2:_ 열기가 70%이상일 때 이동속도가 _10%_ 증가합니다.\n\n_+3:_ 열기가 70%이상일 때 이동속도가 _15%_ 증가합니다.\n\n_+4:_ 열기가 70%이상일 때 이동속도가 _20%_ 증가합니다.\n\n과열 상태일 땐 무조건 발동하며, 특성 효과가 5배로 적용됩니다.
 
 actors.hero.talent.empowering_meal.title=힘이 나는 식사
 actors.hero.talent.empowering_meal.desc=_+1:_ 식사 후 다음 3번의 아츠 스태프 발사에 _3 만큼의 추가 피해_ 를 줍니다.\n\n_+2:_ 식사 후 다음 3번의 아츠 스태프 발사에 _4 만큼의 추가 피해_ 를 줍니다.
@@ -855,6 +855,9 @@ actors.hero.herosubclass.knight_desc=_기사 전문화_ 는 매우 공격적으�
 actors.hero.herosubclass.savior=구제자 니어
 actors.hero.herosubclass.savior_short_desc=_구제자_\n빠른 빛의 인장 충전과 강력해진 빛의 기사의 힘으로 적에게 대항합니다.
 actors.hero.herosubclass.savior_desc=_구제자 전문화_ 는 자신을 지키는데 특화되어있습니다. 빛의 기사 상태일 때 피해 증가량이 40%에서 55%로, 받는 피해 감소량이 20%에서 40%로 증가하며, 빛의 인장의 충전 속도가 증가합니다.
+actors.hero.herosubclass.flash=섬광 니어
+actors.hero.herosubclass.flash_short_desc=_섬광_\n적을 실명시키고 자신을 강화합니다.
+actors.hero.herosubclass.flash_desc=_구제자 전문화_ 는 빛의 기사 상태의 피해 감소 효과가 사라지지만, 빛의 인장의 충전속도가 대폭 상승하고 발동시 시야 내 적들을 실명시킵니다.
 
 
 

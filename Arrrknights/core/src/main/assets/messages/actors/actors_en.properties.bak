@@ -463,6 +463,18 @@ actors.hero.talent.sparkoflife.desc=_+1:_ Blaze`s melee attack is _6%_ chance to
 actors.hero.talent.deadly_reach.title=deadly reach
 actors.hero.talent.deadly_reach.desc=_+1:_ combo cooldown increased by _1 trun_.\n\n_+2:_ combo cooldown increased by _2 trun_.\n\n_+3:_ combo cooldown increased by _3 trun_.\n\n_+4:_ combo cooldown increased by _4 trun_.
 
+// 열기 블레이즈
+actors.hero.talent.heat_blow.title=heat blow
+actors.hero.talent.heat_blow.desc=_+1:_ 열기가 50% 이상이면 물리 피해량이 _10%_ 증가합니다.\n\n_+2:_ 열기가 50% 이상이면 물리 피해량이 _15%_ 증가합니다.\n\n_+3:_ 열기가 50% 이상이면 물리 피해량이 _20%_ 증가합니다.\n\n_과열_ 상태라면 무조건 발동합니다.
+actors.hero.talent.heat_of_protection.title=heat of protection
+actors.hero.talent.heat_of_protection.desc=_+1:_ 과열 상태일 때 받는 피해가 _10%_ 감소합니다.\n\n_+2:_ 과열 상태일 때 받는 피해가 _15%_ 감소합니다.\n\n_+3:_ 과열 상태일 때 받는 피해가 _20%_ 감소합니다.
+actors.hero.talent.heat_of_recovery.title=heat of recovery
+actors.hero.talent.heat_of_recovery.desc=_+1:_ 과열 상태가 끝날 때 체력 회복량이 _20%_ 증가합니다.\n\n_+2:_ 과열 상태가 끝날 때 체력 회복량이 _40%_ 증가합니다.\n\n_+3:_ 과열 상태가 끝날 때 체력 회복량이 _60%_ 증가합니다.
+actors.hero.talent.heat_of_absorption.title=heat of absorption
+actors.hero.talent.heat_of_absorption.desc=_+1:_ 과열 상태일 때 입힌 물리 피해의 _2%_ 만큼 체력을 회복합니다.\n\n_+2:_ 과열 상태일 때 입힌 물리 피해의 _3%_ 만큼 체력을 회복합니다.\n\n_+3:_ 과열 상태일 때 입힌 물리 피해의 _4%_ 만큼 체력을 회복합니다.\n\n_+4:_ 과열 상태일 때 입힌 물리 피해의 _5%_ 만큼 체력을 회복합니다.\n\n1회 공격 회복 최대치 : 30
+actors.hero.talent.redcomet.title=red comet
+actors.hero.talent.redcomet.desc=_+1:_ 열기가 70%이상일 때 이동속도가 _5%_ 증가합니다.\n\n_+2:_ 열기가 70%이상일 때 이동속도가 _10%_ 증가합니다.\n\n_+3:_ 열기가 70%이상일 때 이동속도가 _15%_ 증가합니다.\n\n_+4:_ 열기가 70%이상일 때 이동속도가 _20%_ 증가합니다.\n\n과열 상태일 땐 무조건 발동하며, 특성 효과가 5배로 적용됩니다.
+
 actors.hero.talent.empowering_meal.title=empowering meal
 actors.hero.talent.empowering_meal.desc=_+1:_ Eating food grants the Amiya _3 bonus damage_ on his next 3 wand zaps.\n\n_+2:_ Eating food grants the Amiya _4 bonus damage_ on his next 3 wand zaps.
 actors.hero.talent.scholars_intuition.title=CEO`s privileges
@@ -835,7 +847,9 @@ actors.hero.herosubclass.knight_desc=The _Knight Elite_ is Possessing quick mobi
 actors.hero.herosubclass.savior=Savior
 actors.hero.herosubclass.savior_short_desc=_Savior_\na fast Seal Of Light charge and increased power of light.
 actors.hero.herosubclass.savior_desc=_Savior Elite_ is Using the empowered power of light, Seal Of Light's charge rate is increased, Radiant Knight's damage bonus increased from 40% to 55%, and Damage reduction increased from 20% to 40%
-
+actors.hero.herosubclass.flash=Flash
+actors.hero.herosubclass.flash_short_desc=_Flash_\n적을 실명시키고 자신을 강화합니다.
+actors.hero.herosubclass.flash_desc=_Flash Elite_ 는 빛의 기사 상태의 피해 감소 효과가 사라지지만, 빛의 인장의 충전속도가 대폭 상승하고 발동시 시야 내 적들을 실명시킵니다.
 
 ###npcs
 actors.mobs.npcs.blacksmith.name=Vulcan

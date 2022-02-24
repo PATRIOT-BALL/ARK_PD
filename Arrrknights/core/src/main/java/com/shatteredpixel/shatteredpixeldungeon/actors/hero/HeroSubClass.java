@@ -51,12 +51,11 @@ public enum HeroSubClass {
 
 	DESTROYER,
 	GUARDIAN,
+	WAR,
 
 	KNIGHT,
 	SAVIOR,
-
-	//3차 서브클래스
-	WAR; // 쪽냥이
+	FLASH;
 
 	public String title() {
 		return Messages.get(this, name());
