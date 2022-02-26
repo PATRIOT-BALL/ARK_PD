@@ -59,7 +59,7 @@ public class Heat extends Buff implements ActionIndicator.Action {
             overheattime += time * 5f;
             if (power == 0) {
                 int Heal = target.HT;
-                Heal *= overheattime / 500;
+                Heal *= overheattime / 400;
                 if (Dungeon.hero.hasTalent(Talent.HEAT_OF_ABSORPTION)) {
                     Heal *= 1f + (Dungeon.hero.pointsInTalent(Talent.HEAT_OF_ABSORPTION) * 0.2f);
                 }
