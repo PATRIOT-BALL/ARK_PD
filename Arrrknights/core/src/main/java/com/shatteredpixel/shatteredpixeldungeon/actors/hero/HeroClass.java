@@ -170,9 +170,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
-		//new Heamyo().collect();
-		//new Amulet().collect();
-		//new ScrollOfMagicMapping().collect();
 	}
 
 	public Badges.Badge masteryBadge() {

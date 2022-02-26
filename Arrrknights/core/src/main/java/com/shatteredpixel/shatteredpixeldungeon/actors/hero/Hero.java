@@ -49,6 +49,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Foresight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Fury;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Heat;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.HoldFast;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
@@ -736,7 +737,7 @@ public class Hero extends Char {
 
         spup = Math.min(spup, 0.3f + (float) Dungeon.hero.pointsInTalent(Talent.BERSERKING_STAMINA) / 5);
 
-        speed *= (1 + spup);
+
 
         // 쪽냥이 수호
         AnnihilationGear Gear = this.belongings.getItem(AnnihilationGear.class);
@@ -747,7 +748,15 @@ public class Hero extends Char {
                 }
             }
         }
-        return speed;
+
+        // 열붕이
+        Heat heat = buff(Heat.class);
+        if (heat != null && hasTalent(Talent.REDCOMET)) {
+            if (heat.state() == Heat.State.OVERHEAT) spup = pointsInTalent(Talent.REDCOMET) * 0.25f;
+            else if (heat.power() >= 70) spup = pointsInTalent(Talent.REDCOMET) * 0.05f;
+        }
+
+        return speed *= (1 + spup);
 
     }
 
@@ -839,6 +848,12 @@ public class Hero extends Char {
 
         if (belongings.weapon instanceof Echeveria) ((Echeveria) belongings.weapon).SPCharge( (int)(4*time));
 
+        if (subClass == HeroSubClass.HEAT) {
+            Heat heat = buff(Heat.class);
+            if (heat == null) {
+                Buff.affect(this, Heat.class);
+            } else heat.Timeproc(time);
+        }
 
         super.spend(time);
     }
@@ -1454,8 +1469,6 @@ public class Hero extends Char {
             damage *= Reg;
         }
 
-        damage += BounsDamage;
-
         // 폭풍 스롯 바람의 축복 충전 처리
         if (buff(WindEnergy.class) != null && hasTalent(Talent.WIND_BLESSING)) {
             int getcharge = damage;
@@ -1471,6 +1484,33 @@ public class Hero extends Char {
             int barr = Math.min(5 + HT /6, 2 + (damage/3));
             Buff.affect(this, Barrier.class).incShield(barr);
         }
+
+        // 열기 블레이즈
+
+        Heat heat = buff(Heat.class);
+        if (heat != null) {
+            boolean heatbouns = (heat.power() >= 50f);
+            if (heat.state() == Heat.State.OVERHEAT) {
+                BounsDamage += damage * 0.4f;
+                heatbouns = true;
+            }
+
+            if (heatbouns && hasTalent(Talent.HEAT_BLOW)) {
+                BounsDamage += damage * (0.05f + (pointsInTalent(Talent.HEAT_BLOW) * 0.05f));
+            }
+
+            if (hasTalent(Talent.HEAT_OF_RECOVERY)) {
+                int heal = Math.min(30, (int)((damage+BounsDamage) * (0.01f+(pointsInTalent(Talent.HEAT_OF_RECOVERY) * 0.01f))));
+                if (heal != 0) {
+                    HP = Math.min(HP + heal, HT);
+                    sprite.showStatus(CharSprite.POSITIVE, "+%dHP", heal);
+                }
+            }
+        }
+
+        GLog.w(""+BounsDamage);
+
+        damage += BounsDamage;
 
         return damage;
     }
@@ -1694,6 +1734,12 @@ public class Hero extends Char {
             }
             dmg *= redu;
             dmg -= 2;
+        }
+
+        if (buff(Heat.class) != null) {
+            if (buff(Heat.class).state() == Heat.State.OVERHEAT && hasTalent(Talent.HEAT_OF_PROTECTION)) {
+                dmg *= 0.95f - (pointsInTalent(Talent.HEAT_OF_PROTECTION) * 0.05f);
+            }
         }
 
 

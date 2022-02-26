@@ -782,6 +782,9 @@ public enum Talent {
 			case GLADIATOR:
 				Collections.addAll(tierTalents, CLEAVE, FINALBLOW, ENHANCED_COMBO);
 				break;
+			case HEAT:
+				Collections.addAll(tierTalents, HEAT_BLOW, HEAT_OF_PROTECTION, HEAT_OF_RECOVERY);
+				break;
 			case BATTLEMAGE:
 				Collections.addAll(tierTalents, EMPOWERED_STRIKE, MYSTICAL_CHARGE, EXCESS_CHARGE);
 				break;
@@ -834,6 +837,9 @@ public enum Talent {
 				break;
 			case GLADIATOR:
 				Collections.addAll(tierTalents, SPARKOFLIFE, DEADLY_REACH);
+				break;
+			case HEAT:
+				Collections.addAll(tierTalents, HEAT_OF_ABSORPTION, REDCOMET);
 				break;
 			case BATTLEMAGE:
 				Collections.addAll(tierTalents, AZURE_FURY, SWORDOFLORD);

@@ -319,7 +319,7 @@ actors.buffs.slow.name=Slowed
 actors.buffs.slow.desc=Slowing magic affects the target's rate of time, to them everything is moving super-fast.\n\nA slowed character performs all actions in twice the amount of time they would normally take.\n\nTurns of slow remaining: %s.
 
 actors.buffs.snipersmark.name=Sniper's mark
-actors.buffs.snipersmark.desc=The GreyThroat is honed in on the target she most recently attacked. She is able to perform a special attack with her bow which will vary based on how the bow is augmented.\n\nAn unaugmented bow will fire a _snapshot,_ which deals reduced damage but does not take any time to fire.\n\nA bow augmented for speed will fire a _arts shot._ This shot is Even if the enemy blocks an attack, it unconditionally cripple it, and takes 1 turns to fire.\n\nA bow augmented for damage will fire a _sniper shot._ This shot is guaranteed to hit, deals bonus damage based on distance from the target, and takes 2 turns to fire.
+actors.buffs.snipersmark.desc=The GreyThroat is honed in on the target she most recently attacked. She is able to perform a special attack with her bow which will vary based on how the bow is augmented.\n\nAn overload or unaugmented bow will fire a _snapshot,_ which deals reduced damage but does not take any time to fire.\n\nA bow augmented for speed will fire a _arts shot._ This shot is Even if the enemy blocks an attack, it unconditionally cripple it, and takes 1 turns to fire.\n\nA bow augmented for damage will fire a _sniper shot._ This shot is guaranteed to hit, deals bonus damage based on distance from the target, and takes 2 turns to fire.
 
 actors.buffs.soulmark.name=Soul Marked
 actors.buffs.soulmark.desc=Amiya has tapped into the soul of this creature. She will heal and satisfy his hunger as it takes physical damage.\n\nTurns of soul mark remaining: %s.
@@ -396,6 +396,25 @@ actors.buffs.knightskill$combomove.smash_desc=_Smash_ 140% Damage
 actors.buffs.knightskill$combomove.killblow_desc=_Kill Blow_ 70% Damage, Killing with this attack consumes no turn and immediately allows the next special attack to be used.
 actors.buffs.knightskill$combomove.lightsword_desc=_Light Sword_ Damage increases in proportion to the number of special attack used before, and paralyzes the target at maximum stacks.\nDamage : %1$d%% / %2$d%%
 
+actors.buffs.hallucination.name=hallucination
+actors.buffs.hallucination.desc=This character is watching a hallucination. In this state, accuracy is reduced by 35%, and there is a chance to self-harm.
+actors.buffs.hallucination.ondeath=You committed suicide...
+
+actors.buffs.oblivion.name=oblivion
+actors.buffs.oblivion.desc=to going to forget everything. Vision is reduced and action speed is slowed.\n\nTurns Oblivion: %s.
+
+actors.buffs.windenergy.name=wind energy
+actors.buffs.windenergy.desc=can feel the energy of the wind. can use _Storm_ when your energy is above 100%.\n\nEnergy : %d%%
+
+actors.buffs.stomecharge.name=stome
+actors.buffs.stomecharge.desc=A powerful storm engulfs her body.
+
+actors.buffs.heat.normal=Heat
+actors.buffs.heat.overheat=OverHeat
+actors.buffs.heat.normal_desc=블레이즈의 몸에 열기가 쌓이고 있습니다. 열기가 50%%이상이면 체력을 소모해 과열 상태에 진입할 수 있습니다.\n\n현재 열기 : %f%%
+actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다.\n\n현재 열기 : %f%%
+
+
 ###hero
 actors.hero.talent.hearty_meal.title=hearty meal
 actors.hero.talent.hearty_meal.desc=_+1:_ Eating heals the Blaze for _2 HP_ when she is below 50% health, and _3 HP_ when he is below 25% health.\n\n_+2:_ Eating heals the Blaze for _3 HP_ when she is below 50% health, and _5 HP_ when he is below 25% health.
@@ -444,14 +463,26 @@ actors.hero.talent.sparkoflife.desc=_+1:_ Blaze`s melee attack is _6%_ chance to
 actors.hero.talent.deadly_reach.title=deadly reach
 actors.hero.talent.deadly_reach.desc=_+1:_ combo cooldown increased by _1 trun_.\n\n_+2:_ combo cooldown increased by _2 trun_.\n\n_+3:_ combo cooldown increased by _3 trun_.\n\n_+4:_ combo cooldown increased by _4 trun_.
 
+// 열기 블레이즈
+actors.hero.talent.heat_blow.title=heat blow
+actors.hero.talent.heat_blow.desc=_+1:_ 열기가 50% 이상이면 물리 피해량이 _10%_ 증가합니다.\n\n_+2:_ 열기가 50% 이상이면 물리 피해량이 _15%_ 증가합니다.\n\n_+3:_ 열기가 50% 이상이면 물리 피해량이 _20%_ 증가합니다.\n\n_과열_ 상태라면 무조건 발동합니다.
+actors.hero.talent.heat_of_protection.title=heat of protection
+actors.hero.talent.heat_of_protection.desc=_+1:_ 과열 상태일 때 받는 피해가 _10%_ 감소합니다.\n\n_+2:_ 과열 상태일 때 받는 피해가 _15%_ 감소합니다.\n\n_+3:_ 과열 상태일 때 받는 피해가 _20%_ 감소합니다.
+actors.hero.talent.heat_of_recovery.title=heat of recovery
+actors.hero.talent.heat_of_recovery.desc=_+1:_ 과열 상태가 끝날 때 체력 회복량이 _20%_ 증가합니다.\n\n_+2:_ 과열 상태가 끝날 때 체력 회복량이 _40%_ 증가합니다.\n\n_+3:_ 과열 상태가 끝날 때 체력 회복량이 _60%_ 증가합니다.
+actors.hero.talent.heat_of_absorption.title=heat of absorption
+actors.hero.talent.heat_of_absorption.desc=_+1:_ 과열 상태일 때 입힌 물리 피해의 _2%_ 만큼 체력을 회복합니다.\n\n_+2:_ 과열 상태일 때 입힌 물리 피해의 _3%_ 만큼 체력을 회복합니다.\n\n_+3:_ 과열 상태일 때 입힌 물리 피해의 _4%_ 만큼 체력을 회복합니다.\n\n_+4:_ 과열 상태일 때 입힌 물리 피해의 _5%_ 만큼 체력을 회복합니다.\n\n1회 공격 회복 최대치 : 30
+actors.hero.talent.redcomet.title=red comet
+actors.hero.talent.redcomet.desc=_+1:_ 열기가 70%이상일 때 이동속도가 _5%_ 증가합니다.\n\n_+2:_ 열기가 70%이상일 때 이동속도가 _10%_ 증가합니다.\n\n_+3:_ 열기가 70%이상일 때 이동속도가 _15%_ 증가합니다.\n\n_+4:_ 열기가 70%이상일 때 이동속도가 _20%_ 증가합니다.\n\n과열 상태일 땐 무조건 발동하며, 특성 효과가 5배로 적용됩니다.
+
 actors.hero.talent.empowering_meal.title=empowering meal
 actors.hero.talent.empowering_meal.desc=_+1:_ Eating food grants the Amiya _3 bonus damage_ on his next 3 wand zaps.\n\n_+2:_ Eating food grants the Amiya _4 bonus damage_ on his next 3 wand zaps.
 actors.hero.talent.scholars_intuition.title=CEO`s privileges
 actors.hero.talent.scholars_intuition.desc=_+1:_ The Amiya identifies wands _3x faster_.\n\n_+2:_ The Amiya identifies wands _when he uses them_.
 actors.hero.talent.tested_hypothesis.title=find answer
-actors.hero.talent.tested_hypothesis.desc=_+1:_ Whenever the Amiya identifies an item, she gains _3 turns of wand recharging_.\n\n_+2:_ Whenever the Amiya identifies an item, she gains _4 turns of wand recharging_.
+actors.hero.talent.tested_hypothesis.desc=_+1:_ Whenever the Amiya identifies an item, she gains _4 turns of wand recharging_.\n\n_+2:_ Whenever the Amiya identifies an item, she gains _5 turns of wand recharging_.
 actors.hero.talent.backup_barrier.title=backup barrier
-actors.hero.talent.backup_barrier.desc=_+1:_ The Amiya gains _3 shielding_ whenever she spends the last charge in his staff.\n\n_+2:_ The Amiya gains _5 shielding_ whenever she spends the last charge in his staff.
+actors.hero.talent.backup_barrier.desc=_+1:_ The Amiya gains _3 shielding_ whenever she spends the last charge in his staff.\n\n_+2:_ The Amiya gains _6 shielding_ whenever she spends the last charge in his staff.
 actors.hero.talent.energizing_meal.title=energizing meal
 actors.hero.talent.energizing_meal.desc=_+1:_ Eating food takes the Amiya 1 turn and grants him _5 turns of wand recharging_.\n\n_+2:_ Eating food takes the Amiya 1 turn and grants him _8 turns of wand recharging_.
 actors.hero.talent.energizing_upgrade.title=Arts Drain
@@ -461,7 +492,7 @@ actors.hero.talent.wand_preservation.desc=_+1:_ When the Amiya imbues a new wand
 actors.hero.talent.arcane_vision.title=arts vision
 actors.hero.talent.arcane_vision.desc=_+1:_ When the Amiya zaps an enemy, she gains mind vision on them for _5 turns_.\n\n_+2:_ When the Amiya zaps an enemy, she gains mind vision on them for _10 turns_.
 actors.hero.talent.shield_battery.title=shield battery
-actors.hero.talent.shield_battery.desc=_+1:_ The Amiya can self-target with a arts to convert its charges into shielding at a rate of _4% max HP per charge_.\n\n_+2:_ The Amiya can self-target with a arts to convert its charges into shielding at a rate of _6% max HP per charge_.
+actors.hero.talent.shield_battery.desc=_+1:_ The Amiya can self-target with a arts to convert its charges into shielding at a rate of _2.5% max HP per charge_.\n\n_+2:_ The Amiya can self-target with a arts to convert its charges into shielding at a rate of _5% max HP per charge_.
 actors.hero.talent.psychoanalysis.title=psychoanalysis
 actors.hero.talent.psychoanalysis.desc=_+1:_ Amiya`s scrolls read spends 0 turn, and scroll reading of chance of _33%_ trigger on-eat effects and Amiya's ring Recharge.\n\n_+2:_ Amiya`s scrolls read spends 0 turn, and scroll reading of chance of _66%_ trigger on-eat effects and Amiya's ring Recharge.\n\n_+3:_ Amiya`s scrolls read spends 0 turn, and scroll reading of chance of _100%_ trigger on-eat effects and Amiya's ring Recharge.
 actors.hero.talent.ally_warp.title=order: shift
@@ -486,10 +517,26 @@ actors.hero.talent.azure_fury.title=azure fury
 actors.hero.talent.azure_fury.desc=_+1:_ Striking with her ring grants the Amiya _5%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+2:_ Striking with her ring grants the Amiya _10%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+3:_ Striking with her ring grants the Amiya _15%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+4:_ Striking with her ring grants the Amiya _20%_ chance to restore 2% of the Skill recorder's recharge.
 actors.hero.talent.swordoflord.title=sword of lord
 actors.hero.talent.swordoflord.desc=_+1:_ Striking with her ring of Increases the arts charge of the by _10%_.\n\n_+2:_ Striking with her ring of Increases the arts charge of the by _15%_.\n\n_+3:_ Striking with her ring of Increases the arts charge of the by _20%_.\n\n_+4:_ Striking with her ring of Increases the arts charge of the by _25%_.
-actors.hero.talent.emotion.title=emotion absorption
+actors.hero.talent.emotion.title=emotion burst
 actors.hero.talent.emotion.desc=in proportion to the points chance of engraving soul marked increased.
 actors.hero.talent.lord.title=the lord
 actors.hero.talent.lord.desc=_+1_: soul marked Duration _2 turns_ increased.\n\n_+2_: soul marked Duration _4 turns_ increased.\n\n_+3_: soul marked Duration _6 turns_ increased.\n\n_+4_: soul marked Duration _8 turns_ increased.
+
+//아미야 3차 서브클래스
+actors.hero.talent.chimera.title=chimera
+actors.hero.talent.chimera.desc=_+1_: Wand damage bonus and increased physical damage taken increased from 50% to _60%._\n\n_+2_: Wand damage bonus and increased physical damage taken increased from 50% to _70%._\n\n_+3_: Wand damage bonus and increased physical damage taken increased from 50% to _80%._
+actors.hero.talent.restriction.title=restriction
+actors.hero.talent.restriction.desc=_+1_: All characters' physical attack damage & accuracy is reduced by _5%_.\n\n_+2_: All characters' physical attack damage & accuracy is reduced by _10%_.\n\n_+3_: All characters' physical attack damage & accuracy is reduced by _15%_.
+actors.hero.talent.emotion_absorption.title=Emotion Absorption
+actors.hero.talent.emotion_absorption.desc=_+1_: Charges the amiya`s ring by _0.06_ per enemy kill.\n\n_+2_: Charges the amiya`s ring by _0.12_ per enemy kill.\n\n_+3_: Charges the amiya`s ring by _0.18_ per enemy kill.
+actors.hero.talent.stabilize.title=stabilize
+actors.hero.talent.stabilize.desc=_+1_: When your health is low _20%_, you do not increase physical damage taken.\n\n_+2_: When your health is low _25%_, you do not increase physical damage taken.\n\n_+3_: When your health is low _30%_, you do not increase physical damage taken.\n\n_+4_: When your health is low _35%_, you do not increase physical damage taken.
+actors.hero.talent.mind_crash.title=mind crash
+actors.hero.talent.mind_crash.desc=Marks for 2 turns when the wand hits.\n\n_+1_: Enemies with marks have a _5%_ chance to taken x1.5 damage.\n\n_+2_: Enemies with marks have a _10%_ chance to taken x1.5 damage.\n\n_+3_: Enemies with marks have a _15%_ chance to taken x1.5 damage.\n\n_+4_: Enemies with marks have a _20%_ chance to taken x1.5 damage.
+
+actors.hero.talent$mindcrashmark.name=Mark
+actors.hero.talent$mindcrashmark.desc=You will have a chance to take x1.5 damage from the power of this mark.\n\nTurn: %s.
+actors.hero.talent$mindcrashmark.cri=Critical Hit!
 
 actors.hero.talent.cached_rations.title=cached cookie
 actors.hero.talent.cached_rations.desc=_+1:_ The Red can find _4 honey cookie_ placed in chests while she explores the earlier stages of the dungeon.\n\n_+2:_ The Red can find _6 honey cookie_ placed in chests while she explores the earlier stages of the the dungeon.
@@ -502,7 +549,7 @@ actors.hero.talent.protective_shadows.desc=_+1:_ The Recharge gains one recorder
 actors.hero.talent.mystical_meal.title=mystical meal
 actors.hero.talent.mystical_meal.desc=_+1:_ Eating food takes the Red 1 turn and grants him _1.5 turns of artifact recharging_.\n\n_+2:_ Eating food takes the Red 1 turn and grants him _3 turns of artifact recharging_.\n\nTher talent cannot be used to let the gum of plenty recharge itself.
 actors.hero.talent.tracker.title=tracker
-actors.hero.talent.tracker.desc=_+1:_ When you use a skill or hunt, gain _1 turn of haste_.\n\n_+2:_ When you use a skill or hunt, gain _2 turn of haste_.\n\nRemoves state the Roots, Blindness, Cripple states.
+actors.hero.talent.tracker.desc=_+1:_ When you use a skill or hunt, gain _1 turn of haste_. Killing an enemy with hunt restores _4 HP_.\n\n_+2:_ When you use a skill or hunt, gain _2 turn of haste_. Killing an enemy with hunt restores _7 HP_.\n\nRemoves state the Roots, Blindness, Cripple states.
 actors.hero.talent.wide_search.title=wide search
 actors.hero.talent.wide_search.desc=_+1:_ The Red’s search radius is increased from a 5x5 square to a _7x7 circle_.\n\n_+2:_ The Red’s search radius is increased from a 5x5 square to a _7x7 square_.
 actors.hero.talent.silent_steps.title=silent steps
@@ -562,9 +609,9 @@ actors.hero.talent.arts_focus.desc=_+1:_ When the GreyThroat fires an arrow at t
 actors.hero.talent.seer_shot.title=roots shot
 actors.hero.talent.seer_shot.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _60 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _40 turn_ cooldown.\n\n_+3:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _20 turn_ cooldown.
 actors.hero.talent.farsight.title=farsight
-actors.hero.talent.farsight.desc=_+1:_ The GreyThroat's vision range is _increased by 30%_.\n\n_+2:_ The GreyThroat's vision range is _increased by 60%_.\n\n_+3:_ The GreyThroat's vision range is _increased by 90%_.
-actors.hero.talent.shared_enchantment.title=shared enchantment
-actors.hero.talent.shared_enchantment.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow.\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow.\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
+actors.hero.talent.farsight.desc=_+1:_ The GreyThroat's vision range is _increased by 30%_. Also thrown weapon at has _+85% accuarcy_ instead of +75%\n\n_+2:_ The GreyThroat's vision range is _increased by 60%_. Also thrown weapon at has _+95% accuarcy_ instead of +75%\n\n_+3:_ The GreyThroat's vision range is _increased by 90%_. Also thrown weapon at has _+105% accuarcy_ instead of +75%
+actors.hero.talent.shared_enchantment.title=sharpshooter
+actors.hero.talent.shared_enchantment.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow. If the gun is equipped with accessories, the accuracy of the shot is increased by _20%._\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow. If the gun is equipped with accessories, the accuracy of the shot is increased by _40%._\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow. If the gun is equipped with accessories, the accuracy of the shot is increased by _60%._\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
 actors.hero.talent.shared_upgrades.title=shared upgrades
 actors.hero.talent.shared_upgrades.desc=_+1:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _6%_\n\n_+2:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _12%_.\n\n_+3:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _18%_.\n\nIf you have a gun equipped, this talent is applied in proportion to the gun's upgrade value.(50% efficiency)
 actors.hero.talent.durable_tips.title=durable tips
@@ -583,6 +630,16 @@ actors.hero.talent.sniping.title=sniping
 actors.hero.talent.sniping.desc=_+1:_ increases the and the damage of her special attack by _15%_.\n\n_+2:_ increases the and the damage of her special attack by _30%_.\n\n_+3:_ increases the and the damage of her special attack by _45%_.\n\n_+4:_ increases the and the damage of her special attack by _60%_.
 actors.hero.talent.savior_belief.title=savior`s belief
 actors.hero.talent.savior_belief.desc=_+1:_ Deals _15%_ additional damage to roots or paralyzed enemies.\n\n_+2:_ Deals _30%_ additional damage to roots or paralyzed enemies.\n\n_+3:_ Deals _45%_ additional damage to roots or paralyzed enemies.\n\n_+4:_ Deals _60%_ additional damage to roots or paralyzed enemies.\n\nWhen you activate this talent, you gain up to _25% damage bouns_ based on the nearby high grass.
+
+// 폭풍 전직
+actors.hero.talent.song_of_stome.title=song of stome
+actors.hero.talent.song_of_stome.desc=_+1:_ _Storm_ damage increased from 200% to _230%_ and knocking back the target by _1 space._\n\n_+2:_ _Storm_ damage increased from 200% to _250%_ and knocking back the target by _2 space._\n\n_+3:_ _Storm_ damage increased from 200% to _270%_ and knocking back the target by _3 space._
+actors.hero.talent.energy_storage.title=energy storage
+actors.hero.talent.energy_storage.desc=_+1:_ If the wind energy is less than _40%_, it will not be consumed while moving.\n\n_+2:_ If the wind energy is less than _55%_, it will not be consumed while moving.\n\n_+3:_ If the wind energy is less than _70%_, it will not be consumed while moving.
+actors.hero.talent.wind_blessing.title=wind blessing
+actors.hero.talent.wind_blessing.desc=_+1:_ Charges wind energy to _10%_ of physical damage dealt.\n\n_+2:_ Charges wind energy to _20%_ of physical damage dealt.\n\n_+3:_ Charges wind energy to _30%_ of physical damage dealt.
+actors.hero.talent.galeforce.title=galeforce
+actors.hero.talent.galeforce.desc=_+1:_ Evasion _+10%_ while _Storm_ is active.\n\n_+2:_ Evasion _+20%_ while _Storm_ is active.\n\n_+3:_ Evasion _+30%_ while _Storm_ is active.\n\n_+4:_ Evasion _+40%_ while _Storm_ is active.
 
 actors.hero.talent.lightnessmeal.title=lightness meal
 actors.hero.talent.lightnessmeal.desc=_+1:_ Eating food grants the Rosmontis gain _5 Turns_ levitation.\n\n_+2:_ Eating food grants the Rosmontis gain _10 Turns_ levitation.\n\nIf you have this talent, using gear while levitation does not consume any charge. When this effect is triggered, the levitation effect is immediately removed.\n\nGum doll cannot active talent
@@ -632,6 +689,17 @@ actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or m
 actors.hero.talent$mywishcooldown.name=MyWish Cooldown
 actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
 
+//쪽냥이 3차 서브클래스
+actors.hero.talent.oblivion.title=oblivion
+actors.hero.talent.oblivion.desc=_+1:_ When EX-44 is destroyed, there is a _10%_ chance to recharge the gear.\n\n_+2:_ When EX-44 is destroyed, there is a _20%_ chance to recharge the gear.\n\n_+3:_ When EX-44 is destroyed, there is a _30%_ chance to recharge the gear.
+actors.hero.talent.weakness_cover.title=weakness cover
+actors.hero.talent.weakness_cover.desc=_+1:_ Increases attack damage by _0-2_ per for gear upgrade level.\n\n_+2:_ Increases attack damage by _1-2_ per for gear upgrade level\n\n_+3:_ Increases attack damage by _2-2_ per for gear upgrade level
+actors.hero.talent.mentalamplification.title=mental amplification
+actors.hero.talent.mentalamplification.desc=_+1:_ EX-44 gain Damage reduction _10%_.\n\n_+2:_ EX-44 gain Damage reduction _20%_.\n\n_+1:_ EX-44 gain Damage reduction _30%_.
+actors.hero.talent.crystallize.title=crystallize
+actors.hero.talent.crystallize.desc=_+1:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _10%_.\n\n_+2:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _15%_.\n\n_+3:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _20%_.\n\n_+4:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _25%_.
+
+
 actors.hero.talent.shining_meal.title=shining meal
 actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _6_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal _9_ damage.
 actors.hero.talent.experience.title=knigts experience
@@ -657,7 +725,7 @@ actors.hero.talent.radianthero.desc=If you take damage when your health is below
 actors.hero.talent.into_fray.title=into fray
 actors.hero.talent.into_fray.desc=_+1:_ kill an enemy with a combo, you gain haste for _1 turn_.\n\n_+2:_ kill an enemy with a combo, you gain haste for _2 turn_.\n\n_+3:_ kill an enemy with a combo, you gain haste for _3 turn_.
 actors.hero.talent.blitzkrieg.title=blitzkrieg
-actors.hero.talent.blitzkrieg.desc=_+1:_ Gunshot damage is increased by _5%_. and Evasion is increased by _2_ while in haste buff.\n\n_+2:_ Gunshot damage is increased by _10%_. and Evasion is increased by _4_ while in haste buff.\n\n_+3:_ Gunshot damage is increased by _15%_. and Evasion is increased by _6_ while in haste buff.\n\nAlso, when using a combo move with a gun equipped, you gain 2 turns of haste.
+actors.hero.talent.blitzkrieg.desc=_+1:_ Gunshot damage and accuracy is increased by _10%_. and Evasion is increased by _2_ while in haste buff.\n\n_+2:_ Gunshot damage and accuracy is increased by _20%_. and Evasion is increased by _4_ while in haste buff.\n\n_+3:_ Gunshot damage and accuracy is increased by _30%_. and Evasion is increased by _6_ while in haste buff.\n\nAlso, when using a combo move with a gun equipped, you gain 2 turns of haste.
 actors.hero.talent.skill_mastery.titleskill mastery
 actors.hero.talent.skill_mastery.desc=_+1:_ Increases Light Sword's damage multiplier up to 300%.\n\n_+2:_ Killing an enemy with a kill blow recharges the seal of light by 3%.\n\n_+3:_ Push silences the enemy for 1 turn.
 actors.hero.talent.shield_of_light.title=shield of light
@@ -676,6 +744,16 @@ actors.hero.talent.quick_tactics.title=quick tactics
 actors.hero.talent.quick_tactics.desc=_+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\n_+2:_ Haste gained from using Seal of Light increased from 5 to _7 turn_.\n\n_+3:_ Haste gained from using Seal of Light increased from 5 to _8 turn_.\n\n_+4:_ Haste gained from using Seal of Light increased from 5 to _9 turn_.\n\nAlso, it will no longer cost a turn to use Seal of Light.
 actors.hero.talent.blessed_champion.title=blessed champion
 actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._\n\n_+4:_ seal of light activated, you gain a blessing for _40 turns._
+
+// 니어 3차 서브클래스
+actors.hero.talent.flash_spear.title=flash spear
+actors.hero.talent.flash_spear.desc=_+1:_ 실명한 적에게 공격시 _10%_의 추가 피해를 입힙니다.\n\n_+2:_ 실명한 적에게 공격시 _20%_의 추가 피해를 입힙니다.\n\n_+3:_ 실명한 적에게 공격시 _30%_의 추가 피해를 입힙니다.
+actors.hero.talent.knight_glory.title=knight of glory
+actors.hero.talent.knight_glory.desc=_+1:_ 빛의 인장 발동시 시야 내 적들을 _3_ 턴간 약화시킵니다.\n\n_+2:_ 빛의 인장 발동시 시야 내 적들을 _6_ 턴간 약화시킵니다.\n\n_+3:_ 빛의 인장 발동시 시야 내 적들을 _9_ 턴간 약화시킵니다.
+actors.hero.talent.light_of_glory.title=light of glory
+actors.hero.talent.light_of_glory.desc=특성 레벨에 비례해 빛의 인장 충전 속도가 증가합니다.
+actors.hero.talent.eternal_glory.title=eternal glory
+actors.hero.talent.eternal_glory.desc=_+1:_ 물리 공격시 _10%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+2:_ 물리 공격시 _20%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+3:_ 물리 공격시 _30%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+4:_ 물리 공격시 _40%_ 확률로 대상을 3턴간 실명시킵니다.
 
 actors.hero.talent$radiantherocooldown.name=RadiantHero cooldown
 actors.hero.talent$radiantherocooldown.desc=cooldown %s Trun.
@@ -746,6 +824,9 @@ actors.hero.herosubclass.warlock_desc=When using wands on an enemy, the _Dominat
 actors.hero.herosubclass.battlemage=Guard
 actors.hero.herosubclass.battlemage_short_desc=_Guard_ bonus effects depending on the wand her ring is imbued with.
 actors.hero.herosubclass.battlemage_desc=When fighting with her ring, the _Guard Elite_ conjures bonus effects depending on the wand her ring is imbued with. Her ring will also gain charge through combat.
+actors.hero.herosubclass.chaos=Chaos
+actors.hero.herosubclass.chaos_short_desc=_Chaos_\nIncreases magic damage to enemy, instead increases damage taken
+actors.hero.herosubclass.chaos_desc=_Chaos Elite_ Increases damage dealt by wands by 50%, but also increases physical damage you take by 50%. And the defense you get from armor is reduced.
 actors.hero.herosubclass.assassin=Assassin
 actors.hero.herosubclass.assassin_short_desc=_Assassin_ The longer spent invisible, the more powerful the attack will be.
 actors.hero.herosubclass.assassin_desc=While invisible the _Assassin Elite_ prepares a deadly strike on her next attack. The longer spent invisible, the more powerful the attack will be.
@@ -758,11 +839,17 @@ actors.hero.herosubclass.sniper_desc=The _Shooter Elite_ is a master of ranged c
 actors.hero.herosubclass.warden=Warden
 actors.hero.herosubclass.warden_short_desc=_Warden_ Strong connection to nature which allows her to see through tall grass and command furrowed grass to sprout around plants she grows
 actors.hero.herosubclass.warden_desc=The _Warden Elite_ has a strong connection to nature which allows her to see through tall grass and command furrowed grass to sprout around plants she grows. Plants she tramples will also give bonus effects.\nAlso, she can use the seed to strengthen the crossbow.
+actors.hero.herosubclass.stome=Stome
+actors.hero.herosubclass.stome_short_desc=_Stome_\nGathers energy and explodes.
+actors.hero.herosubclass.stome_desc=Crossbow charged 15% _wind energy_ on hit. The wind energy is charged up to 150%, and 2% is consumed when moving. If wind energy is 100% or higher, you can activate _storm_ to significantly increase movement ability. When the storm ability ends, it deals damage to nearby enemies in a 5x5 area.
 actors.hero.herosubclass.destroyer=Destroyer
 actors.hero.herosubclass.destroyer_short_desc=_Destroyer_ Maximizes the gear's attack power.
 actors.hero.herosubclass.destroyer_desc=The _Destroy Elite_ is Maximizes the gear's attack power. After gear attack, it becomes focus state, and next gear attack is deals 50% more damage Also, if you eat meat, you get an effect depending on how the meat is cooked.
 actors.hero.herosubclass.guardian=Guardian
 actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
+actors.hero.herosubclass.war=War
+actors.hero.herosubclass.war_short_desc=_War_\nSummons EX-44
+actors.hero.herosubclass.war_desc=The _War Elite_ is Summons EX-44. If you use gear on empty land with no characters, EX-44 will be summoned. EX-44's max HP increases in proportion to your armor upgrade, and attack power increases in proportion to your gear upgrade.\n\nAlso, the EX-44 is automatically retrieved after 30 turns. Recharges your gear when retrieved.
 actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
 actors.hero.herosubclass.knight=Knight
 actors.hero.herosubclass.knight_short_desc=_Knight_\nDefeat enemies with quick mobility and combo moves.
@@ -770,7 +857,9 @@ actors.hero.herosubclass.knight_desc=The _Knight Elite_ is Possessing quick mobi
 actors.hero.herosubclass.savior=Savior
 actors.hero.herosubclass.savior_short_desc=_Savior_\na fast Seal Of Light charge and increased power of light.
 actors.hero.herosubclass.savior_desc=_Savior Elite_ is Using the empowered power of light, Seal Of Light's charge rate is increased, Radiant Knight's damage bonus increased from 40% to 55%, and Damage reduction increased from 20% to 40%
-
+actors.hero.herosubclass.flash=Flash
+actors.hero.herosubclass.flash_short_desc=_Flash_\n적을 실명시키고 자신을 강화합니다.
+actors.hero.herosubclass.flash_desc=_Flash Elite_ 는 빛의 기사 상태의 피해 감소 효과가 사라지지만, 빛의 인장의 충전속도가 대폭 상승하고 발동시 시야 내 적들을 실명시킵니다.
 
 ###npcs
 actors.mobs.npcs.blacksmith.name=Vulcan
@@ -829,7 +918,7 @@ actors.mobs.npcs.ratking.desc_festive=Real name Angelina Ajimu, she was a transp
 actors.mobs.npcs.ratking.desc=Real name Angelina Ajimu, she was a transporter responsible for delivering intelligence and special cargo around Siracusa.\nAs an apprentice caster Operator, she now provides logistical support, battlefield assistance, and tactical coordination for Rhodes Island.
 
 actors.mobs.npcs.sheep.name=Ursus Civilian
-actors.mobs.npcs.sheep.baa!=Ah!!!
+actors.mobs.npcs.sheep.baa!=AIEEEEEEEEEEE!!!
 actors.mobs.npcs.sheep.baa?=Nooo!!
 actors.mobs.npcs.sheep.baa.=Ahhhaa!!
 actors.mobs.npcs.sheep.baa...=Help...
@@ -896,6 +985,8 @@ actors.mobs.npcs.closure.fail_skin8=Need a Won with a Contingency badge
 actors.mobs.npcs.closure.fail_skin9=Need a 3rd boss slain by all Subclasses badge
 actors.mobs.npcs.closure.fail_skin10=Need a Slain Pursuer badge
 actors.mobs.npcs.closure.fail_skin11=Need a 10 games played badge
+actors.mobs.npcs.closure.fail_skin12=Need a Siesta Part II badge
+actors.mobs.npcs.closure.fail_skin13=Need a Expert GreyThroat badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model
@@ -908,20 +999,21 @@ actors.mobs.npcs.blackperro.active=Training started.
 
 actors.mobs.npcs.prts.name=???
 actors.mobs.npcs.prts.desc=I will wait until that day comes. I promise you I will. Wait for me. You must wait for me too.\n\n... Don't ever forget about me.
-actors.mobs.npcs.prts.hint1=Hint(1/14)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
-actors.mobs.npcs.prts.hint2=Hint(2/14)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
-actors.mobs.npcs.prts.hint3=Hint(3/14)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
-actors.mobs.npcs.prts.hint4=Hint(4/14)\n\n_Potato_ can be combined with something to make a shield.
-actors.mobs.npcs.prts.hint5=Hint(5/14)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
-actors.mobs.npcs.prts.hint6=Hint(6/14)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
-actors.mobs.npcs.prts.hint7=Hint(7/14)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
-actors.mobs.npcs.prts.hint8=Hint(8/14)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
-actors.mobs.npcs.prts.hint9=Hint(9/14)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
-actors.mobs.npcs.prts.hint10=Hint(10/14)\n\nYou can change the quickslot by long-clicking the backpack button.
-actors.mobs.npcs.prts.hint11=Hint(11/14)\n\n_Fire wand_ can be combined with something to make a A fire tool that destroys traps
-actors.mobs.npcs.prts.hint12=Hint(12/14)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
-actors.mobs.npcs.prts.hint13=Hint(13/14)\n\n_Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
-actors.mobs.npcs.prts.hint14=Hint(14/14)\n\n_someone's dagger_ into the _avant-garde well_, Transforms into a painter's greatsword.
+actors.mobs.npcs.prts.hint1=Hint(1/15)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
+actors.mobs.npcs.prts.hint2=Hint(2/15)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
+actors.mobs.npcs.prts.hint3=Hint(3/15)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
+actors.mobs.npcs.prts.hint4=Hint(4/15)\n\n_Potato_ can be combined with something to make a shield.
+actors.mobs.npcs.prts.hint5=Hint(5/15)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
+actors.mobs.npcs.prts.hint6=Hint(6/15)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
+actors.mobs.npcs.prts.hint7=Hint(7/15)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
+actors.mobs.npcs.prts.hint8=Hint(8/15)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
+actors.mobs.npcs.prts.hint9=Hint(9/15)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
+actors.mobs.npcs.prts.hint10=Hint(10/15)\n\nYou can change the quickslot by long-clicking the backpack button.
+actors.mobs.npcs.prts.hint11=Hint(11/15)\n\n_Fire wand_ can be combined with something to make a A fire tool that destroys traps
+actors.mobs.npcs.prts.hint12=Hint(12/15)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
+actors.mobs.npcs.prts.hint13=Hint(13/15)\n\n_Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
+actors.mobs.npcs.prts.hint14=Hint(14/15)\n\n_someone's dagger_ into the _avant-garde well_, Transforms into a painter's greatsword.
+actors.mobs.npcs.prts.hint15=Hint(15/15)\n\n_If you combine a _someone's dagger_ with something, maked her wand.
 
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her...
@@ -942,8 +1034,12 @@ actors.mobs.npcs.ceylon.water=The day is not complete without tea. Those who too
 actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria National University with a major in Originium research. Are you... Rhodes? I'm sorry, but can you do me a favor? I'm going to practice in Rhodes soon, but I've lost my red tea leaves and water bottle. Can you get me my water bottle and red tea leaves? i want are about 8 red tea leaves.
 
 actors.mobs.npcs.gavial.name=gavial
-actors.mobs.npcs.gavial.desc=Talking to her will take you through the Gavial extra chapter.
+actors.mobs.npcs.gavial.desc=baby alligator~
+actors.mobs.npcs.gavial.desc*Talking to her will take you through the Gavial extra chapter.
+actors.mobs.npcs.gavial.desc_31=Where LANCET-2?
 actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
+actors.mobs.npcs.gavial.no=Oh, have you changed your mind? ok. Let's go next time.
+actors.mobs.npcs.gavial.questhint=I can't see LANCET-2... her caught?
 
 actors.mobs.npcs.dummy.name=DUMMY
 actors.mobs.npcs.dummy.desc=KOKODAYO
@@ -971,6 +1067,40 @@ actors.mobs.npcs.weedy.say=Sorry. It's under construction.
 actors.mobs.npcs.firewall.name=fire wall
 actors.mobs.npcs.firewall.desc=It looks like you need higher privileges. Let's rescue Dr.
 
+actors.mobs.npcs.npc_pilot.name=pilot
+actors.mobs.npcs.npc_pilot.desc=You can advance through additional chapters by talking to he. Be careful as you can't go back once you go.
+
+actors.mobs.npcs.npc_phantom.name=phantom
+actors.mobs.npcs.npc_phantom.desc=it is there and it is here\n\n_NPCs with Quests_
+actors.mobs.npcs.npc_phantom.result=Ahhh. Ms. Christine. your for bringing her, I give this as.
+
+actors.mobs.npcs.npc_phantomshadow.name=phantom?
+actors.mobs.npcs.npc_phantomshadow.desc=Meow
+
+actors.mobs.npcs.npc_astesia.name=astesia
+actors.mobs.npcs.npc_astesia.desc=Would you like to see Horoscopes?
+actors.mobs.npcs.npc_astesia.no_weapon=Hello, %s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...Where are the your weapons? Aren't you on the Operation?
+actors.mobs.npcs.npc_astesia.no_setbouns=Hello, %s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I don't think your weapon has any special secrets yet.
+actors.mobs.npcs.npc_astesia.setbouns_1=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I have uncovered the secrets behind your weapon. If you use _%2$s_ with your weapon, something special will happen.
+actors.mobs.npcs.npc_astesia.setbouns_2=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...the secrets tied to your weapon are... quite a lot. If you use _%2$s_ and _%3$s_ together, something special will happen to your weapon. i will guarantee.
+actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...wow, that's a lot of ties. If you use _%2$s_, _%3$s_, and _%4$s_ together, I think your weapon's special secret can be revealed.
+
+actors.mobs.npcs.lancet2.name=LANCET-2
+actors.mobs.npcs.lancet2.desc=Captured LANCET-2. Rescue her.
+actors.mobs.npcs.lancet2.help=HELP~
+actors.mobs.npcs.lancet2.thank=You Rescue LANCET-2.
+
+actors.mobs.npcs.npc_gglow.name=Goldenglow
+actors.mobs.npcs.npc_gglow.desc=I am a cat! not a dog!
+actors.mobs.npcs.npc_gglow.free1=I`m free!
+actors.mobs.npcs.npc_gglow.free2=Finally see the light!
+actors.mobs.npcs.npc_gglow.free3=I`m Not perro!
+actors.mobs.npcs.npc_gglow.free4=...and no good thing ever dies!
+actors.mobs.npcs.npc_gglow.free5=FREEEEEEEEEDOM!
+
+actors.mobs.npcs.minishopkeeper.name=Texas
+actors.mobs.npcs.minishopkeeper.thief=don't sell.
+actors.mobs.npcs.minishopkeeper.desc=Personalized shop service for you. this is P-Eleven!\n...so her claiming that. don't know if it's true.
 
 
 
@@ -1501,19 +1631,19 @@ actors.mobs.crownslayer_shadow.desc=She is an officer of Reunion, and will a sur
 
 // 가비알 몹
 
-actors.mobs.tiacauhwarrior.name=tiacauh warrior
+actors.mobs.tiacauhwarrior.name=warrior
 actors.mobs.tiacauhwarrior.desc=One of Acahualla's most commonly-seen warriors who uses a crude spear to attack. May pose unexpected difficulties if fighting at close range.\n\nIf there is a lot of grass around, you take less damage.
 
-actors.mobs.tiacauhfanatic.name=tiacauh fanatic
+actors.mobs.tiacauhfanatic.name=fanatic
 actors.mobs.tiacauhfanatic.desc=A fervent Tiacauh warrior with very fast attack speed. Though each strike is not particularly powerful, those caught off guard will be quickly subdued by a rain of blows.
 
-actors.mobs.tiacauhlancer.name=tiacauh lancer
+actors.mobs.tiacauhlancer.name=lancer
 actors.mobs.tiacauhlancer.desc=Not much different from a regular warrior, except they've learned to throw their spears. Though their range is limited, they get the job done.
 
-actors.mobs.tiacauhsniper.name=tiacauh sniper
+actors.mobs.tiacauhsniper.name=sniper
 actors.mobs.tiacauhsniper.desc=Warriors who have gained greater proficiency in using thrown weapons due to training, and boast greater lethality. However, due to the weight of their weapons, their range hasn't really improved.
 
-actors.mobs.tiacauhaddict.name=tiacauh addict
+actors.mobs.tiacauhaddict.name=addict
 actors.mobs.tiacauhaddict.desc=A warrior poisoned by mushrooms. It has a fast movement speed and can reduce the target's combat ability when hit.
 
 actors.mobs.tomimi.name=tomimi
@@ -1527,21 +1657,24 @@ actors.mobs.tomimi.rankings_desc=Beaten by Tommy
 actors.mobs.tomimi$tomimitower.name=building pillars
 actors.mobs.tomimi$tomimitower.desc=If you destroy them all, you can drop tomimi.
 
-actors.mobs.tiacauhripper.name=tiacauh ripper
+actors.mobs.tiacauhripper.name=ripper
 actors.mobs.tiacauhripper.desc=A Very fervent Tiacauh warrior with very fast attack speed. Though each strike is not particularly powerful, those caught off guard will be quickly subdued by a rain of blows.
 
-actors.mobs.tiacauhritualist.name=tiacauh ritualist
+actors.mobs.tiacauhritualist.name=ritualist
 actors.mobs.tiacauhritualist.desc=The very few Originium Arts users in Acahualla will often serve as doctors for their tribe.
 actors.mobs.tiacauhritualistzap_kill=You have been (physical)healed...
 
-actors.mobs.tiacauhshaman.name=tiacauh shaman
+actors.mobs.tiacauhshaman.name=shaman
 actors.mobs.tiacauhshaman.desc=These extremely rare Arts users from Acahualla have a deeper understanding of Originium Arts.
 
-actors.mobs.tiacauhshredder.name=tiacauh shredder
+actors.mobs.tiacauhshredder.name=shredder
 actors.mobs.tiacauhshredder.desc=One of Zumama's chosen elites, bestowed with excellent equipment. If there is a lot of grass around, attack damage Increase.\n\nhe _fire_ seems to be effective.
 
-actors.mobs.tiacauhbrave.name=tiacauh brave
+actors.mobs.tiacauhbrave.name=brave
 actors.mobs.tiacauhbrave.desc=A very formidable Tiacauh warrior, naturally born to do battle.\n\nDefense is very high, but defense decreases after attacking.
+
+actors.mobs.giantmushroom.name=mushroom
+actors.mobs.giantmushroom.desc=This gigantic mushroom continuously inflicts harmful effects around it. It is hard but seems to burn well.
 
 actors.mobs.eunectes.name=eunectes
 actors.mobs.eunectes.desc=The leader of a certain tribe that resides in Acahualla—Gavial's hometown.

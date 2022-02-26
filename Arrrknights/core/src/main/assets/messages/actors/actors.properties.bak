@@ -414,8 +414,8 @@ actors.buffs.stomecharge.desc=폭풍의 힘이 당신을 감싸 이동속도를 
 
 actors.buffs.heat.normal=열기
 actors.buffs.heat.overheat=과열
-actors.buffs.heat.normal_desc=블레이즈의 몸에 열기가 쌓이고 있습니다. 열기가 50%%이상이면 체력을 소모해 과열 상태에 진입할 수 있습니다.\n\n현재 열기 : %d%%
-actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다.\n\n현재 열기 : %d%%
+actors.buffs.heat.normal_desc=블레이즈의 몸에 열기가 쌓이고 있습니다. 열기가 50%%이상이면 체력을 소모해 과열 상태에 진입할 수 있습니다.\n\n현재 열기 : %s%%
+actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다.\n\n현재 열기 : %s%%
 
 
 
@@ -475,7 +475,7 @@ actors.hero.talent.heat_of_protection.desc=_+1:_ 과열 상태일 때 받는 피
 actors.hero.talent.heat_of_recovery.title=재생의 불꽃
 actors.hero.talent.heat_of_recovery.desc=_+1:_ 과열 상태가 끝날 때 체력 회복량이 _20%_ 증가합니다.\n\n_+2:_ 과열 상태가 끝날 때 체력 회복량이 _40%_ 증가합니다.\n\n_+3:_ 과열 상태가 끝날 때 체력 회복량이 _60%_ 증가합니다.
 actors.hero.talent.heat_of_absorption.title=흡수의 불꽃
-actors.hero.talent.heat_of_absorption.desc=_+1:_ 과열 상태일 때 입힌 물리 피해의 _2%_ 만큼 체력을 회복합니다.\n\n_+2:_ 과열 상태일 때 입힌 물리 피해의 _3%_ 만큼 체력을 회복합니다.\n\n_+3:_ 과열 상태일 때 입힌 물리 피해의 _4%_ 만큼 체력을 회복합니다.\n\n_+4:_ 과열 상태일 때 입힌 물리 피해의 _5%_ 만큼 체력을 회복합니다.\n\n1회 공격 회복 최대치 : 30
+actors.hero.talent.heat_of_absorption.desc=_+1:_ 과열 상태일 때 입힌 물리 피해의 _2%_ 만큼 체력을 회복합니다.\n\n_+2:_ 과열 상태일 때 입힌 물리 피해의 _3%_ 만큼 체력을 회복합니다.\n\n_+3:_ 과열 상태일 때 입힌 물리 피해의 _4%_ 만큼 체력을 회복합니다.\n\n_+4:_ 과열 상태일 때 입힌 물리 피해의 _5%_ 만큼 체력을 회복합니다.\n\n1회 공격 회복 최대치 : 10
 actors.hero.talent.redcomet.title=붉은 혜성
 actors.hero.talent.redcomet.desc=_+1:_ 열기가 70%이상일 때 이동속도가 _5%_ 증가합니다.\n\n_+2:_ 열기가 70%이상일 때 이동속도가 _10%_ 증가합니다.\n\n_+3:_ 열기가 70%이상일 때 이동속도가 _15%_ 증가합니다.\n\n_+4:_ 열기가 70%이상일 때 이동속도가 _20%_ 증가합니다.\n\n과열 상태일 땐 무조건 발동하며, 특성 효과가 5배로 적용됩니다.
 
@@ -748,6 +748,17 @@ actors.hero.talent.quick_tactics.desc=_+1:_ 빛의 인장 사용시 획득하는
 actors.hero.talent.blessed_champion.title=축복받은 용사
 actors.hero.talent.blessed_champion.desc=_+1:_ 빛의 인장 발동시 _10 턴_의 축복을 얻습니다.\n\n_+2:_ 빛의 인장 발동시 _20 턴_의 축복을 얻습니다.\n\n_+3:_ 빛의 인장 발동시 _30 턴_의 축복을 얻습니다.\n\n_+4:_ 빛의 인장 발동시 _40 턴_의 축복을 얻습니다.
 
+// 니어 3차 서브클래스
+actors.hero.talent.flash_spear.title=섬광의 창
+actors.hero.talent.flash_spear.desc=_+1:_ 실명한 적에게 공격시 _10%_의 추가 피해를 입힙니다.\n\n_+2:_ 실명한 적에게 공격시 _20%_의 추가 피해를 입힙니다.\n\n_+3:_ 실명한 적에게 공격시 _30%_의 추가 피해를 입힙니다.
+actors.hero.talent.knight_glory.title=기사의 영광
+actors.hero.talent.knight_glory.desc=_+1:_ 빛의 인장 발동시 시야 내 적들을 _3_ 턴간 약화시킵니다.\n\n_+2:_ 빛의 인장 발동시 시야 내 적들을 _6_ 턴간 약화시킵니다.\n\n_+3:_ 빛의 인장 발동시 시야 내 적들을 _9_ 턴간 약화시킵니다.
+actors.hero.talent.light_of_glory.title=빛의 영광
+actors.hero.talent.light_of_glory.desc=특성 레벨에 비례해 빛의 인장 충전 속도가 증가합니다.
+actors.hero.talent.eternal_glory.title=불변의 영광
+actors.hero.talent.eternal_glory.desc=_+1:_ 물리 공격시 _10%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+2:_ 물리 공격시 _20%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+3:_ 물리 공격시 _30%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+4:_ 물리 공격시 _40%_ 확률로 대상을 3턴간 실명시킵니다.
+
+
 actors.hero.talent$radiantherocooldown.name=빛의 용사 쿨타임
 actors.hero.talent$radiantherocooldown.desc=빛의 용사 특성의 재발동까지 %s 턴 남았습니다.
 
@@ -815,7 +826,7 @@ actors.hero.herosubclass.berserker_short_desc=_분노_\n받은 피해를 분노�
 actors.hero.herosubclass.berserker_desc=_분노 전문화_ 는 받은 피해에 비례해 분노를 쌓아 추가 피해를 입히고 이동속도를 끌어올립니다. \n최대로 분노한 블레이즈는 짧은 시간 동안 죽음을 유예할 수 있으며, 그 후 탈진 상태에 빠집니다. 또한, 투척 무기가 아닌 것을 적에게 던지면 적을 광란시키고 분노를 회복할 수 있습니다.
 actors.hero.herosubclass.heat=열기 블레이즈
 actors.hero.herosubclass.heat_short_desc=_열기_\n자신의 생명을 불태워 전투력을 상승시킵니다.
-actors.hero.herosubclass.heatr_desc=_열기 전문화_는 매 턴마다 열기를 얻습니다. 열기가 50%이상이면 _과열_ 능력을 사용하여, 현재 열기의 절반%만큼 체력을 잃는 대신 물리 피해량이 증가합니다. 과열 상태일 땐 매 텀나다 열기를 얻는 대신 소모하며, 과열이 끝나면 체력을 회복합니다.
+actors.hero.herosubclass.heat_desc=_열기 전문화_는 매 턴마다 열기를 얻습니다. 열기가 50%이상이면 _과열_ 능력을 사용하여, 현재 열기의 절반%만큼 체력을 잃는 대신 물리 피해량이 증가합니다. 과열 상태일 땐 매 텀턴마다 열기를 얻는 대신 소모하며, 과열이 끝나면 체력을 회복합니다.
 actors.hero.herosubclass.warlock=지배 아미야
 actors.hero.herosubclass.warlock_short_desc=_지배_\n영혼 표식을 이용해 전투에서 어드벤티지를 얻습니다.
 actors.hero.herosubclass.warlock_desc=_지배 전문화_ 는 적에게 아츠 스태프를 사용함으로써 영혼의 낙인을 걸 확률이 있습니다. 낙인이 걸린 적들은 물리 피해를 입을 때마다 아미야의 체력을 회복시키고 허기를 충족시킵니다.\n\n흑요석 반지의 물리 공격력이 감소하지만, 낙인이 부여된 적 처치시 반지가 충전됩니다.
@@ -1691,6 +1702,9 @@ actors.mobs.miniboss.mon3tr.desc=켈시의 사역마로, 그녀가 만들어낸 
 
 actors.mobs.miniboss.emperorpursuer.name=황제의 칼날
 actors.mobs.miniboss.emperorpursuer.desc=모든 근위병은 하나의 나라요, 그의 발아래의 대지는 모두 우르수스의 국토이다.\n\n강력한 능력을 지녔습니다. 먼저 공격하지 않으면 공격하지는 않을 것 같습니다.
+
+actors.mobs.miniboss.magicgolem.name=마법 거대 석상
+actors.mobs.miniboss.magicgolem.desc=살카즈의 고대 마법이 주입된 머드락의 오리지늄 아츠 피조물. 주인의 의지를 이어받아, 상당히 난해한 오리지늄 아츠의 원리로 움직인다.\n\n이 석상과 정면으로 싸우는 것은 자살행위일 것입니다.
 
 
 
