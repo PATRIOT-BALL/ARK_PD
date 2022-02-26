@@ -1500,7 +1500,7 @@ public class Hero extends Char {
             }
 
             if (hasTalent(Talent.HEAT_OF_RECOVERY)) {
-                int heal = Math.min(30, (int) ((damage + BounsDamage) * (0.01f + (pointsInTalent(Talent.HEAT_OF_RECOVERY) * 0.01f))));
+                int heal = Math.min(10, (int) ((damage + BounsDamage) * (0.01f + (pointsInTalent(Talent.HEAT_OF_RECOVERY) * 0.01f))));
                 if (heal != 0) {
                     HP = Math.min(HP + heal, HT);
                     sprite.showStatus(CharSprite.POSITIVE, "+%dHP", heal);
