@@ -824,6 +824,9 @@ public enum Talent {
 			case SAVIOR:
 				Collections.addAll(tierTalents, SHIELD_OF_LIGHT, PEGASUS_WING, HOPELIGHT);
 				break;
+			case FLASH:
+				Collections.addAll(tierTalents, FLASH_SPEAR, KNIGHT_GLORY, LIGHT_OF_GLORY);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(2).put(talent, 0);
@@ -879,6 +882,9 @@ public enum Talent {
 				break;
 			case SAVIOR:
 				Collections.addAll(tierTalents, BLESSED_CHAMPION);
+				break;
+			case FLASH:
+				Collections.addAll(tierTalents, ETERNAL_GLORY);
 				break;
 		}
 		for (Talent talent : tierTalents){

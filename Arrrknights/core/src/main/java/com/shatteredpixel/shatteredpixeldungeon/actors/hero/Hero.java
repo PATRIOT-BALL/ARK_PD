@@ -40,6 +40,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barkskin;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
@@ -1406,6 +1407,14 @@ public class Hero extends Char {
             }
         }
 
+        if (enemy.buff(Blindness.class) != null && hasTalent(Talent.FLASH_SPEAR)) {
+            BounsDamage += damage * (pointsInTalent(Talent.FLASH_SPEAR) * 0.1f);
+        }
+
+        if (hasTalent(Talent.ETERNAL_GLORY) && Random.Int(10) < pointsInTalent(Talent.ETERNAL_GLORY)) {
+            Buff.affect(enemy, Blindness.class, 3);
+        }
+
         if (buff(BreaktheDawn.BreakBuff.class) != null) {
             damage *= 2f;
             Buff.detach(this, BreaktheDawn.BreakBuff.class);
@@ -1721,7 +1730,7 @@ public class Hero extends Char {
             if (buff(Bonk.BonkBuff.class) != null) dmg = 0;
         }
 
-        if (buff(RadiantKnight.class) != null) {
+        if (buff(RadiantKnight.class) != null && subClass != HeroSubClass.FLASH) {
             float redu = 0.8f;
             if (subClass == HeroSubClass.SAVIOR) {
                 redu = 0.6f;

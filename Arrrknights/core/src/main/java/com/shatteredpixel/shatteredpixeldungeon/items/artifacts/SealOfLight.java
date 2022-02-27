@@ -3,15 +3,19 @@ package com.shatteredpixel.shatteredpixeldungeon.items.artifacts;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RadiantKnight;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMirrorImage;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -65,6 +69,15 @@ public class SealOfLight extends Artifact {
 
                     if (hero.subClass == HeroSubClass.KNIGHT) {
                         Buff.affect(hero, Haste.class, 5f +  hero.pointsInTalent(Talent.QUICK_TACTICS));
+                    }
+                    else if (hero.subClass == HeroSubClass.FLASH) {
+                        boolean knightglory = (hero.hasTalent(Talent.KNIGHT_GLORY));
+                        for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+                            if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
+                                Buff.affect(mob, Blindness.class, 5f);
+                                if (knightglory) Buff.affect(mob, Weakness.class, hero.pointsInTalent(Talent.KNIGHT_GLORY) * 3);
+                            }
+                        }
                     }
 
                     if (hero.hasTalent(Talent.BLESSED_CHAMPION)) {
@@ -126,6 +139,9 @@ public class SealOfLight extends Artifact {
                     // 약 300 턴마다 100%충전 (기본)
                     float chargeGain = 0.34f;
                     if (Dungeon.hero.subClass == HeroSubClass.SAVIOR) chargeGain += 0.07f;
+                    if (Dungeon.hero.subClass == HeroSubClass.FLASH) chargeGain += 0.51f;
+                    if (Dungeon.hero.hasTalent(Talent.LIGHT_OF_GLORY)) chargeGain += Dungeon.hero.pointsInTalent(Talent.LIGHT_OF_GLORY) * 0.05f;
+
                     chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
                     partialCharge += chargeGain;
 
