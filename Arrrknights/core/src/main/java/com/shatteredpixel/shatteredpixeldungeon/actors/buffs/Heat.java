@@ -60,8 +60,8 @@ public class Heat extends Buff implements ActionIndicator.Action {
             if (power == 0) {
                 int Heal = target.HT;
                 Heal *= overheattime / 400;
-                if (Dungeon.hero.hasTalent(Talent.HEAT_OF_ABSORPTION)) {
-                    Heal *= 1f + (Dungeon.hero.pointsInTalent(Talent.HEAT_OF_ABSORPTION) * 0.2f);
+                if (Dungeon.hero.hasTalent(Talent.HEAT_OF_RECOVERY)) {
+                    Heal *= 1f + (Dungeon.hero.pointsInTalent(Talent.HEAT_OF_RECOVERY) * 0.2f);
                 }
                 target.HP = Math.min(target.HP + Heal, target.HT);
                 target.sprite.showStatus(CharSprite.POSITIVE, "+%dHP", Heal);
