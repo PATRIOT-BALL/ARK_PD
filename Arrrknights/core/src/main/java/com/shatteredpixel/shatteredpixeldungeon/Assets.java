@@ -496,6 +496,8 @@ public class Assets {
 
 		// 방벽
 		public static final String EX42	= "sprites/ex42.png";
+		public static final String GLOW_DRON	= "sprites/glow_dron.png";
+		public static final String RED_GOLEM	= "sprites/red_golem.png";
 
 		//스킨
 		public static final String TALRU_FIGHT	= "sprites/talru.png";

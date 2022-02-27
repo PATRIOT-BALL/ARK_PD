@@ -24,6 +24,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DroneSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Glow_dronSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Rock_CrabSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
@@ -39,7 +40,7 @@ import java.util.ArrayList;
 public class Echeveria extends MeleeWeapon{
     public static final String AC_SUMON = "SUMON";
     {
-        image = ItemSpriteSheet.SCENE;
+        image = ItemSpriteSheet.ECHEVERIA;
         hitSound = Assets.Sounds.ATK_SPIRITBOW;
         hitSoundPitch = 1.32f;
 
@@ -196,7 +197,7 @@ public class Echeveria extends MeleeWeapon{
             HP = 20;
             defenseSkill = 5;
 
-            spriteClass = Rock_CrabSprite.class;
+            spriteClass = Glow_dronSprite.class;
             baseSpeed = 2f;
 
             immunities.add(Silence.class);
