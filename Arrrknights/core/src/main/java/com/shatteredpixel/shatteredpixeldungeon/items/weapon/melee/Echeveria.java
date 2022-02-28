@@ -51,7 +51,7 @@ public class Echeveria extends MeleeWeapon{
         usesTargeting = true;
     }
 
-    protected int collisionProperties = Ballistica.MAGIC_BOLT;
+    protected int collisionProperties = Ballistica.STOP_TARGET;
 
     @Override
     public int max(int lvl) {
@@ -73,6 +73,12 @@ public class Echeveria extends MeleeWeapon{
             if (!isEquipped(hero)) return;
             if (charge >= 50) GameScene.selectCell(zapper);
         }
+    }
+
+    @Override
+    public void SPCharge(int value) {
+        if (Dungeon.hero.STR < STRReq()) value = 1;
+        super.SPCharge(value);
     }
 
     protected static CellSelector.Listener zapper = new CellSelector.Listener() {
@@ -136,6 +142,7 @@ public class Echeveria extends MeleeWeapon{
         ArrayList<Integer> respawnPoints = new ArrayList<>();
         Char ch = Actor.findChar( bolt.collisionPos );
         if (ch != null && ch instanceof Mob) {
+            if (ch.alignment == Char.Alignment.ALLY) return;
             for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
                 int p = ch.pos + PathFinder.NEIGHBOURS8[i];
                 if (Actor.findChar(p) == null && Dungeon.level.passable[p]) {
@@ -151,6 +158,9 @@ public class Echeveria extends MeleeWeapon{
                 GameScene.add(drone);
                 ScrollOfTeleportation.appear(drone, respawnPoints.get(index));
 
+                charge -=50;
+                updateQuickslot();
+
                 respawnPoints.remove(index);
                 spawnd++;
             }
@@ -161,10 +171,7 @@ public class Echeveria extends MeleeWeapon{
             Dungeon.level.pressCell(bolt.collisionPos);
         }
 
-        charge -=50;
-        updateQuickslot();
-
-        if (setbouns()) curUser.spendAndNext(0.5f);
+        if (setbouns()) curUser.spendAndNext(0.25f);
         else curUser.spendAndNext(1f);
     }
 
@@ -213,7 +220,7 @@ public class Echeveria extends MeleeWeapon{
 
         @Override
         public int damageRoll() {
-            return Random.IntRange(1, 2+maxLvl);
+            return Random.IntRange(1+(maxLvl/2), 2+maxLvl);
         }
 
         @Override
@@ -239,7 +246,10 @@ public class Echeveria extends MeleeWeapon{
                 }}
 
             if (LockTarget != null && LockTarget.isAlive()) enemy = LockTarget;
-            else die(this);
+            else {
+                die(this);
+                return true;
+            }
             return super.act();
         }
 
@@ -270,9 +280,20 @@ public class Echeveria extends MeleeWeapon{
                 enemy.damage( dmg, this );
                 enemy.sprite.flash();
 
-                Ballistica trajectory = new Ballistica(this.pos, enemy.pos, Ballistica.STOP_TARGET);
-                trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
-                moveChar(this, trajectory, 1, enemy.pos, false, false); // 자신이 이동효과
+                ArrayList<Integer> respawnPoints = new ArrayList<>();
+                for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
+                    int p = enemy.pos + PathFinder.NEIGHBOURS8[i];
+                    if (Actor.findChar(p) == null && Dungeon.level.passable[p]) {
+                        respawnPoints.add(p);
+                    }
+                }
+                int spawnd = 0;
+                while (respawnPoints.size() > 0 && spawnd == 0) {
+                    int index = Random.index(respawnPoints);
+                    ScrollOfTeleportation.appear(this, respawnPoints.get(index));
+                    respawnPoints.remove(index);
+                    spawnd++;
+                }
 
                 AttackCount++;
 
@@ -281,69 +302,6 @@ public class Echeveria extends MeleeWeapon{
                 enemy.sprite.showStatus( CharSprite.NEUTRAL,  enemy.defenseVerb() );
             }
             return true;
-        }
-
-        private void moveChar(final Char ch, final Ballistica trajectory, int power, int enemypos,
-                              boolean closeDoors, boolean collideDmg){
-            if (ch.properties().contains(Char.Property.BOSS)) {
-                power /= 2;
-            }
-
-            int dist = Math.min(trajectory.dist, power);
-
-            boolean collided = dist == trajectory.dist;
-
-            if (dist == 0 || ch.properties().contains(Char.Property.IMMOVABLE)) return;
-
-            //large characters cannot be moved into non-open space
-            if (Char.hasProp(ch, Char.Property.LARGE)) {
-                for (int i = 1; i <= dist; i++) {
-                    if (!Dungeon.level.openSpace[trajectory.path.get(i)]){
-                        dist = i-1;
-                        collided = true;
-                        break;
-                    }
-                }
-            }
-
-            if (Actor.findChar(trajectory.path.get(dist)) != null){
-                dist--;
-                collided = true;
-            }
-
-            if (dist < 0) return;
-
-            final int newPos = trajectory.path.get(dist);
-
-            if (newPos == enemypos) return;
-
-            final int finalDist = dist;
-            final boolean finalCollided = collided && collideDmg;
-            final int initialpos = ch.pos;
-
-            Actor.addDelayed(new Pushing(ch, ch.pos, newPos, new Callback() {
-                public void call() {
-                    if (initialpos != ch.pos) {
-                        //something caused movement before pushing resolved, cancel to be safe.
-                        ch.sprite.place(ch.pos);
-                        return;
-                    }
-                    int oldPos = ch.pos;
-                    ch.pos = newPos;
-                    if (finalCollided && ch.isAlive()) {
-                        ch.damage(Random.NormalIntRange(finalDist, 2*finalDist), this);
-                        Paralysis.prolong(ch, Paralysis.class, 1 + finalDist/2f);
-                    }
-                    if (closeDoors && Dungeon.level.map[oldPos] == Terrain.OPEN_DOOR){
-                        Door.leave(oldPos);
-                    }
-                    Dungeon.level.occupyCell(ch);
-                    if (ch == Dungeon.hero){
-                        //FIXME currently no logic here if the throw effect kills the hero
-                        Dungeon.observe();
-                    }
-                }
-            }), -1);
         }
 
 

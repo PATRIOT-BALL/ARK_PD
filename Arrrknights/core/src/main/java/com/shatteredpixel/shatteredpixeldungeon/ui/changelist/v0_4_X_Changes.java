@@ -30,7 +30,9 @@ public class v0_4_X_Changes {
                 "_에케베리아_ : 5티어 무기로, 드론을 소환해 대상에게 마법 피해를 입힐 수 있습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.HERO_CHANGES), "블레이즈, 그레이스롯, 니어 3번째 전문화",
-                "그레이스롯 : _폭풍 전문화_가 추가되었습니다. 폭풍 전문화는 공격적인 기동전투에 특화되어있습니다."));
+                "블레이즈 : _열기 전문화_가 추가되었습니다. 열기 전문화는 자신의 체력을 소모해 전투력을 증가시킵니다." + "\n" +
+                "그레이스롯 : _폭풍 전문화_가 추가되었습니다. 폭풍 전문화는 공격적인 기동전투에 특화되어있습니다." + "\n" +
+                "니어 : _섬광 전문화_가 추가되었습니다. 섬광 전문화는 빠른 인장 사용과 실명에 특화되어있습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -39,6 +41,9 @@ public class v0_4_X_Changes {
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RING), "암살의 반지 상향",
+                "암살의 반지의 기습 피해 상승량이 기본 5%에서 _6%_로 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);

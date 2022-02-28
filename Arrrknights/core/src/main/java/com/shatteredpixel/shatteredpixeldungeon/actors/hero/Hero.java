@@ -1500,7 +1500,7 @@ public class Hero extends Char {
         if (heat != null) {
             boolean heatbouns = (heat.power() >= 50f);
             if (heat.state() == Heat.State.OVERHEAT) {
-                BounsDamage += damage * 0.4f;
+                BounsDamage += damage * 0.5f;
                 heatbouns = true;
             }
 

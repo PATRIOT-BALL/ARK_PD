@@ -14,7 +14,7 @@ public class RingOfAssassin extends Ring {
     public String statsInfo() {
         if (isIdentified()){
             return Messages.get(this, "stats",
-                    new DecimalFormat("#.##").format(100f * (Math.pow(1.05f, soloBuffedBonus()) - 1f)));
+                    new DecimalFormat("#.##").format(100f * (Math.pow(1.06f, soloBuffedBonus()) - 1f)));
         } else {
             return Messages.get(this, "typical_stats",
                     new DecimalFormat("#.##").format(5f));
@@ -27,7 +27,7 @@ public class RingOfAssassin extends Ring {
     }
 
     public static float supriseattackbouns( Char target ){
-        return (float)Math.pow(1.05f, getBuffedBonus(target, RingOfAssassin.Suprise.class));
+        return (float)Math.pow(1.06f, getBuffedBonus(target, RingOfAssassin.Suprise.class));
     }
 
     public static boolean Assassin_Curse( Char target ){

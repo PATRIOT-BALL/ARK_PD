@@ -47,6 +47,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.MiniShopRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.secret.SecretRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.LACNET2Room;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.MagicGloemRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.PitRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.PursuerRoom;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special.RoseRoom;
@@ -131,11 +132,9 @@ public abstract class RegularLevel extends Level {
 			initRooms.add(new MiniShopRoom());
 		}
 
-		if (Dungeon.depth == 13)
-			initRooms.add(new RoseRoom());
-
-		 if (Dungeon.depth == 24)
-			initRooms.add(new PursuerRoom());
+		if (Dungeon.depth == 13) initRooms.add(new RoseRoom());
+		if (Dungeon.depth == 14) initRooms.add(new MagicGloemRoom());
+		if (Dungeon.depth == 24) initRooms.add(new PursuerRoom());
 
 		if (Dungeon.extrastage_Gavial) {
 			if (Dungeon.depth == 33) initRooms.add(new LACNET2Room());
