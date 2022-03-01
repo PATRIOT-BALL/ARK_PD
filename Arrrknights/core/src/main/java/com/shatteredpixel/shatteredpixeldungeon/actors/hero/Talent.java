@@ -149,7 +149,7 @@ public enum Talent {
 	//Warden T3
 	DURABLE_TIPS(110, 3), BARKSKIN(111, 3), SAVIOR_PRAY(112, 3),
 	//Stome T3
-	SONG_OF_STOME(110,3), ENERGY_STORAGE(111,3), WIND_BLESSING(112, 3),
+	SONG_OF_STOME(210,3), ENERGY_STORAGE(211,3), WIND_BLESSING(212, 3),
 	//Huntress T4
 	POINT_BLANK(106, 3), IMPROVED_CROSSBOW(113,3), PUSH_ATTACK(98,4),
 	//Sniper T4
@@ -157,7 +157,7 @@ public enum Talent {
 	//Warden T4
 	SAVIOR_BELIEF(116,4),
 	// Stome T4
-	GALEFORCE(116,4),
+	GALEFORCE(213,4),
 
 	//RoseCat T1
 	LIGHTNESSMEAL(128), SMARTMEALS(129), GOODMEAT(130), NYANGING(131),
@@ -191,7 +191,7 @@ public enum Talent {
 	//Nearl T3 - SAVIER
 	SHIELD_OF_LIGHT(174, 3), PEGASUS_WING(175,3), HOPELIGHT(176,3),
 	// Flash T3
-	FLASH_SPEAR(174,3), KNIGHT_GLORY(175,3), LIGHT_OF_GLORY(176,3),
+	FLASH_SPEAR(206,3), KNIGHT_GLORY(207,3), LIGHT_OF_GLORY(208,3),
 	//Nearl T4
 	GRAND_ORDER(177, 3), KNIGHT_OF_KAZIMIERZ(178,3), KNIGHT_BODY(179,4),
 	//Nearl T4 - KNIGHT
@@ -199,7 +199,7 @@ public enum Talent {
 	//Nearl T4 - SAVIER
 	BLESSED_CHAMPION(181,4),
 	//Flast T4
-	ETERNAL_GLORY(181,4);
+	ETERNAL_GLORY(209,4);
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};

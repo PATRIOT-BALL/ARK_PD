@@ -17,7 +17,7 @@ public class Glow_dronSprite extends MobSprite {
         run = new Animation( 10, true );
         run.frames( frames, 0, 1, 2, 3, 4, 5 );
 
-        attack = new Animation( 16, false );
+        attack = new Animation( 18, false );
         attack.frames( frames, 6, 7, 8, 9, 10, 11, 12, 13, 14, 8 );
 
         die = new Animation( 10, false );
