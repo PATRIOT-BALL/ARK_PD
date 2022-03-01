@@ -237,7 +237,12 @@ public class Echeveria extends MeleeWeapon{
         @Override
         protected boolean act() {
             if (AttackCount >= 6) { die(this); return true;}
-            damage(2, this);
+
+            HP -= 2;
+            if (HP < 1) {
+                die(this);
+                return true;
+            }
 
             if (targetId != -1){
                 Actor ch = Actor.findById(targetId);
