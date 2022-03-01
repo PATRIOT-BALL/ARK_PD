@@ -847,7 +847,7 @@ public class Hero extends Char {
             if (Random.Int(6) == 0) ((Gluttony) belongings.weapon).SPCharge(1);
         }
 
-        if (belongings.weapon instanceof Echeveria && Dungeon.bossLevel()) ((Echeveria) belongings.weapon).SPCharge( (int)(2*time));
+        if (belongings.weapon instanceof Echeveria && STR() >= ((Echeveria) belongings.weapon).STRReq()) ((Echeveria) belongings.weapon).SPCharge( (int)(2*time));
 
         if (subClass == HeroSubClass.HEAT) {
             Heat heat = buff(Heat.class);
