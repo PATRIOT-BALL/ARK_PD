@@ -75,12 +75,6 @@ public class Echeveria extends MeleeWeapon{
         }
     }
 
-    @Override
-    public void SPCharge(int value) {
-        if (Dungeon.bossLevel()) value = 3;
-        super.SPCharge(value);
-    }
-
     protected static CellSelector.Listener zapper = new CellSelector.Listener() {
 
         @Override
