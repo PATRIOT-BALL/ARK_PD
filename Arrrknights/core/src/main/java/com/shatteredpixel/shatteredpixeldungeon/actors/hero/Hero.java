@@ -1388,6 +1388,7 @@ public class Hero extends Char {
 
         if (buff(RadiantKnight.class) != null) {
             if (subClass == HeroSubClass.SAVIOR) damage *= 1.55f;
+            else if (subClass == HeroSubClass.FLASH) damage *= 1.25f;
             else damage *= 1.4f;
 
             // 난입 특성
