@@ -1509,7 +1509,7 @@ public class Hero extends Char {
                 BounsDamage += damage * (0.05f + (pointsInTalent(Talent.HEAT_BLOW) * 0.05f));
             }
 
-            if (hasTalent(Talent.HEAT_OF_ABSORPTION)) {
+            if (hasTalent(Talent.HEAT_OF_ABSORPTION) && heat.state() == Heat.State.OVERHEAT) {
                 int heal = Math.min(10, (int) ((damage + BounsDamage) * (0.01f + (pointsInTalent(Talent.HEAT_OF_ABSORPTION) * 0.01f))));
                 if (heal != 0) {
                     HP = Math.min(HP + heal, HT);
