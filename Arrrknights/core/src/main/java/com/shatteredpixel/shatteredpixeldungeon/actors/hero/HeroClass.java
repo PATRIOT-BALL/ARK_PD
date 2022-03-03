@@ -170,7 +170,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new ScrollOfIdentify().identify();
 
 		new FoodBag().collect();
-		new Echeveria().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 	}
 
