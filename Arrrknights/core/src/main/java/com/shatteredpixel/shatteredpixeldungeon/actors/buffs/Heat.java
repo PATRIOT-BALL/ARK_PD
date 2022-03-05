@@ -24,21 +24,21 @@ public class Heat extends Buff implements ActionIndicator.Action {
 
     private float power = 0;
     private final float powercap = 100;
-    private float overheattime = 0;
+    private int overheatlife = 0;
 
     public float power() { return power;}
     public Heat.State state() {return state;}
 
     private static final String STATE = "state";
     private static final String POWER = "power";
-    private static final String TIME = "overheattime";
+    private static final String HEAL = "overheatlife";
 
     @Override
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
         bundle.put(STATE, state);
         bundle.put(POWER, power);
-        bundle.put(TIME, overheattime);
+        bundle.put(HEAL, overheatlife);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class Heat extends Buff implements ActionIndicator.Action {
         super.restoreFromBundle(bundle);
         state = bundle.getEnum(STATE, Heat.State.class);
         power = bundle.getFloat(POWER);
-        overheattime = bundle.getFloat(TIME);
+        overheatlife = bundle.getInt(HEAL);
 
         if (power >= 50 && state != State.OVERHEAT) ActionIndicator.setAction(this);
     }
@@ -56,10 +56,8 @@ public class Heat extends Buff implements ActionIndicator.Action {
             power = Math.min(power + (time * 2.5f), powercap);
         } else {
             power = Math.max(0, power - (time * 5f));
-            overheattime += time * 5f;
             if (power == 0) {
-                int Heal = target.HT;
-                Heal *= overheattime / 400;
+                int Heal = overheatlife;
                 if (Dungeon.hero.hasTalent(Talent.HEAT_OF_RECOVERY)) {
                     Heal *= 1f + (Dungeon.hero.pointsInTalent(Talent.HEAT_OF_RECOVERY) * 0.2f);
                 }
@@ -67,7 +65,7 @@ public class Heat extends Buff implements ActionIndicator.Action {
                 target.sprite.showStatus(CharSprite.POSITIVE, "+%dHP", Heal);
 
                 state = State.NORMAL;
-                overheattime = 0;
+                overheatlife = 0;
             }
         }
 
@@ -104,7 +102,16 @@ public class Heat extends Buff implements ActionIndicator.Action {
 
         int reduHP = target.HT;
         reduHP *= power / 200;
+
+        int reduValue = reduHP - target.HP;
+        overheatlife = Math.min(reduHP, reduHP - reduValue);
+        overheatlife *= power / 200;
+        overheatlife = Math.max(overheatlife, 0);
+
+
         target.HP = Math.max(1, target.HP - reduHP);
+
+
 
         target.sprite.showStatus(CharSprite.NEGATIVE, "%d", reduHP);
         target.sprite.showStatus(CharSprite.NEGATIVE, toString());
