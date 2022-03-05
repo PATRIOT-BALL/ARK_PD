@@ -67,7 +67,6 @@ public class EmpireDrone extends Mob {
         if (CoolDown == 0) {
             if (LastPos == -1) {
                 if (state != HUNTING) return super.act();
-                else if (!this.fieldOfView[Dungeon.hero.pos]) return super.act();
 
                 LastPos = Dungeon.hero.pos;
                 sprite.parent.addToBack(new TargetedCell(LastPos, 0xFF0000));
