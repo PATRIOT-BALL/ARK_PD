@@ -105,7 +105,7 @@ public class Heat extends Buff implements ActionIndicator.Action {
 
         int reduValue = reduHP - target.HP;
         overheatlife = Math.min(reduHP, reduHP - reduValue);
-        overheatlife *= power / 200;
+        overheatlife *= 0.5f;
         overheatlife = Math.max(overheatlife, 0);
 
 
