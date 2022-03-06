@@ -100,7 +100,7 @@ public enum HeroSubClass {
 			case BERSERKER:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 16, 80, 16, 16);
 			case HEAT:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 224, 80, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 0, 96, 16, 16);
 
 			case WARLOCK:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 32, 80, 16, 16);
@@ -131,7 +131,7 @@ public enum HeroSubClass {
 			case SAVIOR:
 				return new Image(Assets.Interfaces.BUFFS_LARGE, 176, 80, 16, 16);
 			case FLASH:
-				return new Image(Assets.Interfaces.BUFFS_LARGE, 256, 80, 16, 16);
+				return new Image(Assets.Interfaces.BUFFS_LARGE, 224, 80, 16, 16);
 
 
 			case WAR:

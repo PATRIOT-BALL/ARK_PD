@@ -76,7 +76,7 @@ public class NewsScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				String link = "https://www.pixiv.net/users/14086167";
+				String link = "https://twitter.com/Nam_Sek_";
 				//tracking codes, so that the website knows where this pageview came from
 				DeviceCompat.openURI(link);
 			}
