@@ -21,18 +21,12 @@
 
 package com.shatteredpixel.shatteredpixeldungeon;
 
-import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.Artifact;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.MagicalHolster;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.PotionBandolier;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.ScrollHolder;
 import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
-import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
-import com.shatteredpixel.shatteredpixeldungeon.items.bombs.FrostBomb;
-import com.shatteredpixel.shatteredpixeldungeon.items.bombs.ShrapnelBomb;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
@@ -42,7 +36,6 @@ import com.watabou.utils.FileUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -83,6 +76,7 @@ public class Badges {
 		DEATH_FROM_GAS              ( 16 ),
 		DEATH_FROM_HUNGER           ( 17 ),
 		DEATH_FROM_FALLING          ( 18 ),
+		CERTIFICATE_1               (18),
 
 		//silver
 		NO_MONSTERS_SLAIN           ( 48 ),
@@ -114,6 +108,7 @@ public class Badges {
 		BOSS_SLAIN_1_NEARL,
 		BOSS_SLAIN_1_ALL_CLASSES    ( 69, true ),
 		GAMES_PLAYED_1              ( 70, true ),
+		CERTIFICATE_2               (70),
 
 		//gold
 		PIRANHAS                    ( 96 ),
@@ -166,6 +161,9 @@ public class Badges {
 		SIESTA_PART1              ( 121 ),
 		GAVIAL_PART1              ( 122 ),
 
+		CERTIFICATE_3               (123),
+		USE_HEALBOX(124, true),
+
 		//RED , 버그 유저
 		BUG (368),
 
@@ -193,6 +191,8 @@ public class Badges {
 
 		SIESTA_PART2              ( 173),
 		GAVIAL_PART2              ( 174 ),
+
+		CERTIFICATE_4               (175),
 
 		//diamond
 		GAMES_PLAYED_4              ( 208, true ),
@@ -230,6 +230,8 @@ public class Badges {
 		SKIN_SPECTER(298, false, true),
 		SKIN_SCHWARZ(299, false, true),
 		SKIN_ARCH(301, false, true),
+		SKIN_TOMIMI(302, false, true),
+		SKIN_FRANKA(303, false, true),
 
 		//기타
 		SUPPORT;
@@ -980,6 +982,36 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validateCertificate() {
+		Badge badge = null;
+		if (SPDSettings.getSpecialcoin() >= 10) {
+			badge = Badge.CERTIFICATE_1;
+		}
+		if (SPDSettings.getSpecialcoin() >= 50) {
+			badge = Badge.CERTIFICATE_2;
+		}
+		if (SPDSettings.getSpecialcoin() >= 150) {
+			badge = Badge.CERTIFICATE_3;
+		}
+		if (SPDSettings.getSpecialcoin() >= 300) {
+			badge = Badge.CERTIFICATE_4;
+		}
+
+		if (!global.contains( badge )) {
+			global.add( badge );
+			saveNeeded = true;
+		}
+	}
+
+	public static void UseHealBox() {
+		Badge badge = Badge.USE_HEALBOX;
+		if (!global.contains(badge )) {
+			global.add( badge );
+			displayBadge( badge );
+			saveNeeded = true;
+		}
+	}
+
 	public static void validateskadiskin() {
 		Badge badge = Badge.SKIN_BABOSKADI;
 		displayBadge( badge );
@@ -1045,6 +1077,16 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validatetomimiskin() {
+		Badge badge = Badge.SKIN_TOMIMI;
+		displayBadge( badge );
+	}
+
+	public static void validatefrankaskin() {
+		Badge badge = Badge.SKIN_FRANKA;
+		displayBadge( badge );
+	}
+
 	// 0.3.2버전의 스킨 관련 처리로 인해 추가된 구문입니다. 추후 필요없어질 수 있습니다.
 	public static void allskindestroy() {
 		saveNeeded = true;
@@ -1087,6 +1129,12 @@ public class Badges {
 		if(global.contains(Badge.SKIN_ARCH)) {
 			global.remove(Badge.SKIN_ARCH);
 		}
+		if(global.contains(Badge.SKIN_TOMIMI)) {
+			global.remove(Badge.SKIN_TOMIMI);
+		}
+		if(global.contains(Badge.SKIN_FRANKA)) {
+			global.remove(Badge.SKIN_FRANKA);
+		}
 
 		if (Badges.isUnlocked(Badge.SUPPORT)) {
 			Badges.validatetaluskin();
@@ -1118,6 +1166,8 @@ public class Badges {
 		if(!Badges.isUnlocked(Badge.SKIN_ASTESIA) && Badges.isUnlocked(Badge.SLAIN_PURSUER)) { Badges.validateAstesiaskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_SCHWARZ) && Badges.isUnlocked(Badge.SIESTA_PART2)) { Badges.validateschwazrskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_ARCH) && Badges.isUnlocked(Badge.GREY_CHAMPION1)) { Badges.validatearchskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_TOMIMI) && Badges.isUnlocked(Badge.GAVIAL_PART2)) { Badges.validatetomimiskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_FRANKA) && Badges.isUnlocked(Badge.USE_HEALBOX)) { Badges.validatefrankaskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene
@@ -1500,6 +1550,7 @@ public class Badges {
 			{Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4},
 			{Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3, Badge.CHAMPION_4},
 			{Badge.Get_25_STONES, Badge.Get_40_STONES},
+			{ Badge.CERTIFICATE_1, Badge.CERTIFICATE_2, Badge.CERTIFICATE_3, Badge.CERTIFICATE_4},
 			{Badge.BLAZE_CHAMPION1, Badge.BLAZE_CHAMPION2, Badge.BLAZE_CHAMPION3},
 			{ Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3},
 			{Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3},
@@ -1529,7 +1580,7 @@ public class Badges {
 
 	private static final Badge[][] skinBadgeReplacements = new Badge[][]{
 			{Badge.SKIN_BABOSKADI}, {Badge.SKIN_TALU}, {Badge.SKIN_NOVA}, {Badge.SKIN_SUSUU}, {Badge.SKIN_GRN}, {Badge.SKIN_LAPPY}, {Badge.SKIN_JESSI}, {Badge.SKIN_LEAF},
-			{Badge.SKIN_ASTESIA}, {Badge.SKIN_SPECTER}, {Badge.SKIN_MUDROCK}, {Badge.SKIN_SCHWARZ}, {Badge.SKIN_ARCH}
+			{Badge.SKIN_ASTESIA}, {Badge.SKIN_SPECTER}, {Badge.SKIN_MUDROCK}, {Badge.SKIN_SCHWARZ}, {Badge.SKIN_ARCH}, {Badge.SKIN_TOMIMI}, {Badge.SKIN_FRANKA}
 	};
 	
 	public static List<Badge> filterReplacedBadges( List<Badge> badges ) {
@@ -1544,6 +1595,7 @@ public class Badges {
 		leaveBest( badges, Badge.GAMES_PLAYED_1, Badge.GAMES_PLAYED_2, Badge.GAMES_PLAYED_3, Badge.GAMES_PLAYED_4 );
 		leaveBest( badges, Badge.CHAMPION_1, Badge.CHAMPION_2, Badge.CHAMPION_3, Badge.CHAMPION_4 );
 		leaveBest(badges,Badge.Get_25_STONES, Badge.Get_40_STONES);
+		leaveBest( badges, Badge.CERTIFICATE_1, Badge.CERTIFICATE_2, Badge.CERTIFICATE_3, Badge.CERTIFICATE_4);
 		leaveBest( badges, Badge.BLAZE_CHAMPION1, Badge.BLAZE_CHAMPION2, Badge.BLAZE_CHAMPION3 );
 		leaveBest( badges, Badge.AMIYA_CHAMPION1, Badge.AMIYA_CHAMPION2, Badge.AMIYA_CHAMPION3 );
 		leaveBest( badges, Badge.RED_CHAMPION1, Badge.RED_CHAMPION2, Badge.RED_CHAMPION3 );

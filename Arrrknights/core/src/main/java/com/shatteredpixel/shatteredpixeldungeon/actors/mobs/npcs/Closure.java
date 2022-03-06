@@ -5,23 +5,15 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
-import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
-import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
-import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.Torch;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfMagicMapping;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
-import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.scenes.InterlevelScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ClosureSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.HeroSprite;
-import com.shatteredpixel.shatteredpixeldungeon.ui.StatusPane;
-import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndMessage;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Callback;
@@ -244,6 +236,30 @@ public class Closure extends NPC {
                                         @Override
                                         public void call() {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin13", Dungeon.hero.heroClass.title())));
+                                        }});}
+                                break;
+                            case 13: // 토미미 스킨
+                                if (Badges.isUnlocked(Badges.Badge.GAVIAL_PART2)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_TOMIMI)) {Badges.validatetomimiskin();}
+                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
+                                } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
+                                    Game.runOnRenderThread(new Callback() {
+                                        @Override
+                                        public void call() {
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin14", Dungeon.hero.heroClass.title())));
+                                        }});}
+                                break;
+                            case 14: // 프란카 스킨
+                                if (Badges.isUnlocked(Badges.Badge.USE_HEALBOX)) {
+                                    if(!Badges.isUnlocked(Badges.Badge.SKIN_FRANKA)) {Badges.validatefrankaskin();}
+                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    break;
+                                } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
+                                    Game.runOnRenderThread(new Callback() {
+                                        @Override
+                                        public void call() {
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin15", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
 

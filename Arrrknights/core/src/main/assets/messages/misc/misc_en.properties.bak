@@ -77,10 +77,16 @@ badges$badge.roaringflare=ROARING FLARE
 badges$badge.eviltime_end=End of EVIL TIME
 badges$badge.get_25_stones=Get 25 Stones
 badges$badge.get_40_stones=Get 40 Stones
+badges$badge.doll_collector=Doll collector
 badges$badge.slain_pursuer=Slain Pursuer
 badges$badge.fragging=fragging
 badges$badge.pray=wait for you
 badges$badge.will=Will
+
+badges$badge.certificate_1=Get 10 certificate
+badges$badge.certificate_2=Get 50 certificate
+badges$badge.certificate_3=Get 150 certificate
+badges$badge.use_healbox=USE HealBox
 
 badges$badge.siesta_part1=Siesta Part I
 badges$badge.siesta_part2=Siesta Part II
@@ -124,7 +130,7 @@ badges$badge.skin_mudrock=Mudrock Skin
 badges$badge.skin_specter=SAME Skin
 badges$badge.skin_astesia=Astesia Skin
 badges$badge.skin_schwarz=Schwarz Skin
-badges$badge.skin_arch=beer Skin
+badges$badge.skin_arch=Beer Skin
 
 badges$badge.bug=stigma of sin
 

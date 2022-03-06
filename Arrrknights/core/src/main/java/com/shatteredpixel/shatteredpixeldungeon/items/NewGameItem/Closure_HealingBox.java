@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem;
 
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
@@ -31,6 +32,7 @@ public class Closure_HealingBox extends ClosuresBox {
             hero.busy();
 
             detach(hero.belongings.backpack);
+            Badges.UseHealBox();
 
             hero.sprite.operate(hero.pos);
         }

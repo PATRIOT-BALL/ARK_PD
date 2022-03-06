@@ -990,6 +990,8 @@ actors.mobs.npcs.closure.fail_skin10=Need a Slain Pursuer badge
 actors.mobs.npcs.closure.fail_skin11=Need a 10 games played badge
 actors.mobs.npcs.closure.fail_skin12=Need a Siesta Part II badge
 actors.mobs.npcs.closure.fail_skin13=Need a Expert GreyThroat badge
+actors.mobs.npcs.closure.fail_skin14=Need a Expert Gavial Part II badge
+actors.mobs.npcs.closure.fail_skin15=Need a Expert Buy Healbox badge
 actors.mobs.npcs.closure.die=ugh~
 
 actors.mobs.npcs.skinmodel.name=New Model
@@ -1527,7 +1529,7 @@ actors.mobs.miniboss.emperorpursuer.name=emperor pursuer
 actors.mobs.miniboss.emperorpursuer.desc=Every Royal Guard is as a dominion; the land beneath their feet is all the territory of Ursus.\n\nPowerful, but docile if you don't attack first...
 
 actors.mobs.miniboss.magicgolem.name=Hexed Colossus
-actors.mobs.miniboss.magicgolem.desc=Face-to-face with this mighty golem is suicidal..
+actors.mobs.miniboss.magicgolem.desc=Face-to-face with this mighty golem is suicidal.
 
 actors.char.kill=%s killed you...
 actors.char.defeat=You defeated %s.

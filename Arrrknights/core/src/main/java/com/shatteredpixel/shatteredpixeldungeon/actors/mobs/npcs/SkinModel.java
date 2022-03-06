@@ -56,6 +56,10 @@ public class SkinModel extends NPC {
                break;
            case 12: spriteClass= ArchSkinSprite.class;
                break;
+           case 13: spriteClass= ArchSkinSprite.class;
+               break;
+           case 14: spriteClass= ArchSkinSprite.class;
+               break;
        }
     }
 
@@ -87,7 +91,7 @@ public class SkinModel extends NPC {
     public void SkinChange()
     {
         Dungeon.skin_ch++;
-        if (Dungeon.skin_ch > 12) Dungeon.skin_ch = 0;
+        if (Dungeon.skin_ch > 14) Dungeon.skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();

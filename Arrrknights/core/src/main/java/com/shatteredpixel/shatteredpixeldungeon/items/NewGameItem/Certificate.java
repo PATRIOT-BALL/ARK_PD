@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
@@ -36,6 +37,7 @@ public class Certificate extends Item {
         hero.spendAndNext( TIME_TO_PICK_UP );
 
         Sample.INSTANCE.play( Assets.Sounds.GOLD, 1, 1, Random.Float( 1.35f, 1.45f ) );
+        Badges.validateCertificate();
         return true;
     }
 
