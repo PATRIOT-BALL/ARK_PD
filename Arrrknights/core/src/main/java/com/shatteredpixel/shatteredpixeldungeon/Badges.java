@@ -230,8 +230,8 @@ public class Badges {
 		SKIN_SPECTER(298, false, true),
 		SKIN_SCHWARZ(299, false, true),
 		SKIN_ARCH(301, false, true),
-		SKIN_TOMIMI(302, false, true),
-		SKIN_FRANKA(303, false, true),
+		SKIN_TOMIMI(300, false, true),
+		SKIN_FRANKA(302, false, true),
 
 		//기타
 		SUPPORT;

@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.ArchSkinSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.AstesiaSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FrankaSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FrostLeafSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.GraniSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.JessiSprite;
@@ -15,6 +16,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SchwarzSkinSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SkadiSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SpecterSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SussurroSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.TomimiSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.talrufightSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FnovaSprite;
 
@@ -56,10 +58,11 @@ public class SkinModel extends NPC {
                break;
            case 12: spriteClass= ArchSkinSprite.class;
                break;
-           case 13: spriteClass= ArchSkinSprite.class;
+               case 13: spriteClass= TomimiSprite.class;
                break;
-           case 14: spriteClass= ArchSkinSprite.class;
+           case 14: spriteClass= FrankaSprite.class;
                break;
+
        }
     }
 
