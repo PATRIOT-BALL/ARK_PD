@@ -149,7 +149,7 @@ public enum Icons {
 			icon.frame( icon.texture.uvRect( 83, 0, 95, 12 ) );
 			break;
 		case LANGS:
-			icon.frame( icon.texture.uvRect( 113, 0, 127, 14 ) );
+			icon.frame( icon.texture.uvRect( 97, 0, 109, 12 ) );
 			break;
 		case EXIT:
 			icon.frame( icon.texture.uvRect( 113, 0, 127, 14 ) );
