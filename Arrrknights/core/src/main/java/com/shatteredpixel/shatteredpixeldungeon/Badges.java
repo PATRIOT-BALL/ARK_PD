@@ -76,7 +76,7 @@ public class Badges {
 		DEATH_FROM_GAS              ( 16 ),
 		DEATH_FROM_HUNGER           ( 17 ),
 		DEATH_FROM_FALLING          ( 18 ),
-		CERTIFICATE_1               (19),
+		CERTIFICATE_1               (21),
 
 		//silver
 		NO_MONSTERS_SLAIN           ( 48 ),
