@@ -76,7 +76,7 @@ public class Badges {
 		DEATH_FROM_GAS              ( 16 ),
 		DEATH_FROM_HUNGER           ( 17 ),
 		DEATH_FROM_FALLING          ( 18 ),
-		CERTIFICATE_1               (18),
+		CERTIFICATE_1               (19),
 
 		//silver
 		NO_MONSTERS_SLAIN           ( 48 ),
@@ -108,7 +108,7 @@ public class Badges {
 		BOSS_SLAIN_1_NEARL,
 		BOSS_SLAIN_1_ALL_CLASSES    ( 69, true ),
 		GAMES_PLAYED_1              ( 70, true ),
-		CERTIFICATE_2               (70),
+		CERTIFICATE_2               (71),
 
 		//gold
 		PIRANHAS                    ( 96 ),
