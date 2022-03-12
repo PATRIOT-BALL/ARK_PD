@@ -241,7 +241,7 @@ public class Closure extends NPC {
                             case 13: // 토미미 스킨
                                 if (Badges.isUnlocked(Badges.Badge.GAVIAL_PART2)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_TOMIMI)) {Badges.validatetomimiskin();}
-                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
+                                    sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
                                     break;
                                 } else {sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "no"));
                                     Game.runOnRenderThread(new Callback() {
