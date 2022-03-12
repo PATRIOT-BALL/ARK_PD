@@ -163,7 +163,7 @@ public class WndBadge extends Window {
 				Dungeon.hero.CharSkin = Hero.ARCH;
 				break;
 			case SKIN_TOMIMI:
-				Dungeon.hero.CharSkin = Hero.TOMIMI;
+				// Dungeon.hero.CharSkin = Hero.TOMIMI;
 				break;
 			case SKIN_FRANKA:
 				Dungeon.hero.CharSkin = Hero.FRANKA;
