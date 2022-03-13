@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
@@ -31,6 +32,11 @@ public class MagicGolem extends Mob {
         immunities.add(Vertigo.class);
         immunities.add(Silence.class);
         immunities.add(Amok.class);
+    }
+
+    @Override
+    public int attackSkill(Char target) {
+        return 20;
     }
 
     @Override
