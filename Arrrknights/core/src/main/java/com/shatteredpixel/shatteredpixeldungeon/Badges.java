@@ -997,9 +997,11 @@ public class Badges {
 			badge = Badge.CERTIFICATE_4;
 		}
 
-		if (!global.contains( badge )) {
-			global.add( badge );
-			saveNeeded = true;
+		if (badge != null) {
+			if (!global.contains(badge)) {
+				global.add(badge);
+				saveNeeded = true;
+			}
 		}
 	}
 
