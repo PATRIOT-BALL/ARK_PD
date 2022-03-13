@@ -1001,7 +1001,7 @@ actors.mobs.npcs.closure.fail_skin11=게임을 10회 플레이해야합니다.
 actors.mobs.npcs.closure.fail_skin12=엔딩 : 화람지심을 봐야합니다.
 actors.mobs.npcs.closure.fail_skin13=숙련 그레이스롯이 되어야합니다.
 actors.mobs.npcs.closure.fail_skin14=엔딩 : 대족장을 봐야합니다.
-actors.mobs.npcs.closure.fail_skin15=클로저의 회복 상자를 구매해야합니다.
+actors.mobs.npcs.closure.fail_skin15=클로저의 회복 상자를 사용해야합니다.
 actors.mobs.npcs.closure.die=끄악~
 
 actors.mobs.npcs.skinmodel.name=신형 모델 생성기
@@ -1706,7 +1706,7 @@ actors.mobs.miniboss.emperorpursuer.name=황제의 칼날
 actors.mobs.miniboss.emperorpursuer.desc=모든 근위병은 하나의 나라요, 그의 발아래의 대지는 모두 우르수스의 국토이다.\n\n강력한 능력을 지녔습니다. 먼저 공격하지 않으면 공격하지는 않을 것 같습니다.
 
 actors.mobs.miniboss.magicgolem.name=마법 거대 석상
-actors.mobs.miniboss.magicgolem.desc=살카즈의 고대 마법이 주입된 머드락의 오리지늄 아츠 피조물. 주인의 의지를 이어받아, 상당히 난해한 오리지늄 아츠의 원리로 움직인다.\n\n이 석상과 정면으로 싸우는 것은 자살행위일 것입니다.
+actors.mobs.miniboss.magicgolem.desc=살카즈의 고대 마법이 주입된 머드락의 오리지늄 아츠 피조물. 주인의 의지를 이어받아, 상당히 난해한 오리지늄 아츠의 원리로 움직인다.\n\n이 석상과 정면으로 싸우는 것은 자살행위일 것입니다. 허나 높은 위치에서 떨어졌을 때의 충격은 대비가 안된 것 같습니다.
 
 
 
