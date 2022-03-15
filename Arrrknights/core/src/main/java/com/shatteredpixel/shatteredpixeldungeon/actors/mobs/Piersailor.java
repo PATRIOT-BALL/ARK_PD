@@ -1,6 +1,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -9,7 +11,10 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.DefenderSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.PiersailorSprite;
 import com.watabou.noosa.tweeners.AlphaTweener;
@@ -63,7 +68,22 @@ public class Piersailor extends Mob {
 
             CellEmitter.get(pos).burst(Speck.factory(Speck.WOOL), 4);
 
-            return w;
+            if (Dungeon.level.map[w.pos] == Terrain.CHASM) {
+                Chasm.mobFall(w);
+                Statistics.enemiesSlain++;
+                Badges.validateMonstersSlain();
+                Statistics.qualifiedForNoKilling = false;
+
+                if (w.EXP > 0 && Dungeon.hero.lvl <= w.maxLvl) {
+                    Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(w, "exp", w.EXP));
+                    Dungeon.hero.earnExp(w.EXP, w.getClass());
+                } else {
+                    Dungeon.hero.earnExp(0, w.getClass());
+                }
+            }
+
+
+                return w;
         } else {
             return null;
         } }

@@ -94,8 +94,6 @@ public class HeavyBoat extends Mob {
     public void die(Object cause) {
         int mypos = this.pos;
         super.die(cause);
-
-        if (Actor.findChar(mypos) == null && Dungeon.level.passable[mypos]) {
-        Piersailor.spawnAt(mypos);}
+        Piersailor.spawnAt(mypos);
     }
 }

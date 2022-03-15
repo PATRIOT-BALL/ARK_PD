@@ -1,7 +1,9 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.wands.SP;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
@@ -13,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
@@ -25,8 +28,12 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportat
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.DamageWand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.watabou.noosa.audio.Sample;
@@ -57,6 +64,24 @@ public class StaffOfPurgatory extends Wand {
 
                 ch.pos = Dungeon.hero.pos;
                 ch.sprite.place(Dungeon.hero.pos);
+
+                if (!ch.flying && Dungeon.level.map[ch.pos] == Terrain.CHASM) {
+                    if (ch instanceof Mob) {
+                        Mob mob = ((Mob)ch);
+                        Chasm.mobFall(mob);
+
+                        Statistics.enemiesSlain++;
+                        Badges.validateMonstersSlain();
+                        Statistics.qualifiedForNoKilling = false;
+
+                        if (mob.EXP > 0 && Dungeon.hero.lvl <= mob.maxLvl) {
+                            Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(mob, "exp", mob.EXP));
+                            Dungeon.hero.earnExp(mob.EXP, mob.getClass());
+                        } else {
+                            Dungeon.hero.earnExp(0, mob.getClass());
+                        }
+                    }
+                }
 
                 Dungeon.hero.sprite.place(newpos);
                 Dungeon.hero.pos = newpos;

@@ -2585,7 +2585,19 @@ items.weapon.melee.echeveria.stats_desc=사거리 +1
 items.weapon.melee.echeveria.ac_sumon=소환
 items.weapon.melee.echeveria.setbouns=_아이템 시너지 : 금빛의 나침반_\n부유 유닛 소환에 소모하는 턴이 감소합니다.
 items.weapon.melee.echeveria$pinkdogdrone.name=부유 유닛
-items.weapon.melee.echeveria$pinkdogdrone.desc=버그 좆망캐래요
+items.weapon.melee.echeveria$pinkdogdrone.desc=날아간당
+
+items.weapon.melee.kollamsword.name=콜람의 패검
+items.weapon.melee.kollamsword.desc=그의 패검에 베인 상처에선 피가 흐르지 않았으며, 만약 스스로 물러난다면 목숨을 건질 수 있었다고 하기도 하였다.\n매 공격시 SP가 충전되며, SP를 100%소모해 능력을 해방할 수 있습니다. 능력에 휘말린 적들은 50%확률로 정신을 지배당합니다.
+items.weapon.melee.kollamsword.stats_desc=_고정 피해(방어 무시)_
+items.weapon.melee.kollamsword.ac_zap=능력해방
+items.weapon.melee.kollamsword.setbouns=_아이템 시너지 : 투쟁을 여기서 멈추노라_\n능력해방의 정신지배 확률이 100%로 증가합니다.
+
+items.weapon.melee.suffering.name=고난의 진술자
+items.weapon.melee.suffering.desc=이 무기는 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.\n매 턴마다 SP가 충전되며, SP를 100%소모해 _화염탄_을 발사할 수 있습니다. 화염탄이 적중하면 폭발하여 주위에 200%의 피해를 입힙니다.
+items.weapon.melee.suffering.ac_zap=화염탄
+items.weapon.melee.suffering.setbouns=_아이템 시너지 : 신이 선택한 감독관_\nSP 충전률이 2배가 됩니다.
+
 
 
 

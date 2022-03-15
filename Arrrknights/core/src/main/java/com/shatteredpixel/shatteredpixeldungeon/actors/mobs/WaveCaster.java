@@ -85,7 +85,7 @@ public class WaveCaster extends Mob {
 
                     if (!enemy.isAlive()) {
                         Dungeon.fail( getClass() );
-                        GLog.n( Messages.get(this, "zap_kill") );
+                        GLog.n( Messages.get(Shaman.class, "bolt_kill") );
                     }
                 }
             } else {
