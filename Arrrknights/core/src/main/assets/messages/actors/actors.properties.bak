@@ -508,7 +508,7 @@ actors.hero.talent.mystical_charge.desc=_+1:_ 아미야는 흑요석 반지 근�
 actors.hero.talent.excess_charge.title=과충전 공격
 actors.hero.talent.excess_charge.desc=_+1:_  아미야의 흑요석 반지가 전부 충전되어 있을 때, 흑요석 반지 근접 공격 명중 시 _12.5% 확률_ 로 흑요석 반지 강화 수치당 2만큼의 방어막을 얻습니다.\n\n_+2:_ 아미야의 흑요석 반지가 전부 충전되어 있을 때, 흑요석 반지 근접 공격 명중 시 _25% 확률_ 로 흑요석 반지 강화 수치당 2만큼의 방어막을 얻습니다.\n\n_+3:_아미야의 흑요석 반지가 전부 충전되어 있을 때, 흑요석 반지 근접 공격 명중 시 _37.5% 확률_ 로 흑요석 반지 강화 수치당 2만큼의 방어막을 얻습니다.
 actors.hero.talent.soul_siphon.title=지배력 강화
-actors.hero.talent.soul_siphon.desc=_+1:_ 다른 캐릭터의 물리 공격이 영혼의 낙인을 _15% 효율_ 로 발동시킵니다.\n\n_+2:_ 다른 캐릭터의 물리 공격이 영혼의 낙인을 _30% 효율_ 로 발동시킵니다.\n\n_+3:_ 다른 캐릭터의 물리 공격이 영혼의 낙인을 _45% 효율_ 로 발동시킵니다.
+actors.hero.talent.soul_siphon.desc=낙인이 있는 적에게 물리 공격시 확률적으로 정신을 지배합니다. 발동 확률은 특성 레벨과 입힌 피해에 비례합니다.
 actors.hero.talent.soul_eater.title=살카즈 군주
 actors.hero.talent.soul_eater.desc=_+1:_ 영혼의 낙인이 가한 피해당 _0.33 턴_ 의 허기를 제공합니다. 낙인이 걸린 적이 죽을 때 _6% 확률_ 로 음식 섭취 효과가 발동됩니다.\n\n_+2:_ 영혼의 낙인이 가한 피해당 _0.67 턴_ 의 허기를 제공합니다. 낙인이 걸린 적이 죽을 때 _13% 확률_ 로 음식 섭취 효과가 발동됩니다.\n\n_+3:_ 영혼의 낙인이 가한 피해당 _1 턴_ 의 허기를 제공합니다. 낙인이 걸린 적이 죽을 때 _20% 확률_ 로 음식 섭취 효과가 발동됩니다.
 actors.hero.talent.necromancers_minions.title=환영 생성
@@ -1014,21 +1014,22 @@ actors.mobs.npcs.blackperro.active=이미 훈련은 시작했다.
 
 actors.mobs.npcs.prts.name=???
 actors.mobs.npcs.prts.desc=그날이 올 때까지 나는 너를 기다릴 거야. 무슨 일이 있더라도 기다릴게. 그러니 너도, 너도 꼭 나를 기다려줘.\n\n...나를 잊지 말아줘.
-actors.mobs.npcs.prts.hint1=힌트(1/15)\n\n가공소에서 _스태프 개조 키트_를 만들어 스태프(완드)를 개조할 수 있다.
-actors.mobs.npcs.prts.hint2=힌트(2/15)\n\n1층에서 위로 올라가면 27층이 나온다.\n28층에선 클로저를 통해 스킨을 바꿀 수 있고, 박사를 구출했다면 더 올라갈 수 있다.
-actors.mobs.npcs.prts.hint3=힌트(3/15)\n\n_아방가르드 우물_에 넣으면 특별한 아이템이 되는 것들이 있다. 대표적으론 _감자_다.
-actors.mobs.npcs.prts.hint4=힌트(4/15)\n\n_감자_는 무언가와 조합하여 방패로 만들 수 있다.
-actors.mobs.npcs.prts.hint5=힌트(5/15)\n\n_주물_은 무언가와 조합하여 강력한 무기를 만들 수 잇다.
-actors.mobs.npcs.prts.hint6=힌트(6/15)\n\n_상점에서만 파는 총_은 무언가와 조합하여 강화할 수 있다.
-actors.mobs.npcs.prts.hint7=힌트(7/15)\n\n_처음의 무기_는 무언가와 조합하면 확률적으로 특이한 검이 된다.
-actors.mobs.npcs.prts.hint8=힌트(8/15)\n\n_빔이 나가는 검_ 혹은 _냉기를 다루는 단검_을 _아방가르드 우물_에 넣으면 매우 강력한 창이 된다.
-actors.mobs.npcs.prts.hint9=힌트(9/15)\n\n_게_를 소환하는 석궁을 _아방가르드 우물_에 넣으면 강력한 괴물을 소환하는 총이 된다.
-actors.mobs.npcs.prts.hint10=힌트(10/15)\n\n인벤토리 버튼을 꾹 누르면 퀵슬롯을 변경할 수 있다.
-actors.mobs.npcs.prts.hint11=힌트(11/15)\n\n_불속성 인형_과 무언가를 조합하여 공격력은 없지만 함정을 부수는 화염방사기를 만들 수 있다.
-actors.mobs.npcs.prts.hint12=힌트(12/15)\n\n_어떤 소녀의 낫_은 무언가와 조합해 그녀의 오빠가 쓰는 검을 만들 수 있다.
-actors.mobs.npcs.prts.hint13=힌트(13/15)\n\n_스태프_는 우물과 금속, 모든 것에 반응한다. 실패할 수도 있지만, 실패해도 스태프는 계속 사용할 수 있을 것입니다.
-actors.mobs.npcs.prts.hint14=힌트(14/15)\n\n_어느 술사의 단검_을 _아방가르드 우물_에 넣으면 어떤 3000년 취업준비생의 대검으로 만들 수 있다
-actors.mobs.npcs.prts.hint15=힌트(15/15)\n\n_어느 술사의 단검_을 무언가와 조합하면 그녀의 스태프를 얻을 수 있다.
+actors.mobs.npcs.prts.hint1=힌트(1/16)\n\n가공소에서 _스태프 개조 키트_를 만들어 스태프(완드)를 개조할 수 있다.
+actors.mobs.npcs.prts.hint2=힌트(2/16)\n\n1층에서 위로 올라가면 27층이 나온다.\n28층에선 클로저를 통해 스킨을 바꿀 수 있고, 박사를 구출했다면 더 올라갈 수 있다.
+actors.mobs.npcs.prts.hint3=힌트(3/16)\n\n_아방가르드 우물_에 넣으면 특별한 아이템이 되는 것들이 있다. 대표적으론 _감자_다.
+actors.mobs.npcs.prts.hint4=힌트(4/16)\n\n_감자_는 무언가와 조합하여 방패로 만들 수 있다.
+actors.mobs.npcs.prts.hint5=힌트(5/16)\n\n_주물_은 무언가와 조합하여 강력한 무기를 만들 수 잇다.
+actors.mobs.npcs.prts.hint6=힌트(6/16)\n\n_상점에서만 파는 총_은 무언가와 조합하여 강화할 수 있다.
+actors.mobs.npcs.prts.hint7=힌트(7/16)\n\n_처음의 무기_는 무언가와 조합하면 확률적으로 특이한 검이 된다.
+actors.mobs.npcs.prts.hint8=힌트(8/16)\n\n_빔이 나가는 검_ 혹은 _냉기를 다루는 단검_을 _아방가르드 우물_에 넣으면 매우 강력한 창이 된다.
+actors.mobs.npcs.prts.hint9=힌트(9/16)\n\n_게_를 소환하는 석궁을 _아방가르드 우물_에 넣으면 강력한 괴물을 소환하는 총이 된다.
+actors.mobs.npcs.prts.hint10=힌트(10/16)\n\n인벤토리 버튼을 꾹 누르면 퀵슬롯을 변경할 수 있다.
+actors.mobs.npcs.prts.hint11=힌트(11/16)\n\n_불속성 인형_과 무언가를 조합하여 공격력은 없지만 함정을 부수는 화염방사기를 만들 수 있다.
+actors.mobs.npcs.prts.hint12=힌트(12/16)\n\n_어떤 소녀의 낫_은 무언가와 조합해 그녀의 오빠가 쓰는 검을 만들 수 있다.
+actors.mobs.npcs.prts.hint13=힌트(13/16)\n\n_스태프_는 우물과 금속, 모든 것에 반응한다. 실패할 수도 있지만, 실패해도 스태프는 계속 사용할 수 있을 것입니다.
+actors.mobs.npcs.prts.hint14=힌트(14/16)\n\n_어느 술사의 단검_을 _아방가르드 우물_에 넣으면 어떤 3000년 취업준비생의 대검으로 만들 수 있다
+actors.mobs.npcs.prts.hint15=힌트(15/16)\n\n_어느 술사의 단검_을 무언가와 조합하면 그녀의 스태프를 얻을 수 있다.
+actors.mobs.npcs.prts.hint16=힌트(16/16)\n\n_용살의 검_과 _그 검을 복제한 것_, 그리고 _폭군의 검_을 가공소에서 조합해 군주의 패검을 만들 수 있다.
 
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...과연 이 시체는 진짜인 것일까요? 그 누구도 진실을 알지 못합니다.\n\n그녀를 애도하기 위한 _꽃 한송이_가 있다면 좋을텐데...
@@ -1706,7 +1707,7 @@ actors.mobs.miniboss.emperorpursuer.name=황제의 칼날
 actors.mobs.miniboss.emperorpursuer.desc=모든 근위병은 하나의 나라요, 그의 발아래의 대지는 모두 우르수스의 국토이다.\n\n강력한 능력을 지녔습니다. 먼저 공격하지 않으면 공격하지는 않을 것 같습니다.
 
 actors.mobs.miniboss.magicgolem.name=마법 거대 석상
-actors.mobs.miniboss.magicgolem.desc=살카즈의 고대 마법이 주입된 머드락의 오리지늄 아츠 피조물. 주인의 의지를 이어받아, 상당히 난해한 오리지늄 아츠의 원리로 움직인다.\n\n이 석상과 정면으로 싸우는 것은 자살행위일 것입니다. 허나 높은 위치에서 떨어졌을 때의 충격은 대비가 안된 것 같습니다.
+actors.mobs.miniboss.magicgolem.desc=살카즈의 고대 마법이 주입된 머드락의 오리지늄 아츠 피조물. 주인의 의지를 이어받아, 상당히 난해한 오리지늄 아츠의 원리로 움직인다.\n\n이 석상과 정면으로 싸우는 것은 자살행위일 것입니다. 허나 높은 위치에서 떨어졌을 때의 충격엔 대비가 안된 것 같습니다.
 
 
 

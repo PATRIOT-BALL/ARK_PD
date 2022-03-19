@@ -622,9 +622,32 @@ public abstract class Mob extends Char {
 			int restoration = Math.min(damage, HP);
 			
 			//physical damage that doesn't come from the hero is less effective
-			if (enemy != Dungeon.hero){
-				restoration = Math.round(restoration * 0.14f*Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON));
+			if (enemy == Dungeon.hero){
+				if (Dungeon.hero.hasTalent(Talent.SOUL_SIPHON)) {
+					int chancevalue = Random.Int(HT * (55 - (Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON) * 5)));
+					GLog.w(("" + chancevalue + " / " + damage));
+					boolean chance = (chancevalue < damage);
+					if (chance) {
+						boolean droppingLoot = this.alignment != Char.Alignment.ALLY;
+						Buff.affect(this, Corruption.class);
+
+						if (this.buff(Corruption.class) != null){
+							if (droppingLoot) this.rollToDropLoot();
+							Statistics.enemiesSlain++;
+							Badges.validateMonstersSlain();
+							Statistics.qualifiedForNoKilling = false;
+							if (this.EXP > 0 && Dungeon.hero.lvl <= this.maxLvl) {
+								Dungeon.hero.sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "exp", this.EXP));
+								Dungeon.hero.earnExp(this.EXP, this.getClass());
+							} else {
+								Dungeon.hero.earnExp(0, this.getClass());
+							}
+						}
+					}
+				}
 			}
+			else restoration = 0;
+
 			if (restoration > 0) {
 				Buff.affect(Dungeon.hero, Hunger.class).affectHunger(restoration*Dungeon.hero.pointsInTalent(Talent.SOUL_EATER)/3f);
 				Dungeon.hero.HP = (int) Math.ceil(Math.min(Dungeon.hero.HT, Dungeon.hero.HP + (restoration * 0.4f)));

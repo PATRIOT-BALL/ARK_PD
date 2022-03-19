@@ -49,6 +49,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfHo
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfIcyTouch;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfMight;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirOfToxicEssence;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirsOfIronSkin;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirsOfSoulBreak;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.elixirs.ElixirsOfSoulProtection;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.exotic.ExoticPotion;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfWarp;
@@ -73,6 +76,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.spells.Recycle;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.SaltBlast;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WeaponTransform;
 import com.shatteredpixel.shatteredpixeldungeon.items.spells.WildEnergy;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KollamSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
 import com.watabou.utils.Reflection;
@@ -202,6 +206,7 @@ public abstract class Recipe {
             new ElixirOfMight.Recipe(),
             new ElixirOfHoneyedHealing.Recipe(),
             new ElixirOfToxicEssence.Recipe(),
+            new ElixirsOfSoulBreak.Recipe(),
             new BlizzardBrew.Recipe(),
             new InfernalBrew.Recipe(),
             new ShockingBrew.Recipe(),
@@ -246,7 +251,10 @@ public abstract class Recipe {
             new NotBarFood.Recipe(),
             new Yukjeon.Recipe(),
             new Avantgardeform.Recipe(),
-            new Glassate.Recipe()
+            new Glassate.Recipe(),
+            new ElixirsOfSoulProtection.Recipe(),
+            new ElixirsOfIronSkin.Recipe(),
+            new KollamSword.Recipe()
     };
 
     public static Recipe findRecipe(ArrayList<Item> ingredients) {

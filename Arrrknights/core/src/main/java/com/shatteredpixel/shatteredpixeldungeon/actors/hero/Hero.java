@@ -55,6 +55,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.HoldFast;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.IronSkin;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.KnightSKILL;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LanceCharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
@@ -660,6 +661,8 @@ public class Hero extends Char {
         if (buff(HoldFast.class) != null) {
             dr += Random.NormalIntRange(0, 2 * pointsInTalent(Talent.HOLD_FAST));
         }
+
+        if (buff(IronSkin.class) != null) dr += Random.NormalIntRange(0,2);
 
         if (hasTalent(Talent.TACTICAL_SHIELD)) {
             int drplus = belongings.armor.buffedLvl() * 2;
@@ -1402,7 +1405,7 @@ public class Hero extends Char {
                 Seal.updateQuickslot();
             }
             // 카시미어의 기사
-            if (hasTalent(Talent.KNIGHT_OF_KAZIMIERZ) && Random.Int(3) == 0) {
+            if (hasTalent(Talent.KNIGHT_OF_KAZIMIERZ) && Random.Int(5) == 0) {
                 if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
                     SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
                     Item.SetCharge(pointsInTalent(Talent.KNIGHT_OF_KAZIMIERZ));
@@ -1707,7 +1710,7 @@ public class Hero extends Char {
             }
         }
 
-        if (Dungeon.hero.hasTalent(Talent.BARKSKIN)) {
+        if (Dungeon.hero.hasTalent(Talent.BARKSKIN) && !(src instanceof Hunger)) {
             int grassCells = 0;
             for (int i : PathFinder.NEIGHBOURS9) {
                 if (Dungeon.level.map[pos + i] == Terrain.FURROWED_GRASS

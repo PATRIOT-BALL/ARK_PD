@@ -1238,6 +1238,14 @@ items.potions.elixirs.elixirofmight$htboost.desc=Your body feels unnaturally str
 items.potions.elixirs.elixiroftoxicessence.name=Elixir of Toxic Essence
 items.potions.elixirs.elixiroftoxicessence.desc=When consumed, this elixir will imbue the drinker with toxic energy. The drinker will be immune to toxic gas and poison, and will continuously spread toxic gas as they move.
 
+items.potions.elixirs.elixirsofironskin.name=Elixir of Stoneskin
+items.potions.elixirs.elixirsofironskin.desc=This elixir will permanently increase defense of the drinker, while additionally granting a defense buff for a long duration. Permanent defense increase effect only applies once.
+
+items.potions.elixirs.elixirsofsoulbreak.name=Elixir of Soul Break
+items.potions.elixirs.elixirsofsoulbreak.desc=This elixir is very dangerous, making all targets hit by it suffer Hallucination.
+
+items.potions.elixirs.elixirsofsoulprotection.name=Elixir of Soul Protection
+items.potions.elixirs.elixirsofsoulprotection.desc=This elixir will grant powerful protection to the drinker, granting health regeneration and Barrier.
 
 
 ###exotic potions
@@ -1931,7 +1939,7 @@ items.wands.sp.staffofsussurro.bmage_desc=When _Guard Amiya_ strikes a enemy wit
 
 items.wands.sp.staffofpodenco.name=Staff of Podenco
 items.wands.sp.staffofpodenco.staff_name=Ring of Podenco
-items.wands.sp.staffofpodenco.desc=_And it all stems from her love for flowers. A lifelong love._\n\nnThis staff has the power of operator Podenco.
+items.wands.sp.staffofpodenco.desc=_And it all stems from her love for flowers. A lifelong love._\n\nThis staff has the power of operator Podenco.
 items.wands.sp.staffofpodenco.stats_desc=This staff can fire hallucination energy. Enemies are inflicted Crippled on hit and enemies already Crippled are inflicted Hallucination and Vertigo.
 items.wands.sp.staffofpodenco.bmage_desc=When _Guard Amiya_ strikes an enemy with a Ring of Podenco, it will deal extra damage to enemies under Hallucination.
 
@@ -2585,6 +2593,20 @@ items.weapon.melee.echeveria.ac_sumon=SUMMON
 items.weapon.melee.echeveria.setbouns=_Set Bonus: Golden Compass_\nReduced turns used for SUMMON
 items.weapon.melee.echeveria$pinkdogdrone.name=Float Units
 items.weapon.melee.echeveria$pinkdogdrone.desc=Up up here we go, go
+
+items.weapon.melee.kollamsword.name=kollam`s sword
+items.weapon.melee.kollamsword.desc=그의 패검에 베인 상처에선 피가 흐르지 않았으며, 만약 스스로 물러난다면 목숨을 건질 수 있었다고 하기도 하였다.\n매 공격시 SP가 충전되며, SP를 100%소모해 능력을 해방할 수 있습니다. 능력에 휘말린 적들은 50%확률로 정신을 지배당합니다.
+items.weapon.melee.kollamsword.stats_desc=_고정 피해(방어 무시)_
+items.weapon.melee.kollamsword.ac_zap=능력해방
+items.weapon.melee.kollamsword.setbouns=_아이템 시너지 : 투쟁을 여기서 멈추노라_\n능력해방의 정신지배 확률이 100%로 증가합니다.
+
+items.weapon.melee.suffering.name=suffering
+items.weapon.melee.suffering.desc=이 무기는 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.\n매 턴마다 SP가 충전되며, SP를 100%소모해 _화염탄_을 발사할 수 있습니다. 화염탄이 적중하면 폭발하여 주위에 200%의 피해를 입힙니다.
+items.weapon.melee.suffering.ac_zap=화염탄
+items.weapon.melee.suffering.prompt=목표를 지정해주세요.
+items.weapon.melee.suffering.self_target=자신에게 발사할 수 없습니다.
+items.weapon.melee.suffering.fizzles=당신의 총은 충전되지 않았습니다.
+items.weapon.melee.suffering.setbouns=_아이템 시너지 : 신이 선택한 감독관_\nSP 충전률이 2배가 됩니다.
 
 
 ##Guns Related

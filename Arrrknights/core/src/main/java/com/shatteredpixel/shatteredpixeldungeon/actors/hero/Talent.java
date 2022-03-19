@@ -604,7 +604,7 @@ public enum Talent {
 			SealOfLight Seal = hero.belongings.getItem(SealOfLight.class);
 			if (hero.belongings.getItem(SealOfLight.class) != null)
 			{
-				Seal.charge(hero, 4 + hero.pointsInTalent(KNIGTS_OATH) * 4);
+				Seal.charge(hero, 5 + hero.pointsInTalent(KNIGTS_OATH) * 5);
 				Seal.updateQuickslot();
 			}
 		}

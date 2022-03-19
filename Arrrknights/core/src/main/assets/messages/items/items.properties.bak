@@ -1238,6 +1238,15 @@ items.potions.elixirs.elixirofmight$htboost.desc=당신의 몸이 비자연적�
 items.potions.elixirs.elixiroftoxicessence.name=독성 정수의 영약
 items.potions.elixirs.elixiroftoxicessence.desc=이 영약을 마시면 음용자를 독성을 띤 힘과 융합시킵니다. 음용자는 유독 가스와 중독에 면역을 가지게 될 것이며, 움직이는 곳마다 유독 가스를 살포할 것입니다.
 
+items.potions.elixirs.elixirsofironskin.name=강철 피부의 영약
+items.potions.elixirs.elixirsofironskin.desc=이 영약을 마시면 음용자의 방어력을 영구적으로 상승시켜주며, 긴 시간동안 방어 능력을 상승시킵니다. 영구 방어력 상승 효과는 1회만 적용됩니다.
+
+items.potions.elixirs.elixirsofsoulbreak.name=영혼 파괴의 영약
+items.potions.elixirs.elixirsofsoulbreak.desc=이 영약에 담긴 액체는 매우 위험하여, 닿은 대상들을 환각에 빠지게 만듭니다.
+
+items.potions.elixirs.elixirsofsoulprotection.name=영혼 보호의 영약
+items.potions.elixirs.elixirsofsoulprotection.desc=이 영약을 마시면 강력한 수호의 힘이 음용자의 체력을 회복시키고 보호막을 부여해줍니다.
+
 
 
 ###exotic potions
@@ -2596,6 +2605,9 @@ items.weapon.melee.kollamsword.setbouns=_아이템 시너지 : 투쟁을 여기�
 items.weapon.melee.suffering.name=고난의 진술자
 items.weapon.melee.suffering.desc=이 무기는 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.\n매 턴마다 SP가 충전되며, SP를 100%소모해 _화염탄_을 발사할 수 있습니다. 화염탄이 적중하면 폭발하여 주위에 200%의 피해를 입힙니다.
 items.weapon.melee.suffering.ac_zap=화염탄
+items.weapon.melee.suffering.prompt=목표를 지정해주세요.
+items.weapon.melee.suffering.self_target=자신에게 발사할 수 없습니다.
+items.weapon.melee.suffering.fizzles=당신의 총은 충전되지 않았습니다.
 items.weapon.melee.suffering.setbouns=_아이템 시너지 : 신이 선택한 감독관_\nSP 충전률이 2배가 됩니다.
 
 

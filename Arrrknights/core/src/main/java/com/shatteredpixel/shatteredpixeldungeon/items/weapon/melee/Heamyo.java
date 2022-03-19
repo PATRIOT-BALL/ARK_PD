@@ -42,8 +42,7 @@ public class Heamyo extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  Math.round(6.67f*(tier+1000)) +    //40 base, up from 30
-                lvl*Math.round(1.33f*(tier+1000)); //+8 per level, up from +6
+        return  500;
     }
 
     @Override
