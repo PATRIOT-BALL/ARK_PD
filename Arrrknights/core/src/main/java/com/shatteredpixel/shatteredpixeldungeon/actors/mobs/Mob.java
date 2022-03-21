@@ -625,13 +625,14 @@ public abstract class Mob extends Char {
 			if (enemy == Dungeon.hero){
 				if (Dungeon.hero.hasTalent(Talent.SOUL_SIPHON)) {
 					int chancevalue = Random.Int(HT * (55 - (Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON) * 5)));
-					GLog.w(("" + chancevalue + " / " + damage));
 					boolean chance = (chancevalue < damage);
 					if (chance) {
 						boolean droppingLoot = this.alignment != Char.Alignment.ALLY;
 						Buff.affect(this, Corruption.class);
 
 						if (this.buff(Corruption.class) != null){
+							damage = 0;
+							HP = HT;
 							if (droppingLoot) this.rollToDropLoot();
 							Statistics.enemiesSlain++;
 							Badges.validateMonstersSlain();
