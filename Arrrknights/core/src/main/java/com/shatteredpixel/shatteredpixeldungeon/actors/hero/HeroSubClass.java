@@ -44,6 +44,7 @@ public enum HeroSubClass {
 
 	ASSASSIN,
 	FREERUNNER,
+	WILD,
 
 	SNIPER,
 	WARDEN,

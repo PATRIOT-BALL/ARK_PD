@@ -131,12 +131,16 @@ public enum Talent {
 	ENHANCED_LETHALITY(75, 3), ASSASSINS_REACH(76, 3), BOUNTY_HUNTER(77, 3),
 	//Freerunner T3
 	EVASIVE_ARMOR(78, 3), PROJECTILE_MOMENTUM(79, 3), SPEEDY_STEALTH(80, 3),
+	//WILD T3
+	WIND_SCAR(78,3), OPPORTUNIST(79, 3), WIND_ROAD(80,3),
 	//Rogue T4
 	ASSASSINSCREED(81,3),CLOCK_UPGRADE(74,3),
 	//Assassin T4
 	SWEEP(76,4), HOWLING(75,4),
 	//Freerunner T4
 	SPECIAL_OPERATIONS(83,4), BLOODBATH_OPERATIONS(78,4),
+	// WILD T4
+	SWORD_WIND_UPGRADE(83,4), SHADOW_HUNTER(78,4),
 
 	//Huntress T1
 	NATURES_BOUNTY(96), SURVIVALISTS_INTUITION(97), FOLLOWUP_STRIKE(98), NATURES_AID(99),
@@ -800,6 +804,9 @@ public enum Talent {
 			case FREERUNNER:
 				Collections.addAll(tierTalents, EVASIVE_ARMOR, PROJECTILE_MOMENTUM, SPEEDY_STEALTH);
 				break;
+			case WILD:
+				Collections.addAll(tierTalents, WIND_SCAR, OPPORTUNIST, WIND_ROAD);
+				break;
 			case SNIPER:
 				Collections.addAll(tierTalents, FARSIGHT, SHARPSHOOTER, SHARED_UPGRADES);
 				break;
@@ -858,6 +865,9 @@ public enum Talent {
 				break;
 			case FREERUNNER:
 				Collections.addAll(tierTalents, SPECIAL_OPERATIONS, BLOODBATH_OPERATIONS);
+				break;
+			case WILD:
+				Collections.addAll(tierTalents, SWORD_WIND_UPGRADE, SHADOW_HUNTER);
 				break;
 			case SNIPER:
 				Collections.addAll(tierTalents, SNIPING);
