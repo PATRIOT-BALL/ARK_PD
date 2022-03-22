@@ -26,7 +26,7 @@ public class WintersScar extends MeleeWeapon {
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        if (defender.buff(Chill.class) != null) damage = Math.round(damage * 1.15f);
+        if (defender.buff(Chill.class) != null) damage = Math.round(damage * 1.25f);
 
         if (defender instanceof Mob && ((Mob) defender).surprisedBy(attacker)) {
             Buff.affect(defender, Chill.class, 4f);

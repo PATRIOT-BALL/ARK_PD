@@ -237,7 +237,8 @@ public class Tomimi extends Mob {
             }
 
             if (phase == 1) enemyspawncooldown = 9;
-            else enemyspawncooldown = 5;
+            else if (phase == 2) enemyspawncooldown = 5;
+            else enemyspawncooldown = 3;
         }
     }
 
@@ -266,7 +267,7 @@ public class Tomimi extends Mob {
 
                 Char blocker = Actor.findChar(enemy.pos);
                 if (blocker.alignment != alignment){
-                    blocker.damage( Random.NormalIntRange(2, 10), this );
+                    blocker.damage( Random.NormalIntRange(22, 30), this );
                 }
             }
         }

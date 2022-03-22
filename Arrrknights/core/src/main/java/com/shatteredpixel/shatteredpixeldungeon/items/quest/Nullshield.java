@@ -90,7 +90,7 @@ public class Nullshield extends Item {
                 else if (item instanceof WornShortsword || item instanceof Dagger || item instanceof MagesStaff || item instanceof EX42 || item instanceof Gloves)
                 {
                     if (curUser.belongings.weapon != item) {
-                        if (Random.Int(2) < 1) {
+                        if (Random.Int(3) < 2) {
                             GLog.h(Messages.get(Nullshield.class, "suc"));
                             RhodesSword nya = new RhodesSword();
                             nya.identify();

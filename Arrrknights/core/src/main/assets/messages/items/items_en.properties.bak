@@ -2447,7 +2447,7 @@ items.weapon.melee.shishioh.stats_desc=Accuracy +20%, No surprise attack
 items.weapon.melee.shishioh.desc="I did manage to cut some pretty nasty folks. Doctor, you really know how to appeal to people."\n\nAs health of the user decreases, the damage will increase upto 50%. Should the user's health get low, Life Drain will be activated.
 
 items.weapon.melee.rhodessword.name=Rhodes-style Longsword
-items.weapon.melee.rhodessword.stats_desc=Surprise attack bonus +70%\n_True Damage(ignore defense)_\nGain Invisible on enemy kills.
+items.weapon.melee.rhodessword.stats_desc=Surprise attack bonus +55%\n_True Damage(ignore defense)_\nGain Invisible on enemy kills.
 items.weapon.melee.rhodessword.desc=If she were to suddenly disappear one day, it's unclear how many people would actually notice.
 
 items.weapon.melee.catgun.name=My Wish
@@ -2594,20 +2594,19 @@ items.weapon.melee.echeveria.setbouns=_Set Bonus: Golden Compass_\nReduced turns
 items.weapon.melee.echeveria$pinkdogdrone.name=Float Units
 items.weapon.melee.echeveria$pinkdogdrone.desc=Up up here we go, go
 
-items.weapon.melee.kollamsword.name=kollam`s sword
-items.weapon.melee.kollamsword.desc=그의 패검에 베인 상처에선 피가 흐르지 않았으며, 만약 스스로 물러난다면 목숨을 건질 수 있었다고 하기도 하였다.\n매 공격시 SP가 충전되며, SP를 100%소모해 능력을 해방할 수 있습니다. 능력에 휘말린 적들은 50%확률로 정신을 지배당합니다.
-items.weapon.melee.kollamsword.stats_desc=_고정 피해(방어 무시)_
-items.weapon.melee.kollamsword.ac_zap=능력해방
-items.weapon.melee.kollamsword.setbouns=_아이템 시너지 : 투쟁을 여기서 멈추노라_\n능력해방의 정신지배 확률이 100%로 증가합니다.
+items.weapon.melee.kollamsword.name=Kollam's Saber
+items.weapon.melee.kollamsword.desc=Cuts from his blade drew no blood, and anyone wise enough to retreat would survive.\nCharges SP on every attack, and 100% SP can be consumed to activate this weapon's ability. Every enemy caught in the ability has 50% chance to be inflicted with Mind Control.
+items.weapon.melee.kollamsword.stats_desc=_True Damage(Ignores Defense)_
+items.weapon.melee.kollamsword.ac_zap=Activate
+items.weapon.melee.kollamsword.setbouns=_Set Bonus : Here the Fighting Stops_\nChance to inflict Mind Control from the weapon's ability is increased to 100%.
 
-items.weapon.melee.suffering.name=suffering
-items.weapon.melee.suffering.desc=이 무기는 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.\n매 턴마다 SP가 충전되며, SP를 100%소모해 _화염탄_을 발사할 수 있습니다. 화염탄이 적중하면 폭발하여 주위에 200%의 피해를 입힙니다.
-items.weapon.melee.suffering.ac_zap=화염탄
-items.weapon.melee.suffering.prompt=목표를 지정해주세요.
-items.weapon.melee.suffering.self_target=자신에게 발사할 수 없습니다.
-items.weapon.melee.suffering.fizzles=당신의 총은 충전되지 않았습니다.
-items.weapon.melee.suffering.setbouns=_아이템 시너지 : 신이 선택한 감독관_\nSP 충전률이 2배가 됩니다.
-
+items.weapon.melee.suffering.name=Suffering
+items.weapon.melee.suffering.desc=This weapon inflicts damage to nearby enemies as well, and inflicts 2x damage if the enemy is alone.\nCharges SP every turn, and 100% of SP can be consumed to use _Scorching Bullet_. When Scorching Bullet hits, it will explode, dealing 200% damage nearby.
+items.weapon.melee.suffering.ac_zap=Scorching Bullet
+items.weapon.melee.suffering.prompt=Set the target.
+items.weapon.melee.suffering.self_target=You can't shoot yourself.
+items.weapon.melee.suffering.fizzles=Your gun has not been charged enough.
+items.weapon.melee.suffering.setbouns=_Set Bonus : Chosen Overseer_\nSP charge rate is doubled.
 
 ##Guns Related
 

@@ -552,7 +552,7 @@ public class DriedRose extends Artifact {
 			//same dodge as the hero
 			defenseSkill = (Dungeon.hero.lvl+5);
 			if (rose == null) return;
-			HT = 25 + 8*rose.level();
+			HT = 25 + 11*rose.level();
 		}
 		
 		private int defendingPos = -1;

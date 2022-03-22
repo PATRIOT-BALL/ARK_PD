@@ -18,6 +18,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Slow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.MirrorImage;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;;
@@ -173,6 +174,12 @@ public class SiestaBoss extends Mob {
         int A2pos;
         int SwPos;
         int ThisPos;
+
+        for (Mob m : Dungeon.level.mobs.toArray(new Mob[0])) {
+            if (m instanceof MirrorImage || m instanceof Wraith_donut) {
+                m.die(null);
+            }
+        }
 
         switch (TelType) {
             case 0: default:

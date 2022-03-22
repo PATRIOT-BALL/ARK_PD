@@ -94,7 +94,7 @@ public class IsekaiItem extends Artifact {
             if (activeBuff == null && (lock == null || lock.regenOn()) && !(Dungeon.depth >= 26 && Dungeon.depth <= 30)) {
                 if (charge < chargeCap && !cursed) {
                     // 500 턴마다 100%충전 (기본)
-                    float chargeGain = 0.2f;
+                    float chargeGain = 0.18f;
                     chargeGain *= RingOfEnergy.artifactChargeMultiplier(target);
                     partialCharge += chargeGain;
 
