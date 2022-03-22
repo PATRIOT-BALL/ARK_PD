@@ -24,7 +24,9 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
@@ -41,7 +43,7 @@ public class Golem extends Mob {
 	{
 		spriteClass = GolemSprite.class;
 		
-		HP = HT = 120;
+		HP = HT = 100;
 		defenseSkill = 15;
 		
 		EXP = 12;
@@ -173,6 +175,9 @@ public class Golem extends Mob {
 				Dungeon.observe();
 			}
 		}
+
+		Buff.affect(enemy, Roots.class, 1f);
+		Buff.affect(enemy, Silence.class, 1f);
 
 		enemyTeleCooldown = 20;
 	}
