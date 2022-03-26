@@ -17,7 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class ElixirsOfIronSkin extends Elixir {
     {
-        image = ItemSpriteSheet.ELIXIR_AQUA;
+        image = ItemSpriteSheet.ELIXIR_IRON;
     }
 
     @Override

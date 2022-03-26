@@ -22,7 +22,7 @@ import com.watabou.utils.PathFinder;
 
 public class ElixirsOfSoulBreak extends Elixir {
     {
-        image = ItemSpriteSheet.ELIXIR_TOXIC;
+        image = ItemSpriteSheet.ELIXIR_SOUL1;
     }
 
     @Override
