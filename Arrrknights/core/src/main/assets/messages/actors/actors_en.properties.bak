@@ -1384,7 +1384,7 @@ actors.mobs.slime.desc=One of Reunion's melee soldiers. Equipped with illegally 
 actors.mobs.snake.name=Sprout Slug
 actors.mobs.snake.hint=Try using the examine button on a slug to learn how to counter them.
 actors.mobs.snake.desc=An infected wild creature. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions. Various seeds and fruits are blooming.\n\nYou can perform a surprise attack by attacking while out of the slug`s vision. One way is to let a slug chase you through a doorway and then _strike just as it moves into the door._
-actors.mobs.snake.noticed=Sprout Slug dodged your attack
+actors.mobs.snake.noticed=Sprout Slug dodged your attack.
 
 actors.mobs.explodslug_n.name=Originium Slug
 actors.mobs.explodslug_n.desc=they are easily controlled by enemy casters for use as cannon fodder during invasions. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.\n\n_silence possible_
@@ -1501,6 +1501,10 @@ actors.mobs.yogfist$brightfist.desc=You seem to recognize the mysterious, mythic
 actors.mobs.yogfist$darkfist.name=Emperor’s Blade
 actors.mobs.yogfist$darkfist.teleport=The shadow teleports away in a blast of darkness that extinguishes your light source!
 actors.mobs.yogfist$darkfist.desc=This shadow is formed out of pure dark energy. It is capable of shooting powerful blasts of dark magic every turn! These blasts will weaken your light source in addition to dealing heavy damage. The shadow is also capable of briefly engulfing the arena in darkness in order to escape!\n\nThe shadow has no special abilities which it can use in melee range however.
+
+actors.mobs.mudrockzealot.name=zealot
+actors.mobs.mudrockzealot.desc=A member of Mudrock's Sarkaz squad. The dance on the edge of life and death has given them a unique tactical system.
+actors.mobs.mudrockzealot.brack=Destroyd
 
 // 탈루 추가 보스전
 actors.mobs.talu_blacksnake.name=The Deathless Black Snake

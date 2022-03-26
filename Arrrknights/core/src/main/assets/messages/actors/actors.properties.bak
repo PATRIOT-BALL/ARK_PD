@@ -1414,6 +1414,7 @@ actors.mobs.slime.desc=리유니온의 근거리 전투원. 노획하거나 불�
 actors.mobs.snake.name=새싹 원석충
 actors.mobs.snake.hint=새싹 원석충에게 조사 버튼을 사용하여 어떻게 반격할 수 있는지에 대해 배워 보세요.
 actors.mobs.snake.desc=야생의 감염 생물, 일반 원석충보다 위험도가 낮은 종이다. 이런 저지능 생물은 적의 캐스터에게 조종당할 가능성이 있으며, 인공설비에 침입하여 무리지어 공격한다. 각종 열매의 씨앗이 이 원석충과 함께 자라난다.\n\n새싹 원석충의 시야 바깥에서 공격하면 한 번의 기습 공격을 가합니다. 문 너머로 새싹 원석충을 유인한 뒤 _새싹 원석충이 문을 넘어온 순간에 공격_ 하는 것도 좋은 방법입니다.
+actors.mobs.snake.noticed=새싹 원석충은 당신의 어설픈 공격을 회피했다.
 
 actors.mobs.explodslug_n.name=고에너지 원석충
 actors.mobs.explodslug_n.desc=야생의 감염 생물. 복부에 대량의 오리지늄과 동화되어 불안정한 상태인 관계로 사망 시 폭발이 발생할 수 있다. 이런 저지능 생물은 적의 캐스터에게 조종당할 가능성이 있으며, 인공설비에 침입하여 무리지어 공격한다.\n\n_침묵 가능_
@@ -1530,6 +1531,9 @@ actors.mobs.yogfist$brightfist.desc=석관에서 나타난 신비한 괴물, 당
 actors.mobs.yogfist$darkfist.name=황제의 칼날
 actors.mobs.yogfist$darkfist.teleport=황제의 칼날은 당신의 광원을 없애는 어둠의 폭발 속에서 순간이동했다!
 actors.mobs.yogfist$darkfist.desc=_탈룰라가 불러낸 과거의 환영,_이 환영은 순수한 어둠의 에너지로 이루어져 있습니다. 이 환영은 강력한 어둠 아츠의 폭발을 발사할 수 있습니다. 이 폭발들은 당신의 광원을 약하게 하며, 또한 커다란 피해를 입힙니다. 그리고 환영은 달아나기 위해 잠시동안 전투 지역을 어둠 속으로 집어삼킬 수 있습니다.\n\n하지만 이 환영은 근거리에서 사용할 수 있는 특별한 능력은 가지고 있지 않습니다.
+
+actors.mobs.mudrockzealot.name=머드락 소대원
+actors.mobs.mudrockzealot.desc=머드락의 살카즈 소대. 머드락과 생사를 넘나드는 전투 경험을 통해 독특한 전술을 습득했다.
 
 
 // 탈루 추가 보스전

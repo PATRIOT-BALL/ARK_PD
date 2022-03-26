@@ -117,6 +117,7 @@ public class Bestiary {
 						Brute.class, Brute.class,
 						Shaman.random(), Shaman.random(),
 						ExplodSlug_N.class, ExplodSlug_N.class,
+						MudrockZealot.class,
 						DM200.class));
 			case 14: case 15:
 				//1x bat, 1x brute, 2x shaman, 2x spinner, 2x DM-300
@@ -125,6 +126,7 @@ public class Bestiary {
 						Brute.class,
 						Shaman.random(), Shaman.random(),
 						ExplodSlug_N.class, ExplodSlug_N.class,
+						MudrockZealot.class, MudrockZealot.class,
 						DM200.class, DM200.class));
 				
 			// City
