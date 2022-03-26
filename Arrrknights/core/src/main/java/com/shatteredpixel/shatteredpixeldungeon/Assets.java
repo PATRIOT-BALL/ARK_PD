@@ -250,6 +250,7 @@ public class Assets {
 		public static final String HIT_AR        = "sounds/hit_ar.mp3";
 		public static final String HIT_BONK        = "sounds/hit_bonk.mp3";
 		public static final String HIT_SWORD        = "sounds/hit_sword.mp3";
+		public static final String HIT_SWORD2        = "sounds/hit_sword2.mp3";
 		public static final String HIT_DUALSTRIKE        = "sounds/hit_dualstrike.mp3";
 		public static final String HIT_SPLASH       = "sounds/hit_splash.mp3";
 		public static final String HIT_GLUTONY       = "sounds/hit_glutony.mp3";
@@ -278,7 +279,7 @@ public class Assets {
 
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
-				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY, HIT_SWORD, HIT_DUALSTRIKE,
+				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY, HIT_SWORD, HIT_SWORD2, HIT_DUALSTRIKE,
 				HIT_ARROW, HIT_WHIP, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK, HIT_SPLASH, HIT_DUSK,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, ZAP_GUN, LIGHTNING, LEVELUP, DEATH,

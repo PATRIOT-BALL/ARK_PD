@@ -32,8 +32,8 @@ import java.util.ArrayList;
 public class KollamSword extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.GLAIVE;
-        hitSound = Assets.Sounds.HIT_SLASH;
+        image = ItemSpriteSheet.DONKEY_SWORD;
+        hitSound = Assets.Sounds.HIT_SWORD2;
         hitSoundPitch = 1.03f;
 
         tier = 5;
