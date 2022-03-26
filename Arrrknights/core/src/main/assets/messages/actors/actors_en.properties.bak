@@ -584,6 +584,18 @@ actors.hero.talent.special_operations.desc=_+1:_ Freerunning cooldown is reduced
 actors.hero.talent.bloodbath_operations.title=Bloodbath Operations
 actors.hero.talent.bloodbath_operations.desc=Hunt's damage is decreased by 50%, but will now inflict Paralysis on the target.\n\n_+1:_ Reduces hunt's cooldown by _100 turns_.\n\n_+2:_ Reduces hunt's cooldown by _200 turns_.\n\n_+3:_ Reduces hunt's cooldown by _300 turns_.\n\n_+4:_ Reduces hunt's cooldown by _400 turns_.
 
+// 레드 3차
+actors.hero.talent.wind_scar.title=Wind Scar
+actors.hero.talent.wind_scar.desc=_+1:_ Sword Wind knocks enemy back by _0-2 tiles_.\n\n_+1:_ Sword Wind knocks enemy back by _1-2 tiles_.\n\n_+1:_ Sword Wind knocks enemy back by _2 tiles_.
+actors.hero.talent.opportunist.title=Opportunist
+actors.hero.talent.opportunist.desc=_+1:_ When Sword Wind hits, inflict Blind for 2 turns with _33%_ chance.\n\n_+2:_ When Sword Wind hits, inflict Blind for 2 turns with _67%_ chance.\n\n_+3:_ When Sword Wind hits, inflict Blind for 2 turns with _100%_ chance.
+actors.hero.talent.wind_road.title=Wind Road
+actors.hero.talent.wind_road.desc=_+1:_ Sword Wind is charged by _10%_ on every attack.\n\n_+2:_ Sword Wind is charged by _20%_ on every attack.\n\n_+3:_ Sword Wind is charged by _30%_ on every attack.
+actors.hero.talent.sword_wind_upgrade.title=Sword Wind Upgrade
+actors.hero.talent.sword_wind_upgrade.desc=_+1:_ Sword Wind damage percentage is increased from 60% to _66%_.\n\n_+2:_ Sword Wind damage percentage is increased from 60% to _69%_.\n\n_+3:_ Sword Wind damage percentage is increased from 60% to _72%_.\n\n_+4:_ Sword Wind damage percentage is increased from 60% to _75%_.
+actors.hero.talent.shadow_hunter.title=Shadow Hunter
+actors.hero.talent.shadow_hunter.desc=_+1:_ _5%_ chance to charge Sword Wind when surprise attack lands.\n\n_+2:_ _10%_ chance to charge Sword Wind when surprise attack lands.\n\n_+3:_ _15%_ chance to charge Sword Wind when surprise attack lands.\n\n_+4:_ _20%_ chance to charge Sword Wind when surprise attack lands.
+
 
 actors.hero.talent.natures_bounty.title=Nature's Bounty
 actors.hero.talent.natures_bounty.desc=_+1:_ GreyThroat can find _4 berries_ hidden in tall grass as she explores the earlier stages of the dungeon.\n\n_+2:_ GreyThroat can find _6 berries_ hidden in tall grass as she explores the earlier stages of the dungeon.
@@ -835,6 +847,9 @@ actors.hero.herosubclass.assassin_desc=_Assassin Elite_ subclass prepares a dead
 actors.hero.herosubclass.freerunner=Celerity Red
 actors.hero.herosubclass.freerunner_short_desc=_Celerity_\nPerforms combat utilizing movement speed. Weapons that has extended range or thrown weapons are effective on this class.
 actors.hero.herosubclass.freerunner_desc=_Celerity Elite_ subclass builds momentum as Red runs. Momentum can be used to start freerunning, which grants her 2x movement speed and bonus evasion for a short while.\nThis subclass needs _1 less strength_ to use armor and weapons and takes less turns to reload firearms.
+actors.hero.herosubclass.wild=Wild Red
+actors.hero.herosubclass.wild_short_desc=_Wild_\nDeals ranged attacks with sword wind.
+actors.hero.herosubclass.wild_desc=_Wild Elite_ subclass can deal ranged attacks with _Sword Wind_ that deals 60% damage. _Sword Wind_ is charged through turns spent. Hunt ability can no longer be used. 
 actors.hero.herosubclass.sniper=Sniper GreyThroat
 actors.hero.herosubclass.sniper_short_desc=_Sniper_\nMaster of ranged combat. Ring of Sharpshooter and enhanced thrown weapons are important for this class.
 actors.hero.herosubclass.sniper_desc=_Sniper Elite_ subclass is a master of ranged combat. Her ranged attacks pierce armor, and after striking with a thrown weapon she can follow up with a special attack from her crossbow. Accuracy with thrown weapons are increased as well.\n\nA shot from firearms will also penetrate armor, and special attack can also be triggered after landing a shot with a firearm.
@@ -1383,6 +1398,7 @@ actors.mobs.slime.desc=One of Reunion's melee soldiers. Equipped with illegally 
 actors.mobs.snake.name=Sprout Slug
 actors.mobs.snake.hint=Try using the examine button on a slug to learn how to counter them.
 actors.mobs.snake.desc=An infected wild creature. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions. Various seeds and fruits are blooming.\n\nYou can perform a surprise attack by attacking while out of the slug's vision. One way is to let a slug chase you through a doorway and then _strike just as it moves into the door._
+actors.mobs.snake.noticed=Sprout Slug dodged your attack.
 
 actors.mobs.explodslug_n.name=I. Originium Slug
 actors.mobs.explodslug_n.desc=They are easily controlled by enemy casters for use as cannon fodder during invasions. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.\n\n_Silence possible_
