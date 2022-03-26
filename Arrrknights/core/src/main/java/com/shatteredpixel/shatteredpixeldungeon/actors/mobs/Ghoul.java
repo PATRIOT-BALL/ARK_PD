@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -247,7 +248,9 @@ public class Ghoul extends Mob {
 
 			turnsToRevive--;
 			if (turnsToRevive <= 0){
-				ghoul.HP = Math.round(ghoul.HT/10f);
+				if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) ghoul.HP = Math.round(ghoul.HT/2f);
+				else ghoul.HP = Math.round(ghoul.HT/10f);
+
 				if (Actor.findChar( ghoul.pos ) != null) {
 					ArrayList<Integer> candidates = new ArrayList<>();
 					for (int n : PathFinder.NEIGHBOURS8) {

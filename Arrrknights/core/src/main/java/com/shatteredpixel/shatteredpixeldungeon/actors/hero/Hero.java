@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SpikesBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.StomeCharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Twilight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WildMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WindEnergy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Ghoul;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -831,6 +832,12 @@ public class Hero extends Char {
             return;
         }
 
+        WildMark mark = buff(WildMark.class);
+        if (mark != null) {
+            mark.Charged(time);
+        }
+        else if (subClass == HeroSubClass.WILD) Buff.affect(this, WildMark.class);
+
         if (belongings.weapon instanceof PatriotSpear) {
             if (belongings.armor instanceof PlateArmor) {
                 if (belongings.getItem(RingOfMight.class) != null && belongings.getItem(RingOfTenacity.class) != null) {
@@ -1521,6 +1528,13 @@ public class Hero extends Char {
                     HP = Math.min(HP + heal, HT);
                     sprite.showStatus(CharSprite.POSITIVE, "+%dHP", heal);
                 }
+            }
+        }
+
+        if (hasTalent(Talent.WIND_ROAD)) {
+            WildMark mark = buff(WildMark.class);
+            if (mark != null) {
+                mark.Charged(pointsInTalent(Talent.WIND_ROAD) * 3);
             }
         }
 

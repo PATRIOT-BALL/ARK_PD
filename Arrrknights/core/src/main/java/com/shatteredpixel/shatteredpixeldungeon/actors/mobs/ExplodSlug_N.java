@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
@@ -157,8 +158,10 @@ public class ExplodSlug_N extends Mob {
 
 		super.die(cause);
 		if (!Silnce) {
-			GameScene.add(Blob.seed(pos, 30, StenchGas.class));
-			GameScene.add(Blob.seed(pos, 30, ToxicGas.class));
+			int gas = 30;
+			if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) gas = 50;
+			GameScene.add(Blob.seed(pos, gas, StenchGas.class));
+			GameScene.add(Blob.seed(pos, gas, ToxicGas.class));
 		}
 
 		if (Random.Int(0,300) <= 1)

@@ -185,6 +185,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSwor
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KollamSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.LoneJourney;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
@@ -204,6 +205,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Suffering;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MidnightSword;
@@ -320,6 +322,7 @@ public enum Catalog {
 		WEAPONS.seen.put( SakuraSword.class,                false);
 		WEAPONS.seen.put( LoneJourney.class,                   false);
 		WEAPONS.seen.put( Echeveria.class,                   false);
+		WEAPONS.seen.put( Suffering.class,                   false);
 
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Firmament.class,                       false);
@@ -332,6 +335,7 @@ public enum Catalog {
 		WEAPONS.seen.put( CatGun.class,                   false);
 		WEAPONS.seen.put( MinosFury.class,                   false);
 		WEAPONS.seen.put( ImageoverForm.class,                   false);
+		WEAPONS.seen.put( KollamSword.class,                   false);
 
 		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);
 		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);

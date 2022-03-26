@@ -1,7 +1,9 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
@@ -69,6 +71,10 @@ public class TiacauhRitualist extends Mob{
             if (hit( this, enemy, true )) {
                 int dmg = Random.NormalIntRange(12, 18);
                 enemy.damage( dmg, new TiacauhRitualist.TiacauhBolat() );
+
+                if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE) && Random.Int(2) == 0) {
+                    Buff.affect(enemy, Blindness.class, 1f);
+                }
 
                 if (enemy.sprite.visible) {
                     enemy.sprite.flash();

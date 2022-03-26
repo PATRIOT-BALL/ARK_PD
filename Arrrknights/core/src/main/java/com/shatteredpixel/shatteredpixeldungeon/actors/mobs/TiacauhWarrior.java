@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -51,6 +52,8 @@ public class TiacauhWarrior extends Mob {
             }
         }
         if (grassCells > 0) dmg = Math.round(dmg * (1f - (grassCells * 0.04f)));
+
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) dmg *= 0.8f;
 
         super.damage(dmg, src);
     }

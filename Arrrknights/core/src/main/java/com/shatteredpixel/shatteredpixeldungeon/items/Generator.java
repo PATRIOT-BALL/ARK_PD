@@ -195,6 +195,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.M1887;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Suffering;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
@@ -487,9 +488,10 @@ public class Generator {
                     RadiantSpear.class,
                     KRISSVector.class,
                     LoneJourney.class,
-                    Echeveria.class
+                    Echeveria.class,
+                    Suffering.class
             };
-            WEP_T5.probs = new float[]{5, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 3, 3, 3};
+            WEP_T5.probs = new float[]{4, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 3, 3, 3, 3};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{

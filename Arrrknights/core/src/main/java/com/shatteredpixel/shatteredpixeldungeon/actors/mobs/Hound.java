@@ -21,6 +21,8 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
@@ -48,6 +50,7 @@ public class Hound extends Mob {
 	
 	@Override
 	public int damageRoll() {
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) return Random.NormalIntRange(2,6);
 		return Random.NormalIntRange( 1, 6 );
 	}
 	

@@ -14,6 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.MasterThievesArmband;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SandalsOfNature;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.UnstableSpellbook;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.WoundsofWar;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
@@ -42,6 +43,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KollamSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Laevateinn;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
@@ -50,6 +52,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RadiantSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Suffering;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
@@ -137,6 +140,8 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof KRISSVector) {setItem1 = new RingOfAccuracy(); setItem2 = new MasterThievesArmband(); setItem3 = null; SetValue = 2; return true;}
         else if (weapon instanceof WarJournalist) {setItem1 = new WoundsofWar(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof Echeveria) {setItem1 = new RingOfWealth(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
+        else if (weapon instanceof Suffering) {setItem1 = new TimekeepersHourglass(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
+        else if (weapon instanceof KollamSword) {setItem1 = new RingOfMistress(); setItem2 = new ChaliceOfBlood(); setItem3 = null; SetValue = 2; return true;}
 
 
         return false;

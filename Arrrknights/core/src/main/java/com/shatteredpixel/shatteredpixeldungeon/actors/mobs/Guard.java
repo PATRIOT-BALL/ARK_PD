@@ -22,10 +22,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Chains;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
@@ -119,7 +122,8 @@ public class Guard extends Mob {
 	private void pullEnemy( Char enemy, int pullPos ){
 		enemy.pos = pullPos;
 		Dungeon.level.occupyCell(enemy);
-		Cripple.prolong(enemy, Cripple.class, 4f);
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(enemy, Roots.class, 2f);
+		else Cripple.prolong(enemy, Cripple.class, 4f);
 		if (enemy == Dungeon.hero) {
 			Dungeon.hero.interrupt();
 			Dungeon.observe();

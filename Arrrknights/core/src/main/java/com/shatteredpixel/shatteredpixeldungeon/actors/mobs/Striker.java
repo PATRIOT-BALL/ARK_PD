@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -42,4 +43,9 @@ public class Striker extends Mob{
     public int drRoll() {
         return Random.NormalIntRange(8, 24); }
 
+    @Override
+    public void damage(int dmg, Object src) {
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) dmg *= 0.8f;
+        super.damage(dmg, src);
+    }
 }

@@ -10,9 +10,69 @@ import java.util.ArrayList;
 
 public class v0_4_X_Changes {
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_4_3_Changes(changeInfos);
         add_v0_4_2_Changes(changeInfos);
         add_v0_4_1_Changes(changeInfos);
         add_v0_4_0_Changes(changeInfos);
+
+    }
+
+    public static void add_v0_4_3_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.4.3", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 및 시너지",
+                "_새로운 시너지_ : 투쟁을 여기서 멈추노라 / 신이 선택한 감독관" + "\n\n" +
+                        "_고난의 진술자_ : 5티어 무기로, 공격시 대상 주위에도 피해를 입히며, 대상 주위에 적이 없다면 2배의 피해를 입힙니다. 특수 능력으로 화염탄을 발사할 수 있습니다." + "\n\n" +
+                "_영혼 보호의 영약_, _영혼 파괴의 영약_, _강철 피부의 영약_이 추가되었습니다. 이 아이템들은 재활용 금속을 활용하는 가공소 아이템입니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 3번째 전문화",
+                "야생 전문화가 추가되었습니다. 야생 전문화는 _검풍_을 사용해 원거리 공격을 가하며, 특성으로 검풍의 충전과 유틸성을 강화할 수 있습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 변경",
+                "_로도스 제식 장검_의 조합 성공확률이 증가했습니다. 대신 기습 피해 보너스가 70%에서 _55%_로 감소했습니다." + "\n\n" +
+                "_겨울의 상처_의 한기 대상 추가 피해량이 증가했습니다. 대신 기습 피해 보너스가 33%에서 _25%_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "지배 아미야 변경",
+                "_지배력 강화_ 특성이 대상에게 물리 피해를 입힐 때 확률적으로 정신 지배를 거는 특성으로 변경되었습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEARL), "니어 조정",
+                "_기사의 맹세_ 특성의 충전량이 8-12%에서 _10-15%_로 증가했습니다." + "\n\n" +
+                "_카시미어의 기사_ 특성의 발동 확률이 33%에서 _20%_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "숙주 부랑자 변경",
+                "숙주 부랑자의 체력이 120에서 _95_로 감소했지만, 적을 텔레포트 시킬 때 _속박_과 _침묵_을 1턴 부여합니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 상향",
+                "_가드 오퍼레이터 근로 계약서_의 가드 오퍼레이터 최대 체력이 증가했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
+                "_시장 크로닌_이 텔레포트 발동시 모든 거울상과 아미야의 환영을 파괴합니다." + "\n\n" +
+                "_토미미_의 3페이즈 잡몹 소환 속도가 증가했습니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ARTI), "유물 하향",
+                "_커스텀 탐험세트, 이세계 전술장비, 전쟁의 상처_의 충전 속도가 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "자연 전문화 하향",
+                "_블러드라인_ 특성이 이제 굶주림 피해를 줄여주지 못합니다."));
+
 
     }
 

@@ -41,6 +41,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Rose_Force;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WandEmpower;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WildMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Shopkeeper;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
@@ -627,6 +628,14 @@ public enum Talent {
 				&& enemy.buff(SuckerPunchTracker.class) == null){
 			dmg += Random.IntRange(hero.pointsInTalent(Talent.SUCKER_PUNCH) , 3);
 			Buff.affect(enemy, SuckerPunchTracker.class);
+		}
+
+		if (hero.hasTalent(Talent.SHADOW_HUNTER)
+				&& enemy instanceof Mob && ((Mob) enemy).surprisedBy(hero)){
+			if (Random.Int(20) < hero.pointsInTalent(SHADOW_HUNTER)) {
+				WildMark mark = hero.buff(WildMark.class);
+				if (mark != null) mark.gainCharge();
+			}
 		}
 
 		if (hero.hasTalent(Talent.FOLLOWUP_STRIKE)) {

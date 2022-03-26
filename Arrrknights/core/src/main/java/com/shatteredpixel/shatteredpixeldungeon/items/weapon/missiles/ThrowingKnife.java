@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
@@ -29,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.PinCushion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.WolfMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Piranha;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
@@ -61,8 +63,11 @@ public class ThrowingKnife extends MissileWeapon {
 	public int proc(Char attacker, Char defender, int damage) {
 		if (defender instanceof Piranha) damage = 0;
 
-		if (attacker.buff(huntcooldown.class) == null && defender.isAlive()) {
-		Buff.prolong(attacker, WolfMark.class, WolfMark.DURATION).set(defender.id(), this);}
+		if (Dungeon.hero.subClass != HeroSubClass.WILD) {
+			if (attacker.buff(huntcooldown.class) == null && defender.isAlive()) {
+				Buff.prolong(attacker, WolfMark.class, WolfMark.DURATION).set(defender.id(), this);
+			}
+		}
 		return super.proc(attacker, defender, damage);
 	}
 

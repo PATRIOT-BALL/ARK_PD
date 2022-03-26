@@ -417,6 +417,11 @@ actors.buffs.heat.overheat=과열
 actors.buffs.heat.normal_desc=블레이즈의 몸에 열기가 쌓이고 있습니다. 열기가 50%%이상이면 체력을 소모해 과열 상태에 진입할 수 있습니다.\n\n현재 열기 : %s%%
 actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다.\n\n현재 열기 : %s%%
 
+actors.buffs.wildmark.name=야생의 기운
+actors.buffs.wildmark.desc=레드는 야생의 힘을 쌓은 후 검풍으로 방출할 수 있습니다.\n\n현재 충전량 : %d(%s%%)
+actors.buffs.wildmark.prompt=검풍을 날릴 곳을 지정해주세요.
+actors.buffs.wildmark.self_target=자신에게 검풍을 날릴 수 없습니다.
+
 
 
 ###hero
@@ -595,11 +600,11 @@ actors.hero.talent.wind_scar.desc=_+1:_ 검풍이 대상을 _0-2칸_ 밀쳐냅�
 actors.hero.talent.opportunist.title=기회주의자
 actors.hero.talent.opportunist.desc=_+1:_ 검풍 적중시 _33%_ 확률로 2턴의 실명을 부여합니다.\n\n_+2:_ 검풍 적중시 _67%_ 확률로 2턴의 실명을 부여합니다.\n\n_+3:_ 검풍 적중시 _100%_ 확률로 2턴의 실명을 부여합니다.
 actors.hero.talent.wind_road.title=바람의 길
-actors.hero.talent.wind_road.desc=_+1:_ 검풍의 충전 시간이 30턴에서 _28턴_으로 감소합니다.\n\n_+2:_ 검풍의 충전 시간이 30턴에서 _26턴_으로 감소합니다.\n\n_+3:_ 검풍의 충전 시간이 30턴에서 _24턴_으로 감소합니다.
+actors.hero.talent.wind_road.desc=_+1:_ 공격시 검풍이 _10%_ 충전됩니다.\n\n_+2:_ 공격시 검풍이 _20%_ 충전됩니다\n\n_+3:_ 공격시 검풍이 _30%_ 충전됩니다
 actors.hero.talent.sword_wind_upgrade.title=검풍 강화
 actors.hero.talent.sword_wind_upgrade.desc=_+1:_ 검풍의 피해 배율이 60%에서 _66%_로 증가합니다.\n\n_+2:_ 검풍의 피해 배율이 60%에서 _69%_로 증가합니다.\n\n_+3:_ 검풍의 피해 배율이 60%에서 _72%_로 증가합니다.\n\n_+4:_ 검풍의 피해 배율이 60%에서 _75%_로 증가합니다.
 actors.hero.talent.shadow_hunter.title=그림자 사냥꾼
-actors.hero.talent.shadow_hunter.desc=_+1:_ 기습 공격시 _5%_ 확률로 검풍을 충전합니다.\n\n_+2:_ 기습 공격시 _10%_ 확률로 검풍을 충전합니다.\n\n_+3:_ 기습 공격시 _15%_ 확률로 검풍을 충전합니다.\n\n_+4:_ 기습 공격시 _20%_ 확률로 검풍을 충전합니다.\n\n
+actors.hero.talent.shadow_hunter.desc=_+1:_ 기습 공격시 _5%_ 확률로 검풍을 충전합니다.\n\n_+2:_ 기습 공격시 _10%_ 확률로 검풍을 충전합니다.\n\n_+3:_ 기습 공격시 _15%_ 확률로 검풍을 충전합니다.\n\n_+4:_ 기습 공격시 _20%_ 확률로 검풍을 충전합니다.
 
 actors.hero.talent.natures_bounty.title=자연의 은혜
 actors.hero.talent.natures_bounty.desc=_+1:_ 던전 초반에 있는 길게 자란 풀에서 _4개의 열매_ 를 찾아낼 수 있습니다.\n\n_+2:_ 던전 초반에 있는 길게 자란 풀에서 _6개의 열매_ 를 찾아낼 수 있습니다.
@@ -856,7 +861,7 @@ actors.hero.herosubclass.freerunner_short_desc=_신속_\n이동속도를 이용�
 actors.hero.herosubclass.freerunner_desc=_신속 전문화_ 는 이동할 때 마다 가속력을 쌓습니다. 가속력으로 프리러닝 상태에 돌입해 짧은 시간 동안 2배의 이동 속도와 추가 회피를 얻을 수 있습니다.\n또한, 무기와 방어구의 힘 요구치를 1만큼 감소시키며, 사격 무기의 재장전을 더 빨리할 수 있습니다.
 actors.hero.herosubclass.wild=야생 레드
 actors.hero.herosubclass.wild_short_desc=_야생_\n검풍으로 원거리 공격을 가합니다.
-actors.hero.herosubclass.wild_desc=_야생 전문화_ 는 60%의 피해를 가지는 _검풍_을 사용해 원거리 공격을 가할 수 있습니다. _검풍_은 시간 경과로 충전됩니다.
+actors.hero.herosubclass.wild_desc=_야생 전문화_ 는 60%의 피해를 가지는 _검풍_을 사용해 원거리 공격을 가할 수 있습니다. _검풍_은 시간 경과로 충전됩니다. 더 이상 사냥 능력을 사용할 수 없습니다.
 actors.hero.herosubclass.sniper=사격 그레이스롯
 actors.hero.herosubclass.sniper_short_desc=_사격_\n원거리 전투를 전문으로 합니다. 저격의 반지나 강화된 투척 무기가 중요합니다.
 actors.hero.herosubclass.sniper_desc=_사격 전문화_ 는 자신의 기술을 극단적으로 강화합니다. 원거리 공격이 방어구를 꿰뚫으며, 투척 무기로 공격한 후 쇠뇌로 특별한 공격을 할 수 있습니다. 또한, 투척 무기의 원거리 명중률이 상승합니다.\n\n추가로, 사격 무기가 적의 방어구를 꿰뚫고, 사격 무기로 적중시킨 적에게도 특별한 쇠뇌 공격이 가능합니다.

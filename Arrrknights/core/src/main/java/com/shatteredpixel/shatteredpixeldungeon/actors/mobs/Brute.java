@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -129,8 +130,9 @@ public class Brute extends Mob {
 				detach();
 				return true;
 			}
-			
-			absorbDamage( 4 );
+
+			if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) absorbDamage(2);
+			else absorbDamage( 4 );
 			
 			if (shielding() <= 0){
 				target.die(null);

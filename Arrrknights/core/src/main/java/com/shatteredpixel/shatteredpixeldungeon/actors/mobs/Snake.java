@@ -21,15 +21,21 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BabyBugSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Random;
 
 public class Snake extends Mob {
@@ -71,5 +77,19 @@ public class Snake extends Mob {
 			dodges = 0;
 		}
 		return super.defenseVerb();
+	}
+
+	@Override
+	public void damage( int dmg, Object src ) {
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) {
+			if ((enemySeen && state != SLEEPING && paralysed == 0)
+					&& ((src instanceof Wand && enemy == Dungeon.hero)
+					|| (src instanceof Char && enemy == src))) {
+				GLog.n(Messages.get(this, "noticed"));
+			} else {
+				super.damage(dmg, src);
+			}
+		}
+		else super.damage(dmg, src);
 	}
 }

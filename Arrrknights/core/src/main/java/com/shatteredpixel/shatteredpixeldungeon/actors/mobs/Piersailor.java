@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Badges;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
@@ -40,6 +41,7 @@ public class Piersailor extends Mob {
 
     @Override
     public int drRoll() {
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) return Random.NormalIntRange(4, 24);
         return Random.NormalIntRange(2, 20);
     }
 
@@ -51,6 +53,8 @@ public class Piersailor extends Mob {
 
     @Override
     protected boolean act() {
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) super.act();
+
         if (Dungeon.level.map[this.pos] == Terrain.WATER && state == HUNTING) {
             damage(HT/20, this);
             if (!isAlive()) return true;

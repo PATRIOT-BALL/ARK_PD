@@ -1,5 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -47,7 +49,9 @@ public class MetalCrab extends Mob{
 
     @Override
     public int attackProc(Char enemy, int damage) {
-        Buff.affect(enemy, Roots.class, 1f);
+        float bufftime = 1f;
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) bufftime = 3f;
+        Buff.affect(enemy, Roots.class, bufftime);
         return super.attackProc(enemy, damage);
     }
 }
