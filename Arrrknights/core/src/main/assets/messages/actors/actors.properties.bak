@@ -1534,6 +1534,7 @@ actors.mobs.yogfist$darkfist.desc=_탈룰라가 불러낸 과거의 환영,_이 
 
 actors.mobs.mudrockzealot.name=머드락 소대원
 actors.mobs.mudrockzealot.desc=머드락의 살카즈 소대. 머드락과 생사를 넘나드는 전투 경험을 통해 독특한 전술을 습득했다.
+actors.mobs.mudrockzealot.brack=보호막 파괴
 
 
 // 탈루 추가 보스전
@@ -1711,6 +1712,15 @@ actors.mobs.sandpillar.desc=우리 여동생이 제일 귀엽다고 써져있다
 
 actors.mobs.crownslayer_shadow.name=류드밀라의 그림자
 actors.mobs.crownslayer_shadow.desc=크라운 슬레이어, 리유니온의 간부다. 뛰어난 기동력으로 기습한 뒤 도망쳐서 매우 상대하기 어렵지만, 능력을 연속으로 사용할 수는 없는 듯 하다.\n\n처치시 합성옥을 뜯을 수 있을 것 같다. 
+
+actors.mobs.miniboss.shadow.name=팬텀 로도스
+actors.mobs.miniboss.shadow$typeblaze.desc=_타입 블레이즈_ : 체력이 낮을 때 강해집니다.
+actors.mobs.miniboss.shadow$typeamiya.desc=_타입 아미야_ : 아츠 저항을 보유했습니다.
+actors.mobs.miniboss.shadow$typered.desc=_타입 레드_ : 회피율이 높으며, 투명화한 대원을 감지합니다.
+actors.mobs.miniboss.shadow$typered.antiinvisibility=팬텀 로도스가 대원을 감지해 투명화를 제거했다!
+actors.mobs.miniboss.shadow$typegrey.desc=_타입 그레이스롯_ : 사거리가 깁니다.
+actors.mobs.miniboss.shadow$typerose.desc=_타입 로즈몬티스_ : 피해를 적게 받으며, 대원과의 전투에 돌입하면 방벽을 던집니다.
+actors.mobs.miniboss.shadow$typenearl.desc=_타입 니어_ : 대원과의 전투에 돌입하면 빛을 내뿜습니다. 실명에 면역입니다.
 
 
 

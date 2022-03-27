@@ -39,14 +39,16 @@ public class Challenges {
 	public static final int SPECIAL_BOSS	= 256;
 	public static final int DECISIVE_BATTLE	= 512;
 	public static final int TACTICAL_UPGRADE = 1024;
+	public static final int SHADOW = 2048;
 
-	public static final int MAX_VALUE           = 2047; // 다 합쳐야댐!!
+	public static final int MAX_VALUE           = 4095; // 다 합쳐야댐!!
 
 	public static final String[] NAME_IDS = {
 			"special_boss",
 			"champion_enemies",
 			"decisive_battle",
 			"tactical_upgrade",
+			"shadow",
 			"no_food",
 			"no_armor",
 			"no_healing",
@@ -57,7 +59,7 @@ public class Challenges {
 	};
 
 	public static final int[] MASKS = {
-			SPECIAL_BOSS, CHAMPION_ENEMIES, DECISIVE_BATTLE, TACTICAL_UPGRADE, NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS
+			SPECIAL_BOSS, CHAMPION_ENEMIES, DECISIVE_BATTLE, TACTICAL_UPGRADE, SHADOW, NO_FOOD, NO_ARMOR, NO_HEALING, NO_HERBALISM, SWARM_INTELLIGENCE, DARKNESS, NO_SCROLLS
 	};
 
 	public static int activeChallenges(){

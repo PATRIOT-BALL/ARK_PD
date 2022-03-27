@@ -122,7 +122,7 @@ public class Guard extends Mob {
 	private void pullEnemy( Char enemy, int pullPos ){
 		enemy.pos = pullPos;
 		Dungeon.level.occupyCell(enemy);
-		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(enemy, Roots.class, 2f);
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(enemy, Roots.class, 3f);
 		else Cripple.prolong(enemy, Cripple.class, 4f);
 		if (enemy == Dungeon.hero) {
 			Dungeon.hero.interrupt();

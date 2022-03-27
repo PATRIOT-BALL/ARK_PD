@@ -21,6 +21,9 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.miniboss.Shadow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ceylon;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.CeremonialCandle;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
@@ -52,6 +55,11 @@ public class ExitRoom extends StandardRoom {
 		
 		level.exit = level.pointToCell(random( 2 ));
 		Painter.set( level, level.exit, Terrain.EXIT );
+
+		if (Dungeon.isChallenged(Challenges.SHADOW) && (
+				Dungeon.depth == 4 || Dungeon.depth == 9 || Dungeon.depth == 14 || Dungeon.depth == 19 || Dungeon.depth == 24 || Dungeon.depth == 34 || Dungeon.depth == 39)) {
+			Shadow.Spawn(level, level.exit);
+		}
 	}
 	
 	@Override

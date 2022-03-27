@@ -489,7 +489,7 @@ public abstract class Level implements Bundlable {
 			locked = true;
 			Buff.affect(Dungeon.hero, LockedFloor.class);
 
-			if (Dungeon.hero.hasTalent(Talent.GRAND_ORDER)) {
+			if (Dungeon.hero.hasTalent(Talent.GRAND_ORDER) && Dungeon.bossLevel()) {
 				int HealHP = Dungeon.hero.HT;
 				HealHP *= Dungeon.hero.pointsInTalent(Talent.GRAND_ORDER) * 0.2f;
 
