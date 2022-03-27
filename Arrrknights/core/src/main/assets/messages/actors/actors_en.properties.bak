@@ -413,6 +413,10 @@ actors.buffs.heat.overheat=OverHeat
 actors.buffs.heat.normal_desc=Heat builds up in your body. If Heat is higher than 50%%, you can consume health to gain Overheat.\n\nHeat Power : %s%%
 actors.buffs.heat.overheat_desc=Overheat=Blaze's body is overheating. Increases physical damage and consumes heat over time.\n\nHeat Power : %s%%
 
+actors.buffs.wildmark.name=Wild Aura
+actors.buffs.wildmark.desc=Red can charge wild aura, then unleash it as a sword wind.\n\nCurrent Charge : %d(%s%%)
+actors.buffs.wildmark.prompt=Set the area to throw the sword wind.
+actors.buffs.wildmark.self_target=Cannot throw sword wind at oneself.
 
 ###hero
 actors.hero.talent.hearty_meal.title=Hearty Meal
