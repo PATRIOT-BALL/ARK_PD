@@ -134,18 +134,22 @@ public class Badges {
 		YASD                        ( 111, true ),
 		BOSS_SLAIN_3_GLADIATOR,
 		BOSS_SLAIN_3_BERSERKER,
+		BOSS_SLAIN_3_HEAT,
 		BOSS_SLAIN_3_WARLOCK,
 		BOSS_SLAIN_3_CHAOS,
 		BOSS_SLAIN_3_BATTLEMAGE,
 		BOSS_SLAIN_3_FREERUNNER,
 		BOSS_SLAIN_3_ASSASSIN,
+		BOSS_SLAIN_3_WILD,
 		BOSS_SLAIN_3_SNIPER,
 		BOSS_SLAIN_3_WARDEN,
+		BOSS_SLAIN_3_STOME,
 		BOSS_SLAIN_3_DESTROY,
 		BOSS_SLAIN_3_GUARDIAN,
 		BOSS_SLAIN_3_WAR,
 		BOSS_SLAIN_3_KNIGHT,
 		BOSS_SLAIN_3_SAVIOR,
+		BOSS_SLAIN_3_FLASH,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 112, true ),
 		GAMES_PLAYED_2              ( 113, true ),
 
@@ -768,6 +772,9 @@ public class Badges {
 				case BERSERKER:
 					badge = Badge.BOSS_SLAIN_3_BERSERKER;
 					break;
+				case HEAT:
+					badge = Badge.BOSS_SLAIN_3_BERSERKER;
+					break;
 				case WARLOCK:
 					badge = Badge.BOSS_SLAIN_3_WARLOCK;
 					break;
@@ -783,11 +790,17 @@ public class Badges {
 				case ASSASSIN:
 					badge = Badge.BOSS_SLAIN_3_ASSASSIN;
 					break;
+				case WILD:
+					badge = Badge.BOSS_SLAIN_3_WILD;
+					break;
 				case SNIPER:
 					badge = Badge.BOSS_SLAIN_3_SNIPER;
 					break;
 				case WARDEN:
 					badge = Badge.BOSS_SLAIN_3_WARDEN;
+					break;
+				case STOME:
+					badge = Badge.BOSS_SLAIN_3_STOME;
 					break;
 				case DESTROYER:
 					badge = Badge.BOSS_SLAIN_3_DESTROY;
@@ -795,15 +808,18 @@ public class Badges {
 				case GUARDIAN:
 					badge = Badge.BOSS_SLAIN_3_GUARDIAN;
 					break;
-					case WAR:
-						badge = Badge.BOSS_SLAIN_3_WAR;
-						break;
-					case KNIGHT:
-						badge = Badge.BOSS_SLAIN_3_KNIGHT;
-						break;
-					case SAVIOR:
-						badge = Badge.BOSS_SLAIN_3_SAVIOR;
-						break;
+				case WAR:
+					badge = Badge.BOSS_SLAIN_3_WAR;
+					break;
+				case KNIGHT:
+					badge = Badge.BOSS_SLAIN_3_KNIGHT;
+					break;
+				case SAVIOR:
+					badge = Badge.BOSS_SLAIN_3_SAVIOR;
+					break;
+				case FLASH:
+					badge = Badge.BOSS_SLAIN_3_FLASH;
+					break;
 				default:
 					return;
 				}
