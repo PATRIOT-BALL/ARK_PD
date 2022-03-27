@@ -34,6 +34,10 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.RED), "레드 3번째 전문화",
                 "야생 전문화가 추가되었습니다. 야생 전문화는 _검풍_을 사용해 원거리 공격을 가하며, 특성으로 검풍의 충전과 유틸성을 강화할 수 있습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "새로운 위기협약",
+                "_악의: 전술 강화_\n일부 적이 추가 능력을 얻거나 기존 능력이 강화됩니다." + "\n\n" +
+                "_환시: 팬텀 로도스_\n보스 이전 층에서 로도스 대원의 환영이 나타납니다. 환영은 모습에 따라 다른 능력을 지니며, 내려가는 계단의 사용을 막아버립니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
