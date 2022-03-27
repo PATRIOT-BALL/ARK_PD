@@ -1720,7 +1720,8 @@ actors.mobs.miniboss.shadow$typered.desc=_타입 레드_ : 회피율이 높으�
 actors.mobs.miniboss.shadow$typered.antiinvisibility=팬텀 로도스가 대원을 감지해 투명화를 제거했다!
 actors.mobs.miniboss.shadow$typegrey.desc=_타입 그레이스롯_ : 사거리가 깁니다.
 actors.mobs.miniboss.shadow$typerose.desc=_타입 로즈몬티스_ : 피해를 적게 받으며, 대원과의 전투에 돌입하면 방벽을 던집니다.
-actors.mobs.miniboss.shadow$typenearl.desc=_타입 니어_ : 대원과의 전투에 돌입하면 빛을 내뿜습니다. 실명에 면역입니다.
+actors.mobs.miniboss.shadow$typenearl.desc=_타입 니어_ : 피해량이 높고 실명에 면역입니다. 대원과의 전투에 돌입하면 빛을 내뿜습니다.
+actors.mobs.miniboss.shadow$typechen.desc=_타입 첸_ : 넉백에 면역입니다.
 
 
 

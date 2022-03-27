@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
@@ -286,6 +287,14 @@ public class Shadow extends Mob {
                 GameScene.flash( 0x80FFFFFF );
             }
             return super.act();
+        }
+    }
+
+    public static class TypeChen extends Shadow {
+        {
+            spriteClass = ShadowSprite.ShadowNearl.class;
+            properties.add(Property.NO_KNOCKBACK);
+            immunities.add(Vertigo.class);
         }
     }
 }

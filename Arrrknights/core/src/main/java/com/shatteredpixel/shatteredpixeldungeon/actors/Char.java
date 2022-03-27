@@ -932,6 +932,7 @@ public abstract class Char extends Actor {
 				new HashSet<Class>()),
 		LARGE,
 		IMMOVABLE,
+		NO_KNOCKBACK,
 		// 명픽던 추가 요소
 		DRONE ( new HashSet<Class>(),
 				new HashSet<Class>(Arrays.asList(Bleeding.class, Roots.class))),

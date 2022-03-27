@@ -125,7 +125,7 @@ public class StaffOfSkyfire extends DamageWand {
 
         boolean collided = dist == trajectory.dist;
 
-        if (dist == 0 || ch.properties().contains(Char.Property.IMMOVABLE)) return;
+        if (dist == 0 || ch.properties().contains(Char.Property.IMMOVABLE) || ch.properties().contains(Char.Property.NO_KNOCKBACK)) return;
 
         //large characters cannot be moved into non-open space
         if (Char.hasProp(ch, Char.Property.LARGE)) {
