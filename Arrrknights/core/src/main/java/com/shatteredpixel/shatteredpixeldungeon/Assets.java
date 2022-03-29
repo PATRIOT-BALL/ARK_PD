@@ -476,7 +476,7 @@ public class Assets {
 		public static final String SARKAZ_CENTURION	= "sprites/Sarkaz_Centurion.png";
 		public static final String BLOOD_SHAMAN	= "sprites/Blood_Shaman.png";
 		public static final String FAUST	= "sprites/Faust.png";
-		public static final String ZEALOT	= "sprites/Zealot.png";
+		public static final String ZEALOT	= "sprites/zealot.png";
 
 		public static final String LENS	= "sprites/lens.png";
 		public static final String ROCK_CRAB	= "sprites/rock_crab.png";

@@ -50,7 +50,7 @@ public class MudrockZealot extends Mob {
 
     @Override
     public void damage(int dmg, Object src) {
-        if (src instanceof Wand) {
+        if (src instanceof Wand && barrier) {
             barrier = false;
             sprite.showStatus( CharSprite.NEGATIVE, Messages.get(this, "brack"));
         }
