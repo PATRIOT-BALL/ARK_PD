@@ -40,7 +40,7 @@ import java.util.ArrayList;
 public class Suffering extends MeleeWeapon {
     public static final String AC_ZAP = "ZAP";
     {
-        image = ItemSpriteSheet.M1887;
+        image = ItemSpriteSheet.FLAMMETTA;
         hitSound = Assets.Sounds.HIT_SHOTGUN;
         hitSoundPitch = 1f;
 

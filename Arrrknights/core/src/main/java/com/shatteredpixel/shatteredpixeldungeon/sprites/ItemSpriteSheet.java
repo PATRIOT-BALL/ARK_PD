@@ -346,6 +346,7 @@ public class ItemSpriteSheet {
 	public static final int LONE       = WEP_TIER5+18;
 	public static final int ECHEVERIA       = WEP_TIER5+19;
 	public static final int DONKEY_SWORD       = WEP_TIER5+20;
+	public static final int FLAMMETTA       = WEP_TIER5+21;
 
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
@@ -369,6 +370,7 @@ public class ItemSpriteSheet {
 		assignItemRect(LONE,   16, 16);
 		assignItemRect(ECHEVERIA,   16, 16);
 		assignItemRect(DONKEY_SWORD,   16, 16);
+		assignItemRect(FLAMMETTA,   16, 16);
 
 
 

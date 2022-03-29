@@ -8,12 +8,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EnragedSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.ZealotSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class MudrockZealot extends Mob {
     {
-        spriteClass = EnragedSprite.class;
+        spriteClass = ZealotSprite.class;
 
         HP = HT = 50;
         defenseSkill = 6;
