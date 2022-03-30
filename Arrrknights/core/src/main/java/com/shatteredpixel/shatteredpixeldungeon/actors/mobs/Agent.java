@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -42,8 +43,10 @@ public class Agent extends Mob {
     public int attackProc(Char enemy, int damage) {
         if (buff(Silence.class) == null) {
             if (Random.Int(3) < 1) {
-                Buff.affect(enemy, Hex.class, 5f);
-                Buff.affect(enemy, Vulnerable.class, 5f);
+                float time = 5f;
+                if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) time = 10f;
+                Buff.affect(enemy, Hex.class, time);
+                Buff.affect(enemy, Vulnerable.class, time);
             }
         }
 

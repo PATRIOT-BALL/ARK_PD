@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -72,6 +73,7 @@ public class Eye extends Mob {
 
 	@Override
 	public int attackSkill( Char target ) {
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE))	return 45;
 		return 30;
 	}
 	

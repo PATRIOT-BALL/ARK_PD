@@ -1,5 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
@@ -32,7 +34,6 @@ public class MudrockZealot extends Mob {
 
     @Override
     public int damageRoll() {
-
         if (barrier) return Random.NormalIntRange(7, 21);
         return Random.NormalIntRange(5, 16);
     }
@@ -44,7 +45,10 @@ public class MudrockZealot extends Mob {
 
     @Override
     public int drRoll() {
-        if (barrier) return Random.NormalIntRange(4, 12);
+        if (barrier) {
+            if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) return Random.NormalIntRange(8, 14);
+            return Random.NormalIntRange(4, 12);
+        }
         return Random.NormalIntRange(0, 5);
     }
 

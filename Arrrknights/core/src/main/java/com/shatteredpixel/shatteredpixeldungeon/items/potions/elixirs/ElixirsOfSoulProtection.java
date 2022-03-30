@@ -14,7 +14,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class ElixirsOfSoulProtection extends Elixir {
     {
-        image = ItemSpriteSheet.ELIXIR_SOUL2;
+        image = ItemSpriteSheet.ELIXIR_SOUL1;
     }
 
     @Override
