@@ -53,9 +53,7 @@ public class Piersailor extends Mob {
 
     @Override
     protected boolean act() {
-        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) super.act();
-
-        if (Dungeon.level.map[this.pos] == Terrain.WATER && state == HUNTING) {
+        if (!Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE) && Dungeon.level.map[this.pos] == Terrain.WATER && state == HUNTING) {
             damage(HT/20, this);
             if (!isAlive()) return true;
         }
