@@ -1255,6 +1255,9 @@ public class Hero extends Char {
             return false;
             //there can be multiple exit tiles, so descend on any of them
             //TODO this is slightly brittle, it assumes there are no disjointed sets of exit tiles
+        } else if (Dungeon.level.locked) {
+            ready();
+            return false;
         } else if ((Dungeon.level.map[pos] == Terrain.EXIT || Dungeon.level.map[pos] == Terrain.UNLOCKED_EXIT)) {
 
             curAction = null;

@@ -97,7 +97,6 @@ public class Shadow extends Mob {
     protected boolean act() {
         if (!Dungeon.level.locked) {
             Dungeon.level.seal();
-            Dungeon.level.set( ExitPos, Terrain.EMPTY_SP );
         }
         return super.act();
     }
@@ -105,7 +104,6 @@ public class Shadow extends Mob {
     @Override
     public void die(Object cause) {
         Dungeon.level.unseal();
-        Dungeon.level.set( ExitPos, Terrain.EXIT );
         super.die(cause);
     }
 
