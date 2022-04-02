@@ -26,6 +26,10 @@ public class v0_4_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "새로운 적",
+                "_머드락 소대원_ : 3챕터의 적으로, 높은 능력치를 지녔으며, 스태프로 공격을 입히면 능력치가 감소합니다." + "\n\n" +
+                "_팬텀 로도스_ : 팬텀 로도스 위기협약 적용시 추가되는 적입니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 및 시너지",
                 "_새로운 시너지_ : 투쟁을 여기서 멈추노라 / 신이 선택한 감독관" + "\n\n" +
                         "_고난의 진술자_ : 5티어 무기로, 공격시 대상 주위에도 피해를 입히며, 대상 주위에 적이 없다면 2배의 피해를 입힙니다. 특수 능력으로 화염탄을 발사할 수 있습니다." + "\n\n" +
