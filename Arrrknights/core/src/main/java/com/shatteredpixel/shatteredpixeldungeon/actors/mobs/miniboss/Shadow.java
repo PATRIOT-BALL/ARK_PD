@@ -46,9 +46,9 @@ public class Shadow extends Mob {
     protected int ExitPos = 0;
     protected boolean UseSkill = false;
 
-    private static final int[] HPTable = {20, 45, 75, 120, 175, 220, 255};
+    private static final int[] HPTable = {25, 45, 80, 130, 175, 220, 255};
     private static final int[] MinDamageTable = {1, 3, 6, 11, 20, 27, 33};
-    private static final int[] MaxDamageTable = {6, 11, 17, 25, 40, 44, 52};
+    private static final int[] MaxDamageTable = {8, 13, 20, 30, 40, 44, 52};
     private static final int[] drTable = {1, 3, 6, 10, 16, 20, 24};
     private static final int[] attackSkillTable = {5, 9, 15, 20, 30, 36, 45};
     private static final int[] defenseSkillTable = {1, 4, 8, 12, 18, 22, 26};
