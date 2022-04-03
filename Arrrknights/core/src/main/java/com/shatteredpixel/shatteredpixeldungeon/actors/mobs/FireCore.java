@@ -1,5 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
@@ -57,6 +59,12 @@ public class FireCore extends Mob{
     public int defenseProc(Char enemy, int damage) {
         Buff.affect(enemy, Burning.class).reignite(enemy);
         return super.defenseProc(enemy, damage);
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE) && dmg > 20) dmg = 20;
+        super.damage(dmg, src);
     }
 
     @Override

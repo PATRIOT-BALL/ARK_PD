@@ -21,8 +21,10 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
@@ -163,6 +165,8 @@ public class Thief extends Mob {
 			} else if (item instanceof Honeypot.ShatteredPot) {
 				((Honeypot.ShatteredPot)item).pickupPot(this);
 			}
+
+			if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(hero, Silence.class, 5f);
 
 			return true;
 		} else {

@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -63,7 +64,6 @@ public class Succubus extends Mob {
         spriteClass = LancerSprite.class;
 
         HP = HT = 95;
-        defenseSkill = 25;
         viewDistance = Light.DISTANCE;
 
         EXP = 12;
@@ -85,6 +85,12 @@ public class Succubus extends Mob {
 
         if (ASPlus != 0) return Random.NormalIntRange(25, 25 + ASPlus * 2);
         else return Random.NormalIntRange(18, 28);
+    }
+
+    @Override
+    public int defenseSkill(Char enemy) {
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) return 25 + ASPlus * 2;
+        return 25;
     }
 
     @Override

@@ -1,8 +1,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
@@ -90,6 +93,7 @@ public class AirborneSoldier extends Mob{
 		}
 
 		ScrollOfTeleportation.appear( this, cell );
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(this, Barrier.class).setShield(4);
 
 		blinkCooldown = Random.IntRange(16, 20);
 	}

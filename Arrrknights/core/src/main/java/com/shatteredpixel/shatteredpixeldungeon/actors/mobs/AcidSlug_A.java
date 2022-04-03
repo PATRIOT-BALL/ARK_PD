@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -84,6 +85,7 @@ public class AcidSlug_A extends Mob implements Callback {
             enemy.damage( dmg, new AcidSlug_A.AcidBolt() );
             if (enemy.isAlive()) {
                 Buff.affect(enemy, Ooze.class).set(Ooze.DURATION);
+                if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(enemy,Silence.class, 1f);
             }
 
             if (enemy == Dungeon.hero && !enemy.isAlive()) {

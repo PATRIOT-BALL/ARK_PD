@@ -248,7 +248,7 @@ public class Ghoul extends Mob {
 
 			turnsToRevive--;
 			if (turnsToRevive <= 0){
-				if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) ghoul.HP = Math.round(ghoul.HT/2f);
+				if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) ghoul.HP = Math.round(ghoul.HT * 0.75f);
 				else ghoul.HP = Math.round(ghoul.HT/10f);
 
 				if (Actor.findChar( ghoul.pos ) != null) {

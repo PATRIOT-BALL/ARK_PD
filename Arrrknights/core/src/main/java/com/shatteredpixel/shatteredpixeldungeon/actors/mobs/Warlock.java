@@ -22,6 +22,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
@@ -29,6 +30,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Degrade;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.OriginiumShard;
@@ -120,6 +122,7 @@ public class Warlock extends Mob implements Callback {
 
 			int dmg = Random.NormalIntRange( 14, 18 );
 			enemy.damage( dmg, new DarkBolt() );
+			if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(enemy, Weakness.class, 2f);
 			
 			if (enemy == Dungeon.hero && !enemy.isAlive()) {
 				Dungeon.fail( getClass() );

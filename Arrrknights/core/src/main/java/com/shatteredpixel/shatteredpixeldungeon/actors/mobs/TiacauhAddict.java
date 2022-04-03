@@ -1,10 +1,12 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hallucination;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Weakness;
@@ -55,6 +57,10 @@ public class TiacauhAddict extends Mob {
         if (Random.Int(2) == 0) {
             Buff.affect(enemy, Weakness.class, 4f);
             Buff.affect(enemy, Vulnerable.class, 4f);
+        }
+
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE) && Random.Int(5) == 0) {
+            Buff.affect(enemy, Hallucination.class).set(3f);
         }
         return super.attackProc(enemy, damage);
     }

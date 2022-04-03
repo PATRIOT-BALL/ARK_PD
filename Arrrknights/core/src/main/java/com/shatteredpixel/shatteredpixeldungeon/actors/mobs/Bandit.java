@@ -21,11 +21,13 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BanditSprite;
@@ -50,6 +52,7 @@ public class Bandit extends Thief {
 			Buff.prolong( hero, Blindness.class, Blindness.DURATION/2f );
 			Buff.affect( hero, Poison.class ).set(Random.Int(5, 7) );
 			Buff.prolong( hero, Cripple.class, Cripple.DURATION/2f );
+			if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(hero, Silence.class, 5f);
 			Dungeon.observe();
 			
 			return true;
