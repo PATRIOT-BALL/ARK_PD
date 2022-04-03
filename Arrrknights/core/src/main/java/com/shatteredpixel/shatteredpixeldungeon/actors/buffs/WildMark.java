@@ -74,9 +74,9 @@ public class WildMark extends Buff implements ActionIndicator.Action {
         }
 
         fcharge += time;
-        while (fcharge >= 0.3f) {
+        while (fcharge >= 0.5f) {
             pcharge += 1;
-            fcharge = Math.max(0, fcharge-0.3f);
+            fcharge = Math.max(0, fcharge-0.5f);
         }
 
         if (pcharge >= chargeTurn) {
