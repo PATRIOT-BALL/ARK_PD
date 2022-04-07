@@ -200,7 +200,6 @@ public class Shadow extends Mob {
         protected boolean act() {
             if (!Dungeon.level.locked) {
                 Dungeon.level.seal();
-                Dungeon.level.set( ExitPos, Terrain.EMPTY_SP );
             }
 
             PathFinder.buildDistanceMap(this.pos, BArray.not(Dungeon.level.solid, null), 2);
