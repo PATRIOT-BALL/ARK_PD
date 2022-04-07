@@ -239,7 +239,6 @@ public class Closure extends NPC {
                                         }});}
                                 break;
                             case 13: // 토미미 스킨
-                                /*
                                 if (Badges.isUnlocked(Badges.Badge.GAVIAL_PART2)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_TOMIMI)) {Badges.validatetomimiskin();}
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
@@ -250,7 +249,6 @@ public class Closure extends NPC {
                                         public void call() {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin14", Dungeon.hero.heroClass.title())));
                                         }});}
-                                        */
                                 sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no"));
                                 break;
                             case 14: // 프란카 스킨
