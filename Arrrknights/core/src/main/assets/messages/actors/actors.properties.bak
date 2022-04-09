@@ -227,6 +227,9 @@ actors.buffs.hunger.desc=\n\n던전에서 시간을 보내는 동안 배고픔�
 actors.buffs.invisibility.name=투명화
 actors.buffs.invisibility.desc=당신은 주변 환경에 완벽하게 섞여들어 보이지 않습니다.\n\n투명화 상태 동안 적들은 공격하거나 따라올 수 없습니다. 물리적 공격이나, 주문서 혹은 아츠 스태프 같은 아츠 효과를 사용하는 것은 투명화를 즉시 중단시킵니다.\n\n투명화는 %s턴 동안 지속됩니다.
 
+actors.buffs.camouflage.name=위장
+actors.buffs.camouflage.desc=위장은 투명화와 같은 효과를 내지만, 주위에 적이 있다면 해제됩니다.\n\n위장한 적은 플레이어가 발광 혹은 심안 버프를 보유했거나 인접한 상태가 아니라면 모든 피해를 절반만 받습니다.\n\n위장은 %s턴 동안 지속됩니다.
+
 actors.buffs.levitation.name=부유
 actors.buffs.levitation.desc=아츠의 힘이 당신을 공중으로 띄워 마치 무게가 없는 것 처럼 느껴집니다.\n\n공중에 뜬 상태에서는 모든 지상 효과를 무시합니다. 함정을 밟지 않으며, 불을 끄기 위해 물에 들어갈 수 없고, 식물을 밟을 수 없고, 속박당하지 않으며, 구덩이 위를 날아다닐 수 있습니다. 그러나 이 모든 일들은 부유가 끝나는 바로 그 순간부터 다시 효과를 발휘하니 주의하십시오!\n\n부유 효과는 %s턴 동안 지속됩니다.
 
@@ -498,8 +501,8 @@ actors.hero.talent.energizing_upgrade.title=아츠 흡수
 actors.hero.talent.energizing_upgrade.desc=_+1:_ 아츠 기록장치로 스킬 발동시 흑요석 반지를 _1 만큼_ 충전합니다.\n\n_+2:_ 아츠 기록장치로 스킬 발동시 흑요석 반지를 _2 만큼_ 충전합니다.
 actors.hero.talent.wand_preservation.title=아츠 스태프 보존
 actors.hero.talent.wand_preservation.desc=_+1:_ 아미야의 흑요석 반지에 새로운 아츠 스태프를 융합할 때, 흑요석 반지에 융합되어 있던 아츠 스태프가 _67% 확률_로 +0인 상태로 반환됩니다.\n\n_+2:_ 아미야의 흑요석 반지에 새로운 아츠 스태프를 융합할 때, 흑요석 반지에 융합되어 있던 아츠 스태프가 _100% 확률_로 +0인 상태로 반환됩니다.\n\n이 특성은 아츠 스태프를 최대 세 번까지 반환할 수 있습니다.
-actors.hero.talent.arcane_vision.title=아츠 시야
-actors.hero.talent.arcane_vision.desc=_+1:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _5 턴의 심안 효과_ 를 얻습니다.\n\n_+2:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _10 턴의 심안 효과_ 를 얻습니다.
+actors.hero.talent.arcane_snipe.title=아츠 저격
+actors.hero.talent.arcane_snipe.desc=_+1:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _2 턴의 심안 효과_ 를 얻습니다..\n\n_+2:_ 아츠을 적에게 맞힌 경우 해당 적에 대해 _4 턴의 심안 효과_ 를 얻습니다.
 actors.hero.talent.shield_battery.title=보호막 충전
 actors.hero.talent.shield_battery.desc=_+1:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 2.5%_ 에 해당하는 방어막을 얻습니다.\n\n_+2:_ 아미야는 자신에게 아츠을 발사하면 남은 충전량을 모두 소모하고, 충전량당 _최대 체력의 5%_ 에 해당하는 방어막을 얻습니다.
 actors.hero.talent.psychoanalysis.title=정신분석
@@ -1721,7 +1724,7 @@ actors.mobs.miniboss.shadow$typered.antiinvisibility=팬텀 로도스가 대원�
 actors.mobs.miniboss.shadow$typegrey.desc=_타입 그레이스롯_ : 사거리가 깁니다.
 actors.mobs.miniboss.shadow$typerose.desc=_타입 로즈몬티스_ : 피해를 적게 받으며, 대원과의 전투에 돌입하면 방벽을 던집니다.
 actors.mobs.miniboss.shadow$typenearl.desc=_타입 니어_ : 피해량이 높고 실명에 면역입니다. 대원과의 전투에 돌입하면 빛을 내뿜습니다.
-actors.mobs.miniboss.shadow$typechen.desc=_타입 첸_ : 넉백에 면역입니다.
+actors.mobs.miniboss.shadow$typechen.desc=_타입 첸_ : 밀치기와 현기증에 면역입니다.
 
 
 

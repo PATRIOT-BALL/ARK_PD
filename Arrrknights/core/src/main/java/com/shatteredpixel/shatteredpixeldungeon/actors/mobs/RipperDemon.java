@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
@@ -47,7 +48,7 @@ public class RipperDemon extends Mob {
 	{
 		spriteClass = Sarkaz_SwordsmanSprite.class;
 
-		HP = HT = 60;
+		HP = HT = 38;
 		defenseSkill = 22;
 		viewDistance = Light.DISTANCE;
 
@@ -112,6 +113,8 @@ public class RipperDemon extends Mob {
 
 	@Override
 	protected boolean act() {
+		if (Camouflage.CamoFlageEnemy(this)) Buff.affect(this, Camouflage.class, 10f);
+
 		AiState lastState = state;
 		boolean result = super.act();
 		if (paralysed <= 0) leapCooldown --;

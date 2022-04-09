@@ -31,11 +31,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hunger;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSight;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Preparation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SoulMark;
@@ -81,6 +84,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
@@ -699,6 +703,9 @@ public abstract class Mob extends Char {
 				sprite.showStatus( CharSprite.NEGATIVE, Messages.get(Talent.MindCrashMark.class, "cri") );
 			}
 		}
+
+		if (buff(Camouflage.class) != null) {
+			dmg *= 0.5f; }
 		
 		super.damage( dmg, src );
 	}
@@ -1158,6 +1165,26 @@ public abstract class Mob extends Char {
 				}
 			}
 		}
+	}
+
+	@Override
+	protected void spend(float time) {
+		if (buff(Camouflage.class) != null) {
+			if (Dungeon.hero.buff(Light.class) != null || Dungeon.hero.buff(MindVision.class) != null) Buff.detach(this, Camouflage.class);
+			else {
+				PathFinder.buildDistanceMap(this.pos, BArray.not(Dungeon.level.solid, null), 1);
+				for (int cell = 0; cell < PathFinder.distance.length; cell++) {
+					if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
+						Char ch = Actor.findChar(cell);
+						if (ch != null && ch instanceof Hero) {
+							Buff.detach(this, Camouflage.class);
+						}
+					}
+				}
+			}
+		}
+
+		super.spend(time);
 	}
 
 	//FIXME this works fairly well but is coded poorly. Should refactor

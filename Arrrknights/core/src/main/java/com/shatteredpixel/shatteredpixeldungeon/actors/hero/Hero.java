@@ -213,6 +213,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.AttackIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.QuickSlotButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.StatusPane;
+import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndHero;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndResurrect;
@@ -868,6 +869,14 @@ public class Hero extends Char {
                 Buff.affect(this, Heat.class);
             } else heat.Timeproc(time);
         }
+        PathFinder.buildDistanceMap(Dungeon.hero.pos, BArray.not(Dungeon.level.solid, null), 2);
+        for (int cell = 0; cell < PathFinder.distance.length; cell++) {
+            if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
+                Char ch = Actor.findChar(cell);
+                if (ch != null&& !(ch instanceof Hero) && ch.alignment == Char.Alignment.ENEMY) {
+                    Buff.detach(Dungeon.hero, com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage.class); }}}
+
+
 
         super.spend(time);
     }

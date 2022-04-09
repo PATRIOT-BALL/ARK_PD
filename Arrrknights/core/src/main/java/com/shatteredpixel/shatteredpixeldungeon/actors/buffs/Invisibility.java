@@ -88,9 +88,12 @@ public class Invisibility extends FlavourBuff {
 	}
 
 	public static void dispel() {
-		for ( Buff invis : Dungeon.hero.buffs( Invisibility.class )){
+		for ( Buff invis : Dungeon.hero.buffs( Invisibility.class)){
 			invis.detach();
 		}
+		for ( Buff camo : Dungeon.hero.buffs(Camouflage.class)){
+			camo.detach(); }
+
 		CloakOfShadows.cloakStealth cloakBuff = Dungeon.hero.buff( CloakOfShadows.cloakStealth.class );
 		if (cloakBuff != null) {
 			cloakBuff.dispel();

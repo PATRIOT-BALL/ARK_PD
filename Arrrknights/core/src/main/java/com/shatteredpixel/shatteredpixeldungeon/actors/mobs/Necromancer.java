@@ -26,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Ooze;
@@ -48,7 +49,7 @@ public class Necromancer extends Mob {
 	{
 		spriteClass = ScoutSprite.class;
 		
-		HP = HT = 40;
+		HP = HT = 24;
 		defenseSkill = 14;
 		
 		EXP = 7;
@@ -75,9 +76,17 @@ public class Necromancer extends Mob {
 			summoning = false;
 			if (sprite instanceof ScoutSprite) ((ScoutSprite) sprite).cancelSummoning();
 		}
+
+		if (Camouflage.CamoFlageEnemy(this)) Buff.affect(this, Camouflage.class, 10f);
 		return super.act();
 	}
-	
+
+	@Override
+	public void damage(int dmg, Object src) {
+		if (src == mySkeleton) dmg = 0;
+		super.damage(dmg, src);
+	}
+
 	@Override
 	public int drRoll() {
 		return Random.NormalIntRange(0, 5);
