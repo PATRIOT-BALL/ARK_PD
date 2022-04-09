@@ -13,6 +13,9 @@ import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.watabou.utils.PathFinder;
 
 public class Camouflage extends Invisibility {
+    {
+        announced = false;
+    }
 
     @Override
     public boolean attachTo( Char target ) {
@@ -26,7 +29,7 @@ public class Camouflage extends Invisibility {
 
     @Override
     public String toString() {
-        return null;
+        return Messages.get(this, "name");
     }
 
     @Override

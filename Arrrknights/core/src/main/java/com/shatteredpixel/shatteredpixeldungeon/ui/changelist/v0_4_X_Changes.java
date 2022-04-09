@@ -10,10 +10,46 @@ import java.util.ArrayList;
 
 public class v0_4_X_Changes {
     public static void addAllChanges(ArrayList<ChangeInfo> changeInfos) {
+        add_v0_4_4_Changes(changeInfos);
         add_v0_4_3_Changes(changeInfos);
         add_v0_4_2_Changes(changeInfos);
         add_v0_4_1_Changes(changeInfos);
         add_v0_4_0_Changes(changeInfos);
+
+    }
+
+    public static void add_v0_4_4_Changes(ArrayList<ChangeInfo> changeInfos) {
+        ChangeInfo changes = new ChangeInfo("v0.4.4", true, "");
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "new"), false, null);
+        changes.hardlight(Window.TITLE_COLOR);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.MIZQ), "새로운 상태이상 : 위장",
+                "위장은 플레이어와 적 모두가 가질 수 있는 상태입니다." + "\n\n" +
+                "플레이어에게 적용시 _투명화_와 동일한 기능을 합니다. 단, 근처에 적이 있다면 해제됩니다." + "\n\n" +
+                "적은 위장 중 받는 피해가 절반이 됩니다. 심안에 노출되거나 플레이어가 발광 혹은 인접한 상태라면 해제됩니다."));
+
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
+        changes.hardlight(CharSprite.WARNING);
+        changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "몬스터 리메이크",
+                "_유령_ : 물건을 훔쳤을 때 이동속도가 감소했지만, 훔친 뒤 주기적으로 _위장_합니다." + "\n\n" +
+                "_기술정찰병_ : 체력이 40에서 _22_로 감소했습니다. 대신 영구적으로 _위장_합니다. 또한, 더 이상 자신이 소환한 폭탄새로 피해를 받지 않습니다." + "\n\n" +
+                "_살카즈 도병_ : 체력이 60에서 _38_로 감소했습니다. 대신 영구적으로 _위장_합니다."));
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
+        changes.hardlight(CharSprite.POSITIVE);
+        changeInfos.add(changes);
+
+        changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
+        changes.hardlight(CharSprite.NEGATIVE);
+        changeInfos.add(changes);
+
 
     }
 
