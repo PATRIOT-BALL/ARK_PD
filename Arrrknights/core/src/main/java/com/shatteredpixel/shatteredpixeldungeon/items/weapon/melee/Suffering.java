@@ -46,6 +46,8 @@ public class Suffering extends MeleeWeapon {
 
         tier =5;
         defaultAction = AC_ZAP;
+
+        ACC = 0.8f;
     }
 
     protected int collisionProperties = Ballistica.MAGIC_BOLT;

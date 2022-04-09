@@ -777,6 +777,7 @@ public class Hero extends Char {
         if (belongings.weapon instanceof Enfild2) return false;
         if (RingOfAssassin.Assassin_Curse(this) == true) return false;
         if (belongings.weapon instanceof KRISSVector) return false;
+        if (belongings.weapon instanceof Suffering) return false;
 
         return true;
     }
