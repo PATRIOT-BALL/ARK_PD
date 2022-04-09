@@ -70,7 +70,7 @@ public class RunicBlade extends MeleeWeapon {
 	@Override
 	public int proc(Char attacker, Char defender, int damage) {
 		int recharge = damage / 4;
-		recharge = Math.min(12, recharge);
+		recharge = Math.min(7, recharge);
 		recharge = Math.max(2, recharge);
 
 		SPCharge(recharge);

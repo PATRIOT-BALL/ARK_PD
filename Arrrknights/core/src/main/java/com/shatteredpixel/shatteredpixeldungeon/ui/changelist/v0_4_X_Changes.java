@@ -51,6 +51,7 @@ public class v0_4_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
+                "_오리지늄 검_의 SP 충전률이 감소했습니다." + "\n\n" +
                 "_고난의 진술자_의 명중률 보정치가 0%에서 _-20%_로 감소했으며, 더 이상 기습공격을 할 수 없습니다."));
 
 
