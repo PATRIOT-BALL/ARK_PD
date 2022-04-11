@@ -2440,7 +2440,7 @@ items.weapon.melee.swordofartorius.desc=_"진실은 모두 타버렸고, 이제 
 items.weapon.melee.swordofartorius.setbouns=_아이템 시너지 : 폭군_\n아츠 광선의 피해량이 1.3배로 적용됩니다.
 
 items.weapon.melee.wintersscar.name=겨울의 상처
-items.weapon.melee.wintersscar.stats_desc=기습 시 최소 데미지 보정 +33%\n한기를 느끼는 적에게 추가 피해
+items.weapon.melee.wintersscar.stats_desc=기습 시 최소 데미지 보정 +25%\n한기를 느끼는 적에게 추가 피해
 items.weapon.melee.wintersscar.desc=대지의 차가움엔 이미 각오가 깃들었다.\n\n이 단검으로 적을 기습 공격하면 추위를 느끼게 하며, 추위를 느끼는 적에게 추가 피해를 줄 수 있습니다.
 
 items.weapon.melee.patriotspear.name=레퀴엠
@@ -2604,6 +2604,7 @@ items.weapon.melee.kollamsword.setbouns=_아이템 시너지 : 투쟁을 여기�
 
 items.weapon.melee.suffering.name=고난의 진술자
 items.weapon.melee.suffering.desc=이 무기는 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.\n매 턴마다 SP가 충전되며, SP를 100%소모해 _화염탄_을 발사할 수 있습니다. 화염탄이 적중하면 폭발하여 주위에 200%의 피해를 입힙니다.
+items.weapon.melee.suffering.stats_desc=명중률 -20%, 기습 공격 불가
 items.weapon.melee.suffering.ac_zap=화염탄
 items.weapon.melee.suffering.prompt=목표를 지정해주세요.
 items.weapon.melee.suffering.self_target=자신에게 발사할 수 없습니다.

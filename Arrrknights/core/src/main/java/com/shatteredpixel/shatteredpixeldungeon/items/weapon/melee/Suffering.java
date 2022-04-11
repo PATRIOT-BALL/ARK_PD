@@ -47,7 +47,7 @@ public class Suffering extends MeleeWeapon {
         tier =5;
         defaultAction = AC_ZAP;
 
-        ACC = 0.8f;
+        ACC = 0.9f;
     }
 
     protected int collisionProperties = Ballistica.MAGIC_BOLT;
@@ -166,7 +166,8 @@ public class Suffering extends MeleeWeapon {
     protected void onZap( Ballistica bolt ) {
         Sample.INSTANCE.play(Assets.Sounds.BURNING);
         StaffOfSkyfire.BlastWave.blast(bolt.collisionPos);
-        int dmg = damageRoll(Dungeon.hero) * 2;
+        int dmg = damageRoll(Dungeon.hero);
+        dmg *= 1.25f;
 
         PathFinder.buildDistanceMap( bolt.collisionPos, BArray.not( Dungeon.level.solid, null ), 1 );
         for (int i = 0; i < PathFinder.distance.length; i++) {
