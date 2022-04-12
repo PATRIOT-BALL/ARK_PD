@@ -215,7 +215,7 @@ windows.wndsupportprompt.close=Close
 
 windows.wndeazymode.act=eazy mode start!
 windows.wndeazymode.bt=eazy mode start
-windows.wndeazymode.desc=Easy Mode provides the following benefits:\n\n-_Potion of Strength_, _Potion of Experience_, _Potion of Healing_ identify\n\n-_Scroll of Upgrade_, _Scroll of Remove Curse_, _Scroll of Transmutation_ identify\n\n-you gain two _Scroll of Divination_ and _Elixir of Aquatic Rejuvenation_.\n\n-More HP when level up\n\nHowever, it is not possible to proceed after the 20th floor
+windows.wndeazymode.desc=Easy Mode provides the following benefits:\n\n-_Potion of Strength_, _Potion of Experience_, _Potion of Healing_ identify\n\n-_Scroll of Upgrade_, _Scroll of Remove Curse_, _Scroll of Transmutation_ identify\n\n-you gain two _Scroll of Divination_ and _Elixir of Aquatic Rejuvenation_.\n\n-More HP when level up\n\nHowever, Can't get information certificate and it is not possible to proceed after the 20th floor
 
 
 windows.wndtradeitem.buy=Purchase Price : %dg
