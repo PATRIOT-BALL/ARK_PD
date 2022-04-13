@@ -32,6 +32,9 @@ public class v0_4_X_Changes {
                 "플레이어에게 적용시 _투명화_와 동일한 기능을 합니다. 단, 근처에 적이 있다면 해제됩니다." + "\n\n" +
                 "적은 위장 중 받는 피해가 절반이 됩니다. 심안에 노출되거나 플레이어가 발광 혹은 인접한 상태라면 해제됩니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "위기협약 난이도 상승",
+                "_악의: 전술 강화_ 와 _환시: 팬텀 로도스_의 협약 난이도가 상승했습니다."));
+
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -45,6 +48,9 @@ public class v0_4_X_Changes {
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_콜람의 패검_의 SP 충전률이 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);

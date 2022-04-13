@@ -101,4 +101,44 @@ public class ShadowSprite extends MobSprite {
             idle();
         }
     }
+
+    public static class ShadowJessi extends ShadowSprite {
+        public ShadowJessi() {
+            super();
+            texture(Assets.Sprites.JESSI);
+
+            updateArmor( 5 );
+            idle();
+        }
+    }
+
+    public static class ShadowSkd extends ShadowSprite {
+        public ShadowSkd() {
+            super();
+            texture(Assets.Sprites.SKD);
+
+            updateArmor( 5 );
+            idle();
+        }
+    }
+
+    public static class ShadowSPT extends ShadowSprite {
+        public ShadowSPT() {
+            super();
+            texture(Assets.Sprites.SPT);
+
+            updateArmor( 4 );
+            idle();
+        }
+    }
+
+    public static class ShadowGrani extends ShadowSprite {
+        public ShadowGrani() {
+            super();
+            texture(Assets.Sprites.GRN);
+
+            updateArmor( 5 );
+            idle();
+        }
+    }
 }

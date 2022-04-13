@@ -42,7 +42,7 @@ public class Heamyo extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  500;
+        return  100;
     }
 
     @Override

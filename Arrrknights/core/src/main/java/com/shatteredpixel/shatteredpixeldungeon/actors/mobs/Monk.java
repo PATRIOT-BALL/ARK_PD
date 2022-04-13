@@ -22,10 +22,12 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Imp;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
@@ -110,6 +112,8 @@ public class Monk extends Mob {
 		if (buff(Focus.class) == null && state == HUNTING && focusCooldown <= 0) {
 			Buff.affect( this, Focus.class );
 		}
+
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE) && Camouflage.CamoFlageEnemy(this)) Buff.affect(this, Camouflage.class, 10f);
 		return result;
 	}
 	

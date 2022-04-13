@@ -22,9 +22,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
@@ -71,6 +73,12 @@ public abstract class Shaman extends Mob {
 	protected boolean canAttack( Char enemy ) {
 		if(this.buff(Silence.class) != null) return false;
 		return new Ballistica( pos, enemy.pos, Ballistica.MAGIC_BOLT).collisionPos == enemy.pos;
+	}
+
+	@Override
+	protected boolean act() {
+		if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE) && Camouflage.CamoFlageEnemy(this)) Buff.affect(this, Camouflage.class, 10f);
+		return super.act();
 	}
 
 	@Override

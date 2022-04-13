@@ -1,7 +1,11 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Roots;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -34,7 +38,9 @@ public class Rockbreaker extends Mob {
     }
 
     @Override
-    public int attackSkill( Char target ) {return 45; }
+    public int attackSkill( Char target ) {
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) return 60;
+        return 45; }
 
     @Override
     public int drRoll() {

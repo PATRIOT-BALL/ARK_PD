@@ -41,7 +41,7 @@ public class Camouflage extends Invisibility {
 
     @Override
     public boolean act() {
-        if (!(target instanceof Hero) && Dungeon.hero.buffs(Light.class) != null) Buff.detach(target, Camouflage.class);
+        if (!(target instanceof Hero) && (Dungeon.hero.buffs(Light.class) != null || Dungeon.hero.buff(MindVision.class) != null)) Buff.detach(target, Camouflage.class);
         return super.act();
     }
 

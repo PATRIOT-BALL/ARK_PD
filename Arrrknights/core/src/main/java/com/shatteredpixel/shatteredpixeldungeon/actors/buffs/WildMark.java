@@ -203,8 +203,8 @@ public class WildMark extends Buff implements ActionIndicator.Action {
     }
 
     private static final String CHARGE = "Energy";
-    private static final String PCHARGE = "Energy";
-    private static final String FCHARGE = "Energy";
+    private static final String PCHARGE = "pcharge";
+    private static final String FCHARGE = "fcharge";
 
     @Override
     public void storeInBundle(Bundle bundle) {
