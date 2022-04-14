@@ -418,7 +418,7 @@ actors.buffs.stomecharge.desc=폭풍의 힘이 당신을 감싸 이동속도를 
 actors.buffs.heat.normal=열기
 actors.buffs.heat.overheat=과열
 actors.buffs.heat.normal_desc=블레이즈의 몸에 열기가 쌓이고 있습니다. 열기가 50%%이상이면 체력을 소모해 과열 상태에 진입할 수 있습니다.\n\n현재 열기 : %s%%
-actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다.\n\n현재 열기 : %s%%
+actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다. 열기가 60%% 이상이면 _불사_ 상태가 되어 죽음에 저항합니다. 불사 발동 중에는 피격시 열기가 감소합니다.\n\n현재 열기 : %s%%
 
 actors.buffs.wildmark.name=야생의 기운
 actors.buffs.wildmark.desc=레드는 야생의 힘을 쌓은 후 검풍으로 방출할 수 있습니다.\n\n현재 충전량 : %d(%s%%)
@@ -479,7 +479,7 @@ actors.hero.talent.deadly_reach.desc=_+1:_ 콤보 기본 지속시간이 _1 턴_
 actors.hero.talent.heat_blow.title=타오르는 일격
 actors.hero.talent.heat_blow.desc=_+1:_ 열기가 50% 이상이면 물리 피해량이 _10%_ 증가합니다.\n\n_+2:_ 열기가 50% 이상이면 물리 피해량이 _15%_ 증가합니다.\n\n_+3:_ 열기가 50% 이상이면 물리 피해량이 _20%_ 증가합니다.\n\n_과열_ 상태라면 무조건 발동합니다.
 actors.hero.talent.heat_of_protection.title=인내의 불꽃
-actors.hero.talent.heat_of_protection.desc=_+1:_ 과열 상태일 때 받는 피해가 _10%_ 감소합니다.\n\n_+2:_ 과열 상태일 때 받는 피해가 _15%_ 감소합니다.\n\n_+3:_ 과열 상태일 때 받는 피해가 _20%_ 감소합니다.
+actors.hero.talent.heat_of_protection.desc=_+1:_ 과열 상태일 때 받는 피해가 _10%_ 감소하며, 불사 효과의 요구 열기가 60%에서 _55%_로 감소합니다.\n\n_+2:_ 과열 상태일 때 받는 피해가 _15%_ 감소하며, 불사 효과의 요구 열기가 60%에서 _50%_로 감소합니다.\n\n_+3:_ 과열 상태일 때 받는 피해가 _20%_ 감소하며, 불사 효과의 요구 열기가 60%에서 _45%_로 감소합니다.
 actors.hero.talent.heat_of_recovery.title=재생의 불꽃
 actors.hero.talent.heat_of_recovery.desc=_+1:_ 과열 상태가 끝날 때 체력 회복량이 _20%_ 증가합니다.\n\n_+2:_ 과열 상태가 끝날 때 체력 회복량이 _40%_ 증가합니다.\n\n_+3:_ 과열 상태가 끝날 때 체력 회복량이 _60%_ 증가합니다.
 actors.hero.talent.heat_of_absorption.title=흡수의 불꽃
@@ -1728,7 +1728,7 @@ actors.mobs.miniboss.shadow$typechen.desc=_타입 첸_ : 밀치기와 현기증�
 actors.mobs.miniboss.shadow$typejessica.desc=_타입 제시카_ : 사거리가 길며, 영구 위장 상태입니다. 체력이 50%이하가 되면 1회 한정으로 강력한 능력을 사용합니다.
 actors.mobs.miniboss.shadow$typeskd.desc=_타입 스카디_ : 전투 능력이 높으며, 1회 부활 능력이 있습니다.
 actors.mobs.miniboss.shadow$typespt.desc=_타입 스펙터_ : 피해를 적게 받으며, 재생 능력이 있습니다. 체력이 적을수록 재생력이 증가합니다.
-actors.mobs.miniboss.shadow$Typegrn.desc=_타입 그라니_ : 명중, 회피, 이동속도가 높으며, 공격시 확률적으로 밀쳐냅니다.
+actors.mobs.miniboss.shadow$typegrn.desc=_타입 그라니_ : 명중, 회피, 이동속도가 높으며, 공격시 확률적으로 밀쳐냅니다.
 
 
 

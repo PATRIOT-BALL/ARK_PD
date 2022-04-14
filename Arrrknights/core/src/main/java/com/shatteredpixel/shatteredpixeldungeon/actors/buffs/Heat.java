@@ -119,6 +119,10 @@ public class Heat extends Buff implements ActionIndicator.Action {
         ActionIndicator.clearAction(this);
     }
 
+    public void powerDown() {
+        power -= 5;
+    }
+
     @Override
     public String toString() {
         switch (state){

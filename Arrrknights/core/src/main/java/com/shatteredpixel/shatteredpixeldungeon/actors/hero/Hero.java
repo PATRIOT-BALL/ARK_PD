@@ -2185,6 +2185,19 @@ public class Hero extends Char {
 
         Ankh ankh = null;
 
+        Heat heat = buff(Heat.class);
+
+        if (heat != null) {
+            if (heat.state() == Heat.State.OVERHEAT &&
+                    heat.power() >= (60-pointsInTalent(Talent.HEAT_OF_PROTECTION) * 5))
+            {
+                HP = 1;
+                heat.powerDown();
+                sprite.showStatus(CharSprite.WARNING, heat.power()+"%");
+                return;
+            }
+        }
+
         //look for ankhs in player inventory, prioritize ones which are blessed.
         for (Item item : belongings) {
             if (item instanceof Ankh) {
