@@ -49,6 +49,10 @@ public class v0_4_X_Changes {
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BLAZE), "열기 블레이즈 상향",
+                "_과열_ 발동 중 열기가 60% 이상이면 _불사_ 상태가 되어 죽지 않게됩니다. 불사 발동 중 피격시 열기를 잃습니다." + "\n\n" +
+                "_인내의 불꽃_ 특성에 불사 상태 발동에 요구하는 열기가 감소하는 효과가 추가되었습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_콜람의 패검_의 SP 충전률이 상승했습니다."));
 
