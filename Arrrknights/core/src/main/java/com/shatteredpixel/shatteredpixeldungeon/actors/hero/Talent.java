@@ -55,6 +55,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.HornOfPlenty;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SealOfLight;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
+import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRecharging;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
@@ -79,6 +80,8 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 
 public enum Talent {
+
+	GENIUS(97,1),
 
 	//Warrior T1
 	HEARTY_MEAL(0), ARMSMASTERS_INTUITION(1), TEST_SUBJECT(2), IRON_WILL(3),
@@ -307,6 +310,10 @@ public enum Talent {
 	}
 
 	public static void onTalentUpgraded( Hero hero, Talent talent){
+		if (talent == GENIUS) {
+			new ScrollOfIdentify().execute(hero);
+		}
+
 		if (talent == NATURES_BOUNTY){
 			if ( hero.pointsInTalent(NATURES_BOUNTY) == 1) Buff.count(hero, NatureBerriesAvailable.class, 4);
 			else                                           Buff.count(hero, NatureBerriesAvailable.class, 2);
@@ -672,22 +679,22 @@ public enum Talent {
 		//tier 1
 		switch (cls){
 			case WARRIOR: default:
-				Collections.addAll(tierTalents, HEARTY_MEAL, ARMSMASTERS_INTUITION, TEST_SUBJECT, IRON_WILL);
+				Collections.addAll(tierTalents, HEARTY_MEAL, ARMSMASTERS_INTUITION, TEST_SUBJECT, IRON_WILL, GENIUS);
 				break;
 			case MAGE:
-				Collections.addAll(tierTalents, EMPOWERING_MEAL, SCHOLARS_INTUITION, TESTED_HYPOTHESIS, BACKUP_BARRIER);
+				Collections.addAll(tierTalents, EMPOWERING_MEAL, SCHOLARS_INTUITION, TESTED_HYPOTHESIS, BACKUP_BARRIER, GENIUS);
 				break;
 			case ROGUE:
-				Collections.addAll(tierTalents, CACHED_RATIONS, THIEFS_INTUITION, SUCKER_PUNCH, PROTECTIVE_SHADOWS);
+				Collections.addAll(tierTalents, CACHED_RATIONS, THIEFS_INTUITION, SUCKER_PUNCH, PROTECTIVE_SHADOWS, GENIUS);
 				break;
 			case HUNTRESS:
-				Collections.addAll(tierTalents, NATURES_BOUNTY, SURVIVALISTS_INTUITION, FOLLOWUP_STRIKE, NATURES_AID);
+				Collections.addAll(tierTalents, NATURES_BOUNTY, SURVIVALISTS_INTUITION, FOLLOWUP_STRIKE, NATURES_AID, GENIUS);
 				break;
 			case ROSECAT:
-				Collections.addAll(tierTalents, LIGHTNESSMEAL, SMARTMEALS, GOODMEAT, NYANGING);
+				Collections.addAll(tierTalents, LIGHTNESSMEAL, SMARTMEALS, GOODMEAT, NYANGING, GENIUS);
 				break;
 			case NEARL:
-				Collections.addAll(tierTalents, SHINING_MEAL, EXPERIENCE, PROTECTIONOFLIGHT, KNIGTS_OATH);
+				Collections.addAll(tierTalents, SHINING_MEAL, EXPERIENCE, PROTECTIONOFLIGHT, KNIGTS_OATH, GENIUS);
 				break;
 		}
 		for (Talent talent : tierTalents){

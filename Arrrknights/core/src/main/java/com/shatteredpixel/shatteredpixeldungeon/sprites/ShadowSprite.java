@@ -130,6 +130,15 @@ public class ShadowSprite extends MobSprite {
             updateArmor( 4 );
             idle();
         }
+
+        @Override
+        public void link(Char ch) {
+            super.link( ch );
+            updateArmor( 4 );
+
+            add(State.HIKARI);
+            add(State.DARKENED);
+        }
     }
 
     public static class ShadowGrani extends ShadowSprite {

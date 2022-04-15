@@ -693,7 +693,7 @@ actors.hero.talent.barrier_operation.desc=_+1_ : When taking damage with armamen
 actors.hero.talent.barrier_repair.title=Barrier Regeneration
 actors.hero.talent.barrier_repair.desc=_+1_ : Chance to recharge armament when attacked is increased from 10% to _15%_.\n\n_+2_ : Chance to recharge armament when attacked increased from 10% to _20%_.\n\n_+3_ : Chance to recharge armament when attacked increased from 10% to _25%_.
 actors.hero.talent.rhodes_cat.title=Feline of Rhodes
-actors.hero.talent.rhodes_cat.desc=_+1:_ When Rosmontis' armament has a charge of 1 or more,  physical damage is increased by _15%_.\n\n_+2:_ When Rosmontis' armament has a charge 1 or more, physical damage is increased by _30%_.\n\n_+3:_ When Rosmontis's armament has a charge 1 or more, physical damage is increased by _45%_.
+actors.hero.talent.rhodes_cat.desc=_+1:_ When Rosmontis' armament has a charge of 1 or more,  physical damage is increased by _12%_.\n\n_+2:_ When Rosmontis' armament has a charge 1 or more, physical damage is increased by _24%_.\n\n_+3:_ When Rosmontis's armament has a charge 1 or more, physical damage is increased by _36%_.
 actors.hero.talent.rhodes_weapon.title=Annhilation
 actors.hero.talent.rhodes_weapon.desc=_+1:_ Rosmontis' armament damage increased by _2_.\n\n_+2:_ Rosmontis's armament damage increased by _4_.\n\n_+3:_ Rosmontis's armament damage increased by _6_.
 actors.hero.talent.recall_memory.title=Memory Lane
@@ -710,7 +710,7 @@ actors.hero.talent$mywishcooldown.desc=Cooldown: %s turns
 
 //쪽냥이 3차 서브클래스
 actors.hero.talent.oblivion.title=Oblivion
-actors.hero.talent.oblivion.desc=_+1:_ When EX-44 is destroyed, there is a _10%_ chance to recharge the armament.\n\n_+2:_ When EX-44 is destroyed, there is a _20%_ chance to recharge the armament.\n\n_+3:_ When EX-44 is destroyed, there is a _30%_ chance to recharge the armament.
+actors.hero.talent.oblivion.desc=_+1:_ When EX-44 is destroyed, there is a _15%_ chance to recharge the armament.\n\n_+2:_ When EX-44 is destroyed, there is a _30%_ chance to recharge the armament.\n\n_+3:_ When EX-44 is destroyed, there is a _45%_ chance to recharge the armament.
 actors.hero.talent.weakness_cover.title=Weakness Cover
 actors.hero.talent.weakness_cover.desc=_+1:_ Increases attack damage by _0-2_ for every armament upgrade level.\n\n_+2:_ Increases attack damage by _1-2_ for every armament upgrade level.\n\n_+3:_ Increases attack damage by _2-2_ for every armament upgrade level.
 actors.hero.talent.mentalamplification.title=Mental Amplification
@@ -1673,6 +1673,10 @@ actors.mobs.miniboss.shadow$typegrey.desc=_Type: GreyThroat_ : Possesses longer 
 actors.mobs.miniboss.shadow$typerose.desc=_Type: Rosmontis_ : Receives less damage and throws armaments when entering combat.
 actors.mobs.miniboss.shadow$typenearl.desc=_Type: Nearl_ : Deals high damage and is immune to blind. Illuminates once entering combat.
 actors.mobs.miniboss.shadow$typechen.desc=_Type: Ch'en_ : Immune to knockback and Vertigo.
+actors.mobs.miniboss.shadow$typejessica.desc=_Type Jessica_ : Has a long attack range and is permanently Camouflaged. Uses a powerful ability once its HP gets below 50%. 
+actors.mobs.miniboss.shadow$typeskd.desc=_Type Skadi_ : Has high combat abilities, with the ability to revive itself once.
+actors.mobs.miniboss.shadow$typespt.desc=_Type Specter_ : Receives less damage, and has regeneation abilities. Regeneration rate increases as HP gets lower.
+actors.mobs.miniboss.shadow$Typegrn.desc=_Type Grani_ : Has high accuracy, evasion, and movement speed, with a chance to knock back on hit.
 
 // 가비알 몹
 

@@ -35,6 +35,9 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.CHALLENGE_ON), "위기협약 난이도 상승",
                 "_악의: 전술 강화_ 와 _환시: 팬텀 로도스_의 협약 난이도가 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "1티어 공용 특성 추가",
+                "모든 캐릭터에게 1티어 특성 _지니어스_가 추가되었습니다. 포인트를 1만 투자할 수 있으며, 포인트 투자시 즉시 감정의 일기장 효과를 발동시킵니다."));
+
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -53,6 +56,9 @@ public class v0_4_X_Changes {
                 "_과열_ 발동 중 열기가 60% 이상이면 _불사_ 상태가 되어 죽지 않게됩니다. 불사 발동 중 피격시 열기를 잃습니다." + "\n\n" +
                 "_인내의 불꽃_ 특성에 불사 상태 발동에 요구하는 열기가 감소하는 효과가 추가되었습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "전쟁 로즈몬티스 상향",
+                "_망각_ 특성의 발동 확률이 10-30%에서 _15-45%_로 상승했습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_콜람의 패검_의 SP 충전률이 상승했습니다."));
 
@@ -60,7 +66,10 @@ public class v0_4_X_Changes {
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 너프",
+        changes.addButton(new ChangeButton(Icons.get(Icons.ROSEMARI), "수호 로즈몬티스 하향",
+                "_로도스의 필라인_ 특성의 물리 피해 증가량이 15-45%에서 _12-36%_로 감소했습니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 하향",
                 "_오리지늄 검_의 SP 충전률이 감소했습니다." + "\n\n" +
                 "_고난의 진술자_의 명중률 보정치가 0%에서 _-10%_로, 화염탄 피해 배율이 200%에서 _125%_로 감소했으며, 더 이상 기습공격을 할 수 없습니다."));
 

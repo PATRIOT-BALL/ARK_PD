@@ -418,7 +418,7 @@ actors.buffs.stomecharge.desc=폭풍의 힘이 당신을 감싸 이동속도를 
 actors.buffs.heat.normal=열기
 actors.buffs.heat.overheat=과열
 actors.buffs.heat.normal_desc=블레이즈의 몸에 열기가 쌓이고 있습니다. 열기가 50%%이상이면 체력을 소모해 과열 상태에 진입할 수 있습니다.\n\n현재 열기 : %s%%
-actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다. 열기가 60%% 이상이면 _불사_ 상태가 되어 죽음에 저항합니다. 불사 발동 중에는 피격시 열기가 감소합니다.\n\n현재 열기 : %s%%
+actors.buffs.heat.overheat_desc=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다. 열기가 60%% 이상이면 _불사_ 상태가 되어 죽음에 저항합니다. 불사 발동 중에는 피격시 열기가 감소합니다.\n\n현재 열기 : %s%%
 
 actors.buffs.wildmark.name=야생의 기운
 actors.buffs.wildmark.desc=레드는 야생의 힘을 쌓은 후 검풍으로 방출할 수 있습니다.\n\n현재 충전량 : %d(%s%%)
@@ -428,6 +428,9 @@ actors.buffs.wildmark.self_target=자신에게 검풍을 날릴 수 없습니다
 
 
 ###hero
+actors.hero.talent.genius.title=지니어스
+actors.hero.talent.genius.desc=_이 특성에 투자하면 _감정의 일기장_ 효과가 즉시 발동합니다.
+
 actors.hero.talent.hearty_meal.title=푸짐한 식사
 actors.hero.talent.hearty_meal.desc=_+1:_ 음식을 섭취할 때 체력이 50% 이하라면 _2 HP_ , 25% 이하라면 _3 HP_ 를 회복합니다.\n\n_+2:_ 음식을 섭취할 때 체력이 50% 이하라면  _3 HP_ , 25% 이하라면 _5 HP_ 를 회복합니다.
 actors.hero.talent.armsmasters_intuition.title=장인의 직감
@@ -463,7 +466,7 @@ actors.hero.talent.finalblow.desc=_+1:_ 콤보 필살기로 적을 처치한 경
 actors.hero.talent.enhanced_combo.title=기술 향상
 actors.hero.talent.enhanced_combo.desc=_+1:_ 블레이즈의 연속 타격이 6 이상일 때, 밀쳐내기의 밀쳐내는 거리가 3칸으로 증가하고, 적을 혼란시키며, 적을 밀쳐내 낭떠러지에 떨어뜨릴 수 있습니다.\n\n_+2:_ +1의 효과에 더불어, 블레이즈의 연속 타격이 9 이상일 때 받아치기가 여러 번의 공격을 받아칠 수 있습니다.\n\n_+3:_ +1, +2의 효과에 더불어, 블레이즈는 메치기, 으깨기, 분노 폭발을 사용할 때 연속 타격/3 개의 타일을 도약할 수 있습니다.
 actors.hero.talent.tactical_shield.title=전술 방어막
-actors.hero.talent.tactical_shield.desc=_+1:_ 블레이즈의 갑옷 강화 수치당 방어력이 2 상승합니다. 최대 _4_ 까지 상승합니다.\n\n_+2:_ 블레이즈의 갑옷 강화 수치당 방어력이 2 상승합니다. 최대 _7_ 까지 상승합니다.\n\n_+3:_ 블레이즈의 갑옷 강화 수치당 방어력이 2 상승합니다. 최대 _10_ 까지 상승합니다.
+actors.hero.talent.tactical_shield.desc=_+1:_ 블레이즈의 갑옷 강화 수치당 방어력이 1 상승합니다. 최대 _4_ 까지 상승합니다.\n\n_+2:_ 블레이즈의 갑옷 강화 수치당 방어력이 1 상승합니다. 최대 _7_ 까지 상승합니다.\n\n_+3:_ 블레이즈의 갑옷 강화 수치당 방어력이 1 상승합니다. 최대 _10_ 까지 상승합니다.
 actors.hero.talent.chainsaw_extend.title=전기톱 연장
 actors.hero.talent.chainsaw_extend.desc=_+1:_ 무기 사정거리가 1 상승합니다. 무기의 힘 요구치가 _4_ 증가합니다.\n\n_+2:_ 무기 사정거리가 1 상승합니다. 무기의 힘 요구치가 _3_ 증가합니다.\n\n_+3:_ 무기 사정거리가 1 상승합니다. 무기의 힘 요구치가 _2_ 증가합니다.
 actors.hero.talent.infinite_rage.title=무한의 분노
@@ -697,7 +700,7 @@ actors.hero.talent.barrier_operation.desc=_+1:_ 방벽으로 방어할 때 피�
 actors.hero.talent.barrier_repair.title=방벽 재생
 actors.hero.talent.barrier_repair.desc=_+1:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _15%_ 로 상승합니다.\n\n_+2:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _20%_ 로 상승합니다.\n\n_+3:_ 공격당했을 때 섬멸전 장비를 충전할 확률이 10%에서 _25%_ 로 상승합니다.
 actors.hero.talent.rhodes_cat.title=로도스의 필라인
-actors.hero.talent.rhodes_cat.desc=_+1:_ 섬멸전 장비의 충전이 1 이상이면 물리 공격의 피해량이 _15%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전이 1 이상이면 물리 공격의 피해량이 _30%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전이 1 이상이면 물리 공격의 피해량이 _45%_ 상승합니다.
+actors.hero.talent.rhodes_cat.desc=_+1:_ 섬멸전 장비의 충전이 1 이상이면 물리 공격의 피해량이 _12%_ 상승합니다.\n\n_+2:_ 섬멸전 장비의 충전이 1 이상이면 물리 공격의 피해량이 _24%_ 상승합니다.\n\n_+3:_ 섬멸전 장비의 충전이 1 이상이면 물리 공격의 피해량이 _36%_ 상승합니다.
 actors.hero.talent.rhodes_weapon.title=섬멸 작전
 actors.hero.talent.rhodes_weapon.desc=_+1:_ 섬멸전 장비의 공격력이 _2_ 만큼 상승합니다.\n\n_+2:_ 섬멸전 장비의 공격력이 _4_ 만큼 상승합니다.\n\n_+3:_ 섬멸전 장비의 공격력이 _6_ 만큼 상승합니다.
 actors.hero.talent.recall_memory.title=기억 되새기기
@@ -714,7 +717,7 @@ actors.hero.talent$mywishcooldown.desc=내가 원하는 세상 재발동까지 %
 
 //쪽냥이 3차 서브클래스
 actors.hero.talent.oblivion.title=망각
-actors.hero.talent.oblivion.desc=_+1:_ EX-44가 파괴당할 때 _10%_ 확률로 섬멸전 장비를 충전합니다.\n\n_+2:_ EX-44가 파괴당할 때 _20%_ 확률로 섬멸전 장비를 충전합니다.\n\n_+3:_ EX-44가 파괴당할 때 _30%_ 확률로 섬멸전 장비를 충전합니다.
+actors.hero.talent.oblivion.desc=_+1:_ EX-44가 파괴당할 때 _15%_ 확률로 섬멸전 장비를 충전합니다.\n\n_+2:_ EX-44가 파괴당할 때 _30%_ 확률로 섬멸전 장비를 충전합니다.\n\n_+3:_ EX-44가 파괴당할 때 _45%_ 확률로 섬멸전 장비를 충전합니다.
 actors.hero.talent.weakness_cover.title=약점 보완
 actors.hero.talent.weakness_cover.desc=_+1:_ 섬멸전 장비 강화 1당 물리 피해량이 _0-2_ 상승합니다.\n\n_+2:_ 섬멸전 장비 강화 1당 물리 피해량이 _1-2_ 상승합니다.\n\n_+3:_ 섬멸전 장비 강화 1당 물리 피해량이 _2-2_ 상승합니다.
 actors.hero.talent.mentalamplification.title=정신 증폭
@@ -846,7 +849,7 @@ actors.hero.herosubclass.berserker_short_desc=_분노_\n받은 피해를 분노�
 actors.hero.herosubclass.berserker_desc=_분노 전문화_ 는 받은 피해에 비례해 분노를 쌓아 추가 피해를 입히고 이동속도를 끌어올립니다. \n최대로 분노한 블레이즈는 짧은 시간 동안 죽음을 유예할 수 있으며, 그 후 탈진 상태에 빠집니다. 또한, 투척 무기가 아닌 것을 적에게 던지면 적을 광란시키고 분노를 회복할 수 있습니다.
 actors.hero.herosubclass.heat=열기 블레이즈
 actors.hero.herosubclass.heat_short_desc=_열기_\n자신의 생명을 불태워 전투력을 상승시킵니다.
-actors.hero.herosubclass.heat_desc=_열기 전문화_는 매 턴마다 열기를 얻습니다. 열기가 50%이상이면 _과열_ 능력을 사용할 수 있으며, 발동시 현재 열기의 절반%만큼 체력을 잃는 대신 물리 피해량이 증가합니다. 과열 상태일 땐 매 텀턴마다 열기를 얻는 대신 소모하며, 과열이 끝나면 체력을 회복합니다.
+actors.hero.herosubclass.heat_desc=_열기 전문화_는 매 턴마다 열기를 얻습니다. 열기가 50%이상이면 _과열_ 능력을 사용할 수 있으며, 발동시 현재 열기의 절반%만큼 체력을 잃는 대신 물리 피해량이 증가합니다. 과열 상태일 땐 매 턴마다 열기를 얻는 대신 소모하며, 과열이 끝나면 체력을 회복합니다.
 actors.hero.herosubclass.warlock=지배 아미야
 actors.hero.herosubclass.warlock_short_desc=_지배_\n영혼 표식을 이용해 전투에서 어드벤티지를 얻습니다.
 actors.hero.herosubclass.warlock_desc=_지배 전문화_ 는 적에게 아츠 스태프를 사용함으로써 영혼의 낙인을 걸 확률이 있습니다. 낙인이 걸린 적들은 물리 피해를 입을 때마다 아미야의 체력을 회복시키고 허기를 충족시킵니다.\n\n흑요석 반지의 물리 공격력이 감소하지만, 낙인이 부여된 적 처치시 반지가 충전됩니다.

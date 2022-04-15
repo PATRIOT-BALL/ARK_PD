@@ -614,7 +614,7 @@ public class Spriteex extends MissileWeapon {
                   }
               }
               else if(Dungeon.hero.hasTalent(Talent.OBLIVION)) {
-                  if(Random.Int(100) < Random.IntRange(0, Dungeon.hero.pointsInTalent(Talent.OBLIVION) * 10)) {
+                  if(Random.Int(100) < Random.IntRange(0, Dungeon.hero.pointsInTalent(Talent.OBLIVION) * 15)) {
                       if (Dungeon.hero.belongings.getItem(AnnihilationGear.class) != null) {
                           AnnihilationGear Gear = Dungeon.hero.belongings.getItem(AnnihilationGear.class);
                           Gear.SPCharge(1);

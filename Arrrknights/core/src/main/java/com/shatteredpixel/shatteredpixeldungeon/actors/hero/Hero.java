@@ -1403,7 +1403,7 @@ public class Hero extends Char {
         if (hasTalent(Talent.RHODES_CAT)) {
             if (Gear != null)
                 if (Gear.charge > 0) {
-                    damage *= 1f + (float) this.pointsInTalent(Talent.RHODES_CAT) * 0.15f;
+                    damage *= 1f + (float) this.pointsInTalent(Talent.RHODES_CAT) * 0.12f;
                 }
         }
         if (hasTalent(Talent.WEAKNESS_COVER)) {
