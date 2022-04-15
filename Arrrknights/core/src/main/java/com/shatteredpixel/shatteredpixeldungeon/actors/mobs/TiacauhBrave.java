@@ -1,8 +1,10 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
@@ -37,12 +39,14 @@ public class TiacauhBrave extends Mob {
 
     @Override
     public int damageRoll() {
+
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE))  return Random.NormalIntRange( 44, 57 );
         return Random.NormalIntRange( 35, 57 );
     }
 
     @Override
     public int attackSkill( Char target ) {
-        return 42;
+        return 47;
     }
 
     @Override
@@ -56,6 +60,7 @@ public class TiacauhBrave extends Mob {
     public int attackProc(Char enemy, int damage) {
         if (!isAttack) {
         isAttack = true;
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) Buff.affect(enemy, Hex.class, 5f);
         Buff.affect(enemy, Vulnerable.class, 3f);}
         return super.attackProc(enemy, damage);
     }

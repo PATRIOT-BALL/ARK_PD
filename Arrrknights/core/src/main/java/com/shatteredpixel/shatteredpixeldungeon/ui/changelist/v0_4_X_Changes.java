@@ -62,6 +62,9 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
                 "_콜람의 패검_의 SP 충전률이 상승했습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
+                "_티아카우 용사_의 명중률이 42에서 _47_로 상승했습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
