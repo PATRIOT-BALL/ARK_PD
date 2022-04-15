@@ -1547,7 +1547,7 @@ public class Hero extends Char {
         if (hasTalent(Talent.WIND_ROAD)) {
             WildMark mark = buff(WildMark.class);
             if (mark != null) {
-                mark.Charged(pointsInTalent(Talent.WIND_ROAD) * 5);
+                mark.Charged(pointsInTalent(Talent.WIND_ROAD) * 7.5f);
             }
         }
 
