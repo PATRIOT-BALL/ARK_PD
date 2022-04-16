@@ -2187,7 +2187,7 @@ public class Hero extends Char {
 
         Heat heat = buff(Heat.class);
 
-        if (heat != null) {
+        if (heat != null && !(cause instanceof ChaliceOfBlood)) {
             if (heat.state() == Heat.State.OVERHEAT &&
                     heat.power() >= (60-pointsInTalent(Talent.HEAT_OF_PROTECTION) * 5))
             {
