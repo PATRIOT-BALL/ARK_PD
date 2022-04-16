@@ -50,7 +50,7 @@ public class Sandvich extends Food {
     }
 
     public static void effect(Hero hero){
-        hero.HP = Math.min( hero.HP + hero.HT / 3, hero.HT );
+        hero.HP = Math.min( hero.HP + hero.HT / 5, hero.HT );
         hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
     }
 
