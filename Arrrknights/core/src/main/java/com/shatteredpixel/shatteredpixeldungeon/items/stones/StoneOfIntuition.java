@@ -116,7 +116,7 @@ public class StoneOfIntuition extends InventoryStone {
 			guess.visible = false;
 			guess.icon( new ItemSprite(item) );
 			guess.enable(false);
-			guess.setRect(0, 80, WIDTH, 20);
+			guess.setRect(0, 100, WIDTH, 20);
 			add(guess);
 			
 			float left;
@@ -189,7 +189,7 @@ public class StoneOfIntuition extends InventoryStone {
 				}
 			}
 			
-			resize(WIDTH, 100);
+			resize(WIDTH, 120);
 			
 		}
 		

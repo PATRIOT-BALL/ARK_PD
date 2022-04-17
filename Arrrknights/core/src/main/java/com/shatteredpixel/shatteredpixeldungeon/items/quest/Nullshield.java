@@ -4,9 +4,12 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookFlashShield;
+import com.shatteredpixel.shatteredpixeldungeon.items.Snowsants_Coin;
 import com.shatteredpixel.shatteredpixeldungeon.items.W0502;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.glyphs.Stone;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Firebomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.Scroll;
+import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfPurgatory;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.SP.StaffOfSuzuran;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.Wand;
@@ -222,6 +225,14 @@ public class Nullshield extends Item {
                     GLog.h(Messages.get(Nullshield.class, "suc"));
                     StaffOfPurgatory nya = new StaffOfPurgatory();
                     nya.identify();
+                    Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                    item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
+                }
+                else if (item instanceof Runestone)
+                {
+                    GLog.h(Messages.get(Nullshield.class, "suc"));
+                    Snowsants_Coin nya = new Snowsants_Coin();
                     Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
                     item.detach( curUser.belongings.backpack );
                     detach(curUser.belongings.backpack);

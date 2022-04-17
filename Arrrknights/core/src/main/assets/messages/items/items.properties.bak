@@ -2603,8 +2603,8 @@ items.weapon.melee.kollamsword.ac_zap=능력해방
 items.weapon.melee.kollamsword.setbouns=_아이템 시너지 : 투쟁을 여기서 멈추노라_\n능력해방의 정신지배 확률이 100%로 증가합니다.
 
 items.weapon.melee.suffering.name=고난의 진술자
-items.weapon.melee.suffering.desc=이 무기는 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.\n매 턴마다 SP가 충전되며, SP를 100%소모해 _화염탄_을 발사할 수 있습니다. 화염탄이 적중하면 폭발하여 주위에 200%의 피해를 입힙니다.
-items.weapon.melee.suffering.stats_desc=명중률 -20%, 기습 공격 불가
+items.weapon.melee.suffering.desc=이 무기는 대상 주위 적에게도 피해를 입히며, 만약 적이 혼자라면 2배의 피해를 입힐 수 있습니다.\n매 턴마다 SP가 충전되며, SP를 100%소모해 _화염탄_을 발사할 수 있습니다. 화염탄이 적중하면 폭발하여 주위에 125%의 피해를 입힙니다.
+items.weapon.melee.suffering.stats_desc=명중률 -10%, 기습 공격 불가
 items.weapon.melee.suffering.ac_zap=화염탄
 items.weapon.melee.suffering.prompt=목표를 지정해주세요.
 items.weapon.melee.suffering.self_target=자신에게 발사할 수 없습니다.
@@ -3011,6 +3011,9 @@ items.portablecover.desc=정확한 타이밍에 사용하면 거대하고 못생
 
 items.mushroomslices.name=버섯 조각
 items.mushroomslices.desc=이 버섯 조각 2개를 가공소에서 합치면 휴대용 엄폐물을 만들 수 있을 것 같습니다.
+
+items.snowsants_coin.name=스노우상트의 동전
+items.snowsants_coin.desc='스노우상트의 동전' 이야기가 한때 젊은 오퍼레이터들 사이에서 유행한 적이 있다. 물론 별다른 악의는 없지만 말이다.\n\n이 동전은 직감의 돌과 동일한 효과를 발동시키며, 사용시 직감의 돌을 얻습니다. 직감 판정에 성공하면 감정의 일기장을 추가로 얻습니다.
 
 
 

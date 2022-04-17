@@ -429,7 +429,7 @@ actors.buffs.wildmark.self_target=자신에게 검풍을 날릴 수 없습니다
 
 ###hero
 actors.hero.talent.genius.title=지니어스
-actors.hero.talent.genius.desc=_이 특성에 투자하면 _감정의 일기장_ 효과가 즉시 발동합니다.
+actors.hero.talent.genius.desc=이 특성에 투자하면 _감정의 일기장_ 효과가 즉시 발동합니다.
 
 actors.hero.talent.hearty_meal.title=푸짐한 식사
 actors.hero.talent.hearty_meal.desc=_+1:_ 음식을 섭취할 때 체력이 50% 이하라면 _2 HP_ , 25% 이하라면 _3 HP_ 를 회복합니다.\n\n_+2:_ 음식을 섭취할 때 체력이 50% 이하라면  _3 HP_ , 25% 이하라면 _5 HP_ 를 회복합니다.
