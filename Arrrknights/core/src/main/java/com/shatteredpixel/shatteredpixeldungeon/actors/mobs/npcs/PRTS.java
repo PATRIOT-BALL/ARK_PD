@@ -14,7 +14,7 @@ public class PRTS extends NPC {
 
     private static final String[] LINE_KEYS = {
             "hint1", "hint2", "hint3", "hint4", "hint5", "hint6", "hint7",
-            "hint8", "hint9", "hint10", "hint11", "hint12", "hint13", "hint14", "hint15", "hint16",
+            "hint8", "hint9", "hint10", "hint11", "hint12", "hint13", "hint14", "hint15", "hint16", "hint17",
     };
 
     {
