@@ -13,6 +13,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookTacticalChan
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookGenesis;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.CorpseDust;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nmould;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.Runestone;
@@ -25,6 +26,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ImageoverForm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SanktaBet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
@@ -74,12 +76,17 @@ public class WaterOfAdvanceguard extends WellWater {
         } else if (item instanceof CrabGun) {
             if (Random.Int(4) < 3) {    item = new CatGun();
             item.identify();}
-        }else if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
+        }else if (item instanceof CorpseDust) {
+            item = new SanktaBet();
+            item.identify();
+        }
+        else if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
         {
             Price = item.value() * 3;
             item = new Gold(Price);
             GLog.p(String.format(Messages.get(this, "procced"), Price));
-        } else {
+        }
+        else {
             item = null;
         }
 

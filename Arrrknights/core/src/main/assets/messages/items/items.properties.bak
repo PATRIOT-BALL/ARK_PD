@@ -2612,6 +2612,12 @@ items.weapon.melee.suffering.fizzles=당신의 총은 충전되지 않았습니�
 items.weapon.melee.suffering.setbouns=_아이템 시너지 : 신이 선택한 감독관_\nSP 충전률이 2배가 됩니다.
 
 
+items.weapon.melee.sanktabet.name=산크타의 내기
+items.weapon.melee.sanktabet.desc=...남은 것은 잿더미와 여섯 구의 시체 뿐이였다.\n\n이 _특별한_ 무기는 매 공격시 중첩을 쌓습니다. 최대 중첩일 때 공격시 매우 강력한 공격을 가하지만, 사용자 또한 잿더미가 될 것입니다.\n\n_재장전_시 턴을 소모해 중첩을 초기화합니다.
+items.weapon.melee.sanktabet.ac_re=재장전
+items.weapon.melee.sanktabet.stats_desc=명중률 +20%, 공격속도 +25%
+
+
 
 
 ## 총기 관련
@@ -3014,6 +3020,7 @@ items.mushroomslices.desc=이 버섯 조각 2개를 가공소에서 합치면 �
 
 items.snowsants_coin.name=스노우상트의 동전
 items.snowsants_coin.desc='스노우상트의 동전' 이야기가 한때 젊은 오퍼레이터들 사이에서 유행한 적이 있다. 물론 별다른 악의는 없지만 말이다.\n\n이 동전은 직감의 돌과 동일한 효과를 발동시키며, 사용시 직감의 돌을 얻습니다. 직감 판정에 성공하면 감정의 일기장을 추가로 얻습니다.
+items.snowsants_coin.ac_use=사용한다
 
 
 

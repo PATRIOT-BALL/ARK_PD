@@ -192,6 +192,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SanktaBet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Suffering;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Notes;
@@ -2187,7 +2188,7 @@ public class Hero extends Char {
 
         Heat heat = buff(Heat.class);
 
-        if (heat != null && !(cause instanceof ChaliceOfBlood)) {
+        if (heat != null && !(cause instanceof ChaliceOfBlood) && !(cause instanceof SanktaBet)) {
             if (heat.state() == Heat.State.OVERHEAT &&
                     heat.power() >= (60-pointsInTalent(Talent.HEAT_OF_PROTECTION) * 5))
             {

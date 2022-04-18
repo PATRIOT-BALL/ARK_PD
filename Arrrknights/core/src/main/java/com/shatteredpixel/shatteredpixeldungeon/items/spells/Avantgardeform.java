@@ -18,6 +18,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookThoughts;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK1.BookWhispers;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.BookGenesis;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
+import com.shatteredpixel.shatteredpixeldungeon.items.quest.CorpseDust;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Gamza;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.MetalShard;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Nmould;
@@ -38,6 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ImageoverForm
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SanktaBet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
@@ -126,7 +128,11 @@ public class Avantgardeform extends InventorySpell {
             item = new CatGun();
             item.level(Level);
             item.identify();
-        } else {
+        } else if (item instanceof CorpseDust) {
+            item = new SanktaBet();
+            item.identify();
+        }
+        else {
             item = null;
         }
 
