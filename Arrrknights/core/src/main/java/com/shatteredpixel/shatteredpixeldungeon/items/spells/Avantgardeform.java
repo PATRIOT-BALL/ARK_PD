@@ -128,9 +128,6 @@ public class Avantgardeform extends InventorySpell {
             item = new CatGun();
             item.level(Level);
             item.identify();
-        } else if (item instanceof CorpseDust) {
-            item = new SanktaBet();
-            item.identify();
         }
         else {
             item = null;

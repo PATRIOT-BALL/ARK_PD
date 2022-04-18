@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MinosFury;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SanktaBet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scythe;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.PurgatoryKnife;
@@ -234,6 +235,15 @@ public class Nullshield extends Item {
                     GLog.h(Messages.get(Nullshield.class, "suc"));
                     Snowsants_Coin nya = new Snowsants_Coin();
                     Dungeon.level.drop(nya, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                    item.detach( curUser.belongings.backpack );
+                    detach(curUser.belongings.backpack);
+                }
+                else if (item instanceof CorpseDust)
+                {
+                    GLog.h(Messages.get(Nullshield.class, "suc"));
+                    SanktaBet gma = new SanktaBet();
+                    Dungeon.level.drop(gma, Dungeon.hero.pos).sprite.drop(Dungeon.hero.pos);
+                    gma.identify();
                     item.detach( curUser.belongings.backpack );
                     detach(curUser.belongings.backpack);
                 }

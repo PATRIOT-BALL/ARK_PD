@@ -74,13 +74,11 @@ public class WaterOfAdvanceguard extends WellWater {
             }
             else item = new Thunderbolt();
         } else if (item instanceof CrabGun) {
-            if (Random.Int(4) < 3) {    item = new CatGun();
-            item.identify();}
-        }else if (item instanceof CorpseDust) {
-            item = new SanktaBet();
-            item.identify();
-        }
-        else if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
+            if (Random.Int(4) < 3) {
+                item = new CatGun();
+                item.identify();
+            }
+        } else if (item.value() != 0 && item.unique != true) // 아이템 가격이 0이상(판매 가능)이며, 유니크 아이템이 아닐 경우
         {
             Price = item.value() * 3;
             item = new Gold(Price);
