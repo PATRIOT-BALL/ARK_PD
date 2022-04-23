@@ -2435,6 +2435,7 @@ items.weapon.melee.swordofartorius.setbouns=_Set Bonus: Tyrant_\nArts beam`s dam
 items.weapon.melee.wintersscar.name=Winter's Scar
 items.weapon.melee.wintersscar.stats_desc=Surprise attack bonus +25%\nDamage bonus to enemies inflicted with Chilled
 items.weapon.melee.wintersscar.desc=The biting cold of the land has already been released.\n\nA surprise attack with this weapon will inflict Chilled. Also deals more damage to enemies inflicted with Chilled.
+items.weapon.melee.wintersscar.setbouns=_Set Bonus : Full of Scars_\nSurprise Attack Damage Bonus increased to 45%.
 
 items.weapon.melee.patriotspear.name=Requiem
 items.weapon.melee.patriotspear.desc=He has long struggled with fate, and now resolves to slit the throat of fate.\n\nThis _unique_ weapon attacks four times in a row.
@@ -2601,7 +2602,7 @@ items.weapon.melee.kollamsword.ac_zap=Activate
 items.weapon.melee.kollamsword.setbouns=_Set Bonus : Here the Fighting Stops_\nChance to inflict Mind Control from the weapon's ability is increased to 100%.
 
 items.weapon.melee.suffering.name=Suffering
-items.weapon.melee.suffering.desc=This weapon inflicts damage to nearby enemies as well, and inflicts 1.25x damage if the enemy is alone.\nCharges SP every turn, and 100% of SP can be consumed to use _Scorching Bullet_. When Scorching Bullet hits, it will explode, dealing 200% damage nearby.
+items.weapon.melee.suffering.desc=This weapon inflicts damage to nearby enemies as well, and inflicts 1.25x damage if the enemy is alone.\nCharges SP every turn, and 100% of SP can be consumed to use _Scorching Bullet_. When Scorching Bullet hits, it will explode, dealing 125% damage nearby.
 items.weapon.melee.suffering.stats_desc=Accuracy -10%, No surprise attack
 items.weapon.melee.suffering.ac_zap=Scorching Bullet
 items.weapon.melee.suffering.prompt=Set the target.
@@ -2996,6 +2997,11 @@ items.portablecover.desc=If used at the right time, it seems to be able to effec
 
 items.mushroomslices.name=Mushroom Slices
 items.mushroomslices.desc=If you process these 2 mushroom slices at a processing plant, you can make a _Portable Cover._
+
+items.snowsants_coin.name=Snowsant's Coin
+items.snowsants_coin.desc=The story of 'Snowsant's Coin' was once popular among younger Operators, without any malicious intent of course.\n\nThis coin produces the same effect as Stone of Intuition, and will grant another Stone of Intuition upon use. When your intuition proves true, Scroll of Identification will be additionally acquired.
+items.snowsants_coin.ac_use=Use
+
 
 
 // 정보증명서
