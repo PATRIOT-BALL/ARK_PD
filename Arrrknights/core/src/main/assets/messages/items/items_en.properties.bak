@@ -2265,7 +2265,7 @@ items.weapon.melee.greatshield.desc=Even when he gave up his life, he never gave
 
 items.weapon.melee.greatsword.name=Boiling Blood
 items.weapon.melee.greatsword.stats_desc=Range +1, Attack Speed 200%, Accuracy -15%
-items.weapon.melee.greatsword.desc=A range extension module made by engineers on Rhodes Island has arrived. You hear the chains spinningm As a bonus, the blade amd the motors were also replaced!
+items.weapon.melee.greatsword.desc=A range extension module made by engineers on Rhodes Island has arrived. You hear the chains spinning As a bonus, the blade amd the motors were also replaced!
 
 items.weapon.melee.niansword.name=Copper Seal
 items.weapon.melee.niansword.typical_stats_desc=Typically this weapon blocks 0-%d damage. And it deals 0-%d damage to the attacker. This blocking scales with upgrades.

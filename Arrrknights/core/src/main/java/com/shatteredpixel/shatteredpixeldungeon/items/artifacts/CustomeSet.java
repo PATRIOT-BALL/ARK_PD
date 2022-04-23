@@ -46,7 +46,7 @@ public class CustomeSet extends Artifact {
 
         if (action.equals(AC_SHADOW)) {
             if (activeBuff == null) {
-                if (!isEquipped(hero) && !hero.hasTalent(Talent.LIGHT_CLOAK))
+                if (!isEquipped(hero))
                     GLog.i(Messages.get(Artifact.class, "need_to_equip"));
                 else if (cursed) GLog.i(Messages.get(this, "cursed"));
                 else if (charge < 100) GLog.i(Messages.get(this, "no_charge"));

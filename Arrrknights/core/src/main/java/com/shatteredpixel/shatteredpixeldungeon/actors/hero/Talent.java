@@ -278,6 +278,23 @@ public enum Talent {
 		}
 	};
 
+	public static class LightClockCooldown extends FlavourBuff{
+		@Override
+		public int icon() {
+			return BuffIndicator.COOL_TIME;
+		}
+
+		@Override
+		public String toString() {
+			return Messages.get(this, "name");
+		}
+
+		@Override
+		public String desc() {
+			return Messages.get(this, "desc", dispTurns());
+		}
+	};
+
 	int icon;
 	int maxPoints;
 

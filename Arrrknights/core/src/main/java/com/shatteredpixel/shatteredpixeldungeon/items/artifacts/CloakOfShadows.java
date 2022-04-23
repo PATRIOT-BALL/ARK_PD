@@ -27,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Preparation;
@@ -72,7 +73,7 @@ public class CloakOfShadows extends Artifact {
 	@Override
 	public ArrayList<String> actions( Hero hero ) {
 		ArrayList<String> actions = super.actions( hero );
-		if ((isEquipped( hero ) || hero.hasTalent(Talent.LIGHT_CLOAK))
+		if ((isEquipped( hero ))
 				&& !cursed && (charge > 0 || activeBuff != null)) {
 			actions.add(AC_STEALTH);
 		}
@@ -94,12 +95,19 @@ public class CloakOfShadows extends Artifact {
 		if (action.equals( AC_STEALTH )) {
 
 			if (activeBuff == null){
-				if (!isEquipped(hero) && !hero.hasTalent(Talent.LIGHT_CLOAK)) GLog.i( Messages.get(Artifact.class, "need_to_equip") );
+				if (!isEquipped(hero)) GLog.i( Messages.get(Artifact.class, "need_to_equip") );
 				else if (cursed)       GLog.i( Messages.get(this, "cursed") );
-				else if (charge <= 0)  GLog.i( Messages.get(this, "no_charge") );
+				else if (charge <= 0) {
+					if (hero.hasTalent(Talent.LIGHT_CLOAK) && hero.buff(Talent.LightClockCooldown.class) == null) {
+						Buff.affect(hero, Camouflage.class, 10f);
+						Buff.affect(hero, Talent.LightClockCooldown.class, 250 - hero.pointsInTalent(Talent.LIGHT_CLOAK) * 50);
+						hero.spend( 1f );
+						hero.sprite.operate( hero.pos );
+					}
+					else GLog.i(Messages.get(this, "no_charge"));
+				}
 				else {
-					if (hero.hasTalent(Talent.LIGHT_CLOAK)) hero.spend(1f / (1+hero.pointsInTalent(Talent.LIGHT_CLOAK)));
-					else hero.spend( 1f );
+					hero.spend( 1f );
 					hero.busy();
 					Sample.INSTANCE.play(Assets.Sounds.MELD);
 					activeBuff = activeBuff();
@@ -115,8 +123,7 @@ public class CloakOfShadows extends Artifact {
 			} else {
 				activeBuff.detach();
 				activeBuff = null;
-				if (hero.hasTalent(Talent.LIGHT_CLOAK)) hero.spend(1f / (1+hero.pointsInTalent(Talent.LIGHT_CLOAK)));
-				else hero.spend( 1f );
+				hero.spend( 1f );
 				hero.sprite.operate( hero.pos );
 			}
 
@@ -134,10 +141,6 @@ public class CloakOfShadows extends Artifact {
 	@Override
 	public boolean doUnequip(Hero hero, boolean collect, boolean single) {
 		if (super.doUnequip(hero, collect, single)){
-			if (hero.hasTalent(Talent.LIGHT_CLOAK)){
-				activate(hero);
-			}
-
 			return true;
 		} else
 			return false;
@@ -147,8 +150,7 @@ public class CloakOfShadows extends Artifact {
 	public boolean collect( Bag container ) {
 		if (super.collect(container)){
 			if (container.owner instanceof Hero
-					&& passiveBuff == null
-					&& ((Hero) container.owner).hasTalent(Talent.LIGHT_CLOAK)){
+					&& passiveBuff == null){
 				activate((Hero) container.owner);
 			}
 			return true;
@@ -182,7 +184,6 @@ public class CloakOfShadows extends Artifact {
 	@Override
 	public void charge(Hero target, float amount) {
 		if (charge < chargeCap) {
-			if (!isEquipped(target)) amount *= target.pointsInTalent(Talent.LIGHT_CLOAK)/10f;
 			partialCharge += 0.25f*amount;
 			if (partialCharge >= 1){
 				partialCharge--;
@@ -237,9 +238,6 @@ public class CloakOfShadows extends Artifact {
 					float turnsToCharge = (45 - missing);
 					turnsToCharge /= RingOfEnergy.artifactChargeMultiplier(target);
 					float chargeToGain = (1f / turnsToCharge);
-					if (!isEquipped(Dungeon.hero)){
-						chargeToGain *= (0.1f*Dungeon.hero.pointsInTalent(Talent.LIGHT_CLOAK) - 0.1f);
-					}
 					if (Dungeon.hero.hasTalent(Talent.CLOCK_UPGRADE)) {
 						chargeToGain *= 1 + Dungeon.hero.pointsInTalent(Talent.CLOCK_UPGRADE) * 0.05f;
 					}

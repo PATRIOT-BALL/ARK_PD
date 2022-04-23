@@ -57,6 +57,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarJournalist;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -142,6 +143,7 @@ public class Npc_Astesia extends NPC {
         else if (weapon instanceof Echeveria) {setItem1 = new RingOfWealth(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof Suffering) {setItem1 = new TimekeepersHourglass(); setItem2 = null; setItem3 = null; SetValue = 1; return true;}
         else if (weapon instanceof KollamSword) {setItem1 = new RingOfMistress(); setItem2 = new ChaliceOfBlood(); setItem3 = null; SetValue = 2; return true;}
+        else if (weapon instanceof WintersScar) {setItem1 = new RingOfAssassin(); setItem2 = new WoundsofWar(); setItem3 = null; SetValue = 2; return true;}
 
 
         return false;

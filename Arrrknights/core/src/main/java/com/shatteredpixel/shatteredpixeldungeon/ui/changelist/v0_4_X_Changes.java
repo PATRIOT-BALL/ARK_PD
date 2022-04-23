@@ -38,6 +38,9 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.TALENT), "1티어 공용 특성 추가",
                 "모든 캐릭터에게 1티어 특성 _지니어스_가 추가되었습니다. 포인트를 1만 투자할 수 있으며, 포인트 투자시 즉시 감정의 일기장 효과를 발동시킵니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 추가",
+                "정제 금속으로 조합할 수 있는 _스노우상트의 동전_이 추가되었습니다. 스노우상트의 동전은 추가 효과가 있는 직감의 돌입니다."));
+
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
@@ -47,6 +50,9 @@ public class v0_4_X_Changes {
                 "_유령_ : 물건을 훔쳤을 때 이동속도가 감소했지만, 훔친 뒤 주기적으로 _위장_합니다." + "\n\n" +
                 "_기술정찰병_ : 체력이 40에서 _22_로 감소했습니다. 대신 영구적으로 _위장_합니다. 또한, 더 이상 자신이 소환한 폭탄새로 피해를 받지 않습니다." + "\n\n" +
                 "_살카즈 도병_ : 체력이 60에서 _38_로 감소했습니다. 대신 영구적으로 _위장_합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "레드 특성 리메이크",
+                "_경량화 망토_ 특성이 변경되었습니다. 이제 경량화 망토는 망토의 충전이 0일 때 사용시 위장할 수 있게해줍니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
@@ -73,7 +79,7 @@ public class v0_4_X_Changes {
                 "_로도스의 필라인_ 특성의 물리 피해 증가량이 15-45%에서 _12-36%_로 감소했습니다."));
 
 
-        changes.addButton(new ChangeButton(Icons.get(Icons.RED), "야생 레드 하향",
+        changes.addButton(new ChangeButton(Icons.get(Icons.P_RED), "야생 레드 하향",
                 "_야생의 기운_의 충전 속도가 감소했습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "음식 하향",

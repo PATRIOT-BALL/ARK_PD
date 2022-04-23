@@ -2615,7 +2615,7 @@ items.weapon.melee.suffering.setbouns=_아이템 시너지 : 신이 선택한 �
 items.weapon.melee.sanktabet.name=산크타의 내기
 items.weapon.melee.sanktabet.desc=...남은 것은 잿더미와 여섯 구의 시체 뿐이였다.\n\n이 _특별한_ 무기는 매 공격시 중첩을 쌓습니다. 최대 중첩일 때 공격시 매우 강력한 공격을 가하지만, 사용자 또한 잿더미가 될 것입니다.\n\n_재장전_시 턴을 소모해 중첩을 초기화합니다.
 items.weapon.melee.sanktabet.ac_re=재장전
-items.weapon.melee.sanktabet.stats_desc=명중률 +20%, 공격속도 +25%
+items.weapon.melee.sanktabet.stats_desc=명중률 +33%, 공격속도 +25%
 
 
 
