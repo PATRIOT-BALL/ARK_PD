@@ -304,6 +304,7 @@ public class ItemSpriteSheet {
 	public static final int FLAMETAIL       = WEP_TIER4+14;
 	public static final int PANDA       = WEP_TIER4+15;
 	public static final int SCENE       = WEP_TIER4+16;
+	public static final int REVOLVER       = WEP_TIER4+17;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -322,6 +323,7 @@ public class ItemSpriteSheet {
 		assignItemRect(FLAMETAIL,        16, 16);
 		assignItemRect(PANDA,        16, 16);
 		assignItemRect(SCENE,        16, 16);
+		assignItemRect(REVOLVER,        16, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 10);   //8 slots
@@ -562,6 +564,7 @@ public class ItemSpriteSheet {
 	public static final int ARTIFACT_ASH      = ARTIFACTS+40;
 	public static final int ARTIFACT_NEARL      = ARTIFACTS+41;
 	public static final int ARTIFACT_CAMERA      = ARTIFACTS+42;
+	public static final int ARTIFACT_WALLET      = ARTIFACTS+43;
 	static{
 		assignItemRect(ARTIFACT_CLOAK,      16, 16);
 		assignItemRect(ARTIFACT_ARMBAND,    16, 16);
@@ -590,6 +593,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ARTIFACT_ASH,      16, 16);
 		assignItemRect(ARTIFACT_NEARL,      16, 16);
 		assignItemRect(ARTIFACT_CAMERA,      16, 16);
+		assignItemRect(ARTIFACT_WALLET,      16, 16);
 	}
 
 	                                                                                    //16 free slots

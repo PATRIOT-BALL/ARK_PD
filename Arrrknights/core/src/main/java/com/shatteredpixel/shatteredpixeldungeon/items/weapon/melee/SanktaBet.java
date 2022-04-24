@@ -27,8 +27,8 @@ import java.util.ArrayList;
 public class SanktaBet extends MeleeWeapon {
     public static final String AC_RE = "RE";
     {
-        image = ItemSpriteSheet.M1887;
-        hitSound = Assets.Sounds.HIT_GUN;
+        image = ItemSpriteSheet.REVOLVER;
+        hitSound = Assets.Sounds.HIT_REVOLVER;
         hitSoundPitch = 1.12f;
 
         charge = 0;
@@ -57,6 +57,7 @@ public class SanktaBet extends MeleeWeapon {
     public void execute(Hero hero, String action) {
 
         super.execute(hero, action);
+
 
         if (action.equals(AC_RE)) {
             charge = 0;

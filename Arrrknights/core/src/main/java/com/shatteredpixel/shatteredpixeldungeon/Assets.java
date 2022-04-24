@@ -243,6 +243,7 @@ public class Assets {
 		public static final String HIT_WALL1        = "sounds/hit_wall1.mp3";
 		public static final String HIT_WALL2        = "sounds/hit_wall2.mp3";
 		public static final String HIT_GUNLANCE        = "sounds/hit_gunlance.mp3";
+		public static final String HIT_REVOLVER        = "sounds/hit_revolver.mp3";
 		public static final String HIT_SNIPER        = "sounds/hit_sniping.mp3";
 		public static final String HIT_RINGOUT        = "sounds/hit_ringout.mp3";
 		public static final String HIT_BREAK        = "sounds/hit_break.mp3";
@@ -258,6 +259,7 @@ public class Assets {
 		public static final String HIT_DUSK       = "sounds/hit_dusk.mp3";
 		public static final String HIT_WHIP       = "sounds/hit_whip.mp3";
 		public static final String CHAINS2   = "sounds/chains2.mp3";
+		public static final String RELOAD   = "sounds/reload.mp3";
 
 		public static final String SKILL_BASIC       = "sounds/skill_basic.mp3";
 		public static final String SKILL_TEXAS       = "sounds/skill_texas.mp3";
@@ -280,12 +282,12 @@ public class Assets {
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
 				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY, HIT_SWORD, HIT_SWORD2, HIT_DUALSTRIKE,
-				HIT_ARROW, HIT_WHIP, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK, HIT_SPLASH, HIT_DUSK,
+				HIT_ARROW, HIT_WHIP, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK, HIT_SPLASH, HIT_DUSK, HIT_REVOLVER,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, ZAP_GUN, LIGHTNING, LEVELUP, DEATH,
 				CHALLENGE, CURSED, TRAP, EVOKE, TOMB, ALERT, MELD, BOSS, BLAST, PLANT, RAY, BEACON,
 				TELEPORT, CHARMS, MASTERY, PUFF, ROCKS, BURNING, FALLING, GHOST, SECRET, BONES,
-				BEE, DEGRADE, MIMIC, DEBUFF, CHARGEUP, GAS, CHAINS, SCAN, SHEEP,
+				BEE, DEGRADE, MIMIC, DEBUFF, CHARGEUP, GAS, CHAINS, SCAN, SHEEP, RELOAD,
 
 				//명픽던에서만 추가된  효과음들↓
 				TIMESTOP,

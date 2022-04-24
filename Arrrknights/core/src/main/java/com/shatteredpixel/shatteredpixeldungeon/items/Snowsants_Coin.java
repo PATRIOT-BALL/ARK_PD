@@ -34,7 +34,7 @@ public class Snowsants_Coin extends Item {
     private static final float TIME_TO_ACTIVE = 1;
 
     {
-        image = ItemSpriteSheet.ORE;
+        image = ItemSpriteSheet.ARTIFACT_WALLET;
         bones = false;
     }
 
