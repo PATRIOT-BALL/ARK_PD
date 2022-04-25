@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
@@ -69,6 +70,7 @@ public class Succubus extends Mob {
         EXP = 12;
         maxLvl = 25;
         baseSpeed = 1f;
+        defenseSkill = 25;
 
         loot = Generator.Category.SCROLL;
         lootChance = 0.22f;
@@ -86,13 +88,6 @@ public class Succubus extends Mob {
         if (ASPlus != 0) return Random.NormalIntRange(25, 25 + ASPlus * 2);
         else return Random.NormalIntRange(18, 28);
     }
-
-    @Override
-    public int defenseSkill(Char enemy) {
-        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) return 25 + ASPlus * 2;
-        return 25;
-    }
-
     @Override
     public int attackProc(Char enemy, int damage) {
         damage = super.attackProc(enemy, damage);
@@ -107,6 +102,7 @@ public class Succubus extends Mob {
         super.move(step);
         if (state == HUNTING && buff(Acceleration.class) == null) {
             Buff.affect(this, Acceleration.class, 15f);
+            Buff.affect(this, Camouflage.class, 15f);
         }
         if (buff(Acceleration.class) != null) ASPlus += 3;
         if (ASPlus > 30) ASPlus = 30;

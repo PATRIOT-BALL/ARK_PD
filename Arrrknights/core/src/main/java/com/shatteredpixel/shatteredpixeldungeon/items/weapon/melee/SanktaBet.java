@@ -58,8 +58,8 @@ public class SanktaBet extends MeleeWeapon {
 
         super.execute(hero, action);
 
-
         if (action.equals(AC_RE)) {
+            Sample.INSTANCE.play(Assets.Sounds.RELOAD);
             charge = 0;
             hero.sprite.operate(hero.pos);
             hero.spendAndNext(1f);
@@ -71,8 +71,10 @@ public class SanktaBet extends MeleeWeapon {
     public int proc(Char attacker, Char defender, int damage) {
         if (charge < 5) charge++;
         else {
+
+
             Camera.main.shake(4, 0.12f);
-            Sample.INSTANCE.play(Assets.Sounds.FROST, 1.72f);
+            Sample.INSTANCE.play(Assets.Sounds.HIT_GUNLANCE, 1.33f, 1.76f);
             CellEmitter.get( attacker.pos ).burst( Speck.factory( Speck.WOOL ), 10 );
 
             PathFinder.buildDistanceMap(defender.pos, BArray.not(Dungeon.level.solid, null), 2);
