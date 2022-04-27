@@ -1303,7 +1303,10 @@ public class Hero extends Char {
             return false;
             //there can be multiple entrance tiles, so descend on any of them
             //TODO this is slightly brittle, it assumes there are no disjointed sets of entrance tiles
-        } else if (Dungeon.level.map[pos] == Terrain.ENTRANCE) {
+        } else if (Dungeon.level.locked) {
+            ready();
+            return false;}
+        else if (Dungeon.level.map[pos] == Terrain.ENTRANCE) {
             if (Dungeon.depth == 1) {
                 curAction = null;
 
