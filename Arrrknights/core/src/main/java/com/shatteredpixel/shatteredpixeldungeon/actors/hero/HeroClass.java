@@ -394,6 +394,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				case 13: return Assets.Sprites.ARCT;
 				case 14: return Assets.Sprites.TMM;
 				case 15: return Assets.Sprites.FRK;
+				case 16: return Assets.Sprites.WED;
 			}
 		}
 		switch (this) {
