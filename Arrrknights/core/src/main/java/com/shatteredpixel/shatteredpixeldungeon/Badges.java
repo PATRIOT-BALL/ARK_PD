@@ -236,6 +236,7 @@ public class Badges {
 		SKIN_ARCH(301, false, true),
 		SKIN_TOMIMI(300, false, true),
 		SKIN_FRANKA(302, false, true),
+		SKIN_WEEDY(303, false, true),
 
 		//기타
 		SUPPORT;
