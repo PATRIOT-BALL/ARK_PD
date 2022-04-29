@@ -519,5 +519,6 @@ public class Assets {
 		public static final String ARCT	= "sprites/archetto.png";
 		public static final String TMM	= "sprites/tomimi_skin.png";
 		public static final String FRK	= "sprites/franka.png";
+		public static final String WED	= "sprites/weedy_skin.png";
 	}
 }
