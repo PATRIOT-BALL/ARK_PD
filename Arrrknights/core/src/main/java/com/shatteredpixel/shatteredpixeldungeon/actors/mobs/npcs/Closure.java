@@ -264,7 +264,8 @@ public class Closure extends NPC {
                                         }});}
                                 break;
                             case 15: // 위디 스킨
-                                if (Badges.isUnlocked(Badges.Badge.PIRANHAS)) {
+                                sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "no")); break;
+                             /*   if (Badges.isUnlocked(Badges.Badge.PIRANHAS)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_WEEDY)) {Badges.validatefrankaskin();}
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
@@ -274,7 +275,7 @@ public class Closure extends NPC {
                                         public void call() {
                                             GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin15", Dungeon.hero.heroClass.title())));
                                         }});}
-                                break;
+                                break;*/
 
                         }
                     }

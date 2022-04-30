@@ -1106,6 +1106,11 @@ public class Badges {
 		displayBadge( badge );
 	}
 
+	public static void validateweedyskin() {
+		Badge badge = Badge.SKIN_FRANKA;
+		displayBadge( badge );
+	}
+
 	// 0.3.2버전의 스킨 관련 처리로 인해 추가된 구문입니다. 추후 필요없어질 수 있습니다.
 	public static void allskindestroy() {
 		saveNeeded = true;
@@ -1154,6 +1159,9 @@ public class Badges {
 		if(global.contains(Badge.SKIN_FRANKA)) {
 			global.remove(Badge.SKIN_FRANKA);
 		}
+		if(global.contains(Badge.SKIN_WEEDY)) {
+			global.remove(Badge.SKIN_WEEDY);
+		}
 
 		if (Badges.isUnlocked(Badge.SUPPORT)) {
 			Badges.validatetaluskin();
@@ -1169,7 +1177,7 @@ public class Badges {
 			Badges.validateAstesiaskin();
 			Badges.validateschwazrskin();
 			Badges.validatearchskin();
-			validatefrankaskin();
+			Badges.validatefrankaskin();
 		}
 
 		// 배지 파괴 후, 조건에 맞는 배지는 다시 획득합니다.
