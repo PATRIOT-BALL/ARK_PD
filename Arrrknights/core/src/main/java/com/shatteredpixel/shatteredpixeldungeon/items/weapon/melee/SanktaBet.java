@@ -83,7 +83,8 @@ public class SanktaBet extends MeleeWeapon {
                     CellEmitter.center(cell).burst(BlastParticle.FACTORY, 10);
                     }}
 
-            damage *= 2f;
+            if (attacker instanceof Hero) damage *= 2f;
+            else damage *= 0.6f;
             for (int i = 0; i < 5; i++) defender.damage(damage, this);
 
             attacker.die(this);
