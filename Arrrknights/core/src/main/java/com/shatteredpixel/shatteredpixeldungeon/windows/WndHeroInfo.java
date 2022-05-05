@@ -183,6 +183,7 @@ public class WndHeroInfo extends WndTabbed {
 					break;
 				case CHEN:
 					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.SHORTSWORD),
+							new ItemSprite(ItemSpriteSheet.WEAPON_HOLDER),
 							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
 					break;
 			}

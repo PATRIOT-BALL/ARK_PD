@@ -343,6 +343,7 @@ public class WndStartGame extends Window {
 							break;
 						case CHEN:
 							heroItem.icon(new ItemSprite(ItemSpriteSheet.SHORTSWORD, null));
+							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.WEAPON_HOLDER, null));
 							heroMisc.icon(new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16 ));
 							break;
 					}

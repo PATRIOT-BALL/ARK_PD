@@ -142,22 +142,22 @@ public class WndClass extends WndTabbed {
 			String message = null;
 			switch (cl) {
 				case WARRIOR:
-					message = HeroSubClass.GLADIATOR.desc() + "\n\n" + HeroSubClass.BERSERKER.desc();
+					message = HeroSubClass.GLADIATOR.desc() + "\n\n" + HeroSubClass.BERSERKER.desc() + "\n\n" + HeroSubClass.HEAT.desc();
 					break;
 				case MAGE:
-					message = HeroSubClass.BATTLEMAGE.desc() + "\n\n" + HeroSubClass.WARLOCK.desc();
+					message = HeroSubClass.BATTLEMAGE.desc() + "\n\n" + HeroSubClass.WARLOCK.desc() + "\n\n" + HeroSubClass.CHAOS.desc();
 					break;
 				case ROGUE:
-					message = HeroSubClass.FREERUNNER.desc() + "\n\n" + HeroSubClass.ASSASSIN.desc();
+					message = HeroSubClass.FREERUNNER.desc() + "\n\n" + HeroSubClass.ASSASSIN.desc() + "\n\n" + HeroSubClass.WILD.desc();
 					break;
 				case HUNTRESS:
-					message = HeroSubClass.SNIPER.desc() + "\n\n" + HeroSubClass.WARDEN.desc();
+					message = HeroSubClass.SNIPER.desc() + "\n\n" + HeroSubClass.WARDEN.desc() + "\n\n" + HeroSubClass.STOME.desc();
 					break;
 				case ROSECAT:
-					message = HeroSubClass.DESTROYER.desc() + "\n\n" + HeroSubClass.GUARDIAN.desc();
+					message = HeroSubClass.DESTROYER.desc() + "\n\n" + HeroSubClass.GUARDIAN.desc() + "\n\n" + HeroSubClass.WAR.desc();
 					break;
 				case NEARL:
-					message = HeroSubClass.KNIGHT.desc() + "\n\n" + HeroSubClass.SAVIOR.desc();
+					message = HeroSubClass.KNIGHT.desc() + "\n\n" + HeroSubClass.SAVIOR.desc() + "\n\n" + HeroSubClass.FLASH.desc();
 					break;
 				case CHEN:
 					message = HeroSubClass.SWORDMASTER.desc() + "\n\n" + HeroSubClass.SPSHOOTER.desc();
