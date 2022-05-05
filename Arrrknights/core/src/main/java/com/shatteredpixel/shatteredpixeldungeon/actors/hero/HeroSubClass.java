@@ -56,7 +56,10 @@ public enum HeroSubClass {
 
 	KNIGHT,
 	SAVIOR,
-	FLASH;
+	FLASH,
+
+	SWORDMASTER,
+	SPSHOOTER;
 
 	public String title() {
 		return Messages.get(this, name());

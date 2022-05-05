@@ -54,6 +54,7 @@ public class Badges {
 		MASTERY_HUNTRESS,
 		MASTERY_ROSECAT,
 		MASTERY_NEARL,
+		MASTERY_CHEN,
 //한 줄당 16칸, 모든 위치는 현재 좌표보다 1을 빼서 추가할것
 		//bronze
 		UNLOCK_MAGE                 ( 1 ),
@@ -61,6 +62,7 @@ public class Badges {
 		UNLOCK_HUNTRESS             ( 3 ),
 		UNLOCK_ROSECAT             ( 19 ),
 		UNLOCK_NEARL               (20),
+		UNLOCK_CHEN               (20),
 		MONSTERS_SLAIN_1            ( 4 ),
 		MONSTERS_SLAIN_2            ( 5 ),
 		GOLD_COLLECTED_1            ( 6 ),
@@ -106,6 +108,7 @@ public class Badges {
 		BOSS_SLAIN_1_HUNTRESS,
 		BOSS_SLAIN_1_ROSECAT,
 		BOSS_SLAIN_1_NEARL,
+		BOSS_SLAIN_1_CHEN,
 		BOSS_SLAIN_1_ALL_CLASSES    ( 69, true ),
 		GAMES_PLAYED_1              ( 70, true ),
 		CERTIFICATE_2               (71),
@@ -150,6 +153,8 @@ public class Badges {
 		BOSS_SLAIN_3_KNIGHT,
 		BOSS_SLAIN_3_SAVIOR,
 		BOSS_SLAIN_3_FLASH,
+		BOSS_SLAIN_3_SWORDMASTER,
+		BOSS_SLAIN_3_SPSHOOTER,
 		BOSS_SLAIN_3_ALL_SUBCLASSES ( 112, true ),
 		GAMES_PLAYED_2              ( 113, true ),
 
@@ -159,6 +164,7 @@ public class Badges {
 		GREY_CHAMPION1              ( 117, true ),
 		ROSE_CHAMPION1              ( 118, true ),
 		NEARL_CHAMPION1              ( 119, true ),
+		CHEN_CHAMPION1              ( 119, true ),
 
 		GOLD_COLLECTED_5              ( 120 ),
 
@@ -180,6 +186,7 @@ public class Badges {
 		VICTORY_HUNTRESS,
 		VICTORY_ROSECAT,
 		VICTORY_NEARL,
+		VICTORY_CHEN,
 		VICTORY_ALL_CLASSES         ( 162, true ),
 		GAMES_PLAYED_3              ( 163, true ),
 		CHAMPION_1                  ( 164 ),
@@ -192,6 +199,7 @@ public class Badges {
 		GREY_CHAMPION2              ( 170, true ),
 		ROSE_CHAMPION2              ( 171, true ),
 		NEARL_CHAMPION2              ( 172, true ),
+		CHEN_CHAMPION2              ( 172, true ),
 
 		SIESTA_PART2              ( 173),
 		GAVIAL_PART2              ( 174 ),
@@ -213,6 +221,7 @@ public class Badges {
 		GREY_CHAMPION3              ( 217, true ),
 		ROSE_CHAMPION3              ( 218, true ),
 		NEARL_CHAMPION3              ( 219, true ),
+		CHEN_CHAMPION3              ( 219, true ),
 
 		//Puple
 		Get_25_STONES                (256),
@@ -943,9 +952,9 @@ public class Badges {
 		case ROSECAT:
 			badge = Badge.VICTORY_ROSECAT;
 			break;
-			case NEARL:
-			badge = Badge.VICTORY_NEARL;
-			break;
+    	case NEARL:
+		badge = Badge.VICTORY_NEARL;
+		break;
 		}
 		local.add( badge );
 		if (!global.contains( badge )) {

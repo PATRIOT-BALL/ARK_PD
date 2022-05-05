@@ -65,6 +65,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfInvisibili
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLevitation;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfLiquidFlame;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfMindVision;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfParalyticGas;
+import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMistress;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfIdentify;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfLullaby;
@@ -81,6 +83,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ChenSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSword;
@@ -115,7 +118,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 	ROGUE( "rogue", HeroSubClass.ASSASSIN, HeroSubClass.FREERUNNER, HeroSubClass.WILD ),
 	HUNTRESS( "huntress", HeroSubClass.SNIPER, HeroSubClass.WARDEN, HeroSubClass.STOME ),
 	ROSECAT("rosecat", HeroSubClass.DESTROYER, HeroSubClass.GUARDIAN, HeroSubClass.WAR),
-	NEARL("nearl", HeroSubClass.KNIGHT, HeroSubClass.SAVIOR, HeroSubClass.FLASH);
+	NEARL("nearl", HeroSubClass.KNIGHT, HeroSubClass.SAVIOR, HeroSubClass.FLASH),
+	 CHEN("chen", HeroSubClass.SWORDMASTER, HeroSubClass.SPSHOOTER);
 
 	private String title;
 	private HeroSubClass[] subClasses;
@@ -156,6 +160,10 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case NEARL:
 				initNearl(hero);
 				break;
+
+			case CHEN:
+				initChen(hero);
+				break;
 		}
 
 	}
@@ -187,6 +195,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				return Badges.Badge.MASTERY_ROSECAT;
 			case NEARL:
 				return Badges.Badge.MASTERY_NEARL;
+			case CHEN:
+				return Badges.Badge.MASTERY_CHEN;
 		}
 		return null;
 	}
@@ -363,6 +373,27 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new DewVial().collect();
 	}
 
+	 private void initChen(Hero hero)
+	 {
+		 (hero.belongings.weapon = new ChenSword()).identify();
+
+		 new PotionBandolier().collect();
+		 Dungeon.LimitedDrops.SCROLL_HOLDER.drop();
+
+		 new MagicalHolster().collect();
+		 Dungeon.LimitedDrops.MAGICAL_HOLSTER.drop();
+
+		 new PotionOfStrength().identify();
+		 new PotionOfParalyticGas().identify();
+		 new ScrollOfWarp().identify();
+
+		 SkillBook skillB;
+		 skillB = new SkillBook();
+		 skillB.quantity(1).collect();
+		 Dungeon.quickslot.setSlot(0,skillB);
+		 new DewVial().collect();
+	 }
+
 	public String title() {
 		return Messages.get(HeroClass.class, title);
 	}
@@ -410,6 +441,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				return Assets.Sprites.ROSEMARY;
 			case NEARL:
 				return Assets.Sprites.NEARL;
+			case CHEN:
+				return Assets.Sprites.NEARL;
 		}
 	}
 
@@ -427,6 +460,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				return Assets.Sprites.ROSEMARY;
 			case NEARL:
 				return Assets.Sprites.NEARL;
+			case CHEN:
+				return Assets.Sprites.NEARL;
 		}
 	}
 
@@ -443,6 +478,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case ROSECAT:
 				return Assets.Splashes.ROSECAT;
 			case NEARL:
+				return Assets.Splashes.NEARL;
+			case CHEN:
 				return Assets.Splashes.NEARL;
 		}
 	}
@@ -501,6 +538,9 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_ROSECAT);
 			case NEARL:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
+			case CHEN:
+				//	return Badges.isUnlocked(Badges.Badge.UNLOCK_CHEN);
+				return true;
 		}
 	}
 	
@@ -518,6 +558,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 				return Messages.get(HeroClass.class, "rosecat_unlock");
 			case NEARL:
 				return Messages.get(HeroClass.class, "nearl_unlock");
+			case CHEN:
+				return Messages.get(HeroClass.class, "chen_unlock");
 		}
 	}
 
