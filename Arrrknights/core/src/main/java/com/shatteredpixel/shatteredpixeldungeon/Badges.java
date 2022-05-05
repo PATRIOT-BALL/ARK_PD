@@ -830,6 +830,12 @@ public class Badges {
 				case FLASH:
 					badge = Badge.BOSS_SLAIN_3_FLASH;
 					break;
+				case SWORDMASTER:
+					badge = Badge.BOSS_SLAIN_3_SWORDMASTER;
+					break;
+				case SPSHOOTER:
+					badge = Badge.BOSS_SLAIN_3_SPSHOOTER;
+					break;
 				default:
 					return;
 				}
@@ -850,9 +856,12 @@ public class Badges {
 					global.contains( Badge.BOSS_SLAIN_3_WARDEN ) &&
 					global.contains( Badge.BOSS_SLAIN_3_DESTROY ) &&
 					global.contains( Badge.BOSS_SLAIN_3_GUARDIAN ) &&
-						global.contains( Badge.BOSS_SLAIN_3_WAR ) &&
-						global.contains( Badge.BOSS_SLAIN_3_KNIGHT ) &&
-						global.contains( Badge.BOSS_SLAIN_3_SAVIOR )) {
+					global.contains( Badge.BOSS_SLAIN_3_WAR ) &&
+					global.contains( Badge.BOSS_SLAIN_3_KNIGHT ) &&
+					global.contains( Badge.BOSS_SLAIN_3_SAVIOR ) &&
+					global.contains( Badge.BOSS_SLAIN_3_SWORDMASTER ) &&
+					global.contains( Badge.BOSS_SLAIN_3_SPSHOOTER )
+				) {
 					
 					badge = Badge.BOSS_SLAIN_3_ALL_SUBCLASSES;
 					if (!global.contains( badge )) {
@@ -886,6 +895,9 @@ public class Badges {
 			break;
 		case NEARL:
 			badge = Badge.MASTERY_NEARL;
+			break;
+		case CHEN:
+			badge = Badge.MASTERY_CHEN;
 			break;
 		}
 		
@@ -922,6 +934,11 @@ public class Badges {
 		if (Statistics.enemiesSlain >= 200 && !global.contains(Badge.UNLOCK_NEARL)){
 			displayBadge( Badge.UNLOCK_NEARL );}
 	}
+
+	public static void validateChenUnlock(){
+		if (!global.contains(Badge.UNLOCK_NEARL)){
+			displayBadge( Badge.UNLOCK_CHEN );}
+	}
 	
 	public static void validateMasteryCombo( int n ) {
 		if (!local.contains( Badge.MASTERY_COMBO ) && n == 10) {
@@ -955,6 +972,9 @@ public class Badges {
     	case NEARL:
     		badge = Badge.VICTORY_NEARL;
 			break;
+		case CHEN:
+			badge = Badge.VICTORY_CHEN;
+			break;
 		}
 		local.add( badge );
 		if (!global.contains( badge )) {
@@ -967,7 +987,9 @@ public class Badges {
 			global.contains( Badge.VICTORY_ROGUE ) &&
 			global.contains( Badge.VICTORY_HUNTRESS ) &&
 			global.contains( Badge.VICTORY_ROSECAT ) &&
-		   global.contains( Badge.VICTORY_NEARL )){
+		   global.contains( Badge.VICTORY_NEARL ) &&
+			global.contains( Badge.VICTORY_CHEN )
+		){
 			
 			badge = Badge.VICTORY_ALL_CLASSES;
 			displayBadge( badge );
@@ -1376,6 +1398,25 @@ public class Badges {
 						saveNeeded = true;
 					}
 					badge = Badge.NEARL_CHAMPION3;
+				}
+				break;
+			case CHEN:
+				if (challenges >= 1) {
+					badge = Badge.CHEN_CHAMPION1;
+				}
+				if (challenges >= 3) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.CHEN_CHAMPION2;
+				}
+				if (challenges >= 6) {
+					if (!global.contains(badge)){
+						global.add(badge);
+						saveNeeded = true;
+					}
+					badge = Badge.CHEN_CHAMPION3;
 				}
 				break;
 			default:
