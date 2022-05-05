@@ -953,8 +953,8 @@ public class Badges {
 			badge = Badge.VICTORY_ROSECAT;
 			break;
     	case NEARL:
-		badge = Badge.VICTORY_NEARL;
-		break;
+    		badge = Badge.VICTORY_NEARL;
+			break;
 		}
 		local.add( badge );
 		if (!global.contains( badge )) {
