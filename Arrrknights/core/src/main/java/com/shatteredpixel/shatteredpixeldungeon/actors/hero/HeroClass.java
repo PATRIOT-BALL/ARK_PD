@@ -392,6 +392,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		 skillB.quantity(1).collect();
 		 Dungeon.quickslot.setSlot(0,skillB);
 		 new DewVial().collect();
+
+		 new TomeOfMastery().collect();
 	 }
 
 	public String title() {

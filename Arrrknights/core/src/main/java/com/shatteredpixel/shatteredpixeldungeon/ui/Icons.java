@@ -398,6 +398,8 @@ public enum Icons {
 			return get( ROSEMON );
 		case NEARL:
 			return get(NEARLS_S);
+		case CHEN: //첸포인트
+			return get(NEARLS_S);
 		default:
 			return get(WARRIOR);
 		}

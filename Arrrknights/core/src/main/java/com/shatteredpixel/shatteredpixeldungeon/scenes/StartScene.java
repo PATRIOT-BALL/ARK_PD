@@ -185,6 +185,9 @@ public class StartScene extends PixelScene {
 						case NEARL:
 							hero = new Image(Icons.NEARL.get());
 							break;
+						case CHEN: //첸포인트
+							hero = new Image(Icons.NEARL.get());
+							break;
 					}
 					add(hero);
 					
@@ -215,6 +218,9 @@ public class StartScene extends PixelScene {
 							hero = new Image(Icons.ROSEMARI.get());
 							break;
 						case NEARL:
+							hero = new Image(Icons.NEARL.get());
+							break;
+						case CHEN: //첸포인트
 							hero = new Image(Icons.NEARL.get());
 							break;
 					}

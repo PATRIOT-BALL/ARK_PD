@@ -379,6 +379,9 @@ public class HeroSelectScene extends PixelScene {
 				case NEARL:
 					icon(new Image(Icons.NEARL.get()));
 					break;
+				case CHEN: //첸포인트
+					icon(new Image(Icons.NEARL.get()));
+					break;
 			}
 
 		}

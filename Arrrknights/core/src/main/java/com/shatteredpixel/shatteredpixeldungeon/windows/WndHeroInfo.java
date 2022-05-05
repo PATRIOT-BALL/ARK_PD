@@ -72,6 +72,9 @@ public class WndHeroInfo extends WndTabbed {
 			case NEARL:
 				tabIcon = new ItemSprite(ItemSpriteSheet.NEARL_AXE, null);
 				break;
+			case CHEN:
+				tabIcon = new ItemSprite(ItemSpriteSheet.SHORTSWORD, null);
+				break;
 		}
 
 		int finalHeight = MIN_HEIGHT;
@@ -176,6 +179,10 @@ public class WndHeroInfo extends WndTabbed {
 				case NEARL:
 					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.NEARL_AXE),
 							new ItemSprite(ItemSpriteSheet.ARTIFACT_NEARL),
+							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
+					break;
+				case CHEN:
+					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.SHORTSWORD),
 							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
 					break;
 			}
