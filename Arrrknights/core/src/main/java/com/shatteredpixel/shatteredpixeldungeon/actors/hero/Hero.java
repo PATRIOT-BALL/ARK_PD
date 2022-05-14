@@ -44,6 +44,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChenCombo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
@@ -2395,6 +2396,10 @@ public class Hero extends Char {
 
         if (hit && subClass == HeroSubClass.GLADIATOR) {
             Buff.affect(this, Combo.class).hit(enemy);
+        }
+
+        if (hit && heroClass == HeroClass.CHEN) {
+            Buff.affect(this, ChenCombo.class).hit(enemy);
         }
 
         if (hit && subClass == HeroSubClass.KNIGHT) {

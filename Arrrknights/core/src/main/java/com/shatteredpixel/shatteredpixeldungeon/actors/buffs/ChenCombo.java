@@ -5,9 +5,14 @@ import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
+import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Web;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
@@ -23,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.tiles.DungeonTilemap;
 import com.shatteredpixel.shatteredpixeldungeon.ui.ActionIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.AttackIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
@@ -38,10 +44,11 @@ import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
+import java.util.ArrayList;
+
 public class ChenCombo extends Buff implements ActionIndicator.Action {
     private int count = 0;
-    private float comboTime = 0f;
-    private float initialComboTime = 5f;
+    private int hits = 4;
 
     @Override
     public int icon() {
@@ -50,8 +57,8 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
 
     @Override
     public void tintIcon(Image icon) {
-        Combo.ComboMove move = getHighestMove();
-        if (move != null){
+        ChenCombo.ComboMove move = getHighestMove();
+        if (move != null) {
             icon.hardlight(move.tintColor & 0x00FFFFFF);
         } else {
             icon.resetColor();
@@ -60,7 +67,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
 
     @Override
     public float iconFadePercent() {
-        return Math.max(0, (initialComboTime - comboTime)/ initialComboTime);
+        return 1f;
     }
 
     @Override
@@ -68,50 +75,23 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
         return Messages.get(this, "name");
     }
 
-    public void hit( Char enemy ) {
+    public void hit(Char enemy) {
 
         count++;
-        if (Dungeon.hero.hasTalent(Talent.DEADLY_REACH)) {
-            comboTime = 5f + Dungeon.hero.pointsInTalent(Talent.DEADLY_REACH);
-        }
-        else {
-            comboTime = 5f;
-        }
-
-        if (!enemy.isAlive() || (enemy.buff(Corruption.class) != null && enemy.HP == enemy.HT)){
-            comboTime = Math.max(comboTime, 15*((Hero)target).pointsInTalent(Talent.CLEAVE));
-        }
-
-        initialComboTime = comboTime;
-
         if ((getHighestMove() != null)) {
-
-            ActionIndicator.setAction( this );
-            Badges.validateMasteryCombo( count );
-
-            GLog.p( Messages.get(this, "combo", count) );
-
+            ActionIndicator.setAction(this);
         }
+
+        GLog.p(Messages.get(this, "combo", count));
 
         BuffIndicator.refreshHero(); //refresh the buff visually on-hit
     }
 
-    public void bounshit( Char enemy ) {
-
-        count++;
-        comboTime = 5f;
-
-        if (!enemy.isAlive() || (enemy.buff(Corruption.class) != null && enemy.HP == enemy.HT)){
-            comboTime = Math.max(comboTime, 15*((Hero)target).pointsInTalent(Talent.CLEAVE));
-        }
-
-        initialComboTime = comboTime;
+    public void bounshit(Char enemy) {
 
         if ((getHighestMove() != null)) {
 
-            ActionIndicator.setAction( this );
-            Badges.validateMasteryCombo( count );
-
+            ActionIndicator.setAction(this);
         }
 
         BuffIndicator.refreshHero(); //refresh the buff visually on-hit
@@ -124,42 +104,23 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
     }
 
     @Override
-    public boolean act() {
-        comboTime-=TICK;
-        spend(TICK);
-        if (comboTime <= 0) {
-            detach();
-        }
-        return true;
-    }
-
-    @Override
     public String desc() {
         return Messages.get(this, "desc");
     }
 
     private static final String COUNT = "count";
-    private static final String TIME  = "combotime";
-    private static final String INITIAL_TIME  = "initialComboTime";
 
 
     @Override
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
         bundle.put(COUNT, count);
-        bundle.put(TIME, comboTime);
-        bundle.put(INITIAL_TIME, initialComboTime);
     }
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        count = bundle.getInt( COUNT );
-        comboTime = bundle.getFloat( TIME );
-
-        //pre-0.9.2
-        if (bundle.contains(INITIAL_TIME))  initialComboTime = bundle.getFloat( INITIAL_TIME );
-        else                                initialComboTime = 5;
+        count = bundle.getInt(COUNT);
 
         if (getHighestMove() != null) ActionIndicator.setAction(this);
     }
@@ -167,10 +128,14 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
     @Override
     public Image getIcon() {
         Image icon;
-        if (((Hero)target).belongings.weapon != null){
-            icon = new ItemSprite(((Hero)target).belongings.weapon.image, null);
+        if (((Hero) target).belongings.weapon != null) {
+            icon = new ItemSprite(((Hero) target).belongings.weapon.image, null);
         } else {
-            icon = new ItemSprite(new Item(){ {image = ItemSpriteSheet.WEAPON_HOLDER; }});
+            icon = new ItemSprite(new Item() {
+                {
+                    image = ItemSpriteSheet.WEAPON_HOLDER;
+                }
+            });
         }
 
         icon.tint(getHighestMove().tintColor);
@@ -183,85 +148,66 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
     }
 
     public enum ComboMove {
-        CLOBBER(2, 0xFF00FF00),
-        SLAM   (4, 0xFFCCFF00),
-        PARRY  (6, 0xFFFFFF00),
-        CRUSH  (8, 0xFFFFCC00),
-        FURY   (10, 0xFFFF0000);
+        SKILL1(5, 0xFF00FF00),
+        SKILL2(10, 0xFFFFCC00),
+        SKILL3(15, 0xFFFF0000);
 
         public int comboReq, tintColor;
 
-        ComboMove(int comboReq, int tintColor){
+        ComboMove(int comboReq, int tintColor) {
             this.comboReq = comboReq;
             this.tintColor = tintColor;
         }
 
-        public String desc(){
-            if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                if (name() == "FURY" || name() == "CRUSH" || name() == "SLAM") return Messages.get(this, name()+"_desc2");
-            }
-            return Messages.get(this, name()+"_desc");
+        public String desc() {
+            return Messages.get(this, name() + "_desc");
         }
 
     }
 
-    public Combo.ComboMove getHighestMove(){
-        Combo.ComboMove best = null;
-        for (Combo.ComboMove move : Combo.ComboMove.values()){
-            if (count >= move.comboReq){
+    public ChenCombo.ComboMove getHighestMove() {
+        ChenCombo.ComboMove best = null;
+        for (ChenCombo.ComboMove move : ChenCombo.ComboMove.values()) {
+            if (count >= move.comboReq) {
                 best = move;
             }
         }
         return best;
     }
 
-    public int getComboCount(){
+    public int getComboCount() {
         return count;
     }
 
-    public boolean canUseMove(Combo.ComboMove move){
+    public static class ParalysisTracker extends Buff {
+    }
+
+
+    public boolean canUseMove(ComboMove move) {
         return move.comboReq <= count;
     }
 
-    public void useMove(Combo.ComboMove move){
-        if (move == Combo.ComboMove.PARRY){
-            comboTime = 5f;
-            Buff.affect(target, Combo.ParryTracker.class, Actor.TICK);
-            ((Hero)target).spendAndNext(Actor.TICK);
-            Dungeon.hero.busy();
-        } else {
-            moveBeingUsed = move;
-            GameScene.selectCell(listener);
-        }
+    public void useMove(ComboMove move) {
+        moveBeingUsed = move;
+        GameScene.selectCell(listener);
     }
 
-    public static class ParryTracker extends FlavourBuff{
-        { actPriority = HERO_PRIO+1;}
+    private static ComboMove moveBeingUsed;
 
-        public boolean parried;
-
-        @Override
-        public void detach() {
-            if (!parried && target.buff(ChenCombo.class) != null) target.buff(ChenCombo.class).detach();
-            super.detach();
-        }
-    }
-
-    private static Combo.ComboMove moveBeingUsed;
-
-    private void doAttack(final Char enemy){
+    private void doAttack(final Char enemy) {
+        hits -= 1;
 
         AttackIndicator.target(enemy);
 
         boolean wasAlly = enemy.alignment == target.alignment;
-        Hero hero = (Hero)target;
+        Hero hero = (Hero) target;
 
-        if (enemy.defenseSkill(target) >= Char.INFINITE_EVASION){
-            enemy.sprite.showStatus( CharSprite.NEUTRAL, enemy.defenseVerb() );
+        if (enemy.defenseSkill(target) >= Char.INFINITE_EVASION) {
+            enemy.sprite.showStatus(CharSprite.NEUTRAL, enemy.defenseVerb());
             Sample.INSTANCE.play(Assets.Sounds.MISS);
 
-        } else if (enemy.isInvulnerable(target.getClass())){
-            enemy.sprite.showStatus( CharSprite.POSITIVE, Messages.get(Char.class, "invulnerable") );
+        } else if (enemy.isInvulnerable(target.getClass())) {
+            enemy.sprite.showStatus(CharSprite.POSITIVE, Messages.get(Char.class, "invulnerable"));
             Sample.INSTANCE.play(Assets.Sounds.MISS);
 
         } else {
@@ -270,27 +216,11 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
 
             //variance in damage dealt
             switch (moveBeingUsed) {
-                case CLOBBER:
-                    dmg = 0;
+                case SKILL1:
                     break;
-                case SLAM:
-                    if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                        dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).shotmin(), ((GunWeapon) Dungeon.hero.belongings.weapon).shotmax());
-                        dmg = Math.round(dmg * 0.2f * count);
-                    }
-                    else dmg += Math.round(target.drRoll() * count / 5f);
+                case SKILL2:
                     break;
-                case CRUSH:
-                    if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                        dmg *= 1.25f;
-                    }
-                    else dmg = Math.round(dmg * 0.25f * count);
-                    break;
-                case FURY:
-                    if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                        dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).shotmin(), ((GunWeapon) Dungeon.hero.belongings.weapon).shotmax());
-                        dmg = Math.round(dmg * 0.4f * count);
-                    } else dmg = Math.round(dmg * 0.6f);
+                case SKILL3:
                     break;
             }
 
@@ -306,93 +236,75 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
 
             //special effects
             switch (moveBeingUsed) {
-                case CLOBBER:
-                    hit(enemy);
-                    if (enemy.isAlive()) {
-                        //trace a ballistica to our target (which will also extend past them
-                        Ballistica trajectory = new Ballistica(target.pos, enemy.pos, Ballistica.STOP_TARGET);
-                        //trim it to just be the part that goes past them
-                        trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
-                        //knock them back along that ballistica, ensuring they don't fall into a pit
-                        int dist = 2;
-                        if (count >= 6 && hero.pointsInTalent(Talent.ENHANCED_COMBO) >= 1) {
-                            dist++;
-                            Buff.prolong(enemy, Vertigo.class, 3);
-                        } else if (!enemy.flying) {
-                            while (dist > trajectory.dist ||
-                                    (dist > 0 && Dungeon.level.pit[trajectory.path.get(dist)])) {
-                                dist--;
-                            }
-                        }
-                        WandOfBlastWave.throwChar(enemy, trajectory, dist, true, false);
+                case SKILL1:
+                    if (enemy.isAlive() && enemy.buff(ParalysisTracker.class) == null) {
+                        float ptime = 1f;
+                        Buff.affect(enemy, ParalysisTracker.class);
+                        Buff.affect(enemy, Paralysis.class, ptime);
                     }
-                    break;
-                case SLAM:
-                    if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                        hit(enemy);
-                    }
-                    break;
-                case PARRY:
-                    hit(enemy);
-                    break;
-                case CRUSH:
-                    if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                        if (enemy.isAlive()) {
-                            GameScene.flash( 0x80FFFFFF );
-                            Sample.INSTANCE.play(Assets.Sounds.BLAST, 1.1f, 1.26f);
-                            Buff.affect(enemy, Paralysis.class, 1f);
-                            Buff.affect(enemy, Blindness.class, count*0.3f);
-                            hit(enemy);
-                        }
-                    }
-                    else {
-                        WandOfBlastWave.BlastWave.blast(enemy.pos);
-                        PathFinder.buildDistanceMap(target.pos, Dungeon.level.passable, 3);
-                        for (Char ch : Actor.chars()) {
-                            if (ch != enemy && ch.alignment == Char.Alignment.ENEMY
-                                    && PathFinder.distance[ch.pos] < Integer.MAX_VALUE) {
-                                int aoeHit = Math.round(target.damageRoll() * 0.25f * count);
-                                aoeHit /= 2;
-                                aoeHit -= ch.drRoll();
-                                if (ch.buff(Vulnerable.class) != null) aoeHit *= 1.33f;
-                                ch.damage(aoeHit, target);
-                                ch.sprite.bloodBurstA(target.sprite.center(), dmg);
-                                ch.sprite.flash();
 
-                                if (!ch.isAlive()) {
-                                    if (hero.hasTalent(Talent.FINALBLOW)) {
-                                        if (hero.buff(BrokenSeal.WarriorShield.class) != null) {
-                                            BrokenSeal.WarriorShield shield = hero.buff(BrokenSeal.WarriorShield.class);
-                                            shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.FINALBLOW) / 3f));}
-
-                                        if (hero.belongings.getItem(SkillBook.class) != null) {
-                                            SkillBook book = Dungeon.hero.belongings.getItem(SkillBook.class);
-                                            book.SetCharge(hero.pointsInTalent(Talent.FINALBLOW) * 2);
-                                            SpellSprite.show(hero, SpellSprite.CHARGE);
-                                            Item.updateQuickslot();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
                     break;
-                case FURY:
-                    if (Dungeon.hero.belongings.weapon instanceof GunWeapon){
-                        Camera.main.shake(2, 0.5f);
-                        Sample.INSTANCE.play(Assets.Sounds.HIT_SHOTGUN, 1.87f, 1.26f);
+                case SKILL2:
+                    Ballistica beam = new Ballistica(target.pos, enemy.pos, Ballistica.WONT_STOP);
+                    int maxDistance = Math.min(3, beam.dist);
+                    int cell = beam.path.get(Math.min(beam.dist, maxDistance));
+                    target.sprite.parent.add(new Beam.DeathRay(target.sprite.center(), DungeonTilemap.raisedTileCenterToWorld(cell)));
+                    boolean terrainAffected = false;
+
+                    ArrayList<Char> chars = new ArrayList<>();
+
+                    Blob web = Dungeon.level.blobs.get(Web.class);
+
+                    int terrainPassed = 2;
+                    for (int c : beam.subPath(1, maxDistance)) {
+
+                        Char ch;
+                        if ((ch = Actor.findChar(c)) != null) {
+
+                            //we don't want to count passed terrain after the last enemy hit. That would be a lot of bonus levels.
+                            //terrainPassed starts at 2, equivalent of rounding up when /3 for integer arithmetic.
+                            terrainPassed = terrainPassed % 3;
+
+                            chars.add(ch);
+                        }
+
+                        if (Dungeon.level.solid[c]) {
+                            terrainPassed++;
+                        }
+
+                        if (Dungeon.level.flamable[c]) {
+
+                            Dungeon.level.destroy(c);
+                            GameScene.updateMap(c);
+                            terrainAffected = true;
+
+                        }
+
+                        CellEmitter.center(c).burst(PurpleParticle.BURST, Random.IntRange(1, 2));
                     }
+
+                    if (terrainAffected) {
+                        Dungeon.observe();
+                    }
+
+                    for (Char ch : chars) {
+                        ch.damage(dmg, this);
+                        ch.sprite.centerEmitter().burst(PurpleParticle.BURST, Random.IntRange(1, 2));
+                        ch.sprite.flash();
+                    }
+                    Sample.INSTANCE.play(Assets.Sounds.HIT_DUALSTRIKE, 1.25f, 1.33f);
+                    break;
+                case SKILL3:
                     break;
                 default:
                     //nothing
                     break;
             }
 
-            if (target.buff(FireImbue.class) != null)   target.buff(FireImbue.class).proc(enemy);
-            if (target.buff(FrostImbue.class) != null)  target.buff(FrostImbue.class).proc(enemy);
+            if (target.buff(FireImbue.class) != null) target.buff(FireImbue.class).proc(enemy);
+            if (target.buff(FrostImbue.class) != null) target.buff(FrostImbue.class).proc(enemy);
 
             target.hitSound(Random.Float(0.87f, 1.15f));
-            if (moveBeingUsed != Combo.ComboMove.FURY) Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
             enemy.sprite.bloodBurstA(target.sprite.center(), dmg);
             enemy.sprite.flash();
 
@@ -403,70 +315,23 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
         }
 
         Invisibility.dispel();
-
-        //Post-attack behaviour
-        switch(moveBeingUsed){
-            case CLOBBER:
-                if (getHighestMove() == null) ActionIndicator.clearAction(this);
-                hero.spendAndNext(hero.attackDelay());
-                break;
-
-            case SLAM:
-                if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                    if (getHighestMove() == null) ActionIndicator.clearAction(this);
-                    hero.spendAndNext(hero.attackDelay());
+        switch (moveBeingUsed) {
+            case SKILL3:
+                if (hits > 0 && enemy.isAlive() && hero.canAttack(enemy) &&
+                        (wasAlly || enemy.alignment != target.alignment)) {
+                    target.sprite.Sattack(enemy.pos, new Callback() {
+                        @Override
+                        public void call() {
+                            doAttack(enemy);
+                        }
+                    });
                 } else {
                     detach();
                     Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
-                    ActionIndicator.clearAction(this);
+                    ActionIndicator.clearAction(ChenCombo.this);
                     hero.spendAndNext(hero.attackDelay());
                 }
-                break;
 
-            case PARRY:
-                //do nothing
-                break;
-
-            case CRUSH:
-                if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-                    ActionIndicator.clearAction(this);
-                    hero.spendAndNext(hero.attackDelay());
-                } else {
-                    detach();
-                    Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
-                    ActionIndicator.clearAction(this);
-                    hero.spendAndNext(hero.attackDelay());
-                }
-                break;
-
-            case FURY:
-                if (Dungeon.hero.belongings.weapon instanceof GunWeapon)
-                {
-                    detach();
-                    ActionIndicator.clearAction(this);
-                    hero.spendAndNext(hero.attackDelay());
-                    break;
-                }
-                else {
-                    if (Dungeon.hero.belongings.weapon instanceof Firmament || Dungeon.hero.belongings.weapon instanceof ShadowFirmament)
-                        count--;
-                    count--;
-                    //fury attacks as many times as you have combo count
-                    if (count > 0 && enemy.isAlive() && hero.canAttack(enemy) &&
-                            (wasAlly || enemy.alignment != target.alignment)) {
-                        target.sprite.attack(enemy.pos, new Callback() {
-                            @Override
-                            public void call() {
-                                doAttack(enemy);
-                            }
-                        });
-                    } else {
-                        detach();
-                        Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
-                        ActionIndicator.clearAction(this);
-                        hero.spendAndNext(hero.attackDelay());
-                    }
-                }
                 break;
 
             default:
@@ -476,20 +341,6 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                 break;
         }
 
-        if (!enemy.isAlive() || (!wasAlly && enemy.alignment == target.alignment)) {
-            if (hero.hasTalent(Talent.FINALBLOW)) {
-                if (hero.buff(BrokenSeal.WarriorShield.class) != null) {
-                    BrokenSeal.WarriorShield shield = hero.buff(BrokenSeal.WarriorShield.class);
-                    shield.supercharge(Math.round(shield.maxShield() * hero.pointsInTalent(Talent.FINALBLOW) / 3f));}
-
-                if (hero.belongings.getItem(SkillBook.class) != null) {
-                    SkillBook book = Dungeon.hero.belongings.getItem(SkillBook.class);
-                    book.SetCharge(hero.pointsInTalent(Talent.FINALBLOW) * 2);
-                    SpellSprite.show(hero, SpellSprite.CHARGE);
-                    Item.updateQuickslot();
-                }
-            }
-        }
 
     }
 
@@ -498,46 +349,41 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
         @Override
         public void onSelect(Integer cell) {
             if (cell == null) return;
-            final Char enemy = Actor.findChar( cell );
+            final Char enemy = Actor.findChar(cell);
             if (enemy == null
                     || enemy == target
                     || !Dungeon.level.heroFOV[cell]
-                    || target.isCharmedBy( enemy )) {
-                GLog.w(Messages.get(Combo.class, "bad_target"));
+                    || target.isCharmedBy(enemy)) {
+                GLog.w(Messages.get(ChenCombo.class, "bad_target"));
 
-            } else if (!((Hero)target).canAttack(enemy)){
-                if (((Hero) target).pointsInTalent(Talent.ENHANCED_COMBO) < 3
-                        || Dungeon.level.distance(target.pos, enemy.pos) > 1 + target.buff(ChenCombo.class).count/3){
-                    GLog.w(Messages.get(Combo.class, "bad_target"));
-                } else {
-                    Ballistica c = new Ballistica(target.pos, enemy.pos, Ballistica.PROJECTILE);
-                    if (c.collisionPos == enemy.pos){
-                        final int leapPos = c.path.get(c.dist-1);
-                        if (!Dungeon.level.passable[leapPos]){
-                            GLog.w(Messages.get(Combo.class, "bad_target"));
-                        } else {
-                            Dungeon.hero.busy();
-                            target.sprite.jump(target.pos, leapPos, new Callback() {
-                                @Override
-                                public void call() {
-                                    target.move(leapPos);
-                                    Dungeon.level.occupyCell(target);
-                                    Dungeon.observe();
-                                    GameScene.updateFog();
-                                    target.sprite.attack(cell, new Callback() {
-                                        @Override
-                                        public void call() {
-                                            doAttack(enemy);
-                                        }
-                                    });
-                                }
-                            });
-                        }
+            } else if (!((Hero) target).canAttack(enemy)) {
+                Ballistica c = new Ballistica(target.pos, enemy.pos, Ballistica.PROJECTILE);
+                if (c.collisionPos == enemy.pos) {
+                    final int leapPos = c.path.get(c.dist - 1);
+                    if (!Dungeon.level.passable[leapPos]) {
+                        GLog.w(Messages.get(ChenCombo.class, "bad_target"));
                     } else {
-                        GLog.w(Messages.get(Combo.class, "bad_target"));
-                    }
-                }
+                        Dungeon.hero.busy();
+                        target.sprite.jump(target.pos, leapPos, new Callback() {
+                            @Override
+                            public void call() {
+                                target.move(leapPos);
+                                Dungeon.level.occupyCell(target);
+                                Dungeon.observe();
+                                GameScene.updateFog();
+                                target.sprite.attack(cell, new Callback() {
+                                    @Override
+                                    public void call() {
+                                        doAttack(enemy);
+                                    }
+                                });
+                            }
+                        });
 
+                    }
+                } else {
+                    GLog.w(Messages.get(ChenCombo.class, "bad_target"));
+                }
             } else {
                 Dungeon.hero.busy();
                 target.sprite.attack(cell, new Callback() {
@@ -551,7 +397,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
 
         @Override
         public String prompt() {
-            return Messages.get(Combo.class, "prompt");
+            return Messages.get(ChenCombo.class, "prompt");
         }
     };
-    }
+}

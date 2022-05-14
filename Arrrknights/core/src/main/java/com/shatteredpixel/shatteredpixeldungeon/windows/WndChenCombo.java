@@ -33,7 +33,7 @@ public class WndChenCombo extends Window {
         Image icon;
         icon = Icons.get(Icons.COMBO);
 
-        for (Combo.ComboMove move : Combo.ComboMove.values()) {
+        for (ChenCombo.ComboMove move : ChenCombo.ComboMove.values()) {
             Image ic = new Image(icon);
 
             RedButton moveBtn = new RedButton(move.desc(), 6){

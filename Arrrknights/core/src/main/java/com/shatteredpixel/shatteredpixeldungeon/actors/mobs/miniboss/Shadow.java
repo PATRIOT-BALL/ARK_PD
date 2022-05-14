@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportat
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -400,7 +401,7 @@ public class Shadow extends Mob {
 
         @Override
         public void die(Object cause) {
-            if (!UseSkill) {
+            if (!UseSkill && !(cause instanceof Chasm)) {
                 new Flare(8, 32).color(0xFFFF66, true).show(sprite, 2f);
                 CellEmitter.get(this.pos).start(Speck.factory(Speck.LIGHT), 0.2f, 3);
 

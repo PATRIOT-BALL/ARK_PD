@@ -39,7 +39,6 @@ public class Dummy extends Mob {
     }
 
     {
-        immunities.add( Paralysis.class );
         immunities.add( Amok.class );
         immunities.add( Sleep.class );
         immunities.add( Terror.class );

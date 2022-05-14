@@ -526,7 +526,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					//fury attacks as many times as you have combo count
 					if (count > 0 && enemy.isAlive() && hero.canAttack(enemy) &&
 							(wasAlly || enemy.alignment != target.alignment)) {
-						target.sprite.attack(enemy.pos, new Callback() {
+						target.sprite.Sattack(enemy.pos, new Callback() {
 							@Override
 							public void call() {
 								doAttack(enemy);

@@ -425,6 +425,15 @@ actors.buffs.wildmark.desc=레드는 야생의 힘을 쌓은 후 검풍으로 �
 actors.buffs.wildmark.prompt=검풍을 날릴 곳을 지정해주세요.
 actors.buffs.wildmark.self_target=자신에게 검풍을 날릴 수 없습니다.
 
+actors.buffs.chencombo.name=적소 해방
+actors.buffs.chencombo.combo=%d 콤보!
+actors.buffs.chencombo.bad_target=공격 범위 내에 있는 적을 공격해야 합니다.
+actors.buffs.chencombo.prompt=공격할 대상을 선택
+actors.buffs.chencombo.desc=첸은 공격을 성공할 때마다 적소에 힘을 중첩시킵니다. 적소의 중첩이 5 / 10 / 15가 되면 필살기를 사용할 수 있습니다.
+actors.buffs.chencombo$combomove.skill1_desc=_칼집 공격_(5): 대상을 1턴간 마비시키는 100% 피해를 입힙니다. 같은 적을 1회만 마비시킬 수 있습니다.
+actors.buffs.chencombo$combomove.skill2_desc=_발도_(10): 대상에게 100%의 피해를 입힌 후 일직선 관통 공격을 해 250%의 피해를 입힙니다.
+actors.buffs.chencombo$combomove.skill3_desc=_절영_(15): 대상에게 100%의 피해로 4번 공격합니다.
+
 
 
 ###hero
@@ -844,8 +853,8 @@ actors.hero.heroclass.nearl_unlock=니어는 전 카시미어의 빛의 기사�
 actors.hero.heroclass.nearl_desc=니어는 전 카시미어의 기사로, _강력한 빛의 힘_을 사용해 자신을 강화시킵니다.\n\n그녀는 빛의 인장을 사용해 빛의 기사 상태가 되어 자신의 전투력을 일시적으로 상승시킵니다.\n\n니어는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 일기장\n- 경험의 물약\n- 저주 해제의 일기장
 
 actors.hero.heroclass.chen=첸
-actors.hero.heroclass.nearl_unlock=첸은 용문의 경관으로, 로도스 아일랜드 28층에서 해금할 수 있습니다.
-actors.hero.heroclass.nearl_desc=첸은 용문의 경관으로, 적소를 이용해 강력한 _필살기_를 사용할 수 있습니다.\n\n그녀는 5/10/15 콤보마다 필살기를 사용할 수 있습니다.\n\n첸은 다음 아이템을 감정한 채로 시작합니다:\n- 감정의 일기장\n- 힘의 물약\n- 마비 가스의 물약
+actors.hero.heroclass.chen_unlock=첸은 용문의 경관으로, 로도스 아일랜드 28층에서 해금할 수 있습니다.
+actors.hero.heroclass.chen_desc=첸은 용문의 경관으로, 적소를 이용해 강력한 _필살기_를 사용할 수 있습니다.\n\n그녀는 5/10/15 콤보마다 필살기를 사용할 수 있습니다.\n\n첸은 다음 아이템을 감정한 채로 시작합니다:\n- 감정의 일기장\n- 힘의 물약\n- 마비 가스의 물약
 
 
 actors.hero.herosubclass.gladiator=연계 블레이즈
@@ -905,7 +914,7 @@ actors.hero.herosubclass.flash_desc=_섬광 전문화_ 는 빛의 기사 상태�
 
 actors.hero.herosubclass.swordmaster=검호 첸
 actors.hero.herosubclass.swordmaster_short_desc=_검호_\n적소의 힘을 극대화시켜 필살기를 강화합니다.
-actors.hero.herosubclass.swordmaster_desc=_검호 전문화_ 는 첸의 검술 능력을 극대화시킵니다. 필살기 사용에 필요한 콤보가 5/10/15에서 3/6/9로 감소합니다.
+actors.hero.herosubclass.swordmaster_desc=_검호 전문화_ 는 첸의 검술 능력을 극대화시킵니다. 필살기 사용시 무작위 버프를 얻습니다.
 actors.hero.herosubclass.spshooter=첸 더 홀룽데이
 actors.hero.herosubclass.spshooter_short_desc=_산사수_\n근접 사격에 특화됩니다.
 actors.hero.herosubclass.spshooter_desc=_산사수 전문화_ 는 주위에 적이 있으면 _근접 사격_상태가 되어 사격 피해량이 50% 증가합니다.\n\n더 이상 적소 필살기를 사용할 수 없는 대신, 사격 적중시 _전술 이동_을 사용해 적중한 대상 방향으로 턴 소모없이 이동할 수 있습니다. (쿨타임 20턴)
