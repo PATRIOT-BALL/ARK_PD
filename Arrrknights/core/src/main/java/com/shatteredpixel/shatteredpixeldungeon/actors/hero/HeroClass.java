@@ -444,7 +444,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case NEARL:
 				return Assets.Sprites.NEARL;
 			case CHEN:
-				return Assets.Sprites.NEARL;
+				return Assets.Sprites.CHEN;
 		}
 	}
 
@@ -463,7 +463,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case NEARL:
 				return Assets.Sprites.NEARL;
 			case CHEN:
-				return Assets.Sprites.NEARL;
+				return Assets.Sprites.CHEN;
 		}
 	}
 
@@ -482,7 +482,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case NEARL:
 				return Assets.Splashes.NEARL;
 			case CHEN:
-				return Assets.Splashes.NEARL;
+				return Assets.Splashes.CHEN;
 		}
 	}
 	

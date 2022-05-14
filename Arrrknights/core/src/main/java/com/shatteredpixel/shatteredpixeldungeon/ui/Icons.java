@@ -71,7 +71,9 @@ public enum Icons {
 	ROSEMON,
 	NEARLS_S,
 	COMBO,
-	
+	RISKARM_S,
+	CHEN_S,
+
 	//main menu icons
 	ENTER,
 	GOLD,
@@ -103,6 +105,8 @@ public enum Icons {
 	GREY,
 	NEARL,
 	ROSEMARI,
+	RISKARM,
+	CHEN,
 	HYPER,
 	MONNY,
 
@@ -245,6 +249,12 @@ public enum Icons {
 			case COMBO:
 				icon.frame( icon.texture.uvRect( 112, 48, 128, 64 ) );
 				break;
+			case RISKARM_S:
+				icon.frame( icon.texture.uvRect( 128, 48, 144, 64 ) );
+				break;
+			case CHEN_S:
+				icon.frame( icon.texture.uvRect( 144, 48, 160, 64 ) );
+				break;
 			case ENTER:
 			icon.frame( icon.texture.uvRect( 0, 64, 16, 80 ) );
 			break;
@@ -340,6 +350,12 @@ public enum Icons {
 			case MONNY:
 				icon.frame(icon.texture.uvRect(0, 148, 20, 168));
 				break;
+			case RISKARM:
+				icon.frame(icon.texture.uvRect(120, 128, 140, 148));
+				break;
+			case CHEN:
+				icon.frame(icon.texture.uvRect(140, 128, 160, 148));
+				break;
 			//변경화면 아이콘들
 			case BUG_KILL:
 				icon.frame(icon.texture.uvRect(40, 148, 60, 168));
@@ -399,7 +415,7 @@ public enum Icons {
 		case NEARL:
 			return get(NEARLS_S);
 		case CHEN: //첸포인트
-			return get(NEARLS_S);
+			return get(CHEN_S);
 		default:
 			return get(WARRIOR);
 		}

@@ -186,7 +186,7 @@ public class StartScene extends PixelScene {
 							hero = new Image(Icons.NEARL.get());
 							break;
 						case CHEN: //첸포인트
-							hero = new Image(Icons.NEARL.get());
+							hero = new Image(Icons.CHEN.get());
 							break;
 					}
 					add(hero);
@@ -221,7 +221,7 @@ public class StartScene extends PixelScene {
 							hero = new Image(Icons.NEARL.get());
 							break;
 						case CHEN: //첸포인트
-							hero = new Image(Icons.NEARL.get());
+							hero = new Image(Icons.CHEN.get());
 							break;
 					}
 

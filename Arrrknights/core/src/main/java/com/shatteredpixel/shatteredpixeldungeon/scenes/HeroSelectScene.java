@@ -380,7 +380,7 @@ public class HeroSelectScene extends PixelScene {
 					icon(new Image(Icons.NEARL.get()));
 					break;
 				case CHEN: //첸포인트
-					icon(new Image(Icons.NEARL.get()));
+					icon(new Image(Icons.CHEN.get()));
 					break;
 			}
 

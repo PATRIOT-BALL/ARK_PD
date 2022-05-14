@@ -18,6 +18,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SkadiSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SpecterSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.SussurroSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.TomimiSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.WeedySkinSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.talrufightSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.skins.FnovaSprite;
 
@@ -63,7 +64,7 @@ public class SkinModel extends NPC {
                break;
            case 14: spriteClass= FrankaSprite.class;
                break;
-           case 15: spriteClass= WeedySprite.class;
+           case 15: spriteClass= WeedySkinSprite.class;
                break;
 
        }
