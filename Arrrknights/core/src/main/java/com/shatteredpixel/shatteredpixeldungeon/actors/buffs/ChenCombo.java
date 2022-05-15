@@ -243,6 +243,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                         Buff.affect(enemy, Paralysis.class, ptime);
                     }
 
+                    Sample.INSTANCE.play(Assets.Sounds.HIT_DUALSTRIKE, 1.25f, 1.33f);
                     break;
                 case SKILL2:
                     Ballistica beam = new Ballistica(target.pos, enemy.pos, Ballistica.WONT_STOP);
@@ -292,7 +293,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                         ch.sprite.centerEmitter().burst(PurpleParticle.BURST, Random.IntRange(1, 2));
                         ch.sprite.flash();
                     }
-                    Sample.INSTANCE.play(Assets.Sounds.HIT_DUALSTRIKE, 1.25f, 1.33f);
+                    Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH);
                     break;
                 case SKILL3:
                     break;
@@ -327,7 +328,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                     });
                 } else {
                     detach();
-                    Sample.INSTANCE.play(Assets.Sounds.HIT_STRONG);
+                    Sample.INSTANCE.play(Assets.Sounds.HIT_SLASH, 1.33f, 1.33f);
                     ActionIndicator.clearAction(ChenCombo.this);
                     hero.spendAndNext(hero.attackDelay());
                 }
