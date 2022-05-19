@@ -149,7 +149,7 @@ public class SnowHunter extends MeleeWeapon{
         }), -1);
     }
 
-    private void chainEnemy( Ballistica chain, final Char enemy ){
+    public static void chainEnemy( Ballistica chain, final Char enemy ){
 
         if (enemy.properties().contains(Char.Property.IMMOVABLE)) {
             return;

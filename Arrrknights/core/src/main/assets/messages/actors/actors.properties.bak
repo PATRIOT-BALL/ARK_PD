@@ -431,7 +431,7 @@ actors.buffs.chencombo.bad_target=공격 범위 내에 있는 적을 공격해�
 actors.buffs.chencombo.prompt=공격할 대상을 선택
 actors.buffs.chencombo.desc=첸은 공격을 성공할 때마다 적소에 힘을 중첩시킵니다. 적소의 중첩이 5 / 10 / 15가 되면 필살기를 사용할 수 있습니다.
 actors.buffs.chencombo$combomove.skill1_desc=_칼집 공격_(5): 대상을 1턴간 마비시키는 100% 피해를 입힙니다. 같은 적을 1회만 마비시킬 수 있습니다.
-actors.buffs.chencombo$combomove.skill2_desc=_발도_(10): 대상에게 100%의 피해를 입힌 후 일직선 관통 공격을 해 250%의 피해를 입힙니다.
+actors.buffs.chencombo$combomove.skill2_desc=_발도_(10): 대상에게 100%의 피해를 입힌 후 일직선 관통 공격을 해 150%의 피해를 입힙니다.
 actors.buffs.chencombo$combomove.skill3_desc=_절영_(15): 대상에게 100%의 피해로 4번 공격합니다.
 
 

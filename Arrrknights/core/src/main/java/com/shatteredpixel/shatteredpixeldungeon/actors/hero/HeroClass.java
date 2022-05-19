@@ -83,6 +83,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ChenSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
@@ -392,8 +393,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		 skillB.quantity(1).collect();
 		 Dungeon.quickslot.setSlot(0,skillB);
 		 new DewVial().collect();
-
-		 new TomeOfMastery().collect();
 	 }
 
 	public String title() {

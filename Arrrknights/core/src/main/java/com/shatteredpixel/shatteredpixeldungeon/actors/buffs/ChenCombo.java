@@ -8,6 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Web;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
@@ -68,6 +69,12 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
     @Override
     public float iconFadePercent() {
         return 1f;
+    }
+
+    @Override
+    public boolean act() {
+        if (Dungeon.hero.subClass == HeroSubClass.SPSHOOTER) detach();
+        return super.act();
     }
 
     @Override
@@ -342,6 +349,11 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                 break;
         }
 
+        if (Dungeon.hero.subClass== HeroSubClass.SWORDMASTER) {
+            if (Random.Int(4) == 0) Buff.affect(target, Adrenaline.class, 1f);
+            else if (Random.Int(2) == 0) Buff.affect(target, Bless.class, 3f);
+            else Buff.affect(target, Barrier.class).incShield(1 + hero.lvl / 5);
+        }
 
     }
 

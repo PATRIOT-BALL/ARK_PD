@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChenShooterBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
@@ -298,6 +299,13 @@ public class GunWeapon extends MeleeWeapon {
                         if (Random.Int(10) < Dungeon.hero.pointsInTalent(Talent.CLEAVE)) {
                             Buff.affect(Dungeon.hero, Combo.class).hit(ch);
                         }
+                    }
+                }
+
+                // 산사수 첸 판정
+                if (Dungeon.hero.subClass == HeroSubClass.SPSHOOTER && ch.isAlive()) {
+                    if (Dungeon.hero.buffs(ChenShooterBuff.TACMoveCooldown.class) != null) {
+                        Buff.prolong(Dungeon.hero, ChenShooterBuff.class, 5f).set(ch.id());
                     }
                 }
             }

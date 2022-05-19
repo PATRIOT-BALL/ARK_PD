@@ -2398,7 +2398,7 @@ public class Hero extends Char {
             Buff.affect(this, Combo.class).hit(enemy);
         }
 
-        if (hit && heroClass == HeroClass.CHEN) {
+        if (hit && heroClass == HeroClass.CHEN && subClass != HeroSubClass.SPSHOOTER) {
             Buff.affect(this, ChenCombo.class).hit(enemy);
         }
 
