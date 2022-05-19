@@ -2610,6 +2610,15 @@ items.weapon.melee.suffering.self_target=You can't shoot yourself.
 items.weapon.melee.suffering.fizzles=Your gun has not been charged enough.
 items.weapon.melee.suffering.setbouns=_Set Bonus : Chosen Overseer_\nSP charge rate is doubled.
 
+items.weapon.melee.sanktabet.name=Sankta's Bet
+items.weapon.melee.sanktabet.desc=The moment she fired her gun, their judgment was already complete.\n\nThis _special_ weapon gains a stack on every attack. The gun will fire a very powerful shot at max stacks, but it will also turn its user into ashes at the same time.\n\nThe gun can _Reload_ to reset stacks after consuming a turn.
+items.weapon.melee.sanktabet.ac_re=Reload
+items.weapon.melee.sanktabet.stats_desc=Accuracy +33%, Attack Speed +25%
+
+items.weapon.melee.chensword.name=Rusty Podao
+items.weapon.melee.chensword.desc=Sword of Lungmen Military. Its performance have winded down from age.
+
+
 ##Guns Related
 
 items.weapon.melee.gunweapon.prompt=Select the target

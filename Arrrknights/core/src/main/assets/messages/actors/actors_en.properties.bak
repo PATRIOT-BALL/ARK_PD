@@ -421,8 +421,20 @@ actors.buffs.wildmark.self_target=Cannot throw sword wind at oneself.
 actors.buffs.camouflage.name=Camouflage
 actors.buffs.camouflage.desc=Camouflage has the same effect with Invisibility, but is dispelled if there are enemies nearby.\n\nCamouflaged enemies receive half damage unless if the player is nearby or possesses the Illuminated or Mind Vision buff.\n\nCamouflage lasts for %s turns.
 
+actors.buffs.chencombo.name=Release ChiXiao
+actors.buffs.chencombo.combo=%d combo!
+actors.buffs.chencombo.bad_target=Must target enemies within the attack range.
+actors.buffs.chencombo.prompt=Target enemy
+actors.buffs.chencombo.desc=Ch'en stacks power within her Chi Xiao on every successful attack. Special Attack can be used on 5 / 10 / 15 stacks of Chi Xiao.
+actors.buffs.chencombo$combomove.skill1_desc=_Sheathed Strike_(5): Inflict 100% damage that paralyzes target enemy. An enemy can only be paralyzed once. 
+actors.buffs.chencombo$combomove.skill2_desc=_Unsheath_(10): Inflict 100% damage to the target, then perform a penetrating attqck in a line, deal 150% damage. 
+actors.buffs.chencombo$combomove.skill3_desc=_Shadowless_(15): Inflict 100% damage 4 times.
+
 
 ###hero
+actors.hero.talent.genius.title=Genius
+actors.hero.talent.genius.desc=_When a point is invested into this talent, _Scroll of Identification_ effect will be activated.
+
 actors.hero.talent.hearty_meal.title=Hearty Meal
 actors.hero.talent.hearty_meal.desc=_+1:_ Eating heals Blaze for _2 HP_ when she is below 50% health, and _3 HP_ when she is below 25% health.\n\n_+2:_ Eating heals Blaze for _3 HP_ when she is below 50% health, and _5 HP_ when she is below 25% health.
 actors.hero.talent.armsmasters_intuition.title=Armsmaster's Intuition
@@ -474,7 +486,7 @@ actors.hero.talent.deadly_reach.desc=_+1:_ Combo cooldown increased by _1 turn_.
 actors.hero.talent.heat_blow.title=Heat Blow
 actors.hero.talent.heat_blow.desc=_+1:_ When Heat Power is 50% or higher, physical damage is increased by _10%_.\n\n_+2:_ When Heat Power is 50% or higher, physical damage is increased by _15%_.\n\n_+3:_ When Heat Power is 50% or higher, physical damage is increased by_20%_.\n\nActivated unconditionally in Overheat.
 actors.hero.talent.heat_of_protection.title=Heat of Protection
-actors.hero.talent.heat_of_protection.desc=_+1:_ Damage taken decreased by _10%_ while in Overheat\n\n_+2:_ Damage taken decreased by_15%_ while in Overheat\n\n_+3:_ Damage taken decreased by _20%_ while in Overheat
+actors.hero.talent.heat_of_protection.desc=_+1:_ Damage taken decreased by _10%_ while in Overheat, and Heat required for Immortal effect is decreased from 60% to 55%.\n\n_+2:_ Damage taken decreased by _15%_ while in Overheat, and Heat required for Immortal effect is decreased from 60% to 50%.\n\n_+3:_ Damage taken decreased by _20%_ while in Overheat, and Heat required for Immortal effect is decreased from 60% to 45%.
 actors.hero.talent.heat_of_recovery.title=Heat of Recovery
 actors.hero.talent.heat_of_recovery.desc=_+1:_ _+20%_ HP recovery when Overheat ends.\n\n_+2:_ _+40%_ HP recovery when Overheat ends.\n\n_+3:_ _+60%_ HP recovery when Overheat ends.
 actors.hero.talent.heat_of_absorption.title=Heat of Absorption
@@ -564,7 +576,7 @@ actors.hero.talent.silent_steps.desc=_+1:_ Red will not wake sleeping enemies wh
 actors.hero.talent.rogues_foresight.title=Wild Sense
 actors.hero.talent.rogues_foresight.desc=_+1:_ When Red is on a level with a secret room, she has a _60% chance to notice_ that the level contains a secret.\n\n_+2:_ When Red is on a level with a secret room, she has a _80% chance to notice_ that the level contains a secret.
 actors.hero.talent.light_cloak.title=Light Cloak
-actors.hero.talent.light_cloak.desc=_+1:_ Red can use her cloak of shadows when it is not equipped, but it recharges at _0% speed_.\n\n_+2:_ Red can use her cloak of shadows when it is not equipped, but it recharges at _10% speed_.\n\n_+3:_ Red can use her cloak of shadows when it is not equipped, but it recharges at _20% speed_.
+actors.hero.talent.light_cloak.desc=When Cloak of Shadows is used at zero charge, Red gains _Camouflage_for 10 turns.\n\n_+1_: Cooldown: 200 turns\n\n_+2_: Cooldown 150 turns\n\n_+3_: Cooldown: 100 turns 
 actors.hero.talent.enhanced_rings.title=Enhanced Rings
 actors.hero.talent.enhanced_rings.desc=_+1:_ When Red uses an artifact, her rings gain +1 upgrade for _2.5 turns_.\n\n_+2:_ When Red uses an artifact, her rings gain +1 upgrade for _5 turns_.\n\n_+3:_When Red uses an artifact, her rings gain +1 upgrade for _7.5 turns_.
 actors.hero.talent.enhanced_lethality.title=Enhanced Lethality
@@ -591,6 +603,9 @@ actors.hero.talent.special_operations.title=Special Operations
 actors.hero.talent.special_operations.desc=_+1:_ Freerunning cooldown is reduced by _1 turn_.\n\n_+2:_ Freerunning cooldown is reduced by _2 turns_.\n\n_+3:_ Freerunning cooldown is reduced by _3 turns_.\n\n_+4:_Freerunning cooldown is reduced by _4 turns_.
 actors.hero.talent.bloodbath_operations.title=Bloodbath Operations
 actors.hero.talent.bloodbath_operations.desc=Hunt's damage is decreased by 50%, but will now inflict Paralysis on the target.\n\n_+1:_ Reduces hunt's cooldown by _100 turns_.\n\n_+2:_ Reduces hunt's cooldown by _200 turns_.\n\n_+3:_ Reduces hunt's cooldown by _300 turns_.\n\n_+4:_ Reduces hunt's cooldown by _400 turns_.
+
+actors.hero.talent$lightclockcooldown.name=Light Cloak Cooldown
+actors.hero.talent$lightclockcooldown.desc=Light Cloak Talent Reactivation: %s turns remaining.
 
 // 레드 3차
 actors.hero.talent.wind_scar.title=Wind Scar
@@ -831,6 +846,11 @@ actors.hero.heroclass.nearl=Nearl
 actors.hero.heroclass.nearl_unlock=Nearl is a knight of light, and has a _unique shield_ which awaken the power of light.\n\nTo unlock her, _you must slay 200 enemies._
 actors.hero.heroclass.nearl_desc=Nearl is a knight of light with powerful powers. With her _special shield_, Nearl can awaken the power of light, becoming a Radiant Knight.\n\nAwakening the power of light will greatly increase Nearl's combat abilities, albeit temporary.\n\nNearl automatically identifies:\n- Scrolls of Identify\n- Potion of Experience\n- Scrolls of RemoveCurse
 
+actors.hero.heroclass.chen=Ch'en
+actors.hero.heroclass.nearl_unlock=Ch'en is Lungmen's police officer, and can be unlocked on the 28th floor of Rhodes Island.
+actors.hero.heroclass.nearl_desc=Ch'en is Lungmen's police officer. She can use Chi Xiao to perform a _Special Attack_.\n\nShe can use a Special Attack every 5/10/15 combos.\n\nCh'en automatically identifies:\n- Scroll of Identify\n-Potion of Strength\n-Potion of Paralytic Gas
+
+
 actors.hero.herosubclass.gladiator=Combo Blaze
 actors.hero.herosubclass.gladiator_short_desc=_Combo_\nUses a combo system to unleash a special skill. Accuracy and attack speed is important with this subclass.
 actors.hero.herosubclass.gladiator_desc=_Combo Elite_ subclass will gain a combo stack with every successful attack. Building combo allows Blaze to use unique combo moves. Additionally, there is a chance to charge ammunition when meele attack is performed with a firearm.
@@ -885,6 +905,14 @@ actors.hero.herosubclass.savior_desc=_Savior Elite_ subclass uses empowered powe
 actors.hero.herosubclass.flash=Luminous Nearl
 actors.hero.herosubclass.flash_short_desc=_Luminous_\nBlinds enemies while strengthening oneself.
 actors.hero.herosubclass.flash_desc=_Luminous Elite_ subclass reduces the Radiant Knight buff power, but greatly increases the Seal of Light's charge rate and blinds nearby enemies when used.
+
+actors.hero.herosubclass.swordmaster=Swordmaster Ch'en
+actors.hero.herosubclass.swordmaster_short_desc=_Swordmaster_\nMaximizes the power of Chi Xiao, enhancing Special Attacks.
+actors.hero.herosubclass.swordmaster_desc=_Swordmaster Elite_ maximizes Ch'en's sword prowess. Ch'en gains a random buff when performing Special Attacks.
+actors.hero.herosubclass.spshooter=Chen the Holungday
+actors.hero.herosubclass.spshooter_short_desc=_Spreadshooter_\nSpecializes on close-range shots.
+actors.hero.herosubclass.spshooter_desc=_Spreadshooter Elite_ activates _Close-range Shot_, increasing firearms damage by 50% if there are enemies nearby.\n\nWhile Chi Xiao special attacks are no longer usable, _Tactical Move_ can be used when firearms attack lands, moving towards the hit enemies without using a turn. (Cooldown: 20 turns)
+
 
 ###npcs
 actors.mobs.npcs.blacksmith.name=Vulcan
@@ -962,6 +990,7 @@ actors.mobs.npcs.wandmaker.intro_mage=To think you would be brought in, Amiya, t
 actors.mobs.npcs.wandmaker.intro_huntress=GreyThroat? You came here? In a place with a lot of infected people... I'm glad you've started to change your mind. Can you do me a favor to save the infected?
 actors.mobs.npcs.wandmaker.intro_rosecat=Rosemary, Kal'tsit sent you here? She must really be planning to take Reunion out by the roots this time. Anyway, mind giving me help?
 actors.mobs.npcs.wandmaker.intro_nearl=Nearl? Good timing. I have a problem here, mind helping me out?
+actors.mobs.npcs.wandmaker.intro_chen=Police officer Ch'en, from Lungmen. Could you do me a favor?
 actors.mobs.npcs.wandmaker.intro_1=\n\nI was fighting alone here and I ran into a problem.
 actors.mobs.npcs.wandmaker.intro_dust=What I need is my _warhammer._ It's my weapon, but I dropped it while parachuting down. I'm sure it's over the wooden door somewhere here. But I'm sure an enemy is just waiting for an ambush. If you get the warhammer,_ return it to me quickly._ As long as I have a weapon, I can take care of those guys with a swing.
 actors.mobs.npcs.wandmaker.intro_ember=What I need is a _device_ from a drone. Place 4 guidance lights on the helipad near here and it'll come flying. The drone is strong, but its very vulnerable to cold, so it would be useful to _have a tool to induce cold._
@@ -1043,6 +1072,9 @@ actors.mobs.npcs.prts.hint13=Hint(13/18)\n\n_Wand_ responds to wells and metals,
 actors.mobs.npcs.prts.hint14=Hint(14/18)\n\nThrow _someone's dagger_ into the _avant-garde well_, and it will transform into a painter's greatsword.
 actors.mobs.npcs.prts.hint15=Hint(15/18)\n\n_If you combine a _someone's dagger_ with something, it will forge her wand.
 actors.mobs.npcs.prts.hint16=Hint(16/18)\n\n_Sword of a dragonslayer_, _a sword that replicated it_, and _sword of a tyrant_ can be combined at a Crafting Facility to craft a saber of a Sarkaz Lord.
+actors.mobs.npcs.prts.hint17=Hint(17/18)\n\nWhen _Runestones_ are combined with another item, a girl's coin can be acquired.
+actors.mobs.npcs.prts.hint18=Hint(18/18)\n\nAn _Elite Op's hammer_ can be combined with another item to acquire another Elite Op's revolver.
+
 
 actors.mobs.npcs.prts_corpse.name=???
 actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? No one knows.\n\nIt would be nice to have _a flower_ to mourn her...
