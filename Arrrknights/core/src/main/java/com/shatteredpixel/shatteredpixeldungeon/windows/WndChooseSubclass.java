@@ -22,6 +22,8 @@
 package com.shatteredpixel.shatteredpixeldungeon.windows;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChenCombo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.items.TomeOfMastery;
@@ -72,6 +74,7 @@ public class WndChooseSubclass extends Window {
 							if (index == 0 && WndChooseSubclass.this.parent != null){
 								WndChooseSubclass.this.hide();
 								tome.choose( subCls );
+								if (hero.subClass == HeroSubClass.SPSHOOTER) Buff.detach(hero, ChenCombo.class);
 							}
 						}
 					});

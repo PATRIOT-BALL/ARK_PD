@@ -73,7 +73,6 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
 
     @Override
     public boolean act() {
-        if (Dungeon.hero.subClass == HeroSubClass.SPSHOOTER) detach();
         return super.act();
     }
 
