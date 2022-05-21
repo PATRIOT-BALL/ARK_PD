@@ -497,12 +497,12 @@ public abstract class Char extends Actor {
 			acuRoll *= buff.evasionAndAccuracyFactor();
 		}
 
-		if (Dungeon.hero.hasTalent(Talent.DRAGONS_SWORD)) {
-			float bouns = 0f;
+		if (Dungeon.hero.hasTalent(Talent.DRAGONS_SWORD) && attacker instanceof Hero) {
+			float bouns = 1f;
 			ChenCombo combo = Dungeon.hero.buff(ChenCombo.class);
 			if (combo != null) bouns += combo.getComboCount() * 0.02f;
 
-			acuRoll *= Math.min(bouns, Dungeon.hero.pointsInTalent(Talent.DRAGONS_SWORD) * 0.1f);
+			acuRoll *= bouns;
 		}
 		
 		float defRoll = Random.Float( defStat );
