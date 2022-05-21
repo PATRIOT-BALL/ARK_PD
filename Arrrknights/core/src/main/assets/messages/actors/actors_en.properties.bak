@@ -430,6 +430,9 @@ actors.buffs.chencombo$combomove.skill1_desc=_Sheathed Strike_(5): Inflict 100% 
 actors.buffs.chencombo$combomove.skill2_desc=_Unsheath_(10): Inflict 100% damage to the target, then perform a penetrating attqck in a line, deal 150% damage. 
 actors.buffs.chencombo$combomove.skill3_desc=_Shadowless_(15): Inflict 100% damage 4 times.
 
+actors.buffs.chenshooterbuff$tacmovecooldown.name=Tactical Move Cooldown
+actors.buffs.chenshooterbuff$tacmovecooldown.desc=Tactical Move Cooldown : %s Turns.
+
 
 ###hero
 actors.hero.talent.genius.title=Genius
@@ -791,6 +794,29 @@ actors.hero.talent.eternal_glory.desc=_+1:_ _10%_ chance to inflict Blind to tar
 
 actors.hero.talent$radiantherocooldown.name=Radiant Hero cooldown
 actors.hero.talent$radiantherocooldown.desc=Cooldown: %s turns remaining
+
+
+//첸
+actors.hero.talent.paring.title=Parrying
+actors.hero.talent.paring.desc=_+1:_ Defense increases by _1_.\n\n_+2:_ Defense increases by _2_.
+actors.hero.talent.police_sense.title=Police's Intuition
+actors.hero.talent.police_sense.desc=_+1:_ Ch'en identifies weapons _3x_ faster.\n\n_+2:_ Ch'en identifies weapons _5x_ faster. Also reveals whether weapons are cursed.
+actors.hero.talent.continuous_cut.title=Continuous Cuts
+actors.hero.talent.continuous_cut.desc=_+1:_ Ch'en does not spend a turn with _5%_ chance on every attack.\n\n_+2:_ Ch'en does not spend a turn with _10%_ chance on every attack.
+actors.hero.talent.zantetsuken.title=Zantetsuken
+actors.hero.talent.zantetsuken.desc=_+1:_ Ch'en ignores enemy's defense with _10%_ chance on every attack.\n\n_+2:_ Ch'en ignores enemy's defense with _20%_ chance on every attack.
+
+actors.hero.talent.latent_meal.title=Latent Meal
+actors.hero.talent.latent_meal.desc=_+1:_ Ch'en spends 1 turn on every meal, and turns Invisible for _2 turns_.\n\n_+2:_ Ch'en spends 1 turn on every meal, and turns Invisible for _3 turns_.\n\nThis cannot be activated with _Gummy Doll_.
+actors.hero.talent.scolding.title=Scolding
+actors.hero.talent.scolding.desc=_+1:_ When Ch'en is hit below 50% HP, enemies within sight will be Frenzied for _a turn_.\n\n_+2:_ When Ch'en is hit below 50% HP, enemies within sight will be Frenzied for _2 turns_.\n\nCooldown: 300 turns
+actors.hero.talent.dragons_sword.title=Dragon's Blade
+actors.hero.talent.dragons_sword.desc=Accuracy increases by 2% for every combo..\n\n_+1:_ Max 10%\n\n_+2:_ Max 20%
+actors.hero.talent.gallop.title=Sprint
+actors.hero.talent.gallop.desc=_+1:_ Movement speed increases by 5%.\n\n_+2:_ Gains _Cripple Immunity_.
+actors.hero.talent.target_focusing.title=Target Focus
+actors.hero.talent.target_focusing.desc=_+1:_ Thrown weapons and Firearms ignore enemy's Camouflage by _33%_ chance.\n\n_+2:_ Thrown weapons and Firearms ignore enemy's Camouflage by _67%_ chance-.
+
 
 
 actors.hero.hero.name=%s.
