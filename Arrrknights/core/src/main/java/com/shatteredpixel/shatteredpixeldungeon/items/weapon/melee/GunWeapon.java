@@ -6,8 +6,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChenShooterBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.CloserangeShot;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
@@ -122,6 +124,11 @@ public class GunWeapon extends MeleeWeapon {
 
         if (Dungeon.hero.hasTalent(Talent.BLITZKRIEG)) {
             talentbouns += (Dungeon.hero.pointsInTalent(Talent.BLITZKRIEG) * 0.1f);
+        }
+
+        CloserangeShot closerrange = Dungeon.hero.buff(CloserangeShot.class);
+        if (closerrange != null) {
+            if (closerrange.state() == true) talentbouns += 0.5f;
         }
 
         dmg *= accessoriesbouns * talentbouns;
@@ -276,6 +283,13 @@ public class GunWeapon extends MeleeWeapon {
 
             ACC = Fire_accFactor(FIREACC);
             if (ch.hit(Dungeon.hero, ch, false)) {
+
+                // 첸 특성
+                if (Dungeon.hero.hasTalent(Talent.TARGET_FOCUSING)) {
+                    if (Random.Int(3) < Dungeon.hero.pointsInTalent(Talent.TARGET_FOCUSING)) {
+                        Buff.detach(ch, Camouflage.class);
+                    }
+                }
 
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));

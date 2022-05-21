@@ -35,6 +35,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.EnhancedRings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Haste;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Levitation;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Recharging;
@@ -207,7 +208,14 @@ public enum Talent {
 	//Nearl T4 - SAVIER
 	BLESSED_CHAMPION(181,4),
 	//Flast T4
-	ETERNAL_GLORY(209,4);
+	ETERNAL_GLORY(209,4),
+
+	//Chen T1
+	PARING(160), POLICE_SENSE(161), CONTINUOUS_CUT(162), ZANTETSUKEN(163),
+	//Chen T2
+	LATENT_MEAL(164), SCOLDING(165), DRAGONS_SWORD(166), GALLOP(167), TARGET_FOCUSING(168);
+
+
 
 	public static class ImprovisedProjectileCooldown extends FlavourBuff{};
 	public static class LethalMomentumTracker extends FlavourBuff{};
@@ -222,6 +230,13 @@ public enum Talent {
 	public static class PushAttackCooldown extends FlavourBuff{};
 	public static class foodIdentify extends CounterBuff{};
 	public static class BlazeBurstBuff extends CounterBuff{};
+	public static class ScoldingCooldown extends FlavourBuff{};
+
+	public static class GALLOPbuff extends Buff{
+		{
+			immunities.add(Cripple.class);
+		}
+	}
 
 	public static class MindCrashMark extends FlavourBuff {
 		{
@@ -371,6 +386,18 @@ public enum Talent {
 			}
 		}
 
+		if (talent == POLICE_SENSE && hero.pointsInTalent(POLICE_SENSE) == 2){
+			for (Item item : Dungeon.hero.belongings){
+				if (item instanceof Weapon){
+					((Weapon) item).cursedKnown = true;
+				}
+			}
+		}
+
+		if (talent == GALLOP && hero.pointsInTalent(GALLOP) == 2){
+			Buff.affect(hero, GALLOPbuff.class);
+		}
+
 		if (talent == PROTECTIONOFLIGHT) {
 			Armor heroArmor = hero.belongings.armor;
 			if (heroArmor != null) {
@@ -463,6 +490,10 @@ public enum Talent {
 			}
 		}
 
+		if (hero.hasTalent(LATENT_MEAL) && !(foodSource instanceof HornOfPlenty)){
+			Buff.affect(hero, Invisibility.class, hero.pointsInTalent(LATENT_MEAL));
+		}
+
 		if (hero.subClass == HeroSubClass.DESTROYER)
 			Buff.affect(hero, Rose_Force.class, 10f);
 	}
@@ -490,6 +521,11 @@ public enum Talent {
 
 		//니어전용 감정특
 		if (item instanceof Armor){
+			factor *= 1f + hero.pointsInTalent(EXPERIENCE) * 2;
+		}
+
+		// 첸
+		if (item instanceof Weapon){
 			factor *= 1f + hero.pointsInTalent(EXPERIENCE) * 2;
 		}
 		return factor;
@@ -713,6 +749,9 @@ public enum Talent {
 			case NEARL:
 				Collections.addAll(tierTalents, SHINING_MEAL, EXPERIENCE, PROTECTIONOFLIGHT, KNIGTS_OATH, GENIUS);
 				break;
+			case CHEN:
+				Collections.addAll(tierTalents, PARING, POLICE_SENSE, CONTINUOUS_CUT, ZANTETSUKEN, GENIUS);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(0).put(talent, 0);
@@ -738,6 +777,9 @@ public enum Talent {
 				break;
 			case NEARL:
 				Collections.addAll(tierTalents, COMBAT_MEAL, PUERLIGHT, RESURGENCE, PHASERUSH, EXORCISM);
+				break;
+			case CHEN:
+				Collections.addAll(tierTalents, LATENT_MEAL, SCOLDING, DRAGONS_SWORD, GALLOP, TARGET_FOCUSING);
 				break;
 		}
 		for (Talent talent : tierTalents){

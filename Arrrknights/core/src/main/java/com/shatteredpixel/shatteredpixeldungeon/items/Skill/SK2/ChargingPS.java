@@ -26,12 +26,12 @@ import com.watabou.utils.Random;
 public class ChargingPS extends Skill {
     public void doSkill() {
         curUser.sprite.zap(0);
-        PathFinder.buildDistanceMap(curUser.pos, BArray.not(Dungeon.level.solid, null), 2);
-        for (int cell = 0; cell < PathFinder.distance.length; cell++) {
-                if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
-                    Char ch = Actor.findChar(cell);
-                    if (ch != null&& !(ch instanceof Hero)) {
-                        dohit(ch); }}}
+            PathFinder.buildDistanceMap(curUser.pos, BArray.not(Dungeon.level.solid, null), 2);
+            for (int cell = 0; cell < PathFinder.distance.length; cell++) {
+                    if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
+                        Char ch = Actor.findChar(cell);
+                        if (ch != null&& !(ch instanceof Hero)) {
+                            dohit(ch); }}}
         CellEmitter.get( curUser.pos ).burst( Speck.factory( Speck.TOXIC ), 10 );
         Buff.affect(curUser, Stamina.class, 7f);
         Sample.INSTANCE.play( Assets.Sounds.SKILL_BASIC );

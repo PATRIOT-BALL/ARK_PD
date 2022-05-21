@@ -337,7 +337,13 @@ abstract public class Weapon extends KindOfWeapon {
 			return level();
 		}
 	}
-	
+
+	@Override
+	public boolean doPickUp(Hero hero) {
+		if (hero.hasTalent(Talent.POLICE_SENSE)) this.cursedKnown=true;
+		return super.doPickUp(hero);
+	}
+
 	@Override
 	public Item upgrade() {
 		return upgrade(false);

@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChampionEnemy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChenCombo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corrosion;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
@@ -105,6 +106,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlad
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KollamSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RhodesSword;
@@ -334,6 +336,7 @@ public abstract class Char extends Actor {
 					}
 				if (h.belongings.weapon instanceof ThermiteBlade) dr = 0;
 				if (h.belongings.weapon instanceof RhodesSword) dr = 0;
+				if (h.belongings.weapon instanceof KollamSword) dr = 0;
 
 				if (h.belongings.getItem(RingOfTenacity.class) != null) {
 					if (h.belongings.getItem(RingOfTenacity.class).isEquipped(Dungeon.hero) && h.belongings.weapon instanceof FolkSong) {
@@ -344,6 +347,10 @@ public abstract class Char extends Actor {
 
 				if(h.buff(ExtremeSharpness.SharpnessBuff.class) != null) {
 					dr = 0;
+				}
+
+				if (h.hasTalent(Talent.ZANTETSUKEN)) {
+					if (Random.Int(10) < h.pointsInTalent(Talent.ZANTETSUKEN)) dr = 0;
 				}
 			}
 			
@@ -489,6 +496,14 @@ public abstract class Char extends Actor {
 		for (ChampionEnemy buff : attacker.buffs(ChampionEnemy.class)){
 			acuRoll *= buff.evasionAndAccuracyFactor();
 		}
+
+		if (Dungeon.hero.hasTalent(Talent.DRAGONS_SWORD)) {
+			float bouns = 0f;
+			ChenCombo combo = Dungeon.hero.buff(ChenCombo.class);
+			if (combo != null) bouns += combo.getComboCount() * 0.02f;
+
+			acuRoll *= Math.min(bouns, Dungeon.hero.pointsInTalent(Talent.DRAGONS_SWORD) * 0.1f);
+		}
 		
 		float defRoll = Random.Float( defStat );
 		if (defender.buff(Bless.class) != null) defRoll *= 1.25f;
@@ -498,6 +513,7 @@ public abstract class Char extends Actor {
 		for (ChampionEnemy buff : defender.buffs(ChampionEnemy.class)){
 			defRoll *= buff.evasionAndAccuracyFactor();
 		}
+
 		
 		return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
 	}
@@ -553,6 +569,7 @@ public abstract class Char extends Actor {
 		if ( buff( Adrenaline.class ) != null) speed *= 2f;
 		if ( buff( Haste.class ) != null) speed *= 3f;
 		if ( buff (LanceCharge.class) != null) speed *= 5f;
+		if ( this instanceof Hero && Dungeon.hero.hasTalent(Talent.GALLOP) ) speed *= 1.05f;
 		return speed;
 	}
 	

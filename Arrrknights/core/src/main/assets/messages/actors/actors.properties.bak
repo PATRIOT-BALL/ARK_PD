@@ -434,6 +434,13 @@ actors.buffs.chencombo$combomove.skill1_desc=_칼집 공격_(5): 대상을 1턴�
 actors.buffs.chencombo$combomove.skill2_desc=_발도_(10): 대상에게 100%의 피해를 입힌 후 일직선 관통 공격을 해 150%의 피해를 입힙니다.
 actors.buffs.chencombo$combomove.skill3_desc=_절영_(15): 대상에게 100%의 피해로 4번 공격합니다.
 
+actors.buffs.chenshooterbuff$tacmovecooldown.name=전술 이동 쿨타임
+actors.buffs.chenshooterbuff$tacmovecooldown.desc=전술 이동을 다시 사용할 수 있을 때까지 %s 턴 남았습니다.
+
+actors.buffs.closerangeshot.name=근접사격
+actors.buffs.closerangeshot.active=첸은 주위에 적이 있으면 사격의 피해량이 대폭 상승합니다.\n\n현재 상태: 활성화
+actors.buffs.closerangeshot.passive=첸은 주위에 적이 있으면 사격의 피해량이 대폭 상승합니다.\n\n현재 상태: 비활성화
+
 
 
 ###hero
@@ -796,6 +803,32 @@ actors.hero.talent.eternal_glory.desc=_+1:_ 물리 공격시 _10%_ 확률로 대
 
 actors.hero.talent$radiantherocooldown.name=빛의 용사 쿨타임
 actors.hero.talent$radiantherocooldown.desc=빛의 용사 특성의 재발동까지 %s 턴 남았습니다.
+
+
+
+//첸
+
+//1티어
+actors.hero.talent.paring.title=패링
+actors.hero.talent.paring.desc=_+1:_ 방어력이 _1_ 증가합니다.\n\n_+2:_ 방어력이 _2_ 증가합니다.
+actors.hero.talent.police_sense.title=경찰의 직감
+actors.hero.talent.police_sense.desc=_+1:_ 무기를 _3배 빠르게_ 감정합니다.\n\n_+2:_ 무기를 _5배 빠르게_ 감정합니다. 획득시 저주 여부를 알 수 있습니다.
+actors.hero.talent.continuous_cut.title=연속베기
+actors.hero.talent.continuous_cut.desc=_+1:_ 공격시 _5%_ 확률로 턴을 소모하지 않습니다.\n\n_+2:_ 공격시 _10%_ 확률로 턴을 소모하지 않습니다.
+actors.hero.talent.zantetsuken.title=참철검
+actors.hero.talent.zantetsuken.desc=_+1:_ 공격시 _10%_ 확률로 적의 방어력을 무시합니다.\n\n_+2:_ 공격시 _20%_ 확률로 적의 방어력을 무시합니다.
+
+//2티어
+actors.hero.talent.latent_meal.title=잠복 식사
+actors.hero.talent.latent_meal.desc=_+1:_ 식사에 1턴만 소모되며, 식사 시 _2턴_간 투명화합니다.\n\n_+2:_ 식사에 1턴만 소모되며, 식사 시 _3턴_간 투명화합니다.\n\n_굼 인형_으론 발동할 수 없습니다.
+actors.hero.talent.scolding.title=호령
+actors.hero.talent.scolding.desc=_+1:_ 체력이 50%이하일 때 피격시 시야 내 적들을 _1턴 동안_ 광란시킵니다.\n\n_+2:_ 체력이 50%이하일 때 피격시 시야 내 적들을 _2턴 동안_ 광란시킵니다.\n\n쿨타임 300턴
+actors.hero.talent.dragons_sword.title=용의 검
+actors.hero.talent.dragons_sword.desc=콤보 1당 명중률이 2% 증가합니다.\n\n_+1:_ 최대 10%\n\n_+2:_ 최대 20%
+actors.hero.talent.gallop.title=질주
+actors.hero.talent.gallop.desc=_+1:_ 이동속도가 5% 증가합니다.\n\n_+2: 불구 면역_을 얻습니다.
+actors.hero.talent.target_focusing.title=목표 집중
+actors.hero.talent.target_focusing.desc=_+1:_ 방어력이 _1_ 증가합니다.\n\n_+2:_ 방어력이 _2_ 증가합니다.
 
  
 actors.hero.hero.name=%s.

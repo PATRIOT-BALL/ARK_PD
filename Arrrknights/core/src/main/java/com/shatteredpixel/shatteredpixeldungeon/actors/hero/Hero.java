@@ -45,6 +45,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ChenCombo;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.CloserangeShot;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
@@ -689,6 +690,11 @@ public class Hero extends Char {
             dr += Random.NormalIntRange(0,bounsDR);
         }
 
+        if (hasTalent(Talent.PARING)) {
+            int drplus = pointsInTalent(Talent.PARING);
+            dr += Random.NormalIntRange(0,drplus);
+        }
+
         return dr;
     }
 
@@ -810,6 +816,12 @@ public class Hero extends Char {
             return 0;
         }
 
+        if (hasTalent(Talent.CONTINUOUS_CUT)) {
+            if (Random.Int(100) < pointsInTalent(Talent.CONTINUOUS_CUT) * 5) {
+                return 0;
+            }
+        }
+
         if (belongings.weapon != null) {
 
             return belongings.weapon.speedFactor(this);
@@ -835,6 +847,11 @@ public class Hero extends Char {
         if (bubble != null) {
             bubble.processTime(time);
             return;
+        }
+
+        CloserangeShot crshot = buff(CloserangeShot.class);
+        if (crshot != null) {
+            crshot.isActived();
         }
 
         WildMark mark = buff(WildMark.class);
@@ -1695,6 +1712,21 @@ public class Hero extends Char {
 
                 damage *= bounsdamage;
             }
+
+
+        // 첸 특성
+
+        if (hasTalent(Talent.SCOLDING) && buffs(Talent.ScoldingCooldown.class) == null && HT / 2 >= HP) {
+            for (Mob mob : Dungeon.level.mobs.toArray( new Mob[0] )) {
+                if (mob.alignment != Char.Alignment.ALLY && Dungeon.level.heroFOV[mob.pos]) {
+                    Buff.prolong(mob, Amok.class, pointsInTalent(Talent.SCOLDING));
+                }
+            }
+            this.sprite.centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
+            Sample.INSTANCE.play( Assets.Sounds.CHALLENGE );
+
+            Buff.affect(this, Talent.ScoldingCooldown.class, 300f);
+        }
 
         return damage;
     }
