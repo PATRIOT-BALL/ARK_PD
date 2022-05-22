@@ -1,7 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.buffs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -12,16 +11,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
-import com.shatteredpixel.shatteredpixeldungeon.effects.SpellSprite;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.PurpleParticle;
-import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.SealOfLight;
-import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GunWeapon;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
@@ -35,14 +26,10 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.AttackIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndChenCombo;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndCombo;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndKnightSkill;
-import com.watabou.noosa.Camera;
 import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
-import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 import java.util.ArrayList;
@@ -219,6 +206,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
         } else {
 
             int dmg = target.damageRoll();
+            if (hits < 3 && hero.hasTalent(Talent.UP_EX3)) dmg *= 1 + hero.pointsInTalent(Talent.UP_EX3) * 0.1f;
 
             //variance in damage dealt
             switch (moveBeingUsed) {
@@ -231,7 +219,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
             }
 
             dmg = enemy.defenseProc(target, dmg);
-            dmg -= enemy.drRoll();
+            if (hits > 3 && !hero.hasTalent(Talent.UP_SP3) && Random.Int(2) > hero.pointsInTalent(Talent.UP_SP3)) dmg -= enemy.drRoll();
 
             if (enemy.buff(Vulnerable.class) != null) {
                 dmg *= 1.33f;
@@ -245,15 +233,23 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                 case SKILL1:
                     if (enemy.isAlive() && enemy.buff(ParalysisTracker.class) == null) {
                         float ptime = 1f;
+                        if (hero.hasTalent(Talent.UP_EX1)) ptime += hero.pointsInTalent(Talent.UP_EX1) * 0.5f;
                         Buff.affect(enemy, ParalysisTracker.class);
                         Buff.affect(enemy, Paralysis.class, ptime);
+
+                        if (hero.hasTalent(Talent.UP_SP1)) {
+                            Buff.affect(enemy, Vulnerable.class, hero.pointsInTalent(Talent.UP_SP1) * 2);
+                        }
                     }
 
                     Sample.INSTANCE.play(Assets.Sounds.HIT_DUALSTRIKE, 1.25f, 1.33f);
                     break;
                 case SKILL2:
+                    int dist = 3;
+                    if (hero.hasTalent(Talent.UP_EX2)) dist += hero.pointsInTalent(Talent.UP_EX2);
+
                     Ballistica beam = new Ballistica(target.pos, enemy.pos, Ballistica.WONT_STOP);
-                    int maxDistance = Math.min(3, beam.dist);
+                    int maxDistance = Math.min(dist, beam.dist);
                     int cell = beam.path.get(Math.min(beam.dist, maxDistance));
                     target.sprite.parent.add(new Beam.DeathRay(target.sprite.center(), DungeonTilemap.raisedTileCenterToWorld(cell)));
                     boolean terrainAffected = false;
@@ -294,8 +290,12 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                         Dungeon.observe();
                     }
 
+                    int beamdamage = target.damageRoll();
+                    float dmgbouns = 1.5f;
+                    if (hero.hasTalent(Talent.UP_SP2)) dmgbouns += hero.pointsInTalent(Talent.UP_SP2) * 0.2f;
+                    beamdamage *= dmgbouns;
                     for (Char ch : chars) {
-                        ch.damage(dmg, this);
+                        ch.damage(beamdamage, this);
                         ch.sprite.centerEmitter().burst(PurpleParticle.BURST, Random.IntRange(1, 2));
                         ch.sprite.flash();
                     }
@@ -348,11 +348,13 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                 break;
         }
 
-        if (Dungeon.hero.subClass== HeroSubClass.SWORDMASTER) {
+        if (Dungeon.hero.subClass== HeroSubClass.SWORDMASTER && hits == 0) {
             if (Random.Int(4) == 0) Buff.affect(target, Adrenaline.class, 1f);
             else if (Random.Int(2) == 0) Buff.affect(target, Bless.class, 3f);
             else Buff.affect(target, Barrier.class).incShield(1 + hero.lvl / 5);
         }
+
+        if (hero.hasTalent(Talent.DRAGONS_SWORD)) Buff.affect(hero, DoubleSwordBuff.class);
 
     }
 
@@ -412,4 +414,9 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
             return Messages.get(ChenCombo.class, "prompt");
         }
     };
+
+
+    public static class DoubleSwordBuff extends Buff {
+
+    }
 }

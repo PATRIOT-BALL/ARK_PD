@@ -180,6 +180,10 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
+
+		new TomeOfMastery().collect();
+		new C1_9mm().collect();
+		new ThrowingStone().collect();
 	}
 
 	public Badges.Badge masteryBadge() {
@@ -540,8 +544,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 			case NEARL:
 				return Badges.isUnlocked(Badges.Badge.UNLOCK_NEARL);
 			case CHEN:
-				//	return Badges.isUnlocked(Badges.Badge.UNLOCK_CHEN);
-				return true;
+				return Badges.isUnlocked(Badges.Badge.UNLOCK_CHEN);
 		}
 	}
 	

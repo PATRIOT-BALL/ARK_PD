@@ -588,11 +588,27 @@ public class Hero extends Char {
             accuracy *= 2f;
         }
 
+        if (buff(ChenCombo.DoubleSwordBuff.class) != null) {
+            accuracy *= 1 + pointsInTalent(Talent.DOUBLE_SWORD) * 0.3f;
+
+            Buff.detach(this, ChenCombo.DoubleSwordBuff.class);
+        }
+
+        if (Dungeon.hero.hasTalent(Talent.DRAGONS_SWORD)) {
+            float bouns = 1f;
+            ChenCombo combo = buff(ChenCombo.class);
+            if (combo != null) bouns += combo.getComboCount() * 0.02f;
+
+            accuracy *= bouns;
+        }
+
         if (wep != null) {
             return (int) (attackSkill * accuracy * wep.accuracyFactor(this));
         } else {
             return (int) (attackSkill * accuracy);
         }
+
+
     }
 
     @Override
@@ -2432,6 +2448,7 @@ public class Hero extends Char {
 
         if (hit && heroClass == HeroClass.CHEN && subClass != HeroSubClass.SPSHOOTER) {
             Buff.affect(this, ChenCombo.class).hit(enemy);
+            if (hasTalent(Talent.BLADE_ART) && Random.Int(20) < 1 + pointsInTalent(Talent.BLADE_ART)) Buff.affect(this, ChenCombo.class).hit(enemy);
         }
 
         if (hit && subClass == HeroSubClass.KNIGHT) {

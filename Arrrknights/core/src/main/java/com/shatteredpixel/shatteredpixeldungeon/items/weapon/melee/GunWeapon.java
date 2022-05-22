@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
@@ -26,6 +27,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
+import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
@@ -106,6 +108,12 @@ public class GunWeapon extends MeleeWeapon {
                 acc += (Dungeon.hero.pointsInTalent(Talent.BLITZKRIEG) * 0.1f);
             }
         }
+
+        CloserangeShot closerrange = Dungeon.hero.buff(CloserangeShot.class);
+        if (closerrange != null && Dungeon.hero.hasTalent(Talent.PINPOINT)) {
+            acc += Dungeon.hero.pointsInTalent(Talent.PINPOINT) * 0.2f;
+        }
+
         return acc;
     }
 
@@ -128,7 +136,10 @@ public class GunWeapon extends MeleeWeapon {
 
         CloserangeShot closerrange = Dungeon.hero.buff(CloserangeShot.class);
         if (closerrange != null) {
-            if (closerrange.state() == true) talentbouns += 0.5f;
+            if (closerrange.state() == true){
+                talentbouns += 0.5f;
+                if (Dungeon.hero.hasTalent(Talent.ZERO_RANGE_SHOT)) talentbouns += Dungeon.hero.pointsInTalent(Talent.ZERO_RANGE_SHOT) * 0.1f;
+            }
         }
 
         dmg *= accessoriesbouns * talentbouns;
@@ -265,6 +276,8 @@ public class GunWeapon extends MeleeWeapon {
 
 
     protected void onZap( Ballistica bolt ) {
+        CloserangeShot closerrange = Dungeon.hero.buff(CloserangeShot.class);
+
         Char ch = Actor.findChar( bolt.collisionPos );
         float oldacc = ACC;
         boolean pala = false;
@@ -317,9 +330,24 @@ public class GunWeapon extends MeleeWeapon {
                 }
 
                 // 산사수 첸 판정
-                if (Dungeon.hero.subClass == HeroSubClass.SPSHOOTER && ch.isAlive()) {
-                    if (Dungeon.hero.buffs(ChenShooterBuff.TACMoveCooldown.class) != null) {
+                if (Dungeon.hero.subClass == HeroSubClass.SPSHOOTER && ch.isAlive() && Dungeon.hero.buff(ChenShooterBuff.TACMoveCooldown.class) == null) {
                         Buff.prolong(Dungeon.hero, ChenShooterBuff.class, 5f).set(ch.id());
+                }
+
+                if (closerrange != null && ch.isAlive() && closerrange.state() == true) {
+                    if (Dungeon.hero.hasTalent(Talent.WATER_PLAY) && Random.Int(5) < Dungeon.hero.pointsInTalent(Talent.WATER_PLAY)) {
+                        Buff.affect(ch, Blindness.class, 1f);
+                    }
+
+                    if (Dungeon.hero.hasTalent(Talent.TAC_SHOT) && Dungeon.hero.buff(ChenShooterBuff.TACMove_tacshot.class) != null) {
+                        int min = Dungeon.hero.pointsInTalent(Talent.TAC_SHOT) / 2;
+                        int max = 1 + Dungeon.hero.pointsInTalent(Talent.TAC_SHOT) / 3;
+
+                        Ballistica trajectory = new Ballistica(curUser.pos, ch.pos, Ballistica.STOP_TARGET);
+                        trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
+                        WandOfBlastWave.throwChar(ch, trajectory, Random.IntRange(min, max)); // 넉백 효과
+
+                        Buff.detach(Dungeon.hero,ChenShooterBuff.TACMove_tacshot.class);
                     }
                 }
             }
@@ -346,9 +374,12 @@ public class GunWeapon extends MeleeWeapon {
         Invisibility.dispel();
 
         if (GunAccessories != null) {
-            if (GunAccessories.GetSavingChance() <= Random.Int(100)) {
+            if (GunAccessories.GetSavingChance() < Random.Int(100)) {
                 bullet -=1;
             }
+        }
+        else if (closerrange != null && closerrange.state() == true && Dungeon.hero.hasTalent(Talent.FRUGALITY)) {
+            if (Random.Int(100) > Dungeon.hero.pointsInTalent(Talent.FRUGALITY) * 15) bullet-=1;
         }
         else bullet -=1;
         updateQuickslot();
@@ -357,6 +388,10 @@ public class GunWeapon extends MeleeWeapon {
 
         if (pala) { curUser.spendAndNext(Fire_dlyFactor(FIRETICK / 4)); }
         else curUser.spendAndNext(Fire_dlyFactor(FIRETICK));
+
+        if (!ch.isAlive() && Dungeon.hero.hasTalent(Talent.BF_RULL) && Random.Int(5) < Dungeon.hero.pointsInTalent(Talent.BF_RULL)) {
+            Buff.affect(Dungeon.hero, Swiftthistle.TimeBubble.class).bufftime(1f);
+        }
     }
 
     @Override

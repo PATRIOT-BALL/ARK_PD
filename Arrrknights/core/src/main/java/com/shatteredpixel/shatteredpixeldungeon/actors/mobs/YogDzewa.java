@@ -443,6 +443,7 @@ public class YogDzewa extends Mob {
 		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) Badges.validateroaringflare();
 		if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.mboss4 == 1 && Dungeon.mboss9 == 1 && Dungeon.mboss14 == 1 && Dungeon.mboss19 == 1)
 		Badges.validateeviltimeend();
+		Badges.validateChenUnlock();
 	}
 
 	@Override

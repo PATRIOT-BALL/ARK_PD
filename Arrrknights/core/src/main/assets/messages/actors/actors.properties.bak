@@ -434,8 +434,8 @@ actors.buffs.chencombo$combomove.skill1_desc=_칼집 공격_(5): 대상을 1턴�
 actors.buffs.chencombo$combomove.skill2_desc=_발도_(10): 대상에게 100%의 피해를 입힌 후 일직선 관통 공격을 해 150%의 피해를 입힙니다.
 actors.buffs.chencombo$combomove.skill3_desc=_절영_(15): 대상에게 100%의 피해로 4번 공격합니다.
 
-actors.buffs.chenshooterbuff$tacmovecooldown.name=전술 이동 쿨타임
-actors.buffs.chenshooterbuff$tacmovecooldown.desc=전술 이동을 다시 사용할 수 있을 때까지 %s 턴 남았습니다.
+actors.buffs.chenshooterbuff$tacmovecooldown.name=전술이동 쿨타임
+actors.buffs.chenshooterbuff$tacmovecooldown.desc=전술이동을 다시 사용할 수 있을 때까지 %s 턴 남았습니다.
 
 actors.buffs.closerangeshot.name=근접사격
 actors.buffs.closerangeshot.active=첸은 주위에 적이 있으면 사격의 피해량이 대폭 상승합니다.\n\n현재 상태: 활성화
@@ -828,9 +828,55 @@ actors.hero.talent.dragons_sword.desc=콤보 1당 명중률이 2% 증가합니�
 actors.hero.talent.gallop.title=질주
 actors.hero.talent.gallop.desc=_+1:_ 이동속도가 5% 증가합니다.\n\n_+2: 불구 면역_을 얻습니다.
 actors.hero.talent.target_focusing.title=목표 집중
-actors.hero.talent.target_focusing.desc=_+1:_ 방어력이 _1_ 증가합니다.\n\n_+2:_ 방어력이 _2_ 증가합니다.
+actors.hero.talent.target_focusing.desc=_+1:_ 투척 무기 및 사격이 적의 위장 효과를 _33%_확률로 무시합니다.\n\n_+2:_ 투척 무기 및 사격이 적의 위장 효과를 _67%_확률로 무시합니다.
+
+// 검투술부턴 적용 안해놔서 해야함
+//검호 
+actors.hero.talent.up_sp1.title=강화:칼집 공격
+actors.hero.talent.up_sp1.desc=_+1:_ 칼집 공격시 대상에게 _2턴의_ 취약을 부여합니다.\n\n_+2:_ 칼집 공격시 대상에게 _4턴의_ 취약을 부여합니다.\n\n_+3:_ 칼집 공격시 대상에게 _6턴의_ 취약을 부여합니다.
+actors.hero.talent.up_sp2.title=강화:발도
+actors.hero.talent.up_sp2.desc=_+1:_ 발도의 마법 피해량이 150%에서 _170%_로 증가합니다.\n\n_+2:_ 발도의 마법 피해량이 150%에서 _190%_로 증가합니다.\n\n_+3:_ 발도의 마법 피해량이 150%에서 _210%_로 증가합니다.
+actors.hero.talent.up_sp3.title=강화:절영
+actors.hero.talent.up_sp3.desc=_+1:_ 절영의 추가 타격이 _33%_ 확률로 적의 방어를 무시합니다.\n\n_+2:_ 절영의 추가 타격이 _67%_ 확률로 적의 방어를 무시합니다.\n\n_+3:_ 절영의 추가 타격이 적의 방어를 무시합니다.
+actors.hero.talent.blade_art.title=검투술
+actors.hero.talent.blade_art.desc=_+1:_ 공격시 _10%_확률로 콤보를 추가로 쌓습니다.\n\n_+2:_ 공격시 _15%_확률로 콤보를 추가로 쌓습니다.\n\n_+3:_ 공격시 _20%_확률로 콤보를 추가로 쌓습니다.
+actors.hero.talent.double_sword.title=이도류
+actors.hero.talent.double_sword.desc=_+1:_ 필살기 사용 후 다음 공격의 명중률이 _30%_ 증가합니다.\n\n_+2:_ 필살기 사용 후 다음 공격의 명중률이 _60%_ 증가합니다.\n\n_+3:_ 필살기 사용 후 다음 공격의 명중률이 _90%_ 증가합니다.
+
+actors.hero.talent.up_ex1.title=극의:칼집 공격
+actors.hero.talent.up_ex1.desc=_+1:_ 칼집 공격의 마비 부여량이 1턴에서 _1.5_턴으로 증가합니다.\n\n_+2:_ 칼집 공격의 마비 부여량이 1턴에서 _2_턴으로 증가합니다.\n\n_+3:_ 칼집 공격의 마비 부여량이 1턴에서 _2.5_턴으로 증가합니다.\n\n_+4:_ 칼집 공격의 마비 부여량이 1턴에서 _3_턴으로 증가합니다.
+actors.hero.talent.up_ex2.title=극의:발도
+actors.hero.talent.up_ex2.desc=특성 레벨에 비례해 발도의 마법 피해 사거리가 1 증가합니다.
+actors.hero.talent.up_ex3.title=극의:절영
+actors.hero.talent.up_ex3.desc=_+1:_ 절영의 추가 타격이 _110%_의 피해를 입힙니다.\n\n_+2:_ 절영의 추가 타격이 _120%_의 피해를 입힙니다.\n\n_+3:_ 절영의 추가 타격이 _130%_의 피해를 입힙니다.\n\n_+4:_ 절영의 추가 타격이 _140%_의 피해를 입힙니다.
+actors.hero.talent.awake.title=적소 각성
+actors.hero.talent.awake.desc=_+1:_ 보스가 받는 피해가 _5%_ 증가합니다.\n\n_+2:_ 보스가 받는 피해가 _10%_ 증가합니다.\n\n_+3:_ 보스가 받는 피해가 _15%_ 증가합니다.
+
+
+//산사수
+actors.hero.talent.gorgeous_vacation.title=화려한 휴가
+actors.hero.talent.gorgeous_vacation.desc=_+1:_ 전술이동의 쿨타임이 20턴에서 _16턴_으로 감소합니다.\n\n_+2:_ 전술이동의 쿨타임이 20턴에서 _12턴_으로 감소합니다.\n\n_+3:_ 전술이동의 쿨타임이 20턴에서 _8턴_으로 감소합니다.
+actors.hero.talent.tac_def.title=전술 방어
+actors.hero.talent.tac_def.desc=_+1:_ 전술이동 사용시 보호막을 _2_ 얻습니다.\n\n_+2:_ 전술이동 사용시 보호막을 _4_ 얻습니다.\n\n_+3:_ 전술이동 사용시 보호막을 _6_ 얻습니다.
+actors.hero.talent.pinpoint.title=핀포인트
+actors.hero.talent.pinpoint.desc=_+1:_ 근접사격 상태라면 사격 명중률이 _20%_ 증가합니다.\n\n_+2:_ 근접사격 상태라면 사격 명중률이 _40%_ 증가합니다.\n\n_+3:_ 근접사격 상태라면 사격 명중률이 _60%_ 증가합니다.
+actors.hero.talent.frugality.title=절약풍조
+actors.hero.talent.frugality.desc=_+1:_ 근접사격 상태라면 _15%_ 확률로 탄약을 소모하지 않습니다.\n\_+2:_ 근접사격 상태라면 _30%_ 확률로 탄약을 소모하지 않습니다.\n\n_+3:_ 근접사격 상태라면 _45%_ 확률로 탄약을 소모하지 않습니다.
+actors.hero.talent.water_play.title=물놀이
+actors.hero.talent.water_play.desc=_+1:_ 근접사격 상태라면 사격시 _20%_ 확률로 1턴의 실명을 부여합니다.\n\n_+2:_ 근접사격 상태라면 사격시 _40%_ 확률로 1턴의 실명을 부여합니다.\n\n_+3:_ 근접사격 상태라면 사격시 _60%_ 확률로 1턴의 실명을 부여합니다.
+
+actors.hero.talent.tac_shot.title=전술 사격
+actors.hero.talent.tac_shot.desc=_+1:_ 전술이동을 사용하면 다음 사격이 대상을 _0-1칸_ 밀쳐냅니다.\n\n_+2:_ 전술이동을 사용하면 다음 사격이 대상을 _1칸_ 밀쳐냅니다.\n\n_+3:_ 전술이동을 사용하면 다음 사격이 대상을 _1-2칸_ 밀쳐냅니다.\n\n_+4:_ 전술이동을 사용하면 다음 사격이 대상을 _2칸_ 밀쳐냅니다.
+actors.hero.talent.technical.title=테크니컬
+actors.hero.talent.technical.desc=_+1:_ 전술이동시 _25%_ 확률로 쿨타임이 5턴 감소합니다.\n\n_+2:_ 전술이동시 _50%_ 확률로 쿨타임이 5턴 감소합니다.\n\n_+3:_ 전술이동시 _75%_ 확률로 쿨타임이 5턴 감소합니다.\n\n_+4:_ 전술이동시 _100%_ 확률로 쿨타임이 5턴 감소합니다.
+actors.hero.talent.zero_range_shot.title=영거리 사격
+actors.hero.talent.zero_range_shot.desc=_+1:_ 근접사격 피해 보너스가 50%에서 _60%_로 증가합니다.\n\n_+2:_ 근접사격 피해 보너스가 50%에서 _70%_로 증가합니다.\n\n_+3:_ 근접사격 피해 보너스가 50%에서 _80%_로 증가합니다.\n\n_+4:_ 근접사격 피해 보너스가 50%에서 _90%_로 증가합니다.\n\n대신 근접사격의 발동 범위가 감소합니다.
+actors.hero.talent.bf_rull.title=전장의 지배자
+actors.hero.talent.bf_rull.desc=_+1:_ 사격으로 적 처치시 _20%_ 확률로 1 턴의 시간 방울을 얻습니다.\n\n_+2:_ 사격으로 적 처치시 _40%_ 확률로 1 턴의 시간 방울을 얻습니다.\n\n_+3:_ 사격으로 적 처치시 _60%_ 확률로 1 턴의 시간 방울을 얻습니다.
 
  
+
+
 actors.hero.hero.name=%s.
 actors.hero.hero.leave=%s, 어서 빨리 박사를 구출해라.
 actors.hero.hero.level_up=레벨 업!
@@ -886,7 +932,7 @@ actors.hero.heroclass.nearl_unlock=니어는 전 카시미어의 빛의 기사�
 actors.hero.heroclass.nearl_desc=니어는 전 카시미어의 기사로, _강력한 빛의 힘_을 사용해 자신을 강화시킵니다.\n\n그녀는 빛의 인장을 사용해 빛의 기사 상태가 되어 자신의 전투력을 일시적으로 상승시킵니다.\n\n니어는 다음 아이템들을 감정한 채로 시작합니다:\n- 감정의 일기장\n- 경험의 물약\n- 저주 해제의 일기장
 
 actors.hero.heroclass.chen=첸
-actors.hero.heroclass.chen_unlock=첸은 용문의 경관으로, 로도스 아일랜드 28층에서 해금할 수 있습니다.
+actors.hero.heroclass.chen_unlock=첸은 용문의 경관으로, 강력한 필살기를 사용합니다.\n\n첸을 해금하려면 _게임을 1회 클리어하십시오._
 actors.hero.heroclass.chen_desc=첸은 용문의 경관으로, 적소를 이용해 강력한 _필살기_를 사용할 수 있습니다.\n\n그녀는 5/10/15 콤보마다 필살기를 사용할 수 있습니다.\n\n첸은 다음 아이템을 감정한 채로 시작합니다:\n- 감정의 일기장\n- 힘의 물약\n- 마비 가스의 물약
 
 
@@ -950,7 +996,7 @@ actors.hero.herosubclass.swordmaster_short_desc=_검호_\n적소의 힘을 극�
 actors.hero.herosubclass.swordmaster_desc=_검호 전문화_ 는 첸의 검술 능력을 극대화시킵니다. 필살기 사용시 무작위 버프를 얻습니다.
 actors.hero.herosubclass.spshooter=첸 더 홀룽데이
 actors.hero.herosubclass.spshooter_short_desc=_산사수_\n근접 사격에 특화됩니다.
-actors.hero.herosubclass.spshooter_desc=_산사수 전문화_ 는 주위에 적이 있으면 _근접 사격_상태가 되어 사격 피해량이 50% 증가합니다.\n\n더 이상 적소 필살기를 사용할 수 없는 대신, 사격 적중시 _전술 이동_을 사용해 적중한 대상 방향으로 턴 소모없이 이동할 수 있습니다. (쿨타임 20턴)
+actors.hero.herosubclass.spshooter_desc=_산사수 전문화_ 는 주위에 적이 있으면 _근접 사격_상태가 되어 사격 피해량이 50% 증가합니다.\n\n더 이상 적소 필살기를 사용할 수 없는 대신, 사격 적중시 _전술이동_을 사용해 적중한 대상 방향으로 턴 소모없이 이동할 수 있습니다. (쿨타임 20턴)
 
 
 

@@ -433,6 +433,10 @@ actors.buffs.chencombo$combomove.skill3_desc=_Shadowless_(15): Inflict 100% dama
 actors.buffs.chenshooterbuff$tacmovecooldown.name=Tactical Move Cooldown
 actors.buffs.chenshooterbuff$tacmovecooldown.desc=Tactical Move Cooldown : %s Turns.
 
+actors.buffs.closerangeshot.name=Close-range Shot
+actors.buffs.closerangeshot.active=Ch'en gains greatly increased Firearm damage when there are enemies nearby.\n\nActive
+actors.buffs.closerangeshot.passive=Ch'en gains greatly increased Firearm damage when there are enemies nearby.\n\Inactive
+
 
 ###hero
 actors.hero.talent.genius.title=Genius

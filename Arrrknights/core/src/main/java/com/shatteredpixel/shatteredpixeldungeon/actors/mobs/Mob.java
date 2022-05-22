@@ -704,6 +704,10 @@ public abstract class Mob extends Char {
 			}
 		}
 
+		if (Dungeon.hero.hasTalent(Talent.AWAKE) && properties.contains(Property.BOSS)) {
+			dmg *= 1 + Dungeon.hero.pointsInTalent(Talent.AWAKE) * 0.05f;
+		}
+
 		if (buff(Camouflage.class) != null) {
 			dmg *= 0.5f; }
 		

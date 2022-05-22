@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
@@ -16,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.ActionIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.watabou.noosa.Image;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 public class ChenShooterBuff extends FlavourBuff implements ActionIndicator.Action {
     public int targetid = 0;
@@ -76,7 +78,14 @@ public class ChenShooterBuff extends FlavourBuff implements ActionIndicator.Acti
         CellEmitter.get( hero.pos ).burst( Speck.factory( Speck.WOOL ), 6 );
         hero.spendAndNext(0f);
 
-        Buff.affect(hero, TACMoveCooldown.class, 20f);
+        if (hero.hasTalent(Talent.TAC_DEF)) Buff.affect(hero, Barrier.class).incShield(hero.pointsInTalent(Talent.TAC_DEF) * 2);
+        if (hero.hasTalent(Talent.TAC_SHOT)) Buff.affect(hero, TACMove_tacshot.class);
+
+        float CD = 20f;
+        if (hero.hasTalent(Talent.GORGEOUS_VACATION)) CD -= hero.pointsInTalent(Talent.GORGEOUS_VACATION) * 4;
+        if (hero.hasTalent(Talent.TECHNICAL) && Random.Int(4) < hero.pointsInTalent(Talent.TECHNICAL)) CD -= 5;
+
+        Buff.affect(hero, TACMoveCooldown.class, CD);
 
         Dungeon.level.occupyCell(hero);
         Dungeon.observe();
@@ -100,5 +109,9 @@ public class ChenShooterBuff extends FlavourBuff implements ActionIndicator.Acti
         public String desc() {
             return Messages.get(this, "desc", dispTurns());
         }
+    }
+
+    public static class TACMove_tacshot extends Buff{
+
     }
 }

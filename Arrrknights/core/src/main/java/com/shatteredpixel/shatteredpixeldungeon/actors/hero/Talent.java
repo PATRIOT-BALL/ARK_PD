@@ -213,8 +213,15 @@ public enum Talent {
 	//Chen T1
 	PARING(288), POLICE_SENSE(289), CONTINUOUS_CUT(290), ZANTETSUKEN(291),
 	//Chen T2
-	LATENT_MEAL(292), SCOLDING(293), DRAGONS_SWORD(294), GALLOP(295), TARGET_FOCUSING(296);
-	//Chen T3
+	LATENT_MEAL(292), SCOLDING(293), DRAGONS_SWORD(294), GALLOP(295), TARGET_FOCUSING(296),
+	//Chen T3-SMASTER
+	UP_SP1(297,3), UP_SP2(298,3), UP_SP3(299,3), BLADE_ART(300,3), DOUBLE_SWORD(301,3),
+	//Chen T3-SPSHOT
+	GORGEOUS_VACATION(302,3), TAC_DEF(303,3), PINPOINT(304,3), FRUGALITY(305,3), WATER_PLAY(306,3),
+	//Chen T4-SMASTER
+	UP_EX1(307,4), UP_EX2(308,4), UP_EX3(309,4), AWAKE(310,3),
+	//Chen T4-SPSHOT
+	TAC_SHOT(311,4), TECHNICAL(312,4), ZERO_RANGE_SHOT(313,4), BF_RULL(314,3);
 
 
 
@@ -808,6 +815,9 @@ public enum Talent {
 			case NEARL:
 				Collections.addAll(tierTalents, PEGASUS_AURA, RADIANTHERO);
 				break;
+			case CHEN:
+				Collections.addAll(tierTalents);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(2).put(talent, 0);
@@ -833,6 +843,9 @@ public enum Talent {
 				break;
 			case NEARL:
 				Collections.addAll(tierTalents, GRAND_ORDER, KNIGHT_OF_KAZIMIERZ, KNIGHT_BODY);
+				break;
+			case CHEN:
+				Collections.addAll(tierTalents);
 				break;
 		}
 		for (Talent talent : tierTalents){
@@ -910,6 +923,12 @@ public enum Talent {
 			case FLASH:
 				Collections.addAll(tierTalents, FLASH_SPEAR, KNIGHT_GLORY, LIGHT_OF_GLORY);
 				break;
+			case SWORDMASTER:
+				Collections.addAll(tierTalents, UP_SP1, UP_SP2, UP_SP3, BLADE_ART, DOUBLE_SWORD);
+				break;
+			case SPSHOOTER:
+				Collections.addAll(tierTalents, GORGEOUS_VACATION, TAC_DEF, PINPOINT, FRUGALITY, WATER_PLAY);
+				break;
 		}
 		for (Talent talent : tierTalents){
 			talents.get(2).put(talent, 0);
@@ -971,6 +990,12 @@ public enum Talent {
 				break;
 			case FLASH:
 				Collections.addAll(tierTalents, ETERNAL_GLORY);
+				break;
+			case SWORDMASTER:
+				Collections.addAll(tierTalents, UP_EX1, UP_EX2, UP_EX3, AWAKE);
+				break;
+			case SPSHOOTER:
+				Collections.addAll(tierTalents, TAC_SHOT, TECHNICAL, ZERO_RANGE_SHOT, BF_RULL);
 				break;
 		}
 		for (Talent talent : tierTalents){

@@ -4,6 +4,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DivineAvatar;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
@@ -45,6 +47,7 @@ public class CloserangeShot extends Buff {
 
     public void isActived() {
         int range = 2;
+        if (Dungeon.hero.hasTalent(Talent.ZERO_RANGE_SHOT)) range -= 1;
         boolean isactive = false;
 
         PathFinder.buildDistanceMap(target.pos, BArray.not(Dungeon.level.solid, null), range);
