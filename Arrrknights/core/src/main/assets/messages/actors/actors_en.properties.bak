@@ -821,6 +821,48 @@ actors.hero.talent.gallop.desc=_+1:_ Movement speed increases by 5%.\n\n_+2:_ Ga
 actors.hero.talent.target_focusing.title=Target Focus
 actors.hero.talent.target_focusing.desc=_+1:_ Thrown weapons and Firearms ignore enemy's Camouflage by _33%_ chance.\n\n_+2:_ Thrown weapons and Firearms ignore enemy's Camouflage by _67%_ chance-.
 
+//검호 
+actors.hero.talent.up_sp1.title=Enhance: Sheathed Strike
+actors.hero.talent.up_sp1.desc=_+1:_ When using Sheathed Strike, inflict _2 turns_ of Vulnerability.\n\n_+2:_ When using Sheathed Strike, inflict _4 turns_ of Vulnerability..\n\n_+3:_ When using Sheathed Strike, inflict _6 turns_ of Vulnerability.
+actors.hero.talent.up_sp2.title=Enhance: Unsheathe
+actors.hero.talent.up_sp2.desc=_+1:_ Unsheathe's Arts damage increases from 150% to _170%_.\n\n_+2:_ Unsheathe's Arts damage increases from 150% to _190%_.\n\n_+3:_ Unsheathe's Arts damage increases from 150% to _210%_.
+actors.hero.talent.up_sp3.title=Enhance: Shadowless
+actors.hero.talent.up_sp3.desc=_+1:_ Shadowless' additional strikes ignore defense with _33%_ chance.\n\n_+2:_ Shadowless' additional strikes ignore defense with _67%_ chance.\n\n_+3:_ Shadowless' additional strikes ignore defense.
+actors.hero.talent.blade_art.title=Blade Art
+actors.hero.talent.blade_art.desc=_+1:_ Attacks grant additional combo with _10%_ chance.\n\n_+2:_ Attacks grant additional combo with _15%_ chance.\n\n_+3:_ Attacks grant additional combo with _20%_ chance.
+actors.hero.talent.double_sword.title=Dual Blades
+actors.hero.talent.double_sword.desc=_+1:_ Special Attack increases next attack's accuracy by _30%_.\n\n_+2:_ Special Attacks increase next attack's accuracy by _60%_.\n\n_+3:_ Special Attacks increase next attack's accuracy by _90%_.
+
+actors.hero.talent.up_ex1.title=Ultra Instinct: Sheathed Strike
+actors.hero.talent.up_ex1.desc=_+1:_ Sheathed Strike's Paralyze increase from 1 turn to _1.5_ turns.\n\n_+2:_ Sheathed Strike's Paralyze increase from 1 turn to _2.5_ turns.\n\n_+4:_ Sheathed Strike's Paralyze increase from 1 turn to _3_ turns.
+actors.hero.talent.up_ex2.title=Ultra Instinct: Unsheathe
+actors.hero.talent.up_ex2.desc=Unsehath's Arts damage range increases by 1 for every Talent level.
+actors.hero.talent.up_ex3.title=Ultra Instinct: Shadowless
+actors.hero.talent.up_ex3.desc=_+1:_ Shadowless' additional strikes deal _110%_ damage.\n\n_+2:_ Shadowless' additional strikes deal _120%_ damage.\n\n_+3:_ Shadowless' additional strikes deal _130%_ damage.\n\n_+4:_ Shadowless' additional strikes deal _140%_ damage.
+actors.hero.talent.awake.title=Awaken Chi Xiao
+actors.hero.talent.awake.desc=_+1:_ Bosses take _5%_ additional damage.\n\n_+2:_ Bosses take _10%_ additional damage.\n\n_+3:_ Bosses take _15%_ additional damage.
+
+
+//산사수
+actors.hero.talent.gorgeous_vacation.title=Gorgeous Vacataion
+actors.hero.talent.gorgeous_vacation.desc=_+1:_ Tactical Move's cooldown decreases to _16 turns_.\n\n_+2:_ Tactical Move's cooldown decreases to _12 turns_.\n\n_+3:_ Tactical Move's cooldown decreases to _8 turns_.
+actors.hero.talent.tac_def.title=Tactical Defense
+actors.hero.talent.tac_def.desc=_+1:_ Grants _2_ Barrier upon casting Tactical Move.\n\n_+2:_ Grants _4_ Barrier upon casting Tactical Move.\n\n_+3:_ Grants _6_ Barrier upon casting Tactical Move.
+actors.hero.talent.pinpoint.title=Pinpoint
+actors.hero.talent.pinpoint.desc=_+1:_ When Close-range Shot is in effect, Firearm accuracy increases by _20%_.\n\n_+2:_ When Close-range Shot is in effect, Firearm accuracy increases by _40%_.\n\n_+3:_ When Close-range Shot is in effect, Firearm accuracy increases by _60%_.
+actors.hero.talent.frugality.title=Frugality
+actors.hero.talent.frugality.desc=_+1:_ When Close-range Shot is in effect, ammunitions are not spent with _15%_ chance.\n\n_+2:_ When Close-range Shot is in effect, ammunitions are not spent with _30%_ chance.\n\n_+3:_ When Close-range Shot is in effect, ammunitions are not spent with _45%_ chance.
+actors.hero.talent.water_play.title=Water Play
+actors.hero.talent.water_play.desc=_+1:_ When Close-range Shot is in effect, inflict Blind for a turn with _20%_ chance.\n\n_+2:_ When Close-range Shot is in effect, inflict Blind for a turn with _40%_ chance.\n\n_+3:_ When Close-range Shot is in effect, inflict Blind for a turn with _60%_ chance.
+
+actors.hero.talent.tac_shot.title=Tactical Shot
+actors.hero.talent.tac_shot.desc=_+1:_ When Tactical Move is cast, next shot knock back enemies by _0-1 tiles_.\n\n_+2:_ When Tactical Move is cast, next shot knock back enemies by _1-2 tiles_.\n\n_+4:_ When Tactical Move is cast, next shot knock back enemies by _2 tiles_.
+actors.hero.talent.technical.title=Technical
+actors.hero.talent.technical.desc=_+1:_ When casting Tactical Move, its cooldown is reduced by 5 turns with _25%_ chance.\n\n_+2:_ When casting Tactical Move, its cooldown is reduced by 5 turns with _50%_ chance.\n\n_+3:_ When casting Tactical Move, its cooldown is reduced by 5 turns with _75%_ chance.
+actors.hero.talent.zero_range_shot.title=Point-blank Shot
+actors.hero.talent.zero_range_shot.desc=_+1:_ Close-range damage bonus increases to _60%_.\n\n_+2:_ Close-range damage bonus increases to _70%_.\n\n_+3:_ Close-range damage bonus increases to _80%_.\n\n_+4:_ Close-range damage bonus increases to _90%_.\n\nClose-range Shot's range requirement decreases.
+actors.hero.talent.bf_rull.title=Dominator
+actors.hero.talent.bf_rull.desc=_+1:_ With every enemy defeated with Firearms, _20%_ chance to gain Time Bubble for a turn.\n\n_+2:_ With every enemy defeated with Firearms, _40%_ chance to gain Time Bubble for a turn.\n\n_+3:_ With every enemy defeated with Firearms, _20%_ chance to gain Time Bubble for a turn.
 
 
 actors.hero.hero.name=%s.
@@ -877,8 +919,8 @@ actors.hero.heroclass.nearl_unlock=Nearl is a knight of light, and has a _unique
 actors.hero.heroclass.nearl_desc=Nearl is a knight of light with powerful powers. With her _special shield_, Nearl can awaken the power of light, becoming a Radiant Knight.\n\nAwakening the power of light will greatly increase Nearl's combat abilities, albeit temporary.\n\nNearl automatically identifies:\n- Scrolls of Identify\n- Potion of Experience\n- Scrolls of RemoveCurse
 
 actors.hero.heroclass.chen=Ch'en
-actors.hero.heroclass.nearl_unlock=Ch'en is Lungmen's police officer, and can be unlocked on the 28th floor of Rhodes Island.
-actors.hero.heroclass.nearl_desc=Ch'en is Lungmen's police officer. She can use Chi Xiao to perform a _Special Attack_.\n\nShe can use a Special Attack every 5/10/15 combos.\n\nCh'en automatically identifies:\n- Scroll of Identify\n-Potion of Strength\n-Potion of Paralytic Gas
+actors.hero.heroclass.chen_unlock=Ch'en is Lungmen's police officer\n\nTo unlock her, _you must game clear._
+actors.hero.heroclass.chen_desc=Ch'en is Lungmen's police officer. She can use Chi Xiao to perform a _Special Attack_.\n\nShe can use a Special Attack every 5/10/15 combos.\n\nCh'en automatically identifies:\n- Scroll of Identify\n-Potion of Strength\n-Potion of Paralytic Gas
 
 
 actors.hero.herosubclass.gladiator=Combo Blaze

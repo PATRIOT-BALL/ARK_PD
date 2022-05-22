@@ -180,10 +180,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
-
-		new TomeOfMastery().collect();
-		new C1_9mm().collect();
-		new ThrowingStone().collect();
 	}
 
 	public Badges.Badge masteryBadge() {
