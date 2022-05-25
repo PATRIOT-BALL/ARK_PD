@@ -43,6 +43,9 @@ public class v0_4_X_Changes {
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "적 하향",
+                "_기술 정찰병_의 체력이 24에서 _20_으로 감소했습니다."));
+
     }
 
     public static void add_v0_4_4_Changes(ArrayList<ChangeInfo> changeInfos) {
