@@ -389,7 +389,7 @@ public class GunWeapon extends MeleeWeapon {
         if (pala) { curUser.spendAndNext(Fire_dlyFactor(FIRETICK / 4)); }
         else curUser.spendAndNext(Fire_dlyFactor(FIRETICK));
 
-        if (!ch.isAlive() && Dungeon.hero.hasTalent(Talent.BF_RULL) && Random.Int(5) < Dungeon.hero.pointsInTalent(Talent.BF_RULL)) {
+        if (ch != null && !ch.isAlive() && Dungeon.hero.hasTalent(Talent.BF_RULL) && Random.Int(5) < Dungeon.hero.pointsInTalent(Talent.BF_RULL)) {
             Buff.affect(Dungeon.hero, Swiftthistle.TimeBubble.class).bufftime(1f);
         }
     }
