@@ -936,7 +936,7 @@ public class Badges {
 	}
 
 	public static void validateChenUnlock(){
-		if (!global.contains(Badge.UNLOCK_NEARL)){
+		if (!global.contains(Badge.UNLOCK_CHEN)){
 			displayBadge( Badge.UNLOCK_CHEN );}
 	}
 	
