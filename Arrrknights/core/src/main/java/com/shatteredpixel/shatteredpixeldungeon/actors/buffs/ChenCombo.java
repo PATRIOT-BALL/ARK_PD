@@ -231,6 +231,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
             //special effects
             switch (moveBeingUsed) {
                 case SKILL1:
+                    hits = 0;
                     if (enemy.isAlive() && enemy.buff(ParalysisTracker.class) == null) {
                         float ptime = 1f;
                         if (hero.hasTalent(Talent.UP_EX1)) ptime += hero.pointsInTalent(Talent.UP_EX1) * 0.5f;
@@ -245,6 +246,7 @@ public class ChenCombo extends Buff implements ActionIndicator.Action {
                     Sample.INSTANCE.play(Assets.Sounds.HIT_DUALSTRIKE, 1.25f, 1.33f);
                     break;
                 case SKILL2:
+                    hits = 0;
                     int dist = 3;
                     if (hero.hasTalent(Talent.UP_EX2)) dist += hero.pointsInTalent(Talent.UP_EX2);
 
