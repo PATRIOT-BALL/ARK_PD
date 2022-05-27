@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
@@ -54,6 +55,12 @@ public class TiacauhBrave extends Mob {
     {
         if (!isAttack) return Random.NormalIntRange(20, 50);
         return Random.NormalIntRange(0, 18);
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        if (src == Burning.class) dmg *= 2;
+        super.damage(dmg, src);
     }
 
     @Override

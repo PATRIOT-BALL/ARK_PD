@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.EnragedSprite;
@@ -47,5 +48,12 @@ public class TiacauhRipper extends Mob {
         dmgbouns = Math.min(dmgbouns, 9);
         damage += dmgbouns;
         return super.attackProc(enemy, damage);
+
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        if (src == Burning.class) dmg *= 2;
+        super.damage(dmg, src);
     }
 }

@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Blindness;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
@@ -47,6 +48,12 @@ public class TiacauhRitualist extends Mob{
     @Override
     public int drRoll() {
         return Random.NormalIntRange(0, 16);
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        if (src == Burning.class) dmg *= 2;
+        super.damage(dmg, src);
     }
 
     @Override

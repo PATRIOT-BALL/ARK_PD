@@ -9,6 +9,6 @@ public class BlackPepper extends Ingredients {
 
     @Override
     public int value() {
-        return 18;
+        return 18 * quantity;
     }
 }

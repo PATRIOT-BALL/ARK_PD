@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.ToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hallucination;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
@@ -63,5 +64,11 @@ public class TiacauhAddict extends Mob {
             Buff.affect(enemy, Hallucination.class).set(3f);
         }
         return super.attackProc(enemy, damage);
+    }
+
+    @Override
+    public void damage(int dmg, Object src) {
+        if (src == Burning.class) dmg *= 2;
+        super.damage(dmg, src);
     }
 }

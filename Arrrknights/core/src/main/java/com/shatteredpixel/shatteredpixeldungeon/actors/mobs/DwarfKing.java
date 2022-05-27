@@ -39,6 +39,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Healing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LifeLink;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LockedFloor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicImmune;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ToxicImbue;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Beam;
@@ -97,6 +98,7 @@ public class DwarfKing extends Mob {
 		defenseSkill = 22;
 
 		properties.add(Property.BOSS);
+		immunities.add(Sleep.class);
 	}
 
 	public DwarfKing()
@@ -163,6 +165,8 @@ public class DwarfKing extends Mob {
 
 	@Override
 	protected boolean act() {
+		if (state == SLEEPING) state = WANDERING;
+
 		if (phase == 1) {
 
 			if (summonCooldown <= 0 && summonSubject(3)){

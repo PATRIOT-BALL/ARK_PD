@@ -20,7 +20,7 @@ public class v0_4_X_Changes {
     }
 
     public static void add_v0_4_5_Changes(ArrayList<ChangeInfo> changeInfos) {
-        ChangeInfo changes = new ChangeInfo("v0.4.4", true, "");
+        ChangeInfo changes = new ChangeInfo("v0.4.5", true, "");
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
@@ -35,16 +35,29 @@ public class v0_4_X_Changes {
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.TARGET), "아이템 & 특성 효과 변경",
+                "아미야의 _아츠 저격_이나 _천구_ 유물 등으로 적의 위장을 제거할 수 있도록 변경되었습니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "buffs"), false, null);
         changes.hardlight(CharSprite.POSITIVE);
         changeInfos.add(changes);
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.AMIYA), "지배 아미야 상향",
+                "_지배력 강화_ 특성의 발동 확률이 상승했습니다. (기존 대비 약 42%)"));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "그레이스롯 상향",
+                "그레이스롯의 쇠뇌가 50%확률로 적의 위장을 무시합니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
+                "_탈룰라?_가 체력이 낮을수록 더욱 강력한 환영을 소환하게됩니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "적 하향",
-                "_기술 정찰병_의 체력이 24에서 _20_으로 감소했습니다."));
+                "_기술 정찰병_의 체력이 24에서 _20_으로 감소했습니다." +" \n\n" +
+                "_티아카우 계열 적_들이 _연소_에 2배의 피해를 받도록 변경되었습니다."));
 
     }
 

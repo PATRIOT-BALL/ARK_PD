@@ -18,6 +18,6 @@ public class Ingredients extends Item {
 
     @Override
     public int value() {
-        return 5;
+        return 5 * quantity;
     }
 }

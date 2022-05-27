@@ -54,6 +54,12 @@ public class TiacauhShredder extends Mob {
     }
 
     @Override
+    public void damage(int dmg, Object src) {
+        if (src == Burning.class) dmg *= 2;
+        super.damage(dmg, src);
+    }
+
+    @Override
     public int attackProc(Char enemy, int damage) {
         int grassCells = 0;
         for (int i : PathFinder.NEIGHBOURS9) {

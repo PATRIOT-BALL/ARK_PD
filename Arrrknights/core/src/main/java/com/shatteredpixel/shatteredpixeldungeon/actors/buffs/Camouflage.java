@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
@@ -41,7 +42,9 @@ public class Camouflage extends Invisibility {
 
     @Override
     public boolean act() {
-        if (!(target instanceof Hero) && (Dungeon.hero.buffs(Light.class) != null || Dungeon.hero.buff(MindVision.class) != null)) Buff.detach(target, Camouflage.class);
+        if (!(target instanceof Hero) && (Dungeon.hero.buffs(Light.class) != null || Dungeon.hero.buff(MindVision.class) != null)
+        || target.buff(TalismanOfForesight.CharAwareness.class) != null)
+            Buff.detach(target, Camouflage.class);
         return super.act();
     }
 

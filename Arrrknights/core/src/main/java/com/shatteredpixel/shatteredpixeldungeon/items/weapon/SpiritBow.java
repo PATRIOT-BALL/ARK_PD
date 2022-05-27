@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Berserk;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Cripple;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ReflowBuff;
@@ -337,6 +338,10 @@ public class SpiritBow extends Weapon {
 			if (Dungeon.hero.subClass == HeroSubClass.STOME) {
 				WindEnergy wind = Buff.affect(Dungeon.hero, WindEnergy.class);
 				wind.GetEnergy(15); }
+
+			if (Random.Int(2) == 0) {
+				Buff.detach(defender, Camouflage.class);
+			}
 
 			return SpiritBow.this.proc(attacker, defender, damage);
 		}

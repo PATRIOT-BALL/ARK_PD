@@ -30,7 +30,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barkskin;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.BlobImmunity;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Charm;
@@ -378,6 +381,16 @@ public class YogDzewa extends Mob {
 			GameScene.add(fist, 4);
 			if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS)) Buff.affect(fist, Bless.class, 300f);
 			Actor.addDelayed( new Pushing( fist, Dungeon.level.exit, fist.pos ), -1 );
+
+			if (phase == 4) {
+				Buff.affect(fist, Barrier.class).incShield(150);
+				Buff.affect(fist, BlobImmunity.class, 10f);
+				Buff.affect(fist, Barkskin.class).set(15, 3);
+			}
+			else if (phase == 3) {
+				Buff.affect(fist, Barrier.class).incShield(75);
+				Buff.affect(fist, Barkskin.class).set(15, 2);
+			}
 		}
 
 		LockedFloor lock = Dungeon.hero.buff(LockedFloor.class);

@@ -9,6 +9,6 @@ public class Egg extends Ingredients {
 
     @Override
     public int value() {
-        return 8;
+        return 8 * quantity;
     }
 }

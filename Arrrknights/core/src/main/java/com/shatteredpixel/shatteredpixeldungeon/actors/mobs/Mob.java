@@ -628,7 +628,7 @@ public abstract class Mob extends Char {
 			//physical damage that doesn't come from the hero is less effective
 			if (enemy == Dungeon.hero){
 				if (Dungeon.hero.hasTalent(Talent.SOUL_SIPHON)) {
-					int chancevalue = Random.Int(HT * (55 - (Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON) * 5)));
+					int chancevalue = Random.Int(HT * (55 - (Dungeon.hero.pointsInTalent(Talent.SOUL_SIPHON) * 9)));
 					boolean chance = (chancevalue < damage);
 					if (chance) {
 						boolean droppingLoot = this.alignment != Char.Alignment.ALLY;
