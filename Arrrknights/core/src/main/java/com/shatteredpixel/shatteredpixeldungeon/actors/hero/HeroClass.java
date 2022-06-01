@@ -379,7 +379,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		 (hero.belongings.weapon = new ChenSword()).identify();
 
 		 new PotionBandolier().collect();
-		 Dungeon.LimitedDrops.SCROLL_HOLDER.drop();
+		 Dungeon.LimitedDrops.POTION_BANDOLIER.drop();
 
 		 new MagicalHolster().collect();
 		 Dungeon.LimitedDrops.MAGICAL_HOLSTER.drop();
