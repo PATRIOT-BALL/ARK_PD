@@ -38,10 +38,10 @@ public class RadiantSpear extends MeleeWeapon {
         if (defender.buff(Vulnerable.class) != null) {
             if (Dungeon.hero.belongings.getItem(RingOfSunLight.class) != null && Dungeon.hero.belongings.getItem(RingOfHaste.class) != null) {
                 if (Dungeon.hero.belongings.getItem(RingOfSunLight.class).isEquipped(Dungeon.hero) && Dungeon.hero.belongings.getItem(RingOfHaste.class).isEquipped(Dungeon.hero)) {
-                    damage += attacker.damageRoll() / 3;
+                    damage += attacker.damageRoll() / 2;
                     return super.proc(attacker, defender, damage);
                 }}
-          damage += attacker.damageRoll() / 5;
+          damage += attacker.damageRoll() / 4;
         }
 
         return super.proc(attacker, defender, damage);

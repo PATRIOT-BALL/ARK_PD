@@ -31,6 +31,9 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.CHEN_S), "신규 캐릭터",
                 "신규 캐릭터 첸이 추가되었습니다. 첸은 게임을 1회 클리어하여 해금할 수 있습니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 추가",
+                "_절지생화_ 4티어 무기로, 공격시 확률적으로 분신을 소환해 추가 공격을 가합니다."));
+
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);
         changeInfos.add(changes);
@@ -50,6 +53,11 @@ public class v0_4_X_Changes {
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
                 "_탈룰라?_가 체력이 낮을수록 더욱 강력한 환영을 소환하게됩니다."));
+
+        changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "무기 상향",
+                "_철의 육합_의 명중률 보정이 -10%에서 _-5%_로 상승했습니다." + "\n\n"+
+                "_히라의 사냥꾼_의 사거리 보너스가 3에서 _4_로 상승했습니다." + "\n\n" +
+                "_광휘의 창_의 취약 대상 피해 보너스가 상승했습니다."));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "nerfs"), false, null);
         changes.hardlight(CharSprite.NEGATIVE);

@@ -36,7 +36,7 @@ public class SnowHunter extends MeleeWeapon{
         defaultAction = AC_ZAP;
 
         tier = 4;
-        RCH = 4;    //extra reach
+        RCH = 5;    //extra reach
     }
 
     private boolean swiching = false;

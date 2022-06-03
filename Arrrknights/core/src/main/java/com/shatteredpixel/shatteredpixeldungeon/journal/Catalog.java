@@ -185,6 +185,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FlametailSwor
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gamzashield;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KazemaruWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KollamSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.LoneJourney;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SanktaBet;
@@ -306,6 +307,7 @@ public enum Catalog {
 		WEAPONS.seen.put( FlametailSword.class,                false);
 		WEAPONS.seen.put( MetallicUnion.class,                false);
 		WEAPONS.seen.put( WarJournalist.class,                false);
+		WEAPONS.seen.put( KazemaruWeapon.class,                   false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( Laevateinn.class,                  false);

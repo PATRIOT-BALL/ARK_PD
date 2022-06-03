@@ -22,7 +22,7 @@ public class MetallicUnion extends MeleeWeapon {
         defaultAction = AC_CHANGE;
 
         tier = 4;
-        ACC = 0.9f;
+        ACC = 0.95f;
     }
 
     private boolean swiching = true;
