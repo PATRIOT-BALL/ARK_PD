@@ -1413,6 +1413,7 @@ items.rings.ring.banzi=Anyway Ring
 items.rings.ring.palladium=Palladium Ring
 items.rings.ring.gold=Goldy Ring
 items.rings.ring.lithium=Lithium ring 
+items.rings.ring.metal=metal ring
 
 
 items.rings.ring.equip_cursed=The ring tightens around your finger painfully!
@@ -1503,6 +1504,10 @@ items.rings.ringofmistress.stats=When worn, Weapons SP charging efficiency bonus
 items.rings.ringofmistress.typical_stats=When worn, typically Weapons SP charging efficiency bonus by _%s%%_.
 items.rings.ringofmistress.desc=This ring increases the user's Arts adaptability, allowing them to better manipulate the weapon's special abilities. The cursed ring lowers said adaptability on the contrary.\n\n_My Wish_ cannot be affected by this ring.
 
+items.rings.ringofcommand.name=Ring of Command
+items.rings.ringofcommand.stats=When this ring has been equipped, summons and enemies under Mind Control deal additional _%s%%_ damage.
+items.rings.ringofcommand.typical_stats=When this ring has been equipped, summons and enemies under Mind Control deal additional _%s%%_ damage.
+items.rings.ringofcommand.desc=This ring enhances its user's leadership. Cursed ring decreases the damage of summons and enemies under Mind Control.
 
 
 ###scrolls
