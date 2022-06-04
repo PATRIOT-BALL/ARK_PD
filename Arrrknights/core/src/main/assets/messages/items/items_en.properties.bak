@@ -2520,7 +2520,7 @@ items.weapon.melee.halberd.desc=This weapon deals _4_ additional  damage to _inf
 
 items.weapon.melee.snowhunter.name=Karlan Hunter
 items.weapon.melee.snowhunter.ac_zap=CHANGE
-items.weapon.melee.snowhunter.stats_desc=Range +3
+items.weapon.melee.snowhunter.stats_desc=Range +4
 items.weapon.melee.snowhunter.desc=A whip used by the little sister of the family.\n_Normal mode_\nMove behind the target on hit.
 items.weapon.melee.snowhunter.desc_mode=_EX mode_\nPull the target slightly on hit.
 

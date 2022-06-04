@@ -66,6 +66,7 @@ public class Ring extends KindofMisc {
 			put("gray",ItemSpriteSheet.RING_LITHIUM);
 			put("banzi",ItemSpriteSheet.RING_MINT);
 			put("palladium",ItemSpriteSheet.RING_ARGON);
+			put("metal",ItemSpriteSheet.RING_METAL);
 		}
 	};
 	

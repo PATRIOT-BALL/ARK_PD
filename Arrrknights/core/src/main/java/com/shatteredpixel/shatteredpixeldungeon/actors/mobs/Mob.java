@@ -64,6 +64,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourg
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatCutlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfCommand;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfDeepenedSleep;
@@ -710,6 +712,8 @@ public abstract class Mob extends Char {
 
 		if (buff(Camouflage.class) != null) {
 			dmg *= 0.5f; }
+
+		if (src instanceof Mob) dmg *= RingOfCommand.damageMultiplier(Dungeon.hero);
 		
 		super.damage( dmg, src );
 	}

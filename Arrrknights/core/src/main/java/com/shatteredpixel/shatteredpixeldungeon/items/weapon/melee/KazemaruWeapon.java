@@ -15,6 +15,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.BatSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BeeSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.BreakerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Callback;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
@@ -36,7 +37,7 @@ public class KazemaruWeapon extends MeleeWeapon {
     }
 
     public String statsInfo() {
-        return Messages.get(this, "stats_desc", 1+buffedLvl(), 15+(buffedLvl()*5));
+        return Messages.get(this, "stats_desc", 1+buffedLvl(), 20+(buffedLvl()*5));
     }
 
     @Override
@@ -56,10 +57,10 @@ public class KazemaruWeapon extends MeleeWeapon {
 
                 KazemaruSummon summon = new KazemaruSummon();
                 summon.GetWeaponLvl(buffedLvl());
+                summon.GetTarget(defender);
                 GameScene.add(summon);
                 ScrollOfTeleportation.appear(summon, respawnPoints.get(index));
 
-                summon.attack(defender);
 
                 respawnPoints.remove(index);
                 spawnd++;
@@ -71,6 +72,8 @@ public class KazemaruWeapon extends MeleeWeapon {
 
     public static class KazemaruSummon extends Mob {
         {
+            HP = HT = 1;
+
             spriteClass = BreakerSprite.class;
 
             flying = true;
@@ -79,19 +82,20 @@ public class KazemaruWeapon extends MeleeWeapon {
         }
 
         @Override
-        public int damageRoll() {
-            return Random.NormalIntRange(maxLvl + 1, 15 + (maxLvl * 5));
+        public void onAttackComplete() {
+            attack( enemy );
+            next();
+            die(this);
         }
 
         @Override
-        public void onAttackComplete() {
-            super.onAttackComplete();
-
-            die(this);
+        public int damageRoll() {
+            return Random.NormalIntRange(maxLvl + 1, 20 + (maxLvl * 5));
         }
 
         public void GetWeaponLvl(int wlvl) {
             maxLvl = wlvl;
         }
+        public void GetTarget(Char t) {target = t.id();}
     }
 }

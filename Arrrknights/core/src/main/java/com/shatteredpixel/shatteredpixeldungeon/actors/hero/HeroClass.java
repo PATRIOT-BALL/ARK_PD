@@ -181,9 +181,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
-
-		new KazemaruWeapon().identify().collect();
-		new ScrollOfUpgrade().quantity(2).collect();
 	}
 
 	public Badges.Badge masteryBadge() {

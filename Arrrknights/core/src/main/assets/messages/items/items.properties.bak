@@ -1409,6 +1409,7 @@ items.rings.ring.jojo=독타의 기묘한 반지
 items.rings.ring.gray=플라스틱 반지
 items.rings.ring.banzi=아무튼 반지
 items.rings.ring.palladium=팔라듐 반지
+items.rings.ring.metal=금속 반지
 
 items.rings.ring.gold=골ㅡ든 반지
 items.rings.ring.lithium=리튬 반지
@@ -1500,6 +1501,11 @@ items.rings.ringofmistress.name=여제의 반지
 items.rings.ringofmistress.stats=이 반지를 장착했을 때, 무기의 SP 충전률이 _%s%%_ 만큼 상승합니다.
 items.rings.ringofmistress.typical_stats=이 반지를 장착했을 때, 일반적으로 무기의 SP 충전률이 _%s%%_ 만큼 상승합니다.
 items.rings.ringofmistress.desc=이 반지는 착용자의 아츠 적합성을 올려 무기의 능력 효율을 상승시킵니다. 저주받은 반지는 무기의 SP 충전률을 감소시킵니다.\n\n단, _나의 소원_은 이 반지의 효과를 받을 수 없습니다.
+
+items.rings.ringofcommand.name=통솔의 반지
+items.rings.ringofcommand.stats=이 반지를 장착했을 때, 소환수나 정신지배당한 적들이 _%s%%_ 의 추가 피해를 입힙니다.
+items.rings.ringofcommand.typical_stats=이 반지를 장착했을 때, 소환수나 정신지배당한 적들이 _%s%%_ 의 추가 피해를 입힙니다.
+items.rings.ringofcommand.desc=이 반지는 착용자의 기습 능력을 높혀줍니다. 저주받은 반지는 소환수나 정신지배당한 적들의 피해량이 오히려 감소합니다.
 
 ###scrolls
 items.scrolls.scroll.ac_read=읽는다
@@ -2622,7 +2628,7 @@ items.weapon.melee.chensword.desc=용문 제식 검. 상당히 오래되어 성�
 
 items.weapon.melee.kazemaruweapon.name=절지생화
 items.weapon.melee.kazemaruweapon.desc="아이들이 카제마루가 몇 살 연상인 귀엽고 순진한 아이라고 생각하고 있어......"
-items.weapon.melee.kazemaruweapon.stats_desc=이 검은 공격시 10% 확률로 분신을 소환해 _%1$d-%2$d_의 피해를 입힙니다.
+items.weapon.melee.kazemaruweapon.stats_desc=이 검은 공격시 10%% 확률로 분신을 소환해 _%1$d-%2$d_의 피해를 입힙니다.
 
 
 

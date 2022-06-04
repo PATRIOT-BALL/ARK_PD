@@ -110,6 +110,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAmplified;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAssassin;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfCommand;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
@@ -564,9 +565,10 @@ public class Generator {
                     RingOfAmplified.class,
                     RingOfDominate.class,
                     RingOfAssassin.class,
-                    RingOfMistress.class
+                    RingOfMistress.class,
+                    RingOfCommand.class
             };
-            RING.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+            RING.probs = new float[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
             ARTIFACT.classes = new Class<?>[]{
                     CapeOfThorns.class,

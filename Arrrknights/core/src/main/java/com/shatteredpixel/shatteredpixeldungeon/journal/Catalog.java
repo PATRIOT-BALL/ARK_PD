@@ -102,6 +102,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfToxicGas;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAmplified;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAssassin;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfCommand;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfDominate;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfElements;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfEnergy;
@@ -446,6 +447,7 @@ public enum Catalog {
 		RINGS.seen.put( RingOfDominate.class,               false);
 		RINGS.seen.put( RingOfAssassin.class,               false);
 		RINGS.seen.put( RingOfMistress.class,               false);
+		RINGS.seen.put( RingOfCommand.class,               false);
 
 		//ARTIFACTS.seen.put( AlchemistsToolkit.class,        false);
 		//ARTIFACTS.seen.put( CapeOfThorns.class,             false);
