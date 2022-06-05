@@ -51,6 +51,11 @@ public class v0_4_X_Changes {
         changes.addButton(new ChangeButton(Icons.get(Icons.GREY), "그레이스롯 상향",
                 "그레이스롯의 쇠뇌가 50%확률로 적의 위장을 무시합니다."));
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.NEARL), "니어 상향",
+                "_참전_의 신속 획득량이 1-3턴에서 _2-4턴_으로 상승했습니다." + "\n\n" +
+                "_축복받은 용사_의 축복 획득량이 10-40턴에서 _15-45턴_으로 상승했습니다."));
+
+
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_BUFFS), "적 상향",
                 "_탈룰라?_가 체력이 낮을수록 더욱 강력한 환영을 소환하게됩니다."));
 

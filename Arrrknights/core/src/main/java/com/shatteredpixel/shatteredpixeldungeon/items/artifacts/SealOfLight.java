@@ -81,7 +81,7 @@ public class SealOfLight extends Artifact {
                     }
 
                     if (hero.hasTalent(Talent.BLESSED_CHAMPION)) {
-                        Buff.affect(hero, Bless.class, 10f *  hero.pointsInTalent(Talent.BLESSED_CHAMPION));
+                        Buff.affect(hero, Bless.class, 15f *  hero.pointsInTalent(Talent.BLESSED_CHAMPION));
                     }
 
                     if (hero.hasTalent(Talent.PEGASUS_AURA)) {
