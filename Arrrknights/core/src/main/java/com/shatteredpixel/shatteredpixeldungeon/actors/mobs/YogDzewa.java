@@ -383,12 +383,12 @@ public class YogDzewa extends Mob {
 			Actor.addDelayed( new Pushing( fist, Dungeon.level.exit, fist.pos ), -1 );
 
 			if (phase == 4) {
-				Buff.affect(fist, Barrier.class).incShield(150);
+				Buff.affect(fist, Barrier.class).incShield(50);
 				Buff.affect(fist, BlobImmunity.class, 10f);
 				Buff.affect(fist, Barkskin.class).set(15, 3);
 			}
 			else if (phase == 3) {
-				Buff.affect(fist, Barrier.class).incShield(75);
+				Buff.affect(fist, Barrier.class).incShield(25);
 				Buff.affect(fist, Barkskin.class).set(15, 2);
 			}
 		}
