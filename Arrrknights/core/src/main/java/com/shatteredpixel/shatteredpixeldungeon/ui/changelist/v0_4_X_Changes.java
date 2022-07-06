@@ -69,7 +69,7 @@ public class v0_4_X_Changes {
         changeInfos.add(changes);
 
         changes.addButton(new ChangeButton(Icons.get(Icons.ENEMY_NERFS), "적 하향",
-                "_기술 정찰병_의 체력이 24에서 _20_으로 감소했습니다." +" \n\n" +
+                "_기술 정찰병_의 체력이 24에서 _20_으로 감소했습니다. 자신이 소환한 폭탄새에게 절반의 피해를 받도록 변경되었습니다." +" \n\n" +
                 "_티아카우 계열 적_들이 _연소_에 2배의 피해를 받도록 변경되었습니다."));
 
     }

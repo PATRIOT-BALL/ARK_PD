@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
@@ -83,7 +84,10 @@ public class Necromancer extends Mob {
 
 	@Override
 	public void damage(int dmg, Object src) {
-		if (src == mySkeleton) dmg = 0;
+		if (src == mySkeleton) {
+			if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) dmg = 0;
+			else dmg /= 2;
+		}
 		super.damage(dmg, src);
 	}
 
