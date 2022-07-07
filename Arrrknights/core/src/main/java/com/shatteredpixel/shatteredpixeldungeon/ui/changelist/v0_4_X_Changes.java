@@ -28,11 +28,15 @@ public class v0_4_X_Changes {
         changes.hardlight(Window.TITLE_COLOR);
         changeInfos.add(changes);
 
+        changes.addButton(new ChangeButton(Icons.get(Icons.BUG_KILL), "버전 공지",
+                "현 버전은 작업시간 부족과 작업 지연등으로 선행 배포하게 된 미완성 버전입니다." + "\n\n" +
+                        "미완성 부분은 여유가 된다면 빠른 시일 내에 작업완료할 예정이며, 기타 버그들은 설문조사를 통해 제보해주시면 감사하겠습니다."));
+
         changes.addButton(new ChangeButton(Icons.get(Icons.CHEN_S), "신규 캐릭터",
-                "신규 캐릭터 첸이 추가되었습니다. 첸은 게임을 1회 클리어하여 해금할 수 있습니다."));
+                "신규 캐릭터 첸이 추가되었습니다. 첸은 플레이어 선택 화면 좌측 상단의 버튼으로 선택할 수 있으며, 게임을 1회 클리어하여 해금할 수 있습니다."));
 
         changes.addButton(new ChangeButton(Icons.get(Icons.BACKPACK), "새로운 아이템 추가",
-                "_절지생화_ 4티어 무기로, 공격시 확률적으로 분신을 소환해 추가 공격을 가합니다."));
+                "_절지생화_ 4티어 무기로, 공격시 확률적으로 분신을 소환해 추가 공격을 가합니다. (미완성)"));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);

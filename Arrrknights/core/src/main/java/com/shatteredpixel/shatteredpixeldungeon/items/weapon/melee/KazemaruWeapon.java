@@ -23,9 +23,9 @@ import java.util.ArrayList;
 
 public class KazemaruWeapon extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.DUSK;
-        hitSound = Assets.Sounds.HIT_SLASH;
-        hitSoundPitch = 1.11f;
+        image = ItemSpriteSheet.POMBBAY;
+        hitSound = Assets.Sounds.HIT_BONK;
+        hitSoundPitch = 1f;
 
         tier = 4;
     }
