@@ -1,0 +1,66 @@
+package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
+
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.NervousImpairment;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
+import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.YomaSprite;
+import com.watabou.utils.Random;
+
+public class FloatingSeaDrifter extends Mob {
+        {
+            spriteClass = YomaSprite.class;
+
+            HP = HT = 65;
+
+            EXP = 14;
+            maxLvl = 29;
+
+            flying = true;
+
+            loot = new Gold();
+            lootChance = 0.34f;
+        }
+
+    @Override
+    public int damageRoll() {
+        return Random.NormalIntRange(25, 33);
+    }
+
+    @Override
+    public int attackSkill( Char target ) {
+        return 32;
+    }
+
+    @Override
+    public int drRoll() {
+        return Random.NormalIntRange(0, 14);
+    }
+
+    @Override
+    public int defenseSkill(Char enemy) {
+            if (enemy instanceof Hero) {
+                if (Dungeon.hero.belongings.weapon.getClass() == MissileWeapon.class) {
+                    return 0;
+                }
+            }
+
+            return 70;
+    }
+
+    @Override
+    public int attackProc(Char enemy, int damage) {
+        if (enemy.buff(NervousImpairment.class) == null) {
+            Buff.affect(enemy, NervousImpairment.class);
+        }
+        enemy.buff(NervousImpairment.class).Sum(8);
+
+        return super.attackProc(enemy, damage);
+    }
+}
