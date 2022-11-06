@@ -451,8 +451,13 @@ public class Assets {
 		public static final String PILLAR	= "sprites/pillar.png";
 		public static final String BIG_UGLY	= "sprites/big_ugly.png";
 		public static final String JUMAMA	= "sprites/jumama.png";
-
 		public static final String HELP_LANCET	= "sprites/lancet.png";
+
+		//이베리아-에기르
+		public static final String SEA_DRIFTER	= "sprites/sea_drifter.png";
+		public static final String SEA_RUNNER	= "sprites/sea_runner.png";
+
+
 
 
 		//명픽던에서만 추가된 것들↓
