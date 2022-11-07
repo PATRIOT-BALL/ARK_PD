@@ -6,16 +6,18 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Light;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.NervousImpairment;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Dewdrop;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_DrifterSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.YomaSprite;
 import com.watabou.utils.Random;
 
 public class FloatingSeaDrifter extends Mob {
         {
-            spriteClass = YomaSprite.class;
+            spriteClass = Sea_DrifterSprite.class;
 
             HP = HT = 65;
 
@@ -26,6 +28,9 @@ public class FloatingSeaDrifter extends Mob {
 
             loot = new Gold();
             lootChance = 0.34f;
+
+            properties.add(Property.SEA);
+            immunities.add(Paralysis.class);
         }
 
     @Override

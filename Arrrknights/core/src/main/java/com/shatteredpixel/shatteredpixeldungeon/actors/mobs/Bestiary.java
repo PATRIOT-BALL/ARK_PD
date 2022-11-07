@@ -192,6 +192,11 @@ public class Bestiary {
 							TiacauhWarrior.class, TiacauhWarrior.class, TiacauhWarrior.class,
 							TiacauhFanatic.class, TiacauhFanatic.class));
 				}
+				else if (Dungeon.extrastage_See) {
+					return new ArrayList<>(Arrays.asList(
+							SeaRunner.class, SeaRunner.class,
+							FloatingSeaDrifter.class, FloatingSeaDrifter.class));
+				}
 				//Siesta part1
 				return new ArrayList<>(Arrays.asList(
 						Infantry.class, Infantry.class, Infantry.class,

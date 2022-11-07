@@ -1193,7 +1193,7 @@ actors.mobs.npcs.dobermann.say=미안하군. 지금은 바빠.
 actors.mobs.npcs.jessica.name=제시카
 actors.mobs.npcs.jessica.desc=블랙스틸의 정식 오퍼레이터. 상호 교류 프로젝트의 일환으로 로도스 아일랜드에 주재하며 수련 중이다.\n\n_퀘스트가 있는 NPC입니다._
 actors.mobs.npcs.jessica.say=아, 안녕하세요!
-actors.mobs.npcs.jessica.quest=제시카 :\n\n아, 안녕하세요! 저기 혹시... _표준 탄약통_이 있으신가요? 훈련을 해야되는데 탄약이 슬슬 부족해서... 가져다주시면 대금은 치뤄드릴게요.
+actors.mobs.npcs.jessica.quest=제시카 :\n\n아, 안녕하세요! 저기 혹시... _표준 탄약통_이 있으신가요? 가져다 주시면 탄약값은 드릴게요...
 actors.mobs.npcs.jessica.result=제시카 :\n\n가, 감사합니다! 이걸 받아주세요.\n_합성옥 800개_ 에요.
 actors.mobs.npcs.jessica.quest2=제시카 :\n\n아, 안녕하세요! 저기 혹시... _염국 훈제고기_가 있으신가요? 한 번 먹어보고 싶어가지고... 가져다주시면 좋은 걸 드릴게요.
 actors.mobs.npcs.jessica.result2=제시카 :\n\n가, 감사합니다! 여기 _제가 사용하던 총기 액세서리_ 와 _합성옥 900개_ 에요. 받아주세요.
@@ -1820,6 +1820,8 @@ actors.mobs.thebiguglything.fire_ready=대제사장이 원거리 공격을 준�
 
 
 // 심해 1
+actors.mobs.floatingseadrifter.name=부해의 항해자
+actors.mobs.floatingseadrifter.desc=그들의 후대는 공기 속에서 헤엄치는데 더 능숙할 것 같다.\n이 공중형 적은 공격시 신경손상을 유발하며, 근접 무기로 공격하기는 어려워보입니다.
 
 
 
