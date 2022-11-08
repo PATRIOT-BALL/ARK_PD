@@ -456,6 +456,12 @@ public class Assets {
 		//이베리아-에기르
 		public static final String SEA_DRIFTER	= "sprites/sea_drifter.png";
 		public static final String SEA_RUNNER	= "sprites/sea_runner.png";
+		public static final String SEA_REAPER	= "sprites/sea_reaper.png";
+		public static final String FIRST_TALK	= "sprites/first_talk.png";
+
+		public static final String SEA_SPEWER	= "sprites/sea_spewer.png";
+		public static final String SEA_PREDATOR	= "sprites/sea_predator.png";
+		public static final String SEA_BRANDGUIDER	= "sprites/sea_brandguider.png";
 
 
 
@@ -479,6 +485,7 @@ public class Assets {
 		public static final String NPC_ASTESIA	= "sprites/astesia_npc.png";
 		public static final String NPC_GAVIAL	= "sprites/gavial.png";
 		public static final String NPC_PINK	= "sprites/pink_doggi.png";
+		public static final String NPC_IRENE	= "sprites/npc_irene.png";
 		public static final String TEXAS_SHOPKEEPER	= "sprites/texas_shopkeeper.png";
 
 		public static final String SARKAZ_SENTINEL	= "sprites/Sarkaz_Sentinel.png";
