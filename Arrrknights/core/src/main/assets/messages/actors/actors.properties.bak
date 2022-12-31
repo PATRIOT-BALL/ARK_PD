@@ -1819,9 +1819,19 @@ actors.mobs.thebiguglything.fire_ready=대제사장이 원거리 공격을 준�
 
 
 
+※ 이하 번역 필요
 // 심해 1
+actors.mobs.searunner.name=해안의 폭주자
+actors.mobs.searunner.desc=발이 네 개 달린 시테러. 체내에 뼈가 없다.\n이들은 약하지만, 대상을 서서히 약화시킵니다.
+
 actors.mobs.floatingseadrifter.name=부해의 항해자
 actors.mobs.floatingseadrifter.desc=그들의 후대는 공기 속에서 헤엄치는데 더 능숙할 것 같다.\n이 공중형 적은 공격시 신경손상을 유발하며, 근접 무기로 공격하기는 어려워보입니다.
+
+actors.mobs.seareaper.name=발해의 수확자
+actors.mobs.seareaper.desc=날카로운 소리를 내는 시테러\n피격당하면 각성하여 근접한 플레이어의 신경을 손상시킵니다.
+
+actors.mobs.seacapsule.name=낭해의 저항자
+actors.mobs.seacapsule.desc=불순물이 섞인 시테러. 신체 조직의 밀도가 일부 합금을 뛰어넘는다.\n물리 공격에 당할 때마다 근접한 플레이어의 신경을 손상시킵니다.\n중요한 아이템을 드롭할 것 같습니다.
 
 
 

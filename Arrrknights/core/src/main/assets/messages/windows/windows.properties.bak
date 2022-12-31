@@ -11,6 +11,7 @@ windows.wndclass.mastery=마스터리
 
 windows.wndcombo.title=필살기를 선택하세요
 windows.wndknightskill.title=필살기를 선택하세요
+windows.wndchencombo.title=필살기를 선택하세요
 
 windows.wnddocument.missing=해당 페이지 없음
 
@@ -154,8 +155,10 @@ windows.wndceylon.reward=답례를 받는다.
 
 windows.wndpilot.siesta_name=파란 불꽃의 마음
 windows.wndpilot.gavial_name=가비알 리턴즈
+windows.wndpilot.sea_name=이베리아
 windows.wndpilot.siesta=옵시디언 페스티벌이 시에스타에서 그 성대한 막을 올렸다! 마침 이곳에서 휴가를 즐기던 로도스 아일랜드 오퍼레이터들은 우연한 기회에 인근 화산이 곧 폭발할 거라는 사실을 알게 되었다. 하지만 도시 관리자는 이 위험을 감추려는 듯한 눈치였는데······\n\n더위와 음악, 그리고 전투 속에서 로도스 아일랜드 오퍼레이터들은 시장의 딸 실론과 함께 이 일을 해결하려고 한다.
 windows.wndpilot.gavial=사르곤의 광할한 영토 중엔, 현대 문명의 흔적을 찾을 수 없는 거대한 무인지대가 있다. 고향을 떠나 로도스 아일랜드로 와 의사가 된 가비알의 고향은 바로 이 무인지대에 있는 어느 오아시스에 있다.\n\n그러던 어느 날, 고향에서 "대족장을 선출하는 제전인 '마후이쪼티아'에 참가해달라"는 요청이 적힌 편지를 받게 된 가비알은, 박사 일행과 함께 고향에 들렸다 오기로 결심한다. 하지만 그녀를 기다리고 있던 건 바로......
+windows.wndpilot.sea=이베리아는 이미 바다를 볼 수 없었고, 에기르 역시 이족으로부터 피의 세례를 당했다.\n오직 바다만이 생명을 잉태하고, 오직 바다만이 영원하다.
 windows.wndpilot.move=출발
 
 windows.wndsettings$displaytab.title=화면 설정

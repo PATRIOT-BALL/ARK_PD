@@ -6,11 +6,12 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_RunnerSprite;
 import com.watabou.utils.Random;
 
 public class SeaRunner extends Mob {
     {
-        spriteClass = Bug_ASprite.class;
+        spriteClass = Sea_RunnerSprite.class;
 
         HP = HT = 90;
         EXP = 13;

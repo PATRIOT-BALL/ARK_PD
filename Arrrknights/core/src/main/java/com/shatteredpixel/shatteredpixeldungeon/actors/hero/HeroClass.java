@@ -229,6 +229,10 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new ScrollOfRage().identify();
 		new ScrollOfWarp().identify();
 
+		new Heamyo().identify().collect();
+		new PotionOfExperience().quantity(20).collect();
+		new Amulet().collect();
+
 		new DewVial().collect();
 	}
 

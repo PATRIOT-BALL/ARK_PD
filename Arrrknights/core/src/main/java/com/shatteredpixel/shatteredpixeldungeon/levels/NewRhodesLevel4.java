@@ -5,6 +5,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Gavial;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Irene;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_PhantomShadow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Pilot;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.QuestCat;
@@ -114,6 +115,7 @@ public class NewRhodesLevel4 extends Level {
     @Override
     protected void createItems () {
         Gavial.spawn(this,748);
+        NPC_Irene.spawn(this,749);
         NPC_Pilot.spawn(this, 870);
 
         if (Dungeon.QuestCatPoint == 2 && !NPC_PhantomShadow.Clear) {

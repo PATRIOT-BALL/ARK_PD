@@ -26,7 +26,7 @@ public class FloatingSeaDrifter extends Mob {
 
             flying = true;
 
-            loot = new Gold();
+            loot = Gold.class;
             lootChance = 0.34f;
 
             properties.add(Property.SEA);
@@ -64,7 +64,7 @@ public class FloatingSeaDrifter extends Mob {
         if (enemy.buff(NervousImpairment.class) == null) {
             Buff.affect(enemy, NervousImpairment.class);
         }
-        enemy.buff(NervousImpairment.class).Sum(8);
+        else enemy.buff(NervousImpairment.class).Sum(8);
 
         return super.attackProc(enemy, damage);
     }
