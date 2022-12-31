@@ -34,7 +34,7 @@ public class NPC_IreneSprite extends MobSprite {
         TextureFilm frames = new TextureFilm( texture, 36, 36 );
 
         idle = new Animation( 10, true );
-        idle.frames( frames, 0 );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 6, 7, 5 );
 
         run = new Animation( 12, true );
         run.frames( frames, 0 );
