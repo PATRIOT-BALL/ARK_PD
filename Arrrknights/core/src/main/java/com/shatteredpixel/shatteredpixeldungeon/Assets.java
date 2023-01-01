@@ -170,6 +170,7 @@ public class Assets {
 		public static final String HIT		        = "sounds/hit.mp3";
 		public static final String MISS		        = "sounds/miss.mp3";
 		public static final String HIT_SLASH        = "sounds/hit_slash.mp3";
+		public static final String HIT_SLASH2        = "sounds/hit_slash2.mp3";
 		public static final String HIT_PUNCH        = "sounds/hit_punch.mp3";
 		public static final String HIT_SPEAR        = "sounds/hit_spear.mp3";
 
@@ -281,7 +282,7 @@ public class Assets {
 
 				OPEN, UNLOCK, ITEM, DEWDROP, STEP, WATER, GRASS, TRAMPLE, STURDY,
 
-				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY, HIT_SWORD, HIT_SWORD2, HIT_DUALSTRIKE,
+				HIT_PUNCH, HIT_SPEAR, HIT, MISS, HIT_SLASH, HIT_SLASH2, HIT_STAB, HIT_CRUSH, HIT_MAGIC, HIT_STRONG, HIT_PARRY, HIT_SWORD, HIT_SWORD2, HIT_DUALSTRIKE,
 				HIT_ARROW, HIT_WHIP, ATK_SPIRITBOW, ATK_CROSSBOW, HEALTH_WARN, HEALTH_CRITICAL, HIT_RINGOUT, HIT_BREAK, HIT_BONK, HIT_SPLASH, HIT_DUSK, HIT_REVOLVER,
 
 				DESCEND, EAT, READ, LULLABY, DRINK, SHATTER, ZAP, ZAP_GUN, LIGHTNING, LEVELUP, DEATH,
@@ -457,6 +458,7 @@ public class Assets {
 		public static final String SEA_DRIFTER	= "sprites/sea_drifter.png";
 		public static final String SEA_RUNNER	= "sprites/sea_runner.png";
 		public static final String SEA_REAPER	= "sprites/sea_reaper.png";
+		public static final String SEA_CRAWLER	= "sprites/sea_crawler.png";
 		public static final String FIRST_TALK	= "sprites/first_talk.png";
 
 		public static final String SEA_SPEWER	= "sprites/sea_spewer.png";

@@ -23,8 +23,8 @@ import java.util.ArrayList;
 
 public class KazemaruWeapon extends MeleeWeapon {
     {
-        image = ItemSpriteSheet.POMBBAY;
-        hitSound = Assets.Sounds.HIT_BONK;
+        image = ItemSpriteSheet.KAZEMARU;
+        hitSound = Assets.Sounds.HIT_SLASH2;
         hitSoundPitch = 1f;
 
         tier = 4;
