@@ -178,7 +178,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-
+		new Amulet().collect();
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 	}
