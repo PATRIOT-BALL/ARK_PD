@@ -31,7 +31,7 @@ public class First_talkSprite extends MobSprite {
 
         texture( Assets.Sprites.FIRST_TALK );
 
-        TextureFilm frames = new TextureFilm( texture, 50, 48 );
+        TextureFilm frames = new TextureFilm( texture, 58, 52 );
 
         idle = new Animation( 10, true );
         idle.frames( frames, 0 );
@@ -40,7 +40,7 @@ public class First_talkSprite extends MobSprite {
         run.frames( frames, 0 );
 
         attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 );
 
         die = new Animation( 10, false );
         die.frames( frames, 0 );
