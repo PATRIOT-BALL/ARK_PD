@@ -32,6 +32,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Alchemy;
+import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.ActiveOriginium;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.AdrenalineSurge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
@@ -62,6 +63,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.KnightSKILL;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.LanceCharge;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MindVision;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.NervousImpairment;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.RadiantKnight;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Regeneration;
@@ -190,7 +192,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Enfild2;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gluttony;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KRISSVector;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SHISHIOH;
@@ -230,7 +231,6 @@ import com.watabou.utils.GameMath;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-import java.awt.Shape;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -875,6 +875,26 @@ public class Hero extends Char {
             mark.Charged(time);
         }
         else if (subClass == HeroSubClass.WILD) Buff.affect(this, WildMark.class);
+
+        if (Dungeon.depth > 31 && Dungeon.extrastage_See && Dungeon.level.map[this.pos] == Terrain.EMPTY_SP) {
+            if (buff(NervousImpairment.class) == null) {
+                Buff.affect(this, NervousImpairment.class);
+            }
+            else {
+                int nervousdamage = (int)(5 * time);
+                buff(NervousImpairment.class).Sum(nervousdamage); }
+
+            int evaporatedTiles;
+            evaporatedTiles = Random.chances(new float[]{0, 0, 0, 2, 1, 1});
+            for (int i = 0; i < evaporatedTiles; i++) {
+                if (Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.EMPTY || Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.WATER) {
+                    Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] = Terrain.EMPTY_SP;
+                    CellEmitter.get(pos+PathFinder.NEIGHBOURS8[i]).burst(Speck.factory(Speck.BUBBLE), 10);
+                    GameScene.updateMap( pos+PathFinder.NEIGHBOURS8[i] );
+                    Dungeon.observe();
+                }
+            }
+            }
 
         if (belongings.weapon instanceof PatriotSpear) {
             if (belongings.armor instanceof PlateArmor) {

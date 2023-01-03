@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.blobs.Blob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Adrenaline;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -64,7 +65,6 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourg
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatCutlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.Ring;
-import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfAccuracy;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfCommand;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.stones.StoneOfAggression;
@@ -81,6 +81,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarJournalist
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.darts.Dart;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.features.Chasm;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Swiftthistle;
@@ -1191,6 +1192,19 @@ public abstract class Mob extends Char {
 				}
 			}
 		}
+
+		if (Dungeon.depth > 31 && Dungeon.extrastage_See && Dungeon.level.map[this.pos] == Terrain.EMPTY_SP) {
+			int evaporatedTiles;
+			evaporatedTiles = Random.chances(new float[]{0, 0, 0, 0, 0, 1, 2, 1, 1});
+			for (int i = 0; i < evaporatedTiles; i++) {
+				if (Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.EMPTY || Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.WATER) {
+					Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] = Terrain.EMPTY_SP;
+					GameScene.updateMap( pos+PathFinder.NEIGHBOURS8[i] );
+					CellEmitter.get(pos+PathFinder.NEIGHBOURS8[i]).burst(Speck.factory(Speck.BUBBLE), 10);
+					Dungeon.observe();
+				}
+			}
+			}
 
 		super.spend(time);
 	}
