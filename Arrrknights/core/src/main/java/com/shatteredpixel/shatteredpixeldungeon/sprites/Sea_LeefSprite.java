@@ -24,23 +24,23 @@ package com.shatteredpixel.shatteredpixeldungeon.sprites;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.watabou.noosa.TextureFilm;
 
-public class Sea_RunnerSprite extends MobSprite {
+public class Sea_LeefSprite extends MobSprite {
 
-    public Sea_RunnerSprite() {
+    public Sea_LeefSprite() {
         super();
 
-        texture( Assets.Sprites.SEA_RUNNER );
+        texture( Assets.Sprites.SEA_LEEF );
 
-        TextureFilm frames = new TextureFilm( texture, 46, 28 );
+        TextureFilm frames = new TextureFilm( texture, 48, 40 );
 
-        idle = new Animation( 10, true );
-        idle.frames( frames, 0 );
+        idle = new Animation( 8, true );
+        idle.frames( frames, 0, 1, 2, 3, 4, 5 );
 
         run = new Animation( 12, true );
-        run.frames( frames, 1, 2, 3, 4, 5, 6 );
+        run.frames( frames, 0, 1, 2, 3, 4, 5 );
 
         attack = new Animation( 12, false );
-        attack.frames( frames, 7, 8, 9, 10, 11, 12, 13 );
+        attack.frames( frames, 6, 7, 8, 9, 10, 11, 12, 13 );
 
         die = new Animation( 10, false );
         die.frames( frames, 14, 15, 16, 17, 18, 19, 20, 21, 22 );

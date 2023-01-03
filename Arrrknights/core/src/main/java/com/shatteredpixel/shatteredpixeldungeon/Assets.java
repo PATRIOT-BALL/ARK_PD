@@ -466,6 +466,7 @@ public class Assets {
 		public static final String SEA_SPEWER	= "sprites/sea_spewer.png";
 		public static final String SEA_PREDATOR	= "sprites/sea_predator.png";
 		public static final String SEA_BRANDGUIDER	= "sprites/sea_brandguider.png";
+		public static final String SEA_LEEF	= "sprites/sea_reef.png";
 
 
 
