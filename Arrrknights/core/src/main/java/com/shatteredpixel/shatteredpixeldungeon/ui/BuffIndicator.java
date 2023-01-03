@@ -100,6 +100,7 @@ public class BuffIndicator extends Component {
 	public static final int ACORG    = 52;
 	public static final int SILENCE    = 53;
 	public static final int COOL_TIME    = 54;
+	public static final int IMPAIRMENT    = 55;
 
 	public static final int SIZE	= 7;
 	

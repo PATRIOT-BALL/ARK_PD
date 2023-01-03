@@ -463,6 +463,8 @@ public class Assets {
 		public static final String SEA_CRAWLER	= "sprites/sea_crawler.png";
 		public static final String FIRST_TALK	= "sprites/first_talk.png";
 
+		public static final String BELFLY	= "sprites/belfry.png";
+
 		public static final String SEA_SPEWER	= "sprites/sea_spewer.png";
 		public static final String SEA_PREDATOR	= "sprites/sea_predator.png";
 		public static final String SEA_BRANDGUIDER	= "sprites/sea_brandguider.png";

@@ -31,7 +31,7 @@ public class NervousImpairment extends Buff {
 
     @Override
     public int icon() {
-        return BuffIndicator.CRIPPLE;
+        return BuffIndicator.IMPAIRMENT;
     }
 
     @Override
