@@ -268,7 +268,8 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_See) {
 					return new ArrayList<>(Arrays.asList(
-							SeaReaper.class, SeaReaper.class,
+							SeaReaper.class,
+							Sea_Octo.class, Sea_Octo.class,
 							SeaLeef.class));}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,

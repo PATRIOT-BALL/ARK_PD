@@ -38,7 +38,7 @@ public class Sea_Octo extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(20, 40);
+        return Random.NormalIntRange(20, 42);
     }
 
     @Override
