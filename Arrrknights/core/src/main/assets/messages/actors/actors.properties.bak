@@ -1183,6 +1183,12 @@ actors.mobs.npcs.gavial.ok=좋아, 나랑 같이 가겠다는거지?
 actors.mobs.npcs.gavial.no=아, 다음에 가겠다고? 뭐 상관없지.
 actors.mobs.npcs.gavial.questhint=LANCET-2 못봤어? 분명 같이 있었을텐데.
 
+※번역필요
+actors.mobs.npcs.npc_irene.name=아이린
+actors.mobs.npcs.npc_irene.desc=이베리아의 재판관 아이린\n\n그녀에게 말을 걸면 추가 챕터가 _이베리아_ 로 변경됩니다.
+actors.mobs.npcs.npc_irene.ok=알겠습니다. 이베리아로 가는거죠?
+actors.mobs.npcs.npc_irene.no=그럼 다음 기회에.
+
 actors.mobs.npcs.dummy.name=훈련인형
 actors.mobs.npcs.dummy.desc=KOKODAYO
 
@@ -1832,6 +1838,14 @@ actors.mobs.seareaper.desc=날카로운 소리를 내는 시테러\n피격당하
 
 actors.mobs.seacapsule.name=낭해의 저항자
 actors.mobs.seacapsule.desc=불순물이 섞인 시테러. 신체 조직의 밀도가 일부 합금을 뛰어넘는다.\n물리 공격에 당할 때마다 근접한 플레이어의 신경을 손상시킵니다.\n중요한 아이템을 드롭할 것 같습니다.
+
+//심해 2
+
+actors.mobs.sea_octo.name=심해의 분출자
+actors.mobs.sea_octo.desc=명흔이 나타난 지역에서 흔히 볼 수 있는 시테러.\n공격시 신경 손상을 부여하며, 명흔 위에서 대폭 사거리가 증가합니다.
+
+actors.mobs.sealeef.name=심해의 열초자
+actors.mobs.sealeef.desc=명흔에서 태어난 아주 공격적인 개체. 주변 자연환경을 크게 훼손하고, 동족에 의해 개조된다.\n공격할 때마다 공격력이 상승하며, 명흔 위에서 위장 효과를 얻습니다.
 
 
 

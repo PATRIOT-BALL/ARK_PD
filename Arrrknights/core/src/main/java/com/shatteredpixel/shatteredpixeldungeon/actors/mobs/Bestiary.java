@@ -266,6 +266,10 @@ public class Bestiary {
 							TiacauhRipper.class, TiacauhRipper.class, TiacauhRipper.class,
 							TiacauhShredder.class, TiacauhShredder.class));
 				}
+				else if (Dungeon.extrastage_See) {
+					return new ArrayList<>(Arrays.asList(
+							SeaReaper.class, SeaReaper.class,
+							SeaLeef.class));}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
