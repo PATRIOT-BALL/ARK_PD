@@ -9,13 +9,14 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.buffs;
 
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
+import com.watabou.utils.Bundle;
 
 public class NervousImpairment extends Buff {
 
-    int damages = 0;
-    int limit = 100;
+    float damages = 0;
+    float limit = 100;
 
-    public void Sum(int NervousDamage) {
+    public void Sum(float NervousDamage) {
         damages = Math.min(100, damages + NervousDamage);
         if (damages < 0) detach();
         if (damages >= limit) Burst();
@@ -42,5 +43,19 @@ public class NervousImpairment extends Buff {
     @Override
     public String desc() {
         return Messages.get(this, "desc", damages);
+    }
+
+    private static final String POW = "Power";
+
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(POW, damages);
+    }
+
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        damages = bundle.getFloat(POW);
     }
 }

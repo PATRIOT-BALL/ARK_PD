@@ -3,6 +3,7 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.buffs;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Kinetic;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
+import com.watabou.utils.Bundle;
 
 public class SeethingBurst extends FlavourBuff {
 
@@ -50,5 +51,19 @@ public class SeethingBurst extends FlavourBuff {
     public void GetDamage(int damage)
     {
         Power += damage * 2.5f;
+    }
+
+    private static final String POW = "Power";
+
+    @Override
+    public void storeInBundle(Bundle bundle) {
+        super.storeInBundle(bundle);
+        bundle.put(POW, Power);
+    }
+
+    @Override
+    public void restoreFromBundle(Bundle bundle) {
+        super.restoreFromBundle(bundle);
+        Power = bundle.getInt(POW);
     }
 }

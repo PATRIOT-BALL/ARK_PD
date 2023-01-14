@@ -881,7 +881,7 @@ public class Hero extends Char {
                 Buff.affect(this, NervousImpairment.class);
             }
             else {
-                int nervousdamage = (int)(5 * time);
+                float nervousdamage = 2 * time;
                 buff(NervousImpairment.class).Sum(nervousdamage); }
 
             int evaporatedTiles;
