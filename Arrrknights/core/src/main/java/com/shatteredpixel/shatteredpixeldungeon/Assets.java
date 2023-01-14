@@ -44,6 +44,8 @@ public class Assets {
 		public static final String TILSE_RHODES	= "environment/tiles_rhodos.png";
 		public static final String TILSE_SIESTA	= "environment/tiles_siesta.png";
 		public static final String TILSE_SIESTA2	= "environment/tiles_siesta2.png";
+		public static final String TILSE_IBERIA	= "environment/tiles_iberia.png";
+		public static final String TILSE_IBERIA2	= "environment/tiles_iberia2.png";
 		public static final String TILSE_SARGON	= "environment/tiles_sargon.png";
 
 		public static final String WATER_SEWERS	= "environment/water0.png";
@@ -53,6 +55,8 @@ public class Assets {
 		public static final String WATER_HALLS	= "environment/water4.png";
 		public static final String WATER_SIESTA	= "environment/water5.png";
 		public static final String WATER_SIESTA2	= "environment/water6.png";
+		public static final String WATER_IBERIA	= "environment/water7.png";
+		public static final String WATER_IBERIA2	= "environment/water7.png";
 
 		public static final String WEAK_FLOOR       = "environment/custom_tiles/weak_floor.png";
 		public static final String SEWER_BOSS       = "environment/custom_tiles/sewer_boss.png";

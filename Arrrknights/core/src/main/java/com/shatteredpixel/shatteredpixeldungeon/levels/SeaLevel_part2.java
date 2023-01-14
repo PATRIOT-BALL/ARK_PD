@@ -24,7 +24,7 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.noosa.Group;
 import com.watabou.utils.Random;
 
-public class SeeLevel_part1 extends RegularLevel {
+public class SeaLevel_part2 extends RegularLevel {
     {
         color1 = 0x4b6636;
         color2 = 0xf2f2f2;
@@ -60,12 +60,12 @@ public class SeeLevel_part1 extends RegularLevel {
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILSE_SIESTA;
+        return Assets.Environment.TILSE_IBERIA2;
     }
 
     @Override
     public String waterTex() {
-        return Assets.Environment.WATER_SIESTA;
+        return Assets.Environment.WATER_IBERIA2;
     }
 
     @Override

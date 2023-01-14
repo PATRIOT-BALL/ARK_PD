@@ -876,7 +876,7 @@ public class Hero extends Char {
         }
         else if (subClass == HeroSubClass.WILD) Buff.affect(this, WildMark.class);
 
-        if (Dungeon.depth > 31 && Dungeon.extrastage_See && Dungeon.level.map[this.pos] == Terrain.EMPTY_SP) {
+        if (Dungeon.depth > 31 && Dungeon.extrastage_Sea && Dungeon.level.map[this.pos] == Terrain.EMPTY_SP) {
             if (buff(NervousImpairment.class) == null) {
                 Buff.affect(this, NervousImpairment.class);
             }

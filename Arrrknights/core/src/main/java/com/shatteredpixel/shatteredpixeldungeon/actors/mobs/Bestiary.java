@@ -192,7 +192,7 @@ public class Bestiary {
 							TiacauhWarrior.class, TiacauhWarrior.class, TiacauhWarrior.class,
 							TiacauhFanatic.class, TiacauhFanatic.class));
 				}
-				else if (Dungeon.extrastage_See) {
+				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
 							SeaRunner.class, SeaRunner.class,
 							FloatingSeaDrifter.class, FloatingSeaDrifter.class));
@@ -208,7 +208,7 @@ public class Bestiary {
 							TiacauhFanatic.class, TiacauhFanatic.class,
 							TiacauhLancer.class));
 				}
-				else if (Dungeon.extrastage_See) {
+				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
 							SeaRunner.class, SeaRunner.class,
 							FloatingSeaDrifter.class, FloatingSeaDrifter.class,
@@ -227,7 +227,7 @@ public class Bestiary {
 							TiacauhLancer.class, TiacauhLancer.class,
 							TiacauhAddict.class));
 				}
-				else if (Dungeon.extrastage_See) {
+				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
 							SeaRunner.class, SeaRunner.class,
 							FloatingSeaDrifter.class,
@@ -248,7 +248,7 @@ public class Bestiary {
 							TiacauhLancer.class, TiacauhLancer.class,
 							TiacauhAddict.class, TiacauhAddict.class, TiacauhAddict.class));
 				}
-				else if (Dungeon.extrastage_See) {
+				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
 							SeaRunner.class, SeaRunner.class,
 							SeaReaper.class, SeaReaper.class,
@@ -266,7 +266,7 @@ public class Bestiary {
 							TiacauhRipper.class, TiacauhRipper.class, TiacauhRipper.class,
 							TiacauhShredder.class, TiacauhShredder.class));
 				}
-				else if (Dungeon.extrastage_See) {
+				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
 							SeaReaper.class,
 							Sea_Octo.class, Sea_Octo.class,

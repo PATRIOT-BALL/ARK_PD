@@ -235,12 +235,14 @@ public class GameScene extends PixelScene {
 		else if (Dungeon.depth >= 27 && Dungeon.depth < 31) {
 			Music.INSTANCE.play(Assets.Music.RHODOS, true);
 		}
-		else if (Dungeon.depth >= 31 && Dungeon.depth < 35) {
+		else if (Dungeon.depth >= 36 && Dungeon.depth < 40) {
 			if (Dungeon.extrastage_Gavial) Music.INSTANCE.play(Assets.Music.GAME6_SARGON1, true);
+			else if (Dungeon.extrastage_Sea) Music.INSTANCE.play(Assets.Music.GAME6_IBERIA1, true);
 			else Music.INSTANCE.play(Assets.Music.GAME6_SIESTA, true);
 		}
-		else if (Dungeon.depth >= 36 && Dungeon.depth < 40) {
+		else if (Dungeon.depth >= 31 && Dungeon.depth < 35) {
 			if (Dungeon.extrastage_Gavial) Music.INSTANCE.play(Assets.Music.GAME6_SARGON2, true);
+			else if (Dungeon.extrastage_Sea) Music.INSTANCE.play(Assets.Music.GAME6_IBERIA2, true);
 			else Music.INSTANCE.play(Assets.Music.GAME6_SIESTA2, true);
 		}
 

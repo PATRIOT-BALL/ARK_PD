@@ -74,7 +74,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.PrisonLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel4;
-import com.shatteredpixel.shatteredpixeldungeon.levels.SeeLevel_part1;
+import com.shatteredpixel.shatteredpixeldungeon.levels.SeaLevel_part1;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SiestaBossLevel_part1;
@@ -200,7 +200,7 @@ public class Dungeon {
 	public static int siesta1_bosspower;
 
 	public static boolean extrastage_Gavial; // true라면 가비알 스테이지 실행
-	public static boolean extrastage_See;
+	public static boolean extrastage_Sea;
 
 	public static boolean isPray; // 프리스티스를 위한 기도를 하였는가?
 	public static boolean killcat; // 엔딩 씬에서 켈시 하극상 출현용.
@@ -272,7 +272,7 @@ public class Dungeon {
 		isPray = false;
 		killcat = false;
 		extrastage_Gavial = false;
-		extrastage_See = false;
+		extrastage_Sea = false;
 
 		Jessica.QuestClear = false;
 		NPC_Phantom.QuestClear = false;
@@ -412,7 +412,7 @@ public class Dungeon {
 			case 33:
 			case 34:
 				if (extrastage_Gavial) level = new GavialLevel();
-				else if (extrastage_See) level = new SeeLevel_part1();
+				else if (extrastage_Sea) level = new SeaLevel_part1();
 				else level = new SiestaLevel_part1();
 				break;
 			case 35:
@@ -607,7 +607,7 @@ public class Dungeon {
 	private static final String TALU    = "talucount";
 	private static final String SIEBOSS1    = "siesta1_bosspower";
 	private static final String GAVIAL    = "extrastage_Gavial";
-	private static final String SEE    = "extrastage_See";
+	private static final String SEA    = "extrastage_SeA";
 	private static final String CATQUEST    = "QuestCatPoint";
 	private static final String PHANTOM_QUESTCLEAR    = "NPC_Phantom.QuestClear";
 	private static final String JESI_QUESTCLEAR    = "Jessica.QuestClear";
@@ -647,7 +647,7 @@ public class Dungeon {
 			bundle.put (TALU, talucount);
 			bundle.put (SIEBOSS1, siesta1_bosspower);
 			bundle.put (GAVIAL, extrastage_Gavial);
-			bundle.put (SEE, extrastage_See);
+			bundle.put (SEA, extrastage_Sea);
 
 			bundle.put (PHANTOM_QUESTCLEAR, NPC_Phantom.QuestClear);
 			bundle.put (JESI_QUESTCLEAR, Jessica.QuestClear);
@@ -830,7 +830,7 @@ public class Dungeon {
 		talucount = bundle.getInt(TALU);
 		siesta1_bosspower = bundle.getInt(SIEBOSS1);
 		extrastage_Gavial = bundle.getBoolean(GAVIAL);
-		extrastage_See = bundle.getBoolean(SEE);
+		extrastage_Sea = bundle.getBoolean(SEA);
 
 		QuestCatPoint = bundle.getInt(CATQUEST);
 

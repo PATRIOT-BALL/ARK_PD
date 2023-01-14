@@ -26,7 +26,7 @@ public class WndPilot extends Window {
         if (Dungeon.extrastage_Gavial) {
             titlebar.icon( new ItemSprite(ItemSpriteSheet.AMULET, null ));
             titlebar.label( Messages.get(this, "gavial_name"));}
-        else if (Dungeon.extrastage_See) {
+        else if (Dungeon.extrastage_Sea) {
             titlebar.icon( new ItemSprite(ItemSpriteSheet.ORIGINIUM, null ));
             titlebar.label( Messages.get(this, "sea_name"));}
         else {titlebar.icon( new ItemSprite(ItemSpriteSheet.OBSIDIAN, null ));
@@ -36,7 +36,7 @@ public class WndPilot extends Window {
 
         RenderedTextBlock message;
         if (Dungeon.extrastage_Gavial)  message = PixelScene.renderTextBlock( Messages.get(this, "gavial"), 6 );
-        else if (Dungeon.extrastage_See)  message = PixelScene.renderTextBlock( Messages.get(this, "sea"), 6 );
+        else if (Dungeon.extrastage_Sea)  message = PixelScene.renderTextBlock( Messages.get(this, "sea"), 6 );
         else message = PixelScene.renderTextBlock( Messages.get(this, "siesta"), 6 );
         message.maxWidth(WIDTH);
         message.setPos(0, titlebar.bottom() + GAP);

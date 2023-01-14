@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
@@ -33,6 +34,7 @@ public class Heamyo extends MeleeWeapon {
 
     {
         image = ItemSpriteSheet.HEAMYO;
+        hitSound = Assets.Sounds.GOLD;
 
         tier = 1;
         ACC = 12000f;

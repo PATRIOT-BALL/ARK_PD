@@ -179,6 +179,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new ScrollOfIdentify().identify();
 		new Amulet().collect();
+		new Heamyo().collect();
 		new FoodBag().collect();
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 	}

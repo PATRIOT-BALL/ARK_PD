@@ -9,12 +9,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.NervousPotion;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_CrawlerSprite;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class SeaCapsule extends Mob{
     {
-        spriteClass = Bug_ASprite.class;
+        spriteClass = Sea_CrawlerSprite.class;
 
         HP = HT = 1400;
         EXP = 17;

@@ -27,11 +27,11 @@ public class NPC_Irene extends NPC {
     @Override
     public boolean interact(Char c) {
         sprite.turnTo(pos, c.pos);
-            if (Dungeon.extrastage_See) {
-                Dungeon.extrastage_See = false;
+            if (Dungeon.extrastage_Sea) {
+                Dungeon.extrastage_Sea = false;
                 sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "no"));
             } else {
-                Dungeon.extrastage_See = true;
+                Dungeon.extrastage_Sea = true;
                 sprite.showStatus(CharSprite.POSITIVE, Messages.get(this, "ok"));
             }
         return true;
