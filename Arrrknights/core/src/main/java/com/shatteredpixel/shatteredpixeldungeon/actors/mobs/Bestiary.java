@@ -285,7 +285,7 @@ public class Bestiary {
 							TiacauhShredder.class, TiacauhShredder.class,
 							TiacauhRitualist.class));
 				}
-				else if (Dungeon.extrastage_See) {
+				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
 							Sea_Octo.class, Sea_Octo.class,
 							SeaLeef.class, SeaLeef.class,
