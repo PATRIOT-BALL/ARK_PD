@@ -17,7 +17,7 @@ public class SeaCapsule extends Mob{
     {
         spriteClass = Sea_CrawlerSprite.class;
 
-        HP = HT = 1400;
+        HP = HT = 140;
         EXP = 17;
         maxLvl = 32;
 
