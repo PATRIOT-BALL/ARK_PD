@@ -1505,7 +1505,7 @@ items.rings.ringofmistress.desc=이 반지는 착용자의 아츠 적합성을 �
 items.rings.ringofcommand.name=통솔의 반지
 items.rings.ringofcommand.stats=이 반지를 장착했을 때, 소환수나 정신지배당한 적들이 _%s%%_ 의 추가 피해를 입힙니다.
 items.rings.ringofcommand.typical_stats=이 반지를 장착했을 때, 소환수나 정신지배당한 적들이 _%s%%_ 의 추가 피해를 입힙니다.
-items.rings.ringofcommand.desc=이 반지는 착용자의 기습 능력을 높혀줍니다. 저주받은 반지는 소환수나 정신지배당한 적들의 피해량이 오히려 감소합니다.
+items.rings.ringofcommand.desc=이 반지는 사용자의 통솔력을 높혀줍니다. 저주받은 반지는 소환수나 정신지배당한 적들의 피해량이 오히려 감소합니다.
 
 ###scrolls
 items.scrolls.scroll.ac_read=읽는다
