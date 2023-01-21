@@ -11,12 +11,13 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_SpewerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.StrikerSprite;
 import com.watabou.utils.Random;
 
 public class Sea_Octo extends Mob {
     {
-        spriteClass = StrikerSprite.class;
+        spriteClass = Sea_SpewerSprite.class;
 
         HP = HT = 95;
         defenseSkill = 20;

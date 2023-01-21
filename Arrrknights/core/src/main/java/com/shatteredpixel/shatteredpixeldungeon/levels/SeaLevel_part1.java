@@ -60,7 +60,7 @@ public class SeaLevel_part1 extends RegularLevel {
 
     @Override
     public String tilesTex() {
-        return Assets.Environment.TILSE_IBERIA2;
+        return Assets.Environment.TILSE_IBERIA;
     }
 
     @Override

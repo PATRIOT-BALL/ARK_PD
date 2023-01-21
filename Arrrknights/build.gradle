@@ -15,7 +15,7 @@ allprojects {
         appPackageName = 'com.shatteredpixel.tomorrowpixel'
 
         appVersionCode = 582
-        appVersionName = '0.4.5(WIP)'
+        appVersionName = '0.5.0'
 
         appJavaCompatibility = JavaVersion.VERSION_1_8
 
