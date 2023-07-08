@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.OriginiutantSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_BrandguiderSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_LeefSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -19,7 +20,7 @@ import com.watabou.utils.Random;
 
 public class Sea_Brandguider extends Mob {
     {
-        spriteClass = OriginiutantSprite.class;
+        spriteClass = Sea_BrandguiderSprite.class;
 
         HP = HT = 110;
         EXP = 18;

@@ -181,6 +181,12 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new Amulet().collect();
 		new Heamyo().collect();
 		new FoodBag().collect();
+		new Heamyo().identify().collect();
+		new PotionOfExperience().quantity(40).collect();
+		new PotionOfMindVision().quantity(40).collect();
+		new PotionOfHealing().quantity(40).collect();
+		new Amulet().collect();
+
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 	}
 
@@ -229,10 +235,6 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new PotionOfHealing().identify();
 		new ScrollOfRage().identify();
 		new ScrollOfWarp().identify();
-
-		new Heamyo().identify().collect();
-		new PotionOfExperience().quantity(20).collect();
-		new Amulet().collect();
 
 		new DewVial().collect();
 	}

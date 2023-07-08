@@ -13,13 +13,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.First_talkSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class SeaBoss1 extends Mob{
     {
-        spriteClass = Bug_ASprite.class;
+        spriteClass = First_talkSprite.class;
 
         HP = HT = 1000;
         EXP = 40;

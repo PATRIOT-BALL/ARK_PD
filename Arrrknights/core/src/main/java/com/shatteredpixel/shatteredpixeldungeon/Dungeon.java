@@ -75,6 +75,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel4;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SeaLevel_part1;
+import com.shatteredpixel.shatteredpixeldungeon.levels.SeaLevel_part2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerBossLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SiestaBossLevel_part1;
@@ -423,8 +424,9 @@ public class Dungeon {
 			case 37:
 			case 38:
 			case 39:
-				if (extrastage_Gavial) {level = new GavialLevel(); break;}
-				level = new SiestaLevel_part2();
+				if (extrastage_Gavial) level = new GavialLevel();
+				else if (extrastage_Sea) level = new SeaLevel_part2();
+				else level = new SiestaLevel_part2();
 				break;
 			case 40:
 				if (extrastage_Gavial) {level = new GavialBossLevel2(); break;}
