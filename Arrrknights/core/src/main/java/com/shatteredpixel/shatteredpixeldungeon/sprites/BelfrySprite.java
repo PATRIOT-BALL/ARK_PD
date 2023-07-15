@@ -35,7 +35,7 @@ public class BelfrySprite extends MobSprite {
 
         //many frames here as we want the rising/falling to be slow but the tongue to be fast
         idle = new Animation( 10, true );
-        idle.frames( frames, 0, 0, 0, 0, 0, 0, 0, 0);
+        idle.frames( frames, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0, 0, 0, 0, 0, 1, 2, 3, 2, 1, 0, 4, 5, 4, 0, 6, 7, 6, 0, 0, 0, 0, 0 );
 
         run = new Animation( 8, true );
         run.frames( frames, 0 );

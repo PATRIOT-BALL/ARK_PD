@@ -178,13 +178,12 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
 		new ScrollOfIdentify().identify();
-		new Amulet().collect();
-		new Heamyo().collect();
 		new FoodBag().collect();
-		new Heamyo().identify().collect();
+		new KazemaruWeapon().identify().collect();
+		new PotionOfStrength().quantity(40).collect();
 		new PotionOfExperience().quantity(40).collect();
-		new PotionOfMindVision().quantity(40).collect();
 		new PotionOfHealing().quantity(40).collect();
+		new ScrollOfUpgrade().quantity(40).collect();
 		new Amulet().collect();
 
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
