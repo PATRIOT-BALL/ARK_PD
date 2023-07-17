@@ -13,13 +13,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.BelfrySprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.WeedySprite;
 import com.watabou.utils.PathFinder;
 
 public class SeaObject extends NPC{
     {
-        spriteClass = WeedySprite.class;
+        spriteClass = BelfrySprite.class;
 
         properties.add(Property.IMMOVABLE);
         properties.add(Property.MINIBOSS);

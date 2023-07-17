@@ -22,20 +22,20 @@ public class PursuerSprite extends MobSprite {
 
         TextureFilm frames = new TextureFilm( texture, 72, 46 );
 
-        idle = new MovieClip.Animation( 9, true );
-        idle.frames( frames, c+0 );
+        idle = new MovieClip.Animation( 5, true );
+        idle.frames( frames, c+0, c+1, c+2, c+1, c+0 );
 
         run = new MovieClip.Animation( 8, true );
-        run.frames( frames, c+2, c+3, c+4, c+5, c+6, c+7, c+8, c+9 );
+        run.frames( frames, c+7, c+8, c+9, c+10, c+11, c+12, c+13, c+14 );
 
-        attack = new MovieClip.Animation( 18, false );
-        attack.frames( frames, c+1 );
+        attack = new MovieClip.Animation( 15, false );
+        attack.frames( frames, c+3, c+4, c+5, c+6);
 
         zap = new MovieClip.Animation( 8, false );
         zap.frames( frames, c+1 );
 
         die = new MovieClip.Animation( 10, false );
-        die.frames( frames, c+1 );
+        die.frames( frames, c+15 );
 
         play( idle );//이 구문이 없을경우 스프라이트 오류가 남(찔러용 그거)
     }
