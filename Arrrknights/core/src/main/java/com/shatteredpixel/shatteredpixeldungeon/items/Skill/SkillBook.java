@@ -11,12 +11,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.Pombbay;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SK2.Nervous;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfSunLight;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.PathFinder;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -45,6 +47,10 @@ public class SkillBook extends Item {
     public void execute(Hero hero, String action) {
         super.execute(hero, action);
         if (action.equals(AC_ACT)) {
+
+            Dungeon.level.map[hero.pos] = Terrain.SEE_TEEROR2;
+            GameScene.updateMap( hero.pos );
+            Dungeon.observe();
 
             if (hero.buff(NervousImpairment.class) == null) {
                 Buff.affect(hero, NervousImpairment.class);

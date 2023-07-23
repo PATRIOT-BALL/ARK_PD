@@ -876,7 +876,7 @@ public class Hero extends Char {
         }
         else if (subClass == HeroSubClass.WILD) Buff.affect(this, WildMark.class);
 
-        if (Dungeon.depth > 35 && Dungeon.extrastage_Sea && Dungeon.level.map[this.pos] == Terrain.EMPTY_SP) {
+        if (Dungeon.depth > 35 && Dungeon.extrastage_Sea && Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR1 || Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR2) {
             if (buff(NervousImpairment.class) == null) {
                 Buff.affect(this, NervousImpairment.class);
             }
@@ -887,8 +887,11 @@ public class Hero extends Char {
             int evaporatedTiles;
             evaporatedTiles = Random.chances(new float[]{0, 0, 0, 2, 1, 1});
             for (int i = 0; i < evaporatedTiles; i++) {
-                if (Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.EMPTY || Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.WATER) {
-                    Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] = Terrain.EMPTY_SP;
+                if (Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.EMPTY || Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.EMPTY_SP
+                        || Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.EMPTY_DECO
+                        || Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] == Terrain.WATER) {
+                    if (Random.Int(2) == 0) Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] = Terrain.SEE_TEEROR1;
+                    else Dungeon.level.map[pos+PathFinder.NEIGHBOURS8[i]] = Terrain.SEE_TEEROR2;
                     CellEmitter.get(pos+PathFinder.NEIGHBOURS8[i]).burst(Speck.factory(Speck.BUBBLE), 10);
                     GameScene.updateMap( pos+PathFinder.NEIGHBOURS8[i] );
                     Dungeon.observe();

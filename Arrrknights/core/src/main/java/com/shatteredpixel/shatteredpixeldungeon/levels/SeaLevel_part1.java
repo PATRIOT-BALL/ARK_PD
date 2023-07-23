@@ -71,8 +71,8 @@ public class SeaLevel_part1 extends RegularLevel {
     @Override
     protected Painter painter() {
         return new SiestaPainter()
-                .setWater(feeling == Feeling.WATER ? 0.98f : 0.38f, 4)
-                .setGrass(feeling == Feeling.GRASS ? 0.80f : 0.20f, 3)
+                .setWater(feeling == Feeling.WATER ? 0.38f : 0.18f, 4)
+                .setGrass(feeling == Feeling.GRASS ? 0.30f : 0.10f, 3)
                 .setTraps(nTraps(), trapClasses(), trapChances());
     }
 

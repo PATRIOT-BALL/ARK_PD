@@ -45,7 +45,7 @@ public class SeaLevel_part2 extends RegularLevel {
 
     @Override
     protected void createItems() {
-        if (Dungeon.depth == 32 || Dungeon.depth == 34) {
+        if (Dungeon.depth == 37 || Dungeon.depth == 39) {
             addItemToSpawn(new PotionOfHealing());}
         else addItemToSpawn(new PotionOfStrength());
         addItemToSpawn(new NervousPotion());
@@ -71,8 +71,8 @@ public class SeaLevel_part2 extends RegularLevel {
     @Override
     protected Painter painter() {
         return new SiestaPainter()
-                .setWater(feeling == Feeling.WATER ? 0.98f : 0.38f, 4)
-                .setGrass(feeling == Feeling.GRASS ? 0.80f : 0.20f, 3)
+                .setWater(feeling == Feeling.WATER ? 0.33f : 0.1f, 4)
+                .setGrass(feeling == Feeling.GRASS ? 0.05f : 0.03f, 3)
                 .setTraps(nTraps(), trapClasses(), trapChances());
     }
 

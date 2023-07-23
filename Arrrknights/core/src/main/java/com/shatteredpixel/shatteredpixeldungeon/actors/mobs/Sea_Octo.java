@@ -33,7 +33,8 @@ public class Sea_Octo extends Mob {
 
     @Override
     protected boolean canAttack(Char enemy) {
-        if (Dungeon.level.map[this.pos] == Terrain.EMPTY_SP) return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 8;
+        if (Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR1 || Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR2)
+            return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 8;
         return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 1;
     }
 

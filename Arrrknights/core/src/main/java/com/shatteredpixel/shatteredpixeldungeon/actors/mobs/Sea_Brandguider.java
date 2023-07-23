@@ -52,7 +52,7 @@ public class Sea_Brandguider extends Mob {
     protected boolean act() {
         if (HT /2 >= HP && this.buff(Silence.class) == null) {
             if (Dungeon.level.map[this.pos] == Terrain.EMPTY || Dungeon.level.map[this.pos] == Terrain.WATER) {
-                Dungeon.level.map[pos] = Terrain.EMPTY_SP;
+                Dungeon.level.map[pos] = Terrain.SEE_TEEROR1;
                 CellEmitter.get(pos).burst(Speck.factory(Speck.BUBBLE), 10);
                 GameScene.updateMap( pos );
                 Dungeon.observe();
