@@ -48,6 +48,7 @@ public class SkillBook extends Item {
         super.execute(hero, action);
         if (action.equals(AC_ACT)) {
 
+            // 테스트용 설정
             Dungeon.level.map[hero.pos] = Terrain.SEE_TEEROR2;
             GameScene.updateMap( hero.pos );
             Dungeon.observe();
