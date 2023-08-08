@@ -10,9 +10,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_SpewerSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.StrikerSprite;
+import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
+import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
 public class Sea_Octo extends Mob {
@@ -29,6 +33,21 @@ public class Sea_Octo extends Mob {
         lootChance = 0.3f;
 
         properties.add(Property.SEA);
+    }
+
+    private boolean firstTEEROR = false;
+
+    @Override
+    protected boolean act() {
+
+        //스폰시 첫 행동하면서 명흔을 깝니다.
+        if (!firstTEEROR) {
+            Level.set(this.pos, Terrain.SEE_TEEROR1);
+            GameScene.updateMap(this.pos);
+
+            firstTEEROR = true;
+        }
+        return super.act();
     }
 
     @Override
@@ -64,5 +83,19 @@ public class Sea_Octo extends Mob {
         }
 
         return super.attackProc(enemy, damage);
+    }
+
+    private static final String VAL   = "firstTEEROR";
+
+    @Override
+    public void storeInBundle( Bundle bundle ) {
+        super.storeInBundle( bundle );
+        bundle.put( VAL, firstTEEROR );
+    }
+
+    @Override
+    public void restoreFromBundle( Bundle bundle ) {
+        super.restoreFromBundle( bundle );
+        firstTEEROR = bundle.getBoolean(VAL);
     }
 }

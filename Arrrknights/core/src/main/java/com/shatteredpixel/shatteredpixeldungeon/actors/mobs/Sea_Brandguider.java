@@ -9,6 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.OriginiutantSprite;
@@ -34,13 +35,13 @@ public class Sea_Brandguider extends Mob {
         properties.add(Property.SEA);
     }
 
+    private boolean firstTEEROR = false;
+
     @Override
     public int damageRoll() { return Random.NormalIntRange(30, 46); }
 
     @Override
-    public int attackSkill( Char target ) {
-        return 37;
-    }
+    public int attackSkill( Char target ) {return 37; }
 
     @Override
     public int drRoll() {
@@ -50,6 +51,15 @@ public class Sea_Brandguider extends Mob {
 
     @Override
     protected boolean act() {
+
+        //스폰시 첫 행동하면서 명흔을 깝니다.
+        if (!firstTEEROR) {
+            Level.set(this.pos, Terrain.SEE_TEEROR1);
+            GameScene.updateMap(this.pos);
+
+            firstTEEROR = true;
+        }
+
         if (HT /2 >= HP && this.buff(Silence.class) == null) {
             if (Dungeon.level.map[this.pos] == Terrain.EMPTY || Dungeon.level.map[this.pos] == Terrain.WATER) {
                 Dungeon.level.map[pos] = Terrain.SEE_TEEROR1;
@@ -59,5 +69,19 @@ public class Sea_Brandguider extends Mob {
             }
         }
         return super.act();
+    }
+
+    private static final String VAL   = "firstTEEROR";
+
+    @Override
+    public void storeInBundle( Bundle bundle ) {
+        super.storeInBundle( bundle );
+        bundle.put( VAL, firstTEEROR );
+    }
+
+    @Override
+    public void restoreFromBundle( Bundle bundle ) {
+        super.restoreFromBundle( bundle );
+        firstTEEROR = bundle.getBoolean(VAL);
     }
 }
