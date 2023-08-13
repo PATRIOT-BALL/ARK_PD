@@ -12,14 +12,14 @@ public class Tiacauh_DrugsSprite extends MobSprite {
 
         TextureFilm frames = new TextureFilm( texture, 56, 46 );
 
-        idle = new Animation( 2, true );
-        idle.frames( frames, 0, 0, 0 );
+        idle = new Animation( 4, true );
+        idle.frames( frames, 0, 1, 2, 1, 0 );
 
-        run = new Animation( 18, true );
-        run.frames( frames, 0 );
+        run = new Animation( 12, true );
+        run.frames( frames, 3, 4, 5, 6, 7, 8, 9, 10 );
 
-        attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack = new Animation( 24, false );
+        attack.frames( frames, 3, 4, 5, 6, 7, 8, 9, 10  );
 
         die = new Animation( 10, false );
         die.frames( frames, 0 );

@@ -72,6 +72,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Echeveria;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KazemaruWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.DisintegrationTrap;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.GrimTrap;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
@@ -133,6 +134,7 @@ public class AntiMagic extends Armor.Glyph {
 		RESISTS.add( YogFist.BrightFist.LightBeam.class );
 		RESISTS.add( YogFist.DarkFist.DarkBolt.class );
 		RESISTS.add( Agent.class );
+		RESISTS.add( KazemaruWeapon.class );
 		RESISTS.add( WaveCaster.WaterBolt.class );
 		RESISTS.add( AcidSlug_A.AcidBolt.class );
 		RESISTS.add( Pompeii.Blast.class );

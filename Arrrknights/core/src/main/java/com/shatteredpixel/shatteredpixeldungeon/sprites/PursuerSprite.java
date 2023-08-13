@@ -32,7 +32,7 @@ public class PursuerSprite extends MobSprite {
         attack.frames( frames, c+3, c+4, c+5, c+6);
 
         zap = new MovieClip.Animation( 8, false );
-        zap.frames( frames, c+1 );
+        zap.frames( frames, c+3, c+4, c+5, c+6 );
 
         die = new MovieClip.Animation( 10, false );
         die.frames( frames, c+15 );

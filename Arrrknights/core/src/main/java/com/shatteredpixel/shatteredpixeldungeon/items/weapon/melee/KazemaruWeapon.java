@@ -30,7 +30,7 @@ public class KazemaruWeapon extends MeleeWeapon {
         image = ItemSpriteSheet.KAZEMARU;
         hitSound = Assets.Sounds.HIT_SLASH2;
         hitSoundPitch = 1f;
-
+a
         tier = 4;
     }
 
@@ -90,6 +90,11 @@ public class KazemaruWeapon extends MeleeWeapon {
             attack( enemy );
             next();
             die(this);
+        }
+
+        @Override
+        public int attackSkill( Char target ) {
+            return INFINITE_ACCURACY;
         }
 
         @Override

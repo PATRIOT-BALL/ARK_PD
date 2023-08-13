@@ -10,16 +10,16 @@ public class Tiacauh_lancerSprite extends MobSprite {
 
         texture( Assets.Sprites.TIACAUH_LANCER);
 
-        TextureFilm frames = new TextureFilm( texture, 56, 38 );
+        TextureFilm frames = new TextureFilm( texture, 56, 46 );
 
-        idle = new Animation( 2, true );
-        idle.frames( frames, 0, 0, 0 );
+        idle = new Animation( 5, true );
+        idle.frames( frames, 0, 1, 2, 1, 0 );
 
-        run = new Animation( 18, true );
-        run.frames( frames, 0 );
+        run = new Animation( 8, true );
+        run.frames( frames, 3, 4, 5, 6, 7, 8, 9, 10 );
 
-        attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack = new Animation( 20, false );
+        attack.frames( frames, 3, 4, 5, 6, 7, 8, 9, 10  );
 
         die = new Animation( 10, false );
         die.frames( frames, 0 );
