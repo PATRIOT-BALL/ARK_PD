@@ -31,19 +31,19 @@ public class Sea_BrandguiderSprite extends MobSprite {
 
         texture( Assets.Sprites.SEA_BRANDGUIDER );
 
-        TextureFilm frames = new TextureFilm( texture, 42, 48 );
+        TextureFilm frames = new TextureFilm( texture, 60, 52 );
 
-        idle = new Animation( 10, true );
-        idle.frames( frames, 0 );
+        idle = new Animation( 8, true );
+        idle.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
         run = new Animation( 12, true );
-        run.frames( frames, 0 );
+        run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
         attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
+        attack.frames( frames, 0, 9, 10, 11, 12, 13, 14, 15, 16 );
 
         die = new Animation( 10, false );
-        die.frames( frames, 0 );
+        die.frames( frames, 0, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28 );
 
         play( idle );
     }

@@ -30,7 +30,7 @@ public class KazemaruWeapon extends MeleeWeapon {
         image = ItemSpriteSheet.KAZEMARU;
         hitSound = Assets.Sounds.HIT_SLASH2;
         hitSoundPitch = 1f;
-a
+
         tier = 4;
     }
 

@@ -31,16 +31,16 @@ public class First_talkSprite extends MobSprite {
 
         texture( Assets.Sprites.FIRST_TALK );
 
-        TextureFilm frames = new TextureFilm( texture, 58, 52 );
+        TextureFilm frames = new TextureFilm( texture, 58, 56 );
 
         idle = new Animation( 10, true );
         idle.frames( frames, 0 );
 
         run = new Animation( 12, true );
-        run.frames( frames, 0 );
+        run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
 
         attack = new Animation( 15, false );
-        attack.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 );
+        attack.frames( frames, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 );
 
         die = new Animation( 10, false );
         die.frames( frames, 0 );
