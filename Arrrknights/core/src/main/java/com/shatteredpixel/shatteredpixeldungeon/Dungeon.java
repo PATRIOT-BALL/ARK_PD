@@ -74,6 +74,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.PrisonLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel3;
 import com.shatteredpixel.shatteredpixeldungeon.levels.RhodesLevel4;
+import com.shatteredpixel.shatteredpixeldungeon.levels.SeaBossLevel2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SeaLevel_part1;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SeaLevel_part2;
 import com.shatteredpixel.shatteredpixeldungeon.levels.SewerBossLevel;
@@ -200,6 +201,8 @@ public class Dungeon {
 	public static int talucount;
 	public static int siesta1_bosspower;
 
+	public static int mulaCount;
+
 	public static boolean extrastage_Gavial; // true라면 가비알 스테이지 실행
 	public static boolean extrastage_Sea;
 
@@ -253,7 +256,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 0; //@
+		depth = 39; //@
 		gold = 0;
 		cautusquset = -1;
 		guardquest = -1;
@@ -273,7 +276,8 @@ public class Dungeon {
 		isPray = false;
 		killcat = false;
 		extrastage_Gavial = false;
-		extrastage_Sea = false;
+		extrastage_Sea = true;
+		mulaCount = 0;
 
 		Jessica.QuestClear = false;
 		NPC_Phantom.QuestClear = false;
@@ -429,8 +433,9 @@ public class Dungeon {
 				else level = new SiestaLevel_part2();
 				break;
 			case 40:
-				if (extrastage_Gavial) {level = new GavialBossLevel2(); break;}
-				level = new SiestaBossLevel_part2();
+				if (extrastage_Gavial) level = new GavialBossLevel2();
+				else if (extrastage_Sea) level = new SeaBossLevel2();
+				else level = new SiestaBossLevel_part2();
 				break;
 		default:
 			level = new DeadEndLevel();
@@ -624,6 +629,8 @@ public class Dungeon {
 	private static final String BUY_TRANS = "buyTransbox";
 	private static final String BUY_RING = "buyRingbox";
 
+	private static final String MULA_COUNT = "mulaCount";
+
 	public static void saveGame(int save ) {
 		try {
 			Bundle bundle = new Bundle();
@@ -650,6 +657,7 @@ public class Dungeon {
 			bundle.put (SIEBOSS1, siesta1_bosspower);
 			bundle.put (GAVIAL, extrastage_Gavial);
 			bundle.put (SEA, extrastage_Sea);
+			bundle.put (MULA_COUNT, mulaCount);
 
 			bundle.put (PHANTOM_QUESTCLEAR, NPC_Phantom.QuestClear);
 			bundle.put (JESI_QUESTCLEAR, Jessica.QuestClear);
@@ -833,6 +841,8 @@ public class Dungeon {
 		siesta1_bosspower = bundle.getInt(SIEBOSS1);
 		extrastage_Gavial = bundle.getBoolean(GAVIAL);
 		extrastage_Sea = bundle.getBoolean(SEA);
+
+		mulaCount = bundle.getInt(MULA_COUNT);
 
 		QuestCatPoint = bundle.getInt(CATQUEST);
 

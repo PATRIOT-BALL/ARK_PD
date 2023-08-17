@@ -28,11 +28,13 @@ public class SeaBoss1 extends Mob{
         defenseSkill = 25;
 
         properties.add(Property.SEA);
+        properties.add(Property.BOSS);
     }
 
     boolean SkillActive = false; // true라면 받는 피해 감소
     int phase = 0;
 
+    // 현재 패턴 구현 안됨
     //패턴 : 5+15턴마다 플레이어 위치 중심으로 3x3경고 -> 1턴 뒤 해당 위치에 4턴에 걸쳐 총합 600%의 피해 (매 턴마다 해당 범위의 공격력 x1.5배의 방어력으로 감소하는 피해)
     //패턴 발동 중에는 받는 피해가 75%감소하지만, 다른 행동을 하지 않는다.
     // HP가 500이하가 되면 2페이즈가 되어 공격력 증가 + 플레이어한테 15턴 침묵 부여

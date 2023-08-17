@@ -13,7 +13,7 @@ public class Mula_2Sprite extends MobSprite {
         TextureFilm frames = new TextureFilm( texture, 92, 60 );
 
         idle = new Animation( 2, true );
-        idle.frames( frames, 0, 0, 0 );
+        idle.frames( frames, 0);
 
         run = new Animation( 10, true );
         run.frames( frames, 0 );

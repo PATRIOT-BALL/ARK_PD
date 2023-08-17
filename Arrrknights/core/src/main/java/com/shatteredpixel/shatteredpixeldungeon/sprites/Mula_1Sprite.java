@@ -13,7 +13,7 @@ public class Mula_1Sprite extends MobSprite {
         TextureFilm frames = new TextureFilm( texture, 102, 82 );
 
         idle = new Animation( 2, true );
-        idle.frames( frames, 0, 0, 0 );
+        idle.frames( frames, 0 );
 
         run = new Animation( 10, true );
         run.frames( frames, 0 );
@@ -25,5 +25,10 @@ public class Mula_1Sprite extends MobSprite {
         die.frames( frames, 0 );
 
         play( idle );
+    }
+
+
+    public void attack( int cell ) {
+        play( attack );
     }
 }
