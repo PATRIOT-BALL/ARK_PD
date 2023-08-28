@@ -4,11 +4,6 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Eunectes;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2_Phase2_Head;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2_Phase2_Mid;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2_Phase2_Tail;
-import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.watabou.noosa.Group;
 import com.watabou.utils.Bundle;
@@ -17,7 +12,7 @@ import com.watabou.utils.Random;
 
 import java.util.Arrays;
 
-public class SeaBossLevel2 extends Level {
+public class SeaBossLevel1 extends Level {
     {
         color1 = 0x801500;
         color2 = 0xa68521;
@@ -105,22 +100,8 @@ public class SeaBossLevel2 extends Level {
 
         super.occupyCell( ch );
 
-        if (ch.pos != map[entrance] && map[exit] == Terrain.EXIT) {
-            SeaBoss2_Phase2_Head boss1 = new SeaBoss2_Phase2_Head();
-            boss1.pos = 32;
-            GameScene.add( boss1 );
-
-            SeaBoss2_Phase2_Mid boss2 = new SeaBoss2_Phase2_Mid();
-            boss2.pos = 30;
-            GameScene.add( boss2 );
-
-            SeaBoss2_Phase2_Tail boss3 = new SeaBoss2_Phase2_Tail();
-            boss3.pos = 28;
-            GameScene.add( boss3 );
-
-
+        // 보스 설정 아직 없음
             seal();
-        }
     }
 
     @Override
