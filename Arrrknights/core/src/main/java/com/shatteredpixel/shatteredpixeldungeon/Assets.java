@@ -151,6 +151,8 @@ public class Assets {
 		public static final String BOSS6_SIESTA2		= "music/boss_siesta2.ogg";
 		public static final String BOSS6_SARGON		= "music/boss_sargon1.ogg";
 		public static final String BOSS6_SARGON2		= "music/boss_sargon2.ogg";
+		public static final String BOSS6_IBERIA1		= "music/boss_iberia1.ogg";
+		public static final String BOSS6_IBERIA2		= "music/boss_iberia2.ogg";
 		public static final String SURFACE	= "music/surface.ogg";
 		public static final String THEME	= "music/theme.ogg";
 		public static final String RHODOS	= "music/rhodos.ogg";
