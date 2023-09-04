@@ -101,7 +101,12 @@ public class SeaBossLevel1 extends Level {
         super.occupyCell( ch );
 
         // 보스 설정 아직 없음
-            seal();
+            //seal();
+        //if (ch.pos != map[entrance] && map[exit] == Terrain.WALL_DECO) {
+          //  SeaBoss1 boss = new SeaBoss1();
+            //boss.pos = 0; // 여길 수정
+            //GameScene.add( boss );
+        //}
     }
 
     @Override
