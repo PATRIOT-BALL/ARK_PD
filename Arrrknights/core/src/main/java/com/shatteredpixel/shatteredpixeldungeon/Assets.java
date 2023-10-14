@@ -73,6 +73,9 @@ public class Assets {
 		public static final String RHODES_28F         = "environment/custom_tiles/rhodes_28f.png";
 		public static final String RHODES_29F         = "environment/custom_tiles/rhodes_29f.png";
 		public static final String RHODES_30F         = "environment/custom_tiles/rhodes_30f.png";
+		public static final String GAVIAL_BOSS2         = "environment/custom_tiles/gavial_boss2";
+		public static final String IBERIA_BOSS1_1         = "environment/custom_tiles/iberia_boss1_1";
+		public static final String IBERIA_BOSS1_2         = "environment/custom_tiles/iberia_boss1_2";
 	}
 	
 	//TODO include other font assets here? Some are platform specific though...
