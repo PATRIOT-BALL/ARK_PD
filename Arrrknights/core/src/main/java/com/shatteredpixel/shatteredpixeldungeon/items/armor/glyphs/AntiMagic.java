@@ -33,6 +33,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Agent;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DM100;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Eye;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Pompeii;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss1;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Shaman;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.TheBigUglyThing;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.TiacauhRitualist;
@@ -144,6 +145,8 @@ public class AntiMagic extends Armor.Glyph {
 		RESISTS.add( EmperorPursuer.DarkBolt.class );
 
 		RESISTS.add( Echeveria.PinkdogDrone.class );
+
+		RESISTS.add(SeaBoss1.SeaBoss_SkillAttack.class);
 	}
 	
 	@Override

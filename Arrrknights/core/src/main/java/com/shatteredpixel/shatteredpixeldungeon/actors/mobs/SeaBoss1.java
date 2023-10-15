@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
+import com.shatteredpixel.shatteredpixeldungeon.Badges;
 import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
@@ -8,14 +9,26 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.NervousImpairment;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SeaObject;
+import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
+import com.shatteredpixel.shatteredpixeldungeon.effects.TargetedCell;
+import com.shatteredpixel.shatteredpixeldungeon.effects.particles.BlastParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.NervousPotion;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.First_talkSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.HandclapSprite;
 import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
+import com.shatteredpixel.shatteredpixeldungeon.utils.BArray;
+import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
+import com.watabou.noosa.Camera;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
 public class SeaBoss1 extends Mob{
@@ -27,6 +40,8 @@ public class SeaBoss1 extends Mob{
 
         defenseSkill = 25;
 
+        state = HUNTING;
+
         properties.add(Property.SEA);
         properties.add(Property.BOSS);
     }
@@ -34,17 +49,11 @@ public class SeaBoss1 extends Mob{
     boolean SkillActive = false; // true라면 받는 피해 감소
     int phase = 0;
 
-    /*
-    1. 패턴은 평타 / 돌떨구기
+    int skillCD = 7;
+    int skillAttackPoint1 = 0;
 
-    2. 돌떨구기는 머드락 패턴을 연속해서 쓰는 느낌. 맞으면 침식+낮은 딜 걸리고 침식터지면 감속때문에 연속해서 맞게됨
+    int skillProcVaule = 0; // 스킬 진행상항.
 
-    3. 잡몹뽑음
-
-    4. 보스맵에 침식회복시켜주는 종 있음
-
-    5. 이 종 소추남 패턴에 맞으면 폭발해서 무빙 실수하면 하드모드됨
-    */
 
     @Override
     public int damageRoll() {
@@ -59,7 +68,7 @@ public class SeaBoss1 extends Mob{
 
     @Override
     public int drRoll() {
-        return Random.NormalIntRange(0, 24);
+        return Random.NormalIntRange(0, 16);
     }
 
     @Override
@@ -68,7 +77,7 @@ public class SeaBoss1 extends Mob{
         if (enemy instanceof Hero || enemy instanceof DriedRose.GhostHero) {
             if (enemy.buff(NervousImpairment.class) == null) {
                 Buff.affect(enemy, NervousImpairment.class);
-            } else enemy.buff(NervousImpairment.class).Sum(20);
+            } else enemy.buff(NervousImpairment.class).Sum(10);
         }
 
         return super.attackProc(enemy, damage);
@@ -76,7 +85,8 @@ public class SeaBoss1 extends Mob{
 
     @Override
     public void damage(int dmg, Object src) {
-        if (SkillActive) dmg /= 4;
+        if (SkillActive) dmg /= 3;
+
         super.damage(dmg, src);
 
         if (phase==1 && HP <= 600) {
@@ -88,10 +98,110 @@ public class SeaBoss1 extends Mob{
     }
 
     @Override
+    protected boolean act() {
+
+        if (skillCD > 0) skillCD--;
+        else {
+
+            Skill();
+            SkillActive = true;
+            spend(TICK);
+            return true;
+        }
+
+        if (phase == 2) {
+            int healpoint = 4;
+            if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) healpoint = 8;
+            this.HP = Math.min(this.HT, this.HP + healpoint);
+            this.sprite.emitter().burst(Speck.factory(Speck.HEALING), 1);
+        }
+
+        return super.act();
+    }
+
+    public static class SeaBoss_SkillAttack{};
+
+    boolean Skill() {
+        switch (skillProcVaule) {
+            case 0:
+                skillAttackPoint1 = Dungeon.hero.pos;
+                sprite.parent.addToBack(new TargetedCell(skillAttackPoint1, 0xFF0000));
+                Camera.main.shake(2, 0.5f);
+                break;
+            case 1:
+                skillAttackPoint1 = Dungeon.hero.pos;
+                sprite.parent.addToBack(new TargetedCell(skillAttackPoint1, 0xFF0000));
+                break;
+            case 2:
+                skillAttackPoint1 = Dungeon.hero.pos;
+                sprite.parent.addToBack(new TargetedCell(skillAttackPoint1, 0xFF0000));
+                break;
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+                SkillAttack(skillAttackPoint1);
+                break;
+        }
+
+        skillProcVaule++;
+
+        if (skillProcVaule == 10) {
+            skillProcVaule = 0;
+            skillCD = 8;
+            SkillActive = false;
+        }
+
+        return  true;
+    }
+
+
+    void SkillAttack(int point) {
+        PathFinder.buildDistanceMap(point, BArray.not(Dungeon.level.solid, null), 1);
+        for (int cell = 0; cell < PathFinder.distance.length; cell++) {
+            if (PathFinder.distance[cell] < Integer.MAX_VALUE) {
+                CellEmitter.center(cell).burst(HandclapSprite.GooParticle.FACTORY, 10);
+                Char ch = Actor.findChar(cell);
+                if (ch != null) {
+                    int damage = Random.IntRange(13, 19);
+                    if (ch != Dungeon.hero) damage /= 4;
+                    if (ch == this) damage = 0;
+                    if (ch instanceof SeaObject) damage = Random.IntRange(95,110);
+                    ch.damage(damage, SeaBoss_SkillAttack.class);
+
+                    if (ch instanceof Hero || ch instanceof DriedRose.GhostHero) {
+                        if (ch.buff(NervousImpairment.class) == null) {
+                            Buff.affect(ch, NervousImpairment.class);
+                        } else ch.buff(NervousImpairment.class).Sum(20);
+                    }
+
+                    if (!ch.isAlive() && ch == Dungeon.hero) {
+                        Dungeon.fail(getClass());
+                        GLog.n(Messages.get(this, "destroy"));
+                    }
+                }}}
+    }
+
+    @Override
+    public void die(Object cause) {
+        //Badges.validatesiesta1(); 보스 배지
+
+       // yell(Messages.get(this, "defeated")); 보스 사망 대사
+
+
+        GameScene.bossSlain();
+        Dungeon.level.unseal();
+        super.die( cause );
+    }
+
+    @Override
     public void notice() {
         if (!BossHealthBar.isAssigned()) {
             BossHealthBar.assignBoss(this);
-            yell(Messages.get(this, "notice"));
+           // yell(Messages.get(this, "notice"));
 
             if (phase == 0) {
                 phase = 1;

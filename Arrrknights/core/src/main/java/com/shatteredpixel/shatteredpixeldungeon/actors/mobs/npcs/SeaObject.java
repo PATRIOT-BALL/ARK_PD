@@ -33,7 +33,7 @@ public class SeaObject extends NPC{
 
     public SeaObject() {
         super();
-        HT=HP = 200;
+        HT=HP = 2000;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class SeaObject extends NPC{
         for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
             Char ch = findChar( pos + PathFinder.NEIGHBOURS8[i] );
             if (ch != null && ch.isAlive() && (ch instanceof Hero || ch instanceof DriedRose.GhostHero)) {
-                if (ch.buff(NervousImpairment.class) != null) ch.buff(NervousImpairment.class).Sum(-10 * time);
+                if (ch.buff(NervousImpairment.class) != null) ch.buff(NervousImpairment.class).Sum(-15 * time);
             }
         }
 
