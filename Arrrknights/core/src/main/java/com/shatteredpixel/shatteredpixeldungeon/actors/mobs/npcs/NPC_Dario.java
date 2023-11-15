@@ -7,16 +7,18 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
+import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_DarioSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_PilotSprite;
 import com.shatteredpixel.shatteredpixeldungeon.windows.WndPilot;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Callback;
 
-public class NPC_SEE1 extends NPC {
+public class NPC_Dario extends NPC {
     {
-        spriteClass = NPC_PilotSprite.class;
+        spriteClass = NPC_DarioSprite.class;
         properties.add(Property.NPC);
 
         HP = HT = 1000;
@@ -68,4 +70,11 @@ public class NPC_SEE1 extends NPC {
         return true;
     }
 
+    public static void spawn(Level level, int ppos) {
+        NPC_Dario perro = new NPC_Dario();
+        do {
+            perro.pos = ppos;
+        } while (perro.pos == -1);
+        level.mobs.add(perro);
+    }
 }

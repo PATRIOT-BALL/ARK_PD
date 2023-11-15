@@ -166,6 +166,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Beowulf;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CatGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
@@ -341,6 +342,7 @@ public enum Catalog {
 		WEAPONS.seen.put( MinosFury.class,                   false);
 		WEAPONS.seen.put( ImageoverForm.class,                   false);
 		WEAPONS.seen.put( KollamSword.class,                   false);
+		WEAPONS.seen.put( Beowulf.class,                   false);
 
 		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);
 		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);

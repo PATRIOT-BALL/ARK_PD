@@ -25,7 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.Statistics;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.DemonSpawner;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_SEE1;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC_Dario;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
@@ -49,7 +49,7 @@ public class SEE1QuestRoom extends SpecialRoom {
 		Door door = entrance();
 		door.set(Door.Type.UNLOCKED);
 
-		NPC_SEE1 NPC = new NPC_SEE1();
+		NPC_Dario NPC = new NPC_Dario();
 		NPC.pos = cx + cy * level.width();
 		level.mobs.add( NPC );
 
