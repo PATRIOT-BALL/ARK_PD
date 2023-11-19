@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class NervousPotion extends Item {
     public static final String AC_DRINK = "DRINK";
     {
-        image = ItemSpriteSheet.POMBBAY;
+        image = ItemSpriteSheet.TYLENOL;
     }
 
     @Override

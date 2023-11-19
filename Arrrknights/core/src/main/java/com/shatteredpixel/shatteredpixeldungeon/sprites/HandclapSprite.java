@@ -51,25 +51,25 @@ public class HandclapSprite extends MobSprite {
 		
 		texture( Assets.Sprites.HANDCLAP );
 		
-		TextureFilm frames = new TextureFilm( texture, 38, 38 );
+		TextureFilm frames = new TextureFilm( texture, 56, 46 );
 		
 		idle = new Animation( 10, true );
-		idle.frames( frames, 21 );
+		idle.frames( frames, 0, 1, 2, 3, 4, 5, 6, 0, 0, 0, 0, 0 );
 		
-		run = new Animation( 15, true );
-		run.frames( frames, 0, 1, 2, 3, 4, 5, 6, 7, 8 );
+		run = new Animation( 12, true );
+		run.frames( frames, 7, 8, 9, 10, 11, 12, 13, 14 );
 		
 		pump = new Animation( 20, true );
-		pump.frames( frames, 9, 10, 11 );
+		pump.frames( frames, 15, 16, 17, 18, 19 );
 
-		pumpAttack = new Animation ( 18, false );
-		pumpAttack.frames( frames, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+		pumpAttack = new Animation ( 12, false );
+		pumpAttack.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23);
 
-		attack = new Animation( 18, false );
-		attack.frames( frames, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 );
+		attack = new Animation( 12, false );
+		attack.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23 );
 		
-		die = new Animation( 10, false );
-		die.frames( frames, 21 );
+		die = new Animation( 8, false );
+		die.frames( frames, 24, 25, 26, 27, 28, 29 );
 		
 		play(idle);
 
