@@ -43,7 +43,7 @@ public class Beowulf extends MeleeWeapon {
 
     @Override
     public int max(int lvl) {
-        return  4*(tier+1) +    //12 base, down from 15
+        return  4*(tier+1) +    // 24 + 5
                 lvl*(tier+1);   //scaling unchanged
     }
 
@@ -58,9 +58,6 @@ public class Beowulf extends MeleeWeapon {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
                     int dmg = (Dungeon.hero.damageRoll() - defender.drRoll()) / Math.max(1, 5 - sppos);
-
-                    // 주 대상에게는 추가 피해가 절반으로 적용됩니다.
-                    if (mob == defender) dmg /= 2;
 
                     mob.damage(dmg, this);
                 }
