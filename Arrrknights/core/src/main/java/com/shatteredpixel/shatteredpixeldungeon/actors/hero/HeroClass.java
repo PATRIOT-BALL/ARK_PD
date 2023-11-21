@@ -83,6 +83,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Beowulf;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ChenSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
@@ -185,6 +186,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new PotionOfHealing().quantity(40).collect();
 		new ScrollOfUpgrade().quantity(40).collect();
 		new Amulet().collect();
+		new Beowulf().identify().collect();
 
 		new ScrollOfMagicMapping().identify().collect();
 

@@ -22,6 +22,10 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Beowulf extends MeleeWeapon {
@@ -36,10 +40,33 @@ public class Beowulf extends MeleeWeapon {
         ACC = 1.2f; //32% boost to accuracy
     }
 
+
     @Override
     public int max(int lvl) {
         return  4*(tier+1) +    //12 base, down from 15
                 lvl*(tier+1);   //scaling unchanged
     }
 
+    // 공격시 대상과의 거리에 따라 공격력 25~100%의 3x3범위 범위 피해 (25% / 33% / 50% / 100)
+
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+
+        int sppos = Dungeon.level.distance(attacker.pos, defender.pos);
+
+        if (attacker instanceof Hero) {
+            for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
+                    int dmg = (Dungeon.hero.damageRoll() - defender.drRoll()) / Math.max(1, 5 - sppos);
+
+                    // 주 대상에게는 추가 피해가 절반으로 적용됩니다.
+                    if (mob == defender) dmg /= 2;
+
+                    mob.damage(dmg, this);
+                }
+            }
+        }
+
+        return super.proc(attacker, defender, damage);
+    }
 }
