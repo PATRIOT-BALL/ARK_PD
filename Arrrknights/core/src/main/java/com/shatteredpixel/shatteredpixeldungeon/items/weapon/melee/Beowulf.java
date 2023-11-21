@@ -35,33 +35,28 @@ public class Beowulf extends MeleeWeapon {
         hitSound = Assets.Sounds.HIT_BONK;
         hitSoundPitch = 1f;
 
-        tier = 5;
+        tier = 4;
         RCH = 4;
-        ACC = 1.2f; //32% boost to accuracy
+        ACC = 1.33f; //33% boost to accuracy
     }
 
 
     @Override
     public int max(int lvl) {
-        return  4*(tier+1) +    // 24 + 5
-                lvl*(tier+1);   //scaling unchanged
+        return  8*(tier+1) +    // 40+8
+                lvl*(tier+4);   //scaling unchanged
     }
 
-    // 공격시 대상과의 거리에 따라 공격력 25~100%의 3x3범위 범위 피해 (25% / 33% / 50% / 100)
+    // 공격시 대상과의 거리가 4가 아니면 피해량이 25%로 감소합니다.
+    // 조합법 : 백파 무기 + 감자 2개 (연금술)
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
 
         int sppos = Dungeon.level.distance(attacker.pos, defender.pos);
-
-        if (attacker instanceof Hero) {
-            for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
-                if (Dungeon.level.adjacent(mob.pos, defender.pos) && mob.alignment != Char.Alignment.ALLY) {
-                    int dmg = (Dungeon.hero.damageRoll() - defender.drRoll()) / Math.max(1, 5 - sppos);
-
-                    mob.damage(dmg, this);
-                }
-            }
+        if (sppos != 4) {
+            defender.damage(attacker.damageRoll() / 4, attacker);
+            damage = 0;
         }
 
         return super.proc(attacker, defender, damage);
