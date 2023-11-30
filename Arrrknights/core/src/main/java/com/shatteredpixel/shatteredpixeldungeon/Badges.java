@@ -246,6 +246,7 @@ public class Badges {
 		SKIN_TOMIMI(300, false, true),
 		SKIN_FRANKA(302, false, true),
 		SKIN_WEEDY(303, false, true),
+		SKIN_GLADIIA(304, false, true),
 
 		//기타
 		SUPPORT;
@@ -1138,7 +1139,12 @@ public class Badges {
 	}
 
 	public static void validateweedyskin() {
-		Badge badge = Badge.SKIN_FRANKA;
+		Badge badge = Badge.SKIN_WEEDY;
+		displayBadge( badge );
+	}
+
+	public static void validategladiiaskin() {
+		Badge badge = Badge.SKIN_GLADIIA;
 		displayBadge( badge );
 	}
 
@@ -1209,6 +1215,7 @@ public class Badges {
 			Badges.validateschwazrskin();
 			Badges.validatearchskin();
 			Badges.validatefrankaskin();
+			Badges.validategladiiaskin();
 		}
 
 		// 배지 파괴 후, 조건에 맞는 배지는 다시 획득합니다.
@@ -1227,6 +1234,7 @@ public class Badges {
 		if(!Badges.isUnlocked(Badge.SKIN_ARCH) && Badges.isUnlocked(Badge.GREY_CHAMPION1)) { Badges.validatearchskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_TOMIMI) && Badges.isUnlocked(Badge.GAVIAL_PART2)) { Badges.validatetomimiskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_FRANKA) && Badges.isUnlocked(Badge.USE_HEALBOX)) { Badges.validatefrankaskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_GLADIIA) && Badges.isUnlocked(Badge.GAMES_PLAYED_1)) { Badges.validategladiiaskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene

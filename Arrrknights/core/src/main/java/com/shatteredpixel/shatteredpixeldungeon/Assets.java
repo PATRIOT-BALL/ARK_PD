@@ -483,6 +483,9 @@ public class Assets {
 		public static final String MULA_BODY	= "sprites/mula_2.png";
 		public static final String MULA_TAIL	= "sprites/mula_3.png";
 
+		public static final String LAST_KNIGHT	= "sprites/last_knights.png";
+		public static final String LAST_KNIGHT2	= "sprites/last_knights2.png";
+
 
 
 
@@ -556,5 +559,6 @@ public class Assets {
 		public static final String TMM	= "sprites/tomimi_skin.png";
 		public static final String FRK	= "sprites/franka.png";
 		public static final String WED	= "sprites/weedy_skin.png";
+		public static final String GLD	= "sprites/gladiia.png";
 	}
 }
