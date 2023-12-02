@@ -33,11 +33,11 @@ public class Sea_ReaperSprite extends MobSprite {
 
         TextureFilm frames = new TextureFilm( texture, 44, 42 );
 
-        idle = new Animation( 10, true );
-        idle.frames( frames, 0 );
+        idle = new Animation( 5, true );
+        idle.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
 
         run = new Animation( 12, true );
-        run.frames( frames, 0 );
+        run.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
 
         attack = new Animation( 15, false );
         attack.frames( frames, 0 );
@@ -46,5 +46,19 @@ public class Sea_ReaperSprite extends MobSprite {
         die.frames( frames, 0 );
 
         play( idle );
+
+        /*idle = new Animation( 10, true );
+        idle.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
+
+        run = new Animation( 22, true );
+        run.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
+
+        attack = new Animation( 15, false );
+        attack.frames( frames, 0 );
+
+        die = new Animation( 10, false );
+        die.frames( frames, 0 );
+
+        play( idle ); */
     }
 }
