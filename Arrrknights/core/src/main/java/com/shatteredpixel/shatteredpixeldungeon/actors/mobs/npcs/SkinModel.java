@@ -101,7 +101,7 @@ public class SkinModel extends NPC {
     public void SkinChange()
     {
         Dungeon.skin_ch++;
-        if (Dungeon.skin_ch > 15) Dungeon.skin_ch = 0;
+        if (Dungeon.skin_ch > 16) Dungeon.skin_ch = 0;
 
         int ppos = this.pos;
         this.destroy();

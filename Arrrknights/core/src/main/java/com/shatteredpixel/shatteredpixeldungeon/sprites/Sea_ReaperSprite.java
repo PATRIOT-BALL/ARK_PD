@@ -31,13 +31,21 @@ public class Sea_ReaperSprite extends MobSprite {
 
         texture( Assets.Sprites.SEA_REAPER );
 
+        updateChargeState(false);
+
+    }
+
+    public void updateChargeState(boolean charge) {
+
+        int c = charge ? 9 : 0;
+
         TextureFilm frames = new TextureFilm( texture, 44, 42 );
 
         idle = new Animation( 5, true );
-        idle.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
+        idle.frames( frames, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 
         run = new Animation( 12, true );
-        run.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
+        run.frames( frames, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 
         attack = new Animation( 15, false );
         attack.frames( frames, 0 );
@@ -47,18 +55,5 @@ public class Sea_ReaperSprite extends MobSprite {
 
         play( idle );
 
-        /*idle = new Animation( 10, true );
-        idle.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
-
-        run = new Animation( 22, true );
-        run.frames( frames, 2, 3, 4, 5, 6, 7, 8 );
-
-        attack = new Animation( 15, false );
-        attack.frames( frames, 0 );
-
-        die = new Animation( 10, false );
-        die.frames( frames, 0 );
-
-        play( idle ); */
     }
 }

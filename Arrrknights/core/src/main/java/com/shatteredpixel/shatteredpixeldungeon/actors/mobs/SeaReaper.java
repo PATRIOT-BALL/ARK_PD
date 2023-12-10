@@ -11,6 +11,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.MudrockSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_ReaperSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
@@ -33,6 +34,7 @@ public class SeaReaper extends Mob{
     }
 
     boolean awaked = false;
+    boolean firstrun = false;
 
     @Override
     public int damageRoll() {
@@ -57,14 +59,23 @@ public class SeaReaper extends Mob{
 
     @Override
     public int defenseProc(Char enemy, int damage) {
-        if (!awaked) awaked = true;
+        if (!awaked) {
+            awaked = true;
+            ((Sea_ReaperSprite) sprite).updateChargeState(awaked);
+        }
 
         return super.defenseProc(enemy, damage);
     }
 
     @Override
     protected boolean act() {
+        if (!firstrun) {
+            ((Sea_ReaperSprite) sprite).updateChargeState(awaked);
+            firstrun = true;
+        }
+
         if (awaked) {
+
             for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
                 Char ch = findChar( pos + PathFinder.NEIGHBOURS8[i] );
                 if (ch != null && ch.isAlive() && (ch instanceof Hero || ch instanceof DriedRose.GhostHero)) {
