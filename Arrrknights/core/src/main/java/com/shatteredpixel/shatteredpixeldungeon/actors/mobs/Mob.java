@@ -1193,7 +1193,7 @@ public abstract class Mob extends Char {
 			}
 		}
 
-		if (Dungeon.depth > 31 && Dungeon.extrastage_Sea && Dungeon.level.map[this.pos] == Terrain.EMPTY_SP) {
+		if (Dungeon.depth > 31 && Dungeon.extrastage_Sea && Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR1 || Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR2) {
 			int evaporatedTiles;
 			evaporatedTiles = Random.chances(new float[]{0, 0, 0, 0, 0, 1, 2, 1, 1});
 			for (int i = 0; i < evaporatedTiles; i++) {
