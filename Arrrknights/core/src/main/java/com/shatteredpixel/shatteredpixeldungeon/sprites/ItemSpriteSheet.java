@@ -881,6 +881,9 @@ public class ItemSpriteSheet {
 	public static final int MUSH   = QUEST+21;
 	public static final int BARRI   = QUEST+22;
 	public static final int TYLENOL   = QUEST+23;
+	public static final int SIESTA   = QUEST+24;
+	public static final int GAVIAL   = QUEST+25;
+	public static final int IBERIA   = QUEST+26;
 	static{
 		assignItemRect(SKULL,   16, 16);
 		assignItemRect(DUST,    16, 16);
@@ -906,6 +909,10 @@ public class ItemSpriteSheet {
 		assignItemRect(MUSH,    16, 16);
 		assignItemRect(BARRI,    16, 16);
 		assignItemRect(TYLENOL,    16, 16);
+		assignItemRect(SIESTA,    16, 16);
+		assignItemRect(GAVIAL,    16, 16);
+		assignItemRect(IBERIA,    16, 16);
+
 	}
 
 	private static final int BAGS       =                                   xy(1, 31);  //16 slots

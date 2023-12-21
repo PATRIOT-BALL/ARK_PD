@@ -39,12 +39,12 @@ public class Sea_ReaperSprite extends MobSprite {
 
         int c = charge ? 9 : 0;
 
-        TextureFilm frames = new TextureFilm( texture, 44, 42 );
+        TextureFilm frames = new TextureFilm( texture, 60, 46 );
 
         idle = new Animation( 5, true );
         idle.frames( frames, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 
-        run = new Animation( 12, true );
+        run = new Animation( 20, true );
         run.frames( frames, c+2, c+3, c+4, c+5, c+6, c+7, c+8 );
 
         attack = new Animation( 15, false );

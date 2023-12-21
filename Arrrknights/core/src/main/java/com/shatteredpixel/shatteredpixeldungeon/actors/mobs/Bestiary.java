@@ -268,9 +268,9 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
+							SeaRunner.class, SeaRunner.class,
 							SeaReaper.class,
-							Sea_Octo.class, Sea_Octo.class,
-							SeaLeef.class));}
+							Sea_Octo.class, Sea_Octo.class));}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
@@ -287,9 +287,10 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
+							SeaRunner.class,
+							SeaReaper.class, SeaReaper.class,
 							Sea_Octo.class, Sea_Octo.class,
-							SeaLeef.class, SeaLeef.class,
-							Sea_Brandguider.class));}
+							SeaLeef.class));}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,
@@ -305,6 +306,13 @@ public class Bestiary {
 							TiacauhRitualist.class, TiacauhRitualist.class,
 							TiacauhBrave.class));
 				}
+				else if (Dungeon.extrastage_Sea) {
+					return new ArrayList<>(Arrays.asList(
+							SeaRunner.class,
+							SeaReaper.class,SeaReaper.class,
+							Sea_Octo.class, Sea_Octo.class,
+							SeaLeef.class, SeaLeef.class,
+							Sea_Brandguider.class));}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
 						MetalCrab.class,
@@ -320,6 +328,12 @@ public class Bestiary {
 							TiacauhRitualist.class, TiacauhRitualist.class, TiacauhRitualist.class,
 							TiacauhBrave.class, TiacauhBrave.class));
 				}
+				else if (Dungeon.extrastage_Sea) {
+					return new ArrayList<>(Arrays.asList(
+							SeaReaper.class,
+							Sea_Octo.class, Sea_Octo.class,
+							SeaLeef.class, SeaLeef.class,
+							Sea_Brandguider.class, Sea_Brandguider.class));}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class,
 						MetalCrab.class, MetalCrab.class,

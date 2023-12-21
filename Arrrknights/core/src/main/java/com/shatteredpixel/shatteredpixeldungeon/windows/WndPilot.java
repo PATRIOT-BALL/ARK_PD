@@ -24,12 +24,12 @@ public class WndPilot extends Window {
 
         IconTitle titlebar = new IconTitle();
         if (Dungeon.extrastage_Gavial) {
-            titlebar.icon( new ItemSprite(ItemSpriteSheet.AMULET, null ));
+            titlebar.icon( new ItemSprite(ItemSpriteSheet.GAVIAL, null ));
             titlebar.label( Messages.get(this, "gavial_name"));}
         else if (Dungeon.extrastage_Sea) {
-            titlebar.icon( new ItemSprite(ItemSpriteSheet.ORIGINIUM, null ));
+            titlebar.icon( new ItemSprite(ItemSpriteSheet.IBERIA, null ));
             titlebar.label( Messages.get(this, "sea_name"));}
-        else {titlebar.icon( new ItemSprite(ItemSpriteSheet.OBSIDIAN, null ));
+        else {titlebar.icon( new ItemSprite(ItemSpriteSheet.SIESTA, null ));
             titlebar.label( Messages.get(this, "siesta_name"));}
         titlebar.setRect( 0, 0, WIDTH, 0 );
         add( titlebar );
