@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss1;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SeaObject;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.watabou.noosa.Group;
@@ -191,6 +192,42 @@ public class SeaBossLevel1 extends Level {
 
     @Override
     protected void createItems() {
+    }
+
+    @Override
+    public String tileName( int tile ) {
+        switch (tile) {
+            case Terrain.SEE_TEEROR1:
+            case Terrain.SEE_TEEROR2:
+                return Messages.get(SeaLevel_part1.class, "see_teeror_name");
+            default:
+                return super.tileName( tile );
+        }
+    }
+
+    @Override
+    public String tileDesc(int tile) {
+        switch (tile) {
+            case Terrain.ENTRANCE:
+                return Messages.get(CityLevel.class, "entrance_desc");
+            case Terrain.EXIT:
+                return Messages.get(CityLevel.class, "exit_desc");
+            case Terrain.WALL_DECO:
+            case Terrain.EMPTY_DECO:
+                return Messages.get(CityLevel.class, "deco_desc");
+            case Terrain.EMPTY_SP:
+                return Messages.get(CityLevel.class, "sp_desc");
+            case Terrain.STATUE:
+            case Terrain.STATUE_SP:
+                return Messages.get(CityLevel.class, "statue_desc");
+            case Terrain.BOOKSHELF:
+                return Messages.get(CityLevel.class, "bookshelf_desc");
+            case Terrain.SEE_TEEROR1:
+            case Terrain.SEE_TEEROR2:
+                return Messages.get(SeaLevel_part1.class, "see_teeror_desc");
+            default:
+                return super.tileDesc( tile );
+        }
     }
 
     @Override

@@ -5,10 +5,12 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Eunectes;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2_Phase2_Head;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2_Phase2_Mid;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2_Phase2_Tail;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.watabou.noosa.Group;
 import com.watabou.utils.Bundle;
@@ -105,7 +107,9 @@ public class SeaBossLevel2 extends Level {
 
         super.occupyCell( ch );
 
+
         if (ch.pos != map[entrance] && map[exit] == Terrain.EXIT) {
+            /*
             SeaBoss2_Phase2_Head boss1 = new SeaBoss2_Phase2_Head();
             boss1.pos = 32;
             GameScene.add( boss1 );
@@ -117,6 +121,11 @@ public class SeaBossLevel2 extends Level {
             SeaBoss2_Phase2_Tail boss3 = new SeaBoss2_Phase2_Tail();
             boss3.pos = 28;
             GameScene.add( boss3 );
+            */
+
+            SeaBoss2 boss = new SeaBoss2();
+            boss.pos = 52;
+            GameScene.add( boss );
 
 
             seal();
@@ -166,6 +175,42 @@ public class SeaBossLevel2 extends Level {
                 || (Char.hasProp(ch, Char.Property.LARGE) && !openSpace[cell])
                 || Actor.findChar(cell) != null);
         return cell;
+    }
+
+    @Override
+    public String tileName( int tile ) {
+        switch (tile) {
+            case Terrain.SEE_TEEROR1:
+            case Terrain.SEE_TEEROR2:
+                return Messages.get(SeaLevel_part1.class, "see_teeror_name");
+            default:
+                return super.tileName( tile );
+        }
+    }
+
+    @Override
+    public String tileDesc(int tile) {
+        switch (tile) {
+            case Terrain.ENTRANCE:
+                return Messages.get(CityLevel.class, "entrance_desc");
+            case Terrain.EXIT:
+                return Messages.get(CityLevel.class, "exit_desc");
+            case Terrain.WALL_DECO:
+            case Terrain.EMPTY_DECO:
+                return Messages.get(CityLevel.class, "deco_desc");
+            case Terrain.EMPTY_SP:
+                return Messages.get(CityLevel.class, "sp_desc");
+            case Terrain.STATUE:
+            case Terrain.STATUE_SP:
+                return Messages.get(CityLevel.class, "statue_desc");
+            case Terrain.BOOKSHELF:
+                return Messages.get(CityLevel.class, "bookshelf_desc");
+            case Terrain.SEE_TEEROR1:
+            case Terrain.SEE_TEEROR2:
+                return Messages.get(SeaLevel_part1.class, "see_teeror_desc");
+            default:
+                return super.tileDesc( tile );
+        }
     }
 
     @Override

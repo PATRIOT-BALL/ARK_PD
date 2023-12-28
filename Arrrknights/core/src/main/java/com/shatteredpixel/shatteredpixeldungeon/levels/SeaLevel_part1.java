@@ -102,10 +102,9 @@ public class SeaLevel_part1 extends RegularLevel {
     @Override
     public String tileName( int tile ) {
         switch (tile) {
-            case Terrain.WATER:
-                return Messages.get(CityLevel.class, "water_name");
-            case Terrain.HIGH_GRASS:
-                return Messages.get(CityLevel.class, "high_grass_name");
+            case Terrain.SEE_TEEROR1:
+            case Terrain.SEE_TEEROR2:
+                return Messages.get(SeaLevel_part1.class, "see_teeror_name");
             default:
                 return super.tileName( tile );
         }
@@ -128,6 +127,9 @@ public class SeaLevel_part1 extends RegularLevel {
                 return Messages.get(CityLevel.class, "statue_desc");
             case Terrain.BOOKSHELF:
                 return Messages.get(CityLevel.class, "bookshelf_desc");
+            case Terrain.SEE_TEEROR1:
+            case Terrain.SEE_TEEROR2:
+                return Messages.get(SeaLevel_part1.class, "see_teeror_desc");
             default:
                 return super.tileDesc( tile );
         }

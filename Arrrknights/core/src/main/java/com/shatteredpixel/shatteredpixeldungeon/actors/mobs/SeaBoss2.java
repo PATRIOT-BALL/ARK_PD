@@ -2,11 +2,15 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
@@ -20,16 +24,41 @@ public class SeaBoss2 extends Mob {
         spriteClass = Skadi_mulaSprite.class;
 
         HP = HT = 1500;
-        defenseSkill = 2;
+        defenseSkill = 60;
+
+        state = PASSIVE;
 
         properties.add(Property.BOSS);
-        immunities.add(Sleep.class);
+        properties.add(Property.IMMOVABLE);
+        immunities.add( Paralysis.class );
+        immunities.add( Amok.class );
+        immunities.add( Sleep.class );
+        immunities.add( Terror.class );
+        immunities.add( Vertigo.class );
     }
 
     int summoncooldown = 0;
 
     @Override
+    public void beckon(int cell) {
+        //do nothing
+    }
+
+
+    @Override
+    public void damage(int dmg, Object src) {
+
+        if (src != this) dmg = 0;
+
+        super.damage(dmg, src);
+    }
+
+    @Override
     protected boolean act() {
+
+        if (summoncooldown <= 0) SummonEnemy();
+        else summoncooldown--;
+
         return super.act();
     }
 
@@ -43,18 +72,32 @@ public class SeaBoss2 extends Mob {
     private void SummonEnemy()
     {
         Mob summonEnemy1;
-        int summonpos1 = 50;
+        int summonpos1 = 71;
         if (Random.Int(4) != 0)
             summonEnemy1 = new SummonRunner();
         else
             summonEnemy1 = new SummonOcto();
 
         Mob summonEnemy2;
-        int summonpos2 = 54;
+        int summonpos2 = 75;
         if (Random.Int(4) != 0)
             summonEnemy2 = new SummonRunner();
         else
             summonEnemy2 = new SummonLeef();
+
+        Mob summonEnemy3;
+        int summonpos3 = 170;
+        if (Random.Int(4) != 0)
+            summonEnemy3 = new SummonRunner();
+        else
+            summonEnemy3 = new SummonLeef();
+
+        Mob summonEnemy4;
+        int summonpos4 = 187;
+        if (Random.Int(4) != 0)
+            summonEnemy4 = new SummonRunner();
+        else
+            summonEnemy4 = new SummonOcto();
 
 
         summonEnemy1.pos = summonpos1;
@@ -65,11 +108,24 @@ public class SeaBoss2 extends Mob {
         GameScene.add(summonEnemy2, 1f);
         if (summonpos2 == Dungeon.hero.pos)  ScrollOfTeleportation.teleportChar_unobstructed(summonEnemy2);
 
-        summoncooldown = 5;
+        summonEnemy3.pos = summonpos3;
+        GameScene.add(summonEnemy3, 1f);
+        if (summonpos3 == Dungeon.hero.pos)  ScrollOfTeleportation.teleportChar_unobstructed(summonEnemy3);
+
+        summonEnemy4.pos = summonpos4;
+        GameScene.add(summonEnemy4, 1f);
+        if (summonpos4 == Dungeon.hero.pos)  ScrollOfTeleportation.teleportChar_unobstructed(summonEnemy4);
+
+        for (Mob mob : Dungeon.level.mobs) {
+            mob.beckon( Dungeon.hero.pos );
+        }
+
+        this.damage(250,this);
+        summoncooldown = 8;
 
     }
 
-    // 보스 소환물 (3종) 한번에 2마리 소환
+    // 보스 소환물 (3종) 한번에 4마리 소환
     // 기본 소환은 런너 (확률 75%)
     // 각각 25%확률로 Octo, Leaf가 소환될 수 있음
     public static class SummonRunner extends SeaRunner {
