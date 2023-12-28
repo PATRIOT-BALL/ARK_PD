@@ -27,7 +27,7 @@ public class SeaRunner extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(20, 36);
+        return Random.NormalIntRange(26, 42);
     }
 
     @Override

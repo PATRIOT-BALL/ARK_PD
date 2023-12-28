@@ -17,7 +17,7 @@ public class SeaCapsule extends Mob{
     {
         spriteClass = Sea_CrawlerSprite.class;
 
-        HP = HT = 140;
+        HP = HT = 150;
         EXP = 17;
         maxLvl = 32;
 
@@ -52,7 +52,7 @@ public class SeaCapsule extends Mob{
                 if (enemy.buff(NervousImpairment.class) == null) {
                     Buff.affect(enemy, NervousImpairment.class);
                 }
-                else enemy.buff(NervousImpairment.class).Sum(10);
+                else enemy.buff(NervousImpairment.class).Sum(20);
             }
         }
 

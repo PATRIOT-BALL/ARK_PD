@@ -229,7 +229,7 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
-							SeaRunner.class, SeaRunner.class,
+							SeaRunner.class,
 							FloatingSeaDrifter.class,
 							SeaReaper.class,
 							SeaCapsule.class));
@@ -250,7 +250,7 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
-							SeaRunner.class, SeaRunner.class,
+							FloatingSeaDrifter.class,
 							SeaReaper.class, SeaReaper.class,
 							SeaCapsule.class, SeaCapsule.class));
 				}
@@ -268,8 +268,8 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
-							SeaRunner.class, SeaRunner.class,
-							SeaReaper.class,
+							SeaReaper.class, SeaReaper.class,
+							SeaCapsule.class,
 							Sea_Octo.class, Sea_Octo.class));}
 				return new ArrayList<>(Arrays.asList(
 						LavaSlug.class, LavaSlug.class,
@@ -287,7 +287,6 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
-							SeaRunner.class,
 							SeaReaper.class, SeaReaper.class,
 							Sea_Octo.class, Sea_Octo.class,
 							SeaLeef.class));}
@@ -308,7 +307,6 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
-							SeaRunner.class,
 							SeaReaper.class,SeaReaper.class,
 							Sea_Octo.class, Sea_Octo.class,
 							SeaLeef.class, SeaLeef.class,
@@ -330,7 +328,6 @@ public class Bestiary {
 				}
 				else if (Dungeon.extrastage_Sea) {
 					return new ArrayList<>(Arrays.asList(
-							SeaReaper.class,
 							Sea_Octo.class, Sea_Octo.class,
 							SeaLeef.class, SeaLeef.class,
 							Sea_Brandguider.class, Sea_Brandguider.class));}

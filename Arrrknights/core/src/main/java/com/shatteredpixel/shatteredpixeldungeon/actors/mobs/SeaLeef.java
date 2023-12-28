@@ -62,7 +62,7 @@ public class SeaLeef extends Mob {
     @Override
     public int attackProc(Char enemy, int damage) {
 
-        dmgbouns = Math.min(dmgbouns+2, 50);
+        dmgbouns = Math.min(dmgbouns+3, 60);
 
         return super.attackProc(enemy, damage);
     }

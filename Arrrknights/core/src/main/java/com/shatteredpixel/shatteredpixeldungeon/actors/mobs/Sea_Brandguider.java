@@ -23,7 +23,7 @@ public class Sea_Brandguider extends Mob {
     {
         spriteClass = Sea_BrandguiderSprite.class;
 
-        HP = HT = 110;
+        HP = HT = 160;
         EXP = 18;
         maxLvl = 38;
 
@@ -38,14 +38,14 @@ public class Sea_Brandguider extends Mob {
     private boolean firstTEEROR = false;
 
     @Override
-    public int damageRoll() { return Random.NormalIntRange(30, 46); }
+    public int damageRoll() { return Random.NormalIntRange(38, 55); }
 
     @Override
-    public int attackSkill( Char target ) {return 37; }
+    public int attackSkill( Char target ) {return 44; }
 
     @Override
     public int drRoll() {
-        if (HT /2 >= HP) return Random.NormalIntRange(20, 40);
+        if (HT /2 >= HP) return Random.NormalIntRange(10, 55);
         return Random.NormalIntRange(0, 20);
     }
 

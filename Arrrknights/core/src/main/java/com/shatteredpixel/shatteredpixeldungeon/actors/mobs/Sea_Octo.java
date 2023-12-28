@@ -23,7 +23,7 @@ public class Sea_Octo extends Mob {
     {
         spriteClass = Sea_SpewerSprite.class;
 
-        HP = HT = 95;
+        HP = HT = 125;
         defenseSkill = 20;
 
         EXP = 17;
@@ -73,8 +73,10 @@ public class Sea_Octo extends Mob {
 
     @Override
     public int attackProc(Char enemy, int damage) {
-        int ndamage = 4;
-        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) ndamage = 8;
+        int ndamage = 8;
+        if (Dungeon.isChallenged(Challenges.TACTICAL_UPGRADE)) ndamage = 16;
+
+        if (Dungeon.depth == 39) ndamage /= 2;
 
         if (enemy instanceof Hero || enemy instanceof DriedRose.GhostHero) {
             if (enemy.buff(NervousImpairment.class) == null) {
