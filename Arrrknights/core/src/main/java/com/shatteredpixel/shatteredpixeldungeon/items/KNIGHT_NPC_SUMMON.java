@@ -6,23 +6,14 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Necromancer;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.ACE_BATTLE;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ghost;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.KNIGHT_NPC;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
-import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShaftParticle;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.Artifact;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.DriedRose;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.CellSelector;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
-import com.shatteredpixel.shatteredpixeldungeon.ui.BossHealthBar;
-import com.shatteredpixel.shatteredpixeldungeon.utils.GLog;
-import com.shatteredpixel.shatteredpixeldungeon.windows.WndUseItem;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.Bundle;
@@ -31,7 +22,7 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class WalkieTalkie extends Item {
+public class KNIGHT_NPC_SUMMON extends Item {
     public static final String AC_USE = "USE";
 
     {
@@ -41,9 +32,11 @@ public class WalkieTalkie extends Item {
 
         defaultAction = AC_USE;
     }
+    
+    // 추가해야할 기능 : 이 아이템을 사용하면 <기붕이 퀘스트>가 활성화되며, 40층에 보스가 추가된다
 
-    private ACE_BATTLE ACE = null;
-    private int ACEID = 0;
+    private KNIGHT_NPC KNIGHT = null;
+    private int KNIGHTID = 0;
     private boolean isused = false; // true면 사용 불가
 
     @Override
@@ -59,22 +52,22 @@ public class WalkieTalkie extends Item {
 
         super.execute(hero, action);
 
-        if (ACEID != -1){
-            Actor ch = Actor.findById(ACEID);
+        if (KNIGHTID != -1){
+            Actor ch = Actor.findById(KNIGHTID);
             if (ch instanceof ACE_BATTLE){
-                ACE = (ACE_BATTLE) ch;
+                KNIGHT = (KNIGHT_NPC) ch;
             }
         }
-        if (ACE != null &&
-                (!ACE.isAlive()
-                        || !Dungeon.level.mobs.contains(ACE))){
-            ACE = null;
-            ACEID = -1;
+        if (KNIGHT != null &&
+                (!KNIGHT.isAlive()
+                        || !Dungeon.level.mobs.contains(KNIGHT))){
+            KNIGHT = null;
+            KNIGHTID = -1;
         }
 
         if (Dungeon.depth == 25 && Dungeon.bossLevel() && Dungeon.level.locked) {
-        if (!isused || ACEID != -1) {
-        if (action.equals(AC_USE) && ACE == null) {
+        if (!isused || KNIGHTID != -1) {
+        if (action.equals(AC_USE) && KNIGHT == null) {
 
             ArrayList<Integer> spawnPoints = new ArrayList<>();
             for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {
@@ -85,20 +78,20 @@ public class WalkieTalkie extends Item {
             }
 
             if (spawnPoints.size() > 0) {
-                ACE = new ACE_BATTLE();
-                ACEID = ACE.id();
-                ACE.pos = Random.element(spawnPoints);
+                KNIGHT = new KNIGHT_NPC();
+                KNIGHTID = KNIGHT.id();
+                KNIGHT.pos = Random.element(spawnPoints);
 
-                GameScene.add(ACE, 1f);
-                Dungeon.level.occupyCell(ACE);
+                GameScene.add(KNIGHT, 1f);
+                Dungeon.level.occupyCell(KNIGHT);
 
-                CellEmitter.get(ACE.pos).start(Speck.factory(Speck.ROCK), 0.3f, 4);
-                CellEmitter.get(ACE.pos).start(Speck.factory(Speck.LIGHT), 0.2f, 3);
+                CellEmitter.get(KNIGHT.pos).start(Speck.factory(Speck.ROCK), 0.3f, 4);
+                CellEmitter.get(KNIGHT.pos).start(Speck.factory(Speck.LIGHT), 0.2f, 3);
                 Camera.main.shake(3, 1.5f);
                 GameScene.flash( 0x80FFF0F0 );
                 Sample.INSTANCE.play(Assets.Sounds.ROCKS);
 
-                ACE.yell(Messages.get(ACE, "summon"));
+                KNIGHT.yell(Messages.get(KNIGHT, "summon"));
                 isused = true;
 
                 hero.spend(1f);
@@ -108,7 +101,7 @@ public class WalkieTalkie extends Item {
                 Talent.onArtifactUsed(hero);
             }
 
-        } else if (ACE != null) GameScene.selectCell(ACEDirector);
+        } else if (KNIGHT != null) GameScene.selectCell(ACEDirector);
         }}
     }
 
@@ -130,10 +123,10 @@ public class WalkieTalkie extends Item {
                 return;
             }
 
-            if (ACE.fieldOfView == null || ACE.fieldOfView.length != Dungeon.level.length()){
-                ACE.fieldOfView = new boolean[Dungeon.level.length()];
+            if (KNIGHT.fieldOfView == null || KNIGHT.fieldOfView.length != Dungeon.level.length()){
+                KNIGHT.fieldOfView = new boolean[Dungeon.level.length()];
             }
-            Dungeon.level.updateFieldOfView( ACE, ACE.fieldOfView );
+            Dungeon.level.updateFieldOfView(KNIGHT, KNIGHT.fieldOfView );
 
             if (Actor.findChar(cell) == Dungeon.hero){
                 ArrayList<Integer> spawnPoints = new ArrayList<>();
@@ -146,18 +139,18 @@ public class WalkieTalkie extends Item {
 
                 if (spawnPoints.size() > 0) {
                     int movepos = Random.element(spawnPoints);
-                    ACE.sprite.move(ACE.pos, movepos);
-                    ACE.pos = movepos;
-                    ACE.state = ACE.WANDERING;
-                    ACE.yell(Messages.get(ACE, "move"));
-                    CellEmitter.get(ACE.pos).start(Speck.factory(Speck.LIGHT), 0.2f, 3);
+                    KNIGHT.sprite.move(KNIGHT.pos, movepos);
+                    KNIGHT.pos = movepos;
+                    KNIGHT.state = KNIGHT.WANDERING;
+                    KNIGHT.yell(Messages.get(KNIGHT, "move"));
+                    CellEmitter.get(KNIGHT.pos).start(Speck.factory(Speck.LIGHT), 0.2f, 3);
                 }
 
             } else if (Actor.findChar(cell).alignment == Char.Alignment.ENEMY){
-                ACE.yell(Messages.get(ACE, "target"));
-                ACE.aggro(Actor.findChar(cell));
-                ACE.setTarget(cell);
-                ACE.state= ACE.HUNTING;
+                KNIGHT.yell(Messages.get(KNIGHT, "target"));
+                KNIGHT.aggro(Actor.findChar(cell));
+                KNIGHT.setTarget(cell);
+                KNIGHT.state= KNIGHT.HUNTING;
             }
         }
 
@@ -179,35 +172,35 @@ public class WalkieTalkie extends Item {
 
     @Override
     public String desc() {
-        if (ACEID != -1){
-            Actor ch = Actor.findById(ACEID);
-            if (ch instanceof ACE_BATTLE){
-                ACE = (ACE_BATTLE) ch;
+        if (KNIGHTID != -1){
+            Actor ch = Actor.findById(KNIGHTID);
+            if (ch instanceof KNIGHT_NPC){
+                KNIGHT = (KNIGHT_NPC) ch;
             }
         }
-        if (ACE != null &&
-                (!ACE.isAlive()
-                        || !Dungeon.level.mobs.contains(ACE))){
-            ACE = null;
-            ACEID = -1;
+        if (KNIGHT != null &&
+                (!KNIGHT.isAlive()
+                        || !Dungeon.level.mobs.contains(KNIGHT))){
+            KNIGHT = null;
+            KNIGHTID = -1;
         }
 
-        if (isused && ACEID == -1) return Messages.get(this, "desc_ace_die");
-        if (ACE != null) return Messages.get(this, "desc_ace_alive");
+        if (isused && KNIGHTID == -1) return Messages.get(this, "desc_ace_die");
+        if (KNIGHT != null) return Messages.get(this, "desc_ace_alive");
         if (Dungeon.depth == 25 && Dungeon.bossLevel() && Dungeon.level.locked) return Messages.get(this, "desc_active_ok");
         return Messages.get(this, "desc_no");
     }
 
-    private static final String MYACE = "ACE";
+    private static final String MYACE = "KNIGHT";
     private static final String FIRSTSUMMON =   "firstsummon";
-    private static final String ID =       "ACEID";
+    private static final String ID =       "KNIGHTID";
 
     @Override
     public void storeInBundle( Bundle bundle ) {
         super.storeInBundle(bundle);
 
         bundle.put( FIRSTSUMMON, isused );
-        bundle.put( ID, ACEID );
+        bundle.put( ID, KNIGHTID);
 
     }
 
@@ -216,7 +209,7 @@ public class WalkieTalkie extends Item {
         super.restoreFromBundle(bundle);
 
         isused = bundle.getBoolean( FIRSTSUMMON );
-        ACEID = bundle.getInt( ID );
+        KNIGHTID = bundle.getInt( ID );
     }
 
 }

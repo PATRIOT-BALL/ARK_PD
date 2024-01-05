@@ -16,7 +16,7 @@ import com.watabou.utils.Random;
 
 public class KNIGHT_NPC extends Mob{
     {
-            HP=HT=500;
+            HP=HT=200;
             defenseSkill=20;
             spriteClass = AceSprite.class;
 
@@ -31,34 +31,50 @@ public class KNIGHT_NPC extends Mob{
 
         WANDERING = new KNIGHT_NPC.Wandering();
         }
+
+        private int KNIGHT_LEVEL = 0; // 강화
+
+        public void LevelUP(){
+        KNIGHT_LEVEL++;
+         }
+
         @Override
         public int damageRoll() {
-            return Random.NormalIntRange(30, 45);
+
+            return Random.NormalIntRange(20 * KNIGHT_LEVEL, 25 * KNIGHT_LEVEL);
         }
 
         @Override
         public int attackSkill( Char target ) {
-            return 25;
+            return 20 + (KNIGHT_LEVEL * 8);
         }
+
+    @Override
+    public float speed() {
+        if (KNIGHT_LEVEL == 4) return super.speed() * 2f;
+        return super.speed();
+    }
 
         @Override
         public int drRoll() {
-            return Random.NormalIntRange(12, 20);
+            return Random.NormalIntRange(KNIGHT_LEVEL * 5, 35);
         }
 
         @Override
         protected boolean act() {
-            if (isAlive()) {
-                HP = Math.min(HP+1, HT);
-            }
 
-            if (!Dungeon.level.locked){
-                die(this);
-            }
             return super.act();
         }
 
-        @Override
+    @Override
+    public void damage(int dmg, Object src) {
+
+            dmg /= (1 + KNIGHT_LEVEL);
+
+        super.damage(dmg, src);
+    }
+
+    @Override
         public void die(Object cause) {
             yell(Messages.get(this, "fail"));
             super.die(cause);
@@ -66,9 +82,6 @@ public class KNIGHT_NPC extends Mob{
 
         @Override
         public int attackProc(Char enemy, int damage) {
-            Ballistica trajectory = new Ballistica(this.pos, enemy.pos, Ballistica.STOP_TARGET);
-            trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
-            WandOfBlastWave.throwChar(enemy, trajectory, 1); // 넉백 효과
 
             return super.attackProc(enemy, damage);
         }
