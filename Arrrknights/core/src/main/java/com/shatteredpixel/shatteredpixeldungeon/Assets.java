@@ -76,6 +76,7 @@ public class Assets {
 		public static final String GAVIAL_BOSS2         = "environment/custom_tiles/gavial_boss2.png";
 		public static final String IBERIA_BOSS1_1         = "environment/custom_tiles/iberia_boss1_1.png";
 		public static final String IBERIA_BOSS1_2         = "environment/custom_tiles/iberia_boss1_2.png";
+		public static final String IBERIA_BOSS2         = "environment/custom_tiles/iberia_boss2.png";
 	}
 	
 	//TODO include other font assets here? Some are platform specific though...
@@ -159,6 +160,7 @@ public class Assets {
 		public static final String SURFACE	= "music/surface.ogg";
 		public static final String THEME	= "music/theme.ogg";
 		public static final String RHODOS	= "music/rhodos.ogg";
+		public static final String BOSS_KAL		= "music/boss_kalt.ogg";
 	}
 
 	public static class Sounds {

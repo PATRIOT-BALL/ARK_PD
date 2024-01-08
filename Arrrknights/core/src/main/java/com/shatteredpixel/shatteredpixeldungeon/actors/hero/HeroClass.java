@@ -187,10 +187,10 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new ScrollOfUpgrade().quantity(40).collect();
 		new Amulet().collect();
 		new Beowulf().identify().collect();
-
 		new ScrollOfMagicMapping().identify().collect();
-
 		new Heamyo().collect();
+
+
 
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 	}
