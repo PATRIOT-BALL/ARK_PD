@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.Mula_1Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Mula_2Sprite;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 //패턴 : 미정
 public class SeaBoss2_Phase2_Mid extends Mob {
@@ -33,6 +34,7 @@ public class SeaBoss2_Phase2_Mid extends Mob {
 
         state = HUNTING;
     }
+    
 
     // 모든 믈라 파츠가 파괴되면 사망
     private boolean dieChacke = false;
@@ -43,7 +45,7 @@ public class SeaBoss2_Phase2_Mid extends Mob {
         else return 20;
     }
 
-    // 사거리 3
+    // 공격불가
     @Override
     protected boolean canAttack(Char enemy) {
         return false;

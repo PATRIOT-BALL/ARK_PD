@@ -17,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.Mula_2Sprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Mula_3Sprite;
 import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
+import com.watabou.utils.Random;
 
 //패턴 : 미정
 public class SeaBoss2_Phase2_Tail extends Mob {
@@ -34,6 +35,16 @@ public class SeaBoss2_Phase2_Tail extends Mob {
         state = HUNTING;
     }
 
+    @Override
+    public int damageRoll() {
+        return Random.NormalIntRange(30, 65);
+    }
+
+    @Override
+    public int attackSkill( Char target ) {
+        return 50;
+    }
+
     // 모든 믈라 파츠가 파괴되면 사망
     private boolean dieChacke = false;
 
@@ -43,10 +54,10 @@ public class SeaBoss2_Phase2_Tail extends Mob {
         else return 20;
     }
 
-    // 사거리 3
+    // 사거리 2
     @Override
     protected boolean canAttack(Char enemy) {
-        return false;
+        return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 2;
     }
 
     @Override
