@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Tilemap;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Point;
@@ -86,6 +87,25 @@ public class GavialBossLevel2 extends Level {
             W, S, S, S, S, S, S, S, e, e, E, e, e, S, S, S, S, S, S, S, W,
             W, S, S, S, S, S, S, S, e, e, E, e, e, S, S, S, S, S, S, S, W,
     };
+
+    public static class CustomeMap extends CustomTilemap {
+
+        {
+            texture = Assets.Environment.GAVIAL_BOSS2;
+        }
+
+        @Override
+        public Tilemap create() {
+            Tilemap v = super.create();
+            int[] data = new int[tileW*tileH];
+            for (int i = 0; i < data.length; i++){
+                data[i] = i;
+            }
+
+            v.map( data, tileW );
+            return v;
+        }
+    }
 
     private void setMap(){
 

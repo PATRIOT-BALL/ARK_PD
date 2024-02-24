@@ -12,7 +12,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.SeaBoss2_Phase2_Tail
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
+import com.shatteredpixel.shatteredpixeldungeon.tiles.CustomTilemap;
 import com.watabou.noosa.Group;
+import com.watabou.noosa.Tilemap;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
@@ -65,9 +67,16 @@ public class SeaBossLevel2 extends Level {
     // 현재 이 값을 기준으로하면, 외곽부분에 벽만 둘러지고 전부 일반땅인 맵이 생성됨.
     // 대문자 E로 표시한 부분은 "입구"와 "출구"임으로 벽으로 막지 말거나 바꾸기전에 연락하면 따로 설명해드림 (출구는 사실 별 의미없긴함)
     // 맵 사이즈를 늘릴 생각이라면 그것도 추가로 연락바람
+
     private static final int[] endMap = new int[]{
             W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W,
-            W, e, e, e, e, e, e, e, e, e, E, e, e, e, e, e, e, e, e, e, W,
+            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
+            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
+            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
+            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
+            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
+            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
+            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
@@ -80,10 +89,30 @@ public class SeaBossLevel2 extends Level {
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
-            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
-            W, e, e, e, e, e, e, e, e, e, E, e, e, e, e, e, e, e, e, e, W,
+            W, W, W, W, W, W, W, W, W, e, e, e, W, W, W, W, W, W, W, W, W,
+            W, W, W, W, W, W, W, W, W, e, e, e, W, W, W, W, W, W, W, W, W,
+            W, W, W, W, W, W, W, W, W, e, E, e, W, W, W, W, W, W, W, W, W,
             W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W,
     };
+
+    public static class CustomeMap extends CustomTilemap {
+
+        {
+            texture = Assets.Environment.IBERIA_BOSS2;
+        }
+
+        @Override
+        public Tilemap create() {
+            Tilemap v = super.create();
+            int[] data = new int[tileW*tileH];
+            for (int i = 0; i < data.length; i++){
+                data[i] = i;
+            }
+
+            v.map( data, tileW );
+            return v;
+        }
+    }
 
     private void setMap(){
 
