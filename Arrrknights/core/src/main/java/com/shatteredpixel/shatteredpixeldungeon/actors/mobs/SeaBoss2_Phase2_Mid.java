@@ -6,6 +6,8 @@ import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
@@ -19,7 +21,7 @@ import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-//패턴 : 미정
+//패턴 : 믈라의 몸통은 생존해있다면 주기적으로 머리+꼬리에 보호막을 부여한다
 public class SeaBoss2_Phase2_Mid extends Mob {
     {
         spriteClass = Mula_2Sprite.class;
@@ -38,6 +40,7 @@ public class SeaBoss2_Phase2_Mid extends Mob {
 
     // 모든 믈라 파츠가 파괴되면 사망
     private boolean dieChacke = false;
+    private int cooldown = 8;
 
     @Override
     public int defenseSkill(Char enemy) {
@@ -56,6 +59,15 @@ public class SeaBoss2_Phase2_Mid extends Mob {
 
         sprite.turnTo(pos, 999999);
         rooted = true;
+
+        if (cooldown > 0) cooldown--;
+        else {
+            for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                Buff.affect(mob, Barrier.class).setShield(80);
+            }
+            if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) cooldown = 5;
+            else cooldown = 8;
+        }
 
         return super.act();
     }
