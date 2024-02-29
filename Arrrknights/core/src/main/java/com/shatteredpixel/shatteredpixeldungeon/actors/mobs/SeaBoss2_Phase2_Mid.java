@@ -54,11 +54,14 @@ public class SeaBoss2_Phase2_Mid extends Mob {
         return false;
     }
 
+    // 몸통은 주기적으로 보호막을 부여한다. 체력이 1이하가 되면 스킬사용 불가
     @Override
     protected boolean act() {
 
         sprite.turnTo(pos, 999999);
         rooted = true;
+
+        if (dieChacke = true) return super.act();
 
         if (cooldown > 0) cooldown--;
         else {

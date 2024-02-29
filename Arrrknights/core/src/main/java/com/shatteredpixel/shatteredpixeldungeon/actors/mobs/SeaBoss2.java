@@ -121,7 +121,7 @@ public class SeaBoss2 extends Mob {
         }
 
         this.damage(250,this);
-        summoncooldown = 8;
+        summoncooldown = 10;
 
     }
 
