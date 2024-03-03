@@ -257,7 +257,7 @@ public class Dungeon {
 		quickslot.reset();
 		QuickSlotButton.reset();
 		
-		depth = 39; //@
+		depth = 0; //@
 		gold = 200;
 		cautusquset = -1;
 		guardquest = -1;
