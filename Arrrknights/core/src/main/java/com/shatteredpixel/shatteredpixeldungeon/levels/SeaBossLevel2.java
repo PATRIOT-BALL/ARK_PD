@@ -70,13 +70,13 @@ public class SeaBossLevel2 extends Level {
 
     private static final int[] endMap = new int[]{
             W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W, W,
-            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
-            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
-            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
-            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
-            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
-            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
-            W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
@@ -129,7 +129,13 @@ public class SeaBossLevel2 extends Level {
 
         map[entrance] = Terrain.ENTRANCE;
         map[exit] = Terrain.EXIT;
+
+        SeaBossLevel2.CustomeMap vis = new SeaBossLevel2.CustomeMap();
+        vis.setRect(0, 0, width(), height());
+        customTiles.add(vis);
     }
+
+
 
     @Override
     public void occupyCell( Char ch ) {
@@ -155,6 +161,7 @@ public class SeaBossLevel2 extends Level {
             SeaBoss2 boss = new SeaBoss2();
             boss.pos = 52;
             GameScene.add( boss );
+
 
 
             seal();
