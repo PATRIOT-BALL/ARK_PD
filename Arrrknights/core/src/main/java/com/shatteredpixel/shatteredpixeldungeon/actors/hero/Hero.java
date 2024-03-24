@@ -275,8 +275,8 @@ public class Hero extends Char {
     public HeroSubClass subClass = HeroSubClass.NONE;
     public ArrayList<LinkedHashMap<Talent, Integer>> talents = new ArrayList<>();
 
-   // private int attackSkill = 10;
-    private int attackSkill = 1000;
+    private int attackSkill = 10;
+    //private int attackSkill = 1000;
     private int defenseSkill = 5;
 
     public boolean ready = false;
@@ -320,8 +320,8 @@ public class Hero extends Char {
     public Hero() {
         super();
 
-        //HP = HT = 20;
-        HP = HT = 2000;
+        HP = HT = 20;
+        //HP = HT = 2000;
         STR = STARTING_STR;
 
         belongings = new Belongings(this);

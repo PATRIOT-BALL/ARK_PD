@@ -271,7 +271,7 @@ public class Goo extends Mob {
 		
 		GameScene.bossSlain();
 		Dungeon.level.drop( new SkeletonKey( Dungeon.depth ), pos ).sprite.drop();
-		Dungeon.level.drop(new Certificate(2), pos).sprite.drop(pos);
+		Dungeon.level.drop(new Certificate(5), pos).sprite.drop(pos);
 		
 		//60% chance of 2 blobs, 30% chance of 3, 10% chance for 4. Average of 2.5
 		int blobs = Random.chances(new float[]{0, 0, 6, 3, 1});

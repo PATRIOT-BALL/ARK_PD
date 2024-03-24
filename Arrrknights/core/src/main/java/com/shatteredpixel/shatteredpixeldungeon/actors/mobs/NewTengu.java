@@ -237,7 +237,7 @@ public class NewTengu extends Mob {
             }
         }
         Dungeon.level.drop(new Nullshield(), pos).sprite.drop(pos);
-        Dungeon.level.drop(new Certificate(3), pos).sprite.drop(pos);
+        Dungeon.level.drop(new Certificate(10), pos).sprite.drop(pos);
 
         if (Dungeon.hero.CharSkin == Dungeon.hero.SSR) Dungeon.level.drop(new Pombbay(), pos).sprite.drop(pos);
 

@@ -180,7 +180,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new ScrollOfIdentify().identify();
 		new FoodBag().collect();
-		new KazemaruWeapon().identify().collect();
+		/*new KazemaruWeapon().identify().collect();
 		new PotionOfStrength().quantity(40).collect();
 		new PotionOfExperience().quantity(40).collect();
 		new PotionOfHealing().quantity(40).collect();
@@ -188,7 +188,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new Amulet().collect();
 		new Beowulf().identify().collect();
 		new ScrollOfMagicMapping().identify().collect();
-		new Heamyo().collect();
+		new Heamyo().collect();*/
 
 
 

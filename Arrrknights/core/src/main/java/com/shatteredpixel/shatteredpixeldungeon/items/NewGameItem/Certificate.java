@@ -21,10 +21,10 @@ public class Certificate extends Item {
 
     public Certificate( int value ) {
         this.quantity = value;
-        if (Challenges.activeChallenges() > 7) this.quantity += 8;
-        else if (Challenges.activeChallenges() > 5) this.quantity += 4;
-        else if (Challenges.activeChallenges() > 2) this.quantity += 2;
-        else if (Challenges.activeChallenges() > 0) this.quantity += 1;
+        if (Challenges.activeChallenges() > 7) this.quantity += 20;
+        else if (Challenges.activeChallenges() > 5) this.quantity += 15;
+        else if (Challenges.activeChallenges() > 2) this.quantity += 10;
+        else if (Challenges.activeChallenges() > 0) this.quantity += 5;
 
         if (Dungeon.eazymode == 1) this.quantity = 0;
     }
@@ -36,7 +36,7 @@ public class Certificate extends Item {
         hero.sprite.showStatus( CharSprite.NEUTRAL, TXT_VALUE, quantity );
         hero.spendAndNext( TIME_TO_PICK_UP );
 
-        Sample.INSTANCE.play( Assets.Sounds.GOLD, 1, 1, Random.Float( 1.35f, 1.45f ) );
+        Sample.INSTANCE.play( Assets.Sounds.EVOKE, 1, 1, Random.Float( 1.35f, 1.45f ) );
         Badges.validateCertificate();
         return true;
     }

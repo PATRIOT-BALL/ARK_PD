@@ -461,7 +461,7 @@ public class DwarfKing extends Mob {
 			GLog.h(Messages.get(Hero.class, "eazymode"));
 		} else {
 
-			Dungeon.level.drop(new Certificate(8), pos).sprite.drop(pos);
+			Dungeon.level.drop(new Certificate(20), pos).sprite.drop(pos);
 
 			int ofs = PathFinder.NEIGHBOURS8[Random.Int(8)];
 			do {

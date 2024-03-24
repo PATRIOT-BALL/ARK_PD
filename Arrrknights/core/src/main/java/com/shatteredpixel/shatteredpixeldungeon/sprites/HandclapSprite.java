@@ -62,10 +62,10 @@ public class HandclapSprite extends MobSprite {
 		pump = new Animation( 20, true );
 		pump.frames( frames, 15, 16, 17, 18, 19 );
 
-		pumpAttack = new Animation ( 12, false );
+		pumpAttack = new Animation ( 16, false );
 		pumpAttack.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27);
 
-		attack = new Animation( 12, false );
+		attack = new Animation( 14, false );
 		attack.frames( frames, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 );
 		
 		die = new Animation( 8, false );
