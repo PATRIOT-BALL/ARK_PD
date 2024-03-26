@@ -310,6 +310,7 @@ public enum Catalog {
 		WEAPONS.seen.put( MetallicUnion.class,                false);
 		WEAPONS.seen.put( WarJournalist.class,                false);
 		WEAPONS.seen.put( KazemaruWeapon.class,                   false);
+		WEAPONS.seen.put( Beowulf.class,                   false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( Laevateinn.class,                  false);

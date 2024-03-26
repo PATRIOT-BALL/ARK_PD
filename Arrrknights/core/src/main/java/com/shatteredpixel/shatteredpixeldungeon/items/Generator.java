@@ -170,6 +170,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Beowulf;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.C1_9mm;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.CrabGun;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
@@ -473,8 +474,9 @@ public class Generator {
                     MetallicUnion.class,
                     WarJournalist.class,
                     KazemaruWeapon.class,
+                    Beowulf.class,
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 3, 3, 2, 4, 2, 3, 4};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 3, 3, 2, 4, 2, 3, 4, 4, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,

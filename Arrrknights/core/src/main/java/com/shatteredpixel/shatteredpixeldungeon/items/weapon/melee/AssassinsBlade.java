@@ -58,7 +58,7 @@ public class AssassinsBlade extends MeleeWeapon {
 					int diff = max() - min();
 					int damage;
 					if (Dungeon.hero.belongings.armor instanceof LeatherArmor) {
-						damage = augment.damageFactor(Random.NormalIntRange(min() + Math.round(diff * 0.60f), max()));
+						damage = augment.damageFactor(Random.NormalIntRange(min() + Math.round(diff * 0.70f), max()));
 					}
 					else {
 						damage = augment.damageFactor(Random.NormalIntRange(min() + Math.round(diff * 0.50f), max()));
