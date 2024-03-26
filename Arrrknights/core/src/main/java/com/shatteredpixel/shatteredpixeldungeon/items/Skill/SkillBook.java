@@ -47,11 +47,7 @@ public class SkillBook extends Item {
     public void execute(Hero hero, String action) {
         super.execute(hero, action);
         if (action.equals(AC_ACT)) {
-
-            // 테스트용 설정
-            Dungeon.level.map[hero.pos] = Terrain.SEE_TEEROR2;
-            GameScene.updateMap( hero.pos );
-            Dungeon.observe();
+            
 
             if (hero.buff(NervousImpairment.class) == null) {
                 Buff.affect(hero, NervousImpairment.class);
