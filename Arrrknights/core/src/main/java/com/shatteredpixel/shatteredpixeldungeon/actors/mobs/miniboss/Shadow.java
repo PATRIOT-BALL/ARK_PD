@@ -385,6 +385,7 @@ public class Shadow extends Mob {
             spriteClass = ShadowSprite.ShadowSkd.class;
             immunities.add(Burning.class);
             immunities.add(Paralysis.class);
+            flying = true;
         }
 
         @Override

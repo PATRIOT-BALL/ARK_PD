@@ -47,7 +47,7 @@ public class SeaBossLevel2 extends Level {
     @Override
     protected boolean build() {
 
-        setSize(21, 17);
+        setSize(21, 24);
         Arrays.fill( map, Terrain.EMPTY );
 
         feeling = Feeling.NONE;
@@ -77,8 +77,8 @@ public class SeaBossLevel2 extends Level {
             W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
             W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
             W, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, S, W,
-            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
-            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
+            W, e/*169*/, e, e, e, e, e, e, e, e, e/*178*/, e, e, e, e, e, e, e, e, e,/*187*/ W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e/*199*/, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
@@ -124,12 +124,18 @@ public class SeaBossLevel2 extends Level {
             cell += width();
         }
 
-        entrance = 325; // 입구 위치
+        entrance = 430; // 입구 위치
         exit = 31; // 출구 위치
 
         map[entrance] = Terrain.ENTRANCE;
         map[exit] = Terrain.EXIT;
+
+        SeaBossLevel2.CustomeMap vis = new SeaBossLevel2.CustomeMap();
+        vis.setRect(0, 0, width(), height());
+        customTiles.add(vis);
     }
+
+
 
     @Override
     public void occupyCell( Char ch ) {
@@ -140,21 +146,22 @@ public class SeaBossLevel2 extends Level {
         if (ch.pos != map[entrance] && map[exit] == Terrain.EXIT) {
             /*
             SeaBoss2_Phase2_Head boss1 = new SeaBoss2_Phase2_Head();
-            boss1.pos = 32;
+            boss1.pos = 178;
             GameScene.add( boss1 );
 
             SeaBoss2_Phase2_Mid boss2 = new SeaBoss2_Phase2_Mid();
-            boss2.pos = 30;
+            boss2.pos = 202;
             GameScene.add( boss2 );
 
             SeaBoss2_Phase2_Tail boss3 = new SeaBoss2_Phase2_Tail();
-            boss3.pos = 28;
+            boss3.pos = 217;
             GameScene.add( boss3 );
             */
 
             SeaBoss2 boss = new SeaBoss2();
-            boss.pos = 52;
+            boss.pos = 178;
             GameScene.add( boss );
+
 
 
             seal();

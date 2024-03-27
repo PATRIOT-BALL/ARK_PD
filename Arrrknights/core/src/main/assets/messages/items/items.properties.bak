@@ -2630,6 +2630,10 @@ items.weapon.melee.kazemaruweapon.name=절지생화
 items.weapon.melee.kazemaruweapon.desc="아이들이 카제마루가 몇 살 연상인 귀엽고 순진한 아이라고 생각하고 있어......"
 items.weapon.melee.kazemaruweapon.stats_desc=이 검은 공격시 10%% 확률로 분신을 소환해 _%1$d-%2$d_의 피해를 입힙니다.
 
+items.weapon.melee.beowulf.name=베오울프
+items.weapon.melee.beowulf.desc="자, 나를 넘어서 봐라!"
+items.weapon.melee.beowulf.stats_desc=이 검은 공격시 10%% 확률로 분신을 소환해 _%1$d-%2$d_의 피해를 입힙니다.
+
 
 
 ## 총기 관련

@@ -46,7 +46,7 @@ public class GavialBossLevel2 extends Level {
     @Override
     protected boolean build() {
 
-        setSize(21, 17);
+        setSize(21, 19);
         Arrays.fill( map, Terrain.EMPTY );
 
         feeling = Feeling.NONE;
@@ -79,7 +79,7 @@ public class GavialBossLevel2 extends Level {
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
-            W, S, S, S, S, S, S, S, e, e, E, e, e, S, S, S, S, S, S, S, W,
+            W, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, e, W,
             W, S, S, S, S, S, S, S, e, e, E, e, e, S, S, S, S, S, S, S, W,
             W, S, S, S, S, S, S, S, e, e, E, e, e, S, S, S, S, S, S, S, W,
             W, S, S, S, S, S, S, S, e, e, E, e, e, S, S, S, S, S, S, S, W,
@@ -122,6 +122,10 @@ public class GavialBossLevel2 extends Level {
 
         map[entrance] = Terrain.ENTRANCE;
         map[exit] = Terrain.EXIT;
+
+        GavialBossLevel2.CustomeMap vis = new GavialBossLevel2.CustomeMap();
+        vis.setRect(0, 0, width(), height());
+        customTiles.add(vis);
     }
 
     @Override
@@ -132,7 +136,7 @@ public class GavialBossLevel2 extends Level {
 
         if (ch.pos != map[entrance] && map[exit] == Terrain.EXIT) {
             Eunectes boss = new Eunectes();
-            boss.pos = 37;
+            boss.pos = 136;
             GameScene.add( boss );
             seal();
 

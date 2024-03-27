@@ -599,7 +599,7 @@ public class NewDM300 extends Mob {
         GameScene.bossSlain();
         Dungeon.level.unseal();
 
-        Dungeon.level.drop(new Certificate(5), pos).sprite.drop(pos);
+        Dungeon.level.drop(new Certificate(15), pos).sprite.drop(pos);
 
         for (int i = 0; i < 2; i++) {
             int ofs;

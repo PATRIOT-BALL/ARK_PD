@@ -7,7 +7,9 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hallucination;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
+import com.shatteredpixel.shatteredpixeldungeon.items.armor.LeatherArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
@@ -40,13 +42,39 @@ public class KazemaruWeapon extends MeleeWeapon {
                 lvl*(tier+1);
     }
 
+    @Override
+    public int damageRoll(Char owner) {
+        if (owner instanceof Hero) {
+            Hero hero = (Hero) owner;
+            Char enemy = hero.enemy();
+            if (enemy instanceof Mob && ((Mob) enemy).surprisedBy(hero)) {
+                //deals 50% toward max to max on surprise, instead of min to max.
+                int diff = max() - min();
+                int damage;
+                if (Dungeon.hero.belongings.armor instanceof LeatherArmor) {
+                    damage = augment.damageFactor(Random.NormalIntRange(min() + Math.round(diff * 0.30f), max()));
+                }
+                else {
+                    damage = augment.damageFactor(Random.NormalIntRange(min() + Math.round(diff * 0.30f), max()));
+                }
+                int exStr = hero.STR() - STRReq();
+                if (exStr > 0) {
+                    damage += Random.IntRange(0, exStr);
+                }
+                return damage;
+
+            }
+        }
+        return super.damageRoll(owner);
+    }
+
     public String statsInfo() {
         return Messages.get(this, "stats_desc", 15+buffedLvl(), 20+(buffedLvl()*5));
     }
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
-        if (Random.Int(10) == 0) {
+        if (Random.Int(7) == 0) {
             ArrayList<Integer> respawnPoints = new ArrayList<>();
 
             for (int i = 0; i < PathFinder.NEIGHBOURS8.length; i++) {

@@ -156,7 +156,7 @@ public class SiestaBoss extends Mob {
 
         yell(Messages.get(this, "defeated"));
 
-        Dungeon.level.drop(new Certificate(10), pos).sprite.drop(pos);
+        Dungeon.level.drop(new Certificate(30), pos).sprite.drop(pos);
 
         GameScene.bossSlain();
         Dungeon.level.unseal();

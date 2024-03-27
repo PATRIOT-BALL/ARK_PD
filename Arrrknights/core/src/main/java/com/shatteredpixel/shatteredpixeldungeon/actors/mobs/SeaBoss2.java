@@ -72,28 +72,28 @@ public class SeaBoss2 extends Mob {
     private void SummonEnemy()
     {
         Mob summonEnemy1;
-        int summonpos1 = 71;
+        int summonpos1 = 169;
         if (Random.Int(4) != 0)
             summonEnemy1 = new SummonRunner();
         else
             summonEnemy1 = new SummonOcto();
 
         Mob summonEnemy2;
-        int summonpos2 = 75;
+        int summonpos2 = 187;
         if (Random.Int(4) != 0)
             summonEnemy2 = new SummonRunner();
         else
             summonEnemy2 = new SummonLeef();
 
         Mob summonEnemy3;
-        int summonpos3 = 170;
+        int summonpos3 = 196;
         if (Random.Int(4) != 0)
             summonEnemy3 = new SummonRunner();
         else
             summonEnemy3 = new SummonLeef();
 
         Mob summonEnemy4;
-        int summonpos4 = 187;
+        int summonpos4 = 192;
         if (Random.Int(4) != 0)
             summonEnemy4 = new SummonRunner();
         else
