@@ -1,28 +1,28 @@
-package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard;
+package com.shatteredpixel.shatteredpixeldungeon.levels.rooms.special;
 
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.GiantMushroom;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.SeaObject;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.Room;
+import com.shatteredpixel.shatteredpixeldungeon.levels.rooms.standard.StandardRoom;
 import com.watabou.utils.Point;
 
-public class SeaObjRoom extends StandardRoom {
+public class SeaTerrorRoom extends SpecialRoom {
     @Override
     public int minWidth() {
-        return Math.max(super.minWidth(), 6);
+        return Math.max(super.minWidth(), 5);
     }
 
     @Override
     public int minHeight() {
-        return Math.max(super.minHeight(), 6);
+        return Math.max(super.minHeight(), 5);
     }
 
     public void paint(Level level) {
 
         Painter.fill( level, this, Terrain.WALL );
-        Painter.fill( level, this, 1, Terrain.EMPTY );
+        Painter.fill( level, this, 1, Terrain.SEE_TEEROR1 );
 
         for (Room.Door door : connected.values()) {
             door.set( Room.Door.Type.REGULAR );
@@ -32,9 +32,9 @@ public class SeaObjRoom extends StandardRoom {
         int cx = c.x;
         int cy = c.y;
 
-        SeaObject obj = new SeaObject();
-        obj.pos = cx + cy * level.width();
-        level.mobs.add(obj);
+        GiantMushroom Mushroom = new GiantMushroom();
+        Mushroom.pos = cx + cy * level.width();
+        level.mobs.add(Mushroom);
 
     }
 
