@@ -6,6 +6,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Burning;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Chill;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Combo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
@@ -16,12 +17,10 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Splash;
 import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
-import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TalismanOfForesight;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
-import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.MissileWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Thunderbolt;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.UpMagazine;
@@ -42,37 +41,25 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-public class R4C extends GunWeapon {
+public class Sig553 extends GunWeapon {
     {
-        image = ItemSpriteSheet.R4C;
-        hitSound = Assets.Sounds.HIT_AR;
+        image = ItemSpriteSheet.SIG553;
+        hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 3f;
-        FIRETICK = 0.33f;
+        FIREACC = 10f;
+        FIRETICK = 0.3f;
         bulletCap = 31;
 
         usesTargeting = true;
 
         defaultAction = AC_ZAP;
 
-        tier = 5;
+        tier = 3;
     }
+
     @Override
     protected void SPShot(Char ch) {
-        Ballistica trajectory = new Ballistica(curUser.pos, ch.pos, Ballistica.STOP_TARGET);
-        trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
-        WandOfBlastWave.throwChar(ch, trajectory, 2); // 넉백 효과
-    }
-
-    @Override
-    public String desc() {
-       String info = Messages.get(this, "desc", bullettier);
-            if (Dungeon.hero.belongings.getItem(IsekaiItem.class) != null) {
-                if (Dungeon.hero.belongings.getItem(IsekaiItem.class).isEquipped(Dungeon.hero))
-                    info += "\n\n" + Messages.get( R4C.class, "setbouns");}
-
-
-        return info;
+        Buff.affect(ch, Silence.class, 3f);
     }
 }

@@ -209,6 +209,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Naginata;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Niansword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sig553;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Suffering;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ThermiteBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
@@ -274,6 +275,7 @@ public enum Catalog {
 		WEAPONS.seen.put( MagesStaff.class,                 false);
 		WEAPONS.seen.put( EX42.class,                     false);
 		WEAPONS.seen.put( NEARL_AXE.class,               false);
+		WEAPONS.seen.put( Sig553.class,               false);
 
 		WEAPONS.seen.put( Shortsword.class,                 false);
 		WEAPONS.seen.put( HandAxe.class,                    false);

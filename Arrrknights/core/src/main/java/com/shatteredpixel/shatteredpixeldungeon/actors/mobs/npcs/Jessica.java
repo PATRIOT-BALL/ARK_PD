@@ -107,7 +107,7 @@ public class Jessica extends NPC {
                 } else {
                     Dungeon.level.drop( result, this.pos ).sprite.drop();
                 }
-                new Gold(900).doPickUp(Dungeon.hero);
+                new Gold(1500).doPickUp(Dungeon.hero);
 
                 MeatPie m = Dungeon.hero.belongings.getItem(MeatPie.class);
                 m.detachAll(Dungeon.hero.belongings.backpack);

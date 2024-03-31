@@ -59,6 +59,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.bags.VelvetPouch;
 import com.shatteredpixel.shatteredpixeldungeon.items.bombs.Bomb;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.Food;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MeatCutlet;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.Nevous;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Egg;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.ingredients.Potato;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfExperience;
@@ -183,7 +184,8 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new ScrollOfIdentify().identify();
 		new FoodBag().collect();
-		new Castlebreaker().collect();
+		new Nevous().quantity(5).collect();
+		/*new Castlebreaker().collect();
 		new NervousPotion().quantity(5).collect();
 		new KazemaruWeapon().identify().collect();
 		new PotionOfStrength().quantity(40).collect();
@@ -193,7 +195,7 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 		new Amulet().collect();
 		new Beowulf().identify().collect();
 		new ScrollOfMagicMapping().identify().collect();
-		new Heamyo().collect();
+		new Heamyo().collect();*/
 
 
 

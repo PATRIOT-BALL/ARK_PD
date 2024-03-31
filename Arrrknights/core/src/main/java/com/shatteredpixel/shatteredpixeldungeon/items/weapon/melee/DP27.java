@@ -16,9 +16,9 @@ public class DP27 extends GunWeapon {
         hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 1.5f;
-        FIRETICK = 1f;
-        bulletCap = 30;
+        FIREACC = 3f;
+        FIRETICK = 0.2f;
+        bulletCap = 47;
 
         usesTargeting = true;
 

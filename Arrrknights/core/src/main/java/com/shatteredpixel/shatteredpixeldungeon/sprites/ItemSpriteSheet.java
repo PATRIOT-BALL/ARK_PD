@@ -220,6 +220,7 @@ public class ItemSpriteSheet {
 	public static final int HEAMYO     = WEP_TIER1+6;
 	public static final int YATO     = WEP_TIER1+7;
 	public static final int NEARL_AXE     = WEP_TIER1+8;
+	public static final int SIG553     = WEP_TIER1+9;
 	static{
 		assignItemRect(WORN_SHORTSWORD, 16, 16);
 		assignItemRect(EX41, 			16, 16);
@@ -230,6 +231,7 @@ public class ItemSpriteSheet {
 		assignItemRect(HEAMYO,     16, 16);
 		assignItemRect(YATO,     16, 16);
 		assignItemRect(NEARL_AXE,     16, 16);
+		assignItemRect(SIG553,     16, 16);
 	}
 
 	private static final int WEP_TIER2      =                               xy(17, 7);   //8 slots

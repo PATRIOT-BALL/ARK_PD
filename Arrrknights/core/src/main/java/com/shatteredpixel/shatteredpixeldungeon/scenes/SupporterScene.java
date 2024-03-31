@@ -78,7 +78,7 @@ public class SupporterScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				String link = "https://www.patreon.com/roguenight";
+				String link = "https://arca.live/b/arknights/80626930";
 				//tracking codes, so that the website knows where this pageview came from
 				link += "?utm_source=roguenight";
 				link += "&utm_medium=supporter_page";

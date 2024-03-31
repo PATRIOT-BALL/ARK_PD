@@ -2409,10 +2409,14 @@ items.weapon.melee.wornshortsword.name=크림슨 체인소우
 items.weapon.melee.wornshortsword.stats_desc=공격속도 +100%, 명중률 -40%
 items.weapon.melee.wornshortsword.desc=블레이즈가 매 작전시 들고나가는 전기톱. 각각의 빠르게 회전하는 칼날들은 많은 적을 토막낼 수 있다. 아니면 그냥 방금 썰어버린 적을 한번 더 썰어버린다던가..
 
+items.weapon.melee.sig553.name=화이트팽 465
+items.weapon.melee.sig553.stats_desc=이 무기는 _사격_ 무기입니다. 투척 무기로 탄약을 장전할 수 있습니다.\n현재 장전된 탄약의 레벨은 _%d_ 입니다.
+items.weapon.melee.sig553.desc= _응._
+
 items.weapon.melee.midnightsword.name=동야의 마왕
 items.weapon.melee.midnightsword.ac_zap=사격
 items.weapon.melee.midnightsword.desc="고객님, 제게 최고의 웃는 얼굴을 보여주실 수 없겠습니까?"\n\n이 무기는 성능이 떨어지지만 마탄을 발사할 수 있습니다. 매 공격마다 낮은 확률로 마왕 에너지를 충전합니다.
-items.weapon.melee.midnightsword.stats_desc=이 무기를 사용하면 마왕 에너지를 발사해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다.
+items.weapon.melee.midnightsword.stats_desc=이 무기를 사용하면 마왕 에너지를 발사해 적에게 _%1$d-%2$d의 피해_를 입힐 수 있습니다. 사거리 +1
 items.weapon.melee.midnightsword.prompt=목표를 지정해주세요.
 items.weapon.melee.midnightsword.self_target=자신에게는 발사할 수 없습니다.
 items.weapon.melee.midnightsword.no_magic=아츠 면역 상태일 땐 발사할 수 없습니다.
@@ -2631,8 +2635,8 @@ items.weapon.melee.kazemaruweapon.desc="아이들이 카제마루가 몇 살 연
 items.weapon.melee.kazemaruweapon.stats_desc=이 검은 공격시 10%% 확률로 분신을 소환해 _%1$d-%2$d_의 피해를 입힙니다.
 
 items.weapon.melee.beowulf.name=베오울프
-items.weapon.melee.beowulf.desc="자, 나를 넘어서 봐라!"
-items.weapon.melee.beowulf.stats_desc=이 검은 공격시 10%% 확률로 분신을 소환해 _%1$d-%2$d_의 피해를 입힙니다.
+items.weapon.melee.beowulf.desc="자, 나를 넘어서 봐라!" \n\n 이 건랜스는 대상과 사거리가 멀어질수록 높은 범위 데미지를 입히며, 가까울 수록 데미지가 줄어듭니다.
+items.weapon.melee.beowulf.stats_desc=사거리 +2
 
 
 
@@ -3039,9 +3043,9 @@ items.snowsants_coin.desc='스노우상트의 동전' 이야기가 한때 젊은
 items.snowsants_coin.ac_use=사용한다
 
 ※번역 필요
-items.nervouspotion.name=이성회복제
-items.nervouspotion.desc=섭취시 신경 손상을 50% 회복시켜주는 긴급 이성회복제. 중요한 물건이니 필요할 때만 사용하자.
-items.nervouspotion.ac_drink=마신다
+items.nevous.name=이성회복제
+items.nevous.desc=섭취시 신경 손상을 50% 회복시켜주는 긴급 이성회복제. 중요한 물건이니 필요할 때만 사용하자.
+items.nevous.ac_drink=마신다
 
 
 

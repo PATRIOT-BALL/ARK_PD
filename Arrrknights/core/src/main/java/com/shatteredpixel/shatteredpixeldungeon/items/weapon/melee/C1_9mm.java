@@ -12,6 +12,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Momentum;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Paralysis;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Slow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
@@ -47,9 +48,9 @@ public class C1_9mm extends GunWeapon {
         hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 1.2f;
-        FIRETICK = 1f;
-        bulletCap = 30;
+        FIREACC = 3f;
+        FIRETICK = 0.5f;
+        bulletCap = 34;
 
         usesTargeting = true;
 
@@ -60,6 +61,6 @@ public class C1_9mm extends GunWeapon {
 
     @Override
     protected void SPShot(Char ch) {
-        Buff.affect(ch, Silence.class, 3f);
+        Buff.affect(ch, Slow.class, 3f);
     }
 }

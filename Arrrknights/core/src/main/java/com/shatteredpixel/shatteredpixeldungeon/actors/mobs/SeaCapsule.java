@@ -8,6 +8,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.NervousImpairment;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.items.NervousPotion;
 import com.shatteredpixel.shatteredpixeldungeon.items.food.MysteryMeat;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.Nevous;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Bug_ASprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_CrawlerSprite;
 import com.watabou.utils.PathFinder;
@@ -23,7 +24,7 @@ public class SeaCapsule extends Mob{
 
         defenseSkill = 10;
 
-        loot = new NervousPotion();
+        loot = new Nevous();
         lootChance = 0.55f;
 
         properties.add(Property.SEA);

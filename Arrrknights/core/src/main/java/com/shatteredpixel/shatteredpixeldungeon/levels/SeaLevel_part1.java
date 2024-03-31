@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.Ceylon;
 import com.shatteredpixel.shatteredpixeldungeon.items.NervousPotion;
+import com.shatteredpixel.shatteredpixeldungeon.items.food.Nevous;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfHealing;
 import com.shatteredpixel.shatteredpixeldungeon.items.potions.PotionOfStrength;
 import com.shatteredpixel.shatteredpixeldungeon.items.quest.Obsidian;
@@ -48,7 +49,7 @@ public class SeaLevel_part1 extends RegularLevel {
         if (Dungeon.depth == 32 || Dungeon.depth == 34) {
             addItemToSpawn(new PotionOfHealing());}
         else addItemToSpawn(new PotionOfStrength());
-        addItemToSpawn(new NervousPotion());
+        addItemToSpawn(new Nevous());
         super.createItems();
     }
 

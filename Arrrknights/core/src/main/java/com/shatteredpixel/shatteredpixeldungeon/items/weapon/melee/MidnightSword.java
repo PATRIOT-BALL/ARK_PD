@@ -31,6 +31,7 @@ public class MidnightSword extends MeleeWeapon {
         hitSoundPitch = 1f;
 
         tier = 2;
+        RCH = 2;
 
         usesTargeting = true;
         defaultAction = AC_ZAP;
