@@ -144,19 +144,6 @@ public class SeaBossLevel2 extends Level {
 
 
         if (ch.pos != map[entrance] && map[exit] == Terrain.EXIT) {
-            /*
-            SeaBoss2_Phase2_Head boss1 = new SeaBoss2_Phase2_Head();
-            boss1.pos = 178;
-            GameScene.add( boss1 );
-
-            SeaBoss2_Phase2_Mid boss2 = new SeaBoss2_Phase2_Mid();
-            boss2.pos = 202;
-            GameScene.add( boss2 );
-
-            SeaBoss2_Phase2_Tail boss3 = new SeaBoss2_Phase2_Tail();
-            boss3.pos = 217;
-            GameScene.add( boss3 );
-            */
 
             SeaBoss2 boss = new SeaBoss2();
             boss.pos = 178;

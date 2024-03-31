@@ -1,6 +1,7 @@
 package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
@@ -11,13 +12,18 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Sleep;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
+import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MephistoSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Skadi_mulaSprite;
+import com.watabou.noosa.Camera;
+import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
+
+import java.util.HashSet;
 
 public class SeaBoss2 extends Mob {
     {
@@ -51,6 +57,40 @@ public class SeaBoss2 extends Mob {
         if (src != this) dmg = 0;
 
         super.damage(dmg, src);
+    }
+
+    private HashSet<Mob> getSubjects(){
+        HashSet<Mob> subjects = new HashSet<>();
+        for (Mob m : Dungeon.level.mobs){
+            if (m.alignment == alignment && (m instanceof SummonRunner || m instanceof SummonLeef || m instanceof SummonOcto)){
+                subjects.add(m);
+            }
+        }
+        return subjects;
+    }
+
+    public void detach() {
+        for (Mob m : getSubjects()) {
+            m.die(null);
+        }
+
+        Ballistica trajectory = new Ballistica(pos, Dungeon.hero.pos, Ballistica.STOP_TARGET);
+        trajectory = new Ballistica(trajectory.collisionPos, trajectory.path.get(trajectory.path.size() - 1), Ballistica.PROJECTILE);
+        WandOfBlastWave.throwChar(Dungeon.hero, trajectory, 6); // 넉백 효과
+
+        SeaBoss2_Phase2_Head boss1 = new SeaBoss2_Phase2_Head();
+        boss1.pos = 176;
+        GameScene.add( boss1 );
+
+        SeaBoss2_Phase2_Mid boss2 = new SeaBoss2_Phase2_Mid();
+        boss2.pos = 178;
+        GameScene.add( boss2 );
+
+        SeaBoss2_Phase2_Tail boss3 = new SeaBoss2_Phase2_Tail();
+        boss3.pos = 180;
+        GameScene.add( boss3 );
+        GameScene.flash(0x80FFFFFF);
+        Camera.main.shake(2, 2f);
     }
 
     @Override
