@@ -32,10 +32,6 @@ public class SeaTerrorRoom extends SpecialRoom {
         int cx = c.x;
         int cy = c.y;
 
-        GiantMushroom Mushroom = new GiantMushroom();
-        Mushroom.pos = cx + cy * level.width();
-        level.mobs.add(Mushroom);
-
     }
 
     @Override
