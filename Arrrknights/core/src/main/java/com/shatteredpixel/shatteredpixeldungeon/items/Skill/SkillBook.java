@@ -47,14 +47,6 @@ public class SkillBook extends Item {
     public void execute(Hero hero, String action) {
         super.execute(hero, action);
         if (action.equals(AC_ACT)) {
-            
-
-            if (hero.buff(NervousImpairment.class) == null) {
-                Buff.affect(hero, NervousImpairment.class);
-            }
-            else {
-                hero.buff(NervousImpairment.class).Sum(25);
-            }
 
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),

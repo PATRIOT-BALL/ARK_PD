@@ -11,6 +11,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bless;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Hex;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Poison;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.SurfaceScene;
@@ -68,6 +70,7 @@ public class SeaBoss2_Phase2_Mid extends Mob {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 Buff.affect(mob, Barrier.class).setShield(80);
             }
+            Buff.affect(Dungeon.hero, Hex.class, 2f);
             if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) cooldown = 5;
             else cooldown = 8;
         }
