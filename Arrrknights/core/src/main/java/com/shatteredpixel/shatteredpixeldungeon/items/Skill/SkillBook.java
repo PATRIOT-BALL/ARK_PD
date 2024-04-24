@@ -1,5 +1,6 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.Skill;
 
+import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.SPDSettings;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
@@ -68,6 +69,15 @@ public class SkillBook extends Item {
                                         updateQuickslot();
                                         hero.SK1.doSkill();
                                         Talent.onSkillUsed(Dungeon.hero);
+
+                                        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+                                            if (hero.buff(NervousImpairment.class) == null) {
+                                                Buff.affect(hero, NervousImpairment.class);
+                                                hero.buff(NervousImpairment.class).Sum(25);
+                                            } else {
+                                                hero.buff(NervousImpairment.class).Sum(25);
+                                            }
+                                        }
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
                             } else if (index == 1) {
@@ -81,6 +91,15 @@ public class SkillBook extends Item {
                                         updateQuickslot();
                                         hero.SK2.doSkill();
                                         Talent.onSkillUsed(Dungeon.hero);
+
+                                        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+                                            if (hero.buff(NervousImpairment.class) == null) {
+                                                Buff.affect(hero, NervousImpairment.class);
+                                                hero.buff(NervousImpairment.class).Sum(25);
+                                            } else {
+                                                hero.buff(NervousImpairment.class).Sum(25);
+                                            }
+                                        }
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
                             } else if (index == 2) {
@@ -94,6 +113,15 @@ public class SkillBook extends Item {
                                         updateQuickslot();
                                         hero.SK3.doSkill();
                                         Talent.onSkillUsed(Dungeon.hero);
+
+                                        if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) {
+                                            if (hero.buff(NervousImpairment.class) == null) {
+                                                Buff.affect(hero, NervousImpairment.class);
+                                                hero.buff(NervousImpairment.class).Sum(25);
+                                            } else {
+                                                hero.buff(NervousImpairment.class).Sum(25);
+                                            }
+                                        }
                                     }
                                 } else GLog.w(Messages.get(SkillBook.class, "no_skill"));
                             }

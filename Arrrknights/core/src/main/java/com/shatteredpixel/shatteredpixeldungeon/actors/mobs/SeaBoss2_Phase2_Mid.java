@@ -70,7 +70,6 @@ public class SeaBoss2_Phase2_Mid extends Mob {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
                 Buff.affect(mob, Barrier.class).setShield(80);
             }
-            Buff.affect(Dungeon.hero, Hex.class, 2f);
             if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) cooldown = 5;
             else cooldown = 8;
         }
