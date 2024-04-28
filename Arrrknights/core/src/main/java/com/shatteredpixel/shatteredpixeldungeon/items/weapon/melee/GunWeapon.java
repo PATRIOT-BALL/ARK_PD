@@ -59,6 +59,7 @@ public class GunWeapon extends MeleeWeapon {
     protected boolean gamza = false; // 썬더볼트 장착 여부
     protected float FIREACC = 1f;
     protected float FIRETICK = 1f;
+    protected float FIREDMG = 1f;
 
     @Override
     public int max(int lvl) {
@@ -67,10 +68,10 @@ public class GunWeapon extends MeleeWeapon {
     }
 
     public int shotmin() {
-        return 3 + level();
+        return (int)((3 + level()) * FIREDMG);
     }
     public int shotmax() {
-        return 4 + (bullettier * 3) + (level() * bullettier);
+        return (int)( 4 + (bullettier * 3) + (level() * bullettier) * FIREDMG);
     }
 
     public int ShotDamageRoll() {
