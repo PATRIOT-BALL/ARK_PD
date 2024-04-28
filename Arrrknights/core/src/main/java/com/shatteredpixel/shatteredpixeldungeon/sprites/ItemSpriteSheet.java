@@ -244,6 +244,8 @@ public class ItemSpriteSheet {
 	public static final int MIDSWORD           = WEP_TIER2+6;
 	public static final int FIRMAMENT           = WEP_TIER2+7;
 	public static final int FIRE_KATANA           = WEP_TIER2+8;
+	public static final int USG           = WEP_TIER2+9;
+
 	static{
 		assignItemRect(SHORTSWORD,      16, 16);
 		assignItemRect(HAND_AXE,        16, 16);
@@ -254,6 +256,8 @@ public class ItemSpriteSheet {
 		assignItemRect(MIDSWORD,            16, 16);
 		assignItemRect(FIRMAMENT,            16, 16);
 		assignItemRect(FIRE_KATANA,            16, 16);
+		assignItemRect(USG,            16, 16);
+
 	}
 
 	private static final int WEP_TIER3      =                               xy(1, 8);   //8 slots
@@ -270,6 +274,7 @@ public class ItemSpriteSheet {
 	public static final int FLAG     = WEP_TIER3+10;
 	public static final int DP27     = WEP_TIER3+11;
 	public static final int C1     = WEP_TIER3+12;
+
 	static{
 		assignItemRect(SWORD,           16, 16);
 		assignItemRect(MACE,            16, 16);
@@ -308,6 +313,9 @@ public class ItemSpriteSheet {
 	public static final int SCENE       = WEP_TIER4+16;
 	public static final int REVOLVER       = WEP_TIER4+17;
 	public static final int KAZEMARU       = WEP_TIER4+18;
+	public static final int OTS03       = WEP_TIER4+19;
+	public static final int SG_CQB       = WEP_TIER4+20;
+	public static final int BEOWULF       = WEP_TIER4+21;
 	static{
 		assignItemRect(LONGSWORD,       16, 16);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -328,6 +336,9 @@ public class ItemSpriteSheet {
 		assignItemRect(SCENE,        16, 16);
 		assignItemRect(REVOLVER,        16, 16);
 		assignItemRect(KAZEMARU,        16, 16);
+		assignItemRect(OTS03,        16, 16);
+		assignItemRect(SG_CQB,        16, 16);
+		assignItemRect(BEOWULF,        16, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 10);   //8 slots
@@ -353,7 +364,7 @@ public class ItemSpriteSheet {
 	public static final int ECHEVERIA       = WEP_TIER5+19;
 	public static final int DONKEY_SWORD       = WEP_TIER5+20;
 	public static final int FLAMMETTA       = WEP_TIER5+21;
-	public static final int BEOWULF       = WEP_TIER5+22;
+	public static final int PKP       = WEP_TIER5+22;
 
 	static{
 		assignItemRect(GREATSWORD,  16, 16);
@@ -378,8 +389,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ECHEVERIA,   16, 16);
 		assignItemRect(DONKEY_SWORD,   16, 16);
 		assignItemRect(FLAMMETTA,   16, 16);
-		assignItemRect(BEOWULF,   16, 16);
-
+		assignItemRect(PKP,   16, 16);
 
 
 	}

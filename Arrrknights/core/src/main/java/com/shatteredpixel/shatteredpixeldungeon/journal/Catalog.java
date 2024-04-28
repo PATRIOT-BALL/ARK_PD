@@ -190,6 +190,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KazemaruWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KollamSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.LoneJourney;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Ots03;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Pkp;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SG_CQB;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SanktaBet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
@@ -232,6 +235,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Laevateinn;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Destreza;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Usg;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarJournalist;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
@@ -285,6 +289,7 @@ public enum Catalog {
 		WEAPONS.seen.put( MidnightSword.class,                   false);
 		WEAPONS.seen.put( Halberd.class,                       false);
 		WEAPONS.seen.put( FlameKatana.class,                       false);
+		WEAPONS.seen.put( Usg.class,                   false);
 
 		WEAPONS.seen.put( Sword.class,                      false);
 		WEAPONS.seen.put( ThermiteBlade.class,                       false);
@@ -313,6 +318,8 @@ public enum Catalog {
 		WEAPONS.seen.put( WarJournalist.class,                false);
 		WEAPONS.seen.put( KazemaruWeapon.class,                   false);
 		WEAPONS.seen.put( Beowulf.class,                   false);
+		WEAPONS.seen.put( Ots03.class,                   false);
+		//WEAPONS.seen.put( SG_CQB.class,                   false);
 
 		WEAPONS.seen.put( Greatsword.class,                 false);
 		WEAPONS.seen.put( Laevateinn.class,                  false);
@@ -325,12 +332,14 @@ public enum Catalog {
 		WEAPONS.seen.put( SwordofArtorius.class,                   false);
 		WEAPONS.seen.put( DivineAvatar.class,                false);
 		WEAPONS.seen.put( R4C.class,                false);
+		WEAPONS.seen.put( Pkp.class,                   false);
 		WEAPONS.seen.put( RadiantSpear.class,                false);
 		WEAPONS.seen.put( KRISSVector.class,                false);
 		WEAPONS.seen.put( SakuraSword.class,                false);
 		WEAPONS.seen.put( LoneJourney.class,                   false);
 		WEAPONS.seen.put( Echeveria.class,                   false);
 		WEAPONS.seen.put( Suffering.class,                   false);
+
 
 		WEAPONS.seen.put( RhodesSword.class,               false);
 		WEAPONS.seen.put( Firmament.class,                       false);
@@ -345,7 +354,6 @@ public enum Catalog {
 		WEAPONS.seen.put( MinosFury.class,                   false);
 		WEAPONS.seen.put( ImageoverForm.class,                   false);
 		WEAPONS.seen.put( KollamSword.class,                   false);
-		WEAPONS.seen.put( Beowulf.class,                   false);
 
 		SKILLBOOK.seen.put( BookPowerfulStrike.class,      false);
 		SKILLBOOK.seen.put( BookTacticalChanting.class,    false);

@@ -537,6 +537,7 @@ public class Assets {
 		public static final String LANCER	= "sprites/Lancer.png";
 		public static final String GHOST1	= "sprites/ghost_1.png";
 		public static final String OBELISK	= "sprites/Obelisk.png";
+		public static final String GOPNIK	= "sprites/gopnik.png";
 
 
 

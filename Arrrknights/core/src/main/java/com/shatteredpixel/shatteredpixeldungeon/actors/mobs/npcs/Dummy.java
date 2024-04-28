@@ -9,14 +9,15 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.CivilianSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ClosureSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.NPC_dummySprite;
 
 public class Dummy extends Mob {
     {
-        spriteClass = NPC_dummySprite.class;
+        spriteClass = CivilianSprite.class;
         HP=HT=1000;
-        properties.add(Property.IMMOVABLE);
+        //properties.add(Property.IMMOVABLE);
 
         state = PASSIVE;
     }

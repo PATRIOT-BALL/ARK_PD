@@ -28,6 +28,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.GopnikSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.GuerrillaSprite;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
@@ -35,7 +36,7 @@ import com.watabou.utils.Random;
 public class ArmoredStatue extends Statue {
 
 	{
-		spriteClass = GuerrillaSprite.class;
+		spriteClass = GopnikSprite.class;
 		immunities.add(Silence.class);
 	}
 
@@ -80,7 +81,7 @@ public class ArmoredStatue extends Statue {
 	@Override
 	public CharSprite sprite() {
 		CharSprite sprite = super.sprite();
-		((GuerrillaSprite)sprite).setArmor(armor.tier);
+		((GopnikSprite)sprite).setArmor(armor.tier);
 		return sprite;
 	}
 

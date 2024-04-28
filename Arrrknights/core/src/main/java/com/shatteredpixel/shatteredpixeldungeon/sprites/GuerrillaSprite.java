@@ -29,44 +29,23 @@ public class GuerrillaSprite extends MobSprite {
 	
 	public GuerrillaSprite() {
 		super();
-		
+
 		texture( Assets.Sprites.GUERRILLA );
-		
+
 		TextureFilm frames = new TextureFilm( texture, 42, 42 );
-		
+
 		idle = new Animation( 2, true );
 		idle.frames( frames, 0, 0, 0, 0 );
-		
+
 		run = new Animation( 10, true );
 		run.frames( frames, 1, 2, 3, 4, 5, 6, 7, 8 );
-		
+
 		attack = new Animation( 12, false );
 		attack.frames( frames, 1, 3 );
-		
+
 		die = new Animation( 5, false );
 		die.frames( frames, 0 );
-		
+
 		play( idle );
-	}
-
-	private static int[] tierFrames = {0, 20, 40, 60, 80, 100};
-
-	public void setArmor( int tier ){
-		int c = tierFrames[(int)GameMath.gate(0, tier, 5)];
-
-		TextureFilm frames = new TextureFilm( texture, 42, 42 );
-
-		idle.frames( frames, 0+c, 0+c, 0+c, 0+c, 0+c);
-		run.frames( frames, 1+c, 2+c, 3+c, 4+c, 5+c, 6+c, 7+c );
-		attack.frames( frames, 1+c, 3+c );
-		//death animation is always armorless
-
-		play( idle, true );
-
-	}
-
-	@Override
-	public int blood() {
-		return 0xFFcdcdb7;
 	}
 }

@@ -102,11 +102,14 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KazemaruWeapo
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.EX42;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.NEARL_AXE;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Ots03;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.PatriotSpear;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Pkp;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SakuraSword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SnowHunter;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Usg;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.LightKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.NormalMagazine;
@@ -184,18 +187,21 @@ import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 
 		new ScrollOfIdentify().identify();
 		new FoodBag().collect();
+
 		new Nevous().quantity(5).collect();
-		/*new Castlebreaker().collect();
-		new NervousPotion().quantity(5).collect();
-		new KazemaruWeapon().identify().collect();
+		new Usg().identify().collect();
+		new Ots03().identify().collect();
+		new Pkp().identify().collect();
+		new NormalMagazine().quantity(40).collect();
+
 		new PotionOfStrength().quantity(40).collect();
 		new PotionOfExperience().quantity(40).collect();
 		new PotionOfHealing().quantity(40).collect();
 		new ScrollOfUpgrade().quantity(40).collect();
 		new Amulet().collect();
-		new Beowulf().identify().collect();
+
 		new ScrollOfMagicMapping().identify().collect();
-		new Heamyo().collect();*/
+		new Heamyo().collect();/**/
 
 
 

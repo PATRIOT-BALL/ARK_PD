@@ -188,6 +188,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.FolkSong;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.KazemaruWeapon;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.LoneJourney;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Ots03;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Pkp;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SG_CQB;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.ShadowFirmament;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.DeepAbyss;
@@ -221,6 +224,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.SwordofArtorius;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Laevateinn;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Destreza;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Usg;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarJournalist;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WintersScar;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
@@ -440,9 +444,10 @@ public class Generator {
                     Dirk.class,
                     MidnightSword.class,
                     Halberd.class,
-                    FlameKatana.class
+                    FlameKatana.class,
+                    Usg.class
             };
-            WEP_T2.probs = new float[]{4, 5, 4, 4, 4, 5, 3};
+            WEP_T2.probs = new float[]{4, 5, 4, 4, 4, 5, 3, 2};
 
             WEP_T3.classes = new Class<?>[]{
                     Sword.class,
@@ -475,8 +480,10 @@ public class Generator {
                     WarJournalist.class,
                     KazemaruWeapon.class,
                     Beowulf.class,
+                    //SG_CQB.class,산탄총의 프롭 등록되지 않음
+                    Ots03.class
             };
-            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 3, 3, 2, 4, 2, 3, 4, 4};
+            WEP_T4.probs = new float[]{4, 5, 4, 4, 3, 4, 4, 4, 3, 3, 2, 4, 2, 3, 4, 4, 4};
 
             WEP_T5.classes = new Class<?>[]{
                     Greatsword.class,
@@ -490,13 +497,14 @@ public class Generator {
                     SwordofArtorius.class,
                     DivineAvatar.class,
                     R4C.class,
+                    Pkp.class,
                     RadiantSpear.class,
                     KRISSVector.class,
                     LoneJourney.class,
                     Echeveria.class,
                     Suffering.class
             };
-            WEP_T5.probs = new float[]{4, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 3, 3, 3, 3};
+            WEP_T5.probs = new float[]{4, 3, 3, 4, 4, 4, 4, 3, 3, 4, 4, 4, 3, 3, 3, 3, 3};
 
             //see Generator.randomArmor
             ARMOR.classes = new Class<?>[]{
