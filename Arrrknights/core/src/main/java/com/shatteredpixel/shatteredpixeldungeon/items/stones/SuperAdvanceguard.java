@@ -47,7 +47,7 @@ public class SuperAdvanceguard extends Runestone {
             GLog.h(Messages.get(this, "advanceguard"));
         }
         else {
-            Dungeon.level.drop(new SuperAdvanceguard(), cell).sprite.drop();;
+            Dungeon.level.drop(new SuperAdvanceguard(), cell).sprite.drop();
         }
     }
 }

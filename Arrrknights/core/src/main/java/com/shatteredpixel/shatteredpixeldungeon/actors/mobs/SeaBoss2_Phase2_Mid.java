@@ -80,7 +80,7 @@ public class SeaBoss2_Phase2_Mid extends Mob {
     @Override
     public void damage(int dmg, Object src) {
 
-        if (dieChacke) return;;
+        if (dieChacke) return;
 
         super.damage(dmg, src);
 

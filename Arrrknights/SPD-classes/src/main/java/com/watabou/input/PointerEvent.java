@@ -21,6 +21,7 @@
 
 package com.watabou.input;
 
+import com.watabou.noosa.Game;
 import com.watabou.utils.PointF;
 import com.watabou.utils.Signal;
 
@@ -28,57 +29,67 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PointerEvent {
-	
+
 	public PointF start;
 	public PointF current;
 	public int id;
 	public boolean down;
-	
+
 	public PointerEvent( int x, int y, int id, boolean down){
 		start = current = new PointF(x, y);
 		this.id = id;
 		this.down = down;
 	}
-	
+
 	public void update( PointerEvent other ){
 		this.current = other.current;
 	}
-	
+
 	public void update( int x, int y ){
 		current.set( x, y );
 	}
-	
+
 	public PointerEvent up() {
 		down = false;
 		return this;
 	}
-	
+
 	// **********************
 	// *** Static members ***
 	// **********************
-	
+
 	private static Signal<PointerEvent> pointerSignal = new Signal<>( true );
-	
+
 	public static void addPointerListener( Signal.Listener<PointerEvent> listener ){
 		pointerSignal.add(listener);
 	}
-	
+
 	public static void removePointerListener( Signal.Listener<PointerEvent> listener ){
 		pointerSignal.remove(listener);
 	}
-	
+
 	public static void clearListeners(){
 		pointerSignal.removeAll();
 	}
-	
+
 	// Accumulated pointer events
 	private static ArrayList<PointerEvent> pointerEvents = new ArrayList<>();
 	private static HashMap<Integer, PointerEvent> activePointers = new HashMap<>();
-	
+
+	private static PointF lastHoverPos = new PointF();
+
+	public static PointF currentHoverPos(){
+		if (lastHoverPos.x == 0 && lastHoverPos.y == 0){
+			lastHoverPos.x = Game.width/2;
+			lastHoverPos.y = Game.height/2;
+		}
+		return lastHoverPos.clone();
+	}
+
 	public static synchronized void addPointerEvent( PointerEvent event ){
 		pointerEvents.add( event );
 	}
-	
+
 	public static synchronized void processPointerEvents(){
 		for (PointerEvent p : pointerEvents){
 			if (activePointers.containsKey(p.id)){

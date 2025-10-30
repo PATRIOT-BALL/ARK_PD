@@ -76,7 +76,7 @@ public class SPDSettings extends GameSettings {
 		if (contains(KEY_LANDSCAPE)){
 			return getBoolean(KEY_LANDSCAPE, false);
 		} else {
-			return null;
+			return false;
 		}
 	}
 	

@@ -65,8 +65,6 @@ import com.watabou.utils.Random;
 
 import java.util.ArrayList;
 
-import sun.util.resources.cldr.dua.CalendarData_dua_CM;
-
 public class AnnihilationGear extends Item {
 
     public static final String AC_ACTIVE	= "active";

@@ -119,8 +119,6 @@ import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.DeviceCompat;
 
-import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
-
  public enum HeroClass {
 
 	WARRIOR( "warrior", HeroSubClass.BERSERKER, HeroSubClass.GLADIATOR, HeroSubClass.HEAT ),

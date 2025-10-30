@@ -44,12 +44,12 @@ public class StoneOfAdvanceguard extends Runestone {
             } else {
                 mob.destroy();
                 mob.sprite.killAndErase();
-                Dungeon.level.drop(new Gold(200), cell).sprite.drop();;
+                Dungeon.level.drop(new Gold(200), cell).sprite.drop();
                 GLog.p(Messages.get(this, "hit"));
             }
         }
         else {
-            Dungeon.level.drop(new StoneOfAdvanceguard(), cell).sprite.drop();;
+            Dungeon.level.drop(new StoneOfAdvanceguard(), cell).sprite.drop();
         }
     }
 }

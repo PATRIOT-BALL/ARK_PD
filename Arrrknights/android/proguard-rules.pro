@@ -3,8 +3,8 @@
 -keepnames class com.watabou.** { *; }
 
 # keep members of classes that are instantiated via reflection
--keepclassmembers class * extends com.watabou.glscripts.Script
--keepclassmembers class * implements com.watabou.utils.Bundlable
+-keep class * extends com.watabou.glscripts.Script
+-keep class * implements com.watabou.utils.Bundlable
 
 # retained to support meaningful stack traces
 # note that the mapping file must be referenced in order to make sense of line numbers
@@ -17,6 +17,9 @@
 -dontwarn com.badlogic.gdx.utils.GdxBuild
 -dontwarn com.badlogic.gdx.physics.box2d.utils.Box2DBuild
 -dontwarn com.badlogic.gdx.jnigen.BuildTarget*
+
+-keep class com.badlogic.gdx.graphics.Color { *; }
+-keep class com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle { *; }
 
 -keepclassmembers class com.badlogic.gdx.backends.android.AndroidInput* {
     <init>(com.badlogic.gdx.Application, android.content.Context, java.lang.Object, com.badlogic.gdx.backends.android.AndroidApplicationConfiguration);

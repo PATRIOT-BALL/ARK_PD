@@ -207,7 +207,7 @@ public class Game implements ApplicationListener {
 	public static void switchScene(Class<? extends Scene> c) {
 		switchScene(c, null);
 	}
-	
+
 	public static void switchScene(Class<? extends Scene> c, SceneChangeCallback callback) {
 		instance.sceneClass = c;
 		instance.requestedReset = true;
@@ -240,25 +240,29 @@ public class Game implements ApplicationListener {
 	protected void switchScene() {
 
 		Camera.reset();
-		
+
 		if (scene != null) {
 			scene.destroy();
 		}
+		//clear any leftover vertex buffers
+		Vertexbuffer.clear();
 		scene = requestedScene;
 		if (onChange != null) onChange.beforeCreate();
 		scene.create();
 		if (onChange != null) onChange.afterCreate();
 		onChange = null;
-		
+
 		Game.elapsed = 0f;
 		Game.timeScale = 1f;
 		Game.timeTotal = 0f;
 	}
 
 	protected void update() {
-		Game.elapsed = Game.timeScale * Gdx.graphics.getDeltaTime();
+		//game will not process more than 200ms of graphics time per frame
+		float frameDelta = Math.min(0.2f, Gdx.graphics.getDeltaTime());
+		Game.elapsed = Game.timeScale * frameDelta;
 		Game.timeTotal += Game.elapsed;
-		
+
 		Game.realTime = TimeUtils.millis();
 
 		inputHandler.processAllEvents();

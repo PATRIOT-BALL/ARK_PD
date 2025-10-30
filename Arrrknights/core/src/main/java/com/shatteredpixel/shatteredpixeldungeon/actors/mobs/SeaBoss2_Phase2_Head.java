@@ -165,7 +165,7 @@ public class SeaBoss2_Phase2_Head extends Mob {
     @Override
     public void damage(int dmg, Object src) {
 
-        if (dieChacke) return;;
+        if (dieChacke) return;
         
         // 믈라의 머리는 다른 부위가 파괴되지않았다면 절반의 피해를 받습니다
         if (Dungeon.mulaCount < 2) dmg/=2;

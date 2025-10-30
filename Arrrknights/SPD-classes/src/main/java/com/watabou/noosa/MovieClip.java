@@ -23,8 +23,6 @@ package com.watabou.noosa;
 
 import com.watabou.utils.RectF;
 
-import sun.security.ssl.Debug;
-
 public class MovieClip extends Image {
 
 	protected Animation curAnim;

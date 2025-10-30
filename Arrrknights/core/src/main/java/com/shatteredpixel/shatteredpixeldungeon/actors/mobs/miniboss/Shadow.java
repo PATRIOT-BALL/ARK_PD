@@ -46,8 +46,6 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-import javax.jws.soap.SOAPBinding;
-
 public class Shadow extends Mob {
     {
         viewDistance = Light.DISTANCE;
