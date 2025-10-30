@@ -71,7 +71,7 @@ public class GunWeapon extends MeleeWeapon {
         return (int)((3 + level()) * FIREDMG);
     }
     public int shotmax() {
-        return (int)( 4 + (bullettier * 3) + (level() * bullettier) * FIREDMG);
+        return (int)( 3 + shotmin() + ((level() + 1) * bullettier) * FIREDMG);
     }
 
     public int ShotDamageRoll() {
