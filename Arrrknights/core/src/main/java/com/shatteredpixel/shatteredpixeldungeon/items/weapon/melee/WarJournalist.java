@@ -62,7 +62,7 @@ public class WarJournalist extends MeleeWeapon {
                         Buff.affect(mob, PanoramaBuff.class, PanoramaBuff.DURATION);
                         Buff.append(Dungeon.hero, TalismanOfForesight.CharAwareness.class, PanoramaBuff.DURATION).charID = mob.id();
                       active = true;}
-                    if (active) break;;
+                    if (active) break;
                 }
 
                 GameScene.flash( 0x80FFFFFF );
