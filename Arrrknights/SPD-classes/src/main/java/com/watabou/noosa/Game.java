@@ -146,8 +146,7 @@ public class Game implements ApplicationListener {
 			return;
 		}
 
-		if (justResumed){
-			Gdx.gl.glClear(Gdx.gl.GL_COLOR_BUFFER_BIT);
+		if (justResumed) {
 			justResumed = false;
 			return;
 		}

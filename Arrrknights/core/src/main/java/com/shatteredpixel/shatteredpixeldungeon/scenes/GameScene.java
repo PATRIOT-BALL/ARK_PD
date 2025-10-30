@@ -634,18 +634,18 @@ public class GameScene extends PixelScene {
 	public void destroy() {
 		
 		//tell the actor thread to finish, then wait for it to complete any actions it may be doing.
-		if (!waitForActorThread( 4500 )){
+		if (!waitForActorThread( 4500, true )){
 			Throwable t = new Throwable();
 			t.setStackTrace(actorThread.getStackTrace());
 			throw new RuntimeException("timeout waiting for actor thread! ", t);
 		}
 
 		Emitter.freezeEmitters = false;
-		
+
 		scene = null;
 		Badges.saveGlobal();
 		Journal.saveGlobal();
-		
+
 		super.destroy();
 	}
 	
@@ -656,25 +656,24 @@ public class GameScene extends PixelScene {
 		}
 	}
 
-	public boolean waitForActorThread(int msToWait ){
+	public boolean waitForActorThread(int msToWait, boolean interrupt){
 		if (actorThread == null || !actorThread.isAlive()) {
 			return true;
 		}
 		synchronized (actorThread) {
-			actorThread.interrupt();
+			if (interrupt) actorThread.interrupt();
 			try {
 				actorThread.wait(msToWait);
 			} catch (InterruptedException e) {
 				TomorrowRogueNight.reportException(e);
 			}
 			return !Actor.processing();
-		}
-	}
+		}	}
 	
 	@Override
 	public synchronized void onPause() {
 		try {
-			waitForActorThread(500);
+			waitForActorThread(500, false);
 			Dungeon.saveAll();
 			Badges.saveGlobal();
 			Journal.saveGlobal();
