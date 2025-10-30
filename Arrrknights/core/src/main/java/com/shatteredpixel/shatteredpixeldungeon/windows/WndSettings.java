@@ -826,7 +826,7 @@ public class WndSettings extends WndTabbed {
 							}
 						}
 
-						Window credits = new Window(0, 0, 0, Chrome.get(Chrome.Type.TOAST));
+						Window credits = new Window(0, 0, Chrome.get(Chrome.Type.TOAST));
 
 						int w = wide ? 125 : 60;
 

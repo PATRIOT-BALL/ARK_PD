@@ -34,6 +34,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.audio.Music;
+import com.watabou.utils.RectF;
 
 public class BadgesScene extends PixelScene {
 
@@ -48,6 +49,11 @@ public class BadgesScene extends PixelScene {
 		int w = Camera.main.width;
 		int h = Camera.main.height;
 
+		RectF insets = getCommonInsets();
+
+		w -= insets.left + insets.right;
+		h -= insets.top + insets.bottom;
+
 		Archs archs = new Archs();
 		archs.setSize( w, h );
 		add( archs );
@@ -58,15 +64,15 @@ public class BadgesScene extends PixelScene {
 		RenderedTextBlock title = PixelScene.renderTextBlock( Messages.get(this, "title"), 9 );
 		title.hardlight(Window.TITLE_COLOR);
 		title.setPos(
-				(w - title.width()) / 2f,
-				(top - title.height()) / 2f
+				insets.left + (w - title.width()) / 2f,
+				insets.top + (top - title.height()) / 2f
 		);
 		align(title);
 		add(title);
 
 		Badges.loadGlobal();
 		BadgesGrid grid = new BadgesGrid(true);
-		grid.setRect(margin, top, w-(2*margin), h-top-margin);
+		grid.setRect(margin, insets.top + top, w-(2*margin), h-top-margin);
 		add(grid);
 
 		ExitButton btnExit = new ExitButton();

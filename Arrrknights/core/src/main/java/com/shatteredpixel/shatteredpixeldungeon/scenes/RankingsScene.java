@@ -49,6 +49,7 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.ui.Button;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.GameMath;
+import com.watabou.utils.RectF;
 
 public class RankingsScene extends PixelScene {
 	
@@ -72,6 +73,10 @@ public class RankingsScene extends PixelScene {
 		
 		int w = Camera.main.width;
 		int h = Camera.main.height;
+		RectF insets = getCommonInsets();
+
+		w -= insets.left + insets.right;
+		h -= insets.top + insets.bottom;
 		
 		archs = new Archs();
 		archs.setSize( w, h );
@@ -82,8 +87,8 @@ public class RankingsScene extends PixelScene {
 		RenderedTextBlock title = PixelScene.renderTextBlock( Messages.get(this, "title"), 9);
 		title.hardlight(Window.TITLE_COLOR);
 		title.setPos(
-				(w - title.width()) / 2f,
-				(20 - title.height()) / 2f
+				insets.left + (w - title.width()) / 2f,
+				insets.top + (20 - title.height()) / 2f
 		);
 		align(title);
 		add(title);
@@ -104,7 +109,7 @@ public class RankingsScene extends PixelScene {
 				if (rowHeight <= 14){
 					offset = (pos % 2 == 1) ? 5 : -5;
 				}
-				row.setRect( left+offset, top + pos * rowHeight, w - left * 2, rowHeight );
+				row.setRect( insets.left + left+offset, insets.top + top + pos * rowHeight, w - left * 2, rowHeight );
 				add(row);
 				
 				pos++;
@@ -137,8 +142,8 @@ public class RankingsScene extends PixelScene {
 				add( label );
 				
 				label.setPos(
-						(w - label.width()) / 2,
-						h - label.height() - 2*GAP
+						insets.left + (w - label.width()) / 2,
+						insets.top + h - label.height() - 2*GAP
 				);
 				align(label);
 
@@ -149,8 +154,8 @@ public class RankingsScene extends PixelScene {
 			RenderedTextBlock noRec = PixelScene.renderTextBlock(Messages.get(this, "no_games"), 8);
 			noRec.hardlight( 0xCCCCCC );
 			noRec.setPos(
-					(w - noRec.width()) / 2,
-					(h - noRec.height()) / 2
+					insets.left + (w - noRec.width()) / 2,
+					insets.top + (h - noRec.height()) / 2
 			);
 			align(noRec);
 			add(noRec);
@@ -158,7 +163,7 @@ public class RankingsScene extends PixelScene {
 		}
 
 		ExitButton btnExit = new ExitButton();
-		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+		btnExit.setPos( Camera.main.width - btnExit.width() - insets.right, insets.top );
 		add( btnExit );
 
 		fadeIn();

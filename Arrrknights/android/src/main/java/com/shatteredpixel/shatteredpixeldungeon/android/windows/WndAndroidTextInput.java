@@ -46,6 +46,7 @@ import com.shatteredpixel.shatteredpixeldungeon.ui.RedButton;
 import com.shatteredpixel.shatteredpixeldungeon.ui.RenderedTextBlock;
 import com.shatteredpixel.shatteredpixeldungeon.ui.Window;
 import com.watabou.noosa.Game;
+import com.watabou.utils.Point;
 
 //This class makes use of the android EditText component to handle text input
 //FIXME this window is currently android-specific, should generalize it
@@ -72,9 +73,9 @@ public class WndAndroidTextInput extends Window {
 
 		//need to offset to give space for the soft keyboard
 		if (PixelScene.landscape()) {
-			offset( multiLine ? -45 : -45 );
+			offset( new Point(0, -45) );
 		} else {
-			offset( multiLine ? -60 : -45 );
+			offset( multiLine ? new Point(0, -60) : new Point(0, -45) );
 		}
 
 		final int width;

@@ -57,6 +57,8 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.PointerArea;
 import com.watabou.utils.DeviceCompat;
 import com.watabou.utils.GameMath;
+import com.watabou.utils.PlatformSupport;
+import com.watabou.utils.RectF;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -75,6 +77,8 @@ public class HeroSelectScene extends PixelScene {
 	private IconButton btnExit;
 	private int change;
 
+	private RectF insets;
+
 	@Override
 	public void create() {
 		super.create();
@@ -83,6 +87,8 @@ public class HeroSelectScene extends PixelScene {
 
 		Badges.loadGlobal();
 		Journal.loadGlobal();
+
+		insets = Game.platform.getSafeInsets(PlatformSupport.INSET_BLK).scale(1f/defaultZoom);
 
 		background = new Image(HeroClass.WARRIOR.splashArt()){
 			@Override
@@ -118,7 +124,7 @@ public class HeroSelectScene extends PixelScene {
 
 		prompt = PixelScene.renderTextBlock(Messages.get(this, "title"), 12);
 		prompt.hardlight(Window.TITLE_COLOR);
-		prompt.setPos( (Camera.main.width - prompt.width())/2f, (Camera.main.height - HeroBtn.HEIGHT - prompt.height() - 4));
+		prompt.setPos( (Camera.main.width - prompt.width())/2f, (Camera.main.height - HeroBtn.HEIGHT - prompt.height() - 4 - insets.bottom));
 		PixelScene.align(prompt);
 		add(prompt);
 
@@ -143,7 +149,7 @@ public class HeroSelectScene extends PixelScene {
 		};
 		startBtn.icon(Icons.get(Icons.ENTER));
 		startBtn.setSize(80, 21);
-		startBtn.setPos((Camera.main.width - startBtn.width())/2f, (Camera.main.height - HeroBtn.HEIGHT + 2 - startBtn.height()));
+		startBtn.setPos((Camera.main.width - startBtn.width())/2f, (Camera.main.height - HeroBtn.HEIGHT + 2 - startBtn.height()) - insets.bottom);
 		add(startBtn);
 		startBtn.visible = false;
 
@@ -172,7 +178,7 @@ public class HeroSelectScene extends PixelScene {
 		for (HeroClass cl : classes){
 			if (i==6) break;
 			HeroBtn button = new HeroBtn(cl);
-			button.setRect(curX, Camera.main.height-HeroBtn.HEIGHT+3, btnWidth, HeroBtn.HEIGHT);
+			button.setRect(curX, Camera.main.height-HeroBtn.HEIGHT+3-insets.bottom, btnWidth, HeroBtn.HEIGHT);
 			curX += btnWidth;
 			add(button);
 			heroBtns.add(button);
@@ -199,7 +205,7 @@ public class HeroSelectScene extends PixelScene {
 				super.update();
 			}
 		};
-		challengeButton.setRect(heroBtnleft + 16, Camera.main.height-HeroBtn.HEIGHT-16, 21, 21);
+		challengeButton.setRect(heroBtnleft + 16, Camera.main.height-HeroBtn.HEIGHT-16 - insets.bottom, 21, 21);
 		challengeButton.visible = false;
 
 		if (DeviceCompat.isDebug() || Badges.isUnlocked(Badges.Badge.VICTORY)){
@@ -223,12 +229,12 @@ public class HeroSelectScene extends PixelScene {
 		};
 
 		btnExit = new ExitButton();
-		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+		btnExit.setPos( Camera.main.width - btnExit.width() - insets.right, insets.top );
 		add( btnExit );
 		btnExit.visible = !SPDSettings.intro() || Rankings.INSTANCE.totalNumber > 0;
 
 		chnageButton.setSize(21,21);
-		chnageButton.setPos( btnExit.width() - 21, 0 );
+		chnageButton.setPos( btnExit.width() - 21 + insets.left, insets.top );
 		add(chnageButton);
 		chnageButton.visible = true;
 
@@ -300,7 +306,7 @@ public class HeroSelectScene extends PixelScene {
 		for (int p = 0; p<6; p++){
 			if (classes.length <= p+i) break;
 			HeroBtn button = new HeroBtn(classes[p+i]);
-			button.setRect(curX, Camera.main.height-HeroBtn.HEIGHT+3, btnWidth, HeroBtn.HEIGHT);
+			button.setRect(curX, Camera.main.height-HeroBtn.HEIGHT+3-insets.bottom, btnWidth, HeroBtn.HEIGHT);
 			curX += btnWidth;
 			add(button);
 			heroBtns.add(button);

@@ -30,7 +30,7 @@ public class UpdateImpl {
 	}
 
 	public static boolean supportsUpdates(){
-		return true;
+		return false;
 	}
 
 }

@@ -42,6 +42,8 @@ import com.watabou.noosa.Scene;
 import com.watabou.noosa.Visual;
 import com.watabou.noosa.ui.Component;
 import com.watabou.utils.GameMath;
+import com.watabou.utils.PlatformSupport;
+import com.watabou.utils.RectF;
 import com.watabou.utils.Reflection;
 
 import java.util.ArrayList;
@@ -83,8 +85,14 @@ public class PixelScene extends Scene {
 			minHeight = MIN_HEIGHT_P;
 		}
 
-		maxDefaultZoom = (int)Math.min(Game.width/minWidth, Game.height/minHeight);
-		maxScreenZoom = (int)Math.min(Game.dispWidth/minWidth, Game.dispHeight/minHeight);
+		//TODO all insets? or just blockers?
+		RectF insets = Game.platform.getSafeInsets(PlatformSupport.INSET_ALL);
+
+		float w = Game.width - insets.left - insets.right;
+		float h = Game.height - insets.top - insets.bottom;
+
+		maxDefaultZoom = (int)Math.min(w/minWidth, h/minHeight);
+		maxDefaultZoom = Math.max(2, maxDefaultZoom);
 		defaultZoom = SPDSettings.scale();
 
 		if (defaultZoom < Math.ceil( Game.density * 2 ) || defaultZoom > maxDefaultZoom){
@@ -217,7 +225,19 @@ public class PixelScene extends Scene {
 		Scene s = Game.scene();
 		if (s != null) s.add( banner );
 	}
-	
+
+	//returns insets for the common case of all on top/bottom and only blocking on left/right
+	//plus scaled to pixel zoom
+	public RectF getCommonInsets(){
+		RectF all = Game.platform.getSafeInsets(PlatformSupport.INSET_ALL);
+		RectF blocking = Game.platform.getSafeInsets(PlatformSupport.INSET_BLK);
+
+		all.left =  blocking.left;
+		all.right = blocking.right;
+
+		return all.scale(1f/defaultZoom);
+	}
+
 	protected static class Fader extends ColorBlock {
 		
 		private static float FADE_TIME = 1f;

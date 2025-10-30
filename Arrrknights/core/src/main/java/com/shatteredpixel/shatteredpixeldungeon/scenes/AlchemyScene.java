@@ -59,6 +59,7 @@ import com.watabou.noosa.SkinnedBlock;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.noosa.ui.Component;
+import com.watabou.utils.RectF;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -80,13 +81,18 @@ public class AlchemyScene extends PixelScene {
 	private RedButton btnCombine;
 	
 	private static final int BTN_SIZE	= 28;
+	private static int centerW;
 	
 	@Override
 	public void create() {
 		super.create();
+
+		int w = Camera.main.width;
+		int h = Camera.main.height;
+		RectF insets = getCommonInsets();
 		
 		water = new SkinnedBlock(
-				Camera.main.width, Camera.main.height,
+				w, h,
 				Dungeon.level.waterTex() ){
 			
 			@Override
@@ -104,28 +110,30 @@ public class AlchemyScene extends PixelScene {
 		};
 		water.autoAdjust = true;
 		add(water);
-		
+
 		Image im = new Image(TextureCache.createGradient(0x66000000, 0x88000000, 0xAA000000, 0xCC000000, 0xFF000000));
 		im.angle = 90;
-		im.x = Camera.main.width;
-		im.scale.x = Camera.main.height/5f;
-		im.scale.y = Camera.main.width;
+		im.x = w;
+		im.scale.x = h/5f;
+		im.scale.y = w;
 		add(im);
-		
+
+		w -= insets.left + insets.right;
+		h -= insets.top + insets.bottom;
 		
 		RenderedTextBlock title = PixelScene.renderTextBlock( Messages.get(this, "title"), 9 );
 		title.hardlight(Window.TITLE_COLOR);
 		title.setPos(
-				(Camera.main.width - title.width()) / 2f,
-				(20 - title.height()) / 2f
+				insets.left + (w - title.width()) / 2f,
+				insets.top + (20 - title.height()) / 2f
 		);
 		align(title);
 		add(title);
-		
-		int w = 50 + Camera.main.width/2;
-		int left = (Camera.main.width - w)/2;
-		
-		int pos = (Camera.main.height - 100)/2;
+
+		int pw = Math.min(50 + w/2, 150);
+		int left = (int)(insets.left) + (w - pw)/2;
+		centerW = left + pw/2;
+		int pos = (int)(insets.top) + (h - 120)/2;
 		
 		RenderedTextBlock desc = PixelScene.renderTextBlock(6);
 		desc.maxWidth(w);
@@ -287,8 +295,8 @@ public class AlchemyScene extends PixelScene {
 		
 		energyLeft = PixelScene.renderTextBlock(Messages.get(AlchemyScene.class, "energy", availableEnergy()), 9);
 		energyLeft.setPos(
-				(Camera.main.width - energyLeft.width())/2,
-				Camera.main.height - 5 - energyLeft.height()
+				centerW - energyLeft.width()/2,
+				insets.top + h - 8 - energyLeft.height()
 		);
 		add(energyLeft);
 		

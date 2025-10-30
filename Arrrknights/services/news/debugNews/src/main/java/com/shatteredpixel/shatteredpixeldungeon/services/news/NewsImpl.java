@@ -30,7 +30,7 @@ public class NewsImpl {
 	}
 
 	public static boolean supportsNews(){
-		return true;
+		return false;
 	}
 
 }

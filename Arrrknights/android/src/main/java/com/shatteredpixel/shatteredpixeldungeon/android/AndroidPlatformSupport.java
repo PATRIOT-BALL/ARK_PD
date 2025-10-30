@@ -78,7 +78,7 @@ public class AndroidPlatformSupport extends PlatformSupport {
 				|| !AndroidLauncher.instance.isInMultiWindowMode();
 
 		if (fullscreen && SPDSettings.landscape() != null
-				&& (Game.dispWidth >= Game.dispHeight) != SPDSettings.landscape()){
+				&& (Game.dispWidth >= Game.dispHeight) != SPDSettings.landscape()) {
 			int tmp = Game.dispWidth;
 			Game.dispWidth = Game.dispHeight;
 			Game.dispHeight = tmp;

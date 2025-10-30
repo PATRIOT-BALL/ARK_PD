@@ -116,15 +116,15 @@ public class BadgesGrid extends Component {
 		//2-5 columns in portrait, 5-8 in landscape
 		int nCols;
 		if (width() > height()){
-			if (badgeButtons.size() > 35)       nCols = 8;
-			else if (badgeButtons.size() > 24)  nCols = 7;
-			else if (badgeButtons.size() > 15)  nCols = 6;
-			else                                nCols = 5;
+			if (badgeButtons.size() > 35)       nCols = 9;
+			else if (badgeButtons.size() > 24)  nCols = 8;
+			else if (badgeButtons.size() > 15)  nCols = 7;
+			else                                nCols = 6;
 		} else {
-			if (badgeButtons.size() > 32)       nCols = 5;
-			else if (badgeButtons.size() > 21)  nCols = 4;
-			else if (badgeButtons.size() > 10)  nCols = 3;
-			else                                nCols = 2;
+			if (badgeButtons.size() > 32)       nCols = 6;
+			else if (badgeButtons.size() > 21)  nCols = 5;
+			else if (badgeButtons.size() > 10)  nCols = 4;
+			else                                nCols = 3;
 		}
 
 		int nRows = (int) Math.ceil(badgeButtons.size()/(float)nCols);

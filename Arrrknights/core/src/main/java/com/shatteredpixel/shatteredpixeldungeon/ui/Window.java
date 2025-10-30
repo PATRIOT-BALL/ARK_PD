@@ -33,6 +33,9 @@ import com.watabou.noosa.Game;
 import com.watabou.noosa.Group;
 import com.watabou.noosa.NinePatch;
 import com.watabou.noosa.PointerArea;
+import com.watabou.utils.PlatformSupport;
+import com.watabou.utils.Point;
+import com.watabou.utils.RectF;
 import com.watabou.utils.Signal;
 
 public class Window extends Group implements Signal.Listener<KeyEvent> {
@@ -40,6 +43,7 @@ public class Window extends Group implements Signal.Listener<KeyEvent> {
 	protected int width;
 	protected int height;
 
+	protected int xOffset;
 	protected int yOffset;
 	
 	protected PointerArea blocker;
@@ -52,36 +56,30 @@ public class Window extends Group implements Signal.Listener<KeyEvent> {
 	public static final int SHPX_COLOR = 0x33BB33;
 	
 	public Window() {
-		this( 0, 0, 0, Chrome.get( Chrome.Type.WINDOW ) );
+		this( 0, 0, Chrome.get( Chrome.Type.WINDOW ) );
 	}
 	
 	public Window( int width, int height ) {
-		this( width, height, 0, Chrome.get( Chrome.Type.WINDOW ) );
-	}
-
-	public Window( int width, int height, NinePatch chrome ) {
-		this(width, height, 0, chrome);
+		this( width, height, Chrome.get( Chrome.Type.WINDOW ) );
 	}
 			
-	public Window( int width, int height, int yOffset, NinePatch chrome ) {
+	public Window( int width, int height, NinePatch chrome ) {
 		super();
 
-		this.yOffset = yOffset;
-		
 		blocker = new PointerArea( 0, 0, PixelScene.uiCamera.width, PixelScene.uiCamera.height ) {
 			@Override
 			protected void onClick( PointerEvent event ) {
 				if (Window.this.parent != null && !Window.this.chrome.overlapsScreenPoint(
-					(int) event.current.x,
-					(int) event.current.y )) {
-					
+						(int) event.current.x,
+						(int) event.current.y )) {
+
 					onBackPressed();
 				}
 			}
 		};
 		blocker.camera = PixelScene.uiCamera;
 		add( blocker );
-		
+
 		this.chrome = chrome;
 
 		this.width = width;
@@ -96,16 +94,20 @@ public class Window extends Group implements Signal.Listener<KeyEvent> {
 		chrome.x = -chrome.marginLeft();
 		chrome.y = -chrome.marginTop();
 		chrome.size(
-			width - chrome.x + chrome.marginRight(),
-			height - chrome.y + chrome.marginBottom() );
+				width - chrome.x + chrome.marginRight(),
+				height - chrome.y + chrome.marginBottom() );
 		add( chrome );
-		
+
+		RectF insets = Game.platform.getSafeInsets(PlatformSupport.INSET_BLK);
+		int screenW = (int)(Game.width - insets.left - insets.right);
+		int screenH = (int)(Game.height - insets.top - insets.bottom);
+
 		camera = new Camera( 0, 0,
 			(int)chrome.width,
 			(int)chrome.height,
 			PixelScene.defaultZoom );
-		camera.x = (int)(Game.width - camera.width * camera.zoom) / 2;
-		camera.y = (int)(Game.height - camera.height * camera.zoom) / 2;
+		camera.x = (int)(insets.left + (screenW - camera.width * camera.zoom) / 2);
+		camera.y = (int)(insets.top + (screenH - camera.height * camera.zoom) / 2);
 		camera.y -= yOffset * camera.zoom;
 		camera.scroll.set( chrome.x, chrome.y );
 		Camera.add( camera );
@@ -121,25 +123,70 @@ public class Window extends Group implements Signal.Listener<KeyEvent> {
 	public void resize( int w, int h ) {
 		this.width = w;
 		this.height = h;
-		
+
 		chrome.size(
-			width + chrome.marginHor(),
-			height + chrome.marginVer() );
-		
+				width + chrome.marginHor(),
+				height + chrome.marginVer() );
+
 		camera.resize( (int)chrome.width, (int)chrome.height );
-		camera.x = (int)(Game.width - camera.screenWidth()) / 2;
-		camera.y = (int)(Game.height - camera.screenHeight()) / 2;
+
+		RectF insets = Game.platform.getSafeInsets(PlatformSupport.INSET_BLK);
+		int screenW = (int)(Game.width - insets.left - insets.right);
+		int screenH = (int)(Game.height - insets.top - insets.bottom);
+
+		camera.x = (int)(screenW - camera.screenWidth()) / 2;
+		camera.x += insets.left;
+		camera.x += xOffset * camera.zoom;
+
+		camera.y = (int)(screenH - camera.screenHeight()) / 2;
+		camera.y += insets.top;
 		camera.y += yOffset * camera.zoom;
 
 		shadow.boxRect( camera.x / camera.zoom, camera.y / camera.zoom, chrome.width(), chrome.height );
 	}
 
-	public void offset( int yOffset ){
+	public Point getOffset(){
+		return new Point(xOffset, yOffset);
+	}
+
+	public final void offset( Point offset ){
+		offset(offset.x, offset.y);
+	}
+
+	public void offset( int xOffset, int yOffset ){
+		camera.x -= this.xOffset * camera.zoom;
+		this.xOffset = xOffset;
+		camera.x += xOffset * camera.zoom;
+
 		camera.y -= this.yOffset * camera.zoom;
 		this.yOffset = yOffset;
 		camera.y += yOffset * camera.zoom;
 
 		shadow.boxRect( camera.x / camera.zoom, camera.y / camera.zoom, chrome.width(), chrome.height );
+	}
+
+	//ensures the window, with offset, does not go beyond a given margin
+	public void boundOffsetWithMargin( int margin ){
+		float x = camera.x / camera.zoom;
+		float y = camera.y / camera.zoom;
+
+		Camera sceneCam = PixelScene.uiCamera.visible ? PixelScene.uiCamera : Camera.main;
+
+		int newXOfs = xOffset;
+		if (x < margin){
+			newXOfs += margin - x;
+		} else if (x + camera.width > sceneCam.width - margin){
+			newXOfs += (sceneCam.width - margin) - (x + camera.width);
+		}
+
+		int newYOfs = yOffset;
+		if (y < margin){
+			newYOfs += margin - y;
+		} else if (y + camera.height > sceneCam.height - margin){
+			newYOfs += (sceneCam.height - margin) - (y + camera.height);
+		}
+
+		offset(newXOfs, newYOfs);
 	}
 	
 	public void hide() {
@@ -157,16 +204,16 @@ public class Window extends Group implements Signal.Listener<KeyEvent> {
 		KeyEvent.removeKeyListener( this );
 	}
 
+
 	@Override
 	public boolean onSignal( KeyEvent event ) {
 		if (event.pressed) {
-			if (KeyBindings.getActionForKey( event ) == SPDAction.BACK){
+			if (KeyBindings.getActionForKey( event ) == SPDAction.BACK
+					|| KeyBindings.getActionForKey( event ) == SPDAction.WAIT){
 				onBackPressed();
 			}
 		}
-		
-		//TODO currently always eats the key event as windows always take full focus
-		// if they are ever made more flexible, might not want to do this in all cases
+
 		return true;
 	}
 	

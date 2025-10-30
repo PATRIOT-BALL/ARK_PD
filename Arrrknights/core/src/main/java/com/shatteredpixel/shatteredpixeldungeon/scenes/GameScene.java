@@ -117,7 +117,9 @@ import com.watabou.noosa.audio.Music;
 import com.watabou.noosa.audio.Sample;
 import com.watabou.noosa.particles.Emitter;
 import com.watabou.utils.GameMath;
+import com.watabou.utils.PlatformSupport;
 import com.watabou.utils.Random;
+import com.watabou.utils.RectF;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -257,6 +259,8 @@ public class GameScene extends PixelScene {
 		super.create();
 		Camera.main.zoom( GameMath.gate(minZoom, defaultZoom + SPDSettings.zoom(), maxZoom));
 
+		RectF insets = getCommonInsets();
+
 		scene = this;
 
 		terrain = new Group();
@@ -392,7 +396,7 @@ public class GameScene extends PixelScene {
 		
 		toolbar = new Toolbar();
 		toolbar.camera = uiCamera;
-		toolbar.setRect( 0,uiCamera.height - toolbar.height(), uiCamera.width, toolbar.height() );
+		toolbar.setRect( insets.left,uiCamera.height - toolbar.height() - insets.bottom, uiCamera.width - insets.right, toolbar.height() );
 		add( toolbar );
 		
 		attack = new AttackIndicator();
@@ -544,12 +548,12 @@ public class GameScene extends PixelScene {
 				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.bossLevel() && Dungeon.depth == 25)
 				{
 					if (Dungeon.mboss4 == 1 || Dungeon.mboss9 == 1 || Dungeon.mboss14 == 1 || Dungeon.mboss19 == 1)
-					GLog.n(Messages.get(this, "miniboss"));
+						GLog.n(Messages.get(this, "miniboss"));
 				}
 				if (Dungeon.isChallenged(Challenges.SPECIAL_BOSS) && Dungeon.depth == 25 && Dungeon.bossLevel())
 				{
 					if (Dungeon.mboss4 == 1 && Dungeon.mboss9 == 1 && Dungeon.mboss14 == 1 && Dungeon.mboss19 == 1)
-					GLog.n(Messages.get(this, "miniboss_final"));
+						GLog.n(Messages.get(this, "miniboss_final"));
 				}
 
 				int spawnersAbove = Statistics.spawnersAlive;
@@ -765,12 +769,15 @@ public class GameScene extends PixelScene {
 
 		if (scene == null) return;
 
+		RectF insets = Game.platform.getSafeInsets( PlatformSupport.INSET_ALL );
+		insets = insets.scale(1f / uiCamera.zoom);
+
 		float tagLeft = SPDSettings.flipTags() ? 0 : uiCamera.width - scene.attack.width();
 
 		if (SPDSettings.flipTags()) {
-			scene.log.setRect(scene.attack.width(), scene.toolbar.top()-2, uiCamera.width - scene.attack.width(), 0);
+			scene.log.setRect(scene.attack.width(), scene.toolbar.top()-2, uiCamera.width - scene.attack.width() - insets.right, 0);
 		} else {
-			scene.log.setRect(0, scene.toolbar.top()-2, uiCamera.width - scene.attack.width(),  0 );
+			scene.log.setRect(insets.left, scene.toolbar.top()-2, uiCamera.width - scene.attack.width(),  0 );
 		}
 
 		float pos = scene.toolbar.top();

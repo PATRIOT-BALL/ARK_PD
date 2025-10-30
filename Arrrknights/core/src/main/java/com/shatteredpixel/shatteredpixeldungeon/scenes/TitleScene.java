@@ -48,6 +48,7 @@ import com.watabou.noosa.Image;
 import com.watabou.noosa.audio.Music;
 import com.watabou.utils.ColorMath;
 import com.watabou.utils.DeviceCompat;
+import com.watabou.utils.RectF;
 
 import java.util.Date;
 
@@ -64,6 +65,11 @@ public class TitleScene extends PixelScene {
 		
 		int w = Camera.main.width;
 		int h = Camera.main.height;
+
+		RectF insets = getCommonInsets();
+
+		w -= insets.left + insets.right;
+		h -= insets.top + insets.bottom;
 		
 		Archs archs = new Archs();
 		archs.setSize( w, h );
@@ -74,8 +80,8 @@ public class TitleScene extends PixelScene {
 
 		float topRegion = Math.max(title.height - 6, h*0.45f);
 
-		title.x = (w - title.width()) / 2f;
-		title.y = 2 + (topRegion - title.height()) / 2f;
+		title.x = insets.left + (w - title.width()) / 2f;
+		title.y = insets.top + 2 + (topRegion - title.height()) / 2f;
 
 		align(title);
 
@@ -176,18 +182,20 @@ public class TitleScene extends PixelScene {
 		GAP /= landscape() ? 3 : 5;
 		GAP = Math.max(GAP, 2);
 
+		float buttonAreaWidth = landscape() ? PixelScene.MIN_WIDTH_L-6 : PixelScene.MIN_WIDTH_P-2;
+		float btnAreaLeft = insets.left + (w - buttonAreaWidth) / 2f;
 		if (landscape()) {
-			btnPlay.setRect(title.x-50, topRegion+GAP, ((title.width()+100)/2)-1, BTN_HEIGHT);
+			btnPlay.setRect(btnAreaLeft, insets.top + topRegion+GAP, (buttonAreaWidth/2)-1, BTN_HEIGHT);
 			align(btnPlay);
 			btnSupport.setRect(btnPlay.right()+2, btnPlay.top(), btnPlay.width(), BTN_HEIGHT);
-			btnRankings.setRect(btnPlay.left(), btnPlay.bottom()+ GAP, (btnPlay.width()*.67f)-1, BTN_HEIGHT);
-			btnBadges.setRect(btnRankings.left(), btnRankings.bottom()+GAP, btnRankings.width(), BTN_HEIGHT);
-			btnNews.setRect(btnRankings.right()+2, btnRankings.top(), btnRankings.width(), BTN_HEIGHT);
-			btnChanges.setRect(btnNews.left(), btnNews.bottom() + GAP, btnRankings.width(), BTN_HEIGHT);
-			btnSettings.setRect(btnNews.right()+2, btnNews.top(), btnRankings.width(), BTN_HEIGHT);
-			btnAbout.setRect(btnSettings.left(), btnSettings.bottom() + GAP, btnRankings.width(), BTN_HEIGHT);
+			btnRankings.setRect(btnPlay.left(), btnPlay.bottom()+ GAP, (float) (Math.floor(buttonAreaWidth/3f)-1), BTN_HEIGHT);
+			btnBadges.setRect(btnRankings.right()+2, btnRankings.top(), btnRankings.width(), BTN_HEIGHT);
+			btnNews.setRect(btnBadges.right()+2, btnBadges.top(), btnRankings.width(), BTN_HEIGHT);
+			btnSettings.setRect(btnRankings.left(), btnRankings.bottom() + GAP, btnRankings.width(), BTN_HEIGHT);
+			btnChanges.setRect(btnSettings.right()+2, btnSettings.top(), btnRankings.width(), BTN_HEIGHT);
+			btnAbout.setRect(btnChanges.right()+2, btnSettings.top(), btnRankings.width(), BTN_HEIGHT);
 		} else {
-			btnPlay.setRect(title.x, topRegion+GAP, title.width(), BTN_HEIGHT);
+			btnPlay.setRect(btnAreaLeft, insets.top + topRegion+GAP, buttonAreaWidth, BTN_HEIGHT);
 			align(btnPlay);
 			btnSupport.setRect(btnPlay.left(), btnPlay.bottom()+ GAP, btnPlay.width(), BTN_HEIGHT);
 			btnRankings.setRect(btnPlay.left(), btnSupport.bottom()+ GAP, (btnPlay.width()/2)-1, BTN_HEIGHT);
@@ -201,8 +209,8 @@ public class TitleScene extends PixelScene {
 		BitmapText version = new BitmapText( "v" + Game.version, pixelFont);
 		version.measure();
 		version.hardlight( 0x888888 );
-		version.x = w - version.width() - 4;
-		version.y = h - version.height() - 2;
+		version.x = insets.left + w - version.width() - (DeviceCompat.isDesktop() ? 4 : 8);
+		version.y = insets.top + h - version.height() - (DeviceCompat.isDesktop() ? 2 : 4);
 		add( version );
 
 		fadeIn();
