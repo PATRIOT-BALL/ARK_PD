@@ -47,16 +47,15 @@ public class Beowulf extends MeleeWeapon {
                 lvl*(tier+4);   //scaling unchanged
     }
 
-    // 공격시 대상과의 거리가 4가 아니면 피해량이 25%로 감소합니다.
+    // 공격시 대상과의 거리가 4 이하면 피해량이 25%로 감소합니다.
     // 조합법 : 백파 무기 + 감자 2개 (연금술)
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
 
         int sppos = Dungeon.level.distance(attacker.pos, defender.pos);
-        if (sppos != 4) {
-            defender.damage(attacker.damageRoll() / 4, attacker);
-            damage = 0;
+        if (sppos < 4) {
+            return super.proc(attacker, defender, damage / 4);
         }
 
         return super.proc(attacker, defender, damage);
