@@ -13,6 +13,7 @@ import com.watabou.utils.Random;
 import java.util.ArrayList;
 
 public class EX42 extends MeleeWeapon {
+
     public static final String AC_ZAP = "ZAP";
     {
         image = ItemSpriteSheet.EX41;
@@ -27,6 +28,11 @@ public class EX42 extends MeleeWeapon {
     }
 
     private boolean swiching = false;
+
+    @Override
+    public int getReach() {
+        return swiching ? 50 : 1;
+    }
 
     @Override
     public int max(int lvl) {
@@ -61,9 +67,7 @@ public class EX42 extends MeleeWeapon {
         super.execute(hero, action);
 
         if (action.equals(AC_ZAP)) {
-            if (swiching == true) {swiching = false; RCH = 1; ACC = 1f;}
-            else {swiching = true; RCH = 50; ACC = 3f;}
-
+            swiching = !swiching;
             updateQuickslot();
             curUser.spendAndNext(0.5f);}
     }

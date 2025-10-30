@@ -84,9 +84,21 @@ import java.util.Arrays;
 
 abstract public class Weapon extends KindOfWeapon {
 
-	public float    ACC = 1f;	// Accuracy modifier
-	public float	DLY	= 1f;	// Speed modifier
-	public int      RCH = 1;    // Reach modifier (only applies to melee hits)
+	protected float ACC = 1f;	// Accuracy modifier
+	protected float	DLY	= 1f;	// Speed modifier
+	protected int	RCH = 1;    // Reach modifier (only applies to melee hits)
+
+	public float getAcc() {
+		return ACC;
+	}
+
+	public float getDelay() {
+		return DLY;
+	}
+
+	public int getReach() {
+		return RCH;
+	}
 
 	public enum Augment {
 		SPEED   (0.7f, 0.6667f, 1f),
@@ -282,7 +294,7 @@ abstract public class Weapon extends KindOfWeapon {
 
 	@Override
 	public int reachFactor(Char owner) {
-		int RCHmath = RCH;
+		int RCHmath = getReach();
 		if (Dungeon.hero.hasTalent(Talent.CHAINSAW_EXTEND) && owner instanceof Hero) {
 			RCHmath +=1;
 		}
