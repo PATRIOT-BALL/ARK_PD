@@ -1190,7 +1190,7 @@ actors.mobs.npcs.npc_irene.ok=알겠습니다. 이베리아로 가는거죠?
 actors.mobs.npcs.npc_irene.no=그럼 다음 기회에.
 
 actors.mobs.npcs.dummy.name=훈련인형
-actors.mobs.npcs.dummy.desc=KOKODAYO
+actors.mobs.npcs.dummy.desc=살아있는 사람이 아닌 인형이다.
 
 actors.mobs.npcs.dobermann.name=훈련교관 도베르만
 actors.mobs.npcs.dobermann.desc=로도스 아일랜드의 전술 훈련 교관. 엄격하고 깐깐하며 빈틈없는 성격이다.
@@ -1865,14 +1865,14 @@ actors.mobs.seaboss2.name=이샤믈라,부식의 마음
 actors.mobs.seaboss2.desc=\n\n \n\n \n\n더 이상 노래 부르지 않고, 위매니를 위해 목소리를 낸다.
 
 
-actors.mobs.seaboss2_Phase2_Head.name=믈라머리
-actors.mobs.seaboss2_Phase2_Head.desc=저는 머리 예요!
+actors.mobs.seaboss2_phase2_head.name=믈라머리
+actors.mobs.seaboss2_phase2_head.desc=저는 머리 예요!
 
-actors.mobs.seaboss2_Phase2_Mid.name=믈라가슴
-actors.mobs.seaboss2_Phase2_Mid.desc=빵ㅋㅋ
+actors.mobs.seaboss2_phase2_mid.name=믈라가슴
+actors.mobs.seaboss2_phase2_mid.desc=빵ㅋㅋ
 
-actors.mobs.seaboss2_Phase2_tail.name=믈라꼬리
-actors.mobs.seaboss2_Phase2_tail.desc=쭉ㅋㅋ
+actors.mobs.seaboss2_phase2_tail.name=믈라꼬리
+actors.mobs.seaboss2_phase2_tail.desc=쭉ㅋㅋ
 
 
 

@@ -75,7 +75,7 @@ public class SeaBoss2_Phase2_Head extends Mob {
     // 사거리 6
     @Override
     protected boolean canAttack(Char enemy) {
-        return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 6;
+        return !dieChacke && this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 6;
     }
 
     @Override

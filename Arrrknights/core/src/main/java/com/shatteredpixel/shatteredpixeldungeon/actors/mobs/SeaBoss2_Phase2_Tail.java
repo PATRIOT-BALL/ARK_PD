@@ -61,7 +61,7 @@ public class SeaBoss2_Phase2_Tail extends Mob {
     // 사거리 2
     @Override
     protected boolean canAttack(Char enemy) {
-        return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 2;
+        return !dieChacke && this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 2;
     }
 
     @Override

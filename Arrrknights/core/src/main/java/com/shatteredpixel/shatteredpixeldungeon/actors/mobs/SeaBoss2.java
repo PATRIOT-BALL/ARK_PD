@@ -31,7 +31,7 @@ public class SeaBoss2 extends Mob {
     {
         spriteClass = Skadi_mulaSprite.class;
 
-        HP = HT = 100;
+        HP = HT = 1500;
         defenseSkill = 60;
 
         state = PASSIVE;
@@ -107,7 +107,7 @@ public class SeaBoss2 extends Mob {
     @Override
     public void die(Object cause) {
         super.die(cause);
-        yell(Messages.get(this, "die"));
+        //yell(Messages.get(this, "die"));
         this.detach();
     }
 
