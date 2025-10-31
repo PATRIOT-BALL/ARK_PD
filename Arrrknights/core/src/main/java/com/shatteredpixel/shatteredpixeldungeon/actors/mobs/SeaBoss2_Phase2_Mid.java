@@ -63,12 +63,13 @@ public class SeaBoss2_Phase2_Mid extends Mob {
         sprite.turnTo(pos, 999999);
         rooted = true;
 
-        if (dieChacke = true) return super.act();
+        if (dieChacke) return super.act();
 
         if (cooldown > 0) cooldown--;
         else {
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
-                Buff.affect(mob, Barrier.class).setShield(80);
+                if (mob instanceof SeaBoss2_Phase2_Head || mob instanceof SeaBoss2_Phase2_Mid || mob instanceof SeaBoss2_Phase2_Tail)
+                    Buff.affect(mob, Barrier.class).setShield(80);
             }
             if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) cooldown = 5;
             else cooldown = 8;
@@ -95,18 +96,18 @@ public class SeaBoss2_Phase2_Mid extends Mob {
     @Override
     public void die(Object cause) { }
 
-    private static final String DIECHACKE   = "dieChacke";
+    private static final String DIECHACKE_BODY   = "dieChackeBody";
 
     @Override
     public void storeInBundle( Bundle bundle ) {
         super.storeInBundle( bundle );
-        bundle.put( DIECHACKE, dieChacke );
+        bundle.put( DIECHACKE_BODY, dieChacke );
     }
 
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
 
-        dieChacke = bundle.getBoolean(DIECHACKE);
+        dieChacke = bundle.getBoolean(DIECHACKE_BODY);
     }
     }
 

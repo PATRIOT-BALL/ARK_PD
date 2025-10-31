@@ -144,13 +144,9 @@ public class SeaBossLevel2 extends Level {
 
 
         if (ch.pos != map[entrance] && map[exit] == Terrain.EXIT) {
-
             SeaBoss2 boss = new SeaBoss2();
             boss.pos = 178;
             GameScene.add( boss );
-
-
-
             seal();
         }
     }

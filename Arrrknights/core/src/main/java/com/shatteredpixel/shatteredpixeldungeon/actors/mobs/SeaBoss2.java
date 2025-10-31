@@ -4,6 +4,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Amok;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Corruption;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Drowsy;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.MagicalSleep;
@@ -16,6 +17,7 @@ import com.shatteredpixel.shatteredpixeldungeon.effects.Pushing;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfTeleportation;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
 import com.shatteredpixel.shatteredpixeldungeon.mechanics.Ballistica;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.MephistoSprite;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.Skadi_mulaSprite;
@@ -29,7 +31,7 @@ public class SeaBoss2 extends Mob {
     {
         spriteClass = Skadi_mulaSprite.class;
 
-        HP = HT = 1500;
+        HP = HT = 100;
         defenseSkill = 60;
 
         state = PASSIVE;
@@ -100,6 +102,13 @@ public class SeaBoss2 extends Mob {
         else summoncooldown--;
 
         return super.act();
+    }
+
+    @Override
+    public void die(Object cause) {
+        super.die(cause);
+        yell(Messages.get(this, "die"));
+        this.detach();
     }
 
     // summon pos = 50, 54

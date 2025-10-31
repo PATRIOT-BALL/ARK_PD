@@ -6,9 +6,11 @@ import com.shatteredpixel.shatteredpixeldungeon.Challenges;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.GamesInProgress;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Barrier;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Doom;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.FlavourBuff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.npcs.NPC;
 import com.shatteredpixel.shatteredpixeldungeon.items.Amulet;
 import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.Certificate;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.SurfaceScene;
@@ -19,7 +21,7 @@ import com.watabou.noosa.Game;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
-//패턴 : 미정
+//패턴 : 근처에 모든 적에게 고정데미지를 입히는 스킬을 사용한다
 public class SeaBoss2_Phase2_Tail extends Mob {
     {
         spriteClass = Mula_3Sprite.class;
@@ -35,6 +37,11 @@ public class SeaBoss2_Phase2_Tail extends Mob {
         state = HUNTING;
     }
 
+    // 모든 믈라 파츠가 파괴되면 사망
+    private boolean dieChacke = false;
+
+    private int cooldown = 3;
+
     @Override
     public int damageRoll() {
         return Random.NormalIntRange(30, 65);
@@ -44,9 +51,6 @@ public class SeaBoss2_Phase2_Tail extends Mob {
     public int attackSkill( Char target ) {
         return 50;
     }
-
-    // 모든 믈라 파츠가 파괴되면 사망
-    private boolean dieChacke = false;
 
     @Override
     public int defenseSkill(Char enemy) {
@@ -65,6 +69,19 @@ public class SeaBoss2_Phase2_Tail extends Mob {
 
         sprite.turnTo(pos, 999999);
         rooted = true;
+
+        if (dieChacke) return super.act();
+
+        if (cooldown > 0) cooldown--;
+        else {
+            Dungeon.hero.damage(20, this);
+            for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
+                if (mob instanceof NPC)
+                    mob.damage(20, this);
+            }
+            if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) cooldown = 5;
+            else cooldown = 3;
+        }
 
         return super.act();
     }
@@ -88,18 +105,18 @@ public class SeaBoss2_Phase2_Tail extends Mob {
     public void die(Object cause) { }
 
 
-    private static final String DIECHACKE   = "dieChacke";
+    private static final String DIECHACKE_TAIL   = "dieChackeTail";
 
     @Override
     public void storeInBundle( Bundle bundle ) {
         super.storeInBundle( bundle );
-        bundle.put( DIECHACKE, dieChacke );
+        bundle.put( DIECHACKE_TAIL, dieChacke );
     }
 
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
 
-        dieChacke = bundle.getBoolean(DIECHACKE);
+        dieChacke = bundle.getBoolean(DIECHACKE_TAIL);
     }
     }
 

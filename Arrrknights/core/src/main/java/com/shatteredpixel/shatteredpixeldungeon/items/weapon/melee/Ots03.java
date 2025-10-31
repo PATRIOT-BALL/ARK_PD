@@ -18,10 +18,8 @@ public class Ots03 extends GunWeapon {
 
         FIREACC = 100f;
         FIRETICK = 5f;
-        FIREDMG = 10f;
+        FIREDMG = 8f;
         bulletCap = 16;
-
-
 
         usesTargeting = true;
 

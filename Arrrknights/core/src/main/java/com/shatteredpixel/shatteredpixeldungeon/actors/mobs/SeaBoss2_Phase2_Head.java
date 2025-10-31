@@ -72,7 +72,7 @@ public class SeaBoss2_Phase2_Head extends Mob {
         else return 20;
     }
 
-    // 사거리 3
+    // 사거리 6
     @Override
     protected boolean canAttack(Char enemy) {
         return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 6;
@@ -84,7 +84,6 @@ public class SeaBoss2_Phase2_Head extends Mob {
         rooted = true;
         if (dieChacke)
         {
-
             if (Dungeon.mulaCount == 3) {
                 Badges.validateVictory();
                 Badges.validateChampion(Challenges.activeChallenges());
@@ -99,6 +98,7 @@ public class SeaBoss2_Phase2_Head extends Mob {
                 Dungeon.deleteGame(GamesInProgress.curSlot, true);
                 Game.switchScene(SurfaceScene.class);
             }
+            return super.act();
         }
 
         return super.act();
@@ -184,18 +184,18 @@ public class SeaBoss2_Phase2_Head extends Mob {
     public void die(Object cause) { }
 
 
-    private static final String DIECHACKE   = "dieChacke";
+    private static final String DIECHACKE_HEAD   = "dieChackeHead";
 
     @Override
     public void storeInBundle( Bundle bundle ) {
         super.storeInBundle( bundle );
-        bundle.put( DIECHACKE, dieChacke );
+        bundle.put( DIECHACKE_HEAD, dieChacke );
     }
 
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
 
-        dieChacke = bundle.getBoolean(DIECHACKE);
+        dieChacke = bundle.getBoolean(DIECHACKE_HEAD);
     }
     }
 
