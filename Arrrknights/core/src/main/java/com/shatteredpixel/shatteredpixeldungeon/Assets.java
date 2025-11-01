@@ -262,7 +262,11 @@ public class Assets {
 		public static final String HIT_RINGOUT        = "sounds/hit_ringout.mp3";
 		public static final String HIT_BREAK        = "sounds/hit_break.mp3";
 		public static final String HIT_GUN        = "sounds/hit_gun.mp3";
+		public static final String HIT_GUN2        = "sounds/hit_gun.mp3";
+		public static final String HIT_GUN3        = "sounds/hit_gun3.mp3";
+		public static final String HIT_SNIPER2        = "sounds/hit_sniper.mp3";
 		public static final String HIT_AR        = "sounds/hit_ar.mp3";
+		public static final String HIT_PISTOL        = "sounds/hit_pistol.mp3";
 		public static final String HIT_BONK        = "sounds/hit_bonk.mp3";
 		public static final String HIT_SWORD        = "sounds/hit_sword.mp3";
 		public static final String HIT_SWORD2        = "sounds/hit_sword2.mp3";
@@ -306,7 +310,7 @@ public class Assets {
 				//명픽던에서만 추가된  효과음들↓
 				TIMESTOP,
 				HIT_KNIFE, HIT_CHAINSAW, HIT_CHAINSAW2, HIT_BIRD, HIT_WALL1, HIT_WALL2, HIT_SHOTGUN, HIT_GUNLANCE, HIT_GLUTONY,
-				HIT_SNIPER, HIT_GUN, HIT_AR, FROST, SHINNING, AJIMU, HIT_STRIKE,
+				HIT_SNIPER, HIT_GUN, HIT_GUN2, HIT_GUN3, HIT_PISTOL, HIT_SNIPER2, HIT_AR, FROST, SHINNING, AJIMU, HIT_STRIKE,
 				SKILL_BASIC, SKILL_BEEP, SKILL_CROSSBOW, SKILL_WOLFPACK, SKILL_CHAINSAW, SKILL_SILVERSLASH, SKILL_YOUWISH,
 				SKILL_MON1, SKILL_MON2, SKILL_TEXAS , SKILL_SURTR, SKILL_BABYNIGHT, SKILL_SORA,
 				CHAINS2,

@@ -48,7 +48,7 @@ public class R4C extends GunWeapon {
         hitSound = Assets.Sounds.HIT_AR;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 3f;
+        FIREACC = 2f;
         FIRETICK = 0.33f;
         bulletCap = 31;
 

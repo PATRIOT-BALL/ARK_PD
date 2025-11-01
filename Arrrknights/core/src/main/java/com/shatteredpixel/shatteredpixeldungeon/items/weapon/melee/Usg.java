@@ -45,7 +45,7 @@ import java.util.ArrayList;
 public class Usg extends GunWeapon {
     {
         image = ItemSpriteSheet.USG;
-        hitSound = Assets.Sounds.HIT_GUN;
+        hitSound = Assets.Sounds.HIT_PISTOL;
         hitSoundPitch = 0.9f;
 
         FIREACC = 5f;

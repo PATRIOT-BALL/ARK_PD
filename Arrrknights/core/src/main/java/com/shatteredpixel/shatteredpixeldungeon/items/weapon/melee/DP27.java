@@ -13,10 +13,10 @@ import com.watabou.utils.Callback;
 public class DP27 extends GunWeapon {
     {
         image = ItemSpriteSheet.DP27;
-        hitSound = Assets.Sounds.HIT_GUN;
+        hitSound = Assets.Sounds.HIT_GUN2;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 3f;
+        FIREACC = 1f;
         FIRETICK = 0.2f;
         bulletCap = 47;
 

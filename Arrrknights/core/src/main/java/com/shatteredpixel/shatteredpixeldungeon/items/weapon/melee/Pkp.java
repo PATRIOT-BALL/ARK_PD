@@ -14,10 +14,10 @@ import com.watabou.utils.Callback;
 public class Pkp extends GunWeapon {
     {
         image = ItemSpriteSheet.PKP;
-        hitSound = Assets.Sounds.HIT_GUN;
+        hitSound = Assets.Sounds.HIT_AR;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 3f;
+        FIREACC = 1f;
         FIRETICK = 0.2f;
         FIREDMG = 1f;
         bulletCap = 101;
