@@ -54,7 +54,7 @@ public class Accessories extends Item {
         public void onSelect(final Item item) {
             if (item != null) {
                 if (item instanceof GunWeapon) {
-                   if(!((GunWeapon) item).AffixAccessories(Affix())) {
+                   if(!((GunWeapon) item).affixAccessories(Affix())) {
                        Affix().collect();
                    }
                 }

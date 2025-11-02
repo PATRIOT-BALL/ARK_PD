@@ -16,10 +16,10 @@ public class Ots03 extends GunWeapon {
         hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 100f;
-        FIRETICK = 5f;
-        FIREDMG = 8f;
-        bulletCap = 16;
+        FIRE_ACC_MULT = 100f;
+        FIRE_DELAY_MULT = 5f;
+        FIRE_DAMAGE_MULT = 8f;
+        bulletMax = 16;
 
         usesTargeting = true;
 
@@ -29,14 +29,14 @@ public class Ots03 extends GunWeapon {
 
 
     @Override
-    protected void SPShot(Char ch) {
+    protected void specialFire(Char ch) {
         Buff.affect(ch, Burning.class).reignite(ch);
     }
 
     @Override
     protected void fx(Ballistica bolt, Callback callback ) {
         int a = 0;
-        if (spshot) a = 1;
+        if (specialFire) a = 1;
         MagicMissile.boltFromChar( curUser.sprite.parent,
                 MagicMissile.GUN_SHOT+a,
                 curUser.sprite,

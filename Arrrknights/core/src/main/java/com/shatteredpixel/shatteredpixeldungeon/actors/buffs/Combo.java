@@ -344,7 +344,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					break;
 				case SLAM:
 					if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-						dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).shotmin(), ((GunWeapon) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).fireMin(), ((GunWeapon) Dungeon.hero.belongings.weapon).fireMax());
 						dmg = Math.round(dmg * 0.2f * count);
 					}
 					else dmg += Math.round(target.drRoll() * count / 5f);
@@ -357,7 +357,7 @@ public class Combo extends Buff implements ActionIndicator.Action {
 					break;
 				case FURY:
 					if (Dungeon.hero.belongings.weapon instanceof GunWeapon) {
-						dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).shotmin(), ((GunWeapon) Dungeon.hero.belongings.weapon).shotmax());
+						dmg = Random.IntRange(((GunWeapon) Dungeon.hero.belongings.weapon).fireMin(), ((GunWeapon) Dungeon.hero.belongings.weapon).fireMax());
 						dmg = Math.round(dmg * 0.4f * count);
 					} else dmg = Math.round(dmg * 0.6f);
 					break;

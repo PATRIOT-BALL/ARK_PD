@@ -21,10 +21,8 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.hero.HeroSubClass;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Talent;
 import com.shatteredpixel.shatteredpixeldungeon.effects.MagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.Bonk;
-import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.Gunaccessories.Accessories;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
-import com.shatteredpixel.shatteredpixeldungeon.items.armor.Armor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.IsekaiItem;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.TimekeepersHourglass;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfBlastWave;
@@ -52,14 +50,14 @@ public class GunWeapon extends MeleeWeapon {
     public static final String AC_RELOAD = "RELOAD";
     public static final String AC_REMOVE = "REMOVE";
 
-    protected int bullettier = 3;
+    protected int bulletTier = 3;
     protected int bullet = 5;
-    protected int bulletCap = 25;
-    protected boolean spshot = false; // 특수 사격 여부
+    protected int bulletMax = 25;
+    protected boolean specialFire = false; // 특수 사격 여부
     protected boolean gamza = false; // 썬더볼트 장착 여부
-    protected float FIREACC = 1f;
-    protected float FIRETICK = 1f;
-    protected float FIREDMG = 1f;
+    protected float FIRE_ACC_MULT = 1f;
+    protected float FIRE_DELAY_MULT = 1f;
+    protected float FIRE_DAMAGE_MULT = 1f;
 
     @Override
     public int max(int lvl) {
@@ -67,27 +65,27 @@ public class GunWeapon extends MeleeWeapon {
                 lvl*(tier-2);
     }
 
-    public int shotmin() {
-        return (int)((3 + level()) * FIREDMG);
+    public int fireMin() {
+        return (int) ((3 + level()) * FIRE_DAMAGE_MULT);
     }
-    public int shotmax() {
-        return (int)( 3 + shotmin() + ((level() + 1) * bullettier) * FIREDMG);
+    public int fireMax() {
+        return (int) (3 + fireMin() + ((level() + 1) * bulletTier) * FIRE_DAMAGE_MULT);
     }
 
-    public int ShotDamageRoll() {
-        return Random.Int(shotmin(), shotmax());
+    public int fireDamageRoll() {
+        return Random.Int(fireMin(), fireMax());
     }
 
     protected float RELOAD_TIME = 3f;
 
-    public Accessories GunAccessories;
+    public Accessories gunAccessories;
 
     @Override
     public int proc(Char attacker, Char defender, int damage) {
         if (attacker instanceof Hero) {
             if (Dungeon.hero.subClass == HeroSubClass.GLADIATOR) {
                 if (Random.Int(4) < 1) {
-                    bullet = Math.min(bullet +1, bulletCap);
+                    bullet = Math.min(bullet +1, bulletMax);
                     updateQuickslot();
                 }
             }
@@ -95,11 +93,11 @@ public class GunWeapon extends MeleeWeapon {
         return super.proc(attacker, defender, damage);
     }
 
-    protected void SPShot(Char ch) { }
+    protected void specialFire(Char ch) { }
 
-    protected float Fire_accFactor(float acc) {
-        if (GunAccessories != null) {
-            acc *= GunAccessories.GetACCcorrectionvalue();
+    protected float fireAccuracyFactor(float acc) {
+        if (gunAccessories != null) {
+            acc *= gunAccessories.GetACCcorrectionvalue();
 
             if (Dungeon.hero.hasTalent(Talent.SHARPSHOOTER)) {
                 acc += Dungeon.hero.pointsInTalent(Talent.SHARPSHOOTER) * 0.2f;
@@ -118,14 +116,14 @@ public class GunWeapon extends MeleeWeapon {
         return acc;
     }
 
-    protected float Fire_dlyFactor(float dly) {
-        if (GunAccessories != null) dly *= GunAccessories.GetDLYcorrectionvalue();
+    protected float fireDelayFactor(float dly) {
+        if (gunAccessories != null) dly *= gunAccessories.GetDLYcorrectionvalue();
         return dly;
     }
 
-    protected int Fire_dmgFactor(int dmg) {
+    protected int fireDamageFactor(int dmg) {
         float accessoriesbouns = 1f;
-        if (GunAccessories != null) accessoriesbouns = GunAccessories.GetDMGcorrectionvalue();
+        if (gunAccessories != null) accessoriesbouns = gunAccessories.GetDMGcorrectionvalue();
 
         float talentbouns = 1f;
         if (Dungeon.hero.hasTalent(Talent.PROJECTILE_MOMENTUM) && Dungeon.hero.buff(Momentum.class) != null &&  Dungeon.hero.buff(Momentum.class).freerunning()) {
@@ -135,9 +133,9 @@ public class GunWeapon extends MeleeWeapon {
             talentbouns += (Dungeon.hero.pointsInTalent(Talent.BLITZKRIEG) * 0.1f);
         }
 
-        CloserangeShot closerrange = Dungeon.hero.buff(CloserangeShot.class);
-        if (closerrange != null) {
-            if (closerrange.state() == true){
+        CloserangeShot closerRange = Dungeon.hero.buff(CloserangeShot.class);
+        if (closerRange != null) {
+            if (closerRange.state()){
                 talentbouns += 0.5f;
                 if (Dungeon.hero.hasTalent(Talent.ZERO_RANGE_SHOT)) talentbouns += Dungeon.hero.pointsInTalent(Talent.ZERO_RANGE_SHOT) * 0.1f;
             }
@@ -147,10 +145,10 @@ public class GunWeapon extends MeleeWeapon {
         return dmg;
     }
 
-    public boolean AffixAccessories(Accessories accessories) {
-        if (GunAccessories != null) return false;
+    public boolean affixAccessories(Accessories accessories) {
+        if (gunAccessories != null) return false;
         else {
-            GunAccessories = accessories;
+            gunAccessories = accessories;
             return true;
         }
     }
@@ -160,7 +158,7 @@ public class GunWeapon extends MeleeWeapon {
         ArrayList<String> actions = super.actions(hero);
         actions.add(AC_ZAP);
         actions.add(AC_RELOAD);
-        if (GunAccessories != null) actions.add(AC_REMOVE);
+        if (gunAccessories != null) actions.add(AC_REMOVE);
         return actions;
     }
 
@@ -170,7 +168,7 @@ public class GunWeapon extends MeleeWeapon {
         super.execute(hero, action);
 
         if (action.equals(AC_ZAP) && bullet > 0 && Dungeon.hero.belongings.weapon == this) {
-            if (this.cursed != true) {
+            if (!this.cursed) {
                 cursedKnown = true;
                 GameScene.selectCell(zapper);
             }
@@ -188,22 +186,22 @@ public class GunWeapon extends MeleeWeapon {
 
         if (action.equals(AC_REMOVE)) {
             curUser = hero;
-            Accessories ac = GunAccessories;
+            Accessories ac = gunAccessories;
             if (ac.doPickUp( Dungeon.hero )) {
                 GLog.i( Messages.get(Dungeon.hero, "you_now_have", ac.name()) );
             } else {
                 Dungeon.level.drop( ac, curUser.pos ).sprite.drop();
             }
-            GunAccessories = null;
+            gunAccessories = null;
             curUser.spendAndNext(1f);
         }
     }
 
     public void reload(int tier, boolean sp) {
-        bullettier = tier;
-        bullet = bulletCap;
+        bulletTier = tier;
+        bullet = bulletMax;
 
-        spshot = sp;
+        specialFire = sp;
 
         if (Dungeon.hero.subClass == HeroSubClass.FREERUNNER) Dungeon.hero.spendAndNext(RELOAD_TIME / 2);
         else Dungeon.hero.spendAndNext(RELOAD_TIME);
@@ -277,14 +275,14 @@ public class GunWeapon extends MeleeWeapon {
 
 
     protected void onZap( Ballistica bolt ) {
-        CloserangeShot closerrange = Dungeon.hero.buff(CloserangeShot.class);
+        CloserangeShot closerRange = Dungeon.hero.buff(CloserangeShot.class);
 
         Char ch = Actor.findChar( bolt.collisionPos );
         float oldacc = ACC;
         boolean pala = false;
 
         if (ch != null) {
-            int dmg = Fire_dmgFactor(ShotDamageRoll());
+            int dmg = fireDamageFactor(fireDamageRoll());
 
             // 사격 스롯 판정
             if (Dungeon.hero.subClass == HeroSubClass.SNIPER) dmg -= (ch.drRoll() / 2);
@@ -295,7 +293,7 @@ public class GunWeapon extends MeleeWeapon {
                     if (ch.buff(Paralysis.class) != null) {pala = true;}
                 }}
 
-            ACC = Fire_accFactor(FIREACC);
+            ACC = fireAccuracyFactor(FIRE_ACC_MULT);
             if (ch.hit(Dungeon.hero, ch, false)) {
 
                 // 첸 특성
@@ -308,7 +306,7 @@ public class GunWeapon extends MeleeWeapon {
                 ch.damage(dmg, this);
                 Sample.INSTANCE.play(Assets.Sounds.HIT_GUN, 1, Random.Float(0.87f, 1.15f));
 
-                if (spshot) SPShot(ch);
+                if (specialFire) specialFire(ch);
                 if (this instanceof C1_9mm) {
                     if (Random.Int(8) == 0) Buff.affect(ch, Chill.class, 2f);
                 }
@@ -335,7 +333,7 @@ public class GunWeapon extends MeleeWeapon {
                         Buff.prolong(Dungeon.hero, ChenShooterBuff.class, 5f).set(ch.id());
                 }
 
-                if (closerrange != null && ch.isAlive() && closerrange.state() == true) {
+                if (closerRange != null && ch.isAlive() && closerRange.state()) {
                     if (Dungeon.hero.hasTalent(Talent.WATER_PLAY) && Random.Int(5) < Dungeon.hero.pointsInTalent(Talent.WATER_PLAY)) {
                         Buff.affect(ch, Blindness.class, 1f);
                     }
@@ -374,12 +372,12 @@ public class GunWeapon extends MeleeWeapon {
 
         Invisibility.dispel();
 
-        if (GunAccessories != null) {
-            if (GunAccessories.GetSavingChance() < Random.Int(100)) {
+        if (gunAccessories != null) {
+            if (gunAccessories.GetSavingChance() < Random.Int(100)) {
                 bullet -=1;
             }
         }
-        else if (closerrange != null && closerrange.state() == true && Dungeon.hero.hasTalent(Talent.FRUGALITY)) {
+        else if (closerRange != null && closerRange.state() && Dungeon.hero.hasTalent(Talent.FRUGALITY)) {
             if (Random.Int(100) > Dungeon.hero.pointsInTalent(Talent.FRUGALITY) * 15) bullet-=1;
         }
         else bullet -=1;
@@ -387,8 +385,8 @@ public class GunWeapon extends MeleeWeapon {
 
         ACC = oldacc;
 
-        if (pala) { curUser.spendAndNext(Fire_dlyFactor(FIRETICK / 4)); }
-        else curUser.spendAndNext(Fire_dlyFactor(FIRETICK));
+        if (pala) { curUser.spendAndNext(fireDelayFactor(FIRE_DELAY_MULT / 4)); }
+        else curUser.spendAndNext(fireDelayFactor(FIRE_DELAY_MULT));
 
         if (ch != null && !ch.isAlive() && Dungeon.hero.hasTalent(Talent.BF_RULL) && Random.Int(5) < Dungeon.hero.pointsInTalent(Talent.BF_RULL)) {
             Buff.affect(Dungeon.hero, Swiftthistle.TimeBubble.class).bufftime(1f);
@@ -400,14 +398,14 @@ public class GunWeapon extends MeleeWeapon {
 
     @Override
     public String desc() {
-        return Messages.get(this, "desc", bullettier);
+        return Messages.get(this, "desc", bulletTier);
     }
 
     @Override
     public String info() {
         String info = super.info();
-        if (GunAccessories != null) {
-            info += "\n\n" + Messages.get(GunAccessories, "desc");
+        if (gunAccessories != null) {
+            info += "\n\n" + Messages.get(gunAccessories, "desc");
         }
         return info;
     }
@@ -417,7 +415,7 @@ public class GunWeapon extends MeleeWeapon {
         public void onSelect( final Item item ) {
             if (item != null) {
                 if (item instanceof Thunderbolt) {
-                    bulletCap+=3;
+                    bulletMax +=3;
                     gamza = true;}
                 if (item instanceof UpMagazine) {reload(((MissileWeapon)item).tier, true); }
                 else reload(((MissileWeapon)item).tier, false);
@@ -433,8 +431,8 @@ public class GunWeapon extends MeleeWeapon {
     }
 
     public String statsInfo() {
-        if (spshot) return Messages.get(this, "stats_desc_sp", shotmin(),shotmax());
-        return Messages.get(this, "stats_desc", shotmin(),shotmax());
+        if (specialFire) return Messages.get(this, "stats_desc_sp", fireMin(), fireMax());
+        return Messages.get(this, "stats_desc", fireMin(), fireMax());
     }
 
     private static final String BULLET = "bullet";
@@ -448,23 +446,23 @@ public class GunWeapon extends MeleeWeapon {
     public void storeInBundle(Bundle bundle) {
         super.storeInBundle(bundle);
         bundle.put(BULLET, bullet);
-        bundle.put(BULLET_CAP, bulletCap);
+        bundle.put(BULLET_CAP, bulletMax);
         bundle.put(GAMZA, gamza);
-        bundle.put(TIER, bullettier);
-        bundle.put(SP, spshot);
-        bundle.put( ACCESSORIES, GunAccessories);
+        bundle.put(TIER, bulletTier);
+        bundle.put(SP, specialFire);
+        bundle.put( ACCESSORIES, gunAccessories);
     }
 
     @Override
     public void restoreFromBundle(Bundle bundle) {
         super.restoreFromBundle(bundle);
-        bulletCap = bundle.getInt(BULLET_CAP);
-        if (bulletCap > 0) bullet = Math.min(bulletCap, bundle.getInt(BULLET));
+        bulletMax = bundle.getInt(BULLET_CAP);
+        if (bulletMax > 0) bullet = Math.min(bulletMax, bundle.getInt(BULLET));
         else bullet = bundle.getInt(BULLET);
 
-        bullettier = bundle.getInt(TIER);
-        spshot = bundle.getBoolean(SP);
+        bulletTier = bundle.getInt(TIER);
+        specialFire = bundle.getBoolean(SP);
         gamza = bundle.getBoolean(GAMZA);
-        GunAccessories = (Accessories) bundle.get(ACCESSORIES);
+        gunAccessories = (Accessories) bundle.get(ACCESSORIES);
     }
 }

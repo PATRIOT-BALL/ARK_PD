@@ -16,9 +16,9 @@ public class DP27 extends GunWeapon {
         hitSound = Assets.Sounds.HIT_GUN;
         hitSoundPitch = 0.9f;
 
-        FIREACC = 3f;
-        FIRETICK = 0.2f;
-        bulletCap = 47;
+        FIRE_ACC_MULT = 3f;
+        FIRE_DELAY_MULT = 0.2f;
+        bulletMax = 47;
 
         usesTargeting = true;
 
@@ -27,14 +27,14 @@ public class DP27 extends GunWeapon {
     }
 
     @Override
-    protected void SPShot(Char ch) {
+    protected void specialFire(Char ch) {
         Buff.affect(ch, Burning.class).reignite(ch);
     }
 
     @Override
     protected void fx(Ballistica bolt, Callback callback ) {
         int a = 0;
-        if (spshot) a = 1;
+        if (specialFire) a = 1;
         MagicMissile.boltFromChar( curUser.sprite.parent,
                 MagicMissile.GUN_SHOT+a,
                 curUser.sprite,
