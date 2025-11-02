@@ -15,7 +15,7 @@ Performing a full setup is strongly recommended if you wish to make changes to t
 
 ### Prerequisites
 
-To compile Shattered Pixel Dungeon for desktop using this guide you will need:
+To compile RogueNights for desktop using this guide you will need:
 - A computer which meets the system requirements for [Android Studio](https://developer.android.com/studio#Requirements) or [Intellij](https://www.jetbrains.com/help/idea/installation-guide.html)
 - (optional) a GitHub account to fork this repository, if you wish to use version control
 
@@ -25,7 +25,7 @@ Download and install the latest version of [Android Studio](https://developer.an
 
 Android Studio is recommended over Intellij as it is required to compile the [Android version](getting-started-android.md) of the game. If you prefer Intellij and are certain you do not need Android functionality, you may use that instead. This guide will assume Android Studio is used, but the two programs are very similar.
 
-It is optional, but strongly recommended, to use version control to manage your copy of the Shattered Pixel Dungeon codebase. Version control is software which helps you manage changes to code. To use version control you will need to download and install [Git](https://git-scm.com/downloads). You are welcome to use a separate graphical git client or git CLI if you prefer, but this guide will use Android Studio's built-in git tools.
+It is optional, but strongly recommended, to use version control to manage your copy of the RogueNights codebase. Version control is software which helps you manage changes to code. To use version control you will need to download and install [Git](https://git-scm.com/downloads). You are welcome to use a separate graphical git client or git CLI if you prefer, but this guide will use Android Studio's built-in git tools.
 
 ### Setting up your copy of the code
 
@@ -52,7 +52,7 @@ If you are not using version control, select 'Import project (Gradle, Eclipse AD
 Once the code is open, you can run it from Android Studio by specifying the gradle command from the quick guide as a run configuration:
 - Select 'Run' on the top toolbar, and then 'Edit Configurations...'.
 - Click the + icon to add a new configuration, and select 'gradle'.
-- Set 'Gradle project' to 'Shattered-pixel-dungeon', and 'tasks' to 'desktop:debug'
+- Set 'Gradle project' to 'Arrrknights', and 'tasks' to 'desktop:debug'
 - Name the configuration whatever you like, and select 'Apply' and 'OK' on the bottom right.
 
 That configuration is now saved and can be selected from the configurations dropdown menu. It can be ran using the green arrow icon, and debugged with the green bug icon.
@@ -61,6 +61,6 @@ That configuration is now saved and can be selected from the configurations drop
 
 A JAR (Java ARchive) is a file used to distribute Java applications. Just as with running the code, a run configuration must be set up to create the jar. Follow the above steps, but with 'desktop:release' instead of 'desktop:debug'. Running this configuration will generate a distributable JAR file in the `/desktop/build/libs` folder.
 
-Note that by distributing your modification of Shattered Pixel Dungeon, you are bound by the terms of the GPLv3 license, which requires that you make any modifications you have made open-source. If you followed this guide and are using version control, that is already set up for you as your forked repository is publicly hosted on GitHub. Just make sure to push any changes you make back to that repository.
+Note that by distributing your modification of RogueNights, you are bound by the terms of the GPLv3 license, which requires that you make any modifications you have made open-source. If you followed this guide and are using version control, that is already set up for you as your forked repository is publicly hosted on GitHub. Just make sure to push any changes you make back to that repository.
 
 Note that JAR files will require a [Java runtime enviroment](https://java.com/en/download/win10.jsp) to be installed on a user's computer in order to work. In future this codebase will likely be expanded to allow bundling a java runtime with the application, so that a simple runnable EXE file can be generated.
