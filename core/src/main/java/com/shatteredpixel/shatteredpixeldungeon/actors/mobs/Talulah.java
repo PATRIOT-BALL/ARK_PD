@@ -115,7 +115,7 @@ public class Talulah extends Mob {
 	{
 		for (int i = 0; i < SUMMON_DECK_SIZE; i++){
 			if (i >= Statistics.spawnersAlive){
-				regularSummons.add(Larva.class);
+				regularSummons.add(InfectedPatrolCaptain.class);
 			} else {
 				regularSummons.add(YogRipper.class);
 			}
@@ -413,7 +413,7 @@ public class Talulah extends Mob {
 	public void aggro(Char ch) {
 		for (Mob mob : (Iterable<Mob>)Dungeon.level.mobs.clone()) {
 			if (Dungeon.level.distance(pos, mob.pos) <= 4 &&
-					(mob instanceof Larva || mob instanceof RipperDemon)) {
+					(mob instanceof InfectedPatrolCaptain || mob instanceof RipperDemon)) {
 				mob.aggro(ch);
 			}
 		}
@@ -424,7 +424,7 @@ public class Talulah extends Mob {
 	public void die( Object cause ) {
 
 		for (Mob mob : (Iterable<Mob>)Dungeon.level.mobs.clone()) {
-			if (mob instanceof Larva || mob instanceof RipperDemon) {
+			if (mob instanceof InfectedPatrolCaptain || mob instanceof RipperDemon) {
 				mob.die( cause );
 			}
 		}
@@ -540,7 +540,7 @@ public class Talulah extends Mob {
 		}
 	}
 
-	public static class Larva extends Mob {
+	public static class InfectedPatrolCaptain extends Mob {
 
 		{
 			spriteClass = Ursus_InfantrySprite.class;
