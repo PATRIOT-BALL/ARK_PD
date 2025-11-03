@@ -14,6 +14,7 @@ public class Usg extends GunWeapon {
 
         FIRE_ACC_MULT = 5f;
         FIRE_DELAY_MULT = 1f;
+        FIRE_DAMAGE_MULT = 0.8f;
         bulletMax = 21;
 
         usesTargeting = true;

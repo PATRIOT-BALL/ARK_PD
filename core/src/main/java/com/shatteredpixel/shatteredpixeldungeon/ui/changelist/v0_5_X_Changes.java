@@ -26,14 +26,12 @@ public class v0_5_X_Changes {
                 "아직 개발중입니다!"));
         changes.addButton(new ChangeButton(Icons.get(Icons.WEP), "사격무기",
                 "새로운 무기 종류인 _사격 무기_가 추가되었습니다" + "\n\n" +
-                "_USG 57_ 2티어 무기로, 기본적인 사격 무기입니다" + "\n\n" +
                 "_화이트팽 465_ 3티어 무기입니다" + "\n\n" +
-                "_스털링 기관단총_ 3티어 무기로, 한번의 사격에 2발을 발사합니다" + "\n\n" +
-                "_DP 27_ 3티어 무기로, 한번의 사격에 5발을 발사합니다" + "\n\n" +
-                "_SQ-CQB_ 4티어 무기로, 부채꼴로 퍼지는 탄환을 발사합니다" + "\n\n" +
+                "_스털링 기관단총_ 3티어 무기로, 공격속도가 빠릅니다" + "\n\n" +
+                "_DP 27_ 3티어 무기로, 공격속도가 매우 빠릅니다" + "\n\n" +
                 "_OTs-03_ 4티어 무기로, 강력한 데미지를 가졌지만 사격속도가 매우 느립니다" + "\n\n" +
                 "_6P41_ 5티어 무기로, 공격속도가 빠르지만 명중률이 낮습니다" + "\n\n" +
-                "_R4-C_ 5티어 무기로, 한번의 사격에 3발을 발사합니다" + "\n\n"));
+                "_R4-C_ 5티어 무기로, 공격속도가 매우 빠릅니다" + "\n\n"));
 
         changes = new ChangeInfo(Messages.get(ChangesScene.class, "changes"), false, null);
         changes.hardlight(CharSprite.WARNING);

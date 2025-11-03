@@ -13,7 +13,8 @@ public class C1_9mm extends GunWeapon {
         hitSoundPitch = 0.9f;
 
         FIRE_ACC_MULT = 3f;
-        FIRE_DELAY_MULT = 0.5f;
+        FIRE_DELAY_MULT = 0.66f;
+        FIRE_DAMAGE_MULT = 0.5f;
         bulletMax = 34;
 
         usesTargeting = true;

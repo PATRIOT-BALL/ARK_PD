@@ -13,7 +13,8 @@ public class SG_CQB extends GunWeapon {
         hitSoundPitch = 0.9f;
 
         FIRE_ACC_MULT = 3f;
-        FIRE_DELAY_MULT = 1f;
+        FIRE_DELAY_MULT = 1.5f;
+        FIRE_DAMAGE_MULT = 1.25f;
         bulletMax = 7;
 
         usesTargeting = true;

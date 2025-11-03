@@ -155,29 +155,16 @@ import com.watabou.utils.DeviceCompat;
 		new ScrollOfIdentify().identify();
 		new FoodBag().collect();
 
-		new Usg().identify().collect();
-		new Ots03().identify().collect();
-		new Pkp().identify().collect();
-		new NormalMagazine().quantity(3).collect();
-		new PotionOfStrength().quantity(1).collect();
-		new ScrollOfUpgrade().quantity(1).collect();
+		if (DeviceCompat.isDebug()) {
+            new PotionOfStrength().identify().quantity(40).collect();
+            new PotionOfExperience().identify().quantity(40).collect();
+            new PotionOfHealing().identify().quantity(40).collect();
+            new ScrollOfUpgrade().identify().quantity(40).collect();
+            new ScrollOfMagicMapping().identify().quantity(40).collect();
 
-		/*new Nevous().quantity(5).collect();
-		new Usg().identify().collect();
-		new Ots03().identify().collect();
-		new Pkp().identify().collect();
-		new NormalMagazine().quantity(40).collect();
-
-		new PotionOfStrength().quantity(40).collect();
-		new PotionOfExperience().quantity(40).collect();
-		new PotionOfHealing().quantity(40).collect();
-		new ScrollOfUpgrade().quantity(40).collect();
-		new Amulet().collect();
-
-		new ScrollOfMagicMapping().identify().collect();
-		new Heamyo().collect();/**/
-
-
+            new Amulet().collect();
+            new Heamyo().collect();
+        }
 
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
 	}
