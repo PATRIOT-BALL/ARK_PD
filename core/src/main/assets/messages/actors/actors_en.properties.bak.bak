@@ -1,0 +1,1687 @@
+###blobs
+actors.blobs.blizzard.desc=A blizzard is swirling here.
+
+actors.blobs.confusiongas.desc=A cloud of confusion gas is swirling here.
+
+actors.blobs.electricity.desc=A field of electricity is sparking brightly here.
+actors.blobs.electricity.rankings_desc=Electrocuted
+actors.blobs.electricity.ondeath=You were shocked to death...
+
+actors.blobs.fire.desc=A fire is raging here.
+
+actors.blobs.foliage.desc=Shafts of light pierce the gloom of the underground garden.
+
+actors.blobs.freezing.desc=The air is unnaturally frigid here.
+
+actors.blobs.goowarn.desc=Specks of dark energy are swarming here!
+
+actors.blobs.inferno.desc=An inferno is raging here.
+
+actors.blobs.paralyticgas.desc=A cloud of paralytic gas is swirling here.
+
+actors.blobs.smokescreen.desc=A cloud of thick black smoke is swirling here.
+
+actors.blobs.stenchgas.desc=A cloud of fetid stench is swirling here.
+
+actors.blobs.stormcloud.desc=A cloud of billowing water vapor is swirling here.
+
+actors.blobs.toxicgas.desc=A greenish cloud of toxic gas is swirling here.
+actors.blobs.toxicgas.rankings_desc=Suffocated
+actors.blobs.toxicgas.ondeath=You died from the toxic gas...
+
+actors.blobs.corrosivegas.desc=A cloud of deadly caustic gas is swirling here.
+
+actors.blobs.waterofawareness.procced=As you take a sip, you feel knowledge pour into your mind.
+actors.blobs.waterofawareness.desc=Power of knowledge radiates from the water of this well. Take a sip from it to reveal all secrets of equipped items and reveal all items on the current floor.
+
+actors.blobs.waterofhealth.procced=As you take a sip, you feel your wounds heal completely.
+actors.blobs.waterofhealth.desc=Power of health radiates from the water of this well. Take a sip from it to heal your wounds and satisfy hunger.
+
+actors.blobs.waterofhealth.procced=As you take a sip, you feel your wounds heal completely.
+actors.blobs.waterofhealth.desc=Power of health radiates from the water of this well. Take a sip from it to heal your wounds and satisfy hunger.
+
+actors.blobs.waterofadvanceguard.procced=You get %dOrundums
+actors.blobs.waterofadvanceguard.desc=Power of avant-garde radiates from the water of this well. you put an item, you can get Orundums equal to 3 times the selling price. Also, some items will be turned into special items.
+
+actors.blobs.wateroftransmutation.desc=Power of change radiates from the water of this well. Throw an item into the well to turn it into something else.
+
+actors.blobs.web.desc=A thick web is covering everything here. Anything that touches or is thrown through the web will break it, but will also be stuck in place.
+
+actors.blobs.dominion.desc=In this space, those who do not follow the will of Ursus will be weakened...
+
+
+###buffs
+actors.buffs.adrenaline.name=Adrenaline
+actors.buffs.adrenaline.desc=A surge of physical power, adrenaline enhanced both attack and movement speed.\n\nAdrenaline allows its target to run at 2x speed, and attack at 1.5x speed.\n\nTurns remaining: %s.
+
+actors.buffs.adrenalinesurge.name=Adrenaline Surge
+actors.buffs.adrenalinesurge.desc=A surge of great might, but sadly not permanent.\n\nStrength boost: +%d.\nTurns until boost weakens: %s.
+
+actors.buffs.amok.name=Amok
+actors.buffs.amok.desc=Amok causes a state of great rage and confusion in its target.\n\nWhen a creature is amoked, they will attack whatever is near them, whether they be friend or foe.\n\nTurns of amok remaining: %s
+
+actors.buffs.arcanearmor.name=Arcane Armor
+actors.buffs.arcanearmor.desc=A thin shield is surrounding you, blocking some of the damage from magical attacks.\n\nYour magical armor is currently boosted by: 0-%d.\n\nTurns until arcane armor weakens: %s.
+
+actors.buffs.artifactrecharge.name=Artifact Recharging
+actors.buffs.artifactrecharge.desc=Energy is coursing through you, increasing the rate your equipped artifacts charge.\n\nEach artifact is affected a little differently, but they will all gain charge much faster than normal.\n\nTurns remaining: %s.
+
+actors.buffs.barkskin.name=Barkskin
+actors.buffs.barkskin.desc=Your skin is hardened, it feels rough and solid like bark.\n\nThe hardened skin increases your effective armor, allowing you to better defend against physical attack.\n\nYour armor is currently increased by: %d.\nTurns until barkskin weakens: %s.
+
+actors.buffs.barrier.name=Barrier
+actors.buffs.barrier.desc=A durable bubble of force which blocks all damage.\n\nThe barrier will take damage for whatever it is protecting so long as there is shielding left. The shielding will also slowly decay over time.\n\nShielding remaining: %d.
+
+actors.buffs.berserk.angered=Angered
+actors.buffs.berserk.berserk=Berserking
+actors.buffs.berserk.exhausted=Exhausted
+actors.buffs.berserk.recovering=Recovering
+actors.buffs.berserk.angered_desc=The severity of the Blaze's injuries strengthen her blows. As the berserker takes physical damage, her rage will build, granting him bonus damage. Damage which is blocked by armor still counts towards building rage.\n\nRage will fade over time. The lower the berserker's health, the longer it will last.\n\nIf the berserker is brought to 0 hp while at full rage, and is wearing her seal, he will go berserk and _refuse to die_ for a short time.\n\nCurrent Rage: _%.0f%%_\n_+%.0f%%_ damage
+actors.buffs.berserk.berserk_desc=At the brink of death, fear and uncertainty bleed away, leaving only anger. In this state of near-death the berserker is extremely powerful _dealing +100% damage, gaining bonus shielding, and refusing to die._\n\nThis bonus shielding is stronger the better the Blaze's armor, and will deplete over time. When this shielding is reduced to 0, the Blaze will give in and die.\n\nAny form of healing will return the berserker to stability, but he will be exhausted. While exhausted, the berserker will need to gain experience before being able to build rage again.
+actors.buffs.berserk.recovering_desc=Inner strength has its limits. The Blaze must rest before using his rage again.\n\nWhile recovering the berserker does not build any rage from taking damage.\n\nLevels until recovered: _%.2f_
+actors.buffs.berserk.no_rages=Berserking will also permanently wear on her, reducing his max health each time.
+actors.buffs.berserk.past_rages=Times berserker has raged: _%d_\nMax health reduced to: _%d%%_
+actors.buffs.berserk.rankings_desc=Berserked to Death
+
+actors.buffs.bleeding.name=Bleeding
+actors.buffs.bleeding.ondeath=You bled to death...
+actors.buffs.bleeding.heromsg=You are bleeding!
+actors.buffs.bleeding.rankings_desc=Bled to Death
+actors.buffs.bleeding.desc=That wound is leaking a worrisome amount of blood.\n\nBleeding causes damage every turn. Each turn the damage decreases by a random amount, until the bleeding eventually stops.\n\nCurrent bleed damage: %d.
+
+actors.buffs.bless.name=Blessed
+actors.buffs.bless.desc=A great burst of focus, some say it is inspired by the gods.\n\nBlessing increases accuracy and evasion by 25%%, making the blessed much more effective in combat.\n\nTurns of bless remaining: %s.
+
+actors.buffs.blindness.name=Blinded
+actors.buffs.blindness.heromsg=You are blinded!
+actors.buffs.blindness.desc=Blinding turns the surrounding world into a dark haze.\n\nWhile blinded, a character can't see more than one tile infront of themselves, rendering ranged attacks useless and making it very easy to lose track of distant enemies. Additionally, a blinded hero is unable to read scrolls or books.\n\nTurns of blindness remaining: %s.
+
+actors.buffs.burning.name=Burning
+actors.buffs.burning.heromsg=You catch fire!
+actors.buffs.burning.burnsup=%sburns up!
+actors.buffs.burning.ondeath=You burned to death...
+actors.buffs.burning.rankings_desc=Burned to Ash
+actors.buffs.burning.desc=Few things are more distressing than being engulfed in flames.\n\nFire will deal damage every turn until it is put out by water or it expires. Fire can be extinquished by stepping into water, or from the splash of a shattering potion.\n\nAdditionally, the fire may ignite flammable terrain or items that it comes into contact with.\n\nTurns of burning remaining: %s.
+
+actors.buffs.championenemy.warn=You sense a deadly presence.
+actors.buffs.championenemy$blazing.name=blazing champion
+actors.buffs.championenemy$blazing.desc=Blazing champions deal 25% more melee damage, ignite enemies they attack, are immune to fire, and spread fire around them as they die.
+actors.buffs.championenemy$projecting.name=projecting champion
+actors.buffs.championenemy$projecting.desc=Projecting champions deal 25% more melee damage, and are able to attack any enemy that they can see.
+actors.buffs.championenemy$antimagic.name=antimagic champion
+actors.buffs.championenemy$antimagic.desc=Antimagic champions take 25% less damage and are completely immune to magical effects.
+actors.buffs.championenemy$giant.name=giant champion
+actors.buffs.championenemy$giant.desc=Giant champions take 75% less damage and have +1 attack range, but cannot move through enclosed spaces.
+actors.buffs.championenemy$blessed.name=blessed champion
+actors.buffs.championenemy$blessed.desc=Blessed champions have 200% more accuracy and evasion.
+actors.buffs.championenemy$growing.name=growing champion
+actors.buffs.championenemy$growing.desc=Growing champions gain a steadily increasing bonus to accuracy, evasion, melee damage, and a reduction to damage taken.\n\nCurrent acc/eva/dmg boost: %1$d%%\nCurrent damage reduction: %2$d%%
+
+actors.buffs.charm.name=Charmed
+actors.buffs.charm.heromsg=You are charmed!
+actors.buffs.charm.desc=A charm is manipulative magic that can make enemies temporarily adore each other.\n\nCharacters affected by charm are unable to directly attack the enemy they are charmed by. Attacking other targets is still possible however. The shock of pain will lessen the duration of charm.\n\nTurns of charm remaining: %s.
+
+actors.buffs.chill.name=Chilled
+actors.buffs.chill.freezes=%s freezes!
+actors.buffs.chill.desc=Not quite frozen, but still much too cold.\n\nChilled targets perform all actions more slowly, depending on how many turns are left in the effect. At its worst, this is equivalent to being slowed.\n\nTurns of chill remaining: %1$s.\nSpeed is reduced by: %2$s%%.
+
+actors.buffs.combo.name=Combo
+actors.buffs.combo.combo=%d hit combo!
+actors.buffs.combo.bad_target=You must target an enemy in attack range.
+actors.buffs.combo.prompt=Select a target to attack.
+actors.buffs.combo.desc=The blaze builds momentum as they land successful blows. Each attack increases the combo counter by one, but taking too long between hits will reset the combo counter to 0.\n\nBuilding combo unlocks special combo attacks that cannot miss! A different attack is unlocked at 2, 4, 6, 8, and 10 combo count. Some moves reset combo and some do not, but each move can only be used once per combo session.
+actors.buffs.combo$combomove.clobber_desc=_2 Combo: Clobber_ knocks an enemy back 2 tiles, but deals no damage and cannot knock into pits. Increments combo by 1.
+actors.buffs.combo$combomove.slam_desc=_4 Combo: Slam_ deals combo*20% of your armor's blocking power as bonus damage. Resets combo when used.
+actors.buffs.combo$combomove.slam_desc2=_4 Combo: Fast Shot_  deals combo*20% of your gunfire damage to the target. Increments combo by 1.
+actors.buffs.combo$combomove.parry_desc=_6 Combo: Parry_ blocks the next attack within 1 turn when activated, and instantly retaliates to it. Resets combo if nothing is parried.
+actors.buffs.combo$combomove.crush_desc=_8 Combo: Crush_ deals combo*25% of your melee damage to the primary target, and half that damage to all other enemies in a 7x7 AOE. Resets combo when used
+actors.buffs.combo$combomove.crush_desc2=_8 Combo: Melee Flare_ deals 125% of your melee damage to the target, and 1 trun Paralysis and combo*0.3 truns Blindness. Increments combo by 1.
+actors.buffs.combo$combomove.fury_desc=_10 Combo: Fury_ hits an enemy once for each combo you have, each hit deals 60% damage and can trigger enchantments. Resets combo when used.
+actors.buffs.combo$combomove.fury_desc2=_10 Combo: zero-range_ deals combo*40% of your gunfire damage to the target. Resets combo when used.
+
+actors.buffs.activeoriginium.name=Originium Active
+actors.buffs.activeoriginium.ondeath=You originium to death...
+actors.buffs.activeoriginium.heromsg=You gained Originium power!
+actors.buffs.activeoriginium.rankings_desc=died of originium Infection
+actors.buffs.activeoriginium.desc=Influenced by active originium. You'll be able to melee attacks Twice faster, but your body will slowly collapse due to the powerful force. If you do nothing, your status will be restored, but if you try to attack, the duration will continue to update.\n\nPower of Originium: %s.
+
+actors.buffs.corruption.name=Corrupted
+actors.buffs.corruption.desc=Corruption seeps into the essence of a being, twisting them against their former nature.\n\nCorrupted creatures will attack their allies, and ignore their former enemies. Corruption is damaging as well, and will slowly cause its target to succumb.\n\nCorruption is permanent, its effects only end in death.
+
+actors.buffs.seethingburst.name=Burning spirit
+actors.buffs.seethingburst.desc=Blaze's fighting spirit burns. Defense is doubled. Also, when the effect ends, the next attack is strengthened in proportion to the damage received for the duration.\n\nTurns of Spirit: %s.
+
+actors.buffs.cripple.name=Crippled
+actors.buffs.cripple.heromsg=You are crippled!
+actors.buffs.cripple.desc=You're pretty sure legs aren't meant to bend that way.\n\nCrippled halves movement speed, making moving a tile usually take two turns instead of one.\n\nTurns of cripple remaining: %s.
+
+actors.buffs.degrade.name=Degraded
+actors.buffs.degrade.heromsg=Your equipment feels weaker!
+actors.buffs.degrade.desc=Powerful dark magic is sapping the strength that scrolls of upgrade have applied to your equipment!\n\nWhile degraded, upgraded gear will be treated as if it is a lower level than it actually is. _Every upgrade after +3 becomes exponentially weaker than the last one._ The descriptions of your items will change to reflect their reduced power level.\n\nDegradation does not affect strength requirements, wand charges, durability of thrown weapons, or artifacts.\n\nTurns of degradation remaining: %s. Using a scroll of upgrade or remove curse will end degradation immediately.
+
+actors.buffs.doom.name=Doomed
+actors.buffs.doom.desc=It's hard to keep going when it seems like the universe wants you dead.\n\nDoomed characters will receive double damage from all sources.\n\nDoom is permanent, its effects only end in death.
+
+actors.buffs.drowsy.name=Drowsy
+actors.buffs.drowsy.desc=A arts force is making it difficult to stay awake.\n\nThe hero can resist drowsiness by taking damage or by being at full health.\n\nAfter a few turns, the target will fall into a deep arts sleep.
+
+actors.buffs.earthimbue.name=Imbued with Earth
+actors.buffs.earthimbue.desc=You are imbued with the power of earth!\n\nAll physical attacks will shift the earth under the enemy, crippling them for a short time.\n\nTurns of earth imbue remaining: %s.
+
+actors.buffs.executmode.name=Execution Mode
+actors.buffs.executmode.desc=have entered Execution Mode. During the duration, the evasion rate is multiplied by 1.3.\n\nTurns of Execution: %s.
+
+actors.buffs.reflowbuff.name=Reflow
+actors.buffs.reflowbuff.desc=attack power of thrown weapons has increased.\n\nTurns of Reflow: %s.
+
+actors.buffs.enhancedrings.name=Enhanced Rings
+actors.buffs.enhancedrings.desc=The Rogue's recently used artifact is empowering his rings. Granting them +1 upgrade for %d more turns.
+
+actors.buffs.fireimbue.name=Imbued with Fire
+actors.buffs.fireimbue.desc=You are imbued with the power of fire!\n\nAll physical attacks will have a chance to light enemies ablaze. Additionally, you are completely immune to the effects of fire.\n\nTurns of fire imbue remaining: %s.
+
+actors.buffs.foresight.name=Foresight
+actors.buffs.foresight.desc=Your senses are heightened, allowing you to immediately notice anything out of place.\n\nWhile under the effect of foresight your search radius is increased, and anything that enters your search radius is immediately discovered.\n\nTurns of foresight remaining: %s.
+
+actors.buffs.frost.name=Frozen
+actors.buffs.frost.freezes=%s freezes!
+actors.buffs.frost.desc=Not to be confused with freezing solid, this more benign freezing simply encases the target in ice.\n\nFreezing acts similarly to paralysis, making it impossible for the target to act. Unlike paralysis, freezing is immediately cancelled if the target takes damage, as the ice will shatter.\n\nTurns of freeze remaining: %s.
+
+actors.buffs.frostimbue.name=Imbued with Frost
+actors.buffs.frostimbue.desc=You are imbued with icy power!\n\nAll physical attacks will steadily stack chill on enemies. Additionally, you are completely immune to the cold.\n\nTurns of frost imbue remaining: %s.
+
+actors.buffs.fury.name=Furious
+actors.buffs.fury.heromsg=You become furious!
+actors.buffs.fury.desc=You are angry, enemies won't like you when you're angry.\n\nA great rage burns within you, increasing the damage you deal with physical attacks by 50%%.\n\nThis rage will last as long as you are injured below 50%% health.
+
+actors.buffs.blobimmunity.name=Arts Barrier
+actors.buffs.blobimmunity.desc=Some strange force is encasing you in a thin protective barrier, blocking out all harmful airborne effects.\n\nYou are immune to all area-bound effects while this barrier lasts.\n\nTurns of immunity remaining: %s.
+
+actors.buffs.haste.name=Haste
+actors.buffs.haste.desc=Energy courses through your muscles, allowing you to run at incredible speeds!\n\nWhile under the effects of haste you will run at 3x speed, but will perform all other actions at normal speed.\n\nTurns of haste remaining: %s.
+
+actors.buffs.healing.name=Healing
+actors.buffs.healing.desc=A arts remedy is causing wounds to close and flesh to knit.\n\nEvery turn health will steadily regenerate until the healing effect expires. The amount of healing may fade over time.\n\nNext heal: %d.\nHealing remaining: %d.
+
+actors.buffs.hex.name=Hexed
+actors.buffs.hex.heromsg=You have been hexed!
+actors.buffs.hex.desc=Dark arts which saps focus, making the target slightly disoriented.\n\nHexing reduces accuracy and evasion by 20%%, making the target less effective in combat.\n\nTurns of hex remaining: %s.
+
+actors.buffs.holdfast.name=Hold Fast
+actors.buffs.holdfast.desc=The Blaze is holding his position, increasing his armor by 0-%d. This will last until he moves.
+
+actors.buffs.hunger.hungry=Hungry
+actors.buffs.hunger.starving=Starving
+actors.buffs.hunger.onhungry=You are hungry.
+actors.buffs.hunger.onstarving=You are starving!
+actors.buffs.hunger.ondeath=You starved to death...
+actors.buffs.hunger.cursedhorn=The cursed gum steals some of the food energy as you eat.
+actors.buffs.hunger.rankings_desc=Starved to Death
+actors.buffs.hunger.desc_intro_hungry=You can feel your stomach calling out for food, but it's not too urgent yet.
+actors.buffs.hunger.desc_intro_starving=You're so hungry it hurts.
+actors.buffs.hunger.desc=\n\nHunger slowly increases as you spend time in the dungeon, eventually you will begin to starve. While starving you will slowly lose health instead of regenerating it.\n\nRationing is important! If you have health to spare starving isn't a bad idea if it means there will be more food later. Effective rationing can make food last a lot longer!
+
+actors.buffs.invisibility.name=Invisible
+actors.buffs.invisibility.desc=You are completely blended into the surrounding terrain, making you impossible to see.\n\nWhile you are invisible enemies are unable to attack or follow you. Physical attacks and magical effects (such as scrolls and wands) will immediately cancel invisibility.\n\nTurns of invisibility remaining: %s.
+
+actors.buffs.levitation.name=Levitating
+actors.buffs.levitation.desc=A magical force is levitating you over the ground, making you feel weightless.\n\nWhile levitating you ignore all ground-based effects. Traps won't trigger, water won't put out fire, plants won't be trampled, roots will miss you, and you will hover right over pits. Be careful, as all these things can come into effect the second the levitation ends!\n\nTurns of levitation remaining: %s.
+
+actors.buffs.lifelink.name=Life Link
+actors.buffs.lifelink.desc=This characters's life force is linked to another character nearby. Any damage taken is shared between them.\n\nWhenever this character takes damage, half of it will be dealt to the life link target instead.\n\nTurns of life link remaining: %s, or until the linked character dies.
+
+actors.buffs.light.name=Illuminated
+actors.buffs.light.desc=Even in the Darkest Dungeon, a steady light at your side is always comforting.\n\nLight helps keep darkness at bay, allowing you to see a reasonable distance despite the environment.\n\nTurns of illumination remaining: %s.
+
+actors.buffs.lockedfloor.name=Floor is Locked
+actors.buffs.lockedfloor.desc=The current floor is locked, and you are unable to leave it!\n\nWhile a floor is locked, you will not gain hunger or take damage from starving. In addition, if you do not work towards defeating this floor's boss, passive regeneration effects will also stop.\n\nAdditionally, if you are revived by an unblessed ankh while the floor is locked, then it will reset.\n\nKill this floor's boss to break the lock.
+
+actors.buffs.lancecharge.name=lance charge
+actors.buffs.lancecharge.desc=Accelerated!\n\nYou can now move at 5x speed, and your next attack will be very strong.\nAttacking will end the accelerated.
+
+actors.buffs.magicalsight.name=Arts Sight
+actors.buffs.magicalsight.desc=Somehow you are able to see with your mind, rather than your eyes.\n\nAll terrain or effects which reduce or block vision are broken while arts sight is active.\n\nTurns of arts sight remaining: %s.
+
+actors.buffs.magicalsleep.name=Magical Sleep
+actors.buffs.magicalsleep.toohealthy=You are too healthy, and resist the urge to sleep.
+actors.buffs.magicalsleep.fallasleep=You fall into a deep magical sleep.
+actors.buffs.magicalsleep.wakeup=You wake up feeling refreshed and healthy.
+actors.buffs.magicalsleep.desc=This character has fallen into a deep magical sleep which they will not wake from naturally.\n\nMagical sleep is similar to regular sleep, except that only damage will cause the target to wake up.\n\nFor the hero, magical sleep has some restorative properties, allowing them to rapidly heal while resting.
+
+actors.buffs.magicimmune.name=Immune to Arts
+actors.buffs.magicimmune.desc=All magical effects have lost their hold on you, you are completely impervious to them.\n\nWhile arts immune all harmful and helpful magical effects will not apply to you, including curses, enchants, wands, scrolls, etc.\n\nTurns of magic immunity remaining: %s.
+
+actors.buffs.mindvision.name=Mind vision
+actors.buffs.mindvision.desc=Somehow you are able to see all creatures on this floor through your mind. It's a weird feeling.\n\nAll characters on this floor are visible to you as long as you have mind vision. Seeing a creature through mind vision counts as it being seen or nearby for the purposes of many magical effects.\n\nTurns of mind vision remaining: %s.
+
+actors.buffs.momentum.momentum=Building Momentum
+actors.buffs.momentum.running=Freerunning
+actors.buffs.momentum.resting=Recovering
+actors.buffs.momentum.momentum_desc=As he moves, the Red builds momentum, which he can spend to start freerunning.\n\nEach charge of momentum grants two turns of freerunning, and the Red can build up to 10 charges. Momentum is rapidly lost when the Red stops moving.\n\nCurrent momentum charge: %d.
+actors.buffs.momentum.running_desc=As he moves, the Red builds momentum, which he can spend to start freerunning.\n\nWhile freerunning, the Red moves at double speed and gains bonus evasion based on his level.\n\nTurns remaining: %d.
+actors.buffs.momentum.resting_desc=As he moves, the Red builds momentum, which he can spend to start freerunning.\n\nThe Red needs time to regain his stamina before building momentum again.\n\nTurns remaining: %d.
+
+actors.buffs.ooze.name=Caustic ooze
+actors.buffs.ooze.heromsg=Caustic ooze eats your flesh. Wash it away!
+actors.buffs.ooze.ondeath=You melt away...
+actors.buffs.ooze.rankings_desc=Dissolved
+actors.buffs.ooze.desc=This sticky acid clings to flesh, slowly melting it away.\n\nOoze will deal consistent damage over time, but can be immediately washed off in water.\n\nTurns of ooze remaining: %s.
+
+actors.buffs.paralysis.name=Paralysed
+actors.buffs.paralysis.heromsg=You are paralysed!
+actors.buffs.paralysis.out=resisted paralysis
+actors.buffs.paralysis.desc=Oftentimes the worst thing to do is nothing at all.\n\nParalysis completely halts all actions, forcing the target to wait until the effect wears off. The pain from taking damage can cause characters to resist paralysis, breaking them out of the effect.\n\nTurns of paralysis remaining: %s.
+
+actors.buffs.pincushion.name=Pincushion
+actors.buffs.pincushion.desc=The thrown weapons you have used against this character are currently stuck to them and will fall to the floor after they are defeated.\n\nThe following items are currently attached:
+
+actors.buffs.poison.name=Poisoned
+actors.buffs.poison.heromsg=You are poisoned!
+actors.buffs.poison.ondeath=You died from poison...
+actors.buffs.poison.rankings_desc=Succumbed to Poison
+actors.buffs.poison.desc=Poison works its way through the body, slowly impairing its internal functioning.\n\nPoison deals damage each turn proportional to how long until it expires.\n\nTurns of poison remaining: %s.
+
+actors.buffs.preparation.name=Bonebreaker
+actors.buffs.preparation.desc=The Red is waiting patiently, preparing to strike from the shadows.
+actors.buffs.preparation.desc_dmg=her next attack will deal _%1$d%% bonus damage_, and will execute regular enemies below _%2$d%% health_, or bosses below _%3$d%% health_.
+actors.buffs.preparation.desc_dmg_likely=The attack will also be more likely to deal a larger amount of damage.
+actors.buffs.preparation.desc_blink=She is able to blink towards an enemy before striking them, with a max distance of _%d._
+actors.buffs.preparation.desc_invis_time=The Red has been invisible for _%d turns._
+actors.buffs.preparation.desc_invis_next=Her attack will become stronger at _%d turns._
+actors.buffs.preparation.prompt=Select a target to attack!\nMax blink distance: %d
+actors.buffs.preparation.no_target=There's nothing to attack there.
+actors.buffs.preparation.out_of_reach=That target is out of reach.
+actors.buffs.preparation.assassinated=assassinated
+
+actors.buffs.prismaticguard.name=Prismatic Guard
+actors.buffs.prismaticguard.desc=You are being guarded by a prismatic image which is currently inactive. When enemies are present the prismatic image will spring to action and protect you!\n\nWhile inactive, the prismatic image will steadily recover from any damage it has taken.\n\nCurrent HP: %d/%d.
+
+actors.buffs.recharging.name=Recharging
+actors.buffs.recharging.desc=Energy is coursing through you, improving the rate that your wands and staffs charge.\n\nEach turn this buff will increase current charge by one quarter, in addition to regular recharge.\n\nTurns of recharging remaining: %s.
+
+actors.buffs.revealedarea.name=Revealed Area
+actors.buffs.revealedarea.desc=An area of the dungeon has been temporarily revealed to the hero, They will see it no matter where they are.\n\nTurns remaining: %s.
+
+actors.buffs.revealedchar.name=Revealed
+actors.buffs.revealedchar.desc=This character is revealed to the hero, They will be visible no matter where they are.\n\nTurns remaining: %s.
+
+actors.buffs.roots.name=Rooted
+actors.buffs.roots.heromsg=You can't move!
+actors.buffs.roots.desc=Roots (arts or natural) grab at the feet, forcing them down to the ground.\n\nRoots lock a target in place, making it impossible for them to move, but other actions are not affected.\n\nTurns of root remaining: %s.
+
+actors.buffs.scrollempower.name=Scroll Empower
+actors.buffs.scrollempower.desc=The energy from the Mage's recently read scroll is empowering his wands! His next wand zap within %1$d turns will gain +%2$d levels.
+
+actors.buffs.shadows.name=Shadowmelded
+actors.buffs.shadows.desc=You are blended into the shadows around you, granting you invisibility and slowing your metabolism.\n\nWhile you are invisible enemies are unable to attack or follow you. Most physical attacks and magical effects (such as scrolls and wands) will immediately cancel invisibility. Additionally, while shadowmelded, your rate of hunger is slowed.\n\nYou will remain shadowmelded until you leave the shadows or an enemy comes into contact with you.
+
+actors.buffs.slow.name=Slowed
+actors.buffs.slow.desc=Slowing magic affects the target's rate of time, to them everything is moving super-fast.\n\nA slowed character performs all actions in twice the amount of time they would normally take.\n\nTurns of slow remaining: %s.
+
+actors.buffs.snipersmark.name=Sniper's mark
+actors.buffs.snipersmark.desc=The GreyThroat is honed in on the target she most recently attacked. She is able to perform a special attack with her bow which will vary based on how the bow is augmented.\n\nAn overload or unaugmented bow will fire a _snapshot,_ which deals reduced damage but does not take any time to fire.\n\nA bow augmented for speed will fire a _arts shot._ This shot is Even if the enemy blocks an attack, it unconditionally cripple it, and takes 1 turns to fire.\n\nA bow augmented for damage will fire a _sniper shot._ This shot is guaranteed to hit, deals bonus damage based on distance from the target, and takes 2 turns to fire.
+
+actors.buffs.soulmark.name=Soul Marked
+actors.buffs.soulmark.desc=Amiya has tapped into the soul of this creature. She will heal and satisfy his hunger as it takes physical damage.\n\nTurns of soul mark remaining: %s.
+
+actors.buffs.stamina.name=Stamina
+actors.buffs.stamina.desc=You have unending stamina, allowing for faster movement!\n\nWhile under the effects of stamina you will run at +50%% speed, but will perform all other actions at normal speed.\n\nTurns of stamina remaining: %s.
+
+actors.buffs.vulnerable.name=Vulnerable
+actors.buffs.vulnerable.heromsg=You feel fragile!
+actors.buffs.vulnerable.desc=Vulnerability magic increases all physical damage that a character takes by 33%%, after that damage has been reduced by armor.\n\nTurns of vulnerable remaining: %s.
+
+actors.buffs.terror.name=Terrified
+actors.buffs.terror.desc=Terror is manipulative magic which forces its target into an uncontrollable panic.\n\nTerrified characters are forced to run away from their opponent, trying to put as many doors and walls between them as possible. The shock of pain will lessen the duration of terror, however.\n\nTurns of terror remaining: %s.
+
+actors.buffs.toxicimbue.name=Imbued with Toxicity
+actors.buffs.toxicimbue.desc=You are imbued with poisonous energy!\n\nAs you move around toxic gas will constantly billow forth from you, damaging your enemies. You are immune to toxic gas and poison for the duration of the effect.\n\nTurns of toxic imbue remaining: %s.
+
+actors.buffs.corrosion.name=Corrosion
+actors.buffs.corrosion.heromsg=You are melting!
+actors.buffs.corrosion.ondeath=You melt away...
+actors.buffs.corrosion.rankings_desc=Dissolved
+actors.buffs.corrosion.desc=Powerful acid melts away flesh, metal, and bone at an alarming rate.\n\nCorrosion damage increases over time, as the target continues to melt away.\n\nTurns of corrosion remaining: %1$s.\nCurrent corrosion damage: %2$d.
+
+actors.buffs.vertigo.name=Vertigo
+actors.buffs.vertigo.desc=Walking in a straight line can be difficult when the whole world is spinning.\n\nWhile under the effects of vertigo, characters who attempt to move will go in a random direction, instead of the one they intended to go in.\n\nTurns of vertigo remaining: %s.
+
+actors.buffs.wandempower.name=Wands Empowered
+actors.buffs.wandempower.desc=Your damage-dealing wands have been empowered, increasing the amount of damage they deal for a few zaps.\n\nBonus damage: %1$d.\nZaps remaining: %2$d.
+
+actors.buffs.weakness.name=Weakened
+actors.buffs.weakness.heromsg=You feel weakened!
+actors.buffs.weakness.desc=Everything suddenly seems much heavier.\n\nWeakening magic reduces a character's physical strength, causing them to deal 33%% reduced damage.\n\nTurns of weakness remaining: %s.
+
+actors.buffs.wellfed.name=Well Fed
+actors.buffs.wellfed.desc=You feel quite satisfied and full.\n\nWhile well fed, your hunger will not increase, and you will heal an additional amount of health over time.\n\nTurns remaining: %d.
+
+actors.buffs.silence.name=silence
+actors.buffs.silence.heromsg=...? ...!!!
+actors.buffs.silence.desc=.....\n\nHero is cannot use scroll and wands, and enemies have special abilities sealed.\n\nTurns silence: %s.
+
+actors.buffs.rose_force.name=cat force
+actors.buffs.rose_force.desc=She is concentrating.\n\nGear attack power increases.\n\nTurns forcd: %s.
+
+actors.buffs.meatpower_mystery.name=Mystery meat power
+actors.buffs.meatpower_mystery.desc=Strange taste!\n\nGear Attack damage increase, silences the target while you have the meat power.\n\nTurns meat power: %s.
+
+actors.buffs.meatpower_stewed.name=Stewed meat power
+actors.buffs.meatpower_stewed.desc=Ordinary taste!\n\nGear Attack's damage increase, attack speed has been increased while you have the meat power.\n\nTurns meat power: %s.
+
+actors.buffs.meatpower_frozen.name=Frozen meat power
+actors.buffs.meatpower_frozen.desc=cold taste!\n\nGear Attack damage increase, and hits you will recover your HP while you have the meat power.\n\nTurns meat power: %s.
+
+actors.buffs.meatpower_chargrilled.name=Chargrilled meat power
+actors.buffs.meatpower_chargrilled.desc=steak!\n\nGear Attack damage increase, weakness the target while you have the meat power.\n\nTurns meat power: %s.
+
+actors.buffs.twilight.name=Ragnarok
+actors.buffs.twilight.desc=_"Don’t even think about running!_"\n\nYou are burning yourself with the power of a giant. Damage is doubled, attack range increased, and all damage is reduced to 0. However, you cannot use potions while using this power.\n\nTurns Ragnarok: %s.
+
+actors.buffs.spikesbuff.name=spikes
+actors.buffs.spikesbuff.desc=When attacked, it deals damage proportional to DEF to nearby enemies.\n\nTurns spikes: %s.
+
+actors.buffs.ragethrowcooldown.name=rage throw cooldown
+actors.buffs.ragethrowcooldown.desc=Rage Throw Cooldown : %s Trun.
+
+actors.buffs.radiantknight.name=radiant knight
+actors.buffs.radiantknight.desc=The power of light surrounds you. Increases damage dealt and damage resistance.\n\nTruns Radiant: %s.
+
+actors.buffs.knightskill.name=special attack
+actors.buffs.knightskill.bad_target=Enemies are not in attack range.
+actors.buffs.knightskill.prompt=target
+actors.buffs.knightskill.desc=Nearl can use a special attack after attacking.
+actors.buffs.knightskill$combomove.knockback_desc=_Push_ Pushes the target 1 space away.
+actors.buffs.knightskill$combomove.smash_desc=_Smash_ 140% Damage
+actors.buffs.knightskill$combomove.killblow_desc=_Kill Blow_ 70% Damage, Killing with this attack consumes no turn and immediately allows the next special attack to be used.
+actors.buffs.knightskill$combomove.lightsword_desc=_Light Sword_ Damage increases in proportion to the number of special attack used before, and paralyzes the target at maximum stacks.\nDamage : %1$d%% / %2$d%%
+
+actors.buffs.hallucination.name=hallucination
+actors.buffs.hallucination.desc=This character is watching a hallucination. In this state, accuracy is reduced by 35%, and there is a chance to self-harm.
+actors.buffs.hallucination.ondeath=You committed suicide...
+
+actors.buffs.oblivion.name=oblivion
+actors.buffs.oblivion.desc=to going to forget everything. Vision is reduced and action speed is slowed.\n\nTurns Oblivion: %s.
+
+actors.buffs.windenergy.name=wind energy
+actors.buffs.windenergy.desc=can feel the energy of the wind. can use _Storm_ when your energy is above 100%.\n\nEnergy : %d%%
+
+actors.buffs.stomecharge.name=stome
+actors.buffs.stomecharge.desc=A powerful storm engulfs her body.
+
+actors.buffs.heat.normal=Heat
+actors.buffs.heat.overheat=OverHeat
+actors.buffs.heat.normal_desc=블레이즈의 몸에 열기가 쌓이고 있습니다. 열기가 50%%이상이면 체력을 소모해 과열 상태에 진입할 수 있습니다.\n\n현재 열기 : %f%%
+actors.buffs.heat.overheat_desc=과열=블레이즈의 몸이 불타오르고 있습니다. 지속되는동안 물리 피해량이 증가하며, 열기를 소모합니다.\n\n현재 열기 : %f%%
+
+
+###hero
+actors.hero.talent.hearty_meal.title=hearty meal
+actors.hero.talent.hearty_meal.desc=_+1:_ Eating heals the Blaze for _2 HP_ when she is below 50% health, and _3 HP_ when he is below 25% health.\n\n_+2:_ Eating heals the Blaze for _3 HP_ when she is below 50% health, and _5 HP_ when he is below 25% health.
+actors.hero.talent.armsmasters_intuition.title=armsmaster's intuition
+actors.hero.talent.armsmasters_intuition.desc=_+1:_ The Blaze identifies weapons and armor _3x faster_.\n\n_+2:_ The Blaze identifies weapons and armor _when he equips them_.
+actors.hero.talent.test_subject.title=elite operator
+actors.hero.talent.test_subject.desc=_+1:_ Whenever the Blaze identifies an item, she heals for _4 HP_.\n\n_+2:_ Whenever the Blaze identifies an item, she heals for _6 HP_.
+actors.hero.talent.iron_will.title=iron will
+actors.hero.talent.iron_will.desc=_+1:_ The max shield provided by the Blaze's feather is _increased by 1_.\n\n_+2:_ The max shield provided by the  Blaze's feather is _increased by 2_.
+actors.hero.talent.iron_stomach.title=iron stomach
+actors.hero.talent.iron_stomach.desc=_+1:_ Eating food takes the Blaze 1 turn and grants him _50% damage resistance_ while eating.\n\n_+2:_ Eating food takes the Blaze 1 turn and grants him _75% damage resistance_ while eating.
+actors.hero.talent.restored_willpower.title=restored willpower
+actors.hero.talent.restored_willpower.desc=_+1:_ Drinking a potion of healing instantly recharges _67% of the shielding_ from the Blaze's feather.\n\n_+2:_ Drinking a potion of healing instantly recharges _100% of the shielding_ from the Blaze's feather.\n\nWhen the effect is activated, extinguish the fire on yourself.\n\nThis talent also triggers when drinking potions or elixirs based on potions of healing.
+actors.hero.talent.runic_transference.title=arts transference
+actors.hero.talent.runic_transference.desc=_+1:_ The Blaze's feather can transfer _regular glyphs_ in the same way it transfers an upgrade.\n\n_+2:_ The Blaze's feather can transfer _regular, powerful, and curse glyphs_ in the same way it transfers an upgrade.
+actors.hero.talent.lethal_momentum.title=chainsaw festival
+actors.hero.talent.lethal_momentum.desc=_+1:_ When the Blaze lands a killing blow with a physical weapon, it has a _55% chance_ to take 0 turns.\n\n_+2:_ When the Blaze lands a killing blow with a physical weapon, it has a _80% chance_ to take 0 turns.
+actors.hero.talent.improvised_projectiles.title=improvised projectiles
+actors.hero.talent.improvised_projectiles.desc=_+1:_ The Blaze can blind an enemy for _3 turns_ by throwing any item that isn’t a thrown weapon at them. This has a 25 turn cooldown.\n\n_+2:_ The Blaze can blind an enemy for _5 turns_ by throwing any item that isn’t a thrown weapon at them. This has a 25 turn cooldown.
+actors.hero.talent.hold_fast.title=hold fast
+actors.hero.talent.hold_fast.desc=_+1:_ When the Blaze waits she gains _+2 armor_ until he moves.\n\n_+2:_ When the Blaze waits she gains _+4 armor_ until he moves.\n\n_+3:_ When the Blaze waits she gains _+6 armor_ until he moves.
+actors.hero.talent.strongman.title=strongman
+actors.hero.talent.strongman.desc=_+1:_ The Blaze needs _1 less strength_ to use armor and weapons.\n\n_+2:_ The Blaze needs _2 less strength_ to use armor and _1 less strength_ to use weapons.\n\n_+3:_ The Blaze needs _2 less strength_ to use armor and weapons.
+actors.hero.talent.endless_rage.title=endless rage
+actors.hero.talent.endless_rage.desc=_+1:_ The Blaze can reach a max of _120% rage_.\n\n_+2:_ The Blaze can reach a max of _140% rage_.\n\n_+3:_ The Blaze can reach a max of _160% rage_.\n\nNote that rage above 100% will not grant more than +100% damage.
+actors.hero.talent.berserking_stamina.title=burning heart
+actors.hero.talent.berserking_stamina.desc=_+1:_ Increases the  Rage of Rage Throwing by _20%_, and Maximum movement speed increase during rage increased from 30% to _50%_\n\n_+2:_ Increases the  Rage of Rage Throwing by _40%_, and Maximum movement speed increase during rage increased from 30% to _70%_\n\n_+3:_ Increases the  Rage of Rage Throwing by _60%_, and Maximum movement speed increase during rage increased from 30% to 90%
+actors.hero.talent.enraged_catalyst.title=Frenzy Chainsaw
+actors.hero.talent.enraged_catalyst.desc=_+1:_ Blaze is When rage is over 50% After being hit 10 times, the next attack inflicts _33%_ damage to all enemies in sight and paralyzes them for 1 turn.\n\n_+2:_ Blaze is When rage is over 50% After being hit 10 times, the next attack inflicts _50%_ damage to all enemies in sight and paralyzes them for 1 turn.\n\n_+3:_ Blaze is When rage is over 50% After being hit 10 times, the next attack inflicts _100%_ damage to all enemies in sight and paralyzes them for 1 turn.
+actors.hero.talent.cleave.title=cleave
+actors.hero.talent.cleave.desc=_+1:_ When the Blaze kills an enemy, the combo cooldown for his next hit is increased to _15 turns_. Also, _10% chance_ to gain an extra combo when your gun fire hits.\n\n_+2:_ When the Blaze kills an enemy, the combo cooldown for his next hit is increased to _30 turns_. Also, _20% chance_ to gain an extra combo when your gun fire hits.\n\n_+3:_ When the Blaze kills an enemy, the combo cooldown for his next hit is increased to _45 turns_. Also, _30% chance_ to gain an extra combo when your gun fire hits.
+actors.hero.talent.finalblow.title=final blow
+actors.hero.talent.finalblow.desc=_+1:_ When the Blaze kills an enemy with a combo move, she _regains 33%_ of the feather's shielding. And recharge _2%_ of the SP of the Arts Recorder.\n\n_+2:_ When the Blaze kills an enemy with a combo move, she _regains 67%_ of the feather's shielding. And recharge _4%_ of the SP of the Arts Recorder.\n\n_+3:_ When the Blaze kills an enemy with a combo move, she _regains 100%_ of the feather's shielding. And recharge _6%_ of the SP of the Arts Recorder. 
+actors.hero.talent.enhanced_combo.title=enhanced combo
+actors.hero.talent.enhanced_combo.desc=_+1:_ When the Blaze`s combo is 6 or higher, Clobber's knockback range increases to 3, it inflicts vertigo, and it can knock enemies into pits.\n\n_+2:_ In addition to the benefits of +1, when the Blaze`s combo is 9 or higher Parry works on multiple attacks.\n\n_+3:_ In addition to the benefits of +1 and +2, the Blaze can leap up to combo/3 tiles when using Slam, Crush, or Fury.
+actors.hero.talent.tactical_shield.title=tactical shield
+actors.hero.talent.tactical_shield.desc=_+1:_ Blaze`s defense increases by 2 for each armor level. It goes up to _4_.\n\n_+2:_ Blaze`s defense increases by 2 for each armor level. It goes up to _7_.\n\n_+3:_ Blaze`s defense increases by 2 for each armor level. It goes up to _10_.
+actors.hero.talent.chainsaw_extend.title=chainsaw extend
+actors.hero.talent.chainsaw_extend.desc=_+1:_ Melee attack range is 1 increased, required STR of the weapon _+4_\n\n_+2:_ Melee attack range is 1 increased, required STR of the weapon _+3_\n\n_+3:_ Melee attack range is 1 increased, required STR of the weapon _+2_
+actors.hero.talent.infinite_rage.title=infinite rage
+actors.hero.talent.infinite_rage.desc=_+1:_ Blaze`s Rage is above _100%_, you gain 20% damage resistance.\n\n_+2:_ Blaze`s Rage is above _80%_, you gain 20% damage resistance.\n\n_+3_ Blaze`s Rage is above _60%_, you gain 20% damage resistance.\n\n_+4_ Blaze`s Rage is above _40%_, you gain 20% damage resistance.
+actors.hero.talent.infinite_battle.title=infinite battle
+actors.hero.talent.infinite_battle.desc=_+1:_ Reduces rage penalty by _30%_.\n\n_+2:_ Reduces rage penalty by _50%_.\n\n_+3:_ Reduces rage penalty by _70%_.\n\n_+4:_ Reduces rage penalty by _90%_.
+actors.hero.talent.sparkoflife.title=spark of life
+actors.hero.talent.sparkoflife.desc=_+1:_ Blaze`s melee attack is _6%_ chance to recover 5% of Blaze`s HP.\n\n_+2:_ Blaze`s melee attack is _9%_ chance to recover 5% of Blaze`s HP\n\n_+3_ Blaze`s melee attack is _12%_ chance to recover 5% of Blaze`s HP\n\n_+4_ Blaze`s melee attack is _15%_ chance to recover 5% of Blaze`s HP
+actors.hero.talent.deadly_reach.title=deadly reach
+actors.hero.talent.deadly_reach.desc=_+1:_ combo cooldown increased by _1 trun_.\n\n_+2:_ combo cooldown increased by _2 trun_.\n\n_+3:_ combo cooldown increased by _3 trun_.\n\n_+4:_ combo cooldown increased by _4 trun_.
+
+// 열기 블레이즈
+actors.hero.talent.heat_blow.title=heat blow
+actors.hero.talent.heat_blow.desc=_+1:_ 열기가 50% 이상이면 물리 피해량이 _10%_ 증가합니다.\n\n_+2:_ 열기가 50% 이상이면 물리 피해량이 _15%_ 증가합니다.\n\n_+3:_ 열기가 50% 이상이면 물리 피해량이 _20%_ 증가합니다.\n\n_과열_ 상태라면 무조건 발동합니다.
+actors.hero.talent.heat_of_protection.title=heat of protection
+actors.hero.talent.heat_of_protection.desc=_+1:_ 과열 상태일 때 받는 피해가 _10%_ 감소합니다.\n\n_+2:_ 과열 상태일 때 받는 피해가 _15%_ 감소합니다.\n\n_+3:_ 과열 상태일 때 받는 피해가 _20%_ 감소합니다.
+actors.hero.talent.heat_of_recovery.title=heat of recovery
+actors.hero.talent.heat_of_recovery.desc=_+1:_ 과열 상태가 끝날 때 체력 회복량이 _20%_ 증가합니다.\n\n_+2:_ 과열 상태가 끝날 때 체력 회복량이 _40%_ 증가합니다.\n\n_+3:_ 과열 상태가 끝날 때 체력 회복량이 _60%_ 증가합니다.
+actors.hero.talent.heat_of_absorption.title=heat of absorption
+actors.hero.talent.heat_of_absorption.desc=_+1:_ 과열 상태일 때 입힌 물리 피해의 _2%_ 만큼 체력을 회복합니다.\n\n_+2:_ 과열 상태일 때 입힌 물리 피해의 _3%_ 만큼 체력을 회복합니다.\n\n_+3:_ 과열 상태일 때 입힌 물리 피해의 _4%_ 만큼 체력을 회복합니다.\n\n_+4:_ 과열 상태일 때 입힌 물리 피해의 _5%_ 만큼 체력을 회복합니다.\n\n1회 공격 회복 최대치 : 30
+actors.hero.talent.redcomet.title=red comet
+actors.hero.talent.redcomet.desc=_+1:_ 열기가 70%이상일 때 이동속도가 _5%_ 증가합니다.\n\n_+2:_ 열기가 70%이상일 때 이동속도가 _10%_ 증가합니다.\n\n_+3:_ 열기가 70%이상일 때 이동속도가 _15%_ 증가합니다.\n\n_+4:_ 열기가 70%이상일 때 이동속도가 _20%_ 증가합니다.\n\n과열 상태일 땐 무조건 발동하며, 특성 효과가 5배로 적용됩니다.
+
+actors.hero.talent.empowering_meal.title=empowering meal
+actors.hero.talent.empowering_meal.desc=_+1:_ Eating food grants the Amiya _3 bonus damage_ on his next 3 wand zaps.\n\n_+2:_ Eating food grants the Amiya _4 bonus damage_ on his next 3 wand zaps.
+actors.hero.talent.scholars_intuition.title=CEO`s privileges
+actors.hero.talent.scholars_intuition.desc=_+1:_ The Amiya identifies wands _3x faster_.\n\n_+2:_ The Amiya identifies wands _when he uses them_.
+actors.hero.talent.tested_hypothesis.title=find answer
+actors.hero.talent.tested_hypothesis.desc=_+1:_ Whenever the Amiya identifies an item, she gains _4 turns of wand recharging_.\n\n_+2:_ Whenever the Amiya identifies an item, she gains _5 turns of wand recharging_.
+actors.hero.talent.backup_barrier.title=backup barrier
+actors.hero.talent.backup_barrier.desc=_+1:_ The Amiya gains _3 shielding_ whenever she spends the last charge in his staff.\n\n_+2:_ The Amiya gains _6 shielding_ whenever she spends the last charge in his staff.
+actors.hero.talent.energizing_meal.title=energizing meal
+actors.hero.talent.energizing_meal.desc=_+1:_ Eating food takes the Amiya 1 turn and grants him _5 turns of wand recharging_.\n\n_+2:_ Eating food takes the Amiya 1 turn and grants him _8 turns of wand recharging_.
+actors.hero.talent.energizing_upgrade.title=Arts Drain
+actors.hero.talent.energizing_upgrade.desc=_+1:_ When you use a skill, recharges the Amiya's ring _for 1 charges_\n\n_+2:_ When you use a skill, recharges the Amiya's ring _for 1 charges_
+actors.hero.talent.wand_preservation.title=wand preservation
+actors.hero.talent.wand_preservation.desc=_+1:_ When the Amiya imbues a new wand into her ring, the old wand has a _67% chance_ of being returned at +0.\n\n_+2:_ When the Amiya imbues a new wand into her ring, the old wand has a _100% chance_ of being returned at +0.\n\nTher talent can preserve a wand up to three times.
+actors.hero.talent.arcane_vision.title=arts vision
+actors.hero.talent.arcane_vision.desc=_+1:_ When the Amiya zaps an enemy, she gains mind vision on them for _5 turns_.\n\n_+2:_ When the Amiya zaps an enemy, she gains mind vision on them for _10 turns_.
+actors.hero.talent.shield_battery.title=shield battery
+actors.hero.talent.shield_battery.desc=_+1:_ The Amiya can self-target with a arts to convert its charges into shielding at a rate of _2.5% max HP per charge_.\n\n_+2:_ The Amiya can self-target with a arts to convert its charges into shielding at a rate of _5% max HP per charge_.
+actors.hero.talent.psychoanalysis.title=psychoanalysis
+actors.hero.talent.psychoanalysis.desc=_+1:_ Amiya`s scrolls read spends 0 turn, and scroll reading of chance of _33%_ trigger on-eat effects and Amiya's ring Recharge.\n\n_+2:_ Amiya`s scrolls read spends 0 turn, and scroll reading of chance of _66%_ trigger on-eat effects and Amiya's ring Recharge.\n\n_+3:_ Amiya`s scrolls read spends 0 turn, and scroll reading of chance of _100%_ trigger on-eat effects and Amiya's ring Recharge.
+actors.hero.talent.ally_warp.title=order: shift
+actors.hero.talent.ally_warp.desc=_+1:_ The Amiya can tap an ally to instantly swap places with them, with a _2 tile range_.\n\n_+2:_ The Amiya can tap an ally to instantly swap places with them, with a _4 tile range_.\n\n_+3:_ The Amiya can tap an ally to instantly swap places with them, with a _6 tile range_.\n\nThe Amiya cannot swap places with immobile allies.
+actors.hero.talent.empowered_strike.title=Fleeting Night
+actors.hero.talent.empowered_strike.desc=_+1:_ The Amiya's first melee strike with her ring after zapping with it deals _+20% damage_.\n\n_+2:_ The Amiya's first melee strike with her ring after zapping with it deals _+40% damage_.\n\n+3:_ The Amiya's first melee strike with her ring after zapping with it deals _+60% damage_.
+actors.hero.talent.mystical_charge.title=mystical charge
+actors.hero.talent.mystical_charge.desc=_+1:_ Striking with her ring grants the Amiya _0.33 turns_ worth of artifact recharging.\n\n_+2:_ Striking with her ring grants the Amiya _0.66 turn_ worth of artifact recharging.\n\n_+3:_ Striking with her ring grants the Amiya _1 turns_ worth of artifact recharging.
+actors.hero.talent.excess_charge.title=excess charge
+actors.hero.talent.excess_charge.desc=_+1:_ When the Amiya's ring is fully charged, she has a _12.5% chance_ to gain 2 shielding per level of the ring when she strikes with it.\n\n_+2:_ When the Amiya's staff is fully charged, she has a _25% chance_ to gain 2 shielding per level of the ring when she strikes with it.\n\n_+3:_ When the Amiya's staff is fully charged, she has a _37.5% chance_ to gain 2 shielding per level of the ring when she strikes with it.
+actors.hero.talent.soul_siphon.title=Dominance Upgrade
+actors.hero.talent.soul_siphon.desc=_+1:_ Melee damage dealt by other characters triggers the Amiya`s soul mark at _15% effectiveness_.\n\n_+2:_ Melee damage dealt by other characters triggers the Amiya`s soul mark at _30% effectiveness_.\n\n_+3:_ Melee damage dealt by other characters triggers the Amiya`s soul mark at _45% effectiveness_.
+actors.hero.talent.soul_eater.title=Sarkaz Load
+actors.hero.talent.soul_eater.desc=_+1:_ Soul mark grants _0.33 turns_ of satiety for each damage dealt. Soul marked enemies have a _6% chance_ to trigger on-eat effects when they die.\n\n_+2:_ Soul mark grants _0.67 turns_ of satiety for each damage dealt. Soul marked enemies have a _13% chance_ to trigger on-eat effects when they die.\n\n_+3:_ Soul mark grants _1 turn_ of satiety for each damage dealt. Soul marked enemies have a _20% chance_ to trigger on-eat effects when they die.
+actors.hero.talent.necromancers_minions.title=summon illusion
+actors.hero.talent.necromancers_minions.desc=_+1:_ When a soul marked enemy dies, the Amiya has a _10% chance_ to raise them as a soul illusion.\n\n_+2:_ When a soul marked enemy dies, the Amiya has a _20% chance_ to raise them as a soul illusion.\n\n_+3:_ When a soul marked enemy dies, the Amiya has a _30% chance_ to raise them as a soul illusion.
+actors.hero.talent.liberation.title=liberation
+actors.hero.talent.liberation.desc=_+1:_ Increases the maximum charge of Amiya's Ring by _1._\n\n_+2:_ Increases the maximum charge of Amiya's Ring by _2._\n\n_+3:_ Increases the maximum charge of Amiya's Ring by _3._
+actors.hero.talent.rhodes.title=hospitaller
+actors.hero.talent.rhodes.desc=_+1:_ Using scroll gives you _5_ Arcane Armor. This armor decreases every 15 turns.\n\n_+2:_ Using scroll gives you _10_ Arcane Armor. This armor decreases every 15 turns.\n\n_+3:_ Using scroll gives you _15_ Arcane Armor. This armor decreases every 15 turns.
+actors.hero.talent.azure_fury.title=azure fury
+actors.hero.talent.azure_fury.desc=_+1:_ Striking with her ring grants the Amiya _5%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+2:_ Striking with her ring grants the Amiya _10%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+3:_ Striking with her ring grants the Amiya _15%_ chance to restore 2% of the Skill recorder's recharge.\n\n_+4:_ Striking with her ring grants the Amiya _20%_ chance to restore 2% of the Skill recorder's recharge.
+actors.hero.talent.swordoflord.title=sword of lord
+actors.hero.talent.swordoflord.desc=_+1:_ Striking with her ring of Increases the arts charge of the by _10%_.\n\n_+2:_ Striking with her ring of Increases the arts charge of the by _15%_.\n\n_+3:_ Striking with her ring of Increases the arts charge of the by _20%_.\n\n_+4:_ Striking with her ring of Increases the arts charge of the by _25%_.
+actors.hero.talent.emotion.title=emotion burst
+actors.hero.talent.emotion.desc=in proportion to the points chance of engraving soul marked increased.
+actors.hero.talent.lord.title=the lord
+actors.hero.talent.lord.desc=_+1_: soul marked Duration _2 turns_ increased.\n\n_+2_: soul marked Duration _4 turns_ increased.\n\n_+3_: soul marked Duration _6 turns_ increased.\n\n_+4_: soul marked Duration _8 turns_ increased.
+
+//아미야 3차 서브클래스
+actors.hero.talent.chimera.title=chimera
+actors.hero.talent.chimera.desc=_+1_: Wand damage bonus and increased physical damage taken increased from 50% to _60%._\n\n_+2_: Wand damage bonus and increased physical damage taken increased from 50% to _70%._\n\n_+3_: Wand damage bonus and increased physical damage taken increased from 50% to _80%._
+actors.hero.talent.restriction.title=restriction
+actors.hero.talent.restriction.desc=_+1_: All characters' physical attack damage & accuracy is reduced by _5%_.\n\n_+2_: All characters' physical attack damage & accuracy is reduced by _10%_.\n\n_+3_: All characters' physical attack damage & accuracy is reduced by _15%_.
+actors.hero.talent.emotion_absorption.title=Emotion Absorption
+actors.hero.talent.emotion_absorption.desc=_+1_: Charges the amiya`s ring by _0.06_ per enemy kill.\n\n_+2_: Charges the amiya`s ring by _0.12_ per enemy kill.\n\n_+3_: Charges the amiya`s ring by _0.18_ per enemy kill.
+actors.hero.talent.stabilize.title=stabilize
+actors.hero.talent.stabilize.desc=_+1_: When your health is low _20%_, you do not increase physical damage taken.\n\n_+2_: When your health is low _25%_, you do not increase physical damage taken.\n\n_+3_: When your health is low _30%_, you do not increase physical damage taken.\n\n_+4_: When your health is low _35%_, you do not increase physical damage taken.
+actors.hero.talent.mind_crash.title=mind crash
+actors.hero.talent.mind_crash.desc=Marks for 2 turns when the wand hits.\n\n_+1_: Enemies with marks have a _5%_ chance to taken x1.5 damage.\n\n_+2_: Enemies with marks have a _10%_ chance to taken x1.5 damage.\n\n_+3_: Enemies with marks have a _15%_ chance to taken x1.5 damage.\n\n_+4_: Enemies with marks have a _20%_ chance to taken x1.5 damage.
+
+actors.hero.talent$mindcrashmark.name=Mark
+actors.hero.talent$mindcrashmark.desc=You will have a chance to take x1.5 damage from the power of this mark.\n\nTurn: %s.
+actors.hero.talent$mindcrashmark.cri=Critical Hit!
+
+actors.hero.talent.cached_rations.title=cached cookie
+actors.hero.talent.cached_rations.desc=_+1:_ The Red can find _4 honey cookie_ placed in chests while she explores the earlier stages of the dungeon.\n\n_+2:_ The Red can find _6 honey cookie_ placed in chests while she explores the earlier stages of the the dungeon.
+actors.hero.talent.thiefs_intuition.title=wolf's intuition
+actors.hero.talent.thiefs_intuition.desc=_+1:_ The Red identifies rings _2x faster_, and identifies the type of a ring _when he equips it_.\n\n_+2:_ The Red identifies rings _when he equips them_, and identifies the type of a ring _when he picks it up_.
+actors.hero.talent.sucker_punch.title=sucker punch
+actors.hero.talent.sucker_punch.desc=_+1:_ The Red deals _1-3 bonus damage_ the first time he surprise attacks an enemy.\n\n_+2:_ The Red deals _2-3 bonus damage_ the first time he surprise attacks an enemy.
+actors.hero.talent.protective_shadows.title=arts shadows
+actors.hero.talent.protective_shadows.desc=_+1:_ The Recharge gains one recorder _4 turn_ her cloak is activated.\n\n_+2:_ The Recharge gains one recorder _2 turn_ her cloak is activated.\n\nRecovers _1_ if your health is low when you activate the talent.
+actors.hero.talent.mystical_meal.title=mystical meal
+actors.hero.talent.mystical_meal.desc=_+1:_ Eating food takes the Red 1 turn and grants him _1.5 turns of artifact recharging_.\n\n_+2:_ Eating food takes the Red 1 turn and grants him _3 turns of artifact recharging_.\n\nTher talent cannot be used to let the gum of plenty recharge itself.
+actors.hero.talent.tracker.title=tracker
+actors.hero.talent.tracker.desc=_+1:_ When you use a skill or hunt, gain _1 turn of haste_. Killing an enemy with hunt restores _4 HP_.\n\n_+2:_ When you use a skill or hunt, gain _2 turn of haste_. Killing an enemy with hunt restores _7 HP_.\n\nRemoves state the Roots, Blindness, Cripple states.
+actors.hero.talent.wide_search.title=wide search
+actors.hero.talent.wide_search.desc=_+1:_ The Red’s search radius is increased from a 5x5 square to a _7x7 circle_.\n\n_+2:_ The Red’s search radius is increased from a 5x5 square to a _7x7 square_.
+actors.hero.talent.silent_steps.title=silent steps
+actors.hero.talent.silent_steps.desc=_+1:_ The Red will not wake sleeping enemies while she is _2 or more tiles away from them_.\n\n_+2:_ The Red will not wake sleeping enemies while she is _not adjacent to them_.
+actors.hero.talent.rogues_foresight.title=wild sense
+actors.hero.talent.rogues_foresight.desc=_+1:_ When the Red is on a level with a secret room, she has a _60% chance to notice_ that the level contains a secret.\n\n_+2:_ When the Red is on a level with a secret room, she has a _80% chance to notice_ that the level contains a secret.
+actors.hero.talent.light_cloak.title=light cloak
+actors.hero.talent.light_cloak.desc=_+1:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _0% speed_.\n\n_+2:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _10% speed_.\n\n_+3:_ The Red can use her cloak of shadows when it is not equipped, but it recharges at _20% speed_.
+actors.hero.talent.enhanced_rings.title=enhanced rings
+actors.hero.talent.enhanced_rings.desc=_+1:_ When the Red uses an artifact, her rings gain +1 upgrade for _2.5 turns_.\n\n_+2:_ When the Red uses an artifact, her rings gain +1 upgrade for _5 turns_.\n\n_+3:_When the Red uses an artifact, her rings gain +1 upgrade for _7.5 turns_.
+actors.hero.talent.enhanced_lethality.title=enhanced lethality
+actors.hero.talent.enhanced_lethality.desc=_+1:_ The Red can assassinate enemies below _4/13/30/60% health_ per level of Bonebreaker, up from 3/10/20/40%.\n\n_+2:_ The Red can assassinate enemies below _6/16/40/80% health_ per level of Bonebreaker, up from 3/10/20/40%.\n\n_+3:_ The Red can assassinate enemies below _8/19/50/100% health_ per level of Bonebreaker, up from 3/10/20/40%.
+actors.hero.talent.assassins_reach.title=Execution begins
+actors.hero.talent.assassins_reach.desc=_+1:_ Blink distance is increased by _1_ when Bonebreaker level is 2 or higher. and Reduces hunt's cooldown by _75 turns_ and has a _33% chance_ to deal x2 damage to normal enemies.\n\n_+2:_ Blink distance is increased by _2_ when Bonebreaker level is 2 or higher. and Reduces hunt's cooldown by _150 turns_ and has a _67% chance_ to deal x2 damage to normal enemies.\n\n_+3:_ Blink distance is increased by _3_ when Bonebreaker level is 2 or higher. and Reduces hunt's cooldown by _225 turns_ and has a _100% chance_ to deal x2 damage to normal enemies.
+actors.hero.talent.bounty_hunter.title=bounty hunter
+actors.hero.talent.bounty_hunter.desc=When the Red kills an enemy with a prepared strike they get additional rewards. The higher the talent level, the higher the chance of getting a better reward.
+actors.hero.talent.evasive_armor.title=evasive armor
+actors.hero.talent.evasive_armor.desc=_+1:_ While freerunning, the Red gains an additional _+1 evasion_ per excess point of strength on her armor.\n\n_+2:_ While freerunning, the Red gains an additional _+2 evasion_ per excess point of strength on her armor.\n\n_+3:_ While freerunning, the Red gains an additional _+3 evasion_ per excess point of strength on her armor.
+actors.hero.talent.projectile_momentum.title=projectile momentum
+actors.hero.talent.projectile_momentum.desc=_+1:_ While freerunning, the Red gains _+20% accuracy and +10% damage_ with thrown weapons.\nAnd gun`s fire _damage +10%_\n\n_+2:_ While freerunning, the Red gains _+40% accuracy and +20% damage_ with thrown weapons.\nAnd gun`s fire _damage +20%_\n\n_+3:_ While freerunning, the Red gains _+60% accuracy and +30% damage_ with thrown weapons.\nAnd gun`s fire _damage +30%_
+actors.hero.talent.speedy_stealth.title=speedy stealth
+actors.hero.talent.speedy_stealth.desc=_+1:_ The Red gains 2 stacks of momentum per turn while she is invisible.\n\n_+2:_ In addition to the benefits of +1, freerunning no longer counts down while the Red is invisible.\n\n_+3:_ In addition to the benefits of +1 and +2, the Red moves at 2x speed while invisible, regardless of whether she is freerunning or not.
+actors.hero.talent.assassinscreed.title=assassin's creed
+actors.hero.talent.assassinscreed.desc=_+1:_ The Red deals _5% bonus damage_ the first time she surprise attacks an enemy.\n\n_+2:_ The Red deals _10% bonus damage_ the first time she surprise attacks an enemy.\n\n_+3:_ The Red deals _15% bonus damage_ the first time she surprise attacks an enemy.
+actors.hero.talent.clock_upgrade.title=cloak upgrade
+actors.hero.talent.clock_upgrade.desc=_+1:_ Red`s cloak recharges at _105%_ speed\n\n_+2:_ Red`s cloak recharges at _110%_ speed\n\n_+3:_ Red`s cloak recharges at _115%_ speed
+actors.hero.talent.sweep.title=SWEEP
+actors.hero.talent.sweep.desc=_+1:_ When the Red kills an enemy with a prepared strike they 2% SP charge of recorder\n\n_+2:_ When the Red kills an enemy with a prepared strike they 4% SP charge of recorder\n\n_+3:_ When the Red kills an enemy with a prepared strike they 6% SP charge of recorder\n\n_+4:_ When the Red kills an enemy with a prepared strike they 8% SP charge of recorder\n\nWhen the talent level is +2 or higher, gain art vision for 3 turns.
+actors.hero.talent.howling.title=howling
+actors.hero.talent.howling.desc=_+1:_ can now deal _50 damage_ to bosses by hunt.\n\n_+2:_ can now deal _100 damage_ to bosses by hunt\n\n_+3:_ can now deal _150 damage_ to bosses by hunt\n\n_+4:_ can now deal _200 damage_ to bosses by hunt
+actors.hero.talent.special_operations.title=special operations
+actors.hero.talent.special_operations.desc=_+1:_Freerunning cooldown reduced _1 turns_\n\n_+2:_Freerunning cooldown reduced _2 turns_\n\n_+3:_Freerunning cooldown reduced _3 turns_\n\n_+4:_Freerunning cooldown reduced _4 turns_
+actors.hero.talent.bloodbath_operations.title=bloodbath operations
+actors.hero.talent.bloodbath_operations.desc=hunt's damage x0.5, Also Inflicts Paralysis on the target.\n\n_+1:_ Reduces hunt's cooldown by _100 turns_\n\n_+2:_ Reduces hunt's cooldown by _200 turns_\n\n_+3:_ Reduces hunt's cooldown by _300 turns_\n\n_+4:_ Reduces hunt's cooldown by _400 turns_
+
+
+actors.hero.talent.natures_bounty.title=nature's bounty
+actors.hero.talent.natures_bounty.desc=_+1:_ The GreyThroat can find _4 berries_ hidden in tall grass as she explores the earlier stages of the dungeon.\n\n_+2:_ The GreyThroat can find _6 berries_ hidden in tall grass as she explores the earlier stages of the dungeon.
+actors.hero.talent.survivalists_intuition.title=savior's intuition
+actors.hero.talent.survivalists_intuition.desc=_+1:_ The GreyThroat identifies all equipment _2x faster_.\n\n_+2:_ The GreyThroat identifies all equipment _3x faster_.
+actors.hero.talent.followup_strike.title=followup strike
+actors.hero.talent.followup_strike.desc=_+1:_ When the GreyThroat hits an enemy with her crossbow or a thrown weapon, her next melee attack against that enemy deals _2 bonus damage_.\n\n_+2:_ When the GreyThroat hits an enemy with her crossbow or a thrown weapon, her next melee attack against that enemy deals _3 bonus damage_.
+actors.hero.talent.natures_aid.title=nature's aid
+actors.hero.talent.natures_aid.desc=_+1:_ The GreyThroat gains 3 armor of barkskin, which fades every _4 turns_ when a plant's effect is activated in her vision.\n\n_+2:_ The GreyThroat gains 3 armor of barkskin, which fades every _7 turns_ when a plant's effect is activated in her vision.
+actors.hero.talent.invigorating_meal.title=invigorating meal
+actors.hero.talent.invigorating_meal.desc=_+1:_ Eating food takes the GreyThroat 1 turn (berries are eaten instantly) and grants her _1 turn of haste_.\n\n_+2:_ Eating food takes the GreyThroat 1 turn (berries are eaten instantly) and grants her _2 turns of haste_.
+actors.hero.talent.restored_nature.title=nature's grace
+actors.hero.talent.restored_nature.desc=_+1:_ Drinking a potion of healing spawns _up to 5 grass_ around the GreyThroat, and roots adjacent enemies for _2 turns_.\nand, gains mind vision on any enemy within _2 tiles of her position_.\n\n_+2:_ Drinking a potion of healing spawns _up to 8 grass_ around the GreyThroat, and roots adjacent enemies for _3 turns_.\nand, gains mind vision on any enemy within _3 tiles of her position_.\n\nTher talent also triggers when drinking potions or elixirs based on potions of healing.
+actors.hero.talent.rejuvenating_steps.title=rejuvenating steps
+actors.hero.talent.rejuvenating_steps.desc=_+1:_ When the GreyThroat steps on short grass or embers, they spring up into tall grass which the GreyThroat immediately furrows. Ther has a _18 turn cooldown_.\n\n_+2:_ When the GreyThroat steps on short grass or embers, they spring up into tall grass which the GreyThroat immediately furrows. Ther has a _12 turn cooldown_.
+actors.hero.talent.bomb_arrow.title=explo shot
+actors.hero.talent.bomb_arrow.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s _100% damage_ in a 3x3 area. Ther has a _30 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s _150% damage_ in a 3x3 area. Ther has a _20 turn_ cooldown.
+actors.hero.talent.durable_projectiles.title=killstreak
+actors.hero.talent.durable_projectiles.desc=_+1:_ enemy killed gain +50% move speed for _2 trun_.\n\n_+2:_ enemy killed gain +50% move speed for _3 trun_.
+actors.hero.talent.arts_focus.title=silence shot
+actors.hero.talent.arts_focus.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s Silence 3 turn in a 3x3 area. Ther has a _60 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s Silence 3 turn in a 3x3 area. Ther has a _40 turn_ cooldown.\n\n_+3:_ When the GreyThroat fires an arrow at the ground, it targt`s Silence 3 turn in a 3x3 area. Ther has a _20 turn_ cooldown.
+actors.hero.talent.seer_shot.title=roots shot
+actors.hero.talent.seer_shot.desc=_+1:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _60 turn_ cooldown.\n\n_+2:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _40 turn_ cooldown.\n\n_+3:_ When the GreyThroat fires an arrow at the ground, it targt`s roots 3 turn in a 3x3 area. Ther has a _20 turn_ cooldown.
+actors.hero.talent.farsight.title=farsight
+actors.hero.talent.farsight.desc=_+1:_ The GreyThroat's vision range is _increased by 30%_. Also thrown weapon at has _+85% accuarcy_ instead of +75%\n\n_+2:_ The GreyThroat's vision range is _increased by 60%_. Also thrown weapon at has _+95% accuarcy_ instead of +75%\n\n_+3:_ The GreyThroat's vision range is _increased by 90%_. Also thrown weapon at has _+105% accuarcy_ instead of +75%
+actors.hero.talent.shared_enchantment.title=sharpshooter
+actors.hero.talent.shared_enchantment.desc=_+1:_ Thrown weapons have a _33% chance_ to use the enchantment on the GreyThroat's crossbow. If the gun is equipped with accessories, the accuracy of the shot is increased by _20%._\n\n_+2:_ Thrown weapons have a _67% chance_ to use the enchantment on the GreyThroat's crossbow. If the gun is equipped with accessories, the accuracy of the shot is increased by _40%._\n\n_+3:_ Thrown weapons have a _100% chance_ to use the enchantment on the GreyThroat's crossbow. If the gun is equipped with accessories, the accuracy of the shot is increased by _60%._\n\nTher talent does not apply to arrows shot from an enchanted ballista, they already trigger the ballista`s enchantment.
+actors.hero.talent.shared_upgrades.title=shared upgrades
+actors.hero.talent.shared_upgrades.desc=_+1:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _6%_\n\n_+2:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _12%_.\n\n_+3:_ When the GreyThroat attacks with an upgraded thrown weapon, each level increases the duration of GreyThroat's mark by 1 turn and the damage of her special attack by _18%_.\n\nIf you have a gun equipped, this talent is applied in proportion to the gun's upgrade value.(50% efficiency)
+actors.hero.talent.durable_tips.title=durable tips
+actors.hero.talent.durable_tips.desc=_+1:_ When the GreyThroat uses a thrown weapon at melee range it has _-35% accuracy,_ instead of -50%.\n\n_+2:_ When the GreyThroat uses a thrown weapon at melee range it has _-20% accuracy,_ instead of -50%.\n\n_+3:_ When the GreyThroat uses a thrown weapon at melee range it has _-5% accuracy,_ instead of -50%
+actors.hero.talent.barkskin.title=bloodline
+actors.hero.talent.barkskin.desc=_+1:_ Thrown weapons have a _low_ chance to generate grass around the target on hit.\n\n_+2:_ Thrown weapons have a _middle_ chance to generate grass around the target on hit.\n\n_+3:_ Thrown weapons have a _high_ chance to generate grass around the target on hit.\n\nWhen you activate this talent, you gain up to _40% damage resistance_ based on the nearby high grass.
+actors.hero.talent.savior_pray.title=savior`s pray
+actors.hero.talent.savior_pray.desc=_+1:_ Enemies within sight are reducing their hit evasion _3 turns_ when a plant's effect is activated in her vision\n\n_+2:_ Enemies within sight are reducing their hit evasion _4 turns_ when a plant's effect is activated in her vision\n\n_+3:_ Enemies within sight are reducing their hit evasion _5 turns_ when a plant's effect is activated in her vision
+actors.hero.talent.point_blank.title=don't come!
+actors.hero.talent.point_blank.desc=_+1:_ Enemies hit by GreyThroat`s crossbow have a 10% chance to become Vertigo.\n\n_+2:_ Enemies hit by GreyThroat`s crossbow have a 20% chance to become Vertigo.\n\n_+3:_ Enemies hit by GreyThroat`s crossbow have a 30% chance to become Vertigo.\n\nNote that thrown weapons always have +50% accuracy when used at a distance.
+actors.hero.talent.improved_crossbow.title=improved crossbow
+actors.hero.talent.improved_crossbow.desc=_+1:_  GrayThroat`s crossbow damage increased by _2_\n\n_+2:_ GrayThroat`s crossbow damage increased by _4_\n\n_+3:_ GrayThroat`s crossbow damage increased by _6_
+actors.hero.talent.push_attack.title=push attack
+actors.hero.talent.push_attack.desc=Attack knocks back the target. There is a cooldown of 80 turns.\n\n_+1:_ push 1 space\n\n_+2:_ push 2 space\n\n_+3:_ push 3 space\n\n_+4:_ push 4 space
+actors.hero.talent.sniping.title=sniping
+actors.hero.talent.sniping.desc=_+1:_ increases the and the damage of her special attack by _15%_.\n\n_+2:_ increases the and the damage of her special attack by _30%_.\n\n_+3:_ increases the and the damage of her special attack by _45%_.\n\n_+4:_ increases the and the damage of her special attack by _60%_.
+actors.hero.talent.savior_belief.title=savior`s belief
+actors.hero.talent.savior_belief.desc=_+1:_ Deals _15%_ additional damage to roots or paralyzed enemies.\n\n_+2:_ Deals _30%_ additional damage to roots or paralyzed enemies.\n\n_+3:_ Deals _45%_ additional damage to roots or paralyzed enemies.\n\n_+4:_ Deals _60%_ additional damage to roots or paralyzed enemies.\n\nWhen you activate this talent, you gain up to _25% damage bouns_ based on the nearby high grass.
+
+// 폭풍 전직
+actors.hero.talent.song_of_stome.title=song of stome
+actors.hero.talent.song_of_stome.desc=_+1:_ _Storm_ damage increased from 200% to _230%_ and knocking back the target by _1 space._\n\n_+2:_ _Storm_ damage increased from 200% to _250%_ and knocking back the target by _2 space._\n\n_+3:_ _Storm_ damage increased from 200% to _270%_ and knocking back the target by _3 space._
+actors.hero.talent.energy_storage.title=energy storage
+actors.hero.talent.energy_storage.desc=_+1:_ If the wind energy is less than _40%_, it will not be consumed while moving.\n\n_+2:_ If the wind energy is less than _55%_, it will not be consumed while moving.\n\n_+3:_ If the wind energy is less than _70%_, it will not be consumed while moving.
+actors.hero.talent.wind_blessing.title=wind blessing
+actors.hero.talent.wind_blessing.desc=_+1:_ Charges wind energy to _10%_ of physical damage dealt.\n\n_+2:_ Charges wind energy to _20%_ of physical damage dealt.\n\n_+3:_ Charges wind energy to _30%_ of physical damage dealt.
+actors.hero.talent.galeforce.title=galeforce
+actors.hero.talent.galeforce.desc=_+1:_ Evasion _+10%_ while _Storm_ is active.\n\n_+2:_ Evasion _+20%_ while _Storm_ is active.\n\n_+3:_ Evasion _+30%_ while _Storm_ is active.\n\n_+4:_ Evasion _+40%_ while _Storm_ is active.
+
+actors.hero.talent.lightnessmeal.title=lightness meal
+actors.hero.talent.lightnessmeal.desc=_+1:_ Eating food grants the Rosmontis gain _5 Turns_ levitation.\n\n_+2:_ Eating food grants the Rosmontis gain _10 Turns_ levitation.\n\nIf you have this talent, using gear while levitation does not consume any charge. When this effect is triggered, the levitation effect is immediately removed.\n\nGum doll cannot active talent
+actors.hero.talent.smartmeals.title=smart meal
+actors.hero.talent.smartmeals.desc=_+1:_ If you eat food _5_ times, it will be Identifyd when you pick up a Melee Weapon/Armor/Wand/Ring.\n\n_+2:_ If you eat food _4_ times, it will be Identifyd when you pick up a Melee Weapon/Armor/Wand/Ring.
+actors.hero.talent.goodmeat.title=good meat
+actors.hero.talent.goodmeat.desc=_+1:_ Eating Mystery Meat's chance to inflict a _negative effect is reduced_.\n\n_+2:_ Eating Mystery Meat's _no negative effect_.\n\nIf you have this talent, Eating Mystery Meat and Frozen Carpaccio recharges the Rosmontis`s gear for 1.
+actors.hero.talent.nyanging.title=nyanging
+actors.hero.talent.nyanging.desc=_+1:_ Whenever the Rosemontis identifies an item, annihilation gear gaine _1_ charge\n\n_+2:_ Whenever the Rosemontis identifies an item, annihilation gear gaine _2_ charge\n\nther can put it above its current charge cap +4
+actors.hero.talent.fastmeal.title=fast meal
+actors.hero.talent.fastmeal.desc=_+1:_ Eating food takes the Rosmontis 1 turn and Gain a barrier equal to _3% of MAX HP_\n\n_+2:_ Eating food takes the Rosmontis 1 turn and Gain a barrier equal to _6% of MAX HP_
+actors.hero.talent.recovery_upgrade.title=recovery upgrade
+actors.hero.talent.recovery_upgrade.desc=_+1:_ Using a scroll of upgrade instantly recharges the Rosmontis`s gear _for 2 charges_\n\n_+2:_ Using a scroll of upgrade instantly recharges the Rosmontis`s gear _for 4 charges_\n\nTher talent also triggers when using scrolls or spells based on scrolls of upgrade.
+actors.hero.talent.delicious_food.title=delicious food
+actors.hero.talent.delicious_food.desc=_+1:_ Cookies' fullness is _+50%._\n\n_+2:_ Cookies' fullness is _+100%._\n\nEating cookie, recharges the Rosmontis`s gear for 2
+actors.hero.talent.lovemeat.title=love meat
+actors.hero.talent.lovemeat.desc=_+1_ : Eating meat, gain _20 Turn _ Well Fed effect and she heals for _3 HP_\n\n_+2_ : Eating meat, gain _40 Turn _ Well Fed effect and she heals for _6 HP_
+actors.hero.talent.powergear.title=power gear
+actors.hero.talent.powergear.desc=_+1:_ Gear attack knocks enemies back with a _weak force_\n\n_+2:_ Gear attack knocks enemies back with a _normal force_
+actors.hero.talent.mywish.title=my wish
+actors.hero.talent.mywish.desc=When the Gear's charge is 0, it instantly kills all normal enemies in sight and recharges the Gear. However, it consumes 75% of the current HP.\n\n_+1:_ CoolDown _4,000 Trun_\n\n_+2:_ CoolDown _3,000 Trun_\n\n_+3:_ CoolDown _2,000 Trun_\n\ncannot be linked with mind vision.
+actors.hero.talent.cutlet.title=cutlet maker
+actors.hero.talent.cutlet.desc=_+1:_ who in the dungeon die, there is a _3%_ chance to drop a cutlet.\n\n_+2:_ who in the dungeon die, there is a _6%_ chance to drop a cutlet.\n\n_+3:_ who in the dungeon die, there is a _9%_ chance to drop a cutlet.\n\ncutlets can't fill you hunger up, but they recharge your gear.
+actors.hero.talent.focused_attack.title=focused attack
+actors.hero.talent.focused_attack.desc=_+1:_ focusing gear attack damage bonus increased from 50% to _65%_.\n\n_+2:_ focusing gear attack damage bonus increased from 50% to _80%_.\n\n_+3:_ focusing gear attack damage bonus increased from 50% to _95%_.
+actors.hero.talent.physical_attack.title=weight attack
+actors.hero.talent.physical_attack.desc=_+1:_ focusing gear attack _20%_ chance to paralyze target for 1 turn.\n\n_+2:_ focusing gear attack _40%_ chance to paralyze target for 1 turn.\n\n_+3:_ focusing gear attack _60%_ chance to paralyze target for 1 turn.
+actors.hero.talent.battleflow.title=battle flow
+actors.hero.talent.battleflow.desc=_+1:_ Increases the chance of a gear to recharge when someone dies from 8% to _12%_.\n\n_+2:_ Increases the chance of a gear to recharge when someone dies from 8% to _16%_.\n\n_+3:_ Increases the chance of a gear to recharge when someone dies from 8% to _20%_.
+actors.hero.talent.barrier_operation.title=barrier operation
+actors.hero.talent.barrier_operation.desc=_+1_ : Gear`s Defense damage reduction increased from 50% to _60%_. Inflicts damage equal to _30%_ of ATK to the attacker when the defensive effect is activated.\n\n_+2:_ Gear`s Defense damage reduction increased from 50% to _70%_. Inflicts damage equal to _60%_ of ATK to the attacker when the defensive effect is activated.\n\n_+3_ : Gear`s Defense damage reduction increased from 50% to _80%_.Inflicts damage equal to _90%_ of ATK to the attacker when the defensive effect is activated.
+actors.hero.talent.barrier_repair.title=barrier repair
+actors.hero.talent.barrier_repair.desc=_+1_ : chance to recharge gear when attacked increased from 10% to _15%_.\n\n_+2_ : chance to recharge gear when attacked increased from 10% to _20%_.\n\n_+3_ : chance to recharge gear when attacked increased from 10% to _25%_.
+actors.hero.talent.rhodes_cat.title=rhodes cat
+actors.hero.talent.rhodes_cat.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, attack power is increased by _15%_.\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, attack power is increased by _30%_.\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, attack power is increased by _45%_.
+actors.hero.talent.rhodes_weapon.title=rhodes weapon
+actors.hero.talent.rhodes_weapon.desc=_+1:_ Rosmontis's Gear damage increased by _2_.\n\n_+2:_ Rosmontis's Gear damage increased by _4_.\n\n_+3:_ Rosmontis's Gear damage increased by _6_.
+actors.hero.talent.recall_memory.title=recall memory
+actors.hero.talent.recall_memory.desc=_+1:_ Using scroll, recorder is recharged by _3%_.\n\n_+2:_ Using scroll, recorder is recharged by _6%_.\n\n_+3:_ Using scroll, recorder is recharged by _9%_.
+actors.hero.talent.guilt.title=guilt
+actors.hero.talent.guilt.desc=_+1:_ Defense increases by 1 for every _80 enemies_ killed.\n\n_+2:_ Defense increases by 1 for every _70 enemies_ killed.\n\n_+3:_ Defense increases by 1 for every _60 enemies_ killed.\n\n_+4:_ Defense increases by 1 for every _50 enemies_ killed.\n\nmax : 15
+actors.hero.talent.esthesia.title=esthesia
+actors.hero.talent.esthesia.desc=_+1:_ Gear attacks deal _6%_ bonus damage to boss enemies.\n\n_+2_ Gear attacks deal _9%_ bonus damage to boss enemies.\n\n_+3:_ Gear attacks deal _12%_ bonus damage to boss enemies.\n\n_+4:_ Gear attacks deal _15%_ bonus damage to boss enemies.
+actors.hero.talent.speed_comabt.title=speed comabt
+actors.hero.talent.speed_comabt.desc=_+1:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _5%_\n\n_+2:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _10%_\n\n_+3:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _15%_\n\n_+4:_ Rosmontis's Gear has a charged 1 or more, Movement speed is increased by _20%_
+
+actors.hero.talent$mywishcooldown.name=MyWish Cooldown
+actors.hero.talent$mywishcooldown.desc=cooldown %s Trun
+
+//쪽냥이 3차 서브클래스
+actors.hero.talent.oblivion.title=oblivion
+actors.hero.talent.oblivion.desc=_+1:_ When EX-44 is destroyed, there is a _10%_ chance to recharge the gear.\n\n_+2:_ When EX-44 is destroyed, there is a _20%_ chance to recharge the gear.\n\n_+3:_ When EX-44 is destroyed, there is a _30%_ chance to recharge the gear.
+actors.hero.talent.weakness_cover.title=weakness cover
+actors.hero.talent.weakness_cover.desc=_+1:_ Increases attack damage by _0-2_ per for gear upgrade level.\n\n_+2:_ Increases attack damage by _1-2_ per for gear upgrade level\n\n_+3:_ Increases attack damage by _2-2_ per for gear upgrade level
+actors.hero.talent.mentalamplification.title=mental amplification
+actors.hero.talent.mentalamplification.desc=_+1:_ EX-44 gain Damage reduction _10%_.\n\n_+2:_ EX-44 gain Damage reduction _20%_.\n\n_+1:_ EX-44 gain Damage reduction _30%_.
+actors.hero.talent.crystallize.title=crystallize
+actors.hero.talent.crystallize.desc=_+1:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _10%_.\n\n_+2:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _15%_.\n\n_+3:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _20%_.\n\n_+4:_ If an EX-44 is in Rosemontis's field of vision, that object's damage is increased by _25%_.
+
+
+actors.hero.talent.shining_meal.title=shining meal
+actors.hero.talent.shining_meal.desc=_+1:_ Eating food Blinds enemies in sight for _2 turns._ If the enemy is an Infected creature or a Sarkaz, deal _6_ damage.\n\n_+2:_ Eating food Blinds enemies in sight for _3 turns._ If the enemy is an Infected creature or a Sarkaz, deal _9_ damage.
+actors.hero.talent.experience.title=knigts experience
+actors.hero.talent.experience.desc=_+1:_ Armor identification is _3x Speed_\n\n_+2:_ Armor identification is _5x Speed_, Also identifies curses when acquiring armor.
+actors.hero.talent.protectionoflight.title=protection of light
+actors.hero.talent.protectionoflight.desc=_+1:_ When you invest points in this talent, the curse weakened of the equipped armor.\n\n_+2:_ When you invest points in this talent, the curse remove of the equipped armor.
+actors.hero.talent.knigts_oath.title=knigts oath
+actors.hero.talent.knigts_oath.desc=_+1:_ Recharges seal of light by _8%_ when identifying item.\n\n_+2:_ Recharges seal of light by _12%_ when identifying item.
+actors.hero.talent.combat_meal.title=Combat Meal
+actors.hero.talent.combat_meal.desc=_+1:_ Eating food takes the 1 turn and Recharges seal of light by _4%_\n\n_+1:_ Eating food takes the 1 turn and Recharges seal of light by _7%_
+actors.hero.talent.puerlight.title=puer light
+actors.hero.talent.puerlight.desc=_+1:_ When you use a skill, Knocks back visible enemies by _1 space_ and glows for _50 turns._\n\n+2:_ When you use a skill, Knocks back visible enemies by _2 space_ and glows for _100 turns._
+actors.hero.talent.resurgence.title=resurgence
+actors.hero.talent.resurgence.desc=_+1:_ Blessed Ankh activated, Increases health recovery by _30%_ and shield by _50%_.\n\n+2:_ Blessed Ankh activated, Increases health recovery by _60%_ and shield by _100%_.
+actors.hero.talent.phaserush.title=phase rush
+actors.hero.talent.phaserush.desc=_+1:_ When you are a RadiantKnight, you seal of light gain charge by _1%_ on hit.\n\n_+2:_ When you are a RadiantKnight, you seal of light gain charge by _2%_ on hit.
+actors.hero.talent.exorcism.title=exorcism
+actors.hero.talent.exorcism.desc=_+1:_ Deals _3_ additional damage and takes _1_ less damage. to Sarkaz.\n\n_+2:_ Deals _5_ additional damage and takes _2_ less damage. to Sarkaz.
+actors.hero.talent.pegasus_aura.title=pegasus aura
+actors.hero.talent.pegasus_aura.desc=_+1:_ When your seal of light activated, your recover HP _5%._. and When in RadiantKnight state, accuracy increases by _10%._\n\n_+2:_ When your seal of light activated, your recover HP _10%._. and When in RadiantKnight state, accuracy increases by _20%._\n\n_+3:_ When your seal of light activated, your recover HP _15%._. and When in RadiantKnight state, accuracy increases by _30%._
+actors.hero.talent.radianthero.title=radiant hero
+actors.hero.talent.radianthero.desc=If you take damage when your health is below 50%, you will be awakened as a Radiant Knight.\n\n_+1: 750 turn_ cool down\n\n_+2: 600 turn_ cool down\n\n_+3: 450 turn_ cool down
+actors.hero.talent.into_fray.title=into fray
+actors.hero.talent.into_fray.desc=_+1:_ kill an enemy with a combo, you gain haste for _1 turn_.\n\n_+2:_ kill an enemy with a combo, you gain haste for _2 turn_.\n\n_+3:_ kill an enemy with a combo, you gain haste for _3 turn_.
+actors.hero.talent.blitzkrieg.title=blitzkrieg
+actors.hero.talent.blitzkrieg.desc=_+1:_ Gunshot damage and accuracy is increased by _10%_. and Evasion is increased by _2_ while in haste buff.\n\n_+2:_ Gunshot damage and accuracy is increased by _20%_. and Evasion is increased by _4_ while in haste buff.\n\n_+3:_ Gunshot damage and accuracy is increased by _30%_. and Evasion is increased by _6_ while in haste buff.\n\nAlso, when using a combo move with a gun equipped, you gain 2 turns of haste.
+actors.hero.talent.skill_mastery.titleskill mastery
+actors.hero.talent.skill_mastery.desc=_+1:_ Increases Light Sword's damage multiplier up to 300%.\n\n_+2:_ Killing an enemy with a kill blow recharges the seal of light by 3%.\n\n_+3:_ Push silences the enemy for 1 turn.
+actors.hero.talent.shield_of_light.title=shield of light
+actors.hero.talent.shield_of_light.desc=_+1:_ Defense is increased by _1_.\n\n_+2:_ Defense is increased by _2_.\n\n_+3:_ Defense is increased by _3_.\n\nWhen HP is below 50% & while in Radiant Knight status, each increases by 2x. (up to 4x)
+actors.hero.talent.pegasus_wing.title=pegasus wing
+actors.hero.talent.pegasus_wing.desc=_+1:_ When attacked by an enemy, there is a _33%_ chance to recharge the Seal of Light by 2%.\n\n_+1:_ When attacked by an enemy, there is a _67%_ chance to recharge the Seal of Light by 2%.\n\n_+1:_ When attacked by an enemy, there is a _100%_ chance to recharge the Seal of Light by 2%.
+actors.hero.talent.hopelight.title=hope light
+actors.hero.talent.hopelight.desc=_+1:_ Radiant Knight status, Damage mitigation increased from 40% to _45%_\n\n_+2:_ Radiant Knight status, Damage mitigation increased from 40% to _50%_\n\n_+3:_ Radiant Knight status, Damage mitigation increased from 40% to _55%_
+actors.hero.talent.grand_order.title=grand order
+actors.hero.talent.grand_order.desc=_+1:_ When entering a boss battle, recover _20% of HP_ and immediately awaken as a Radiant Knight.\n\n_+2:_ When entering a boss battle, recover _40% of HP_ and immediately awaken as a Radiant Knight.\n\n_+3:_ When entering a boss battle, recover _60% of HP_ and immediately awaken as a Radiant Knight.
+actors.hero.talent.knight_of_kazimierz.title=knight of kazimierz
+actors.hero.talent.knight_of_kazimierz.desc=_+1:_ Radiant Knight status, Charges recorder by _1%_ on hit.\n\n_+2:_ Radiant Knight status, Charges recorder by _2%_ on hit.\n\n_+3:_ Radiant Knight status, Charges recorder by _3%_ on hit.\n\nThis talent has a 33% chance to activate.
+actors.hero.talent.knight_body.title=knight body
+actors.hero.talent.knight_body.desc=_+1:_ Max HP +10\n\n_+2:_ Max HP +20\n\n_+3:_ Max HP +30\n\n_+4:_ Max HP +40
+actors.hero.talent.quick_tactics.title=quick tactics
+actors.hero.talent.quick_tactics.desc=_+1:_ Haste gained from using Seal of Light increased from 5 to _6 turn_.\n\n_+2:_ Haste gained from using Seal of Light increased from 5 to _7 turn_.\n\n_+3:_ Haste gained from using Seal of Light increased from 5 to _8 turn_.\n\n_+4:_ Haste gained from using Seal of Light increased from 5 to _9 turn_.\n\nAlso, it will no longer cost a turn to use Seal of Light.
+actors.hero.talent.blessed_champion.title=blessed champion
+actors.hero.talent.blessed_champion.desc=_+1:_ seal of light activated, you gain a blessing for _10 turns._\n\n_+2:_ seal of light activated, you gain a blessing for _20 turns._\n\n_+3:_ seal of light activated, you gain a blessing for _30 turns._\n\n_+4:_ seal of light activated, you gain a blessing for _40 turns._
+
+// 니어 3차 서브클래스
+actors.hero.talent.flash_spear.title=flash spear
+actors.hero.talent.flash_spear.desc=_+1:_ 실명한 적에게 공격시 _10%_의 추가 피해를 입힙니다.\n\n_+2:_ 실명한 적에게 공격시 _20%_의 추가 피해를 입힙니다.\n\n_+3:_ 실명한 적에게 공격시 _30%_의 추가 피해를 입힙니다.
+actors.hero.talent.knight_glory.title=knight of glory
+actors.hero.talent.knight_glory.desc=_+1:_ 빛의 인장 발동시 시야 내 적들을 _3_ 턴간 약화시킵니다.\n\n_+2:_ 빛의 인장 발동시 시야 내 적들을 _6_ 턴간 약화시킵니다.\n\n_+3:_ 빛의 인장 발동시 시야 내 적들을 _9_ 턴간 약화시킵니다.
+actors.hero.talent.light_of_glory.title=light of glory
+actors.hero.talent.light_of_glory.desc=특성 레벨에 비례해 빛의 인장 충전 속도가 증가합니다.
+actors.hero.talent.eternal_glory.title=eternal glory
+actors.hero.talent.eternal_glory.desc=_+1:_ 물리 공격시 _10%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+2:_ 물리 공격시 _20%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+3:_ 물리 공격시 _30%_ 확률로 대상을 3턴간 실명시킵니다.\n\n_+4:_ 물리 공격시 _40%_ 확률로 대상을 3턴간 실명시킵니다.
+
+actors.hero.talent$radiantherocooldown.name=RadiantHero cooldown
+actors.hero.talent$radiantherocooldown.desc=cooldown %s Trun.
+
+
+actors.hero.hero.name=%s.
+actors.hero.hero.leave=%s, rescue the doctor.
+actors.hero.hero.level_up=Level up!
+actors.hero.hero.new_level=Level up! +Accuracy, +Evasion, +5 HP!
+actors.hero.hero.new_talent=+1 Talent Point!
+actors.hero.hero.unspent=You have unspent talent points!
+actors.hero.hero.level_cap=You cannot grow stronger, but your experiences do give you a surge of power!
+actors.hero.hero.you_now_have=You picked up: %s.
+actors.hero.hero.you_cant_have=You can't carry: %s.
+actors.hero.hero.locked_chest=Tsher cshest is locked and you don't have a matching key.
+actors.hero.hero.locked_door=You don't have a matching key.
+actors.hero.hero.noticed_smth=You noticed something.
+actors.hero.hero.wait=...
+actors.hero.hero.search=search
+actors.hero.hero.search_distracted=It's hard to concentrate, searching is exhausting.
+actors.hero.hero.pain_resist=Tshe pain shelps you resist tshe urge to sleep.
+actors.hero.hero.revive=Tshe ankh explodes with life-giving energy!
+actors.hero.hero.yam1=gum`s specialty!
+actors.hero.hero.yam2=Here's something yummy!
+actors.hero.hero.eazymode=Easy mode is over!
+actors.hero.hero.identify=The talent activated.
+actors.hero.hero.dm1=Climb up from floor 1 to get to Rhodes Island. The doberman in the room to the right of there activates Easy Mode.
+actors.hero.hero.dm2=A surprise attack can be triggered by attacking when the enemy enters the door.
+actors.hero.hero.dm3=If there is a room blocked by a wooden barricade, something like a flame potion will always come out on this floor.
+actors.hero.hero.dm4=Strength can be increased with Potion of Strength, and 2 Potion of Strength can be obtained for every 5th floor unit.
+actors.hero.hero.dm5=Upgrading is possible with Scroll of Upgrade, and 3 Scroll of Upgradeappear every 5 floors.
+actors.hero.hero.dm6=Using the Workshop to combine Scroll of Identify and 2 rune stones will help the Identify.
+actors.hero.hero.dm7=Scroll of Upgrade is very important, so if you are a beginner, it is better to use it on good equipment of tiers 3 or 4 or higher.
+actors.hero.hero.dm8=If you lack stamina, try using Sungrass or Scroll of Lullaby.
+
+actors.hero.heroclass.warrior=Blaze
+actors.hero.heroclass.warrior_desc=The Blaze starts weapon is strong..\nThe Blaze`s feather can be moved between different armor sets, transferring a single upgrade with it.\n\nThe Blaze automatically identifies:\n- Scrolls of Identify\n- Potions of healing\n- Scrolls of Rage
+
+actors.hero.heroclass.mage=Amiya
+actors.hero.heroclass.mage_unlock=The Amiya is an expert with arts, and carries a _unique obsidian ring._\n\nTo unlock her _use a scroll of upgrade to make an item stronger._
+actors.hero.heroclass.mage_desc=The Amiya starts with a _unique obsidian ring_ of magic missile. The ring recharges significantly faster than a wand, and has 1 more maximum charge.\n\nThe Amiya`s ring can be imbued with any wand he finds in the dungeon. Imbuing changes the ring's effect and can be used to transfer some upgrades.\n\nThe Amiya automatically identifies:\n- Scrolls of Identify\n- Potions of Liquid Flame\n- Scrolls of Upgrade
+
+actors.hero.heroclass.rogue=Red
+actors.hero.heroclass.rogue_unlock=The Red can control the flow of battle and strike from invisibility using her _unique cloak of shadows._\n\nTo unlock her _perform 10 surprise attacks in one run._
+actors.hero.heroclass.rogue_desc=The Red starts with a unique artifact: the _Cloak of Shadows,_ which she can use to become invisible at will. Like all artifacts, the cloak becomes more powerful as it is used.\n\nThe Red can detect secrets and traps from a greater distance.\n\nThe Red automatically identifies:\n- Scrolls of Identify\n- Potions of Invisibility\n- Scrolls of Magic Mapping
+
+actors.hero.heroclass.huntress=GreyThroat
+actors.hero.heroclass.huntress_unlock=The GreyThroat is a master of thrown weapons, and has a _unique cross bow_ with infinite arrows.\n\nTo unlock her _hit 15 enemies with thrown weapons in one run._
+actors.hero.heroclass.huntress_desc=The GreyThroat starts with a _unique crossbow,_ which can fire an infinite number of conjured arrows. The crossbow steadily grows stronger as the huntress levels up, and can be augmented and enchanted.\n\nThe GreyThroat can travel through tall grass without trampling it.\n\nThe GreyThroat automatically identifies:\n- Scrolls of Identify\n- Potions of Mind Vision\n- Scrolls of Lullaby
+
+actors.hero.heroclass.rosecat=Rosmontis
+actors.hero.heroclass.rosecat_unlock=The Rosmontis is a strong arts user, and has a _unique gear_ with ranged attack.\n\nTo unlock her _you eat 25 food in one run._
+actors.hero.heroclass.rosecat_desc=The Rosmontis is strong arts user, and has a _unique gear_ which fire an can attack all locations.gear is Cannot be recharged in the usual way, and you level up by gaining experience, everything is recharged.\n\nRosemontis`s gear is can attack all locations.\n\nThe Rosmontis automatically identifies:\n- Scrolls of Identify\n- Potion Of Levitation
+
+actors.hero.heroclass.nearl=Nearl
+actors.hero.heroclass.nearl_unlock=The Nearl is A Knight of light, and has a _uniqu shield_ with awaken the power of light.\n\nTo unlock her _you Slaine 200 enemy._
+actors.hero.heroclass.nearl_desc=The Nearl is A knight of light with powerful power, With her _special shield_, you can awaken the power of light.\n\nawakening the power of light, Nearl's combat ability increases.\n\nThe Nearl automatically identifies:\n- Scrolls of Identify\n- Potion of Experience\n- Scrolls of RemoveCurse
+
+actors.hero.herosubclass.gladiator=Master
+actors.hero.herosubclass.gladiator_short_desc=_Master_ start a combo. Building combo allows him to use unique combo moves.
+actors.hero.herosubclass.gladiator_desc=A successful attack with a melee weapon allows the _Master Elite_ to start a combo. Building combo allows him to use unique combo moves. Also, there is a chance to get bullets when attacking melee with a Gun.
+actors.hero.herosubclass.berserker=Berserker
+actors.hero.herosubclass.berserker_short_desc=_Berserker_ builds rage as she takes damage, which increases her damage
+actors.hero.herosubclass.berserker_desc=The _Berserker Elite_ builds rage as she takes damage, which increases her damage. When at full rage, she can refuse to die for a short time, at the cost of exhaustion. Also, if you throw a not weapon, you have a special ability that makes the target go mad and you get rage.
+actors.hero.herosubclass.warlock=Dominator
+actors.hero.herosubclass.warlock_short_desc=_Dominator_ has a chance to mark their soul.
+actors.hero.herosubclass.warlock_desc=When using wands on an enemy, the _Dominator Elite_ has a chance to mark their soul. Marked enemies will heal her and restore her hunger whenever she attacks them with physical damage.\n\nAmiya's Ring's melee damage is reduced, but the ring recharges when you kill a branded enemy.
+actors.hero.herosubclass.battlemage=Guard
+actors.hero.herosubclass.battlemage_short_desc=_Guard_ bonus effects depending on the wand her ring is imbued with.
+actors.hero.herosubclass.battlemage_desc=When fighting with her ring, the _Guard Elite_ conjures bonus effects depending on the wand her ring is imbued with. Her ring will also gain charge through combat.
+actors.hero.herosubclass.chaos=Chaos
+actors.hero.herosubclass.chaos_short_desc=_Chaos_\nIncreases magic damage to enemy, instead increases damage taken
+actors.hero.herosubclass.chaos_desc=_Chaos Elite_ Increases damage dealt by wands by 50%, but also increases physical damage you take by 50%. And the defense you get from armor is reduced.
+actors.hero.herosubclass.assassin=Assassin
+actors.hero.herosubclass.assassin_short_desc=_Assassin_ The longer spent invisible, the more powerful the attack will be.
+actors.hero.herosubclass.assassin_desc=While invisible the _Assassin Elite_ prepares a deadly strike on her next attack. The longer spent invisible, the more powerful the attack will be.
+actors.hero.herosubclass.freerunner=Runner
+actors.hero.herosubclass.freerunner_short_desc=_Runner_ Momentum can be used to start freerunning, which grants her 2x movespeed and bonus evasion for a short while.
+actors.hero.herosubclass.freerunner_desc=The _Runner Elite_ builds momentum as she runs. Momentum can be used to start freerunning, which grants her 2x movespeed and bonus evasion for a short while.\nneeds _1 less strength_ to use armor and weapons.\n\nAlso, it takes less turns to load the gun.
+actors.hero.herosubclass.sniper=Shooter
+actors.hero.herosubclass.sniper_short_desc=_Shooter_ master of ranged combat
+actors.hero.herosubclass.sniper_desc=The _Shooter Elite_ is a master of ranged combat. Her ranged attacks pierce armor, and after striking with a thrown weapon she can follow up with a special attack from her crossbow.\n\nA special crossbow attack is also possible with a gun, and the shot from the gun can penetrate armor.
+actors.hero.herosubclass.warden=Warden
+actors.hero.herosubclass.warden_short_desc=_Warden_ Strong connection to nature which allows her to see through tall grass and command furrowed grass to sprout around plants she grows
+actors.hero.herosubclass.warden_desc=The _Warden Elite_ has a strong connection to nature which allows her to see through tall grass and command furrowed grass to sprout around plants she grows. Plants she tramples will also give bonus effects.\nAlso, she can use the seed to strengthen the crossbow.
+actors.hero.herosubclass.stome=Stome
+actors.hero.herosubclass.stome_short_desc=_Stome_\nGathers energy and explodes.
+actors.hero.herosubclass.stome_desc=Crossbow charged 15% _wind energy_ on hit. The wind energy is charged up to 150%, and 2% is consumed when moving. If wind energy is 100% or higher, you can activate _storm_ to significantly increase movement ability. When the storm ability ends, it deals damage to nearby enemies in a 5x5 area.
+actors.hero.herosubclass.destroyer=Destroyer
+actors.hero.herosubclass.destroyer_short_desc=_Destroyer_ Maximizes the gear's attack power.
+actors.hero.herosubclass.destroyer_desc=The _Destroy Elite_ is Maximizes the gear's attack power. After gear attack, it becomes focus state, and next gear attack is deals 50% more damage Also, if you eat meat, you get an effect depending on how the meat is cooked.
+actors.hero.herosubclass.guardian=Guardian
+actors.hero.herosubclass.guardian_short_desc=_Guardian_ uses gear defensively
+actors.hero.herosubclass.war=War
+actors.hero.herosubclass.war_short_desc=_War_\nSummons EX-44
+actors.hero.herosubclass.war_desc=The _War Elite_ is Summons EX-44. If you use gear on empty land with no characters, EX-44 will be summoned. EX-44's max HP increases in proportion to your armor upgrade, and attack power increases in proportion to your gear upgrade.\n\nAlso, the EX-44 is automatically retrieved after 30 turns. Recharges your gear when retrieved.
+actors.hero.herosubclass.guardian_desc=_Guardian Elite_ uses gear defensively. When attacked, use gear to block the enemy's attack, greatly reducing damage. At this time, the charge amount of the gear is reduced. Also, there is a chance to recharge the gear when attacked.\n\nParrying with gears grants a shield. Parrying does not trigger when there is a shield.
+actors.hero.herosubclass.knight=Knight
+actors.hero.herosubclass.knight_short_desc=_Knight_\nDefeat enemies with quick mobility and combo moves.
+actors.hero.herosubclass.knight_desc=The _Knight Elite_ is Possessing quick mobility, gains haste when using Seal of Light. A combo move can be used after a normal attack, and attack power increases when in haste state.
+actors.hero.herosubclass.savior=Savior
+actors.hero.herosubclass.savior_short_desc=_Savior_\na fast Seal Of Light charge and increased power of light.
+actors.hero.herosubclass.savior_desc=_Savior Elite_ is Using the empowered power of light, Seal Of Light's charge rate is increased, Radiant Knight's damage bonus increased from 40% to 55%, and Damage reduction increased from 20% to 40%
+actors.hero.herosubclass.flash=Flash
+actors.hero.herosubclass.flash_short_desc=_Flash_\n적을 실명시키고 자신을 강화합니다.
+actors.hero.herosubclass.flash_desc=_Flash Elite_ 는 빛의 기사 상태의 피해 감소 효과가 사라지지만, 빛의 인장의 충전속도가 대폭 상승하고 발동시 시야 내 적들을 실명시킵니다.
+
+###npcs
+actors.mobs.npcs.blacksmith.name=Vulcan
+actors.mobs.npcs.blacksmith.gold_1=...Ah, it went well. There are a lot of pure raw rocks here, right? I want to have it, but I can't go there myself...\nGet _15 Orirock_ with this and bring them to me.\nOf course, it's not free. If you bring it, I'll strengthen your equipment.
+actors.mobs.npcs.blacksmith.blood_1=...Ah, it went well. I wanted to experiment with what I just made.\n_Kill 1 Breaker_ with this pickaxe. If you can defeat enemies with something like this, you can do a lot.\nOf course, it's not free. If you bring it, I'll strengthen your equipment.
+actors.mobs.npcs.blacksmith.lost_pick=Oh sh... where's the pickaxe I gave you? I've only made one...
+actors.mobs.npcs.blacksmith.gold_2=Orirock, 15 pcs. remember.
+actors.mobs.npcs.blacksmith.blood_2=Break Breaker`s head with that pickaxe.
+actors.mobs.npcs.blacksmith.completed=I was waiting.
+actors.mobs.npcs.blacksmith.get_lost=uh? Why?
+actors.mobs.npcs.blacksmith.same_item=I told you to choose 2 items. How do you do it with one?!
+actors.mobs.npcs.blacksmith.diff_type=Pick 2 items of the same type.
+actors.mobs.npcs.blacksmith.un_ided=I don't want to touch what I don't know. Please Identify.
+actors.mobs.npcs.blacksmith.cursed=...Are you telling me to touch this?
+actors.mobs.npcs.blacksmith.degraded=This is junk! I don't deal with this!
+actors.mobs.npcs.blacksmith.cant_reforge=It can't be smelted... Closure won't be able to either.
+actors.mobs.npcs.blacksmith.def_verb=Block
+actors.mobs.npcs.blacksmith.desc=Vulcan is a blacksmith from Minos who sought treatment at Rhodes Island after contracting Oripathy, ultimately reaching an agreement to become a part of the team.\nIn charge of smithing and maintaining weapons for other Operators, Vulcan also goes on missions when necessary.
+
+actors.mobs.npcs.ghost.name=Guard operator
+actors.mobs.npcs.ghost.rat_1=Aww, help me... Ah, %s?\n\nI am the guard operator of the ace team. While retreating after being wounded, he met a strong enemy and was running away.\nPlease. can you kill _Acid Slug_?\n\nIt has the ability to melt clothes, which female operators hate. _Watch out for acid clouds around him. and If something gets on your body, wash it off with water._
+actors.mobs.npcs.ghost.rat_2=Please, kill that him.\n\n_Fight near water, and avoid acid clouds_
+actors.mobs.npcs.ghost.gnoll_1=Aww, help me... Ah, %s?\n\nI am the guard operator of the ace team. While retreating after being wounded, he met a strong enemy and was running away.\nPlease. can you kill _Sniper_?\n\nHe is cunning and will continue to keep his distance and fight. _Don't distance yourself from him. Without ranged arts attacks, it would be at a disadvantage._
+actors.mobs.npcs.ghost.gnoll_2=Please, I don't have the skills to approach him.\n\n_Approach him without giving him a chance to attack._
+actors.mobs.npcs.ghost.crab_1=Aww, help me... Ah, %s?\n\nI am the guard operator of the ace team. While retreating after being wounded, he met a strong enemy and was running away.\nPlease. can you kill _Defender_?\n\nHe has a huge shield. Because of that shield, it moves slowly, but it will block all attacks from the front. _You have to attack the moment you open the door or when your view is blocked._
+actors.mobs.npcs.ghost.crab_2=Please, I can't pierce his armor with my weapon.\n\n_Please don't forget He blocks all attacks unless he is ambushed._
+actors.mobs.npcs.ghost.find_me=Thanks, I'll go now!
+actors.mobs.npcs.ghost.desc=New operator our Rhodes. We are weak now, but we will be strong when we meet again.
+actors.mobs.npcs.ghost.stop=Uuuh?! stop!
+
+actors.mobs.npcs.imp.name=Cannot
+actors.mobs.npcs.imp.golems_1=Rhodes Island is a business and I am a business person, so it can be said to be the same industry. That's right, why don't we help each other with friends? friend?\n\nWhat you need to get rid of is the _Possessed Junkman._ As you can see, I'm in business here and those stupid beggars don't help the business.\n\nSo... by the way, _kill about 4_ of those guys. Then I will reward you.
+actors.mobs.npcs.imp.monks_1=Rhodes Island is a business and I am a business person, so it can be said to be the same industry. That's right, why don't we help each other with friends? friend?\n\nWhat you need to get rid of is the _Enraged Soldier._ The monsters keep screaming and the guests run away!\n\nSo... by the way, _kill about 5_ of those guys. Then I will reward you.
+actors.mobs.npcs.imp.golems_2=Get what the Junkman`s drop. where do use? I do not know.
+actors.mobs.npcs.imp.monks_2=Get what the Soldier`s drop. where do use? I do not know.
+actors.mobs.npcs.imp.cya=See you later, %s!
+actors.mobs.npcs.imp.hey=Hey, %s!
+actors.mobs.npcs.imp.desc=It's not about picking up trash, it's about picking up treasures you don't need.\n\nThere are people who like neutrality, neither team nor foe.
+
+actors.mobs.npcs.impshopkeeper.name=Cannot
+actors.mobs.npcs.impshopkeeper.greetings=Good Morning, Good Afternoon, and Good Evening!
+actors.mobs.npcs.impshopkeeper.thief=I used to believe you... I'm kill off you!
+actors.mobs.npcs.impshopkeeper.desc=Need help? But help is not free.\n\nThere are people who like neutrality, neither team nor foe.
+
+actors.mobs.npcs.mirrorimage.name=Mirror Image
+actors.mobs.npcs.mirrorimage.desc=This illusion bears a close resemblance to you, even seeming to wield your current weapon and armor.\n\nMirror images will seek and attack enemies using their mimicked weapon, which behaves the same as yours, but deals less damage. They start out ethereal, but must take on a solid form in order to attack.\n\nWhile their offensive power can be potent, mirror images have no durability, and will fade the moment they take damage.
+
+actors.mobs.npcs.prismaticimage.name=Prisma Image
+actors.mobs.npcs.prismaticimage.desc=This shimmering illusion bears a close resemblance to you, even seeming to wield your current weapon and armor.\n\nPrismatic images will attempt to seek and draw focus from enemies, using their enhanced defense and health to protect you. While they do not have the same offensive power as mirror images, they have enhanced durability, including receiving benefits from your armor.\n\nWhen reduced to 0 hp, prismatic images will fade over several turns, and can still be healed during this time. When no enemies are present, prismatic images will fade and rejoin their master.
+
+actors.mobs.npcs.ratking.name=Angelina Ajimu
+actors.mobs.npcs.ratking.not_sleeping=I... I didn't sleep!... Oh, %s? Get this!
+actors.mobs.npcs.ratking.what_is_it=I'll be passing by! Information must be quickly...
+actors.mobs.npcs.ratking.confused= Like, Siracusan transporters always say: "the slow are just dust in the wind."
+actors.mobs.npcs.ratking.desc_festive=Real name Angelina Ajimu, she was a transporter responsible for delivering intelligence and special cargo around Siracusa.\nAs an apprentice caster Operator, she now provides logistical support, battlefield assistance, and tactical coordination for Rhodes Island.
+actors.mobs.npcs.ratking.desc=Real name Angelina Ajimu, she was a transporter responsible for delivering intelligence and special cargo around Siracusa.\nAs an apprentice caster Operator, she now provides logistical support, battlefield assistance, and tactical coordination for Rhodes Island.
+
+actors.mobs.npcs.sheep.name=Ursus Civilian
+actors.mobs.npcs.sheep.baa!=AIEEEEEEEEEEE!!!
+actors.mobs.npcs.sheep.baa?=Nooo!!
+actors.mobs.npcs.sheep.baa.=Ahhhaa!!
+actors.mobs.npcs.sheep.baa...=Help...
+actors.mobs.npcs.sheep.def_verb=!ssim
+actors.mobs.npcs.sheep.desc=An ordinary Ursus citizen caught in the crossfire. A part of the cruelty and suffering of this world.
+
+actors.mobs.npcs.shopkeeper.name=Penguin Logistics
+actors.mobs.npcs.shopkeeper.thief=Thief, thief!
+actors.mobs.npcs.shopkeeper.sell=Sell an item
+actors.mobs.npcs.shopkeeper.desc=Penguin Logistics`s workers. came here under a contract with Rhodes Island.
+
+actors.mobs.npcs.wandmaker.name="Ace"
+actors.mobs.npcs.wandmaker.intro_warrior=I'm glad you look healthy, Blaze. have a request to you.
+actors.mobs.npcs.wandmaker.intro_rogue=Did you come here on orders from Kal'tsit? Anyway, I have a favor little wolf.
+actors.mobs.npcs.wandmaker.intro_mage=Amiya, Were you also involved in this operation? The situation seems serious. Can I ask you one favor before you leave?
+actors.mobs.npcs.wandmaker.intro_huntress=GreyThroat? did you come here? In place with a lot of infected people... you? I'm glad you've changed your mind. Can you do my favor to save the infected?
+actors.mobs.npcs.wandmaker.intro_rosecat=hello, little cat.
+actors.mobs.npcs.wandmaker.intro_nearl=니어인가? 마침 잘 되었군. 내게 곤란한 일이 생겼는데 잠깐 괜찮나?
+actors.mobs.npcs.wandmaker.intro_1=\n\nI was fighting alone here and I ran into a problem.
+actors.mobs.npcs.wandmaker.intro_dust=I need is _Warhammer._ It's my weapon, but I dropped it during an airborne fall. I'm sure it's over the wooden door somewhere here. But surely there will be an ambush of the enemy. If you get the war hammer,_ return to me quickly._ As long as I have a weapon, these guys are no match for me.
+actors.mobs.npcs.wandmaker.intro_ember=I need is a _device_ from drone. Place 4 guidance lights on the helipad near here and he'll come here. drone is strong, but very vulnerable to cold, so it would be useful to _have a tool to induce cold._
+actors.mobs.npcs.wandmaker.intro_berry=Someone once grew a _rotberry plant._ And I need the seeds of it. The plant must have grown out of control, and it would be difficult to get the seeds. If you want to live, _be careful not to be tied to the vines._ And if possible, don't use fire. _if I burn it, there will be no seeds left._
+actors.mobs.npcs.wandmaker.intro_2=\n\nIf you do my favor, I will give you the wands of the retreated casters.
+actors.mobs.npcs.wandmaker.reminder_dust=%s, ,You haven't brought the hammer? Find the wooden wall.
+actors.mobs.npcs.wandmaker.reminder_ember=%s, Haven't brought your device? Install 4 guidance lights on the helipad.
+actors.mobs.npcs.wandmaker.reminder_berry=%s,  haven't brought the seeds? Find a room full of plants.
+actors.mobs.npcs.wandmaker.def_verb=blockad
+actors.mobs.npcs.wandmaker.desc=An elite operator of Rhodes. He went out to rescue the Doctor.
+actors.mobs.npcs.wandmaker.stop=just one, %s.
+
+actors.mobs.npcs.lens.name=Lens
+actors.mobs.npcs.lens.desc=A machine that assists Scene, a Rhodes operator and photojournalist. her have been dispatched to help you.\n\n"Please give any tasks that require doing directly to Lens!"
+actors.mobs.npcs.lens.t1=Shooting——
+actors.mobs.npcs.lens.t2=Lights——
+actors.mobs.npcs.lens.t3=Panorama——
+actors.mobs.npcs.lens.t4=Time Lapse——
+
+actors.mobs.npcs.greencat.name=Dr.Kal'tsit
+actors.mobs.npcs.greencat.desc=Rhodes Island`s Senior Manager and Medical Project Leader. and your boss
+actors.mobs.npcs.greencat.wellcom=Ah, Is the operation over... Good work %s
+
+actors.mobs.npcs.weedy.name=Weedy
+actors.mobs.npcs.weedy.desc=\n\nHello, I'm Weedy from Rhodes Island Engineering, but I can't go around here because it's still under construction. Oh, please shake hands with your right hand with this glove. I need to put hand sanitizer nearby...
+actors.mobs.npcs.weedy.t1=It's under construction. It's dangerous, so step back!
+
+actors.mobs.npcs.keeper.name=Firewalls
+actors.mobs.npcs.keeper.desc=\n\nIt cannot be passed unless it is a high-ranking executive. You have to bring a doctor.
+actors.mobs.npcs.keeper.t1=Entry denied.
+
+actors.mobs.npcs.closure.name=Closure
+actors.mobs.npcs.closure.desc=Rhodes Island`s Chief Engineer. _The items you left behind in this Rhodes Island will be by the Closure`s pocket money._\n\nTouch to change skin
+actors.mobs.npcs.closure.hi=How about this?
+actors.mobs.npcs.closure.hihi=you already unlocked it!
+actors.mobs.npcs.closure.no=Can't wear this!
+actors.mobs.npcs.closure.incomplete=Less made!
+actors.mobs.npcs.closure.fail_skin1=Need a End of EVIL TIME badge\nEnvironment: Reunion in challenge Defeat Tallulah without killing a single mini-boss.
+actors.mobs.npcs.closure.fail_skin2=Need a FRAGGING badge
+actors.mobs.npcs.closure.fail_skin3=Need a 50 games played badge
+actors.mobs.npcs.closure.fail_skin4=Need a All potions identified badge
+actors.mobs.npcs.closure.fail_skin5=Need a 10 games played badge
+actors.mobs.npcs.closure.fail_skin6=Need a Amiya Unlock
+actors.mobs.npcs.closure.fail_skin7=Need a Happy End
+actors.mobs.npcs.closure.fail_skin8=Need a Won with a Contingency badge
+actors.mobs.npcs.closure.fail_skin9=Need a 3rd boss slain by all Subclasses badge
+actors.mobs.npcs.closure.fail_skin10=Need a Slain Pursuer badge
+actors.mobs.npcs.closure.fail_skin11=Need a 10 games played badge
+actors.mobs.npcs.closure.fail_skin12=Need a Siesta Part II badge
+actors.mobs.npcs.closure.fail_skin13=Need a Expert GreyThroat badge
+actors.mobs.npcs.closure.die=ugh~
+
+actors.mobs.npcs.skinmodel.name=New Model
+actors.mobs.npcs.skinmodel.desc=A machine that creates realistic holograms.\n\nTouch to check the next skin
+
+actors.mobs.npcs.blackperro.name=Dobermann
+actors.mobs.npcs.blackperro.desc=Touch to activate Easy Mode
+actors.mobs.npcs.blackperro.no=You don't need.
+actors.mobs.npcs.blackperro.active=Training started.
+
+actors.mobs.npcs.prts.name=???
+actors.mobs.npcs.prts.desc=I will wait until that day comes. I promise you I will. Wait for me. You must wait for me too.\n\n... Don't ever forget about me.
+actors.mobs.npcs.prts.hint1=Hint(1/15)\n\nYou can make a _staff kit_ in the workshop to modify the wand.
+actors.mobs.npcs.prts.hint2=Hint(2/15)\n\nIf you go up from the 1st floor, you will up 27th floor.\nYou can change the skin on the 27th floor, and you can go higher if you rescue the Doctor.
+actors.mobs.npcs.prts.hint3=Hint(3/15)\n\nThere are some items that become special items when placed in _avant-garde well_. A typical example is _potato_.
+actors.mobs.npcs.prts.hint4=Hint(4/15)\n\n_Potato_ can be combined with something to make a shield.
+actors.mobs.npcs.prts.hint5=Hint(5/15)\n\n_Metal lump_ can be combined with something to make a powerful weapon.
+actors.mobs.npcs.prts.hint6=Hint(6/15)\n\n_Guns sold only in shops_ can be strengthened by combining them with something.
+actors.mobs.npcs.prts.hint7=Hint(7/15)\n\n_The first weapon_ has a probability of becoming a unique sword when combined with something.
+actors.mobs.npcs.prts.hint8=Hint(8/15)\n\nIf you put a _beaming sword_ or _a cold dagger_ into the _avant-garde well_, it becomes a very powerful spear.
+actors.mobs.npcs.prts.hint9=Hint(9/15)\n\nIf you put a _crossbow that summons crabs_ into an _avant-garde well_, it becomes a gun that summons powerful monsters.
+actors.mobs.npcs.prts.hint10=Hint(10/15)\n\nYou can change the quickslot by long-clicking the backpack button.
+actors.mobs.npcs.prts.hint11=Hint(11/15)\n\n_Fire wand_ can be combined with something to make a A fire tool that destroys traps
+actors.mobs.npcs.prts.hint12=Hint(12/15)\n\nIf you combine a large _scythe_ with something, you can get Golden dog`s sword
+actors.mobs.npcs.prts.hint13=Hint(13/15)\n\n_Wand_ responds to wells and metals, everything. But it is highly likely to fail. Fortunately, failure doesn't break it.
+actors.mobs.npcs.prts.hint14=Hint(14/15)\n\n_someone's dagger_ into the _avant-garde well_, Transforms into a painter's greatsword.
+actors.mobs.npcs.prts.hint15=Hint(15/15)\n\n_If you combine a _someone's dagger_ with something, maked her wand.
+
+actors.mobs.npcs.prts_corpse.name=???
+actors.mobs.npcs.prts_corpse.desc=...Is this corpse real? anywhere No one knows it.\n\nIt would be nice to have _a flower_ to mourn her...
+
+actors.mobs.npcs.ace_battle.name=Ace
+actors.mobs.npcs.ace_battle.desc=I came for you.
+actors.mobs.npcs.ace_battle.summon=Let me share your pain.
+actors.mobs.npcs.ace_battle.fail=go. I hope that there is only hope in your path ahead.
+actors.mobs.npcs.ace_battle.move=Move.
+actors.mobs.npcs.ace_battle.target=receive command.
+actors.mobs.npcs.ace_battle.battlecry=Don't underestimate!
+
+actors.mobs.npcs.ceylon.name=ceylon
+actors.mobs.npcs.ceylon.hey=ah... maybe good...
+actors.mobs.npcs.ceylon.cya=See you later, Rhodes.
+actors.mobs.npcs.ceylon.desc=I don't like this water!
+actors.mobs.npcs.ceylon.water=The day is not complete without tea. Those who took my tea leaves are called _Infantry_, _Ergate_, _Agent_.
+actors.mobs.npcs.ceylon.quest=Hello, I'm Ceylon, graduate of the Victoria National University with a major in Originium research. Are you... Rhodes? I'm sorry, but can you do me a favor? I'm going to practice in Rhodes soon, but I've lost my red tea leaves and water bottle. Can you get me my water bottle and red tea leaves? i want are about 8 red tea leaves.
+
+actors.mobs.npcs.gavial.name=gavial
+actors.mobs.npcs.gavial.desc=baby alligator~
+actors.mobs.npcs.gavial.desc*Talking to her will take you through the Gavial extra chapter.
+actors.mobs.npcs.gavial.desc_31=Where LANCET-2?
+actors.mobs.npcs.gavial.ok=Ok. Are you going with me.
+actors.mobs.npcs.gavial.no=Oh, have you changed your mind? ok. Let's go next time.
+actors.mobs.npcs.gavial.questhint=I can't see LANCET-2... her caught?
+
+actors.mobs.npcs.dummy.name=DUMMY
+actors.mobs.npcs.dummy.desc=KOKODAYO
+
+actors.mobs.npcs.dobermann.name=dobermann
+actors.mobs.npcs.dobermann.desc=Rhodes Island`s Drill instructor. has a strict personality.
+actors.mobs.npcs.dobermann.say=Sorry, I'm busy.
+
+actors.mobs.npcs.jessica.name=jessica
+actors.mobs.npcs.jessica.desc=A fully enlisted Operator from Blacksteel, stationed at Rhodes Island as part of an exchange training program.\n\n_NPCs with Quests_
+actors.mobs.npcs.jessica.say=H, Hello!
+actors.mobs.npcs.jessica.quest=Jessica :\n\nE, Excuse me! Do you... have an _Normal Magazine_? I need right now... I'll pay for it, can you bring it to me?
+actors.mobs.npcs.jessica.result=Jessica :\n\nth.. Thank you! Here's the 800 Orundum.
+
+actors.mobs.npcs.frostleaf.name=frostleaf
+actors.mobs.npcs.frostleaf.desc=Not Frostnova\n\n_NPCs with Quests_
+actors.mobs.npcs.frostleaf.say=hum?
+actors.mobs.npcs.frostleaf.quest=frostleaf :\n\nuh, hello. Do you have _Elixir Of IcyTouch_ by any chance? It's something I'm personally interested in.
+actors.mobs.npcs.frostleaf.result=frostleaf :\n\nI really didn't know you would bring it... I'll give you a _staff that contains my arts._
+
+actors.mobs.npcs.weedy.name=weedy
+actors.mobs.npcs.weedy.desc=Weedy, a bioengineering expert who was born into a family of Iberian scientists, is a researcher who has been with Rhodes Island since its establishment.
+actors.mobs.npcs.weedy.say=Sorry. It's under construction.
+
+actors.mobs.npcs.firewall.name=fire wall
+actors.mobs.npcs.firewall.desc=It looks like you need higher privileges. Let's rescue Dr.
+
+actors.mobs.npcs.npc_pilot.name=pilot
+actors.mobs.npcs.npc_pilot.desc=You can advance through additional chapters by talking to he. Be careful as you can't go back once you go.
+
+actors.mobs.npcs.npc_phantom.name=phantom
+actors.mobs.npcs.npc_phantom.desc=it is there and it is here\n\n_NPCs with Quests_
+actors.mobs.npcs.npc_phantom.result=Ahhh. Ms. Christine. your for bringing her, I give this as.
+
+actors.mobs.npcs.npc_phantomshadow.name=phantom?
+actors.mobs.npcs.npc_phantomshadow.desc=Meow
+
+actors.mobs.npcs.npc_astesia.name=astesia
+actors.mobs.npcs.npc_astesia.desc=Would you like to see Horoscopes?
+actors.mobs.npcs.npc_astesia.no_weapon=Hello, %s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...Where are the your weapons? Aren't you on the Operation?
+actors.mobs.npcs.npc_astesia.no_setbouns=Hello, %s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I don't think your weapon has any special secrets yet.
+actors.mobs.npcs.npc_astesia.setbouns_1=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...umm, I have uncovered the secrets behind your weapon. If you use _%2$s_ with your weapon, something special will happen.
+actors.mobs.npcs.npc_astesia.setbouns_2=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...the secrets tied to your weapon are... quite a lot. If you use _%2$s_ and _%3$s_ together, something special will happen to your weapon. i will guarantee.
+actors.mobs.npcs.npc_astesia.setbouns_3=Hello, %1$s. are you free now? If it's okay with you, can I take a look at your weapon for a second? I think I can tell you the secrets tied to your weapon through the horoscope.\n\n...wow, that's a lot of ties. If you use _%2$s_, _%3$s_, and _%4$s_ together, I think your weapon's special secret can be revealed.
+
+actors.mobs.npcs.lancet2.name=LANCET-2
+actors.mobs.npcs.lancet2.desc=Captured LANCET-2. Rescue her.
+actors.mobs.npcs.lancet2.help=HELP~
+actors.mobs.npcs.lancet2.thank=You Rescue LANCET-2.
+
+actors.mobs.npcs.npc_gglow.name=Goldenglow
+actors.mobs.npcs.npc_gglow.desc=I am a cat! not a dog!
+actors.mobs.npcs.npc_gglow.free1=I`m free!
+actors.mobs.npcs.npc_gglow.free2=Finally see the light!
+actors.mobs.npcs.npc_gglow.free3=I`m Not perro!
+actors.mobs.npcs.npc_gglow.free4=...and no good thing ever dies!
+actors.mobs.npcs.npc_gglow.free5=FREEEEEEEEEDOM!
+
+actors.mobs.npcs.minishopkeeper.name=Texas
+actors.mobs.npcs.minishopkeeper.thief=don't sell.
+actors.mobs.npcs.minishopkeeper.desc=Personalized shop service for you. this is P-Eleven!\n...so her claiming that. don't know if it's true.
+
+
+
+
+
+
+###miniboss
+
+actors.mobs.miniboss.sentinel.name=Sentinel
+actors.mobs.miniboss.sentinel.desc= A Sarkaz mercenary. They are responsible for scouting, patrolling, and issuing early warnings to the entire squad. Once attacked, the Herald will immediately issue a warning that Inspires the entire army.\n\n_Mini Boss_ : If you don't kill it, the next boss and Talulah will power up.
+actors.mobs.miniboss.sentinel.hit=Sentinel has gathered the enemies of this floor!
+actors.mobs.miniboss.sentinel.die=felt the powers of Grudgebearer and Talulah weaken.
+
+actors.mobs.miniboss.centurion.name=Centurion
+actors.mobs.miniboss.centurion.desc=One of Reunion's squad leaders who also serves as a Sarkaz mercenary. He leads a group of Sarkaz mercenaries to fight on the front lines.\nPeriodically summons mercenaries.\n\n_Mini Boss_ : If you don't kill it, the next boss and Talulah will power up.
+actors.mobs.miniboss.centurion.tep=Summoned mercenaries cast Teleport Arts!
+actors.mobs.miniboss.centurion.die=felt the powers of W and Talulah weaken.
+actors.mobs.miniboss.centurion$centurionminion.name=nameless mercenary
+actors.mobs.miniboss.centurion$centurionminion.desc=This Sarkaz mercenary was summoned by the Centurion. If summoned in a strange place, it will trigger a transfer ability.
+
+actors.mobs.miniboss.bloodmagister.name=Blood Shaman
+actors.mobs.miniboss.bloodmagister.desc=Locals who have studied the ancient Arts of Winterwisp are much more terrifying than modern Casters. He's very strong, _it's dangerous to fight from the front._ However, due to the side effects of powerful power,  will _lose  life when you enter battle._\n\n_Mini Boss_ : If you don't kill it, the next boss and Talulah will power up.
+actors.mobs.miniboss.bloodmagister.die=felt the powers of Mudrock and Talulah weaken.
+actors.mobs.miniboss.bloodmagister$rage.name=Enraged
+actors.mobs.miniboss.bloodmagister$rage.desc=Enraged! A very strong state, but will slowly lose life.\n\n_This effect lasts until death._
+
+actors.mobs.miniboss.faust.name=Faust
+actors.mobs.miniboss.faust.desc=A Sniper who is one of Reunion's squad leaders, often working in tandem with Mephisto.\nAttack from a distance, If you _attack 4 times_ in a row without moving, _will do a very lethal attack._\n\n_Mini Boss_ : If you don't kill it, the next boss and Talulah will power up.
+actors.mobs.miniboss.faust.die=felt the powers of Mephisto and Talulah weaken.
+
+
+
+###mobs
+actors.mobs.acidic.name=Crossbowman Leader
+actors.mobs.acidic.desc=A mercenary from Sarkaz, more dangerous than a normal Sarkaz Sniper. Their towering physique has not hampered their marksmanship. On the contrary, it allows them to use larger ranged weapons with ease and withstand more damage.
+
+actors.mobs.albino.name=Alpha Slug
+actors.mobs.albino.desc=An infected wild creature that is more dangerous than a normal Originium Slug. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions. The pointed horns of these Slugs cause bleeding.
+
+actors.mobs.armoredstatue.name=Armored Guerrilla Shieldguard
+actors.mobs.armoredstatue.desc=One of Patriot’s elite defenders. Carrying out Patriot’s will, these shieldguard form the solid foundation of the 'Aegis of the Infected.'.\n\nThe _%1$s_ and _%2$s_ guerrilla is holding looks real.\n\nIt seems to be in great condition because of the armor it's wearing, it might be very hard to kill.
+
+actors.mobs.airbornesoldier.name=Airborne Soldier
+actors.mobs.airbornesoldier.desc=One of Reunion's special melee soldiers. They are equipped with modified disposable jetpacks made from looted parts. Despite their fairly rudimentary equipment, Reunion uses them to great effect when attacking insufficiently protected areas.\n\nThey are approaching very quickly with the power of their equipment.
+
+actors.mobs.bandit.name=Wraith Leader
+actors.mobs.bandit.desc=One of Reunion's engineers. Due to being better trained and more heavily equipped, they are harder to neutralize in time, even if they have been detected. They utilize their agility and cunning to slip through defenses in order to sabotage mechanical and electrical equipment.
+
+actors.mobs.bat.name=Breaker
+actors.mobs.bat.desc=A well-trained enemy unit that spearheads assaults. Though their attack power is only slightly higher than average, their terrifying speed often allows them to break through the defenses of the unprepared- hence their nickname, "Breakers."
+
+actors.mobs.bee.name=golden bee
+actors.mobs.bee.desc_honey=Despite their small size, golden bees tend to protect their home fiercely. This one has been placated, and seems to want to follow you.
+actors.mobs.bee.desc=Despite their small size, golden bees tend to protect their home fiercely. This one is very mad, better keep your distance.
+
+actors.mobs.brute.name=Avenger
+actors.mobs.brute.enraged=Revenge
+actors.mobs.brute.def_verb=Block
+actors.mobs.brute.desc=An unidentified combatant who attacks using unconventional methods. Equipped with a special weapon, they are known to change their attack patterns during combat, making them difficult to defend against.
+actors.mobs.brute$bruterage.name=Revenge
+actors.mobs.brute$bruterage.desc=He is dying, but the voices of his compatriots have lifted him from the brink of death.\n\nhe is will die when its shielding wears off, either due to time or if it is damaged. In the meantime, it will deal hugely increased damage, so watch out!\n\nShield remaining: %d
+
+actors.mobs.causticslime.name=Leader Soldier
+actors.mobs.causticslime.desc=One of Reunion's melee soldiers, more dangerous than a normal Armored Soldier. Equipped with illegally obtained weapons and armor, they are better equipped and trained, and cannot be taken down with conventional strategies.\n\nhe was wearing hard armor. it is difficult to deal more than _6 damage_ to from any one attack. Also, the weapon is given Ooze arts.
+
+actors.mobs.hound.name=Rabid Hound
+actors.mobs.hound.desc=A creature controlled by a Reunion recon squad that is more dangerous than a Hound Pro. Monitoring equipment is strapped to its body. Due to their speed and evasiveness, they can easily slip through enemy defenses and cause heavy damage.
+
+actors.mobs.crystalmimic.name=special ambush
+actors.mobs.crystalmimic.ate=A special ambush stole your stuff %s!
+actors.mobs.crystalmimic.escaped=A special ambush has escaped!
+actors.mobs.crystalmimic.desc=Specially trained, cunning soldiers disguised themselves as supplies. They can _steal things_, and after _stealing they will try to run away._ Their swords have special arts that teleport their target.
+
+actors.mobs.cannot.name=Cannot, Angry Merchant
+actors.mobs.cannot.desc=Thief!!
+
+actors.mobs.demonspawner.name=Sarkaz Altar
+actors.mobs.demonspawner.on_death=the power of the Sarkaz was weakened because the altar was destroyed.
+actors.mobs.demonspawner.desc=This altar has no combat power of its own, but has special powers. Summons Swordsman periodically.\n\nThis altar is linked to Talulah's will. Destroying it seems to weaken her powers.
+
+actors.mobs.dm100.name=Arts Master A1
+actors.mobs.dm100.zap_kill=The lightning arts killed you...
+actors.mobs.dm100.desc=An unmanned enemy drone with extremely high movement speed, modified from the product of an Arts Education competition. It is equipped with an Arts Weapon module that allows it to launch long-range Arts attacks, so proceed with caution. Based on available data, its weapon module also allows it to block some Arts damage.\n\n_silence possible_
+
+actors.mobs.dm200.name=Mudrock Colossus
+actors.mobs.dm200.vent=Colossus threw a stone!
+actors.mobs.dm200.desc=This Originium construct, crafted by Mudrock, does not possess sentience and must be directly controlled by Mudrock. Though bulky and slow, they are extremely durable and boast terrifying physical damage and survivability.\n\nThese are too large to use doors or passages
+
+actors.mobs.dm201.name=lost colossus
+actors.mobs.dm201.vent=lost Colossus threw a stone!
+actors.mobs.dm201.desc=Experimental creature created by Caster of Leithanien. It was originally created for the role of a servant, but it didn't set who to serve...\n\nThis Siesta's obsidian golem is very sturdy, but it's heavy and immobile. But those fists can crush you.
+
+actors.mobs.olddm300.name=Mudrock
+actors.mobs.olddm300.notice=unused text
+actors.mobs.olddm300.defeated=unused text
+actors.mobs.olddm300.repair=unused text
+actors.mobs.olddm300.def_verb=unused text
+actors.mobs.olddm300.rankings_desc=unused text
+actors.mobs.olddm300.desc=unused text
+
+actors.mobs.newdm300.name=Mudrock
+actors.mobs.newdm300.damageup=Attack Up!
+actors.mobs.newdm300.final=Impure Soil
+actors.mobs.newdm300.notice=the enemy has come.
+actors.mobs.newdm300.shield=Mudrock pulls power from the exposed wires and shields itself!
+actors.mobs.newdm300.vent=Mudrock fires a jet of toxic exhaust!
+actors.mobs.newdm300.rocks=Mudrock slams the ground, loosening rocks from the ceiling!
+actors.mobs.newdm300.charging=Arise, great boulder, Heed my call.
+actors.mobs.newdm300.charging_hint=Mudrock is invulnerable while it is being energized by a gramophone!
+actors.mobs.newdm300.supercharged=It's no use running away, fight me.
+actors.mobs.newdm300.charge_lost=Was the gramophone destroyed...? it's still ok.
+actors.mobs.newdm300.pylons_destroyed=The land is as my friend, Be as the mountains.
+actors.mobs.newdm300.rankings_desc=become soil
+actors.mobs.newdm300.def_verb=Block
+actors.mobs.newdm300.defeated=I was... trying to save the infected in this place...
+actors.mobs.newdm300.desc=Age unknown, gender unknown, history unknown. This ex-Reunion member now leads an organization of Infected and wanders the wilderness between the cities of Leithania. What thoughts run through Mudrock’s mind as he is forced to once again step upon the battlefield?
+actors.mobs.newdm300.desc_supercharged=Mudrock is currently charged full of electrical energy. In this form Mudrock cannot be damaged and moves at double speed! Additionally, its drill now spins fast enough for it to _tunnel through solid rock,_ though it moves much more slowly when doing this.\n\nAttacking Mudrock directly is pointless while it is supercharged, but _something in the area must be providing it with this energy,_ destroying that may weaken it.
+actors.mobs.newdm300$fallingrocks.desc=Loose rocks are tumbling down from the ceiling here, it looks like its about to collapse!
+
+actors.mobs.dwarfking.name=Mephisto
+actors.mobs.dwarfking.notice=be impertinent! Who do you dare to attack!!
+actors.mobs.dwarfking.lifelink_1=I need of your essence, slave!
+actors.mobs.dwarfking.lifelink_2=Bleed for me, slave!
+actors.mobs.dwarfking.teleport_1=Deal with them, slave!
+actors.mobs.dwarfking.teleport_2=Keep them busy, slave!
+actors.mobs.dwarfking.wave_1=Enough! Arise my slaves!
+actors.mobs.dwarfking.wave_2=More! Bleed for your me!
+actors.mobs.dwarfking.wave_3=useless! Kill him quickly!
+actors.mobs.dwarfking.enraged=you can't kill me, %s! Reunion will destroy you soon!
+actors.mobs.dwarfking.losing=NO, NO! cannot make Faust's death meaningless!
+actors.mobs.dwarfking.defeated=I'm alone again.
+actors.mobs.dwarfking.rankings_desc=becoming a slave to Mephisto
+actors.mobs.dwarfking.desc=A Medic who is one of Reunion's squad leaders, often working in tandem with Faust. He heals the wounded while commanding his troops to attack, and can improve their life recovery rate. He boasts a high resistance to Arts. Currently\n\n it has been confirmed that he is the one controlling the Hosts.
+actors.mobs.dwarfking$dkghoul.rankings_desc=becoming a slave to Mephisto
+actors.mobs.dwarfking$dkmonk.rankings_desc=becoming a slave to Mephisto
+actors.mobs.dwarfking$dkwarlock.rankings_desc=becoming a slave to Mephisto
+
+actors.mobs.elemental$fireelemental.name=drone flame
+actors.mobs.elemental$fireelemental.desc=A drone controlled by an enemy, it can use a special device to blow high-temperature heat to the enemy.
+actors.mobs.elemental$newbornfireelemental.name=Raptor prototype
+actors.mobs.elemental$newbornfireelemental.desc=An unmanned enemy drone, its design and name seem to be inspired by a certain space game. Equipped with a minigun and a long-range Arts receiver, they are likely operated by concealed Casters. Their outstanding stealthiness and attack power pose a major threat to Operators.\n\nSince this Raptor is a prototype, its performance is inferior to other high-end drones. It is especially susceptible to frost. However, the attack power is very high, so be careful.
+actors.mobs.elemental$frostelemental.name=drone frost
+actors.mobs.elemental$frostelemental.desc=A drone controlled by an enemy, it can use a special device to blow cold to the enemy.
+actors.mobs.elemental$shockelemental.name=drone spark
+actors.mobs.elemental$shockelemental.desc=A drone controlled by an enemy, it can use a special device to blow Electricity To the enemy.
+actors.mobs.elemental$chaoselemental.name=Raptor
+actors.mobs.elemental$chaoselemental.desc=An unmanned enemy drone, its design and name seem to be inspired by a certain space game. Equipped with a minigun and a long-range Arts receiver, they are likely operated by concealed Casters. Their outstanding stealthiness and attack power pose a major threat to Operators.
+
+actors.mobs.eye.name=Arts Master A2
+actors.mobs.eye.deathgaze_kill=pierced by the arts beam...
+actors.mobs.eye.desc=An unmanned enemy drone that had some of its Flight Support modules swapped out, trading speed for a more powerful Arts Weapon module. Capable of using long-range Arts attacks. Proceed with caution. Based on available data, its weapon module also allows it to block some Arts damage.\n\n_silence possible_
+
+actors.mobs.fanatic.name=Fanatic
+actors.mobs.fanatic.desc=Special combatant wielding a huge hammer
+
+actors.mobs.fetidrat.name=Acid Slug
+actors.mobs.fetidrat.desc=An infected wild creature that can secrete corrosive fluids strong enough to dissolve armor. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions.\n\nThis slug creates acid clouds. The closer you are, the stronger it seems.\n\nAcidic bodily fluids flow from this Slug. It's very powerful, but it seems to Water wash off.
+
+actors.mobs.ghoul.name=slave soldier
+actors.mobs.ghoul.desc=A soldier that has been controlled by an unknown entity, capable of regenerating rapidly. The appearance of such an aberration on the battlefield is almost beyond imagination.\n\n _When a slave is defeated, it will rise again after a few turns as long as another slave is nearby._
+
+actors.mobs.gnoll.name=Soldier
+actors.mobs.gnoll.desc=One of Reunion's basic melee soldiers. Equipped with illegally obtained weapons and armor, they wear masks to conceal their identities during operations.
+
+actors.mobs.gnolltrickster.name=Sniper
+actors.mobs.gnolltrickster.desc=One of Reunion's basic ranged soldiers. Equipped with illegally obtained weapons and armor, they wear masks to conceal their identities during operations.
+
+actors.mobs.goldenmimic.name=Greater Ambush
+actors.mobs.goldenmimic.desc=These trained Reunion Soldiers are stronger than typical ambush soldiers.\n\nThey disguised themselves as supplies, and they seem to have items that are as good as they are strong.
+
+actors.mobs.golem.name=Junkman
+actors.mobs.golem.def_verb=Block
+actors.mobs.golem.desc=A Junkman that has been controlled by an unknown entity, capable of regenerating rapidly. Covered with clusters of Originium. The appearance of such an aberration on the battlefield is almost beyond imagination.\n\nCrystals on their bodies prevent them from using doors and passages. Instead, you can teleport yourself by receiving powerful arts from Mephisto, and you can also teleport enemies in front of you.
+
+actors.mobs.goo.name=Grudgebearer
+actors.mobs.goo.notice=Revenge For a Dead Comrade.
+actors.mobs.goo.defeated=I, will, be, back
+actors.mobs.goo.!!!=Clap, Clap!
+actors.mobs.goo.pumpup=He begins to memorize strange spells. You must run away!
+actors.mobs.goo.enraged=Anger
+actors.mobs.goo.gluuurp=Die!
+actors.mobs.goo.rankings_desc=Destroyed by Grudgebearer
+actors.mobs.goo.desc=A Sarkaz mercenary. Their Originium-wracked bodies have become convenient tools in their operations, allowing them to unleash Arts without relying on a staff. Though they won’t attack while on Standby, they will cruelly expend their own life to complete their mission once in Combat-Ready mode.
+
+actors.mobs.reuniondefender.name=Defender
+actors.mobs.reuniondefender.noticed=A defender has blocked your trivial attack.
+actors.mobs.reuniondefender.blocked=Block
+actors.mobs.reuniondefender.def_verb=Block
+actors.mobs.reuniondefender.desc=One of Reunion's melee soldiers. Equipped with a full set of heavy armor, they have ample combat experience and are extremely hard to defeat. As they may have had formal training, proceed with caution.
+
+actors.mobs.guard.name=Sarkaz Caster
+actors.mobs.guard.scorpion=Can't run away!
+actors.mobs.guard.def_verb=Block
+actors.mobs.guard.desc=A mercenary from Sarkaz. They use complex Arts to attack. Proceed with caution
+
+actors.mobs.king.name=Mephisto
+actors.mobs.king.notice=not used
+actors.mobs.king.defeated=not used%s
+actors.mobs.king.def_verb=not used
+actors.mobs.king.arise=not used
+actors.mobs.king.rankings_desc=not used
+actors.mobs.king.desc=not used
+actors.mobs.king$undead.name=not used
+actors.mobs.king$undead.def_verb=not used
+actors.mobs.king$undead.rankings_desc=not used
+actors.mobs.king$undead.desc=not used
+
+actors.mobs.mimic.name=ambush soldier
+actors.mobs.mimic.reveal=Ambush!
+actors.mobs.mimic.hidden_hint=This supply seems odd. Approaching doesn't seem like a good idea.
+actors.mobs.mimic.desc=These ambush Reunion soldiers serve to surprise enemies in need of supplies.\n\nThey have excellent equipment, so defeating them will give you a reward.
+
+actors.mobs.necromancer.name=Technical Scout
+actors.mobs.necromancer.desc=One of Reunion's engineers. They are able to utilize devices to assess the status of Operators and their equipment. Prioritize dealing with them.\n\nThey replace the battle by summoning a Bombtail. If it falls, the summoned Bombtail will also be destroyed.
+actors.mobs.necromancer$necroskeleton.name=handmade Bombtail
+actors.mobs.necromancer$necroskeleton.desc=This Bombtail was summoned by Scout. Same abilities, but will be destroyed if the Scout is knocked down.
+
+actors.mobs.mob.died=You hear something die in the distance.
+actors.mobs.mob.rage=#$%^
+actors.mobs.mob.exp=%+dEXP
+actors.mobs.mob.rankings_desc=Slain by: %s
+
+actors.mobs.monk.name=Slave(Enraged)
+actors.mobs.monk.def_verb=Block
+actors.mobs.monk.parried=Parry
+actors.mobs.monk.desc=slave rely solely on the art of hand-to-hand combat, and are able to use their unarmed fists both for offense and defense. When they become focused, slaves will parry the next physical attack used against them, even if it was otherwise guaranteed to hit. slave s build focus more quickly while on the move, and more slowly when in direct combat.
+actors.mobs.monk$focus.name=Force
+actors.mobs.monk$focus.desc=An enemy combatant who has slowly descended into primal madness as their lifeforce is consumed. The infection has penetrated their bone marrow, and they are unusually aggressive as a result. The appearance of such an aberration on the battlefield is almost beyond imagination.
+
+actors.mobs.piranha.name=tentacle
+actors.mobs.piranha.desc=It is not native to this place. These are imported from Iberia.
+
+actors.mobs.pylon.name=gramophone
+actors.mobs.pylon.desc_inactive=A power gramophone, meant to help regulate the electricity which powers the machinery in this area.\n\nThe gramophoneis currently inactive and immune to damage.
+actors.mobs.pylon.desc_active=A power gramophone, meant to help regulate the electricity which powers the machinery in this area. The gramophone is currently surging with electrical energy, this must be what's supercharging Mudrock!\n\nIn this state gramophones are vulnerable, but will arc electricity to nearby cells in a clockwise pattern. Due to their heavy metal construction, gramophones are resistant to large amounts of damage.
+
+actors.mobs.rat.name=Slug
+actors.mobs.rat.desc=An infected wild creature. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions.
+
+actors.mobs.ripperdemon.name=Swordsman
+actors.mobs.ripperdemon.leap=Swordsman is Trying to cast a leap attack!
+actors.mobs.ripperdemon.desc=A Sarkaz mercenary. Though scarred by years of war, they are still fighting to fulfill the orders of their employers.
+
+actors.mobs.rotheart.name=corrupting heart
+actors.mobs.rotheart.desc=Originally there should have been a rot heart. But the Corruption of the Deep Sea has polluted this place.
+
+actors.mobs.rotlasher.name=raw sea
+actors.mobs.rotlasher.desc=A monster of the deep sea. they don't move. Not yet.
+actors.mobs.rotlasher$waiting.status=This %s is idle.
+
+actors.mobs.scorpio.name=Sarkaz Crossbowman
+actors.mobs.scorpio.desc=A mercenary from Sarkaz. Their towering physique has not hampered their marksmanship. On the contrary, it allows them to use larger ranged weapons with ease and withstand more damage.
+
+actors.mobs.senior.name=Slave Leader(Enraged)
+actors.mobs.senior.desc=An enemy combatant who has completely given in to primal madness as their lifeforce is consumed. The infection has penetrated their bone marrow, and their death-defying aggression breaks the bounds of reason. The appearance of such an aberration on the battlefield is almost beyond imagination.
+
+actors.mobs.shaman.name=Spec Ops Caster
+actors.mobs.shaman.bolt_kill=The arts killed you...
+actors.mobs.shaman.desc=One of Reunion's Casters. Their armor makes them more resistant to physical damage compared to regular Casters.
+actors.mobs.shaman$redshaman.spell_desc=This Caster wore a red robe. They use arts that _reduce your attack power._\n\n_silence possible_
+actors.mobs.shaman$blueshaman.spell_desc=This Caster wore a blue robe. They use arts that _increase damage taken_\n\n_silence possible_
+actors.mobs.shaman$purpleshaman.spell_desc=This Caster wore a purple robe. They use arts that _reduces accuracy and evasion_\n\n_silence possible_
+
+actors.mobs.armoredbrute.name=Hateful Avenger
+actors.mobs.armoredbrute.desc=An unidentified combatant who attacks using unconventional methods, more dangerous than a normal Avenger. Equipped with a special weapon, they are known to change their attack patterns during combat, making them difficult to defend against. Proceed with caution.
+
+actors.mobs.skeleton.name=Bombtail
+actors.mobs.skeleton.explo_kill=You were killed by the explosion of dreon..
+actors.mobs.skeleton.def_verb=blocked
+actors.mobs.skeleton.desc=Enemy-controlled drones that are slow but drop bombs when shot down.
+
+actors.mobs.slime.name=Light Soldier
+actors.mobs.slime.def_verb=blocked
+actors.mobs.slime.desc=One of Reunion's melee soldiers. Equipped with illegally obtained weapons and armor, they are better equipped and trained, and cannot be taken down with conventional strategies.\n\nhe was wearing hard armor. it is difficult to deal more than _6 damage_ to from any one attack.
+
+actors.mobs.snake.name=Sprout Slug
+actors.mobs.snake.hint=Try using the examine button on a slug to learn how to counter them.
+actors.mobs.snake.desc=An infected wild creature. Due to their low intelligence, they are easily controlled by enemy casters for use as cannon fodder during invasions. Various seeds and fruits are blooming.\n\nYou can perform a surprise attack by attacking while out of the slug`s vision. One way is to let a slug chase you through a doorway and then _strike just as it moves into the door._
+
+actors.mobs.explodslug_n.name=Originium Slug
+actors.mobs.explodslug_n.desc=they are easily controlled by enemy casters for use as cannon fodder during invasions. They are capable of shooting their webs great distances, and will try to block whatever path their prey is taking.\n\n_silence possible_
+
+actors.mobs.statue.name=Guerrilla Shieldguard
+actors.mobs.statue.def_verb=blocked
+actors.mobs.statue.desc=One of Patriot’s elite defenders. Carrying out Patriot’s will, these shieldguard form the solid foundation of the 'Aegis of the Infected.'.\n\nThe _%s_ guerrilla is holding looks real.
+
+actors.mobs.succubus.name=Lancer
+actors.mobs.succubus.desc=A Sarkaz mercenary. After special training, they are capable of rushing forward with a long spear, building up speed. The faster they charge, the harder they strike anyone who might stand in their way.\n\nThey are accelerated when they spot an enemy. If you move while in acceleration, your attack power, movement speed, and accuracy will gradually increase! The accelerated state ends on attack.
+actors.mobs.succubus$acceleration.name=accelerated
+actors.mobs.succubus$acceleration.desc=entered a state of acceleration. If this Lancer builds up enough acceleration, it will be very dangerous.
+
+actors.mobs.swarm.name=Monster MK.1
+actors.mobs.swarm.desc=An unmanned enemy drone, called "Monster" by Reunion forces. Equipped with a long-range Arts receiver, they are likely operated by concealed Casters. Though unlikely to cause heavy damage to armored Operators, they can still pose a considerable threat.\n\n Every non-magical attack will split it into two smaller but equally dangerous Monster MK.1
+
+actors.mobs.newtengu.name=W
+actors.mobs.newtengu.notice_gotcha=Long time no see, %s!
+actors.mobs.newtengu.interesting=you are funny!
+actors.mobs.newtengu.notice_have=Don't think about running away, %s!
+actors.mobs.newtengu.defeated=ok, it was fun! see you later~
+actors.mobs.newtengu.rankings_desc=bombed by W
+actors.mobs.newtengu.desc=Save the Infected? Almost all the Sarkaz in Kazdel are infected, and you haven’t even seen the kinds of oppression and conflict that go on there... So, how far do you plan to go with your “salvation?” For someone like Kal’tsit, who can’t even protect a single Sarkaz, and for the person you’ve now become, what exactly do you intend to do?
+
+actors.mobs.newtengu$bombability$bombblob.desc=A cloud of superheated smoke is billowing here. Watch out, it's going to explode!
+actors.mobs.newtengu$bombability$bombitem.name=Land mine
+actors.mobs.newtengu$bombability$bombitem.cant_pickup=It's stuck to the ground, you can't move it!
+actors.mobs.newtengu$bombability$bombitem.desc=W has thrown a strange looking smoke bomb here, which is billowing a thick hot smoke. It's making a loud ticking noise, as if its counting down to an explosion!\n\nThe bomb has anchored itself to the ground, so you can't pick it up.
+
+actors.mobs.newtengu$fireability$fireblob.desc=W has thrown a fine powder that seems to be catching into steam here, it's about to ignite!
+
+actors.mobs.newtengu$shockerability$shockerblob.desc=Electrical energy is building here, anything standing on this tile will be shocked next turn!
+actors.mobs.newtengu$shockerability$shockeritem.name=Shocker
+actors.mobs.newtengu$shockerability$shockeritem.cant_pickup=It's putting out too much electricity, you can't grab it!
+actors.mobs.newtengu$shockerability$shockeritem.desc=W has thrown a curious machine here, which seems to be made of DM-100 parts. The machine is constantly arcing electricity around it, but it seems to be going in a predictable pattern.\n\nWith all the electricity arcing around it, there's no way you can pick this up.
+
+actors.mobs.newtengu$wmine$bombblob.desc=A Suspicious smoke rises.
+actors.mobs.newtengu$wmine$bombitem.name=Special Mines
+actors.mobs.newtengu$wmine$bombitem.cant_pickup=It's stuck to the ground, you can't move it!
+actors.mobs.newtengu$wmine$bombitem.desc=This special mine will ignite faster if an enemy is nearby.\n\nHas _low destructive power_, but will blind you if you are swept away
+
+actors.mobs.oldtengu.name=do not use
+actors.mobs.oldtengu.notice_gotcha=do not use%s
+actors.mobs.oldtengu.interesting=do not use
+actors.mobs.oldtengu.notice_have=do not use%s
+actors.mobs.oldtengu.defeated=do not use
+actors.mobs.oldtengu.rankings_desc=do not use
+actors.mobs.oldtengu.desc=do not use
+
+actors.mobs.thief.name=Wraith
+actors.mobs.thief.bye=Thank you~
+actors.mobs.thief.stole=The thief stole %s from you!
+actors.mobs.thief.carries=\n\nThe Wraith is carrying a _%s._ Stolen obviously.
+actors.mobs.thief.escapes=The wraith gets away with your %s!
+actors.mobs.thief.desc=One of Reunion's engineers. Though unarmed, they utilize their agility and cunning to slip through defenses in order to sabotage mechanical and electrical equipment.\n\nThese enemies are more likely to steal and run than they are to fight. Make sure to keep them in sight, or you might never see your stolen item again.
+
+actors.mobs.warlock.name=slave thrower
+actors.mobs.warlock.bolt_kill=died with piercing...
+actors.mobs.warlock.desc=An enemy ranged combatant who has slowly descended into primal madness as their lifeforce is consumed. The infection has penetrated their bone marrow, and they will hurl whatever they can get their hands on at their targets. The appearance of such an aberration on the battlefield is almost beyond imagination.\n\n_silence possible_
+
+actors.mobs.wraith_donut.name=Shadow of the soul
+actors.mobs.wraith_donut.desc=AMIYA's own illusion created from the souls of the enemies she defeated. It is difficult to attack this formless illusion.
+
+actors.mobs.wraith.name=Lurker
+actors.mobs.wraith.desc=One of Reunion's special soldiers. They move swiftly and stealthily, making it almost impossible to detect them before they engage in combat. Therefore, teamwork is needed in order to defeat them.
+
+actors.mobs.yog.name=unuse
+actors.mobs.yog.notice=unuse
+actors.mobs.yog.defeated=unuse
+actors.mobs.yog.rankings_desc=unuse
+actors.mobs.yog.desc=unuse
+actors.mobs.yog$rottingfist.name=unuse
+actors.mobs.yog$rottingfist.rankings_desc=unuse
+actors.mobs.yog$rottingfist.desc=unuse
+actors.mobs.yog$burningfist.name=unuse
+actors.mobs.yog$burningfist.rankings_desc=unuse
+actors.mobs.yog$burningfist.desc=unuse
+actors.mobs.yog$larva.name=unuse
+actors.mobs.yog$larva.rankings_desc=unuse
+actors.mobs.yog$larva.desc=unuse
+
+actors.mobs.talulah.name=Talulah?
+actors.mobs.talulah.notice=I suggest you look out for your own skin before jumping to conclusions.
+actors.mobs.talulah.notice_ch=I've given you the wrong impression.
+actors.mobs.talulah.phase2="I journey across the plains of salt, the bleeding mountain valleys, and not once was I harmed."
+actors.mobs.talulah.phase2_ch=Let me repeat myself. Everyone in this city who could kill me is now dead.
+actors.mobs.talulah.phase3="For his sword, his territory, his subjects, they grant me protection."
+actors.mobs.talulah.phase3_ch=FrostNova, the frosty nightmare of the tundra died at Lungmen.
+actors.mobs.talulah.phase4=However, the time for jokes is over.
+actors.mobs.talulah.phase4_end=I admit defeat. Go ahead and celebrate your victory to your hearts' content.
+actors.mobs.talulah.defeated=Remember this, Talulah. "I will be there even at the edge of the world."
+actors.mobs.talulah.rankings_desc=Burning to Talulah
+actors.mobs.talulah.desc=The leader and spokesperson of Reunion. So far, she has been confirmed to have masterminded multiple riots, as well as the destruction of Chernobog.\n\nWhile the she itself is immobile, it is capable of shooting powerful beams of arts and summoning a variety of minions to aid it.
+actors.mobs.talulah.desc_spawners=You can feel waves of Sarkaz energy radiating to the she from the floors above. Something you left alive up there must be funneling power back into Talulah. _Talulah will use this energy to summon more powerful minions!_
+actors.mobs.talulah$infectedpatrolcaptain.name=Infected Patrol Captain
+actors.mobs.talulah$infectedpatrolcaptain.rankings_desc=succumbing to Talulah
+actors.mobs.talulah$infectedpatrolcaptain.desc=An officer tasked with hunting the Infected of Ursus. Greedy and cold-bloode\nIt seems he has succumbed to Tallulah.
+actors.mobs.talulah$yogripper.rankings_desc=succumbing to Talulah
+
+actors.mobs.yogfist.invuln_warn=The shadow is invulnerable while near to the she!
+actors.mobs.yogfist.rankings_desc=succumbing to Talulah
+actors.mobs.yogfist.desc=An shadow summoned by Tallulah. shadow are linked to the power of Talulah, and will be protected from all damage when they are close to the she.
+actors.mobs.yogfist$burningfist.name=Black Snake
+actors.mobs.yogfist$burningfist.desc=A disenchanted Reunion soldier, or a giant manipulating history? A conspirator full of lies, or a nobleman swallowed by tragedy? The truth has been turned to ash, and only an evil god stands in the flames.\n\nability to spread flames is suppressed when near water, but its heat is so great that any water around it will evaporate after a short while !
+actors.mobs.yogfist$soiledfist.name=Demolitionist
+actors.mobs.yogfist$soiledfist.desc=A high-level elite Reunion combatant. This shadow is formed out of chaotic earthen magic. As it moves it will constantly cause vegetation to sprout around it. It can also shoot concentrated earthen blasts that will ensnare its target in rapidly growing vines and roots!\n\nDemolitionist derives power from this plant life, and will resist damage based on the amount of tall or furrowed vegetation near it!
+actors.mobs.yogfist$rottingfist.name=Lost Colossus
+actors.mobs.yogfist$rottingfist.desc=Experimental creature created by Caster of Leithanien. This shadow is formed out of living corruption. It is a towering mass of decaying flesh that can spread caustic ooze in melee and toxic gas at range. Even worse, the fist's great mass causes it to bleed instead of taking damage directly.\n\nWater can be used to wash the ooze off, but the shadow is also capable of absorbing water to heal itself! Additionally, damaging the shadow while it is bleeding will cause the bleed to refresh, but not stack!
+actors.mobs.yogfist$rustedfist.name=Patriot
+actors.mobs.yogfist$rustedfist.desc=His armor is in disrepair and damaged in many places. The blade of his once sharp halberd is now eroded with rust. However, the indomitable Patriot never capitulates, never backs down, and never shows mercy. He has long struggled with fate, and now resolves to slit the throat of fate.\n\nThis shadow is formed out of living metal. It is a towering mass of shifting metal that has powerful melee attacks, and can cripple its targets at range. Because of its tremendous mass, the shadow will take any damage dealt to it over time, instead of immediately.\n\nThe shadow is inflexible however, and cannot move into tight passageways. Additionally, while it may take damage slowly, the deferred damage will continue to increase if the shadow is hit multiple times.
+actors.mobs.yogfist$brightfist.name=The Singer
+actors.mobs.yogfist$brightfist.teleport=The singer teleports away in a flash of light that seriously blinds you!
+actors.mobs.yogfist$brightfist.desc=You seem to recognize the mysterious, mythical beast that has descended from the Sarcophagus. An otherworldly song flows from its sharp beak and floods its surroundings. It seems to devour the will of the Infected around it, including its own. Even if it knows not what it is doing, its song does not cease. It simply wishes to sing.\n\nThis shadow is formed out of pure light energy. It is capable of shooting powerful rays of searing light every turn! These beams will temporarily blind you in addition to dealing heavy damage. The shadow is also capable of briefly engulfing the arena in blinding light in order to escape!\n\nThe shadow has no special abilities which it can use in melee range however.
+actors.mobs.yogfist$darkfist.name=Emperor’s Blade
+actors.mobs.yogfist$darkfist.teleport=The shadow teleports away in a blast of darkness that extinguishes your light source!
+actors.mobs.yogfist$darkfist.desc=This shadow is formed out of pure dark energy. It is capable of shooting powerful blasts of dark magic every turn! These blasts will weaken your light source in addition to dealing heavy damage. The shadow is also capable of briefly engulfing the arena in darkness in order to escape!\n\nThe shadow has no special abilities which it can use in melee range however.
+
+// 탈루 추가 보스전
+actors.mobs.talu_blacksnake.name=The Deathless Black Snake
+actors.mobs.talu_blacksnake.desc=An ancient consciousness that refuses to relinquish the lands of Ursus from its vicelike grip, even after countless deaths.
+actors.mobs.talu_blacksnake.notice=Come.
+actors.mobs.talu_blacksnake.phase2=To Ursus, all lives are equal. We are all grains of sand in Ursus.
+actors.mobs.talu_blacksnake.phase3=Some people must be punished.
+actors.mobs.talu_blacksnake.phase4=I love everyone on this land... It has been so for a thousand years.
+actors.mobs.talu_blacksnake.phase5=I will change everything. I gave them direction.
+actors.mobs.talu_blacksnake.invincibility=immune
+actors.mobs.talu_blacksnake.invincibility1=I am the will of Ursus.
+actors.mobs.talu_blacksnake.invincibility2=Why can you not see the future?
+actors.mobs.talu_blacksnake.invincibility3=Do you think you can stop me?
+
+
+actors.mobs.miniboss.kaltsit.name=kaltsit
+actors.mobs.miniboss.kaltsit.desc=Mon3tr.
+actors.mobs.miniboss.kaltsit.burst=no use.
+actors.mobs.miniboss.kaltsit.summon=kill her, Mon3tr.
+actors.mobs.miniboss.kaltsit.skill1=Mon3tr, protect yourself.
+actors.mobs.miniboss.kaltsit.skill2=blow the her, Mon3tr.
+actors.mobs.miniboss.kaltsit.skill3=crush the her, Mon3tr.
+
+actors.mobs.miniboss.mon3tr.name=mon3tr
+actors.mobs.miniboss.mon3tr.desc=krrrr....
+
+actors.mobs.miniboss.emperorpursuer.name=emperor pursuer
+actors.mobs.miniboss.emperorpursuer.desc=Every Royal Guard is as a dominion; the land beneath their feet is all the territory of Ursus.\n\nPowerful, but docile if you don't attack first...
+
+actors.char.kill=%s killed you...
+actors.char.defeat=You defeated %s.
+actors.char.def_verb=dodged
+actors.char.invulnerable=invulnerable
+
+// 31~35
+
+actors.mobs.infantry.name=infantry
+actors.mobs.infantry.descLow-ranking infantry that is full of guts and cannot be knocked down in a single blow.
+
+actors.mobs.ergate.name=ergate
+actors.mobs.ergate.desc=Its combat ability is low, but it performs sabotage, dropping enemy weapons and running away.
+
+actors.mobs.sniper.name=sniper
+actors.mobs.sniper.desc=beginner sniper. Equipped sniper gear can paralyze the target using special ammunition.
+
+actors.mobs.wavecaster.name=wave caster
+actors.mobs.wavecaster.desc=The water arts they use aren't that powerful, but they fatal to enemies on the water.
+
+actors.mobs.piersailor.name=Piersailor
+actors.mobs.piersailor.desc=It has strong fighting power. However, it constantly loses stamina on water.
+
+actors.mobs.heavyboat.name=heavy boat
+actors.mobs.heavyboat.desc=This powerful boat is very strong on in water. However, out of water they become very weak and lose health. When destroyed, the crew escapes.
+actors.mobs.heavyboat.bang=got in a Traffic Accident
+actors.mobs.heavyboat.rankings_desc=Traffic Accident
+
+actors.mobs.agent.name=agent
+actors.mobs.agent.desc=Advanced combatant wielding powerful magical weapons.
+
+actors.mobs.schwarz.name=schwarz
+actors.mobs.schwarz.desc=A fighter with very good skills. Her Periodically try to sniper.
+actors.mobs.schwarz.snipe1=you won't be able to run away.
+actors.mobs.schwarz.snipe2=That's a good target.
+actors.mobs.schwarz.snipe3=i saw you.
+actors.mobs.schwarz.parried=IMMUNED
+
+// OF-6 작전 후 대사
+actors.mobs.siestaboss.name=cronin
+actors.mobs.siestaboss.desc=bad anyway
+actors.mobs.siestaboss.notice=Rho, Rhodes! Why are you here?!
+actors.mobs.siestaboss.skill1=Put all the staff in!
+actors.mobs.siestaboss.skill2=Get that girl!
+actors.mobs.siestaboss.phase2=Bitches...!
+actors.mobs.siestaboss.defeated=Shit... Shit...!
+
+
+actors.mobs.empiredrone.name=Imperial Drone
+actors.mobs.empiredrone.desc=A powerful drone operated by the Imperial. Designate coordinates to induce bombing.
+actors.mobs.empiredrone.bomb_kill=Destoryd.
+actors.mobs.empiredrone.rankings_desc=body destroyd
+
+actors.mobs.raider.name=Raider
+actors.mobs.raider.desc=Combatants with powerful breakthrough powers, they build up haste to unleash attacks that knock back their targets.
+
+actors.mobs.striker.name=Striker
+actors.mobs.striker.desc=The powerful infantry of the Imperial, inflicting long-range physical attacks. Attack power increases when stamina goes down.
+
+actors.mobs.strikerelite.name=Striker Elite
+actors.mobs.strikerelite.desc=The powerful infantry of the Imperial, inflicting long-range physical attacks. Attack power increases when stamina goes down.
+
+
+//36~40
+
+actors.mobs.lavaslug.name=lava slug
+actors.mobs.lavaslug.desc=Pompeii affected infected beast. so hot!
+
+actors.mobs.metalcrab.name=metal crab
+actors.mobs.metalcrab.desc=An infected wild creature, completely covered in metal. It has the ability to bind the feet of the attacking target.
+
+actors.mobs.rockbreaker.name=rockbreaker
+actors.mobs.rockbreaker.desc=A melee soldier. They use standard-issue tactical axes to inflict heavy damage to their targets. their armor provides improved Arts resistance.
+
+actors.mobs.explodeslug.name=explode slug
+actors.mobs.explodeslug.desc=An infected wild creature that has become unstable due to assimilating a large amount of Originium into its abdomen, exploding upon death.\n\nLooks very vulnerable to _Aqua Blast_ spells.
+actors.mobs.explodeslug.explo_kill=Your body is torn to pieces...
+
+actors.mobs.acidslug_a.name=acid slug α
+actors.mobs.acidslug_a.desc=An infected wild creature that is more dangerous than an Acid Originium Slug. Use ranged arts attacks.
+actors.mobs.acidslug_a.bolt_kill=Your body melted...
+actors.mobs.acidslug_a.rankings_desc=melt away
+
+actors.mobs.originiutant.name=originiutant
+actors.mobs.originiutant.desc=An Originiutant mutant that was weaponized for some purpose. Possesses an incredibly tough outer shell.\n\nThese are very powerful. The _fire_ seems to be effective.
+actors.mobs.originiutant.rankings_desc=terrible death
+
+actors.mobs.mutantspider.name=mutant spider
+actors.mobs.mutantspider.desc=A giant rock spider infected and severely mutated by an Originiutant. Its damage is low, but it has a very threatening ability.
+actors.mobs.mutantspider.rankings_desc=infected
+
+actors.mobs.firecore.name=fire core
+actors.mobs.firecore.desc=Powerful energy empowers the creatures of the under floer...
+actors.mobs.firecore.on_death=You felt volcanic energy diminish. Remaining cores: %d
+
+actors.mobs.pompeii.name=Pompeii
+actors.mobs.pompeii.desc=A massive infected beast. These aberrations were born in a special high-temperature environment.\n\n_This creature seems to be weak against water and poison_
+actors.mobs.pompeii.skill=Pompeii absorbs the attack and recovers Life energy!
+
+// 추가
+actors.mobs.sandpillar.name=Obelisk
+actors.mobs.sandpillar.desc=my little sister is the cutest
+
+actors.mobs.crownslayer_shadow.name=shadow crownslayer
+actors.mobs.crownslayer_shadow.desc=She is an officer of Reunion, and will a surprise attack with her unique ability. However, this ability seems to have a long cooldown.
+
+// 가비알 몹
+
+actors.mobs.tiacauhwarrior.name=warrior
+actors.mobs.tiacauhwarrior.desc=One of Acahualla's most commonly-seen warriors who uses a crude spear to attack. May pose unexpected difficulties if fighting at close range.\n\nIf there is a lot of grass around, you take less damage.
+
+actors.mobs.tiacauhfanatic.name=fanatic
+actors.mobs.tiacauhfanatic.desc=A fervent Tiacauh warrior with very fast attack speed. Though each strike is not particularly powerful, those caught off guard will be quickly subdued by a rain of blows.
+
+actors.mobs.tiacauhlancer.name=lancer
+actors.mobs.tiacauhlancer.desc=Not much different from a regular warrior, except they've learned to throw their spears. Though their range is limited, they get the job done.
+
+actors.mobs.tiacauhsniper.name=sniper
+actors.mobs.tiacauhsniper.desc=Warriors who have gained greater proficiency in using thrown weapons due to training, and boast greater lethality. However, due to the weight of their weapons, their range hasn't really improved.
+
+actors.mobs.tiacauhaddict.name=addict
+actors.mobs.tiacauhaddict.desc=A warrior poisoned by mushrooms. It has a fast movement speed and can reduce the target's combat ability when hit.
+
+actors.mobs.tomimi.name=tomimi
+actors.mobs.tomimi.desc=Tomimi, an Archosauria from the Acahualla region of Sargon. And the culprit who detonated the helicopter.
+actors.mobs.tomimi.notice=I, I think it'd be better to directly practice on the battlefield, right?
+actors.mobs.tomimi.phase2=Anyone who needs a good beating, step forward!
+actors.mobs.tomimi.phase3=Wait, I'm not ready yet!
+actors.mobs.tomimi.die=I... I'm sorry...
+actors.mobs.tomimi.destroy=you blast!
+actors.mobs.tomimi.rankings_desc=Beaten by Tommy
+actors.mobs.tomimi$tomimitower.name=building pillars
+actors.mobs.tomimi$tomimitower.desc=If you destroy them all, you can drop tomimi.
+
+actors.mobs.tiacauhripper.name=ripper
+actors.mobs.tiacauhripper.desc=A Very fervent Tiacauh warrior with very fast attack speed. Though each strike is not particularly powerful, those caught off guard will be quickly subdued by a rain of blows.
+
+actors.mobs.tiacauhritualist.name=ritualist
+actors.mobs.tiacauhritualist.desc=The very few Originium Arts users in Acahualla will often serve as doctors for their tribe.
+actors.mobs.tiacauhritualistzap_kill=You have been (physical)healed...
+
+actors.mobs.tiacauhshaman.name=shaman
+actors.mobs.tiacauhshaman.desc=These extremely rare Arts users from Acahualla have a deeper understanding of Originium Arts.
+
+actors.mobs.tiacauhshredder.name=shredder
+actors.mobs.tiacauhshredder.desc=One of Zumama's chosen elites, bestowed with excellent equipment. If there is a lot of grass around, attack damage Increase.\n\nhe _fire_ seems to be effective.
+
+actors.mobs.tiacauhbrave.name=brave
+actors.mobs.tiacauhbrave.desc=A very formidable Tiacauh warrior, naturally born to do battle.\n\nDefense is very high, but defense decreases after attacking.
+
+actors.mobs.giantmushroom.name=mushroom
+actors.mobs.giantmushroom.desc=This gigantic mushroom continuously inflicts harmful effects around it. It is hard but seems to burn well.
+
+actors.mobs.eunectes.name=eunectes
+actors.mobs.eunectes.desc=The leader of a certain tribe that resides in Acahualla—Gavial's hometown.
+actors.mobs.eunectes.notice=I'll give it my all no matter the prey!
+actors.mobs.eunectes.die=You people are no match for Gavial!
+
+actors.mobs.thebiguglything.name=the B.U.T
+actors.mobs.thebiguglything.desc=Zumama's magnum opus, a massive mechanical monster piloted by the High Priest.\n\nhe _fire_ seems to be effective.
+actors.mobs.thebiguglything.rage=The machine is enraged!
+actors.mobs.thebiguglything.fire_ready=The high priest prepares for a ranged attack!
