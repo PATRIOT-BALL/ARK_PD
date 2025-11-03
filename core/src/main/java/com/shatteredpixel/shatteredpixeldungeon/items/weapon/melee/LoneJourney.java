@@ -71,7 +71,7 @@ public class LoneJourney extends MeleeWeapon {
 
         super.execute(hero, action);
 
-        if (action.equals(AC_SP) && this.isEquipped(hero)) {
+        if (action.equals(AC_SP) && this.isEquipped(hero) && this.charge >= this.chargeCap) {
             GameScene.show(
                     new WndOptions(Messages.get(this, "name"),
                             Messages.get(this, "wnddesc"),
@@ -82,23 +82,33 @@ public class LoneJourney extends MeleeWeapon {
                         @Override
                         protected void onSelect(int index) {
                             if (index == 0) {
+                                clearJourneyBuff(hero);
                                 Buff.affect(hero, JourneyBuff_ice.class);
                                 charge = 0;
                                 updateQuickslot();
                             }
                             else if (index == 1) {
+                                clearJourneyBuff(hero);
                                 Buff.affect(hero, JourneyBuff_fire.class);
                                 charge = 0;
                                 updateQuickslot();
                             }
                             else if (index == 2) {
+                                clearJourneyBuff(hero);
                                 Buff.affect(hero, JourneyBuff_heavy.class);
                                 charge = 0;
                                 updateQuickslot();
                             }
                         }
-                    });
+                    }
+                    );
         }
+    }
+
+    private void clearJourneyBuff(Hero hero) {
+        Buff.detach(hero, JourneyBuff_ice.class);
+        Buff.detach(hero, JourneyBuff_fire.class);
+        Buff.detach(hero, JourneyBuff_heavy.class);
     }
 
     @Override
