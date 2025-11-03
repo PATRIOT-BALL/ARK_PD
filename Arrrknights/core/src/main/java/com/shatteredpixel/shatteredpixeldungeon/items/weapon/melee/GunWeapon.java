@@ -59,6 +59,8 @@ public class GunWeapon extends MeleeWeapon {
     protected float FIRE_DELAY_MULT = 1f;
     protected float FIRE_DAMAGE_MULT = 1f;
 
+    protected float RELOAD_DELAY = 3f;
+
     @Override
     public int max(int lvl) {
         return  3*(tier) +    // 3티어 기준 9+1, 5티어는 15+3
@@ -75,8 +77,6 @@ public class GunWeapon extends MeleeWeapon {
     public int fireDamageRoll() {
         return Random.Int(fireMin(), fireMax());
     }
-
-    protected float RELOAD_TIME = 3f;
 
     public Accessories gunAccessories;
 
@@ -167,15 +167,21 @@ public class GunWeapon extends MeleeWeapon {
 
         super.execute(hero, action);
 
-        if (action.equals(AC_ZAP) && bullet > 0 && Dungeon.hero.belongings.weapon == this) {
-            if (!this.cursed) {
-                cursedKnown = true;
-                GameScene.selectCell(zapper);
-            }
-            else {
-                Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero,4f);
+        if (action.equals(AC_ZAP)) {
+
+            if (Dungeon.hero.belongings.weapon != this) {
+                GLog.n(Messages.get(this, "not_equipped"));
+                QuickSlotButton.cancel();
+                return;
+            } else if (this.cursed) {
+                Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero, 4f);
                 cursedKnown = true;
                 bullet -= 1;
+            } else {
+                curUser = hero;
+                curItem = this;
+                cursedKnown = true;
+                GameScene.selectCell(zapper);
             }
         }
 
@@ -203,8 +209,8 @@ public class GunWeapon extends MeleeWeapon {
 
         specialFire = sp;
 
-        if (Dungeon.hero.subClass == HeroSubClass.FREERUNNER) Dungeon.hero.spendAndNext(RELOAD_TIME / 2);
-        else Dungeon.hero.spendAndNext(RELOAD_TIME);
+        if (Dungeon.hero.subClass == HeroSubClass.FREERUNNER) Dungeon.hero.spendAndNext(RELOAD_DELAY / 2);
+        else Dungeon.hero.spendAndNext(RELOAD_DELAY);
         Dungeon.hero.sprite.operate( Dungeon.hero.pos );
     }
 
