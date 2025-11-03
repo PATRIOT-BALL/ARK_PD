@@ -9,10 +9,10 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 public class Pkp extends GunWeapon {
     {
         image = ItemSpriteSheet.PKP;
-        hitSound = Assets.Sounds.HIT_GUN;
+        hitSound = Assets.Sounds.HIT_AR;
         hitSoundPitch = 0.9f;
 
-        FIRE_ACC_MULT = 3f;
+        FIRE_ACC_MULT = 1f;
         FIRE_DELAY_MULT = 0.2f;
         FIRE_DAMAGE_MULT = 1f;
         bulletMax = 101;

@@ -9,7 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 public class Usg extends GunWeapon {
     {
         image = ItemSpriteSheet.USG;
-        hitSound = Assets.Sounds.HIT_GUN;
+        hitSound = Assets.Sounds.HIT_PISTOL;
         hitSoundPitch = 0.9f;
 
         FIRE_ACC_MULT = 5f;

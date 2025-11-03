@@ -13,7 +13,7 @@ import com.watabou.utils.Callback;
 public class Ots03 extends GunWeapon {
     {
         image = ItemSpriteSheet.OTS03;
-        hitSound = Assets.Sounds.HIT_GUN;
+        hitSound = Assets.Sounds.HIT_PISTOL;
         hitSoundPitch = 0.9f;
 
         FIRE_ACC_MULT = 100f;
