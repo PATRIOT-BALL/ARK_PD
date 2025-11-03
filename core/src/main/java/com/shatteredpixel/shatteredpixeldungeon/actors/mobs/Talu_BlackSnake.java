@@ -155,6 +155,7 @@ public class Talu_BlackSnake extends Mob {
             Badges.validateChampion_char(Challenges.activeChallenges());
             Badges.saveGlobal();
 
+            Dungeon.level.drop(new Certificate(25), pos).sprite.drop(pos);
             Certificate.specialEndingBouns();
 
             Badges.silentValidateHappyEnd();

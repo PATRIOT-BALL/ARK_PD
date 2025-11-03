@@ -28,14 +28,13 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Mob;
 import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Talu_BlackSnake;
-import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.YogDzewa;
+import com.shatteredpixel.shatteredpixeldungeon.actors.mobs.Talulah;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.FlameParticle;
 import com.shatteredpixel.shatteredpixeldungeon.effects.particles.ShadowParticle;
 import com.shatteredpixel.shatteredpixeldungeon.items.Heap;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Dragonkill;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Firmament;
 import com.shatteredpixel.shatteredpixeldungeon.levels.painters.Painter;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
@@ -215,11 +214,11 @@ public class NewHallsBossLevel extends Level {
 		}
 
 		if (Dungeon.talucount < 4) {
-		YogDzewa boss = new YogDzewa();
-		boss.pos = exit + width*3;
-		GameScene.add( boss ); }
-		else {
-		Talu_BlackSnake boss = new Talu_BlackSnake();
+            Talulah boss = new Talulah();
+            boss.pos = exit + width*3;
+            GameScene.add( boss );
+        } else {
+		    Talu_BlackSnake boss = new Talu_BlackSnake();
 			boss.pos = exit + width*3;
 			GameScene.add( boss );
 		}
@@ -255,8 +254,8 @@ public class NewHallsBossLevel extends Level {
 	public void restoreFromBundle(Bundle bundle) {
 		super.restoreFromBundle(bundle);
 		for (Mob m : mobs){
-			if (m instanceof YogDzewa){
-				((YogDzewa) m).updateVisibility(this);
+			if (m instanceof Talulah){
+				((Talulah) m).updateVisibility(this);
 			}
 		}
 	}
