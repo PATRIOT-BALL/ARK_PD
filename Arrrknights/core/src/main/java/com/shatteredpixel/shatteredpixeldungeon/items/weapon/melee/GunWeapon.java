@@ -163,6 +163,15 @@ public class GunWeapon extends MeleeWeapon {
     }
 
     @Override
+    public void execute(Hero hero) {
+        if (this.bullet <= 0) {
+            this.execute(hero, AC_RELOAD);
+        } else {
+            this.execute(hero, defaultAction);
+        }
+    }
+
+    @Override
     public void execute(Hero hero, String action) {
 
         super.execute(hero, action);
@@ -172,7 +181,6 @@ public class GunWeapon extends MeleeWeapon {
             if (Dungeon.hero.belongings.weapon != this) {
                 GLog.n(Messages.get(this, "not_equipped"));
                 QuickSlotButton.cancel();
-                return;
             } else if (this.cursed) {
                 Buff.affect(Dungeon.hero, Burning.class).reignite(Dungeon.hero, 4f);
                 cursedKnown = true;
@@ -188,6 +196,7 @@ public class GunWeapon extends MeleeWeapon {
         if (action.equals(AC_RELOAD)) {
             curUser = hero;
             GameScene.selectItem(itemSelector, WndBag.Mode.MISSILEWEAPON, Messages.get(this, "prompt"));
+            QuickSlotButton.cancel();
         }
 
         if (action.equals(AC_REMOVE)) {
