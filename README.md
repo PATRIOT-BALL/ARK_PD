@@ -1,16 +1,20 @@
-# Shattered Pixel Dungeon
+# Tomorrow's RogueNights
 
-A Roguelike RPG, with randomly generated levels, items, enemies, and traps! Based on the [source code of Pixel Dungeon](https://github.com/00-Evan/pixel-dungeon-gradle), by [Watabou](https://www.watabou.ru).
+이 게임은 Hypergryph에서 개발한 명일방주의 팬 게임입니다!
 
-Shattered Pixel Dungeon currently compiles for Android and desktop platforms. It is available from [GitHub](https://github.com/00-Evan/shattered-pixel-dungeon/releases), [Google Play](https://play.google.com/store/apps/details?id=com.shatteredpixel.shatteredpixeldungeon), [Amazon](https://www.amazon.com/Shattered-Pixel-Dungeon/dp/B00OH2C21M), and [F-Droid](https://f-droid.org/repository/browse/?fdid=com.shatteredpixel.shatteredpixeldungeon).
+개발자 [00-Evan](https://github.com/00-Evan)의 [Shattered Pixel Dungeon](https://github.com/00-Evan/shattered-pixel-dungeon) (녹픽던)을 기반으로 개발중인 프로젝트입니다.
 
-If you like this game, please consider [supporting me on Patreon](https://www.patreon.com/roguenight)!
+A fan game of Arknights, a tactical RPG / tower defense mobile defense game developed by Hypergryph, with a twist of Roguelike RPG, including randomly generated levels, items, enemies, and traps! 
 
-There is an official blog for this project at [ShatteredPixel.com](https://www.patreon.com/roguenight).
+This is a fork of Shattered Pixel Dungeon. Based on the [source code of Shattered Pixel Dungeon](https://github.com/00-Evan/shattered-pixel-dungeon), by [00-Evan](https://github.com/00-Evan).
 
-The game also has a translation project hosted on [Transifex](https://www.transifex.com/team-rosemari/tomorrows-roguenight/).
+Originally based on a Based on the [source code of Pixel Dungeon](https://github.com/00-Evan/pixel-dungeon-gradle), by [Watabou](https://www.watabou.ru).
 
-Note that **this repository does not accept pull requests!** The code here is provided in hopes that others may find it useful for their own projects, not to allow community contribution. Issue reports of all kinds (bug reports, feature requests, etc.) are welcome.
+Tomorrow's Roguenights currently compiles for Android platforms. It is available from [GitHub](https://github.com/PATRIOT-BALL/ARK_PD/releases), and community links [TBD]().
+
+There is an official development log for this project at [TBD]().
+
+Issue reports of all kinds (bug reports, feature requests, etc.) are welcome.
 
 If you'd like to work with the code, you can find the following guides in `/docs`:
 - [Compiling for Android.](docs/getting-started-android.md)

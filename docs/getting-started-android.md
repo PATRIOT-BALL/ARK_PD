@@ -45,7 +45,7 @@ If you frequently wish to run your code for debugging purposes, and the changes 
 
 ### Generating an installable APK
 
-An APK (Android PacKage) is a file used to distribute Android applications. The Android studio website has [a guide which covers building your app into an APK.](https://developer.android.com/studio/run#reference) Note that the option you will likely want to use is 'Generate Signed Bundle / APK'.
+An APK (Android Package) is a file used to distribute Android applications. The Android studio website has [a guide which covers building your app into an APK.](https://developer.android.com/studio/run#reference) Note that the option you will likely want to use is 'Generate Signed Bundle / APK'.
 
 Note that APKs must be signed with a signing key. If you are making a small personal modification to RogueNights then your signing key is not important, but **if you intend to distribute your modification to other people and want them to be able to receive updates, then your signing key is critical.** The Android studio website has [a guide on signing keys.](https://developer.android.com/studio/publish/app-signing.html#opt-out)
 
