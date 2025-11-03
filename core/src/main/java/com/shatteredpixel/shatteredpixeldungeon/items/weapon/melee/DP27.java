@@ -17,7 +17,7 @@ public class DP27 extends GunWeapon {
         hitSoundPitch = 0.9f;
 
         FIRE_ACC_MULT = 1f;
-        FIRE_DELAY_MULT = 0.33f;
+        FIRE_DELAY_MULT = 0.25f;
         FIRE_DAMAGE_MULT = 0.2f;
         bulletMax = 47;
 
