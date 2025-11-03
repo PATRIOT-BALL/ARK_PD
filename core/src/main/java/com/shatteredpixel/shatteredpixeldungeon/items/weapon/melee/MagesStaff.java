@@ -161,7 +161,7 @@ public class MagesStaff extends MeleeWeapon {
 
 		if (Dungeon.hero.hasTalent(Talent.AZURE_FURY))
 		{
-			if (Random.Int(20) > Dungeon.hero.pointsInTalent(Talent.AZURE_FURY))
+			if (Random.Int(25) < Dungeon.hero.pointsInTalent(Talent.AZURE_FURY) * 2)
 			{
 				if (Dungeon.hero.belongings.getItem(SkillBook.class) != null) {
 					SkillBook Item = Dungeon.hero.belongings.getItem(SkillBook.class);
