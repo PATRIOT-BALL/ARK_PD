@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceCompatibility = targetCompatibility = appJavaCompatibility
+
+dependencies {
+    api project(':SPD-classes')
+    implementation project(':services')
+    //TODO might be nice to remove this, should decide
+    compileOnly "org.projectlombok:lombok:1.18.42"
+    annotationProcessor 'org.projectlombok:lombok:1.18.42'
+}
