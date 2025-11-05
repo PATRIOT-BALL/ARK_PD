@@ -14,7 +14,7 @@ public class Sig553 extends GunWeapon {
 
         FIRE_ACC_MULT = 10f;
         FIRE_DELAY_MULT = 0.4f;
-        FIRE_DAMAGE_MULT = 0.35f;
+        FIRE_DAMAGE_MULT = 0.4f;
         bulletMax = 31;
 
         usesTargeting = true;
