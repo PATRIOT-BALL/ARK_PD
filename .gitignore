@@ -96,3 +96,4 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 *.pepk
+/android/release/

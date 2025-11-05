@@ -14,7 +14,7 @@ public class Pkp extends GunWeapon {
 
         FIRE_ACC_MULT = 1f;
         FIRE_DELAY_MULT = 0.25f;
-        FIRE_DAMAGE_MULT = 0.2f;
+        FIRE_DAMAGE_MULT = 0.25f;
         bulletMax = 101;
 
         usesTargeting = true;

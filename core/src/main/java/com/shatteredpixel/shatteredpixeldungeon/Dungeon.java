@@ -277,7 +277,7 @@ public class Dungeon {
 		isPray = false;
 		killcat = false;
 		extrastage_Gavial = false;
-		extrastage_Sea = false;
+		extrastage_Sea = true;
 		mulaCount = 0;
 
 		Jessica.QuestClear = false;

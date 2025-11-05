@@ -36,8 +36,9 @@ android {
             //This makes release APKs smaller and more efficient, but also makes debugging trickier
             //as the information produced in stack traces must be de-obfuscated.
             //See here: https://developer.android.com/studio/build/shrink-code#decode-stack-trace
-            shrinkResources true
-            minifyEnabled true
+            //R8 is disabled for now as it's causing issues TODO: investigate
+            shrinkResources false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             applicationIdSuffix '.Release'
             versionNameSuffix '-Release'

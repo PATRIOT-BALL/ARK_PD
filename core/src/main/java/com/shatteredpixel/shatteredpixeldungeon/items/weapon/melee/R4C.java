@@ -17,7 +17,7 @@ public class R4C extends GunWeapon {
 
         FIRE_ACC_MULT = 2f;
         FIRE_DELAY_MULT = 0.5f;
-        FIRE_DAMAGE_MULT = 0.4f;
+        FIRE_DAMAGE_MULT = 0.55f;
         bulletMax = 31;
 
         usesTargeting = true;

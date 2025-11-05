@@ -273,11 +273,11 @@ public class Closure extends NPC {
                                     Game.runOnRenderThread(new Callback() {
                                         @Override
                                         public void call() {
-                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin15", Dungeon.hero.heroClass.title())));
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin16", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;*/
                             case 16: // 글라디아 스킨
-                                if (Badges.isUnlocked(Badges.Badge.GAMES_PLAYED_1)) {
+                                if (Badges.isUnlocked(Badges.Badge.IBERIA_PART1)) {
                                     if(!Badges.isUnlocked(Badges.Badge.SKIN_GLADIIA)) {Badges.validategladiiaskin();}
                                     sprite.showStatus( CharSprite.POSITIVE, Messages.get(this, "hi"));
                                     break;
@@ -285,7 +285,7 @@ public class Closure extends NPC {
                                     Game.runOnRenderThread(new Callback() {
                                         @Override
                                         public void call() {
-                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin16", Dungeon.hero.heroClass.title())));
+                                            GameScene.show(new WndMessage(Messages.get(Closure.class, "fail_skin17", Dungeon.hero.heroClass.title())));
                                         }});}
                                 break;
 

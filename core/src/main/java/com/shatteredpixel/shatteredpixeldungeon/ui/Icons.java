@@ -98,6 +98,7 @@ public enum Icons {
 	ARKPD,
 	NAMSEK,
 	MIZQ,
+    DANWO,
 
 	BLAZE,
 	AMIYA,
@@ -327,6 +328,10 @@ public enum Icons {
 				icon.frame(icon.texture.uvRect(96, 192, 128, 224));
 				icon.scale.set(PixelScene.align(0.49f));
 				break;
+            case DANWO:
+                icon.frame(icon.texture.uvRect(128, 192, 160, 224));
+                icon.scale.set(PixelScene.align(0.49f));
+                break;
 
 				//캐릭터 선택창 이미지
 			case BLAZE:

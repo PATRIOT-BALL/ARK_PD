@@ -82,7 +82,7 @@ public class AlchemyScene extends PixelScene {
 	
 	private static final int BTN_SIZE	= 28;
 	private static int centerW;
-	
+
 	@Override
 	public void create() {
 		super.create();
@@ -90,7 +90,7 @@ public class AlchemyScene extends PixelScene {
 		int w = Camera.main.width;
 		int h = Camera.main.height;
 		RectF insets = getCommonInsets();
-		
+
 		water = new SkinnedBlock(
 				w, h,
 				Dungeon.level.waterTex() ){
@@ -124,21 +124,21 @@ public class AlchemyScene extends PixelScene {
 		RenderedTextBlock title = PixelScene.renderTextBlock( Messages.get(this, "title"), 9 );
 		title.hardlight(Window.TITLE_COLOR);
 		title.setPos(
-				insets.left + (w - title.width()) / 2f,
-				insets.top + (20 - title.height()) / 2f
+                insets.left + (w - title.width()) / 2f,
+                insets.top + (20 - title.height()) / 2f
 		);
 		align(title);
 		add(title);
 
 		int pw = Math.min(50 + w/2, 150);
-		int left = (int)(insets.left) + (w - pw)/2;
+        int left = (int)(insets.left) + (w - pw)/2;
 		centerW = left + pw/2;
 		int pos = (int)(insets.top) + (h - 120)/2;
-		
+
 		RenderedTextBlock desc = PixelScene.renderTextBlock(6);
-		desc.maxWidth(w);
-		desc.text( Messages.get(AlchemyScene.class, "text") );
-		desc.setPos(left + (w - desc.width())/2, pos);
+        desc.maxWidth(pw);
+        desc.text( Messages.get(AlchemyScene.class, "text") );
+        desc.setPos(left + (pw - desc.width())/2, pos);
 		add(desc);
 		
 		pos += desc.height() + 6;
@@ -171,7 +171,7 @@ public class AlchemyScene extends PixelScene {
 						return false;
 					}
 				};
-				inputs[i].setRect(left + 10, pos, BTN_SIZE, BTN_SIZE);
+                inputs[i].setRect(left + 10, pos, BTN_SIZE, BTN_SIZE);
 				add(inputs[i]);
 				pos += BTN_SIZE + 2;
 			}
@@ -217,7 +217,7 @@ public class AlchemyScene extends PixelScene {
 			}
 		};
 		btnCombine.enable(false);
-		btnCombine.setRect(left + (w-30)/2f, inputs[1].top()+5, 30, inputs[1].height()-10);
+		btnCombine.setRect(left + (pw-30)/2f, inputs[1].top()+5, 30, inputs[1].height()-10);
 		add(btnCombine);
 		
 		output = new ItemSlot(){
@@ -229,7 +229,7 @@ public class AlchemyScene extends PixelScene {
 				}
 			}
 		};
-		output.setRect(left + w - BTN_SIZE - 10, inputs[1].top(), BTN_SIZE, BTN_SIZE);
+		output.setRect(left + pw - BTN_SIZE - 10, inputs[1].top(), BTN_SIZE, BTN_SIZE);
 		
 		ColorBlock outputBG = new ColorBlock(output.width(), output.height(), 0x9991938C);
 		outputBG.x = output.left();
@@ -263,7 +263,7 @@ public class AlchemyScene extends PixelScene {
 				 Item.updateQuickslot();
 			}
 		};
-		btnExit.setPos( Camera.main.width - btnExit.width(), 0 );
+        btnExit.setPos( insets.left + w - btnExit.width(), insets.top );
 		add( btnExit );
 		
 		IconButton btnGuide = new IconButton( new ItemSprite(ItemSpriteSheet.ALCH_PAGE, null)){
@@ -290,13 +290,13 @@ public class AlchemyScene extends PixelScene {
 				});
 			}
 		};
-		btnGuide.setRect(0, 0, 20, 20);
+		btnGuide.setRect(insets.left, insets.top, 20, 20);
 		add(btnGuide);
 		
 		energyLeft = PixelScene.renderTextBlock(Messages.get(AlchemyScene.class, "energy", availableEnergy()), 9);
 		energyLeft.setPos(
-				centerW - energyLeft.width()/2,
-				insets.top + h - 8 - energyLeft.height()
+                centerW - energyLeft.width()/2,
+                insets.top + h - 8 - energyLeft.height()
 		);
 		add(energyLeft);
 		

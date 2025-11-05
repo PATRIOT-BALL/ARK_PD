@@ -125,10 +125,10 @@ public class AboutScene extends PixelScene {
 
 		CreditsBlock mizq = new CreditsBlock(false, Window.SHPX_COLOR,
 				"Programming:",
-				Icons.MIZQ.get(),
-				"mizq4482",
-				"blog",
-				"https://mizq4482.tistory.com/");
+				Icons.DANWO.get(),
+				"Danwo0",
+				"GitHub",
+				"https://github.com/Danwo0/");
 		mizq.setRect(nam.right(), nam.top(), colWidth/2f, 0);
 		content.add(mizq);
 

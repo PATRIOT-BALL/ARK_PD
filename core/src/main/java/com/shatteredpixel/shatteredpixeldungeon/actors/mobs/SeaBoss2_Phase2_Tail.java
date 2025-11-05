@@ -44,7 +44,7 @@ public class SeaBoss2_Phase2_Tail extends Mob {
 
     @Override
     public int damageRoll() {
-        return Random.NormalIntRange(30, 65);
+        return Random.NormalIntRange(25, 55);
     }
 
     @Override
@@ -74,13 +74,13 @@ public class SeaBoss2_Phase2_Tail extends Mob {
 
         if (cooldown > 0) cooldown--;
         else {
-            Dungeon.hero.damage(20, this);
+            Dungeon.hero.damage(10, this);
             for (Mob mob : Dungeon.level.mobs.toArray(new Mob[0])) {
-                if (mob instanceof NPC)
-                    mob.damage(20, this);
+                if (mob.alignment == Alignment.ALLY)
+                    mob.damage(10, this);
             }
-            if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) cooldown = 5;
-            else cooldown = 3;
+            if (Dungeon.isChallenged(Challenges.DECISIVE_BATTLE)) cooldown = 3;
+            else cooldown = 5;
         }
 
         return super.act();

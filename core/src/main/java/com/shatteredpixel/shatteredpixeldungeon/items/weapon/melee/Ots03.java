@@ -18,7 +18,7 @@ public class Ots03 extends GunWeapon {
 
         FIRE_ACC_MULT = 100f;
         FIRE_DELAY_MULT = 5f;
-        FIRE_DAMAGE_MULT = 5f;
+        FIRE_DAMAGE_MULT = 6f;
         bulletMax = 16;
 
         usesTargeting = true;
