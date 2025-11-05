@@ -143,34 +143,34 @@ abstract public class Weapon extends KindOfWeapon {
 	public int proc( Char attacker, Char defender, int damage ) {
 
 		if (attacker instanceof Hero) {
-		if (Dungeon.hero.belongings.ring instanceof RingOfDominate)
-		{
-			float enemyResist = 1;
-			enemyResist *= 1 + 2*Math.pow(defender.HP/(float)defender.HT, 2);
+            curUser = Dungeon.hero;
+            if (Dungeon.hero.belongings.ring instanceof RingOfDominate) {
+                float enemyResist = 1;
+                enemyResist *= 1 + 2*Math.pow(defender.HP/(float)defender.HT, 2);
 
-			float Resists = 100 * enemyResist;
+                float Resists = 100 * enemyResist;
 
-			if (Random.Int((int)Resists) < RingOfDominate.Dominate(Dungeon.hero)) {
-				if (defender.isAlive() && !defender.isImmune(Corruption.class) && defender.buff(Corruption.class) == null && defender.alignment != Char.Alignment.ALLY) {
-					Buff.affect(defender, Corruption.class);
-					defender.HP = defender.HT;
-					damage = 0;
-				}
-				if (defender instanceof Mob) {
-					if (defender.isAlive() && !defender.isImmune(Corruption.class)) {
-						((Mob)defender).rollToDropLoot();
-						Statistics.enemiesSlain++;
-						Badges.validateMonstersSlain();
-						Statistics.qualifiedForNoKilling = false;
-						if (((Mob) defender).EXP > 0 && curUser.lvl <= ((Mob) defender).maxLvl) {
-							curUser.sprite.showStatus(CharSprite.POSITIVE, Messages.get(defender, "exp", ((Mob) defender).EXP));
-							curUser.earnExp(((Mob) defender).EXP, defender.getClass());
-						} else {
-							curUser.earnExp(0, defender.getClass());
-						}
-					}
-				}
-			}
+                if (Random.Int((int)Resists) < RingOfDominate.Dominate(Dungeon.hero)) {
+                    if (defender.isAlive() && !defender.isImmune(Corruption.class) && defender.buff(Corruption.class) == null && defender.alignment != Char.Alignment.ALLY) {
+                        Buff.affect(defender, Corruption.class);
+                        defender.HP = defender.HT;
+                        damage = 0;
+                    }
+                    if (defender instanceof Mob) {
+                        if (defender.isAlive() && !defender.isImmune(Corruption.class)) {
+                            ((Mob)defender).rollToDropLoot();
+                            Statistics.enemiesSlain++;
+                            Badges.validateMonstersSlain();
+                            Statistics.qualifiedForNoKilling = false;
+                            if (((Mob) defender).EXP > 0 && curUser.lvl <= ((Mob) defender).maxLvl) {
+                                curUser.sprite.showStatus(CharSprite.POSITIVE, Messages.get(defender, "exp", ((Mob) defender).EXP));
+                                curUser.earnExp(((Mob) defender).EXP, defender.getClass());
+                            } else {
+                                curUser.earnExp(0, defender.getClass());
+                            }
+                        }
+                    }
+                }
 			}
 		}
 
