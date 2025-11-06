@@ -93,6 +93,7 @@ public class SeaBoss2_Phase2_Head extends Mob {
                 Certificate.specialEndingBouns();
 
                 Badges.silentValidateHappyEnd();
+                Badges.validateiberia2();
                 Badges.validatewill();
                 Dungeon.win(Amulet.class);
                 Dungeon.deleteGame(GamesInProgress.curSlot, true);

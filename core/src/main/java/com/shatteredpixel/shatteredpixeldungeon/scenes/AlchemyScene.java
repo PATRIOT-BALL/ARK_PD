@@ -82,7 +82,7 @@ public class AlchemyScene extends PixelScene {
 	
 	private static final int BTN_SIZE	= 28;
 	private static int centerW;
-	
+
 	@Override
 	public void create() {
 		super.create();
@@ -90,7 +90,7 @@ public class AlchemyScene extends PixelScene {
 		int w = Camera.main.width;
 		int h = Camera.main.height;
 		RectF insets = getCommonInsets();
-		
+
 		water = new SkinnedBlock(
 				w, h,
 				Dungeon.level.waterTex() ){
@@ -130,11 +130,11 @@ public class AlchemyScene extends PixelScene {
 		align(title);
 		add(title);
 
-        int pw = Math.min(50 + w/2, 150);
+		int pw = Math.min(50 + w/2, 150);
         int left = (int)(insets.left) + (w - pw)/2;
-        centerW = left + pw/2;
-        int pos = (int)(insets.top) + (h - 120)/2;
-		
+		centerW = left + pw/2;
+		int pos = (int)(insets.top) + (h - 120)/2;
+
 		RenderedTextBlock desc = PixelScene.renderTextBlock(6);
         desc.maxWidth(pw);
         desc.text( Messages.get(AlchemyScene.class, "text") );

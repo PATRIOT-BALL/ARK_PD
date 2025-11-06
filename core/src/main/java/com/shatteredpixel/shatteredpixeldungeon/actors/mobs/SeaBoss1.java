@@ -187,7 +187,7 @@ public class SeaBoss1 extends Mob{
 
     @Override
     public void die(Object cause) {
-        //Badges.validatesiesta1(); 보스 배지
+        Badges.validateiberia1();
 
        // yell(Messages.get(this, "defeated")); 보스 사망 대사
 

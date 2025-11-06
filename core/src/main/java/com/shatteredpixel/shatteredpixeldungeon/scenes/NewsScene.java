@@ -85,7 +85,7 @@ public class NewsScene extends PixelScene {
 			@Override
 			protected void onClick() {
 				super.onClick();
-				String link = "https://mizq4482.tistory.com/";
+				String link = "https://github.com/tomorrows-ark-pd/ARK_PD/";
 				//tracking codes, so that the website knows where this pageview came from
 				DeviceCompat.openURI(link);
 			}
@@ -104,7 +104,7 @@ public class NewsScene extends PixelScene {
 		btnSite.setRect(left, top, fullWidth, BTN_HEIGHT);
 		add(btnSite);
 
-		btnSite2.icon(Icons.get(Icons.MIZQ));
+		btnSite2.icon(Icons.get(Icons.DANWO));
 		btnSite2.textColor(Window.TITLE_COLOR);
 		btnSite2.setRect(left, top*4, fullWidth, BTN_HEIGHT);
 		add(btnSite2);

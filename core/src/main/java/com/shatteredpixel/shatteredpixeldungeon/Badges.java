@@ -168,8 +168,9 @@ public class Badges {
 
 		GOLD_COLLECTED_5              ( 120 ),
 
-		SIESTA_PART1              ( 121 ),
-		GAVIAL_PART1              ( 122 ),
+		SIESTA_PART1              ( 128 ),
+		GAVIAL_PART1              ( 129 ),
+        IBERIA_PART1              ( 130 ),
 
 		CERTIFICATE_3               (123),
 		USE_HEALBOX(124, true),
@@ -201,8 +202,9 @@ public class Badges {
 		NEARL_CHAMPION2              ( 172, true ),
 		CHEN_CHAMPION2              ( 172, true ),
 
-		SIESTA_PART2              ( 173),
-		GAVIAL_PART2              ( 174 ),
+		SIESTA_PART2              ( 192),
+		GAVIAL_PART2              ( 193 ),
+        IBERIA_PART2              ( 194 ),
 
 		CERTIFICATE_4               (175),
 
@@ -1234,7 +1236,7 @@ public class Badges {
 		if(!Badges.isUnlocked(Badge.SKIN_ARCH) && Badges.isUnlocked(Badge.GREY_CHAMPION1)) { Badges.validatearchskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_TOMIMI) && Badges.isUnlocked(Badge.GAVIAL_PART2)) { Badges.validatetomimiskin();}
 		if(!Badges.isUnlocked(Badge.SKIN_FRANKA) && Badges.isUnlocked(Badge.USE_HEALBOX)) { Badges.validatefrankaskin();}
-		if(!Badges.isUnlocked(Badge.SKIN_GLADIIA) && Badges.isUnlocked(Badge.GAMES_PLAYED_1)) { Badges.validategladiiaskin();}
+		if(!Badges.isUnlocked(Badge.SKIN_GLADIIA) && Badges.isUnlocked(Badge.IBERIA_PART2)) { Badges.validategladiiaskin();}
 	}
 
 	//necessary in order to display the happy end badge in the surface scene
@@ -1483,6 +1485,20 @@ public class Badges {
 			local.add(Badge.GAVIAL_PART2);
 			displayBadge( Badge.GAVIAL_PART2 );}
 	}
+    public static void validateiberia1() {
+        if (!local.contains( Badge.IBERIA_PART1 )){
+            global.add(Badge.IBERIA_PART1);
+            saveNeeded = true;
+            local.add(Badge.IBERIA_PART1);
+            displayBadge( Badge.IBERIA_PART1 );}
+    }
+    public static void validateiberia2() {
+        if (!local.contains( Badge.IBERIA_PART2 )){
+            global.add(Badge.IBERIA_PART2);
+            saveNeeded = true;
+            local.add(Badge.IBERIA_PART2);
+            displayBadge( Badge.IBERIA_PART2 );}
+    }
 
 	public static void validatepursuerkill() {
 		if (!local.contains( Badge.SLAIN_PURSUER )){
@@ -1644,7 +1660,8 @@ public class Badges {
 			{ Badge.ROSE_CHAMPION1, Badge.ROSE_CHAMPION2, Badge.ROSE_CHAMPION3},
 			{ Badge.NEARL_CHAMPION1, Badge.NEARL_CHAMPION2, Badge.NEARL_CHAMPION3},
 			{ Badge.SIESTA_PART1, Badge.SIESTA_PART2},
-			{ Badge.GAVIAL_PART1, Badge.GAVIAL_PART2}
+			{ Badge.GAVIAL_PART1, Badge.GAVIAL_PART2},
+            { Badge.IBERIA_PART1, Badge.IBERIA_PART2}
 	};
 
 	private static final Badge[][] metaBadgeReplacements = new Badge[][]{
@@ -1690,6 +1707,7 @@ public class Badges {
 		leaveBest( badges, Badge.NEARL_CHAMPION1, Badge.NEARL_CHAMPION2, Badge.NEARL_CHAMPION3 );
 		leaveBest( badges, Badge.SIESTA_PART1, Badge.SIESTA_PART2);
 		leaveBest( badges, Badge.GAVIAL_PART1, Badge.GAVIAL_PART2);
+        leaveBest( badges, Badge.IBERIA_PART1, Badge.IBERIA_PART2);
 
 		for (Badge[] tierReplace : tierBadgeReplacements){
 			leaveBest( badges, tierReplace );

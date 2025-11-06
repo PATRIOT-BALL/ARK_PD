@@ -68,7 +68,7 @@ public class GunWeapon extends MeleeWeapon {
     }
 
     public int fireMin() {
-        return (int) ((tier + bulletTier) * FIRE_DAMAGE_MULT);
+        return (int) ((tier + bulletTier + level()) * FIRE_DAMAGE_MULT);
     }
     public int fireMax() {
         return (int) ((tier * 3 + bulletTier * 4 + level() * 2) * FIRE_DAMAGE_MULT);
