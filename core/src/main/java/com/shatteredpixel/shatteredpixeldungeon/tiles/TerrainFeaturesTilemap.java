@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.levels.LastShopLevel;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
+import com.shatteredpixel.shatteredpixeldungeon.levels.features.Platform;
 import com.shatteredpixel.shatteredpixeldungeon.levels.traps.Trap;
 import com.shatteredpixel.shatteredpixeldungeon.plants.Plant;
 import com.watabou.noosa.Image;
@@ -39,12 +40,14 @@ public class TerrainFeaturesTilemap extends DungeonTilemap {
 
 	private SparseArray<Plant> plants;
 	private SparseArray<Trap> traps;
+    private SparseArray<Platform> platforms;
 
-	public TerrainFeaturesTilemap(SparseArray<Plant> plants, SparseArray<Trap> traps) {
+	public TerrainFeaturesTilemap(SparseArray<Plant> plants, SparseArray<Trap> traps, SparseArray<Platform> platforms) {
 		super(Assets.Environment.TERRAIN_FEATURES);
 
 		this.plants = plants;
 		this.traps = traps;
+        this.platforms = platforms;
 
 		map( Dungeon.level.map, Dungeon.level.width() );
 
@@ -63,6 +66,10 @@ public class TerrainFeaturesTilemap extends DungeonTilemap {
 		if (plants.get(pos) != null){
 			return plants.get(pos).image + 7*16;
 		}
+
+        if (platforms.get(pos) != null){
+            return platforms.get(pos).image + 7*16;
+        }
 
 		int stage = (Dungeon.depth-1)/5;
 		if (stage == 6) stage = 3;
@@ -111,5 +118,24 @@ public class TerrainFeaturesTilemap extends DungeonTilemap {
 			}
 		} );
 	}
+
+    public void createPlatform( final int pos ) {
+        final Image platform = tile ( pos, map[pos] );
+        if (platform == null) return;
+
+        platform.origin.set( 8, 12 );
+        platform.scale.set( 0 );
+        platform.point( DungeonTilemap.tileToWorld(pos));
+
+        parent.add( platform );
+
+        parent.add( new ScaleTweener( platform, new PointF(1, 1), 0.2f) {
+            protected void onComplete() {
+                platform.killAndErase();
+                killAndErase();
+                updateMapCell(pos);
+            }
+        } );
+    }
 
 }

@@ -31,6 +31,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.AnnihilationGear;
 import com.shatteredpixel.shatteredpixeldungeon.items.BrokenSeal;
 import com.shatteredpixel.shatteredpixeldungeon.items.DewVial;
 import com.shatteredpixel.shatteredpixeldungeon.items.Item;
+import com.shatteredpixel.shatteredpixeldungeon.items.NewGameItem.SeaPlatform;
 import com.shatteredpixel.shatteredpixeldungeon.items.Skill.SkillBook;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.ClothArmor;
 import com.shatteredpixel.shatteredpixeldungeon.items.artifacts.CloakOfShadows;
@@ -164,6 +165,8 @@ import com.watabou.utils.DeviceCompat;
 
             new Amulet().collect();
             new Heamyo().collect();
+
+            new SeaPlatform.Generator().quantity(40).collect();
         }
 
 		Dungeon.LimitedDrops.FOOD_BAG.drop();
