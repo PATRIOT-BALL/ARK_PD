@@ -22,7 +22,7 @@ public class SeaTerrorRoom extends SpecialRoom {
     public void paint(Level level) {
 
         Painter.fill( level, this, Terrain.WALL );
-        Painter.fill( level, this, 1, Terrain.SEE_TEEROR1 );
+        Painter.fill( level, this, 1, Terrain.SEA_TERROR );
 
         for (Room.Door door : connected.values()) {
             door.set( Room.Door.Type.REGULAR );

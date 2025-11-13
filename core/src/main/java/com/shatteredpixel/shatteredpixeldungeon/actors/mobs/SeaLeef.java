@@ -53,7 +53,7 @@ public class SeaLeef extends Mob {
 
     @Override
     protected boolean act() {
-        if (Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR1 || Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR2) {
+        if (Dungeon.level.map[this.pos] == Terrain.SEA_TERROR) {
             Buff.affect(this, Camouflage.class, 10f);
         }
         return super.act();

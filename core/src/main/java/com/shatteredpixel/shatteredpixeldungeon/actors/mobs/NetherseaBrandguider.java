@@ -2,26 +2,20 @@ package com.shatteredpixel.shatteredpixeldungeon.actors.mobs;
 
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
-import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Camouflage;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Silence;
 import com.shatteredpixel.shatteredpixeldungeon.effects.CellEmitter;
 import com.shatteredpixel.shatteredpixeldungeon.effects.Speck;
 import com.shatteredpixel.shatteredpixeldungeon.items.Generator;
-import com.shatteredpixel.shatteredpixeldungeon.items.Gold;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Level;
 import com.shatteredpixel.shatteredpixeldungeon.levels.Terrain;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.OriginiutantSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_BrandguiderSprite;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.Sea_LeefSprite;
+import com.shatteredpixel.shatteredpixeldungeon.sprites.NetherseaBrandguiderSprite;
 import com.watabou.utils.Bundle;
-import com.watabou.utils.PathFinder;
 import com.watabou.utils.Random;
 
-public class Sea_Brandguider extends Mob {
+public class NetherseaBrandguider extends Mob {
     {
-        spriteClass = Sea_BrandguiderSprite.class;
+        spriteClass = NetherseaBrandguiderSprite.class;
 
         HP = HT = 160;
         EXP = 18;
@@ -54,7 +48,7 @@ public class Sea_Brandguider extends Mob {
 
         //스폰시 첫 행동하면서 명흔을 깝니다.
         if (!firstTEEROR) {
-            Level.set(this.pos, Terrain.SEE_TEEROR1);
+            Level.set(this.pos, Terrain.SEA_TERROR);
             GameScene.updateMap(this.pos);
 
             firstTEEROR = true;
@@ -62,7 +56,7 @@ public class Sea_Brandguider extends Mob {
 
         if (HT /2 >= HP && this.buff(Silence.class) == null) {
             if (Dungeon.level.map[this.pos] == Terrain.EMPTY || Dungeon.level.map[this.pos] == Terrain.WATER) {
-                Dungeon.level.map[pos] = Terrain.SEE_TEEROR1;
+                Dungeon.level.map[pos] = Terrain.SEA_TERROR;
                 CellEmitter.get(pos).burst(Speck.factory(Speck.BUBBLE), 10);
                 GameScene.updateMap( pos );
                 Dungeon.observe();

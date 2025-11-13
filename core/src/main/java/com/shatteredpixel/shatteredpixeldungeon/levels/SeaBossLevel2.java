@@ -199,9 +199,8 @@ public class SeaBossLevel2 extends Level {
     @Override
     public String tileName( int tile ) {
         switch (tile) {
-            case Terrain.SEE_TEEROR1:
-            case Terrain.SEE_TEEROR2:
-                return Messages.get(SeaLevel_part1.class, "see_teeror_name");
+            case Terrain.SEA_TERROR:
+                return Messages.get(SeaLevel_part1.class, "sea_terror_name");
             default:
                 return super.tileName( tile );
         }
@@ -224,9 +223,8 @@ public class SeaBossLevel2 extends Level {
                 return Messages.get(CityLevel.class, "statue_desc");
             case Terrain.BOOKSHELF:
                 return Messages.get(CityLevel.class, "bookshelf_desc");
-            case Terrain.SEE_TEEROR1:
-            case Terrain.SEE_TEEROR2:
-                return Messages.get(SeaLevel_part1.class, "see_teeror_desc");
+            case Terrain.SEA_TERROR:
+                return Messages.get(SeaLevel_part1.class, "sea_terror_desc");
             default:
                 return super.tileDesc( tile );
         }

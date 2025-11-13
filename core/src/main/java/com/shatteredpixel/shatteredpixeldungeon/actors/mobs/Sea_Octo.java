@@ -42,7 +42,7 @@ public class Sea_Octo extends Mob {
 
         //스폰시 첫 행동하면서 명흔을 깝니다.
         if (!firstTEEROR) {
-            Level.set(this.pos, Terrain.SEE_TEEROR1);
+            Level.set(this.pos, Terrain.SEA_TERROR);
             GameScene.updateMap(this.pos);
 
             firstTEEROR = true;
@@ -52,7 +52,7 @@ public class Sea_Octo extends Mob {
 
     @Override
     protected boolean canAttack(Char enemy) {
-        if (Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR1 || Dungeon.level.map[this.pos] == Terrain.SEE_TEEROR2)
+        if (Dungeon.level.map[this.pos] == Terrain.SEA_TERROR)
             return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 8;
         return this.fieldOfView[enemy.pos] && Dungeon.level.distance(this.pos, enemy.pos) <= 1;
     }
